@@ -6,7 +6,10 @@ import { useSettingsStore } from '../stores/settings';
 
 const props = defineProps<{
   data: TopicRiverData;
+  color?: 'blue' | 'purple';
 }>();
+
+const themeColor = props.color || 'blue';
 
 const settingsStore = useSettingsStore();
 
@@ -14,7 +17,6 @@ const svgRef = ref<SVGSVGElement | null>(null);
 const containerRef = ref<HTMLDivElement | null>(null);
 const selectedTopic = ref<string | null>(null);
 const hoveredTopic = ref<string | null>(null);
-const topicFilter = ref<number>(15);
 const dimensions = ref({ width: 1200, height: 600 });
 const tooltipRef = ref<HTMLDivElement | null>(null);
 const selectedYear = ref<number | null>(null);
@@ -25,7 +27,7 @@ const processedData = computed(() => {
   const topics: ProcessedTopicData[] = [];
   const years = props.data.statistics.years;
   
-  console.log('Processing data with topicFilter:', topicFilter.value);
+  console.log('Processing data with topicFilter:', settingsStore.topicFilter);
   
   // Erstelle ein Array aller Topics mit ihrer Episode-Anzahl
   const allTopics = Object.values(props.data.topics).map(topic => ({
@@ -38,7 +40,7 @@ const processedData = computed(() => {
   // Sortiere nach Episode-Anzahl und nimm die Top-N
   const topTopics = allTopics
     .sort((a, b) => b.episodeCount - a.episodeCount)
-    .slice(0, topicFilter.value);
+    .slice(0, settingsStore.topicFilter);
   
   console.log('Top topics count:', topTopics.length);
   
@@ -369,8 +371,8 @@ const updateOpacity = () => {
 };
 
 // Watch für Änderungen
-watch(topicFilter, () => {
-  console.log('topicFilter changed to:', topicFilter.value);
+watch(() => settingsStore.topicFilter, () => {
+  console.log('topicFilter changed to:', settingsStore.topicFilter);
   hoveredTopic.value = null; // Clear hover on filter change
   drawRiver();
 });
@@ -623,22 +625,21 @@ const formatDuration = (duration: [number, number, number]) => {
         <label class="m-2 text-sm font-medium text-gray-700">
           Anzahl Themen:
           <input
-            v-model.number="topicFilter"
+            v-model.number="settingsStore.topicFilter"
             type="range"
             min="5"
             max="30"
             step="1"
-            class="ml-2 w-48"
-            @input="(e) => { topicFilter = Number((e.target as HTMLInputElement).value); }"
+            :class="['ml-2 w-48', themeColor === 'blue' ? 'slider-blue' : 'slider-purple']"
           />
-          <span class="ml-2 text-blue-600 font-semibold">{{ topicFilter }}</span>
+          <span :class="['ml-2 font-semibold', themeColor === 'blue' ? 'text-blue-600' : 'text-purple-600']">{{ settingsStore.topicFilter }}</span>
         </label>
         
         <label class="flex items-center gap-2 text-sm font-medium text-gray-700 cursor-pointer">
           <input
             v-model="settingsStore.normalizedView"
             type="checkbox"
-            class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
+            :class="['w-4 h-4 rounded', themeColor === 'blue' ? 'checkbox-blue' : 'checkbox-purple']"
           />
           <span>Normierte Ansicht (100%/Jahr)</span>
         </label>
@@ -665,13 +666,13 @@ const formatDuration = (duration: [number, number, number]) => {
             <div class="mt-2 flex gap-4">
               <button
                 @click="showEpisodeList = !showEpisodeList; if (showEpisodeList) showTopicList = false;"
-                class="text-sm text-blue-600 hover:text-blue-800 font-semibold underline"
+                :class="['text-sm font-semibold underline', themeColor === 'blue' ? 'text-blue-600 hover:text-blue-800' : 'text-purple-600 hover:text-purple-800']"
               >
                 {{ showEpisodeList ? 'Episoden ausblenden' : (selectedYear ? `${selectedTopicInfo.filteredCount} von ${selectedTopicInfo.totalEpisodes} Episoden anzeigen` : `${selectedTopicInfo.episodes.length} Episoden anzeigen`) }}
               </button>
               <button
                 @click="showTopicList = !showTopicList; if (showTopicList) showEpisodeList = false;"
-                class="text-sm text-blue-600 hover:text-blue-800 font-semibold underline"
+                :class="['text-sm font-semibold underline', themeColor === 'blue' ? 'text-blue-600 hover:text-blue-800' : 'text-purple-600 hover:text-purple-800']"
               >
                 {{ showTopicList ? 'Einzelne Themen ausblenden' : 'Alle einzelnen Themen anzeigen' }}
               </button>
@@ -717,7 +718,7 @@ const formatDuration = (duration: [number, number, number]) => {
                             :href="episodeDetails.get(episode.number).url"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="text-blue-600 hover:text-blue-800 underline text-xs"
+                            :class="['underline text-xs', themeColor === 'blue' ? 'text-blue-600 hover:text-blue-800' : 'text-purple-600 hover:text-purple-800']"
                           >
                             🔗
                           </a>
@@ -786,7 +787,7 @@ const formatDuration = (duration: [number, number, number]) => {
                           :href="episodeDetails.get(topicItem.episodeNumber)?.url || `https://freakshow.fm/${topicItem.episodeTitle.toLowerCase().split(' ')[0]}`"
                           target="_blank"
                           rel="noopener noreferrer"
-                          class="text-xs text-blue-600 hover:text-blue-800"
+                          :class="['text-xs', themeColor === 'blue' ? 'text-blue-600 hover:text-blue-800' : 'text-purple-600 hover:text-purple-800']"
                         >
                           {{ topicItem.episodeTitle }}
                         </a>
@@ -799,7 +800,7 @@ const formatDuration = (duration: [number, number, number]) => {
           </div>
           <button
             @click="selectedTopic = null; selectedYear = null; showEpisodeList = false; showTopicList = false;"
-            class="text-blue-600 hover:text-blue-800 font-semibold ml-4"
+            :class="['font-semibold ml-4', themeColor === 'blue' ? 'text-blue-600 hover:text-blue-800' : 'text-purple-600 hover:text-purple-800']"
           >
             ✕
           </button>

@@ -27,27 +27,27 @@
             <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
               Anzahl Sprecher:
               <input
-                v-model.number="topNSpeakers"
+                v-model.number="settingsStore.topNSpeakersClusterHeatmap"
                 type="range"
                 min="5"
                 max="30"
                 step="1"
-                class="ml-2 w-48"
+                class="ml-2 w-48 slider-orange"
               />
-              <span class="ml-2 text-blue-600 dark:text-blue-400 font-semibold">{{ topNSpeakers }}</span>
+              <span class="ml-2 text-blue-600 dark:text-blue-400 font-semibold">{{ settingsStore.topNSpeakersClusterHeatmap }}</span>
             </label>
             
             <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
               Anzahl Cluster:
               <input
-                v-model.number="topNClusters"
+                v-model.number="settingsStore.topNClustersHeatmap"
                 type="range"
                 min="10"
                 max="50"
                 step="1"
-                class="ml-2 w-48"
+                class="ml-2 w-48 slider-orange"
               />
-              <span class="ml-2 text-orange-600 dark:text-orange-400 font-semibold">{{ topNClusters }}</span>
+              <span class="ml-2 text-orange-600 dark:text-orange-400 font-semibold">{{ settingsStore.topNClustersHeatmap }}</span>
             </label>
           </div>
 
@@ -157,6 +157,9 @@
 import { ref, onMounted, computed, watch } from 'vue';
 import * as d3 from 'd3';
 import type { HeatmapData } from '../types';
+import { useSettingsStore } from '../stores/settings';
+
+const settingsStore = useSettingsStore();
 
 interface EpisodeDetail {
   title: string;
@@ -169,10 +172,6 @@ interface EpisodeDetail {
 const heatmapData = ref<HeatmapData | null>(null);
 const svgElement = ref<SVGSVGElement | null>(null);
 const heatmapContainer = ref<HTMLDivElement | null>(null);
-
-// Slider controls for top N speakers and clusters
-const topNSpeakers = ref(15);
-const topNClusters = ref(20);
 
 const selectedCell = ref<{
   speakerName: string;
@@ -191,10 +190,10 @@ const filteredData = computed(() => {
   if (!heatmapData.value) return { speakers: [], clusters: [] };
   
   // Get top N speakers (already sorted by episodes in the data)
-  const speakers = heatmapData.value.speakers.slice(0, topNSpeakers.value);
+  const speakers = heatmapData.value.speakers.slice(0, settingsStore.topNSpeakersClusterHeatmap);
   
   // Get top N clusters (already sorted by episodes in the data)
-  const clusters = (heatmapData.value.clusters || []).slice(0, topNClusters.value);
+  const clusters = (heatmapData.value.clusters || []).slice(0, settingsStore.topNClustersHeatmap);
   
   return { speakers, clusters };
 });
@@ -493,7 +492,7 @@ watch([heatmapData, filteredMatrix, filteredClusters], () => {
 });
 
 // Clear selection when slider values change
-watch([topNSpeakers, topNClusters], () => {
+watch([() => settingsStore.topNSpeakersClusterHeatmap, () => settingsStore.topNClustersHeatmap], () => {
   selectedCell.value = null;
   showEpisodeList.value = false;
 });

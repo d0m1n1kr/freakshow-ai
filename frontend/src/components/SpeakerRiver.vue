@@ -14,7 +14,6 @@ const svgRef = ref<SVGSVGElement | null>(null);
 const containerRef = ref<HTMLDivElement | null>(null);
 const selectedSpeaker = ref<string | null>(null);
 const hoveredSpeaker = ref<string | null>(null);
-const speakerFilter = ref<number>(15);
 const dimensions = ref({ width: 1200, height: 600 });
 const tooltipRef = ref<HTMLDivElement | null>(null);
 const selectedYear = ref<number | null>(null);
@@ -25,7 +24,7 @@ const processedData = computed(() => {
   const speakers: ProcessedSpeakerData[] = [];
   const years = props.data.statistics.years;
   
-  console.log('Processing speaker data with speakerFilter:', speakerFilter.value);
+  console.log('Processing speaker data with speakerFilter:', settingsStore.speakerFilter);
   
   // Erstelle ein Array aller Speaker mit ihrer Episode-Anzahl
   const allSpeakers = props.data.speakers.map(speaker => ({
@@ -38,7 +37,7 @@ const processedData = computed(() => {
   // Sortiere nach Episode-Anzahl und nimm die Top-N
   const topSpeakers = allSpeakers
     .sort((a, b) => b.episodeCount - a.episodeCount)
-    .slice(0, speakerFilter.value);
+    .slice(0, settingsStore.speakerFilter);
   
   console.log('Top speakers count:', topSpeakers.length);
   
@@ -373,8 +372,8 @@ const updateOpacity = () => {
 };
 
 // Watch für Änderungen
-watch(speakerFilter, () => {
-  console.log('speakerFilter changed to:', speakerFilter.value);
+watch(() => settingsStore.speakerFilter, () => {
+  console.log('speakerFilter changed to:', settingsStore.speakerFilter);
   hoveredSpeaker.value = null; // Clear hover on filter change
   drawRiver();
 });
@@ -529,22 +528,21 @@ watch(selectedYear, () => {
         <label class="m-2 text-sm font-medium text-gray-700">
           Anzahl Sprecher:
           <input
-            v-model.number="speakerFilter"
+            v-model.number="settingsStore.speakerFilter"
             type="range"
             min="5"
             max="30"
             step="1"
-            class="ml-2 w-48"
-            @input="(e) => { speakerFilter = Number((e.target as HTMLInputElement).value); }"
+            class="ml-2 w-48 slider-green"
           />
-          <span class="ml-2 text-green-600 font-semibold">{{ speakerFilter }}</span>
+          <span class="ml-2 text-green-600 font-semibold">{{ settingsStore.speakerFilter }}</span>
         </label>
         
         <label class="flex items-center gap-2 text-sm font-medium text-gray-700 cursor-pointer">
           <input
             v-model="settingsStore.normalizedView"
             type="checkbox"
-            class="w-4 h-4 text-green-600 rounded focus:ring-green-500"
+            class="w-4 h-4 rounded checkbox-green"
           />
           <span>Normierte Ansicht (100%/Jahr)</span>
         </label>

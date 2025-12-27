@@ -4,6 +4,12 @@ import { ref } from 'vue';
 export const useSettingsStore = defineStore('settings', () => {
   // State
   const normalizedView = ref(false);
+  const topicFilter = ref(15);
+  const speakerFilter = ref(15);
+  const topNSpeakersHeatmap = ref(15);
+  const topNCategoriesHeatmap = ref(10);
+  const topNSpeakersClusterHeatmap = ref(15);
+  const topNClustersHeatmap = ref(20);
   
   // Actions
   function toggleNormalizedView() {
@@ -16,10 +22,19 @@ export const useSettingsStore = defineStore('settings', () => {
   
   return {
     normalizedView,
+    topicFilter,
+    speakerFilter,
+    topNSpeakersHeatmap,
+    topNCategoriesHeatmap,
+    topNSpeakersClusterHeatmap,
+    topNClustersHeatmap,
     toggleNormalizedView,
     setNormalizedView
   };
 }, {
-  persist: true // Aktiviert localStorage Persistenz
+  persist: {
+    key: 'freakshow-settings',
+    storage: window.localStorage,
+  }
 });
 

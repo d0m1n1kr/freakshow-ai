@@ -2,6 +2,9 @@
 import { ref, onMounted, computed, watch } from 'vue';
 import * as d3 from 'd3';
 import type { HeatmapData } from '../types';
+import { useSettingsStore } from '../stores/settings';
+
+const settingsStore = useSettingsStore();
 
 const heatmapData = ref<HeatmapData | null>(null);
 const loading = ref(true);
@@ -15,10 +18,6 @@ const showEpisodeList = ref(false);
 const showTopicList = ref(false);
 const episodeDetails = ref<Map<number, any>>(new Map());
 const loadingEpisodes = ref(false);
-
-// Filter options
-const topNSpeakers = ref(15);
-const topNCategories = ref(10);
 
 onMounted(async () => {
   try {
@@ -57,10 +56,10 @@ watch(() => heatmapData.value, (newData) => {
 const filteredData = computed(() => {
   if (!heatmapData.value) return null;
   
-  const topSpeakers = heatmapData.value.speakers.slice(0, topNSpeakers.value);
+  const topSpeakers = heatmapData.value.speakers.slice(0, settingsStore.topNSpeakersHeatmap);
   const topCategories = (heatmapData.value.categories || [])
     .sort((a, b) => b.totalEpisodes - a.totalEpisodes)
-    .slice(0, topNCategories.value);
+    .slice(0, settingsStore.topNCategoriesHeatmap);
   
   return {
     speakers: topSpeakers,
@@ -291,7 +290,7 @@ const drawHeatmap = () => {
     .text('Episoden');
 };
 
-watch([topNSpeakers, topNCategories], () => {
+watch([() => settingsStore.topNSpeakersHeatmap, () => settingsStore.topNCategoriesHeatmap], () => {
   selectedSpeaker.value = null;
   selectedCategory.value = null;
   drawHeatmap();
@@ -347,7 +346,7 @@ const formatDuration = (duration: [number, number, number]) => {
 <template>
   <div v-if="loading" class="flex items-center justify-center py-20">
     <div class="text-center">
-      <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-indigo-500 border-t-transparent"></div>
+      <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-pink-500 border-t-transparent"></div>
       <p class="mt-4 text-gray-600">Lade Heatmap-Daten...</p>
     </div>
   </div>
@@ -380,27 +379,27 @@ const formatDuration = (duration: [number, number, number]) => {
         <label class="text-sm font-medium text-gray-700">
           Anzahl Sprecher:
           <input
-            v-model.number="topNSpeakers"
+            v-model.number="settingsStore.topNSpeakersHeatmap"
             type="range"
             min="5"
             max="30"
             step="1"
-            class="ml-2 w-48"
+            class="ml-2 w-48 slider-pink"
           />
-          <span class="ml-2 text-pink-600 font-semibold">{{ topNSpeakers }}</span>
+          <span class="ml-2 text-pink-600 font-semibold">{{ settingsStore.topNSpeakersHeatmap }}</span>
         </label>
         
         <label class="text-sm font-medium text-gray-700">
           Anzahl Kategorien:
           <input
-            v-model.number="topNCategories"
+            v-model.number="settingsStore.topNCategoriesHeatmap"
             type="range"
             min="5"
             max="12"
             step="1"
-            class="ml-2 w-48"
+            class="ml-2 w-48 slider-pink"
           />
-          <span class="ml-2 text-pink-600 font-semibold">{{ topNCategories }}</span>
+          <span class="ml-2 text-pink-600 font-semibold">{{ settingsStore.topNCategoriesHeatmap }}</span>
         </label>
       </div>
 
@@ -426,30 +425,30 @@ const formatDuration = (duration: [number, number, number]) => {
             </div>
 
             <!-- Episode List -->
-            <div v-if="showEpisodeList" class="mt-4 bg-white rounded-lg border border-indigo-300 overflow-hidden">
+            <div v-if="showEpisodeList" class="mt-4 bg-white rounded-lg border border-pink-300 overflow-hidden">
               <div v-if="loadingEpisodes" class="p-4 text-center text-gray-600">
                 Lade Episoden-Details...
               </div>
               <div v-else class="max-h-96 overflow-y-auto">
                 <table class="w-full text-sm">
-                  <thead class="bg-indigo-100 sticky top-0">
+                  <thead class="bg-pink-100 sticky top-0">
                     <tr>
-                      <th class="px-3 py-2 text-left text-xs font-semibold text-indigo-900">#</th>
-                      <th class="px-3 py-2 text-left text-xs font-semibold text-indigo-900">Datum</th>
-                      <th class="px-3 py-2 text-left text-xs font-semibold text-indigo-900">Titel</th>
-                      <th class="px-3 py-2 text-left text-xs font-semibold text-indigo-900">Dauer</th>
-                      <th class="px-3 py-2 text-left text-xs font-semibold text-indigo-900">Sprecher</th>
-                      <th class="px-3 py-2 text-left text-xs font-semibold text-indigo-900">Link</th>
+                      <th class="px-3 py-2 text-left text-xs font-semibold text-pink-900">#</th>
+                      <th class="px-3 py-2 text-left text-xs font-semibold text-pink-900">Datum</th>
+                      <th class="px-3 py-2 text-left text-xs font-semibold text-pink-900">Titel</th>
+                      <th class="px-3 py-2 text-left text-xs font-semibold text-pink-900">Dauer</th>
+                      <th class="px-3 py-2 text-left text-xs font-semibold text-pink-900">Sprecher</th>
+                      <th class="px-3 py-2 text-left text-xs font-semibold text-pink-900">Link</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr 
                       v-for="episodeNum in selectedCellData.episodes" 
                       :key="episodeNum"
-                      class="border-t border-indigo-100 hover:bg-indigo-50"
+                      class="border-t border-pink-100 hover:bg-pink-50"
                     >
                       <template v-if="episodeDetails.has(episodeNum) && episodeDetails.get(episodeNum)">
-                        <td class="px-3 py-2 text-indigo-700 font-mono text-xs">{{ episodeNum }}</td>
+                        <td class="px-3 py-2 text-pink-700 font-mono text-xs">{{ episodeNum }}</td>
                         <td class="px-3 py-2 text-gray-600 whitespace-nowrap">
                           {{ new Date(episodeDetails.get(episodeNum).date).toLocaleDateString('de-DE') }}
                         </td>
@@ -463,7 +462,7 @@ const formatDuration = (duration: [number, number, number]) => {
                               :class="[
                                 'inline-block',
                                 speaker === selectedCellData?.speakerName 
-                                  ? 'font-semibold text-indigo-700 bg-indigo-100 px-1 rounded' 
+                                  ? 'font-semibold text-pink-700 bg-pink-100 px-1 rounded' 
                                   : 'text-gray-600'
                               ]"
                             >{{ speaker }}</span><span v-if="(idx as number) < (episodeDetails.get(episodeNum).speakers.length - 1)" class="text-gray-600">, </span>
@@ -474,7 +473,7 @@ const formatDuration = (duration: [number, number, number]) => {
                             :href="episodeDetails.get(episodeNum).url"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="text-indigo-600 hover:text-indigo-800 underline text-xs"
+                            class="text-pink-600 hover:text-pink-800 underline text-xs"
                           >
                             🔗
                           </a>
@@ -494,7 +493,7 @@ const formatDuration = (duration: [number, number, number]) => {
           </div>
           <button
             @click="selectedSpeaker = null; selectedCategory = null; showEpisodeList = false;"
-            class="text-indigo-600 hover:text-indigo-800 font-semibold ml-4"
+            class="text-pink-600 hover:text-pink-800 font-semibold ml-4"
           >
             ✕
           </button>

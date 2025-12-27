@@ -52,7 +52,7 @@ onMounted(async () => {
       </div>
     </div>
 
-    <TopicRiver :data="categoryData" />
+    <TopicRiver :data="categoryData" color="purple" />
     
     <footer class="p-4 text-center text-gray-500 text-sm border-t border-gray-200">
       <p>Generiert am: {{ new Date(categoryData.generatedAt).toLocaleString('de-DE') }}</p>
