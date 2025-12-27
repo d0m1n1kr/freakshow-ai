@@ -1,0 +1,84 @@
+{
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "apiKey": "YOUR_API_KEY_HERE",
+    "baseURL": "https://api.openai.com/v1",
+    "temperature": 0.3,
+    "maxTokens": 1000
+  },
+  "topicExtraction": {
+    "maxTopics": 10,
+    "minTopicLength": 3,
+    "language": "de",
+    "requestDelayMs": 3000,
+    "maxRetries": 3,
+    "retryDelayMs": 5000
+  },
+  "topicNormalization": {
+    "maxMainTopics": 35,
+    "taxonomyMaxTokens": 16000,
+    "model": null,
+    "_modelComment": "Optional: Anderes Modell für Normalisierung (z.B. 'gpt-4o' für mehr Output-Tokens). Null = Standard-Modell aus llm.model"
+  },
+  "topicClustering": {
+    "embeddingModel": "text-embedding-3-small",
+    "embeddingBatchSize": 100,
+    "fineClusters": 256,
+    "coarseClusters": 64,
+    "overviewClusters": 16,
+    "outlierThreshold": 0.7,
+    "linkageMethod": "weighted",
+    "useRelevanceWeighting": true,
+    "useLLMNaming": true,
+    "model": null,
+    "_comment": "linkageMethod: 'average', 'weighted', 'ward', 'complete'. useRelevanceWeighting: Gewichtet Topics/Cluster nach Episoden-Anzahl"
+  },
+  "_examples": {
+    "_comment": "Beispiel-Konfigurationen für verschiedene LLM-Anbieter. Kopiere die gewünschte Konfiguration in den 'llm' Abschnitt oben.",
+    "openai": {
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "apiKey": "sk-...",
+      "baseURL": "https://api.openai.com/v1",
+      "temperature": 0.3,
+      "maxTokens": 1000
+    },
+    "anthropic": {
+      "provider": "anthropic",
+      "model": "claude-3-haiku-20240307",
+      "apiKey": "sk-ant-...",
+      "baseURL": "https://api.anthropic.com/v1",
+      "temperature": 0.3,
+      "maxTokens": 1000
+    },
+    "openrouter": {
+      "provider": "openrouter",
+      "model": "openai/gpt-4o-mini",
+      "apiKey": "sk-or-...",
+      "baseURL": "https://openrouter.ai/api/v1",
+      "temperature": 0.3,
+      "maxTokens": 1000,
+      "_comment": "OpenRouter unterstützt viele Modelle: anthropic/claude-3-haiku, meta-llama/llama-3.1-8b-instruct, etc."
+    },
+    "ollama_local": {
+      "provider": "ollama",
+      "model": "llama3.2",
+      "apiKey": "not-needed",
+      "baseURL": "http://localhost:11434/v1",
+      "temperature": 0.3,
+      "maxTokens": 1000,
+      "_comment": "Ollama muss lokal installiert sein: https://ollama.ai/"
+    },
+    "groq": {
+      "provider": "groq",
+      "model": "llama-3.3-70b-versatile",
+      "apiKey": "gsk_...",
+      "baseURL": "https://api.groq.com/openai/v1",
+      "temperature": 0.3,
+      "maxTokens": 1000,
+      "_comment": "Groq bietet sehr schnelle Inferenz mit kostenlosen API-Limits"
+    }
+  }
+}
+

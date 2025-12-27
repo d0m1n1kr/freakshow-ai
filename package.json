@@ -1,0 +1,21 @@
+{
+  "name": "freakshow-scraper",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Scraper for Freak Show podcast archive",
+  "main": "scrape.js",
+  "scripts": {
+    "scrape": "node scrape.js",
+    "scrape-details": "node scrape-details.js",
+    "scrape-osf": "node scrape-osf.js",
+    "extract-topics": "node extract-topics.js",
+    "normalize-topics": "node normalize-topics.js",
+    "create-embeddings": "node create-embeddings.js",
+    "cluster-topics": "node cluster-topics.js",
+    "topic-river": "node generate-topic-river.js"
+  },
+  "dependencies": {
+    "puppeteer": "^24.0.0"
+  }
+}
+
