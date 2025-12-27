@@ -7,7 +7,7 @@ const route = useRoute();
 const settingsStore = useSettingsStore();
 
 const activeView = computed(() => {
-  return route.name as 'topics' | 'categories' | 'speakers' | 'heatmap' | 'cluster-heatmap' | 'speaker-speaker-heatmap' | 'about';
+  return route.name as 'topics' | 'categories' | 'speakers' | 'heatmap' | 'cluster-heatmap' | 'speaker-speaker-heatmap' | 'cluster-cluster-heatmap' | 'about';
 });
 
 const themeIcon = computed(() => {
@@ -105,7 +105,6 @@ const themeLabel = computed(() => {
           >
             Sprecher × Cluster
           </router-link>
-          <!--
           <router-link
             to="/cluster-cluster-heatmap"
             :class="[
@@ -117,7 +116,6 @@ const themeLabel = computed(() => {
           >
             Cluster × Cluster
           </router-link>
-          -->
           <router-link
             to="/speaker-speaker-heatmap"
             :class="[

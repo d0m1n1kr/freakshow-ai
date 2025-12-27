@@ -1,118 +1,97 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Read topic taxonomy
-const taxonomyPath = path.join(__dirname, 'topic-taxonomy.json');
-const taxonomy = JSON.parse(fs.readFileSync(taxonomyPath, 'utf-8'));
-
-// Read all episode files
-const episodesDir = path.join(__dirname, 'episodes');
-const episodeFiles = fs.readdirSync(episodesDir)
-  .filter(f => f.endsWith('.json'))
-  .sort((a, b) => {
-    const numA = parseInt(a.replace('.json', ''));
-    const numB = parseInt(b.replace('.json', ''));
-    return numA - numB;
+async function generateClusterClusterHeatmap() {
+  console.log('Loading topic taxonomy...');
+  
+  // Load topic taxonomy
+  const taxonomyPath = path.join(__dirname, 'frontend/public/topic-taxonomy.json');
+  const taxonomyData = JSON.parse(await fs.readFile(taxonomyPath, 'utf-8'));
+  
+  const clusters = taxonomyData.clusters;
+  
+  console.log(`Found ${clusters.length} clusters`);
+  
+  // Build cluster co-occurrence matrix
+  const matrix = [];
+  const clusterMap = new Map();
+  
+  // Index clusters by ID
+  clusters.forEach(cluster => {
+    clusterMap.set(cluster.id, cluster);
   });
-
-console.log(`Found ${episodeFiles.length} episode files`);
-
-// Build cluster co-occurrence matrix
-const clusterEpisodes = new Map(); // cluster ID -> set of episode numbers
-const clusterInfo = new Map(); // cluster ID -> {name, totalEpisodes}
-
-// Build cluster info array with episodes from taxonomy
-taxonomy.clusters.forEach(cluster => {
-  const episodes = new Set();
   
-  // Collect all episodes that have topics from this cluster
-  if (cluster.topics && Array.isArray(cluster.topics)) {
-    cluster.topics.forEach(topic => {
-      if (topic.episodes && Array.isArray(topic.episodes)) {
-        topic.episodes.forEach(ep => episodes.add(ep));
-      }
-    });
-  }
-  
-  if (episodes.size > 0) {
-    clusterInfo.set(cluster.id, {
-      id: cluster.id,
-      name: cluster.name,
-      totalEpisodes: episodes.size,
-      episodes
-    });
-  }
-});
-
-console.log(`Found ${clusterInfo.size} clusters with episodes`);
-
-// Build co-occurrence matrix
-const matrix = [];
-const clusterArray = Array.from(clusterInfo.values())
-  .filter(c => c.totalEpisodes > 0)
-  .sort((a, b) => b.totalEpisodes - a.totalEpisodes);
-
-console.log(`Processing ${clusterArray.length} clusters with episodes`);
-
-clusterArray.forEach((cluster1, i) => {
-  const row = {
-    clusterId: cluster1.id,
-    cluster1Name: cluster1.name,
-    values: []
-  };
-  
-  clusterArray.forEach((cluster2, j) => {
-    // Count episodes where both clusters appear
-    const intersection = new Set(
-      [...cluster1.episodes].filter(ep => cluster2.episodes.has(ep))
-    );
+  // For each cluster pair, find episodes where both clusters appear
+  for (let i = 0; i < clusters.length; i++) {
+    const cluster1 = clusters[i];
+    const cluster1Episodes = new Set(cluster1.episodes);
     
-    if (intersection.size > 0) {
+    const row = {
+      clusterId: cluster1.id,
+      cluster1Name: cluster1.name,
+      values: []
+    };
+    
+    for (let j = 0; j < clusters.length; j++) {
+      const cluster2 = clusters[j];
+      const cluster2Episodes = new Set(cluster2.episodes);
+      
+      // Find intersection of episodes
+      const commonEpisodes = [...cluster1Episodes].filter(ep => cluster2Episodes.has(ep));
+      
       row.values.push({
         clusterId: cluster2.id,
         cluster2Name: cluster2.name,
-        count: intersection.size,
-        episodes: Array.from(intersection).sort((a, b) => a - b)
+        count: commonEpisodes.length,
+        episodes: commonEpisodes.sort((a, b) => a - b)
       });
     }
-  });
+    
+    matrix.push(row);
+  }
   
-  matrix.push(row);
-});
-
-// Create output
-const output = {
-  generatedAt: new Date().toISOString(),
-  description: "Cluster-Cluster Co-occurrence Heatmap Data",
-  statistics: {
-    totalClusters: clusterArray.length,
-    totalCombinations: matrix.reduce((sum, row) => sum + row.values.length, 0),
-    topClustersByEpisodes: clusterArray.slice(0, 20).map(c => ({
+  // Sort clusters by total episode count
+  const sortedClusters = [...clusters]
+    .sort((a, b) => b.episodeCount - a.episodeCount)
+    .map(c => ({
       id: c.id,
       name: c.name,
-      totalEpisodes: c.totalEpisodes
-    }))
-  },
-  clusters: clusterArray.map(c => ({
-    id: c.id,
-    name: c.name,
-    totalEpisodes: c.totalEpisodes
-  })),
-  matrix
-};
+      totalEpisodes: c.episodeCount,
+      topicCount: c.topicCount
+    }));
+  
+  // Count total combinations (non-zero co-occurrences)
+  let totalCombinations = 0;
+  matrix.forEach(row => {
+    row.values.forEach(val => {
+      if (val.count > 0) totalCombinations++;
+    });
+  });
+  
+  const heatmapData = {
+    generatedAt: new Date().toISOString(),
+    description: 'Cluster-Cluster Co-occurrence Heatmap Data',
+    statistics: {
+      totalClusters: clusters.length,
+      totalCombinations,
+      topClustersByEpisodes: sortedClusters.slice(0, 20)
+    },
+    clusters: sortedClusters,
+    matrix
+  };
+  
+  // Write output
+  const outputPath = path.join(__dirname, 'frontend/public/cluster-cluster-heatmap.json');
+  await fs.writeFile(outputPath, JSON.stringify(heatmapData, null, 2));
+  
+  console.log(`\n✓ Generated cluster-cluster-heatmap.json`);
+  console.log(`  - ${clusters.length} clusters`);
+  console.log(`  - ${totalCombinations} combinations with co-occurrences`);
+  console.log(`  - Top cluster: ${sortedClusters[0].name} (${sortedClusters[0].totalEpisodes} episodes)`);
+}
 
-// Write output
-const outputPath = path.join(__dirname, 'frontend/public/cluster-cluster-heatmap.json');
-fs.writeFileSync(outputPath, JSON.stringify(output, null, 2));
-
-console.log(`✅ Generated cluster-cluster heatmap data`);
-console.log(`   Total clusters: ${output.statistics.totalClusters}`);
-console.log(`   Total combinations: ${output.statistics.totalCombinations}`);
-console.log(`   Output: ${outputPath}`);
-
+generateClusterClusterHeatmap().catch(console.error);

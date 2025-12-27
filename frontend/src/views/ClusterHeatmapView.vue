@@ -224,12 +224,12 @@ const filteredMatrix = computed(() => {
   const clusterIds = new Set(clusters.map(c => c.id));
   
   // Filter matrix by selected speakers
-  let matrix = heatmapData.value.matrix.filter(row => speakerIds.has(row.speakerId));
+  let matrix = heatmapData.value.matrix.filter(row => row.speakerId && speakerIds.has(row.speakerId));
   
   // Filter values by selected clusters
   matrix = matrix.map(row => ({
     ...row,
-    values: row.values.filter(val => clusterIds.has(val.clusterId || ''))
+    values: row.values.filter(val => val.clusterId && clusterIds.has(val.clusterId))
   }));
   
   return matrix;
@@ -362,17 +362,18 @@ function drawHeatmap() {
 
   // Y axis (speakers)
   const yScale = d3.scaleBand()
-    .domain(matrix.map(row => row.speakerId))
+    .domain(matrix.map(row => row.speakerId || '').filter(id => id))
     .range([0, height])
     .padding(0.05);
 
   // Draw cells
   matrix.forEach((row) => {
+    if (!row.speakerId) return;
     row.values.forEach((value) => {
       if (!value.clusterId) return;
       
       const x = xScale(value.clusterId);
-      const y = yScale(row.speakerId);
+      const y = yScale(row.speakerId || '');
       
       if (x === undefined || y === undefined) return;
 
@@ -489,7 +490,7 @@ function drawHeatmap() {
     .enter()
     .append('text')
     .attr('x', -10)
-    .attr('y', d => (yScale(d.speakerId) || 0) + yScale.bandwidth() / 2)
+    .attr('y', d => (yScale(d.speakerId || '') || 0) + yScale.bandwidth() / 2)
     .attr('text-anchor', 'end')
     .attr('dominant-baseline', 'middle')
     .attr('font-size', '10px')

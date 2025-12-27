@@ -155,9 +155,12 @@ export interface HeatmapData {
     topicCount: number;
   }>;
   matrix: Array<{
-    speakerId: string;
+    speakerId?: string;
     speakerName?: string;     // For backward compatibility
     speaker1Name?: string;    // For Speaker × Speaker heatmap
+    clusterId?: string;       // For Cluster × Cluster heatmap
+    clusterName?: string;     // For backward compatibility
+    cluster1Name?: string;    // For Cluster × Cluster heatmap
     values: Array<{
       categoryId?: string;
       categoryName?: string;
@@ -165,6 +168,7 @@ export interface HeatmapData {
       clusterName?: string;
       speakerId?: string;      // For Speaker × Speaker heatmap
       speaker2Name?: string;   // For Speaker × Speaker heatmap
+      cluster2Name?: string;   // For Cluster × Cluster heatmap
       count: number;
       episodes: number[];
     }>;
