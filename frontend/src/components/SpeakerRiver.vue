@@ -2,18 +2,23 @@
 import { ref, onMounted, computed, watch } from 'vue';
 import * as d3 from 'd3';
 import type { SpeakerRiverData, ProcessedSpeakerData } from '../types';
+import { useSettingsStore } from '../stores/settings';
 
 const props = defineProps<{
   data: SpeakerRiverData;
 }>();
+
+const settingsStore = useSettingsStore();
 
 const svgRef = ref<SVGSVGElement | null>(null);
 const containerRef = ref<HTMLDivElement | null>(null);
 const selectedSpeaker = ref<string | null>(null);
 const hoveredSpeaker = ref<string | null>(null);
 const speakerFilter = ref<number>(15);
-const normalizedView = ref<boolean>(false);
 const dimensions = ref({ width: 1200, height: 600 });
+const tooltipRef = ref<HTMLDivElement | null>(null);
+const selectedYear = ref<number | null>(null);
+const hoveredYear = ref<number | null>(null);
 
 // Prozessiere die Daten
 const processedData = computed(() => {
@@ -134,7 +139,7 @@ const drawRiver = () => {
     .keys(keys)
     // In normierter Ansicht: stackOffsetExpand sorgt für gleich hohe Jahre (0-1)
     // In normaler Ansicht: stackOffsetWiggle für schöne Stream-Optik
-    .offset(normalizedView.value ? d3.stackOffsetExpand : d3.stackOffsetWiggle)
+    .offset(settingsStore.normalizedView ? d3.stackOffsetExpand : d3.stackOffsetWiggle)
     .order(d3.stackOrderInsideOut);
   
   const series = stack(stackData);
@@ -177,14 +182,82 @@ const drawRiver = () => {
     .on('mouseover', function(_event: any, d: any) {
       hoveredSpeaker.value = d.key;
     })
+    .on('mousemove', function(event: any, d: any) {
+      if (!tooltipRef.value) return;
+      
+      // Finde das nächste Jahr zum Mauszeiger
+      const [mx] = d3.pointer(event);
+      const year = Math.round(xScale.invert(mx));
+      hoveredYear.value = year;
+      const speaker = speakers.find(s => s.id === d.key);
+      
+      if (speaker) {
+        const episodeCount = speaker.yearValues.get(year) || 0;
+        const speakerData = props.data.speakers.find(s => s.id === speaker.id);
+        const yearData = speakerData?.timeline.find(tl => tl.year === year);
+        
+        if (episodeCount > 0 && yearData) {
+          tooltipRef.value.style.display = 'block';
+          tooltipRef.value.style.left = `${event.pageX + 15}px`;
+          tooltipRef.value.style.top = `${event.pageY - 10}px`;
+          
+          const durationHours = yearData.durationHours.toFixed(1);
+          
+          tooltipRef.value.innerHTML = `
+            <div class="font-semibold text-sm mb-1">${speaker.name}</div>
+            <div class="text-xs"><strong>Jahr:</strong> ${year}</div>
+            <div class="text-xs"><strong>Episoden:</strong> ${episodeCount}</div>
+            <div class="text-xs"><strong>Dauer:</strong> ${durationHours}h</div>
+          `;
+          
+          // Highlight the year on X-axis
+          if (svgRef.value) {
+            d3.select(svgRef.value)
+              .selectAll('.x-axis text')
+              .attr('fill', (tickYear: any) => tickYear === year ? '#10b981' : '#666')
+              .attr('font-weight', (tickYear: any) => tickYear === year ? '700' : '400')
+              .style('font-size', (tickYear: any) => tickYear === year ? '14px' : '12px');
+          }
+        } else {
+          tooltipRef.value.style.display = 'none';
+          // Reset X-axis highlighting
+          if (svgRef.value) {
+            d3.select(svgRef.value)
+              .selectAll('.x-axis text')
+              .attr('fill', '#666')
+              .attr('font-weight', '400')
+              .style('font-size', '12px');
+          }
+        }
+      }
+    })
     .on('mouseout', function(_event: any, d: any) {
       // Only clear if we're leaving the current hovered item
       if (hoveredSpeaker.value === d.key) {
         hoveredSpeaker.value = null;
       }
+      hoveredYear.value = null;
+      if (tooltipRef.value) {
+        tooltipRef.value.style.display = 'none';
+      }
+      // Reset X-axis highlighting (unless a year is selected)
+      if (svgRef.value && !selectedYear.value) {
+        d3.select(svgRef.value)
+          .selectAll('.x-axis text')
+          .attr('fill', '#666')
+          .attr('font-weight', '400')
+          .style('font-size', '12px');
+      }
     })
     .on('click', function(_event: any, d: any) {
-      selectedSpeaker.value = selectedSpeaker.value === d.key ? null : d.key;
+      const wasSelected = selectedSpeaker.value === d.key;
+      selectedSpeaker.value = wasSelected ? null : d.key;
+      // Speichere das aktuell gehoverte Jahr beim Klicken
+      if (!wasSelected && hoveredYear.value) {
+        selectedYear.value = hoveredYear.value;
+      } else if (wasSelected) {
+        selectedYear.value = null;
+      }
     });
   
   // X-Achse
@@ -192,13 +265,16 @@ const drawRiver = () => {
     .tickFormat(d3.format('d'))
     .ticks(years.length);
   
-  g.append('g')
+  const xAxisGroup = g.append('g')
     .attr('class', 'x-axis')
     .attr('transform', `translate(0,${innerHeight})`)
-    .call(xAxis)
-    .selectAll('text')
+    .call(xAxis);
+  
+  xAxisGroup.selectAll('text')
     .attr('fill', '#666')
-    .style('font-size', '12px');
+    .style('font-size', '12px')
+    .attr('data-year', (d: any) => d)
+    .style('transition', 'all 0.2s ease');
   
   g.append('text')
     .attr('x', innerWidth / 2)
@@ -303,8 +379,8 @@ watch(speakerFilter, () => {
   drawRiver();
 });
 
-watch(normalizedView, () => {
-  console.log('normalizedView changed to:', normalizedView.value);
+watch(() => settingsStore.normalizedView, () => {
+  console.log('normalizedView changed to:', settingsStore.normalizedView);
   hoveredSpeaker.value = null; // Clear hover on view change
   drawRiver();
 });
@@ -348,24 +424,35 @@ const selectedSpeakerInfo = computed(() => {
       ...speaker,
       firstAppearance: null,
       lastAppearance: null,
-      episodeNumbers: []
+      episodeNumbers: [],
+      totalEpisodes: 0,
+      filteredCount: 0
     };
   }
   
-  // Sammle alle Episode-Nummern
-  const episodeNumbers: number[] = [];
+  // Sammle alle Episode-Nummern mit Jahr
+  const episodeData: Array<{ number: number; year: number }> = [];
   fullSpeaker.timeline.forEach(tl => {
-    episodeNumbers.push(...tl.episodes);
+    tl.episodes.forEach(ep => {
+      episodeData.push({ number: ep, year: tl.year });
+    });
   });
   
   // Sortiere nach Nummer (neueste zuerst)
-  episodeNumbers.sort((a, b) => b - a);
+  episodeData.sort((a, b) => b.number - a.number);
+  
+  // Filtere nach ausgewähltem Jahr, falls vorhanden
+  const filteredEpisodeData = selectedYear.value 
+    ? episodeData.filter(ep => ep.year === selectedYear.value)
+    : episodeData;
   
   return {
     ...speaker,
     firstAppearance: fullSpeaker.firstAppearance,
     lastAppearance: fullSpeaker.lastAppearance,
-    episodeNumbers
+    episodeNumbers: filteredEpisodeData.map(ep => ep.number),
+    totalEpisodes: episodeData.length,
+    filteredCount: filteredEpisodeData.length
   };
 });
 
@@ -389,9 +476,15 @@ const loadEpisodeDetails = async () => {
       if (response.ok) {
         const data = await response.json();
         newDetails.set(episodeNum, data);
+      } else {
+        console.warn(`Episode ${episodeNum} not found (HTTP ${response.status})`);
+        // Mark as attempted but failed, so we don't try again
+        newDetails.set(episodeNum, null);
       }
     } catch (e) {
       console.error(`Failed to load episode ${episodeNum}:`, e);
+      // Mark as attempted but failed
+      newDetails.set(episodeNum, null);
     }
   }
   
@@ -406,14 +499,35 @@ watch(showEpisodeList, (newValue) => {
     loadEpisodeDetails();
   }
 });
+
+// Watch für selectedYear - lade zusätzliche Episoden wenn Filter entfernt wird
+watch(selectedYear, () => {
+  if (showEpisodeList.value && selectedSpeakerInfo.value) {
+    loadEpisodeDetails();
+  }
+});
+
+// Watch für selectedYear - reload episodes when filter changes
+watch(selectedYear, () => {
+  if (showEpisodeList.value && selectedSpeakerInfo.value) {
+    loadEpisodeDetails();
+  }
+});
 </script>
 
 <template>
   <div class="speaker-river-container">
+    <!-- Tooltip -->
+    <div 
+      ref="tooltipRef" 
+      class="tooltip"
+      style="display: none; position: absolute; background: rgba(0, 0, 0, 0.9); color: white; padding: 8px 12px; border-radius: 6px; pointer-events: none; z-index: 1000; font-size: 13px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);"
+    ></div>
+    
     <div class="controls mb-6">
       <div class="flex items-center gap-4 flex-wrap">
-        <label class="text-sm font-medium text-gray-700">
-          Anzahl Speaker:
+        <label class="m-2 text-sm font-medium text-gray-700">
+          Anzahl Sprecher:
           <input
             v-model.number="speakerFilter"
             type="range"
@@ -428,7 +542,7 @@ watch(showEpisodeList, (newValue) => {
         
         <label class="flex items-center gap-2 text-sm font-medium text-gray-700 cursor-pointer">
           <input
-            v-model="normalizedView"
+            v-model="settingsStore.normalizedView"
             type="checkbox"
             class="w-4 h-4 text-green-600 rounded focus:ring-green-500"
           />
@@ -446,12 +560,25 @@ watch(showEpisodeList, (newValue) => {
                 ({{ selectedSpeakerInfo.firstAppearance }} - {{ selectedSpeakerInfo.lastAppearance }})
               </span>
             </p>
+            
+            <!-- Year Filter Badge -->
+            <div v-if="selectedYear" class="mt-2 inline-flex items-center gap-2 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              <span>📅 Jahr: {{ selectedYear }}</span>
+              <button 
+                @click="selectedYear = null"
+                class="hover:bg-green-700 rounded-full w-5 h-5 flex items-center justify-center transition-colors"
+                title="Jahr-Filter entfernen"
+              >
+                ✕
+              </button>
+            </div>
+            
             <div class="mt-2">
               <button
                 @click="showEpisodeList = !showEpisodeList"
                 class="text-sm text-green-600 hover:text-green-800 font-semibold underline"
               >
-                {{ showEpisodeList ? 'Episoden ausblenden' : `${selectedSpeakerInfo.episodeNumbers.length} Episoden anzeigen` }}
+                {{ showEpisodeList ? 'Episoden ausblenden' : (selectedYear ? `${selectedSpeakerInfo.filteredCount} von ${selectedSpeakerInfo.totalEpisodes} Episoden anzeigen` : `${selectedSpeakerInfo.episodeNumbers.length} Episoden anzeigen`) }}
               </button>
             </div>
             
@@ -468,7 +595,7 @@ watch(showEpisodeList, (newValue) => {
                       <th class="px-3 py-2 text-left text-xs font-semibold text-green-900">Datum</th>
                       <th class="px-3 py-2 text-left text-xs font-semibold text-green-900">Titel</th>
                       <th class="px-3 py-2 text-left text-xs font-semibold text-green-900">Dauer</th>
-                      <th class="px-3 py-2 text-left text-xs font-semibold text-green-900">Speaker</th>
+                      <th class="px-3 py-2 text-left text-xs font-semibold text-green-900">Sprecher</th>
                       <th class="px-3 py-2 text-left text-xs font-semibold text-green-900">Link</th>
                     </tr>
                   </thead>
@@ -478,7 +605,7 @@ watch(showEpisodeList, (newValue) => {
                       :key="episodeNum"
                       class="border-t border-green-100 hover:bg-green-50"
                     >
-                      <template v-if="episodeDetails.has(episodeNum)">
+                      <template v-if="episodeDetails.has(episodeNum) && episodeDetails.get(episodeNum)">
                         <td class="px-3 py-2 text-green-700 font-mono text-xs">{{ episodeNum }}</td>
                         <td class="px-3 py-2 text-gray-600 whitespace-nowrap">
                           {{ new Date(episodeDetails.get(episodeNum).date).toLocaleDateString('de-DE') }}
@@ -510,8 +637,11 @@ watch(showEpisodeList, (newValue) => {
                           </a>
                         </td>
                       </template>
+                      <template v-else-if="episodeDetails.has(episodeNum) && episodeDetails.get(episodeNum) === null">
+                        <td colspan="6" class="px-3 py-2 text-gray-400 text-xs">Episode {{ episodeNum }} - Daten nicht verfügbar (Datei fehlt)</td>
+                      </template>
                       <template v-else>
-                        <td colspan="6" class="px-3 py-2 text-gray-400 text-xs">Episode {{ episodeNum }} - Daten nicht verfügbar</td>
+                        <td colspan="6" class="px-3 py-2 text-gray-400 text-xs">Episode {{ episodeNum }} - Lädt...</td>
                       </template>
                     </tr>
                   </tbody>
@@ -520,7 +650,7 @@ watch(showEpisodeList, (newValue) => {
             </div>
           </div>
           <button
-            @click="selectedSpeaker = null; showEpisodeList = false;"
+            @click="selectedSpeaker = null; selectedYear = null; showEpisodeList = false;"
             class="text-green-600 hover:text-green-800 font-semibold ml-4"
           >
             ✕
@@ -535,7 +665,7 @@ watch(showEpisodeList, (newValue) => {
     
     <div class="mt-6 text-sm text-gray-600">
       <p>
-        <strong>Interaktion:</strong> Bewege die Maus über einen Stream oder die Legende, um den Speaker hervorzuheben. 
+        <strong>Interaktion:</strong> Bewege die Maus über einen Stream oder die Legende, um den Sprecher hervorzuheben. 
         Klicke, um Details anzuzeigen.
       </p>
     </div>

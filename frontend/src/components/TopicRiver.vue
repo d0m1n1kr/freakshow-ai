@@ -2,18 +2,23 @@
 import { ref, onMounted, computed, watch } from 'vue';
 import * as d3 from 'd3';
 import type { TopicRiverData, ProcessedTopicData } from '../types';
+import { useSettingsStore } from '../stores/settings';
 
 const props = defineProps<{
   data: TopicRiverData;
 }>();
+
+const settingsStore = useSettingsStore();
 
 const svgRef = ref<SVGSVGElement | null>(null);
 const containerRef = ref<HTMLDivElement | null>(null);
 const selectedTopic = ref<string | null>(null);
 const hoveredTopic = ref<string | null>(null);
 const topicFilter = ref<number>(15);
-const normalizedView = ref<boolean>(false);
 const dimensions = ref({ width: 1200, height: 600 });
+const tooltipRef = ref<HTMLDivElement | null>(null);
+const selectedYear = ref<number | null>(null);
+const hoveredYear = ref<number | null>(null);
 
 // Prozessiere die Daten
 const processedData = computed(() => {
@@ -132,7 +137,7 @@ const drawRiver = () => {
     .keys(keys)
     // In normierter Ansicht: stackOffsetExpand sorgt für gleich hohe Jahre (0-1)
     // In normaler Ansicht: stackOffsetWiggle für schöne Stream-Optik
-    .offset(normalizedView.value ? d3.stackOffsetExpand : d3.stackOffsetWiggle)
+    .offset(settingsStore.normalizedView ? d3.stackOffsetExpand : d3.stackOffsetWiggle)
     .order(d3.stackOrderInsideOut);
   
   const series = stack(stackData);
@@ -175,14 +180,80 @@ const drawRiver = () => {
     .on('mouseover', function(_event: any, d: any) {
       hoveredTopic.value = d.key;
     })
+    .on('mousemove', function(event: any, d: any) {
+      if (!tooltipRef.value) return;
+      
+      // Finde das nächste Jahr zum Mauszeiger
+      const [mx] = d3.pointer(event);
+      const year = Math.round(xScale.invert(mx));
+      hoveredYear.value = year;
+      const topic = topics.find(t => t.id === d.key);
+      
+      if (topic) {
+        const episodeCount = topic.yearValues.get(year) || 0;
+        const topicData = props.data.topics[topic.id];
+        const yearData = topicData?.yearData.find(yd => yd.year === year);
+        
+        if (episodeCount > 0 && yearData) {
+          tooltipRef.value.style.display = 'block';
+          tooltipRef.value.style.left = `${event.pageX + 15}px`;
+          tooltipRef.value.style.top = `${event.pageY - 10}px`;
+          
+          tooltipRef.value.innerHTML = `
+            <div class="font-semibold text-sm mb-1">${topic.name}</div>
+            <div class="text-xs"><strong>Jahr:</strong> ${year}</div>
+            <div class="text-xs"><strong>Episoden:</strong> ${episodeCount}</div>
+            <div class="text-xs"><strong>Themen:</strong> ${yearData.episodes.length}</div>
+          `;
+          
+          // Highlight the year on X-axis
+          if (svgRef.value) {
+            d3.select(svgRef.value)
+              .selectAll('.x-axis text')
+              .attr('fill', (tickYear: any) => tickYear === year ? '#2563eb' : '#666')
+              .attr('font-weight', (tickYear: any) => tickYear === year ? '700' : '400')
+              .style('font-size', (tickYear: any) => tickYear === year ? '14px' : '12px');
+          }
+        } else {
+          tooltipRef.value.style.display = 'none';
+          // Reset X-axis highlighting
+          if (svgRef.value) {
+            d3.select(svgRef.value)
+              .selectAll('.x-axis text')
+              .attr('fill', '#666')
+              .attr('font-weight', '400')
+              .style('font-size', '12px');
+          }
+        }
+      }
+    })
     .on('mouseout', function(_event: any, d: any) {
       // Only clear if we're leaving the current hovered item
       if (hoveredTopic.value === d.key) {
         hoveredTopic.value = null;
       }
+      hoveredYear.value = null;
+      if (tooltipRef.value) {
+        tooltipRef.value.style.display = 'none';
+      }
+      // Reset X-axis highlighting (unless a year is selected)
+      if (svgRef.value && !selectedYear.value) {
+        d3.select(svgRef.value)
+          .selectAll('.x-axis text')
+          .attr('fill', '#666')
+          .attr('font-weight', '400')
+          .style('font-size', '12px');
+      }
     })
     .on('click', function(_event: any, d: any) {
-      selectedTopic.value = selectedTopic.value === d.key ? null : d.key;
+      const wasSelected = selectedTopic.value === d.key;
+      selectedTopic.value = wasSelected ? null : d.key;
+      // Speichere das aktuell gehoverte Jahr beim Klicken
+      if (!wasSelected && hoveredYear.value) {
+        selectedYear.value = hoveredYear.value;
+      } else if (wasSelected) {
+        selectedYear.value = null;
+      }
     });
   
   // X-Achse
@@ -190,13 +261,16 @@ const drawRiver = () => {
     .tickFormat(d3.format('d'))
     .ticks(years.length);
   
-  g.append('g')
+  const xAxisGroup = g.append('g')
     .attr('class', 'x-axis')
     .attr('transform', `translate(0,${innerHeight})`)
-    .call(xAxis)
-    .selectAll('text')
+    .call(xAxis);
+  
+  xAxisGroup.selectAll('text')
     .attr('fill', '#666')
-    .style('font-size', '12px');
+    .style('font-size', '12px')
+    .attr('data-year', (d: any) => d)
+    .style('transition', 'all 0.2s ease');
   
   g.append('text')
     .attr('x', innerWidth / 2)
@@ -301,8 +375,8 @@ watch(topicFilter, () => {
   drawRiver();
 });
 
-watch(normalizedView, () => {
-  console.log('normalizedView changed to:', normalizedView.value);
+watch(() => settingsStore.normalizedView, () => {
+  console.log('normalizedView changed to:', settingsStore.normalizedView);
   hoveredTopic.value = null; // Clear hover on view change
   drawRiver();
 });
@@ -339,19 +413,32 @@ const selectedTopicInfo = computed(() => {
     number: number;
     date: string;
     title: string;
+    year: number;
   }> = [];
   
   fullTopic.yearData.forEach(yd => {
-    allEpisodes.push(...yd.episodes);
+    yd.episodes.forEach(ep => {
+      allEpisodes.push({
+        ...ep,
+        year: yd.year
+      });
+    });
   });
   
   // Sortiere nach Episode-Nummer (neueste zuerst)
   allEpisodes.sort((a, b) => b.number - a.number);
   
+  // Filtere nach ausgewähltem Jahr, falls vorhanden
+  const filteredEpisodes = selectedYear.value 
+    ? allEpisodes.filter(ep => ep.year === selectedYear.value)
+    : allEpisodes;
+  
   return {
     ...topic,
     description: fullTopic.description,
-    episodes: allEpisodes
+    episodes: filteredEpisodes,
+    totalEpisodes: allEpisodes.length,
+    filteredCount: filteredEpisodes.length
   };
 });
 
@@ -381,9 +468,15 @@ const loadEpisodeDetails = async () => {
       if (response.ok) {
         const data = await response.json();
         newDetails.set(episodeNum, data);
+      } else {
+        console.warn(`Episode ${episodeNum} not found (HTTP ${response.status})`);
+        // Mark as attempted but failed, so we don't try again
+        newDetails.set(episodeNum, null);
       }
     } catch (e) {
       console.error(`Failed to load episode ${episodeNum}:`, e);
+      // Mark as attempted but failed
+      newDetails.set(episodeNum, null);
     }
   }
   
@@ -492,6 +585,13 @@ watch(showEpisodeList, (newValue) => {
   }
 });
 
+// Watch für selectedYear - lade zusätzliche Episoden wenn Filter entfernt wird
+watch(selectedYear, () => {
+  if (showEpisodeList.value && selectedTopicInfo.value) {
+    loadEpisodeDetails();
+  }
+});
+
 // Watch für showTopicList
 watch(showTopicList, (newValue) => {
   if (newValue && selectedTopicInfo.value) {
@@ -511,10 +611,17 @@ const formatDuration = (duration: [number, number, number]) => {
 
 <template>
   <div class="topic-river-container">
+    <!-- Tooltip -->
+    <div 
+      ref="tooltipRef" 
+      class="tooltip"
+      style="display: none; position: absolute; background: rgba(0, 0, 0, 0.9); color: white; padding: 8px 12px; border-radius: 6px; pointer-events: none; z-index: 1000; font-size: 13px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);"
+    ></div>
+    
     <div class="controls mb-6">
       <div class="flex items-center gap-4 flex-wrap">
-        <label class="text-sm font-medium text-gray-700">
-          Anzahl Topics:
+        <label class="m-2 text-sm font-medium text-gray-700">
+          Anzahl Themen:
           <input
             v-model.number="topicFilter"
             type="range"
@@ -529,7 +636,7 @@ const formatDuration = (duration: [number, number, number]) => {
         
         <label class="flex items-center gap-2 text-sm font-medium text-gray-700 cursor-pointer">
           <input
-            v-model="normalizedView"
+            v-model="settingsStore.normalizedView"
             type="checkbox"
             class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500"
           />
@@ -542,18 +649,31 @@ const formatDuration = (duration: [number, number, number]) => {
           <div class="flex-1">
             <h3 class="font-semibold text-lg text-blue-900">{{ selectedTopicInfo.name }}</h3>
             <p class="text-sm text-blue-700 mt-1">{{ selectedTopicInfo.description }}</p>
+            
+            <!-- Year Filter Badge -->
+            <div v-if="selectedYear" class="mt-2 inline-flex items-center gap-2 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              <span>📅 Jahr: {{ selectedYear }}</span>
+              <button 
+                @click="selectedYear = null"
+                class="hover:bg-blue-700 rounded-full w-5 h-5 flex items-center justify-center transition-colors"
+                title="Jahr-Filter entfernen"
+              >
+                ✕
+              </button>
+            </div>
+            
             <div class="mt-2 flex gap-4">
               <button
-                @click="showEpisodeList = !showEpisodeList"
+                @click="showEpisodeList = !showEpisodeList; if (showEpisodeList) showTopicList = false;"
                 class="text-sm text-blue-600 hover:text-blue-800 font-semibold underline"
               >
-                {{ showEpisodeList ? 'Episoden ausblenden' : `${selectedTopicInfo.episodes.length} Episoden anzeigen` }}
+                {{ showEpisodeList ? 'Episoden ausblenden' : (selectedYear ? `${selectedTopicInfo.filteredCount} von ${selectedTopicInfo.totalEpisodes} Episoden anzeigen` : `${selectedTopicInfo.episodes.length} Episoden anzeigen`) }}
               </button>
               <button
-                @click="showTopicList = !showTopicList"
+                @click="showTopicList = !showTopicList; if (showTopicList) showEpisodeList = false;"
                 class="text-sm text-blue-600 hover:text-blue-800 font-semibold underline"
               >
-                {{ showTopicList ? 'Einzelne Topics ausblenden' : 'Alle einzelnen Topics anzeigen' }}
+                {{ showTopicList ? 'Einzelne Themen ausblenden' : 'Alle einzelnen Themen anzeigen' }}
               </button>
             </div>
             
@@ -570,7 +690,7 @@ const formatDuration = (duration: [number, number, number]) => {
                       <th class="px-3 py-2 text-left text-xs font-semibold text-blue-900">Datum</th>
                       <th class="px-3 py-2 text-left text-xs font-semibold text-blue-900">Titel</th>
                       <th class="px-3 py-2 text-left text-xs font-semibold text-blue-900">Dauer</th>
-                      <th class="px-3 py-2 text-left text-xs font-semibold text-blue-900">Speaker</th>
+                      <th class="px-3 py-2 text-left text-xs font-semibold text-blue-900">Sprecher</th>
                       <th class="px-3 py-2 text-left text-xs font-semibold text-blue-900">Link</th>
                     </tr>
                   </thead>
@@ -580,7 +700,7 @@ const formatDuration = (duration: [number, number, number]) => {
                       :key="episode.number"
                       class="border-t border-blue-100 hover:bg-blue-50"
                     >
-                      <template v-if="episodeDetails.has(episode.number)">
+                      <template v-if="episodeDetails.has(episode.number) && episodeDetails.get(episode.number)">
                         <td class="px-3 py-2 text-blue-700 font-mono text-xs">{{ episode.number }}</td>
                         <td class="px-3 py-2 text-gray-600 whitespace-nowrap">
                           {{ new Date(episode.date).toLocaleDateString('de-DE') }}
@@ -603,6 +723,14 @@ const formatDuration = (duration: [number, number, number]) => {
                           </a>
                         </td>
                       </template>
+                      <template v-else-if="episodeDetails.has(episode.number) && episodeDetails.get(episode.number) === null">
+                        <td class="px-3 py-2 text-blue-700 font-mono text-xs">{{ episode.number }}</td>
+                        <td class="px-3 py-2 text-gray-600 whitespace-nowrap">
+                          {{ new Date(episode.date).toLocaleDateString('de-DE') }}
+                        </td>
+                        <td class="px-3 py-2 text-gray-900">{{ episode.title }}</td>
+                        <td colspan="3" class="px-3 py-2 text-gray-400 text-xs">Details nicht verfügbar (Datei fehlt)</td>
+                      </template>
                       <template v-else>
                         <td class="px-3 py-2 text-blue-700 font-mono text-xs">{{ episode.number }}</td>
                         <td class="px-3 py-2 text-gray-600 whitespace-nowrap">
@@ -620,12 +748,12 @@ const formatDuration = (duration: [number, number, number]) => {
             <!-- Individual Topics List -->
             <div v-if="showTopicList" class="mt-4 bg-white rounded-lg border border-blue-300 overflow-hidden">
               <div v-if="loadingTopics" class="p-4 text-center text-gray-600">
-                Lade alle Topics...
+                Lade alle Themen...
               </div>
               <div v-else class="max-h-96 overflow-y-auto">
                 <div class="p-3 bg-blue-100 sticky top-0">
                   <p class="text-sm font-semibold text-blue-900">
-                    {{ allIndividualTopics.length }} einzelne Topics gefunden
+                    {{ allIndividualTopics.length }} einzelne Themen gefunden
                   </p>
                 </div>
                 <div class="divide-y divide-blue-100">
@@ -670,7 +798,7 @@ const formatDuration = (duration: [number, number, number]) => {
             </div>
           </div>
           <button
-            @click="selectedTopic = null; showEpisodeList = false; showTopicList = false;"
+            @click="selectedTopic = null; selectedYear = null; showEpisodeList = false; showTopicList = false;"
             class="text-blue-600 hover:text-blue-800 font-semibold ml-4"
           >
             ✕

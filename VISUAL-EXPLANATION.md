@@ -230,7 +230,7 @@ Looking at: Business & Economy (includes many things)
 
 ```
 ┌────────────────────────────────────────────────┐
-│  Freak Show River Visualisierung               │
+│  Freak Show Visualisierung               │
 ├────────────────────────────────────────────────┤
 │ [Topics (Detail)] [Kategorien] [Speaker] ← Tabs│
 ├────────────────────────────────────────────────┤

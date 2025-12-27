@@ -512,8 +512,8 @@ fn call_llm_for_naming<'a>(
     Box::pin(async move {
     let client = reqwest::Client::new();
     let model_name = model.unwrap_or(&settings.llm.model);
-    let max_retries = settings.topic_extraction.as_ref().and_then(|s| s.max_retries).unwrap_or(5);
-    let retry_delay_ms = settings.topic_extraction.as_ref().and_then(|s| s.retry_delay_ms).unwrap_or(10000);
+    let max_retries = settings.topic_extraction.as_ref().and_then(|s| s.max_retries).unwrap_or(3);
+    let retry_delay_ms = settings.topic_extraction.as_ref().and_then(|s| s.retry_delay_ms).unwrap_or(5000);
     let system_prompt = r#"Du bist ein Experte für präzise Kategorisierung. Deine Aufgabe ist es, für eine Gruppe von Podcast-Topics einen kurzen, prägnanten Kategorie-Namen zu finden.
 
 Regeln:
@@ -539,49 +539,29 @@ Regeln:
         .header("Content-Type", "application/json")
         .header("Authorization", format!("Bearer {}", settings.llm.api_key))
         .json(&request)
-        .timeout(tokio::time::Duration::from_secs(30))
         .send()
         .await
     {
         Ok(response) => {
-            let status = response.status();
-            if status == 429 || status == 503 {
-                if retry_count < max_retries {
-                    let backoff_ms = retry_delay_ms * 2u64.pow(retry_count);
-                    eprintln!("   ⚠️  Rate limit ({}), warte {}ms vor Retry {}/{}", status, backoff_ms, retry_count + 1, max_retries);
-                    tokio::time::sleep(tokio::time::Duration::from_millis(backoff_ms)).await;
-                    return call_llm_for_naming(topics, settings, model, retry_count + 1).await;
-                } else {
-                    eprintln!("   ❌ Max retries erreicht nach Rate Limit");
-                    return None;
-                }
+            if response.status() == 429 && retry_count < max_retries {
+                tokio::time::sleep(tokio::time::Duration::from_millis(
+                    retry_delay_ms * 2u64.pow(retry_count),
+                )).await;
+                return call_llm_for_naming(topics, settings, model, retry_count + 1).await;
             }
-            if status.is_success() {
+            if response.status().is_success() {
                 match response.json::<LlmResponse>().await {
                     Ok(data) => {
                         let content = data.choices[0].message.content.trim();
                         let cleaned = content.replace(&['\"', '\''][..], "");
                         return Some(cleaned);
                     }
-                    Err(e) => {
-                        eprintln!("   ❌ JSON Parse Error: {}", e);
-                        return None;
-                    },
+                    Err(_) => return None,
                 }
             }
-            eprintln!("   ❌ HTTP Status: {}", status);
             None
         }
-        Err(e) => {
-            if retry_count < max_retries {
-                let backoff_ms = retry_delay_ms * 2u64.pow(retry_count);
-                eprintln!("   ⚠️  Request Error: {}, Retry {}/{}", e, retry_count + 1, max_retries);
-                tokio::time::sleep(tokio::time::Duration::from_millis(backoff_ms)).await;
-                return call_llm_for_naming(topics, settings, model, retry_count + 1).await;
-            }
-            eprintln!("   ❌ Request failed: {}", e);
-            None
-        }
+        Err(_) => None,
     }
     })
 }
@@ -631,7 +611,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     );
     println!("   ✓ {} Cluster erstellt\n", cluster_result.len());
     println!("🏷️  Cluster benennen...");
-    let delay_ms = settings.topic_extraction.as_ref().and_then(|s| s.request_delay_ms).unwrap_or(2000);
+    let delay_ms = settings.topic_extraction.as_ref().and_then(|s| s.request_delay_ms).unwrap_or(1000);
     let pb = ProgressBar::new(cluster_result.len() as u64);
     pb.set_style(
         ProgressStyle::default_bar()
@@ -642,7 +622,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut named_clusters = Vec::new();
     let mut outlier_count = 0;
     let model = settings.topic_clustering.as_ref().and_then(|s| s.model.as_deref());
-    for (i, cluster) in cluster_result.iter().enumerate() {
+    for (_i, cluster) in cluster_result.iter().enumerate() {
         let cluster_topics: Vec<_> = cluster.items.iter().map(|&idx| unique_topics[idx].clone()).collect();
         let name = if cluster.is_outlier || cluster.max_merge_distance > outlier_threshold {
             outlier_count += 1;
@@ -652,17 +632,10 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             let mut sorted_topics = cluster_topics.clone();
             sorted_topics.sort_by(|a, b| b.episodes.len().cmp(&a.episodes.len()));
             let top_topics: Vec<String> = sorted_topics.iter().take(10).map(|t| t.topic.clone()).collect();
-            
-            // Längere Pause alle 50 Requests um Rate Limits zu vermeiden
-            if i > 0 && i % 50 == 0 {
-                pb.set_message("⏸️  Pause (Rate Limit Prävention)".to_string());
-                tokio::time::sleep(tokio::time::Duration::from_millis(30000)).await;
-            }
-            
             match call_llm_for_naming(top_topics, &settings, model, 0).await {
                 Some(llm_name) => {
                     pb.set_message(format!("\"{}\" (LLM)", llm_name));
-                    tokio::time::sleep(tokio::time::Duration::from_millis(delay_ms)).await;
+                    tokio::time::sleep(tokio::time::Duration::from_millis(delay_ms / 2)).await;
                     llm_name
                 }
                 None => {

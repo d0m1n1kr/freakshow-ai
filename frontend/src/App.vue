@@ -1,40 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import TopicRiver from './components/TopicRiver.vue';
-import SpeakerRiver from './components/SpeakerRiver.vue';
-import type { TopicRiverData, SpeakerRiverData } from './types';
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
 
-const topicData = ref<TopicRiverData | null>(null);
-const categoryData = ref<TopicRiverData | null>(null);
-const speakerData = ref<SpeakerRiverData | null>(null);
-const loading = ref(true);
-const error = ref<string | null>(null);
-const activeView = ref<'topics' | 'categories' | 'speakers'>('topics');
+const route = useRoute();
 
-onMounted(async () => {
-  try {
-    const [topicResponse, speakerResponse, categoryResponse] = await Promise.all([
-      fetch('/topic-river-data.json'),
-      fetch('/speaker-river-data.json'),
-      fetch('/category-river-data.json').catch(() => null)
-    ]);
-    
-    if (!topicResponse.ok || !speakerResponse.ok) {
-      throw new Error('Fehler beim Laden der Daten');
-    }
-    
-    topicData.value = await topicResponse.json();
-    speakerData.value = await speakerResponse.json();
-    
-    // Category data is optional
-    if (categoryResponse && categoryResponse.ok) {
-      categoryData.value = await categoryResponse.json();
-    }
-  } catch (e) {
-    error.value = e instanceof Error ? e.message : 'Unbekannter Fehler';
-  } finally {
-    loading.value = false;
-  }
+const activeView = computed(() => {
+  return route.name as 'topics' | 'categories' | 'speakers' | 'heatmap' | 'cluster-heatmap' | 'about';
 });
 </script>
 
@@ -43,28 +14,16 @@ onMounted(async () => {
     <header class="bg-white border-b border-gray-200 shadow-sm">
       <div class="container mx-auto px-4 py-6">
         <h1 class="text-4xl font-bold text-gray-900">
-          Freak Show River Visualisierung
+          Freak Show Visualisierung
         </h1>
         <p class="text-gray-600 mt-2">
-          Visualisierung der Themen- und Speaker-Entwicklung über die Jahre
+          Visualisierung der Themen- und Sprecher-Entwicklung über die Jahre
         </p>
         
-        <!-- Tab Navigation -->
+        <!-- Tab Navigation with Router Links -->
         <div class="mt-6 flex gap-2 border-b border-gray-200">
-          <button
-            @click="activeView = 'topics'"
-            :class="[
-              'px-6 py-3 font-semibold border-b-2 transition-colors',
-              activeView === 'topics' 
-                ? 'border-blue-500 text-blue-600' 
-                : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
-            ]"
-          >
-            Topics (Detail)
-          </button>
-          <button
-            v-if="categoryData"
-            @click="activeView = 'categories'"
+          <router-link
+            to="/categories"
             :class="[
               'px-6 py-3 font-semibold border-b-2 transition-colors',
               activeView === 'categories' 
@@ -72,10 +31,21 @@ onMounted(async () => {
                 : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
             ]"
           >
-            Kategorien (Übersicht)
-          </button>
-          <button
-            @click="activeView = 'speakers'"
+            Kategorien
+          </router-link>
+          <router-link
+            to="/topics"
+            :class="[
+              'px-6 py-3 font-semibold border-b-2 transition-colors',
+              activeView === 'topics' 
+                ? 'border-blue-500 text-blue-600' 
+                : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
+            ]"
+          >
+            Themen
+          </router-link>
+          <router-link
+            to="/speakers"
             :class="[
               'px-6 py-3 font-semibold border-b-2 transition-colors',
               activeView === 'speakers' 
@@ -83,103 +53,47 @@ onMounted(async () => {
                 : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
             ]"
           >
-            Speaker
-          </button>
+            Sprecher
+          </router-link>
+          <router-link
+            to="/heatmap"
+            :class="[
+              'px-6 py-3 font-semibold border-b-2 transition-colors',
+              activeView === 'heatmap' 
+                ? 'border-pink-500 text-pink-600' 
+                : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
+            ]"
+          >
+            Sprecher × Kategorien
+          </router-link>
+          <router-link
+            to="/cluster-heatmap"
+            :class="[
+              'px-6 py-3 font-semibold border-b-2 transition-colors',
+              activeView === 'cluster-heatmap' 
+                ? 'border-orange-500 text-orange-600' 
+                : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
+            ]"
+          >
+            Sprecher × Cluster
+          </router-link>
+          <router-link
+            to="/about"
+            :class="[
+              'px-6 py-3 font-semibold border-b-2 transition-colors',
+              activeView === 'about' 
+                ? 'border-indigo-500 text-indigo-600' 
+                : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
+            ]"
+          >
+            Über
+          </router-link>
         </div>
       </div>
     </header>
 
     <main class="container mx-auto px-4 py-8">
-      <div v-if="loading" class="flex items-center justify-center py-20">
-        <div class="text-center">
-          <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-blue-500 border-t-transparent"></div>
-          <p class="mt-4 text-gray-600">Lade Daten...</p>
-        </div>
-      </div>
-
-      <div v-else-if="error" class="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
-        <p class="text-red-800 font-semibold">{{ error }}</p>
-      </div>
-
-      <!-- Topics View -->
-      <div v-else-if="activeView === 'topics' && topicData" class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-        <div class="p-6 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50">
-          <h2 class="text-xl font-bold text-gray-900 mb-3">Topic-Cluster (Detailansicht)</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="text-center">
-              <div class="text-3xl font-bold text-blue-600">{{ topicData.statistics.totalTopics }}</div>
-              <div class="text-sm text-gray-600 mt-1">Topics insgesamt</div>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-purple-600">
-                {{ topicData.statistics.yearRange.start }} - {{ topicData.statistics.yearRange.end }}
-              </div>
-              <div class="text-sm text-gray-600 mt-1">Zeitspanne</div>
-            </div>
-          </div>
-        </div>
-
-        <TopicRiver :data="topicData" />
-      </div>
-
-      <!-- Categories View -->
-      <div v-else-if="activeView === 'categories' && categoryData" class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-        <div class="p-6 border-b border-gray-200 bg-gradient-to-r from-purple-50 to-pink-50">
-          <h2 class="text-xl font-bold text-gray-900 mb-3">Topic-Kategorien (Überblick)</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="text-center">
-              <div class="text-3xl font-bold text-purple-600">{{ categoryData.statistics.totalTopics }}</div>
-              <div class="text-sm text-gray-600 mt-1">Kategorien insgesamt</div>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-pink-600">
-                {{ categoryData.statistics.yearRange.start }} - {{ categoryData.statistics.yearRange.end }}
-              </div>
-              <div class="text-sm text-gray-600 mt-1">Zeitspanne</div>
-            </div>
-          </div>
-        </div>
-
-        <TopicRiver :data="categoryData" />
-      </div>
-
-      <!-- Speakers View -->
-      <div v-else-if="activeView === 'speakers' && speakerData" class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-        <div class="p-6 border-b border-gray-200 bg-gradient-to-r from-green-50 to-emerald-50">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="text-center">
-              <div class="text-3xl font-bold text-green-600">{{ speakerData.statistics.totalSpeakers }}</div>
-              <div class="text-sm text-gray-600 mt-1">Speaker insgesamt</div>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-emerald-600">
-                {{ speakerData.statistics.totalAppearances }}
-              </div>
-              <div class="text-sm text-gray-600 mt-1">Gesamt-Auftritte</div>
-            </div>
-            <div class="text-center">
-              <div class="text-3xl font-bold text-teal-600">
-                {{ speakerData.statistics.yearRange.start }} - {{ speakerData.statistics.yearRange.end }}
-              </div>
-              <div class="text-sm text-gray-600 mt-1">Zeitspanne</div>
-            </div>
-          </div>
-        </div>
-
-        <SpeakerRiver :data="speakerData" />
-      </div>
-
-      <footer class="mt-12 text-center text-gray-500 text-sm">
-        <p v-if="activeView === 'topics' && topicData">
-          Generiert am: {{ new Date(topicData.generatedAt).toLocaleString('de-DE') }}
-        </p>
-        <p v-else-if="activeView === 'categories' && categoryData">
-          Generiert am: {{ new Date(categoryData.generatedAt).toLocaleString('de-DE') }}
-        </p>
-        <p v-else-if="activeView === 'speakers' && speakerData">
-          Generiert am: {{ new Date(speakerData.generatedAt).toLocaleString('de-DE') }}
-        </p>
-      </footer>
+      <router-view />
     </main>
   </div>
 </template>

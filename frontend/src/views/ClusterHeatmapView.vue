@@ -1,0 +1,519 @@
+<template>
+  <div class="flex flex-col h-full">
+    <!-- Header -->
+    <div class="p-6 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-orange-50 to-orange-100">
+      <div v-if="heatmapData" class="grid grid-cols-2 gap-4">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-orange-600">{{ heatmapData.statistics.totalSpeakers }}</div>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Sprecher insgesamt</p>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-orange-600">{{ heatmapData.statistics.totalClusters }}</div>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Cluster insgesamt</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 overflow-hidden">
+      <!-- Heatmap -->
+      <div class="flex-1 overflow-auto p-6" ref="heatmapContainer">
+        <div v-if="!heatmapData" class="flex items-center justify-center h-full">
+          <p class="text-gray-500 dark:text-gray-400">Lade Daten...</p>
+        </div>
+        <div v-else>
+          <!-- Controls -->
+          <div class="mb-6 flex gap-6 flex-wrap items-center">
+            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+              Anzahl Sprecher:
+              <input
+                v-model.number="topNSpeakers"
+                type="range"
+                min="5"
+                max="30"
+                step="1"
+                class="ml-2 w-48"
+              />
+              <span class="ml-2 text-blue-600 dark:text-blue-400 font-semibold">{{ topNSpeakers }}</span>
+            </label>
+            
+            <label class="text-sm font-medium text-gray-700 dark:text-gray-300">
+              Anzahl Cluster:
+              <input
+                v-model.number="topNClusters"
+                type="range"
+                min="10"
+                max="50"
+                step="1"
+                class="ml-2 w-48"
+              />
+              <span class="ml-2 text-orange-600 dark:text-orange-400 font-semibold">{{ topNClusters }}</span>
+            </label>
+          </div>
+
+          <!-- Selected Cell Details -->
+          <div v-if="selectedCell" class="mb-6 p-4 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-700 rounded-lg">
+            <div class="flex items-start justify-between">
+              <div class="flex-1">
+                <h3 class="font-semibold text-lg text-orange-900 dark:text-orange-100">
+                  {{ selectedCell.speakerName }} → {{ selectedCell.clusterName }}
+                </h3>
+                <p class="text-sm text-orange-600 dark:text-orange-400 mt-2">
+                  <strong>{{ selectedCell.episodes.length }}</strong> Episoden in dieser Kombination
+                </p>
+                
+                <div class="mt-3">
+                  <button
+                    @click="showEpisodeList = !showEpisodeList"
+                    class="text-sm text-orange-600 hover:text-orange-800 dark:text-orange-400 dark:hover:text-orange-300 font-semibold underline"
+                  >
+                    {{ showEpisodeList ? 'Episoden ausblenden' : `${selectedCell.episodes.length} Episoden anzeigen` }}
+                  </button>
+                </div>
+
+                <!-- Episode List -->
+                <div v-if="showEpisodeList" class="mt-4 bg-white dark:bg-gray-900 rounded-lg border border-orange-300 dark:border-orange-700 overflow-hidden">
+                  <div v-if="loadingEpisodes" class="p-4 text-center text-gray-600 dark:text-gray-400">
+                    Lade Episoden-Details...
+                  </div>
+                  <div v-else class="max-h-96 overflow-y-auto">
+                    <table class="w-full text-sm">
+                      <thead class="bg-orange-100 dark:bg-orange-900 sticky top-0">
+                        <tr>
+                          <th class="px-3 py-2 text-left text-xs font-semibold text-orange-900 dark:text-orange-100">#</th>
+                          <th class="px-3 py-2 text-left text-xs font-semibold text-orange-900 dark:text-orange-100">Datum</th>
+                          <th class="px-3 py-2 text-left text-xs font-semibold text-orange-900 dark:text-orange-100">Titel</th>
+                          <th class="px-3 py-2 text-left text-xs font-semibold text-orange-900 dark:text-orange-100">Link</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr 
+                          v-for="episodeNum in selectedCell.episodes" 
+                          :key="episodeNum"
+                          class="border-t border-orange-100 dark:border-orange-800 hover:bg-orange-50 dark:hover:bg-orange-900/50"
+                        >
+                          <template v-if="episodeDetails.has(episodeNum) && episodeDetails.get(episodeNum) !== null">
+                            <td class="px-3 py-2 text-orange-700 dark:text-orange-300 font-mono text-xs">{{ episodeNum }}</td>
+                            <td class="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap text-xs">
+                              {{ formatDate(episodeDetails.get(episodeNum)?.date) }}
+                            </td>
+                            <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">
+                              {{ episodeDetails.get(episodeNum)?.title }}
+                            </td>
+                            <td class="px-3 py-2">
+                              <a 
+                                v-if="episodeDetails.get(episodeNum)?.link"
+                                :href="episodeDetails.get(episodeNum)?.link" 
+                                target="_blank"
+                                class="text-orange-600 dark:text-orange-400 hover:text-orange-800 dark:hover:text-orange-300 text-xs"
+                              >
+                                →
+                              </a>
+                            </td>
+                          </template>
+                          <template v-else-if="episodeDetails.get(episodeNum) === null">
+                            <td class="px-3 py-2 text-orange-700 dark:text-orange-300 font-mono text-xs">{{ episodeNum }}</td>
+                            <td colspan="3" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs italic">
+                              Details nicht verfügbar
+                            </td>
+                          </template>
+                          <template v-else>
+                            <td class="px-3 py-2 text-orange-700 dark:text-orange-300 font-mono text-xs">{{ episodeNum }}</td>
+                            <td colspan="3" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs">
+                              Lade...
+                            </td>
+                          </template>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              
+              <button
+                @click="clearSelection"
+                class="ml-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- SVG Container -->
+          <svg ref="svgElement" class="w-full"></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, onMounted, computed, watch } from 'vue';
+import * as d3 from 'd3';
+import type { HeatmapData } from '../types';
+
+interface EpisodeDetail {
+  title: string;
+  date: string;
+  duration?: string;
+  speakers?: string[];
+  link?: string;
+}
+
+const heatmapData = ref<HeatmapData | null>(null);
+const svgElement = ref<SVGSVGElement | null>(null);
+const heatmapContainer = ref<HTMLDivElement | null>(null);
+
+// Slider controls for top N speakers and clusters
+const topNSpeakers = ref(15);
+const topNClusters = ref(20);
+
+const selectedCell = ref<{
+  speakerName: string;
+  clusterName: string;
+  count: number;
+  episodes: number[];
+} | null>(null);
+
+const showEpisodeList = ref(false);
+const loadingEpisodes = ref(false);
+
+const episodeDetails = ref<Map<number, EpisodeDetail | null>>(new Map());
+
+// Filtered data based on slider values
+const filteredData = computed(() => {
+  if (!heatmapData.value) return { speakers: [], clusters: [] };
+  
+  // Get top N speakers (already sorted by episodes in the data)
+  const speakers = heatmapData.value.speakers.slice(0, topNSpeakers.value);
+  
+  // Get top N clusters (already sorted by episodes in the data)
+  const clusters = (heatmapData.value.clusters || []).slice(0, topNClusters.value);
+  
+  return { speakers, clusters };
+});
+
+const filteredMatrix = computed(() => {
+  if (!heatmapData.value) return [];
+  
+  const { speakers, clusters } = filteredData.value;
+  const speakerIds = new Set(speakers.map(s => s.id));
+  const clusterIds = new Set(clusters.map(c => c.id));
+  
+  // Filter matrix by selected speakers
+  let matrix = heatmapData.value.matrix.filter(row => speakerIds.has(row.speakerId));
+  
+  // Filter values by selected clusters
+  matrix = matrix.map(row => ({
+    ...row,
+    values: row.values.filter(val => clusterIds.has(val.clusterId || ''))
+  }));
+  
+  return matrix;
+});
+
+const filteredClusters = computed(() => {
+  return filteredData.value.clusters;
+});
+
+function clearSelection() {
+  selectedCell.value = null;
+  showEpisodeList.value = false;
+}
+
+async function loadEpisodeDetails(episodeNumbers: number[]) {
+  loadingEpisodes.value = true;
+  
+  for (const num of episodeNumbers) {
+    if (episodeDetails.value.has(num)) continue;
+
+    try {
+      const response = await fetch(`/episodes/${num}.json`);
+      if (!response.ok) {
+        episodeDetails.value.set(num, null);
+        continue;
+      }
+      const data = await response.json();
+      episodeDetails.value.set(num, data);
+    } catch (error) {
+      console.error(`Failed to load episode ${num}:`, error);
+      episodeDetails.value.set(num, null);
+    }
+  }
+  
+  loadingEpisodes.value = false;
+}
+
+function formatDate(dateString: string | undefined): string {
+  if (!dateString) return '';
+  const date = new Date(dateString);
+  return date.toLocaleDateString('de-DE', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+
+function drawHeatmap() {
+  if (!svgElement.value || !heatmapData.value || !heatmapContainer.value) return;
+
+  // Remove all existing tooltips first
+  d3.selectAll('.heatmap-tooltip').remove();
+
+  const svg = d3.select(svgElement.value);
+  svg.selectAll('*').remove();
+
+  const matrix = filteredMatrix.value;
+  const clusters = filteredClusters.value;
+
+  if (matrix.length === 0 || clusters.length === 0) {
+    svg.append('text')
+      .attr('x', 200)
+      .attr('y', 100)
+      .attr('text-anchor', 'middle')
+      .attr('class', 'text-gray-500 dark:text-gray-400')
+      .text('Keine Daten für die ausgewählten Filter');
+    return;
+  }
+
+  // Dimensions
+  const containerWidth = heatmapContainer.value.clientWidth - 48; // padding
+  const cellSize = Math.min(30, Math.max(10, containerWidth / (clusters.length + 10)));
+  const margin = { top: 180, right: 20, bottom: 20, left: 200 };
+  const width = clusters.length * cellSize;
+  const height = matrix.length * cellSize;
+
+  svg.attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom);
+
+  const g = svg.append('g')
+    .attr('transform', `translate(${margin.left},${margin.top})`);
+
+  // Color scale
+  const maxCount = d3.max(matrix.flatMap(row => row.values.map(v => v.count))) || 0;
+  const colorScale = d3.scaleSequential(d3.interpolateBlues)
+    .domain([0, maxCount]);
+
+  // X axis (clusters)
+  const xScale = d3.scaleBand()
+    .domain(clusters.map(c => c.id))
+    .range([0, width])
+    .padding(0.05);
+
+  // Y axis (speakers)
+  const yScale = d3.scaleBand()
+    .domain(matrix.map(row => row.speakerId))
+    .range([0, height])
+    .padding(0.05);
+
+  // Draw cells
+  matrix.forEach((row) => {
+    row.values.forEach((value) => {
+      if (!value.clusterId) return;
+      
+      const x = xScale(value.clusterId);
+      const y = yScale(row.speakerId);
+      
+      if (x === undefined || y === undefined) return;
+
+      const cellGroup = g.append('g')
+        .attr('class', 'cell-group')
+        .style('cursor', value.count > 0 ? 'pointer' : 'default');
+
+      cellGroup.append('rect')
+        .attr('x', x)
+        .attr('y', y)
+        .attr('width', xScale.bandwidth())
+        .attr('height', yScale.bandwidth())
+        .attr('fill', value.count > 0 ? colorScale(value.count) : '#f0f0f0')
+        .attr('stroke', '#fff')
+        .attr('stroke-width', 1)
+        .on('mouseover', function(event) {
+          if (value.count === 0) return;
+          
+          d3.select(this)
+            .attr('stroke', '#000')
+            .attr('stroke-width', 2);
+
+          // Remove any existing tooltips first
+          d3.selectAll('.heatmap-tooltip').remove();
+
+          // Create tooltip
+          d3.select('body').append('div')
+            .attr('class', 'heatmap-tooltip')
+            .style('position', 'absolute')
+            .style('background', 'rgba(0, 0, 0, 0.8)')
+            .style('color', 'white')
+            .style('padding', '8px')
+            .style('border-radius', '4px')
+            .style('pointer-events', 'none')
+            .style('font-size', '12px')
+            .style('z-index', '1000')
+            .html(`
+              <strong>${row.speakerName}</strong><br/>
+              ${value.clusterName}<br/>
+              ${value.count} Episoden
+            `)
+            .style('left', (event.pageX + 10) + 'px')
+            .style('top', (event.pageY - 28) + 'px');
+        })
+        .on('mouseout', function() {
+          d3.select(this)
+            .attr('stroke', '#fff')
+            .attr('stroke-width', 1);
+
+          // Remove tooltip
+          d3.selectAll('.heatmap-tooltip').remove();
+        })
+        .on('click', function() {
+          if (value.count === 0) return;
+          
+          // Remove tooltip on click
+          d3.selectAll('.heatmap-tooltip').remove();
+          
+          selectedCell.value = {
+            speakerName: row.speakerName,
+            clusterName: value.clusterName || '',
+            count: value.count,
+            episodes: value.episodes
+          };
+        });
+
+      // Add text for non-zero values
+      if (value.count > 0 && cellSize > 15) {
+        cellGroup.append('text')
+          .attr('x', x + xScale.bandwidth() / 2)
+          .attr('y', y + yScale.bandwidth() / 2)
+          .attr('text-anchor', 'middle')
+          .attr('dominant-baseline', 'middle')
+          .attr('font-size', Math.min(10, cellSize * 0.4))
+          .attr('fill', value.count > maxCount / 2 ? 'white' : 'black')
+          .attr('pointer-events', 'none')
+          .text(value.count);
+      }
+    });
+  });
+
+  // X axis labels (clusters)
+  g.append('g')
+    .selectAll('text')
+    .data(clusters)
+    .enter()
+    .append('text')
+    .attr('x', d => (xScale(d.id) || 0) + xScale.bandwidth() / 2)
+    .attr('y', -15)
+    .attr('text-anchor', 'start')
+    .attr('transform', d => {
+      const x = (xScale(d.id) || 0) + xScale.bandwidth() / 2;
+      return `rotate(-65 ${x} -15)`;
+    })
+    .attr('font-size', '11px')
+    .attr('class', 'fill-gray-700 dark:fill-gray-300')
+    .text(d => d.name);
+
+  // Y axis labels (speakers)
+  g.append('g')
+    .selectAll('text')
+    .data(matrix)
+    .enter()
+    .append('text')
+    .attr('x', -10)
+    .attr('y', d => (yScale(d.speakerId) || 0) + yScale.bandwidth() / 2)
+    .attr('text-anchor', 'end')
+    .attr('dominant-baseline', 'middle')
+    .attr('font-size', '10px')
+    .attr('class', 'fill-gray-700 dark:fill-gray-300')
+    .text(d => d.speakerName);
+
+  // Legend
+  const legendWidth = 200;
+  const legendHeight = 10;
+  const legend = svg.append('g')
+    .attr('transform', `translate(${margin.left},${margin.top + height + 40})`);
+
+  const legendScale = d3.scaleLinear()
+    .domain([0, maxCount])
+    .range([0, legendWidth]);
+
+  const legendAxis = d3.axisBottom(legendScale)
+    .ticks(5)
+    .tickFormat(d => d.toString());
+
+  // Create gradient
+  const defs = svg.append('defs');
+  const gradient = defs.append('linearGradient')
+    .attr('id', 'legend-gradient');
+
+  gradient.selectAll('stop')
+    .data(d3.range(0, 1.1, 0.1))
+    .enter()
+    .append('stop')
+    .attr('offset', d => `${d * 100}%`)
+    .attr('stop-color', d => colorScale(d * maxCount));
+
+  legend.append('rect')
+    .attr('width', legendWidth)
+    .attr('height', legendHeight)
+    .style('fill', 'url(#legend-gradient)');
+
+  legend.append('g')
+    .attr('transform', `translate(0,${legendHeight})`)
+    .call(legendAxis);
+
+  legend.append('text')
+    .attr('x', legendWidth / 2)
+    .attr('y', -5)
+    .attr('text-anchor', 'middle')
+    .attr('font-size', '12px')
+    .attr('class', 'fill-gray-700 dark:fill-gray-300')
+    .text('Anzahl Episoden');
+}
+
+// Load data on mount
+onMounted(async () => {
+  try {
+    const response = await fetch('/speaker-cluster-heatmap.json');
+    heatmapData.value = await response.json();
+  } catch (error) {
+    console.error('Failed to load heatmap data:', error);
+  }
+});
+
+// Watch for data changes and redraw
+watch([heatmapData, filteredMatrix, filteredClusters], () => {
+  if (heatmapData.value) {
+    drawHeatmap();
+  }
+});
+
+// Clear selection when slider values change
+watch([topNSpeakers, topNClusters], () => {
+  selectedCell.value = null;
+  showEpisodeList.value = false;
+});
+
+// Load episode details when episode list is shown
+watch(showEpisodeList, (show) => {
+  if (show && selectedCell.value) {
+    loadEpisodeDetails(selectedCell.value.episodes);
+  }
+});
+
+// Redraw on container resize
+watch(heatmapContainer, (container) => {
+  if (!container) return;
+  
+  const resizeObserver = new ResizeObserver(() => {
+    drawHeatmap();
+  });
+  
+  resizeObserver.observe(container);
+});
+</script>
+
