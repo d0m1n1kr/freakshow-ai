@@ -205,7 +205,7 @@ function createScatterplot() {
       }
       return 4;
     })
-    .attr('fill', (d, i) => getClusterColor(d.clusterId, i))
+    .attr('fill', d => getClusterColor(d.clusterId))
     .attr('opacity', d => {
       if (highlightCluster.value && d.clusterId !== highlightCluster.value) {
         return 0.1;
