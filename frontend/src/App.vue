@@ -1,10 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 import { useSettingsStore } from './stores/settings';
+import LanguageSelector from './components/LanguageSelector.vue';
 
 const route = useRoute();
 const settingsStore = useSettingsStore();
+const { t } = useI18n();
 
 const activeView = computed(() => {
   return route.name as 'topics' | 'categories' | 'speakers' | 'heatmap' | 'cluster-heatmap' | 'speaker-speaker-heatmap' | 'cluster-cluster-heatmap' | 'duration-heatmap' | 'umap' | 'about';
@@ -17,9 +20,9 @@ const themeIcon = computed(() => {
 });
 
 const themeLabel = computed(() => {
-  if (settingsStore.themeMode === 'auto') return 'Auto';
-  if (settingsStore.themeMode === 'light') return 'Hell';
-  return 'Dunkel';
+  if (settingsStore.themeMode === 'auto') return t('theme.auto');
+  if (settingsStore.themeMode === 'light') return t('theme.light');
+  return t('theme.dark');
 });
 </script>
 
@@ -30,22 +33,27 @@ const themeLabel = computed(() => {
         <div class="flex items-start justify-between">
           <div class="flex-1">
             <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
-              Freak Show Visualisierung
+              {{ t('app.title') }}
             </h1>
             <p class="text-gray-600 dark:text-gray-400 mt-2">
-              Visualisierung der Themen- und Sprecher-Entwicklung über die Jahre
+              {{ t('app.subtitle') }}
             </p>
           </div>
           
-          <!-- Theme Toggle -->
-          <button
-            @click="settingsStore.cycleThemeMode()"
-            class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
-            :title="`Aktuell: ${themeLabel}`"
-          >
-            <span class="text-2xl">{{ themeIcon }}</span>
-            <span class="text-sm font-medium text-gray-700 dark:text-gray-300">{{ themeLabel }}</span>
-          </button>
+          <div class="flex items-center gap-3">
+            <!-- Language Selector -->
+            <LanguageSelector />
+            
+            <!-- Theme Toggle -->
+            <button
+              @click="settingsStore.cycleThemeMode()"
+              class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+              :title="t('theme.current', { mode: themeLabel })"
+            >
+              <span class="text-2xl">{{ themeIcon }}</span>
+              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">{{ themeLabel }}</span>
+            </button>
+          </div>
         </div>
         
         <!-- Tab Navigation with Router Links -->
@@ -59,7 +67,7 @@ const themeLabel = computed(() => {
                 : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
             ]"
           >
-            Kategorien
+            {{ t('nav.categories') }}
           </router-link>
           <router-link
             to="/topics"
@@ -70,7 +78,7 @@ const themeLabel = computed(() => {
                 : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
             ]"
           >
-            Themen
+            {{ t('nav.topics') }}
           </router-link>
           <router-link
             to="/speakers"
@@ -81,7 +89,7 @@ const themeLabel = computed(() => {
                 : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
             ]"
           >
-            Sprecher
+            {{ t('nav.speakers') }}
           </router-link>
           <router-link
             to="/heatmap"
@@ -92,7 +100,7 @@ const themeLabel = computed(() => {
                 : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
             ]"
           >
-            Sprecher × Kategorien
+            {{ t('nav.speakerCategories') }}
           </router-link>
           <router-link
             to="/cluster-heatmap"
@@ -103,7 +111,7 @@ const themeLabel = computed(() => {
                 : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
             ]"
           >
-            Sprecher × Cluster
+            {{ t('nav.speakerClusters') }}
           </router-link>
           <router-link
             to="/cluster-cluster-heatmap"
@@ -114,7 +122,7 @@ const themeLabel = computed(() => {
                 : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
             ]"
           >
-            Cluster × Cluster
+            {{ t('nav.clusterCluster') }}
           </router-link>
           <router-link
             to="/speaker-speaker-heatmap"
@@ -125,7 +133,7 @@ const themeLabel = computed(() => {
                 : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
             ]"
           >
-            Sprecher × Sprecher
+            {{ t('nav.speakerSpeaker') }}
           </router-link>
           <router-link
             to="/duration-heatmap"
@@ -136,7 +144,7 @@ const themeLabel = computed(() => {
                 : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
             ]"
           >
-            Duration
+            {{ t('nav.duration') }}
           </router-link>
           <!-- UMAP tab temporarily hidden - uncomment to reactivate
           <router-link
@@ -148,7 +156,7 @@ const themeLabel = computed(() => {
                 : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
             ]"
           >
-            UMAP
+            {{ t('nav.umap') }}
           </router-link>
           -->
           <router-link
@@ -160,7 +168,7 @@ const themeLabel = computed(() => {
                 : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
             ]"
           >
-            Über
+            {{ t('nav.about') }}
           </router-link>
         </div>
       </div>

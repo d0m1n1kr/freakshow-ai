@@ -1,0 +1,154 @@
+{
+  "app": {
+    "title": "Visualisation Freak Show",
+    "subtitle": "Visualisation de l'évolution des sujets et des intervenants au fil des années"
+  },
+  "theme": {
+    "auto": "Auto",
+    "light": "Clair",
+    "dark": "Sombre",
+    "current": "Actuel : {mode}"
+  },
+  "nav": {
+    "categories": "Catégories",
+    "topics": "Sujets",
+    "speakers": "Intervenants",
+    "speakerCategories": "Intervenants × Catégories",
+    "speakerClusters": "Intervenants × Clusters",
+    "clusterCluster": "Clusters × Clusters",
+    "speakerSpeaker": "Intervenants × Intervenants",
+    "duration": "Durée",
+    "umap": "UMAP",
+    "about": "À propos"
+  },
+  "about": {
+    "title": "À propos de cette visualisation",
+    "subtitle": "Technologies et outils derrière la visualisation River de Freak Show",
+    "projectDescription": {
+      "title": "Description du projet",
+      "content": "Cette visualisation interactive analyse et visualise les sujets et intervenants du podcast Freak Show au fil des années. Grâce à l'analyse de texte assistée par IA et aux algorithmes de clustering, les sujets sont regroupés et leur évolution temporelle est affichée dans des diagrammes en rivière."
+    },
+    "frontend": {
+      "title": "Technologies Frontend",
+      "vue": "Framework JavaScript progressif pour interface utilisateur réactive",
+      "typescript": "Programmation typée pour un code plus robuste",
+      "d3": "Bibliothèque de visualisation de données pour diagrammes en rivière interactifs",
+      "tailwind": "Framework CSS Utility-First pour design moderne",
+      "pinia": "Gestion d'état avec persistance LocalStorage",
+      "router": "Routage Single-Page-Application",
+      "vite": "Outil de build rapide et serveur de développement"
+    },
+    "backend": {
+      "title": "Backend & Traitement des données",
+      "rust": "Algorithmes de clustering haute performance pour analyse de sujets",
+      "node": "Agrégation de données et génération JSON",
+      "rayon": "Traitement parallèle en Rust pour clustering plus rapide",
+      "serde": "Sérialisation et désérialisation des données d'épisodes"
+    },
+    "ai": {
+      "title": "IA & Machine Learning",
+      "embedding": {
+        "title": "OpenAI text-embedding-3-small",
+        "badge": "Modèle d'embedding",
+        "description": "Génération d'embeddings sémantiques pour tous les sujets du podcast. Permet un clustering basé sur le sens plutôt que sur les mots-clés uniquement.",
+        "features": {
+          "dimensions": "Vecteurs à 1536 dimensions",
+          "similarity": "Calcul de similarité sémantique",
+          "multilingual": "Compréhension multilingue"
+        }
+      },
+      "clustering": {
+        "title": "Clustering hiérarchique",
+        "badge": "Algorithme",
+        "description": "Regroupement automatique de sujets similaires basé sur la similarité cosinus des embeddings.",
+        "features": {
+          "agglomerative": "Clustering agglomératif avec liaison moyenne",
+          "threshold": "Détermination dynamique du seuil",
+          "naming": "Nommage automatique des clusters"
+        }
+      }
+    },
+    "tools": {
+      "title": "Outils de développement",
+      "cursor": {
+        "title": "Cursor",
+        "badge": "IDE assisté par IA",
+        "description": "Environnement de développement assisté par IA pour une génération de code plus rapide et intelligente.",
+        "features": {
+          "sonnet": "Claude Sonnet 4.5 - Génération de code rapide et refactoring",
+          "opus": "Claude Opus 4.5 - Résolution de problèmes complexes et décisions d'architecture",
+          "pair": "Programmation en binôme avec IA pour développement efficace"
+        }
+      }
+    },
+    "pipeline": {
+      "title": "Pipeline de traitement des données",
+      "steps": {
+        "extraction": {
+          "title": "Extraction des données d'épisodes",
+          "description": "Chargement des métadonnées d'épisodes et sujets depuis fichiers JSON"
+        },
+        "embedding": {
+          "title": "Génération d'embeddings",
+          "description": "L'API OpenAI crée des vecteurs sémantiques pour chaque sujet"
+        },
+        "clustering": {
+          "title": "Analyse de clustering",
+          "description": "Clustering hiérarchique basé sur Rust regroupe les sujets similaires"
+        },
+        "categorization": {
+          "title": "Catégorisation",
+          "description": "Les catégories de niveau supérieur regroupent les clusters associés"
+        },
+        "aggregation": {
+          "title": "Agrégation de séries temporelles",
+          "description": "Node.js agrège les données par années pour visualisation en rivière"
+        },
+        "visualization": {
+          "title": "Visualisation interactive",
+          "description": "D3.js rend les données sous forme de graphiques de flux interactifs"
+        }
+      }
+    },
+    "features": {
+      "title": "Fonctionnalités",
+      "tooltips": {
+        "title": "Info-bulles interactives",
+        "description": "Informations spécifiques à l'année au survol"
+      },
+      "filter": {
+        "title": "Filtre par année",
+        "description": "Filtrage par clic selon les années"
+      },
+      "normalized": {
+        "title": "Vue normalisée",
+        "description": "Paramètre persistant pour affichage en pourcentage"
+      },
+      "deeplink": {
+        "title": "Liens profonds",
+        "description": "URLs directes pour chaque vue"
+      },
+      "responsive": {
+        "title": "Design responsive",
+        "description": "Optimisé pour ordinateur de bureau et tablette"
+      },
+      "storage": {
+        "title": "LocalStorage",
+        "description": "Les paramètres persistent entre les sessions"
+      }
+    },
+    "footer": {
+      "madeWith": "Créé avec ❤️ pour le",
+      "podcast": "Podcast Freak Show",
+      "copyright": "© 2025 • Toutes les données basées sur des informations de podcast publiquement disponibles"
+    }
+  },
+  "common": {
+    "year": "Année",
+    "count": "Nombre",
+    "percentage": "Pourcentage",
+    "episodes": "Épisodes",
+    "episode": "Épisode"
+  }
+}
+

@@ -1,0 +1,154 @@
+{
+  "app": {
+    "title": "Freak Show Visualization",
+    "subtitle": "Visualization of topic and speaker development over the years"
+  },
+  "theme": {
+    "auto": "Auto",
+    "light": "Light",
+    "dark": "Dark",
+    "current": "Current: {mode}"
+  },
+  "nav": {
+    "categories": "Categories",
+    "topics": "Topics",
+    "speakers": "Speakers",
+    "speakerCategories": "Speakers × Categories",
+    "speakerClusters": "Speakers × Clusters",
+    "clusterCluster": "Clusters × Clusters",
+    "speakerSpeaker": "Speakers × Speakers",
+    "duration": "Duration",
+    "umap": "UMAP",
+    "about": "About"
+  },
+  "about": {
+    "title": "About this Visualization",
+    "subtitle": "Technologies and tools behind the Freak Show River Visualization",
+    "projectDescription": {
+      "title": "Project Description",
+      "content": "This interactive visualization analyzes and visualizes the topics and speakers of the Freak Show Podcast over the years. Using AI-powered text analysis and clustering algorithms, topics are grouped and their temporal development is displayed in river diagrams."
+    },
+    "frontend": {
+      "title": "Frontend Technologies",
+      "vue": "Progressive JavaScript Framework for reactive user interface",
+      "typescript": "Type-safe programming for more robust code",
+      "d3": "Data visualization library for interactive river diagrams",
+      "tailwind": "Utility-First CSS Framework for modern design",
+      "pinia": "State Management with LocalStorage persistence",
+      "router": "Single-Page-Application Routing",
+      "vite": "Fast build tool and development server"
+    },
+    "backend": {
+      "title": "Backend & Data Processing",
+      "rust": "High-performance clustering algorithms for topic analysis",
+      "node": "Data aggregation and JSON generation",
+      "rayon": "Parallel processing in Rust for faster clustering",
+      "serde": "Serialization and deserialization of episode data"
+    },
+    "ai": {
+      "title": "AI & Machine Learning",
+      "embedding": {
+        "title": "OpenAI text-embedding-3-small",
+        "badge": "Embedding Model",
+        "description": "Generation of semantic embeddings for all podcast topics. Enables meaning-based clustering instead of just keyword matching.",
+        "features": {
+          "dimensions": "1536-dimensional vectors",
+          "similarity": "Semantic similarity calculation",
+          "multilingual": "Cross-language understanding"
+        }
+      },
+      "clustering": {
+        "title": "Hierarchical Clustering",
+        "badge": "Algorithm",
+        "description": "Automatic grouping of similar topics based on cosine similarity of embeddings.",
+        "features": {
+          "agglomerative": "Agglomerative clustering with average linkage",
+          "threshold": "Dynamic threshold determination",
+          "naming": "Automatic cluster naming"
+        }
+      }
+    },
+    "tools": {
+      "title": "Development Tools",
+      "cursor": {
+        "title": "Cursor",
+        "badge": "AI-Powered IDE",
+        "description": "AI-powered development environment for faster and smarter code generation.",
+        "features": {
+          "sonnet": "Claude Sonnet 4.5 - Fast code generation and refactoring",
+          "opus": "Claude Opus 4.5 - Complex problem solving and architecture decisions",
+          "pair": "AI-Pair-Programming for efficient development"
+        }
+      }
+    },
+    "pipeline": {
+      "title": "Data Processing Pipeline",
+      "steps": {
+        "extraction": {
+          "title": "Episode Data Extraction",
+          "description": "Loading episode metadata and topics from JSON files"
+        },
+        "embedding": {
+          "title": "Embedding Generation",
+          "description": "OpenAI API creates semantic vectors for each topic"
+        },
+        "clustering": {
+          "title": "Clustering Analysis",
+          "description": "Rust-based hierarchical clustering groups similar topics"
+        },
+        "categorization": {
+          "title": "Categorization",
+          "description": "Higher-level categories group related clusters"
+        },
+        "aggregation": {
+          "title": "Time Series Aggregation",
+          "description": "Node.js aggregates data by years for river visualization"
+        },
+        "visualization": {
+          "title": "Interactive Visualization",
+          "description": "D3.js renders data as interactive stream graphs"
+        }
+      }
+    },
+    "features": {
+      "title": "Features",
+      "tooltips": {
+        "title": "Interactive Tooltips",
+        "description": "Year-specific information on hover"
+      },
+      "filter": {
+        "title": "Year Filter",
+        "description": "Click-based filtering by years"
+      },
+      "normalized": {
+        "title": "Normalized View",
+        "description": "Persistent setting for percentage display"
+      },
+      "deeplink": {
+        "title": "Deep-Linking",
+        "description": "Direct URLs for each view"
+      },
+      "responsive": {
+        "title": "Responsive Design",
+        "description": "Optimized for desktop and tablet"
+      },
+      "storage": {
+        "title": "LocalStorage",
+        "description": "Settings persist across sessions"
+      }
+    },
+    "footer": {
+      "madeWith": "Created with ❤️ for the",
+      "podcast": "Freak Show Podcast",
+      "copyright": "© 2025 • All data based on publicly available podcast information"
+    }
+  },
+  "common": {
+    "year": "Year",
+    "count": "Count",
+    "percentage": "Percentage",
+    "episodes": "Episodes",
+    "episode": "Episode"
+  }
+}
+

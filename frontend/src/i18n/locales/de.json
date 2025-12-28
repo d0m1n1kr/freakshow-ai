@@ -1,0 +1,154 @@
+{
+  "app": {
+    "title": "Freak Show Visualisierung",
+    "subtitle": "Visualisierung der Themen- und Sprecher-Entwicklung über die Jahre"
+  },
+  "theme": {
+    "auto": "Auto",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "current": "Aktuell: {mode}"
+  },
+  "nav": {
+    "categories": "Kategorien",
+    "topics": "Themen",
+    "speakers": "Sprecher",
+    "speakerCategories": "Sprecher × Kategorien",
+    "speakerClusters": "Sprecher × Cluster",
+    "clusterCluster": "Cluster × Cluster",
+    "speakerSpeaker": "Sprecher × Sprecher",
+    "duration": "Duration",
+    "umap": "UMAP",
+    "about": "Über"
+  },
+  "about": {
+    "title": "Über diese Visualisierung",
+    "subtitle": "Technologien und Werkzeuge hinter der Freak Show River Visualisierung",
+    "projectDescription": {
+      "title": "Projekt-Beschreibung",
+      "content": "Diese interaktive Visualisierung analysiert und visualisiert die Themen und Sprecher des Freak Show Podcasts über die Jahre. Durch KI-gestützte Textanalyse und Clustering-Algorithmen werden Themen gruppiert und deren zeitliche Entwicklung in River-Diagrammen dargestellt."
+    },
+    "frontend": {
+      "title": "Frontend-Technologien",
+      "vue": "Progressive JavaScript Framework für die reaktive Benutzeroberfläche",
+      "typescript": "Typsichere Programmierung für robusteren Code",
+      "d3": "Datenvisualisierungs-Bibliothek für die interaktiven River-Diagramme",
+      "tailwind": "Utility-First CSS Framework für modernes Design",
+      "pinia": "State Management mit LocalStorage-Persistenz",
+      "router": "Single-Page-Application Routing",
+      "vite": "Schneller Build-Tool und Development-Server"
+    },
+    "backend": {
+      "title": "Backend & Datenverarbeitung",
+      "rust": "Hochperformante Clustering-Algorithmen für Topic-Analyse",
+      "node": "Daten-Aggregation und JSON-Generierung",
+      "rayon": "Parallele Verarbeitung in Rust für schnelleres Clustering",
+      "serde": "Serialisierung und Deserialisierung von Episode-Daten"
+    },
+    "ai": {
+      "title": "KI & Machine Learning",
+      "embedding": {
+        "title": "OpenAI text-embedding-3-small",
+        "badge": "Embedding-Modell",
+        "description": "Generierung von semantischen Embeddings für alle Podcast-Themen. Ermöglicht bedeutungsbasiertes Clustering statt nur Keyword-Matching.",
+        "features": {
+          "dimensions": "1536-dimensionale Vektoren",
+          "similarity": "Semantische Ähnlichkeitsberechnung",
+          "multilingual": "Sprachübergreifendes Verständnis"
+        }
+      },
+      "clustering": {
+        "title": "Hierarchisches Clustering",
+        "badge": "Algorithmus",
+        "description": "Automatische Gruppierung ähnlicher Themen basierend auf Kosinus-Ähnlichkeit der Embeddings.",
+        "features": {
+          "agglomerative": "Agglomerative Clustering mit Average-Linkage",
+          "threshold": "Dynamische Schwellwert-Bestimmung",
+          "naming": "Automatische Cluster-Benennung"
+        }
+      }
+    },
+    "tools": {
+      "title": "Entwicklungswerkzeuge",
+      "cursor": {
+        "title": "Cursor",
+        "badge": "AI-Powered IDE",
+        "description": "KI-gestützte Entwicklungsumgebung für schnellere und intelligentere Code-Generierung.",
+        "features": {
+          "sonnet": "Claude Sonnet 4.5 - Schnelle Code-Generierung und Refactoring",
+          "opus": "Claude Opus 4.5 - Komplexe Problemlösung und Architektur-Entscheidungen",
+          "pair": "AI-Pair-Programming für effiziente Entwicklung"
+        }
+      }
+    },
+    "pipeline": {
+      "title": "Datenverarbeitungs-Pipeline",
+      "steps": {
+        "extraction": {
+          "title": "Episode-Daten Extraktion",
+          "description": "Laden von Episode-Metadaten und Themen aus JSON-Dateien"
+        },
+        "embedding": {
+          "title": "Embedding-Generierung",
+          "description": "OpenAI API erstellt semantische Vektoren für jedes Thema"
+        },
+        "clustering": {
+          "title": "Clustering-Analyse",
+          "description": "Rust-basiertes hierarchisches Clustering gruppiert ähnliche Themen"
+        },
+        "categorization": {
+          "title": "Kategorisierung",
+          "description": "Übergeordnete Kategorien fassen verwandte Cluster zusammen"
+        },
+        "aggregation": {
+          "title": "Zeitreihen-Aggregation",
+          "description": "Node.js aggregiert Daten nach Jahren für River-Visualisierung"
+        },
+        "visualization": {
+          "title": "Interactive Visualisierung",
+          "description": "D3.js rendert die Daten als interaktive Stream-Graphen"
+        }
+      }
+    },
+    "features": {
+      "title": "Features",
+      "tooltips": {
+        "title": "Interaktive Tooltips",
+        "description": "Jahr-spezifische Informationen beim Hovern"
+      },
+      "filter": {
+        "title": "Jahr-Filter",
+        "description": "Klick-basierte Filterung nach Jahren"
+      },
+      "normalized": {
+        "title": "Normierte Ansicht",
+        "description": "Persistente Einstellung für prozentuale Darstellung"
+      },
+      "deeplink": {
+        "title": "Deep-Linking",
+        "description": "Direkte URLs für jede Ansicht"
+      },
+      "responsive": {
+        "title": "Responsive Design",
+        "description": "Optimiert für Desktop und Tablet"
+      },
+      "storage": {
+        "title": "LocalStorage",
+        "description": "Einstellungen bleiben über Sitzungen erhalten"
+      }
+    },
+    "footer": {
+      "madeWith": "Erstellt mit ❤️ für den",
+      "podcast": "Freak Show Podcast",
+      "copyright": "© 2025 • Alle Daten basieren auf öffentlich verfügbaren Podcast-Informationen"
+    }
+  },
+  "common": {
+    "year": "Jahr",
+    "count": "Anzahl",
+    "percentage": "Prozent",
+    "episodes": "Episoden",
+    "episode": "Episode"
+  }
+}
+
