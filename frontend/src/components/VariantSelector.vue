@@ -27,10 +27,8 @@
 import { ref, onMounted, computed } from 'vue';
 import { useSettingsStore } from '@/stores/settings';
 import { loadVariantsManifest, type VariantManifest } from '@/composables/useVariants';
-import { useRouter } from 'vue-router';
 
 const settings = useSettingsStore();
-const router = useRouter();
 
 const manifest = ref<VariantManifest | null>(null);
 const isLoading = ref(false);
@@ -67,16 +65,11 @@ async function onVariantChange() {
   isLoading.value = true;
   settings.setClusteringVariant(selectedVariant.value);
   
-  // Reload current view to fetch new data
-  try {
-    const currentRoute = router.currentRoute.value;
-    await router.push({ path: '/' }); // Go to home briefly
-    await router.push(currentRoute); // Return to current view
-  } catch (error) {
-    console.error('Failed to reload view:', error);
-  } finally {
+  // Data reload is handled by watchers in the views
+  // Just give them a moment to update
+  setTimeout(() => {
     isLoading.value = false;
-  }
+  }, 300);
 }
 </script>
 
