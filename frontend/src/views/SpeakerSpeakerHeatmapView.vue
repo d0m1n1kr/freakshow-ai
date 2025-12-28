@@ -30,7 +30,7 @@
                 v-model.number="settingsStore.topNSpeakersSpeaker1Heatmap"
                 type="range"
                 min="5"
-                max="30"
+                :max="heatmapData.statistics.totalSpeakers"
                 step="1"
                 class="ml-2 w-48 slider-teal"
               />
@@ -43,7 +43,7 @@
                 v-model.number="settingsStore.topNSpeakersSpeaker2Heatmap"
                 type="range"
                 min="10"
-                max="50"
+                :max="heatmapData.statistics.totalSpeakers"
                 step="1"
                 class="ml-2 w-48 slider-teal"
               />

@@ -31,7 +31,7 @@
                   v-model.number="settingsStore.topNSpeakersClusterHeatmap"
                   type="range"
                   min="5"
-                  max="30"
+                  :max="heatmapData.statistics.totalSpeakers"
                   step="1"
                   class="flex-1 sm:w-32 md:w-48 slider-orange"
                 />
@@ -46,7 +46,7 @@
                   v-model.number="settingsStore.topNClustersHeatmap"
                   type="range"
                   min="10"
-                  max="50"
+                  :max="heatmapData.statistics.totalClusters"
                   step="1"
                   class="flex-1 sm:w-32 md:w-48 slider-orange"
                 />

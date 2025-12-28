@@ -22,6 +22,11 @@ const tooltipRef = ref<HTMLDivElement | null>(null);
 const selectedYear = ref<number | null>(null);
 const hoveredYear = ref<number | null>(null);
 
+// Total count of available topics (before filtering)
+const totalTopicsAvailable = computed(() => {
+  return Object.keys(props.data.topics).length;
+});
+
 // Prozessiere die Daten
 const processedData = computed(() => {
   const topics: ProcessedTopicData[] = [];
@@ -123,6 +128,7 @@ const drawRiver = () => {
   // Lösche vorherigen Inhalt
   d3.select(svgRef.value).selectAll('*').remove();
   
+  // No need to extend SVG width for legend anymore
   const svg = d3.select(svgRef.value)
     .attr('width', width)
     .attr('height', height);
@@ -292,56 +298,7 @@ const drawRiver = () => {
     .style('font-weight', '600')
     .text('Jahr');
   
-  // Legende - only show on desktop, hide on mobile
-  if (!isMobile) {
-    const legend = g.append('g')
-      .attr('class', 'legend')
-      .attr('transform', `translate(${innerWidth + 20}, 0)`);
-    
-    topics.forEach((topic, i) => {
-      const legendRow = legend.append('g')
-        .attr('class', 'legend-item')
-        .attr('data-topic-id', topic.id)
-        .attr('transform', `translate(0, ${i * 24})`)
-        .style('cursor', 'pointer')
-        .on('mouseover', function() {
-          hoveredTopic.value = topic.id;
-        })
-        .on('mouseout', function() {
-          // Only clear if we're leaving the current hovered item
-          if (hoveredTopic.value === topic.id) {
-            hoveredTopic.value = null;
-          }
-        })
-        .on('click', function() {
-          selectedTopic.value = selectedTopic.value === topic.id ? null : topic.id;
-        });
-      
-      legendRow.append('rect')
-        .attr('width', 16)
-        .attr('height', 16)
-        .attr('fill', topic.color)
-        .attr('opacity', () => {
-          if (!hoveredTopic.value && !selectedTopic.value) return 0.8;
-          if (hoveredTopic.value === topic.id || selectedTopic.value === topic.id) return 1;
-          return 0.2;
-        });
-      
-      const text = legendRow.append('text')
-        .attr('x', 22)
-        .attr('y', 12)
-        .attr('fill', '#333')
-        .style('font-size', isTablet ? '10px' : '11px')
-        .style('font-weight', () => {
-          if (hoveredTopic.value === topic.id || selectedTopic.value === topic.id) return '600';
-          return '400';
-        })
-        .text(`${topic.name} (${Math.round(topic.totalDuration)} Episoden)`);
-      
-      // Tooltip für lange Namen
-      text.append('title').text(`${topic.name} (${Math.round(topic.totalDuration)} Episoden)`);
-    });
-  }
+  // D3 Legend removed - now using HTML legend
   
   return streams; // Return streams for updating
 };
@@ -360,25 +317,6 @@ const updateOpacity = () => {
       if (selectedTopic.value && d.key === selectedTopic.value) return 1;
       return 0.2;
     });
-  
-  // Update legend opacity and font weight
-  svg.selectAll('.legend-item').each(function() {
-    const item = d3.select(this);
-    const topicId = item.attr('data-topic-id');
-    
-    item.select('rect')
-      .attr('opacity', () => {
-        if (!hoveredTopic.value && !selectedTopic.value) return 0.8;
-        if (hoveredTopic.value === topicId || selectedTopic.value === topicId) return 1;
-        return 0.2;
-      });
-    
-    item.select('text')
-      .style('font-weight', () => {
-        if (hoveredTopic.value === topicId || selectedTopic.value === topicId) return '600';
-        return '400';
-      });
-  });
 };
 
 // Watch für Änderungen
@@ -640,7 +578,7 @@ const formatDuration = (duration: [number, number, number]) => {
               v-model.number="settingsStore.topicFilter"
               type="range"
               min="5"
-              max="30"
+              :max="totalTopicsAvailable"
               step="1"
               :class="['flex-1 sm:w-32 md:w-48', themeColor === 'blue' ? 'slider-blue' : 'slider-purple']"
             />
@@ -824,13 +762,56 @@ const formatDuration = (duration: [number, number, number]) => {
       </div>
     </div>
     
-    <div ref="containerRef" class="w-full overflow-x-auto -mx-2 sm:mx-0">
-      <svg ref="svgRef" class="topic-river-svg"></svg>
+    <div class="flex flex-col lg:flex-row gap-4">
+      <!-- River Chart -->
+      <div ref="containerRef" class="flex-1 w-full overflow-x-auto -mx-2 sm:mx-0">
+        <svg ref="svgRef" class="topic-river-svg"></svg>
+      </div>
+      
+      <!-- HTML Legend (Desktop only) -->
+      <div class="hidden lg:block w-64 flex-shrink-0">
+        <div class="sticky top-4 max-h-[600px] overflow-y-auto border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 p-4">
+          <h3 class="text-sm font-semibold mb-3 text-gray-900 dark:text-white">Themen</h3>
+          <div class="space-y-2">
+            <div 
+              v-for="topic in processedData.topics" 
+              :key="topic.id"
+              @mouseenter="hoveredTopic = topic.id"
+              @mouseleave="hoveredTopic = null"
+              @click="selectedTopic = selectedTopic === topic.id ? null : topic.id"
+              class="flex items-start gap-2 p-2 rounded cursor-pointer transition-all hover:bg-gray-50 dark:hover:bg-gray-700"
+              :class="{
+                'bg-gray-100 dark:bg-gray-700': hoveredTopic === topic.id || selectedTopic === topic.id,
+                'opacity-40': (hoveredTopic || selectedTopic) && hoveredTopic !== topic.id && selectedTopic !== topic.id
+              }"
+            >
+              <div 
+                class="w-4 h-4 rounded flex-shrink-0 mt-0.5" 
+                :style="{ backgroundColor: topic.color }"
+              ></div>
+              <div class="flex-1 min-w-0">
+                <div 
+                  class="text-xs leading-tight text-gray-900 dark:text-white"
+                  :class="{
+                    'font-semibold': hoveredTopic === topic.id || selectedTopic === topic.id
+                  }"
+                  :title="`${topic.name} (${Math.round(topic.totalDuration)} Episoden)`"
+                >
+                  {{ topic.name }}
+                </div>
+                <div class="text-xs text-gray-500 dark:text-gray-400">
+                  {{ Math.round(topic.totalDuration) }} Ep.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     
     <div class="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
       <p>
-        <strong>Interaktion:</strong> Bewege die Maus über einen Stream<span class="hidden sm:inline"> oder die Legende</span>, um das Topic hervorzuheben. 
+        <strong>Interaktion:</strong> Bewege die Maus über einen Stream oder ein Thema in der Legende, um es hervorzuheben. 
         Klicke, um Details anzuzeigen.
       </p>
     </div>

@@ -19,6 +19,11 @@ const tooltipRef = ref<HTMLDivElement | null>(null);
 const selectedYear = ref<number | null>(null);
 const hoveredYear = ref<number | null>(null);
 
+// Total count of available speakers (before filtering)
+const totalSpeakersAvailable = computed(() => {
+  return props.data.speakers.length;
+});
+
 // Prozessiere die Daten
 const processedData = computed(() => {
   const speakers: ProcessedSpeakerData[] = [];
@@ -122,6 +127,7 @@ const drawRiver = () => {
   // Lösche vorherigen Inhalt
   d3.select(svgRef.value).selectAll('*').remove();
   
+  // No need to extend SVG width for legend anymore
   const svg = d3.select(svgRef.value)
     .attr('width', width)
     .attr('height', height);
@@ -293,56 +299,7 @@ const drawRiver = () => {
     .style('font-weight', '600')
     .text('Jahr');
   
-  // Legende - only show on desktop, hide on mobile
-  if (!isMobile) {
-    const legend = g.append('g')
-      .attr('class', 'legend')
-      .attr('transform', `translate(${innerWidth + 20}, 0)`);
-    
-    speakers.forEach((speaker, i) => {
-      const legendRow = legend.append('g')
-        .attr('class', 'legend-item')
-        .attr('data-speaker-id', speaker.id)
-        .attr('transform', `translate(0, ${i * 24})`)
-        .style('cursor', 'pointer')
-        .on('mouseover', function() {
-          hoveredSpeaker.value = speaker.id;
-        })
-        .on('mouseout', function() {
-          // Only clear if we're leaving the current hovered item
-          if (hoveredSpeaker.value === speaker.id) {
-            hoveredSpeaker.value = null;
-          }
-        })
-        .on('click', function() {
-          selectedSpeaker.value = selectedSpeaker.value === speaker.id ? null : speaker.id;
-        });
-      
-      legendRow.append('rect')
-        .attr('width', 16)
-        .attr('height', 16)
-        .attr('fill', speaker.color)
-        .attr('opacity', () => {
-          if (!hoveredSpeaker.value && !selectedSpeaker.value) return 0.8;
-          if (hoveredSpeaker.value === speaker.id || selectedSpeaker.value === speaker.id) return 1;
-          return 0.2;
-        });
-      
-      const text = legendRow.append('text')
-        .attr('x', 22)
-        .attr('y', 12)
-        .attr('fill', '#333')
-        .style('font-size', isTablet ? '10px' : '11px')
-        .style('font-weight', () => {
-          if (hoveredSpeaker.value === speaker.id || selectedSpeaker.value === speaker.id) return '600';
-          return '400';
-        })
-        .text(`${speaker.name} (${speaker.totalAppearances} Episoden)`);
-      
-      // Tooltip für lange Namen
-      text.append('title').text(`${speaker.name} (${speaker.totalAppearances} Episoden)`);
-    });
-  }
+  // D3 Legend removed - now using HTML legend
   
   return streams; // Return streams for updating
 };
@@ -361,25 +318,6 @@ const updateOpacity = () => {
       if (selectedSpeaker.value && d.key === selectedSpeaker.value) return 1;
       return 0.2;
     });
-  
-  // Update legend opacity and font weight
-  svg.selectAll('.legend-item').each(function() {
-    const item = d3.select(this);
-    const speakerId = item.attr('data-speaker-id');
-    
-    item.select('rect')
-      .attr('opacity', () => {
-        if (!hoveredSpeaker.value && !selectedSpeaker.value) return 0.8;
-        if (hoveredSpeaker.value === speakerId || selectedSpeaker.value === speakerId) return 1;
-        return 0.2;
-      });
-    
-    item.select('text')
-      .style('font-weight', () => {
-        if (hoveredSpeaker.value === speakerId || selectedSpeaker.value === speakerId) return '600';
-        return '400';
-      });
-  });
 };
 
 // Watch für Änderungen
@@ -543,7 +481,7 @@ watch(selectedYear, () => {
               v-model.number="settingsStore.speakerFilter"
               type="range"
               min="5"
-              max="30"
+              :max="totalSpeakersAvailable"
               step="1"
               class="flex-1 sm:w-32 md:w-48 slider-green"
             />
@@ -673,13 +611,56 @@ watch(selectedYear, () => {
       </div>
     </div>
     
-    <div ref="containerRef" class="w-full overflow-x-auto -mx-2 sm:mx-0">
-      <svg ref="svgRef" class="speaker-river-svg"></svg>
+    <div class="flex flex-col lg:flex-row gap-4">
+      <!-- River Chart -->
+      <div ref="containerRef" class="flex-1 w-full overflow-x-auto -mx-2 sm:mx-0">
+        <svg ref="svgRef" class="speaker-river-svg"></svg>
+      </div>
+      
+      <!-- HTML Legend (Desktop only) -->
+      <div class="hidden lg:block w-64 flex-shrink-0">
+        <div class="sticky top-4 max-h-[600px] overflow-y-auto border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 p-4">
+          <h3 class="text-sm font-semibold mb-3 text-gray-900 dark:text-white">Sprecher</h3>
+          <div class="space-y-2">
+            <div 
+              v-for="speaker in processedData.speakers" 
+              :key="speaker.id"
+              @mouseenter="hoveredSpeaker = speaker.id"
+              @mouseleave="hoveredSpeaker = null"
+              @click="selectedSpeaker = selectedSpeaker === speaker.id ? null : speaker.id"
+              class="flex items-start gap-2 p-2 rounded cursor-pointer transition-all hover:bg-gray-50 dark:hover:bg-gray-700"
+              :class="{
+                'bg-gray-100 dark:bg-gray-700': hoveredSpeaker === speaker.id || selectedSpeaker === speaker.id,
+                'opacity-40': (hoveredSpeaker || selectedSpeaker) && hoveredSpeaker !== speaker.id && selectedSpeaker !== speaker.id
+              }"
+            >
+              <div 
+                class="w-4 h-4 rounded flex-shrink-0 mt-0.5" 
+                :style="{ backgroundColor: speaker.color }"
+              ></div>
+              <div class="flex-1 min-w-0">
+                <div 
+                  class="text-xs leading-tight text-gray-900 dark:text-white"
+                  :class="{
+                    'font-semibold': hoveredSpeaker === speaker.id || selectedSpeaker === speaker.id
+                  }"
+                  :title="`${speaker.name} (${speaker.totalAppearances} Episoden)`"
+                >
+                  {{ speaker.name }}
+                </div>
+                <div class="text-xs text-gray-500 dark:text-gray-400">
+                  {{ speaker.totalAppearances }} Ep.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     
     <div class="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
       <p>
-        <strong>Interaktion:</strong> Bewege die Maus über einen Stream<span class="hidden sm:inline"> oder die Legende</span>, um den Sprecher hervorzuheben. 
+        <strong>Interaktion:</strong> Bewege die Maus über einen Stream oder einen Sprecher in der Legende, um ihn hervorzuheben. 
         Klicke, um Details anzuzeigen.
       </p>
     </div>

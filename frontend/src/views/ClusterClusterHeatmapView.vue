@@ -30,7 +30,7 @@
                 v-model.number="settingsStore.topNClustersCluster1Heatmap"
                 type="range"
                 min="5"
-                max="30"
+                :max="heatmapData.statistics.totalClusters"
                 step="1"
                 class="ml-2 w-48 slider-cyan"
               />
@@ -43,7 +43,7 @@
                 v-model.number="settingsStore.topNClustersCluster2Heatmap"
                 type="range"
                 min="10"
-                max="50"
+                :max="heatmapData.statistics.totalClusters"
                 step="1"
                 class="ml-2 w-48 slider-cyan"
               />
