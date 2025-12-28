@@ -8,8 +8,8 @@ const __dirname = path.dirname(__filename);
 async function generateClusterClusterHeatmap() {
   console.log('Loading topic taxonomy...');
   
-  // Load topic taxonomy
-  const taxonomyPath = path.join(__dirname, 'frontend/public/topic-taxonomy.json');
+  // Load topic taxonomy from root directory (where Rust binary outputs it)
+  const taxonomyPath = path.join(__dirname, 'topic-taxonomy.json');
   const taxonomyData = JSON.parse(await fs.readFile(taxonomyPath, 'utf-8'));
   
   const clusters = taxonomyData.clusters;
@@ -84,8 +84,8 @@ async function generateClusterClusterHeatmap() {
     matrix
   };
   
-  // Write output
-  const outputPath = path.join(__dirname, 'frontend/public/cluster-cluster-heatmap.json');
+  // Write output to root directory (will be moved by build-variant.sh)
+  const outputPath = path.join(__dirname, 'cluster-cluster-heatmap.json');
   await fs.writeFile(outputPath, JSON.stringify(heatmapData, null, 2));
   
   console.log(`\n✓ Generated cluster-cluster-heatmap.json`);

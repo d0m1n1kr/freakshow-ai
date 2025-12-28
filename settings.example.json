@@ -30,7 +30,13 @@
     "useRelevanceWeighting": true,
     "useLLMNaming": true,
     "model": null,
-    "_comment": "linkageMethod: 'average', 'weighted', 'ward', 'complete'. useRelevanceWeighting: Gewichtet Topics nach Episoden-Anzahl"
+    "_comment": "V1: linkageMethod: 'average', 'weighted', 'ward', 'complete'. useRelevanceWeighting: Gewichtet Topics nach Episoden-Anzahl",
+    "_v2_settings": {
+      "minClusterSize": 5,
+      "minSamples": 3,
+      "reducedDimensions": 50,
+      "_comment": "V2 (HDBSCAN): minClusterSize = minimale Cluster-Größe, minSamples = Dichte-Parameter, reducedDimensions = PCA/Random Projection Ziel-Dimensionen"
+    }
   },
   "categoryGrouping": {
     "categories": 12,

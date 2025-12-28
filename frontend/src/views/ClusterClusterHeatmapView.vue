@@ -174,6 +174,8 @@
 <script setup lang="ts">
 import { ref, onMounted, computed, watch } from 'vue';
 import * as d3 from 'd3';
+import { loadVariantData } from '@/composables/useVariants';
+import NoVariantsMessage from '../components/NoVariantsMessage.vue';
 import type { HeatmapData } from '../types';
 import { useSettingsStore } from '../stores/settings';
 
@@ -202,6 +204,14 @@ const showEpisodeList = ref(false);
 const loadingEpisodes = ref(false);
 
 const episodeDetails = ref<Map<number, EpisodeDetail | null>>(new Map());
+
+async function loadData() {
+  try {
+    heatmapData.value = await loadVariantData('cluster-cluster-heatmap.json');
+  } catch (error) {
+    console.error('Failed to load heatmap data:', error);
+  }
+}
 
 // Filtered data based on slider values
 const filteredData = computed(() => {
@@ -595,13 +605,13 @@ function drawHeatmap() {
 }
 
 // Load data on mount
-onMounted(async () => {
-  try {
-    const response = await fetch('/cluster-cluster-heatmap.json');
-    heatmapData.value = await response.json();
-  } catch (error) {
-    console.error('Failed to load heatmap data:', error);
-  }
+onMounted(() => {
+  loadData();
+});
+
+// Watch for variant changes and reload data
+watch(() => settingsStore.clusteringVariant, () => {
+  loadData();
 });
 
 // Watch for data changes and redraw

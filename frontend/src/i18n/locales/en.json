@@ -149,6 +149,50 @@
     "percentage": "Percentage",
     "episodes": "Episodes",
     "episode": "Episode"
+  },
+  "variantSelector": {
+    "label": "Clustering Variant:",
+    "loading": "Loading data..."
+  },
+  "variantInfo": {
+    "version": "Version",
+    "clusters": "Clusters",
+    "topics": "Topics",
+    "outliers": "Outliers",
+    "showDetails": "Show details",
+    "hideDetails": "Hide details",
+    "algorithm": "Algorithm",
+    "method": "Method",
+    "linkage": "Linkage",
+    "weighting": "Weighting",
+    "metadata": "Metadata",
+    "created": "Created",
+    "embeddingModel": "Embedding Model",
+    "lastBuilt": "Last Built",
+    "topClusters": "Top Clusters",
+    "episodes": "episodes"
+  },
+  "noVariants": {
+    "title": "No Clustering Variants Available",
+    "subtitle": "To use this view, you need to create a clustering variant first.",
+    "quickStart": "Quick Start",
+    "step1": {
+      "title": "Create a V1 variant (256 clusters)",
+      "description": "Hierarchical clustering with fixed cluster count (~20 seconds)"
+    },
+    "step2": {
+      "title": "Or a V2 variant (automatic)",
+      "description": "HDBSCAN with automatic cluster detection (~2 minutes)"
+    },
+    "step3": {
+      "title": "Reload page",
+      "description": "After successful generation, reload the page and select variant from dropdown."
+    },
+    "note": {
+      "title": "Prerequisite",
+      "description": "Topic embeddings must be created first (node create-embeddings.js)."
+    },
+    "documentation": "📖 Full Documentation"
   }
 }
 

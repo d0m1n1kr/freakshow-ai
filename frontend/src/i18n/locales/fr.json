@@ -149,6 +149,50 @@
     "percentage": "Pourcentage",
     "episodes": "Épisodes",
     "episode": "Épisode"
+  },
+  "variantSelector": {
+    "label": "Variante de clustering:",
+    "loading": "Chargement..."
+  },
+  "variantInfo": {
+    "version": "Version",
+    "clusters": "Clusters",
+    "topics": "Sujets",
+    "outliers": "Outliers",
+    "showDetails": "Afficher les détails",
+    "hideDetails": "Masquer les détails",
+    "algorithm": "Algorithme",
+    "method": "Méthode",
+    "linkage": "Liaison",
+    "weighting": "Pondération",
+    "metadata": "Métadonnées",
+    "created": "Créé",
+    "embeddingModel": "Modèle d'embedding",
+    "lastBuilt": "Dernière construction",
+    "topClusters": "Meilleurs clusters",
+    "episodes": "épisodes"
+  },
+  "noVariants": {
+    "title": "Aucune variante de clustering disponible",
+    "subtitle": "Pour utiliser cette vue, vous devez d'abord créer une variante de clustering.",
+    "quickStart": "Démarrage rapide",
+    "step1": {
+      "title": "Créer une variante V1 (256 clusters)",
+      "description": "Clustering hiérarchique avec un nombre fixe de clusters (~20 secondes)"
+    },
+    "step2": {
+      "title": "Ou une variante V2 (automatique)",
+      "description": "HDBSCAN avec détection automatique de clusters (~2 minutes)"
+    },
+    "step3": {
+      "title": "Recharger la page",
+      "description": "Après génération réussie, rechargez la page et sélectionnez la variante dans le menu déroulant."
+    },
+    "note": {
+      "title": "Prérequis",
+      "description": "Les embeddings de topics doivent être créés d'abord (node create-embeddings.js)."
+    },
+    "documentation": "📖 Documentation complète"
   }
 }
 

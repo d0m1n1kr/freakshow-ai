@@ -7,6 +7,10 @@ edition = "2021"
 name = "cluster-topics"
 path = "src/cluster_topics.rs"
 
+[[bin]]
+name = "cluster-topics-v2"
+path = "src/cluster_topics_v2.rs"
+
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
@@ -17,8 +21,14 @@ chrono = { version = "0.4", features = ["serde"] }
 tokio = { version = "1.35", features = ["full"] }
 reqwest = { version = "0.11", features = ["json"] }
 
+# V2 dependencies for improved clustering
+ndarray = { version = "0.16", features = ["rayon"] }
+ndarray-rand = "0.15"
+rand = "0.8"
+rand_distr = "0.4"
+ordered-float = "4.2"
+
 [profile.release]
 opt-level = 3
 lto = true
 codegen-units = 1
-

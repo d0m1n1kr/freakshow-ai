@@ -17,6 +17,9 @@ export const useSettingsStore = defineStore('settings', () => {
   const topNSpeakersSpeaker1Heatmap = ref(15);
   const topNSpeakersSpeaker2Heatmap = ref(15);
   
+  // Clustering variant selection
+  const clusteringVariant = ref<string>('default-v1');
+  
   // Dark mode: 'auto' | 'light' | 'dark'
   const themeMode = ref<'auto' | 'light' | 'dark'>('auto');
   
@@ -64,6 +67,10 @@ export const useSettingsStore = defineStore('settings', () => {
     console.log('Current classes:', document.documentElement.className);
   }
   
+  function setClusteringVariant(variant: string) {
+    clusteringVariant.value = variant;
+  }
+  
   // Watch for theme changes
   watch([themeMode, isDarkMode], () => {
     applyTheme();
@@ -83,10 +90,12 @@ export const useSettingsStore = defineStore('settings', () => {
     topNSpeakers2Heatmap,
     topNSpeakersSpeaker1Heatmap,
     topNSpeakersSpeaker2Heatmap,
+    clusteringVariant,
     themeMode,
     isDarkMode,
     toggleNormalizedView,
     setNormalizedView,
+    setClusteringVariant,
     setThemeMode,
     cycleThemeMode,
     applyTheme

@@ -4,13 +4,14 @@ import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { useSettingsStore } from './stores/settings';
 import LanguageSelector from './components/LanguageSelector.vue';
+import VariantSelector from './components/VariantSelector.vue';
 
 const route = useRoute();
 const settingsStore = useSettingsStore();
 const { t } = useI18n();
 
 const activeView = computed(() => {
-  return route.name as 'topics' | 'categories' | 'speakers' | 'heatmap' | 'cluster-heatmap' | 'speaker-speaker-heatmap' | 'cluster-cluster-heatmap' | 'duration-heatmap' | 'umap' | 'about';
+  return route.name as 'topics' | 'speakers' | 'cluster-heatmap' | 'speaker-speaker-heatmap' | 'cluster-cluster-heatmap' | 'duration-heatmap' | 'umap' | 'about';
 });
 
 const themeIcon = computed(() => {
@@ -41,6 +42,9 @@ const themeLabel = computed(() => {
           </div>
           
           <div class="flex items-center gap-2 sm:gap-3">
+            <!-- Variant Selector -->
+            <VariantSelector />
+            
             <!-- Language Selector -->
             <LanguageSelector />
             
@@ -60,114 +64,90 @@ const themeLabel = computed(() => {
         <div class="mt-4 md:mt-6 -mx-4 px-4 overflow-x-auto border-b border-gray-200 dark:border-gray-700">
           <div class="flex gap-1 sm:gap-2 min-w-max">
             <router-link
-              to="/categories"
+              to="/topics"
               :class="[
                 'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
-              activeView === 'categories' 
-                ? 'border-purple-500 text-purple-600 dark:text-purple-400' 
-                : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
-            ]"
-          >
-            {{ t('nav.categories') }}
-          </router-link>
-          <router-link
-            to="/topics"
-            :class="[
-              'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
-              activeView === 'topics' 
-                ? 'border-blue-500 text-blue-600 dark:text-blue-400' 
-                : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
-            ]"
-          >
-            {{ t('nav.topics') }}
-          </router-link>
-          <router-link
-            to="/speakers"
-            :class="[
-              'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
-              activeView === 'speakers' 
-                ? 'border-green-500 text-green-600 dark:text-green-400' 
-                : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
-            ]"
-          >
-            {{ t('nav.speakers') }}
-          </router-link>
-          <router-link
-            to="/heatmap"
-            :class="[
-              'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
-              activeView === 'heatmap' 
-                ? 'border-pink-500 text-pink-600 dark:text-pink-400' 
-                : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
-            ]"
-          >
-            {{ t('nav.speakerCategories') }}
-          </router-link>
-          <router-link
-            to="/cluster-heatmap"
-            :class="[
-              'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
-              activeView === 'cluster-heatmap' 
-                ? 'border-orange-500 text-orange-600 dark:text-orange-400' 
-                : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
-            ]"
-          >
-            {{ t('nav.speakerClusters') }}
-          </router-link>
-          <router-link
-            to="/cluster-cluster-heatmap"
-            :class="[
-              'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
-              activeView === 'cluster-cluster-heatmap' 
-                ? 'border-cyan-500 text-cyan-600 dark:text-cyan-400' 
-                : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
-            ]"
-          >
-            {{ t('nav.clusterCluster') }}
-          </router-link>
-          <router-link
-            to="/speaker-speaker-heatmap"
-            :class="[
-              'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
-              activeView === 'speaker-speaker-heatmap' 
-                ? 'border-teal-500 text-teal-600 dark:text-teal-400' 
-                : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
-            ]"
-          >
-            {{ t('nav.speakerSpeaker') }}
-          </router-link>
-          <router-link
-            to="/duration-heatmap"
-            :class="[
-              'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
-              activeView === 'duration-heatmap' 
-                ? 'border-violet-500 text-violet-600 dark:text-violet-400' 
-                : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
-            ]"
-          >
-            {{ t('nav.duration') }}
-          </router-link>
-          <!-- UMAP tab temporarily hidden - uncomment to reactivate
-          <router-link
-            to="/umap"
-            :class="[
-              'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
-              activeView === 'umap' 
-                ? 'border-purple-500 text-purple-600 dark:text-purple-400' 
-                : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
-            ]"
-          >
-            {{ t('nav.umap') }}
-          </router-link>
-          -->
-          <router-link
-            to="/about"
-            :class="[
-              'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
-              activeView === 'about' 
-                ? 'border-indigo-500 text-indigo-600 dark:text-indigo-400' 
-                : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
-            ]"
+                activeView === 'topics' 
+                  ? 'border-blue-500 text-blue-600 dark:text-blue-400' 
+                  : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
+              ]"
+            >
+              {{ t('nav.topics') }}
+            </router-link>
+            <router-link
+              to="/speakers"
+              :class="[
+                'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
+                activeView === 'speakers' 
+                  ? 'border-green-500 text-green-600 dark:text-green-400' 
+                  : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
+              ]"
+            >
+              {{ t('nav.speakers') }}
+            </router-link>
+            <router-link
+              to="/cluster-heatmap"
+              :class="[
+                'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
+                activeView === 'cluster-heatmap' 
+                  ? 'border-orange-500 text-orange-600 dark:text-orange-400' 
+                  : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
+              ]"
+            >
+              {{ t('nav.speakerClusters') }}
+            </router-link>
+            <router-link
+              to="/cluster-cluster-heatmap"
+              :class="[
+                'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
+                activeView === 'cluster-cluster-heatmap' 
+                  ? 'border-cyan-500 text-cyan-600 dark:text-cyan-400' 
+                  : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
+              ]"
+            >
+              {{ t('nav.clusterCluster') }}
+            </router-link>
+            <router-link
+              to="/speaker-speaker-heatmap"
+              :class="[
+                'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
+                activeView === 'speaker-speaker-heatmap' 
+                  ? 'border-teal-500 text-teal-600 dark:text-teal-400' 
+                  : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
+              ]"
+            >
+              {{ t('nav.speakerSpeaker') }}
+            </router-link>
+            <router-link
+              to="/duration-heatmap"
+              :class="[
+                'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
+                activeView === 'duration-heatmap' 
+                  ? 'border-violet-500 text-violet-600 dark:text-violet-400' 
+                  : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
+              ]"
+            >
+              {{ t('nav.duration') }}
+            </router-link>
+            <router-link
+              to="/umap"
+              :class="[
+                'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
+                activeView === 'umap' 
+                  ? 'border-purple-500 text-purple-600 dark:text-purple-400' 
+                  : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
+              ]"
+            >
+              {{ t('nav.umap') }}
+            </router-link>
+            <router-link
+              to="/about"
+              :class="[
+                'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
+                activeView === 'about' 
+                  ? 'border-indigo-500 text-indigo-600 dark:text-indigo-400' 
+                  : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
+              ]"
           >
             {{ t('nav.about') }}
           </router-link>

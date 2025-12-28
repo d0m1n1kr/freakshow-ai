@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, computed, nextTick } from 'vue';
 import * as d3 from 'd3';
+import { loadVariantData } from '@/composables/useVariants';
+import { useSettingsStore } from '@/stores/settings';
+import NoVariantsMessage from '../components/NoVariantsMessage.vue';
+import VariantInfoPanel from '../components/VariantInfoPanel.vue';
+
+const settings = useSettingsStore();
 
 interface UmapPoint {
   topic: string;
@@ -40,6 +46,7 @@ interface UmapData {
 const umapData = ref<UmapData | null>(null);
 const loading = ref(true);
 const error = ref<string | null>(null);
+const noVariants = ref(false);
 const selectedPoint = ref<UmapPoint | null>(null);
 const hoveredPoint = ref<UmapPoint | null>(null);
 const highlightCluster = ref<string | null>(null);
@@ -268,24 +275,37 @@ function createScatterplot() {
     });
 }
 
-onMounted(async () => {
+async function loadData() {
+  loading.value = true;
+  error.value = null;
+  noVariants.value = false;
+  
   try {
-    const response = await fetch('/topic-umap-data.json');
-    
-    if (!response.ok) {
-      throw new Error('Fehler beim Laden der UMAP-Daten');
-    }
-    
-    umapData.value = await response.json();
-    loading.value = false;
+    umapData.value = await loadVariantData<UmapData>('topic-umap-data.json');
     
     // Wait for DOM to be ready
     await nextTick();
     createScatterplot();
   } catch (e) {
-    error.value = e instanceof Error ? e.message : 'Unbekannter Fehler';
+    const errorMessage = e instanceof Error ? e.message : 'Unbekannter Fehler';
+    // Check if error is due to missing variants
+    if (errorMessage.includes('Failed to load') || errorMessage.includes('404')) {
+      noVariants.value = true;
+    } else {
+      error.value = errorMessage;
+    }
+  } finally {
     loading.value = false;
   }
+}
+
+onMounted(() => {
+  loadData();
+});
+
+// Watch for variant changes and reload data
+watch(() => settings.clusteringVariant, () => {
+  loadData();
 });
 
 // Recreate chart when filters change
@@ -304,11 +324,16 @@ watch([searchQuery, highlightCluster], () => {
     </div>
   </div>
 
+  <NoVariantsMessage v-else-if="noVariants" />
+
   <div v-else-if="error" class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6 text-center">
     <p class="text-red-800 dark:text-red-200 font-semibold">{{ error }}</p>
   </div>
 
   <div v-else-if="umapData" class="space-y-6">
+    <!-- Variant Info Panel -->
+    <VariantInfoPanel />
+    
     <!-- Statistics Header -->
     <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">

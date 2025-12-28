@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Clustering Varianten Konfiguration - Verschiedene Parametrisierungen für Topic-Clustering",
+  "defaultVariant": "default-v1",
+  "variants": {
+    "default-v1": {
+      "version": "v1",
+      "name": "Standard (V1, 256 Cluster)",
+      "description": "Hierarchisches Clustering mit 256 fixen Clustern",
+      "settings": {
+        "clusters": 256,
+        "outlierThreshold": 0.7,
+        "linkageMethod": "weighted",
+        "useRelevanceWeighting": true,
+        "useLLMNaming": true
+      }
+    },
+    "fine-v1": {
+      "version": "v1",
+      "name": "Fein-granular (V1, 512 Cluster)",
+      "description": "Sehr detaillierte Kategorisierung mit 512 Clustern",
+      "settings": {
+        "clusters": 512,
+        "outlierThreshold": 0.6,
+        "linkageMethod": "weighted",
+        "useRelevanceWeighting": true,
+        "useLLMNaming": true
+      }
+    },
+    "coarse-v1": {
+      "version": "v1",
+      "name": "Grob (V1, 128 Cluster)",
+      "description": "Gröbere Kategorisierung mit 128 Clustern",
+      "settings": {
+        "clusters": 128,
+        "outlierThreshold": 0.75,
+        "linkageMethod": "ward",
+        "useRelevanceWeighting": true,
+        "useLLMNaming": true
+      }
+    },
+    "auto-v2": {
+      "version": "v2",
+      "name": "Automatisch (V2, HDBSCAN)",
+      "description": "HDBSCAN mit automatischer Cluster-Erkennung",
+      "settings": {
+        "minClusterSize": 5,
+        "minSamples": 3,
+        "reducedDimensions": 50,
+        "useRelevanceWeighting": true,
+        "useLLMNaming": true
+      }
+    },
+    "fine-v2": {
+      "version": "v2",
+      "name": "Fein-granular (V2, HDBSCAN)",
+      "description": "HDBSCAN mit vielen kleinen Clustern",
+      "settings": {
+        "minClusterSize": 3,
+        "minSamples": 2,
+        "reducedDimensions": 50,
+        "useRelevanceWeighting": true,
+        "useLLMNaming": true
+      }
+    },
+    "coarse-v2": {
+      "version": "v2",
+      "name": "Grob (V2, HDBSCAN)",
+      "description": "HDBSCAN mit wenigen großen Clustern",
+      "settings": {
+        "minClusterSize": 15,
+        "minSamples": 5,
+        "reducedDimensions": 50,
+        "useRelevanceWeighting": true,
+        "useLLMNaming": true
+      }
+    },
+    "fast-v2": {
+      "version": "v2",
+      "name": "Schnell (V2, ohne LLM)",
+      "description": "HDBSCAN ohne LLM-Benennung (nur Heuristik)",
+      "settings": {
+        "minClusterSize": 5,
+        "minSamples": 3,
+        "reducedDimensions": 30,
+        "useRelevanceWeighting": true,
+        "useLLMNaming": false
+      }
+    }
+  }
+}
+

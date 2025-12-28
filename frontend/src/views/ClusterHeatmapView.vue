@@ -183,6 +183,7 @@ import { ref, onMounted, computed, watch } from 'vue';
 import * as d3 from 'd3';
 import type { HeatmapData } from '../types';
 import { useSettingsStore } from '../stores/settings';
+import { loadVariantData } from '@/composables/useVariants';
 
 const settingsStore = useSettingsStore();
 
@@ -206,6 +207,14 @@ const selectedCell = ref<{
 } | null>(null);
 
 const showEpisodeList = ref(false);
+
+async function loadData() {
+  try {
+    heatmapData.value = await loadVariantData('speaker-cluster-heatmap.json');
+  } catch (error) {
+    console.error('Failed to load heatmap data:', error);
+  }
+}
 const loadingEpisodes = ref(false);
 
 const episodeDetails = ref<Map<number, EpisodeDetail | null>>(new Map());
@@ -584,13 +593,13 @@ function drawHeatmap() {
 }
 
 // Load data on mount
-onMounted(async () => {
-  try {
-    const response = await fetch('/speaker-cluster-heatmap.json');
-    heatmapData.value = await response.json();
-  } catch (error) {
-    console.error('Failed to load heatmap data:', error);
-  }
+onMounted(() => {
+  loadData();
+});
+
+// Watch for variant changes and reload data
+watch(() => settingsStore.clusteringVariant, () => {
+  loadData();
 });
 
 // Watch for data changes and redraw

@@ -1,8 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import TopicsView from '../views/TopicsView.vue';
-import CategoriesView from '../views/CategoriesView.vue';
 import SpeakersView from '../views/SpeakersView.vue';
-import HeatmapView from '../views/HeatmapView.vue';
 import ClusterHeatmapView from '../views/ClusterHeatmapView.vue';
 import SpeakerSpeakerHeatmapView from '../views/SpeakerSpeakerHeatmapView.vue';
 import ClusterClusterHeatmapView from '../views/ClusterClusterHeatmapView.vue';
@@ -15,12 +13,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/categories'
-    },
-    {
-      path: '/categories',
-      name: 'categories',
-      component: CategoriesView
+      redirect: '/topics'
     },
     {
       path: '/topics',
@@ -31,11 +24,6 @@ const router = createRouter({
       path: '/speakers',
       name: 'speakers',
       component: SpeakersView
-    },
-    {
-      path: '/heatmap',
-      name: 'heatmap',
-      component: HeatmapView
     },
     {
       path: '/cluster-heatmap',

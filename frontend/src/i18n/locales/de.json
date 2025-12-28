@@ -149,6 +149,50 @@
     "percentage": "Prozent",
     "episodes": "Episoden",
     "episode": "Episode"
+  },
+  "variantSelector": {
+    "label": "Clustering-Variante:",
+    "loading": "Lade Daten..."
+  },
+  "variantInfo": {
+    "version": "Version",
+    "clusters": "Cluster",
+    "topics": "Topics",
+    "outliers": "Outliers",
+    "showDetails": "Details anzeigen",
+    "hideDetails": "Details verbergen",
+    "algorithm": "Algorithmus",
+    "method": "Methode",
+    "linkage": "Linkage",
+    "weighting": "Gewichtung",
+    "metadata": "Metadaten",
+    "created": "Erstellt",
+    "embeddingModel": "Embedding-Modell",
+    "lastBuilt": "Zuletzt gebaut",
+    "topClusters": "Top-Cluster",
+    "episodes": "Episoden"
+  },
+  "noVariants": {
+    "title": "Keine Clustering-Varianten verfügbar",
+    "subtitle": "Um diese Ansicht zu nutzen, muss zunächst eine Clustering-Variante erstellt werden.",
+    "quickStart": "Schnellstart",
+    "step1": {
+      "title": "Erstelle eine V1-Variante (256 Cluster)",
+      "description": "Hierarchisches Clustering mit fixer Cluster-Anzahl (~20 Sekunden)"
+    },
+    "step2": {
+      "title": "Oder eine V2-Variante (automatisch)",
+      "description": "HDBSCAN mit automatischer Cluster-Erkennung (~2 Minuten)"
+    },
+    "step3": {
+      "title": "Seite neu laden",
+      "description": "Nach erfolgreicher Generierung die Seite neu laden und Variante im Dropdown auswählen."
+    },
+    "note": {
+      "title": "Voraussetzung",
+      "description": "Topic-Embeddings müssen bereits erstellt sein (node create-embeddings.js)."
+    },
+    "documentation": "📖 Vollständige Dokumentation"
   }
 }
 
