@@ -13,11 +13,11 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/topics'
+      redirect: '/clusters'
     },
     {
-      path: '/topics',
-      name: 'topics',
+      path: '/clusters',
+      name: 'clusters',
       component: TopicsView
     },
     {

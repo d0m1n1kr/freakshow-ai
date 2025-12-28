@@ -11,7 +11,7 @@ const settingsStore = useSettingsStore();
 const { t } = useI18n();
 
 const activeView = computed(() => {
-  return route.name as 'topics' | 'speakers' | 'cluster-heatmap' | 'speaker-speaker-heatmap' | 'cluster-cluster-heatmap' | 'duration-heatmap' | 'umap' | 'about';
+  return route.name as 'clusters' | 'speakers' | 'cluster-heatmap' | 'speaker-speaker-heatmap' | 'cluster-cluster-heatmap' | 'duration-heatmap' | 'umap' | 'about';
 });
 
 const themeIcon = computed(() => {
@@ -64,10 +64,10 @@ const themeLabel = computed(() => {
         <div class="mt-4 md:mt-6 -mx-4 px-4 overflow-x-auto border-b border-gray-200 dark:border-gray-700">
           <div class="flex gap-1 sm:gap-2 min-w-max">
             <router-link
-              to="/topics"
+              to="/clusters"
               :class="[
                 'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
-                activeView === 'topics' 
+                activeView === 'clusters' 
                   ? 'border-blue-500 text-blue-600 dark:text-blue-400' 
                   : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
               ]"
