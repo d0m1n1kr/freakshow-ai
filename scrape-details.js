@@ -2,14 +2,36 @@ import puppeteer from 'puppeteer';
 import fs from 'fs/promises';
 import path from 'path';
 
+function parseArgs(argv) {
+  const args = {
+    force: false,
+    start: null,
+    end: null,
+    timeoutMs: 60000,
+    retries: 2,
+  };
+  const a = argv.slice(2);
+  for (let i = 0; i < a.length; i++) {
+    const k = a[i];
+    if (k === '--force' || k === '-f') args.force = true;
+    else if (k === '--start') args.start = a[++i] ?? null;
+    else if (k === '--end') args.end = a[++i] ?? null;
+    else if (k === '--timeout-ms') args.timeoutMs = a[++i] ?? null;
+    else if (k === '--retries') args.retries = a[++i] ?? null;
+    else if (k === '--help' || k === '-h') args.help = true;
+  }
+  args.timeoutMs = Number.isFinite(parseInt(String(args.timeoutMs), 10)) ? parseInt(String(args.timeoutMs), 10) : 60000;
+  args.retries = Number.isFinite(parseInt(String(args.retries), 10)) ? parseInt(String(args.retries), 10) : 2;
+  return args;
+}
+
+const ARGS = parseArgs(process.argv);
+const START_EPISODE = ARGS.start !== null ? parseInt(String(ARGS.start), 10) : null;
+const END_EPISODE = ARGS.end !== null ? parseInt(String(ARGS.end), 10) : null;
+
 const EPISODES_DIR = './episodes';
 const CONCURRENT_REQUESTS = 3; // Reduced for stability
 const BROWSER_RESTART_AFTER = 30; // Restart browser after N episodes
-
-// Optional: Set a specific range of episodes to process
-// Leave as null to process all episodes
-const START_EPISODE = null; // e.g., 1
-const END_EPISODE = null; // e.g., 50
 
 // Read all episode JSON files
 async function getEpisodeFiles() {
@@ -73,9 +95,19 @@ async function extractTranscript(page) {
         const timeEl = speakerEl.querySelector('.ts-time');
         const time = timeEl ? timeEl.textContent.trim() : '';
         
-        // Extract text
-        const textEl = group.querySelector('.ts-content .ts-line');
-        const text = textEl ? textEl.textContent.trim() : '';
+        // Extract text (ALL lines within this ts-group)
+        // The page often splits a single speaker segment into multiple `.ts-line` elements.
+        // Using `querySelector` would only capture the first line.
+        const lineEls = group.querySelectorAll('.ts-content .ts-line');
+        let text = Array.from(lineEls)
+          .map(el => (el?.textContent || '').trim())
+          .filter(Boolean)
+          .join('\n');
+        // Fallback: some pages might not use `.ts-line` but still have text in `.ts-content`.
+        if (!text) {
+          const contentEl = group.querySelector('.ts-content');
+          text = contentEl ? (contentEl.textContent || '').trim() : '';
+        }
         
         if (speakerText && text) {
           transcriptItems.push({
@@ -157,7 +189,7 @@ async function processEpisode(page, episodeFile) {
   const url = episodeData.url;
   
   // Check if already processed
-  if (await isEpisodeProcessed(episodeNumber)) {
+  if (!ARGS.force && await isEpisodeProcessed(episodeNumber)) {
     console.log(`Skipping episode ${episodeNumber} (already processed)`);
     return { success: true, episode: episodeNumber, skipped: true };
   }
@@ -165,10 +197,39 @@ async function processEpisode(page, episodeFile) {
   console.log(`Processing episode ${episodeNumber}: ${episodeData.title}`);
   
   try {
-    await page.goto(url, { 
-      waitUntil: 'networkidle2',
-      timeout: 60000  // Increased timeout to 60 seconds
-    });
+    // Some pages keep long-polling / analytics requests open, which can prevent `networkidle2`
+    // from ever being reached. Prefer DOM readiness and then wait briefly for expected content.
+    page.setDefaultNavigationTimeout(ARGS.timeoutMs);
+    page.setDefaultTimeout(ARGS.timeoutMs);
+
+    let lastNavErr = null;
+    const attempts = Math.max(1, ARGS.retries + 1);
+    for (let attempt = 1; attempt <= attempts; attempt++) {
+      try {
+        await page.goto(url, {
+          waitUntil: 'domcontentloaded',
+          timeout: ARGS.timeoutMs,
+        });
+        // Best-effort: wait for either transcript groups or shownotes or main content.
+        // If none appear quickly, proceed anyway; extraction functions handle "not found".
+        await Promise.race([
+          page.waitForSelector('.ts-group', { timeout: Math.min(15000, ARGS.timeoutMs) }),
+          page.waitForSelector('.psn-entry', { timeout: Math.min(15000, ARGS.timeoutMs) }),
+          page.waitForSelector('.entry-content', { timeout: Math.min(15000, ARGS.timeoutMs) }),
+        ]).catch(() => {});
+        lastNavErr = null;
+        break;
+      } catch (e) {
+        lastNavErr = e;
+        if (attempt < attempts) {
+          console.warn(`  ! Navigation attempt ${attempt}/${attempts} failed for episode ${episodeNumber}: ${e?.message || e}`);
+          // Short backoff before retry
+          await new Promise((r) => setTimeout(r, 1000 * attempt));
+          continue;
+        }
+      }
+    }
+    if (lastNavErr) throw lastNavErr;
     
     // Extract transcript
     const transcript = await extractTranscript(page);
@@ -277,6 +338,20 @@ async function processEpisodesInBatches(browser, episodeFiles, concurrentRequest
 }
 
 async function scrapeEpisodeDetails() {
+  if (ARGS.help) {
+    console.log(`Usage:
+  node scrape-details.js [--force] [--start <n>] [--end <n>] [--timeout-ms <ms>] [--retries <n>]
+
+Options:
+  --force, -f   Overwrite existing output files (do not skip episodes)
+  --start <n>   Only process episodes with number >= n
+  --end <n>     Only process episodes with number <= n
+  --timeout-ms <ms>  Navigation + selector timeout per episode (default: 60000)
+  --retries <n>      Number of retries after a failed navigation (default: 2)
+`);
+    return;
+  }
+
   console.log('Reading episode files...');
   const episodeFiles = await getEpisodeFiles();
   

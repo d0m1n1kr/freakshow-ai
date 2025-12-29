@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch, onMounted, onBeforeUnmount, computed } from 'vue';
+import { ref, watch, onMounted, onBeforeUnmount, computed, nextTick } from 'vue';
 
 const props = defineProps<{
   src: string;
@@ -8,6 +8,7 @@ const props = defineProps<{
   seekToSec?: number;
   autoplay?: boolean;
   playToken?: number; // increment to force re-seek/play even if seekToSec is unchanged
+  transcriptSrc?: string; // optional: URL to <episode>-ts-live.json for live speaker/text display
 }>();
 
 const emit = defineEmits<{
@@ -21,6 +22,106 @@ const currentTime = ref(0);
 const duration = ref(0);
 const localError = ref<string | null>(null);
 const isSeeking = ref(false);
+const scrubValue = ref(0);
+
+type LiveTranscriptV1 = {
+  v: 1;
+  episode?: number;
+  speakers: string[];
+  t: number[]; // seconds
+  s: number[]; // speaker index into speakers[]
+  x: string[]; // text
+};
+
+const liveTranscript = ref<LiveTranscriptV1 | null>(null);
+const liveTranscriptError = ref<string | null>(null);
+const liveTranscriptLoading = ref(false);
+
+const findLastIndexLE = (arr: number[], value: number) => {
+  let lo = 0;
+  let hi = arr.length - 1;
+  let ans = -1;
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    const v = arr[mid] ?? Number.NaN;
+    if (Number.isFinite(v) && v <= value) {
+      ans = mid;
+      lo = mid + 1;
+    } else {
+      hi = mid - 1;
+    }
+  }
+  return ans;
+};
+
+const currentSpoken = computed(() => {
+  const lt = liveTranscript.value;
+  if (!lt || !Array.isArray(lt.t) || lt.t.length === 0) return null;
+
+  const sec = Math.max(0, Math.floor(currentTime.value || 0));
+  const idx = findLastIndexLE(lt.t, sec);
+  if (idx < 0) return null;
+
+  const startSecRaw = lt.t[idx];
+  if (typeof startSecRaw !== 'number' || !Number.isFinite(startSecRaw)) return null;
+  const startSec = Math.max(0, Math.floor(startSecRaw));
+
+  const speakerIdxRaw = lt.s[idx];
+  const speaker =
+    (typeof speakerIdxRaw === 'number' &&
+      Number.isInteger(speakerIdxRaw) &&
+      speakerIdxRaw >= 0 &&
+      speakerIdxRaw < lt.speakers.length)
+      ? (lt.speakers[speakerIdxRaw] ?? null)
+      : null;
+  const text = typeof lt.x[idx] === 'string' ? lt.x[idx] : '';
+  if (!speaker && !text) return null;
+
+  return { speaker, text, startSec };
+});
+
+const loadLiveTranscript = async () => {
+  const url = typeof props.transcriptSrc === 'string' ? props.transcriptSrc.trim() : '';
+  liveTranscript.value = null;
+  liveTranscriptError.value = null;
+  if (!url) return;
+
+  try {
+    liveTranscriptLoading.value = true;
+    const res = await fetch(url, { cache: 'force-cache' });
+    if (!res.ok) {
+      // Silent when the transcript file simply doesn't exist (common when not generated).
+      if (res.status === 404) return;
+      liveTranscriptError.value = `Transcript nicht verfügbar (HTTP ${res.status})`;
+      return;
+    }
+    const ct = (res.headers.get('content-type') || '').toLowerCase();
+    // Guard: many static hosts return index.html (200) for unknown paths.
+    if (!ct.includes('application/json') && !ct.includes('text/json') && !ct.includes('+json')) {
+      const txt = await res.text();
+      const head = txt.trim().slice(0, 32);
+      if (head.startsWith('<!doctype') || head.startsWith('<html') || head.startsWith('<')) {
+        // Treat SPA HTML fallback as "transcript missing" (silent).
+        // Many static hosts return index.html with HTTP 200 for unknown asset paths.
+        return;
+      } else {
+        liveTranscriptError.value = `Transcript ist kein JSON (content-type: ${ct || 'unknown'})`;
+      }
+      return;
+    }
+    const data = await res.json();
+    // very light validation
+    if (data?.v !== 1 || !Array.isArray(data?.t) || !Array.isArray(data?.s) || !Array.isArray(data?.x) || !Array.isArray(data?.speakers)) {
+      liveTranscriptError.value = 'Transcript hat ein unbekanntes Format';
+      return;
+    }
+    liveTranscript.value = data as LiveTranscriptV1;
+  } catch (e) {
+    liveTranscriptError.value = e instanceof Error ? e.message : String(e);
+  } finally {
+    liveTranscriptLoading.value = false;
+  }
+};
 
 const formatHms = (sec: number) => {
   const s0 = Number.isFinite(sec) ? Math.max(0, Math.floor(sec)) : 0;
@@ -52,6 +153,29 @@ const safeSetTime = (sec: number) => {
   }
 };
 
+const waitForEventOnce = (el: EventTarget, event: string, timeoutMs: number) => {
+  return new Promise<boolean>((resolve) => {
+    let done = false;
+    const on = () => {
+      if (done) return;
+      done = true;
+      cleanup();
+      resolve(true);
+    };
+    const t = window.setTimeout(() => {
+      if (done) return;
+      done = true;
+      cleanup();
+      resolve(false);
+    }, Math.max(0, Math.floor(timeoutMs)));
+    const cleanup = () => {
+      window.clearTimeout(t);
+      el.removeEventListener(event, on as any);
+    };
+    el.addEventListener(event, on as any, { once: true } as any);
+  });
+};
+
 const safePlay = async () => {
   const a = audioRef.value;
   if (!a) return;
@@ -60,21 +184,46 @@ const safePlay = async () => {
     emit('error', null);
     await a.play();
   } catch (e: any) {
-    const msg = `Konnte nicht automatisch abspielen: ${e?.message || e}`;
+    // Common benign race when `src` changes / `load()` is called while autoplay is requested.
+    // Chrome message: "The play() request was interrupted by a new load request."
+    const m = String(e?.message || e || '');
+    if (m.includes('interrupted by a new load request')) return;
+    if (e?.name === 'AbortError') return;
+
+    const msg = `Konnte nicht automatisch abspielen: ${m || e}`;
     localError.value = msg;
     emit('error', msg);
   }
 };
 
+let applySeq = 0;
+let lastSrcKey: string | null = null;
 const applySeekAndMaybePlay = async () => {
   const a = audioRef.value;
   if (!a) return;
+  const seq = ++applySeq;
   const seek = Number.isFinite(props.seekToSec as number) ? (props.seekToSec as number) : 0;
 
   const doIt = async () => {
+    if (seq !== applySeq) return; // superseded by a newer call
     safeSetTime(seek);
     if (props.autoplay) await safePlay();
   };
+
+  const srcKey = typeof props.src === 'string' ? props.src : '';
+  const srcChanged = lastSrcKey !== srcKey;
+  if (srcChanged) lastSrcKey = srcKey;
+
+  if (srcChanged) {
+    // When switching tracks while playing, make sure we load the new src first.
+    // Otherwise `play()` can race with the new load and end up paused.
+    try { a.pause(); } catch {}
+    if (seq === applySeq) a.load();
+    await waitForEventOnce(a, 'loadedmetadata', 15000);
+    if (seq !== applySeq) return;
+    await doIt();
+    return;
+  }
 
   if (a.readyState >= 1) {
     await doIt();
@@ -84,7 +233,7 @@ const applySeekAndMaybePlay = async () => {
       await doIt();
     };
     a.addEventListener('loadedmetadata', onMeta);
-    a.load();
+    if (seq === applySeq) a.load();
   }
 };
 
@@ -103,11 +252,16 @@ const onScrub = (e: Event) => {
   if (!a) return;
   const v = Number((e.target as HTMLInputElement).value);
   isSeeking.value = true;
+  scrubValue.value = v;
+  // update UI immediately (also updates live transcript while scrubbing)
+  currentTime.value = v;
   safeSetTime(v);
 };
 
 const onScrubCommit = async () => {
   isSeeking.value = false;
+  const a = audioRef.value;
+  if (a) currentTime.value = a.currentTime || currentTime.value || 0;
   if (props.autoplay && !isPlaying.value) {
     // user interaction: safePlay should succeed reliably
     await safePlay();
@@ -120,11 +274,11 @@ const attach = () => {
 
   const onPlay = () => { isPlaying.value = true; };
   const onPause = () => { isPlaying.value = false; };
-  const onTimeUpdate = () => { if (!isSeeking.value) currentTime.value = a.currentTime || 0; };
+  const onTimeUpdate = () => { currentTime.value = a.currentTime || 0; };
   const onLoadedMeta = () => {
     duration.value = Number.isFinite(a.duration) ? a.duration : 0;
     // keep currentTime in sync if we set it before metadata was ready
-    if (!isSeeking.value) currentTime.value = a.currentTime || 0;
+    currentTime.value = a.currentTime || 0;
   };
   const onEnded = () => { isPlaying.value = false; };
 
@@ -146,7 +300,10 @@ const attach = () => {
 let detach: (() => void) | undefined;
 
 onMounted(async () => {
+  // Ensure the <audio> ref is populated before attaching listeners.
+  await nextTick();
   detach = attach();
+  await loadLiveTranscript();
   await applySeekAndMaybePlay();
 });
 
@@ -158,6 +315,15 @@ onBeforeUnmount(() => {
   }
 });
 
+// In rare cases the ref can be null on first mount (or change during HMR);
+// attach listeners as soon as it becomes available.
+watch(audioRef, (a, prev) => {
+  if (a && a !== prev) {
+    detach?.();
+    detach = attach();
+  }
+});
+
 watch(() => props.src, async () => {
   // Reset local state when switching tracks
   localError.value = null;
@@ -166,7 +332,13 @@ watch(() => props.src, async () => {
   duration.value = 0;
   isPlaying.value = false;
 
+  // Ensure the template has applied the new `src` to the <audio> element before we call `load()` / `play()`.
+  await nextTick();
   await applySeekAndMaybePlay();
+});
+
+watch(() => props.transcriptSrc, async () => {
+  await loadLiveTranscript();
 });
 
 watch(() => props.seekToSec, async () => {
@@ -204,6 +376,30 @@ watch(() => props.playToken, async () => {
       </button>
     </div>
 
+    <!-- Transcript: full width of player (not constrained by the header row / close button) -->
+    <div v-if="transcriptSrc" class="mt-2 w-full">
+      <div v-if="liveTranscriptLoading" class="text-xs text-gray-500 dark:text-gray-400">
+        Transcript lädt…
+      </div>
+      <div v-else-if="currentSpoken" class="w-full rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/30 px-2 py-1.5">
+        <div class="text-[11px] font-semibold text-gray-600 dark:text-gray-300 truncate">
+          {{ currentSpoken.speaker || '—' }}
+          <span class="ml-2 font-mono font-normal text-gray-500 dark:text-gray-400">
+            @ {{ formatHms(currentSpoken.startSec) }}
+          </span>
+        </div>
+        <div class="mt-0.5 text-sm leading-snug text-gray-900 dark:text-gray-100 max-h-24 overflow-auto whitespace-pre-wrap">
+          {{ currentSpoken.text }}
+        </div>
+      </div>
+      <div v-else-if="liveTranscriptError" class="text-xs text-gray-500 dark:text-gray-400">
+        {{ liveTranscriptError }}
+      </div>
+      <div v-else class="text-xs text-gray-500 dark:text-gray-400">
+        Kein Transcript an dieser Stelle.
+      </div>
+    </div>
+
     <div class="mt-2 flex items-center gap-3">
       <button
         type="button"
@@ -219,9 +415,10 @@ watch(() => props.playToken, async () => {
         min="0"
         :max="Math.max(0, Math.floor(duration || 0))"
         step="1"
-        :value="Math.floor(currentTime || 0)"
+        :value="isSeeking ? Math.floor(scrubValue || 0) : Math.floor(currentTime || 0)"
         @input="onScrub"
         @change="onScrubCommit"
+        @pointerup="onScrubCommit"
       />
     </div>
 

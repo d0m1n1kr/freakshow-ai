@@ -13,13 +13,15 @@
     "extend-topics": "node generate-extended-topics.js --all",
     "normalize-topics": "node normalize-topics.js",
     "create-embeddings": "node create-embeddings.js",
+    "create-rag-db": "node create-rag-db.js",
     "cluster-topics": "node cluster-topics.js",
     "topic-river": "node generate-topic-river.js",
     "episodes-mp3": "node generate-episodes-mp3.js",
     "cluster-categories": "node cluster-categories.js",
     "category-river": "node generate-category-river.js",
     "generate-umap": "node generate-topic-umap.js",
-    "speaker-profiles": "node generate-speaker-profiles.js"
+    "speaker-profiles": "node generate-speaker-profiles.js",
+    "ts-live": "node generate-ts-live.js --in-dir episodes --out-dir episodes --all && node generate-ts-live.js --in-dir frontend/public/episodes --out-dir frontend/public/episodes --all"
   },
   "dependencies": {
     "puppeteer": "^24.0.0",

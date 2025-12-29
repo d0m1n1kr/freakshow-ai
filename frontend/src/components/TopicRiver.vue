@@ -466,6 +466,16 @@ const currentMp3Url = ref<string | null>(null);
 const playerInfo = ref<{ episodeNumber: number; positionSec: number; label: string } | null>(null);
 const playerError = ref<string | null>(null);
 const playerToken = ref(0);
+const currentTranscriptUrl = ref<string | null>(null);
+
+const withBase = (p: string) => {
+  // Ensure static assets work when deployed under a sub-path (Vite base).
+  // Example: BASE_URL = "/freakshow/" -> "/freakshow/episodes/285-ts-live.json"
+  const base = (import.meta as any)?.env?.BASE_URL || '/';
+  const b = String(base).endsWith('/') ? String(base) : `${String(base)}/`;
+  const rel = String(p).replace(/^\/+/, '');
+  return `${b}${rel}`;
+};
 
 // Lade Episode-Details für Topics (für Speaker-Informationen)
 const loadEpisodeDetails = async () => {
@@ -735,6 +745,8 @@ const playEpisodeAt = async (episodeNumber: number, seconds: number, label: stri
 
   currentMp3Url.value = mp3;
   playerInfo.value = { episodeNumber, positionSec: Math.max(0, Math.floor(seconds)), label };
+  // Live transcript data (generated via `yarn ts-live`)
+  currentTranscriptUrl.value = withBase(`episodes/${episodeNumber}-ts-live.json`);
   playerToken.value++;
 };
 
@@ -742,6 +754,7 @@ const closePlayer = () => {
   currentMp3Url.value = null;
   playerInfo.value = null;
   playerError.value = null;
+  currentTranscriptUrl.value = null;
 };
 </script>
 
@@ -790,6 +803,7 @@ const closePlayer = () => {
           :seek-to-sec="playerInfo?.positionSec ?? 0"
           :autoplay="true"
           :play-token="playerToken"
+          :transcript-src="currentTranscriptUrl || undefined"
           @close="closePlayer"
           @error="(msg) => { playerError = msg }"
         />
