@@ -11,6 +11,10 @@ path = "src/cluster_topics.rs"
 name = "cluster-topics-v2"
 path = "src/cluster_topics_v2.rs"
 
+[[bin]]
+name = "rag-backend"
+path = "src/rag_backend.rs"
+
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
@@ -21,6 +25,13 @@ chrono = { version = "0.4", features = ["serde"] }
 tokio = { version = "1.35", features = ["full"] }
 reqwest = { version = "0.11", features = ["json"] }
 clap = { version = "4.5", features = ["derive"] }
+
+# Backend (HTTP API)
+axum = { version = "0.7", features = ["macros", "json"] }
+tower-http = { version = "0.6", features = ["cors", "trace"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+anyhow = "1.0"
 
 # V2 dependencies for improved clustering
 ndarray = { version = "0.16", features = ["rayon"] }

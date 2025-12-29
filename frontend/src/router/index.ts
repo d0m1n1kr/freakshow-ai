@@ -7,6 +7,9 @@ import ClusterClusterHeatmapView from '../views/ClusterClusterHeatmapView.vue';
 import DurationHeatmapView from '../views/DurationHeatmapView.vue';
 import UmapView from '../views/UmapView.vue';
 import AboutView from '../views/AboutView.vue';
+import SearchView from '../views/SearchView.vue';
+
+const isDev = import.meta.env.DEV;
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,6 +48,15 @@ const router = createRouter({
       name: 'duration-heatmap',
       component: DurationHeatmapView
     },
+    ...(isDev
+      ? ([
+          {
+            path: '/search',
+            name: 'search',
+            component: SearchView
+          }
+        ] as const)
+      : []),
     {
       path: '/umap',
       name: 'umap',

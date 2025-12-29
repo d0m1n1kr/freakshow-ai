@@ -6,16 +6,16 @@
 //! - Automatic optimal cluster count detection
 //! - Better outlier handling
 
+use clap::Parser;
+use indicatif::{ProgressBar, ProgressStyle};
 use ndarray::{Array1, Array2, Axis};
 use ordered_float::OrderedFloat;
 use rayon::prelude::*;
 use serde::{Deserialize, Serialize};
-use std::collections::{HashMap, HashSet, BinaryHeap};
+use std::collections::{BinaryHeap, HashMap, HashSet};
 use std::fs;
 use std::path::PathBuf;
 use std::time::Instant;
-use indicatif::{ProgressBar, ProgressStyle};
-use clap::Parser;
 
 // ============================================================================
 // Command-line Arguments
@@ -300,9 +300,9 @@ struct LlmRequestMessage {
 fn pca_reduce(embeddings: &[Vec<f64>], target_dims: usize) -> Vec<Vec<f64>> {
     let n = embeddings.len();
     let d = embeddings[0].len();
-    
+
     println!("   Reduziere Dimensionen: {} → {} (PCA)", d, target_dims);
-    
+
     // Convert to ndarray
     let mut data = Array2::<f64>::zeros((n, d));
     for (i, emb) in embeddings.iter().enumerate() {
@@ -310,7 +310,7 @@ fn pca_reduce(embeddings: &[Vec<f64>], target_dims: usize) -> Vec<Vec<f64>> {
             data[[i, j]] = val;
         }
     }
-    
+
     // Center the data (subtract mean)
     let mean = data.mean_axis(Axis(0)).unwrap();
     for i in 0..n {
@@ -318,14 +318,14 @@ fn pca_reduce(embeddings: &[Vec<f64>], target_dims: usize) -> Vec<Vec<f64>> {
             data[[i, j]] -= mean[j];
         }
     }
-    
+
     // Power iteration to find principal components
     let mut rng = rand::rngs::StdRng::seed_from_u64(42);
     let normal = Normal::new(0.0, 1.0).unwrap();
-    
+
     let mut components = Vec::with_capacity(target_dims);
     let mut projected = data.clone();
-    
+
     let pb = ProgressBar::new(target_dims as u64);
     pb.set_style(
         ProgressStyle::default_bar()
@@ -333,15 +333,15 @@ fn pca_reduce(embeddings: &[Vec<f64>], target_dims: usize) -> Vec<Vec<f64>> {
             .unwrap()
             .progress_chars("#>-"),
     );
-    
+
     for _ in 0..target_dims {
         // Random initial vector
         let mut v: Array1<f64> = Array1::from_iter((0..d).map(|_| normal.sample(&mut rng)));
-        
+
         // Normalize
         let norm: f64 = v.iter().map(|x| x * x).sum::<f64>().sqrt();
         v.mapv_inplace(|x| x / norm);
-        
+
         // Power iteration (find dominant eigenvector of X^T X)
         for _ in 0..50 {
             // v_new = X^T * (X * v)
@@ -352,17 +352,17 @@ fn pca_reduce(embeddings: &[Vec<f64>], target_dims: usize) -> Vec<Vec<f64>> {
                     v_new[j] += projected[[i, j]] * xv[i];
                 }
             }
-            
+
             // Normalize
             let norm: f64 = v_new.iter().map(|x| x * x).sum::<f64>().sqrt();
             if norm > 1e-10 {
                 v = v_new.mapv(|x| x / norm);
             }
         }
-        
+
         // Store component
         components.push(v.clone());
-        
+
         // Deflate: remove this component from data
         let scores: Array1<f64> = projected.dot(&v);
         for i in 0..n {
@@ -370,11 +370,11 @@ fn pca_reduce(embeddings: &[Vec<f64>], target_dims: usize) -> Vec<Vec<f64>> {
                 projected[[i, j]] -= scores[i] * v[j];
             }
         }
-        
+
         pb.inc(1);
     }
     pb.finish();
-    
+
     // Project original data onto components
     let mut result = vec![vec![0.0; target_dims]; n];
     for (i, emb) in embeddings.iter().enumerate() {
@@ -386,7 +386,7 @@ fn pca_reduce(embeddings: &[Vec<f64>], target_dims: usize) -> Vec<Vec<f64>> {
             result[i][k] = sum;
         }
     }
-    
+
     // Normalize the reduced embeddings
     for emb in &mut result {
         let norm: f64 = emb.iter().map(|x| x * x).sum::<f64>().sqrt();
@@ -396,7 +396,7 @@ fn pca_reduce(embeddings: &[Vec<f64>], target_dims: usize) -> Vec<Vec<f64>> {
             }
         }
     }
-    
+
     result
 }
 
@@ -405,17 +405,20 @@ fn pca_reduce(embeddings: &[Vec<f64>], target_dims: usize) -> Vec<Vec<f64>> {
 fn random_projection_reduce(embeddings: &[Vec<f64>], target_dims: usize) -> Vec<Vec<f64>> {
     let n = embeddings.len();
     let d = embeddings[0].len();
-    
-    println!("   Reduziere Dimensionen: {} → {} (Random Projection, {} Vektoren)", d, target_dims, n);
-    
+
+    println!(
+        "   Reduziere Dimensionen: {} → {} (Random Projection, {} Vektoren)",
+        d, target_dims, n
+    );
+
     // Generate random projection matrix
     let mut rng = rand::rngs::StdRng::seed_from_u64(42);
     let normal = Normal::new(0.0, 1.0 / (target_dims as f64).sqrt()).unwrap();
-    
+
     let projection: Vec<Vec<f64>> = (0..target_dims)
         .map(|_| (0..d).map(|_| normal.sample(&mut rng)).collect())
         .collect();
-    
+
     // Project all embeddings in parallel
     let result: Vec<Vec<f64>> = embeddings
         .par_iter()
@@ -436,7 +439,7 @@ fn random_projection_reduce(embeddings: &[Vec<f64>], target_dims: usize) -> Vec<
             reduced
         })
         .collect();
-    
+
     result
 }
 
@@ -483,26 +486,27 @@ fn build_mst(distances: &[Vec<f64>], core_distances: &[f64]) -> Vec<MstEdge> {
     let n = distances.len();
     let mut in_tree = vec![false; n];
     let mut edges = Vec::with_capacity(n - 1);
-    
+
     // Min-heap: (distance, from, to)
-    let mut heap: BinaryHeap<(std::cmp::Reverse<OrderedFloat<f64>>, usize, usize)> = BinaryHeap::new();
-    
+    let mut heap: BinaryHeap<(std::cmp::Reverse<OrderedFloat<f64>>, usize, usize)> =
+        BinaryHeap::new();
+
     // Start from node 0
     in_tree[0] = true;
     for j in 1..n {
         let d = mutual_reachability_distance(0, j, distances, core_distances);
         heap.push((std::cmp::Reverse(OrderedFloat(d)), 0, j));
     }
-    
+
     while edges.len() < n - 1 {
         if let Some((std::cmp::Reverse(OrderedFloat(weight)), from, to)) = heap.pop() {
             if in_tree[to] {
                 continue;
             }
-            
+
             in_tree[to] = true;
             edges.push(MstEdge { from, to, weight });
-            
+
             // Add edges from new node
             for (j, &is_in_tree) in in_tree.iter().enumerate() {
                 if !is_in_tree {
@@ -514,7 +518,7 @@ fn build_mst(distances: &[Vec<f64>], core_distances: &[f64]) -> Vec<MstEdge> {
             break;
         }
     }
-    
+
     edges
 }
 
@@ -533,21 +537,21 @@ impl UnionFind {
             size: vec![1; n],
         }
     }
-    
+
     fn find(&mut self, x: usize) -> usize {
         if self.parent[x] != x {
             self.parent[x] = self.find(self.parent[x]);
         }
         self.parent[x]
     }
-    
+
     fn union(&mut self, x: usize, y: usize) -> bool {
         let px = self.find(x);
         let py = self.find(y);
         if px == py {
             return false;
         }
-        
+
         if self.rank[px] < self.rank[py] {
             self.parent[px] = py;
             self.size[py] += self.size[px];
@@ -561,7 +565,7 @@ impl UnionFind {
         }
         true
     }
-    
+
     #[allow(dead_code)]
     fn size_of(&mut self, x: usize) -> usize {
         let root = self.find(x);
@@ -575,8 +579,8 @@ struct HdbscanNode {
     #[allow(dead_code)]
     id: usize,
     children: Vec<usize>,
-    lambda_birth: f64,  // 1/distance at which this cluster was formed
-    lambda_death: f64,  // 1/distance at which this cluster split
+    lambda_birth: f64, // 1/distance at which this cluster was formed
+    lambda_death: f64, // 1/distance at which this cluster split
     points: Vec<usize>,
     stability: f64,
     is_leaf: bool,
@@ -585,21 +589,17 @@ struct HdbscanNode {
 
 /// Build the HDBSCAN cluster tree from MST.
 /// Replacement for build_cluster_tree function - lines 549-644.
-fn build_cluster_tree(
-    mst: &[MstEdge],
-    n: usize,
-    _min_cluster_size: usize,
-) -> Vec<HdbscanNode> {
+fn build_cluster_tree(mst: &[MstEdge], n: usize, _min_cluster_size: usize) -> Vec<HdbscanNode> {
     // Sort MST edges by weight (ascending - smallest distances first)
     let mut sorted_edges = mst.to_vec();
     sorted_edges.sort_by(|a, b| a.weight.partial_cmp(&b.weight).unwrap());
-    
+
     let mut uf = UnionFind::new(n);
     let mut nodes: Vec<HdbscanNode> = Vec::new();
-    
+
     // Track active cluster for each root (union-find root -> node_id)
     let mut active_clusters: HashMap<usize, usize> = HashMap::new();
-    
+
     // Initialize: each point starts as its own cluster
     for i in 0..n {
         let node_id = nodes.len();
@@ -619,22 +619,26 @@ fn build_cluster_tree(
         });
         active_clusters.insert(i, node_id);
     }
-    
+
     // Process edges in order of increasing distance
     for edge in sorted_edges {
         let root_a = uf.find(edge.from);
         let root_b = uf.find(edge.to);
-        
+
         if root_a == root_b {
             continue; // Already in same cluster
         }
-        
-        let lambda = if edge.weight > 0.0 { 1.0 / edge.weight } else { f64::INFINITY };
-        
+
+        let lambda = if edge.weight > 0.0 {
+            1.0 / edge.weight
+        } else {
+            f64::INFINITY
+        };
+
         // Get the two clusters being merged
         let cluster_a_id = active_clusters[&root_a];
         let cluster_b_id = active_clusters[&root_b];
-        
+
         // Mark death time for both clusters
         nodes[cluster_a_id].lambda_death = lambda;
         nodes[cluster_b_id].lambda_death = lambda;
@@ -647,15 +651,15 @@ fn build_cluster_tree(
         if nodes[cluster_b_id].children.is_empty() && nodes[cluster_b_id].lambda_birth == 0.0 {
             nodes[cluster_b_id].lambda_birth = lambda;
         }
-        
+
         // Merge in union-find
         uf.union(root_a, root_b);
         let new_root = uf.find(root_a);
-        
+
         // Combine points from both clusters
         let mut new_points = nodes[cluster_a_id].points.clone();
         new_points.extend(&nodes[cluster_b_id].points);
-        
+
         // Create new parent cluster
         let new_node_id = nodes.len();
         nodes.push(HdbscanNode {
@@ -668,21 +672,20 @@ fn build_cluster_tree(
             is_leaf: false,
             selected: false,
         });
-        
+
         // Update active cluster for this root
         active_clusters.remove(&root_a);
         active_clusters.remove(&root_b);
         active_clusters.insert(new_root, new_node_id);
     }
-    
+
     // Set death time for root node(s) to 0 (they never die)
     for &node_id in active_clusters.values() {
         nodes[node_id].lambda_death = 0.0;
     }
-    
+
     nodes
 }
-
 
 /// Compute stability for each cluster and select optimal clusters
 fn select_clusters(nodes: &mut [HdbscanNode], min_cluster_size: usize) {
@@ -760,17 +763,13 @@ fn select_clusters(nodes: &mut [HdbscanNode], min_cluster_size: usize) {
 }
 
 /// Extract flat clustering from HDBSCAN result
-fn extract_flat_clusters(
-    nodes: &[HdbscanNode],
-    n: usize,
-    min_cluster_size: usize,
-) -> Vec<i32> {
+fn extract_flat_clusters(nodes: &[HdbscanNode], n: usize, min_cluster_size: usize) -> Vec<i32> {
     let mut labels = vec![-1i32; n]; // -1 = noise
-    
+
     if nodes.is_empty() {
         return labels;
     }
-    
+
     // Find selected clusters (leaves)
     let mut cluster_id = 0i32;
     for node in nodes.iter() {
@@ -783,53 +782,61 @@ fn extract_flat_clusters(
             cluster_id += 1;
         }
     }
-    
+
     labels
 }
 
 /// Main HDBSCAN function
-fn hdbscan(
-    embeddings: &[Vec<f64>],
-    min_cluster_size: usize,
-    min_samples: usize,
-) -> Vec<i32> {
+fn hdbscan(embeddings: &[Vec<f64>], min_cluster_size: usize, min_samples: usize) -> Vec<i32> {
     let n = embeddings.len();
-    
-    println!("   Parameter: min_cluster_size={}, min_samples={}", min_cluster_size, min_samples);
+
+    println!(
+        "   Parameter: min_cluster_size={}, min_samples={}",
+        min_cluster_size, min_samples
+    );
     println!("   Anzahl Topics: {}", n);
-    
+
     // Step 1: Compute distance matrix
     println!("   Berechne Distanz-Matrix...");
     let distances = compute_distance_matrix(embeddings);
-    
+
     // Step 2: Compute core distances
     println!("   Berechne Core-Distanzen...");
     let core_distances = compute_core_distances(&distances, min_samples);
-    
+
     // Step 3: Build MST
     println!("   Erstelle Minimum Spanning Tree...");
     let mst = build_mst(&distances, &core_distances);
-    
+
     // Step 4: Build cluster hierarchy
     println!("   Erstelle Cluster-Hierarchie...");
     let mut nodes = build_cluster_tree(&mst, n, min_cluster_size);
-    
+
     // Step 5: Select optimal clusters
     println!("   Wähle optimale Cluster...");
     select_clusters(&mut nodes, min_cluster_size);
-    
+
     // Debug: count selected nodes
     let selected_count = nodes.iter().filter(|n| n.selected).count();
     let leaf_count = nodes.iter().filter(|n| n.is_leaf).count();
-    println!("   Debug: {} nodes total, {} leaves, {} selected", nodes.len(), leaf_count, selected_count);
-    
+    println!(
+        "   Debug: {} nodes total, {} leaves, {} selected",
+        nodes.len(),
+        leaf_count,
+        selected_count
+    );
+
     // Step 6: Extract flat clustering
     let labels = extract_flat_clusters(&nodes, n, min_cluster_size);
 
     // If the current HDBSCAN-tree selection degenerates (e.g. 1 mega-cluster or almost one per point),
     // fall back to a DBSCAN clustering with automatically selected epsilon. This keeps V2 usable
     // and restores meaningful noise/outliers.
-    let num_clusters = labels.iter().filter(|&&l| l >= 0).max().map_or(0, |&m| m + 1);
+    let num_clusters = labels
+        .iter()
+        .filter(|&&l| l >= 0)
+        .max()
+        .map_or(0, |&m| m + 1);
     let num_noise = labels.iter().filter(|&&l| l == -1).count();
 
     let degenerate_many = (num_clusters as usize) > (n / 2);
@@ -845,15 +852,12 @@ fn hdbscan(
 
 /// Alternative: DBSCAN with automatic epsilon selection
 #[allow(dead_code)]
-fn dbscan_auto_eps(
-    embeddings: &[Vec<f64>],
-    min_samples: usize,
-) -> (Vec<i32>, f64) {
+fn dbscan_auto_eps(embeddings: &[Vec<f64>], min_samples: usize) -> (Vec<i32>, f64) {
     let n = embeddings.len();
-    
+
     // Compute distance matrix
     let distances = compute_distance_matrix(embeddings);
-    
+
     // Compute k-distance for each point
     let k = min_samples;
     let mut k_distances: Vec<f64> = distances
@@ -864,9 +868,9 @@ fn dbscan_auto_eps(
             sorted[k.min(n - 1)]
         })
         .collect();
-    
+
     k_distances.sort_by(|a, b| a.partial_cmp(b).unwrap());
-    
+
     // Find the "elbow" in the k-distance graph
     // Use second derivative to find the point of maximum curvature
     let mut max_curvature = 0.0;
@@ -876,7 +880,7 @@ fn dbscan_auto_eps(
     // and a single mega-cluster). Search within [10%, 90%].
     let start_i = (n / 10).max(1);
     let end_i = ((n * 9) / 10).min(n.saturating_sub(2));
-    
+
     for i in start_i..=end_i {
         let second_deriv = (k_distances[i + 1] - 2.0 * k_distances[i] + k_distances[i - 1]).abs();
         if second_deriv > max_curvature {
@@ -884,16 +888,19 @@ fn dbscan_auto_eps(
             best_idx = i;
         }
     }
-    
+
     let raw_eps = k_distances[best_idx];
     // Heuristic: the elbow-point often skews too permissive for cosine distances in high-dim space,
     // collapsing into a single mega-cluster. Scale down to encourage separation + noise.
     let eps = raw_eps * 0.75;
-    println!("   Auto-Epsilon: {:.4} → {:.4} (scale 0.75, index {})", raw_eps, eps, best_idx);
-    
+    println!(
+        "   Auto-Epsilon: {:.4} → {:.4} (scale 0.75, index {})",
+        raw_eps, eps, best_idx
+    );
+
     // Run DBSCAN with this epsilon
     let labels = dbscan(&distances, eps, min_samples);
-    
+
     (labels, eps)
 }
 
@@ -903,44 +910,40 @@ fn dbscan(distances: &[Vec<f64>], eps: f64, min_samples: usize) -> Vec<i32> {
     let n = distances.len();
     let mut labels = vec![-1i32; n];
     let mut cluster_id = 0;
-    
+
     for i in 0..n {
         if labels[i] != -1 {
             continue;
         }
-        
+
         // Find neighbors
-        let neighbors: Vec<usize> = (0..n)
-            .filter(|&j| distances[i][j] <= eps)
-            .collect();
-        
+        let neighbors: Vec<usize> = (0..n).filter(|&j| distances[i][j] <= eps).collect();
+
         if neighbors.len() < min_samples {
             // Noise point (will be labeled later if reachable from a core point)
             continue;
         }
-        
+
         // Start a new cluster
         labels[i] = cluster_id;
         let mut queue: Vec<usize> = neighbors.clone();
         let mut visited = vec![false; n];
         visited[i] = true;
-        
+
         while let Some(pt) = queue.pop() {
             if visited[pt] {
                 continue;
             }
             visited[pt] = true;
-            
+
             if labels[pt] == -1 {
                 labels[pt] = cluster_id;
             } else if labels[pt] != cluster_id {
                 continue;
             }
-            
-            let pt_neighbors: Vec<usize> = (0..n)
-                .filter(|&j| distances[pt][j] <= eps)
-                .collect();
-            
+
+            let pt_neighbors: Vec<usize> = (0..n).filter(|&j| distances[pt][j] <= eps).collect();
+
             if pt_neighbors.len() >= min_samples {
                 for &neighbor in &pt_neighbors {
                     if labels[neighbor] == -1 {
@@ -952,17 +955,17 @@ fn dbscan(distances: &[Vec<f64>], eps: f64, min_samples: usize) -> Vec<i32> {
                 }
             }
         }
-        
+
         cluster_id += 1;
     }
-    
+
     labels
 }
 
 /// Compute cosine distance matrix (parallel)
 fn compute_distance_matrix(embeddings: &[Vec<f64>]) -> Vec<Vec<f64>> {
     let n = embeddings.len();
-    
+
     // Parallel computation
     let results: Vec<(usize, usize, f64)> = (0..n)
         .into_par_iter()
@@ -975,13 +978,13 @@ fn compute_distance_matrix(embeddings: &[Vec<f64>]) -> Vec<Vec<f64>> {
                 .collect::<Vec<_>>()
         })
         .collect();
-    
+
     let mut distances = vec![vec![0.0; n]; n];
     for (i, j, dist) in results {
         distances[i][j] = dist;
         distances[j][i] = dist;
     }
-    
+
     distances
 }
 
@@ -990,13 +993,13 @@ fn cosine_similarity(a: &[f64], b: &[f64]) -> f64 {
     let mut dot_product = 0.0;
     let mut norm_a = 0.0;
     let mut norm_b = 0.0;
-    
+
     for i in 0..a.len() {
         dot_product += a[i] * b[i];
         norm_a += a[i] * a[i];
         norm_b += b[i] * b[i];
     }
-    
+
     if norm_a > 0.0 && norm_b > 0.0 {
         dot_product / (norm_a.sqrt() * norm_b.sqrt())
     } else {
@@ -1016,7 +1019,7 @@ fn merge_small_clusters(
     outlier_threshold: f64,
 ) -> Vec<i32> {
     let mut new_labels = labels.to_vec();
-    
+
     // Count cluster sizes
     let mut cluster_sizes: HashMap<i32, usize> = HashMap::new();
     for &label in labels {
@@ -1024,11 +1027,11 @@ fn merge_small_clusters(
             *cluster_sizes.entry(label).or_insert(0) += 1;
         }
     }
-    
+
     // Compute cluster centroids
     let mut cluster_centroids: HashMap<i32, Vec<f64>> = HashMap::new();
     let mut cluster_counts: HashMap<i32, usize> = HashMap::new();
-    
+
     for (i, &label) in labels.iter().enumerate() {
         if label >= 0 {
             let centroid = cluster_centroids
@@ -1040,37 +1043,37 @@ fn merge_small_clusters(
             *cluster_counts.entry(label).or_insert(0) += 1;
         }
     }
-    
+
     for (label, centroid) in cluster_centroids.iter_mut() {
         let count = cluster_counts[label] as f64;
         for val in centroid.iter_mut() {
             *val /= count;
         }
     }
-    
+
     // Find small clusters and merge them
     let small_clusters: Vec<i32> = cluster_sizes
         .iter()
         .filter(|(_, &size)| size < min_size)
         .map(|(&label, _)| label)
         .collect();
-    
+
     let large_clusters: Vec<i32> = cluster_sizes
         .iter()
         .filter(|(_, &size)| size >= min_size)
         .map(|(&label, _)| label)
         .collect();
-    
+
     if large_clusters.is_empty() {
         return new_labels;
     }
-    
+
     for small_label in small_clusters {
         if let Some(small_centroid) = cluster_centroids.get(&small_label) {
             // Find nearest large cluster
             let mut best_label = large_clusters[0];
             let mut best_sim = -1.0;
-            
+
             for &large_label in &large_clusters {
                 if let Some(large_centroid) = cluster_centroids.get(&large_label) {
                     let sim = cosine_similarity(small_centroid, large_centroid);
@@ -1080,7 +1083,7 @@ fn merge_small_clusters(
                     }
                 }
             }
-            
+
             // Reassign all points
             for label in new_labels.iter_mut() {
                 if *label == small_label {
@@ -1089,13 +1092,13 @@ fn merge_small_clusters(
             }
         }
     }
-    
+
     // Reassign noise points to nearest cluster ONLY if similarity exceeds threshold
     for (i, label) in new_labels.iter_mut().enumerate() {
         if *label == -1 && !large_clusters.is_empty() {
             let mut best_label = large_clusters[0];
             let mut best_sim = -1.0;
-            
+
             for &cluster_label in &large_clusters {
                 if let Some(centroid) = cluster_centroids.get(&cluster_label) {
                     let sim = cosine_similarity(&embeddings[i], centroid);
@@ -1105,7 +1108,7 @@ fn merge_small_clusters(
                     }
                 }
             }
-            
+
             // Only assign if similarity exceeds threshold
             if best_sim >= outlier_threshold {
                 *label = best_label;
@@ -1113,20 +1116,20 @@ fn merge_small_clusters(
             // else: keep as -1 (noise/outlier)
         }
     }
-    
+
     // Renumber clusters to be contiguous
     let unique_labels: HashSet<i32> = new_labels.iter().filter(|&&l| l >= 0).copied().collect();
     let mut label_map: HashMap<i32, i32> = HashMap::new();
     for (new_id, &old_label) in unique_labels.iter().enumerate() {
         label_map.insert(old_label, new_id as i32);
     }
-    
+
     for label in new_labels.iter_mut() {
         if *label >= 0 {
             *label = label_map[label];
         }
     }
-    
+
     new_labels
 }
 
@@ -1142,16 +1145,52 @@ fn find_cluster_name(
 ) -> String {
     let mut keyword_counts: HashMap<String, f64> = HashMap::new();
     let mut topic_words: HashMap<String, f64> = HashMap::new();
-    
+
     let generic_words: HashSet<&str> = [
-        "und", "der", "die", "das", "in", "im", "von", "für", "mit", "über", "zur", "zum",
-        "diskussion", "thema", "themen", "aspekte", "entwicklung", "entwicklungen",
-        "nutzung", "verwendung", "einsatz", "einfluss", "bedeutung", "rolle",
-        "allgemein", "allgemeine", "verschiedene", "aktuelle", "neue", "neuen",
-        "technologie", "technologien", "technik", "technisch", "technische",
-        "zukunft", "zukünftige", "trends", "trend",
-    ].iter().copied().collect();
-    
+        "und",
+        "der",
+        "die",
+        "das",
+        "in",
+        "im",
+        "von",
+        "für",
+        "mit",
+        "über",
+        "zur",
+        "zum",
+        "diskussion",
+        "thema",
+        "themen",
+        "aspekte",
+        "entwicklung",
+        "entwicklungen",
+        "nutzung",
+        "verwendung",
+        "einsatz",
+        "einfluss",
+        "bedeutung",
+        "rolle",
+        "allgemein",
+        "allgemeine",
+        "verschiedene",
+        "aktuelle",
+        "neue",
+        "neuen",
+        "technologie",
+        "technologien",
+        "technik",
+        "technisch",
+        "technische",
+        "zukunft",
+        "zukünftige",
+        "trends",
+        "trend",
+    ]
+    .iter()
+    .copied()
+    .collect();
+
     for &idx in cluster_items {
         let topic = &all_topics[idx];
         let weight = if use_relevance_weighting {
@@ -1159,45 +1198,51 @@ fn find_cluster_name(
         } else {
             1.0
         };
-        
+
         for kw in &topic.keywords {
             let key = kw.to_lowercase();
             *keyword_counts.entry(key).or_insert(0.0) += weight;
         }
-        
+
         let words: Vec<String> = topic
             .topic
             .to_lowercase()
             .chars()
-            .map(|c| if c.is_alphabetic() || c == ' ' || c == '-' { c } else { ' ' })
+            .map(|c| {
+                if c.is_alphabetic() || c == ' ' || c == '-' {
+                    c
+                } else {
+                    ' '
+                }
+            })
             .collect::<String>()
             .split_whitespace()
             .filter(|w| w.len() > 2 && !generic_words.contains(w))
             .map(|s| s.to_string())
             .collect();
-        
+
         for word in words {
             *topic_words.entry(word).or_insert(0.0) += weight;
         }
     }
-    
+
     let mut all_counts: HashMap<String, f64> = topic_words.clone();
     for (kw, count) in keyword_counts {
         *all_counts.entry(kw).or_insert(0.0) += count * 2.0;
     }
-    
+
     if all_counts.is_empty() {
         return "Sonstiges".to_string();
     }
-    
+
     let mut sorted: Vec<_> = all_counts.into_iter().collect();
     sorted.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap());
-    
+
     let top_words: Vec<_> = sorted.iter().take(3).collect();
     if top_words.is_empty() {
         return "Sonstiges".to_string();
     }
-    
+
     let first_word = &top_words[0].0;
     let mut chars = first_word.chars();
     let name = match chars.next() {
@@ -1208,7 +1253,7 @@ fn find_cluster_name(
         }
         None => first_word.to_string(),
     };
-    
+
     if top_words.len() > 1 && top_words[0].1 <= top_words[1].1 * 2.0 {
         let second_word = &top_words[1].0;
         let mut chars = second_word.chars();
@@ -1222,11 +1267,14 @@ fn find_cluster_name(
         };
         return format!("{} & {}", name, second);
     }
-    
+
     name
 }
 
-fn normalized_occurrences(topic: &TopicWithEmbedding, default_topic_duration_sec: u32) -> Vec<ClusterTopicOccurrence> {
+fn normalized_occurrences(
+    topic: &TopicWithEmbedding,
+    default_topic_duration_sec: u32,
+) -> Vec<ClusterTopicOccurrence> {
     if let Some(occ) = topic.occurrences.as_ref() {
         if !occ.is_empty() {
             return occ
@@ -1269,9 +1317,17 @@ fn call_llm_for_naming<'a>(
     Box::pin(async move {
         let client = reqwest::Client::new();
         let model_name = model.unwrap_or(&settings.llm.model);
-        let max_retries = settings.topic_extraction.as_ref().and_then(|s| s.max_retries).unwrap_or(5);
-        let retry_delay_ms = settings.topic_extraction.as_ref().and_then(|s| s.retry_delay_ms).unwrap_or(10000);
-        
+        let max_retries = settings
+            .topic_extraction
+            .as_ref()
+            .and_then(|s| s.max_retries)
+            .unwrap_or(5);
+        let retry_delay_ms = settings
+            .topic_extraction
+            .as_ref()
+            .and_then(|s| s.retry_delay_ms)
+            .unwrap_or(10000);
+
         let system_prompt = r#"Du bist ein Experte für präzise Kategorisierung. Deine Aufgabe ist es, für eine Gruppe von Podcast-Topics einen kurzen, prägnanten Kategorie-Namen zu finden.
 
 Regeln:
@@ -1280,23 +1336,30 @@ Regeln:
 - Wenn es um ein konkretes Produkt/Thema geht, nenne es beim Namen
 - Die Topics sind nach Relevanz sortiert - die ersten sind wichtiger!
 - Antworte NUR mit dem Kategorie-Namen, nichts anderes"#;
-        
+
         let user_prompt = format!(
             "Finde einen kurzen, prägnanten Namen für diese Gruppe von Topics (sortiert nach Relevanz, wichtigste zuerst):\n\n{}\n\nKategorie-Name:",
             topics.iter().map(|t| format!("- {}", t)).collect::<Vec<_>>().join("\n")
         );
-        
+
         let request = LlmRequest {
             model: model_name.to_string(),
             messages: vec![
-                LlmRequestMessage { role: "system".to_string(), content: system_prompt.to_string() },
-                LlmRequestMessage { role: "user".to_string(), content: user_prompt },
+                LlmRequestMessage {
+                    role: "system".to_string(),
+                    content: system_prompt.to_string(),
+                },
+                LlmRequestMessage {
+                    role: "user".to_string(),
+                    content: user_prompt,
+                },
             ],
             temperature: settings.llm.temperature.unwrap_or(0.3),
             max_tokens: 50,
         };
-        
-        match client.post(format!("{}/chat/completions", settings.llm.base_url))
+
+        match client
+            .post(format!("{}/chat/completions", settings.llm.base_url))
             .header("Content-Type", "application/json")
             .header("Authorization", format!("Bearer {}", settings.llm.api_key))
             .json(&request)
@@ -1309,7 +1372,13 @@ Regeln:
                 if status == 429 || status == 503 {
                     if retry_count < max_retries {
                         let backoff_ms = retry_delay_ms * 2u64.pow(retry_count);
-                        eprintln!("   ⚠️  Rate limit ({}), warte {}ms vor Retry {}/{}", status, backoff_ms, retry_count + 1, max_retries);
+                        eprintln!(
+                            "   ⚠️  Rate limit ({}), warte {}ms vor Retry {}/{}",
+                            status,
+                            backoff_ms,
+                            retry_count + 1,
+                            max_retries
+                        );
                         tokio::time::sleep(tokio::time::Duration::from_millis(backoff_ms)).await;
                         return call_llm_for_naming(topics, settings, model, retry_count + 1).await;
                     } else {
@@ -1336,7 +1405,12 @@ Regeln:
             Err(e) => {
                 if retry_count < max_retries {
                     let backoff_ms = retry_delay_ms * 2u64.pow(retry_count);
-                    eprintln!("   ⚠️  Request Error: {}, Retry {}/{}", e, retry_count + 1, max_retries);
+                    eprintln!(
+                        "   ⚠️  Request Error: {}, Retry {}/{}",
+                        e,
+                        retry_count + 1,
+                        max_retries
+                    );
                     tokio::time::sleep(tokio::time::Duration::from_millis(backoff_ms)).await;
                     return call_llm_for_naming(topics, settings, model, retry_count + 1).await;
                 }
@@ -1351,89 +1425,155 @@ Regeln:
 // Main
 // ============================================================================
 
-
 /// Load variant settings from variants.json
-fn load_variant_settings(variant_name: &str) -> Result<(String, VariantSettingsJson), Box<dyn std::error::Error>> {
+fn load_variant_settings(
+    variant_name: &str,
+) -> Result<(String, VariantSettingsJson), Box<dyn std::error::Error>> {
     let variants_path = PathBuf::from("variants.json");
     if !variants_path.exists() {
         return Err("variants.json not found".into());
     }
-    
+
     let variants_content = fs::read_to_string(&variants_path)?;
     let variants_config: VariantsConfig = serde_json::from_str(&variants_content)?;
-    
-    let variant = variants_config.variants.get(variant_name)
+
+    let variant = variants_config
+        .variants
+        .get(variant_name)
         .ok_or_else(|| format!("Variant '{}' not found in variants.json", variant_name))?;
-    
+
     Ok((variant.name.clone(), variant.settings.clone()))
 }
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let start_time = Instant::now();
-    
+
     // Parse command-line arguments
     let args = Args::parse();
-    
+
     println!("🔬 Topic-Clustering V2 für Freakshow Episoden");
     println!("   (HDBSCAN + Dimensionsreduktion)\n");
-    
+
     // Load base settings
     let settings_path = PathBuf::from("settings.json");
     if !settings_path.exists() {
         eprintln!("\n❌ settings.json nicht gefunden!");
-        eprintln!("   Kopiere settings.example.json zu settings.json und passe die Konfiguration an.\n");
+        eprintln!(
+            "   Kopiere settings.example.json zu settings.json und passe die Konfiguration an.\n"
+        );
         std::process::exit(1);
     }
-    
+
     let settings_content = fs::read_to_string(&settings_path)?;
     let settings: Settings = serde_json::from_str(&settings_content)?;
-    
+
     // Load variant settings if specified, otherwise use base settings
-    let (min_cluster_size, min_samples, reduced_dims, use_llm_naming, use_relevance_weighting, outlier_threshold, default_topic_duration_sec) =
-        if let Some(ref variant_name) = args.variant {
-            match load_variant_settings(variant_name) {
-                Ok((variant_display_name, variant_settings)) => {
-                    println!("📋 Lade Variante: {} ({})\n", variant_display_name, variant_name);
-                    (
-                        variant_settings.min_cluster_size
-                            .or(settings.topic_clustering.as_ref().and_then(|s| s.min_cluster_size))
-                            .unwrap_or(5),
-                        variant_settings.min_samples
-                            .or(settings.topic_clustering.as_ref().and_then(|s| s.min_samples))
-                            .unwrap_or(3),
-                        variant_settings.reduced_dimensions
-                            .or(settings.topic_clustering.as_ref().and_then(|s| s.reduced_dimensions))
-                            .unwrap_or(50),
-                        variant_settings.use_llm_naming
-                            .or(settings.topic_clustering.as_ref().and_then(|s| s.use_llm_naming))
-                            .unwrap_or(true),
-                        variant_settings.use_relevance_weighting
-                            .or(settings.topic_clustering.as_ref().and_then(|s| s.use_relevance_weighting))
-                            .unwrap_or(true),
-                        variant_settings.outlier_threshold
-                            .or(settings.topic_clustering.as_ref().and_then(|s| s.outlier_threshold))
-                            .unwrap_or(0.15),
-                        variant_settings.default_topic_duration_sec.unwrap_or(300),
-                    )
-                },
-                Err(e) => {
-                    eprintln!("\n❌ Fehler beim Laden der Variante '{}': {}", variant_name, e);
-                    std::process::exit(1);
-                }
+    let (
+        min_cluster_size,
+        min_samples,
+        reduced_dims,
+        use_llm_naming,
+        use_relevance_weighting,
+        outlier_threshold,
+        default_topic_duration_sec,
+    ) = if let Some(ref variant_name) = args.variant {
+        match load_variant_settings(variant_name) {
+            Ok((variant_display_name, variant_settings)) => {
+                println!(
+                    "📋 Lade Variante: {} ({})\n",
+                    variant_display_name, variant_name
+                );
+                (
+                    variant_settings
+                        .min_cluster_size
+                        .or(settings
+                            .topic_clustering
+                            .as_ref()
+                            .and_then(|s| s.min_cluster_size))
+                        .unwrap_or(5),
+                    variant_settings
+                        .min_samples
+                        .or(settings
+                            .topic_clustering
+                            .as_ref()
+                            .and_then(|s| s.min_samples))
+                        .unwrap_or(3),
+                    variant_settings
+                        .reduced_dimensions
+                        .or(settings
+                            .topic_clustering
+                            .as_ref()
+                            .and_then(|s| s.reduced_dimensions))
+                        .unwrap_or(50),
+                    variant_settings
+                        .use_llm_naming
+                        .or(settings
+                            .topic_clustering
+                            .as_ref()
+                            .and_then(|s| s.use_llm_naming))
+                        .unwrap_or(true),
+                    variant_settings
+                        .use_relevance_weighting
+                        .or(settings
+                            .topic_clustering
+                            .as_ref()
+                            .and_then(|s| s.use_relevance_weighting))
+                        .unwrap_or(true),
+                    variant_settings
+                        .outlier_threshold
+                        .or(settings
+                            .topic_clustering
+                            .as_ref()
+                            .and_then(|s| s.outlier_threshold))
+                        .unwrap_or(0.15),
+                    variant_settings.default_topic_duration_sec.unwrap_or(300),
+                )
             }
-        } else {
-            (
-                settings.topic_clustering.as_ref().and_then(|s| s.min_cluster_size).unwrap_or(5),
-                settings.topic_clustering.as_ref().and_then(|s| s.min_samples).unwrap_or(3),
-                settings.topic_clustering.as_ref().and_then(|s| s.reduced_dimensions).unwrap_or(50),
-                settings.topic_clustering.as_ref().and_then(|s| s.use_llm_naming).unwrap_or(true),
-                settings.topic_clustering.as_ref().and_then(|s| s.use_relevance_weighting).unwrap_or(true),
-                settings.topic_clustering.as_ref().and_then(|s| s.outlier_threshold).unwrap_or(0.15),
-                300,
-            )
-        };
-    
+            Err(e) => {
+                eprintln!(
+                    "\n❌ Fehler beim Laden der Variante '{}': {}",
+                    variant_name, e
+                );
+                std::process::exit(1);
+            }
+        }
+    } else {
+        (
+            settings
+                .topic_clustering
+                .as_ref()
+                .and_then(|s| s.min_cluster_size)
+                .unwrap_or(5),
+            settings
+                .topic_clustering
+                .as_ref()
+                .and_then(|s| s.min_samples)
+                .unwrap_or(3),
+            settings
+                .topic_clustering
+                .as_ref()
+                .and_then(|s| s.reduced_dimensions)
+                .unwrap_or(50),
+            settings
+                .topic_clustering
+                .as_ref()
+                .and_then(|s| s.use_llm_naming)
+                .unwrap_or(true),
+            settings
+                .topic_clustering
+                .as_ref()
+                .and_then(|s| s.use_relevance_weighting)
+                .unwrap_or(true),
+            settings
+                .topic_clustering
+                .as_ref()
+                .and_then(|s| s.outlier_threshold)
+                .unwrap_or(0.15),
+            300,
+        )
+    };
+
     // Load embeddings
     println!("📂 Lade Embeddings-Datenbank...");
     let db_path = PathBuf::from("topic-embeddings.json");
@@ -1443,10 +1583,10 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         eprintln!("   node create-embeddings.js\n");
         std::process::exit(1);
     }
-    
+
     let db_content = fs::read_to_string(&db_path)?;
     let db: EmbeddingsDatabase = serde_json::from_str(&db_content)?;
-    
+
     println!("   Modell: {}", db.embedding_model);
     println!("   Topics: {}", db.topics.len());
     println!("   Dimensionen: {}", db.embedding_dimensions);
@@ -1501,19 +1641,32 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         );
         println!("   Topics nach Filter: {}", filtered_topics.len());
     }
-    
+
     println!("\n📊 V2 Clustering-Einstellungen:");
     println!("   Algorithmus:         HDBSCAN");
     println!("   Min Cluster Size:    {}", min_cluster_size);
     println!("   Min Samples:         {}", min_samples);
     println!("   Reduzierte Dims:     {}", reduced_dims);
-    println!("   Relevanz-Gewichtung: {}", if use_relevance_weighting { "Ja" } else { "Nein" });
+    println!(
+        "   Relevanz-Gewichtung: {}",
+        if use_relevance_weighting {
+            "Ja"
+        } else {
+            "Nein"
+        }
+    );
     println!("   Default Topic Dauer: {}s", default_topic_duration_sec);
-    println!("   LLM-Benennung:       {}\n", if use_llm_naming { "Ja" } else { "Nein" });
-    
+    println!(
+        "   LLM-Benennung:       {}\n",
+        if use_llm_naming { "Ja" } else { "Nein" }
+    );
+
     let unique_topics = filtered_topics.clone();
-    let embeddings: Vec<Vec<f64>> = filtered_topics.iter().map(|t| t.embedding.clone()).collect();
-    
+    let embeddings: Vec<Vec<f64>> = filtered_topics
+        .iter()
+        .map(|t| t.embedding.clone())
+        .collect();
+
     // Step 1: Dimensionality reduction
     println!("📉 Dimensionsreduktion...");
     let reduced_embeddings = if reduced_dims < db.embedding_dimensions {
@@ -1522,31 +1675,52 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     } else {
         embeddings.clone()
     };
-    
+
     // Step 2: HDBSCAN clustering
     println!("\n📊 HDBSCAN Clustering...");
     let labels = hdbscan(&reduced_embeddings, min_cluster_size, min_samples);
-    
+
     // Count clusters and noise
-    let num_clusters = labels.iter().filter(|&&l| l >= 0).max().map_or(0, |&m| m + 1);
+    let num_clusters = labels
+        .iter()
+        .filter(|&&l| l >= 0)
+        .max()
+        .map_or(0, |&m| m + 1);
     let num_noise = labels.iter().filter(|&&l| l == -1).count();
-    println!("   ✓ {} Cluster gefunden, {} Noise-Punkte", num_clusters, num_noise);
-    
+    println!(
+        "   ✓ {} Cluster gefunden, {} Noise-Punkte",
+        num_clusters, num_noise
+    );
+
     // Step 3: Merge small clusters and assign noise
     println!("\n🔄 Post-Processing...");
-    let final_labels = merge_small_clusters(&labels, &reduced_embeddings, min_cluster_size, outlier_threshold);
-    
-    let final_num_clusters = final_labels.iter().filter(|&&l| l >= 0).max().map_or(0, |&m| m + 1);
+    let final_labels = merge_small_clusters(
+        &labels,
+        &reduced_embeddings,
+        min_cluster_size,
+        outlier_threshold,
+    );
+
+    let final_num_clusters = final_labels
+        .iter()
+        .filter(|&&l| l >= 0)
+        .max()
+        .map_or(0, |&m| m + 1);
     let final_num_outliers = final_labels.iter().filter(|&&l| l == -1).count();
     println!("   ✓ {} finale Cluster nach Merge", final_num_clusters);
-    println!("   ✓ {} Outliers (Threshold: {})", final_num_outliers, outlier_threshold);
-    
+    println!(
+        "   ✓ {} Outliers (Threshold: {})",
+        final_num_outliers, outlier_threshold
+    );
+
     // Step 4: Build cluster structures
     println!("\n🏷️  Cluster benennen...");
-    let delay_ms = settings.topic_extraction.as_ref()
+    let delay_ms = settings
+        .topic_extraction
+        .as_ref()
         .and_then(|s| s.request_delay_ms)
         .unwrap_or(2000);
-    
+
     // Group topics by cluster
     let mut cluster_topics: HashMap<i32, Vec<usize>> = HashMap::new();
     for (i, &label) in final_labels.iter().enumerate() {
@@ -1554,7 +1728,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             cluster_topics.entry(label).or_default().push(i);
         }
     }
-    
+
     let pb = ProgressBar::new(cluster_topics.len() as u64);
     pb.set_style(
         ProgressStyle::default_bar()
@@ -1562,18 +1736,22 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             .unwrap()
             .progress_chars("#>-"),
     );
-    
+
     let mut named_clusters = Vec::new();
-    let model = settings.topic_clustering.as_ref().and_then(|s| s.model.as_deref());
-    
+    let model = settings
+        .topic_clustering
+        .as_ref()
+        .and_then(|s| s.model.as_deref());
+
     for (i, (_cluster_label, topic_indices)) in cluster_topics.iter().enumerate() {
-        let cluster_topics_data: Vec<_> = topic_indices.iter()
+        let cluster_topics_data: Vec<_> = topic_indices
+            .iter()
             .map(|&idx| unique_topics[idx].clone())
             .collect();
-        
+
         // Determine if outlier based on cluster cohesion
         let is_outlier = cluster_topics_data.len() < min_cluster_size;
-        
+
         let name = if is_outlier {
             pb.set_message("\"Sonstiges\" (Outlier)".to_string());
             "Sonstiges".to_string()
@@ -1583,14 +1761,18 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 topic_relevance_sec(b, default_topic_duration_sec)
                     .cmp(&topic_relevance_sec(a, default_topic_duration_sec))
             });
-            let top_topics: Vec<String> = sorted_topics.iter().take(10).map(|t| t.topic.clone()).collect();
-            
+            let top_topics: Vec<String> = sorted_topics
+                .iter()
+                .take(10)
+                .map(|t| t.topic.clone())
+                .collect();
+
             // Rate limit prevention
             if i > 0 && i % 50 == 0 {
                 pb.set_message("⏸️  Pause (Rate Limit Prävention)".to_string());
                 tokio::time::sleep(tokio::time::Duration::from_millis(30000)).await;
             }
-            
+
             match call_llm_for_naming(top_topics, &settings, model, 0).await {
                 Some(llm_name) => {
                     pb.set_message(format!("\"{}\" (LLM)", llm_name));
@@ -1598,17 +1780,27 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                     llm_name
                 }
                 None => {
-                    let heuristic_name = find_cluster_name(topic_indices, &unique_topics, use_relevance_weighting, default_topic_duration_sec);
+                    let heuristic_name = find_cluster_name(
+                        topic_indices,
+                        &unique_topics,
+                        use_relevance_weighting,
+                        default_topic_duration_sec,
+                    );
                     pb.set_message(format!("\"{}\" (Heuristik)", heuristic_name));
                     heuristic_name
                 }
             }
         } else {
-            let heuristic_name = find_cluster_name(topic_indices, &unique_topics, use_relevance_weighting, default_topic_duration_sec);
+            let heuristic_name = find_cluster_name(
+                topic_indices,
+                &unique_topics,
+                use_relevance_weighting,
+                default_topic_duration_sec,
+            );
             pb.set_message(format!("\"{}\" (Heuristik)", heuristic_name));
             heuristic_name
         };
-        
+
         // Collect all episodes
         let mut all_episodes = HashSet::new();
         for topic in &cluster_topics_data {
@@ -1623,16 +1815,24 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             .iter()
             .map(|t| topic_relevance_sec(t, default_topic_duration_sec))
             .sum();
-        
+
         // Create ID from name
-        let id = name.to_lowercase().chars()
-            .map(|c| if c.is_alphanumeric() || c == 'ä' || c == 'ö' || c == 'ü' || c == 'ß' { c } else { '-' })
+        let id = name
+            .to_lowercase()
+            .chars()
+            .map(|c| {
+                if c.is_alphanumeric() || c == 'ä' || c == 'ö' || c == 'ü' || c == 'ß' {
+                    c
+                } else {
+                    '-'
+                }
+            })
             .collect::<String>()
             .split('-')
             .filter(|s| !s.is_empty())
             .collect::<Vec<_>>()
             .join("-");
-        
+
         named_clusters.push(NamedCluster {
             id,
             name,
@@ -1652,21 +1852,21 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .collect(),
             episodes,
         });
-        
+
         pb.inc(1);
     }
-    
+
     pb.finish_with_message("Done");
-    
+
     // Sort by relevance (duration) so "bigger" clusters bubble to the top
     named_clusters.sort_by(|a, b| b.relevance_sec.cmp(&a.relevance_sec));
-    
+
     let outlier_count = named_clusters.iter().filter(|c| c.is_outlier).count();
     println!("\n   ℹ️  {} Outlier-Cluster gefunden\n", outlier_count);
-    
+
     // Save results (same format as V1)
     let taxonomy_file = PathBuf::from("topic-taxonomy.json");
-    
+
     let result = TaxonomyResult {
         created_at: chrono::Utc::now().to_rfc3339(),
         method: "hdbscan-v2".to_string(),
@@ -1677,31 +1877,40 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         settings: ClusterSettings {
             clusters: named_clusters.len(),
             outlier_threshold,
-            linkage_method: format!("hdbscan(min_cluster_size={}, min_samples={})", min_cluster_size, min_samples),
+            linkage_method: format!(
+                "hdbscan(min_cluster_size={}, min_samples={})",
+                min_cluster_size, min_samples
+            ),
             use_relevance_weighting,
         },
         statistics: Statistics {
             cluster_count: named_clusters.len(),
             outlier_count,
-            outlier_percentage: format!("{:.1}%", (outlier_count as f64 / named_clusters.len() as f64) * 100.0),
+            outlier_percentage: format!(
+                "{:.1}%",
+                (outlier_count as f64 / named_clusters.len() as f64) * 100.0
+            ),
         },
-        clusters: named_clusters.iter().map(|c| TaxonomyCluster {
-            id: c.id.clone(),
-            name: c.name.clone(),
-            description: format!("{} Topics in {} Episoden", c.topic_count, c.episode_count),
-            is_outlier: c.is_outlier,
-            topic_count: c.topic_count,
-            episode_count: c.episode_count,
-            relevance_sec: c.relevance_sec,
-            sample_topics: c.topics.iter().take(5).map(|t| t.topic.clone()).collect(),
-            episodes: c.episodes.clone(),
-        }).collect(),
+        clusters: named_clusters
+            .iter()
+            .map(|c| TaxonomyCluster {
+                id: c.id.clone(),
+                name: c.name.clone(),
+                description: format!("{} Topics in {} Episoden", c.topic_count, c.episode_count),
+                is_outlier: c.is_outlier,
+                topic_count: c.topic_count,
+                episode_count: c.episode_count,
+                relevance_sec: c.relevance_sec,
+                sample_topics: c.topics.iter().take(5).map(|t| t.topic.clone()).collect(),
+                episodes: c.episodes.clone(),
+            })
+            .collect(),
     };
-    
+
     let result_json = serde_json::to_string_pretty(&result)?;
     fs::write(&taxonomy_file, result_json)?;
     println!("✅ Taxonomie gespeichert: {:?}", taxonomy_file);
-    
+
     // Save detailed mapping
     #[derive(Serialize)]
     struct DetailedCluster {
@@ -1713,46 +1922,61 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         relevance_sec: u64,
         topics: Vec<ClusterTopic>,
     }
-    
+
     #[derive(Serialize)]
     struct DetailedMapping {
         #[serde(rename = "createdAt")]
         created_at: String,
         clusters: Vec<DetailedCluster>,
     }
-    
+
     let detailed_file = PathBuf::from("topic-taxonomy-detailed.json");
     let detailed_mapping = DetailedMapping {
         created_at: chrono::Utc::now().to_rfc3339(),
-        clusters: named_clusters.iter().map(|c| DetailedCluster {
-            id: c.id.clone(),
-            name: c.name.clone(),
-            topic_count: c.topic_count,
-            relevance_sec: c.relevance_sec,
-            topics: c.topics.clone(),
-        }).collect(),
+        clusters: named_clusters
+            .iter()
+            .map(|c| DetailedCluster {
+                id: c.id.clone(),
+                name: c.name.clone(),
+                topic_count: c.topic_count,
+                relevance_sec: c.relevance_sec,
+                topics: c.topics.clone(),
+            })
+            .collect(),
     };
-    
+
     let detailed_json = serde_json::to_string_pretty(&detailed_mapping)?;
     fs::write(&detailed_file, detailed_json)?;
     println!("✅ Detailed Topic-Mapping gespeichert: {:?}", detailed_file);
-    
+
     // Print top clusters
     println!("\n📋 Top 15 Cluster:");
     for (i, c) in named_clusters.iter().take(15).enumerate() {
         let outlier_tag = if c.is_outlier { " [Outlier]" } else { "" };
-        println!("   {}. {}{} ({} Episoden, {} Topics)", 
-            i + 1, c.name, outlier_tag, c.episode_count, c.topic_count);
+        println!(
+            "   {}. {}{} ({} Episoden, {} Topics)",
+            i + 1,
+            c.name,
+            outlier_tag,
+            c.episode_count,
+            c.topic_count
+        );
         let examples: Vec<String> = c.topics.iter().take(3).map(|t| t.topic.clone()).collect();
         println!("      Beispiele: {}", examples.join(", "));
     }
-    
+
     let elapsed = start_time.elapsed();
     println!("\n✨ Statistik:");
-    println!("   {} Cluster erstellt (automatisch gefunden)", named_clusters.len());
-    println!("   {} Outlier ({:.1}%)", outlier_count, (outlier_count as f64 / named_clusters.len() as f64) * 100.0);
+    println!(
+        "   {} Cluster erstellt (automatisch gefunden)",
+        named_clusters.len()
+    );
+    println!(
+        "   {} Outlier ({:.1}%)",
+        outlier_count,
+        (outlier_count as f64 / named_clusters.len() as f64) * 100.0
+    );
     println!("   Laufzeit: {:.2}s", elapsed.as_secs_f64());
-    
+
     Ok(())
 }
-

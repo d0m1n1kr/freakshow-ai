@@ -1,11 +1,11 @@
+use clap::Parser;
+use indicatif::{ProgressBar, ProgressStyle};
 use rayon::prelude::*;
 use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet};
 use std::fs;
 use std::path::PathBuf;
 use std::time::Instant;
-use indicatif::{ProgressBar, ProgressStyle};
-use clap::Parser;
 
 // ============================================================================
 // Command-line Arguments
@@ -375,7 +375,14 @@ fn hierarchical_clustering(
 ) -> Vec<Cluster> {
     let n = topics.len();
     println!("   Linkage-Methode: {}", linkage_method);
-    println!("   Relevanz-Gewichtung: {}", if use_relevance_weighting { "Ja" } else { "Nein" });
+    println!(
+        "   Relevanz-Gewichtung: {}",
+        if use_relevance_weighting {
+            "Ja"
+        } else {
+            "Nein"
+        }
+    );
     let weights: Vec<f64> = if use_relevance_weighting {
         topics.iter().map(|t| t.episodes.len() as f64).collect()
     } else {
@@ -406,9 +413,7 @@ fn hierarchical_clustering(
         let n_clusters = clusters.len();
         let (merge_i, merge_j, min_dist): (usize, usize, f64) = (0..n_clusters)
             .into_par_iter()
-            .flat_map_iter(|i| {
-                ((i + 1)..n_clusters).map(move |j| (i, j))
-            })
+            .flat_map_iter(|i| ((i + 1)..n_clusters).map(move |j| (i, j)))
             .map(|(i, j)| {
                 let dist = compute_cluster_distance(
                     &clusters[i],
@@ -421,7 +426,7 @@ fn hierarchical_clustering(
             })
             .reduce(
                 || (0, 1, f64::INFINITY),
-                |a, b| if a.2 <= b.2 { a } else { b }
+                |a, b| if a.2 <= b.2 { a } else { b },
             );
         let mut is_outlier = clusters[merge_i].is_outlier || clusters[merge_j].is_outlier;
         if min_dist > outlier_threshold {
@@ -477,13 +482,49 @@ fn find_cluster_name(
     let mut keyword_counts: HashMap<String, f64> = HashMap::new();
     let mut topic_words: HashMap<String, f64> = HashMap::new();
     let generic_words: HashSet<&str> = [
-        "und", "der", "die", "das", "in", "im", "von", "für", "mit", "über", "zur", "zum",
-        "diskussion", "thema", "themen", "aspekte", "entwicklung", "entwicklungen",
-        "nutzung", "verwendung", "einsatz", "einfluss", "bedeutung", "rolle",
-        "allgemein", "allgemeine", "verschiedene", "aktuelle", "neue", "neuen",
-        "technologie", "technologien", "technik", "technisch", "technische",
-        "zukunft", "zukünftige", "trends", "trend",
-    ].iter().copied().collect();
+        "und",
+        "der",
+        "die",
+        "das",
+        "in",
+        "im",
+        "von",
+        "für",
+        "mit",
+        "über",
+        "zur",
+        "zum",
+        "diskussion",
+        "thema",
+        "themen",
+        "aspekte",
+        "entwicklung",
+        "entwicklungen",
+        "nutzung",
+        "verwendung",
+        "einsatz",
+        "einfluss",
+        "bedeutung",
+        "rolle",
+        "allgemein",
+        "allgemeine",
+        "verschiedene",
+        "aktuelle",
+        "neue",
+        "neuen",
+        "technologie",
+        "technologien",
+        "technik",
+        "technisch",
+        "technische",
+        "zukunft",
+        "zukünftige",
+        "trends",
+        "trend",
+    ]
+    .iter()
+    .copied()
+    .collect();
     for &idx in cluster_items {
         let topic = &all_topics[idx];
         let weight = if use_relevance_weighting {
@@ -539,7 +580,7 @@ fn find_cluster_name(
         }
         None => first_word.to_string(),
     };
-    
+
     if top_words.len() > 1 && top_words[0].1 <= top_words[1].1 * 2.0 {
         let second_word = &top_words[1].0;
         // Capitalize first character (UTF-8 safe)
@@ -564,11 +605,19 @@ fn call_llm_for_naming<'a>(
     retry_count: u32,
 ) -> std::pin::Pin<Box<dyn std::future::Future<Output = Option<String>> + Send + 'a>> {
     Box::pin(async move {
-    let client = reqwest::Client::new();
-    let model_name = model.unwrap_or(&settings.llm.model);
-    let max_retries = settings.topic_extraction.as_ref().and_then(|s| s.max_retries).unwrap_or(3);
-    let retry_delay_ms = settings.topic_extraction.as_ref().and_then(|s| s.retry_delay_ms).unwrap_or(5000);
-    let system_prompt = r#"Du bist ein Experte für präzise Kategorisierung. Deine Aufgabe ist es, für eine Gruppe von Podcast-Topics einen kurzen, prägnanten Kategorie-Namen zu finden.
+        let client = reqwest::Client::new();
+        let model_name = model.unwrap_or(&settings.llm.model);
+        let max_retries = settings
+            .topic_extraction
+            .as_ref()
+            .and_then(|s| s.max_retries)
+            .unwrap_or(3);
+        let retry_delay_ms = settings
+            .topic_extraction
+            .as_ref()
+            .and_then(|s| s.retry_delay_ms)
+            .unwrap_or(5000);
+        let system_prompt = r#"Du bist ein Experte für präzise Kategorisierung. Deine Aufgabe ist es, für eine Gruppe von Podcast-Topics einen kurzen, prägnanten Kategorie-Namen zu finden.
 
 Regeln:
 - Der Name sollte 1-3 Wörter lang sein
@@ -576,144 +625,215 @@ Regeln:
 - Wenn es um ein konkretes Produkt/Thema geht, nenne es beim Namen
 - Die Topics sind nach Relevanz sortiert - die ersten sind wichtiger!
 - Antworte NUR mit dem Kategorie-Namen, nichts anderes"#;
-    let user_prompt = format!(
+        let user_prompt = format!(
         "Finde einen kurzen, prägnanten Namen für diese Gruppe von Topics (sortiert nach Relevanz, wichtigste zuerst):\n\n{}\n\nKategorie-Name:",
         topics.iter().map(|t| format!("- {}", t)).collect::<Vec<_>>().join("\n")
     );
-    let request = LlmRequest {
-        model: model_name.to_string(),
-        messages: vec![
-            LlmRequestMessage { role: "system".to_string(), content: system_prompt.to_string() },
-            LlmRequestMessage { role: "user".to_string(), content: user_prompt },
-        ],
-        temperature: settings.llm.temperature.unwrap_or(0.3),
-        max_tokens: 50,
-    };
-    match client.post(format!("{}/chat/completions", settings.llm.base_url))
-        .header("Content-Type", "application/json")
-        .header("Authorization", format!("Bearer {}", settings.llm.api_key))
-        .json(&request)
-        .timeout(tokio::time::Duration::from_secs(30))
-        .send()
-        .await
-    {
-        Ok(response) => {
-            let status = response.status();
-            if status == 429 || status == 503 {
+        let request = LlmRequest {
+            model: model_name.to_string(),
+            messages: vec![
+                LlmRequestMessage {
+                    role: "system".to_string(),
+                    content: system_prompt.to_string(),
+                },
+                LlmRequestMessage {
+                    role: "user".to_string(),
+                    content: user_prompt,
+                },
+            ],
+            temperature: settings.llm.temperature.unwrap_or(0.3),
+            max_tokens: 50,
+        };
+        match client
+            .post(format!("{}/chat/completions", settings.llm.base_url))
+            .header("Content-Type", "application/json")
+            .header("Authorization", format!("Bearer {}", settings.llm.api_key))
+            .json(&request)
+            .timeout(tokio::time::Duration::from_secs(30))
+            .send()
+            .await
+        {
+            Ok(response) => {
+                let status = response.status();
+                if status == 429 || status == 503 {
+                    if retry_count < max_retries {
+                        let backoff_ms = retry_delay_ms * 2u64.pow(retry_count);
+                        eprintln!(
+                            "   ⚠️  Rate limit ({}), warte {}ms vor Retry {}/{}",
+                            status,
+                            backoff_ms,
+                            retry_count + 1,
+                            max_retries
+                        );
+                        tokio::time::sleep(tokio::time::Duration::from_millis(backoff_ms)).await;
+                        return call_llm_for_naming(topics, settings, model, retry_count + 1).await;
+                    } else {
+                        eprintln!("   ❌ Max retries erreicht nach Rate Limit");
+                        return None;
+                    }
+                }
+                if status.is_success() {
+                    match response.json::<LlmResponse>().await {
+                        Ok(data) => {
+                            let content = data.choices[0].message.content.trim();
+                            let cleaned = content.replace(&['\"', '\''][..], "");
+                            return Some(cleaned);
+                        }
+                        Err(e) => {
+                            eprintln!("   ❌ JSON Parse Error: {}", e);
+                            return None;
+                        }
+                    }
+                }
+                eprintln!("   ❌ HTTP Status: {}", status);
+                None
+            }
+            Err(e) => {
                 if retry_count < max_retries {
                     let backoff_ms = retry_delay_ms * 2u64.pow(retry_count);
-                    eprintln!("   ⚠️  Rate limit ({}), warte {}ms vor Retry {}/{}", status, backoff_ms, retry_count + 1, max_retries);
+                    eprintln!(
+                        "   ⚠️  Request Error: {}, Retry {}/{}",
+                        e,
+                        retry_count + 1,
+                        max_retries
+                    );
                     tokio::time::sleep(tokio::time::Duration::from_millis(backoff_ms)).await;
                     return call_llm_for_naming(topics, settings, model, retry_count + 1).await;
-                } else {
-                    eprintln!("   ❌ Max retries erreicht nach Rate Limit");
-                    return None;
                 }
+                eprintln!("   ❌ Request failed: {}", e);
+                None
             }
-            if status.is_success() {
-                match response.json::<LlmResponse>().await {
-                    Ok(data) => {
-                        let content = data.choices[0].message.content.trim();
-                        let cleaned = content.replace(&['\"', '\''][..], "");
-                        return Some(cleaned);
-                    }
-                    Err(e) => {
-                        eprintln!("   ❌ JSON Parse Error: {}", e);
-                        return None;
-                    },
-                }
-            }
-            eprintln!("   ❌ HTTP Status: {}", status);
-            None
         }
-        Err(e) => {
-            if retry_count < max_retries {
-                let backoff_ms = retry_delay_ms * 2u64.pow(retry_count);
-                eprintln!("   ⚠️  Request Error: {}, Retry {}/{}", e, retry_count + 1, max_retries);
-                tokio::time::sleep(tokio::time::Duration::from_millis(backoff_ms)).await;
-                return call_llm_for_naming(topics, settings, model, retry_count + 1).await;
-            }
-            eprintln!("   ❌ Request failed: {}", e);
-            None
-        }
-    }
     })
 }
 
-
 /// Load variant settings from variants.json
-fn load_variant_settings(variant_name: &str) -> Result<(String, VariantSettingsJson), Box<dyn std::error::Error>> {
+fn load_variant_settings(
+    variant_name: &str,
+) -> Result<(String, VariantSettingsJson), Box<dyn std::error::Error>> {
     let variants_path = PathBuf::from("variants.json");
     if !variants_path.exists() {
         return Err("variants.json not found".into());
     }
-    
+
     let variants_content = fs::read_to_string(&variants_path)?;
     let variants_config: VariantsConfig = serde_json::from_str(&variants_content)?;
-    
-    let variant = variants_config.variants.get(variant_name)
+
+    let variant = variants_config
+        .variants
+        .get(variant_name)
         .ok_or_else(|| format!("Variant '{}' not found in variants.json", variant_name))?;
-    
+
     Ok((variant.name.clone(), variant.settings.clone()))
 }
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let start_time = Instant::now();
-    
+
     // Parse command-line arguments
     let args = Args::parse();
-    
+
     println!("🔬 Topic-Clustering für Freakshow Episoden\n");
-    
+
     // Load base settings
     let settings_path = PathBuf::from("settings.json");
     if !settings_path.exists() {
         eprintln!("\n❌ settings.json nicht gefunden!");
-        eprintln!("   Kopiere settings.example.json zu settings.json und passe die Konfiguration an.\n");
+        eprintln!(
+            "   Kopiere settings.example.json zu settings.json und passe die Konfiguration an.\n"
+        );
         std::process::exit(1);
     }
     let settings_content = fs::read_to_string(&settings_path)?;
     let settings: Settings = serde_json::from_str(&settings_content)?;
-    
+
     // Load variant settings if specified, otherwise use base settings
-    let (target_clusters, outlier_threshold, linkage_method, use_relevance_weighting, use_llm_naming) = 
-        if let Some(ref variant_name) = args.variant {
-            match load_variant_settings(variant_name) {
-                Ok((variant_display_name, variant_settings)) => {
-                    println!("📋 Lade Variante: {} ({})\n", variant_display_name, variant_name);
-                    (
-                        variant_settings.clusters
-                            .or(settings.topic_clustering.as_ref().and_then(|s| s.clusters))
-                            .unwrap_or(256),
-                        variant_settings.outlier_threshold
-                            .or(settings.topic_clustering.as_ref().and_then(|s| s.outlier_threshold))
-                            .unwrap_or(0.7),
-                        variant_settings.linkage_method
-                            .or(settings.topic_clustering.as_ref().and_then(|s| s.linkage_method.clone()))
-                            .unwrap_or_else(|| "weighted".to_string()),
-                        variant_settings.use_relevance_weighting
-                            .or(settings.topic_clustering.as_ref().and_then(|s| s.use_relevance_weighting))
-                            .unwrap_or(true),
-                        variant_settings.use_llm_naming
-                            .or(settings.topic_clustering.as_ref().and_then(|s| s.use_llm_naming))
-                            .unwrap_or(true),
-                    )
-                },
-                Err(e) => {
-                    eprintln!("\n❌ Fehler beim Laden der Variante '{}': {}", variant_name, e);
-                    std::process::exit(1);
-                }
+    let (
+        target_clusters,
+        outlier_threshold,
+        linkage_method,
+        use_relevance_weighting,
+        use_llm_naming,
+    ) = if let Some(ref variant_name) = args.variant {
+        match load_variant_settings(variant_name) {
+            Ok((variant_display_name, variant_settings)) => {
+                println!(
+                    "📋 Lade Variante: {} ({})\n",
+                    variant_display_name, variant_name
+                );
+                (
+                    variant_settings
+                        .clusters
+                        .or(settings.topic_clustering.as_ref().and_then(|s| s.clusters))
+                        .unwrap_or(256),
+                    variant_settings
+                        .outlier_threshold
+                        .or(settings
+                            .topic_clustering
+                            .as_ref()
+                            .and_then(|s| s.outlier_threshold))
+                        .unwrap_or(0.7),
+                    variant_settings
+                        .linkage_method
+                        .or(settings
+                            .topic_clustering
+                            .as_ref()
+                            .and_then(|s| s.linkage_method.clone()))
+                        .unwrap_or_else(|| "weighted".to_string()),
+                    variant_settings
+                        .use_relevance_weighting
+                        .or(settings
+                            .topic_clustering
+                            .as_ref()
+                            .and_then(|s| s.use_relevance_weighting))
+                        .unwrap_or(true),
+                    variant_settings
+                        .use_llm_naming
+                        .or(settings
+                            .topic_clustering
+                            .as_ref()
+                            .and_then(|s| s.use_llm_naming))
+                        .unwrap_or(true),
+                )
             }
-        } else {
-            (
-                settings.topic_clustering.as_ref().and_then(|s| s.clusters).unwrap_or(256),
-                settings.topic_clustering.as_ref().and_then(|s| s.outlier_threshold).unwrap_or(0.7),
-                settings.topic_clustering.as_ref().and_then(|s| s.linkage_method.clone()).unwrap_or_else(|| "weighted".to_string()),
-                settings.topic_clustering.as_ref().and_then(|s| s.use_relevance_weighting).unwrap_or(true),
-                settings.topic_clustering.as_ref().and_then(|s| s.use_llm_naming).unwrap_or(true),
-            )
-        };
+            Err(e) => {
+                eprintln!(
+                    "\n❌ Fehler beim Laden der Variante '{}': {}",
+                    variant_name, e
+                );
+                std::process::exit(1);
+            }
+        }
+    } else {
+        (
+            settings
+                .topic_clustering
+                .as_ref()
+                .and_then(|s| s.clusters)
+                .unwrap_or(256),
+            settings
+                .topic_clustering
+                .as_ref()
+                .and_then(|s| s.outlier_threshold)
+                .unwrap_or(0.7),
+            settings
+                .topic_clustering
+                .as_ref()
+                .and_then(|s| s.linkage_method.clone())
+                .unwrap_or_else(|| "weighted".to_string()),
+            settings
+                .topic_clustering
+                .as_ref()
+                .and_then(|s| s.use_relevance_weighting)
+                .unwrap_or(true),
+            settings
+                .topic_clustering
+                .as_ref()
+                .and_then(|s| s.use_llm_naming)
+                .unwrap_or(true),
+        )
+    };
     println!("📂 Lade Embeddings-Datenbank...");
     let db_path = PathBuf::from("topic-embeddings.json");
     if !db_path.exists() {
@@ -782,17 +902,39 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("   Ziel-Cluster:        {}", target_clusters);
     println!("   Outlier-Schwellwert: {}", outlier_threshold);
     println!("   Linkage-Methode:     {}", linkage_method);
-    println!("   Relevanz-Gewichtung: {}", if use_relevance_weighting { "Ja" } else { "Nein" });
-    println!("   LLM-Benennung:       {}\n", if use_llm_naming { "Ja" } else { "Nein" });
+    println!(
+        "   Relevanz-Gewichtung: {}",
+        if use_relevance_weighting {
+            "Ja"
+        } else {
+            "Nein"
+        }
+    );
+    println!(
+        "   LLM-Benennung:       {}\n",
+        if use_llm_naming { "Ja" } else { "Nein" }
+    );
     let unique_topics = filtered_topics.clone();
-    let embeddings: Vec<Vec<f64>> = filtered_topics.iter().map(|t| t.embedding.clone()).collect();
+    let embeddings: Vec<Vec<f64>> = filtered_topics
+        .iter()
+        .map(|t| t.embedding.clone())
+        .collect();
     println!("📊 Cluster erstellen...");
     let cluster_result = hierarchical_clustering(
-        &unique_topics, &embeddings, target_clusters, outlier_threshold, &linkage_method, use_relevance_weighting,
+        &unique_topics,
+        &embeddings,
+        target_clusters,
+        outlier_threshold,
+        &linkage_method,
+        use_relevance_weighting,
     );
     println!("   ✓ {} Cluster erstellt\n", cluster_result.len());
     println!("🏷️  Cluster benennen...");
-    let delay_ms = settings.topic_extraction.as_ref().and_then(|s| s.request_delay_ms).unwrap_or(2000);
+    let delay_ms = settings
+        .topic_extraction
+        .as_ref()
+        .and_then(|s| s.request_delay_ms)
+        .unwrap_or(2000);
     let pb = ProgressBar::new(cluster_result.len() as u64);
     pb.set_style(
         ProgressStyle::default_bar()
@@ -802,9 +944,16 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     );
     let mut named_clusters = Vec::new();
     let mut outlier_count = 0;
-    let model = settings.topic_clustering.as_ref().and_then(|s| s.model.as_deref());
+    let model = settings
+        .topic_clustering
+        .as_ref()
+        .and_then(|s| s.model.as_deref());
     for (i, cluster) in cluster_result.iter().enumerate() {
-        let cluster_topics: Vec<_> = cluster.items.iter().map(|&idx| unique_topics[idx].clone()).collect();
+        let cluster_topics: Vec<_> = cluster
+            .items
+            .iter()
+            .map(|&idx| unique_topics[idx].clone())
+            .collect();
         let name = if cluster.is_outlier || cluster.max_merge_distance > outlier_threshold {
             outlier_count += 1;
             pb.set_message(format!("\"Sonstiges\" (Outlier)"));
@@ -812,14 +961,18 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         } else if use_llm_naming && cluster_topics.len() > 1 {
             let mut sorted_topics = cluster_topics.clone();
             sorted_topics.sort_by(|a, b| b.episodes.len().cmp(&a.episodes.len()));
-            let top_topics: Vec<String> = sorted_topics.iter().take(10).map(|t| t.topic.clone()).collect();
-            
+            let top_topics: Vec<String> = sorted_topics
+                .iter()
+                .take(10)
+                .map(|t| t.topic.clone())
+                .collect();
+
             // Längere Pause alle 50 Requests um Rate Limits zu vermeiden
             if i > 0 && i % 50 == 0 {
                 pb.set_message("⏸️  Pause (Rate Limit Prävention)".to_string());
                 tokio::time::sleep(tokio::time::Duration::from_millis(30000)).await;
             }
-            
+
             match call_llm_for_naming(top_topics, &settings, model, 0).await {
                 Some(llm_name) => {
                     pb.set_message(format!("\"{}\" (LLM)", llm_name));
@@ -827,13 +980,15 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                     llm_name
                 }
                 None => {
-                    let heuristic_name = find_cluster_name(&cluster.items, &unique_topics, use_relevance_weighting);
+                    let heuristic_name =
+                        find_cluster_name(&cluster.items, &unique_topics, use_relevance_weighting);
                     pb.set_message(format!("\"{}\" (Heuristik)", heuristic_name));
                     heuristic_name
                 }
             }
         } else {
-            let heuristic_name = find_cluster_name(&cluster.items, &unique_topics, use_relevance_weighting);
+            let heuristic_name =
+                find_cluster_name(&cluster.items, &unique_topics, use_relevance_weighting);
             pb.set_message(format!("\"{}\" (Heuristik)", heuristic_name));
             heuristic_name
         };
@@ -845,20 +1000,35 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
         let mut episodes: Vec<u32> = all_episodes.into_iter().collect();
         episodes.sort_unstable();
-        let id = name.to_lowercase().chars().map(|c| {
-            if c.is_alphanumeric() || c == 'ä' || c == 'ö' || c == 'ü' || c == 'ß' { c } else { '-' }
-        }).collect::<String>().split('-').filter(|s| !s.is_empty()).collect::<Vec<_>>().join("-");
+        let id = name
+            .to_lowercase()
+            .chars()
+            .map(|c| {
+                if c.is_alphanumeric() || c == 'ä' || c == 'ö' || c == 'ü' || c == 'ß' {
+                    c
+                } else {
+                    '-'
+                }
+            })
+            .collect::<String>()
+            .split('-')
+            .filter(|s| !s.is_empty())
+            .collect::<Vec<_>>()
+            .join("-");
         named_clusters.push(NamedCluster {
             id,
             name,
             is_outlier: cluster.is_outlier || cluster.max_merge_distance > outlier_threshold,
             topic_count: cluster_topics.len(),
             episode_count: episodes.len(),
-            topics: cluster_topics.iter().map(|t| ClusterTopic {
-                topic: t.topic.clone(),
-                count: t.count,
-                keywords: t.keywords.iter().take(5).cloned().collect(),
-            }).collect(),
+            topics: cluster_topics
+                .iter()
+                .map(|t| ClusterTopic {
+                    topic: t.topic.clone(),
+                    count: t.count,
+                    keywords: t.keywords.iter().take(5).cloned().collect(),
+                })
+                .collect(),
             episodes,
         });
         pb.inc(1);
@@ -884,23 +1054,29 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         statistics: Statistics {
             cluster_count: named_clusters.len(),
             outlier_count: outliers.len(),
-            outlier_percentage: format!("{:.1}%", (outliers.len() as f64 / named_clusters.len() as f64) * 100.0),
+            outlier_percentage: format!(
+                "{:.1}%",
+                (outliers.len() as f64 / named_clusters.len() as f64) * 100.0
+            ),
         },
-        clusters: named_clusters.iter().map(|c| TaxonomyCluster {
-            id: c.id.clone(),
-            name: c.name.clone(),
-            description: format!("{} Topics in {} Episoden", c.topic_count, c.episode_count),
-            is_outlier: c.is_outlier,
-            topic_count: c.topic_count,
-            episode_count: c.episode_count,
-            sample_topics: c.topics.iter().take(5).map(|t| t.topic.clone()).collect(),
-            episodes: c.episodes.clone(),
-        }).collect(),
+        clusters: named_clusters
+            .iter()
+            .map(|c| TaxonomyCluster {
+                id: c.id.clone(),
+                name: c.name.clone(),
+                description: format!("{} Topics in {} Episoden", c.topic_count, c.episode_count),
+                is_outlier: c.is_outlier,
+                topic_count: c.topic_count,
+                episode_count: c.episode_count,
+                sample_topics: c.topics.iter().take(5).map(|t| t.topic.clone()).collect(),
+                episodes: c.episodes.clone(),
+            })
+            .collect(),
     };
     let result_json = serde_json::to_string_pretty(&result)?;
     fs::write(&taxonomy_file, result_json)?;
     println!("✅ Taxonomie gespeichert: {:?}", taxonomy_file);
-    
+
     // Save detailed mapping with all topics per cluster
     #[derive(Serialize)]
     struct DetailedCluster {
@@ -916,16 +1092,19 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         created_at: String,
         clusters: Vec<DetailedCluster>,
     }
-    
+
     let detailed_file = PathBuf::from("topic-taxonomy-detailed.json");
     let detailed_mapping = DetailedMapping {
         created_at: chrono::Utc::now().to_rfc3339(),
-        clusters: named_clusters.iter().map(|c| DetailedCluster {
-            id: c.id.clone(),
-            name: c.name.clone(),
-            topic_count: c.topic_count,
-            topics: c.topics.clone(),
-        }).collect(),
+        clusters: named_clusters
+            .iter()
+            .map(|c| DetailedCluster {
+                id: c.id.clone(),
+                name: c.name.clone(),
+                topic_count: c.topic_count,
+                topics: c.topics.clone(),
+            })
+            .collect(),
     };
     let detailed_json = serde_json::to_string_pretty(&detailed_mapping)?;
     fs::write(&detailed_file, detailed_json)?;
@@ -933,14 +1112,25 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("\n📋 Top 15 Cluster:");
     for (i, c) in named_clusters.iter().take(15).enumerate() {
         let outlier_tag = if c.is_outlier { " [Outlier]" } else { "" };
-        println!("   {}. {}{} ({} Episoden, {} Topics)", i + 1, c.name, outlier_tag, c.episode_count, c.topic_count);
+        println!(
+            "   {}. {}{} ({} Episoden, {} Topics)",
+            i + 1,
+            c.name,
+            outlier_tag,
+            c.episode_count,
+            c.topic_count
+        );
         let examples: Vec<String> = c.topics.iter().take(3).map(|t| t.topic.clone()).collect();
         println!("      Beispiele: {}", examples.join(", "));
     }
     let elapsed = start_time.elapsed();
     println!("\n✨ Statistik:");
     println!("   {} Cluster erstellt", named_clusters.len());
-    println!("   {} Outlier ({:.1}%)", outliers.len(), (outliers.len() as f64 / named_clusters.len() as f64) * 100.0);
+    println!(
+        "   {} Outlier ({:.1}%)",
+        outliers.len(),
+        (outliers.len() as f64 / named_clusters.len() as f64) * 100.0
+    );
     println!("   Laufzeit: {:.2}s", elapsed.as_secs_f64());
     Ok(())
 }

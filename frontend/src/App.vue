@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
+import { computed, ref, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { useSettingsStore } from './stores/settings';
 import LanguageSelector from './components/LanguageSelector.vue';
 
 const route = useRoute();
+const router = useRouter();
 const settingsStore = useSettingsStore();
 const { t } = useI18n();
 
@@ -13,7 +14,16 @@ const FREAKSHOW_HOME_URL = 'https://freakshow.fm/';
 const FREAKSHOW_ICON_URL = 'https://freakshow.fm/files/2013/07/cropped-freakshow-logo-600x600-180x180.jpg';
 
 const activeView = computed(() => {
-  return route.name as 'clusters' | 'speakers' | 'cluster-heatmap' | 'speaker-speaker-heatmap' | 'cluster-cluster-heatmap' | 'duration-heatmap' | 'umap' | 'about';
+  return route.name as
+    | 'clusters'
+    | 'speakers'
+    | 'cluster-heatmap'
+    | 'speaker-speaker-heatmap'
+    | 'cluster-cluster-heatmap'
+    | 'duration-heatmap'
+    | 'search'
+    | 'umap'
+    | 'about';
 });
 
 const themeIcon = computed(() => {
@@ -27,14 +37,31 @@ const themeLabel = computed(() => {
   if (settingsStore.themeMode === 'light') return t('theme.light');
   return t('theme.dark');
 });
+
+const isDev = import.meta.env.DEV;
+const searchText = ref('');
+
+watch(
+  () => route.query?.q,
+  (q) => {
+    if (typeof q === 'string') searchText.value = q;
+  },
+  { immediate: true }
+);
+
+const submitSearch = async () => {
+  const q = searchText.value.trim();
+  if (!q) return;
+  await router.push({ name: 'search', query: { q } });
+};
 </script>
 
 <template>
   <div class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
     <header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 shadow-sm">
       <div class="container mx-auto px-4 py-4 md:py-6">
-        <div class="flex items-start justify-between flex-col sm:flex-row gap-4">
-          <div class="flex-1 flex items-start gap-3">
+        <div class="flex items-start justify-between flex-col lg:flex-row gap-4">
+          <div class="flex-1 min-w-0 flex items-start gap-3">
             <a
               :href="FREAKSHOW_HOME_URL"
               target="_blank"
@@ -61,7 +88,28 @@ const themeLabel = computed(() => {
             </div>
           </div>
           
-          <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3 w-full lg:w-auto lg:justify-end">
+            <!-- Search -->
+            <form
+              v-if="isDev"
+              class="flex items-center gap-2 w-full sm:w-auto"
+              @submit.prevent="submitSearch"
+            >
+              <input
+                v-model="searchText"
+                type="search"
+                :placeholder="t('search.placeholder')"
+                class="flex-1 min-w-0 sm:w-56 md:w-72 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+              />
+              <button
+                type="submit"
+                class="px-3 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition-colors"
+                :title="t('search.button')"
+              >
+                {{ t('search.button') }}
+              </button>
+            </form>
+
             <!-- Language Selector -->
             <LanguageSelector />
             
@@ -145,6 +193,18 @@ const themeLabel = computed(() => {
               ]"
             >
               {{ t('nav.duration') }}
+            </router-link>
+            <router-link
+              v-if="isDev"
+              to="/search"
+              :class="[
+                'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',
+                activeView === 'search' 
+                  ? 'border-blue-500 text-blue-600 dark:text-blue-400' 
+                  : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600'
+              ]"
+            >
+              {{ t('nav.search') }}
             </router-link>
             <!-- Temporarily hidden UMAP tab
             <router-link

@@ -354,6 +354,50 @@ npm run build
 
 **Output:** `frontend/dist/` (static files ready for deployment)
 
+## RAG AI Search Backend (Rust)
+
+This repo includes a small Rust HTTP backend (`rag-backend`) that does RAG over `rag-embeddings.json` (created by `node create-rag-db.js`). It retrieves the referenced transcript window from `episodes/<N>-ts.json`, asks the LLM, and returns the answer **plus sources** (episode + time window + excerpt).
+
+### Build the RAG DB
+
+```bash
+# Creates ./rag-embeddings.json (make sure your LLM settings are configured)
+npm run create-rag-db
+```
+
+### Run the backend
+
+The backend reads LLM settings from `settings.json` (fallback: `settings.example.json`) and also supports **env overrides**. The LLM API must be **OpenAI-compatible** for both embeddings and chat.
+
+```bash
+export LLM_API_KEY="sk-..."
+# Optional overrides (otherwise taken from settings.json):
+export LLM_BASE_URL="https://api.openai.com/v1"
+export LLM_MODEL="gpt-4o-mini"
+export EMBEDDING_MODEL="text-embedding-3-small"
+
+# Optional:
+export RAG_DB_PATH="./rag-embeddings.json"
+export EPISODES_DIR="./episodes"
+export RAG_BIND_ADDR="127.0.0.1:7878"
+export RAG_TOP_K="6"
+
+cargo run --bin rag-backend
+```
+
+### Call the API
+
+```bash
+curl -s http://127.0.0.1:7878/api/chat \
+  -H 'Content-Type: application/json' \
+  -d '{ "query": "Worum ging es bei Universal Control?" }' | jq
+```
+
+Response shape:
+
+- **`answer`**: LLM answer (with citations like `(Episode 281, 12:38-17:19)`)
+- **`sources[]`**: list of sources with `episodeNumber`, `startSec/endSec`, and an `excerpt`
+
 ## Project Structure
 
 ```
