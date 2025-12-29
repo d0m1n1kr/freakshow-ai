@@ -3,6 +3,7 @@ import { ref, onMounted, computed, watch } from 'vue';
 import * as d3 from 'd3';
 import type { TopicRiverData, ProcessedTopicData } from '../types';
 import { useSettingsStore } from '../stores/settings';
+import MiniAudioPlayer from './MiniAudioPlayer.vue';
 
 const props = defineProps<{
   data: TopicRiverData;
@@ -457,6 +458,15 @@ const taxonomyData = ref<any>(null);
 const loadingEpisodes = ref(false);
 const loadingTopics = ref(false);
 
+// MP3 playback (uses /episodes.json generated from MP3 RSS feed)
+const mp3IndexLoaded = ref(false);
+const mp3IndexError = ref<string | null>(null);
+const mp3UrlByEpisode = ref<Map<number, string>>(new Map());
+const currentMp3Url = ref<string | null>(null);
+const playerInfo = ref<{ episodeNumber: number; positionSec: number; label: string } | null>(null);
+const playerError = ref<string | null>(null);
+const playerToken = ref(0);
+
 // Lade Episode-Details für Topics (für Speaker-Informationen)
 const loadEpisodeDetails = async () => {
   if (!selectedTopicInfo.value || loadingEpisodes.value) return;
@@ -628,7 +638,7 @@ const formatHmsFromSeconds = (sec: unknown) => {
   return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 };
 
-const formatTopicPositions = (episode: any) => {
+const getTopicOccurrences = (episode: any): Array<{ positionSec: number; durationSec: number | null }> => {
   const occ = Array.isArray(episode?.occurrences) ? episode.occurrences : [];
   const items: Array<{ positionSec: number; durationSec: number | null }> = occ
     .map((o: any) => ({
@@ -637,7 +647,7 @@ const formatTopicPositions = (episode: any) => {
     }))
     .filter((x: any): x is { positionSec: number; durationSec: number | null } => Number.isFinite(x?.positionSec));
 
-  if (items.length === 0) return '—';
+  if (items.length === 0) return [];
 
   // sort + de-dupe
   items.sort((a, b) => a.positionSec - b.positionSec);
@@ -646,19 +656,92 @@ const formatTopicPositions = (episode: any) => {
     const last = unique[unique.length - 1];
     if (!last || last.positionSec !== it.positionSec || last.durationSec !== it.durationSec) unique.push(it);
   }
+  return unique;
+};
 
+const formatOccurrenceLabel = (occ: { positionSec: number; durationSec: number | null }) => {
   const formatMinutes = (sec: number | null) => {
     if (!Number.isFinite(sec as number) || (sec as number) <= 0) return null;
     const m = Math.max(1, Math.round((sec as number) / 60));
     return `${m}m`;
   };
+  const m = formatMinutes(occ.durationSec);
+  return m ? `${formatHmsFromSeconds(occ.positionSec)} (${m})` : formatHmsFromSeconds(occ.positionSec);
+};
 
-  return unique
-    .map(({ positionSec, durationSec }) => {
-      const m = formatMinutes(durationSec);
-      return m ? `${formatHmsFromSeconds(positionSec)} (${m})` : formatHmsFromSeconds(positionSec);
-    })
-    .join(', ');
+const buildEpisodeDeepLink = (episodeUrl: string, seconds: number) => {
+  try {
+    const u = new URL(episodeUrl);
+    // best-effort: some players support `?t=SECONDS` or `#t=SECONDS`; autoplay can be blocked by browser policies.
+    u.searchParams.set('t', String(Math.max(0, Math.floor(seconds))));
+    u.searchParams.set('autoplay', '1');
+    u.hash = `t=${Math.max(0, Math.floor(seconds))}`;
+    return u.toString();
+  } catch {
+    return episodeUrl;
+  }
+};
+
+const openEpisodeAt = (episodeNumber: number, seconds: number) => {
+  const details = episodeDetails.value.get(episodeNumber);
+  const url = typeof details?.url === 'string' ? details.url : null;
+  if (!url) return;
+  const link = buildEpisodeDeepLink(url, seconds);
+  window.open(link, '_blank', 'noopener,noreferrer');
+};
+
+const ensureMp3Index = async () => {
+  if (mp3IndexLoaded.value || mp3IndexError.value) return;
+  try {
+    const res = await fetch('/episodes.json', { cache: 'force-cache' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+
+    const map = new Map<number, string>();
+    if (data?.byNumber && typeof data.byNumber === 'object') {
+      for (const [k, v] of Object.entries<any>(data.byNumber)) {
+        const n = parseInt(k, 10);
+        const url = typeof v?.mp3Url === 'string' ? v.mp3Url : null;
+        if (Number.isFinite(n) && url) map.set(n, url);
+      }
+    } else if (Array.isArray(data?.episodes)) {
+      for (const ep of data.episodes) {
+        const n = Number.isFinite(ep?.number) ? ep.number : null;
+        const url = typeof ep?.mp3Url === 'string' ? ep.mp3Url : null;
+        if (Number.isFinite(n) && url) map.set(n, url);
+      }
+    }
+
+    mp3UrlByEpisode.value = map;
+    mp3IndexLoaded.value = true;
+  } catch (e) {
+    mp3IndexError.value = e instanceof Error ? e.message : String(e);
+  }
+};
+
+const playEpisodeAt = async (episodeNumber: number, seconds: number, label: string) => {
+  playerError.value = null;
+  await ensureMp3Index();
+
+  const mp3 = mp3UrlByEpisode.value.get(episodeNumber) || null;
+  if (!mp3) {
+    playerError.value = mp3IndexError.value
+      ? `MP3 Index nicht verfügbar (${mp3IndexError.value})`
+      : 'Keine MP3-URL für diese Episode gefunden (episodes.json)';
+    // Fallback: open episode page (if we have it)
+    openEpisodeAt(episodeNumber, seconds);
+    return;
+  }
+
+  currentMp3Url.value = mp3;
+  playerInfo.value = { episodeNumber, positionSec: Math.max(0, Math.floor(seconds)), label };
+  playerToken.value++;
+};
+
+const closePlayer = () => {
+  currentMp3Url.value = null;
+  playerInfo.value = null;
+  playerError.value = null;
 };
 </script>
 
@@ -696,6 +779,23 @@ const formatTopicPositions = (episode: any) => {
           />
           <span>Normierte Ansicht (100%/Jahr)</span>
         </label>
+      </div>
+      
+      <!-- Inline MP3 player (appears after clicking a position) -->
+      <div v-if="currentMp3Url" class="mt-4 sm:mt-6">
+        <MiniAudioPlayer
+          :src="currentMp3Url"
+          :title="`Episode ${playerInfo?.episodeNumber ?? ''}`"
+          :subtitle="playerInfo?.label || ''"
+          :seek-to-sec="playerInfo?.positionSec ?? 0"
+          :autoplay="true"
+          :play-token="playerToken"
+          @close="closePlayer"
+          @error="(msg) => { playerError = msg }"
+        />
+        <div v-if="playerError" class="mt-2 text-xs text-red-700 dark:text-red-300">
+          {{ playerError }}
+        </div>
       </div>
       
       <div v-if="selectedTopicInfo" :class="['mt-4 p-4 border rounded-lg', themeColor === 'blue' ? 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-700' : 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-700']">
@@ -764,7 +864,24 @@ const formatTopicPositions = (episode: any) => {
                         </td>
                         <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">{{ episode.title }}</td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap font-mono">
-                          {{ formatTopicPositions(episode) }}
+                          <template v-if="getTopicOccurrences(episode).length > 0">
+                            <template v-for="(occ, idx) in getTopicOccurrences(episode)" :key="`${episode.number}-${occ.positionSec}-${idx}`">
+                              <button
+                                type="button"
+                                :class="[
+                                  'underline hover:no-underline cursor-pointer',
+                                  themeColor === 'blue'
+                                    ? 'text-blue-700 dark:text-blue-300'
+                                    : 'text-purple-700 dark:text-purple-300'
+                                ]"
+                                @click="playEpisodeAt(episode.number, occ.positionSec, formatOccurrenceLabel(occ))"
+                                :title="`Episode öffnen bei ${formatHmsFromSeconds(occ.positionSec)}`"
+                              >
+                                {{ formatOccurrenceLabel(occ) }}
+                              </button><span v-if="idx < getTopicOccurrences(episode).length - 1">, </span>
+                            </template>
+                          </template>
+                          <span v-else>—</span>
                         </td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap">
                           {{ formatDuration(episodeDetails.get(episode.number).duration) }}
@@ -790,7 +907,10 @@ const formatTopicPositions = (episode: any) => {
                         </td>
                         <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">{{ episode.title }}</td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap font-mono">
-                          {{ formatTopicPositions(episode) }}
+                          <template v-if="getTopicOccurrences(episode).length > 0">
+                            {{ getTopicOccurrences(episode).map(formatOccurrenceLabel).join(', ') }}
+                          </template>
+                          <span v-else>—</span>
                         </td>
                         <td colspan="3" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs">Details nicht verfügbar (Datei fehlt)</td>
                       </template>
@@ -801,7 +921,10 @@ const formatTopicPositions = (episode: any) => {
                         </td>
                         <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">{{ episode.title }}</td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap font-mono">
-                          {{ formatTopicPositions(episode) }}
+                          <template v-if="getTopicOccurrences(episode).length > 0">
+                            {{ getTopicOccurrences(episode).map(formatOccurrenceLabel).join(', ') }}
+                          </template>
+                          <span v-else>—</span>
                         </td>
                         <td colspan="3" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs">Lädt...</td>
                       </template>
@@ -926,7 +1049,7 @@ const formatTopicPositions = (episode: any) => {
         </div>
       </div>
     </div>
-    
+
     <div class="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
       <p>
         <strong>Interaktion:</strong> Bewege die Maus über einen Stream oder ein Thema in der Legende, um es hervorzuheben. 

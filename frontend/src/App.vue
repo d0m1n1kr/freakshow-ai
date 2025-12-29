@@ -4,11 +4,13 @@ import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { useSettingsStore } from './stores/settings';
 import LanguageSelector from './components/LanguageSelector.vue';
-import VariantSelector from './components/VariantSelector.vue';
 
 const route = useRoute();
 const settingsStore = useSettingsStore();
 const { t } = useI18n();
+
+const FREAKSHOW_HOME_URL = 'https://freakshow.fm/';
+const FREAKSHOW_ICON_URL = 'https://freakshow.fm/files/2013/07/cropped-freakshow-logo-600x600-180x180.jpg';
 
 const activeView = computed(() => {
   return route.name as 'clusters' | 'speakers' | 'cluster-heatmap' | 'speaker-speaker-heatmap' | 'cluster-cluster-heatmap' | 'duration-heatmap' | 'umap' | 'about';
@@ -32,19 +34,34 @@ const themeLabel = computed(() => {
     <header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 shadow-sm">
       <div class="container mx-auto px-4 py-4 md:py-6">
         <div class="flex items-start justify-between flex-col sm:flex-row gap-4">
-          <div class="flex-1">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-              {{ t('app.title') }}
-            </h1>
-            <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1 md:mt-2">
-              {{ t('app.subtitle') }}
-            </p>
+          <div class="flex-1 flex items-start gap-3">
+            <a
+              :href="FREAKSHOW_HOME_URL"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-1 flex-shrink-0"
+              aria-label="Freak Show"
+              title="Freak Show"
+            >
+              <img
+                :src="FREAKSHOW_ICON_URL"
+                alt="Freak Show"
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-lg shadow-sm ring-1 ring-gray-200 dark:ring-gray-700"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+            </a>
+            <div>
+              <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+                {{ t('app.title') }}
+              </h1>
+              <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1 md:mt-2">
+                {{ t('app.subtitle') }}
+              </p>
+            </div>
           </div>
           
           <div class="flex flex-wrap items-center gap-2 sm:gap-3">
-            <!-- Variant Selector -->
-            <VariantSelector />
-            
             <!-- Language Selector -->
             <LanguageSelector />
             

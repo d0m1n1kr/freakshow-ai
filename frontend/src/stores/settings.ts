@@ -1,6 +1,8 @@
 import { defineStore } from 'pinia';
 import { ref, computed, watch } from 'vue';
 
+const LOCKED_CLUSTERING_VARIANT = 'auto-v2.1' as const;
+
 export const useSettingsStore = defineStore('settings', () => {
   // State
   const normalizedView = ref(false);
@@ -18,7 +20,7 @@ export const useSettingsStore = defineStore('settings', () => {
   const topNSpeakersSpeaker2Heatmap = ref(15);
   
   // Clustering variant selection
-  const clusteringVariant = ref<string>('auto-v2.1');
+  const clusteringVariant = ref<string>(LOCKED_CLUSTERING_VARIANT);
   
   // Dark mode: 'auto' | 'light' | 'dark'
   const themeMode = ref<'auto' | 'light' | 'dark'>('auto');
@@ -68,9 +70,18 @@ export const useSettingsStore = defineStore('settings', () => {
   }
   
   function setClusteringVariant(variant: string) {
-    clusteringVariant.value = variant;
+    // Variant selection is temporarily disabled; always use the locked variant.
+    void variant;
+    clusteringVariant.value = LOCKED_CLUSTERING_VARIANT;
   }
   
+  // Ensure persisted state (localStorage) can't override the locked variant.
+  watch(clusteringVariant, (v) => {
+    if (v !== LOCKED_CLUSTERING_VARIANT) {
+      clusteringVariant.value = LOCKED_CLUSTERING_VARIANT;
+    }
+  }, { immediate: true });
+
   // Watch for theme changes
   watch([themeMode, isDarkMode], () => {
     applyTheme();

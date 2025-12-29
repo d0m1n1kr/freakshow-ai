@@ -12,6 +12,20 @@ const { t } = useI18n();
     </div>
 
     <div class="p-8 space-y-8">
+      <!-- Freak Show Reference -->
+      <section>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">🎙️ {{ t('about.freakshow.title') }}</h3>
+        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          {{ t('about.freakshow.description') }}
+          <a
+            href="https://freakshow.fm/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+          >freakshow.fm</a>.
+        </p>
+      </section>
+
       <!-- Project Description -->
       <section>
         <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">📊 {{ t('about.projectDescription.title') }}</h3>
