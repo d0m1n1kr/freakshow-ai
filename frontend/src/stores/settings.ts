@@ -24,6 +24,9 @@ export const useSettingsStore = defineStore('settings', () => {
   
   // Dark mode: 'auto' | 'light' | 'dark'
   const themeMode = ref<'auto' | 'light' | 'dark'>('auto');
+
+  // RAG backend auth token (persisted). Used for /search.
+  const ragAuthToken = ref<string>('');
   
   // Computed: actual dark mode state
   const isDarkMode = computed(() => {
@@ -74,6 +77,14 @@ export const useSettingsStore = defineStore('settings', () => {
     void variant;
     clusteringVariant.value = LOCKED_CLUSTERING_VARIANT;
   }
+
+  function setRagAuthToken(token: string) {
+    ragAuthToken.value = token;
+  }
+
+  function clearRagAuthToken() {
+    ragAuthToken.value = '';
+  }
   
   // Ensure persisted state (localStorage) can't override the locked variant.
   watch(clusteringVariant, (v) => {
@@ -104,12 +115,15 @@ export const useSettingsStore = defineStore('settings', () => {
     clusteringVariant,
     themeMode,
     isDarkMode,
+    ragAuthToken,
     toggleNormalizedView,
     setNormalizedView,
     setClusteringVariant,
     setThemeMode,
     cycleThemeMode,
-    applyTheme
+    applyTheme,
+    setRagAuthToken,
+    clearRagAuthToken,
   };
 }, {
   persist: {

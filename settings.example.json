@@ -38,6 +38,11 @@
       "_comment": "V2 (HDBSCAN): minClusterSize = minimale Cluster-Größe, minSamples = Dichte-Parameter, reducedDimensions = PCA/Random Projection Ziel-Dimensionen"
     }
   },
+  "rag": {
+    "bindAddr": "127.0.0.1:7878",
+    "authToken": "CHANGE_ME",
+    "_comment": "Optional: Token required by the RAG backend for /api/chat. Frontend will ask for this token on first search and store it locally."
+  },
   "categoryGrouping": {
     "categories": 12,
     "_comment": "Anzahl der übergeordneten Kategorien für Topic-Gruppierung"

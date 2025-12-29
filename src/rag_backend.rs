@@ -1,9 +1,16 @@
-use std::{cmp::Ordering, collections::HashMap, net::SocketAddr, path::PathBuf, sync::Arc};
+use std::{
+    cmp::Ordering,
+    collections::HashMap,
+    io,
+    net::SocketAddr,
+    path::PathBuf,
+    sync::Arc,
+};
 
 use anyhow::{anyhow, Context, Result};
 use axum::{
     extract::State,
-    http::{header, HeaderValue, Method, StatusCode},
+    http::{header, HeaderMap, HeaderName, HeaderValue, Method, StatusCode},
     response::IntoResponse,
     routing::post,
     Json, Router,
@@ -12,7 +19,7 @@ use reqwest::Client;
 use serde::{Deserialize, Serialize};
 use tokio::sync::RwLock;
 use tower_http::{cors::CorsLayer, trace::TraceLayer};
-use tracing::{error, info};
+use tracing::{error, info, warn};
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
 #[derive(Debug, Deserialize, Clone)]
@@ -20,6 +27,7 @@ struct SettingsFile {
     llm: Option<LlmSettings>,
     #[serde(rename = "topicClustering")]
     topic_clustering: Option<TopicClusteringSettings>,
+    rag: Option<RagSettings>,
 }
 
 #[derive(Debug, Deserialize, Clone)]
@@ -35,6 +43,14 @@ struct LlmSettings {
 struct TopicClusteringSettings {
     #[serde(rename = "embeddingModel")]
     embedding_model: Option<String>,
+}
+
+#[derive(Debug, Deserialize, Clone)]
+struct RagSettings {
+    #[serde(rename = "authToken")]
+    auth_token: Option<String>,
+    #[serde(rename = "bindAddr")]
+    bind_addr: Option<String>,
 }
 
 fn try_read_json<T: for<'de> Deserialize<'de>>(path: &PathBuf) -> Result<Option<T>> {
@@ -72,16 +88,12 @@ struct AppConfig {
     embedding_model: String,
     top_k: usize,
     max_context_chars: usize,
+    auth_token: Option<String>,
 }
 
 impl AppConfig {
     fn from_env_and_settings() -> Result<(Self, String)> {
         let (settings, settings_source) = load_settings()?;
-
-        let bind_addr: SocketAddr = std::env::var("RAG_BIND_ADDR")
-            .unwrap_or_else(|_| "127.0.0.1:7878".to_string())
-            .parse()
-            .context("Invalid RAG_BIND_ADDR (expected host:port)")?;
 
         let rag_db_path = PathBuf::from(
             std::env::var("RAG_DB_PATH").unwrap_or_else(|_| "rag-embeddings.json".to_string()),
@@ -92,6 +104,16 @@ impl AppConfig {
         // Resolve from settings first, then allow env override.
         let settings_llm = settings.as_ref().and_then(|s| s.llm.as_ref());
         let settings_cluster = settings.as_ref().and_then(|s| s.topic_clustering.as_ref());
+        let settings_rag = settings.as_ref().and_then(|s| s.rag.as_ref());
+
+        let bind_addr_s = std::env::var("RAG_BIND_ADDR")
+            .ok()
+            .or_else(|| settings_rag.and_then(|r| r.bind_addr.clone()))
+            .unwrap_or_else(|| "127.0.0.1:7878".to_string());
+
+        let bind_addr: SocketAddr = bind_addr_s
+            .parse()
+            .with_context(|| format!("Invalid RAG bind address '{bind_addr_s}' (expected host:port)"))?;
 
         let llm_base_url = std::env::var("LLM_BASE_URL")
             .ok()
@@ -129,6 +151,12 @@ impl AppConfig {
             .and_then(|s| s.parse::<usize>().ok())
             .unwrap_or(24_000);
 
+        let auth_token = std::env::var("RAG_AUTH_TOKEN")
+            .ok()
+            .or_else(|| settings_rag.and_then(|r| r.auth_token.clone()))
+            .map(|s| s.trim().to_string())
+            .filter(|s| !s.is_empty());
+
         Ok((
             Self {
             bind_addr,
@@ -140,6 +168,7 @@ impl AppConfig {
             embedding_model,
             top_k,
             max_context_chars,
+            auth_token,
             },
             settings_source,
         ))
@@ -170,7 +199,11 @@ async fn main() -> Result<()> {
     let cors = CorsLayer::new()
         .allow_origin(HeaderValue::from_static("*"))
         .allow_methods([Method::POST, Method::GET, Method::OPTIONS])
-        .allow_headers([header::CONTENT_TYPE, header::AUTHORIZATION]);
+        .allow_headers([
+            header::CONTENT_TYPE,
+            header::AUTHORIZATION,
+            HeaderName::from_static("x-auth-token"),
+        ]);
 
     let app_state = AppState {
         cfg: cfg.clone(),
@@ -194,6 +227,39 @@ async fn main() -> Result<()> {
 
 async fn health() -> impl IntoResponse {
     (StatusCode::OK, "ok")
+}
+
+fn extract_auth_token(headers: &HeaderMap) -> Option<String> {
+    // Prefer explicit x-auth-token, but also accept Authorization: Bearer <token>
+    if let Some(v) = headers.get("x-auth-token").and_then(|v| v.to_str().ok()) {
+        let t = v.trim();
+        if !t.is_empty() {
+            return Some(t.to_string());
+        }
+    }
+
+    if let Some(v) = headers.get(header::AUTHORIZATION).and_then(|v| v.to_str().ok()) {
+        let s = v.trim();
+        if let Some(rest) = s.strip_prefix("Bearer ").or_else(|| s.strip_prefix("bearer ")) {
+            let t = rest.trim();
+            if !t.is_empty() {
+                return Some(t.to_string());
+            }
+        }
+    }
+
+    None
+}
+
+fn is_auth_ok(cfg: &AppConfig, headers: &HeaderMap) -> bool {
+    let Some(expected) = cfg.auth_token.as_ref() else {
+        // No auth configured => allow.
+        return true;
+    };
+    let Some(got) = extract_auth_token(headers) else {
+        return false;
+    };
+    got == *expected
 }
 
 #[derive(Debug, Deserialize)]
@@ -227,7 +293,18 @@ struct ChatSource {
     excerpt: String,
 }
 
-async fn chat(State(st): State<AppState>, Json(req): Json<ChatRequest>) -> impl IntoResponse {
+async fn chat(
+    State(st): State<AppState>,
+    headers: HeaderMap,
+    Json(req): Json<ChatRequest>,
+) -> impl IntoResponse {
+    if !is_auth_ok(&st.cfg, &headers) {
+        return (
+            StatusCode::FORBIDDEN,
+            Json(serde_json::json!({ "error": "permission denied" })),
+        )
+            .into_response();
+    }
     match chat_impl(&st, req).await {
         Ok(resp) => (StatusCode::OK, Json(resp)).into_response(),
         Err(e) => {
@@ -517,8 +594,19 @@ async fn load_transcript_entries(
 
     let fname = format!("{episode_number}-ts.json");
     let path = st.cfg.episodes_dir.join(fname);
-    let bytes = std::fs::read(&path)
-        .with_context(|| format!("Failed to read transcript {}", path.display()))?;
+    let bytes = match std::fs::read(&path) {
+        Ok(b) => b,
+        Err(e) if e.kind() == io::ErrorKind::NotFound => {
+            warn!("Transcript not found: {}", path.display());
+            let arc = Arc::new(Vec::new());
+            let mut cache = st.transcript_cache.write().await;
+            cache.insert(episode_number, arc.clone());
+            return Ok(arc);
+        }
+        Err(e) => {
+            return Err(anyhow!(e).context(format!("Failed to read transcript {}", path.display())));
+        }
+    };
     let tf: TranscriptFile = serde_json::from_slice(&bytes)
         .with_context(|| format!("Failed to parse {}", path.display()))?;
 

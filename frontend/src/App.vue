@@ -38,7 +38,6 @@ const themeLabel = computed(() => {
   return t('theme.dark');
 });
 
-const isDev = import.meta.env.DEV;
 const searchText = ref('');
 
 watch(
@@ -91,7 +90,6 @@ const submitSearch = async () => {
           <div class="flex flex-wrap items-center gap-2 sm:gap-3 w-full lg:w-auto lg:justify-end">
             <!-- Search -->
             <form
-              v-if="isDev"
               class="flex items-center gap-2 w-full sm:w-auto"
               @submit.prevent="submitSearch"
             >
@@ -195,7 +193,6 @@ const submitSearch = async () => {
               {{ t('nav.duration') }}
             </router-link>
             <router-link
-              v-if="isDev"
               to="/search"
               :class="[
                 'px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold border-b-2 transition-colors whitespace-nowrap',

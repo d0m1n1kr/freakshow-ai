@@ -3,6 +3,7 @@ import { computed, onMounted, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import MiniAudioPlayer from '@/components/MiniAudioPlayer.vue';
+import { useSettingsStore } from '@/stores/settings';
 
 type ChatSource = {
   episodeNumber: number;
@@ -25,6 +26,7 @@ type ChatResponse = {
 
 const route = useRoute();
 const { t } = useI18n();
+const settings = useSettingsStore();
 
 const q = computed(() => (typeof route.query?.q === 'string' ? route.query.q.trim() : ''));
 
@@ -36,10 +38,30 @@ const expandedSources = ref<Record<number, boolean>>({});
 let abortController: AbortController | null = null;
 
 const backendBase = computed(() => {
+  // In production we assume a reverse proxy and always use relative URLs.
+  if ((import.meta as any)?.env?.PROD) return '';
+
+  // In dev, allow overriding the backend URL (or fall back to local dev server).
   const v = (import.meta as any)?.env?.VITE_RAG_BACKEND_URL;
   const s = typeof v === 'string' ? v.trim() : '';
   return (s || 'http://127.0.0.1:7878').replace(/\/+$/, '');
 });
+
+const ensureAuthToken = async () => {
+  const existing = typeof settings.ragAuthToken === 'string' ? settings.ragAuthToken.trim() : '';
+  if (existing) return existing;
+
+  const token = window.prompt(t('search.authToken.prompt'), '')?.trim() ?? '';
+  if (!token) return null;
+  settings.setRagAuthToken(token);
+  return token;
+};
+
+const isPermissionDenied = (status: number, bodyText: string) => {
+  if (status === 401 || status === 403) return true;
+  const txt = (bodyText || '').toLowerCase();
+  return txt.includes('permission denied') || txt.includes('forbidden') || txt.includes('unauthorized');
+};
 
 const doSearch = async (query: string) => {
   const qq = query.trim();
@@ -53,16 +75,43 @@ const doSearch = async (query: string) => {
 
   loading.value = true;
   try {
-    const res = await fetch(`${backendBase.value}/api/chat`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: qq }),
-      signal: abortController.signal,
-    });
+    const token0 = await ensureAuthToken();
+    if (!token0) {
+      error.value = t('search.authToken.required');
+      return;
+    }
+
+    const run = async (token: string) => {
+      const url = backendBase.value ? `${backendBase.value}/api/chat` : '/api/chat';
+      const res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-auth-token': token },
+        body: JSON.stringify({ query: qq }),
+        signal: abortController?.signal,
+      });
+      return res;
+    };
+
+    let res = await run(token0);
     if (!res.ok) {
       const txt = await res.text();
-      throw new Error(`HTTP ${res.status}: ${txt}`);
+      if (isPermissionDenied(res.status, txt)) {
+        settings.clearRagAuthToken();
+        const token1 = await ensureAuthToken();
+        if (!token1) {
+          error.value = t('search.authToken.required');
+          return;
+        }
+        res = await run(token1);
+        if (!res.ok) {
+          const txt2 = await res.text();
+          throw new Error(`HTTP ${res.status}: ${txt2}`);
+        }
+      } else {
+        throw new Error(`HTTP ${res.status}: ${txt}`);
+      }
     }
+
     const data = (await res.json()) as ChatResponse;
     if (!data || typeof data.answer !== 'string' || !Array.isArray(data.sources)) {
       throw new Error(t('search.errors.invalidResponse'));
