@@ -24,6 +24,25 @@ const totalSpeakersAvailable = computed(() => {
   return props.data.speakers.length;
 });
 
+// Slider max must be >= min (min is 5)
+const speakerFilterMax = computed(() => Math.max(5, totalSpeakersAvailable.value));
+
+// Default slider value to "max" (but don't override persisted user choice)
+watch(speakerFilterMax, (max) => {
+  if (settingsStore.speakerFilter === 15 || settingsStore.speakerFilter > max) {
+    settingsStore.speakerFilter = max;
+  }
+}, { immediate: true });
+
+// Legend search (desktop)
+const legendSearchQuery = ref('');
+const filteredLegendSpeakers = computed(() => {
+  const q = legendSearchQuery.value.trim().toLowerCase();
+  const items = processedData.value.speakers;
+  if (!q) return items;
+  return items.filter((s) => s.name.toLowerCase().includes(q));
+});
+
 // Prozessiere die Daten
 const processedData = computed(() => {
   const speakers: ProcessedSpeakerData[] = [];
@@ -481,7 +500,7 @@ watch(selectedYear, () => {
               v-model.number="settingsStore.speakerFilter"
               type="range"
               min="5"
-              :max="totalSpeakersAvailable"
+              :max="speakerFilterMax"
               step="1"
               class="flex-1 sm:w-32 md:w-48 slider-green"
             />
@@ -621,9 +640,15 @@ watch(selectedYear, () => {
       <div class="hidden lg:block w-64 flex-shrink-0">
         <div class="sticky top-4 max-h-[600px] overflow-y-auto border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 p-4">
           <h3 class="text-sm font-semibold mb-3 text-gray-900 dark:text-white">Sprecher</h3>
+          <input
+            v-model="legendSearchQuery"
+            type="text"
+            placeholder="Suche…"
+            class="w-full mb-3 px-3 py-2 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-sm text-gray-900 dark:text-gray-100"
+          />
           <div class="space-y-2">
             <div 
-              v-for="speaker in processedData.speakers" 
+              v-for="speaker in filteredLegendSpeakers" 
               :key="speaker.id"
               @mouseenter="hoveredSpeaker = speaker.id"
               @mouseleave="hoveredSpeaker = null"

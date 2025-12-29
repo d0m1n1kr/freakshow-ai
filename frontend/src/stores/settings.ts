@@ -18,7 +18,7 @@ export const useSettingsStore = defineStore('settings', () => {
   const topNSpeakersSpeaker2Heatmap = ref(15);
   
   // Clustering variant selection
-  const clusteringVariant = ref<string>('auto-v2');
+  const clusteringVariant = ref<string>('auto-v2.1');
   
   // Dark mode: 'auto' | 'light' | 'dark'
   const themeMode = ref<'auto' | 'light' | 'dark'>('auto');

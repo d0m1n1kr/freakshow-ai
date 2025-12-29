@@ -37,11 +37,11 @@ export function useVariantPath() {
   const settings = useSettingsStore();
   
   const variantPath = computed(() => {
-    const variant = settings.clusteringVariant || 'auto-v2';
+    const variant = settings.clusteringVariant || 'auto-v2.1';
     return `/topics/${variant}`;
   });
   
-  const variantName = computed(() => settings.clusteringVariant || 'auto-v2');
+  const variantName = computed(() => settings.clusteringVariant || 'auto-v2.1');
   
   return {
     variantPath,
@@ -90,13 +90,13 @@ export async function loadVariantsManifest(): Promise<VariantManifest> {
       console.warn('No variants manifest found, using default');
       return {
         variants: {
-          'auto-v2': {
-            name: 'Automatisch (V2)',
+          'auto-v2.1': {
+            name: 'Automatisch (V2.1)',
             version: 'v2',
             lastBuilt: ''
           }
         },
-        defaultVariant: 'auto-v2',
+        defaultVariant: 'auto-v2.1',
         lastUpdated: ''
       };
     }
@@ -105,13 +105,13 @@ export async function loadVariantsManifest(): Promise<VariantManifest> {
     console.error('Error loading variants manifest:', error);
     return {
       variants: {
-        'auto-v2': {
-          name: 'Automatisch (V2)',
+        'auto-v2.1': {
+          name: 'Automatisch (V2.1)',
           version: 'v2',
           lastBuilt: ''
         }
       },
-      defaultVariant: 'auto-v2',
+      defaultVariant: 'auto-v2.1',
       lastUpdated: ''
     };
   }
@@ -122,7 +122,7 @@ export async function loadVariantsManifest(): Promise<VariantManifest> {
  */
 export function getVariantFileUrl(filename: string, variant?: string): string {
   const settings = useSettingsStore();
-  const v = variant || settings.clusteringVariant || 'auto-v2';
+  const v = variant || settings.clusteringVariant || 'auto-v2.1';
   return `/topics/${v}/${filename}`;
 }
 

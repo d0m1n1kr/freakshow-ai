@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "Clustering Varianten Konfiguration - Verschiedene Parametrisierungen für Topic-Clustering",
-  "defaultVariant": "auto-v2",
+  "defaultVariant": "auto-v2.1",
   "variants": {
     "default-v1": {
       "version": "v1",
@@ -51,6 +51,20 @@
         "useLLMNaming": true
       }
     },
+    "auto-v2.1": {
+      "version": "v2",
+      "name": "Automatisch (V2.1, HDBSCAN)",
+      "description": "HDBSCAN mit automatischer Cluster-Erkennung",
+      "settings": {
+        "minClusterSize": 2,
+        "minSamples": 3,
+        "reducedDimensions": 75, 
+        "outlierThreshold": 0.90,        
+        "ubiquitousTopicMaxEpisodeShare": 0.90,
+        "useRelevanceWeighting": true,
+        "useLLMNaming": true
+      }
+    },    
     "fine-v2": {
       "version": "v2",
       "name": "Fein-granular (V2, HDBSCAN)",

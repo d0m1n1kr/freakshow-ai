@@ -47,7 +47,7 @@
               {{ $t('noVariants.step2.title') }}
             </p>
             <code class="block bg-gray-100 dark:bg-gray-900 px-3 py-2 rounded text-sm font-mono text-gray-800 dark:text-gray-200">
-              ./build-variant.sh v2 auto-v2
+              ./build-variant.sh v2 auto-v2.1
             </code>
             <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
               {{ $t('noVariants.step2.description') }}

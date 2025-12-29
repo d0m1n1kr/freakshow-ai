@@ -108,18 +108,30 @@ fi
 echo ""
 echo -e "${BLUE}📊 Generating derived data...${NC}"
 
-# Topic UMAP
-echo -e "  ${YELLOW}→${NC} Generating topic-umap-data.json..."
-node generate-topic-umap.js 2>/dev/null || true
-if [ -f topic-umap-data.json ]; then
-    mv topic-umap-data.json "$OUTPUT_DIR/"
-else
-    echo "     (skipped - file not generated)"
+# Temporarily copy taxonomy files back to root for generate scripts
+if [ -f "$OUTPUT_DIR/topic-taxonomy.json" ]; then
+    cp "$OUTPUT_DIR/topic-taxonomy.json" .
 fi
+if [ -f "$OUTPUT_DIR/topic-taxonomy-detailed.json" ]; then
+    cp "$OUTPUT_DIR/topic-taxonomy-detailed.json" .
+fi
+
+# Topic UMAP
+# echo -e "  ${YELLOW}→${NC} Generating topic-umap-data.json..."
+#node generate-topic-umap.js || {
+#    echo -e "     ${RED}✗ Failed to generate topic-umap-data.json${NC}"
+# }
+# if [ -f topic-umap-data.json ]; then
+#     mv topic-umap-data.json "$OUTPUT_DIR/"
+# else
+#    echo "     (skipped - file not generated)"
+# fi
 
 # Topic River
 echo -e "  ${YELLOW}→${NC} Generating topic-river-data.json..."
-node generate-topic-river.js 2>/dev/null || true
+node generate-topic-river.js || {
+    echo -e "     ${RED}✗ Failed to generate topic-river-data.json${NC}"
+}
 if [ -f topic-river-data.json ]; then
     mv topic-river-data.json "$OUTPUT_DIR/"
 else
@@ -128,7 +140,9 @@ fi
 
 # Cluster-Cluster Heatmap
 echo -e "  ${YELLOW}→${NC} Generating cluster-cluster-heatmap.json..."
-node generate-cluster-cluster-heatmap.js 2>/dev/null || true
+node generate-cluster-cluster-heatmap.js || {
+    echo -e "     ${RED}✗ Failed to generate cluster-cluster-heatmap.json${NC}"
+}
 if [ -f cluster-cluster-heatmap.json ]; then
     mv cluster-cluster-heatmap.json "$OUTPUT_DIR/"
 else
@@ -137,12 +151,17 @@ fi
 
 # Speaker-Cluster Heatmap
 echo -e "  ${YELLOW}→${NC} Generating speaker-cluster-heatmap.json..."
-node generate-speaker-cluster-heatmap.js 2>/dev/null || true
+node generate-speaker-cluster-heatmap.js || {
+    echo -e "     ${RED}✗ Failed to generate speaker-cluster-heatmap.json${NC}"
+}
 if [ -f speaker-cluster-heatmap.json ]; then
     mv speaker-cluster-heatmap.json "$OUTPUT_DIR/"
 else
     echo "     (skipped - file not generated)"
 fi
+
+# Cleanup - remove temporary taxonomy files
+rm -f topic-taxonomy.json topic-taxonomy-detailed.json
 
 # Cleanup (no longer needed - binaries read directly from variants.json)
 

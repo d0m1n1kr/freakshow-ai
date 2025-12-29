@@ -88,6 +88,10 @@ struct TopicClusteringSettings {
     clusters: Option<usize>,
     #[serde(rename = "outlierThreshold")]
     outlier_threshold: Option<f64>,
+    /// Topics that appear in (almost) every episode are not useful clusters (e.g. intro/outro).
+    /// If set, topics with episode_share >= threshold will be excluded before clustering.
+    #[serde(rename = "ubiquitousTopicMaxEpisodeShare")]
+    ubiquitous_topic_max_episode_share: Option<f64>,
     #[serde(rename = "linkageMethod")]
     linkage_method: Option<String>,
     #[serde(rename = "useRelevanceWeighting")]
@@ -724,14 +728,64 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("   Topics: {}", db.topics.len());
     println!("   Dimensionen: {}", db.embedding_dimensions);
     println!("   Erstellt: {}", db.created_at);
+
+    // ------------------------------------------------------------------------
+    // Filter ubiquitous / boilerplate topics (e.g. intro/outro)
+    // ------------------------------------------------------------------------
+    let ubiquitous_share_threshold = settings
+        .topic_clustering
+        .as_ref()
+        .and_then(|s| s.ubiquitous_topic_max_episode_share)
+        .unwrap_or(0.90);
+
+    let mut all_episode_ids: HashSet<u32> = HashSet::new();
+    for t in db.topics.iter() {
+        for &ep in &t.episodes {
+            all_episode_ids.insert(ep);
+        }
+    }
+    let total_episodes = all_episode_ids.len().max(1);
+
+    let mut filtered_topics: Vec<TopicWithEmbedding> = Vec::with_capacity(db.topics.len());
+    let mut skipped_by_name = 0usize;
+    let mut skipped_by_share = 0usize;
+
+    for t in db.topics.iter().cloned() {
+        let topic_lc = t.topic.to_lowercase();
+        let is_intro_outro = topic_lc.contains("intro") || topic_lc.contains("outro");
+
+        if is_intro_outro {
+            skipped_by_name += 1;
+            continue;
+        }
+
+        let share = (t.episodes.len() as f64) / (total_episodes as f64);
+        if share >= ubiquitous_share_threshold {
+            skipped_by_share += 1;
+            continue;
+        }
+
+        filtered_topics.push(t);
+    }
+
+    if skipped_by_name > 0 || skipped_by_share > 0 {
+        println!(
+            "🧹 Filter: entferne {} Intro/Outro-Themen + {} ubiquitäre Themen (≥ {:.0}% von {} Episoden).",
+            skipped_by_name,
+            skipped_by_share,
+            ubiquitous_share_threshold * 100.0,
+            total_episodes
+        );
+        println!("   Topics nach Filter: {}", filtered_topics.len());
+    }
     println!("\n📊 Clustering-Einstellungen:");
     println!("   Ziel-Cluster:        {}", target_clusters);
     println!("   Outlier-Schwellwert: {}", outlier_threshold);
     println!("   Linkage-Methode:     {}", linkage_method);
     println!("   Relevanz-Gewichtung: {}", if use_relevance_weighting { "Ja" } else { "Nein" });
     println!("   LLM-Benennung:       {}\n", if use_llm_naming { "Ja" } else { "Nein" });
-    let unique_topics = db.topics.clone();
-    let embeddings: Vec<Vec<f64>> = db.topics.iter().map(|t| t.embedding.clone()).collect();
+    let unique_topics = filtered_topics.clone();
+    let embeddings: Vec<Vec<f64>> = filtered_topics.iter().map(|t| t.embedding.clone()).collect();
     println!("📊 Cluster erstellen...");
     let cluster_result = hierarchical_clustering(
         &unique_topics, &embeddings, target_clusters, outlier_threshold, &linkage_method, use_relevance_weighting,
@@ -820,7 +874,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         embedding_model: db.embedding_model.clone(),
         embeddings_created_at: db.created_at.clone(),
         total_topics: db.total_topics_raw,
-        unique_topics: db.topics.len(),
+        unique_topics: unique_topics.len(),
         settings: ClusterSettings {
             clusters: target_clusters,
             outlier_threshold,

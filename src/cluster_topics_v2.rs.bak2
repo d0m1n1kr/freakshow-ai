@@ -104,10 +104,6 @@ struct TopicClusteringSettings {
     clusters: Option<usize>,
     #[serde(rename = "outlierThreshold")]
     outlier_threshold: Option<f64>,
-    /// Topics that appear in (almost) every episode are not useful clusters (e.g. intro/outro).
-    /// If set, topics with episode_share >= threshold will be excluded before clustering.
-    #[serde(rename = "ubiquitousTopicMaxEpisodeShare")]
-    ubiquitous_topic_max_episode_share: Option<f64>,
     #[allow(dead_code)]
     #[serde(rename = "linkageMethod")]
     linkage_method: Option<String>,
@@ -550,178 +546,62 @@ struct HdbscanNode {
 }
 
 /// Build the HDBSCAN cluster tree from MST
-// Replacement for build_cluster_tree function - lines 549-644
-
-fn build_cluster_tree(
-    mst: &[MstEdge],
-    n: usize,
-    _min_cluster_size: usize,
-) -> Vec<HdbscanNode> {
-    // Sort MST edges by weight (ascending - smallest distances first)
-    let mut sorted_edges = mst.to_vec();
-    sorted_edges.sort_by(|a, b| a.weight.partial_cmp(&b.weight).unwrap());
-    
-    let mut uf = UnionFind::new(n);
-    let mut nodes: Vec<HdbscanNode> = Vec::new();
-    
-    // Track active cluster for each root (union-find root -> node_id)
-    let mut active_clusters: HashMap<usize, usize> = HashMap::new();
-    
-    // Initialize: each point starts as its own cluster
-    for i in 0..n {
-        let node_id = nodes.len();
-        nodes.push(HdbscanNode {
-            id: node_id,
-            children: vec![],
-            // NOTE: In a full HDBSCAN implementation, leaf "birth" is related to core distance.
-            // For our simplified EOM stability computation we must NOT use +∞ here, otherwise
-            // stability becomes degenerate. We'll set birth when the leaf dies (first merge),
-            // resulting in a zero-lifespan leaf and preventing leaves from dominating stability.
-            lambda_birth: 0.0,
-            lambda_death: 0.0,
-            points: vec![i],
-            stability: 0.0,
-            is_leaf: true,
-            selected: false,
-        });
-        active_clusters.insert(i, node_id);
-    }
-    
-    // Process edges in order of increasing distance
-    for edge in sorted_edges {
-        let root_a = uf.find(edge.from);
-        let root_b = uf.find(edge.to);
-        
-        if root_a == root_b {
-            continue; // Already in same cluster
-        }
-        
-        let lambda = if edge.weight > 0.0 { 1.0 / edge.weight } else { f64::INFINITY };
-        
-        // Get the two clusters being merged
-        let cluster_a_id = active_clusters[&root_a];
-        let cluster_b_id = active_clusters[&root_b];
-        
-        // Mark death time for both clusters
-        nodes[cluster_a_id].lambda_death = lambda;
-        nodes[cluster_b_id].lambda_death = lambda;
-
-        // If these are leaf nodes, set their birth to the same lambda so their lifespan is 0
-        // (prevents +∞/degenerate stability at the leaves).
-        if nodes[cluster_a_id].children.is_empty() && nodes[cluster_a_id].lambda_birth == 0.0 {
-            nodes[cluster_a_id].lambda_birth = lambda;
-        }
-        if nodes[cluster_b_id].children.is_empty() && nodes[cluster_b_id].lambda_birth == 0.0 {
-            nodes[cluster_b_id].lambda_birth = lambda;
-        }
-        
-        // Merge in union-find
-        uf.union(root_a, root_b);
-        let new_root = uf.find(root_a);
-        
-        // Combine points from both clusters
-        let mut new_points = nodes[cluster_a_id].points.clone();
-        new_points.extend(&nodes[cluster_b_id].points);
-        
-        // Create new parent cluster
-        let new_node_id = nodes.len();
-        nodes.push(HdbscanNode {
-            id: new_node_id,
-            children: vec![cluster_a_id, cluster_b_id],
-            lambda_birth: lambda,
-            lambda_death: 0.0, // Will be set when this cluster merges
-            points: new_points,
-            stability: 0.0,
-            is_leaf: false,
-            selected: false,
-        });
-        
-        // Update active cluster for this root
-        active_clusters.remove(&root_a);
-        active_clusters.remove(&root_b);
-        active_clusters.insert(new_root, new_node_id);
-    }
-    
-    // Set death time for root node(s) to 0 (they never die)
-    for &node_id in active_clusters.values() {
-        nodes[node_id].lambda_death = 0.0;
-    }
-    
-    nodes
-}
-
 
 /// Compute stability for each cluster and select optimal clusters
 fn select_clusters(nodes: &mut [HdbscanNode], min_cluster_size: usize) {
     if nodes.is_empty() {
         return;
     }
-
-    // Reset selection flags
+    
+    // Compute stability for each node
     for node in nodes.iter_mut() {
-        node.selected = false;
+        let lifespan = (node.lambda_death - node.lambda_birth).max(0.0);
+        let size = node.points.len();
+        node.stability = lifespan * (size as f64);
     }
-
-    // Compute (simplified) stability per node.
-    // We use: stability = (lambda_birth - lambda_death) * |cluster|
-    // where lambda_birth >= lambda_death (lambda decreases over merges).
+    
+    // Mark leaf nodes
     for node in nodes.iter_mut() {
         if node.children.is_empty() {
-            node.stability = 0.0;
-            continue;
+            node.is_leaf = true;
         }
-        if node.points.len() < min_cluster_size {
-            node.stability = 0.0;
-            continue;
-        }
-
-        let birth = node.lambda_birth;
-        let death = node.lambda_death; // root death = 0.0
-        let lifespan = (birth - death).max(0.0);
-
-        // IMPORTANT:
-        // Using size * lifespan tends to make the root dominate and collapses everything into 1 cluster.
-        // We use a sub-linear size scaling to approximate HDBSCAN's EOM behavior more closely:
-        // large, short-lived clusters should not automatically beat several stable subclusters.
-        node.stability = lifespan * (node.points.len() as f64).sqrt();
     }
-
-    // EOM selection (dynamic programming):
-    // process nodes from leaves to root. In our construction, children always have smaller ids
-    // than their parent (parent nodes are appended). So iterating i=0..N is bottom-up.
-    let mut subtree_best_stability = vec![0.0f64; nodes.len()];
-
-    for i in 0..nodes.len() {
-        if nodes[i].children.is_empty() || nodes[i].points.len() < min_cluster_size {
-            subtree_best_stability[i] = 0.0;
-            continue;
+    
+    // Initially select all leaf nodes that meet minimum size
+    for node in nodes.iter_mut() {
+        if node.is_leaf && node.points.len() >= min_cluster_size {
+            node.selected = true;
         }
-
-        let mut children_sum = 0.0;
+    }
+    
+    // HDBSCAN cluster selection algorithm:
+    // Process nodes bottom-up (reverse order, as leaves come first in construction)
+    // For each internal node, decide if we should select it instead of its children
+    for i in (0..nodes.len()).rev() {
+        if nodes[i].is_leaf || nodes[i].points.len() < min_cluster_size {
+            continue; // Skip leaves and nodes too small
+        }
+        
+        // Calculate total stability of selected children
+        let mut children_stability = 0.0;
+        let mut has_selected_children = false;
+        
         for &child_idx in &nodes[i].children {
-            if child_idx < nodes.len() {
-                children_sum += subtree_best_stability[child_idx];
+            if child_idx < nodes.len() && nodes[child_idx].selected {
+                children_stability += nodes[child_idx].stability;
+                has_selected_children = true;
             }
         }
-
-        // Select this cluster if it is more stable than the sum of its children's best stabilities.
-        if nodes[i].stability > children_sum {
+        
+        // If this node is more stable than its children combined, select it instead
+        if has_selected_children && nodes[i].stability > children_stability {
             nodes[i].selected = true;
-
-            // Deselect all descendants to keep the selected set disjoint.
-            let mut stack: Vec<usize> = nodes[i].children.clone();
-            while let Some(idx) = stack.pop() {
-                if idx >= nodes.len() {
-                    continue;
+            // Deselect children
+            for &child_idx in &nodes[i].children {
+                if child_idx < nodes.len() {
+                    nodes[child_idx].selected = false;
                 }
-                nodes[idx].selected = false;
-                stack.extend(nodes[idx].children.iter().copied());
             }
-
-            subtree_best_stability[i] = nodes[i].stability;
-        } else {
-            // Keep children selections
-            subtree_best_stability[i] = children_sum;
         }
     }
 }
@@ -792,21 +672,7 @@ fn hdbscan(
     
     // Step 6: Extract flat clustering
     let labels = extract_flat_clusters(&nodes, n, min_cluster_size);
-
-    // If the current HDBSCAN-tree selection degenerates (e.g. 1 mega-cluster or almost one per point),
-    // fall back to a DBSCAN clustering with automatically selected epsilon. This keeps V2 usable
-    // and restores meaningful noise/outliers.
-    let num_clusters = labels.iter().filter(|&&l| l >= 0).max().map_or(0, |&m| m + 1);
-    let num_noise = labels.iter().filter(|&&l| l == -1).count();
-
-    let degenerate_many = (num_clusters as usize) > (n / 2);
-    if num_clusters <= 1 || degenerate_many {
-        println!("   ⚠️  HDBSCAN selection degenerate (clusters={}, noise={}). Falling back to DBSCAN(auto-eps)...", num_clusters, num_noise);
-        let (db_labels, eps) = dbscan_auto_eps(embeddings, min_samples);
-        println!("   ✓ Fallback DBSCAN eps={:.4}", eps);
-        return db_labels;
-    }
-
+    
     labels
 }
 
@@ -838,13 +704,8 @@ fn dbscan_auto_eps(
     // Use second derivative to find the point of maximum curvature
     let mut max_curvature = 0.0;
     let mut best_idx = n / 2;
-
-    // Avoid picking the extreme tail where curvature is often noisy (can lead to eps too large
-    // and a single mega-cluster). Search within [10%, 90%].
-    let start_i = (n / 10).max(1);
-    let end_i = ((n * 9) / 10).min(n.saturating_sub(2));
     
-    for i in start_i..=end_i {
+    for i in 1..n - 1 {
         let second_deriv = (k_distances[i + 1] - 2.0 * k_distances[i] + k_distances[i - 1]).abs();
         if second_deriv > max_curvature {
             max_curvature = second_deriv;
@@ -852,11 +713,8 @@ fn dbscan_auto_eps(
         }
     }
     
-    let raw_eps = k_distances[best_idx];
-    // Heuristic: the elbow-point often skews too permissive for cosine distances in high-dim space,
-    // collapsing into a single mega-cluster. Scale down to encourage separation + noise.
-    let eps = raw_eps * 0.75;
-    println!("   Auto-Epsilon: {:.4} → {:.4} (scale 0.75, index {})", raw_eps, eps, best_idx);
+    let eps = k_distances[best_idx];
+    println!("   Auto-Epsilon: {:.4} (bei Index {})", eps, best_idx);
     
     // Run DBSCAN with this epsilon
     let labels = dbscan(&distances, eps, min_samples);
@@ -1381,56 +1239,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("   Topics: {}", db.topics.len());
     println!("   Dimensionen: {}", db.embedding_dimensions);
     println!("   Erstellt: {}", db.created_at);
-
-    // ------------------------------------------------------------------------
-    // Filter ubiquitous / boilerplate topics (e.g. intro/outro)
-    // ------------------------------------------------------------------------
-    let ubiquitous_share_threshold = settings
-        .topic_clustering
-        .as_ref()
-        .and_then(|s| s.ubiquitous_topic_max_episode_share)
-        .unwrap_or(0.90);
-
-    let mut all_episode_ids: HashSet<u32> = HashSet::new();
-    for t in db.topics.iter() {
-        for &ep in &t.episodes {
-            all_episode_ids.insert(ep);
-        }
-    }
-    let total_episodes = all_episode_ids.len().max(1);
-
-    let mut filtered_topics: Vec<TopicWithEmbedding> = Vec::with_capacity(db.topics.len());
-    let mut skipped_by_name = 0usize;
-    let mut skipped_by_share = 0usize;
-
-    for t in db.topics.iter().cloned() {
-        let topic_lc = t.topic.to_lowercase();
-        let is_intro_outro = topic_lc.contains("intro") || topic_lc.contains("outro");
-
-        if is_intro_outro {
-            skipped_by_name += 1;
-            continue;
-        }
-
-        let share = (t.episodes.len() as f64) / (total_episodes as f64);
-        if share >= ubiquitous_share_threshold {
-            skipped_by_share += 1;
-            continue;
-        }
-
-        filtered_topics.push(t);
-    }
-
-    if skipped_by_name > 0 || skipped_by_share > 0 {
-        println!(
-            "🧹 Filter: entferne {} Intro/Outro-Themen + {} ubiquitäre Themen (≥ {:.0}% von {} Episoden).",
-            skipped_by_name,
-            skipped_by_share,
-            ubiquitous_share_threshold * 100.0,
-            total_episodes
-        );
-        println!("   Topics nach Filter: {}", filtered_topics.len());
-    }
     
     println!("\n📊 V2 Clustering-Einstellungen:");
     println!("   Algorithmus:         HDBSCAN");
@@ -1440,8 +1248,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("   Relevanz-Gewichtung: {}", if use_relevance_weighting { "Ja" } else { "Nein" });
     println!("   LLM-Benennung:       {}\n", if use_llm_naming { "Ja" } else { "Nein" });
     
-    let unique_topics = filtered_topics.clone();
-    let embeddings: Vec<Vec<f64>> = filtered_topics.iter().map(|t| t.embedding.clone()).collect();
+    let unique_topics = db.topics.clone();
+    let embeddings: Vec<Vec<f64>> = db.topics.iter().map(|t| t.embedding.clone()).collect();
     
     // Step 1: Dimensionality reduction
     println!("📉 Dimensionsreduktion...");
@@ -1588,7 +1396,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         embedding_model: db.embedding_model.clone(),
         embeddings_created_at: db.created_at.clone(),
         total_topics: db.total_topics_raw,
-        unique_topics: unique_topics.len(),
+        unique_topics: db.topics.len(),
         settings: ClusterSettings {
             clusters: named_clusters.len(),
             outlier_threshold,
