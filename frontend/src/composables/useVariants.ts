@@ -10,6 +10,7 @@ export interface VariantSettings {
   minClusterSize?: number;
   minSamples?: number;
   reducedDimensions?: number;
+  defaultTopicDurationSec?: number;
   // Common settings
   outlierThreshold?: number;
   useRelevanceWeighting?: boolean;

@@ -7,15 +7,18 @@
   "scripts": {
     "scrape": "node scrape.js",
     "scrape-details": "node scrape-details.js",
+    "scrape-chapters": "node scrape-chapters.js",
     "scrape-osf": "node scrape-osf.js",
     "extract-topics": "node extract-topics.js",
+    "extend-topics": "node generate-extended-topics.js --all",
     "normalize-topics": "node normalize-topics.js",
     "create-embeddings": "node create-embeddings.js",
     "cluster-topics": "node cluster-topics.js",
     "topic-river": "node generate-topic-river.js",
     "cluster-categories": "node cluster-categories.js",
     "category-river": "node generate-category-river.js",
-    "generate-umap": "node generate-topic-umap.js"
+    "generate-umap": "node generate-topic-umap.js",
+    "speaker-profiles": "node generate-speaker-profiles.js"
   },
   "dependencies": {
     "puppeteer": "^24.0.0",

@@ -18,22 +18,13 @@ function sleep(ms) {
 /**
  * Ruft das LLM auf, um Hauptthemen zu extrahieren (mit Retry bei Rate Limits)
  */
-async function callLLM(prompt, retryCount = 0) {
+async function callLLM(messages, retryCount = 0) {
   const { provider, model, apiKey, baseURL, temperature, maxTokens } = settings.llm;
   const { maxRetries, retryDelayMs } = settings.topicExtraction;
   
   const requestBody = {
     model: model,
-    messages: [
-      {
-        role: "system",
-        content: "Du bist ein Assistent, der Hauptthemen aus Podcast-Episoden extrahiert. Antworte immer mit einem JSON-Array von Themen-Objekten. Jedes Objekt sollte ein 'topic' (kurze Beschreibung) und optional 'keywords' (Array von Schlagwörtern) enthalten. Extrahiere ALLE wichtigen Hauptthemen ohne Maximalbeschränkung."
-      },
-      {
-        role: "user",
-        content: prompt
-      }
-    ],
+    messages,
     temperature: temperature,
     max_tokens: maxTokens
   };
@@ -80,6 +71,26 @@ async function callLLM(prompt, retryCount = 0) {
   }
 }
 
+function parseJsonArrayFromLLM(responseText) {
+  // Try to extract the first JSON array from the response (some models wrap with text)
+  const text = String(responseText || '').trim();
+  const jsonMatch = text.match(/\[[\s\S]*\]/);
+  const jsonText = jsonMatch ? jsonMatch[0] : text;
+  const parsed = JSON.parse(jsonText);
+  if (!Array.isArray(parsed)) throw new Error('LLM-Antwort ist kein JSON-Array');
+  return parsed;
+}
+
+function durationTupleToSeconds(tuple) {
+  if (!tuple || !Array.isArray(tuple)) return null;
+  const [h, m, s] = tuple;
+  const hh = Number.isFinite(h) ? h : parseInt(h, 10);
+  const mm = Number.isFinite(m) ? m : parseInt(m, 10);
+  const ss = Number.isFinite(s) ? s : parseInt(s, 10);
+  if ([hh, mm, ss].some(x => Number.isNaN(x))) return null;
+  return hh * 3600 + mm * 60 + ss;
+}
+
 /**
  * Lade alle verfügbaren Informationen für eine Episode
  */
@@ -111,6 +122,12 @@ function loadEpisodeData(episodeNumber) {
     data.osf = JSON.parse(fs.readFileSync(osfFile, 'utf-8'));
   }
 
+  // Detaillierte Kapitel (mit positionSec/durationSec)
+  const chaptersFile = path.join(episodesDir, `${episodeNumber}-chapters.json`);
+  if (fs.existsSync(chaptersFile)) {
+    data.detailedChapters = JSON.parse(fs.readFileSync(chaptersFile, 'utf-8'));
+  }
+
   return data;
 }
 
@@ -118,29 +135,15 @@ function loadEpisodeData(episodeNumber) {
  * Bestimme die beste Datenquelle für Topic-Extraktion nach Priorität
  */
 function selectDataSource(episodeData) {
-  // Priorität 1: Kapitel aus Hauptdatei
-  if (episodeData.main && episodeData.main.chapters && Array.isArray(episodeData.main.chapters) && episodeData.main.chapters.length > 0) {
+  // Priorität 1: Detaillierte Kapitel-Datei (episodes/<n>-chapters.json)
+  if (episodeData.detailedChapters && Array.isArray(episodeData.detailedChapters.chapters) && episodeData.detailedChapters.chapters.length > 0) {
     return {
-      source: 'chapters',
-      data: episodeData.main.chapters
+      source: 'detailed-chapters',
+      data: episodeData.detailedChapters.chapters
     };
   }
 
-  // Priorität 2: Kapitel aus OSF Show Notes
-  if (episodeData.osf && episodeData.osf.shownotes) {
-    const chapters = episodeData.osf.shownotes
-      .filter(section => section.chapter && section.chapter !== '')
-      .map(section => section.chapter);
-    
-    if (chapters.length > 0) {
-      return {
-        source: 'osf-chapters',
-        data: chapters
-      };
-    }
-  }
-
-  // Priorität 3: Text & Description
+  // Priorität 2: Text & Description
   let textData = '';
   if (episodeData.main && episodeData.main.description) {
     textData += episodeData.main.description;
@@ -154,7 +157,7 @@ function selectDataSource(episodeData) {
   
   if (textData.length > 0) {
     return {
-      source: 'text-description',
+      source: 'description',
       data: textData
     };
   }
@@ -163,57 +166,64 @@ function selectDataSource(episodeData) {
 }
 
 /**
- * Erstelle einen Prompt für das LLM aus den Episode-Daten
+ * Erstelle LLM-Messages zur Filterung + Kategorisierung von Kapiteln
  */
-function createPrompt(episodeData, dataSource) {
-  const { language } = settings.topicExtraction;
-  
-  let prompt = `Analysiere die folgenden Informationen einer Podcast-Episode und extrahiere ALLE wichtigen Hauptthemen. Es gibt keine Maximalzahl - extrahiere möglichst alle relevanten Hauptthemen, die in der Episode besprochen werden.\n\n`;
-  
-  // Titel
-  if (episodeData.main) {
-    prompt += `**Titel:** ${episodeData.main.title}\n\n`;
-  }
+function createChapterCurationMessages(episodeData, chapterTopics) {
+  const title = episodeData.main?.title || '';
+  const payload = chapterTopics.map(t => ({
+    id: t.id,
+    topic: t.topic
+  }));
 
-  // Datenquelle basierend auf Priorität
-  if (dataSource.source === 'chapters') {
-    prompt += `**Kapitel:**\n`;
-    dataSource.data.forEach((chapter, i) => {
-      // Prüfe verschiedene Kapitel-Formate
-      const chapterText = typeof chapter === 'string' ? chapter : (chapter.title || chapter.name || '');
-      if (chapterText) {
-        prompt += `${i + 1}. ${chapterText}\n`;
-      }
-    });
-    prompt += `\n`;
-  } else if (dataSource.source === 'osf-chapters') {
-    prompt += `**Kapitel:**\n`;
-    dataSource.data.forEach((chapter, i) => {
-      prompt += `${i + 1}. ${chapter}\n`;
-    });
-    prompt += `\n`;
-  } else if (dataSource.source === 'text-description') {
-    // Begrenze Text auf sinnvolle Länge für LLM
-    const text = dataSource.data.substring(0, 4000);
-    prompt += `**Inhalt:**\n${text}${dataSource.data.length > 4000 ? '...' : ''}\n\n`;
-  }
+  return [
+    {
+      role: "system",
+      content:
+        "Du kuratierst Podcast-Themen. Du bekommst eine geordnete Liste von Kapiteln (topic). " +
+        "Deine Aufgaben: (1) entferne strukturelle/administrative Kapitel wie Intro, Begrüßung, Vorstellung, Orga/Housekeeping, Verabschiedung, Ausklang, Nachklapp, Werbung etc. " +
+        "(2) Weise jedem verbleibenden Thema genau ZWEI Subject-Layer zu: coarse und fine. " +
+        "Beispiele: 'Software / Filesystems', 'Hardware / iPad', 'Social / Social Network'. " +
+        "Wichtig: Keine Keywords. Keine neuen Themen erfinden. Topic-Texte nicht umschreiben (nur klassifizieren und ggf. verwerfen). " +
+        "Antworte ausschließlich mit einem JSON-Array von Objekten: {\"id\": number, \"keep\": boolean, \"subjectCoarse\": string, \"subjectFine\": string}."
+    },
+    {
+      role: "user",
+      content:
+        `Episode: ${title}\n\n` +
+        `Kapitel (geordnet):\n${JSON.stringify(payload, null, 2)}`
+    }
+  ];
+}
 
-  prompt += `Antworte ausschließlich mit einem JSON-Array im folgenden Format (ohne zusätzlichen Text):\n`;
-  prompt += `[\n`;
-  prompt += `  {\n`;
-  prompt += `    "topic": "Hauptthema als kurze Beschreibung",\n`;
-  prompt += `    "keywords": ["keyword1", "keyword2"]\n`;
-  prompt += `  }\n`;
-  prompt += `]\n\n`;
-  prompt += `Wichtig:\n`;
-  prompt += `- Extrahiere ALLE wichtigen Hauptthemen (keine Maximalbeschränkung)\n`;
-  prompt += `- Jedes Hauptthema sollte ein eigenständiges, substantielles Thema sein\n`;
-  prompt += `- Themen sollten die wichtigsten besprochenen Inhalte widerspiegeln\n`;
-  prompt += `- Jedes Thema sollte klar und präzise sein\n`;
-  prompt += `- Keywords sollten relevante Schlagwörter zum Thema sein\n`;
-  prompt += `- Antwort muss valides JSON sein\n`;
+/**
+ * Erstelle LLM-Messages zur Topic-Extraktion aus Beschreibung (inkl. Subject-Layer, ohne Keywords)
+ */
+function createDescriptionExtractionMessages(episodeData, descriptionText) {
+  const title = episodeData.main?.title || '';
+  const text = String(descriptionText || '').substring(0, 5000);
 
-  return prompt;
+  return [
+    {
+      role: "system",
+      content:
+        "Du extrahierst Podcast-Themen aus einem Beschreibungstext. " +
+        "Gib eine geordnete Liste der besprochenen Hauptthemen zurück. " +
+        "Entferne strukturelle/administrative Themen (Intro, Begrüßung, Vorstellung, Orga/Housekeeping, Verabschiedung, Ausklang etc.). " +
+        "Wichtig: Keine Keywords. Weise jedem Thema genau ZWEI Subject-Layer zu: coarse und fine (z.B. 'Software'/'Filesystems', 'Hardware'/'iPad', 'Social'/'Social Network'). " +
+        "Antworte ausschließlich mit einem JSON-Array von Objekten: {\"topic\": string, \"subjectCoarse\": string, \"subjectFine\": string}."
+    },
+    {
+      role: "user",
+      content:
+        `Episode: ${title}\n\nBeschreibung (evtl. gekürzt):\n${text}${String(descriptionText || '').length > 5000 ? '...' : ''}`
+    }
+  ];
+}
+
+function toOptionalInt(value) {
+  const n = Number.isFinite(value) ? value : parseInt(value, 10);
+  if (!Number.isFinite(n) || Number.isNaN(n)) return null;
+  return n;
 }
 
 /**
@@ -251,35 +261,71 @@ async function extractTopicsForEpisode(episodeNumber, forceOverwrite = false) {
 
   console.log(`  📊 Verwende Datenquelle: ${dataSource.source}`);
 
-  // Erstelle Prompt
-  const prompt = createPrompt(episodeData, dataSource);
-  
   try {
-    // LLM aufrufen
-    console.log(`  🤖 Rufe LLM auf...`);
-    const response = await callLLM(prompt);
-    
-    // Parse JSON response
-    let topics;
-    try {
-      // Versuche, JSON aus der Antwort zu extrahieren (falls das LLM zusätzlichen Text zurückgibt)
-      const jsonMatch = response.match(/\[[\s\S]*\]/);
-      if (jsonMatch) {
-        topics = JSON.parse(jsonMatch[0]);
-      } else {
-        topics = JSON.parse(response);
-      }
-    } catch (parseError) {
-      console.error(`  ❌ Fehler beim Parsen der LLM-Antwort:`, response);
-      throw parseError;
-    }
+    let finalTopics = [];
 
-    // Validiere und bereinige Topics
-    if (!Array.isArray(topics)) {
-      throw new Error('LLM-Antwort ist kein Array');
-    }
+    if (dataSource.source === 'detailed-chapters') {
+      // Take chapters directly as topics; use LLM only for filtering structural items + subject layers.
+      const chapters = dataSource.data
+        .filter(ch => ch && typeof ch === 'object')
+        .map((ch, idx) => ({
+          id: idx + 1,
+          topic: String(ch.title || ch.topic || '').trim(),
+          durationSec: toOptionalInt(ch.durationSec),
+          positionSec: toOptionalInt(ch.positionSec),
+        }))
+        .filter(ch => ch.topic.length > 0);
 
-    const validTopics = topics.filter(t => t.topic && t.topic.length >= settings.topicExtraction.minTopicLength);
+      console.log(`  🤖 Rufe LLM auf (Kapitel filtern + Subject-Layer)...`);
+      const response = await callLLM(createChapterCurationMessages(episodeData, chapters));
+      const curated = parseJsonArrayFromLLM(response);
+
+      const curatedById = new Map();
+      curated.forEach(x => {
+        if (x && typeof x === 'object' && Number.isFinite(x.id)) curatedById.set(x.id, x);
+      });
+
+      finalTopics = chapters
+        .map(ch => {
+          const c = curatedById.get(ch.id);
+          const keep = c?.keep === true;
+          if (!keep) return null;
+          const topic = ch.topic;
+          if (!topic || topic.length < settings.topicExtraction.minTopicLength) return null;
+          const out = {
+            topic,
+            subject: {
+              coarse: String(c.subjectCoarse || '').trim(),
+              fine: String(c.subjectFine || '').trim(),
+            },
+          };
+          // Only include timing fields if present in chapters source
+          if (ch.durationSec !== null) out.durationSec = ch.durationSec;
+          if (ch.positionSec !== null) out.positionSec = ch.positionSec;
+          return out;
+        })
+        .filter(Boolean);
+    } else if (dataSource.source === 'description') {
+      console.log(`  🤖 Rufe LLM auf (Topics aus Beschreibung extrahieren + Subject-Layer)...`);
+      const response = await callLLM(createDescriptionExtractionMessages(episodeData, dataSource.data));
+      const topics = parseJsonArrayFromLLM(response);
+
+      const cleaned = topics
+        .filter(t => t && typeof t === 'object' && typeof t.topic === 'string')
+        .map(t => ({
+          topic: t.topic.trim(),
+          subject: {
+            coarse: String(t.subjectCoarse || '').trim(),
+            fine: String(t.subjectFine || '').trim(),
+          }
+        }))
+        .filter(t => t.topic && t.topic.length >= settings.topicExtraction.minTopicLength);
+
+      // No per-topic timing data available without chapters → do not add duration/position
+      finalTopics = cleaned;
+    } else {
+      throw new Error(`Unbekannte Datenquelle: ${dataSource.source}`);
+    }
 
     // Erstelle Ergebnis-Objekt
     const result = {
@@ -287,16 +333,16 @@ async function extractTopicsForEpisode(episodeNumber, forceOverwrite = false) {
       title: episodeData.main.title,
       extractedAt: new Date().toISOString(),
       dataSource: dataSource.source,
-      topics: validTopics
+      topics: finalTopics
     };
 
     // Speichere in Datei
     fs.writeFileSync(topicsFile, JSON.stringify(result, null, 2), 'utf-8');
-    console.log(`  ✅ ${validTopics.length} Themen extrahiert und gespeichert`);
+    console.log(`  ✅ ${finalTopics.length} Themen extrahiert und gespeichert`);
     
     // Zeige Themen
-    validTopics.forEach((topic, i) => {
-      console.log(`     ${i + 1}. ${topic.topic}`);
+    finalTopics.forEach((topic, i) => {
+      console.log(`     ${i + 1}. ${topic.topic} (${topic.subject?.coarse || '?'}/${topic.subject?.fine || '?'})`);
     });
 
   } catch (error) {

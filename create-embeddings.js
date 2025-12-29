@@ -92,10 +92,30 @@ function loadAllTopics() {
   for (const { path: filePath, episodeNumber } of topicsFiles) {
     const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     for (const topic of data.topics) {
+      const subjectCoarse =
+        (topic?.subject && typeof topic.subject.coarse === 'string' && topic.subject.coarse.trim()) ||
+        (typeof topic?.subjectCoarse === 'string' && topic.subjectCoarse.trim()) ||
+        null;
+      const subjectFine =
+        (topic?.subject && typeof topic.subject.fine === 'string' && topic.subject.fine.trim()) ||
+        (typeof topic?.subjectFine === 'string' && topic.subjectFine.trim()) ||
+        null;
+
+      const durationSec =
+        Number.isFinite(topic?.durationSec) ? topic.durationSec : (topic?.durationSec != null ? parseInt(topic.durationSec, 10) : null);
+      const positionSec =
+        Number.isFinite(topic?.positionSec) ? topic.positionSec : (topic?.positionSec != null ? parseInt(topic.positionSec, 10) : null);
+
       allTopics.push({
         episodeNumber,
         topic: topic.topic,
-        keywords: topic.keywords || []
+        keywords: Array.isArray(topic.keywords) ? topic.keywords : [],
+        subject: {
+          coarse: subjectCoarse,
+          fine: subjectFine
+        },
+        durationSec: Number.isFinite(durationSec) ? durationSec : null,
+        positionSec: Number.isFinite(positionSec) ? positionSec : null
       });
     }
   }
@@ -119,18 +139,73 @@ function deduplicateTopics(topics) {
           existing.keywords.push(kw);
         }
       }
-      existing.episodes.push(t.episodeNumber);
+      if (!existing.episodes.includes(t.episodeNumber)) {
+        existing.episodes.push(t.episodeNumber);
+      }
+
+      existing.occurrences.push({
+        episodeNumber: t.episodeNumber,
+        subject: {
+          coarse: t.subject?.coarse || null,
+          fine: t.subject?.fine || null
+        },
+        durationSec: t.durationSec ?? null,
+        positionSec: t.positionSec ?? null
+      });
     } else {
       seen.set(key, {
         topic: t.topic,
         keywords: [...t.keywords],
         count: 1,
-        episodes: [t.episodeNumber]
+        episodes: [t.episodeNumber],
+        occurrences: [
+          {
+            episodeNumber: t.episodeNumber,
+            subject: {
+              coarse: t.subject?.coarse || null,
+              fine: t.subject?.fine || null
+            },
+            durationSec: t.durationSec ?? null,
+            positionSec: t.positionSec ?? null
+          }
+        ]
       });
     }
   }
   
   return Array.from(seen.values());
+}
+
+function buildSubjectKeywordsFromOccurrences(occurrences) {
+  const kws = new Set();
+  if (!Array.isArray(occurrences)) return [];
+  for (const o of occurrences) {
+    const coarse = o?.subject?.coarse;
+    const fine = o?.subject?.fine;
+    if (typeof coarse === 'string' && coarse.trim()) kws.add(coarse.trim());
+    if (typeof fine === 'string' && fine.trim()) kws.add(fine.trim());
+  }
+  return Array.from(kws);
+}
+
+function computeTopSubjects(occurrences, max = 3) {
+  const counts = new Map();
+  if (!Array.isArray(occurrences)) return [];
+  for (const o of occurrences) {
+    const coarse = typeof o?.subject?.coarse === 'string' ? o.subject.coarse.trim() : '';
+    const fine = typeof o?.subject?.fine === 'string' ? o.subject.fine.trim() : '';
+    const key = `${coarse} /// ${fine}`.trim();
+    if (!key || key === '///') continue;
+    counts.set(key, (counts.get(key) || 0) + 1);
+  }
+  return Array.from(counts.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, max)
+    .map(([k]) => {
+      const [coarse, fine] = k.split(' /// ').map(s => s.trim());
+      if (coarse && fine) return `${coarse} / ${fine}`;
+      return coarse || fine || k;
+    });
 }
 
 /**
@@ -142,6 +217,7 @@ async function main() {
   const embeddingModel = settings.topicClustering?.embeddingModel || 'text-embedding-3-small';
   const batchSize = settings.topicClustering?.embeddingBatchSize || 100;
   const dbFile = path.join(__dirname, 'topic-embeddings.json');
+  const schemaVersion = 2;
   
   console.log(`Embedding-Modell: ${embeddingModel}`);
   console.log(`Batch-Größe: ${batchSize}\n`);
@@ -172,7 +248,8 @@ async function main() {
   const forceUpdate = args.includes('--force') || args.includes('-f');
   
   if (existingDb && !forceUpdate) {
-    if (existingDb.embeddingModel === embeddingModel && 
+    if (existingDb.schemaVersion === schemaVersion &&
+        existingDb.embeddingModel === embeddingModel && 
         existingDb.topics.length === uniqueTopics.length) {
       console.log('\n✅ Datenbank ist aktuell. Nutze --force für Neuerstellung.');
       return;
@@ -186,7 +263,12 @@ async function main() {
   
   for (let i = 0; i < uniqueTopics.length; i += batchSize) {
     const batch = uniqueTopics.slice(i, i + batchSize);
-    const texts = batch.map(t => `${t.topic}. Keywords: ${t.keywords.join(', ')}`);
+    const texts = batch.map(t => {
+      const topSubjects = computeTopSubjects(t.occurrences, 3);
+      const subjectLine = topSubjects.length > 0 ? `\nSubject: ${topSubjects.join('; ')}` : '';
+      const keywordLine = (t.keywords && t.keywords.length > 0) ? `\nKeywords: ${t.keywords.slice(0, 12).join(', ')}` : '';
+      return `Topic: ${t.topic}${subjectLine}${keywordLine}`;
+    });
     
     const batchNum = Math.floor(i / batchSize) + 1;
     const totalBatches = Math.ceil(uniqueTopics.length / batchSize);
@@ -205,6 +287,7 @@ async function main() {
   console.log('\n💾 Speichere Datenbank...');
   
   const database = {
+    schemaVersion,
     createdAt: new Date().toISOString(),
     embeddingModel: embeddingModel,
     embeddingDimensions: allEmbeddings[0]?.length || 0,
@@ -213,9 +296,10 @@ async function main() {
     topics: uniqueTopics.map((topic, i) => ({
       id: i,
       topic: topic.topic,
-      keywords: topic.keywords,
+      keywords: Array.from(new Set([...(topic.keywords || []), ...buildSubjectKeywordsFromOccurrences(topic.occurrences)])),
       count: topic.count,
       episodes: topic.episodes,
+      occurrences: topic.occurrences,
       embedding: allEmbeddings[i]
     }))
   };

@@ -32,16 +32,26 @@ export interface TopicRiverData {
       topicCount?: number; // For category river data
       totalDurationMinutes?: number;
       totalDurationHours?: number;
+      totalRelevanceSec?: number;
+      totalOccurrences?: number;
       yearData: Array<{
         year: number;
         count: number;
         totalDurationMinutes?: number;
         totalDurationHours?: number;
+        totalRelevanceSec?: number;
+        totalOccurrences?: number;
         episodes: Array<{
           number: number;
           date: string;
           title: string;
           durationMinutes?: number;
+          relevanceSec?: number;
+          occurrences?: Array<{
+            topic?: string | null;
+            positionSec: number;
+            durationSec?: number | null;
+          }>;
         }>;
       }>;
     };

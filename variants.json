@@ -47,6 +47,7 @@
         "minClusterSize": 5,
         "minSamples": 3,
         "reducedDimensions": 50,
+        "defaultTopicDurationSec": 300,
         "useRelevanceWeighting": true,
         "useLLMNaming": true
       }
@@ -61,6 +62,7 @@
         "reducedDimensions": 75, 
         "outlierThreshold": 0.90,        
         "ubiquitousTopicMaxEpisodeShare": 0.90,
+        "defaultTopicDurationSec": 300,
         "useRelevanceWeighting": true,
         "useLLMNaming": true
       }
@@ -73,6 +75,7 @@
         "minClusterSize": 3,
         "minSamples": 2,
         "reducedDimensions": 50,
+        "defaultTopicDurationSec": 300,
         "useRelevanceWeighting": true,
         "useLLMNaming": true
       }
@@ -85,6 +88,7 @@
         "minClusterSize": 15,
         "minSamples": 5,
         "reducedDimensions": 50,
+        "defaultTopicDurationSec": 300,
         "useRelevanceWeighting": true,
         "useLLMNaming": true
       }
@@ -97,6 +101,7 @@
         "minClusterSize": 5,
         "minSamples": 3,
         "reducedDimensions": 30,
+        "defaultTopicDurationSec": 300,
         "useRelevanceWeighting": true,
         "useLLMNaming": false
       }

@@ -53,17 +53,33 @@ const processedData = computed(() => {
   
   console.log('Processing data with topicFilter:', settingsStore.topicFilter);
   
-  // Erstelle ein Array aller Topics mit ihrer Episode-Anzahl
+  const hasRelevanceData = Object.values(props.data.topics).some(t =>
+    Number.isFinite((t as any).totalRelevanceSec) ||
+    (Array.isArray((t as any).yearData) && (t as any).yearData.some((yd: any) => Number.isFinite(yd?.totalRelevanceSec)))
+  );
+
+  const computeTopicTotalRelevanceSec = (topic: any): number => {
+    if (Number.isFinite(topic?.totalRelevanceSec)) return topic.totalRelevanceSec;
+    if (!Array.isArray(topic?.yearData)) return 0;
+    return topic.yearData.reduce((sum: number, yd: any) => sum + (Number.isFinite(yd?.totalRelevanceSec) ? yd.totalRelevanceSec : 0), 0);
+  };
+
+  // Erstelle ein Array aller Topics mit ihrer Episode-Anzahl / Relevanz (Sekunden)
   const allTopics = Object.values(props.data.topics).map(topic => ({
     id: topic.id,
     name: topic.name,
     episodeCount: topic.totalEpisodes,
+    relevanceSec: computeTopicTotalRelevanceSec(topic as any),
     data: topic
   }));
   
-  // Sortiere nach Episode-Anzahl und nimm die Top-N
+  // Sortiere nach Relevanz (oder Episode-Anzahl als Fallback) und nimm die Top-N
   const topTopics = allTopics
-    .sort((a, b) => b.episodeCount - a.episodeCount)
+    .sort((a, b) => {
+      const av = hasRelevanceData ? a.relevanceSec : a.episodeCount;
+      const bv = hasRelevanceData ? b.relevanceSec : b.episodeCount;
+      return bv - av;
+    })
     .slice(0, settingsStore.topicFilter);
   
   console.log('Top topics count:', topTopics.length);
@@ -105,22 +121,38 @@ const processedData = computed(() => {
     // Initialisiere alle Jahre mit 0
     years.forEach(year => yearValues.set(year, 0));
     
-    // Setze die tatsächlichen Werte (Anzahl Episoden)
+    // Setze die tatsächlichen Werte (Relevanz in Sekunden; Fallback: Anzahl Episoden)
     topic.yearData.forEach(yd => {
-      yearValues.set(yd.year, yd.count);
+      const v = hasRelevanceData
+        ? (Number.isFinite((yd as any)?.totalRelevanceSec) ? (yd as any).totalRelevanceSec : 0)
+        : yd.count;
+      yearValues.set(yd.year, v);
     });
     
     topics.push({
       id: topic.id,
       name: topic.name,
       yearValues,
-      totalDuration: topic.totalEpisodes,
+      totalDuration: hasRelevanceData ? computeTopicTotalRelevanceSec(topic as any) : topic.totalEpisodes,
       color: colors[index] || '#888'
     });
   });
   
   return { topics, years };
 });
+
+const formatTimespanSec = (sec: unknown) => {
+  const s0 = Number.isFinite(sec as number) ? Math.max(0, Math.round(sec as number)) : 0;
+  const days = Math.floor(s0 / 86400);
+  const hours = Math.floor((s0 % 86400) / 3600);
+  const minutes = Math.floor((s0 % 3600) / 60);
+  const seconds = s0 % 60;
+
+  if (days > 0) return `${days}d ${hours}h`;
+  if (hours > 0) return `${hours}h ${minutes}m`;
+  if (minutes > 0) return `${minutes}m ${seconds}s`;
+  return `${seconds}s`;
+};
 
 // Erstelle das Stream Graph (Topic River)
 const drawRiver = () => {
@@ -194,7 +226,9 @@ const drawRiver = () => {
     .x((d: any) => xScale(d.data.year))
     .y0((d: any) => yScale(d[0]))
     .y1((d: any) => yScale(d[1]))
-    .curve(d3.curveBasis);
+    // Important: curveBasis is an approximating spline and can visually distort values at exact years.
+    // Use an interpolating curve so the thickness at each year matches the underlying data much better.
+    .curve(d3.curveCatmullRom.alpha(0.5));
   
   // Zeichne die Streams
   const streams = g.selectAll('.stream')
@@ -226,11 +260,14 @@ const drawRiver = () => {
       const topic = topics.find(t => t.id === d.key);
       
       if (topic) {
-        const episodeCount = topic.yearValues.get(year) || 0;
         const topicData = props.data.topics[topic.id];
         const yearData = topicData?.yearData.find(yd => yd.year === year);
         
-        if (episodeCount > 0 && yearData) {
+        const relevanceSec = topic.yearValues.get(year) || 0;
+        const episodeCount = yearData?.count ?? 0;
+        const hasYearData = (episodeCount > 0) || (relevanceSec > 0);
+
+        if (hasYearData && yearData) {
           tooltipRef.value.style.display = 'block';
           tooltipRef.value.style.left = `${event.pageX + 15}px`;
           tooltipRef.value.style.top = `${event.pageY - 10}px`;
@@ -239,7 +276,7 @@ const drawRiver = () => {
             <div class="font-semibold text-sm mb-1">${topic.name}</div>
             <div class="text-xs"><strong>Jahr:</strong> ${year}</div>
             <div class="text-xs"><strong>Episoden:</strong> ${episodeCount}</div>
-            <div class="text-xs"><strong>Themen:</strong> ${yearData.episodes.length}</div>
+            <div class="text-xs"><strong>Dauer:</strong> ${formatTimespanSec(relevanceSec)}</div>
           `;
           
           // Highlight the year on X-axis
@@ -577,6 +614,52 @@ const formatDuration = (duration: [number, number, number]) => {
   }
   return `${minutes}:${seconds.toString().padStart(2, '0')}`;
 };
+
+const fullTopicById = (id: string) => {
+  return props.data.topics[id];
+};
+
+const formatHmsFromSeconds = (sec: unknown) => {
+  const s0 = Number.isFinite(sec as number) ? Math.max(0, Math.floor(sec as number)) : null;
+  if (s0 === null) return '—';
+  const hours = Math.floor(s0 / 3600);
+  const minutes = Math.floor((s0 % 3600) / 60);
+  const seconds = s0 % 60;
+  return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+};
+
+const formatTopicPositions = (episode: any) => {
+  const occ = Array.isArray(episode?.occurrences) ? episode.occurrences : [];
+  const items: Array<{ positionSec: number; durationSec: number | null }> = occ
+    .map((o: any) => ({
+      positionSec: Number.isFinite(o?.positionSec) ? o.positionSec : null,
+      durationSec: Number.isFinite(o?.durationSec) ? o.durationSec : null,
+    }))
+    .filter((x: any): x is { positionSec: number; durationSec: number | null } => Number.isFinite(x?.positionSec));
+
+  if (items.length === 0) return '—';
+
+  // sort + de-dupe
+  items.sort((a, b) => a.positionSec - b.positionSec);
+  const unique: Array<{ positionSec: number; durationSec: number | null }> = [];
+  for (const it of items) {
+    const last = unique[unique.length - 1];
+    if (!last || last.positionSec !== it.positionSec || last.durationSec !== it.durationSec) unique.push(it);
+  }
+
+  const formatMinutes = (sec: number | null) => {
+    if (!Number.isFinite(sec as number) || (sec as number) <= 0) return null;
+    const m = Math.max(1, Math.round((sec as number) / 60));
+    return `${m}m`;
+  };
+
+  return unique
+    .map(({ positionSec, durationSec }) => {
+      const m = formatMinutes(durationSec);
+      return m ? `${formatHmsFromSeconds(positionSec)} (${m})` : formatHmsFromSeconds(positionSec);
+    })
+    .join(', ');
+};
 </script>
 
 <template>
@@ -662,6 +745,7 @@ const formatDuration = (duration: [number, number, number]) => {
                       <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">#</th>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Datum</th>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Titel</th>
+                      <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Position(en)</th>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Dauer</th>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Sprecher</th>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Link</th>
@@ -679,6 +763,9 @@ const formatDuration = (duration: [number, number, number]) => {
                           {{ new Date(episode.date).toLocaleDateString('de-DE') }}
                         </td>
                         <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">{{ episode.title }}</td>
+                        <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap font-mono">
+                          {{ formatTopicPositions(episode) }}
+                        </td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap">
                           {{ formatDuration(episodeDetails.get(episode.number).duration) }}
                         </td>
@@ -702,6 +789,9 @@ const formatDuration = (duration: [number, number, number]) => {
                           {{ new Date(episode.date).toLocaleDateString('de-DE') }}
                         </td>
                         <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">{{ episode.title }}</td>
+                        <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap font-mono">
+                          {{ formatTopicPositions(episode) }}
+                        </td>
                         <td colspan="3" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs">Details nicht verfügbar (Datei fehlt)</td>
                       </template>
                       <template v-else>
@@ -710,6 +800,9 @@ const formatDuration = (duration: [number, number, number]) => {
                           {{ new Date(episode.date).toLocaleDateString('de-DE') }}
                         </td>
                         <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">{{ episode.title }}</td>
+                        <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap font-mono">
+                          {{ formatTopicPositions(episode) }}
+                        </td>
                         <td colspan="3" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs">Lädt...</td>
                       </template>
                     </tr>
@@ -820,12 +913,12 @@ const formatDuration = (duration: [number, number, number]) => {
                   :class="{
                     'font-semibold': hoveredTopic === topic.id || selectedTopic === topic.id
                   }"
-                  :title="`${topic.name} (${Math.round(topic.totalDuration)} Episoden)`"
+                  :title="`${topic.name} (${fullTopicById(topic.id)?.totalEpisodes ?? 0} Ep., ${formatTimespanSec(fullTopicById(topic.id)?.totalRelevanceSec ?? 0)})`"
                 >
                   {{ topic.name }}
                 </div>
                 <div class="text-xs text-gray-500 dark:text-gray-400">
-                  {{ Math.round(topic.totalDuration) }} Ep.
+                  {{ fullTopicById(topic.id)?.totalEpisodes ?? 0 }} Ep. • {{ formatTimespanSec(fullTopicById(topic.id)?.totalRelevanceSec ?? 0) }}
                 </div>
               </div>
             </div>

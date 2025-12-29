@@ -129,7 +129,15 @@ fi
 
 # Topic River
 echo -e "  ${YELLOW}→${NC} Generating topic-river-data.json..."
-node generate-topic-river.js || {
+TOPIC_RIVER_ARGS=()
+if [ -f "$OUTPUT_DIR/topic-taxonomy.json" ]; then
+    TOPIC_RIVER_ARGS+=(--taxonomy "$OUTPUT_DIR/topic-taxonomy.json")
+fi
+if [ -f "$OUTPUT_DIR/topic-taxonomy-detailed.json" ]; then
+    TOPIC_RIVER_ARGS+=(--taxonomy-detailed "$OUTPUT_DIR/topic-taxonomy-detailed.json")
+fi
+
+node generate-topic-river.js "${TOPIC_RIVER_ARGS[@]}" || {
     echo -e "     ${RED}✗ Failed to generate topic-river-data.json${NC}"
 }
 if [ -f topic-river-data.json ]; then

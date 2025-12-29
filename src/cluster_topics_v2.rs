@@ -57,6 +57,9 @@ struct VariantSettingsJson {
     reduced_dimensions: Option<usize>,
     #[serde(rename = "outlierThreshold")]
     outlier_threshold: Option<f64>,
+    /// Default per-topic duration (seconds) used as relevance when no duration is available.
+    #[serde(rename = "defaultTopicDurationSec")]
+    default_topic_duration_sec: Option<u32>,
     #[serde(rename = "useRelevanceWeighting")]
     use_relevance_weighting: Option<bool>,
     #[serde(rename = "useLLMNaming")]
@@ -144,7 +147,19 @@ struct TopicWithEmbedding {
     keywords: Vec<String>,
     count: usize,
     episodes: Vec<u32>,
+    #[serde(default)]
+    occurrences: Option<Vec<TopicOccurrence>>,
     embedding: Vec<f64>,
+}
+
+#[derive(Debug, Clone, Deserialize)]
+struct TopicOccurrence {
+    #[serde(rename = "episodeNumber")]
+    episode_number: u32,
+    #[serde(rename = "durationSec")]
+    duration_sec: Option<u32>,
+    #[serde(rename = "positionSec")]
+    position_sec: Option<u32>,
 }
 
 // ============================================================================
@@ -161,6 +176,9 @@ struct NamedCluster {
     topic_count: usize,
     #[serde(rename = "episodeCount")]
     episode_count: usize,
+    /// Sum of topic relevance (seconds) within the cluster.
+    #[serde(rename = "relevanceSec")]
+    relevance_sec: u64,
     topics: Vec<ClusterTopic>,
     episodes: Vec<u32>,
 }
@@ -170,6 +188,20 @@ struct ClusterTopic {
     topic: String,
     count: usize,
     keywords: Vec<String>,
+    #[serde(rename = "relevanceSec")]
+    relevance_sec: u64,
+    /// Per-episode timing metadata for jumping into the audio stream.
+    occurrences: Vec<ClusterTopicOccurrence>,
+}
+
+#[derive(Debug, Clone, Serialize)]
+struct ClusterTopicOccurrence {
+    #[serde(rename = "episodeNumber")]
+    episode_number: u32,
+    #[serde(rename = "durationSec")]
+    duration_sec: u32,
+    #[serde(rename = "positionSec")]
+    position_sec: u32,
 }
 
 #[derive(Debug, Clone, Serialize)]
@@ -222,6 +254,8 @@ struct TaxonomyCluster {
     topic_count: usize,
     #[serde(rename = "episodeCount")]
     episode_count: usize,
+    #[serde(rename = "relevanceSec")]
+    relevance_sec: u64,
     #[serde(rename = "sampleTopics")]
     sample_topics: Vec<String>,
     episodes: Vec<u32>,
@@ -470,8 +504,8 @@ fn build_mst(distances: &[Vec<f64>], core_distances: &[f64]) -> Vec<MstEdge> {
             edges.push(MstEdge { from, to, weight });
             
             // Add edges from new node
-            for j in 0..n {
-                if !in_tree[j] {
+            for (j, &is_in_tree) in in_tree.iter().enumerate() {
+                if !is_in_tree {
                     let d = mutual_reachability_distance(to, j, distances, core_distances);
                     heap.push((std::cmp::Reverse(OrderedFloat(d)), to, j));
                 }
@@ -549,9 +583,8 @@ struct HdbscanNode {
     selected: bool,
 }
 
-/// Build the HDBSCAN cluster tree from MST
-// Replacement for build_cluster_tree function - lines 549-644
-
+/// Build the HDBSCAN cluster tree from MST.
+/// Replacement for build_cluster_tree function - lines 549-644.
 fn build_cluster_tree(
     mst: &[MstEdge],
     n: usize,
@@ -1105,6 +1138,7 @@ fn find_cluster_name(
     cluster_items: &[usize],
     all_topics: &[TopicWithEmbedding],
     use_relevance_weighting: bool,
+    default_topic_duration_sec: u32,
 ) -> String {
     let mut keyword_counts: HashMap<String, f64> = HashMap::new();
     let mut topic_words: HashMap<String, f64> = HashMap::new();
@@ -1121,7 +1155,7 @@ fn find_cluster_name(
     for &idx in cluster_items {
         let topic = &all_topics[idx];
         let weight = if use_relevance_weighting {
-            topic.episodes.len() as f64
+            topic_relevance_sec(topic, default_topic_duration_sec) as f64
         } else {
             1.0
         };
@@ -1190,6 +1224,40 @@ fn find_cluster_name(
     }
     
     name
+}
+
+fn normalized_occurrences(topic: &TopicWithEmbedding, default_topic_duration_sec: u32) -> Vec<ClusterTopicOccurrence> {
+    if let Some(occ) = topic.occurrences.as_ref() {
+        if !occ.is_empty() {
+            return occ
+                .iter()
+                .map(|o| ClusterTopicOccurrence {
+                    episode_number: o.episode_number,
+                    duration_sec: o.duration_sec.unwrap_or(default_topic_duration_sec),
+                    position_sec: o.position_sec.unwrap_or(0),
+                })
+                .collect();
+        }
+    }
+
+    // Backwards compatibility: older embeddings DBs don't have occurrences.
+    // Synthesize one occurrence per episode with default duration and position 0.
+    topic
+        .episodes
+        .iter()
+        .map(|&ep| ClusterTopicOccurrence {
+            episode_number: ep,
+            duration_sec: default_topic_duration_sec,
+            position_sec: 0,
+        })
+        .collect()
+}
+
+fn topic_relevance_sec(topic: &TopicWithEmbedding, default_topic_duration_sec: u32) -> u64 {
+    normalized_occurrences(topic, default_topic_duration_sec)
+        .iter()
+        .map(|o| o.duration_sec as u64)
+        .sum()
 }
 
 fn call_llm_for_naming<'a>(
@@ -1322,7 +1390,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let settings: Settings = serde_json::from_str(&settings_content)?;
     
     // Load variant settings if specified, otherwise use base settings
-    let (min_cluster_size, min_samples, reduced_dims, use_llm_naming, use_relevance_weighting, outlier_threshold) = 
+    let (min_cluster_size, min_samples, reduced_dims, use_llm_naming, use_relevance_weighting, outlier_threshold, default_topic_duration_sec) =
         if let Some(ref variant_name) = args.variant {
             match load_variant_settings(variant_name) {
                 Ok((variant_display_name, variant_settings)) => {
@@ -1346,6 +1414,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                         variant_settings.outlier_threshold
                             .or(settings.topic_clustering.as_ref().and_then(|s| s.outlier_threshold))
                             .unwrap_or(0.15),
+                        variant_settings.default_topic_duration_sec.unwrap_or(300),
                     )
                 },
                 Err(e) => {
@@ -1361,6 +1430,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 settings.topic_clustering.as_ref().and_then(|s| s.use_llm_naming).unwrap_or(true),
                 settings.topic_clustering.as_ref().and_then(|s| s.use_relevance_weighting).unwrap_or(true),
                 settings.topic_clustering.as_ref().and_then(|s| s.outlier_threshold).unwrap_or(0.15),
+                300,
             )
         };
     
@@ -1438,6 +1508,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("   Min Samples:         {}", min_samples);
     println!("   Reduzierte Dims:     {}", reduced_dims);
     println!("   Relevanz-Gewichtung: {}", if use_relevance_weighting { "Ja" } else { "Nein" });
+    println!("   Default Topic Dauer: {}s", default_topic_duration_sec);
     println!("   LLM-Benennung:       {}\n", if use_llm_naming { "Ja" } else { "Nein" });
     
     let unique_topics = filtered_topics.clone();
@@ -1508,7 +1579,10 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             "Sonstiges".to_string()
         } else if use_llm_naming && cluster_topics_data.len() > 1 {
             let mut sorted_topics = cluster_topics_data.clone();
-            sorted_topics.sort_by(|a, b| b.episodes.len().cmp(&a.episodes.len()));
+            sorted_topics.sort_by(|a, b| {
+                topic_relevance_sec(b, default_topic_duration_sec)
+                    .cmp(&topic_relevance_sec(a, default_topic_duration_sec))
+            });
             let top_topics: Vec<String> = sorted_topics.iter().take(10).map(|t| t.topic.clone()).collect();
             
             // Rate limit prevention
@@ -1524,13 +1598,13 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                     llm_name
                 }
                 None => {
-                    let heuristic_name = find_cluster_name(topic_indices, &unique_topics, use_relevance_weighting);
+                    let heuristic_name = find_cluster_name(topic_indices, &unique_topics, use_relevance_weighting, default_topic_duration_sec);
                     pb.set_message(format!("\"{}\" (Heuristik)", heuristic_name));
                     heuristic_name
                 }
             }
         } else {
-            let heuristic_name = find_cluster_name(topic_indices, &unique_topics, use_relevance_weighting);
+            let heuristic_name = find_cluster_name(topic_indices, &unique_topics, use_relevance_weighting, default_topic_duration_sec);
             pb.set_message(format!("\"{}\" (Heuristik)", heuristic_name));
             heuristic_name
         };
@@ -1544,6 +1618,11 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
         let mut episodes: Vec<u32> = all_episodes.into_iter().collect();
         episodes.sort_unstable();
+
+        let cluster_relevance_sec: u64 = cluster_topics_data
+            .iter()
+            .map(|t| topic_relevance_sec(t, default_topic_duration_sec))
+            .sum();
         
         // Create ID from name
         let id = name.to_lowercase().chars()
@@ -1560,11 +1639,17 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             is_outlier,
             topic_count: cluster_topics_data.len(),
             episode_count: episodes.len(),
-            topics: cluster_topics_data.iter().map(|t| ClusterTopic {
-                topic: t.topic.clone(),
-                count: t.count,
-                keywords: t.keywords.iter().take(5).cloned().collect(),
-            }).collect(),
+            relevance_sec: cluster_relevance_sec,
+            topics: cluster_topics_data
+                .iter()
+                .map(|t| ClusterTopic {
+                    topic: t.topic.clone(),
+                    count: t.count,
+                    keywords: t.keywords.iter().take(5).cloned().collect(),
+                    relevance_sec: topic_relevance_sec(t, default_topic_duration_sec),
+                    occurrences: normalized_occurrences(t, default_topic_duration_sec),
+                })
+                .collect(),
             episodes,
         });
         
@@ -1573,8 +1658,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     
     pb.finish_with_message("Done");
     
-    // Sort by episode count
-    named_clusters.sort_by(|a, b| b.episode_count.cmp(&a.episode_count));
+    // Sort by relevance (duration) so "bigger" clusters bubble to the top
+    named_clusters.sort_by(|a, b| b.relevance_sec.cmp(&a.relevance_sec));
     
     let outlier_count = named_clusters.iter().filter(|c| c.is_outlier).count();
     println!("\n   ℹ️  {} Outlier-Cluster gefunden\n", outlier_count);
@@ -1607,6 +1692,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             is_outlier: c.is_outlier,
             topic_count: c.topic_count,
             episode_count: c.episode_count,
+            relevance_sec: c.relevance_sec,
             sample_topics: c.topics.iter().take(5).map(|t| t.topic.clone()).collect(),
             episodes: c.episodes.clone(),
         }).collect(),
@@ -1623,6 +1709,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         name: String,
         #[serde(rename = "topicCount")]
         topic_count: usize,
+        #[serde(rename = "relevanceSec")]
+        relevance_sec: u64,
         topics: Vec<ClusterTopic>,
     }
     
@@ -1640,6 +1728,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             id: c.id.clone(),
             name: c.name.clone(),
             topic_count: c.topic_count,
+            relevance_sec: c.relevance_sec,
             topics: c.topics.clone(),
         }).collect(),
     };
