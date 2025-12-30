@@ -9,6 +9,7 @@ const props = defineProps<{
   autoplay?: boolean;
   playToken?: number; // increment to force re-seek/play even if seekToSec is unchanged
   transcriptSrc?: string; // optional: URL to <episode>-ts-live.json for live speaker/text display
+  speakersMetaUrl?: string; // optional: Base URL to fetch speaker meta data (e.g., '/speakers')
 }>();
 
 const emit = defineEmits<{
@@ -33,9 +34,17 @@ type LiveTranscriptV1 = {
   x: string[]; // text
 };
 
+type SpeakerMeta = {
+  name: string;
+  slug: string;
+  image?: string;
+};
+
 const liveTranscript = ref<LiveTranscriptV1 | null>(null);
 const liveTranscriptError = ref<string | null>(null);
 const liveTranscriptLoading = ref(false);
+
+const speakersMeta = ref<Map<string, SpeakerMeta>>(new Map());
 
 const findLastIndexLE = (arr: number[], value: number) => {
   let lo = 0;
@@ -79,6 +88,37 @@ const currentSpoken = computed(() => {
 
   return { speaker, text, startSec };
 });
+
+const currentSpeakerImage = computed(() => {
+  const speaker = currentSpoken.value?.speaker;
+  if (!speaker) return null;
+  const meta = speakersMeta.value.get(speaker);
+  return meta?.image || null;
+});
+
+const loadSpeakerMeta = async (speakerName: string) => {
+  if (!props.speakersMetaUrl || speakersMeta.value.has(speakerName)) return;
+  
+  try {
+    // Convert speaker name to slug (lowercase, replace spaces with dashes)
+    const slug = speakerName.toLowerCase().replace(/\s+/g, '-');
+    const url = `${props.speakersMetaUrl}/${slug}-meta.json`;
+    
+    const res = await fetch(url, { cache: 'force-cache' });
+    if (!res.ok) return; // Silent fail if meta doesn't exist
+    
+    const data = await res.json();
+    if (data && typeof data.name === 'string') {
+      speakersMeta.value.set(speakerName, {
+        name: data.name,
+        slug: data.slug || slug,
+        image: data.image || undefined,
+      });
+    }
+  } catch {
+    // Silent fail
+  }
+};
 
 const loadLiveTranscript = async () => {
   const url = typeof props.transcriptSrc === 'string' ? props.transcriptSrc.trim() : '';
@@ -348,6 +388,13 @@ watch(() => props.seekToSec, async () => {
 watch(() => props.playToken, async () => {
   await applySeekAndMaybePlay();
 });
+
+// Load speaker meta when current speaker changes
+watch(() => currentSpoken.value?.speaker, async (speakerName) => {
+  if (speakerName) {
+    await loadSpeakerMeta(speakerName);
+  }
+}, { immediate: true });
 </script>
 
 <template>
@@ -382,14 +429,24 @@ watch(() => props.playToken, async () => {
         Transcript lädt…
       </div>
       <div v-else-if="currentSpoken" class="w-full rounded-md border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/30 px-2 py-1.5">
-        <div class="text-[11px] font-semibold text-gray-600 dark:text-gray-300 truncate">
-          {{ currentSpoken.speaker || '—' }}
-          <span class="ml-2 font-mono font-normal text-gray-500 dark:text-gray-400">
-            @ {{ formatHms(currentSpoken.startSec) }}
-          </span>
-        </div>
-        <div class="mt-0.5 text-sm leading-snug text-gray-900 dark:text-gray-100 max-h-24 overflow-auto whitespace-pre-wrap">
-          {{ currentSpoken.text }}
+        <div class="flex items-start gap-2">
+          <img
+            v-if="currentSpeakerImage"
+            :src="currentSpeakerImage"
+            :alt="currentSpoken.speaker || ''"
+            class="w-8 h-8 rounded-full flex-shrink-0 border border-gray-300 dark:border-gray-600"
+          />
+          <div class="flex-1 min-w-0">
+            <div class="text-[11px] font-semibold text-gray-600 dark:text-gray-300 truncate">
+              {{ currentSpoken.speaker || '—' }}
+              <span class="ml-2 font-mono font-normal text-gray-500 dark:text-gray-400">
+                @ {{ formatHms(currentSpoken.startSec) }}
+              </span>
+            </div>
+            <div class="mt-0.5 text-sm leading-snug text-gray-900 dark:text-gray-100 max-h-24 overflow-auto whitespace-pre-wrap">
+              {{ currentSpoken.text }}
+            </div>
+          </div>
         </div>
       </div>
       <div v-else-if="liveTranscriptError" class="text-xs text-gray-500 dark:text-gray-400">

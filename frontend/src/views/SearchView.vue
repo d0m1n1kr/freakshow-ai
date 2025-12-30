@@ -31,6 +31,7 @@ type SpeakerInfo = {
   utterancesCount: number;
   totalWords: number;
   hasProfile: boolean;
+  image?: string;
 };
 
 const route = useRoute();
@@ -47,8 +48,19 @@ const expandedSources = ref<Record<number, boolean>>({});
 
 const availableSpeakers = ref<SpeakerInfo[]>([]);
 const selectedSpeaker = ref<string | null>(null);
+const selectedSpeaker2 = ref<string | null>(null);
 const speakersLoading = ref(false);
 const speakersError = ref<string | null>(null);
+
+const selectedSpeakerInfo = computed(() => {
+  if (!selectedSpeaker.value) return null;
+  return availableSpeakers.value.find(s => s.slug === selectedSpeaker.value) || null;
+});
+
+const selectedSpeaker2Info = computed(() => {
+  if (!selectedSpeaker2.value) return null;
+  return availableSpeakers.value.find(s => s.slug === selectedSpeaker2.value) || null;
+});
 
 let abortController: AbortController | null = null;
 
@@ -120,6 +132,9 @@ const doSearch = async (query: string) => {
       const body: any = { query: qq };
       if (selectedSpeaker.value) {
         body.speakerSlug = selectedSpeaker.value;
+      }
+      if (selectedSpeaker2.value) {
+        body.speakerSlug2 = selectedSpeaker2.value;
       }
       const res = await fetch(url, {
         method: 'POST',
@@ -293,6 +308,58 @@ const formatHmsFromSeconds = (sec: unknown) => {
   const seconds = s0 % 60;
   return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 };
+
+const hmsToSeconds = (hms: string): number | null => {
+  const parts = hms.trim().split(':').map(p => parseInt(p, 10));
+  if (parts.some(p => !Number.isFinite(p))) return null;
+  
+  if (parts.length === 3) {
+    // H:MM:SS
+    const [h, m, s] = parts;
+    return (h ?? 0) * 3600 + (m ?? 0) * 60 + (s ?? 0);
+  } else if (parts.length === 2) {
+    // M:SS
+    const [m, s] = parts;
+    return (m ?? 0) * 60 + (s ?? 0);
+  } else if (parts.length === 1) {
+    // SS
+    return parts[0] ?? 0;
+  }
+  return null;
+};
+
+const linkifyAnswer = (text: string): string => {
+  // Match patterns like: (Episode 297, 1:53:19-1:54:13) or (Episode 297, 12:38)
+  const episodePattern = /\(Episode\s+(\d+),\s+([\d:]+)(?:-[\d:]+)?\)/gi;
+  
+  return text.replace(episodePattern, (match, episodeNum, startTime) => {
+    const episodeNumber = parseInt(episodeNum, 10);
+    const seconds = hmsToSeconds(startTime);
+    if (!Number.isFinite(episodeNumber) || seconds === null) return match;
+    
+    // Create a data attribute that we'll use to handle clicks
+    return `<a href="#" class="episode-link text-blue-600 dark:text-blue-400 hover:underline font-medium" data-episode="${episodeNumber}" data-time="${seconds}">${match}</a>`;
+  });
+};
+
+const handleAnswerClick = (event: MouseEvent) => {
+  const target = event.target as HTMLElement;
+  if (target.classList.contains('episode-link')) {
+    event.preventDefault();
+    const episodeAttr = target.getAttribute('data-episode');
+    const timeAttr = target.getAttribute('data-time');
+    
+    if (!episodeAttr || !timeAttr) return;
+    
+    const episodeNum = parseInt(episodeAttr, 10);
+    const timeInSec = parseInt(timeAttr, 10);
+    
+    if (Number.isFinite(episodeNum) && Number.isFinite(timeInSec)) {
+      const hms = formatHmsFromSeconds(timeInSec);
+      playEpisodeAt(episodeNum, timeInSec, hms);
+    }
+  }
+};
 </script>
 
 <template>
@@ -372,11 +439,27 @@ const formatHmsFromSeconds = (sec: unknown) => {
 
       <div v-else-if="result" class="space-y-6">
         <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/30 p-4">
-          <div class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 font-semibold">
-            {{ t('search.answerTitle') }}
-          </div>
-          <div class="mt-2 whitespace-pre-wrap text-gray-900 dark:text-gray-100 leading-relaxed">
-            {{ result.answer }}
+          <div class="flex items-start gap-3">
+            <img
+              v-if="selectedSpeakerInfo?.image"
+              :src="selectedSpeakerInfo.image"
+              :alt="selectedSpeakerInfo.speaker"
+              class="w-12 h-12 rounded-full flex-shrink-0 border-2 border-gray-300 dark:border-gray-600"
+            />
+            <div class="flex-1 min-w-0">
+              <div class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 font-semibold">
+                {{ t('search.answerTitle') }}
+                <span v-if="selectedSpeakerInfo" class="ml-1 font-normal normal-case">
+                  ({{ selectedSpeakerInfo.speaker }})
+                </span>
+              </div>
+              <div 
+                class="mt-2 whitespace-pre-wrap text-gray-900 dark:text-gray-100 leading-relaxed"
+                v-html="linkifyAnswer(result.answer)"
+                @click="handleAnswerClick"
+              >
+              </div>
+            </div>
           </div>
         </div>
 
@@ -389,6 +472,7 @@ const formatHmsFromSeconds = (sec: unknown) => {
             :autoplay="true"
             :play-token="playerToken"
             :transcript-src="currentTranscriptUrl || undefined"
+            :speakers-meta-url="'/speakers'"
             @close="closePlayer"
             @error="(msg) => { playerError = msg }"
           />

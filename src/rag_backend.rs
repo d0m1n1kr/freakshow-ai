@@ -244,6 +244,13 @@ struct SpeakerInfo {
     total_words: u32,
     #[serde(skip_deserializing, default)]
     has_profile: bool,
+    #[serde(skip_deserializing, skip_serializing_if = "Option::is_none")]
+    image: Option<String>,
+}
+
+#[derive(Debug, Deserialize)]
+struct SpeakerMeta {
+    image: Option<String>,
 }
 
 #[derive(Debug, Serialize)]
@@ -276,12 +283,23 @@ fn load_speakers_index(speakers_dir: &Path) -> Result<Vec<SpeakerInfo>> {
     let mut speakers: Vec<SpeakerInfo> = serde_json::from_slice(&bytes)
         .with_context(|| format!("Failed to parse {}", index_path.display()))?;
     
-    // Check which speakers have profile markdown files
+    // Check which speakers have profile markdown files and load image URLs from meta files
     for speaker in &mut speakers {
         let profile_path = speakers_dir.join(format!("{}.md", speaker.slug));
         speaker.has_profile = profile_path.exists();
-        info!("Speaker '{}' (slug: {}): profile at {} exists = {}", 
-              speaker.speaker, speaker.slug, profile_path.display(), speaker.has_profile);
+        
+        // Try to load image from meta file
+        let meta_path = speakers_dir.join(format!("{}-meta.json", speaker.slug));
+        if meta_path.exists() {
+            if let Ok(meta_bytes) = std::fs::read(&meta_path) {
+                if let Ok(meta) = serde_json::from_slice::<SpeakerMeta>(&meta_bytes) {
+                    speaker.image = meta.image;
+                }
+            }
+        }
+        
+        info!("Speaker '{}' (slug: {}): profile at {} exists = {}, image = {:?}", 
+              speaker.speaker, speaker.slug, profile_path.display(), speaker.has_profile, speaker.image);
     }
     
     Ok(speakers)

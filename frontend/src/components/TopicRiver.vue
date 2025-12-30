@@ -929,6 +929,7 @@ const closePlayer = () => {
           :autoplay="true"
           :play-token="playerToken"
           :transcript-src="currentTranscriptUrl || undefined"
+          :speakers-meta-url="'/speakers'"
           @close="closePlayer"
           @error="(msg) => { playerError = msg }"
         />
