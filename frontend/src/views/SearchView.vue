@@ -48,19 +48,17 @@ const result = ref<ChatResponse | null>(null);
 const expandedSources = ref<Record<number, boolean>>({});
 
 const availableSpeakers = ref<SpeakerInfo[]>([]);
-const selectedSpeaker = ref<string | null>(null);
-const selectedSpeaker2 = ref<string | null>(null);
 const speakersLoading = ref(false);
 const speakersError = ref<string | null>(null);
 
 const selectedSpeakerInfo = computed(() => {
-  if (!selectedSpeaker.value) return null;
-  return availableSpeakers.value.find(s => s.slug === selectedSpeaker.value) || null;
+  if (!settings.selectedSpeaker) return null;
+  return availableSpeakers.value.find(s => s.slug === settings.selectedSpeaker) || null;
 });
 
 const selectedSpeaker2Info = computed(() => {
-  if (!selectedSpeaker2.value) return null;
-  return availableSpeakers.value.find(s => s.slug === selectedSpeaker2.value) || null;
+  if (!settings.selectedSpeaker2) return null;
+  return availableSpeakers.value.find(s => s.slug === settings.selectedSpeaker2) || null;
 });
 
 let abortController: AbortController | null = null;
@@ -131,11 +129,11 @@ const doSearch = async (query: string) => {
     const run = async (token: string) => {
       const url = backendBase.value ? `${backendBase.value}/api/chat` : '/api/chat';
       const body: any = { query: qq };
-      if (selectedSpeaker.value) {
-        body.speakerSlug = selectedSpeaker.value;
+      if (settings.selectedSpeaker) {
+        body.speakerSlug = settings.selectedSpeaker;
       }
-      if (selectedSpeaker2.value) {
-        body.speakerSlug2 = selectedSpeaker2.value;
+      if (settings.selectedSpeaker2) {
+        body.speakerSlug2 = settings.selectedSpeaker2;
       }
       const res = await fetch(url, {
         method: 'POST',
@@ -412,7 +410,7 @@ const handleAnswerClick = (event: MouseEvent) => {
             <div class="flex flex-col sm:flex-row gap-2">
               <div class="flex-1">
                 <select
-                  v-model="selectedSpeaker"
+                  v-model="settings.selectedSpeaker"
                   class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-sm text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   :disabled="speakersLoading || loading"
                 >
@@ -425,9 +423,9 @@ const handleAnswerClick = (event: MouseEvent) => {
                 </select>
               </div>
               
-              <div v-if="selectedSpeaker" class="flex-1">
+              <div v-if="settings.selectedSpeaker" class="flex-1">
                 <select
-                  v-model="selectedSpeaker2"
+                  v-model="settings.selectedSpeaker2"
                   class="w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-sm text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   :disabled="speakersLoading || loading"
                 >
@@ -437,7 +435,7 @@ const handleAnswerClick = (event: MouseEvent) => {
                       v-for="speaker in availableSpeakers" 
                       :key="speaker.slug" 
                       :value="speaker.slug"
-                      :disabled="speaker.slug === selectedSpeaker"
+                      :disabled="speaker.slug === settings.selectedSpeaker"
                     >
                       {{ speaker.hasProfile ? '✓' : '⚠️' }} {{ speaker.speaker }} ({{ speaker.episodesCount }} episodes, {{ Math.round(speaker.totalWords / 1000) }}k words)
                     </option>
@@ -446,19 +444,19 @@ const handleAnswerClick = (event: MouseEvent) => {
               </div>
             </div>
             
-            <p v-if="selectedSpeaker && selectedSpeaker2" class="text-xs text-purple-600 dark:text-purple-400 font-semibold">
+            <p v-if="settings.selectedSpeaker && settings.selectedSpeaker2" class="text-xs text-purple-600 dark:text-purple-400 font-semibold">
               💬 {{ t('search.discussionMode.active', { 
-                speaker1: availableSpeakers.find(s => s.slug === selectedSpeaker)?.speaker,
-                speaker2: availableSpeakers.find(s => s.slug === selectedSpeaker2)?.speaker 
+                speaker1: availableSpeakers.find(s => s.slug === settings.selectedSpeaker)?.speaker,
+                speaker2: availableSpeakers.find(s => s.slug === settings.selectedSpeaker2)?.speaker 
               }) }}
             </p>
             
-            <p v-if="selectedSpeaker && !selectedSpeaker2" class="mt-1 text-xs text-gray-500 dark:text-gray-400">
-              <span v-if="availableSpeakers.find(s => s.slug === selectedSpeaker)?.hasProfile">
-                ✓ {{ t('search.profileAvailable', { speaker: availableSpeakers.find(s => s.slug === selectedSpeaker)?.speaker }) }}
+            <p v-if="settings.selectedSpeaker && !settings.selectedSpeaker2" class="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <span v-if="availableSpeakers.find(s => s.slug === settings.selectedSpeaker)?.hasProfile">
+                ✓ {{ t('search.profileAvailable', { speaker: availableSpeakers.find(s => s.slug === settings.selectedSpeaker)?.speaker }) }}
               </span>
               <span v-else class="text-amber-600 dark:text-amber-400">
-                ⚠️ {{ t('search.profileLimited') }} <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">{{ t('search.profileGenerate', { speaker: availableSpeakers.find(s => s.slug === selectedSpeaker)?.speaker }) }}</code>
+                ⚠️ {{ t('search.profileLimited') }} <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">{{ t('search.profileGenerate', { speaker: availableSpeakers.find(s => s.slug === settings.selectedSpeaker)?.speaker }) }}</code>
               </span>
             </p>
             
@@ -471,8 +469,90 @@ const handleAnswerClick = (event: MouseEvent) => {
     </div>
 
     <div class="p-4 sm:p-6">
-      <div v-if="!searchQuery && !result" class="text-gray-600 dark:text-gray-400">
-        {{ t('search.empty') }}
+      <div v-if="!searchQuery && !result" class="space-y-6">
+        <div class="text-gray-600 dark:text-gray-400">
+          {{ t('search.empty') }}
+        </div>
+        
+        <!-- Example Queries -->
+        <div class="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border border-blue-200 dark:border-blue-700 rounded-lg p-4 sm:p-6">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
+            {{ t('search.examples.title') }}
+          </h3>
+          <div class="space-y-3">
+            <!-- Discussion Mode Example -->
+            <button
+              @click="searchQuery = t('search.examples.discussion'); handleSearch()"
+              class="w-full text-left px-4 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg transition-colors group"
+            >
+              <div class="flex items-start gap-3">
+                <div class="text-2xl flex-shrink-0">💬</div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                    {{ t('search.examples.discussion') }}
+                  </div>
+                  <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    {{ t('search.discussionMode.discussion') }}
+                  </div>
+                </div>
+              </div>
+            </button>
+            
+            <!-- Persona Example 1 -->
+            <button
+              @click="searchQuery = t('search.examples.persona1'); handleSearch()"
+              class="w-full text-left px-4 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg transition-colors group"
+            >
+              <div class="flex items-start gap-3">
+                <div class="text-2xl flex-shrink-0">🎙️</div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                    {{ t('search.examples.persona1') }}
+                  </div>
+                  <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    Speaker Persona
+                  </div>
+                </div>
+              </div>
+            </button>
+            
+            <!-- Persona Example 2 -->
+            <button
+              @click="searchQuery = t('search.examples.persona2'); handleSearch()"
+              class="w-full text-left px-4 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg transition-colors group"
+            >
+              <div class="flex items-start gap-3">
+                <div class="text-2xl flex-shrink-0">🏠</div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                    {{ t('search.examples.persona2') }}
+                  </div>
+                  <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    Speaker Persona
+                  </div>
+                </div>
+              </div>
+            </button>
+            
+            <!-- Neutral Example -->
+            <button
+              @click="searchQuery = t('search.examples.neutral'); handleSearch()"
+              class="w-full text-left px-4 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg transition-colors group"
+            >
+              <div class="flex items-start gap-3">
+                <div class="text-2xl flex-shrink-0">🍎</div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+                    {{ t('search.examples.neutral') }}
+                  </div>
+                  <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    {{ t('search.neutral') }}
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
       </div>
 
       <div v-if="loading" class="flex items-center gap-3">

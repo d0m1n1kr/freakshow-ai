@@ -47,6 +47,13 @@
     "profileLimited": "Limited profile - answers may be less personalized. Run:",
     "profileGenerate": "node generate-speaker-profiles.js --speaker \"{speaker}\"",
     "speakerLoadError": "Failed to load speaker profiles: {error}",
+    "examples": {
+      "title": "Example queries:",
+      "discussion": "Tim Pritlove VS Ralf Stockmann: What's better, the Quest 3 or Apple Vision Pro?",
+      "persona1": "Tim Pritlove: What's your stance on Bitcoin?",
+      "persona2": "roddi: Can you give me home automation tips?",
+      "neutral": "Neutral: Apple Quo Vadis?"
+    },
     "discussionMode": {
       "none": "No discussion mode (single person)",
       "selectSecond": "Second discussion partner",
@@ -251,7 +258,14 @@
     "count": "Count",
     "percentage": "Percentage",
     "episodes": "Episodes",
-    "episode": "Episode"
+    "episode": "Episode",
+    "interaction": "Interaction"
+  },
+  "heatmap": {
+    "interaction": {
+      "hover": "Hover over a cell to see details.",
+      "click": "Click on a cell to display the episode list."
+    }
   },
   "variantSelector": {
     "label": "Clustering Variant:",

@@ -28,6 +28,12 @@ export const useSettingsStore = defineStore('settings', () => {
   // RAG backend auth token (persisted). Used for /search.
   const ragAuthToken = ref<string>('');
   
+  // Search: Answer style (speaker persona) - persisted
+  const selectedSpeaker = ref<string | null>(null);
+  
+  // Search: Discussion mode (second speaker) - persisted
+  const selectedSpeaker2 = ref<string | null>(null);
+  
   // Computed: actual dark mode state
   const isDarkMode = computed(() => {
     if (themeMode.value === 'auto') {
@@ -86,6 +92,14 @@ export const useSettingsStore = defineStore('settings', () => {
     ragAuthToken.value = '';
   }
   
+  function setSelectedSpeaker(speaker: string | null) {
+    selectedSpeaker.value = speaker;
+  }
+  
+  function setSelectedSpeaker2(speaker: string | null) {
+    selectedSpeaker2.value = speaker;
+  }
+  
   // Ensure persisted state (localStorage) can't override the locked variant.
   watch(clusteringVariant, (v) => {
     if (v !== LOCKED_CLUSTERING_VARIANT) {
@@ -116,6 +130,8 @@ export const useSettingsStore = defineStore('settings', () => {
     themeMode,
     isDarkMode,
     ragAuthToken,
+    selectedSpeaker,
+    selectedSpeaker2,
     toggleNormalizedView,
     setNormalizedView,
     setClusteringVariant,
@@ -124,6 +140,8 @@ export const useSettingsStore = defineStore('settings', () => {
     applyTheme,
     setRagAuthToken,
     clearRagAuthToken,
+    setSelectedSpeaker,
+    setSelectedSpeaker2,
   };
 }, {
   persist: {

@@ -4,10 +4,12 @@ This document describes how speaker images from the speaker metadata are display
 
 ## Overview
 
-Speaker profile images are automatically displayed in three places:
+Speaker profile images are automatically displayed in five places:
 1. **Search Tab**: When a speaker persona is selected, their image appears next to the answer
 2. **Player Subtitles**: When playing audio with live transcripts, the current speaker's image appears next to their name
 3. **Speaker River Chart**: Speaker images appear in the legend and tooltips when hovering over streams
+4. **Speaker × Speaker Heatmap**: Speaker images appear in tooltips when hovering over cells
+5. **Speaker × Cluster Heatmap**: Speaker images appear in tooltips when hovering over cells
 
 ## Implementation Details
 
@@ -79,6 +81,34 @@ const imageHtml = speakerMeta?.image
 
 Speaker metadata is loaded asynchronously on component mount from `/speakers/{slug}-meta.json` files.
 
+#### SpeakerSpeakerHeatmapView Component
+
+The Speaker × Speaker heatmap displays speaker images in tooltips:
+
+```typescript
+const speaker1Meta = speakersMeta.value.get(row.speaker1Name || '');
+const speaker2Meta = speakersMeta.value.get(value.speaker2Name || '');
+const speaker1ImageHtml = speaker1Meta?.image 
+  ? `<img src="${speaker1Meta.image}" alt="${row.speaker1Name}" class="w-8 h-8 rounded-full border-2 border-white inline-block mr-2" />`
+  : '';
+const speaker2ImageHtml = speaker2Meta?.image 
+  ? `<img src="${speaker2Meta.image}" alt="${value.speaker2Name}" class="w-8 h-8 rounded-full border-2 border-white inline-block mr-2" />`
+  : '';
+```
+
+#### ClusterHeatmapView Component
+
+The Speaker × Cluster heatmap displays speaker images in tooltips:
+
+```typescript
+const speakerMeta = speakersMeta.value.get(row.speakerName || '');
+const speakerImageHtml = speakerMeta?.image
+  ? `<img src="${speakerMeta.image}" alt="${row.speakerName}" class="w-8 h-8 rounded-full border-2 border-white inline-block mr-2" />`
+  : '';
+```
+
+Both heatmap components load speaker metadata asynchronously after data is loaded.
+
 ## Data Flow
 
 1. **Scraping**: `npm run scrape-speakers` fetches images from freakshow.fm/team
@@ -139,12 +169,20 @@ npm run scrape-speakers --force
 2. Speaker images appear in the legend on the right side
 3. Hover over any speaker's stream to see their image in the tooltip
 
+### Heatmap Charts
+
+1. Navigate to the Speaker × Speaker or Speaker × Cluster heatmap
+2. Hover over any cell to see speaker images in the tooltip
+3. Images appear for both speakers (in Speaker × Speaker) or for the speaker (in Speaker × Cluster)
+
 ## Files Modified
 
 - `src/rag_backend.rs`: Added image field and loading logic
 - `frontend/src/views/SearchView.vue`: Display speaker image in answers
 - `frontend/src/components/MiniAudioPlayer.vue`: Display speaker image in live transcripts
 - `frontend/src/components/SpeakerRiver.vue`: Display speaker images in legend and tooltips
+- `frontend/src/views/SpeakerSpeakerHeatmapView.vue`: Display speaker images in tooltips
+- `frontend/src/views/ClusterHeatmapView.vue`: Display speaker images in tooltips
 - `freakshow-stats/frontend/src/components/SpeakerRiver.vue`: Display speaker images in legend and tooltips
 - `frontend/src/components/TopicRiver.vue`: Pass speakers-meta-url prop
 - `scrape-speakers.js`: Scrape speaker images from team page
@@ -152,6 +190,7 @@ npm run scrape-speakers --force
 ## Related Documentation
 
 - [SPEAKER-RIVER-IMAGES.md](./SPEAKER-RIVER-IMAGES.md) - Detailed implementation of Speaker River images
+- [HEATMAP-SPEAKER-IMAGES.md](./HEATMAP-SPEAKER-IMAGES.md) - Detailed implementation of Heatmap tooltip images
 
 ## Browser Caching
 

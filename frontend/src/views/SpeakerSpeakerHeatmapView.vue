@@ -168,6 +168,15 @@
 
           <!-- SVG Container -->
           <svg ref="svgElement" class="w-full"></svg>
+          
+          <!-- Interaction Instructions -->
+          <div class="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+            <p>
+              <strong>{{ $t('common.interaction') }}:</strong> 
+              {{ $t('heatmap.interaction.hover') }} 
+              {{ $t('heatmap.interaction.click') }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -189,6 +198,57 @@ interface EpisodeDetail {
   speakers?: string[];
   url?: string;
 }
+
+// Speaker metadata with images
+type SpeakerMeta = {
+  name: string;
+  slug: string;
+  image?: string;
+};
+const speakersMeta = ref<Map<string, SpeakerMeta>>(new Map());
+
+// Helper to convert speaker name to slug
+function speakerNameToSlug(name: string): string {
+  return name.toLowerCase()
+    .replace(/ä/g, 'ae')
+    .replace(/ö/g, 'oe')
+    .replace(/ü/g, 'ue')
+    .replace(/ß/g, 'ss')
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '');
+}
+
+// Load speaker metadata (for images)
+const loadSpeakerMeta = async (speakerName: string) => {
+  if (speakersMeta.value.has(speakerName)) return;
+  
+  try {
+    const slug = speakerNameToSlug(speakerName);
+    const url = `/speakers/${slug}-meta.json`;
+    const res = await fetch(url, { cache: 'force-cache' });
+    if (!res.ok) return; // Silent fail if meta doesn't exist
+    
+    const data = await res.json();
+    if (data && typeof data.name === 'string') {
+      speakersMeta.value.set(speakerName, {
+        name: data.name,
+        slug: data.slug || slug,
+        image: data.image || undefined,
+      });
+    }
+  } catch {
+    // Silent fail
+  }
+};
+
+// Load all speaker metadata
+const loadAllSpeakerMeta = async () => {
+  if (!heatmapData.value) return;
+  const speakerNames = new Set<string>();
+  heatmapData.value.speakers.forEach(s => speakerNames.add(s.name));
+  const promises = Array.from(speakerNames).map(name => loadSpeakerMeta(name));
+  await Promise.all(promises);
+};
 
 const heatmapData = ref<HeatmapData | null>(null);
 const svgElement = ref<SVGSVGElement | null>(null);
@@ -461,6 +521,17 @@ function drawHeatmap() {
           // Remove any existing tooltips first
           d3.selectAll('.heatmap-tooltip').remove();
 
+          // Get speaker images
+          const speaker1Meta = speakersMeta.value.get(row.speaker1Name || row.speakerName || '');
+          const speaker2Meta = speakersMeta.value.get(value.speaker2Name || '');
+          
+          const speaker1ImageHtml = speaker1Meta?.image
+            ? `<img src="${speaker1Meta.image}" alt="${row.speaker1Name}" class="w-8 h-8 rounded-full border-2 border-white inline-block mr-2" />`
+            : '';
+          const speaker2ImageHtml = speaker2Meta?.image
+            ? `<img src="${speaker2Meta.image}" alt="${value.speaker2Name}" class="w-8 h-8 rounded-full border-2 border-white inline-block mr-2" />`
+            : '';
+
           // Create tooltip
           d3.select('body').append('div')
             .attr('class', 'heatmap-tooltip')
@@ -473,9 +544,9 @@ function drawHeatmap() {
             .style('font-size', '12px')
             .style('z-index', '1000')
             .html(`
-              <strong>${row.speaker1Name}</strong><br/>
-              ${value.speaker2Name}<br/>
-              ${value.count} Episoden
+              <div>${speaker1ImageHtml}<strong>${row.speaker1Name}</strong></div>
+              <div class="mt-1">${speaker2ImageHtml}${value.speaker2Name}</div>
+              <div class="mt-1">${value.count} Episoden</div>
             `)
             .style('left', (event.pageX + 10) + 'px')
             .style('top', (event.pageY - 28) + 'px');
@@ -718,6 +789,8 @@ onMounted(async () => {
   try {
     const response = await fetch('/speaker-speaker-heatmap.json');
     heatmapData.value = await response.json();
+    // Load speaker metadata for images
+    await loadAllSpeakerMeta();
   } catch (error) {
     console.error('Failed to load heatmap data:', error);
   }

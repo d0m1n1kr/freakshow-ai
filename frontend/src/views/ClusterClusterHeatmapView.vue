@@ -162,9 +162,13 @@
           <svg ref="svgElement" class="w-full"></svg>
           
           <!-- Interaction Instructions -->
-          <p class="text-xs text-gray-500 dark:text-gray-400 mt-4 text-center">
-            Klicke auf eine Zelle, um Episoden zu sehen, in denen beide Cluster vorkommen
-          </p>
+          <div class="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+            <p>
+              <strong>{{ $t('common.interaction') }}:</strong> 
+              {{ $t('heatmap.interaction.hover') }} 
+              {{ $t('heatmap.interaction.click') }}
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -172,6 +172,15 @@
 
           <!-- SVG Container -->
           <svg ref="svgElement" class="w-full"></svg>
+          
+          <!-- Interaction Instructions -->
+          <div class="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
+            <p>
+              <strong>{{ $t('common.interaction') }}:</strong> 
+              {{ $t('heatmap.interaction.hover') }} 
+              {{ $t('heatmap.interaction.click') }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -195,6 +204,57 @@ interface EpisodeDetail {
   url?: string;
 }
 
+// Speaker metadata with images
+type SpeakerMeta = {
+  name: string;
+  slug: string;
+  image?: string;
+};
+const speakersMeta = ref<Map<string, SpeakerMeta>>(new Map());
+
+// Helper to convert speaker name to slug
+function speakerNameToSlug(name: string): string {
+  return name.toLowerCase()
+    .replace(/ä/g, 'ae')
+    .replace(/ö/g, 'oe')
+    .replace(/ü/g, 'ue')
+    .replace(/ß/g, 'ss')
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '');
+}
+
+// Load speaker metadata (for images)
+const loadSpeakerMeta = async (speakerName: string) => {
+  if (speakersMeta.value.has(speakerName)) return;
+  
+  try {
+    const slug = speakerNameToSlug(speakerName);
+    const url = `/speakers/${slug}-meta.json`;
+    const res = await fetch(url, { cache: 'force-cache' });
+    if (!res.ok) return; // Silent fail if meta doesn't exist
+    
+    const data = await res.json();
+    if (data && typeof data.name === 'string') {
+      speakersMeta.value.set(speakerName, {
+        name: data.name,
+        slug: data.slug || slug,
+        image: data.image || undefined,
+      });
+    }
+  } catch {
+    // Silent fail
+  }
+};
+
+// Load all speaker metadata
+const loadAllSpeakerMeta = async () => {
+  if (!heatmapData.value) return;
+  const speakerNames = new Set<string>();
+  heatmapData.value.speakers.forEach(s => speakerNames.add(s.name));
+  const promises = Array.from(speakerNames).map(name => loadSpeakerMeta(name));
+  await Promise.all(promises);
+};
+
 const heatmapData = ref<HeatmapData | null>(null);
 const svgElement = ref<SVGSVGElement | null>(null);
 const heatmapContainer = ref<HTMLDivElement | null>(null);
@@ -214,6 +274,8 @@ const showEpisodeList = ref(false);
 async function loadData() {
   try {
     heatmapData.value = await loadVariantData('speaker-cluster-heatmap.json');
+    // Load speaker metadata for images
+    await loadAllSpeakerMeta();
   } catch (error) {
     console.error('Failed to load heatmap data:', error);
   }
@@ -474,6 +536,12 @@ function drawHeatmap() {
           // Remove any existing tooltips first
           d3.selectAll('.heatmap-tooltip').remove();
 
+          // Get speaker image
+          const speakerMeta = speakersMeta.value.get(row.speakerName || '');
+          const speakerImageHtml = speakerMeta?.image
+            ? `<img src="${speakerMeta.image}" alt="${row.speakerName}" class="w-8 h-8 rounded-full border-2 border-white inline-block mr-2" />`
+            : '';
+
           // Create tooltip
           d3.select('body').append('div')
             .attr('class', 'heatmap-tooltip')
@@ -486,9 +554,9 @@ function drawHeatmap() {
             .style('font-size', '12px')
             .style('z-index', '1000')
             .html(`
-              <strong>${row.speakerName}</strong><br/>
-              ${value.clusterName}<br/>
-              ${value.count} Episoden
+              <div>${speakerImageHtml}<strong>${row.speakerName}</strong></div>
+              <div class="mt-1">${value.clusterName}</div>
+              <div class="mt-1">${value.count} Episoden</div>
             `)
             .style('left', (event.pageX + 10) + 'px')
             .style('top', (event.pageY - 28) + 'px');
