@@ -4,9 +4,10 @@ This document describes how speaker images from the speaker metadata are display
 
 ## Overview
 
-Speaker profile images are automatically displayed in two places:
+Speaker profile images are automatically displayed in three places:
 1. **Search Tab**: When a speaker persona is selected, their image appears next to the answer
 2. **Player Subtitles**: When playing audio with live transcripts, the current speaker's image appears next to their name
+3. **Speaker River Chart**: Speaker images appear in the legend and tooltips when hovering over streams
 
 ## Implementation Details
 
@@ -54,6 +55,30 @@ The player loads speaker metadata dynamically as transcript speakers change:
 
 Speaker metadata files are fetched from `/speakers/{slug}-meta.json` using the `speakersMetaUrl` prop.
 
+#### SpeakerRiver Component
+
+The Speaker River chart displays speaker images in two locations:
+
+**Legend:**
+```vue
+<img
+  v-if="speakersMeta.get(speaker.id)?.image"
+  :src="speakersMeta.get(speaker.id)?.image"
+  :alt="speaker.name"
+  class="w-8 h-8 rounded-full"
+/>
+```
+
+**Tooltip (via innerHTML):**
+```typescript
+const speakerMeta = speakersMeta.value.get(speaker.id);
+const imageHtml = speakerMeta?.image 
+  ? `<img src="${speakerMeta.image}" alt="${speaker.name}" class="w-10 h-10 rounded-full border-2 border-white" />`
+  : '';
+```
+
+Speaker metadata is loaded asynchronously on component mount from `/speakers/{slug}-meta.json` files.
+
 ## Data Flow
 
 1. **Scraping**: `npm run scrape-speakers` fetches images from freakshow.fm/team
@@ -71,9 +96,13 @@ After scraping or updating speaker metadata, copy the files to the frontend publ
 ```bash
 mkdir -p frontend/public/speakers
 cp speakers/*-meta.json frontend/public/speakers/
+
+# Also copy to freakshow-stats if using that version
+mkdir -p freakshow-stats/frontend/public/speakers
+cp speakers/*-meta.json freakshow-stats/frontend/public/speakers/
 ```
 
-This step is required for the MiniAudioPlayer to load speaker images in live transcripts.
+This step is required for the MiniAudioPlayer and SpeakerRiver components to load speaker images.
 
 ## Image Sources
 
@@ -104,13 +133,25 @@ npm run scrape-speakers --force
 1. Play an episode with live transcripts enabled
 2. Speaker images appear automatically next to each utterance
 
+### Speaker River Chart
+
+1. Navigate to the Speaker River visualization
+2. Speaker images appear in the legend on the right side
+3. Hover over any speaker's stream to see their image in the tooltip
+
 ## Files Modified
 
 - `src/rag_backend.rs`: Added image field and loading logic
 - `frontend/src/views/SearchView.vue`: Display speaker image in answers
 - `frontend/src/components/MiniAudioPlayer.vue`: Display speaker image in live transcripts
+- `frontend/src/components/SpeakerRiver.vue`: Display speaker images in legend and tooltips
+- `freakshow-stats/frontend/src/components/SpeakerRiver.vue`: Display speaker images in legend and tooltips
 - `frontend/src/components/TopicRiver.vue`: Pass speakers-meta-url prop
 - `scrape-speakers.js`: Scrape speaker images from team page
+
+## Related Documentation
+
+- [SPEAKER-RIVER-IMAGES.md](./SPEAKER-RIVER-IMAGES.md) - Detailed implementation of Speaker River images
 
 ## Browser Caching
 

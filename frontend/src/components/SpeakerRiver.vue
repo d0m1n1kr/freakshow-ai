@@ -10,6 +10,14 @@ const props = defineProps<{
 
 const settingsStore = useSettingsStore();
 
+// Speaker metadata with images
+type SpeakerMeta = {
+  name: string;
+  slug: string;
+  image?: string;
+};
+const speakersMeta = ref<Map<string, SpeakerMeta>>(new Map());
+
 const svgRef = ref<SVGSVGElement | null>(null);
 const containerRef = ref<HTMLDivElement | null>(null);
 const selectedSpeaker = ref<string | null>(null);
@@ -300,12 +308,21 @@ const drawRiver = () => {
           tooltipRef.value.style.top = `${event.pageY - 10}px`;
           
           const durationHours = yearData.durationHours.toFixed(1);
+          const speakerMeta = speakersMeta.value.get(speaker.id);
+          const imageHtml = speakerMeta?.image 
+            ? `<img src="${speakerMeta.image}" alt="${speaker.name}" class="w-10 h-10 rounded-full border-2 border-white" />`
+            : '';
           
           tooltipRef.value.innerHTML = `
-            <div class="font-semibold text-sm mb-1">${speaker.name}</div>
-            <div class="text-xs"><strong>Jahr:</strong> ${year}</div>
-            <div class="text-xs"><strong>Episoden:</strong> ${episodeCount}</div>
-            <div class="text-xs"><strong>Dauer:</strong> ${durationHours}h</div>
+            <div class="flex items-start gap-2">
+              ${imageHtml}
+              <div>
+                <div class="font-semibold text-sm mb-1">${speaker.name}</div>
+                <div class="text-xs"><strong>Jahr:</strong> ${year}</div>
+                <div class="text-xs"><strong>Episoden:</strong> ${episodeCount}</div>
+                <div class="text-xs"><strong>Dauer:</strong> ${durationHours}h</div>
+              </div>
+            </div>
           `;
           
           // Highlight the year on X-axis
@@ -485,9 +502,38 @@ const formatDuration = (duration: [number, number, number]) => {
   return `${minutes}:${seconds.toString().padStart(2, '0')}`;
 };
 
+// Load speaker metadata (for images)
+const loadSpeakerMeta = async (speakerId: string) => {
+  if (speakersMeta.value.has(speakerId)) return;
+  
+  try {
+    const url = `/speakers/${speakerId}-meta.json`;
+    const res = await fetch(url, { cache: 'force-cache' });
+    if (!res.ok) return; // Silent fail if meta doesn't exist
+    
+    const data = await res.json();
+    if (data && typeof data.name === 'string') {
+      speakersMeta.value.set(speakerId, {
+        name: data.name,
+        slug: data.slug || speakerId,
+        image: data.image || undefined,
+      });
+    }
+  } catch {
+    // Silent fail
+  }
+};
+
+// Load all speaker metadata on mount
+const loadAllSpeakerMeta = async () => {
+  const promises = props.data.speakers.map(speaker => loadSpeakerMeta(speaker.id));
+  await Promise.all(promises);
+};
+
 // Initial draw und resize listener
 onMounted(() => {
   drawRiver();
+  loadAllSpeakerMeta();
   
   const resizeObserver = new ResizeObserver(() => {
     drawRiver();
@@ -778,10 +824,19 @@ watch(selectedYear, () => {
                 'opacity-40': (hoveredSpeaker || selectedSpeaker) && hoveredSpeaker !== speaker.id && selectedSpeaker !== speaker.id
               }"
             >
+              <img
+                v-if="speakersMeta.get(speaker.id)?.image"
+                :src="speakersMeta.get(speaker.id)?.image"
+                :alt="speaker.name"
+                class="w-8 h-8 rounded-full flex-shrink-0 border border-gray-300 dark:border-gray-600"
+              />
               <div 
-                class="w-4 h-4 rounded flex-shrink-0 mt-0.5" 
+                v-else
+                class="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center text-white text-xs font-semibold" 
                 :style="{ backgroundColor: speaker.color }"
-              ></div>
+              >
+                {{ speaker.name.charAt(0).toUpperCase() }}
+              </div>
               <div class="flex-1 min-w-0">
                 <div 
                   class="text-xs leading-tight text-gray-900 dark:text-white"
