@@ -1,0 +1,606 @@
+{
+  "episodeNumber": 250,
+  "title": "FS250 Die Ente bleibt draußen",
+  "extractedAt": "2025-12-29T09:44:54.691Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "Konferenzformate",
+      "subject": {
+        "coarse": "Events",
+        "fine": "Konferenzformate"
+      },
+      "durationSec": 990,
+      "positionSec": 284,
+      "summary": "In der Episode wird über verschiedene Konferenzformate diskutiert, insbesondere über Remote-Veranstaltungen wie die Wetterbasket Konferenz und die WWDC. Tim Pritlove und Denis Ahrens erörtern die Vor- und Nachteile von Online-Formaten, wobei Denis betont, dass die Remote-Teilnahme für große Communities fairer und angenehmer sein kann. Es wird auch auf die Herausforderungen eingegangen, die mit der Interaktion und dem Networking bei virtuellen Konferenzen verbunden sind. Dominik Wagner hebt hervor, dass die Qualität der vorproduzierten Sessions vorteilhaft ist, während die Live-Interaktion oft leidet. Die Diskussion thematisiert auch die Balance zwischen Informationsverbreitung und sozialer Interaktion bei Konferenzen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 48,
+        "startSec": 264,
+        "endSec": 1294,
+        "generatedAt": "2025-12-29T15:16:17.679Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "WWDC Keynote",
+      "subject": {
+        "coarse": "Events",
+        "fine": "WWDC Keynote"
+      },
+      "durationSec": 272,
+      "positionSec": 1274,
+      "summary": "In der Diskussion über die WWDC Keynote äußern die Teilnehmer unterschiedliche Eindrücke von den Zusammenfassungen, die sie gesehen haben. Letty erwähnt eine dreizehn Minuten lange Zusammenfassung von McRoomers, während hukl eine achtzehn Minuten lange Zusammenfassung anspricht, die seiner Meinung nach wichtige Neuigkeiten vermissen ließ. Tim Pritlove und Dominik Wagner diskutieren über ein Interview mit John Gruber, das interessante Analysen bot, jedoch wichtige Fragen, wie die zu Bootcamp und Windows, nicht aufgriff. Es wird spekuliert, dass Apple möglicherweise keine Bootcamp-Lösungen mehr anbieten wird, was die Virtualisierung als einzigen Weg zur Nutzung anderer Betriebssysteme auf Apple-Hardware hervorhebt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 36,
+        "startSec": 1254,
+        "endSec": 1566,
+        "generatedAt": "2025-12-29T15:16:18.482Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "ARM-Macs",
+      "subject": {
+        "coarse": "Hardware",
+        "fine": "ARM-Macs"
+      },
+      "durationSec": 1911,
+      "positionSec": 1547,
+      "summary": "In der Episode wird über die Umstellung von Intel- auf ARM-Macs diskutiert. Tim Pritlove und Denis Ahrens sprechen über die möglichen Einschränkungen für Softwareentwickler und die Kontrolle von Apple über die Plattform. Es wird erwähnt, dass Apple plant, alle neuen Macs auf eigene ARM-Chips umzustellen, die verschiedene Funktionen integrieren werden. Zudem wird die Einführung von Rosetta zur Ausführung von Intel-Code auf den neuen Macs angesprochen. Die Diskussion umfasst auch die Sicherheitsaspekte und die Zukunft der Softwareverteilung über den App Store.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 108,
+        "startSec": 1527,
+        "endSec": 3478,
+        "generatedAt": "2025-12-29T15:16:21.644Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "macOS BS",
+      "subject": {
+        "coarse": "Software",
+        "fine": "macOS BS"
+      },
+      "durationSec": 834,
+      "positionSec": 3608,
+      "summary": "In dieser Episode wird über die neue Version des macOS, genannt Big Sur, diskutiert. Die Teilnehmer äußern ihre Meinungen zu den Veränderungen im Design, das einen einheitlichen Look mit iOS anstrebt. Es wird kritisiert, dass einige Benutzeroberflächen-Elemente, wie die Schiedswege, entfernt wurden, was die Benutzererfahrung negativ beeinflusst. Zudem wird die Möglichkeit hervorgehoben, dass iOS-Apps auf Apple Silicon Macs laufen können, was eine interessante Entwicklung darstellt. Die Diskussion umfasst auch die Stabilität des neuen Systems und die Herausforderungen, die mit der Umstellung von früheren Versionen verbunden sind.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 68,
+        "startSec": 3588,
+        "endSec": 4462,
+        "generatedAt": "2025-12-29T15:16:22.462Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "APFS und TimeMachine",
+      "subject": {
+        "coarse": "Software",
+        "fine": "APFS und TimeMachine"
+      },
+      "durationSec": 692,
+      "positionSec": 4442,
+      "summary": "In der Episode wird diskutiert, wie APFS (Apple File System) mit Time Machine funktioniert und welche Herausforderungen dabei bestehen. Es wird erwähnt, dass APFS jetzt auch Checksums für Dateien unterstützt, jedoch nur für Backup-Zwecke. Nutzer sollten darauf achten, Backups nicht im selben Container wie das System zu speichern, um Probleme zu vermeiden. Zudem wird die Performance von Time Machine-Backups angesprochen, die bei manchen Nutzern lange dauert, und es gibt Hinweise auf mögliche Optimierungen durch Priorisierungseinstellungen. Die Diskussion umfasst auch die Kompatibilität von Time Machine mit externen Laufwerken und die Nutzung von Snapshots.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 72,
+        "startSec": 4422,
+        "endSec": 5154,
+        "generatedAt": "2025-12-29T15:16:25.959Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Encrypted DNS",
+      "subject": {
+        "coarse": "Networking",
+        "fine": "Encrypted DNS"
+      },
+      "durationSec": 895,
+      "positionSec": 5135,
+      "summary": "Im Transkript wird das Thema Encrypted DNS, insbesondere DNS Over HTTPS (DOH) und DNS Over TLS (DOT), diskutiert. Clemens Schrimpe erklärt, dass DNS für die Umwandlung von Domainnamen in IP-Adressen verantwortlich ist, jedoch traditionell unverschlüsselt arbeitet, was Datenschutzprobleme mit sich bringt. Mit DOH und DOT können Nutzer ihre DNS-Anfragen verschlüsseln und von beliebigen Anbietern durchführen lassen, was jedoch auch das Vertrauen in diese Anbieter erfordert. Es wird auf die Kontroversen hingewiesen, die durch die Integration von DOH in Browser wie Firefox entstehen, da dies die Kontrolle über DNS-Anfragen an Dritte weitergibt. Zudem wird die Problematik angesprochen, dass Apps ihren eigenen DNS-Resolver mitbringen können, was sowohl Vorteile als auch Risiken birgt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 49,
+        "startSec": 5115,
+        "endSec": 6050,
+        "generatedAt": "2025-12-29T15:16:27.001Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Portal Working Group",
+      "subject": {
+        "coarse": "Networking",
+        "fine": "Portal Working Group"
+      },
+      "durationSec": 258,
+      "positionSec": 6030,
+      "summary": "In der Diskussion über die Portal Working Group wird das Thema Export Notifikation angesprochen, wobei Clemens Schrimpe und Tim Pritlove über die Zusammenarbeit im Marketing sprechen. Es wird erwähnt, dass die Implementierung von Portal 40 notwendig ist, um ein verbessertes User Interface zu schaffen. Denis Ahrens bringt die Möglichkeit zur Sprache, die Diskussion auf iOS und iPad auszuweiten, während Letty die Verbesserung des Workflows durch neue Funktionen, wie die Umwandlung von handschriftlichen Eingaben in maschinenlesbaren Text, lobt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 8,
+        "startSec": 6010,
+        "endSec": 6308,
+        "generatedAt": "2025-12-29T15:16:29.785Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Scribble",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Scribble"
+      },
+      "durationSec": 106,
+      "positionSec": 6289,
+      "summary": "In der Episode wird über die Scribble-Funktion auf iOS und iPad gesprochen, die es ermöglicht, handschriftliche Eingaben in maschinenlesbaren Text umzuwandeln. Letty hebt hervor, wie diese Funktion den Workflow beim Illustrieren verbessert, da man nicht ständig zwischen Stift und Tastatur wechseln muss. Dominik Wagner erklärt, wie man eine schwebende Tastatur aktivieren kann, die die Eingabe mit dem Stift erleichtert. Zudem wird ein neues Sicherheitsfeature erwähnt, das es Apps ermöglicht, nur temporären Zugriff auf Fotos zu erhalten, was die Privatsphäre der Nutzer verbessert.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 15,
+        "startSec": 6269,
+        "endSec": 6415,
+        "generatedAt": "2025-12-29T15:16:30.861Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Photo Picker",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Photo Picker"
+      },
+      "durationSec": 159,
+      "positionSec": 6396,
+      "summary": "In der Episode wird über den neuen Photo Picker in iOS gesprochen, der es ermöglicht, einzelnen Apps wie Telegram nur temporären Zugriff auf bestimmte Bilder zu gewähren, ohne dass sie die gesamte Fotosammlung einsehen können. Dies wird als wichtiges Sicherheitsfeature hervorgehoben, da es den Zugriff auf persönliche Bilder besser kontrolliert. Denis Ahrens und Dominik Wagner diskutieren die bisherigen Einschränkungen und die Verbesserungen, die mit dieser neuen Funktion eingeführt wurden.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 12,
+        "startSec": 6376,
+        "endSec": 6575,
+        "generatedAt": "2025-12-29T15:16:32.959Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Maps",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Maps"
+      },
+      "durationSec": 260,
+      "positionSec": 6555,
+      "summary": "Im Transkript wird über die neuen Features von Maps gesprochen, insbesondere über die Möglichkeit, Ladesäulen für Elektroautos zu finden und das Routing entsprechend anzupassen. Es wird erwähnt, dass es Kooperationen mit BMW und Ford gibt, um den Ladestand und die Geschwindigkeit zwischen Auto und Smartphone auszutauschen. Zudem wird die Einführung von Fahrrad-Routing in den USA und die schrittweise Verbesserung der Maps in Deutschland thematisiert. Die Diskussion umfasst auch die Integration von iPhones als Schlüssel für Autos und die Vereinheitlichung der Benutzeroberfläche zwischen iOS und macOS.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 22,
+        "startSec": 6535,
+        "endSec": 6835,
+        "generatedAt": "2025-12-29T15:16:34.544Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "CarKeys und CarPlay",
+      "subject": {
+        "coarse": "Hardware",
+        "fine": "CarKeys und CarPlay"
+      },
+      "durationSec": 285,
+      "positionSec": 6815,
+      "summary": "In der Episode wird über die Nutzung von iPhones als CarKeys gesprochen, die über NFC-Technologie mit Autos kommunizieren können. Es wird erwähnt, dass Tesla als Vorreiter in der Integration von Technologie in Fahrzeuge gilt und kein CarPlay oder Android Auto unterstützt. Zudem wird diskutiert, dass CarPlay mittlerweile auch in Motorrädern, wie der Honda Africa Twin, verfügbar ist. Die Diskussion umfasst auch die Möglichkeit, dass Apple in Zukunft eigene Fahrzeuge oder alternative Mobilitätslösungen entwickeln könnte.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 28,
+        "startSec": 6795,
+        "endSec": 7120,
+        "generatedAt": "2025-12-29T15:16:36.626Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "watchOS",
+      "subject": {
+        "coarse": "Software",
+        "fine": "watchOS"
+      },
+      "durationSec": 197,
+      "positionSec": 7101,
+      "summary": "Im Transkript wird über die Apple Watch und deren Bedienung diskutiert. Dominik Wagner äußert seine Unzufriedenheit über das Fehlen von Force Touch, das seiner Meinung nach eine wichtige Interaktionsmöglichkeit auf der kleinen Benutzeroberfläche der Uhr darstellt. Er beschreibt die Watch als hauptsächlich ein Gerät für Apple Pay und Benachrichtigungen, während er die Fitnessfunktionen als unzureichend empfindet. Zudem wird erwähnt, dass das neue Update für die Apple Watch einige Verbesserungen bringt, darunter die Möglichkeit, mehrere Benutzerkonten auf Apple TV zu verwalten.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 28,
+        "startSec": 7081,
+        "endSec": 7318,
+        "generatedAt": "2025-12-29T15:16:39.260Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Apple TV Multiuser",
+      "subject": {
+        "coarse": "Hardware",
+        "fine": "Apple TV Multiuser"
+      },
+      "durationSec": 140,
+      "positionSec": 7299,
+      "summary": "In der Episode wird über das Multiuser-Feature des Apple TVs diskutiert, das es Nutzern ermöglichen soll, verschiedene Accounts zu verwenden, sodass jeder Benutzer seine eigenen Inhalte und Einstellungen hat. Dominik Wagner erklärt, dass die aktuelle Funktionalität noch eingeschränkt ist, ähnlich wie bei der Multiuser-Browser-Funktion auf iPads. Es wird auch der Wunsch geäußert, dass ähnliche Funktionen für iPads verfügbar sein sollten, um die Nutzung für Familienmitglieder zu erleichtern. Zudem wird erwähnt, dass Workout-Apps auf dem Apple TV laufen können.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 21,
+        "startSec": 7279,
+        "endSec": 7459,
+        "generatedAt": "2025-12-29T15:16:40.528Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Apple TV Workout Apps",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Apple TV Workout Apps"
+      },
+      "durationSec": 162,
+      "positionSec": 7439,
+      "summary": "Im Transkript wird die Nutzung von Workout-Apps auf Apple TV angesprochen. Tim Pritlove erwähnt, dass diese Apps für verschiedene Trainings, wie Yoga, genutzt werden können. Letty äußert jedoch, dass sie Yoga lieber nicht vor dem Fernseher praktiziert. Es wird auch diskutiert, dass es in den Apps keine spezifischen Funktionen für Paddeln oder Rudern gibt, was von den Teilnehmern als unzureichend empfunden wird. Die Diskussion dreht sich um die Möglichkeiten und Einschränkungen der verfügbaren Fitness-Apps.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 33,
+        "startSec": 7419,
+        "endSec": 7621,
+        "generatedAt": "2025-12-29T15:16:43.126Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Corona-Warn-App",
+      "subject": {
+        "coarse": "Health",
+        "fine": "Corona-Warn-App"
+      },
+      "durationSec": 1823,
+      "positionSec": 7602,
+      "summary": "In der Episode wird die Corona-Warn-App thematisiert, wobei die Teilnehmer darüber diskutieren, ob sie die App installiert haben und welche Erfahrungen sie damit gemacht haben. Tim Pritlove fragt, ob alle die App installiert haben, während Denis Ahrens anmerkt, dass eine 'Read only' Version der App hilfreich sein könnte, um Impfgegner zu überzeugen. Es wird auch auf die Schwierigkeiten hingewiesen, die App in verschiedenen Ländern zu nutzen, insbesondere aufgrund von Account-Problemen im App Store. Die Diskussion umfasst auch die Herausforderungen bei der Implementierung der App und die Rolle von Juristen in diesem Prozess.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 167,
+        "startSec": 7582,
+        "endSec": 9445,
+        "generatedAt": "2025-12-29T15:16:44.184Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Elgato StreamDeck",
+      "subject": {
+        "coarse": "Hardware",
+        "fine": "Elgato StreamDeck"
+      },
+      "durationSec": 592,
+      "positionSec": 9425,
+      "summary": "In der Episode wird das Elgato StreamDeck besprochen, ein Gerät mit mehreren Tasten und Displays, das als leuchtende Tastatur fungiert. Tim Pritlove hebt die praktische Anwendung des StreamDecks hervor, insbesondere für die Verwaltung von Kapitelmarken und anderen Funktionen während der Audioaufnahme. Es gibt verschiedene Größen des StreamDecks, und es wird erwähnt, dass es Plugins für die Integration mit der Aufnahmesoftware Ultraschall gibt. Tim plant, das StreamDeck im Studio zu nutzen, um die Effizienz bei der Bearbeitung von Audioaufnahmen zu steigern.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 56,
+        "startSec": 9405,
+        "endSec": 10037,
+        "generatedAt": "2025-12-29T15:16:46.987Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "MacBook Pro 13\"",
+      "subject": {
+        "coarse": "Hardware",
+        "fine": "MacBook Pro 13\""
+      },
+      "durationSec": 1454,
+      "positionSec": 10018,
+      "summary": "Im Transkript wird über das MacBook Pro 13\" gesprochen, insbesondere über die Erfahrungen von Tim Pritlove und Clemens Schrimpe im Apple Store. Tim berichtet von seiner unangenehmen Erfahrung mit den Apple-Mitarbeitern, die ihn während seines Besuchs ständig ansprachen. Clemens äußert seine Zufriedenheit mit dem MacBook Pro, hebt die Leistung, die Tastatur und die USB-C-Ports hervor. Er erwähnt auch, dass die Touch Bar nützlich ist, jedoch einige Apps nicht optimal damit umgehen. Zudem wird die fehlende LTE-Funktionalität kritisiert, obwohl das Gerät einen hohen Preis hat.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 155,
+        "startSec": 9998,
+        "endSec": 11492,
+        "generatedAt": "2025-12-29T15:16:48.185Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Mac-Windows-Transition",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Mac-Windows-Transition"
+      },
+      "durationSec": 259,
+      "positionSec": 11473,
+      "summary": "Im Transkript wird die Herausforderung von Tala bei der Umstellung auf eine Mac-Umgebung thematisiert, insbesondere die Probleme mit Microsoft Word und dessen Tools. Tala berichtet von Bugs in der Software und Schwierigkeiten beim Annotieren von Word-Dokumenten auf dem iPad. Trotz der Probleme schätzt sie die Vorteile des Mac-Systems, wie die Nutzung minimalistischer Tools. Es wird auch erwähnt, dass die gesamte wissenschaftliche Community weiterhin Word verwendet, was die Umstellung erschwert.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 26,
+        "startSec": 11453,
+        "endSec": 11752,
+        "generatedAt": "2025-12-29T15:16:50.232Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "HexFiend",
+      "subject": {
+        "coarse": "Software",
+        "fine": "HexFiend"
+      },
+      "durationSec": 287,
+      "positionSec": 11732,
+      "summary": "In der Episode wird das Tool HexFiend besprochen, ein Hexeditor, der Binärdateien analysiert und deren Struktur anzeigt. Tim Pritlove hebt hervor, dass HexFiend nicht nur Dateien in hexadezimaler Form darstellt, sondern auch Templating-Funktionen bietet, die es ermöglichen, die Struktur von Dateien wie Flagddateien zu erkennen. Die aktuelle Version, 2.1.3, wurde vor kurzem veröffentlicht, während frühere Versionen lange nicht aktualisiert wurden. Es wird auch erwähnt, dass der Entwickler für Apple arbeitet und dass die Templates für verschiedene Dateitypen, wie JPEG, aus einem GitHub-Repository heruntergeladen werden müssen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 29,
+        "startSec": 11712,
+        "endSec": 12039,
+        "generatedAt": "2025-12-29T15:16:53.138Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Programmiersprachen-Prinzipien",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Programmiersprachen-Prinzipien"
+      },
+      "durationSec": 64,
+      "positionSec": 12019,
+      "summary": "In der Episode wird über eine Publikationsserie zum Thema Programmiersprachen-Design diskutiert, an der auch Personen wie Obsti und Klauscher beteiligt sind. Dominik Wagner erwähnt, dass es interessante Papers gibt, die die Entstehung und die Gedanken hinter Programmiersprachen beleuchten. Zudem wird darauf hingewiesen, dass Springer vor kurzem viele Lehrbücher und wissenschaftliche Publikationen kostenlos zur Verfügung gestellt hat.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 7,
+        "startSec": 11999,
+        "endSec": 12103,
+        "generatedAt": "2025-12-29T15:16:53.469Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Open Access",
+      "subject": {
+        "coarse": "Publishing",
+        "fine": "Open Access"
+      },
+      "durationSec": 189,
+      "positionSec": 12084,
+      "summary": "Im Transkript wird über Open Access und die Unterstützung von wissenschaftlichen Publikationen gesprochen. Dominik Wagner erwähnt, dass Papers im Open Access verfügbar sind und dass er Freude daran hat, sie zu lesen. Tala berichtet, dass der Springer Verlag kürzlich viele Lehrbücher und wissenschaftliche Publikationen kostenlos zur Verfügung gestellt hat. Es wird auch auf die Open Access-Initiativen hingewiesen, die Hochschulen und Bibliotheken unterstützen, um die Kosten für die Veröffentlichung in vollständig offenen Journalen zu übernehmen. Tim Pritlove und andere diskutieren die Herausforderungen und Entwicklungen im Bereich Open Science.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 14,
+        "startSec": 12064,
+        "endSec": 12293,
+        "generatedAt": "2025-12-29T15:16:57.008Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Bitcoin Halvening",
+      "subject": {
+        "coarse": "Finance",
+        "fine": "Bitcoin Halvening"
+      },
+      "durationSec": 91,
+      "positionSec": 12274,
+      "summary": "Im Transkript-Ausschnitt wird das Thema Bitcoin Halvening angesprochen. Dominik Wagner erwähnt, dass das Halvening bereits stattgefunden hat und Denis Ahrens erklärt, dass die Belohnung für das Mining von Bitcoin auf 6,25 Bitcoins pro Block reduziert wurde. Es wird diskutiert, dass das Halvening eine eingebaute Bremse im Bitcoin-System darstellt, um die Inflation zu kontrollieren und möglicherweise die Preise zu steigern. Ahrens äußert, dass die Preisentwicklung nach einem Halvening oft spekuliert wird, aber niemand genau weiß, was passieren wird.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 15,
+        "startSec": 12254,
+        "endSec": 12385,
+        "generatedAt": "2025-12-29T15:16:57.586Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Digitale Gesundheitsapps",
+      "subject": {
+        "coarse": "Health",
+        "fine": "Digitale Gesundheitsapps"
+      },
+      "durationSec": 192,
+      "positionSec": 12366,
+      "summary": "Im Transkript wird über digitale Gesundheitsanwendungen (Apps) diskutiert, die offiziell Anträge beim BVM einreichen können. Diese Apps müssen innerhalb von drei Monaten genehmigt werden und können für ein Jahr lang zu einem festgelegten Preis von Krankenkassen bezahlt werden. Die Anwendungen umfassen Funktionen wie Monitoring, Symptomtracking und Diagnostik. Es wird auch auf die Herausforderungen der Abrechenbarkeit und die Komplexität des deutschen Gesundheitssystems hingewiesen. Zudem wird die Möglichkeit erörtert, dass eine COVID-19-App zu einer digitalen Gesundheitsanwendung weiterentwickelt werden könnte.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 31,
+        "startSec": 12346,
+        "endSec": 12578,
+        "generatedAt": "2025-12-29T15:17:01.497Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Hauswasserwerk",
+      "subject": {
+        "coarse": "Hardware",
+        "fine": "Hauswasserwerk"
+      },
+      "durationSec": 253,
+      "positionSec": 12558,
+      "summary": "In diesem Transkript-Ausschnitt wird das Thema Hauswasserwerk behandelt. Roddi erklärt, dass ein Hauswasserwerk eine Grundwasserpumpe mit einem Druckausgleichsbehälter ist, den er kürzlich repariert hat. Der Druckausgleichsbehälter ist wichtig, da er dafür sorgt, dass beim Öffnen eines Hahns sofort Wasser fließt, ohne dass die Pumpe ständig laufen muss. Es wird auch auf die Vorteile der Nutzung von Grundwasser zur Gartenbewässerung hingewiesen, insbesondere im Hinblick auf die hohen Wasserpreise in Berlin.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 40,
+        "startSec": 12538,
+        "endSec": 12831,
+        "generatedAt": "2025-12-29T15:17:01.837Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Bonus Track",
+      "subject": {
+        "coarse": "Miscellaneous",
+        "fine": "Bonus Track"
+      },
+      "durationSec": 68,
+      "positionSec": 12992,
+      "summary": "",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "250-ts.json",
+        "method": "time-window",
+        "pickedCount": 0,
+        "startSec": 12972,
+        "endSec": 13080,
+        "note": "no-excerpt"
+      }
+    }
+  ],
+  "extendedAt": "2025-12-29T15:17:01.837Z",
+  "transcriptFound": true,
+  "transcriptFile": "250-ts.json"
+}
