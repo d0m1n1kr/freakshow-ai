@@ -7,6 +7,9 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Navigate from scripts/ to project root
+const PROJECT_ROOT = path.join(__dirname, '..');
+
 /**
  * Analyze cluster speakers from topic-taxonomy.json
  * 
@@ -39,7 +42,7 @@ async function loadJSON(filePath) {
 }
 
 async function loadEpisode(episodeNumber) {
-  const filePath = path.join(__dirname, 'episodes', `${episodeNumber}.json`);
+  const filePath = path.join(PROJECT_ROOT, 'episodes', `${episodeNumber}.json`);
   try {
     return await loadJSON(filePath);
   } catch (err) {
@@ -84,7 +87,7 @@ function calculateSpeakerRelevance(speakerCounts, totalEpisodes) {
 
 async function analyzeClusterSpeakers() {
   console.log('Loading topic taxonomy...');
-  const taxonomy = await loadJSON('./topic-taxonomy.json');
+  const taxonomy = await loadJSON(path.join(PROJECT_ROOT, 'topic-taxonomy.json'));
   
   if (!taxonomy.clusters || !Array.isArray(taxonomy.clusters)) {
     throw new Error('Invalid topic-taxonomy.json format: missing clusters array');
@@ -165,7 +168,7 @@ async function main() {
     
     const result = await analyzeClusterSpeakers();
     
-    const outputFile = './cluster-speakers.json';
+    const outputFile = path.join(PROJECT_ROOT, 'frontend', 'public', 'cluster-speakers.json');
     await fs.writeFile(outputFile, JSON.stringify(result, null, 2), 'utf-8');
     
     console.log(`\n✓ Analysis complete!`);
