@@ -22,7 +22,11 @@
     "category-river": "node scripts/generate-category-river.js",
     "generate-umap": "node scripts/generate-topic-umap.js",
     "speaker-profiles": "node scripts/generate-speaker-profiles.js",
-    "ts-live": "node scripts/generate-ts-live.js --in-dir episodes --out-dir episodes --all && node scripts/generate-ts-live.js --in-dir frontend/public/episodes --out-dir frontend/public/episodes --all"
+    "ts-live": "node scripts/generate-ts-live.js --in-dir episodes --out-dir episodes --all && node scripts/generate-ts-live.js --in-dir frontend/public/episodes --out-dir frontend/public/episodes --all",
+    "test": "npm run test:frontend && npm run test:rust",
+    "test:frontend": "cd frontend && npm run test:run",
+    "test:rust": "cargo test --lib",
+    "test:all": "npm run test:frontend && npm run test:rust"
   },
   "dependencies": {
     "puppeteer": "^24.0.0",
