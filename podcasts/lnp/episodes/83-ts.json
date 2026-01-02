@@ -1,0 +1,1314 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus. Guten Morgen, Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:02",
+      "text": "Wenn du ein Handy abhören würdest, dann würdest du auch sicherlich die Software dafür kostenlos aus dem Internet herunterladen, oder?\nLokbuch, Netzpolitik, die zweiundachtzigste Ausgabe sendet heute am einunddreißigsten Oktober zwanzig dreizehn. Nicht vergessen. Und das ist der Podcast,\nwo wir immer dann irgendwann nochmal gleich zu irgendwas kommen. Das ist ganz wichtig, weil wenn man das nicht tut, dann entgehen einem die Details. Nicht wahr?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:53",
+      "text": "Ja und das ist äh jetzt ist es äh quasi zwei Jahre alt. Montag hatten wir quasi Geburtstag."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:01",
+      "text": "Oh ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:02",
+      "text": "In der letzten Sendung schon gesagt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:04",
+      "text": "Hatte jetzt grad nicht mehr dieser nee letzter nächster Montag äh aha, okay, na das ist ja schon äh das kann man ja schon etablierten Podcast nennen, würde ich sagen. Zwei Jahre? Das ist was.\nJa, mit Beständigkeit. Da loben wir uns mal selbst."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:22",
+      "text": "Haben wir gut gemacht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:23",
+      "text": "Ja, haben wir super gemacht. Ansonsten, wen kann man denn noch äh loben? Die Medien, Regierung.\nÜbrig zum hat irgendjemand noch sein Lob noch nicht bekommen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:39",
+      "text": "Mal wieder kein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:40",
+      "text": "Kein Lob zu verteilen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:42",
+      "text": "Nee, mal wieder, doch, doch, wir kommen heute, werden wird gelobt, äh, im weiteren Verlauf der Sendung, wird jemand gelobt?\nBundesverband wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:54",
+      "text": "Okay, guten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:55",
+      "text": "Im Live."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:56",
+      "text": "Kandidaten fürs gelobte Land. Ja, dann beschäftigen wir uns erstmal mit den Kandidaten, die in der ersten oder zweiten Runde schon ausgeschieden sind. Ninos. Ja. Womit fangen wir an?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:09",
+      "text": "Ja. Angela Merkels Handy wurde abgehört von den Amerikanern, wer hätte damit rechnen können.\nSie ist empört, empört. Ja. Das geht gar nicht. Das geht nämlich gar nicht unter Freunden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:19",
+      "text": "Oh Gott. Ja. Das geht gar nicht. Ey. Nee, das ist einfach, da ist eine Grenze überschritten worden. Da ist einfach also muss sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:27",
+      "text": "Gar nicht. Also der der Postillon titelte Angela Merkel empört, dass sie von den USA so behandelt wird, als wäre sie ein deutscher Bürger."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:35",
+      "text": "Ja genau, das hat's auch echt auf den Punkt getroffen. Und der Slapstick, also ich äh äh ich bin wirklich in mir zusammen gesunken, als ich äh gesehen habe, wie auf einmal eine\nAufregungs- und Empörungswelle äh das politische System Deutschlands äh erfasst. Auf einmal war alles ganz schlimm. Und ich dachte mir so, hallo?\nIrgendwie,\nkann es sein, vermutlich bestätigt es, dass die aufm anderen Planeten leben. Ja, und das Licht braucht einfach ein halbes Jahr,\num äh bis dahin zu kommen. Also man kann sozusagen nachrechnen, dass die Bundesregierung sich ungefähr ein halbes Lichtjahr entfernt befindet. Wir könnten jetzt sagen, okay, vielleicht ist es nicht ganz so schlimm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:20",
+      "text": "Ist eine Entfernungseinheit. Ja sicher. Und ach so, ah okay und so lange dauerte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:27",
+      "text": "Die das Licht braucht, genau, weil die jetzt auch die Fernsehberichte endlich zur Kenntnis genommen haben,\nja, damit er nicht das Licht gesehen, ja, aber halt erst ein halbes Jahr später und das heißt, das ist ja halt ungefähr ein halbes liegt ja im Fernsehen, so.\nUnd ähm dann könnt ihr jetzt ihnen zugute halten, dass es vielleicht dann doch nur die Schallgeschwindigkeit ist, so, ja, die äh da herangezogen werden sollte, aber ist schon eine gewisse Distanz zwischen dem Volk. Auf jeden Fall ist auf einmal alles ganz schlimm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:53",
+      "text": "Ich glaube das ist erstmal eine Größe der Lasergehirne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:56",
+      "text": "Es ist wirklich so geil, ja. Also."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:58",
+      "text": "Nee, es ist, es ist, es ist nicht, ihr wisst überhaupt nicht geil. Ist nicht geil."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:03",
+      "text": "Na ja, natürlich ist es nicht geil, aber ich meine, man man man sitzt doch ohnehin schon seit einem halben Jahr fassungslos\nMedienberichterstattung und den Reaktionen der Politik und\njetzt auf einmal ist alles auf einmal wichtig und jetzt geht auf einmal alles gar nicht und jetzt sind Grenzen überschritten worden und jetzt sind äh jetzt müssen Botschafter einbestellt werden\nHallo."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:25",
+      "text": "Ja, es äh es ist es war eigentlich genau das, was also als diese Meldung kam, habe ich mir gedacht, ähm so, jetzt,\nJetzt wird auf jeden Fall etwas passieren\nAlso es wird eine Reaktion geben und diese Reaktion wird eine gewisse Schärfe haben. Das heißt, die äh Deutschland wird jetzt als von einem Schoßhündchen zu einem Schoßhündchen das mal gezwickt hat\nvielleicht in dem Pulli oder vielleicht auch mal den Finger oder so, ne. Vielleicht beißen die auch wirklich richtig. So, ich habe auf jeden Fall, jetzt kommt eine schärfere Reaktion, weil da können sie sich einfach nicht gefallen lassen,\nähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:59",
+      "text": "Ernsthaft davon ausgegangen, dass es nicht stattfindet. Also das."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:01",
+      "text": "Genau, ich war aber ich muss ich muss dazu sagen, ich war so ein bisschen äh zwiegespalten, weil ich hätte mir natürlich also ich habe dazu getwittert,\nglaube ich so, es ist es ist notwendig und längst überfällig, dass die deutsche Regierung da jetzt irgendwie mal was macht, aber wir sollten echt nicht vergessen, was es war, was sie am Ende dazu gebracht hat, sich überhaupt mal um diesen, um dieses Ding zu kümmern, ne,\nSo, ne? Es muss erst ihr ihr eigenes Privathandy betreffen. Konkret, dass sie auf einmal sagen, ach so, nee, ja, oh je, wir haben ja hier einen Skandal. Bisschen einen Skandal,\nja? Eine Frechheit. Und ähm.\nIch habe dann noch dazu getwittert. Also ich ich habe ja nicht so viele Follower auf Twitter. Es kommt selten vor, dass ich mehr als fünfzig Sterne bekomme für einen Tweet\nund ich twitterte äh immerhin, die USA überwachen deutsche Verfassungsfeinde, da muss man die auch mal zu Gute halten, ja.\nAlso ich meine, immerhin, so das ist jetzt der erste Beleg, dass sie das zum Schutze der Bevölkerung machen. Ähm,\nAlso man kann nicht vielleicht, um das kurz mal gerade zu. Man kann natürlich nicht als ähm Regierungschef davon ausgehen, dass man,\nnicht überwacht wird. Ja, also diese ganze äh Überwachung, Überwachung und Abhörsache ist ja immer nur eine Frage von äh wie viel Kosten hat der Angreifer? Wie viele Kosten hat der Angreifer und hat er,\nbetreibt er diesen Aufwand. Und wenn ich ähm diejenige Politikerin Europa bin, die ähm massiv\nden ein den größten Einfluss auf die komplette\nauf die komplette Europolitik hat, ja? Also in Sachen Finanzen jetzt, ökonomischen Einfluss auf die, auf die Entwicklung des Euro und so weiter, hat die, haben die Entscheidung von Angela Merkel den allergrößten Einfluss. Also entsprechend.\nMuss sie natürlich davon ausgehen, dass sie von allem und jedem,\nabgehört wird ist völlig naheliegend, vor allem wenn, da kommen wir später zu, der Aufwand, um Handy abzuhören, sich äh wirklich in klaren, engen Grenzen hält. Ähm,\nDafür hat die Frau ja auch ein Kryptohandy, welches sie, wie wir ja auch dann erfahren haben, nicht benutzt, weil, äh, komme ich gleich auch nochmal zu."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:17",
+      "text": "Ja, na gut, aber der zweite interessante Information, wenn sie denn stimmt, ist, dass die Abhörmaßnahme offensichtlich schon, also mindestens zweitausendzwei begannen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:31",
+      "text": "Genau. Und jetzt fragt man sich genau, da war sie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:33",
+      "text": "Keine Bundeskanzlerin. Dabei sie noch nicht mal Kandidatin."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:38",
+      "text": "Und was heißt das? Da sagen, da war sie Oppositionsführerin. So, das heißt, okay, haben die USA etwa damals schon gewusst, dass sie Kanzlerin werden würde und vorsorglich schon mal mit der Überwachung angefangen? Die Frage, die sich keiner stellt, ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:50",
+      "text": "Nö, ich würde sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:51",
+      "text": "Die vor zehn Jahren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:52",
+      "text": "Jeder, der halbwegs äh im deutschen politischen System irgendeine Rolle spielt, kann davon ausgehen, auf einer Liste zu stehen. Und es ist alles interessant, weil alleine schon ich meine, gut, eine CDU Führung.\nSelbst wenn die SPD äh die Zeit ihres Lebens äh gehabt hätte und drei oder vier oder fünf Kanzler hintereinander äh stellt. Ja,\nDie CDU kann immer,\nnimmt immer Einfluss, hat auch schon Macht und kann auch jederzeit die Bundesführung übernehmen, wenn die Kacke am Dampfen ist. Davon kann ein Land wie die USA oder muss ein Land wie die USA immer von ausgehen,\nAlso kann man genauso davon ausgehen, dass auch die SPD, für die das ja im Prinzip,\nEinschränkungen auch gilt, genauso unter Überwachung steht. Also Herr Gabriel ist da sicherlich genauso auf der Liste wie am Ende sogar die Grünen.\nEin Trittin, eine Rot."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:46",
+      "text": "Vor allem war doch mit mit also wenn die zweitausendzwei Angela Merkel überwacht haben, dann haben sie auch damals Gerhard Schröder überwacht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:57",
+      "text": "Ja, es gab äh irgendwo eine Meldung, dass das mit mit Schröders äh Widerstand gegen den Irak erst begann. Zweitausendzwei ist ja nun auch wirklich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:09",
+      "text": "Ich hatte daher mit den Franzosen noch drüber gewitzelt in der letzten Sendung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:14",
+      "text": "Ja, aber also das mag natürlich bei den USA so der Auslöser gewesen sein, dass Deutschland so ein bisschen als potentieller Feind äh äh gesehen wird, ne. Aber."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:24",
+      "text": "Halten wir fest ähm,\nirgendwie das Thema, was sich ein bisschen unter ähbelichtet sehe gerade in den Medien ist, wer noch davon betroffen ist, ja und äh es ist ja schon sogar eine Zahl da gefallen, wo sie reden von fünfunddreißig weiteren Regierungschefs, äh von,\nweltweit und ähm\nDas sind ja dann nur die Regierungschefs, also offensichtlich können sich die Oppositionsführer ähm in den jeweiligen Ländern ebenso äh als als Angriffsziele da sehen. Und das finde ich interessant, dass die da gerade nicht mal lauter werden, weil alle nur so, oh, die haben die Bundeskanzlerin abgehört. Das ist ja jetzt ein Skandal. Wahrscheinlich will sich keiner den Schuh anziehen, er ist aktiv,\ngeworden zu sein, als er als er dann wirklich konkret ähm selber betroffen war. Na ja,\nwir haben die Amerikaner das gemacht, es gibt mehrere,\nmehrere Informationen dann dazu. Zunächst war übrigens erstmal nur von den Meterdaten und nicht von Gesprächsinhalten die Rede, ja? Das ist ein bisschen untergegangen, also äh\nähm das,\nabhören, war da erst gar nicht Teil der äh Teil des. Sie wollten, glaube ich, noch erst darauf warten, dass die Amerikaner das leugnen, um dann den Beleg dafür zu erbringen.\nUnd ähm was sich jetzt also rausstellt oder was der Spiegel dann äh äh in die in dieser Woche irgendwie schrieb, dass sich der Special Collection Service, eine Einheit der NSA ähm,\nIn der US-Botschaft äh eingenistet hat und dort,\naus dem Gebäude raus mit Richtantennen ins Regierungsviertel zieht. Jetzt muss man wissen, die US-Botschaft ist in Berlin quasi der Nachbar vom Brandenburger Tor.\nAlso stehst vorm Pariser Platz am Brandenburger Tor, dann ist links von dir der Eingang zur US-Botschaft. Ähm,\nund die US-Botschaft geht dann hoch, die hat so mehrere Stockwerke. Ich glaube, ich war mal im zweiten oder so. Von da aus kannst du dann auf so einen Balkon gehen, kann jetzt der Dritte gewesen sein. Und von da aus kannst du,\nüber die Bäume, da sind also ein paar Bäume vom Tiergarten, denn eigentlich äh das Kanzleramt sehen und auch den Reichstag. Und da haben sie offensichtlich einen Teil der Fassade ausgespart und äh verkleidet mit ähm.\nVerkleidet mit diesem gleichen Stoff, der um,\nso Radar-Abhörstationen gespannt ist. Hier Teufelsberg, da haben sie ja diese große dieses große Kreisgerüst jeweils drum und da ist ein sehr dünner metallender Stoff drauf gespannt,\nund ähm genau, da ist es jetzt gerade mal aufm Google."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:58",
+      "text": "Ist nicht der Google ist der Apple."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:00",
+      "text": "Der Apple, ja. So und da siehst du genau, die da sind die Bäume vom Tiergarten und dann kannst du, da haste den Balkon und von da aus kannst du halt rüber gucken. Da ist der Balkon, diese kleine Grünfläche."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:09",
+      "text": "Na ja, da gibt's halt dieses kleine diese kleine Kanzel, die jetzt auch aufm Spiegel äh Titel war, die so ein bisschen den Eindruck macht, als könnte sie so der Hort äh des Bösen sein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:20",
+      "text": "Na ja und ähm da haben sie als offensichtlich irgendwie diesen Stoff davor, damit sie, damit sie einen guten Empfang haben,\nund da, von da aus zielen sie so die äh so die Vermutungen und so wahrscheinlich auch das, was man sich immer hatte denken können mit einer Richtantenne äh oder mit mehreren Richterntenten dann auf äh auf das,\nauf den ähm Reichstag, den wir da in Sicht äh weit haben und das Kanzleramt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:45",
+      "text": "Spuck weiter."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:46",
+      "text": "In Spuckweide. Ja, es sind glaube, was sind das? Achthundert Meter oder so?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:49",
+      "text": "Nach hier und nimm mal das achthundert Meter, das sind eher so was wie hundert bis."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:53",
+      "text": "Ach so, zum Reichstagsgebäude. Ja, doch, doch,\nReihe. Zum Kanzleramt würde ich dann nochmal. Also lächerlich, gar kein Problem. Äh da äh das das Handysignal äh äh zu empfangen,\nwie ich ja auch gestern im Fernsehen demonstriert habe, aber dazu komme ich ja gleich. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:11",
+      "text": "Kostenlosen Software."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:12",
+      "text": "Boah hör auf\nSo, dann äh war also sagte, sagte Obama, ja äh habe ich gar nichts von gewusst und wir haben da ja jetzt auch in diesem Sommer mit aufgehört, nachdem nämlich dieser Edward Snowden anfing, mit seinen unsäglichen äh mit seinem unsäglichen Verrat\nÄhm und dann eine interne Prüfung\nAnberaumt wurde, dass der Obama dann zum ersten Mal seinen Geheimdienstleuten dann da Fragen gestellt hat und gesagt hat, Jungs, was macht ihr eigentlich den ganzen Tag? Und dann haben die oft kamen offensichtlich dann auch dabei heraus, ja, hier Handy abhören von der von fünfunddreißig Regierungschefs, da hat der Obama wohl auch dann zur NSA gesagt,\nFreunde abhören, das geht gar nicht. Und dann haben sie auch damit aufgehört angeblich, ja?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:56",
+      "text": "Auch erstaunlich, dass äh die Regierung davon keine unmittelbaren Kenntnis hat. Oder zumindest meint,\nzu haben. Also es könnte auch alles ein Schutzprogramm sein, den Präsidenten erstmal aus der äh Schusslinie zu nehmen. Offensichtlich stört das auch irgendwie keinen, wenn Geheimdienste, naja gut, ich meine\nnicht, dass man irgendwas anderes erwarten könnte, wenn geheimdienste sagen, dass sie eigentlich das, was sie tun, im Geheimen tun und nicht unbedingt auch immer jede Maßnahme im Einzelnen\nwobei natürlich sowas wie die Regierung anderer Länder voll überwachen. Ich meine, was machen sie mit dieser Information,\naußer sie ihrer Regierung zur Verfügung zu stellen.\nAlso er muss ja Protokolle gelesen haben, die können ja jetzt nicht zehn Jahre lang Angela Merkel abgehört haben und es lag niemals eine Mitschrift von irgendeinem Gespräch auf äh dem Tisch des Präsidenten,\nDas glaubt doch wohl keiner. Also es ist wirklich absurd."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:51",
+      "text": "Ja ja, der Punkt für so ein für so einen Präsidenten ist, ähm in dem Moment, wo so was rauskommt,\nist klar, dass du keine schöne Option mehr hast. Du kannst dir nur so die ähm,\nAlso du kannst halt kannst dir eine beschissene Option auswählen. Und die eine ist zu sagen, ja wusste ich, habe ich gemacht, super, alles klar und ich möchte jetzt bitteschön als der Präsident in die Geschichte eingehen, der äh Lauschangriffe auf äh auf Alliierte äh befohlen hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:19",
+      "text": "Genauso einen nächsten Pro."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:20",
+      "text": "Oder ich möchte,\nals der Präsident in die Geschichte gehen, der ähm seinen eigenen Geheimdienst nicht unter Kontrolle hatte, dann aber für Ordnung gesorgt hat,\nJa, das heißt, also eine kurzfristige äh peinliche oder eine mittelfristige äh Erniedrigung in der Öffentlichkeit bleibt dir nicht erspart, aber du kannst dich wenigstens äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:43",
+      "text": "Mal einen dicken Max machen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:44",
+      "text": "Kannst dann nochmal Max machen, indem du äh sagst, was das beendet, ja?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:48",
+      "text": "Ach, vierzig Liter wurde abgehört. Äh entschuldigen Sie mich kurz. Kleinen Moment, bau, bau, bau,\nist wieder okay."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:55",
+      "text": "Ja. Aber schön finde ich äh also genau, fünfunddreißig weitere Staatschef und was ich gestern las, also,\nfür heute ist angekündigt, dass ein also eine italienische Zeitung, ich kann nicht genau beurteilen, ob wie äh ernst zu nehmen die ist, hat angekündigt, sie würde heute Beweis erbringen, dass die NSA auch den Papst abhören.\nUnd das wäre dann wirklich mein ja. Den Papst, also ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:26",
+      "text": "Also sozusagen nur noch einen Schritt bis zu Gott."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:30",
+      "text": "Ja, vielleicht wer weiß, ich meine, wenn der da Kontakt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:32",
+      "text": "Vielleicht hört die NSA auch Gott ab. Ich meine, dann werden sie dem Vatikan in gewisser Hinsicht sogar noch einen Schritt voraus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:39",
+      "text": "Wie reagiert die deutsche Bundesregierung, die ja, so will man meinen,\nDiesen Skandal, wir haben doch Herrn Pofalla noch im Ohr, wie er das alles beendet hat, mehrfach ähm und genau diese Frage wurde ja dann auch dem ähm,\nGeorg Streiter, Sprecher der Bundesregierung in der äh Bundespressekonferenz gestellt und wir können ja mal hören, was so seine Reaktion darauf war."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:04",
+      "text": "Seit wann ist denn der eigentlich äh? Weiß ich nicht. Ist der jetzt ganz neu oder nicht? Das war doch der Herr Seibert, der was hast du jetzt so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:06",
+      "text": "Weiß ich nicht. Ich habe den auch noch nicht gesehen, aber der die haben mehrere. Das sind wie heißt der Freund? Georg Streiter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:11",
+      "text": "Wie heißt der Freund? Georg, Streiter, das ist ja ein passender Name für so einen äh Job."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:17",
+      "text": "Wahrscheinlich auch eine Karriere bei Springer gemacht äh und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:21",
+      "text": "Ja, Journalist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:24",
+      "text": "Ja? Ach so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:25",
+      "text": "Stellvertretender Sprecher der Bundesregierung. Genau, ein Enkel des Deutschen Politikers Georg Streiter. So so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:31",
+      "text": "So, dann lasst doch mal hören, was der gute Herr Streiter sagt. Zum Thema, die Affäre ist beendet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:36",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:09",
+      "text": "Ja, da steckt viel drin. Vor allem äh finde ich ganz besonders schön, dieses äh schriftliche Auskunft. Wir hatten keinen Grund, ja an dieser schriftlichen Auskunft zu zweifeln. Hallo, äh hören sie uns alle ab? Nein?\nAh okay. Und das ist hier genau das, was da mal was was wir, sage ich mal, hier in dieser Sendung und viele andere Menschen,\nder Regierung seit jeher seit seit Beginn dieses Skandals vorwerfen und wie völlig locker der Typ irgendwie locker flockig von fünfhundert Millionen Kommunikationen redet, die die\ndie die Bundesregierung mit der NSA geteilt hat. Ja, das waren aber keine Deutschen. Was soll denn sonst gewesen sein?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:48",
+      "text": "Ist auch nicht bei Bundesbürgern abgeschöpft worden, sondern die wurden vom BND in Bad Aimling abge äh Bad Aiblingen was hat der abgefangen.\nHat er abgefangen gesagt?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:59",
+      "text": "Ich hab's jetzt leider nicht genommen. Abgedingst.\nAlso wie lockert der Typ."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:07",
+      "text": "Aber was für Kommunikationen das ist, sagt er auch nicht. Und das äh fand ich auch sehr interessant. Da hatten wir auch eigene Erkenntnisse,\nAlso offensichtlich mangelt es an eigenen Erkenntnissen äh in dieser ganzen Geschichte, dass es auch offenbar ja ähm,\nIst völlig absurd. Also was diese fünfhundert Kommunikationen jetzt tatsächlich sind, bleibt offen. Äh fünfhundert Millionen äh Kommunikation, auch eine schöne Einheit. Ähm was es ist, bleibt äh unklar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:35",
+      "text": "Also um das mal kurz ins Verhältnis zu rücken, wie völlig locker der von fünfhundert Millionen Kommunikationen redet und was für ein was für ein Bohei gemacht wird, das sind eine, der wie gesagt, die,\ndie mächtigste Politikerin Europas, die einflussreichste Politikerin Europas, dass die völlig überraschenderweise ähm,\nZiel von Spionage ist, ja, da wird jetzt ein riesen Bohei drum gemacht. Das zeigt einfach, also das zeigt, dieses Denken dieser Regierung da und da,\nDas ist ja äh wie gesagt, ich hatte es ganz am Anfang gesagt. Genauso wird's sein. Und genau so verhalten die sich. Es sind diese Massenüberwachung ist für die völlig okay. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:14",
+      "text": "Vielleicht nochmal ein Detail, was wir, glaube ich, noch nicht so erwähnt haben, was ich aber selber nur, weiß ich, hier nicht ganz sicher weiß, aber soweit ich das mitbekommen habe, diese Information, das Merkel abgehört wurde, ist jetzt nicht,\ngewesen, sondern kam tatsächlich aus dem Regierungslager,\nSelbst, wo sozusagen präventiv die Öffentlichkeit äh gesucht wurde oder habe ich da was falsch mitbekommen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:45",
+      "text": "Ähm das geht jetzt erstmal nicht. Die also es gibt ja dieses diesen Teil von Snowden,\nAlso dieses Dokument, wo dann so steht, GE, Chenzler, Angela Merkel, auf diese dieser Teil des Scans von der Zielpersonenliste. Aber äh auch ich habe das so verstanden, dass die,\nUrsprungsinformation dann wohl von der, von der Bundesregierung selber angegangen wurde und das kann, denke ich, durchaus als so eine Flucht nach vorne auch ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:10",
+      "text": "Ja genau, so und ich meine diese Unterstellung, dass die jetzt nicht wissen, was sie tun, ja, also ich habe ihr so das den gegenteiligen Eindruck dadurch,\nJa, dass sie sehr wohl jetzt wussten, dass sie jetzt nicht mehr im Eierpofalla-Modus äh fahren können. Ja,\nAuf einmal stimmt auch alles nicht mehr, was man äh gesagt hat und das wird ja alles nur fehlen interpretiert, sondern jetzt muss man irgendwie selber Stellung beziehen und jetzt schalten wir einfach mal auf Empörung um, weil jetzt haben wir ja einen Grund."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:41",
+      "text": "Ja und können trotzdem nix machen, ne? Also, weil ich meine, was, okay, dann, was was war denn jetzt die Reaktion? So, erstmal ja, wir müssen jetzt prüfen, müssen wir gucken und müssen jetzt sagen, geht gar nicht, hört damit auf, ja? Ähm Friedrich will,\nDie Leute ausweisen, die das machen. Das ist irgendwie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:59",
+      "text": "US-Botschafter einbestellt. Du sogar Guido Westerwelle hatte noch was zu tun."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:02",
+      "text": "Guido Westerwelle hat hat den US-Botschafter einbestellt. Nach fünf Monaten, ich bitte dich. Und und Friedrich,\noder oder wie viele Monate das jetzt sind. Und und Friedrich sagt, er will die Personen, die das waren, ausweisen. Das komischerweise immer der erste Gedanke, den die Politiker aus Bayern haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:20",
+      "text": "Ja, das hat er gesagt. Haus?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:22",
+      "text": "Ja natürlich, müssen wir ausweisen, wenn die hier spionieren, müssen wir die ausweisen.\nUnd wenn die auf unserer Autobahn fahren, dann müssen wir den Maut abnehmen, weil die uns die Straßen kaputt fahren und die Parkplätze weg."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:32",
+      "text": "Genau, ich sehe schon, wie sie hier wirklich so die die die Mitarbeiter der US-Botschafter der Gliederbrücke übergehe ich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:41",
+      "text": "Es ist äh ist äh wir müssen da, glaube ich, jetzt auf das Detail gar nicht eingehen. Ähm.\nWas jetzt das bedeutet, dass das eine Botschaft ist und dass sie da natürlich die deutsche ähm,\nSpionageabwehr oder Polizei nicht so einfach rein darf, weil's eben eine Botschaft ist und so und das geschützte Territorium, gleichzeitig aber aus dieser Botschaft natürlich ein\neine Straftat gegangen wird, denn Handys abhören ist in Deutschland verboten, wenn man nicht selber die Regierung ist oder die Strafverfolgungsbehörden,\nAber ich meine, natürlich ist das ein starkes Stück,\nEine Botschaft das macht, aber das war auch nie ein Geheimnis. Das war nie ein Geheimnis, dass Botschaften eine ganze Menge an Tennen auf ihr Dach kleben. Und wir erinnern uns ähm an Fall vor mehreren Wochen,\ndenke ich, in Frankfurt an dem Konsulat,\nder Verfassungsschutz oder so was äh oder oder äh irgendwie auf jeden Fall sind die mit einem Hubschrauber na."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:45",
+      "text": "Überflug. Mhm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:46",
+      "text": "Dran vorbeigeflogen, da haben die Amerikaner sich irgendwie tierisch drüber aufgeregt. Und es ist, sorry, es ist wirklich keine Neuigkeit, dass Botschaften benutzt werden,\num da mal eine größere äh paar Amateurfunker und Park äh Kryptographen irgendwie drin äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:02",
+      "text": "Ja und wenn man da hochauflösende Fotos von haben will, dann schickt man da bestimmt keinen Hubschrauber hin."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:08",
+      "text": "Ja, ich habe keine Ahnung. Also äh wie gesagt, der der Punkt ist einfach, Botschaften machen das und Botschaften machen das überall."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:17",
+      "text": "Sich hier nur die chinesische Botschaft in Berlin anschauen, also die strotzt geradezu nur vor äh moderner TK-Technik und ich glaube nicht, dass sie da gerade eine eine Ausstellung von äh Technik äh vorhaben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:30",
+      "text": "Nein, natürlich nicht. Also, Botschaften sind,\nwerden auch zur Spionage genutzt und da ist die US-Botschaft in Deutschland mit Sicherheit keine Ausnahme, sondern ganz im Gegenteil. Eher der absolute Regelfall. Es gab ja dann auch die äh Griechen, die sagten, ja,\nWir äh überwachen übrigens die US-Botschaft bei uns im Land und ähm ich finde das schon immer ganz amüsant, wenn der Botschafter mich Arschloch nennt, aber ja, so ist das halt, ne. Ähm,\ndas war jetzt, ich sage jetzt mal, auch eine souveräne äh Möglichkeit, damit umzugehen. Ähm kommen wir mal zu dem zu dem Handy abhören selber,\nUnd zwar äh ist es ja so, man fragt sich jetzt so die Kanzlerin hat seit vielen Jahren offensichtlich ein Kryptohandy.\nUnd benutzt das nicht. Das betroffene Handy war ja jetzt ihr äh privat beziehungsweise Parteihandy,\nJa und das war also so, dass die, dass die Bundesregierung vor ein paar Jahren,\nIm Rahmen eines Konjunkturpaketes dann irgendwie Deutschland entwickelt ähm Krypto-Handys\nangeschafft hat. Eine geringe Anzahl davon zu äh hohen Stückpreisen\ndie dann leider äh spätestens mit dem Aufkommen der der Smartphones und deren äh derer Funktionalitäten einfach nicht mehr dem Anspruch genügten, den,\nihre Nutzer an ihre Mobiltelefone stellten in Form in im Bereich des Funktionsumfangs, ja? Also ähm das hat auch einen guten Grund,\nwenn ich also einer wenn ich also jetzt ein ein Handy habe, was übers Datennetzwerk verschlüsselt kommuniziert.\nSendet verschlüsselte Pakete ab und gehen wir mal davon aus, die Krypto ist vernünftig implementiert und so. Dann äh ist es,\nsehr viel schwieriger, bis eventuell sogar nicht möglich. Dieses Handy passiv abzuhören.\nJa? Gehen wir mal davon aus, dass das der Fall ist. So. Was mache ich als Angreifer als Nächstes? Ich muss\nüberlegen, wo ich ein das das Signale, das was die Menschen sagen, unverschlüsselt abgreifen kann. Und das ist dann auf dem Gerät selber,\nJa, Stichwort QuellentKÜ, genau deshalb hat ja die deutsche äh da haben die deutschen äh Dienste und straffer Volksbehörden. Ja, Staatstrojaner anfertigen lassen, um\ndie Kommunikation am, an ihrer Quelle, da dort wo sie entsteht, abzuhören. Und genau das ist natürlich auch der Fall, wenn ich jetzt Angela Merkel sagen würde, installiere doch mal hier, was weiß ich, Silent Circle auf deinem iPhone.\nAlso oder jede andere App, äh die äh in der Lage ist, äh verschlüsselt übers Datennetzwerk äh T,\näh Voice zu machen. Redfan gibt's eh XX Möglichkeiten für relativ kleines Geld. In dem Moment wird das Handy selber zum Ziel,\nUnd deswegen sind,\nernstzunehmende Kryptohandys, nicht nur dadurch gekennzeichnet, dass sie ähm, dass sie eine vernünftige Korruptur implementieren, sondern auch dadurch, dass sie einen Großteil der Zeit äh darauf für aufwenden, dass Betriebssystem zu härten,\nauf dem Handy selber. Und ähm in dem Moment, wo ich sage, das ist jetzt ein Kryptohandy, dann kann ich eben nicht zulassen, dass irgendwie äh aus allen möglichen Quellen, insbesondere aus US-amerikanischen Quellen, einfach mal Apps\nauf so einem Gerät installiert werden können. Und dadurch ergibt sich der eingeschränkte Funktionsumfang von solchen Kryptohandies.\nÄhm anderes Problem dabei ist, dass diese Handys dann äh Ende zu Ende Verschlüsselung machen,\nDas heißt, äh der ganze Spaß funktioniert auch nur so lange, wie die Gegenstelle, auch so ein Krypto-Handy hat.\nMacht ja auch keinen Sinn. Warum sollte ich mit meinem Krypto-Handy jemanden anrufen, wendet nur die Hälfte der Strecke verschlüsselt ist und die die andere Person dann eben abgehört werden kann, ja?\nDas heißt, ähm also ein ernstzunehmendes Kryptohandy muss auch eine vernünftige Softwarehärtung haben\nfür eine Privatperson sind da durchaus solche, solche Apps, die man sich irgendwie aufs iPhone oder aufs Android laden kann, erstmal eine sicherlich eine sehr gangbare Alternative, vor allem wenn man sich überlegt, wie einfach Handys abgehört werden können.\nDas habe ich ja, wie du schon mehrmals du hast jetzt gerade schon mehrmals darauf angesprochen,\nAh nee, fangen wir mal anders an. Am Montag wurde getitelt in der Bild-Zeitung, also Schlagzeile,\nSeite eins, so einfach kann jeder äh ihr Handy abhören,\nDa war ein mir nicht bekannter IT-Sicherheitsexperte,\nder äh da sich hat, fotografieren lassen mit einem alten Motorola-Telefon, einem USB-Kabel und seinem Computer und dann sagte er hätte mit diesem Computer ähm.\nSeine, also er hätte damit dein Handy abgehört. Das ist, war für mich etwas überraschend, weil,\nDie Technik, die er da genutzt hat, von dem Team entwickelt wurde, in dem ich auch arbeite und ähm,\nzumindest mit einem, nur einem Motorroller Telefon am Computer angeschlossen, sich die Wahrscheinlichkeit, dass man erfolgreich ein Telefonat abhört, doch sehr stark verringert.\nWenn man keine vorheriges Wissen über das Zieltelefon hat,\nliegt daran, dass das Telefon in verschiedenen Zellen eingebucht sein kann, auf verschiedenen Frequenzen und mit einem modifizierten Motorola-Telefon kann ich immer nur eine Zelle, eine Frequenz überwachen,\nDas heißt, wenn ich damit einen gezielten Abhörangriff demonstrieren will, muss ich schon mal vor wissen über ähm,\nüber mein Zieltelefon haben, zum Beispiel in welcher Zelle ist es? Äh auf welchem hängt's und so weiter, ja? Ähm insofern.\nRadio Frequenz ah warte, ARFQN. RF steht für Radios Frequency.\nÄh zehn. So, meine Güte, jetzt absolut Radio Frequency Channel haben wir. Also eine ein Kanal, also eine eine Funkfrequenz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:50",
+      "text": "Okay. Mhm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:52",
+      "text": "Ähm das muss man alles einstellen und wenn man also wie gesagt so ich ich habe mal den die leise Vermutung, dass es dem Mann eventuell."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:04",
+      "text": "Wirklich gelungen ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:05",
+      "text": "Nicht so wirklich gelungen ist, was abzu."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:07",
+      "text": "Also eigentlich braucht man so ein so ein so ein so einen Blumenstrauß von äh Handys und jedes äh Lausch so auf einem Kanal und dann hat man Software, die das dahinten immer oder weniger in Echtzeit zusammenführt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:16",
+      "text": "Genau. Also wir haben das, äh es war gestern bei Stern TV zu sehen, da haben wir das mal für die Leute da gemacht. Und zwar sind wir dann am Montag auch im haben wir uns neben den Bundestag gestellt und haben da Handys abgehört."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:30",
+      "text": "Von Politikern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:31",
+      "text": "Nee, wir haben äh von ähm von zwei so gecasteten Mädels dann da ein Telefonat abgehört\nUnd wir hatten die, das Problem, dass da am Bundestag waren, er war erstens Mal sehr viel los, da wurden sehr viele Telefonate geführt, das hat uns ein bisschen Schwierigkeiten gemacht so, dann die richtigen rauszufiltern,\nUnd außerdem gab's da so von jedem Netzwerk so sechs Zellen. Und wir haben letztendlich Erfolg gehabt, dadurch, dass wir,\ninsgesamt zwölf Telefone benutzt haben, sodass wir einfach auf jeden auf den Zellen jeweils auf dem,\nGrundkanal, also es gibt quasi so den Rufkanal, jede Zeller, zu dem Rufkanal, auf dem alle Telefone hören und dann wird dieser, wenn dann jetzt ein Anruf kommt, dann sagt sie, hey, hallo, hier Telefon sound so. Ähm,\nHier ist ein Anruf für dich. Komm doch mal auf den anderen Kanal,\nund dann handeln sie da eine Krypto aus und dann fangen sie an, die ganze Zeit äh Frequenzen zu springen. In einer.\nIn einer vorhersagbaren, aber nicht wirklich mit hundertprozentiger Sicherheit vorhersagbaren,\nSprungdauer. Und deswegen muss man,\nAm Anfang direkt quasi innerhalb der ersten zwei Sekunden den Schlüssel knacken, um dann direkt noch mitzubekommen, auf welche ähm Sprungsequenz von den Frequenzen sich die Zelle mit dem Handy einigt, um dann zu folgen. Und dieser ganze,\nDieser ganze Vorgang ist einfach enorm dadurch erleichtert, wenn du mit mehreren Handys einfach auf verschiedenen Kanälen schon hören kannst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:02",
+      "text": "Hm, ich muss es einfach immer nur nachführen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:05",
+      "text": "Genau, beziehungsweise, es ist sogar noch einfacher, wenn man, und das ist dann so, wenn man diesen Angriff jetzt auf die, auf das Niveau eines Geheimdienstes hebt, wenn man einfach grundsätzlich alle GSM-Frequenzen mithört.\nUnd das ist eher das, was dann so ein ähm was dann so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:23",
+      "text": "Angriff machen würde, der hört halt einfach alles ab. Einfach alles immer die ganze Zeit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:27",
+      "text": "Und dann auf äh auf Bedarf Interesse, Nachfrage oder so, kann man dann jeden, jedes Telefon hat daraus äh ähm auch im Nachhinein wieder entschlüsseln,\nwährend das nicht geht, wenn du nicht die wenn du nicht alle Frequenzen auf denen das Telefonat führst, auch zu dem richtigen Zeitpunkt immer mitschneidest.\nDas haben wir äh auf jeden Fall demonstriert bei Stern TV kann man sich auch irgendwie online noch angucken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:53",
+      "text": "Und viel Werbung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:54",
+      "text": "Und was mich da sehr geärgert hat, war, dass äh äh eben dann,\ndieser Angriff, eine eine Entwicklung ist von, wie gesagt, im Team, in dem ich arbeite. Ähm,\nund quasi auch von uns veröffentlicht wurde. Das heißt, wir sind nicht die Ersten oder ich gehe nicht davon aus, dass wir die ersten sind, die es geschafft haben, GSM abzuhören\nAber äh immerhin, denke ich, kann man sich rühmen, dass wir die Ersten sind, die diese Fähigkeit erlangt haben und publik gemacht haben und ähm\nklare Hinweise zur kryptographischen Verbesserung des GSM Netzes gegeben haben. Und wir haben eine Liste veröffentlicht und gesagt, das, das, das und das müsst ihr machen, um diesen Angriff äh stark zu erschweren, bis unmöglich zu machen.\nUnd äh wie gesagt, ich gehe eigentlich davon aus, dass das jetzt Geheimdienste und äh Überwachungsgeräthersteller schon sehr, sehr viel länger können. Aber ähm,\nIch war trotzdem ein bisschen verärgert, dass ich dann da mehr oder weniger als so ein Student, der sich eine Software aus dem Internet runtergeladen hat, dargestellt wurde, obwohl ich eher der Typ bin,\nobwohl wir, Luka und ich, eher die sind, die die Software ins Internet gestellt haben. Das äh hat mich ziemlich geärgert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:05",
+      "text": "Tja, diesem Ärger haben wir jetzt hier einen Ausdruck verliehen. Und wir prallen das an und finden das nicht gut und äh sprechen ein scharfes, äh scharfes, vehementes, du, du, du du aus in etwa so, wie es die Bundesregierung tut, wenn sie abgehört wird und das nicht gut findet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:19",
+      "text": "Ja, man muss sich äh keine Ahnung, wenn man sich auf so einen, ich ich habe halt äh seit zweitausendeins keinen oder seit ich habe nie einen Fernseher besessen und als ich zweitausend und zweitausendeins die USA verlassen habe, seitdem er ja auch kein Fernsehen mehr gesehen nennenswert\nUnd ich habe äh war ein bisschen nicht darauf vorbereitet, wie äh wenig die,\nwenn ich dann so gesagt habe, ey Jungs, guck mal hier, ist schon ein relativ komplizierter Aufbau, den wir hier machen und die nur so ja, ja, ja, ja, alles ganz einfach, ganz einfach. Und jetzt hier kann man einfach alles abhören, ne? Zeig mal, wie einfach das geht. Äh und das, naja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:52",
+      "text": "Ja, muss halt ein bisschen äh in der Logik eines Produktionsteams äh denken. Die macht sich nur darüber Gedanken, ob sie da irgendwie genug Hacker mit Maske und schwarzen T-Shirts irgendwie an Start kriegen. Ja, schwarzer Bus, schwarze Shirts, alles stimmt so?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:05",
+      "text": "Aber letztendlich, ich meine, letztendlich haben sie Recht. Das ist ja auch nur so ein bisschen gekränkter stolz jetzt von von mir. Ähm letztendlich ist es so, mit mit geringem Aufwand äh kann man jetzt GSM auf jeden Fall abhören. Und bei 3G und 4G ähm\nist es, glaube ich, auch nur noch eine\nKurze Frage der Zeit, bis die öffentliche Research-Community soweit ist. Da äh publizieren zu können. Und man kann also davon ausgehen, dass äh,\ndas jetzt, sage ich mal, geheimdienstliche und dunkle Seiten der Macht, das schon sehr viel länger äh erfolgreich machen. Ich will noch ganz kurz was zu Krypto für uns sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:40",
+      "text": "Ja, sag mal was zu."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:41",
+      "text": "Ich in letzter Zeit also ich habe jetzt die letzten Tage die ganze Zeit mit äh,\nJournalisten gesprochen und denen erklärt und so, ne, wie das funktioniert und wie man sich dagegen wehren kann. Also für eine Privatperson ähm,\nreicht auf jeden Fall so eine, so eine Krypto-Telefon-App, die man da irgendwie benutzen kann oder so Krypto Messenger gibt's ja ganz viele. Äh von unterschiedlichen Implementierungsguten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:03",
+      "text": "Kenne überhaupt gar keine ordentliche Krypto-Telefonie ab."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:07",
+      "text": "Silent Circle, Red Phone, das sind so die, die mir da als erstes einfallen,\nmachen äh ZRTP, also eine Real, wie heißt das, was wofür steht noch mal RTP? Real Time."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:19",
+      "text": "Protokoll."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:20",
+      "text": "Ja genau, also äh im Prinzip Voice over IP mit einer speziellen äh of Voice, äh getrimmten Krypto oben drüber. Und ZP ist eine Entwicklung, an der maßgeblich,\nder gute Phil Zimmermann beteiligt war, der uns ja auch schon den Segen des äh PGP gegeben hat,\nUnd ähnliche Applikationen, also das ist schon mal auf jeden Fall eine ganz äh eine deutliche Erschwerung des Angriffs, vor allem weil der äh Datenteil ein bisschen schwieriger abzuhören ist, als der als der Voice und SMS Teil,\nÄhm die Frage ist warum nicht einfach unter die wurde mir eben häufiger gestellt. Ähm.\nWarum ist das eigentlich so kompliziert mit den Kryptofoden? Der erste Punkt ist klar, Sie müssen,\nSollten speziell gehärtet sein, wenn man sie als ernsthaft sicher verkauft. Aber jetzt mal als Grundniveau um das Grundrauschen zu erhöhen, könnte man ja einfach in jedes Telefon,\nZRTP einbauen und die Telefone telefonieren da einfach verschlüsselt übers Datennetzwerk wäre jetzt eigentlich kein Problem. Was ich als App für das Telefon runterladen kann, kann ich ja genauso gut im Auslieferungszustand ins Betriebssystem integrieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:34",
+      "text": "Könnte man."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:35",
+      "text": "So und dann war die Frage, warum eigentlich nicht? Und äh die Antwort, die ich dazu geben würde, ist, erstens, ähm hat der Staat da was gegen, weil er dann nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:44",
+      "text": "Dann kann man ja nicht mehr abhören."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:45",
+      "text": "Kann man die nicht mehr abhören. Und wir haben ja leider die Erfahrung gemacht, dass sie starten, das sieht man ja bei den bei den Krypto äh bei der Krypto-Sabotage, die da offensichtlich auf die NSA zurückgeführt wird, dass dem Staat, dass der Staat lieber in Kauf nimmt, dass\neventuell auch andere Geheimdienste, die Bürger abhören können, als in Kauf zu nehmen, dass er selber es nicht kann.\nUnd das heißt, der Staat hat natürlich was dagegen, weil dann dieses gesamte Modell irgendwie in den Keller geht und ähm auf einmal alle Kriminellen ähm und alle anderen Personen, die man so überwacht,\nverschlüsselt kommunizieren und man das Problem hat, wie kriegen wir die jetzt? Wie kriegen wir die jetzt abgehört?\nDie Netzbetreiber haben keinen Bock dadrauf, weil sie gut daran verdienen, dir irgendwie vierzig Zentiminute in Rechnung zu stellen, wenn du aus dem Volumen deines iPhone-Tarifs rauskletterst.\nJa? Und sperren ja ohnehin äh Voice over IP, weil sie das als starke Bedrohung ihres Geschäftsmodells sehen. Das heißt, die die Netzbetreiber haben keinen Bock dadrauf. Und die Hersteller,\nwenn wir uns jetzt mal umschauen, haben vor allem großes Interesse an geschlossenen Standards, die die Leute auf der Plattform einschließen. Das heißt, an einem offenen äh Kryptotelefonat Standard jetzt einfach ZRTP. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:11",
+      "text": "Hat eigentlich fast keiner."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:12",
+      "text": "Keiner Interesse. Hat Apple kein Interesse?\nWeil sie sagen, ey, wir wollen lieber hier Facetime machen und das, da machen wir ein proportäres Protokoll, damit nicht äh irgendwie einer hingeht, eine Android-App macht die auch äh Facetime kann. Weil wir wollen Facetime als Feature\nunserer Plattform verkaufen. Und nicht als ein als ein Feature, das zur zu nennenswerten, sage ich mal, Verbesserung der äh der Sicherheit beiträgt.\nUnd die so und dadurch wird es so kompliziert,\nVerschlüsselt zu telefonieren, weil es eben keinen Standard gibt. Wenn man sich einfach auf einen Standard einigen würde und alle den ähm alle den einhalten würden,\nWie jetzt zum Beispiel und deswegen sind im Moment halt meines Erachtens, sage ich mal, für den,\nfür den Otto Normalbürger diese Kryptotelefonie Apps äh durchaus äh die ähm.\nDie beste Möglichkeit, ja, im Vergleich jetzt zu natürlich bei besonderem Schutzbedarf natürlich äh entsprechende Kryptofonds, ja.\nUnd vor dem Hintergrund muss man, denke ich, auch der Kanzlerin ankreiden, dass sie das Ding nicht nutzt. So\ndie Meldungen sind ja erst ein paar Wochen alt, dass äh die neu entwickelten äh Merkel vor uns dann hier von den äh Sachsen, da\nÄhm und von der Telekom.\nKanzlerin nicht, weil irgendwie eingeschränkt, ne? Konnte man irgendwie nicht schnell genug ein lustiges Foto mit auf Facebook posten oder so.\nGenau also\nAber ich denke in einem ab einem gewissen Schutzbereich äh ist ist das eben, also wenn man's ernst meint mit der und wirklich, sage ich mal, einen Anhaltspunkt hat, dass man überwacht wird, kommt man um um dieses Sicherheitsniveau nicht\näh herum für einen Normalbürger, denke ich mal, wäre wäre gut geholfen, wenn man jetzt einfach mal sagt, okay, zack hier."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:10",
+      "text": "Schusssichere Weste, wiegt auch ein bisschen was."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:13",
+      "text": "Ja. Aber so grundsätzlich diese diese Telefonie die haben natürlich auch allen Ärger, ne. Dann hast du irgendwo kein Datennetz, dann funktionieren die nicht. Und und so weiter, aber."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:24",
+      "text": "Ja, man hätte ja mal gleich das Netz schon äh halbwegs abhärten können, aber da hat ja keiner ein Interesse daran. Also da beißt sich die Katze auch ein bisschen in den Schwanz. Ich finde das in der Hinsicht ganz interessant, das auch immer mal wieder zu betonen, ne.\nNicht, dass jetzt vor zwanzig Jahren sich die Leute da fehlt, Gedanken drüber gemacht hätten, aber äh es ist ja vollkommen offensichtlich, dass unsere derzeitigen digitalen Telefonnetze\nerhebliche Menge haben. Du hast das ja eben auch ausführlich schon äh dargestellt und wir haben das auch schon mal hier im CRE hundertneunundsiebzig, wer das noch nicht,\ngehört hat, ging's ja um GSM äh Security und Detail und da ist ja auch schon das ein oder andere angesprochen worden, was dann später mal äh fallen könnte, was dann mittlerweile auch äh gefallen ist.\nUnd ähm es macht\ngrad nicht so den Eindruck, als ob man jetzt mit so Ländern wie Saudi Arabien äh den USA\nmittlerweile auch halt und äh was weiß ich, Israel, Russland und so, sich auf einen internationalen Kryptostandard einigen kann für für die Telefonie,\nJa, aber irgendwas, irgendwas wird sich ohnehin entwickeln und es ist halt auch mal wieder so, die Leute, die sich schützen wollen wirklich, die haben auch die Chance dazu,\nSich so ein bisschen das Thema annehmen. Ja und alle anderen, die eigentlich nichts zu verbergen haben, die werden dann halt auch die ganze Zeit ausgefragt. Und verdächtig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:45:49",
+      "text": "Das ist, so ist es, also ja so sieht's aus. Wer's also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:56",
+      "text": "So sieht's aus. Na gut, wollen wir ein bisschen äh voranschreiten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:02",
+      "text": "Ja, genau. Ähm Frankreich,\nDie Frankreich-Sache hat sich ja schön weiterentwickelt. Da habe ich ja letzte Woche schon gesagt, na ja, da ging's um diese Zahl von den siebzig Millionen Datensätzen, die da innerhalb eines äh einmonatigen Zeitraums rausgekratzt wurden. Ähm.\nUnd ich habe ja schon damals die Vermutung geäußert, letzte Woche, dass ich sagte, so, na ja, so diese Datenmenge kriegst du da im Zweifelsfall nicht rausgepult, ohne dass es jemand mitkriegt. Und ähm,\nSagt ihr auch dann gestern oder vorgestern sagten dann die NSA Vorderen in einem in einer Anhörung, also erstens Mal,\ndiese Kommunikationsüberwachung ist natürlich üblich, das macht jeder andere auch. Haben sie mit recht?\nUnd zweitens sagen sie, naja, die in Frankreich, Spanien und Italien, gesammelten Daten stammen nicht allein von der NSA, sondern auch von ausländischen ähm Partnern. Ähm,\nInsbesondere sollen Frankreich und Spanien die Datensätze selber gesammelt haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:05",
+      "text": "Mhm. Toll, das heißt, die Franzosen regen sich darüber auf, dass sie selbst Daten gesammelt haben, die sie dann an die NSA übergeben haben oder die haben sich die klauen lassen oder was?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:47:17",
+      "text": "So sieht es jetzt gerade aus. Also das ist ähm also,\nDie Frage ist, also was wie sie immer versuchen, sich rauszureden. Der Ball wird jetzt gerade immer so gespielt. Die NSA sagt, das haben die siebzig Millionen Datensätze aus Frankreich,\nWir haben nicht in Frankreich spioniert. Die haben wir von den Franzosen. Und um das Gesicht der Franzosen zu wahren, sagen sie dann aber,\nDas betrifft natürlich keine französischen Bürger, weil die Franzosen dürfen ihre Bürger gar nicht überwachen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:46",
+      "text": "Die Franzosen dürfen ihre Bürger gar nicht überfahren. Wahrscheinlich haben sie die französischen Daten haben sie vom BND und die Deutschen von den Franzosen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:47:52",
+      "text": "Genauso sieht's aus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:54",
+      "text": "Ist doch echt geil, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:47:56",
+      "text": "Also letztendlich würde ich sagen, dass es am Ende."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:56",
+      "text": "Hören sich sozusagen gegenseitig ab, damit keiner behaupten kann, er hätte seine eigenen Leute abge äh hört. Ja, wir haben ja da Punkt DE rausgefiltert und so. Und äh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:09",
+      "text": "Also so so sieht's grade aus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:10",
+      "text": "Also es ist so lächerlich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:13",
+      "text": "Was sie fürchten das hat jetzt eine fürchterliche Entwicklung. Das hat eine fürchterliche Komponente die sich schon seit einiger Zeit abzeichnet.\nEs wird unübersichtlich,\nEs wird unübersichtlich in dieser ganzen Angelegenheit. Man weiß nicht mehr, wer jetzt genau was abhört und was jetzt wie die USA worauf Zugriff haben oder wo worauf auch nicht.\nUnd ähm kommen wir gleich auch nochmal zu einer Meldung. So, es wird ziemlich unübersichtlich, wer jetzt genau wen überwacht, mit welchen Methoden. Und ähm,\nsitzt tatsächlich der Fall ist, dass die NSA Recht hat, mit ihrer Unterstellung, dass diese Leonde Veröffentlichung.\nNicht den Tatsachen entsprechen, dass sie also sagen, hey, da haben die die Folien falsch verstanden. Ähm nämlich,\nwas weiß ich, die französischen Datensätze sind eigentlich aus Afghanistan und sind von den oder sonst was. Oder wenn sie's auch nicht falsch verstanden haben, die NSA das nur schafft, das zu behaupten oder den Eindruck zu vermitteln, dann wird's wackelig\nweil so lange so dieses gesamte Gerüst,\nSnowden Enthüllung steht ohnehin nur so auf diesen auf diesem PowerPoint Folien Veröffentlichung und das geht aus Dokumenten von Snowden hervor,\nUnd wenn das jetzt den den USA und auch den anderen ähm Arschkriechern gelingt, das als äh,\nHier sehe ich irgendwie, also zu hören, sagen irgendwie zu diffamieren oder zu diskreditieren. Oder da auch nur ein einziger Journalist einmal einen Fehler macht und tatsächlich\n'ne falsche Schlussfolgerung zieht. Dann sind wir dabei mit der ganzen Sache hier,\nohne äh nennenswerte Konsequenzen bald durch zu sein,\nUnd da sehe ich in letzter Zeit echt äh wird mir das ein bisschen zu viel äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:10",
+      "text": "Das wäre natürlich eine klassische Abwehrmaßnahme, äh ausm Lehrbuch, ja, also wenn du unter äh Attacke stehst in so einem Informationskrieg, dann äh versuch's halt auch einfach mal mit Nebelkerzen und äh wenn du\nden Eindruck ähm ja wehren kannst, wenn zu viele Berichte über die Wahrheit da sind, dass du ähm bist halt einfach,\nAlso wenn du dann behaupten kannst, na ja, also das und das und das, das hat ja nicht gestimmt und hier sind noch sehr viel mehr verwirrender äh Informationen, ja und dann liegst du vielleicht noch selber irgendwas, was so gar nicht so stimmt, aber irgendwie genauso offiziell aussieht, dann,\nuns dann widerlegen kannst, so dann hast du halt auch schnell den Eindruck, ähm.\nErzeugt, dass dass man nichts mehr trauen kann und das kann hier natürlich passieren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:51:00",
+      "text": "Ja und da finde ich dann solche Äußerungen wie die von Frankreich, dass die sagen, ey neues Programm, wir wollen in der Wirtschaftsspionage besser sein als die USA\noder die Griechen, die sagen was die bei uns, was die bei uns in der äh Botschaft hören, das wissen wir sowieso, äh solche äh Äußerungen finde ich dann erfrischend. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:21",
+      "text": "Ja, aber ist auch interessant zu sehen, dass äh\nnicht so die Empörung da ist, so oh Gott, ihr habt uns abgehört, lasst das mal bitte sein, weil wir wollen ja hier äh friedlich miteinander äh koexistieren, ja? So, nee, so, au, so weit seid ihr schon bei der Wirtschaftsspionage, da müssen wir jetzt nochmal aufrüsten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:51:37",
+      "text": "Ja ja, das ist das ist echt der die die unterschwellige Message hier, ja. Das also die USA sich eigentlich nur so ein bisschen\nbisschen aufräumen müssen in Hinsicht, dass sie irgendwie die Rechte ihrer eigenen Bürger waren und sonst haben sie da keine großartigen Probleme, sondern kriegen gerade echt mal Credity bei ihrem Geheimdienst Homies, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:58",
+      "text": "Also im Prinzip haben wir es hier mit einer Rüstungsspirale zu tun,\nund was früher halt in Form von richtigen Waffen getätigt wurde, wo äh ja schweres Geschütz, später dann äh,\nSchwierige Waffen, Wasserstoffbomben, Atombomben et cetera, Sprengraketen\nähm Marschflugkörper und äh Langstreckenraketen und all diese ganzen Bedrohungsszenarien der achtziger und neunziger Jahre waren, dass es heute halt\nÜberwachung und natürlich auch äh in gewisser Hinsicht der Vollelektronisierte Drohnenkrieg,\nJa, wird nicht mehr so lange dauern und äh uns irren die Köpfe, ja? Und dann ist irgendwie fleißiges äh Drohnenschießen angesagt, also,\nLeute, die vielleicht jüngst beim,\nTauben schießen sich äh etwas hintergangen. Fühlten könnten demnächst wieder ungeahnte Betätigungsfelder erschließen, wenn sie irgendwann mal so viel Drohnen durch die äh Geschichte fliegen, dass dann einfach mal äh ein bisschen Public Take Out gespielt wird."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:02",
+      "text": "Ja, da wird aber dann auch von der anderen Seite Publictade Code gespielt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:06",
+      "text": "Ja ja klar, das wird dann einfach gegenseitig irgendwie abgeschossen. Die Drohnen ballern sich gegen, also mir geht's jetzt nicht nur um die Drohnen. Das ist findet ja im Prinzip im Internet auf dieselbe Art und Weise äh statt. Attacken, gegen Attacken\nDedos äh et cetera. Das ist halt einfach alles nicht schön, ja? Im Prinzip ist das so eine Art äh digitaler, kalter Krieg."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:26",
+      "text": "Ja, in dem in dem befinden wir uns in der aber das ist auch genau meine das ist das äh sagen wir immer Cyber, die machen unsere Infrastruktur kaputt. Diese Interpretation von Cyberware halte ich ja äh habe ich, glaube ich, auch schon öfter gesagt. Das halte ich für ziemlich bescheuert. Der ist ein kalter Krieg\nSo, das ist das, irgendwo leise reinkriechen und bei Belger kommen drin hängen, das ist die, die Telefonate abhören, das ist das Kontrollieren,\nso Fälle wie die ähm wie die Sabotage äh von durch durch ähm,\nStucks net. Das werden eher seltene Fälle bleiben. Die äh der Cyberware ist wird besser gespielt und besser gewonnen, wenn die anderen nicht merken, dass du die Waffe grade eingesetzt hast und sie dadurch weiterhin einsetzen kannst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:11",
+      "text": "Gut, jetzt haben wir aber genug äh hier Verschwörungen analysiert, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:54:19",
+      "text": "Äh weiß ich nicht. Ich weiß ja nicht, was was heute noch veröffentlicht wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:24",
+      "text": "Naja gut, also das das Thema wird."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:54:26",
+      "text": "Finden die raus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:27",
+      "text": "Die Agenda kommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:54:28",
+      "text": "Finden alles raus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:28",
+      "text": "Aber lass uns mal äh weitermachen. Gehen wir nach,\nDeutschland und schauen wir mal, wie hier äh sich in unserem kleinen Krieg hier zum gesellschaftlichen Kleinkrieg die äh Lage verbessert. Ja, wir haben schon gestern äh bei der Friedshow ein bisschen gefeiert,\nClemens Telekom, zwei Punkt zwei zu null."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:54:53",
+      "text": "Ja, die äh wir hatten das, glaube ich, kurz erwähnt, dass die Verbraucherzentrale Bundesverband\nder Verbraucherzentrale Bundesverband die, ich weiß immer nicht was da, was sie da gerne möchten, machen wir mal die generische Femininum vom Landgericht Köln,\nhaben sie ja geklagt gegen äh die unangemessene Benachteiligung und die den äh Verbrauchern dadurch entsteht, dass äh ihnen eine Drosselklausel mit in die,\nallgemein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:21",
+      "text": "Reingeschrieben wird."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:22",
+      "text": "Genommen wird, ja? Und also wichtiger Punkt, sie haben gesagt, der Kunde hat eine Flatrate gebucht, der,\nDas Ding heißt Fatrade, der Vertrag lautet auf eine Flatrate und eine AGB-Änderung dahingehend, dass diese Flatrate jetzt begrenzt ist, ist nicht okay, weil.\nDamit ähm das Ding nicht mehr eine Flatrate ist. Ja, also ich kann\nAlso man kann irgendwie AGB-Bedingungen irgendwie in in die und die Richtung verändern, aber man kann nicht den Kern des Angebotes ändern. Das ist so jetzt der das war so die Argumentation der Verbraucherzentrale. Äh und das Landgericht Köln hat,\nRecht gegeben und erklärte diese Klauseln, also die Drosselungsklausel in den AGBs der äh Telekom für unzulässig.\nUnd das heißt, die Telekom muss die Passagen über die Drosselung aus den Flatrateverträgen streichen und darf sich auch nicht mehr darauf berufen. Die sind also nichtig. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:30",
+      "text": "Zumindest jetzt in erster Instanz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:32",
+      "text": "Genau und das heißt, sie können damit das nicht mehr machen. Jetzt ist der Punkt, dass dieses äh Urteil nicht rechtskräftig ist,\nUnd das heißt, die Telekom kann dagegen in Berufung gehen,\nHat aber relativ schlechte Aussichten, wie juristische Experten das äh einschätzen.\nArgumente, das Gegenargument der Telekom oder das Kerngegenargument der Telekom war, Moment mal, wir verkaufen doch Immobilfunkbereich seit jeher Flatrates mit Volumenbegrenzung.\nUnd die das Gericht ist der Argumentation gefolgt.\nDass es einen Unterschied gibt zwischen einer Festnetz-Flat und zwischen einer Mobilfunk-Flat. Das also der Begriff im Festnetz klar verbunden ist mit Flat und im Mobilfunkbereich nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:33",
+      "text": "Was auch ein bisschen absurd ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:35",
+      "text": "Das ist absurd für den Mobilfunkbereich. So und jetzt ist die Frage ähm,\nAlso es ist richtig, eigentlich hätten die hätte man diese Tarife, die man den Menschen im Mobilfunkbereich.\nNiemals Flatrate nennen dürfen. Und jetzt wär's natürlich wünschenswert, dass direkt noch einer hingeht und sagt, ey übrigens,\nDie Tarife, die Erde verkauft, die dürft ihr nicht mehr Flatrate nennen, benennt die mal bitte schön alle um. Ähm,\nBlöd wär's natürlich, wenn die Telekom mit ihrer Argumentation durchkäme\nund irgendwie das nächsthöhere Gericht äh entscheiden würde. Ja, ach komm, die haben die Flatrate jetzt seit so vielen Jahren kaputt gedroschen inzwischen kann man net durchgehen lassen, der Begriff ist leer.\nJa, der Begriff hat keine Bedeutung mehr. Flatrate heißt nichts mehr, kannst jetzt überall Flatrate dran schreiben. So, wie gesagt, die beide,\nOptionen sind, also wie gesagt, steht aufm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:32",
+      "text": "Sehr wackeligen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:33",
+      "text": "Sehr wackeligen Podest und das Problem ist eben, dass die Telekom auch keinen Bock hat, von so einem wackeligen Podest runterzufallen. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:42",
+      "text": "Ich meine, im schlimmsten Fall, wirklich, im schlimmsten Fall, müssen sie ihre Tarife umbenennen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:49",
+      "text": "Nein, weil die Leute, das geht nicht. Die Leute haben ja eine Flatrate benannt gekauft. Ich kann ja nicht bei dir, sage ich mal, äh äh ein ein Podcast zu Max,\nabonnieren und du möchtest dann über PCs,\nmachen und dann sage ich nein, ich habe einen Podcast über Max bestellt und dann sagst du, na gut, dann benenne ich den jetzt eben oben in PC-Podcast, ja? Dann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:17",
+      "text": "Ja, also existierende Verträge ist eine andere Geschichte, aber diese dieses eigentliche Ziel\nab jetzt nur noch neue Verträge, die nach dem und dem Schema äh sind. Ja, sie haben ja auch die anderen nicht rückwirkend geändert.\nKönnten das vielleicht irgendwann mal äh tun, aber wenn sie einem das jetzt aufdrücken wollen, müssen sie's halt anders nennen, aber sie können mir natürlich nach wie vor einen solchen Vertrag anbieten\nJa, heißt dann bloß nicht mehr anders und es kann auch sein, dass es gar keinen anderen gibt,\ndass man halt nur noch diesen kriegt und der heißt dann bloß nicht Flatrate, sondern er heißt dann versetzen wir uns mal in die Lage des Marketings, ähm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:54",
+      "text": "Surf äh Millennium oder so. Das Ding."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:56",
+      "text": "Base, Galaxy, super Plus dreitausend."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:58",
+      "text": "Ja, richtig, das Problem ist ein anderes. Die Telekom möchte ja flächendeckend diese Drosseln haben.\nDie haben ja keine Interesse daran, dass ähm dass das nur beim Teil der Kunden zu machen, ja? Die haben ja irgendwie so ein von mir aus äh einen geringen Prozentsatz pro Jahr Neukunden. Der meiste Teil sind ja Bestandskunden und,\nDen wollen sie den Tarif Tarife ändern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:21",
+      "text": "Ja, den können sie ja die Preise erhöhen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:23",
+      "text": "Genau und jetzt kann können sie auch nicht wahrscheinlich, aber die Möglichkeit, die sie haben, ist, sie können alle bestehenden Verträge auslaufen lassen,\nkündigen und sagen, wir verlängern den nicht, haben sie ja das Recht und können dann den Kunden neue Verträge anbieten,\nDas Problem ist, wenn die Telekom den Vertrag kündigt, können die Kunden abwandern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:43",
+      "text": "Ja, tun sie aber nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:46",
+      "text": "Ist die Frage."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:47",
+      "text": "Na, wo sollen sie denn hingehen? Zu den anderen, die jetzt auch mittlerweile schon alle angekündigt haben, dass sie dieselben Arten von Tarife anbieten wollen und die auch gar keine Leitungen da haben und so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:55",
+      "text": "Ja egal, die Kunden würden trotzdem gehen, weil die Telekom jetzt einfach mal gerade der Arsch ist. Und wenn sie, äh pass auf, wenn sie jetzt sagen, okay, äh ihr ihr Flatrate läuft aus und heißt jetzt, ähm,\nzweihundert MB rate und ähm,\nBitte wechseln sie dahin. Dann kriegen sie den Kunden nur mit einem einzigen Argument dazu, diesen Schritt, der eindeutig zu seinem Nachteil ist, zu gehen,\nUnd das ist, sie müssen den Tarif billiger machen. Und genau das wollen sie eigentlich nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:27",
+      "text": "Hm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:01:30",
+      "text": "Abgesehen von dem ganzen administrativen Aufwand, den Kosten für äh alle Verträge auslaufen lassen, neue unter die Nase reiben und dem Problem, dass die."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:39",
+      "text": "Ist nicht alles scheiße, aber ich weiß jetzt nicht, ob ich äh so ohne Weiteres diese Einschätzung teilen möchte, dass sie jetzt keine Chance haben in der Berufung des Gerichts zu einer anderen Überzeugung zu bringen, weil es bräuchte ja jetzt so, dass nur das\nOberlandes äh ähm ja, aber du meintest ja juristisch schwierig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:01:55",
+      "text": "Sie haben das Risiko, äh dass sie sich da ein Urteil einfangen, was rechtskräftig ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:01",
+      "text": "Ja, klar, aber ich meine, das droht ja auch schon mit diesem.\nAlso ich meine, wenn sie jetzt nicht dagegen vorgehen, dann wird es ja äh rechtskräftig, von daher haben sie eigentlich gar keine andere Wahl, als jetzt dagegen vorzugehen. Das heißt, sie werden das jetzt äh Berufung, Berufung, solange es irgendwie noch neu vorgelegt und erörtert werden kann, wenn sie das tun\nDas ist die Frage auf welchem Level das äh äh landet. Also,\nweiß ich jetzt grad wieder mal nicht, wie das so äh läuft, aber bei besonderer Bedeutung und so kann das ja bis zum BGH gehen, denke ich mal."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:02:33",
+      "text": "Würde ich jetzt auch vermuten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:34",
+      "text": "Ähm das wäre dann natürlich schon ein recht wegweisendes Ding und meiner Meinung nach ist auch diese äh Sicht der des Gerichtes, dass,\nDass ja im Mobilfunk was anderes sei, meiner Meinung nach nicht zu halten und da kann man auch nach wie vor zu der Überzeugung kommen,\nDas ist ja das gleiche, also,\nKann man auf Festnetz genauso agieren wie auf mobil. Man könnte auch sagen, ja, äh hier bei Festnetz äh ist das scheiße und beim Mobilfunk ist es eigentlich auch schon immer scheiße und das stellen wir jetzt mal nebenbei auch nochmal mit fest.\nJa, auch wenn da jetzt noch nicht konkret geklagt wurde, aber so sehen wir das und dann kann der nächste gleich, wenn die Verbraucherzentrale gleich die nächsten Kriegsstaaten und feststellen, dass es für Mobilfunk auch äh Quatsch ist und dann sind wir das komplett los. Und dann heißen alle Tarife irgendwie anders.\nSchon mal begrüßen würde, wenn sie einfach nur anders heißen. Also wenn er macht einfach eine ehrliche Ansage, aber dieses Flat, ich meine, ihr schaltet da irgendwie immer komplett ab, wenn ich fürhöre Flat,\nSchon überrascht, wenn irgendjemand ein Flat-Tarif hat und das wirklich irgendwas Flat."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:35",
+      "text": "Also den Begriff haben sie haben sie aufgeweicht. Das war ja also es ist ja nun mal."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:40",
+      "text": "Aber auch schon lange so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:41",
+      "text": "Wirtschaftlich haben sie sich natürlich sehr geärgert über die Entscheidung jemals den Menschen ähm Flatrates zu geben,\nJa, natürlich, also das das war eine, äh, das war eine Entwicklung des Marktes, der jetzt aus den Gewinn,\nPerspektiven der Unternehmen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:59",
+      "text": "Ja gut, also ich meine mit einer Volumenbeschränkung, da kann ich ja auch, sagen wir mal, ähm,\nsofern mit Leben, wenn es klar ist, äh ja, das eigentliche Problem, was wir ja hier äh dahinter hinter dieser ganzen Entwicklung sehen, der Netzneutralität, ja und der."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:14",
+      "text": "Dass sie Ausnahmen von."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:15",
+      "text": "Das ist ja hier jetzt auch überhaupt nicht behandelt worden, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:20",
+      "text": "Naja im Prinzip schon, wenn du wenn sie nicht drosseln dürfen, dann können sie auch keinen von der Drossel ausschließen, ja? Aber genau, das Problem, Netzneutralität könnte da nochmal\nso denn eine Drosse kommt sowieso nochmal parallel 'ne andere."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:34",
+      "text": "Hm, also ist auf jeden Fall noch ein Weg zu gehen, aber ist schon mal äh gut festzustellen, dass das zumindest eine verhandelbare Größe zu sein scheint auf juristischer Ebene und wir harren der Dinge, die dort kommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:45",
+      "text": "Noch kurz zur Telekom. Telekom hat sich dann dazu geäußert, äh ich glaube, das war der,\nzukünftige Vorstandsvorsitzende, der sagte, der Brüsseler Druck auf die Preise in den vergangenen Jahren, habe zu einem teils ruinösen Wettbewerb geführt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:02",
+      "text": "Kinder."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:03",
+      "text": "Also als es eine Marktanalyse der deutschen Telekom,\nEs werde dogmatisch dem obersten Ziel des Preiswettbewerbs zugunsten des Verbrauchers gefolgt. Interessant oder? Ich mein so wurde mir damals der äh Kapitalismus in der Schule schmackhaft gemacht,\nja? Und jetzt sagt er ähm,\ndiesen Negativtrend, das sind immer alles billiger werden muss, kann man sich kann man nur entgegentreten, wenn man sich das US-Modell zum Vorbild nimmt,\nÄhm das Ziel der Regulierung,\nnicht länger eine verbraucherfreundliche Regulierung mit möglichst vielen Wettbewerbern und ständig sinkenden Preisen sein. Ey sorry, ich bin echt äh überrascht,\ngenau so genauso wurde mir der Kapitalismus erklärt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:53",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:54",
+      "text": "Genauso wurde gesagt Linus, pass mal auf, hier ist Kapitalismus und das ist gut für dich, weil es wird alles immer billiger durch die Konkurrenz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:00",
+      "text": "Und Wettbewerb und so weiter."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:06:02",
+      "text": "Und Wette wird billiger und besser."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:03",
+      "text": "Offener Markt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:06:04",
+      "text": "So und jetzt gucken wir mal in die USA, da gab's einen sehr interessanten,\nArtikel äh BBC war das, glaube ich, kann ich nur empfehlen, wo sie gesagt haben, warum ist eigentlich Internet in USA so teuer?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:18",
+      "text": "Da ist es wirklich teuer. Da."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:06:19",
+      "text": "Und da sind die Preise zwischen siebzig und zweihundert Dollar, die die Person für ähm,\nfür Internet bezahlen, ja? Oder eher so also ist ja Kanada, Washington, New York, San Francisco, San Francisco ist der Durchschnittspreis ähm,\neinhundert Dollar, New York bei siebzig Washington DC-Ball siebzig. Ja, also zwischen siebzig und wenn man dann, dann gab's irgendwie Paket mit Telefon und so weiter. Äh und, und, und Kabel, da gibt's Leute, die zahlen zweihundert Dollar,\nIm Monat für äh ja Internet und Fernsehen, ja?\nUnd dann wurde sich gefragt, ja wie wie kommt das denn, ne? Wie kommt das denn in den USA so? Kommt das denn? Und da hat sich herausgestellt, dadurch, dass die dass die äh dereguliert haben,\nhaben sich die ganzen Anbieter konsolidiert und Monopole gebildet. Das heißt, es gibt zwar viele,\nlokale, aber lokal immer nur einen einzigen Anbieter. Das heißt ja, es gibt einfach keinen Alternativanbieter. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:27",
+      "text": "Das ja hier mit dem Kabelfernsehen auch haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:07:29",
+      "text": "Genau, das hat, wenn ich mich nicht täusche, äh damit zu tun, dass damals ähm als,\nso groß, nee, das das steht in diesem Buch von Tim Master Switch, dass die zerlegt haben.\nDie eigentlich Bell damals zerlegt haben in ganz viele verschiedene Telefonanbieter, die dann wieder gesagt haben, wir sind zwar einzelne, aber wir halten zusammen als ATNT und machen äh Abzug und haben trotzdem nur Monopole,\nAlso ich meine, wenn ich ein Monopolanbieter nach Regionen aufteile, hat ja kein Problem. Dann ist er in seiner Region immer noch Monopolist, ja. Hm, also interessant, die Entwicklung in den USA,\ndass es einfach viel, viel teurer ist, dadurch, dass es dereguliert wurde. Und ich bin wirklich erspaß erstaunt,\nWie gesagt, der Kapitalismus immer so erklärt wurde,\nwenn dir jemand einen Dienst zu teuer anbietet, er einen Konkurrenten haben wird, der den gleichen Dienst billiger anbietet. Und das ist zu meinem Vorteil,\nund das ist der faire Markt, der offene Markt, in dem irgendwie Anbieter und Kunden,\nimmer den fairen Preis finden, weil es keine Preisabsprachen gibt. Weil es ja auch inzwischen den Mobilfunk,\nAlso da noch ganz kurz, ja, ich weiß, immer die äh die dies linksradikale Gewäsch von mir gibt's ja Kommentare zu, aber ähm,\nIn Deutschland gibt's vier Mobilfunkanbieter.\nUnd die betreiben, wenn du mal genau auf die Preise guckst, seid ähm eigentlich knapp zehn Jahren kein ernsthaften aggressiven Preiskampf,\nÄhm es gibt nicht jemanden, der wirklich radikal das Angebot des anderen bei gleicher Leistung unterbietet,\nIch meine E Plus und O2, die natürlich die machen billigere Angebote, die sind aber auch ganz offensichtlich von schlechterer Qualität,\nund du kriegst irgendwie kein Gerät dazu, beziehungsweise wenn du ein Gerät dazu nimmst, bist du auch nur irgendwie höchstens fünf Euro drunter.\nSMS-Preise haben wir über Jahre bei zwanzig Cent gehalten, obwohl die äh neunzehn Cent gehalten, obwohl die Technologie im Prinzip,\nIn den achtziger Jahren unverändert ist, ja. Es war einfach eine Nachfrage nach diesen SMS,\nneunziger Jahren, Entschuldigung, so klar neunziger Jahre. So, jetzt kommt er ähm,\nJetzt stellt man sich die Frage, wie kommt das denn? Haben die insgesamt die ganze Zeit weiter in den Netzaufbau äh investiert? Stimmt, haben sie, ja? Haben sie Preisabsprachen getroffen,\nWürde ich noch nicht mal unterstellen, bei vier Anbietern auf dem Markt, ist es einfach naheliegend, dass du jetzt nicht anfängst, deine Preise,\nstark unter dem anderen anzulegen, weil du weißt, du schneidest dir ins eigene Fleisch, weil wenn du Pech hast, geht der auch runter. Also kann man stillschweigend einfach sagen, super.\nAn der Situation, dass eine SMS, dass ich eine SMS, die mich nichts kostet,\nirgendwie hundertvierzig Bike durch eine Maschine zu schieben äh und und irgendwie wieder auszusetzen. Ähm.\nDa habe ich keinerlei Kosten dran, aber ich bin noch wär doch bekloppt jetzt irgendwie mir diese Einkommensquelle zu versauen, nur um irgendwie ein paar Kunden zu gewinnen. Und das ist die Entwicklung, die du seit längerer Zeit äh als Stillstand bei den Preisen im Mobilfunkbereich siehst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:56",
+      "text": "Ja, also es ist halt einfach das alte Problem mit dem begrenzten äh Ressourcen und in wessen Hand die sein sollten. Na ja, also ob das jetzt Ölforderung ist oder äh Handystandorte\noder äh Platz für Glasfaserkabel. Du hast einfach da immer das Problem, dass eben nicht sehr viele sich das leisten können und du im Prinzip eine ganze, ich meine, wir haben tonnenweise Glasfaser in diesen Boden gebuddelt hier in Deutschland, aber nur ein Bruchteil davon kommt auch tatsächlich zur Anwendung. Das ist alles irgendwie nur\npotenziell Breitband. Und ähm ähnlich ist es halt auch mit dem Mobilfunkzellen. Äh Clemens hatte diese schöne Story da äh\nauch geschildert, ähm da wo die Republika ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:11:35",
+      "text": "Ja, ja, wo ich, das habe ich mir mit ihm zusammen angeschaut, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:37",
+      "text": "Ja, diese diese absurde äh der absurde Abbau äh Aufbau, wo also mehrere Mobilfunkprovider, ich glaube jetzt alle bis auf E plus, ne, da irgendwie da waren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:11:47",
+      "text": "Zellen hingestellt haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:48",
+      "text": "Und äh äh die Regulierung, also an der Stelle ist es auch ein politisches Problem\nja ihnen nicht erlaubt, da eine gemeinsame Zelle zu betreiben, sondern die also einen kompletten neunzehn Zoll Schrank an diesem einen Standort hinbauen müssen mit mega\nteuren Frequenz weichen, wo also ein ein Konvolut von von Kabeln erstmal dafür sorgt, dass da jeder einen bestimmten Frequenzbereich nutzt, anstatt dass einfach der\nFrequenzbereich für alle genutzt wird und dann einfach nur virtuell äh den Provider das zugewiesen wird, der sich da gerade einbucht. Das ist einfach eine eine ineffiziente Nutzung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:24",
+      "text": "Ja, das ist richtig. Da also das Problem war da, dass die dass die sende die Sendestation, dürfen sie sich nicht teilen. Sie dürfen sich aber den ähm,\ndie Antenne teilen. Und was da dieser dieser dieser große Schrank, der das gefiltert hat, waren Frequenzfilter, sodass die drei,\nBasisstation, die da standen. Da kommt dann so ein dickes Kabel raus, das ist so dick, weiß nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:49",
+      "text": "Über dieselbe Antenne agieren können."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:50",
+      "text": "Dass sie am Ende über dieselbe Antenne agieren konnten\nUnd damit nicht die Endstufe von der einen äh von der einen Basisstation in die Endstufe von der anderen brät, ging das in riesiges Teil, wo einfach\nnur Kondensatoren und Spulen drin sind, um für die einzelnen Frequenzen, die die jeweiliger Station nutzt,\nFilter zu haben, sodass das Signal dann von der Station in die Antenne geht, nicht aber in die."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:14",
+      "text": "Völlig, völlig absurd. Das erzeugt riesige Kosten auch. Ähnliches Ding ist es halt mit der Versorgung äh des,\ndes ländlichen Raums, ja, wo einfach nicht so viel Interesse da ist. Ja, da ist dann halt auch nur die Telekom oder nur Vodafone. Ja, und dann vielleicht auch nur, weil da eine Autobahn ist, aber in dem Moment, wo einfach\nStruktur einfach vom Staat betrieben werden würde, zumindest geordnet wird und die es dann einfach weiter äh vermietet, sieht die Sache schon wieder ganz anders aus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:43",
+      "text": "Es gibt noch einen, einen wichtigen Punkt, der äh der da bei der bei der Sache in der Station eine Rolle gespielt hat. Also, die Regulation zu sagen, okay, wir wollen nicht, dass ihr euch zusammenschließt und den Netzausbau gemeinsam macht, hat natürlich auch,\nIn einer gewissen Form macht das Sinn, weil du sagen möchtest, okay, ich möchte ich möchte, dass die Provider um Abdeckung konkurrieren,\nJa, das heißt,\nDu willst eigentlich, dass die das Erschließen eines äh ländlichen Teils dann irgendwie für einen bestimmten Provider interessant bleibt? Das ist der, das ist ja der Grundgedanke dahinter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:18",
+      "text": "Wieso die Abdeckung kann man doch auch anbieten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:21",
+      "text": "Genau. Das Problem ist ein anderes, nämlich, dass die ähm oder ein ein Problem kommt oben drauf, nämlich dass die Telekom zu dieser Station Glas liegen hatte.\nUnd ihre Basisstation natürlich über über die Telekom Glasfaser angeschlossen wurde und die anderen Anbieter,\nähm ihre Station nicht an dieses Telekom Glas legen konnten, weil das natürlich Geld gekostet hätte und dann noch eine Mikrowellenantenne jeweils selber aufs Dach schnallen mussten, um den,\nVerbindung von dieser Basisstation zum Netzwerk herzustellen. Und spätestens da wäre so eine gemeinsame Infrastruktur ganz besonders sinnvoll."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:58",
+      "text": "Ja, einfach buntes Glasfaser."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:01",
+      "text": "Also ja, aber wie gesagt, äh Regulierung an dem in dem Punkt echt ähm bisschen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:06",
+      "text": "Baut doch ordentlich jede Firma ihre eigene Autobahn."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:11",
+      "text": "Ja, aber wenn's nach Horst Seehofer geht, können wir bald äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:14",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:15",
+      "text": "Da die Autos und die gleicheren Autos irgendwie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:17",
+      "text": "Ja ja gut, das okay, das sind jetzt noch Probleme. Das haben wir dann äh demnächst dann auch noch mal. Lass uns das mal hier zum Ende bringen. Ich denke, wir haben jetzt hier im Wesentlichen alles äh gesagt, also äh.\nGut Drossel kommen, hat äh äh was vor die Nase bekommen, die Geschichte ist noch nicht zu Ende."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:36",
+      "text": "Aber das ist höchstens ein Etappensieg und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:38",
+      "text": "Genau, wir erwarten die äh Berufung ab, aber so oder so äh könnte das nochmal ganz interessant werden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:44",
+      "text": "Ist auf jeden Fall erstmal schön, dass es wenigstens mal kurz äh zur Sprache kam, dass das äh so einfach nicht geht,\nund finde ich auch schön, dass es da erstmal also zumindest in der öffentlichen Wirkung ist jetzt erstmal dieses Urteil da und wenn die Telekom aus irgendwie ihre Ziele dann noch durchsetzen wird, was sie auf jeden Fall schaffen wird. Ich meine, die geben einfach nicht auf,\nDann hat man zumindest schon mal den Punkt, dass man sieht, dass es auf was auch immer sie ab jetzt machen, irgendwie sneaky, shit ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:15",
+      "text": "Da ist was dran. So. Nochmal ein bisschen internationale Geheimdienste. Wir hatten so wenig davon."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:16:22",
+      "text": "Wir hatten so wenig davon. Ja, dass äh ein, ein, ein, ein,\nEin Hauptwiderspruch der der letzten Monate wurde jetzt endlich aufgelöst. Und zwar war es ja so, dass äh,\nNSA-Folien dann irgendwie sagten, ja, wir haben Zugriff auf Google, Yahoo und die ganzen äh Knalltüten. Und äh Google und Jago dann sagten,\nNein, äh ihr habt nur so unseres Wissens nach, habt ihr nur Zugriff mit euren ähm anhand eurer geheimen Cord-Orders da, ja, der die der,\näh FISQ, wie ist das nochmal? Foren Intelligence oder so was."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:02",
+      "text": "Ja, der geheimen äh geheim äh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:17:05",
+      "text": "Das Geheimgericht, wo immer nur eine Partei äh wo immer nur eine Partei steht. Und NSA sagt, wir haben Zugriff Anbieter sagen, nö, habt ihr, wir haben euch keinen Vollzugriff gegeben, turns out, beide hatten recht.\nDenn Google es wurde also es wurde jetzt bekannt wie die NSA bei Google abhört,\nUnd da gibt's also so eine Folie, die ist jetzt wird's auch langsam witzig, dass dann so eine handgemalte Folie, also eine eine wahrscheinlich so eine Vorzeichnung, die man dann zum nach Indien, zum Mal, zum zum Umsetzen im PowerPoint schickt oder so. Ähm,\nUnd zwar ist das so, Google betreibt ja ein eigenes Glasfasernetz, um ihre ihre ganzen Daten Zentren zu,\nverbinden,\nUnd zwar liegt das, glaube ich, hauptsächlich daran, dass denen die Carier gesagt haben, na ja, wenn ihr Glas von eurem Datenzentrum in äh was weiß ich, in Finnland zu dem in Chile haben wollt, dann äh kostet das so und so. Und da hat Google irgendwann gesagt, wisst ihr, was machen wir selber?\nDas heißt, Google hat hinter seinem seinem einen großen äh genannt Google Frontend Server,\nnatürlich vielen,\nTeil der Erde, Rechenzentren und diese sind nicht über das normale Internet verbunden, sondern über äh Daddy Cated Glas.\nDas ist quasi so deren Backend ist über ihr eigenes Glasfasernetz verbunden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:39",
+      "text": "Netz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:41",
+      "text": "Genau. Und ähm genau da.\nÄh kommunizieren sie offensichtlich, teilweise oder sogar sehr stark unverschlüsselt. Und,\nan. Das heißt quasi die NSA rühmt sich damit an dem quasi an dem Frontend Server, dem Server, der in Richtung Internet guckt,\nzu sitzen und der macht auch die Verschlüsselung. Das heißt, wenn ich jetzt äh mit Google über SSL spreche, dann spreche ich mit Google dot com verschlüsselt,\nAber das, was ich als Google dot com sehe, ist eigentlich nur ein Proxi, der wieder woanders hingeht.\nUnd dahinter steht dann der wirklich, steht dann was weiß ich. Das suchmaschinen, Datenzentrum, das Gmail Datenzentrum, das Google Dogsding, das sind ja alles getrennte äh ja Servercluster,\nund wie man das auch üblicherweise macht bei so einem Gateway, findet dann von dem Frontend Server zu dem eigentlichen,\nsind eigentlich ein Backboard die Kommunikation unverschlüsselt statt.\nWeil unter der Annahme, dass dieses ganze Backbord deins ist und privat ist, du dir die Last auf den Büchsen nicht geben willst, da nochmal äh ähm äh SSL zu sprechen.\nUnd wenn jetzt aber ein ein NSA\ngenau da hängt, an dem Frontend-Server, wie der hinten mit den anderen spricht. Und auf der Leitung mithört\nund du da nicht verschlüsselt, dann kannst du dir natürlich dieses Ganze vorne, dieses SSL, bei in allem, was Internet ist, kannst du dir dann sparen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:32",
+      "text": "Genau, man muss sich, glaube ich, so ein bisschen im Kopf davon trennen, dass äh so mein Computer und der Server, dass das so zwei Computer sind, die miteinander reden, sondern in dem Moment, wo man mit Facebook,\nGoogle und anderen Unternehmen einer Mindestgröße, einer gewissen,\nPräsenz im Netz äh kommuniziert, dass man in dem Moment eigentlich nur mit einem Einfallstor redet,\nUnd dahinter ist nochmal etwas von der Größenordnung einer, tja,\neines kompletten Internetservice Providers oder mehr, ja? Also niemand hat so viele Server wie Google auf dieser äh auf dieser Erde und."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:08",
+      "text": "Haben die mehr als Amazon? Wer würde mich jetzt echt mal interessieren?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:10",
+      "text": "Ja, Google hat äh, ich weiß nicht, wie sich das in den letzten Jahren so entwickelt hat. Es gab ja mal diese schöne Infografik, wo man so äh alle Server von Google, alle Server, von Facebook und Amazon und so weiter so grafisch zusammen äh,\nwar die Übermacht von Google so dermaßen massiv, dass ich nicht glaube, dass ich,\njetzt an der Rangfolge viel geändert hat. Es mag sich an den Relationen was geändert haben, aber so ein Großteil der Server steht schon wirklich bei Google."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:36",
+      "text": "Und es gibt da, also auch, was ich jetzt grade als als äh als das Frontend äh Server äh benannt habe, dass natürlich auch nicht eine Maschine, ne? Das sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:44",
+      "text": "Auch das ist viel, aber es ist schon mal klar, äh die Nachfrage geht dann auf jeden Fall in ein internes Netz und wenn dieses interne Netz sich voll traut\nund da äh irgendjemand ist, dem eigentlich nicht zu trauen ist, dann ist natürlich äh vorbei. Jetzt frage ich mich natürlich, wie kommt die NSA da rein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:02",
+      "text": "Ja. Also ihr an einer Stelle muss dieser Frontend Server ja mit dem mit dem ähm mit dem Internet verbunden werden, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:11",
+      "text": "Ja, also die sitzen dann wahrscheinlich wieder auf der Glasfaser mit ihrem U-Boot und äh lauschen einfach die Cloud von innen ab. Also sie sitzen sozusagen einem Injoor-Cloud, E-Mails."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:25",
+      "text": "Also das dann wirklich schon, also es wäre jetzt wie ähm ja ich ich hoffe, wir haben's ausreichend gut erklärt. Also sie sind im im Google Backend in dem in der in."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:38",
+      "text": "Wir sitzen einfach in der Wolke, in der nichts mehr verschlüsselt ist. Das heißt, meine."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:42",
+      "text": "Außerhalb dessen, was was man was Internet äh im im eigentlichen Sinne ist. Ja, findet Google nicht ganz so cool."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:52",
+      "text": "Kann ich mir auch vorstellen. Jetzt schalten sie mal SSL ein oder."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:55",
+      "text": "Schalten sie SSL zwischen ihren äh zwischen ihren Einheiten da ein, dass äh,\nist sicherlich sinnvoll, aber und ich meine, wir kommen, glaube ich, eh langsam mal an den Punkt, dass man sagen muss, es gibt einfach keine.\nEs es gibt keine Veranlassung mehr für unverschlüsselt Kommunikation an irgendeiner Stelle.\nPunkt. Weder in deinem Trusted, noch in deinem Bereich. Ich bin auch ein großer Gegner von HTTP port achtzig, das müssen wir uns auch irgendwann mal langsam überlegen, ob wir den nicht äh sperren, genauso wie fünfundzwanzig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:34",
+      "text": "Ja, aber solange die ganze Krypto äh noch auf diesen kaputten Zertifikatsystem äh beruht, ist da halt leider nicht viel zu holen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:42",
+      "text": "Das ist äh ist auch ein Problem,\naber äh denke ich im Moment äh gemessen an dem, dass wie viel Plaintext äh es gibt, erstmal noch ein kleineres, aber du hast Recht. Also es gibt auch noch nicht die eierlegende Wollmilch, Kryptosau und,\nUm dann doch kurz zu Ende zu bringen. Wenn Google jetzt sagt, wir wir wollen jetzt, also es ist nicht so einfach, dass das ein Switch ist, den sie anschalten und sagen, wir wollen in unserer Cloud da jetzt mal alles verschlüsseln, weil sie nämlich genau dann ein riesiges Zertifikatsverwaltungsproblem haben, ne.\nOder wie auch immer, also überhaupt die Keys auf die ganzen einzelnen Kisten zu bringen, zu verwalten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:18",
+      "text": "Sicher zu halten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:24:19",
+      "text": "Die sicher zu halten und ähm der erhöhte Rechneraufwand, den jede einzelne Büchse davon bekommt,\nwenn sie auf einmal SSL sprechen muss, das ist das schon signifikantes Update,\nAber na ja, wenn du inzwischen einer Glasfaser nicht mehr trauen kannst, die du irgendwie, die dir selber gehört, dann äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:42",
+      "text": "Wir brauchen einfach noch resistentere ähm.\nUnd Abhörsicherer Krypto nicht nur im Sinne von, dass man einen verschlüsselten Strom nicht mehr so äh knacken kann, sondern dass eben auch so dieses ganze Hinterlegen von Schlüssel und so weiter weitgehend entfallen kann. Also\nmuss sich einfach aus sich selbst heraus Bootstreppen äh können und jederzeit etwas ähm zumindest äh seines Klartextes berauben.\nOhne dass man viel Aufwand damit hat. Das ist wirklich so ein Einschalten geht äh Ding ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:25:17",
+      "text": "Das Problem ist aber doch, da also,\nEs ist ja kein, es ist ja kein Problem eine Krypto zu bauen, die sich einfach so aufbaut und verschlüsselt. Das Problem ist, dass ich an einer Stelle äh sicher gehen muss, dass ich auch gerade mit demjenigen, mit derjenigen Partei verschlüssel, mit der ich gerne verschlüsseln möchte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:35",
+      "text": "Ich weiß. Trotzdem muss das halt auch,\nwerden, weil wenn ich jetzt immer wieder zu irgendeiner südafrikanischen äh Firma gehe, von der ich noch nicht mal weiß, wer da arbeitet und wem die jetzt wieder gehorchen und mir von denen irgendwas ausstellen lasse, dann dann bin ich auch nicht weiter. Äh also das\ndas ist äh also da ist gibt's einfach noch eine Menge zu erfinden und ich denke äh bis zur nächsten Sendung könnten ja hier unsere Zuhörer dann vielleicht auch mal,\nwas vorlegen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:04",
+      "text": "Genau, also löst mal bitte kurz dieses äh das Problem, dass das rast Problem bei Krypto. Äh ich würde sagen, langfristiger Platz in der Geschichte der äh,\nIT Security wäre euch damit gesichert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:20",
+      "text": "Jeden Fall und ihr würdet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:22",
+      "text": "Äh ein nennenswerter Einkommensstrom."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:25",
+      "text": "Ja, ich glaube, da wäre auch einfach mal ein paar Autogrammkarten von Lokbuch Netzpolitik werden auf jeden Fall auch drin, oder? Ja, denke auch, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:29",
+      "text": "Sind drin. Kriegt er. Haben wir irgendwas vergessen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:35",
+      "text": "So Leute, eine lange Sendung, wir haben bestimmt eine Menge vergessen, aber das machen wir dann nächstes Mal. Äh ich denke, wir waren schon sehr ausführlich dieses Mal. Ich hoffe auch halbwegs unterhaltsam noch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:47",
+      "text": "Haben wir heute einen lustigen Titel überhaupt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:49",
+      "text": "Bestimmt. Uns fällt immer irgendwas."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:50",
+      "text": "Wissen wir jetzt noch lustig, ne, weil die lustig äh die Hörerinnen hören ja jetzt quasi die Sendung wissen schon den Titel und wir noch nicht. Denkt mal drüber nach."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:58",
+      "text": "Ja, so ist das."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:02",
+      "text": "So ähnlich wie die NSA, die zweitausendzwei schon wusste, wer Kanzler wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:06",
+      "text": "Wissen sie in einer ganz komischen Zeitschleife gefangen. Wir sagen tschüss, oder? Tschüss. Bis bald."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:12",
+      "text": "Tschüss."
+    }
+  ]
+}

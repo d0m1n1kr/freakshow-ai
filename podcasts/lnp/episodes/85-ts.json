@@ -1,0 +1,1039 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus. Guten Morgen Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:30",
+      "text": "Ich finde, man muss die, die, die, die Netzwerke auch mal ein bisschen\nunterstützen und mit äh einem entsprechenden Fanpublikum äh ausstatten, damit sich da einfach was, damit sich da einfach was tut, damit da einfach ein bisschen Bewegung äh reinkommt, damit da einfach äh alle motiviert sind, daran mitzuarbeiten, dass es vorangeht und,\nja, Pressing, genau, einfach die Bandbreite einfach mal so richtig schön über die Flügel äh entwickeln, ne? Klar, hinten auch immer die äh Sechser, die einfach nach vorne drücken und dann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:58",
+      "text": "Die Abwehr muss."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:00",
+      "text": "Das ist sehr wichtig. Security ist auch äh einfach immer sehr wichtig, ja. Und äh."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:01:05",
+      "text": "Gerne Telekom-Cheer-Lieder, die vom DEzix stehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:08",
+      "text": "Ja so denken wir, dass so denken wir, dass schon äh alles in die richtige Richtung, ja? Also man kann nicht nur Politik, sondern wahrscheinlich auch Netzpolitik,\näh Fußballassoziationen einfach wirklich äh auf ein Level bringen, den wir so äh bisher nicht gehabt haben. Einfach mehr Trainer denken, ja? Wir sind ja alle eigentlich so eine Art Netz äh\nTrainer. Außerdem ähm sind wir immer noch hier,\nPolitik und wir feiern die fünfundachtzigste Ausgabe und ihr habt's schon gehört, wir haben äh einen äh Gast dabei, nämlich äh Clemens ist uns zugeschaltet. Hallo Clemens Clemens Schrämpe. Moin.\nGenau. Äh denn wir haben heute sagen wir mal nicht so den großen Nachrichtenkatalog, wie wir das äh sonst so häufig haben.\nSondern wir setzen Schwerpunkte."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:02",
+      "text": "Mhm. Wir sitzen heute unseren Schwerpunkt beim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:08",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:09",
+      "text": "Wir wollen ja, was vielleicht um das kurz, was ist, was was ist jetzt schon wieder passiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:14",
+      "text": "Ist eigentlich passiert. Ja, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:19",
+      "text": "Ich hatte das in der letzten Sendung schon so,\nanklingen lassen, dass äh Innenminister Friedrich.\nIrgendwie in einem Nebensatz ja schon so gesagt hätte, ja, man müsste jetzt eigentlich mal so ein deutsches IT-Sicherheitsgesetz machen und gucken, dass man nur noch durch Deutschland routet, ja?\nWeil offensichtlich ist dem Fall des Land ja nicht zu trauen,\nund die äh gucken ja dann irgendwie da rein und dann werten das auf einmal deren Geheimdienste aus und nicht mehr unsere und deswegen müssen wir äh ein ein IT-Sicherheitsgesetz machen und es war irgendwie\nIch erwähnte das nur kurz, weil ich den Eindruck hatte, dass jedem klar war, dass es eine relativ ähm.\nRelativ wertneutrale Idee ist, um es jetzt mal vorsichtig auszudrücken, ähm.\nDann begab es sich aber, dass der gute Herr Obermann.\nEiner Tagung sagte, dass ihnen ja so diese Idee des Deutschland-Routings das wäre jetzt echt mal eine tolle, das müsste man echt endlich mal angehen. Und was er sich ja außerdem noch vorstellen könnte, wäre so ein Schengenraum fürs Internet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:33",
+      "text": "Das hat er nicht wirklich gesagt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:37",
+      "text": "Natürlich. Schengen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:38",
+      "text": "Was?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:40",
+      "text": "Und das hat auch ein, er hat ja eine äh hat er einen gezielten, gezielten Grund, für Weil Schengen äh Teil von Schengen ist ja nicht äh äh das Vereinigte Königreich,\nund äh da das Vereinigte Königreich mit seinem ja so ähm.\nSo so schlecht ist, ne? Und äh so böse ist zu uns. Ähm hat der äh René Obermann diese Konutation sicherlich auch nicht äh aus Versehen.\nAnklingen lassen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:13",
+      "text": "Mhm. Schengen als letzter Ort äh Hort der Freiheit so ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:17",
+      "text": "Ja, genau. Innerhalb von Schengen kann man sich vertrauen, aber ja.\nUnd die Idee jetzt vielleicht mal als Einleitung, so die, es klingt ja also warum wir auch heute eine ganze Sendung diesem Thema fast widmen wollen, ist, dass es ja auf Anhieb, sage ich mal, nicht so dumm klingt.\nSo sagt so okay, warum sollte ein Datenpaket, was jetzt von von mir."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:46",
+      "text": "Meterebene geht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:47",
+      "text": "In den Friedrichshain zu dir paar Kilometer weiter hoch nach Prenzlauer Berg in die äh Meterebene wandert, ja,\nWarum sollte das zwischendurch nochmal nach Mekka? Ja, nach Kryptocity? Ja. Ähm wenn es doch eigentlich schon innerhalb Deutschlands bleiben könnte, theoretisch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:07",
+      "text": "Ja. Weiß ja dann auch schneller und direkter ist und warum sollte man irgendwie, wenn man von äh Berlin nach München fährt, noch einen Umweg über Amsterdam nehmen oder sonst was.\nJa"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:20",
+      "text": "Und diese.\nAlso wenn wenn man dann schon, wenn dann schon jemand anfängt mit Schengen, dann merkt man schon, okay, das ist ein bisschen dann weiß man schon, jetzt riecht's wieder komisch."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:05:32",
+      "text": "Pässe gezückt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:34",
+      "text": "Ja, am zumindest am Rande von Schengen, ne? Ähm Inscheng ist ja alles super. Und deswegen haben wir uns den den Clemenz eingeladen, um da mal so in in Ruhe uns überhaupt mit mit Routing und wie funktioniert das denn alles auseinanderzusetzen?"
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:05:49",
+      "text": "Was ist ein deutsches Paket?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:51",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:52",
+      "text": "Das äh hat ja, das ist äh wunderbar, da kommen wir gleich noch zu, was ein deutsches Paket ist. Der BRD sagte, es gibt ja gar kein deutsches Paket, weil das Internet ja inhärent Ausland ist.\nUnd deswegen dürfen wir eh alles abhören. Aber jetzt hast du schon was vorweggenommen.\nAber ähm bleiben wir doch mal beim Beispiel. Wie wie wandert denn jetzt mein Paket? Wir können ja mal das Beispiel nehmen. Ich bin bei Eins und Eins. Bei wem bist du?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:17",
+      "text": "Was meinst du jetzt? Redest du von Servern oder redest du."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:19",
+      "text": "Deine, dein, dein, dein, äh, Heimpaket. Wir reden jetzt von einem Paket, was wirklich von mir zur Metaebene wandert. Direkt von meiner IP an deiner IP."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:06:28",
+      "text": "Du meinst das Paket, was von deinem amerikanischen Laptop aus durch deinen chinesischen Router äh ja? Dieses Paket meinst du?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:39",
+      "text": "Ich habe einen deutschen Router."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:06:41",
+      "text": "Oder ich meine du hast da einen deutschen Router, der aber in China hergestellt wurde."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:46",
+      "text": "Achso, ja, das weiß ich nicht, aber steht Deutsch drauf. A V M."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:06:50",
+      "text": "OK"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:51",
+      "text": "Hm, ja."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:06:53",
+      "text": "Darf ich ja nicht erwähnen als als äh äh Schwarzwerber wieder gebrandmarkt. Hm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:59",
+      "text": "Fritzboxen werden verwendet, auch hier in der Mieterebene, äh so ist es. Und gebaut wird das wahrscheinlich trotzdem in China, aber."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:06",
+      "text": "Aber Clemens, klärst du mal auf. Ich bin beim Provider Eins und Eins. Tim ist bei.\nTelekom, so. Wie wandert jetzt ein ein, ein, ein, ein, ein, einzelnes IP-Paket, äh welches ich mittels äh Netcat gebaut habe, von mir zum Tim."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:07:27",
+      "text": "Ui, also ähm eins und eins, ich nehme mal an, dass die äh bei dir an deiner Stelle dort äh auch die Dienste der Telekom benutzen\nÄhm musst ja überlegen, das wird ja alles immer ein und ausgepackt so ein Paket. Wir können das ja jetzt nicht rein auf IP-Ebene nur betrachten. Das ist ja das, was jeder zu Hause machen kann, kann er dieses Kommando eingeben. Ähm aber das Paket wird andauernd. Der ein oder ausgepackt\nzum Beispiel äh auf dem Weg von dir überhaupt erstmal zu Eins und Eins, wenn Eins und Eins überhaupt selber eigenen Adressraum benutzt\nwas sie teilweise auch nicht tun, sondern sie mieten sich das ganze Alpi denn auch von der Telekom teilweise an. Aber nehmen wir mal an irgendeinen anderen Provider, der sowas\nder so was tut. Ähm dann wird das Paket ja von dir übertragen mit deinem DSL-Router erstmal über die DSL-Leitung,\nzum ähm hatten wir schon mal diskutiert, was dahinter steckt\nÄhm der schickt das dann äh weiter an ein an so ein so ein Massenrouter, so ein Beras nennt sich so ein Ding. Und der guckt sich jetzt erstmal, das steht alles noch bei der Telekom. Ja, übrigens äh und äh\nähm da da guckt sich das so ein bisschen an, denkt sich, oh, eins und eins Kunde oder jetzt oder Fremdprovider Kunde und schickt das dann erstmal über einen Tunnel.\nAlso über wieder über eine IP Verbindung, die aber jetzt mit deiner, mit deiner persönlichen IP Verbindung nichts zu tun hat, sondern die steckt da sozusagen drin, ja, IP in IP eingepackt\nähm zu dem Beas Router von dem entsprechenden Provider.\nSo und der packt das dann alles erst wieder aus und so ist überhaupt erstmal schon mal über drei Umwege und äh fünfzig Glasfasern quer durch die Mongolei oder sowas oder wie auch immer. Ist jetzt überhaupt erstmal dein IP-Paket bei deinem eigenen Provider angekommen\nÄhm das sind alles diese Schritte siehst du alle nicht, ja? Wenn du da dein Dressrad machst, siehst du, A, meine Fritzbox A, der Router von meinem Provider,\nSo, das Einzige, was du siehst, ist,\nda ist halt zeitlich Verzögerung drin, ne, je nachdem, was du so hast, das können eben auch gerne mal dreißig, vierzig, fünfzig Millisekunden sein. Äh was da zusammenkommen kann und in diesen dreißig, vierzig, fünfzig Millisekunden passiert halt eine ganze Menge auf tieferen Ebenen mit deinem Paket, was du überhaupt,\nnachvollziehen kannst oder aber du auch gar nicht sehen kannst. Und denn haben wir wie gesagt Pakete überhaupt erst den den Weg zu deinem zu deinem eigenen Provider gefunden\nja? Der stopft das dann wieder in irgendwelche Leitungen rein. Äh da kommen wir dann vielleicht noch drauf, wenn wir uns über Dezix oder andere solche Dinger unterhalten. Aber das sind,\nden ich wie gesagt dazu nochmal erstmal machen muss, dass die Leute ähm dit ist mitnichten so, dass dieses Kabel, was du bei dir zu Hause hast.\nDiese Kupferleitung oder wie auch immer, äh ob nun gemietet oder nicht, direkt irgendwie zu deinem Provider führt.\nAlso es ist nicht so, wenn du da an diesem Kabel ziehst, dass dann irgendwo in Frankfurt oder wo auch immer dein Provada sitzt oder in Karlsruhe, ähm dass da jetzt irgendwie ein Stück äh Equipment aus dem Regal fällt. Ja, ähm weil halt,\nKabel, das ist fünffach gemultiplext äh äh zusammengezogen mit anderen äh gesplittet wieder verteilt, redundant verteilt und gemacht und getan. Und das passiert alles noch unterhalb deines Alpilairs.\nUnd zwar sehr viel. Deswegen finde ich jetzt auch die Diskussion da über Laya drei Routing und deutsches Routing oder so was eigentlich relativ albern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:10:44",
+      "text": "Da müssen wir mal, glaube ich, müssen wir ganz kurz an der Stelle vielleicht das das äh OSI-Modell kurz erklären.\nDas kann der Tim, der erklärt das immer gerne. Die sieben Layer und das Achte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:55",
+      "text": "Ja, wir müssen eh aufpassen, denke ich, dass wir jetzt hier nicht unbedingt äh zu sehr jetzt äh in die technische äh Debatte abgleiten, aber äh grundsätzlich äh ist es natürlich so, dass wenn jetzt Datenpakete äh von A nach B wandern,\nja auf so eine auf also was mit anspricht ist dieses Schichtenmodell, dass man also,\näh um etwas zu verschicken, ist immer wieder eine untere Ebene weiterreicht und dabei immer wieder neu einkapselt so. Ja, das heißt\nProgramme reichen, dass an äh das Betriebssystem herunter, das Betriebssystem reicht das Antreiber herunter, die es dann letzten Endes auf ein Kabel herunterreichen und dabei wird halt immer wieder etwas einge,\nauf der anderen Seite, wenn es überall äh das entsprechende Kabel empfangen wird, wird es dann in der äh entgegengesetzten Richtung langsam wieder,\ndas ist das, was wir jetzt hier mit Lea, zwei und drei meinen.\nÄhm IP so das Internet an sich so, die Pakete, die man da eigentlich schicken will, das äh spielt sich halt in der Regel auf Lea drei ab, also so mehr oder weniger direkt über der Hardware und,\nDas ist das, worauf."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:12:02",
+      "text": "Wie gesagt jetzt bei uns heutzutage mit dazu kommt, dass eben Dinger doppelt eingepackt werden, ne? Also es kommt sehr, sehr häufig vor, dass man IP in IP hat\nWir hatten das ja auch schon mal allein schon diese ganze DSL Geschichte, die du dort hast, also wenn du ein IP-Paket erzeugst, auf deinem Laptop und das in deine Fritzbox reinschickst, dann kommt der IP\nIP über Internet in die Fritzbox rein die Fritzbox nimmt. Ähm macht da äh hat macht ihr diese PPP OE Geschichte, das heißt die hat ähm auf dem DSL, also auf der Übertragung,\nIst noch eine ATM-Lyer drauf. Dann gibt's den ATM Adaption Layer, der da auch noch drauf ist, dann ist da ein drauf, dann ist da ein PPP OI drin, dann ist da ein IPCP drin,\nund in diesem IPCP ist denn dein IP-Paket, also nicht dem IPCP.\nDas, ne? Also das wird tausendfach wird es nochmal eingepackt und immer wieder ausgepackt und dabei eben auch doppelt eingepackt, ne. Dort hast du eben doppelte ISA Netz oder äh I."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:56",
+      "text": "Aber das findet ja zumindest\nClemens, das findet ja zumindest alles immer noch in Deutschland statt. Ich meine, der Max ist viele, viele Layer geben so, aber das äh sind ja auch alles jetzt Maßnahmen, die äh stattfinden noch bevor es hier überhaupt äh ins Kabel äh in der Wand äh äh gleitet.\nDie eigentliche Frage ist ja, inwiefern bitte?"
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:13:13",
+      "text": "Aber bei bei der Telekom vielleicht, ja, aber seit der Eröffnung des Markts in Deutschland haben wir ja etliche Leute gesehen,\netliche Firmen, die sozusagen reingerannt sind in den Neunzigern, ja, äh nach äh nach Deutschland äh gesagt haben, toller, geiler Markt, jetzt liberalisiert, wir schlagen jetzt hier mal unsere Zelte auf\nund äh die haben daran geglaubt, was die Politik damals gesagt hat. So äh Europa ohne Grenzen lalala, das war ja auch alles auch noch vor dem bösen zweitausendeins, ja.\nUnd die haben dort äh äh sich Glasfasern gelegt\nweil sie keinen Bock hatten, die alle von der Telekom zu zu mieten, ähm sondern die haben sich selber Glasfasern gelegt mit Milliardenaufwenden und die haben sie,\nüberall da lang gelegt, wo sie irgendwie ein Wegerecht herkriegen konnten,\nund äh das heißt, wir reden hier über über Straßen, wir reden über über Bahnstrecken, wir reden über Gasleitungen, wir reden über äh Kanäle, Wasserkanäle."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:07",
+      "text": "Stromtrassen eigentlich auch."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:14:09",
+      "text": "Ford Stromtrassen allet,\nwo du ein Wegerecht hast. Also in alles, wo du jetzt nicht hingehen musst und irgendwie fünfzig Kleingärtner einzeln anschreiben musst und den Vertrag machen musst, dass wir zehn Meter durch ihren Garten buddeln musst,\noder darfst da, sondern ist wirklich, wirklich verzweifelt die Leute gewesen mit ihren Sachen, die sie da gemacht haben. Und jeder, der auch nur irgendein\nirgendein irgendein Wegrecht hatte, weil er sich das nämlich eh gemacht hat zum Beispiel. Ich habe jetzt gerade neulich gesehen äh hier bei den Dzix Geschichten in meiner Vorrecherche. Da gibt's auch die Firma Wingaz zum Beispiel. Die der ist, die dazuträger ist. Und wenn man genau hinguckt\nDas ist äh dit ist Gazprom. Also das gehört jetzt Gazprom. Das sind äh oder größtenteils, ne? Das war äh Wintershall, ähm und ähm.\nDie haben halt Gasleitungen gehabt quer durch Deutschland. Schon, keine Ahnung, seitdem man halt Gasfern transportiert und äh haben sich gedacht, na ja, wenn bei ihr die Rohre warten oder neu bauen, dann schmeißen wir immer mal ein Stück Glasfaser daneben.\nSo, erstmal so für den Eigenbedarf vielleicht und äh inzwischen haben sie halt so viel Kapazität, dass sie die auch wieder weitervermieten. Genauso wie zum Beispiel, die Aqua, die ja nur zu Vodafone gehören, das war mal eine Tochter der Deutschen Bahn, DB Telematik.\nAuch die haben sich gesagt, geil, wir haben hier Gleise, das heißt, wir haben hier Wegerechte quer durch Deutschland oder quer durch Europa teilweise, ja, wo wir eh unsere Gleise lang haben. Nächstes Mal werden wir denen den Schotter da mal reinigen, schmeißen wir ein Stück Glasfaser mit rein.\nSo sind all diese Dinge entstanden und die, diese Dinge äh oder solche Wege sind nicht notwendigerweise immer äh einen Nationalstaatsgrenzen gebunden. Das ist eigentlich der Punkt, auf den ich kommen will.\nDas heißt also in den Neunzigern, als die Leute diese Leitung geworfen haben, ähm da gibt's halt diverse Nummer ein Beispiel. Es gibt mehrere Verbindungen von Berlin nach Hamburg. Es gibt natürlich eine Direktverbindung, aber es gibt noch eine redundante Verbindung dahin über Kopenhagen.\nAlso jetzt nicht bloß einer, aber ich kenne so Pläne von so Sachen, da geht es halt über Kopenhagen nach Hamburg. Ähm und äh äh weil man dann sozusagen einen Zweitweg hat, dann man\nbaut nicht einzelne Leitungen, sondern baut immer sogenannte Ringe, damit die sich ähm äh falls da mal doch mal ein Bagger kommt, so ein Ding durchhackt, damit sie sich dann entsprechend ersetzen können,\nund äh so eine Ringschlaufe ist nicht notwendigerweise hält sich nicht an Nationalstaatsgrenzen. Das heißt, im Normalfall, im Friedensfall dürfte der Verkehr zwischen Berlin und Hamburg\nvermutlich direkt laufen. Wenn da irgendjemand mal Sorgen mit hat, Wartung ist oder doch mal ein ein Bauer dieses Kabel ausgräbt mit seinem Trecker,\ngeht der Verkehr halt über Dänemark, fertig Peng. Davon sagt man den Berliner und den Hamburger Kunden überhaupt nix. Das ist so gebaut, dass die das gar nicht merken."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:41",
+      "text": "Dänemark ist ja aber auch Schengen."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:16:45",
+      "text": "Gerade noch so, ne? Ja, das weißt du, dass die jetzt schon wieder Grenzkontrollen eingeführt haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:49",
+      "text": "Aber was mag wahrscheinlich auch ähnliche Beispiele geben mit äh ich weiß nicht, ist Polen eigentlich mittlerweile auch Schengen."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:16:56",
+      "text": "Aber ähm wie gesagt, es ist vollkommen egal, diese Leute du musst halt geographisch denken\nnicht, nicht national, staatlich oder national äh äh grenzig oder sonst\ndie einzelnen, die das tun oder getan haben, sind natürlich die nationalen Telekomgesellschaften, die ja früher Staatsbetriebe waren, also die deutsche Bundespost hat natürlich nur auf deutschem Boden gebuddelt,\nDas ist klar, ne? Aber alles, was danach kam, die haben einfach gebuddelt und gemacht und Kabel im im Schifffahrtskanal versenkt und an Stromtrassen gehängt oder sonst irgendwas und äh die sind da kreuz und quer über die Grenzen rüber, wie sie lustig waren.\nWar doch das, was die Politik ihnen versprochen hat und deswegen haben sie gesagt, ja klar, machen wir auch so. Macht ja auch Sinn, geographisch zu denken und nicht anhand von irgendwelchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:40",
+      "text": "Ja, genau. Gerade an so komischen Ausbuchtungen hier in Deutschland, ich meine, manchmal hast du auch noch die Gebirgszüge entsprechend, aber wenn da jetzt irgendwo so eine Landzunge eines anderen Staats irgendwo reinrascht, macht's ja wenig Sinn, äh da wirklich an der Grenze entlang zu gehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:54",
+      "text": "So, jetzt haben die, jetzt haben die ihr Glas da in die Erde gelegt oder ihr, ihr Kupfer oder was auch immer. Ähm,\nworauf ich jetzt nochmal oder was was glaube ich noch nicht so ganz rausgekommen ist, wo landen denn so die ganzen IP-Pakete, die jetzt aus unseren Fritzboxen über tausend äh tausendmal verschachtelte Protokolle irgendwo zum Internet kommen.\nAn welcher Stelle ähm also."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:18:17",
+      "text": "Wo das Internet ist, sagt der wie dein kommt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:20",
+      "text": "Genau, das,\ngenau das hätte der Punkt, den ich so ein bisschen verdeutlichen will. Also wo kommt denn mein wo wird denn meine IP? Ich habe jetzt gerade mal geguckt, meine IP ist gerade äh hat auch einen Pointer auf TIP-Connect, das heißt, ich bin da wahrscheinlich bei der Telekom noch, ne."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:18:36",
+      "text": "Ja, die eins null eins hattet einfach nicht nur das DSL angemietet, sondern das dazugehörige IP-Netz gleich mit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:42",
+      "text": "Genau, so und jetzt wo wird denn jetzt wo wird das jetzt zum ersten Mal zu diesem IP? Also wo komme ich da jetzt quasi raus?\nWo steht das? Ist das noch hier in Berlin oder ist das äh."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:18:57",
+      "text": "Det ist schon noch in Berlin. Natürlich äh haben die an die Provider grade die Großen jetzt keinen Bock, alles nur zu konzentrieren\nÄhm gerade äh Telekom und oder Vodafone, wie sie alle heißen. Die haben natürlich auch lokale Infrastruktur\näh ähm das heißt aber nicht notwendigerweise, dass sie diese lokale Infrastruktur, also heißt jetzt mal mit Router in Berlin,\nAlso ich würde mir jetzt mal mutmaßen, dass dein dass das Paket, was aus deiner Fritzbox da raus kullert, durch diese tausend Ein- und Auspackereien letztendlich erstmal wieder an einem Router in Berlin landet.\nJa? Äh das äh macht Sinn, weil Berlin ist halt einer von so paar großen Knotenpunkten, die die großen Provider alle haben\nja? Das kann dir aber zum Beispiel also mein Paket, was ich hier einpacke, hier auf meinem Landsitz, ich befinde mich gerade hundert Kilometer nördlich von Berlin. Ähm das wird hier nirgendwo in der Gegend ausgepackt,\nwandert direkt hier aus dem DSL das nächste nächste für mich, ist auch wieder in Berlin. Ähm\nwird allen Leuten irgendwo in Deutschland zu gehen, das heißt, da gibt's da immer noch die alten Telekomstrukturen, also sozusagen\nhaben, wo sind ihre Hauptvermittlungsstellen und ihren ganzen Quatsch und so, da entlang dieser Trassen legen die natürlich auch noch ihre ihre Kabel, weil sie ja eben auch Wegerechte haben und so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:12",
+      "text": "Und da steht jetzt ein, das ist dann quasi ein äh großer Raum, der ist äh klimatisiert, stehen die ganz stehen ganz viele neunzehn Zoll Recks drin. Und in den neunzehn Zoll Recks sind ganz viele Cisco Router und."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:20:26",
+      "text": "Unter anderem auch jede Menge Cisco-Uter. Gerade bei der Telekom."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:29",
+      "text": "Und dann geht's von da aus, fängt da jetzt schon das große böse Internet an oder äh."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:20:35",
+      "text": "Ne? Jeder jeder Großprovider betreibt erstmal seinen eigenen Backboard. Das heißt äh äh es gibt erstmal so Verbindungen äh der der Netzknoten,\nbleib jetzt mal beim Thema Telekom oder Vodafone. Also in dieser Größenordnung, ja? Ähm die sind erstmal untereinander verbunden miteinander. Ähm auf Basis von entweder selbstgelegt\noder eben gemieteten Leitungen. Wobei eben diese Mietleitung durch irgendjemanden bereitgestellt werden, auch sehr häufig durch amerikanische Firmen wieder,\noder wie gesagt auch russische Firmen oder wat auch immer. Ähm jedenfalls ähm irgendwie so ein so ein so ein Stückchen Glas.\nWo man denn sein Paket reinspuckt und irgendwie fällt in Stuttgart oder wo auch immer wieder raus\nDort heißt, jeder Provider bildet sich erst mal eine eigene nationale Infrastruktur, über die er seinen ganzen Verkehr leitet\nähm die es auch äh in der Regel wird die nicht wird die nicht öffentlich dokumentiert äh irgendwas. Man kann's manchmal ein bisschen sehen, weil wenn du diese Dress-Rout-Kommando machst, mit Namen, hat sich so eingebürgert, dass äh ein guter Provider da vielleicht mal seine,\nähm auch seiner internen Infrastruktur im DNS dokumentiert. Das heißt, wir haben mal so ein macht zum Beispiel.\nZu Google mal dann fällt das halt von meiner Fritzbox raus erstmal in irgendwelche unbekannten Dinger bei der Telekom und dann\nmal zwischendurch so einen Namen und diese Namen äh orientieren sich äh entweder gerne an Flughafen kurz oder äh in Deutschland auch gerne an Autokennzeichen.\nDas heißt also bei mir rennt das Paket teilweise durch einen Router durch, der heißt B Punkt DE Punkt Net Punkt DAX Punkt DE\nJa, und dieses B ist halt Autokennzeichen für Berlin. Das heißt, das rennt da irgendwie durch den Berliner, ruht da durch. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:23",
+      "text": "Aber auch so Muck und wie und so, ne."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:22:26",
+      "text": "Wie gesagt, also man sieht gerne diese drei Buchstabe,\nsind denn die üblichen Flughafen kurz. Also gerade auf internationalen Verbindungen, wenn du irgendwo hinruhtest, äh irgendwohin ähm sieht man das sehr gerne.\nÄhm aber um um nochmal darauf zurückzukommen, also die als so ein großer Netzbetreiber betreibt erstmal ein eigenes, ein eigenes Netz, was ja komplett,\nautonom für sich betreibt und mit seinen eigenen Spielregeln, mit seinen eigenen Adressen, mit seinen eigenen Quality of Service Geschichte,\nist schon mal diese Thema, ne? So äh Stichwort Netzneutralität und so. Das macht er alles, wie er will. Und\ndas kannst du dir vorstellen, aufm Bild wie eine Wolke\nÄh dieses Ding hat auch einen technischen Terminus, nennt sich nämlich ein, so deswegen ist auch meine Betonung auf autonom, ja, das heißt,\nLeute ähm äh machen das komplett nach einem Gutdünken und das Ding hat eine Nummer,\nSo ein hat eine international zugewiesene Nummer, nämlich eine AS-Nummer. Ähm und äh jetzt kann man an diese Wolke\näh beliebig Außenverbindung andocken."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:29",
+      "text": "Nur nur mal ganz kurz, das heißt aber eigentlich vom Aufbau her unter Schall ist das jetzt was weiß ich so mein,\nLook Local Area Network, also das, was was man irgendwie zu Hause in seinem WLAN hat, nur das jetzt halt in einfach in sehr, sehr viel groß, größer. Und an mehreren Orten.\nUnd mehrere IP-Subnetze zusammen, aber am Ende ist es ein ein IP-Netz, was noch nicht\nunbedingt Internet ist, aber schon mal in der Lage ist, alle ähm IP-Adressen, die innerhalb dieses einen Providers äh zugewiesen werden, miteinander zu verbinden. Das heißt, wenn Tim die\nZu meiner Frage, weil wir jetzt gerade herausgefunden haben, dass mein Eins- und Eins-Zugang\näh sogar die diese Infrastruktur von der Telekom gemietet hat. Das heißt, mein IP-Paket, was ich jetzt vor einer halben Stunde losgeschickt habe, das fällt einmal in diese Wolke rein und bauen's wahrscheinlich direkt an dem Berliner Router\nin Richtung Tim. Und damit wär das schon mal, also das ist jetzt ein ein pures Schlandnett-Paket."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:24:35",
+      "text": "Das ist ähm höchstwahrscheinlich ein pures Landnett-Paket, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:39",
+      "text": "Freischland net. Freischleimpaket, ein Freischleim."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:24:42",
+      "text": "Frei, weiß ich nicht, hat wat mit Telekom zu tun und das ist jetzt,\nWorte, die nicht notwendigerweise mal miteinander assoziieren würde, aber ähm ist äh ja, äh bleibt innerhalb dieser Wolke."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:53",
+      "text": "Und jetzt kommen wir zu dem zu dem Fall, auf den ich eigentlich ansprechen wollte. Jetzt jetzt wollte dieses Paket sollte jetzt zu einem anderen Provider. Nehmen wir mal einen, der nicht irgendwelche Infrastruktur von der Telekom nutzt, äh Kabel Deutschland. Ist das so? Nutzen wahrscheinlich nicht so viel Telekom-Infrastruktur, oder?"
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:25:08",
+      "text": "Ähm ja, die werden sich auch irgendwo die eine oder andere Leitung mieten müssen, aber jetzt nicht für den Zugang zu ihren Kunden, ne. Das machen sie ja über ihr Kabelzeugs."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:16",
+      "text": "Das heißt, äh wenn dieses Paket jetzt äh zu einem Kabel Deutschland Kunden soll, dann muss es irgendwie aus dieser Telekom-Wolke raus und dann muss es irgendwo in das übertreten,\nwas dann irgendwann als Internet bezeichnet wird, weil es mehrere Netze verbindet."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:25:34",
+      "text": "Ja, aber auch das ist keine einzelne äh äh Entität."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:39",
+      "text": "Nee, nee, ist richtig, aber."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:25:40",
+      "text": "Aber genau, also das heißt, du musst jetzt diese Wolke verlassen. Du musst jetzt dieses verlassen ähm und da gibt's halt mehrere Möglichkeiten, was man tun kann.\nDie erste Geschichte, die dort üblich war, als man damit angefangen hat, überhaupt, war, dass sich äh Provider ähm äh Leitungen, direkte Leitungen zwischen äh zwischen sich gemietet haben, von irgendwo her. Äh die natürlich auch ein Geld gekostet haben. Da hat man sich dann die Kosten geteilt.\nUnd hat einfach direkt Daten miteinander ausgetauscht, fertig, zack. Ähm da gibt's den,\nauch so spezielle Protokolle dafür, die das Ganze steuern,\näh deswegen kommt auch dieses orthonom System da so ein bisschen ins Spiel. Ähm,\ndass sich äh zwei solche Wolken miteinander verbinden über ein,\nProtokoll, wie zum Beispiel BGP, das berühmte BGP des Boardergate."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:28",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:26:29",
+      "text": "Wo die sich sozusagen gegenseitig äh A versichern, dass sie da sind und B auch austauschen, welche Routen. Also welche Netze der jeweilige hat auf seiner Seite. Ähm und äh,\nDas hat man, wie gesagt, früher direkt sagen, ich will mal sagen, ja, das heißt also,\nin unserem fiktiven Beispiel, ist also sozusagen Kabel Deutschland hingegangen, hat gesagt, ja, es gibt\nunter Umständen Gründe, warum meine Kunden mit deinen Kunden was zu tun haben wollen, liebe Telekom, äh lass uns doch mal bitte ein Kabel ziehen zwischen uns, äh wir setzen eine BGP-Session auf und tauschen da sozusagen direkt den Datenverkehr zwischen unseren beiden Kunden aus.\nDas ist so die äh die traditionelle Methode. Dann hat man irgendwann festgestellt, als es immer mehr Leute wurden, also immer mehr Provider wohnen, als das Internet größer wurde in den Neunzigern. Dass es nicht besonders effektiv ist, dass es sogar sehr teuer ist.\nWenn jetzt jeder zu jedem eine einzelne Strippe hat. Ähm deswegen hat man dort angefangen ähm so nette Internets zu gründen\nDas heißt, man ist dort hingegangen, man hat sich nicht jeder mit jedem verbunden, sondern man hat sich ein ein politisch neutralen Punkt gesucht.\nDort hat man einen Sternpunkt aufgebaut, wie du technisch aussieht, können wir gleich noch drauf kommen. Ähm und äh alle connecten jetzt sozusagen zu diesem Sternpunkt hin.\nUnd tauschen dort miteinander Daten aus. Äh das heißt, ich brauchte sozusagen statt äh fünf Leitungen zu fünf Partner pro Weidern, äh brauchte ich sozusagen nur noch eine Leitung zu so einem Internet Exchange, weil dort die anderen fünf auch,\nda waren und konnte sozusagen über eine Leitung, die ich dir natürlich dicker ausführe als die fünf einzelnen äh äh konnte ich dann sozusagen Verkehr mit allen Fünfen dort austauschen.\nOder kann, so ist dieses Konzept ja heute noch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:12",
+      "text": "Und,\nDa war glaube ich so, dass wenn ich das jetzt richtig äh mich erinnere, so einer der ersten oder der wichtigsten seit äh irgendwie neunziger Jahren waren dann der für Europa war Ansix. Amsterdam Internet ist change.\nUnd.\nDas hieß, da haben wir dann, da gab's dann erstmal kein Schland mehr, ne, weil dann haben die äh haben die Deutschen Provider wahrscheinlich erst mal äh sich alle ihre ihr Glas zum gelegt oder haben sie sofort die Idee gehabt, man könnte sowas."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:28:45",
+      "text": "Nee, nee, nee, Internet, das hat man relativ früh gern gemacht. Also DTX ist auch eine eine sehr, sehr."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:51",
+      "text": "Jahre, ne? Ja."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:28:52",
+      "text": "Ist sehr, sehr früh dagewesen. Ich habe selber da noch gefummelt in den ersten, also an den in den in den in den Räumen da ähm in den in den ersten Tagen, als da hoch,\nÄh das ist äh das macht auch Sinn, weil internationale Leitungen waren zu Zeiten des Telekommonopols unglaublich teuer.\nÄhm die man hatte sozusagen, also Leitungen waren sowieso teuer, waren's richtig, richtig teuer und soweit man irgendwie eine Grenze nur äh touchiert hat, wurde das gleiche um den Faktor fünf nochmal teurer,\nAlso deswegen so alle Leute ganz Europa springt nach Amsterdam oder sowas,\nist ähm das ist erst heute möglich, wurde halt eben mit Carian arbeitest, denen eben die Grenzen egal sind,\nÄhm also wenn ich eine Leitung von Colt miete, ist das egal, ob die von äh von äh Berlin nach München geht oder ob die von Berlin nach Amsterdam geht,\ndas rechnet sich halt rein nach der Strecke oder irgendwas aus, aber da hat ja jetzt eine Grenze dazwischen, das interessiert heute keinen mehr. Damals hatte\ndie Leute sehr interessiert, beziehungsweise waren ja eben es gab ja die Leitungsmonopole der nationalen Telekomgesellschaften.\nUnd allein schon durch die Tatsache, dass du eine internationale Leitung hattest, waren ja denn immer zwei involviert,\nIch kann mich erinnern, wir hatten mal so Leitungen gemacht, so was ich Deutschland, Frankreich ähm und das bedeutete, das heißt, du musst es nicht nur die Pappnasen von der Deutschen Telekom dazu bringen, äh äh die der Bundespost dazu bringen, irgendwie äh wat richtig zu machen und das auch,\nin angemessener Zeit, sondern bei France Telekom auch nochmal mit. Ähm kann mich erinnern, wir haben sogar Sachen gemacht ähm,\ndass man äh so bestimmte Grenzsituationen auseinander hat, zum Beispiel Zerren, sagte das was? Cern dieser dieser äh Beschleuniger ringt da in der Schweiz?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:27",
+      "text": "Schon mal gehört."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:30:28",
+      "text": "Der liegt, der liegt geographisch gesehen äh unter der Schweiz und Unterfrankreich. Also der Ring geht sozusagen zweimal zweimal unter der Grenze durch.\nUnd dit haben damals schon Leute benutzt, äh um durch einen Cerentunnel mit dem Isonet zu gehen und äh äh eine Brücke herzustellen zwischen zwei Ländern, weil es einfacher war, als sozusagen internationale Leitungen zu kriegen von der Schweiz nach Frankreich\nNe, also deswegen ähm dit war alles so eine graue Zeit, wo diese nationalen Telekomgesellschaften da irgendwie ihr Monopol ausgelebt haben, das war nicht lustig.\nLange Rede gar keinen Sinn, also Dezix war auch eine sehr frühe Sache, hat man auch gemacht,\nauch so andere Geschichten so der berühmte Eunet Knoten\nin Frankfurt und sollte dann so frühe Geschichten wo man sich einfach getroffen hat an bestimmten\n'ne Ordner. Det waren jetzt noch gar nicht in dem Sinne so offizielle Zixe, aber man wusste eh, ach guck mal, da in dem selben Rechenzentrum, wo wir sind sind, sind doch, wie zwei Recks weiter, auch die anderen. Na dann kann man auch da mal ein Kabel oben rüberschmeißen.\nIst ja dann irgendwie einfacher, als äh wie jetzt sich Querleitung durch die Republik anzumieten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:31",
+      "text": "So und dann, dann kam irgendwann, also das heißt, da kam dann das auf und heißt, letztendlich, dass dass zwei ähm\nich nenne es jetzt mal Internetprovider, ähm die so größere Netze betreiben, sagen, ach Mensch, lass uns doch einfach mal unsere beiden Netze aneinander äh,\nmit dem Käbelchen und dann können können wir zwischen unseren Nutzern ähm schnellere Verbindungen herstellen und das."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:31:59",
+      "text": "Verbindung herstellen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:01",
+      "text": "Oder überhaupt Verbindungen herstellen und das sollte doch in unser aller Interesse sein."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:32:08",
+      "text": "Ist halt ein riesen äh ja, klar, logisch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:11",
+      "text": "Und jetzt kam aber doch dann irgendwann hat jemand gesagt, ach, weißt du, wenn du mit uns verbunden werden möchtest, wir haben doch viel mehr Kunden als du,\nDu hast auch mehr davon, wenn wir beide uns verbinden als ich davon habe."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:32:27",
+      "text": "Details, wir teilen uns die Kosten nicht mehr, sondern du zahlst mehr mehr als ich dir. Oder als oder du zahlst mir auch, hm?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:35",
+      "text": "Das nennt sich dann wie?"
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:32:39",
+      "text": "Erpressung?\nIch glaube, da gibt's gar nicht so richtig so einen Namen für. Also was man noch unterscheiden muss, ist folgendes. Ist äh die ISPs sind nicht alle gleich. Nicht jeder äh Provider,\ndieselbe Größe, hat den selben internationalen Bums, äh, so viele Verbindungen, so viele Kunden, äh, und so weiter und so fort. Deswegen, es gibt auch so, also, es gibt\nin dieser ganzen Szenerie gibt es auch durchaus ISP,\ndie selber gar keine Endkunden mit DSL-Fritzboxen dran äh betreiben oder irgendwie äh versorgen, sondern die versorgen nur andere Provider."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:15",
+      "text": "Also Level drei zum Beispiel oder."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:33:18",
+      "text": "B drei zum Beispiel\nÄhm und bei denen, bei denen führt man technisch gesehen das selber aus, wie wie mit so einem direkten Peering, ja, deswegen nennt sich das ergibt sie einen technischen Thermp Peering,\nähm ähm nur bei denen kauft man sich Transit.\nDas heißt, ähm wat so ein kleiner ISP in Deutschland ist, der hat in der Regel eins, zwei, drei von diesen äh von diesen großen Transitprovidern\nÄhm hängt sich da an, mit möglichst\nLeitung und äh äh die erlauben einem, dass man Verkehr nach überall hin da reinschmeißen kann. Ich kann also jetzt, wenn ich mir so einen Transit Link von Level drei Miete kann ich da nicht nur Verkehr an Level drei Kunden reinschubsen, sondern ich kann,\nan beliebige Leute reintun. Äh weil Level drei ist ja halt so groß und,\nund das heißt,\nbieten wir globales Routing.\nJa, auch nach Japan, auch in die äh auch nach in die Antarktis und überall hin und so, ja?\nUnd dafür zahlt man natürlich Geld, ne, als Provider.\nÄhm für diese Transit äh so ein Transit Connection, Transit Peering.\nÄhm dit andere Peeling, wat wir zuerst besprochen haben, ist ja ein Reinig, äh meine Kunden gegen deine Kunden. Ja, das heißt, man geht nicht durch so einen durch zu einem Dritten, außer,\nJa, man man erlaubt sich das mal gegenseitig, weil man sich nett findet oder wie auch immer. Es gab ja auch mal eine sehr, sehr kooperative Zeit bei diesem ganzen Internet. Das dürfen wir bitte nicht vergessen, diese ganzen Strukturen wurden aufgebaut zu einer Zeit, als es darum ging, globale Konnektivität zu schaffen.\nDa war diese,\ndieser ganze Politlayer, ja, den es da so gibt und äh irgendwelche Beamter, die sagen, ja aber du schickst mir fünf Bikes mehr im Monat als ich dir. Deswegen musst du mir jetzt Geld zahlen. Diese ganze Nummer äh kam erst später hinzu\nJa, also dieses äh das war alles mal sehr, sehr, sehr auf Kooperation äh ausgerichtet. Und dann kam es auch mal vor, dass auch mal versehentlich mal fünf Bikes von kommerziellen Provider A durch irgendein Wissenschaftsnetz\nzu kommerziellen Provider B gingen. Ja, das war okay.\nGing da drum, ein Internet zu schaffen, ein Netz, was für alle und jeden immer überall verfügbar ist, das war sozusagen noch das Ziel, das war noch nicht so diese Handelsware, die es heute ist. Ähm.\nUnd aus dieser Zeit stammen diese Strukturen, ja und das ist dieser ganze andere Quarkt, der da später jetzt hinzugekommen ist, das ist äh hat sozusagen det Internet erst verkompliziert, sagen wir mal."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:42",
+      "text": "So, dann kommen wir jetzt irgendwann langsam im Heute an. Und heute, wir haben schon gesagt, es gibt den,\nDeutschen Commercial Internet Exchange ähm."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:35:53",
+      "text": "Bzix und so. Also Berlin und Tralala und so gibt diverse von diesen internet Exchanges."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:58",
+      "text": "Eigentlich gibt's mittlerweile in jeder Stadt irgendwelche Zixe oder kann man sagen, ne, also in jeder größeren Stadt gibt's äh."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:36:06",
+      "text": "Also ich sage mal, es gibt dit in gibt's in Berlin, das gibt's in Hamburg, das gibt's in Düsseldorf, das gibt's in Frankfurt, natürlich, das gibt's in München,\nweiß jetzt nicht, ob Stuttgart irgendwas hat oder Nürnberg oder so, aber das war's glaube ich. Und weiß nicht, vielleicht hat auch mal jemand was versucht in Dresden\nkann ich jetzt nicht sagen. Aber so die spannenden Dinger, also habe ich eben genannt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:28",
+      "text": "Und da sind dann immer die ganzen alle Provider miteinander verbunden. Alle? Nein, nicht alle. Wer macht nicht mit?"
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:36:37",
+      "text": "Ähm na ja, sagen wir mal so, ähm es gibt\nweiß worauf du hinaus willst. Äh es gibt einen, der hat sich dieser ganzen Nummer sehr, sehr, sehr, sehr lange äh verweigert, nämlich die Deutsche Telekom\nDie Deutsche Telekom hat, wie alle großen Provider, ähm das haben sich abgeguckt von äh so Leuten wie Horizon oder ATNT in USA äh gesagt,\nja Peering, klar können wir pieren, aber wir haben ja nur Router in Kleinkukakerode\nAlso lieber Provider XY, wenn du gerne mit uns der Deutschen telefonieren willst\nDann musst du, ja, wir sind leider nicht vertreten,\nTut uns leid, aber wir haben, wie gesagt, in kleinen da sind Router, da könntest du dich hin verbinden,\nOh, du hast kein Glas nach kleinen Coca Crode. Na ja, wir könnten dir da was anbieten. Ja,\nungefähr so 'ne Nummer die da gerne gemacht wird und,\nja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:37",
+      "text": "Und erlauben konnten sie sich deshalb, weil sie die ganzen Kunden haben. Das heißt, wenn du äh was weiß ich, werde ich als äh,\nIch gehe hin und sage, äh ich mache jetzt hier einen auf, auf Internetprovider. Äh oder ich habe zum Beispiel eine äh ähm Datenzentrum, wo irgendwie ganz viele Server drin\nund die Leute sollen bei mir äh Daddy Cated und Virtual Server kaufen und sollen da irgendwie Webseiten drauf machen. Dann bin ich natürlich darauf angewiesen, dass ich eine vernünftige Verbindung habe zu den,\nder Telekom, damit die ganzen Telekom-Kunden glücklich sind und sagen, ah, da diese Seite kann ich aufrufen, das funktioniert schnell und ist gut.\nUnd wenn ich als wenn ich jetzt als Inhalte, Anbieter quasi da stehe oder als jemand, der,\nInhalte, Anbietern Infrastruktur zur Verfügung stellt äh und ich habe keine vernünftige Verbindung zur Telekom, dann wird meine wird mein Infrastrukturangebot\nsich keiner großen Beliebtheit erfreuen."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:38:30",
+      "text": "Vielleicht nicht hier, sondern bei Amerikanern oder Schweden oder wie auch immer, die gute Konnektivität zu dir haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:35",
+      "text": "Klar, aber das heißt, wenn ich äh wenn ich in Deutschland eine wenn ich Dienste für deutsche\nKunden anbieten möchte, die leider größtenteils bei der deutschen Telekom\nihre Internetanschlüsse haben, bin ich darauf angewiesen eine vernünftige Verbindung zur Telekom zu haben und wenn die\nDeutsche Telekom dann sagt, ja genau, hier guck mal, wir haben da sogar ein Glas noch fliegen, das könnte sie bei uns mieten und dann könnte sie für das Glas bezahlen und dafür bezahlen, mit uns zu."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:39:04",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:05",
+      "text": "Und dann äh hast du auch äh eine vernünftige Verbindung zu unseren Kunden. Während eigentlich die gute\ndas, das, das Gute im Menschen einmal dazu geführt hatte, dass man gesagt hat, komm, wir bauen uns äh Sixse, da legen wir einfach\nalle hin. Das ist dann eben unser Problem, wo wir unsere Daten äh äh unsere Netze aufbauen. Am Ende muss ein dickes, ein dickes Kabel äh nach\näh zum zum Zix gehen, ob der jetzt in Frankfurt oder in Berlin steht. Und ab da ist dann, sind wir alle miteinander verbunden und dann haben wir schön Internet."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:39:38",
+      "text": "Soweit die Türe, ja. Oder auch die."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:40",
+      "text": "Das heißt, die Telekom hat eigentlich die die Geschäftsstrategie der Telekom war, das zu umgehen und zu,\nMit jedem einzelnen zupieren. Hat die Telekom denn dann auch gesagt, na ja gut, wenn du einmal bei uns dransteckst, dann transiten wir dich auch durch zu den anderen, weil dann wäre die Telekom ja quasi in direkten direkte Konkurrenz mit dem Zix getreten. Dann wäre die."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:40:01",
+      "text": "Kannst du dazu kaufen\nKannst ja äh, es gibt ja von der Telekom nicht nur DSL-Anschlüsse für Kretin und Platin zu Hause. Es gibt ja von der Telekom auch richtig äh für ernsthafte Unternehmen äh Anschlüsse, also so mehrfach Gigabit-Bereich äh oder\nhalt eben auch so was für andere Provider. Du kannst dir Transit von der Telekom einkaufen, damit bist du auch eigentlich europäisch\nrelativ gut verdrahtet, bist du auch innerdeutsch ganz gut verdrahtet, wenn du das bei denen kaufst, aber det ist halt teuer.\nUnd äh die sind auch ein bisschen da gibt's auch Leute in Münster, die äh ein bisschen Anal fixiert sind, was ihre Spielregeln angeht und so. Aber ähm abgesehen davon, äh kannst du das tun?\nNe, kappt das auch neulich mal gemacht gerade, deswegen habe ich relativ aktuelle Daten, weil wir haben die die ITF, die im August ja in Berlin da war, da war die Telekom Sponsor,\nfür die Konnektivität dorthin und ich habe die da betreut und äh da konnte ich mal sehen, was die so aktuell gerade können so an Durchsatz und so und das sieht sehr ordentlich aus.\nDa hatten wir zweimal ein Gigabit von der Telekom. Ja und äh dort wurden die ITF wird\nbehandelt wie ein Provider. Das heißt, da wird auch wieder so ein BGP-Peeling aufgesetzt und so und die ITF bringt doch ihre eigenen ihre eigenen Netze mit, die dann da gerootet werden müssen und so. Und das geht also, das kann man sich einfach kaufen, bloß ich hätte es nie bezahlen wollen oder so. Also das ist halt unsäglich teuer.\nAlso im Vergleich zu Angeboten von von anderen äh internationalen Kerryern wie oder Level drei oder wie auch immer,\nÄhm wie dem auch sei, ja, du hättest, du hast es, du hast es ja genau richtig beschrieben. Ähm,\nan dieser Stelle jetzt nochmal Netz politisch mal sagen möchte ist, äh ich hatte das schon mal in dieser äh äh Qualitätsdiskussion schon mal. Ich finde das eine ziemliche Frechheit von der Telekom,\ndass sie äh ihre User ähm also die Endkunden mit dem armen Modem oder DSL-Anschluss zu Hause ähm.\nDass sie die sozusagen nochmal als Pfand einsetzt oder die nochmal vermarktet,\nstell dir bitte vor, du hast ja, du bist ja DSL-Kunde und zahlst den ja schon X Euro im Monat, dass sie dich ins Internet bringen,\njetzt von der Telekom nochmal hinzugehen und zu sagen, äh zu jemand anders, äh wir wollen nochmal dafür kassieren, für die selbe Dienstleistung\nähm äh finde ich halt irgendwie ein bisschen affig. Weil äh du hast es eben so schön dargestellt, wenn du so ein Hosting Provider bist, du betreibst es irgendeinen Webshop,\ndeutsche Kunden, ja? Und dann möchtest du natürlich, dass der, dass der Hosting Provider gute Verbindungen zu den\nOnlinekunden hat, damit sozusagen deine deutschen Kunden schön auf deinem Webshop kaufen können und dass das äh fluffig ist, wenn man da klickt. Ähm,\nDer DSL-Kunde hat ja schon selber dafür bezahlt, dass er dahin kommt zu diesem Shop,\nWarum soll es der Shop noch mal dafür bezahlen, dass Leute zu ihm hinkommen können? Das ist so wie, ich habe dieses Beispiel damals gebracht, du setzt dich in Zug, fährst nimmst dir kaufst dir ein Ticket nach München,\nja, fährst damit nach München und kurz vor München hält der Zug an und dem der Bahnchef ruft beim Oberbürgermeister in München an, sagt, hallo, ich hätte jetzt hier einen Zug voller Leute für deine Stadt.\nZahl mir doch mal nochmal ein paar hundert Euro, dann kommen die auch an. Und dann kommen die auch vernünftig an. Det ist dit kann man sich so, kann man sich das gar nicht vorstellen oder ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:11",
+      "text": "Das ist jetzt ein sehr doofes Beispiel, Clemens, weil tatsächlich ist es auch so, dass die Stadt München, der Bahn äh Geld dafür zahlt, dass sie dort einen Bahnhof betreibt. Also das funktioniert jetzt äh an der Stelle."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:43:23",
+      "text": "Ja, aber ist ist das, ist das nicht bekloppt? Ich habe doch schon jemanden dafür Geld gegeben, dass er mich nach München bringt. Warum soll jetzt München nochmal dafür Geld bezahlen, dass."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:32",
+      "text": "Nein, das das hinkt jetzt ein bisschen, weil die Bahn natürlich mit dem Netz, also mit ihrem Netzausbau auch wirklich ein Monopolbetreiber ist, da gibt's keine anderen Schienen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:40",
+      "text": "War ein Taxi. Fahren wir mit dem Taxi."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:40",
+      "text": "Also äh das ja äh genau, also wenn schon Vergleiche, dann äh bitte auch welche, die passen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:47",
+      "text": "Ah, komm, der war aber lustig. So, wir fahren mit dem Taxi, wir fahren mit dem Taxi und der Taxifahrer verlangt nochmal äh Geld,\nder Stadt, dass er mich auch dahin bringt, weil ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:55",
+      "text": "Noch nicht von der,\nvon den von den von den Shopping Malls so, das heißt so, ja ich fahre dich gerne zum Einkaufen, äh ich fahre dich äh kann dir jetzt aber leider nur einen Normaltarif anbieten für die Shopping-Balls, die bei mir auch einen Vertrag haben. Alle anderen äh äh Ziele."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:44:09",
+      "text": "Er mir aber nicht schön, Tim, das sagte mir, die Telekom sagt mir als DSL-Kunde nicht. Äh, hallo, hier, du hast jetzt hier nur Normaltarif, äh, ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:17",
+      "text": "Nee, du kommst dahin, aber es dauert halt länger."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:44:20",
+      "text": "Ja. Aber ich habe noch nicht mal die Option selber also verstehst du, das wird halt einfach, es wird auf beiden Seiten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:26",
+      "text": "Halten einfach in."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:44:27",
+      "text": "Dieselbe Dienstleistung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:29",
+      "text": "Für eine für eine für eine technischen Prozess, der,\nZur Grundidee des Internets eigentlich dazugehört, dass man einfach nach bestem Wissen und Gewissen einfach überall Leitungen hin äh schmeißt und so gut rutet wie man kann."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:44:45",
+      "text": "So und wenn die,\nKunden, der der Witz ist ja der, die Telekom-Kunden haben ja keine Möglichkeit, sich äh sich dort sozusagen durchzusetzen. Die können jetzt nicht in Streik treten. Weil viele von denen sind halt in der Lage, wie ich hier auch auf meinem Land sitze, wenn ich keinen Telekomanschluss habe\ngar keine Bits\nSo ähm aber da würde ich jetzt zum Beispiel auch mal irgendwie diese diese Verbraucherschutzorganisation in der Pflicht,\ndie ihr auch gerne mal eben so so Siege erreichen, vor irgendwelchen Gerichten, wie jetzt gerade kürzlich, ne?\nDieser Flatrate Geschichte, dass die mal hingehen und sagen, hallo lieber,\nin Klammern Telekom at Klammer zu ähm ähm,\ndeine Leute oder die Kunden, die wir hier vertreten, als Verbraucherschutz-Organisation zahlen schon für eine Dienstleistung. Bitte erbring die doch jetzt mal. Bitte macht doch det jetzt mal, bring doch det jetzt mal in Ordnung. Also zum Beispiel diese diese\newige Quengelei mit den YouTube-Videos und den ganzen anderen. Das ist ja, sind ja Auswüchse genau von solchen Geschichten\noder halt mit dem mit dem Routing zu irgendwelchen Shops. Ähm natürlich kann man jetzt\ndie Leute nicht dazu verpflichten, äh irgendwie an bestimmte Peeringpunkte zu gehen oder sonst irgendwas, aber ähm diese diese Doppelausnutzung oder äh auf\npassiert ja auch alle zu Lasten der Kunden, ja. Die Telekom-Kunden haben ja teilweise dann eben schlechte Verbindungen nach A oder B hin,\nweil es an der Technik hapert, sondern weil irgendein Politiker sitzt in Bonn oder in Münster oder sonst irgendwo, der sagt, nö, wir lassen halt die Leute mal ein bisschen leiden, bis die Webshop\näh Betreiber so lange leiden, bis die halt ihren Provider quengeln, dass der doch endlich mit uns piert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:17",
+      "text": "So und jetzt sind wir quasi, jetzt sind wir ja so echt im Heute angelangt. Wir haben die die Deutsche Telekom, die sich da irgendwie hinstellt und sagt, ach so, du willst\nInternet haben, ja klar kannst du bekommen, kostet so und so viel und ach so, du willst, dass unsere Kunden bei dir ankommen\nauf eine vernünftige äh mit einer vernünftigen Geschwindigkeit. Das kostet auch. Das heißt, sie halten in beide Hände in in beide Richtungen die Hand auf und lassen sich\nbezahlen. Und dann gibt's noch irgendwo ein daneben steht dann sowas wie der wo ich hatte, glaube ich, gelesen. Da inzwischen heute um die sechshundert Provider\nsich da interconnecten, ne?"
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:46:52",
+      "text": "Sind über zweihundert wohl,\näh die, die dann mehrfach connecten, also sie haben physikalische Connections, gibt's äh irgendwie so im Bereich fünf sechshundert rum, ja? Ähm das sind aber jetzt nicht alles äh nicht jeder Providor hat da bloß eine Strippe hin."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:47:08",
+      "text": "Ah ja, okay, aber das ist, das ist."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:47:10",
+      "text": "Dass man sich mal vorstellt was es eigentlich ist. Also Dzix hat mal angefangen in irgendeinem Rechenzentrum, da war das einfach nur so ein,\nein so ein Ding, so ein größerer,\nÄhm und inzwischen sieht es aber so aus, markant ist übrigens auch alles öffentlich, wer das gerne gucken möchte, kann da mal nachschauen, äh der DTX betreibt ja auch eine sehr schöne Webseite, nämlich D E Minus CIX Punkt Net.\nDa kann man sich mal so äh die äh gibt's so bei About kann man sich die äh Topologie angucken. Inzwischen haben die in acht Rechenzentren oder mehr, acht, neun Rechenzentren irgendwie in Frankfurt äh riesengroße Switches zu stehen\nAlso in verschiedenen Rechenzentren da und ganz verschiedenen Stadtteilen dort, die untereinander und miteinander verbunden sind, die benehmen sich aber alle wie ein,\ndass sozusagen ein ein riesengroßes und die haben dort wie gesagt Umsätze im Terrabitbereich, ne?\nPro, was haben Sie hier? Zwölf Terrabit äh durch das Mesh Network, durch zwei Terabit äh äh auf den einzelnen Glasfaserleitung zwischen diesen Dingern hin und her.\nÄhm\nDas heißt, du kannst dich als Provider, kannst du dir jetzt eins von diesen Hosting-Centern dort aussuchen, was da dran teilnimmt, eins von diesen neun oder zehn Dingern, die das sind, ähm dich da einmieten mit deinem Equipment oder auch nur dort eine Strippe hinlegen lassen ähm und dich dann sozusagen auf diesen großen, großen drauf stecken, wo die anderen auch alle draufstecken?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:36",
+      "text": "Dann kommt das Bit."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:48:39",
+      "text": "Ja, Moment, der muss ja noch wissen, wohin damit. Ähm\nÄh erstmal steckst du dann sozusagen mit allen anderen pro Wahl, allen anderen zweihundert Provatern oder eben fünf, sechshundert äh Devices dort auf dem auf einem Lahn drauf und das heißt, du kannst jetzt wieder hingehen und mit denen private Vereinbarungen treffen, mit den anderen Providern, äh\ndie\nkommerzieller politischer Art sein mögen, äh wie man sich da Verkehr austauscht. Nur du musst jetzt keine, keine Strippe mehr mieten. Du musst jetzt nicht mehr hingehen und jetzt noch mal separate Leitungen von A nach B bieten, weil ihr seid ja schon alle an dem Treffpunkt.\nAber er tauscht jetzt immer noch privat miteinander Daten aus. Ja, also nach privaten Vereinbarungen. Die andere Methode ist äh diese Dezix-Leute betreiben auch einen sogenannten Server.\nDas heißt, das sind oder das ist natürlich eine redundante Infrastruktur und so. Ähm da gibt's äh gibt's so ein Kästchen, das heißt du sprichst, machst diese berühmte BGP-Session, von der wir vorhin äh Sprachen, wo du also sagst, welche Routen du\nkennst äh und so, also welche deine sind, die machst du nicht gegenseitig mit den anderen Leuten zusammen, weil dann musst du mal überlegen, wenn du jetzt äh dit mit zweihundert anderen Leuten dort machst\ndann hast du auch äh.\nJa, einfach jeder mit jedem tausend Konfigurationsaufwand ist voll der Film, sondern du connectest halt eben auch gegen diesen äh mit deiner BGP-Session, lieferst dort deine Routen ab und holst dir die Routen von den anderen dort mit einer Session ab\nDas ist sozusagen ditwart eigentlich all diese Millionen oder diese tausenden äh von Kleinprovidern oft den ganzen Zixen gerne machen\nNe, das heißt, du steckst dich an eine zentrale physische Infrastruktur. Das ist dieser,\nDieser virtuelle Monster-Switch, der sich dort wie eine Krake quer durch Frankfurt und mehrere Hostings hätte äh raucht. Ähm und äh du hast eine logische Verbindung, wo du sagst, so, ich möchte gerne mit jedem pieren, der auch noch irgendwie Bock auf mich hat oder wie auch immer, ich stecke mich einfach in diesen rein, liefere dort meine Routen ein\nund lass den Verkehr hier so ein bisschen rauschen. Das ist eigentlich sozusagen die die schönste Methode\noder das ist eigentlich so die Methode, äh die so der Internet-Ideologie am besten entspricht. Ne? Det muss da, wie gesagt, so nicht sein. Also ich gebe dir mal ein Beispiel\nÄhm wir haben jetzt schon über Telekom gesprochen und bla, bla, bla und dann wo die Tierkommunten das hier nicht am ist und dann hat aber jemand den Finger oben irgendwo bei der Telekom gesagt, aber wir sind doch beim Dezix. Wir haben doch da irgendwie eine zehn Gigabit Connection irgendwo hin.\nÄhm nur die tauchen nicht aufm auf. Das heißt also, sie nehmen nicht an diesem wieder nicht an diesem öffentlich,\nich gebe dir meine Routen und lalala-Spielchen teil, sondern erstens machen sie's wohl angeblich nur für,\nund wie gesagt, sie tauchen weder auf dem V4 noch auf dem V sechser auf, sondern man kann halt wieder mit der Telekom diskutieren dort,\nsozusagen bilaterale Abkommen machen, statt Multilaterale Abkommen, äh macht ein bilaterales Abkommen mit der Tilgung, sagt hallo, ich möchte gerne mit dir IP Six Routing austauschen und ich bin noch abends sex und dann macht man wieder so eine private Konfiguration zwischen zwei Leuten,\nÄhm so, dit ist so die äh äh,\nleider die Situation. Wer übrigens da nachgucken möchte, es gibt ein nettes Tool, ähm ähm es gibt\nich hatte eben schon die Idee erwähnt. Man kann mal gehen nach LG, wie looking Glas Punkt DE minus SIX Punkt Net\nDa kann man nämlich diese diese befragen, wer ist denn so an dir angeschlossen? Wer ist denn da so dran und so. Äh da steht jetzt natürlich nicht Vodafone oder äh oder Eins und Eins oder irgendwas, sondern da stehen natürlich technische Daten,\nÄhm die zum Beispiel diese AS-Nummer, die ich vorhin erwähnt habe, die zu einem autonomen System gehört. Übrigens nebenbei, Telekom ist drei, drei, zwo null,\nJa, kann man mal gucken, guckt auf dem, sagt, kennst du drei, drei, zwo, null und sagt der, nö, nie gehört, nie sehen.\nAber man kann äh, wie gesagt, dann schauen, welcher andere Provider denn da ist, wie viel Routen er abliefert und so weiter und so fort. Das ist alles öffentlich, diese Daten. Da kann man, wenn man jetzt mal ein bisschen Recherche betreiben will, wäre jetzt eigentlich alles mitspielt und wie kann man da ganz gut\ndrin rumstochern. Also wie gesagt, LG Punkt DE minus Six Punkt Networking Glas. Da kann man mal schauen, was da passiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:42",
+      "text": "Mhm. So,\nbevor wir uns zu sehr inthenischen Details äh verfangen, würde ich doch ganz gerne mal ein bisschen wieder so auf die Netzpolitische äh äh Bewertung äh und die eigentliche Diskussion ähm zurückkommen wollen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:00",
+      "text": "Ja, was ist vor dem, also vor vor dem ganzen Hintergrund, das, was wir jetzt gehört haben? Was ist davon zu halten? Wenn jetzt die Telekom sagt, ey, Freunde, lasst doch mal schlank nett machen."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:53:14",
+      "text": "Ich es ist ein großes Hirn spinnst wieder,\nAlso ich kann da auch nur, ich kann mich darüber gar nicht aufregen, kann dadrüber im Kopf schütteln. Äh es ist auch, ich denke auch wirklich langsam ähm.\nDie verarschen uns. Da gibt's irgendwelche Leute äh beim Telekom-Marketing oder wie auch immer, die immer genau wissen, dass es da so eine Netz-Community gibt\nso 'ne Nerdtruppe, die sie immer voll aufziehen können, den muss man nur irgendwie so 'n kleinen Brocken hinwerfen, wie so 'n Wort\nJa, äh oder die spielt denn die Presse auch noch mit und generiert dann so schlank Netz. Und wir alle regen uns dadrüber unglaublich auf, weil das so unglaublich dämlich ist\ndie sitzen in Bonn nur da und feixen. Wie wir uns darüber aufregen. Ähm anders kann ich mir das nicht erklären, weil diese Sachen sind halt so unglaublich,\nhanebüchen. Ja, man kann man kann Netzverkehr so gestalten, dass er nur auf irgendwelchen nationalstaatlichen Routen lang,\naber wie ich vorhin schon sagte, ähm.\nDa nicht jeder Provider selber mit einer äh äh Kabeltrommel voll Glasfaser quer durch Frankfurt gerannt ist, äh äh sondern sich seine Verbindung anmietet, äh muss er sich auch drauf verlassen, dass diese physikalische Verbindung, die Glasfasern selber, die Multiplexer dafür, die Leute, die das managen und so weiter und so fort\ndass die auch alle total deutsch und total äh schlandig sind.\nDas kannst du nicht, das ist kannst du kannst du schon, wie gesagt, wenn du selber machst, ja? Also jemand wie die Telekom könnte tun\nAber auch dann äh sie machen's ja jetzt alle nur, weil sie jetzt Angst davor haben, dass in die NSA die Kabel an Bord, naja und äh wie gesagt,\nIst nicht ein Kästchen in einem Schrank, wo man jetzt irgendwie einen Wachmann vorstellen kann, sondern det Dzix ist ein riesengroßer Switch. Die haben sogar selber, muss man sich mal überlegen, die bieten die als Dienst an. Es gibt einen Dezix-Ableger in New York.\nUnd da haben die natürlich auch Verbindungen rüber. Ähm das heißt, es gibt sogar offizielle eigene von der vom Dzix angebotene Connections rüber, äh also raus aus Schlandnetz. Äh in in andere äh Juristdiktionen rein,\nund selbst innerhalb dieser innerhalb Frankfurts ich hab gesagt diese neun oder zehn Rechenzentren die wir haben die sind ja alle miteinander verbunden. Wer soll mir denn jetzt garantieren dass da nicht Nachts mal irgendwie ein NSA\näh einen Kanaldeckel sich anhebt in Frankfurt, da ist ja nachts keine Sau in der Innenstadt. Ähm und da mal unten ein bisschen Spaß hat äh mit äh ist sozusagen von daher vollkommen vollkommen affig diese."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:41",
+      "text": "Ja aber wenn man jetzt mal nur wenn man jetzt mal die Überwachungsmöglichkeit des NSA in Deutschland mal rausnimmt, sondern einfach jetzt mal nur diese Argumentation wir versuchen den äh den deutschen Traffic in Deutschland."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:55:53",
+      "text": "Aber warum denn?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:54",
+      "text": "Daten für deutsche Bürger."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:55:56",
+      "text": "Warum? Warum? Warum? Wenn du nicht äh wenn du nicht äh Schiss davor hast, abgehört zu werden von ausländisch. Ähm warum würdest du das tun wollen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:04",
+      "text": "Also ich würde es auf Anhieb erstmal für äh ökonomisch sinnvoll halten, äh möglichst\nna ja, auf der kürzesten beziehungsweise schnellsten Strecke zu ruten und die Strategie der ausländischen Feindesmächte\nscheint ja gewesen zu sein, dafür zu sorgen, dass wir teilweise durch sie schneller innerhalb des eigenen Landes als über.\nBilliger."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:56:35",
+      "text": "Billiger. Das kannst du heute übrigens auch noch angucken, wenn du bei Call-Telefonie über über Telefon machst. Also es gibt ja offizielle Interconnect\ngebühren, ja, zu, zum Mobilfunknetzen. Da sagt der Regulierungsbehörde, hier, lieber Deutscher Telefonprovider, wenn du einen Anruf in einen Mobilfunknetz einleiten willst, dann hast du dafür X und Y zu zahlen. Jetzt gibt's aber Call bei Call-Angebote. Die liegen weit da drunter.\nWie machen die das? Na ja, sie gehen halt eben einmal raus aus Deutschland wieder rein nach Deutschland, weil dann eben Spielregeln direkt die da nicht gelten.\nÄhm äh sozusagen die gelten ja Nutzung für den Austausch der Provider untereinander hier in Deutschland,\nAlso jetzt im Telefoniebereich und im Datenbereich ist das sehr ähnlich. Solange sozusagen äh die Telekom äh von mir für eine Leitung von Berlin nach Hamburg äh direkt, ja, Schlandnettleitung irgendwie paar tausend Euro haben will. Ich aber dieselbe Leitung von Colt oder Level drei, meinetwegen mit\nUmweg über Kopenhagen oder Stockholm äh irgendwie für einen dreistelligen Eurobetrag kriegen kann, äh braucht man dadrüber nicht zu diskutieren. Da nehme ich natürlich\nökonomisch aus ökonomischen Gründen als deutscher Provider, nämlich die billigste Strippe, die ich kriegen kann. Die ist ja qualitativ, ist ja genau dasselbe. Sie geht halt nur, verlässt halt nur zwischendurch mal mein Land, äh oh ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:44",
+      "text": "So und wenn also jetzt die Telekom um um das mal abschließend zu bewerten, wenn die Telekom hingeht und sagt, ey, ja hier, super Idee vom von IM Friedrich, wir machen jetzt hier äh Schengen, Routing und Landnetz\nwahrscheinlich\nÄhm mal wieder so, dass sie sich ganz gerne wünschen würden, dass es eine am besten noch gesetzliche Regelung gibt\ndie es ihnen erlaubt, einfach ihre teureren Peeringangebote den Menschen aufzuzwingen, weil man dann womöglich gegen das deutsche IT-Sicherheitsgesetz verstößt, ähm wenn man nicht\nso rutet, wie es die Telekom vorschlicht und verkauft."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:58:23",
+      "text": "Wisst ihr zwar ein Long Shot, aber sagen wir mal so, die Telekom hat dabei bei dieser Diskussion nichts zu verlieren. Die können nur gewinnen\nDeswegen spielen sie dir natürlich gerne mit. Also ich würde ihnen jetzt nicht so viel Igelness unterstellen, dass sie sagen, ja wir machen jetzt hier über Umweg, spielen über Bande mit ihrem Friedrich und so und IT-Sicherheitsgesetz und dafür zu sorgen, dass die Leute nicht mal\nLevel drei benutzen, sondern äh die haben ja übrigens auch innerdeutsche Leitung, ja, wo man noch dazu sagen, aber äh sind trotzdem ausländische Mächte, ne? Kolt\nnur so nebenbei City of London Telekom. Siehst du, wo die herkommen, ne? Ähm aber ähm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:59",
+      "text": "Die die äh den unterstellt wird bei den äh bei dem Abschnorcheln der Google, Datenbank."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "0:59:05",
+      "text": "Na komm, wenn dein größter,\nKunde, wenn dein größter Kunde dich mal bittet, mal ein Bit fallen zu lassen, dann sagst du da auch nicht nein, insbesondere dann, wenn die noch mit dem National Security Letter vor dir stehen. Ähm musst ja überlegen, ist bei der ganzen Diskussion muss man sich mal äh äh kurz überlegen, die NSA, wenn die in\naußerhalb der USA wird abschnorchelt. Die müssen ja die Ergebnisse dieser Schnorchelei entweder hier verarbeiten, was sie wahrscheinlich auch tun oder halt auch wieder nach Hause bringen.\nDas heißt, für jede Terrabit, was sie in äh ausm Dzix raus schnorcheln und es sind ja ein paar.\nDie müssen sie hier entweder schon durchwursten oder sie müssen dieselbe Anzahl von Terrabriz äh Terrawitz nach Fort Meet rüberbringen, damit sie sie da auseinanderschnipseln können. Also das heißt, die müssen auch hierzulanden und das kannst du halt nicht mit einer, mit einer WLAN-Station oder sowas.\nDir basteln mal so schnell, ne, sondern das heißt, die müssen auch hierzulande natürlich Glasfasern äh angemietet haben, weil die haben sie sicherlich nicht selbst verbuddelt,\nsondern die haben irgendwelche Provada dort, rufen halt eben an bei Level dreier Song und sagen, hast du mal ein Stück Glas, stellt keine Fragen. Ja, und so\nMuss man ja bitte auch mal betrachten und da sind natürlich auch kommerzielle Aspekte und abgesehen davon, wie gesagt, auch diese Geschichte mit dem National Security Letter. Und die Amis sind ja da auch nicht zimperlich. Die kennen ja da auch kein Territorialprinzip\nDas heißt, die gehen auch hin zu einer äh zu einer amerikanischen Firma sagen, ja, ist uns doch scheißegal, ob du in anderen Ländern Gesetze brechen musst. Äh und ob du da deine Präsenz in dem Land gefährdest. Hier, du bist eine amerikanische Firma und wir machen dich hier dicht, wenn du nicht im Ausland tust, was wir wollen.\nDas war schon lange so.\nWar schon immer so, ich habe mal, kann mich erinnern in den, in den äh frühen Neunzigern habe ich mal versucht, die berühmte Krypto von SCO zu kriegen aus London und die sagten, ne, das dürfen wir nicht.\nDürfen wir denen nicht geben, aber ich sage, ihr seid doch hier äh SCO europ und so,\nJa, aber unsere Mutter ist amerikanisch und wir dürfen hier nichts rausgeben. Äh egal, ob jetzt komplett auf europäischem Boden sind oder nicht, es ist den Amis egal\nUnsere Mutterfirma wird dafür bestraft, wenn wir als Tochterfirma hier in Europa was tun, was die Amis nicht mögen, fertig.\nDa sind die ganz locker und deswegen kann man das auch, würde ich jetzt auch Level drei oder wer auch immer det jetzt sein mag, da gibt's ja Dutzende von diesen Buden. Äh kann man das jetzt auch nicht nachsehen, wenn da so ein Typ steht, der sagt, ja also ich mache das oder wir schalten hier das Rechenzentrum aus.\nNoch Fragen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:18",
+      "text": "Also ich fasse das mal so ein bisschen zusammen. Ähm es gibt.\nNicht nur aber auch letztlich wegen dieser Sonderrolle, die die Telekom hier äh hat und auch aktiv ausspielt, was äh das Peering mit anderen Providern äh betrifft\nähm eigentlich viele, viele Gründe, warum so äh ein äh deutsche Daten bleiben in deutschen Netzen äh Visionen eigentlich technisch totaler Quatsch ist, weil die Leute äh an vielen, vielen Stellen, also die Provider an vielen Stellen einfach auf,\nLeitungen, die geographisch und auch ganz konkret durch andere Länder äh durch äh gehen einfach darauf ausweichen werden. Das so ein Netz ist nicht herstellbar,\nfasse ich das richtig zusammen."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:02:01",
+      "text": "Doch, es ist sauteuer herstellbar, an dem du halt mit einer Kabeltrommel durch die Gegend rennst und selber dein Kabel verlegst und dir überlegst, wo es denn liegt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:02:08",
+      "text": "Ja, aber jetzt in nächster Zukunft erstmal nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:10",
+      "text": "Aber de facto macht das ja keiner."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:02:13",
+      "text": "Außer die Leute, die es ohnehin tun, einer muss ja mal die Kabel legen, nämlich die Telekom. Oh, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:17",
+      "text": "Ja gut, aber ich meine, wenn jetzt die Politik gerne so etwas hätte, so ein äh deutsche Daten für deutsche Bürger äh Ding, ja, dann müsste er, da müsst ihr ja wahrscheinlich mal drüber nachdenken, tatsächlich überall Glasfaser.\nVerlegen, um einfach genug Kapazitäten zu schaffen, aber auch dann kann man ja nichts garantieren. Also, ich meine, solche Pakete, wenn du äh äh\ndas würde ja bedeuten, also wenn man das wirklich sicherstellen wollen würde, müsste man ja im Prinzip auch die ganze äh Rauting äh Software- und Rauting-Logik so äh umbauen, dass sie ja im Prinzip auch Umwege über das Ausland verhindert.\nEs gibt ja auch genug andere Gründe, wenn Leitungen einfach äh mal down sind, verstopft sind, überlastet sind, dass äh das Rauting sich eben ganz automatisch,\nauf andere Wege macht."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:03:05",
+      "text": "Wenn wir jetzt über äh über Layer drei Routing reden, ja, also IP-Routing zwischen den Routern\nDas ist relativ einfach möglich auf Basis dieser schon erwähnten AS Nummern und da gibt's ähm sogenannte Communitys. Das heißt, man kann da äh schon Policy einfließen lassen, aber mein\nMein Ansatzpunkt war der, das sagte diese,\nP-Routing kommt erst sehr viel später. Das heißt, du musst erst mal dafür sorgen, dass die rohen Bits die ungeruhteten Bits innerhalb des Landes bleiben,\nund dann kannst du anfangen, och am Routing zu drehen und das ist dann wiederum relativ einfach."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:36",
+      "text": "Ja gut, aber das heißt."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:03:38",
+      "text": "Weil da muss der keine Leitung für legen, sondern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:39",
+      "text": "Das heißt ja, dann nimmt's das heißt doch im Zweifelsfall, dass ein ein langsameres Netz hingenommen wird, damit äh nicht das Land verlassen wird."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:03:50",
+      "text": "Nee, langsamer, nicht notwendigerweise teurer.\nLangsamer wird das Netz keiner mehr machen. Wir haben ja auch innerhalb Deutschlands genügend Kapazität, auch von Leuten, die nicht die Telekom sind, so ist das ja nicht\nhabe ja gesagt, entlang der Bahnlinien gibt's wat entlang der Gasleitung, gibt's was entlang der Stromleitung, gibt's was. Ähm entlang der Autobahn, gibt's was, jetzt siehst du auch heute mal noch, das haben sie ja in den Neunzigern gemacht, ja, Ende der Neunziger, aber,\nWenn du heute entlang der Autobahn fährst, siehst du häufiger mal so auf Holzpflöcken auf äh neben der Autobahn so schwarze Schlangen,\nDas Zündglasfaserkabel, die da mal jemand äh lang geworfen hat, wo sie sich gedacht haben, irgendwann mal, wenn wir Bock haben, buddeln wir die auch mal ein,\ndie stehen heute bis heute noch teilweise auf diesen Holzpflöcken darum und da gibt reichlich Kapazität, die auch nicht der Telekom gehört in Deutschland,\naber es gibt halt eben auch die anderen und äh äh sind ein guter Netzbetreiber, sorgt sich natürlich jetzt nicht um Nationalstaatsgrenzen, sondern ein guter Netzbetreiber sorgt sich dafür, dass seine Leitung möglich\ngleichmäßig ausgelastete,\nund dit wurde sich in dem Moment natürlich verschieben, wenn man dort anfängt und sagt, hallo, ich möchte jetzt nicht nur eine Leitung äh von Berlin nach Hamburg haben, sondern ich hätte gerne Rede und Land und Leitung von Berlin nach Hamburg, die auch im Rede und Ganzfall\nnicht über Dänemark oder sonst irgendwo geht, sondern innerhalb von Deutschland bleibt, dann wird's halt einfach teurer, aber es wird jetzt nicht langsamer dadurch oder so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:12",
+      "text": "Im Rahmen der äh Verhandlung rund um die GroKo, ja das Krokodil ist unter äh Weg, ja, die große Koalition des Digitalismus äh wird ja auch über\nBandbreiten äh diskutiert. Ähm es wird kolportiert, dass die äh SPD tatsächlich es wohl äh gewagt hat mal Bandbreite für alle auch zu äh fordern im Rahmen dieser Koalitionsverhandlung, dass es,\ndas ist jetzt wohl irgendwie äh vom Tisch. Äh die CDU ähm meint wohl auch, dass es jetzt nicht ähm.\nDas ist ja jetzt nicht unbedingt nur äh gesagt äh wäre, man müsse jetzt hier äh weiße Flecken füllen, sondern man muss ja allgemein auch zu höheren äh Bandbreiten äh kommen.\nÄhm."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:06:02",
+      "text": "Die CDU glaubt, dass fünfzig Megabit höhere Bandbreiten sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:06",
+      "text": "Ja, das ist wirklich äh haarsträubend. Also ich glaube, das das war jetzt so das Ziel, ne, fünfzig Megabit flächendeckend bis zwanzig achtzehn.\nDas können sie ja, also ich meine, abgesehen davon, dass das wahrscheinlich noch nicht mal ein realistisches Ziel ist, so wie das derzeit äh abläuft. Doch doch sagst du, warum?"
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:06:24",
+      "text": "Wenn man wollte, könnte man."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:25",
+      "text": "Ja, wenn man wollte, aber will man denn."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:06:27",
+      "text": "Man man will ja nicht, ne, will man nicht. Abgesehen davon, jetzt wollen wir mal vorsichtig sein. Wir wir klagen hier auf auf hohem Niveau fünfzig Megabit, ist schon relativ viel.\nAllerdings gerade eben und darauf kommt's ja auch gerade so so bunt wie der CDU immer an, so im internationalen Vergleich. Ja, man ist ja wer? Sind fünfzig Megabit Schiss\nErst recht in zweitausendachtzehn, ja? Ähm das muss man dazu.\nJa, was heißt für Deutschland? Ich meine, gerade im internationalen Vergleich, das ist das, was die Koreaner heute schon haben auf jedem Bauernhof. Ähm und äh äh,\nin der Schweiz wird jetzt Fiber to the Home angeboten, zwar teuer, aber da gibt's halt ein Gigabit nach Hause, so peng,\nund ähm da finde ich jetzt albern da drüber zu diskutieren, dass man irgendwie fünfzig Megabit hier für toll hält\nEs ist toll fünfzig Megabit erstmal haben oder nicht haben, ja? Wie man so schön sagt, erstmal Harmstücke mit weg sein, ich hätte ja auch gerne fünfzig Megabit auf meinem Landsitz, aber äh aber nichtsdestotrotz äh gerade auf den internationalen Vergleich und Standort Deutschland-Diskussion bla, bla, bla, bla, bla, kannst du in der Pfeife rauchen\nfünfzig Megabit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:27",
+      "text": "Ja, zumal die fünfzig Megabit ja eigentlich auch nur zehn Megabit sind, weil man muss ja auch noch die andere Richtung mit äh einrechnen."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:07:35",
+      "text": "Aber das muss eh aufhören, dass Privatleute Content anbieten. Det geht so nicht. Unkontrolliert, dann fangen die an, Podcast zu machen und also nicht, das ist nicht im Interesse dieser Bundesregierung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:45",
+      "text": "Ja, das äh ist offensichtlich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:07:49",
+      "text": "Ja äh was das MDR-Magazin Fakt jetzt enthüllte.\nDas ist ja ein Thema, was immer ein wenig äh worüber uns immer wo man in Deutschland sich immer so ein bisschen unklar war, also wie gut\nist der BND in der Lage, den den Internetverkehr zu überwachen. Wir hatten letzte Woche ja schon in der Sendung die Andeutung,\nformuliert,\ndass der sagte, dass sie oder vor einigen Jahren schrieb, dass sie sehr beeindruckt waren von den Internetüberwachungsmöglichkeiten des äh BND.\nÄhm,\nsteht es sogar so äh geschrieben, dass sich der BND zweitausendacht vom britischen Geheimdienst helfen ließ\nDas äh G zehn Gesetz irgendwie neu zu formulieren. Ich weiß nicht, ob's da tatsächlich auch eine Änderung gab\nder entscheidende Punkt dieses Beitrags ist, dass sie dass,\nDa drin der Anschein erweckt wird, dass der ähm dass der BND sagt, ja ähm.\nDa das Internet ja inhärent irgendwie inter ist und nicht, nett, nicht intra. Ähm.\nKönnen wir erstmal sowieso alles davon in die Hand nehmen und was ich ja auch schon seit einiger Zeit immer betont habe, ist, dass sie ähm\ndass das äh Abschnorcheln durch den durch den BND nicht dadurch funktioniert, dass der sich irgendwie nach Schlüsselworten vom Provider\ngeben lässt, was diese Kriterien erfüllt, weil sich dadurch, ja, ich argumentiere mal für den BND die Möglichkeit ergeben würde, das A der Provider als äh Erfüllungsgehilfe des BND,\nwüsste, wonach der BND sucht, welche Personen er äh überwacht und so weiter\nbeziehungsweise auch äh manipulieren könnte, Informationen nicht geben könnte, obwohl sie den Kriterien entsprechen, sondern dass das größtenteils durch einfach Monitoring äh Ports gemacht wird, ne, also das heißt, es geht einfach alles zum BND und der sucht sich dann schon aus, was er davon haben möchte und was nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:05",
+      "text": "Also er sucht sich sozusagen die zwanzig Prozent, die er darf, selber aus."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:10:11",
+      "text": "Der Rest ist international, den darf er sowieso."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:14",
+      "text": "Genau, genau."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:10:17",
+      "text": "Aber nochmal, bitte, ich möchte nicht sagen, dass es nicht geht, aber ich weise nochmal darauf hin, wenn du Verkehr monitorst, hast du dieselbe Verkehrsmenge\nund das heißt ist sogar noch schlimmer. Nehmen wir an, du hast jetzt an zwei Provider, die dort mit einem Gigabit sich anschließen, jeweils.\nJa, das macht aber insgesamt vier Gigabit\nNämlich rein und raus für jeden und OK jetzt kann man natürlich den doppelten Verkehr da nochmal wieder weglassen aber das heißt wenn wir den monitoren will brauchst du mindestens zwei Gigabit\näh äh nochmal eine zwei Gigabit-Leitung, die davon weggeht hin zu deinem BND und der BND muss dann auch\nZeug, also Equipment und auch Leute haben und dementsprechend auch die Kohle, um in diese zwei Gigabyte auch reinzugucken."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:11:00",
+      "text": "Hat ja keiner gesagt, dass das leicht wäre. Äh insofern war's ja auch immer so, dass dass man immer nicht wusste, ob sie wirklich A ähm,\ndie Kapazität haben, weil man B nicht wusste, ob sich ob sie sich den Aufwand machen würden, ne? Aber ähm."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:11:18",
+      "text": "Ich meine, bei den Amis wissen, was sie machen, sich den aufs kann gar nicht teuer genug sein,\noder komplex genug sein, die wissen, es gab da auch diese schönen Ding von,\nähm sage schon, von alternativlos, wo doch Frank und Feedback neulich so paar Beispiele da äh rausgesucht haben, wo sie einfach sagten, ja, immer wenn man glaubte, nee, diese diese Nummer ist viel zu komplex, das machen die nicht. Das ist ihnen zu teuer oder ist ihnen zu aufwendig?\nMachen sie. Na klar machen sie das. Ja, aber die Frage ist, sind die, sind die Deutschen so blöd? Vor allen Dingen, sind die Deutschen so reich?\nDas ist nämlich der Punkt dabei. Das kostet ein Schweinegeld. Wenn du das komplette Netz so komplett abschnorcheln willst, äh das bedeutet das sozusagen jede verdammte Leitung, die ins Dezix rät, muss nochmal mit doppelter Kapazität wieder raus zum Monitoren.\nÄhm das ist schon spannend. Also das ist auch, glaube ich, der nicht so ganz unauffällig zu machen. Ja, ähm wenn halt einfach sozusagen äh im übertriebenen Sinne für jede Glasfaser nochmal zwei andere da liegen zum Abhören,\nAlso das ist so ein bisschen so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:17",
+      "text": "Sie hatten ja jetzt zuletzt äh davor, darüber hatten wir auch schon vor ein paar Monaten berichtet. Hatten sie gesagt, äh wir hätten gerne nochmal hundert Millionen Euro mehr, um die Infrastruktur auszubauen."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:12:29",
+      "text": "Mhm. Ja, damit kann man was basteln. Mit hundert Millionen Euro kann man was basteln."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:34",
+      "text": "Was würdest du denn so also,\nhundert Millionen. Ich meine, wir wissen, wir kennen nicht ihren Ausgangs äh wir kennen nicht ihre Ausgangslage. Ähm,\nwir wissen nicht, ob sie jetzt die hundert Millionen brauchen, um die restlichen achtzig Prozent zu kriegen oder um die restlichen zehn Prozent zu kriegen. Aber was kann man so mit hundert Millionen Euro.\nWas kann man damit so grob in welcher Region äh Bits pro Sekunde kann man denn da so äh monitoren?"
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:13:04",
+      "text": "Kann ich dir wirklich nicht sagen.\nAber man kann mit hundert Millionen Euro kann man, wie gesagt, ein bisschen wat basteln. Man kann sich damit irgendwo ein schönes Gebäude anmieten in Frankfurt äh und man kann sich damit auch irgendwelche Glasfaser anlegen lassen, äh muss dann natürlich\npolitisch gut aufpassen, äh wen man damit beschäftigt, äh und dann kann man da so ein bisschen Equipment reinstellen für hundert Millionen Euro. Äh das ist aber, wie gesagt, auch ein bisschen auffällig, weil das\nwir auch alles Strom haben und gekühlt werden und so, also ist nicht wat, was du mal so nebenbei in so einem Schränkchen hinter deinem Büro laufen lässt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:32",
+      "text": "Es geht dieser Betrag, wo die ja öffentlich gefordert oder oder das ist jetzt nix geheimes, ne."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:13:36",
+      "text": "Sie wollen natürlich auch Krypto und lalala und was weiß ich und noch einen Agenten bezahlen und hier und da und dort, ich kann's dir nicht sagen, weil ich nicht weiß, was Agenten kosten. Ich weiß auch nicht\nkostet ein Telekom Provider, äh äh dazu zu bringen, dir unter extremster Geheimhaltung, welche Leitung quer durchs Land zu legen. Und zwar richtig massive Leitungen. Das kann ich dir nicht sagen, was das kostet.\nDas ist ja, ist ja schon sehr grau zu sagen, was es öffentlich kostet, die normalen Provider irgendwie dabei zu machen. Selbst dit ist schon, da ist schon sehr große Geheimnistuerei mit dabei. Äh und das Ganze jetzt nochmal ein kleines Team zu bauen, kann ich dir nicht sagen, was das kostet.\nDas kann keiner, können die selber auch nicht. Deswegen ist auch hundert Millionen so eine schöne runde Summe,\nGib mal ein bisschen Geld her. Haben vielleicht mal angerufen vorher ein oder da beim und haben gesagt, so was kosten sowas, wenn ihr soweit baut und die so, ja, hundert Millionen,\nja? Oder so keine Ahnung, also das äh weiß ich nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:30",
+      "text": "Okay, damit wären wir beim beim letzten äh beim letzten kurzen Treppenwitz, der äh der Sendung angelangt. Ähm der BKA-Chef Jörg Zirke."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:14:42",
+      "text": "Entschuldigung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:45",
+      "text": "Und das war's diese Woche.\nKleines Scherzchen am Ende."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:53",
+      "text": "Was hat er gesagt?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:56",
+      "text": "Er hat jetzt die äh Kriminal äh hat einen Grundsatzreferat gehalten bei der Herbsttagung des äh Bundeskriminalamtes. Ähm.\nUnd hat dann mal so die Kriminalstatistik zwei Punkt null referiert. Ähm jetzt muss man wissen, wenn das BKA die Kriminalstatistik ähm,\nvorstellt, dann sind da immer moderate, moderate Zahlen für irgendwie.\nCyber Crime oder sonst was oder dann Kriminalität mit dem Tatmittel, Internet, die ja davon zu unterscheiden ist. Ähm das heißt also eine ein ein Betrugsdelikt, was ich auch auf anderem Wege begehen kann.\nAber mit Hilfe des Internet begehe, weil mir das Internet das sehr vereinfacht, äh ist dann eben ein, ein, ein, ein, ein straf.\nInternet.\nUnd da in diesem BKA-Berichten spiegelt sich eigentlich seit Jahren drin, dass sie immer sagen.\nJa, wir haben hier eine ähm wir haben hier nur relativ wenig Beweise für die massive Anzahl an Internetkriminalität, weil äh die Dunkelziffer so unglaublich groß ist.\nMan fragt sich, woher wisst ihr denn, dass sie unten Dunkelziffer so groß ist? Ja, weil äh ne, ist alles, also das ist alles noch viel, viel schlimmer, als wir äh feststellen können, weil.\nÄhm und da da ist es dann sich sehr schön, weil wir haben ja keine Vorratsdatenspeicherung,\nDas heißt, wir können also so argumentiert dieser Mann, ich habe das live gesehen, das habe ich auch mal irgendwo live auf Netzpolitik org, wo ihr dann im im ähm Bundestag, im Unterausschuss, neue Medien wahrscheinlich irgendwie groß um die Vorratsdatenspeicherung, wo er sagte.\nWo er gebeten wurde zu sagen, lieber Herr Zirke, sagen sie uns doch mal, wie.\nViel besser wird denn die Strafverfolgung, wenn wir eine Vorratsdatenspeicherung haben? Schätzen Sie doch mal bitte. Und da hat er gesagt, das kann ich gar nicht sagen. Das wird so unglaublich viel besser, weil im Moment wissen wir noch nicht mal um diese Verbrechen,\nwir mit Hilfe der überhaupt erstmal erfahren können, um sie dann aufzuklären. Ja, also quasi ein Doppel-Plus-Gut wäre diese Vorratsdatensprecher, weil im Moment\nsind ist die Kriminalität so schlimm, dass sie noch nicht mal in der Statistik auftauchen kann. Ähm na ja, also so viel dazu. Und er sagte also jetzt\nstellte sich dahin und erzählte dann, ja, wir müssen natürlich ähm Vorratszeitenschwächung haben, wobei auch er sich inzwischen jetzt äh schon auf die neue äh neue äh Redewendung Mindestspeicherfrist äh hat einschießen lassen.\nUnd sagt am Ende äh bleiben ja nur Verdachtsmomente übrig, ähm er redet dann von, also er nennt da ein Beispiel äh Detox äh Erpressung, das ist in der Tat äh,\nrelativ ähm üblich, dass das gemacht wird, dass also äh Leute hingehen."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:17:48",
+      "text": "Schöne Webseite haben sie da. Wäre doch schade, wenn Punkt, Punkt, Punkt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:17:51",
+      "text": "Das läuft dann, also vor allem bei so Saison äh äh Sachen, ne? Da haben auch Deutsche, große Unternehmen drunter zu leiden, dass sie dann ähm.\nSo\nimmer wieder einen Dedos kriegen und dann kommt irgendwann so ein Brief so, wo jemand sagt, ach, mir ist aufgefallen, dass äh dass ihre Internetseite öfter mal nicht funktioniert. Wir sind hier Experten äh für verteiltes Echtzeit äh,\nEchtzeit äh Hosting und wir können sie da gerne beraten, äh dass das aufhört, ja? Ähm."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:18:24",
+      "text": "Übrigens nur ganz kurz,\nbeim heute toll referiert haben, gibt's einen tollen Dienst, der noch mit dazugehört zu diesem ganzen, hier, du darfst unseren benutzen, wir haben hier einen das heißt, du kannst Dezix mit seiner Wahnsinnskapazität\ndazu benutzen, äh Dedosverkehr, der aus dem ganzen Internet auf dich einströmt, äh dort in einem schwarzen Loch zu versenken. Das ist ein echter, ein echter Service dort.\nDatenpakete versenken, also nicht weiterleiten.\nNicht weiterleiten. Jedenfalls nicht zu mir, weil ich bin ja davon überwältigt, ja, sondern ab ins Loch damit. Das äh Black Holding. Hm. Ja, Contini Please."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:03",
+      "text": "So, sie sagte, ja, natürlich, also solche ähm die Night of Serviceattacken funktionieren ja in der Regel, dadurch, dass man sich einfach ein größeres Bot Netz mietet\nÄhm das heißt, man hat auf der ganzen Welt verteilt, die man äh die mit einer infiziert sind und dem man dann das Kommando geben kann, jetzt hier Feuer frei auf äh mein Opfer. Das äh\nDie kann man stundenweise mieten, solche Bot-Netze, die kann man tageweise mieten, äh dessen relativ einfaches Geschäftsmodell.\nUnd natürlich äh geht damit einher, dass derjenige, der der eigentliche Erpresser ist. Zu keinem einzigen Zeitpunkt wahrscheinlich überhaupt mal auf die Seite zugreift die Dost?\nÄhm sondern das eben über über dunkle Kanäle machen lässt. Ähm,\nwas jetzt in den Zirkel zu der Annahme verleitet hat, dass aufgrund mangelnder Vorratsdatenspeicherung eher die äh die Erpresser nicht äh äh,\näh finden konnte. Aber okay, das das erzählt der Mann seit seit vielen Jahren und jetzt stellt er natürlich auch fest, ja, Silk Road ist eine Gefahr, weil da wird äh Drogenhandel äh wurde Drogenhandel begangen, beziehungsweise gibt's ja jetzt auch schon wieder.\nUnd überhaupt ist dieses Tor natürlich echt ein Problem."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:20:18",
+      "text": "Tornetz, was vom auswärtigen Amt äh gefördert wird und äh mitfinanziert wird."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:23",
+      "text": "Ich weiß nicht, ob das Auswärtige Amt mit fördert. Ich weiß nur, dass sie."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:20:26",
+      "text": "Tun sie."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:27",
+      "text": "Kenne nur die ganze Förderung der USA. Ja, das das Tornetz, was wir äh allen zur Verfügung stellen wollen\nÄh um aus den repressiven Regimen äh auf das freie Internet unbeobachtet zugreifen zu können, was für das Gute in der Welt gebaut wurde und von einigen für das Schlechte in der Welt genutzt wird.\nDer möchte jetzt hier."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:20:47",
+      "text": "Gesamte Internet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:48",
+      "text": "Genau, er möchte das gerne unter staatliche Meldeauflagen stellen."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:20:54",
+      "text": "Hm? Ja. Das erinnert mich an."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:58",
+      "text": "Das heißt, du so, ich hallo, ich möchte einen Anonymisierungsdienst nutzen, der funktioniert.\nDeswegen melde ich das, ich melde das jetzt an. Also du hast wahrscheinlich Amateur äh Amateur-Internet-Lizenz, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:11",
+      "text": "Den Betrieb von was soll man anmelden?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:14",
+      "text": "Die freie Nutzung, so klein, Nutzung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:17",
+      "text": "So dass ich das benutze, soll ich anmelden? Ja. Guten Tag, ich äh hiermit melde ich an. Ich ich bin jetzt anonym unterwegs, hier ist eine Kopie meines Ausweises. Ja. Geile Idee."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:21:29",
+      "text": "Das erinnert mich an RFC äh drei fünf eins vier,\nwo man sich schon am ersten April zweitausenddrei, muss man überlegen, das ist jetzt zehn Jahre her, ja, hat man sich schon überlegt, das wär doch gut, wenn man halt einfach guten von bösen Inhalt mal ordnungsgemäß deklarieren würde.\nDie haben entdeckt, dass sie dort im IP for vier Header noch ein freies,\nund haben gesagt, ja, wir machen das jetzt einfach so, wir nennen dieses jetzt das EBIT, nämlich das Evilbit und äh wenn das auf null gesetzt ist, kann ich ja mal kurz vorlesen statt,\nNetwork-Elements et cetera.\nJa, oder wenn's auf eins gesetzt ist, evil intend. Securitys sind shot defend im et cetera.\nToll ist übrigens auch noch äh so wie wann, wenn man das jetzt setzen muss, ja, also ähm,\nIst doch ganz einfach, denn man geht halt einfach hin und sagt, wenn du was Böses machst, setzt du bitte dieses Igel bitte in deinem Paket,\nSo anmelden, ne, so äh deklarieren, äh äh das ist jetzt ein D-Dos-Paket, also bitte schön das Igelbit setzen und dann ist gut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:00",
+      "text": "Ja, das ist äh sind wir wieder bei dem."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:23:02",
+      "text": "Ich finde das sehr vernünft."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:03",
+      "text": "Es ist super, ist so ein bisschen wie mit dem Waldsterben, ne? Waldsterben verboten. Das."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:08",
+      "text": "Das ja, also auf diesem Niveau bewegen wir uns hier weiterhin in in."
+    },
+    {
+      "speaker": "Clemens Schrimpe",
+      "time": "1:23:18",
+      "text": "Wir sollten das wirklich ihrem Friedrich mal diesen RFC mal schicken. Sagen, guck mal, hier ist die Lösung all deiner Probleme. Du erklärst einfach sozusagen, dass die Leute jetzt RFC, drei, fünf, eins, vier befolgen müssen und dann guckst du einfach in deinem BND-Abschnorchel-Ding, wo das EBIT gesetzt ist und schon hast du alles in der Hand."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:32",
+      "text": "Ich sage ja man muss mit mehr mit mit Fußball äh vergleichen kommen. Das ist glaube ich das einzige, was da oben verstanden wird, ja. Also Herr Friedrich, äh Sie laufen da gerade, Sie stehen leider gerade im Abseits, ja?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:44",
+      "text": "Als ich das letzte Mal als ich das letzte Mal öffentlich dazu äh darauf hingewiesen habe, dass man sich an eine bestimmte,\nStelle wenden kann mit einem Vorschlag oder einem Wunsch, äh stand ich irgendwie eine Woche später bei Wikipedia unter E-Mailbombe drin\nÄhm und hatte äh Bedrohung vom Axel-Springer-Verlag, die mich irgendwie in den Knast bringen wollten wegen gefährlichen Eingriff in Computersysteme. Deswegen,\nrufe ich jetzt mal nicht dazu auf irgendjemanden vorzuschlagen, den den RFC äh dreiundfünfzig,\nvierzehn äh fünfunddreißig vierzehn tatsächlich umzusetzen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:23",
+      "text": "Ciao. Ist die Frage, müssen wir das Bit jetzt für diesen Podcast aufsetzen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:24:27",
+      "text": "Ich weiß es nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:29",
+      "text": "Clemens, äh vielen Dank für dein äh ausführlichen Beitrag heute.\nÄhm bei dir ist das bitte auf jeden Fall noch nicht gesetzt. Das ist äh klar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:24:45",
+      "text": "Ich glaube abschließend will ich nur eins sagen, wir sind, glaube ich, bei unserer gesamten Schlandnettbetrachtung nicht über Laya drei hinausgegangen.\nDas heißt, ähm.\nSich das jetzt noch zu überlegen, wie man das denn bei Facebook-Nachrichten von einer deutschen Person zu einer deutschen Person löst, überlassen wir als ähm Denkübungen für die aufmerksamen Hörerinnen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:12",
+      "text": "Und äh verabschieden uns für diese Woche von äh Lokbuch-Netzpolitik mit äh wieder meiner etwas äh längeren Folge. Nächste Woche gibt's dann wieder andere Betrachtungen, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:25:26",
+      "text": "Nächste Woche äh habe ich dann einen äh einen Gast eingeladen. Der bleibt aber noch geheim. Weiteres Stargast."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:31",
+      "text": "Allen weiteren Stargast eingeladen. Gut, noch mehr Philosophie bei Docbuch Netzpolitik. Wir sagen tschüss."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:25:39",
+      "text": "Clemens, bist du noch da? Clemens ist weg. Tschüss, Clemens, äh und tschüss, liebe Hörerinnen."
+    }
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "episodeNumber": 30,
+  "title": "UKW030 Die Corona-Warn-App",
+  "extractedAt": "2026-01-02T17:34:44.212Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "Suche nach dem richtigen System",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Systemauswahl"
+      },
+      "durationSec": 1057,
+      "positionSec": 358,
+      "summary": "In der Diskussion um die Corona-Warn-App in Deutschland wurde zunächst über verschiedene Ansätze zur Software- und Systemauswahl debattiert. Malte Janduda und Thomas Klingbeil schildern, wie sie in die Thematik einstiegen, während die öffentliche Debatte über zentrale versus dezentrale Modelle an Fahrt gewann. Die Gruppe favorisierte letztendlich ein dezentrales Modell, um Datenschutzbedenken zu berücksichtigen. Die Rolle von Apple und Google wurde ebenfalls thematisiert, da deren Unterstützung entscheidend für die Funktionsfähigkeit der App war. Die Diskussion um die App entwickelte sich parallel zu den Entwicklungen in der Öffentlichkeit und der Hacker-Community.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 41,
+        "startSec": 338,
+        "endSec": 1435,
+        "generatedAt": "2026-01-02T18:34:16.110Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Zuteilung an SAP und Telekom",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Zuteilung"
+      },
+      "durationSec": 468,
+      "positionSec": 1416,
+      "summary": "In der Episode wird die Zuteilung des Projekts der Corona-Warn-App an SAP und die Telekom besprochen. Malte Janduda erklärt, dass SAP die App-Entwicklung übernahm, während die Telekom für die Cloudinfrastruktur und die Anbindung an Labore zuständig war. Die Entscheidung für die Telekom fiel aufgrund ihrer umfangreichen Erfahrung in der Bereitstellung von Infrastruktur für große Nutzerzahlen. Der Auftrag wurde am 26. April erteilt, nachdem die Regierung eine Alternative zum zentralen Modell benötigte. Thomas Klingbeil und Malte Janduda betonen die Herausforderungen und den Druck, ein effektives Team in kurzer Zeit aufzubauen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 24,
+        "startSec": 1396,
+        "endSec": 1904,
+        "generatedAt": "2026-01-02T18:34:16.369Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Entwicklungsbeginn",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Entwicklung"
+      },
+      "durationSec": 324,
+      "positionSec": 1884,
+      "summary": "Der Entwicklungsbeginn der Corona-Warn-App wurde von verschiedenen Teams, darunter iOS-, Android- und Backend-Teams, geprägt, die sich erst während des Projekts persönlich begegneten. Malte Janduda begleitete das Projekt seit Anfang April und stellte fest, dass die Zusammenarbeit schnell und effektiv war, unterstützt durch die Bereitschaft der Teammitglieder, auch außerhalb der regulären Arbeitszeiten zu kommunizieren. Die Remote-Arbeit trug dazu bei, Teamgrenzen zu überwinden und die Kommunikation zu erleichtern. Der Vertrag für das Projekt wurde in Rekordzeit von etwa vier Wochen abgeschlossen, und bereits am ersten Tag der Entwicklung wurden Sicherheitsaspekte in den Fokus gerückt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 19,
+        "startSec": 1864,
+        "endSec": 2228,
+        "generatedAt": "2026-01-02T18:34:21.609Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Systemarchitektur",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Architektur"
+      },
+      "durationSec": 640,
+      "positionSec": 2209,
+      "summary": "In der Diskussion über die Systemarchitektur der Corona-Warn-App wird betont, dass von Beginn an Sicherheits- und Datenschutzaspekte im Fokus standen. Die Entwickler verfolgten einen dezentralen Ansatz, um persönliche Daten zu schützen und die Risiken eines Datenlecks zu minimieren. Die App sollte sicherstellen, dass keine sensiblen Informationen auf Servern gespeichert werden, um die Privatsphäre der Nutzer zu wahren. Zudem wurde die Integration eines digitalen Laborverfahrens zur Übermittlung von Testergebnissen in die App als entscheidend erachtet, um die Verifizierung positiver Testergebnisse zu ermöglichen und Missbrauch zu verhindern.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 22,
+        "startSec": 2189,
+        "endSec": 2869,
+        "generatedAt": "2026-01-02T18:34:21.421Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Übermittlung von Laborergebnissen",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Datenübertragung"
+      },
+      "durationSec": 213,
+      "positionSec": 2849,
+      "summary": "Im Transkript wird die digitale Rückübermittlung von Laborergebnissen thematisiert, die bereits vor der Corona-Pandemie existierte. Thomas Klingbeil erklärt, dass diese Rückübermittlung sowohl an Ärzte als auch an Patienten erfolgt, um schnelle Informationen über Testergebnisse zu gewährleisten, insbesondere bei positiven Ergebnissen. Die Integration in die Corona-Warn-App erforderte die Einbettung eines speziellen Servers, um die Ergebnisse effizient an die Patienten zu übermitteln. Zudem wird auf die Notwendigkeit hingewiesen, Identifikatoren einzuführen, die bereits in bestehenden Laborinformationssystemen vorhanden waren.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 14,
+        "startSec": 2829,
+        "endSec": 3082,
+        "generatedAt": "2026-01-02T18:34:26.339Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Open Source",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Open Source"
+      },
+      "durationSec": 350,
+      "positionSec": 3062,
+      "summary": "In der Diskussion um die Corona-Warn-App wird die Bedeutung von Open Source hervorgehoben. Thomas Klingbeil und Malte Janduda betonen, dass Open Source von Anfang an Teil des Projekts war, um Vertrauen zu schaffen und eine bessere Entwicklungskultur zu fördern. Janduda erläutert, dass SAP bereits eigene Open Source-Komponenten entwickelt und sich an großen Projekten beteiligt, jedoch noch nicht den Durchbruch zu einem eigenen, weit verbreiteten Open Source-Projekt geschafft hat. Die interne Diskussion über Open Source bei SAP zeigt, dass es nach wie vor Vorbehalte gibt, die sich jedoch langsam ändern. Zudem wird die Wahl einer liberalen Lizenz, wie der Apache-Lizenz, als strategische Entscheidung betrachtet.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 18,
+        "startSec": 3042,
+        "endSec": 3432,
+        "generatedAt": "2026-01-02T18:34:27.930Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Lizenz",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Lizenzierung"
+      },
+      "durationSec": 126,
+      "positionSec": 3413,
+      "summary": "Im Transkript wird die Lizenzierung der Corona-Warn-App diskutiert. Malte Janduda erklärt, dass die gewählte Apache-Lizenz eine liberale Lizenz ist, die es Nutzern erlaubt, die Software frei zu verwenden, auch kommerziell, solange der ursprüngliche Autor genannt wird. Im Gegensatz dazu verpflichtet die GPL-Lizenz zur Offenlegung von Änderungen, was große Unternehmen oft abschreckt. Die Entscheidung für die Apache-Lizenz wurde getroffen, um eine breitere Zusammenarbeit zu ermöglichen und keine Unternehmen auszuschließen. Zudem wird auf die Dokumentation und den Code of Conduct des Projekts eingegangen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 5,
+        "startSec": 3393,
+        "endSec": 3559,
+        "generatedAt": "2026-01-02T18:34:30.743Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Dokumentation und offene Entwicklung",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Dokumentation"
+      },
+      "durationSec": 453,
+      "positionSec": 3540,
+      "summary": "In der Episode wird die Dokumentation und offene Entwicklung der Corona-Warn-App thematisiert. Tim Pritlove und Malte Janduda diskutieren die frühzeitige und ausführliche Bereitstellung von Dokumentationen in internetkompatiblen Formaten, anstatt in traditionellen Word- oder PDF-Dokumenten. Janduda hebt hervor, dass die Entwicklung offen gestaltet wurde, um die Community aktiv einzubeziehen und Feedback zu erhalten. Kritische Nachfragen zur Dokumentation wurden ernst genommen, und es wurde Wert auf transparente Entscheidungen gelegt. Die Diskussion zeigt, dass die Dokumentation als wichtiges Hilfsmittel für das Verständnis der App-Entwicklung angesehen wird.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 11,
+        "startSec": 3520,
+        "endSec": 4013,
+        "generatedAt": "2026-01-02T18:34:33.713Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Code Reviews und Tools",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Code Review"
+      },
+      "durationSec": 167,
+      "positionSec": 3994,
+      "summary": "In der Diskussion über die Corona-Warn-App betonen Malte Janduda und Thomas Klingbeil die Wichtigkeit von Code Reviews und der Verwendung von Standards. Sie freuen sich über neue Reviews und erhalten positives Feedback zu ihrem soliden Code, der jedoch in einigen Bereichen, wie Tests, verbessert werden könnte. Die App wurde nativ für iOS und Android entwickelt, wobei gängige Standards verwendet wurden, um eine einfache Nachvollziehbarkeit und Testbarkeit zu gewährleisten. Es wird darauf geachtet, keine speziellen Lizenzen für Datenbanken zu benötigen und eine unkomplizierte Serverumgebung zu schaffen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 4,
+        "startSec": 3974,
+        "endSec": 4181,
+        "generatedAt": "2026-01-02T18:34:34.940Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Exposure Notification API",
+      "subject": {
+        "coarse": "Software",
+        "fine": "API"
+      },
+      "durationSec": 368,
+      "positionSec": 4161,
+      "summary": "Im Transkript wird die Exposure Notification API besprochen, die von Apple und Google entwickelt wurde. Thomas Klingbeil, ein Mobilentwickler, äußert sich positiv über die Implementierung dieser API auf Android und Apple Geräten, hebt die Robustheit und Benutzerfreundlichkeit hervor. Es wird diskutiert, dass die API nicht Open Source ist, was einige kritisieren, jedoch Klingbeil betont, dass die Spezifikationen gut dokumentiert sind. Zudem wird auf eine alternative Open Source Implementierung namens Koral Libre hingewiesen, die von einer Gruppe im Android-Bereich entwickelt wird.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 17,
+        "startSec": 4141,
+        "endSec": 4549,
+        "generatedAt": "2026-01-02T18:34:38.017Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Laboratory Information Server",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Server"
+      },
+      "durationSec": 194,
+      "positionSec": 4530,
+      "summary": "Im Transkript wird ein Laborinformationssystem (LIS) diskutiert, das als Teil der Infrastruktur für die Corona-Warn-App dient. Es handelt sich um ein Produkt, das bereits existiert und nun angepasst wurde. Eine Schnittstelle wurde entwickelt, um Testergebnisse vom Labor an den Testresultatsserver zu übermitteln. Es wird betont, dass keine sensiblen Daten wie Namen oder Telefonnummern übermittelt werden, sondern nur eine GUID und das Testergebnis. Der genaue Aufbau des Laborservers, ob lokal oder in der Cloud, bleibt unklar.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 15,
+        "startSec": 4510,
+        "endSec": 4744,
+        "generatedAt": "2026-01-02T18:34:39.974Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Die App in der Nutzung",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Nutzung"
+      },
+      "durationSec": 659,
+      "positionSec": 4724,
+      "summary": "In der Episode wird der Workflow der Nutzung der Corona-Warn-App beschrieben. Nachdem die App installiert ist, wird sie genutzt, um Testergebnisse zu erhalten. Der Nutzer geht zum Arzt, wo ein Test durchgeführt wird, und erhält einen Probenbegleitschein mit einer neuen Kennung, die für die elektronische Übermittlung des Ergebnisses dient. Die App ermöglicht es, diesen Code zu scannen, um das Testergebnis digital abzurufen, ohne dass die Daten auf dem Telefon gespeichert werden. Bei einem positiven Testergebnis erhält der Nutzer Handlungsempfehlungen und kann seine Diagnoseschlüssel teilen, um andere Kontakte zu benachrichtigen, wobei die Privatsphäre gewahrt bleibt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 28,
+        "startSec": 4704,
+        "endSec": 5403,
+        "generatedAt": "2026-01-02T18:34:42.970Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Die TeleTAN",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Technologie"
+      },
+      "durationSec": 675,
+      "positionSec": 5384,
+      "summary": "Die TeleTAN ist ein Verfahren, das in Verbindung mit der Corona-Warn-App genutzt wird, um Testergebnisse zu verifizieren und zu übermitteln. Wenn ein Test nicht über einen QR-Code registriert ist, können Nutzer über eine Hotline ihre Testergebnisse abfragen und eine TeleTAN erhalten. Diese Methode ermöglicht es, auch ohne elektronische Übermittlung des Testergebnisses, andere Nutzer zu warnen. Die Hotline-Mitarbeiter sind speziell geschult und können durch einen Fragenkatalog sicherstellen, dass ein Test tatsächlich durchgeführt wurde, um Missbrauch zu vermeiden.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 51,
+        "startSec": 5364,
+        "endSec": 6079,
+        "generatedAt": "2026-01-02T18:34:45.795Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Erwartungshaltungen",
+      "subject": {
+        "coarse": "Soziale Aspekte",
+        "fine": "Erwartungen"
+      },
+      "durationSec": 360,
+      "positionSec": 6059,
+      "summary": "In der Diskussion um die Corona-Warn-App gibt es unterschiedliche Erwartungen hinsichtlich ihrer Nützlichkeit. Während einige glauben, die App könnte zur Rückkehr zur Normalität beitragen, sehen andere sie lediglich als unterstützendes Werkzeug für das Kontaktverfolgungssystem der Gesundheitsämter. Studien, wie die aus Oxford, zeigen, dass eine hohe Verbreitung der App (mindestens 60%) notwendig ist, um signifikante Effekte zu erzielen. Es wird auch auf die potenzielle Diskriminierung hingewiesen, wenn der Zugang zu bestimmten Orten nur für App-Nutzer erlaubt ist. Die App könnte zwar nicht die Erfassung von Kontakten in Restaurants ersetzen, bietet jedoch eine zusätzliche Möglichkeit zur Kontaktverfolgung.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 15,
+        "startSec": 6039,
+        "endSec": 6439,
+        "generatedAt": "2026-01-02T18:34:47.302Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Risiko-Kalibrierung",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Kalibrierung"
+      },
+      "durationSec": 774,
+      "positionSec": 6419,
+      "summary": "Die Risiko-Kalibrierung der Corona-Warn-App erfolgt durch Fachleute des Robert Koch Instituts (RKI) und des Fraunhofer Instituts, die Parameter wie Kontaktzeit und Signalstärke festlegen. Die Risikostufen reichen von null bis acht und wurden während der Beta-Phase mehrfach angepasst. Ein wichtiger Parameter ist der Transmission Risk, der individuell pro Nutzer und Tag definiert wird, um das Infektionsrisiko besser einschätzen zu können. Die App verfolgt eine Philosophie der Datensparsamenkeit, indem nur notwendige Daten erhoben werden, um das Vertrauen der Nutzer zu gewährleisten.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 22,
+        "startSec": 6399,
+        "endSec": 7213,
+        "generatedAt": "2026-01-02T18:34:49.980Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Benachrichtigungen",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Benachrichtigungen"
+      },
+      "durationSec": 268,
+      "positionSec": 7193,
+      "summary": "In der Diskussion um die Corona-Warn-App wird die User-Experience als zentrales Thema hervorgehoben. Es wird betont, dass Benachrichtigungen über Testergebnisse und Risikostatus so gestaltet sind, dass sie nicht sofort von anderen Personen wahrgenommen werden können. Die App informiert den Nutzer über seinen Risikostatus, der in drei Kategorien unterteilt ist: geringes Risiko, hohes Risiko und kein Risiko. Zudem wird die Herausforderung angesprochen, die App verständlich zu erklären, um Akzeptanz zu schaffen, insbesondere im Hinblick auf Datenschutzbedenken. Die internationale Kompatibilität der Apps wird ebenfalls thematisiert, da es wichtig ist, dass Nutzer aus verschiedenen Ländern, die die App verwenden, benachrichtigt werden können.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 6,
+        "startSec": 7173,
+        "endSec": 7481,
+        "generatedAt": "2026-01-02T18:34:52.274Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Internationaler Datenaustausch",
+      "subject": {
+        "coarse": "Daten",
+        "fine": "Datenaustausch"
+      },
+      "durationSec": 976,
+      "positionSec": 7462,
+      "summary": "Im Transkript wird der internationale Datenaustausch im Kontext der Corona-Warn-App diskutiert. Malte Janduda und Tim Pritlove thematisieren die Herausforderungen eines dezentralen Systems, insbesondere die exponentiell wachsenden Datenmengen, die bei einer globalen Nutzung entstehen. Es wird die Notwendigkeit betont, Daten lokal zu verarbeiten und nur relevante Infektionszahlen aus den Ländern abzurufen, in denen sich Nutzer aufgehalten haben. Zudem wird auf die Problematik eingegangen, dass die App Informationen über Aufenthaltsorte nicht ohne Weiteres erheben kann, was die Kommunikation von Infektionsstatus zwischen verschiedenen Ländern erschwert. Die Diskussion umfasst auch datenschutzrechtliche Bedenken und technische Lösungen zur Optimierung des Datenaustauschs.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 50,
+        "startSec": 7442,
+        "endSec": 8458,
+        "generatedAt": "2026-01-02T18:34:54.702Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Altersbeschränkungen",
+      "subject": {
+        "coarse": "Soziale Aspekte",
+        "fine": "Altersbeschränkungen"
+      },
+      "durationSec": 31,
+      "positionSec": 8439,
+      "summary": "",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 4,
+        "startSec": 8419,
+        "endSec": 8490,
+        "generatedAt": "2026-01-02T18:34:53.974Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Modell für öffentliche Projekte",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Modell"
+      },
+      "durationSec": 280,
+      "positionSec": 8470,
+      "summary": "In der Diskussion um die Corona-Warn-App wird ein neues Modell für öffentliche Softwareprojekte angesprochen, das auf Open Source basiert. Malte Janduda und Tim Pritlove betonen die Vorteile von Transparenz, schneller Entwicklung und öffentlicher Beteiligung. Sie argumentieren, dass solche Ansätze im Gesundheitswesen, das oft von Intransparenz und hohen Kosten geprägt ist, hilfreich sein könnten. Zudem wird die Rolle der Medien hervorgehoben, die nun aktiv den Entwicklungsprozess verfolgen und Fehler zeitnah dokumentieren können.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 9,
+        "startSec": 8450,
+        "endSec": 8770,
+        "generatedAt": "2026-01-02T18:34:57.529Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Berichterstattung",
+      "subject": {
+        "coarse": "Berichterstattung",
+        "fine": "Analyse"
+      },
+      "durationSec": 351,
+      "positionSec": 8751,
+      "summary": "In der Diskussion um die Corona-Warn-App wird die Berichterstattung über die Entwicklung der App thematisiert. Malte Janduda und Thomas Klingbeil betonen, dass die Medien nun direkt über den Entwicklungsprozess berichten, anstatt nur über fertige Produkte. Sie kritisieren, dass oft veraltete Informationen veröffentlicht werden, die nicht mehr den aktuellen Stand der App widerspiegeln. Zudem wird auf die Herausforderungen hingewiesen, die mit der Transparenz und der Dokumentation der Infrastruktur verbunden sind. Die Gesprächspartner zeigen sich insgesamt zufrieden mit der bisherigen Berichterstattung, sehen jedoch Verbesserungsbedarf in der Nachvollziehbarkeit der Informationen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "30-ts.json",
+        "method": "time-window",
+        "pickedCount": 15,
+        "startSec": 8731,
+        "endSec": 9122,
+        "generatedAt": "2026-01-02T18:34:59.618Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T18:34:59.618Z",
+  "transcriptFound": true,
+  "transcriptFile": "30-ts.json"
+}

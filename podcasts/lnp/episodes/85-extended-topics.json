@@ -1,0 +1,131 @@
+{
+  "episodeNumber": 85,
+  "title": "LNP085 Tatmittel Internet",
+  "extractedAt": "2026-01-02T10:48:35.375Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "Hintergrund: Netztopologie in Deutschland",
+      "subject": {
+        "coarse": "Infrastructure",
+        "fine": "Network Topology"
+      },
+      "durationSec": 3038,
+      "positionSec": 124,
+      "summary": "In dieser Episode diskutieren Linus Neumann und Tim Pritlove die Idee eines deutschen IT-Sicherheitsgesetzes und das Konzept des \"Deutschland-Routings\" für Internetdaten. Innenminister Friedrich hatte angeregt, dass Daten nur noch durch Deutschland geleitet werden sollten, um die Kontrolle über Daten zu behalten. René Obermann äußerte den Vorschlag eines \"Schengenraums fürs Internet\", was die Diskussion über Vertrauen und Sicherheit im Internet anheizt. Die Gesprächspartner beleuchten die Komplexität der Netztopologie in Deutschland und die verschiedenen Layer, durch die Datenpakete auf ihrem Weg von einem Nutzer zum anderen geleitet werden.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "85-ts.json",
+        "method": "time-window",
+        "pickedCount": 120,
+        "startSec": 104,
+        "endSec": 3182,
+        "generatedAt": "2026-01-02T17:53:19.031Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Schlandnet",
+      "subject": {
+        "coarse": "Infrastructure",
+        "fine": "Local Networks"
+      },
+      "durationSec": 748,
+      "positionSec": 3163,
+      "summary": "In der Diskussion um das Konzept \"Schlandnet\" äußern die Teilnehmer Skepsis gegenüber der Idee, deutschen Internetverkehr ausschließlich innerhalb Deutschlands zu routen. Clemens Schrimpe kritisiert die Telekom und deren Marketingstrategie, die auf die Netz-Community abzielt. Es wird darauf hingewiesen, dass Provider oft auf ausländische Verbindungen zurückgreifen, um Kosten zu sparen, und dass es technisch und ökonomisch schwierig ist, ein rein deutsches Netz zu schaffen. Zudem wird die Rolle der Telekom als dominanter Anbieter und die Herausforderungen durch internationale Datenströme thematisiert.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "85-ts.json",
+        "method": "time-window",
+        "pickedCount": 25,
+        "startSec": 3143,
+        "endSec": 3931,
+        "generatedAt": "2026-01-02T17:53:19.661Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Kein Breitband für alle",
+      "subject": {
+        "coarse": "Infrastructure",
+        "fine": "Broadband Access"
+      },
+      "durationSec": 157,
+      "positionSec": 3912,
+      "summary": "Im Gespräch über die Koalitionsverhandlungen der GroKo wird die Forderung der SPD nach flächendeckendem Breitband diskutiert, die jedoch anscheinend vom Tisch ist. Die CDU sieht 50 Megabit als ausreichend an, was im internationalen Vergleich als unzureichend betrachtet wird, insbesondere im Hinblick auf Länder wie Südkorea und die Schweiz, die deutlich höhere Bandbreiten anbieten. Es wird kritisiert, dass die Diskussion um 50 Megabit nicht den aktuellen Anforderungen entspricht und dass die Internetversorgung in Deutschland hinterherhinkt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "85-ts.json",
+        "method": "time-window",
+        "pickedCount": 10,
+        "startSec": 3892,
+        "endSec": 4089,
+        "generatedAt": "2026-01-02T17:53:22.972Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "BND schnorchelt mit",
+      "subject": {
+        "coarse": "Security",
+        "fine": "Surveillance"
+      },
+      "durationSec": 400,
+      "positionSec": 4069,
+      "summary": "In der Episode wird die Überwachungsfähigkeit des BND (Bundesnachrichtendienst) im Internet thematisiert. Es wird diskutiert, dass der BND möglicherweise in der Lage ist, den Internetverkehr umfassend zu überwachen, indem er Datenströme direkt abgreift, anstatt nur gezielt nach Schlüsselwörtern zu suchen. Die Kosten und der Aufwand für eine solche Infrastruktur werden als hoch eingeschätzt, wobei eine zusätzliche Finanzierung von 100 Millionen Euro für den Ausbau der Überwachungsinfrastruktur gefordert wird. Es wird auch auf die Herausforderungen hingewiesen, die mit der Überwachung und dem Monitoring von Internetdaten verbunden sind.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "85-ts.json",
+        "method": "time-window",
+        "pickedCount": 18,
+        "startSec": 4049,
+        "endSec": 4489,
+        "generatedAt": "2026-01-02T17:53:23.381Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Meldepflicht für Tor",
+      "subject": {
+        "coarse": "Regulation",
+        "fine": "Internet Privacy"
+      },
+      "durationSec": 600,
+      "positionSec": 4470,
+      "summary": "In der Episode wird die Diskussion über die Meldepflicht für Anonymisierungsdienste wie Tor behandelt. BKA-Chef Jörg Zirke äußert sich zur Kriminalstatistik und betont, dass die Dunkelziffer der Internetkriminalität hoch sei, was durch fehlende Vorratsdatenspeicherung erschwert werde. Er schlägt vor, Anonymisierungsdienste unter staatliche Meldeauflagen zu stellen, was auf Kritik stößt. Die Gesprächspartner diskutieren die Absurdität solcher Vorschläge und ziehen Parallelen zu früheren Ideen, wie dem 'Evilbit' zur Kennzeichnung von böswilligem Datenverkehr.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "85-ts.json",
+        "method": "time-window",
+        "pickedCount": 32,
+        "startSec": 4450,
+        "endSec": 5090,
+        "generatedAt": "2026-01-02T17:53:27.288Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T17:53:27.288Z",
+  "transcriptFound": true,
+  "transcriptFile": "85-ts.json"
+}

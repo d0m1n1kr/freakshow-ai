@@ -1,5 +1,6 @@
 import puppeteer from 'puppeteer';
-import fs from 'fs/promises';
+import fs from 'fs';
+import fsPromises from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -12,7 +13,35 @@ const podcastIndex = args.indexOf('--podcast');
 const PODCAST_ID = podcastIndex !== -1 && args[podcastIndex + 1] ? args[podcastIndex + 1] : 'freakshow';
 
 const PROJECT_ROOT = path.join(__dirname, '..');
-const TEAM_URL = 'https://freakshow.fm/team'; // TODO: Load from settings.json
+
+// Load settings and get podcast configuration
+let settings;
+try {
+  settings = JSON.parse(fs.readFileSync(path.join(PROJECT_ROOT, 'settings.json'), 'utf-8'));
+} catch (error) {
+  console.error('Error loading settings.json:', error.message);
+  console.error('Falling back to settings.example.json');
+  try {
+    settings = JSON.parse(fs.readFileSync(path.join(PROJECT_ROOT, 'settings.example.json'), 'utf-8'));
+  } catch (e) {
+    console.error('Error loading settings.example.json:', e.message);
+    process.exit(1);
+  }
+}
+
+// Find podcast configuration
+const podcast = settings.podcasts?.find(p => p.id === PODCAST_ID);
+if (!podcast) {
+  console.error(`Error: Podcast '${PODCAST_ID}' not found in settings.json`);
+  process.exit(1);
+}
+
+const TEAM_URL = podcast.teamUrl;
+if (!TEAM_URL) {
+  console.error(`Error: teamUrl not configured for podcast '${PODCAST_ID}'`);
+  process.exit(0);
+}
+
 const SPEAKERS_DIR = path.join(PROJECT_ROOT, 'podcasts', PODCAST_ID, 'speakers');
 
 function parseArgs(argv) {
@@ -168,7 +197,7 @@ async function scrapeSpeakers() {
   console.log('');
 
   // Ensure speakers directory exists
-  await fs.mkdir(SPEAKERS_DIR, { recursive: true });
+  await fsPromises.mkdir(SPEAKERS_DIR, { recursive: true });
 
   console.log('Launching browser...');
   const browser = await puppeteer.launch({
@@ -305,7 +334,7 @@ async function scrapeSpeakers() {
     // Check if file exists and --force not set
     if (!ARGS.force) {
       try {
-        await fs.access(filepath);
+        await fsPromises.access(filepath);
         console.log(`✓ ${speaker.name} (${slug}) - already exists, skipping`);
         continue;
       } catch {
@@ -419,7 +448,7 @@ async function scrapeSpeakers() {
     };
     
     // Write to file
-    await fs.writeFile(filepath, JSON.stringify(metadata, null, 2), 'utf-8');
+    await fsPromises.writeFile(filepath, JSON.stringify(metadata, null, 2), 'utf-8');
     console.log(`✓ ${speaker.name} (${slug}) - saved to ${filename}`);
   }
 

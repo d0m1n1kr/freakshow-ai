@@ -76,9 +76,16 @@ async function createEmbeddings(texts, retryCount = 0) {
  */
 function findTopicsFiles() {
   const episodesDir = path.join(PROJECT_ROOT, 'podcasts', PODCAST_ID, 'episodes');
-  const files = fs.readdirSync(episodesDir);
   
-  return files
+  if (!fs.existsSync(episodesDir)) {
+    console.error(`\n❌ Episoden-Verzeichnis nicht gefunden: ${episodesDir}`);
+    console.error(`   Podcast ID: ${PODCAST_ID}`);
+    console.error(`   Projekt-Root: ${PROJECT_ROOT}`);
+    process.exit(1);
+  }
+  
+  const files = fs.readdirSync(episodesDir);
+  const topicsFiles = files
     .filter(file => file.match(/^\d+-topics\.json$/))
     .map(file => ({
       file: file,
@@ -86,6 +93,13 @@ function findTopicsFiles() {
       path: path.join(episodesDir, file)
     }))
     .sort((a, b) => a.episodeNumber - b.episodeNumber);
+  
+  if (topicsFiles.length === 0) {
+    console.warn(`\n⚠️  Keine Topics-Dateien gefunden in: ${episodesDir}`);
+    console.warn(`   Gefundene Dateien: ${files.filter(f => f.endsWith('.json')).slice(0, 10).join(', ')}${files.length > 10 ? '...' : ''}`);
+  }
+  
+  return topicsFiles;
 }
 
 /**
@@ -218,11 +232,15 @@ function computeTopSubjects(occurrences, max = 3) {
  * Hauptfunktion
  */
 async function main() {
-  console.log('🧠 Erstelle Embeddings-Datenbank für Topics\n');
+  console.log(`🧠 Erstelle Embeddings-Datenbank für Topics (Podcast: ${PODCAST_ID})\n`);
   
   const embeddingModel = settings.topicClustering?.embeddingModel || 'text-embedding-3-small';
   const batchSize = settings.topicClustering?.embeddingBatchSize || 100;
-  const dbFile = path.join(PROJECT_ROOT, 'db', 'topic-embeddings.json');
+  const dbDir = path.join(PROJECT_ROOT, 'db', PODCAST_ID);
+  if (!fs.existsSync(dbDir)) {
+    fs.mkdirSync(dbDir, { recursive: true });
+  }
+  const dbFile = path.join(dbDir, 'topic-embeddings.json');
   const schemaVersion = 2;
   
   console.log(`Embedding-Modell: ${embeddingModel}`);
@@ -239,10 +257,27 @@ async function main() {
   }
 
   // 1. Lade alle Topics
-  console.log('📂 Lade Topics aus Episoden...');
+  console.log(`📂 Lade Topics aus Episoden (Podcast: ${PODCAST_ID})...`);
+  const episodesDir = path.join(PROJECT_ROOT, 'podcasts', PODCAST_ID, 'episodes');
+  if (!fs.existsSync(episodesDir)) {
+    console.error(`\n❌ Episoden-Verzeichnis nicht gefunden: ${episodesDir}`);
+    console.error(`   Stelle sicher, dass die Episoden-Daten für Podcast '${PODCAST_ID}' existieren.`);
+    process.exit(1);
+  }
   const allTopics = loadAllTopics();
   const topicsFiles = findTopicsFiles();
   console.log(`   ${allTopics.length} Topics aus ${topicsFiles.length} Episoden geladen`);
+  
+  if (allTopics.length === 0) {
+    console.error(`\n❌ Keine Topics gefunden!`);
+    console.error(`   Episoden-Verzeichnis: ${episodesDir}`);
+    console.error(`   Gefundene Topics-Dateien: ${topicsFiles.length}`);
+    if (topicsFiles.length === 0) {
+      console.error(`   Stelle sicher, dass Topics extrahiert wurden mit:`);
+      console.error(`   node scripts/extract-topics.js --podcast ${PODCAST_ID} --all`);
+    }
+    process.exit(1);
+  }
 
   // 2. Dedupliziere
   console.log('\n🔄 Dedupliziere Topics...');

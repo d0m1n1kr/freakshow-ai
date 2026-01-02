@@ -15,6 +15,30 @@ const PROJECT_ROOT = path.join(__dirname, '..');
 const settings = JSON.parse(fs.readFileSync(path.join(PROJECT_ROOT, 'settings.json'), 'utf-8'));
 
 /**
+ * Remove `--podcast <id>` from argv so command parsing works regardless of flag order.
+ * Example:
+ *   node scripts/normalize-topics.js --podcast lnp --create-taxonomy
+ * should behave the same as:
+ *   node scripts/normalize-topics.js --create-taxonomy --podcast lnp
+ */
+function stripPodcastArgs(argv) {
+  const out = [];
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
+    if (a === '--podcast') {
+      i++; // skip value
+      continue;
+    }
+    out.push(a);
+  }
+  return out;
+}
+
+function taxonomyFilePath() {
+  return path.join(PROJECT_ROOT, 'podcasts', PODCAST_ID, 'topic-taxonomy.json');
+}
+
+/**
  * Wartet für eine bestimmte Zeit
  */
 function sleep(ms) {
@@ -193,8 +217,9 @@ function loadAllTopics() {
  * Erstelle oder aktualisiere die Topic-Taxonomie
  */
 async function createTaxonomy(allTopics) {
-  const taxonomyFile = path.join(__dirname, 'topic-taxonomy.json');
+  const taxonomyFile = taxonomyFilePath();
   const maxMainTopics = settings.topicNormalization?.maxMainTopics || 35;
+  fs.mkdirSync(path.dirname(taxonomyFile), { recursive: true });
   
   // Gruppiere Topics nach ähnlichen Bezeichnungen für besseren Überblick
   const topicCounts = {};
@@ -293,7 +318,7 @@ Erstelle jetzt die Taxonomie als JSON-Array:`;
  * Lade existierende Taxonomie
  */
 function loadTaxonomy() {
-  const taxonomyFile = path.join(__dirname, 'topic-taxonomy.json');
+  const taxonomyFile = taxonomyFilePath();
   if (fs.existsSync(taxonomyFile)) {
     return JSON.parse(fs.readFileSync(taxonomyFile, 'utf-8'));
   }
@@ -393,13 +418,13 @@ Ordne die Episode-Topics den passenden Haupt-Topics zu:`;
  * Hauptfunktion
  */
 async function main() {
-  console.log('🚀 Topic-Normalisierung für Freakshow Episoden\n');
+  console.log(`🚀 Topic-Normalisierung für ${PODCAST_ID} Episoden\n`);
   const normModel = settings.topicNormalization?.model || settings.llm.model;
   console.log(`LLM: ${settings.llm.provider} - ${normModel}${settings.topicNormalization?.model ? ' (Override)' : ''}`);
   console.log(`Max Haupt-Topics: ${settings.topicNormalization?.maxMainTopics || 35}`);
   console.log(`Max Tokens (Taxonomie): ${settings.topicNormalization?.taxonomyMaxTokens || 16000}\n`);
 
-  const args = process.argv.slice(2);
+  const args = stripPodcastArgs(process.argv.slice(2));
   const delayMs = settings.topicExtraction?.requestDelayMs || 3000;
   
   // Prüfe Kommandozeilen-Argumente
@@ -414,12 +439,12 @@ async function main() {
   
   if (args[0] === '--help' || args[0] === '-h') {
     console.log('Verwendung:');
-    console.log('  node scripts/normalize-topics.js --create-taxonomy    Erstelle/Aktualisiere Taxonomie');
-    console.log('  node scripts/normalize-topics.js --normalize-all      Normalisiere alle Episoden');
-    console.log('  node scripts/normalize-topics.js <episode>            Normalisiere eine Episode');
-    console.log('  node scripts/normalize-topics.js 1 2 3                Normalisiere mehrere Episoden');
-    console.log('  node scripts/normalize-topics.js --range 1 10         Normalisiere Bereich');
-    console.log('  node scripts/normalize-topics.js --full               Taxonomie + alle Episoden\n');
+    console.log('  node scripts/normalize-topics.js [--podcast <id>] --create-taxonomy    Erstelle/Aktualisiere Taxonomie');
+    console.log('  node scripts/normalize-topics.js [--podcast <id>] --normalize-all      Normalisiere alle Episoden');
+    console.log('  node scripts/normalize-topics.js [--podcast <id>] <episode>            Normalisiere eine Episode');
+    console.log('  node scripts/normalize-topics.js [--podcast <id>] 1 2 3                Normalisiere mehrere Episoden');
+    console.log('  node scripts/normalize-topics.js [--podcast <id>] --range 1 10         Normalisiere Bereich');
+    console.log('  node scripts/normalize-topics.js [--podcast <id>] --full               Taxonomie + alle Episoden\n');
     return;
   }
   
@@ -438,7 +463,8 @@ async function main() {
   
   if (!taxonomy) {
     console.log('❌ Keine Taxonomie gefunden. Erstelle zuerst eine mit:');
-    console.log('   node scripts/normalize-topics.js --create-taxonomy\n');
+    console.log(`   node scripts/normalize-topics.js --podcast ${PODCAST_ID} --create-taxonomy\n`);
+    console.log(`   (Taxonomie-Datei: ${taxonomyFilePath()})\n`);
     return;
   }
   

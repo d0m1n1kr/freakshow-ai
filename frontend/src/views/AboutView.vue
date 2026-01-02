@@ -1,31 +1,45 @@
 <script setup lang="ts">
+import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
+import type { Podcast } from '@/stores/settings';
 
 const { t } = useI18n();
+
+const podcasts = ref<Podcast[]>([]);
+const loading = ref(true);
+
+onMounted(async () => {
+  try {
+    const response = await fetch('/podcasts.json');
+    if (response.ok) {
+      const data = await response.json();
+      podcasts.value = data.podcasts || [];
+    }
+  } catch (error) {
+    console.error('Failed to load podcasts:', error);
+  } finally {
+    loading.value = false;
+  }
+});
 </script>
 
 <template>
   <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
-    <div class="p-6 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20">
-      <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">{{ t('about.title') }}</h2>
-      <p class="text-gray-600 dark:text-gray-400">{{ t('about.subtitle') }}</p>
+    <div class="p-6 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20">
+      <div class="flex items-center gap-4 mb-4">
+        <img
+          src="/logo.svg?v=2"
+          alt="PodInsights Logo"
+          class="w-16 h-16 flex-shrink-0"
+        />
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-1">{{ t('about.title') }}</h2>
+          <p class="text-gray-600 dark:text-gray-400">{{ t('about.subtitle') }}</p>
+        </div>
+      </div>
     </div>
 
     <div class="p-8 space-y-8">
-      <!-- Freak Show Reference -->
-      <section>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">🎙️ {{ t('about.freakshow.title') }}</h3>
-        <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-          {{ t('about.freakshow.description') }}
-          <a
-            href="https://freakshow.fm/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="font-semibold text-blue-600 dark:text-blue-400 hover:underline"
-          >freakshow.fm</a>.
-        </p>
-      </section>
-
       <!-- Project Description -->
       <section>
         <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">📊 {{ t('about.projectDescription.title') }}</h3>
@@ -34,9 +48,55 @@ const { t } = useI18n();
         </p>
       </section>
 
+      <!-- Supported Podcasts -->
+      <section>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">🎙️ {{ t('about.supportedPodcasts.title') }}</h3>
+        <div v-if="loading" class="text-center py-4">
+          <p class="text-gray-500 dark:text-gray-400">{{ t('about.supportedPodcasts.loading') }}</p>
+        </div>
+        <div v-else-if="podcasts.length > 0" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a
+            v-for="podcast in podcasts"
+            :key="podcast.id"
+            :href="podcast.homeUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="p-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg border border-blue-200 dark:border-blue-700 hover:border-blue-400 dark:hover:border-blue-500 transition-colors group"
+          >
+            <div class="flex items-center gap-4">
+              <img
+                v-if="podcast.logoUrl"
+                :src="podcast.logoUrl"
+                :alt="podcast.name"
+                class="w-16 h-16 rounded-lg object-cover flex-shrink-0 ring-2 ring-blue-200 dark:ring-blue-700 group-hover:ring-blue-400 dark:group-hover:ring-blue-500 transition-all"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+              <div class="flex-1 min-w-0">
+                <h4 class="font-semibold text-blue-900 dark:text-blue-100 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">
+                  {{ podcast.name }}
+                </h4>
+                <p class="text-xs text-blue-700 dark:text-blue-300 mt-1 truncate">
+                  {{ podcast.homeUrl }}
+                </p>
+              </div>
+              <svg
+                class="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </div>
+          </a>
+        </div>
+        <p v-else class="text-gray-500 dark:text-gray-400 text-sm">{{ t('about.supportedPodcasts.none') }}</p>
+      </section>
+
       <!-- Multi-Podcast Support -->
       <section>
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">🎙️ {{ t('about.multiPodcast.title') }}</h3>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">🔧 {{ t('about.multiPodcast.title') }}</h3>
         <div class="p-5 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-lg border border-emerald-200 dark:border-emerald-700">
           <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
             {{ t('about.multiPodcast.description') }}
@@ -421,7 +481,7 @@ const { t } = useI18n();
             {{ t('about.openSource.description') }}
           </p>
           <a
-            href="https://github.com/d0m1n1kr/freakshow-ai"
+            href="https://github.com/d0m1n1kr/pod-insights"
             target="_blank"
             rel="noopener noreferrer"
             class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg hover:bg-gray-800 dark:hover:bg-gray-600 transition-colors"

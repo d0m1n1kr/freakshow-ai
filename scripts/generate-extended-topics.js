@@ -28,7 +28,16 @@ function parseArgs(argv) {
     dryRun: false,
   };
 
-  const rest = [...argv];
+  // Remove `--podcast <id>` from argv so order doesn't matter (caller always passes it).
+  const rest = [];
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
+    if (a === '--podcast') {
+      i++; // skip value
+      continue;
+    }
+    rest.push(a);
+  }
   while (rest.length) {
     const a = rest.shift();
     if (a === '--all') args.all = true;
@@ -71,13 +80,13 @@ function tryReadJson(p) {
 
 function loadSettings({ allowMissing } = { allowMissing: false }) {
   // Prefer settings.json, but in some environments it may be blocked (ignored/secret file).
-  const settingsPath = path.join(__dirname, 'settings.json');
+  const settingsPath = path.join(__dirname, '..', 'settings.json');
   const fromSettings = tryReadJson(settingsPath);
 
   if (fromSettings.ok) return { settings: fromSettings.value, source: 'settings.json' };
 
   // If settings.json is missing or unreadable, allow env-based config (and optionally fall back to settings.example.json)
-  const examplePath = path.join(__dirname, 'settings.example.json');
+  const examplePath = path.join(__dirname, '..', 'settings.example.json');
   const fromExample = tryReadJson(examplePath);
 
   const envLLM = {

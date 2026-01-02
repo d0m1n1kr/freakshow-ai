@@ -1,0 +1,227 @@
+{
+  "episodeNumber": 221,
+  "title": "LNP221 Ich glaub doch nichts, was die Regierung sagt!",
+  "extractedAt": "2026-01-02T11:03:36.049Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "Feedback: Wahlsoftware",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Wahlsoftware"
+      },
+      "durationSec": 240,
+      "positionSec": 88,
+      "summary": "In dieser Episode wird Feedback zu Wahlsoftware thematisiert, insbesondere zu einem Bericht eines Wahlhelfers aus einer nicht näher genannten Stadt. Der Wahlhelfer berichtet von der Nutzung von Software zur digitalen Zusammenfassung der Wahlergebnisse, wobei unklar bleibt, ob die Software IVU Elect zum Einsatz kam. Es wird erwähnt, dass private Computer verwendet wurden, um die Wahldaten zu verarbeiten, was als problematisch angesehen wird. Der Prozess zur Übertragung der Stimmen und die damit verbundenen Herausforderungen werden diskutiert, wobei das Vertrauen in die Wahlverfahren als zentrales Thema hervorgehoben wird.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "221-ts.json",
+        "method": "time-window",
+        "pickedCount": 11,
+        "startSec": 68,
+        "endSec": 348,
+        "generatedAt": "2026-01-02T18:25:35.817Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "WannaCry: Vorgeschichte",
+      "subject": {
+        "coarse": "Cybersecurity",
+        "fine": "WannaCry"
+      },
+      "durationSec": 556,
+      "positionSec": 328,
+      "summary": "Im Transkript wird die Vorgeschichte des WannaCry-Angriffs thematisiert, der durch die Veröffentlichung von NSA-Exploits durch die Gruppe der Shadow Brokers ermöglicht wurde. Linus Neumann erklärt, dass die Shadow Brokers im August 2016 mit der Veröffentlichung von Angriffstools begannen, die die NSA als geheim hielt. Diese Tools wurden dann von Angreifern genutzt, um Systeme zu kompromittieren, insbesondere durch die Sicherheitslücke EternalBlue, die eine Remote Code Execution ermöglichte. WannaCry, ein Ransomware-Angriff, nutzte diese Schwachstelle, um Dateien auf befallenen Rechnern zu verschlüsseln und Lösegeldforderungen zu stellen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "221-ts.json",
+        "method": "time-window",
+        "pickedCount": 23,
+        "startSec": 308,
+        "endSec": 904,
+        "generatedAt": "2026-01-02T18:25:37.846Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "WannaCry: Verbreitungsweg",
+      "subject": {
+        "coarse": "Cybersecurity",
+        "fine": "WannaCry"
+      },
+      "durationSec": 610,
+      "positionSec": 884,
+      "summary": "Im Transkript wird die Verbreitung des WannaCry-Trojaners thematisiert, insbesondere ein DNS-Kill-Switch, der versehentlich aktiviert wurde. Ein Analyst registrierte eine nicht existierende Domain, die der Trojaner benötigte, um seine Ausbreitung zu stoppen. Dies führte zu einer vorübergehenden Eindämmung, während Varianten ohne diesen Kill-Switch schnell auftauchten. Zudem wird die begrenzte Anzahl an Bitcoin-Wallets erwähnt, auf die Lösegeld gezahlt werden sollte, was Fragen zur Motivation der Angreifer aufwirft. Die Diskussion beleuchtet auch die technischen Schwächen und die unkonventionellen Methoden der Angreifer.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "221-ts.json",
+        "method": "time-window",
+        "pickedCount": 20,
+        "startSec": 864,
+        "endSec": 1514,
+        "generatedAt": "2026-01-02T18:25:39.485Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "WannaCry: Auswirkungen",
+      "subject": {
+        "coarse": "Cybersecurity",
+        "fine": "WannaCry"
+      },
+      "durationSec": 522,
+      "positionSec": 1495,
+      "summary": "Die WannaCry-Attacke hatte massive Auswirkungen auf verschiedene Institutionen, insbesondere in Großbritannien, wo 16 Krankenhäuser betroffen waren und der Zugriff auf Patientendaten für 24 Stunden unterbrochen wurde. Auch andere Organisationen, wie das russische Innenministerium und die Deutsche Bahn, erlitten Störungen. Die Angriffe nutzten veraltete Systeme, oft mit nicht aktuellen Sicherheitsupdates, was die Verwundbarkeit erhöhte. Linus Neumann betont die Bedeutung von regelmäßigen Backups und einem effektiven Patch-Management, um solche Sicherheitsrisiken zu minimieren. Zudem wird auf die politische Dimension hingewiesen, dass die NSA möglicherweise lange über die Schwachstelle informiert war.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "221-ts.json",
+        "method": "time-window",
+        "pickedCount": 21,
+        "startSec": 1475,
+        "endSec": 2037,
+        "generatedAt": "2026-01-02T18:25:41.690Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "WannaCry: Politische Komponente",
+      "subject": {
+        "coarse": "Cybersecurity",
+        "fine": "WannaCry"
+      },
+      "durationSec": 1173,
+      "positionSec": 2018,
+      "summary": "Im Transkript wird die politische Komponente des WannaCry-Angriffs thematisiert, insbesondere die Verantwortung der NSA für die Entstehung der Schwachstelle. Linus Neumann kritisiert, dass die NSA ihr Wissen über die Schwachstelle geheim hielt, um eigene Hacking-Tools zu nutzen, wodurch sie ein erhebliches Risiko für die globale Cybersecurity eingingen. Der Angriff führte zu Schäden in über hundert Ländern, und Neumann fordert eine verantwortungsvollere Handhabung von Sicherheitslücken durch staatliche Stellen. Er betont, dass das Sammeln von Sicherheitslücken anstelle ihrer Behebung nicht akzeptabel ist und dass die Gesellschaft unter den Folgen leidet.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "221-ts.json",
+        "method": "time-window",
+        "pickedCount": 25,
+        "startSec": 1998,
+        "endSec": 3211,
+        "generatedAt": "2026-01-02T18:25:43.372Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Vorratsdatenseicherung wird ausgeweitet",
+      "subject": {
+        "coarse": "Privacy",
+        "fine": "Vorratsdatensicherung"
+      },
+      "durationSec": 1227,
+      "positionSec": 3192,
+      "summary": "In der Episode wird die bevorstehende Ausweitung der Vorratsdatenspeicherung thematisiert. Linus Neumann und Tim Pritlove diskutieren die unklaren technischen Richtlinien und die Herausforderungen für Anbieter, die gesetzliche Anforderungen umzusetzen. Ein neues Unternehmen, Uniscon (Universal Identity Control GmbH), bietet einen Service zur Vorratsdatenspeicherung an und behauptet, in enger Zusammenarbeit mit dem Bundeswirtschaftsministerium und der Bundesnetzagentur zu stehen. Die Diskussion hebt die Bedenken hinsichtlich der Datensicherheit und der Verantwortung der Anbieter hervor, während gleichzeitig die wirtschaftlichen Implikationen für kleinere Provider angesprochen werden.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "221-ts.json",
+        "method": "time-window",
+        "pickedCount": 51,
+        "startSec": 3172,
+        "endSec": 4439,
+        "generatedAt": "2026-01-02T18:25:45.185Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "SMS-2nd-Factor-Hack",
+      "subject": {
+        "coarse": "Cybersecurity",
+        "fine": "SMS-2nd-Factor-Hack"
+      },
+      "durationSec": 1264,
+      "positionSec": 4419,
+      "summary": "Im Transkript wird der SMS-2nd-Factor-Hack thematisiert, der über das Signaling System Number Seven (SS7) funktioniert. Linus Neumann erklärt, dass SS7 eine Protokollfamilie ist, die den Austausch zwischen Mobilfunknetzen ermöglicht. Angreifer können sich als Mobilfunkanbieter ausgeben und SMS an das Opfer abfangen, was besonders bei Online-Banking gefährlich ist. Die Sicherheit von SMS als zweiten Faktor wird in Frage gestellt, da sie über ein unsicheres Netzwerk gesendet werden. Neumann kritisiert auch Banken, die unsichere Verfahren anbieten, und verweist auf die Notwendigkeit, sicherere Authentifizierungsmethoden zu implementieren.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "221-ts.json",
+        "method": "time-window",
+        "pickedCount": 33,
+        "startSec": 4399,
+        "endSec": 5703,
+        "generatedAt": "2026-01-02T18:25:48.411Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "re:publica 2017",
+      "subject": {
+        "coarse": "Event",
+        "fine": "re:publica"
+      },
+      "durationSec": 1992,
+      "positionSec": 5683,
+      "summary": "In der Episode wird die re:publica 2017 thematisiert, wobei Tim Pritlove und Linus Neumann die Veranstaltung kritisch betrachten. Sie bemängeln die Überfülle an Programmpunkten und Stages, die zu einer Überforderung der Teilnehmer führen und die Qualität der Talks senken. Das Motto 'Love Out laut' wird als unterhaltsam, aber nicht durchgängig in den Inhalten umgesetzt wahrgenommen. Trotz der Kritik wird die Veranstaltung als wichtig für die digitale Gemeinde und als politisch relevant angesehen. Neumann schlägt vor, die Anzahl der Bühnen zu reduzieren oder die Veranstaltung zu verlängern, um die Wahrnehmung zu verbessern.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "221-ts.json",
+        "method": "time-window",
+        "pickedCount": 57,
+        "startSec": 5663,
+        "endSec": 7695,
+        "generatedAt": "2026-01-02T18:25:49.630Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "34C3 in Leipzig",
+      "subject": {
+        "coarse": "Event",
+        "fine": "34C3"
+      },
+      "durationSec": 370,
+      "positionSec": 7810,
+      "summary": "Der vierunddreißigste Chaos Communication Kongress (34C3) wird nicht in Hamburg, sondern in Leipzig stattfinden. Die Wahl fiel auf Leipzig aufgrund der modernen Messeinfrastruktur und der verkehrsgünstigen Lage, insbesondere durch die neue ICE-Strecke nach München. Tim Pritlove und Linus Neumann betonen die kulturelle Attraktivität Leipzigs und die kooperative Haltung des Messe-Teams. Es gibt Herausforderungen bezüglich der Unterbringung, aber es wird erwartet, dass der Kongress gut organisiert sein wird, mit Shuttlebusverbindungen und Straßenbahnlinien für die Teilnehmer.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "221-ts.json",
+        "method": "time-window",
+        "pickedCount": 13,
+        "startSec": 7790,
+        "endSec": 8200,
+        "generatedAt": "2026-01-02T18:25:53.272Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T18:25:53.272Z",
+  "transcriptFound": true,
+  "transcriptFile": "221-ts.json"
+}

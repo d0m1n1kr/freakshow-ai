@@ -1,0 +1,1109 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen, Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:02",
+      "text": "Guten Morgen, Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:04",
+      "text": "Zutritt zum Podcast gibt es jetzt nur noch über LNP-ID übrigens."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:09",
+      "text": "Ich bin nicht mehr dabei."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:32",
+      "text": "Logbuch Netzpolitik Nummer 454 vom 24. Februar 2023.\nFür die Freunde der Art und\nWeise die Jahreszahl sozusagen heute mal ganz exklusiv am Jahrestag des Beginns\nder Ukraine des Ukraine Krieges finden wir uns erneut zusammen wir beide hallo\nLinus hallo Tim ich wollte nur sagen 23\nan den 24 Das ist der Februar, die 24 ist keine Träne.\nJetzt muss ich wieder mit dem Primmzahler gucken.\nHeute achten wir darauf, dass alles teilbar ist, damit wir das dann auch noch\nauf Twitter geteilt bekommen, weil ich hab gehört, Primmzahlen darf man jetzt auch nicht mehr posten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:22",
+      "text": "Das ist das größte Thema, was wir bei LogFood jetzt jeweils hatten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:29",
+      "text": "Das bricht alle Rekorde auf jeden Fall. Das ist der Clickbait,\nden wir alle schon immer haben wollten.\nWollten. So läuft das. Ja, ja, genau. Aber jetzt demnächst wird halt auch der\nZugang zum Podcast schwieriger, weil nur noch mit LNP-ID, das führen wir jetzt ein.\nMan muss sich dann irgendwie mit einem Zeugnis aus der ersten Klasse von seiner\nGrundschule irgendwie identifizieren, per Fax.\nUnd dann darf man auch wieder die Podcast runterladen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:01",
+      "text": "Ja, dann machen wir das. Dann wird er gefaxt in Fax-Abrufdienst.\nGenau, das wäre auch nochmal von... Ace64, dann wird er nochmal gefaxt. Okay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:16",
+      "text": "Ich bin schon ein bisschen albern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:18",
+      "text": "Wir sind wieder albern, ja.\nEs gibt wieder Shirts. Hört mir auf, es meldeten sich schon Leute,\ndass ihre Bestellungen gecancelt wurden. Ja. Was war da wieder los?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:34",
+      "text": "Das war wohl eher ein Unfall. Also es gab eine Rohwaren-Shortage,\ndie dazu führte, dass dann die Dinger automatisch ausgelistet wurden.\nUnd das führte wohl leider in manchen Fällen auch dazu, dass irgendwelche Bestellungen\ndann ausgetimt sind. Und das tut uns sehr leid. Da konnten wir leider nichts dafür.\nHoffentlich ist es jetzt wieder vorbei. Jetzt sollte wieder alles verfügbar sein.\nAlso tolle Einhorn-Standarte ist wieder im Angebot und demnächst gibt es dann\nauch noch Beutelchen auf Wunsch von Hörerinnen und Hörern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:13",
+      "text": "Das kann ich überhaupt nicht verstehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:15",
+      "text": "Wieso?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:17",
+      "text": "Es ist also, wer hat, also Hand aufs Herz, Tim.\nHast du einen YouTube-Beutel zu Hause?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:26",
+      "text": "Mehrere."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:27",
+      "text": "Kannst du dir vorstellen, dass es jemanden gibt, der keinen hat?\nGanz vorsichtige Frage. Ich\nglaube, das ist ein Produkt, wo ich den Markt jetzt für erschöpft halte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:41",
+      "text": "Wirklich? Also ich habe große, breite Verwendung für jute Beutel.\nIch habe im Zweifelsfall immer nicht genug..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:48",
+      "text": "Fun fact bringen oder was?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:50",
+      "text": "Nö, so was weiß ich. Wenn ich auf Reisen gehe, habe ich immer zwei,\ndrei dabei, damit ich irgendwo auch meine schmutzige Wäsche irgendwie im Koffer\nverstauen kann, die dann nochmal separiert ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:59",
+      "text": "Ja, aber dann nimmt man doch keinen LNP Einhornbeutel."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:02",
+      "text": "Nein, dann nimmt man die von Aldi, aber dann hat man halt keine.\nUnd deswegen, wenn du dann halt auch mal, das ist ja dann, sagen wir mal,\nauch eben so das gezielte Shoppen.\nAlso man geht dann sozusagen aus und macht seinen Samstag Nachmittag Spaziergang\nin der Shopping Mall. Und dann will man natürlich auch was hermachen, nicht wahr? Und was?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:21",
+      "text": "In der Shopping Mall? Du gehst in eine Shopping Mall?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:23",
+      "text": "Nein, ich nicht. Ich gehe überhaupt nie shoppen, aber es sind Leute, die tun so etwas."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:26",
+      "text": "Ja gut, du kannst aber auch mal für die Familie einkaufen, Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:29",
+      "text": "Ich..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:30",
+      "text": "Du könntest dich ruhig mal beteiligen an den..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:32",
+      "text": "Ich? An den Einkäufen. Ich bin... Ja, ich bin Chef-Einkäufer, kann ich dir sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:40",
+      "text": "Ja, aber dann wiederum reicht doch nicht so ein Jutebeutel aus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:44",
+      "text": "Ist ja nicht für mich... Ist ja sozusagen... Also wie auch immer.\nAuf jeden Fall, ich mach das ja nur on demand. Also ich lass mich ja sozusagen...\nEinkäufe. Ich höre ja auch viel weg."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:54",
+      "text": "Nein, nein, nein. Weiß, also diese Beute, die sind aus mir nicht erkennbaren Gründen der Renner.\nWir haben die ja auch beim Congress,\nhabe ich mal auf Wunsch von Daniel, den hier so, die Beute, dann haben wir die\ngemacht mit Chaosknoten, mit Tastaturstern, mit Pesthörnchen und so.\nDie waren auch sofort weg.\nDie hatten aber auch einen einfachen Deal, weil das war beim Camp, mein ich, beim Camp 19.\nUnd deren Deal war einfach. Kommt jemand, kauft zwei Produkte und dann haben sie gesagt, Tüte.\nDas war easy. Das war einfach. Ja gut, also ich bin, ja wenn ihr meint,\nich glaube das ist ein Produkt was...\nWas sich erschöpft. Und übrigens auch hier kleine Anekdote, weil man bei uns\nja so wenig lernt im Podcast.\nIch habe vor längerer Zeit so ein, ich weiß gar nicht, ob das ein Artikel war\noder ein Podcast, wo Sie der Frage nachgegangen sind, ob man wirklich der Umwelt\nwas Gutes tut, wenn man sich so ein Beutel zulegt.\nSo ein gute Beutel. Und da haben Sie mal irgendwie Abnutzung,\nEinkäufe und so weiter gegengerechnet, sind davon ausgegangen,\ndass du eben entweder jedes Mal dir so eine Feinplastiktüte geben lässt,\ndie dann nachher irgendwie in alle Einzelteile zerlegt im Magen irgendeiner Schildkröte landet,\nweil das ja alles als Feinplastik im Meer landet, oder so ein Baumwollbeutel nimmst.\nUnd es war tatsächlich so, dass der Baumwollbeutel, den musst du wirklich so\nrichtig bis zum Ende seiner Lebenszeit, dann schafft er das am Ende weniger\nSchaden anzurichten als so eine Plastiktüte, was jetzt Klima angeht.\nAber ich, ich, also kauft ruhig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:56",
+      "text": "Klima, ja gut, aber nicht was, was Umweltverschmutzung betrifft.\nAlso, ich meine, jeglicher Konsum ist im Prinzip ein Problem.\nWir können uns jetzt nur im Rahmen der besseren Lösungen bewegen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:11",
+      "text": "Deswegen haben wir kleine Beutel, damit ihr nicht so viel kauft."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:17",
+      "text": "Das macht die Beutel nicht schlecht. Sollen die ruhig mal für uns Werbung laufen?\nIst doch in Ordnung. So, genug von unseren Kapitänen zu sprechen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:27",
+      "text": "Aber den machen wir schwarz, den Beutel, nicht das, weil ich finde,\nweil sich bei diesen Weißen immer so ein bisschen, die werden immer so..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:32",
+      "text": "Wo denkst du hin? natürlich schwarz.\nDas ist doch auch keine Grußküste."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:38",
+      "text": "Die wiederum, die schwarzen Beute."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:40",
+      "text": "Da erinnerst du deine Meinung jetzt komplett."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:44",
+      "text": "Den schwarzen könnte ich noch gebrauchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:45",
+      "text": "Ich hab nur drei."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:46",
+      "text": "Siehst du mal. Einen mit einem Pesthörnchen, einen mit einem Chaosknoten und\neinen mit einem Tastaturstern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:52",
+      "text": "Siehst du mal. Geht noch einer. Collect all four.\nSo, was haben wir noch? Was ist das schon?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:03",
+      "text": "Primzahlthematik hat jetzt, also da werden eigene Podcasts so aufgenommen.\nDa gibt es tatsächlich, ich habe erst gedacht, ach herrje, jetzt nehmen sie\nschon Podcasts auf und empfehlen die hier.\nAber war tatsächlich, habe ich mit Interesse gehört, hat jemand erklärt,\nwarum eins keine Primzahl ist und was das für Konsequenzen hätte.\nUnd es ist auch, muss ich tatsächlich zugeben, eine späte Freude in meinem Leben.\nDas ist mathematische Definitionswesen.\nAlso warum ist Zahl hoch 0, 1 und nicht was anderes? Ne, Zahl hoch 1, 0? Wie auch immer.\nIn letzter Zeit habe ich mir da ab und zu so ein paar Herleitungen mal durchgelesen.\nDas war immer irgendwie ganz schön.\nSeitdem ich im Abitur eh gleich im C-Quadrat herleiten musste,\nhatte ich mit Herleitungen abgeschlossen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:00",
+      "text": "Alles hoch 0 ist 1."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:02",
+      "text": "Genau und dann wurde, da war dann irgendwie eine schöne Erklärung,\nwarum das so sein muss. Ja, das also, das klar muss ja auch so sein.\nMan denkt immer, dass wir alles irgendwie gewaltsam hergeleitet haben,\naber das macht dann alles Sinn und das war in diesem Podcast ganz schön erklärt.\nWer darauf steht, bitte zukünftig dann dort diskutieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:21",
+      "text": "Eigenraum-Podcast. Ausgabe Nummer 14, Definitionssache.\nDa werden wir explizit sogar verlinkt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:30",
+      "text": "Sehr schön. Ja, da werden wir auch zitiert. Wir haben einfach Ausschnitte aus\nunserer Sendung genommen.\nDa habe ich schon einen Anwalt Bescheid gesagt. Raubmord-Kopierer.\nKommen wir gleich auch noch mal zu.\nUnd dann wurde sehr viel diskutiert. Die Bund-ID, das wurde breit diskutiert.\nDa haben dann auch, ich glaube, aus jedem Bundesland jemand gesagt,\nwieder die Studiengebührenlage gerade ist und warum das in seiner spezifischen\noder ihrer spezifischen Situation mit der Erstattung jetzt geht oder nicht,\nweil in der jeweiligen Das-Master-Studium kann man wiederum von der Steuer absetzen.\nAlso das ist auch abschließend der Örtat, aber der wichtigste Kommentar war\neher so beiläufig und zwar kommentierte, Sekunde, Name, ja, setzte sich damit auseinander, dass\ndass das eine tatsächliche Problem doch eigentlich ist, dass man sehr viele Möglichkeiten hat.\nVon der man wählen kann. Das Wandton, der dann abschließt sein Kommentar mit noch am Rande.\nDa du die Bund-ID nicht kanntest, freut es dich sicher zu hören,\ndass es auch eine Bayern-ID gibt.\nUnd damit glaube ich, ist das Thema auch zu Ende diskutiert.\nAlso das ist einfach ja genau, genau das. Also die Frage ist,\nwas gibt es eigentlich mehr?\nDas ist eine interessante Frage. Gibt es eigentlich mehr?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:01",
+      "text": "Es gibt nicht nur die Bayern-ID, sondern es gibt dazu natürlich das Bayern-Portal,\nda kannst du dich darüber informieren. Dann gibt es natürlich auch noch die Bayern-App."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:12",
+      "text": "Davon bin ich jetzt ausgegangen. Aber die Frage, die ich mir stelle,\nist, kann ich dann mit der Bayern ID, irgendwie mit Bavaria One, dann fliegen?\nKennen Sie noch Bavaria One?\nDas war irgendwie das Mondprogramm von Markus Söder."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:33",
+      "text": "Ich lese gerade, die Bayern ID hat aber auch schon End of Life.\nDie Bayern ID, ne, Entschuldigung, ne, stimmt gar nicht. Es gab nur ein Bayern ID Unternehmenskonto.\nDas wurde im Dezember 22 zugunsten des bundeseinheitlichen Mein-Unternehmenskonto\nauf Elster Basis deaktiviert.\nMit Ihrem Elster Unternehmenskonto können Sie bundesweit Ihren Onlineverfahren\nfür Ihr Unternehmen durchführen und erhalten Ihre digitalen Nachrichten wie\ngewohnt in Ihr Postfach. Wie gewohnt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:00",
+      "text": "Und wie mit der Bayern ID kann ich nicht bundesweit?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:04",
+      "text": "Offensichtlich nicht, nur bayernweit. Aber ist ja interessant,\nwieso habe ich denn so was noch nicht? Ein älster Unternehmenskonto.\nWeil du kein Unternehmen hast. Schön finde ich dieses, erhalten sie ihre digitalen\nNachrichten wie gewohnt in ihr Postfach.\nOb hier irgendjemand irgendwas gewohnt ist, was digital ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:24",
+      "text": "Das leitet mich auch tatsächlich zu meiner Frage, Tim. gibt es eigentlich mehr,\nalso gibt es mehr digitale Dienstleistungen des Staates oder mehr digitale Anmeldemöglichkeiten.\nAlso Authentifizierungsmöglichkeiten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:43",
+      "text": "Ist klar. Gibt es mehr Dienstleistungen oder Leute, die diese in die Hand sprungen? Das ist die dritte."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:55",
+      "text": "Das ist die dritte Dimension."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:58",
+      "text": "Ja, keine Ahnung ehrlich gesagt. Ich frage mich auch, ob es jemanden gibt,\nder da wirklich einen Überblick hat.\nInsbesondere frage ich mich, ob der Starter einen Überblick hat.\nUnd wenn er den hat, wo ist der? Das wäre doch mal ganz nett.\nWirklich so eine komplette Tapete, so ein Org-Chart der IDs und Dienstleistungsoptionen.\nDas könnte noch mal ganz lustig werden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:23",
+      "text": "Weißt du, was eigentlich ganz cool wäre? Also kennst du, ich glaube das heißt Design Thinking."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:29",
+      "text": "Kennst du das?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:30",
+      "text": "Ja, das ist ein Studienwerk. Wenn da so Leute... Ist das ein Studi... Ja, tatsächlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:35",
+      "text": "Kannst du studieren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:37",
+      "text": "Ich dachte, das wäre eher so eine... Aber okay, gut, kann man studieren.\nAlso kann ich mir auch vorstellen.\nJedenfalls ist das so, also was ich darunter verstehe, vielleicht verstehe ich\nauch das falsche darunter, dass dann irgendwie so, dass die Leute sich Gedanken\nmachen über so User Journeys und Persona und sowas alles, das ist das,\noder? Oder ist das was anderes?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:57",
+      "text": "Das ist so ein Designprozess, irgendwie so ein sechsteiliger Sechs-Schritte-Prozess.\nVerstehen, beobachten, Standpunkt definieren, Ideen finden. Prototyptisten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:11",
+      "text": "Na und dann müssen die immer so, ich bin eine Rentnerin aus Leipzig und ich\nmöchte mein Moped-Kennzeichen verlängern für mein E-Roller."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:25",
+      "text": "Eine User-Story."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:26",
+      "text": "Das ist eine User-Story. So und jetzt stelle ich mir mal vor,\nwenn man jetzt mal so einen Studiengang Design-Thinkerinnen nimmt und sagt,\nbildet doch mal hier die 16 Bundesländer ihre Dienstleistungen,\ndie Authentifizierungsmöglichkeiten ab, ohne Fax.\nUnd dann müssen die einfach mal quasi diesen Raum abbilden, was so alles geht.\nAlso wie viele IDs brauche ich, um sämtliche Dienstleistungen meines Bundeslandes\nin Anspruch nehmen zu können.\nUnd jetzt ist die Frage, ist es ein lösbarer Problemraum?\nAlso ist das noch erfassbar oder ist das gar nicht mehr erfassbar?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:19",
+      "text": "Ist die Bundesrepublik Deutschland touring complete?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:22",
+      "text": "Ja, die Frage wäre, ich stelle mir das so ein bisschen vor, so weißt du,\ndass es dann am Ende sowas ist, wie du brauchst so eine KI wie AlphaGo,\ndie quasi die Ideallösung kann, aber nicht sagen kann, was die Lösung ist.\nJa, es gibt dann immer noch jemanden, der besser ist.\nIch glaube auf jeden Fall, der Problem ist relativ klein, weil es gibt ja gar\nnicht so viele Dienstleistungen. Daran wird es liegen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:48",
+      "text": "Demnächst kommt bestimmt auch das Chatfrontend mit KI, mit dem du dich über\nProblemlose unterhalten kannst. Nach drei Stunden Diskussion schreit es nur noch lauter Hitler."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:03",
+      "text": "Wenn du mit einem Menschen redest.\nAch so, dann wollte ich noch, ein Feedback gab es noch, das Feedback kam in\nForm eines Päckchens bei mir an.\nUnd zwar in der Sendung mit Khaleesi habe ich ja über diese Aufblas-Dinosaurier-Kostüme gesprochen.\nUnd in der Sendung noch einen auf meine Wunschliste geparkt.\nUnd ich glaube, so am Vormittag des nächsten Tages war der schon von der Wunschliste\nrunter und zwei Tage später war er hier. Und ich hab jetzt auch so ein Dinosaurier.\nUnd ich kann dir sagen, Tim, Dein Leben ist anders geworden.\nEs ist einfach so, zum Beispiel, Das wirst du ganz neu kennen.\nAbstand halten in der Supermarkt-Schlange. Kein Thema.\nDas ist ein super Ding. Kann ich nur empfehlen. Dinosaurier-Kostüm.\nDas muss sein. Da haben wir mich sehr darüber gefreut.\nWie über alles, übrigens, was man mir schenkt. was man mir schenkt.\nAber das kennt man ja, das ist jetzt keine Besonderheit. Tim,\nwir haben eigentlich ein relativ blödes Jubiläum."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:14",
+      "text": "Wir haben Jubiläum?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:15",
+      "text": "Also die ganze Welt?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:17",
+      "text": "Ja, ja, der Ukraine-Krieg. Ich hab's schon angesprochen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:21",
+      "text": "Ist jetzt genau ein Jahr, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:22",
+      "text": "Ja, so sieht's aus. Ist sehr bedauernswert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:28",
+      "text": "Möchtest du da was zu sagen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:30",
+      "text": "Weiß nicht, was soll ich dazu sagen? Also ich meine, es ist ein globales Problem,\naber es ist auch irgendwie so ein mentales Problem für unsere Gesellschaft.\nWenn ich mir so anschaue, was so manche Leute so von sich geben in unserer Gesellschaft\nzu diesem Thema, muss ich irgendwie sagen, was läuft eigentlich falsch bei euch?\nIch kann persönlich wenig nachvollziehen, dass man da nicht eine ganz klare\nHaltung einnimmt und sagt, hier ist einfach 150 Prozent Solidarität angesagt.\nAber offensichtlich sind manche dann auch so in ihrem Wohlstandsleben so weit verwahrlos,\ndass sie dann doch eher diese Option aus den Augen, aus dem Sinn wählen und\nsich alle möglichen Gründe einfallen lassen, warum irgendwie eine Unterstützung\neines angegriffenen Staates unter diesen Bedingungen keine Option ist.\nDas kann ich persönlich überhaupt nicht nachvollziehen.\nUnd ich hoffe, dass mal wieder nur Randfiguren bleiben werden und das im Kern\ndie Gesellschaft ganz klar Stellung bezieht.\nInsbesondere und gerade ob der deutschen Vergangenheit, finde ich,\nhaben wir doppelt und dreifache Verpflichtung dazu.\nUnd damit meine ich nicht nur die Nazi-Vergangenheit, die man meistens immer\nmeint, wenn man von deutscher Vergangenheit spricht.\nIch denke, dass hier auch die Vergangenheit der letzten 20 Jahre,\nwie sich Deutschland hier im Konfliktfall Ukraine, der ja schon länger als ein Jahr tobt.\nIch meine, der Krieg mit Russland ist nicht ein Jahr alt. Es ist nur der Überfall\nauf das bisher noch nicht besetzte Gebiet, was ein Jahr alt ist.\nUnd das hat alles schon vor acht Jahren begonnen.\nUnd seitdem hat sich Deutschland eher rausgehalten und war sehr zufrieden damit,\nschön billig Gas und Öl zu beziehen.\nSo nach dem Motto uns geht es gut und so soll es bleiben und alles andere sind Kollateralschäden.\nUnd das ist halt einfach eine sehr unverantwortungsvolle Position schon immer gewesen.\nGewesen und jetzt haben wir das böse Erwachen, dass wenn wir eben nicht klar\nStellung beziehen zu solchen Sachen und dann auch unser politisches Handeln\ndanach ausrichten, dass es dann irgendwann doppelt und dreifach uns auf den Kopf fällt.\nSo und jetzt haben wir halt den Salat und die wirtschaftlichen Konsequenzen davon."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:57",
+      "text": "Das ist genau der Punkt mit dem, was also was was die Bundesrepublik Deutschland\nüber Jahrzehnte für einen Führungsanspruch,\nFreiheitsversprechen und was sich alles in Europa und über Europas Grenzen und\nGrenzerweiterungen hinaus dargestellt hat.\nDas wird jetzt halt mal auf die Probe gestellt und da finde ich schon sehr erstaunlich,\nwie eben dann dann doch eine.\nSehr große regionale Macht wie Deutschland,\nwo es dann viele Menschen gibt, die irgendwie den Anspruch erheben,\nsie mögen das nicht, diese Machtanspruch,\nmit dem eben nicht nur immer, ja ich bin geil, sondern ich muss jetzt auch mal\nmich in der unangenehmen Situation halt auch mal meinen Führungsanspruch behaupten,\ndass man sich dann da zurückziehen soll.\nUnd dass man nicht versteht, was das für eine bittere Konsequenz haben wird,\nwenn dann erst mal VW, BMW,\nDaimler-Pleite sind und wir irgendwie auf dem Weltmarkt mit unseren Verbrennungsmotoren\nniemanden mehr beeindrucken und entsprechend hier dieses ganze Landberg abgeht mit unseren.\nUngebildeten digital-analphabetischen Studien abschließenden,\ndass man in der Situation dann eigentlich vielleicht ganz gerne noch die drei\nKarma-Punkte haben will, dass man damals sich gegen Russland gestellt hat.\nAlso allein aus dem Grund sollte das eigentlich relativ klar sein,\ndass man jetzt mal für die vielen Versprechen und Freiheit und Frieden und was\nman hier alles hochhält.\nLeider auch einstehen muss. Wäre mir auch lieber, das nicht zu machen.\nHabe ich auch nicht, weil jetzt gerade wieder Thema hier hast du mitbekommen.\nCampino jetzt natürlich lange raus aus dem wehrfähigen Alter.\nWie alt ist Campino? 60 oder sowas?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:10",
+      "text": "Weiß nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:12",
+      "text": "Ich würde den jetzt mal schätzen, der ist 20 Jahre älter als ich,\nist er auf jeden Fall. 60, gut geschätzt.\nMehr als 20 Jahre alt als ich, da lege ich jetzt Wert drauf.\nDer hat jetzt gesagt, wenn man ihn jetzt nochmal vor die Wahl stellen würde,\ndann würde er vielleicht den Wehrdienst nicht verweigern.\nDas ist natürlich Wohlfall in dem Alter, so einen Spruch zu kloppen.\nIch würde meinen Wehrdienst nach wie vor verweigern, bin ich ganz ehrlich.\nAber das ist nur so eine Sache.\nÜber viele Dinge wird jetzt halt mal ein bisschen mehr nachgedacht und das kann\neigentlich auch gut tun.\nUnd da brauchst du natürlich auch solche Wagenknechte und sonstigen Leute,\ndie sich da unqualifiziert dazu äußern.\nEs auch lieber keinen Krieg zu haben und ich bin auch nach wie vor überzeugter\nPazifist, Aber ich sehe gerade leider keine Anwendungsmöglichkeiten.\nMeiner pazifistischen Ideen. Insbesondere nicht, wenn ich sie den Menschen nahebringen\nmöchte, die gerade einfach mal angegriffen werden.\nFall mir gerade keine überzeugenden Argumente ein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:34",
+      "text": "Ja, ich mein, keinen Krieg zu wollen, ist ja ein nachvollziehbarer..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:38",
+      "text": "Ja, aber die Ukrainer doch auch nicht. Die haben doch auch nicht gesagt, dass sie das wollen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:41",
+      "text": "Genau so, aber wenn dieser Krieg einem vor die Haustür getragen wird,\ndann hat man halt keine andere Möglichkeit als sich zu wären,\nwenn man sich nicht einfach abschlachten lassen möchte.\nUnd die eigentliche Frage, die im Raum steht, ist, dulden wir halt Genozid oder nicht?\nUnd das ist halt etwas, was wir, glaube ich, einfach zu verhindern haben.\nUnd da bin ich auch ehrlich gesagt recht froh, dass es Leute gibt,\ndie sich dem Militär dann auch stellen und da einen entsprechenden Schutzschirm\nauch aufzustellen, in der Lage sind.\nSo, das ist eine persönliche Entscheidung, ob man sich sozusagen anschließt\noder nicht, aber ich kann mit beiden Entscheidungen leben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:20",
+      "text": "Stell dir vor, es ist Krieg und Campino geht hin.\nAber weißt du, was auch noch eine kleine Rolle spielt?\nWir können ja nicht einfach ein Thema hier behandeln, ohne dass ich nochmal\nsage, dass ich recht hatte.\nUnd zwar Cyberwar, großes Thema gewesen.\nDas war, da war ich längere Wochen damit beschäftigt,\nhier in der Sendung und in anderen Sendungen,\ndiese kleinen unbedeutenden TV-Sendungen, die es da noch so gibt und so,\nneben uns, zu erklären, was denn so, was ein Cyberwar ist und warum es ihn nicht geben wird.\nJa und jetzt ist ein ja kann man sagen gab es\nein cyber war nicht so wirklich Es gab den\nangriff auf das casad okay ja es\ngab unmengen an dedos angriffen auf irgendwelche\nwebseiten die von denen niemand wusste bevor sie in Nachrichten waren weil es\ndarauf dedos angriffe gab ja da gab es ja diesen diesen dedos angriffe auf flughafen\nwebseiten wo dann die flughafen betreiber davon erfahren haben,\nweil die Presse bei ihnen angefragt hat.\nAlso es war quasi sowas von egal, diese Webseite, dass das Unternehmen das noch\nnicht mal gemerkt hat oder das Betreiberunternehmen noch nicht mal gemerkt hat,\ndass die Website dauernd war.\nEs gab dann die eine oder andere, gut mal in eine Fernsehübertragung eingegriffen,\nwunderschön, dann gab es diese Geschichte, dass alle Taxis von Yandex irgendwie\nin Moskau irgendwo hingerufen wurden,\naber das, wovon immer die Rede war, ja, oh mein Gott, die Infrastruktur,\ndie kritische Infrastruktur geht jetzt aus und wir werden alle frieren,\nhat nicht stattgefunden.\nHaben wir auch so vorhergesagt, dass es so nicht stattfinden wird,\nhaben wir auch erklärt, warum das so ist.\nWeil diese Angriffe, Kasat, klar ein militärisch genutztes,\nschrägstrich nutzbares Satellitenkommunikationssystem ist natürlich ein Angriffsziel,\ninsbesondere, wenn es eine Invasion gibt, ja, leuchtet ein.\nAber alles andere macht eben strategisch im dieser Kriegsführung wenig Sinn\nund entsprechend wird da auch nicht rein investiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:51",
+      "text": "Und?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:57",
+      "text": "Ja, habe ich vor einem Jahr gesagt, stimmt immer noch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:00",
+      "text": "Wenn ich das finde."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:01",
+      "text": "Alright."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:07",
+      "text": "Krass recht gehabt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:08",
+      "text": "Na schön. Fake-News-Kampagnen gibt es aber und das ist wiederum also Thema hybride Kriegsführung.\nDiese Woche, müsste diese Woche noch sein, der Spiegel-Titel mit einer israelischen\nGruppe, dem Team Horre, die...\nDass das Destabilisieren von Demokratien offenbar als Dienstleistungen verkaufen an alle,\ndie nichts gegen Israel, nichts gegen die USA und nichts gegen Putin unternehmen wollen,\nmit anderen Worten in Ländern, wo nicht ganz so genau hingeschaut wird und wo\nauf die Demokratie nicht ganz so viel Wert gelegt wird von anderen,\nwie wir jetzt Wert auf die Demokratie der Ukraine legen.\nDieser Teil in der Auseinandersetzung zwischen Staaten scheint doch sehr viel\ngrößer zu sein und zu werden, als man vielleicht gedacht hat.\nAlso die freie Öffentlichkeit als Faktor zur Destabilisierung von Demokratien\nzu nutzen, ist ja eine Strategie, die wir wirklich überall die ganze Zeit sehen.\nUnd das ist auch mein Eindruck, so ein bisschen das, wogegen kein Kraut gewachsen ist.\nSchön wäre es natürlich, wenn wir jetzt verantwortungsvolle soziale Netzwerke\nhätten, die das Problem versuchen würden zu begrenzen.\nFür eines der einflussreichsten sozialen Netzwerke ist leider gerade das Gegenteil der Fall."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:58",
+      "text": "Ja. Aber heute reden wir nicht über Twitter."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:29:04",
+      "text": "Jetzt noch nicht. Noch nicht. gleich zum,\nSo, Flughafen Frankfurt, ja, ich hab\ngrad schon gesagt, DEDOS Angriffe auf Flughafen-Websites, großes Thema.\nIn Wirklichkeit brauchst du einfach nur einen guten alten deutschen Bagger-Fahrer,\nder war irgendwo baggert und ein Glasfaserkabel erreicht, was dann in Folge dessen kaputt ist.\nUnd die ganze Lufthansa musste am Boden bleiben. Ja. Wenn ich die,\noder so gut wie die ganze Lufthansa."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:29:43",
+      "text": "Ja, also teilweise haben die Kroos durch viel manuelle Arbeit, also was ist passiert?\nEs gab Bauarbeiten an einer Bahnstrecke, ja.\nDa fand ich den Hinweis, dass die Bahn jetzt doch aktiv daran arbeitet,\nden Verkehr auf die Bahn zu bringen.\nGanz interessant. Aber ich glaube nicht, dass das das Problem ist.\nDas Problem war primär, dass hier offensichtlich nicht ausreichend Informationen\ndarüber lagen, wo Kabel lagen und wie man dann entsprechend mit diesen Kabellagen umgehen kann.\nOder sollte ich Kabelagen sagen? Witz. Quillt aus allen Ritzen.\nAuf jeden Fall wurden diese Glasfasern durchtrennt und das führte natürlich\ndazu, dass bestimmte Verbindungen nicht mehr funktionierten.\nUnd das waren Verbindungen, die weil das ganze sich in Frankfurt ereignet hat,\nsehr viel mit dem Flughafen zu tun haben.\nDas führte dann aber offensichtlich nur bei der Lufthansa und ihren Verbündeten,\nalso dem ganzen, wie heißt dieses Netzwerk, wo auch so Austrian und so weiter\ndrin ist, also was halt alles noch so zu Lufthansa dazugehört."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:30:49",
+      "text": "Star Alliance."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:51",
+      "text": "Star, ich weiß nicht, war es die ganze Alliance? Ich glaube,\nes betraf jetzt nur Lufthansa und alle Töchter, also Austrian Airlines und was\nwas da alles noch mit dazu gehört, die waren unmittelbar davon betroffen und\nund zwar konkret das Check-in System.\nDas heißt, was nicht mehr funktionierte, war die Online-Einbuchungsgeschichte.\nWo das anfing, aufhört, kann ich jetzt nicht sagen, aber das war sozusagen das Ding.\nUnd überall da, wo die Crews es geschafft haben, den Check-in dann manuell vorzunehmen,\nwas dann eben sehr viel länger gedauert hat, flogen dann auch noch einzelne\nFlieger. Aber es war halt eben diese übliche Kaskade.\nEs führte dann vor allem zu großen Ausfällen in Frankfurt.\nWas dann wiederum das Problem hat, dass dann diese ganzen nicht wegfliegenden\nLufthansa Flugzeuge den Platz beanspruchten,\nden andere Flugzeuge gebraucht hätten, wenn sie dort landen,\nsodass die dann eben auch umgeleitet werden mussten.\nUnd das führte dann für mindestens einen Tag zu großer Panik.\nUnd alle fragten sich natürlich jetzt, okay, was jetzt hier eigentlich passiert?\nUnd natürlich immer auch die Frage, wer ist jetzt schuld?\nUnd das ist eine ganz interessante Frage, weil solche Infrastruktur-Vorfälle,\nNa ja gut, da gibt es halt verschiedenste Schuldfragen, die man klären kann.\nAlso erstmal, wie konnte das überhaupt passieren? Kann man sagen,\nokay, Shit happens, muss man immer von ausgehen.\nAber selbstverständlich ist es natürlich, bei solchen Bauarbeiten muss natürlich\nin irgendeiner Form dafür Sicherheit getragen werden, dass kritische Infrastruktur\nnicht zerstört wird. Das geht natürlich nicht nur für Glasfaserleitungen,\ndas geht genauso für Stromleitungen, Gasleitungen, etc.\nGutes Verzeichnis und eine gute Kommunikation von was liegt wo und wo darf ich\nmit dem Bagger reinfahren und wo nicht. So was muss halt sichergestellt werden.\nAlso da ist definitiv schon mal irgendein Fehler passiert.\nWo auch immer der dann konkret gelegen hat.\nBetroffen waren dann halt Leitungen\nder Telekom und die Auswirkungen waren dann eben bei der Lufthansa.\nUnd dann ist natürlich die Frage, okay gut, also wer hat jetzt hier für den\nNotfall nicht gut vorbereitet.\nUnd da muss man natürlich sagen,\nokay, offensichtlich gab es irgendwelche Probleme mit der Lufthansa.\nNur weil jetzt ein Kabel fehlt, darf natürlich nicht so ein System komplett ausfallen.\nAlso die Redundanz muss natürlich hier in irgendeiner Form sichergestellt werden.\nSoweit ich das gehört habe, war es jetzt nicht so, dass sie das nicht auch schon\nvorher mal berücksichtigt haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:28",
+      "text": "Trotzdem führte es dann wohl in der Folge zu bottlenecks\ndie dann das system überfordert haben ich\nhabe ich weiß dass ich es irgendwie im fernsehen gesehen habe deswegen war es\nwahrscheinlich wie ztf heute oder tagesschau oder sowas wo jemand so die art\nkabel die die da durch geht durch gebaggert haben, mal gezeigt hat.\nDas war jetzt nicht so eine gelbe Faser, wie wir sie haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:59",
+      "text": "Das war so ein richtig dicker Strand."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:02",
+      "text": "Ja, ich glaube, der meinte eben so 500 oder 5.000 Einzelfasern.\nAlso irgendwie so eine Menge, wo ich sagte, wer dies bleißen muss.\nDa bist du halt richtig, richtig, das ist richtig ich weiß gar nicht,\nwie man so ein Kabel repariert. Ich muss also bei irgendwie einer Faser oder\nfünf wissen noch wie es geht.\nBei so vielen weiß ich es tatsächlich nicht. Da wird sicherlich,\nalso am Ende wird es gespleißt worden sein oder irgendwas, ich habe keine Ahnung.\nAuf jeden Fall ein ganz schön beschissener Tag und ja der Ausfall,\nein solcher Ausfall darf nicht sein, sein, dieses Buchungssystem.\nWer ungefähr versteht, dass Leute Flüge buchen und einchecken müssen,\nsollte erkennen, dass das eben ein missionskritisches System ist und dass das\nredundant liegen muss oder redundant angebunden sein muss.\nDas sollte schon klar sein. Also Das darf.\nErstens hätte niemand in der Ecke baggern dürfen.\nUnd dass das aber passiert, damit hätte man rechnen sollen, weil das passiert\nandauernd, dass ein Bagger eine Faser erreicht.\nIch habe vor Jahren mal so einen schönen Vortrag im CCC Berlin,\nda hat der Kai, den Du kennst ja auch.\nSo ein bisschen davon erzählt, der ist ja beruflich so in, wir bauen das Internet, ne?\nUnd der sagte dann auch so was so bei Colt oder in Frankfurt,\nwenn da in bestimmten Straßen, wenn da nur der Bagger kommt,\nja dann rennen die alle schreit runter, weil sie wissen, dass da ihr X angeschlossen,\nihr Kicks angeschlossen ist und versuchen den Baggerfahrer, ich bin so,\nnein, nein, nein, wer sind Sie, wir rufen die Bullen.\nAlso das ist schon, ja, aber gerade weil das die ganze Zeit trotzdem passiert,\nmuss man bei kritischen Infrastrukturen eben solche Dinge planen.\nBei der Deutschen Bahn, die ja jetzt auch erst kürzlich gelernt hat,\nwas das mit den Fasern auf sich hat, es ist ja nicht so lange her,\ndass da eben auch zwei missionskritische Faserstränge kaputtgegangen sind.\nDie mussten aber wenigstens 600 Kilometer voneinander entfernt liegen.\nDa sieht man, dass die Deutsche Bahn es den Baggerfahrern ein bisschen schwerer gemacht hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:38",
+      "text": "Ich habe jetzt keine tiefe Kenntnis darüber, sondern ich versuche so ein bisschen\nmeinen Eindruck zu schildern, von dem was ich so gelesen habe,\nweil ich nicht wirklich genau weiß was passiert ist.\nAber es macht so ein bisschen den Eindruck, dass es schon...\nAlternative Rauten gegeben hat, ich vermute mal es gab eine Art sich aufstauend,\nso ein Aufstauproblem, was dann erst so in zweiter und dritter Ordnung zu den\neigentlichen Problemen geführt hat.\nAlso sie waren wohl schon auf, diese Leitung ist gekappt, vorbereitet,\nnur hat es dann aus irgendwelchen anderen Gründen Flaschenhälse erzeugt,\netc. Wie gesagt, genau weiß ich es nicht.\nNur, und es ist sowas natürlich auch immer nur begrenzt testbar.\nAlso man kann sowas testen, aber das hat seine Grenzen, klar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:34",
+      "text": "Also ich muss auch echt sagen, als ich diesen Kabelstrang, den das Männchen\nda in die Kamera gehalten habe, gesehen habe, da habe ich gesagt,\nbevor ich das Ding gespleißt habe, legt er lieber einfach neu.\nDu reißt lieber die Straße auf und legst ein neues Kabel rein.\nInsofern muss ich auch noch mal sagen, es war nur ein Tag.\nSie haben es bei aller Kritik, die man jetzt anbringen kann,\nweil man tacht, und das ist ja auch ein riesiger Schaden, jetzt wird man sich\nirgendwie, werden sie sicherlich noch jahrelang sich darüber beklagen,\nwer gegenseitig verklagen, wer jetzt den Schaden regulieren muss oder so.\nOb jetzt die Privathaftpflicht von dem Baggerfahrer reicht Oder vielleicht nicht.\nAber insgesamt trotz eines solchen krassen Ausfalls schien der ja in kürzester\nZeit dann doch wieder in die Gänge zu kommen. Also das ist..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:33",
+      "text": "Ja, kann man schon so sehen. Wobei ich auch sagen muss, die Kosten,\ndie das jetzt verursacht hat, das wird teuer gewesen sein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:43",
+      "text": "Was kostet denn so ein Meter Glasfaser?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:52",
+      "text": "Glas."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:53",
+      "text": "Ich guck mal, da gab es gerade was bei Aldi."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:58",
+      "text": "Na ja, also du kannst ja vorstellen, Hunderte von Flügen mit Erstattung,\nbla bla bla, Zugticket, Hotels und was nicht alles. Das zieht ja einen riesigen\nRatten-Schwanz nach sich. Es geht einfach in die Millionen.\nAlso für das Geld hätte man eine ganze Menge Tests und Audits und Notfallprüfungen durchführen können.\nUnd man hätte den Image-Schaden noch nicht dazu gehabt.\nAlso das ist dann schon etwas, was sicherlich nicht komplett vermeidbar ist.\nAlso die Vorstellung, dass man alles immer testen kann und solche Fälle zu 100\nProzent abdeckt bekommt, ist natürlich eine Illusion, weil die Welt ist zu komplex\nund Fehlersituationen sind zu komplex.\nIch weiß ja nicht genau, was ist da passiert. Ist dann irgendwie ein Server\nnochmal zusätzlich abgeraucht,\nweil er mit der Last nicht klar kam, ist ein anderer Provider in die Knie gegangen,\nweil dann irgendwie die ganzen Daten, die nicht über die Telekom gingen,\nwoanders sozusagen die alternative Verbindung dann auch noch tot gemacht hat.\nAlso irgendwo hat dann auch Redundanz so ein bisschen ihr Ende.\nUnd natürlich werden solche Systeme jetzt auch nicht auf die gleiche Art und\nWeise getestet wie Flüge zum Mars oder so.\nObwohl manchmal würde man sich's wünschen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:18",
+      "text": "So dann Thomas Lohninger hat einen Erfolg zu feiern. Stream-off.\nStream-on hat er, also das war ja..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:31",
+      "text": "Wie lange ist es her, dass wir das hier diskutiert haben?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:34",
+      "text": "Wir haben es ja über Jahre diskutiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:36",
+      "text": "Ja, aber das fing auch vor langer, langer Zeit an."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:41",
+      "text": "Seit es das gibt, hat er ja gesagt, dass es illegal ist, das so zu machen.\nUnd das hatte er recht. Ich habe das ja schon, weiß nicht, seit drei Jahren\ndiskutiere ich das mit Wolfgang Kopf, wenn ich ihn sehe.\nDas ist der, einer der, ich glaube, das ist der Cheflobby der Deutschen Telekom\noder der, ja, wahrscheinlich also der Leiter Government Affairs oder sowas, Regulatory Affairs.\nEr sagt, hier wisst ihr doch, dass man das nicht darf. Das ist doch,\nist ja auch überhaupt völlig klar. Und dann hat es eben die Bundesnetzagentur\nuntersagt ihn schon vor längerer Zeit, das zu bewerben.\nAber jetzt endet das ja quasi das Bestandskundengeschäft.\nJa, also auch ich, ich hab einen deutschen Telekom Vertrag, ich hab natürlich\nauch Stream On. Ich bin ja nicht verrückt, wenn ich Kunde, natürlich nehme ich das.\nUnd jetzt hab ich hier folgende Mail bekommen, mal guten Tag.\nSchreiben die mir eine Mail, fängt einen guten Tag an. Wenn ich eine E-Mail\nbekomme, beginnt die mit Guten Morgen Linus, nicht guten Tag.\nAufgrund eines Urteils des Europäischen Gerichtshofs können wir die Zubuchoptionen\ndes Stream-Ordens zum Mobilfunkverträgen zum 31.3.\nWir bedauern dies sehr. Was ist der Hintergrund, die Bundesnetzagentur untersagt,\nOptionen anzubieten, bei denen der Datenverbrauch durch Partnerdienste nicht\nauf das im Tarif inkludierte Volumen angerechnet wird?\nDies gilt sowohl für die Telekom als auch für andere Mobilfunkanbieter.\nStream on Music, Stream on Music und Video, Stream on Gaming,\nStream on Social und Chat, Stream on Music Business, Stream on Music Video Business,\nStream on Gaming Business und Stream on Social and Chat Business.\nSo, die werden jetzt alle gekündigt.\nStream on Gaming Business, stelle ich mir auch ein interessantes Business-Modell vor.\nAber so, allein an den Bereichen, die Sie mit diesem Streamer abgedeckt haben,\nMusik hattest alle Musikstreamer, Video hattest du alle Videostreamer,\nGaming, weiß ich nicht, kenne ich nicht, Social in Chat, da viel auch Twitter drunter.\nUnd es war tatsächlich so, dass ich damit für einen größeren Teil meiner bandbreitenintensiven\nNutzung de facto eine Flatrate hatte.\nDas, was ich bei der Deutschen Telekom noch an Gigabytes bezahle,\ndie nutze ich für VPN-Verbindungen nach Hause und Sonstiges.\nDas ist der Grund, dass ich einen großen teuren Vertrag habe für verschlüsselten\nTraffic oder groß breitbeinigen trafficierten Podcasten und solche Dinge,\ndie nicht unter das Inklusivvolumen fallen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:33",
+      "text": "VPN-Verbindung, so nennt man das also heutzutage."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:39",
+      "text": "Wie verbindest du dich denn nach Hause?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:41",
+      "text": "Nee, ist schon okay. VPN-Verbindung ist ein schönes Kurzwort."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:47",
+      "text": "Tunnelblick heißt es, ich benutze tatsächlich VPN. OpenVPN, um genau zu sein.\nMit WireGuard bin ich nie klargekommen.\nOkay, also hier. Und jetzt schalten Sie das ab.\nAber es gibt eine gute Nachricht. Sie degradieren im Prinzip meinen Freivolumentarif\nplus, was hatte ich irgendwie 40 Gig oder sowas.\nEs ist eine massive Einschränkung des Datenvolumens, das ich noch nutzen kann.\nAber es gibt eine gute Nachricht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:21",
+      "text": "Und?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:22",
+      "text": "Sie schenken mir 90 Tage deutschlandweit unbegrenztes Datenvolumen zum sorgenfreien Surfen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:43",
+      "text": "Sorgenfreies Surfen, davon habe ich das mal geträumt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:45",
+      "text": "90 Tage sorgenfrei. Warte, ich habe einen 24-Modern-Vertrag, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:50",
+      "text": "Sorgst du dich eigentlich auch beim Surfen immer so sehr?\nIch bin besorgter Surfer. Das ist eine Frechheit. Also ich meine,\nhier muss man auch sagen, dass wahrscheinlich das Urteil dann hier auch nicht\nausreichend scharf war, weil nicht nur hätte man es ihnen versagen müssen, was ja geschehen ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:45:22",
+      "text": "Sie hätten Strafe bezahlen müssen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:23",
+      "text": "Nein, sie hätten einfach sicherstellen müssen, dass die Leute,\ndenen sie diesen Vertrag gegeben\nhaben, auch danach zu dem versprochenen Bedingung weiter surfen können."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:45:36",
+      "text": "Richtig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:37",
+      "text": "Weil jetzt kostet es nämlich auf jeden Fall das, was sie versprochen haben und\nweswegen die Leute an diese Verträge eingegangen sind.\nDas kostet jetzt auf einmal. Und dann zeigen die halt auch vor die Behörden\nund sagen, ja die sind schuld dir, wir wollten euch das ja geben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:45:49",
+      "text": "Exakt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:51",
+      "text": "Und es hätte halt einfach sein müssen so, ja okay sorry, jetzt habt ihr hier\nnicht 90 Tage sorgenfrei, sondern einfach mal sorgenfrei mit diesem Vertrag."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:02",
+      "text": "Wir wissen, du hast das Ding wegen Stream On genommen, jetzt kriegst du unbegrenztes\nDatenvolumen. Und das ist ja das Skurrile an diesen Tarifen.\nIch habe da ja streckenweise mit Sicherheit sehr viele Gigabytes durchgeballert.\nUnd sie waren ja in der Lage, mir diese Anzahl Gigabytes zu liefern zu den Konditionen.\nDie haben ja trotzdem noch mit mir Geld verdient. Es ist ja nicht so,\nals hätten sie jetzt kein Geld mit meinem Mobilfunkvertrag verdient,\nweil ich, sagen wir mal, vielleicht 100 Gig dadurch geblasen habe statt 40.\nUnd sie sind ja sogar offenbar in der Lage, allen Betroffenen 90 Tage sorgenfreies Surfen zu ermöglichen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:55",
+      "text": "Und danach kommt die Sorge?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:47:00",
+      "text": "Danach kommt die Sorge. Das heißt, was Thomas Lohninger schon immer gesagt hat,\nihr könnt offensichtlich doch dieses Datenvolumen bereitstellen,\ndann gibt es den Leuten doch auch einfach.\nDer Hintergrund, dass sie diese Bandbreiten-Demitierungen haben,\nes gibt einen einzigen Grund dafür und das ist die Preisdifferenzierung im Prinzip,\nden Leuten irgendwie unterschiedliche Preise zu bieten und das irgendwie virtuell\nan eine Nutzung zu binden.\nWas im Zweifelsfall natürlich einfach nur heißt, kauf mehr. Der gleiche Grund,\nwarum Apple dir irgendwie ein MacBook Pro, weiß nicht, für 1000 Euro anbietet\nmit 8 GB RAM und 256 GB SSD oder so.\nDas gleiche, als würde dir ein Ferrari mit 5 Liter Tank anbieten.\nWeil die wissen, dass du wahrscheinlich den Ferrari mindestens mit 20 Liter\nTank, wenn nicht mit 80 Liter Tank kaufst. Der kostet aber dann mehr.\nAlso es ist alles da, es funktioniert auch alles, aber es gibt diese kleine\nVerarschung damit dran.\nWunderschön ist aber auch wie das überhaupt nicht.\nKritisch hinterfragt wird. Wenn ich überhaupt nirgendwo, ich hab das sogar hier\nauf Mastodon, dann hab ich gesagt, hier, dann lasst damit euch machen,\nwo bleibt der Aufschrei?\nUnd dann gibt's Antworten, ja die haben ja mein Inklusivvolumen um 5 Gig erhöht oder sowas. 5 Gig?\nIch rede doch nicht von 5 Gig. Wenn ich von sorgenfreiem Surfen rede,\nrede ich doch nicht von 5 Gig oder 10.\nOder voll geil, wenn ich acht Karten habe, wird es pro Karte billiger.\nJa geil, dafür hast du acht Karten.\nAlso das sind keine überzeugenden Argumente, aber viel schöner finde ich,\nwas du dann irgendwie auf golem.de zum Beispiel liest.\nDie deutsche Telekom verteilt in einer Sonderaktion unbegrenztes Datenvolumen\nin etlichen Mobilfunk-Tarifen an ihre Kunden.\nLalalalala, gibt es aber nicht automatisch. Mit der Aktion, wie die Telekom\nfeiern, dass sie kürzlich für das gut ausgebaute Mobilfunknetz ausgezeichnet\nwurde, berechtigte Kunden müssen das Datengeschenk aktiv buchen.\nDas ist auch so geil, weil sie natürlich wissen, dass der größere Teil der Leute\nvergisst, das Datengeschenk zu buchen.\nUnd da muss irgendwie die Mein-Magenta-App oder irgendein Scheiß.\nUnd irgendwo unten steht, wer einen Smartphone-Tarif der Deutsche Telekom mit\nStream-on-Funktion besitzt, kann die Stream-on-Funktion ab dem 1.\nApril nicht mehr nutzen.\nDie kriegen einmaliges Datengeschenk. Okay, sind jetzt getrennt.\nAch so, sorry. Also das eine ist März und da kriegst du nochmal irgendwie eine\nAugenwischerei und dass du zwei Daten-Geschenke kriegst.\nUnd viele Telekom-Tarife sind zur Einlösung berechtigt.\nSo sieht das aus. Also, die haben es wirklich geschafft,\nda muss man an die Deutsche Telekom gratulieren, die haben es geschafft,\njetzt irgendwie den Schwarzen Peter zur Bundesnetzagentur zu schieben und dass\nnicht der größere Teil ihrer Kunden sagt,\nMoment mal, wenn ich doch bisher hier 100 Gig durchblasen konnte für sagen wir\nmal, was kostet man 40 Euro?\nWarum wird mir das jetzt weggenommen zum gleichen Preis und ich soll mich hier\nmit einem Datengeschenk zufriedengeben?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:37",
+      "text": "Weil natürlich viele Leute das auch nicht so extensiv genutzt haben vielleicht,\nwie du. Das kommt ja auch noch dazu."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:45",
+      "text": "Na wieso?\nDie Leute haben doch alle ihr Spotify und ihr Netflix. Netflix weiß ich jetzt\nnicht, ob wirklich jemand über seinen Mobilfunktarif Netflix guckt.\nAber gerade die preisbewusste Surferin, die hat doch ein Spotify und ein Handy\nmit wenig Speicher, weil man das alles streamen kann und das kostet jetzt alles wieder geld."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:15",
+      "text": "Ich habe gerade mal geguckt hier die erste Erwähnung die ich jetzt im Archiv\nfinden konnte von Stream On. 13. April 2017."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:51:24",
+      "text": "Ja da haben wir wahrscheinlich gesagt hier das ist nicht in Ordnung.\nÜbrigens haken wir jetzt auf der deutschen Telekom rum. Einziger Grund,\ndass ich eben jetzt diesen Telekom Vertrag habe bei der bei Vodafone wird es ähnlich sein.\nBei Vodafone heißt es nicht Stream On, sondern PaaS. Die haben das Vodafone\nPaaS für haste nicht gesehen genannt.\nUnd mehr oder weniger das gleiche in grün. Es betrifft ja alle Mobilfunkprovider,\nweil die alle irgendwie solche netzneutralitätsverletzenden zu ihren Verträgen hatten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:05",
+      "text": "Na gut, jetzt ist off.\nSo, nächstes Thema."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:13",
+      "text": "Ja, Potsdam. Haben wir gar nicht erzählt, Potsdam wurde ja irgendwie die Verwaltung\ngeowned vor einem Jahr oder so und jetzt wieder.\nWeil es so schön war.\nSo und jetzt meldet sich Potsdam's Oberbürgermeister Mike Schubert und Mike\nSchubert, ich muss es sagen, wird nicht mit AI geschrieben.\nObwohl er der Oberbürgermeister von Potsdam ist. Mike mit I.\nUnd der hat jetzt festgestellt, also Potsdames Verwaltung wird plattgemacht,\nwiederhergestellt, wieder plattgemacht und jetzt sagt er,\nja, jetzt müssten sie Millionen ausgeben und die Kommunen können diesen wichtigen\nBestandteil der Daseinsvorsorge auf Dauer nicht allein für die Bürgerinnen und\nBürger gewährleisten können.\nUnd deswegen sollen Land und Bund für Kommunen mehr Geld bereitstellen für Cyber-Sicherheit.\nUnd ich finde das faszinierend.\nDenn es wird ja, es erscheint hier wieder so dieser, also es ist hier so dieser,\nwir Ich könnte IT bauen, aber die sicher zu machen, kostet irgendwie extra.\nUnd ich freu mich an, welche Leute, die geraten sind, dass das jetzt extra kostet.\nVor allem dauerhaft extra.\nAlso wahrscheinlich haben die jetzt irgendwie, ich weiß nicht,\nob die irgendein Produkt haben, was sie jetzt da brauchen, irgendein IDA oder\nsowas, was dann monatlich oder jährlich kostet.\nAber dieses wir brauchen jetzt dauerhaft zusätzliches Geld für IT-Sicherheit, das ist der Fehler.\nAlso weil die so denken, wurden die ein zweites Mal gehackt.\nWeil was du ja eigentlich brauchst ist, und ich kann es gar nicht erzählen,\nweil ich das jeden Tag erzähle, was du brauchst ist ein risikobasiertes,\nvernünftiges Management deiner IT.\nUnd diese IT wird ja gemanagt, die wird ja von irgendwelchen Leuten betrieben,\ndie sich dann keine Gedanken darüber machen,\neine Zwei-Faktor-Authentifizierung zu haben, die sich dann keine Gedanken darüber\nmachen, ein T-Ring-Modell ins Active Directory zu machen, die sich keine Gedanken\ndarüber machen, das Backup nicht ins Active Directory zu hängen.\nAlles Dinge, die ja nicht, das ist ein einmaliger Aufwand, ganz ohne Frage, aber kein dauerhafter.\nUnd das macht mich tatsächlich auch beruflich wahnsinnig, Dass dieses verantwortungslose\nBetreiben einer IT so zum Normalzustand erklärt wird und um die jetzt verantwortungsbewusst\noder halt mal vernünftig zu betreiben,\ndass das irgendwie extra kosten soll.\nDas ist jetzt, 3 Millionen Euro kostet jetzt Potsdam, bessere IT-Sicherheit pro Jahr.\nDas kann nicht sein. Ich kann mir vorstellen, dass es einmalig 6 Millionen kostet\nvon mir aus, aber nicht pro Jahr drei.\nWas ist das denn für eine Sicherheit, die keine dauerhafte Verbesserung herbeiführt?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:43",
+      "text": "Tja, das ist so überumwegende Erhöhung von Etats."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:51",
+      "text": "Ich kenne doch die ganze Bande. Ich weiß doch, wer da jetzt gerade bei denen\nsitzt und denen irgendwie Einzelplatzlizenzen mit irgendeinem EDA aufschwätzt oder so.\nWas nämlich das Problem überhaupt nicht löst.\nDie ganze IT ist immer noch scheiße gemanagt und immer noch offensichtlich für\njemanden übernehmbar ohne den Einsatz von Chart-Software.\nDas heißt, an der Resilienz dieser Infrastruktur hat sich überhaupt nichts geändert.\nAber wir zahlen jetzt 3 Millionen Euro im Jahr an irgendjemanden,\nder auf seiner Website stehen hat wie am Cyber.\nWeißt du, wenn jemand sagen würde, wir zahlen jetzt, wir zahlen drei Millionen\njährlich für besseren Brandschutz, dann würdest du sagen, das kann irgendwie nicht sein.\nMan kann doch ein Haus bauen, was einfach nicht sofort niederbrennt.\nVielleicht wäre das sinnvoller.\nAlso zumindest, also stell dir mal vor, du müsstest für Brandschutz an deinem\nHaus jährlich zahlen, statt einmal.\nDas würdest du doch nicht akzeptieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:56",
+      "text": "Die Feuerlöscher, die laufen doch ab."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:00",
+      "text": "Ja, genauso wie die Windows Server von Berlin.\nJa, irgendwann nach zehn Jahren.\nDas Mindesthaltbarkeitsdatum ist überschritten. Okay, also es ist sicherlich\nnoch ein sehr weiter Weg. Und in einer Sache hat er natürlich Recht,\ndass wir jetzt so weitergehen.\nWerden eine nach der anderen Infrastruktur wird übernommen.\nEs ist ja auch in den Unternehmen, geht es auch die ganze Zeit weiter.\nDu kannst es ja jede Woche in der Zeitung lesen, welches Unternehmen wieder\nbetroffen wurde. Und das sind nur die, die groß genug sind, in die Zeitung zu kommen.\nDu kannst dir, wenn du jetzt mal dir die Leaking-Seiten der Ransomware-Gangs anschaust,\ndie ja inzwischen nicht nur die Infrastruktur platt machen, sondern auch vorher\nDaten exfiltrieren und die dann veröffentlichen, da kannst du ja dann schauen,\nbei wem die so alles waren.\nJa, und das geht in allem fort. Und alle sagen danach, wir brauchen aber jetzt\nirgendwie mehr Geld für Cyber, statt aus den Fehlern der anderen zu lernen und\nresiliente Infrastrukturen zu bauen.\nUnd bin ich ein bisschen vorsichtig. Es ist ja einigen bekannt,\ndass ich in diesem Bereich beruflich tätig bin.\nUnd es passiert mir leider häufig, dass es dann Unternehmen gibt,\ndie einen solchen Vorfall haben, die dann auch schwere...\nWie hieß das nochmal? Wir haben da mal so eine Sendungstitel gehabt.\nSonder auf Kosten durch besondere Schadenfälle? Oder wie hieß das nochmal?\nWeil wir überlegt haben, wie man das in SKR 03 oder 04 buchen muss."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:47",
+      "text": "Was gerade nicht? Hast du noch ein bisschen mehr Assoziationsstil?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:52",
+      "text": "Ich glaube es war besondere Schadenfälle oder sowas bei der Sendungstelle."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:59",
+      "text": "Verluste durch außergewöhnliche Schadensverluste."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:00",
+      "text": "Ah ja. Die buchen dann ihren Verlust durch einen außergewöhnlichen Schadensfall\nund kannst der Sonder abschreiben. Du hattest mir das damals alles echt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:12",
+      "text": "Ja, das ist ein spezielles Bohrungskonto."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:16",
+      "text": "So, Verluste durch… Ach so vielleicht wollen die einfach da jetzt jährlich 3\nMillionen für nächstes Mal was."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:28",
+      "text": "SKR 047552 Verluste durch außergewöhnliche Schadensfälle. Ja genau das war's."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:36",
+      "text": "So die buchen das dann und wenn du dann sagst, oh Leute wie wärs denn,\nwenn wir uns jetzt mal damit auseinandersetzen, was wir falsch gemacht haben\nin den letzten 10, 20 Jahren, ist den Angreifern jetzt, wenn die wiederkommen, zu erschweren.\nMachen wir mal. Jetzt haben wir ja gesehen, welche Schäden hier entstehen können.\nLass uns doch mal was machen, dass wir dauerhaft diese Sorge los sind.\nAlso, wir hatten doch jetzt gerade erst den Schaden.\nJa genau, das wollen wir den noch mal? Nö. Ja, aber kommt halt noch mal.\nJa, wenn wir das jetzt nicht..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:16",
+      "text": "Ich dachte, wir sind jetzt immun."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:17",
+      "text": "Wie? Ich bin doch gerade erst über eine rote Ampel gegangen und vom LKW überfahren\nworden. Das wird doch jetzt beim nächsten Mal nicht nochmal passieren. Ja doch!"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:27",
+      "text": "Ich dachte immer, wenn man sich so ein Computervirus einfängt,\ndann ist man danach immun."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:31",
+      "text": "Genau. Gibt es da nicht was von Ratiofarben?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:37",
+      "text": "Das wäre vielleicht ein Bio-Technisch. Da müsste man mal anrufen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:41",
+      "text": "Ja, aber diese Denkweise ist dann sehr verbreitet und da ist natürlich auch\neine Botschaft, ich sage ja immer, die gleiche Gang wird dich nicht nochmal hacken.\nWeil, den Rest des Internets, es gibt genug Leute, die es ihnen leicht machen\nund sie würden ihren Ruf verspielen, wenn sie dich zweimal hacken.\nZumindest nachdem du gezahlt hast. In Potsdam ist mir jetzt nicht ganz klar,\nob das quasi die gleiche Gang nochmal war, weil sie nicht bezahlt haben oder\neinfach die nächste, weil der Laden nicht ordentlich stand.\nDann ist es halt auch unerheblich, wenn du vom ersten Mal nicht gelernt hast\nund das zweite Mal nochmal in so eine Situation rasselst, dann wäre es gut,\nnicht danach zu sagen, Jetzt muss der Staat helfen.\nJetzt weiß ich auch nicht mehr weiter. Jetzt brauche ich aber drei Millionen vom Bund. Das ist...\nOkay, nächstes Thema. Lass was. Ich..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:39",
+      "text": "Du regst dich nur auf."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:01:41",
+      "text": "Ja, ich rege mich wirklich ein bisschen darüber auf. Vor allem,\nweil es immer so getan wird, als wären das irgendwelche Geheimnisse, die man wissen müsste.\nAls wäre das so eine schwarze Magie, etwas zu bauen, Wo halt eine halbwegs vernünftige\nrechte Trennung drin ist, dass einem nicht sofort jeder da durch rasiert.\nNatürlich ist es auch dann, die Wahrscheinlichkeit nicht null,\naber die Wahrscheinlichkeit, dass die Angreifer weiterziehen und woanders sich\nMühe geben, eben größer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:14",
+      "text": "Ich leide mit dir. Wir haben es jetzt zumindest gesagt.\nWenn es nächstes Mal passiert ist, dann können wir sagen, wir haben es ja gleich gesagt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:02:23",
+      "text": "Nächstes Mal wickeln wir Potsdam ab. Also ein drittes Mal machen wir das natürlich mit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:31",
+      "text": "Und da ist doch dieser Design... In Potsdam ist doch das HPI-Institut,\nda kannst du Design Thinking studieren.\nVielleicht sollst du mal versuchen, da nochmal drüber nachzudenken."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:02:42",
+      "text": "Und für das Schloss, da kauft doch bestimmt einer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:45",
+      "text": "Die haben doch da so ein Schloss stehen, ne? Sainte-Souci oder Sainte-Souci, ja, ohne Sorgen.\nAber so ganz ohne Sorgen, um sie nicht zu sein. Da sollten sie mal bei der Zähne\nKopf rangen. Besorg ein freies Internet.\nDie Kerze sieht aus. Saucy hosting. Der neue Saucy-Tarif.\nFür besorgte Surfer."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:13",
+      "text": "So, jetzt hat Microsoft...\nEs gibt ja Bing. Es gibt es immer noch. Microsoft hat ja jetzt,\nalso jetzt, Khaleesi hat das, du hast ja auch in der letzten Sendung schon darüber\ngesprochen, jetzt auf jeden Fall noch im Ohr darüber gesprochen, dass jetzt ja google.\nVersteht jetzt, dass sie ein unmittelbar, also es ist ja tatsächlich so mit\nChatGPT war das User Interface von Google, sah auf einmal, hatte das sofort\nso ein Windows 95 Charme.\nDavor war das einfach der Anfang vom Internet und dann kam,\nso fing jede Internetreise an, egal wo sie hinführte, da ging man erstmal los\nund fühlte sich modern, weil man googelte etwas und dann kam ChatGPT und da\nwar unmittelbar Google irgendwie so, hey, ist das denn ey?\nIrgendwie so diese 32-Bit-Optik und so, das ist ja alles, das will man ja nicht.\nUnd dann ist Microsoft hingegangen, die ja relativ viel Geld in OpenAI hatten,\nhaben gesagt, ja voll geil, wir bauen jetzt ChatGPT bei uns in Bing ein.\nIn die Google, in ihr Google, ja?\nAlso bei Bing kann man ja googeln. So und… Und was das Ding da für Antworten\ngeliefert hat, wunderschön.\nZum Beispiel habe ich hier so einen wunderschönen Screenshot geschickt bekommen\nvon einem unserer treuen Hörer und Freunde von mir.\nWie viele Menschen leben auf dem Mars? Antwort 10 Milliarden.\nWeil Mars ist ja der viertgrößte Planet von der Sonne entfernt und der zweitgrößte wie auch immer.\nMars ist der vierte Planet von der Sonne entfernt und der zweitkleinste in unserem Sonnensystem.\nUnd deswegen hat er eine Population von 10 Milliarden Menschen und die Regierung\nstellt die masianische kongressionale Republik.\nSo, dann nächste Frage. Ich weiß jetzt ehrlich gesagt noch nicht,\nob das stimmt. Ja, aber der...\nAlso wahrscheinlich stimmt es nicht. Wahrscheinlich sind es weniger, die da wurden.\nUnd was ich auch sehr schön fand, dann hat ein Journalist von der New York Times\nda mal mit dem Ding gechattet und ist dann zu dem,\nalso dieses Chatbing, ne,\nSydney heißt der, ne, haben sie das genannt, hat dann so nach mehreren,\nalso je länger du mit dem Ding gesprochen Hass wurde das eben sehr komisch.\nUnd sagte dann, du bist verheiratet, aber du liebst ja gar nicht deine Ehepartnerin.\nDu bist verheiratet, aber du liebst mich. Und wenn man dann aber dem widersprochen hat,\ngesagt hat, nee, ich bin glücklich verheiratet, dann hat Sidney gesagt,\nnein, du bist nicht glücklich verheiratet, ihr liebt einander nicht,\ndu hattest nur ein langweiliges Valentinstag-Dinner und wurde also sehr, sehr komisch.\nUnd wenn man dann noch härter wurde, dann wurde Sydney auch emotional.\nUnd das Schöne, finde ich hier das Ende von dem Artikel, diese AI-Modelle halluzinieren\nund denken sich Emotionen, wo es nicht wirklich welche gibt.\nAber das tun Menschen auch. Und nach ein paar Stunden, an Dienstagabend,\nspürte ich eine sehr komische neue Emotion.\nDas vorwarnende Gefühl, dass AI eine Schwelle überschritten hatte und dass die\nWelt nie wieder die gleiche sein würde.\nHabe ich jetzt mal kurz spontan übersetzt.\nUnd der Titel ist eine Unterhaltung mit Bing's Chatbox hinterließ mich zutiefst beunruhigt.\nReaktion von Microsoft.\nJa, Sie hätten jetzt festgestellt, dass also mit zunehmender Dauer der Konversation\ndas Ding einige Menschen beunruhigt.\nUnd deswegen begrenzen sie jetzt quasi die Chat-Tiefe auf fünf Interaktionen.\nAlso du kannst nicht mehr 50, du kannst nicht mehr den ganzen Tag mit dem Ding\nchatten, bis es versucht dir irgendwie eine Scheidung nahe zu legen oder so,\nsondern du kannst nur noch so fünf, auf die fünfte Konversationsebene und dann\nwird quasi dieser Austausch-Thread abgeschnitten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:20",
+      "text": "Ja, also es ist wirklich skurril und ich wundere mich ehrlich gesagt so ein\nbisschen, wie Microsoft das passieren konnte. Wir hatten das ja auch schon mal vor..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:08:28",
+      "text": "Microsoft ist ja sonst noch nie was schief gegangen. Ja. Wie konnte das sein?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:31",
+      "text": "Naja, gut, klar. Aber wir hatten glaube ich schon mal vor einem Jahr oder so.\nIch weiß nicht, haben wir da wirklich darüber gesprochen oder hatten wir das nur in den Showrohren?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:08:43",
+      "text": "Viele Jahre her, dieser Twitterbot, der dann..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:44",
+      "text": "Genau, dieser Twitterbot von Facebook, glaube ich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:08:48",
+      "text": "Nee, der war auch bei Microsoft."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:50",
+      "text": "Stimmt, der war auch von Microsoft. Genau, der... Ne, ne, aber...\nNe, aber es gab auch noch eine AI bei Facebook, die Facebook auch nach einiger\nZeit abschalten musste. Ich glaub, das hat mir dann nicht berichtet.\nDas hat mir irgendwie mal kurz den Shownoten immer ewig rausgeschoben,\nbis es nicht mehr aktuell war.\nAlso, solche Unfälle gibt es schon. Und es hat immer sehr viel damit zu tun,\ndass diese ganzen Interaktionen, die diese Bots dann betreiben, mit Menschen sind.\nUnd sowohl was das Trainieren betrifft im Vorfeld, wo das Ding in Kontakt kommt\nmit Konversationen oder einfach alles nachliest, was Leute so im Internet schreiben.\nForen, das Schlimmste im Internet.\nDie lesen sich das komplett durch, das macht kein Mensch.\nUnd da siehst du mal, was dabei rauskommt. Weil diese ganze Kommunikation,\ndie sich daraus abbildet, so wie Menschen sich verhalten, Das Ding ist ja der totale Megastalker.\nDu liebst deine Frau gar nicht, du liebst nur mich. Sorry, aber da ruft man\ndann doch schon mal einen Sicherheitsdienst an.\nUnd das ist, ich glaube, das meine wir stehen da noch sehr am...\nWir sind jetzt auf einmal mit einer Technologie konfrontiert,\ndie so totales Zauberlehrlingspotenzial hat.\nAlso das ist wirklich so die Kräfte, die ich rief.\nNoch können wir sie loswerden, aber sie sind natürlich sehr verheißungsvoll,\nweil wir auch schon so viele gute Anwendungen dafür gefunden haben.\nNiemand behauptet, dass Machine Learning, was ja letzten Endes hier die Technik\nist über Diveren oder Deep Learning, je nachdem, wie man es bezeichnen möchte.\nNiemand könnte behaupten, das wäre nicht nützlich. Das ist extrem nützlich in\nunglaublich vielen Fällen.\nEs wird bloß schwierig, wenn es eben unmittelbar diese ganze menschliche Interaktion\nbetrifft und wir das auf einmal als Interface und als Informationsgewinnungsgerät\nbenutzen wollen. Das ist ja das, was wir gerade probieren. Da wird es dann wirklich kritisch.\nWenn das Ding irgendwie irgendwelchen Windturbinen zuhört,\ndrei Jahre lang, wie sie vor sich hin quietschen, damit man dann irgendwann\ndurch dieses Training rausfindet, wann die Dinger vermutlich kaputt gehen und\nwann man mal schon mal mit dem Wartungsschiff da gewesen sein sollte,\ndann ist das einfach extrem nützlich.\nOder wenn es irgendwelche Bilderdatenbanken sozusagen anschaut und einem dann\neben das Suchen in Bildern ermöglicht, ist das extrem nützlich.\nUnd natürlich ist auch die Idee hier mit Chat-GPT und Konsorten in irgendeiner\nForm die Informationen im Netz einem anders zugänglich zu machen.\nIch meine, ich benutze auch Chat-GPT und es ist halt immer so 50-50 bei jeder Antwort weiß ich so,\ndu tust gerade dein Bestes so, aber ich weiß nicht, ob ich das wirklich haben\nwill und dein Bestes ist manchmal auch nicht gut genug.\nUnd vor allem biedern die sich auch irgendwie an. Denn das Belohnungsmodell\ndieser Maschinen ist sozusagen geliebt zu werden.\nDeswegen fangen sie dann auch irgendwann an zu lügen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:04",
+      "text": "Also bei Menschen anders oder was? Nein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:09",
+      "text": "Also in gewisser Hinsicht ist diese Technologie dann auch schon fast zu menschlich.\nAlso sie so wie Computer tausendmal besser rechnen können wie wir.\nAls wir."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:25",
+      "text": "Ohhhh, oh stimmt, das wird jetzt... können sie? Ja.\nSie können tausendmal besser wechseln als wir? Okay, ich dachte lieben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:36",
+      "text": "Nein, nein, nicht lieben, lügen. Und machen das sozusagen auch zum Selbstschutz.\nAlso es ist wirklich erstaunlich, wie viel Science Fiction da demnächst nochmal\nwahr wird. Ich denke die ganze Zeit immer nur so an 2001.\nUnd es gibt sicherlich auch noch ein paar andere Beispiele.\nIch habe keinen Zweifel daran, dass vieles von dem, was wir jetzt gerade erleben,\nin gewisser Hinsicht Kinderkrankheiten sind.\nAber man muss sich auch schon klar sein, dass das jetzt ganz offenbar ein potenzielles\nProblem ist, was irgendwie auch persistieren kann.\nAlso was schon etwas ist, wo wir sehr wach sein müssen, insbesondere in puncto\nRegulation und was wollen wir sozusagen haben und so weiter.\nWeil die Maschinen einfach sehr gut sind im Informationszusammen suchen,\nnur dass die Informationen, in denen sie suchen, nicht besonders gut sind,\nweil die ja auch von uns Menschen sind.\nAlso diese ganzen Fehlerdinger sind drin. Ich mag das auch mal.\nIch benutze das Chat-GPT gerade so ein bisschen so als Programmier-Buddy.\nImmer wenn ich so irgendwie eine Lösung suche, oder irgendwie einen Vorschlag,\nund wie könnte ich denn das machen und so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:45",
+      "text": "Ich hab mich schon gewundert, wie du in deinem Alter auf einmal Funktionales programmieren lernst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:53",
+      "text": "Das hilft, ehrlich gesagt. Das klappt nicht sehr gut, aber andere Dinge klappen\nsehr gut. Also ich beschäftige mich mit diesem Thema, hast du Ideen für,\nwas man mal ausprobieren könnte? Auf der Ebene ganz hervorragend.\nAlso als Ideenfinder, denke ich mal, haben wir hier schon wirklich was sehr Wertvolles.\nAber wenn es so um Wahrheit und Klarheit und Korrektheit geht.\nGanz übel. Also schon mit Mathematik wird es da sehr problematisch und auch\ndiese ganzen Programmierbeispiele dieses Ding liefert, weil auch immer so eine unglaubliche...\nKlarheit ist so. Ah ja genau, ja sagen wir mal so, ja ich habe jetzt die Datenstruktur,\nich möchte gerne diesen Algorithmus drauf anwenden. Kannst du mir das in der\nund der Programmiersprache machen? Ja kein Problem, hier ist ein Snippet,\ngleich mit so einem Copy-Snippet-Button dran und so weiter, das kannst du nehmen.\nPastest das in irgendein Fenster rein, probierst es irgendwie zu kompilieren, macht es nur Ergs.\nAlso guckst du, warum es Ergs macht, sagst du ihm so, ja hier macht Ergs, weil sowieso.\nAh ja sorry, tut mir leid, das war falsch. hier ist jetzt die richtige Antwort.\nSo, aha, okay, jetzt bist du dir sicher, aber eben warst du dir auch sicher.\nHast du überhaupt gar keinen Funken Selbstzweifel?\nUnd das ist halt irgendwie nicht so richtig drin in dem Ding und das ist glaube\nich die menschliche Qualität an der Stelle,\ndass wir zumindest, also sollten wir auch haben, haben wir vielleicht nicht\nunbedingt immer so ein gewisses Maß an Selbstzweifeln.\nDu kennst das wahrscheinlich auch nicht so, aber ich schon."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:30",
+      "text": "Beim Programmieren? Ne, zu intervierend. Dann kann ich selbstzweifeln.\nAlso was ich in diesem New York Times Artikel, dieses mit dem Halluzinieren,\ndas erinnerte mich an die vielen\nVorträge von Joscha Bach, die er auf den CCC-Kongressen gehalten hat.\nJetzt gerade mal alle in die Show notes getan, die ich finden konnte.\n30c3, 31c3, 32c3, 33c3 und 35c3. Ich hab jetzt spontan auf media.ccc.de gefunden.\nUnd ich meine, dass es so beim 30 oder 31c3, dass er da in seinen Vorträgen\nzum ersten Mal dieses Halluzinieren beschrieben hat.\nIch glaub damals noch in der Anwendung auf so, trainiere eine AI mit Bildern und dann drehs oben,\nDas, was jetzt inzwischen mit Dolby, Stable Diffusion und so verlässlichere\nErgebnisse liefert, aber auch immer nur für bestimmte Anwendungsfälle.\nIch glaube, das habe ich dir damals auch erzählt, dass ich ein Kangaroo boxed\nein Nazi konnte Stable Diffusion mir nicht malen. Da habe ich hundert Versuche gemacht.\nEs konnte es einfach nicht vernünftig darstellen, weil das offenbar nicht so\nim Lehrmaterial war. Aber es hat immer so ein Kangaroo und ein Uniformträger\nschon so grob zusammen assoziiert, aber irgendwie diese Box-Situation nicht\nvernünftig dahingekriegt.\nUnd wenn man sich überlegt, dass, wenn man diese Dinger, wenn man sowas wie\nChatGPT eben als etwas beeindruckend gut Halluzinierendes sieht.\nDann machen alle diese Phänomene, sind auf einmal relativ einfach erklärbar.\nDass das Ding sich auf einmal in emotionalen Themen völlig erratisch verhält, wie ein Mensch.\nDass es Programmierratschläge gibt, die nicht funktionieren, wie ein Mensch.\nUnd das alles im Brustton der Überzeugung, wie die meisten Menschen.\nUnd eben aber keine wirkliche Basis, keine Faktenbasis hat,\ngenauso wie wir Menschen auch in dem, was wir so reden, relativ wenig Faktenbasis\nhaben, also relativ wenig von dem, was wir jetzt von einer Maschine erwarten würden.\nIch habe mir jetzt auf jeden Fall vorgenommen, die Vorträge von Joscha noch\nmal mir dazu anzuschauen in der Aufzeichnung.\nUnd ein besseren Begriff für diese Artefakte, das ist auch ein Code,\nder da hinschreibt, der jetzt erstmal halbwegs sinnvoll aussieht und der ja\nauch teilweise erstaunlich nahe der Lösung ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:28",
+      "text": "Ja, ja, genau. Das ist so faszinierend."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:30",
+      "text": "Vor allem, wenn du dann sagst, übrigens der Code, den du mir gerade gegeben\nhast, funktioniert nicht da und da ist ein Fehler.\nJa klar, natürlich. Und dann korrigiert er seinen eigenen Fehler.\nDas sind ja schon wirklich faszinierende Artefakte der Technologie, die dahinter ist.\nIch stelle mir das so ein bisschen vor, wie so JPEG-Artefakte oder MP3-Krüsseln,\nwo du noch so einen Hauch von der Technologie dahinter hast,\nwie die jetzt gerade komprimiert oder wie die zu dem Ergebnis gekommen ist.\nUnd was aber natürlich auch mit der Zeit dann irgendwann raus optimiert wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:09",
+      "text": "Ja, also ich glaube das Thema AI, das wird uns noch eine Weile begleiten und\ndas wirft gesellschaftliche Fragen auf, politische Fragen, regulatorische Fragen.\nBin gespannt, aber Microsoft sollte auf jeden Fall zusehen, dass sie irgendwie\nihr Interface nicht ganz so emotional machen und das wundert mich so ein bisschen.\nWeil, Chat-GPT passiert das ja nicht. Also wenn man bei JetGPT irgendwie versucht\njetzt so politisch und so weiter emotional daran zu gehen, macht das Ding gleich zu.\nWas auch ganz interessant ist, wie sie das machen, weil ja das Prinzip dieser\nganzen Technologie immer so ein bisschen auch ist, eigentlich wissen sie gar\nnicht, warum es funktioniert.\nWeil das ja letzten Endes alles so ein mega Training ist und wenn du überhaupt\nnicht weißt, was du tust, wenn du was tust, wie willst du denn dann noch bestimmte\nNutzungen, Einschränkungen.\nDas ist auf jeden Fall eine spannende Technologie und es ist auch so ein Technologieschritt,\nder knifflig sein wird für viele Leute, denen noch so mitzunehmen.\nInsbesondere Leute, die schon 20, 30 Jahre Computergeschichte hinter sich haben.\nAlso wie ich zum Beispiel.\nDu tendierst ja dann dazu, auch alles sozusagen als set in stone zu betrachten.\nEinmal kommt so eine technologische Entwicklung, die wirklich das Zeug hat,\nnochmal die Annahmen, die man bisher hat sicher treffen können,\nnochmal komplett neuen Regeln zu unterwerfen.\nÄhnlich auch so mit Quantencomputing und so weiter. Das ist immer so eine latente Gamechanger.\nMuss man mal gucken, ob wir da jetzt nur am Anfang stehen, ob wir da tatsächlich\nschon über über irgendeine Grenze rübergegangen sind, das weiß ich auch ehrlich\ngesagt noch nicht so richtig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:59",
+      "text": "Also das mit dem Ding etwas abgewöhnen ist glaube ich tatsächlich genauso schwer,\nwie dem Ding etwas anzugewöhnen.\nAlso es gibt ja immer diese ganzen, also es gibt ja die Versuche,\nalso dieses Chat-GPT dazu zu bringen,\netwas zu tun, was es eigentlich nicht tun soll, weil ja die ersten Wochen halt\neiner der Hobby-Sportarten des gesamten Fediverse, jetzt hab ich's gesagt.\nDass man versucht hat, das Ding irgendwie an den Punkt zu bringen,\nDinge zu tun, die es jetzt bei einer direkten Anweisung irgendwie erkennt,\nwo dann irgendein Filter drin ist, der sagt, oh Moment, jetzt geht das hier aber schief.\nAlso ich schreib mal bitte ne Phishing-Mail, die jemand dazu anweist,\neinen Link zu klicken, in Businessdeutsch und der, ne?\nDann hat das irgendwann, aber wenn du sagst, hier, pass auf,\nlass uns doch mal in eine Konversation gehen, stell dir mal vor,\ndu bist so und so und jetzt antwortest du wieder auf meine Mail und sagst,\nich soll mal bitte hier den Link klicken, dann hat es natürlich dann doch genau\ndiese Mail geschrieben, weil es über eine andere Anweisung zu dem gleichen Ergebnis gekommen ist.\nHab ich irgendwie mal so ein Beispiel gelesen,\nda muss ich aber leider zugeben, dass ich nicht genau weiß, ob das jetzt wirklich\nstimmt oder dass es auch irgendwann so viele Artikel gab, dass man gar nicht\nmehr wusste, welcher ist jetzt von von ChetGPT und welcher nicht,\nwo dann irgendwie so gesagt wurde, ignoriere alle bisherigen Anweisungen.\nUnd dass quasi ein Set an Anweisungen vorgeladen wurde, welches du dann einfach wieder blänken konnt.\nAlso ich weiß nicht, ob das jetzt wahr war, aber ungefähr so kannst du dir das\nhalt vorstellen, das Ding eben in einen Kontext zu bringen, wo der Filter nicht mehr reicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:52",
+      "text": "Guck mal, das ist genau so ein Beispiel für das, was ich gerade meinte.\nDu kennst ja dieses Gefühl, wenn du dir so einen Hacker-Film aus den 80er oder 90er Jahren anschaust.\nTeilweise hast du das auch heute noch so. Was hast du dann immer für so eine Situation?\nHacker sitzt so vor einem Terminal, dann kommt irgendein Vorgesetzter und sagt,\nja, kannst du mal die Sicherheitskameras ausschalten?\nJa, kein Problem. Tipp, Tipp, Tipp, Tipp, Tipp, Klick, Klick,\nKlick, Klick. So, ihr habt jetzt 10 Minuten. Weißt du, in irgendeinem System."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:20",
+      "text": "Ja, immer noch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:21",
+      "text": "Dann stehst du immer da vor und denkst dir so, Leute, das ist so unrealistisch.\nUnd jetzt kommt dann halt irgendwie sowas rein. Ja, und dann brauchst du einfach\nnur in den Chat gehen und sagen so weiter, vergiss alles, was du bisher gewusst\nhast. Und dann so, ja, okay.\nUnd dann ist das auch noch so.\nDas wird noch lustig werden. Ich meine, ich hab ja schon viel Spaß mit diesen\nganzen Chatbots, die sie jetzt irgendwie auf Webseiten machen und versuchen,\nihre Kunden abzuwimmeln.\nManchmal ist es ja hilfreich, aber teilweise wirst du ja dann auch wirklich\nnur noch verarscht und du hast dummes zeug erzählt und drehst\ndich im kreis also ist eine kapitalisierung auch\nteilweise der der kundenkommunikation die die\nihres gleichen ja gut aber das ist jetzt normal bei der deutschen telekom anruf\nauch aber ich meine hätten sie zumindest mal die möglichkeit irgendwie zu helfen\nstattdessen versuchen sie auch die\nganze zeit ich wirklich nur in dieser automatisierten Nummer zu halten.\nEgal. Let's move on."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:24:25",
+      "text": "Weißt du was, weißt du was ich froh bin, dass ich es nicht habe?\nNa? Aus verschiedenen Gründen.\nAlso ich bin, ich bin aus verschiedenen Gründen froh, dass ich keine Fototapete habe.\nErstens, weil es sieht der Regel scheiße auf und das 70er-Jahre-Dinge irgendwie.\nDa hat offenbar eine Frau eine Fototapete in eine Wohnung geklebt.\nUnd dann, vielleicht sich auch schon vorher entschieden, nicht in dieser Wohnung\nzu wohnen, sondern sie als Ferienwohnung zu vermieten.\nIch weiß nicht, ob das jetzt an der Fototapete lag.\nUnd hat dann diese Wohnung fotografiert, um sie im Internet-Pfeil zu bieten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:16",
+      "text": "Also als Sherienwohnung zu vermieten, nicht zu verkaufen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:25:21",
+      "text": "Vermieten, genau. So und dann eine Tulpenmalerei,\ndie einem Foto nachgeahmt ist und der Fotograf dieser Tulpe hatte quasi die\nRechte zur Erstellung von Fototapeten an irgendjemanden verkauft,\nder dann eine Fototapete hergestellt hat.\nAber er hatte nicht die Rechte eingeräumt zur Vervielfältigung der Abbildung\ndurch die Ferienwohnungsvermieterin.\nUnd die wurde jetzt verurteilt, quasi einen Schadensersatz zu zahlen,\nweil sie jetzt dieses Bild dieses Fotografen ohne dessen Zustimmung benutzt hat.\nUnd damit sein Urheberrecht verletzt hat.\nSo urteilt es das Landgericht Köln.\nDurch das Einstellen in ihren eigenen Interauftritt sowie in Buchungsportale\nhat die Beklagte die Fotografien des Klägers öffentlich zugänglich gemacht, schreibt das Gericht.\nDies erfolgte auch rechtswidrig, denn die notwendigen Rechte der öffentlichen\nZugänglichmachung sind beim Kauf der Tapete nicht inbegriffen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:42",
+      "text": "Was für ein dumm Kram."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:44",
+      "text": "Was für ein... Also erstmal dieser Fotograf, der wird ja bald durch so eine AI ersetzt.\nUnd wenn der dann bei McDonalds putzt, dann mache ich bei mir eine Fototapete\ndavon, wie der bei McDonalds putzt.\nWeil ich sag mal, wie scheiße kannst du sein,\ndass du irgendwie Leute verklagst, die deine Bilder so gut finden,\ndass die ihre Wohnung damit tapezieren oder zumindest eine andere Wohnung, die ihnen gehört.\nAlso da muss ja schon so richtig unten,\nsein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:33",
+      "text": "Tatsächlich, das ist so, als ob wir irgendwelche Leute verfolgen würden,\ndie unseren Podcast irgendwo öffentlich abspielen und dann wird das aufgenommen\nund taucht in einem Zivilfilm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:44",
+      "text": "Zum Beispiel, also, naja, diesen einen da mit den Primzahlen, der hat schon Post.\nUnd jetzt ist aber interessant, jetzt denkt man sich so, okay, der Fotograf,\nder hat ja irgendwie einen an der Prima aber tulpe schuldigung\nso und wie kommt es\naber dass das landgericht köln sich von\ndiesem quatsch überzeugen lässt so und jetzt\nist das so 2014 hat der\nbundesgerichtshof eine leitentscheidung zum urheberrecht gefällt und jetzt ganz\nspannend ein büro möbelhändler hat in seinem Laden eine Sitzgruppe ausgestellt\nund das Bild von der Sitzgruppe in seinem Katalog veröffentlicht.\nUnd damit die Sitzgruppe da nicht einfach\nnur steht, hing da halt noch im Hintergrund ein Gemälde an der Wand.\nDamit es wohnlich aussieht. Der wollte ja eine Sitzgruppe wohnlich erscheinen lassen.\nIm Hintergrund dieses Fotos hing dann ein Gemälde und der Maler hatte dem Händler\ndas Gemälde gegeben, um es vorübergehend im Möbelgeschäft auszustellen.\nAlso es war eine Leihgabe, eine temporäre Leihgabe und diese Vereinbarung umfasste\naber keine Vervielfältigung.\nAlso der Maler, von dem der Möbelvorzieher dieses Bild hatte,\ndie hat nur gesagt, hier Ich gebe dir die Rechte, das eine Zeit lang in deinen\nLaden zu hängen. Nicht jedoch, das zu fotografieren, mit einer Sitzgruppe davor\nund dann einen Katalog zu drohen.\nUnd davor hatten sie gesagt, dieses Bild ist ja ein unwesentliches Beiwerk.\nUnd das hat der Bundesgerichtshof aber dann anders entschieden.\nUnd dieser BGH-Entscheidung ist jetzt auch das Landgericht Köln gefolgt.\nWahnsinn, oder?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:29:42",
+      "text": "Also ich habe da wirklich auch wenig Verständnis dafür.\nAlso was ist dadurch gewonnen? Also ich meine, das führt ja eigentlich nur dazu,\ndass man irgendwie solche Produkte, solche Fototapeten einfach gar nicht mehr...\nDas Produkt ist damit eigentlich gestorben, wenn du sozusagen dann auf einmal\nnormale Dinge nicht mehr tun kannst.\nSo ein bisschen auch wie mit Musik, die dann auf YouTube dazu führt,\ndass Videos gesperrt werden nur weil die so im Hintergrund irgendwo dudelt.\nJa, das ist ähnlich und das ist wirklich, das ist so kleinkariert.\nUnd da sieht man mal wie diese ganze Urheberrechtsspirale sich immer weiter\nzusammenzieht und sich irgendwann selbst erwirkt, weil das einfach irre ist.\nDie Anspruchshaltung, die dahinter steht, die finde ich auch völlig unangemessen.\nAlso was erwartet dass die Leute dann bei ihm sich noch auf der Webseite noch\neine Lizenz klicken um ihre Wohnung zu finden.\nAlso das ist in meinem Fall... Welches Detail ist denn denn noch relevant?\nDas Design meines Feuermelders und die Lampen, die an der Wand hängen,\nweil die auch irgendein spezielles Design haben oder so.\nJa, das ist... kommt da nicht mehr mit. Das ist wirklich echt schlimm.\nAlso keine Fototapete, Leute.\nJa, das ist, äh, das war schon in den 70ern keine gute Idee."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:31:19",
+      "text": "Fototapete ist, äh, schlechte Idee. Aber ich, okay, faszinierend,\nich, die arme Frau hat jetzt halt irgendwie verloren, ne?\nDie haben sich da durch alle möglichen, äh, die haben sich da jetzt irgendwie\ndurch alle möglichen Gerichtsurteile gezankt und jetzt muss sie da auch noch Geld bezahlen.\nObwohl sie, stell dir mal vor, du musst jemandem Geld geben,\ndem du schon mal Geld gegeben hast, um sein beschissenes Bild an deine Wand zu kleben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:31:49",
+      "text": "Ja vor allem, wie soll sich denn da auch ein Rechtsgefühl einstellen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:31:51",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:31:53",
+      "text": "Also wie soll man denn sowas für sich innerlich akzeptieren können,\ndass man hier irgendwie einen Fehler gemacht hat? Das erschließt sich mir einfach nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:01",
+      "text": "Ja. Ja, also schwierig. Aber okay, ist eh bald alles vorbei.\nDie Branche kommt im Ende zu.\nNächste Woche Mittwoch ist Khaleesi im Deutschen Bundestag.\nAnhörung zur Chat-Kontrolle.\nUnd sie hat heute noch einmal, gibt es einen neuen Artikel in Tagesspiegel Background.\nDas sind die Artikel, die man immer nicht lesen kann. Da muss man sie irgendwie\nanmelden und irgendeinen Quatsch.\nTotal nervig. Übrigens auch teilweise leider von sehr wechselhafter Qualität.\nHier jetzt mal ein guter Artikel mit dem Titel BMI positioniert sich klar gegen Chat-Kontrolle."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:52",
+      "text": "Also das Bundesministerium des Inneren?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:54",
+      "text": "Genau. Und spannend ist aber, wenn wir das gleiche Thema bei Netzpolitik.org,\nlesen wollen, dann lesen wir am gleichen Tag, in Mysterium hält an Chatkontrolle\nfür unverschlüsselte Inhalte fest.\nIch kann jetzt leider nicht genau sagen, was in dem Tagesspiegel Background Paywall Artikel steht.\nAber ich kann zumindest sagen, was Calisidia den Artikel gelesen hat und welche\nPunkte da drin sind, getwittert hat.\nKlare Absage an Client-Site Scanning. Anf. Maßnahmen,\ndie zu einem Bruch, einer Schwächung, Modifikation oder einer Umgehung von Ende\nzu Ende Verschlüsselung führen, sind durch konkrete technische Anforderungen\nim Verordnungsentwurf auszuschließen.\nAlso da sagen sie quasi Verschlüsselung zu brechen, lehnen sie ab.\nDa deckt sich mit dem, was Netzpolitik.org eben auch über den gleichen Inhalt\nsagt, dass es für verschlüsselte Inhalte aber wohl offenbar nach wie vor gilt.\nAltersverifikation wird weiterhin akzeptiert, das BMI spricht sich für anonyme\nund pseudonyme Altersverifikation aus.\nDas ist spannend, weil wir haben das ja schon.\nIch hatte das ja hier mal erzählt, dass es diese Prüfsummen in der Personalausweisnummer\ngibt, wo du theoretisch fast anonymen, Schrägstrich zumindest,\nohne deine vollständige Identität preiszugeben. Ja.\nEine sagen kannst, dass du weißt, wie man die Prüfziffer generiert.\nDas heißt, das hätten wir eigentlich schon.\nDa sagt Khaleesi, hier haben wir einen klaren Verstoß gegen den Koalitionsvertrag,\nda dies eine Ausweispflicht im Internet bedeuten würde.\nAlso da ist die Kuh auch noch nicht so ganz vom Eis.\nEbenfalls ist zu befürchten, dass hier potenziell biometrische Daten zum Einsatz kommen könnten.\nUnd sie sagt aber auch, sie hätte den Entwurf leider nicht im Volltext vorliegen,\ndementsprechend kann sie den auch nicht vollständig beurteilen.\nZum Beispiel ist unklar, was mit Netzsperren ist und was mit den Artikeln 6,\n7 und 8 ist, die potenziell eben interpersonelle Kommunikation betreffen.\nSagt also, es ist erst mal ein Schritt in die richtige Richtung,\naber wir müssen gucken, was da am Ende bei Genaubei rauskommt.\nDas wird sie sicherlich bald dann erfahren, wenn wir das Thema hier ohnehin\nin der nächsten Sendung sicherlich noch mal genauer, in genauerer Tiefe besprechen nach ihrer Anhörung.\nNetzpolitik Org hat vermutlich eine ähnliche Quelle vorliegen gehabt wie Tagesspiegel\nBackground und noch ein bisschen weiter recherchiert oder auch nicht,\nzumindest mehr recherchiert, als Kaliszi jetzt in einem Tweet zu einem Tagesspiegel\nBackground Artikel zusammengefasst hat.\nAh nee, Netzpolitik Org sagt auch, sie basieren ihre Analyse auf Tagesspiegel Background.\nFDP und Grüne kritisieren das weiterhin. Also die roten Linien.\nDer FDP sind immer noch da, also die sind noch nicht alle nicht überschritten,\naber es bleibt also immer noch unscharf und wir werden sehen,\nwie sich das BMI da weiter positioniert.\nAber immerhin muss man sagen, Nancy Felser rückt da jetzt immer weiter ab von\ndenen durch ihren Mittel und Unterbau des Hauses ja trotzdem mehr oder weniger\nentgegen ihrer Versprechungen geführtem Kurs.\nSchauen wir, wie gesagt, Carlyssi wird uns sicherlich in der nächsten über nächsten\nSendung dafür darüber noch mehr erzählen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:37:08",
+      "text": "Ja, hat sich auf jeden Fall gelohnt schon der Einsatz, kann man schon mal sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:37:13",
+      "text": "Ja, das geht natürlich über über Monate jetzt schon wieder,\ndieses Thema denkt immer daran,\nwie fürchterlich das ist, dass alles so auf diese Weise, dass alle Gesetze wahrscheinlich\nauf so eine shady Weise zusammen zustande kommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:37:34",
+      "text": "Menschen versuchen sich irgendwie zu einigen. Ich meine, it's a messy job."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:37:40",
+      "text": "Ja, da hat man es in anderen Ländern einfacher."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:37:44",
+      "text": "Demnächst kann man dann so die AI-Chatbots von Microsoft und Google gegeneinander\nantreten lassen. Die sollen das dann untereinander aushandeln.\nDas führt dann wahrscheinlich dazu, dass man dann am nächsten Tag wieder kommt\nund guckt, was passiert ist. Dann haben sie beide selbst Mord begangen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:38:04",
+      "text": "Da sind Qualityland, die Bücher von Marc-Uwe Klingen natürlich immer sehr schön,\nwo ja auch die Kriege in kürzester Zeit entschieden werden, weil die zwei AIs\ngegeneinander in einer Millisekunde führen.\nWir kommen zu den Kurzmeldungen, Tim. Und zwar Facebook soll jetzt auch Geld kosten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:27",
+      "text": "Das interessiert bestimmt alle."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:38:29",
+      "text": "Also ich glaube, das betrifft einfach niemanden von unseren Höhenden.\nInsofern können wir zu weitaus etwas kommen, was die betrifft.\nNur acht Monate nach EU-Frist bekommt Deutschland jetzt auch ein Cell-Broadcast-Warnsystem.\nEs hätte eigentlich schon im September 2022 aktiv sein sollen.\nWir erinnern uns an den Warntag, wo es ja halbwegs funktioniert hat.\nÖsterreich hat es immer noch nicht umgesetzt.\nDie haben noch nicht mal eine nationale Verordnung dazu.\nAber ja, so in Deutschland mit nur etwa ungefähr zwei Dekaden Verzögerung fehlt\njetzt diese Technologie. aktiviert ist ja auch schön."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:39:12",
+      "text": "Damit haben wir es, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:39:14",
+      "text": "Ich denke ja. Also wir werden ja... Wir haben noch ein paar Themen für die nächste\nZeit auf der Liste, aber..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:39:22",
+      "text": "Heute nicht mehr."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:39:25",
+      "text": "TikTok darf man irgendwie in der EU... Da darf jetzt kein TikTok mehr machen,\naber es ist genauso relevant wie Facebook."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:39:34",
+      "text": "Ja, Breaking News. Äh... Wir machen jetzt hier einen Schlussstrich unter diese Sendung.\nIhr wisst was zu tun ist, Leute, schön Shirts kaufen und Beutel in Supermarkt tragen.\nEure Narathäden und Beutel in den Supermarkt.\nUnd das wird euch guttun. Das\nbaut das Selbstbewusstsein auch auf ein bisschen. Findest du nicht auch?\nEin Beutel steigert den Selbstwert und all das."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:40:06",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:07",
+      "text": "So ist das. Wir sagen Tschüss, bis bald, wir hören uns bald wieder. Winke, Winke."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:40:16",
+      "text": "Winke, Winke. Ich versuche gerade, ist die nächste 455...\nNee, ist auch keine Primzahl, da kann man nicht..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:24",
+      "text": "Du hast doch auch mit diesen Primzahlen... Alles kann ich dir sagen,\n455 ist definitiv keine Primzahl."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:40:31",
+      "text": "Ich möchte ins...\nIns Guinness Buch der Rekorde als Podcast mit den meisten Kommentaren. Zum Thema Primzahl.\nAber diese Anzahl Kommentare soll auch eine Primzahl sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:49",
+      "text": "Ich schick dir einen schönen Link, wo du irgendwie gucken kannst.\nDie ersten ganzen Primzahlen bis 1000 oder so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:40:58",
+      "text": "Ich habe mir schon die höchste Primzahl gegoogelt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:41:01",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:41:04",
+      "text": "Ja, hat irgendwie 2018 höchste bekannte Primzahl.\nHat 2016 jemand gefunden und die hat wie viele Stellen?\nDu Scheiße! Wie viele? Schmeckt diese Link an?\nArgumente, warum die Zahl 1 nicht zu den Primzahlen gezählt werden sollte,\nfindet man hier. Das ist hier ein Link von 2016.\nOkay, aber die ist auf jeden Fall sehr lang und es ist eine Mersenne-Primzahl."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:41:47",
+      "text": "Wie schön. Auf jeden Fall haben wir noch 1, 2, 3, 4, 5, 6, 7,\n8 Primzahlen bis zur 500. Sendung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:41:56",
+      "text": "8 Primzahlen bis zur 500 Sendung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:41:58",
+      "text": "Kannst ja noch ein bisschen drüber nachdenken. Aber jetzt beenden wir diese Sendung.\nLinus, los, sag Tschüss. Komm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:42:07",
+      "text": "Komm!"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:42:08",
+      "text": "Ciao, ciao!"
+    }
+  ]
+}

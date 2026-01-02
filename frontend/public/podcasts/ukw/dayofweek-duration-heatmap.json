@@ -1,0 +1,734 @@
+{
+  "generatedAt": "2026-01-02T18:15:21.455Z",
+  "description": "Day of Week × Episode Duration Heatmap Data",
+  "statistics": {
+    "totalEpisodes": 140,
+    "totalDays": 7,
+    "totalDurationBuckets": 10,
+    "totalCombinations": 40,
+    "mostCommonDay": "Samstag",
+    "mostCommonDayCount": 42,
+    "mostCommonDuration": 90,
+    "mostCommonDurationLabel": "1h 30min",
+    "mostCommonDurationCount": 44
+  },
+  "days": [
+    {
+      "name": "Montag",
+      "totalEpisodes": 10
+    },
+    {
+      "name": "Dienstag",
+      "totalEpisodes": 14
+    },
+    {
+      "name": "Mittwoch",
+      "totalEpisodes": 24
+    },
+    {
+      "name": "Donnerstag",
+      "totalEpisodes": 19
+    },
+    {
+      "name": "Freitag",
+      "totalEpisodes": 25
+    },
+    {
+      "name": "Samstag",
+      "totalEpisodes": 42
+    },
+    {
+      "name": "Sonntag",
+      "totalEpisodes": 6
+    }
+  ],
+  "durations": [
+    {
+      "minutes": 0,
+      "label": "0min",
+      "totalEpisodes": 1
+    },
+    {
+      "minutes": 30,
+      "label": "30min",
+      "totalEpisodes": 4
+    },
+    {
+      "minutes": 60,
+      "label": "1h",
+      "totalEpisodes": 13
+    },
+    {
+      "minutes": 90,
+      "label": "1h 30min",
+      "totalEpisodes": 44
+    },
+    {
+      "minutes": 120,
+      "label": "2h",
+      "totalEpisodes": 38
+    },
+    {
+      "minutes": 150,
+      "label": "2h 30min",
+      "totalEpisodes": 28
+    },
+    {
+      "minutes": 180,
+      "label": "3h",
+      "totalEpisodes": 7
+    },
+    {
+      "minutes": 210,
+      "label": "3h 30min",
+      "totalEpisodes": 3
+    },
+    {
+      "minutes": 240,
+      "label": "4h",
+      "totalEpisodes": 1
+    },
+    {
+      "minutes": 270,
+      "label": "4h 30min",
+      "totalEpisodes": 1
+    }
+  ],
+  "matrix": [
+    {
+      "day": "Montag",
+      "values": [
+        {
+          "duration": 0,
+          "durationLabel": "0min",
+          "count": 1,
+          "episodes": [
+            16
+          ]
+        },
+        {
+          "duration": 30,
+          "durationLabel": "30min",
+          "count": 1,
+          "episodes": [
+            11
+          ]
+        },
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 3,
+          "episodes": [
+            102,
+            23,
+            58
+          ]
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 2,
+          "episodes": [
+            122,
+            94
+          ]
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 3,
+          "episodes": [
+            128,
+            136,
+            30
+          ]
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    {
+      "day": "Dienstag",
+      "values": [
+        {
+          "duration": 0,
+          "durationLabel": "0min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 30,
+          "durationLabel": "30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 3,
+          "episodes": [
+            13,
+            17,
+            39
+          ]
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 3,
+          "episodes": [
+            134,
+            29,
+            4
+          ]
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 4,
+          "episodes": [
+            112,
+            113,
+            80,
+            88
+          ]
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 2,
+          "episodes": [
+            103,
+            120
+          ]
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 1,
+          "episodes": [
+            140
+          ]
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 1,
+          "episodes": [
+            95
+          ]
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    {
+      "day": "Mittwoch",
+      "values": [
+        {
+          "duration": 0,
+          "durationLabel": "0min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 30,
+          "durationLabel": "30min",
+          "count": 1,
+          "episodes": [
+            26
+          ]
+        },
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 4,
+          "episodes": [
+            123,
+            19,
+            40,
+            44
+          ]
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 5,
+          "episodes": [
+            116,
+            126,
+            127,
+            33,
+            74
+          ]
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 8,
+          "episodes": [
+            101,
+            137,
+            18,
+            22,
+            27,
+            6,
+            7,
+            81
+          ]
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 4,
+          "episodes": [
+            105,
+            107,
+            110,
+            21
+          ]
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 1,
+          "episodes": [
+            125
+          ]
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 1,
+          "episodes": [
+            104
+          ]
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    {
+      "day": "Donnerstag",
+      "values": [
+        {
+          "duration": 0,
+          "durationLabel": "0min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 30,
+          "durationLabel": "30min",
+          "count": 2,
+          "episodes": [
+            10,
+            45
+          ]
+        },
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 1,
+          "episodes": [
+            12
+          ]
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 5,
+          "episodes": [
+            106,
+            131,
+            14,
+            56,
+            90
+          ]
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 4,
+          "episodes": [
+            133,
+            20,
+            31,
+            99
+          ]
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 5,
+          "episodes": [
+            117,
+            24,
+            93,
+            96,
+            97
+          ]
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 1,
+          "episodes": [
+            129
+          ]
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 1,
+          "episodes": [
+            119
+          ]
+        }
+      ]
+    },
+    {
+      "day": "Freitag",
+      "values": [
+        {
+          "duration": 0,
+          "durationLabel": "0min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 30,
+          "durationLabel": "30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 1,
+          "episodes": [
+            36
+          ]
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 11,
+          "episodes": [
+            1,
+            100,
+            109,
+            111,
+            132,
+            3,
+            38,
+            41,
+            5,
+            8,
+            9
+          ]
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 6,
+          "episodes": [
+            139,
+            25,
+            28,
+            62,
+            77,
+            78
+          ]
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 6,
+          "episodes": [
+            108,
+            124,
+            138,
+            35,
+            83,
+            98
+          ]
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 1,
+          "episodes": [
+            130
+          ]
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    {
+      "day": "Samstag",
+      "values": [
+        {
+          "duration": 0,
+          "durationLabel": "0min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 30,
+          "durationLabel": "30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 3,
+          "episodes": [
+            34,
+            57,
+            91
+          ]
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 15,
+          "episodes": [
+            135,
+            2,
+            37,
+            42,
+            43,
+            46,
+            47,
+            48,
+            50,
+            54,
+            68,
+            73,
+            75,
+            82,
+            89
+          ]
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 13,
+          "episodes": [
+            121,
+            32,
+            49,
+            51,
+            52,
+            55,
+            59,
+            60,
+            65,
+            69,
+            71,
+            72,
+            76
+          ]
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 6,
+          "episodes": [
+            53,
+            63,
+            64,
+            67,
+            70,
+            86
+          ]
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 3,
+          "episodes": [
+            118,
+            66,
+            87
+          ]
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 2,
+          "episodes": [
+            114,
+            92
+          ]
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    {
+      "day": "Sonntag",
+      "values": [
+        {
+          "duration": 0,
+          "durationLabel": "0min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 30,
+          "durationLabel": "30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 1,
+          "episodes": [
+            79
+          ]
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 2,
+          "episodes": [
+            84,
+            85
+          ]
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 1,
+          "episodes": [
+            15
+          ]
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 2,
+          "episodes": [
+            115,
+            61
+          ]
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    }
+  ]
+}

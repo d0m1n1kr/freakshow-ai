@@ -1,5 +1,6 @@
 import puppeteer from 'puppeteer';
-import fs from 'fs/promises';
+import fs from 'fs';
+import fsPromises from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -12,19 +13,53 @@ const podcastIndex = args.indexOf('--podcast');
 const PODCAST_ID = podcastIndex !== -1 && args[podcastIndex + 1] ? args[podcastIndex + 1] : 'freakshow';
 
 const PROJECT_ROOT = path.join(__dirname, '..');
-const ARCHIVE_URL = 'https://freakshow.fm/archiv'; // TODO: Load from settings.json
+
+// Load settings and get podcast configuration
+let settings;
+try {
+  settings = JSON.parse(fs.readFileSync(path.join(PROJECT_ROOT, 'settings.json'), 'utf-8'));
+} catch (error) {
+  console.error('Error loading settings.json:', error.message);
+  console.error('Falling back to settings.example.json');
+  try {
+    settings = JSON.parse(fs.readFileSync(path.join(PROJECT_ROOT, 'settings.example.json'), 'utf-8'));
+  } catch (e) {
+    console.error('Error loading settings.example.json:', e.message);
+    process.exit(1);
+  }
+}
+
+// Find podcast configuration
+const podcast = settings.podcasts?.find(p => p.id === PODCAST_ID);
+if (!podcast) {
+  console.error(`Error: Podcast '${PODCAST_ID}' not found in settings.json`);
+  process.exit(1);
+}
+
+const ARCHIVE_URL = podcast.archiveUrl;
+if (!ARCHIVE_URL) {
+  console.error(`Error: archiveUrl not configured for podcast '${PODCAST_ID}'`);
+  process.exit(1);
+}
+
 const EPISODES_DIR = path.join(PROJECT_ROOT, 'podcasts', PODCAST_ID, 'episodes');
 
 // Parse duration string like "3 Stunden 53 Minuten" into [hh, mm, ss]
 function parseDuration(durationText) {
-  const hours = durationText.match(/(\d+)\s+Stunde[n]?/);
-  const minutes = durationText.match(/(\d+)\s+Minute[n]?/);
-  const seconds = durationText.match(/(\d+)\s+Sekunde[n]?/);
+  const s = String(durationText || '').replace(/\s+/g, ' ').trim();
+  // German
+  const hours = s.match(/(\d+)\s+Stunde[n]?/i);
+  const minutes = s.match(/(\d+)\s+Minute[n]?/i);
+  const seconds = s.match(/(\d+)\s+Sekunde[n]?/i);
+  // English (e.g. UKW archive uses "3 hours 19 minutes")
+  const hoursEn = s.match(/(\d+)\s+hour[s]?/i);
+  const minutesEn = s.match(/(\d+)\s+minute[s]?/i);
+  const secondsEn = s.match(/(\d+)\s+second[s]?/i);
   
   return [
-    hours ? parseInt(hours[1]) : 0,
-    minutes ? parseInt(minutes[1]) : 0,
-    seconds ? parseInt(seconds[1]) : 0
+    hours ? parseInt(hours[1], 10) : (hoursEn ? parseInt(hoursEn[1], 10) : 0),
+    minutes ? parseInt(minutes[1], 10) : (minutesEn ? parseInt(minutesEn[1], 10) : 0),
+    seconds ? parseInt(seconds[1], 10) : (secondsEn ? parseInt(secondsEn[1], 10) : 0),
   ];
 }
 
@@ -38,11 +73,13 @@ function parseDate(dateText) {
   return dateText;
 }
 
-// Extract episode number from title like "FS296 Chat der langen Messer"
+// Extract episode number from title like "FS296 Chat der langen Messer" or "LNP540 Respektschelle"
+// Removes any letter prefix and extracts the first number
 function extractEpisodeNumber(title) {
-  const match = title.match(/FS(\d+)|MM(\d+)/i);
+  // Match any letters followed by digits, or just digits at the start
+  const match = title.match(/^[A-Za-z]*(\d+)/);
   if (match) {
-    return parseInt(match[1] || match[2]);
+    return parseInt(match[1]);
   }
   return null;
 }
@@ -66,36 +103,139 @@ async function scrapeEpisodes() {
   
   // Extract all episodes from the page
   const episodes = await page.evaluate(() => {
-    const episodeElements = document.querySelectorAll('ul.archive li.archive__element');
+    const normalizeText = (v) => (v ?? '').toString().replace(/\s+/g, ' ').trim();
+    const splitSpeakers = (v) => {
+      const s = normalizeText(v);
+      if (!s) return [];
+      return s
+        .split(',')
+        .map(x => normalizeText(x))
+        .filter(Boolean);
+    };
+
     const episodesData = [];
+
+    // Layout A (Freak Show / LNP): list-based archive
+    const listElements = document.querySelectorAll('ul.archive li.archive__element');
+    if (listElements.length > 0) {
+      listElements.forEach(element => {
+        try {
+          // Extract title and URL
+          const titleLink = element.querySelector('a.show__title__link');
+          const title = titleLink ? normalizeText(titleLink.textContent) : '';
+          const url = titleLink ? titleLink.href : '';
+          
+          // Extract date
+          const dateElement = element.querySelector('.show__meta-data--date');
+          const date = dateElement ? normalizeText(dateElement.textContent) : '';
+          
+          // Extract duration
+          const durationElement = element.querySelector('.show__meta-data--duration');
+          const duration = durationElement ? normalizeText(durationElement.textContent) : '';
+          
+          // Extract description
+          const descElement = element.querySelector('.show__description');
+          const description = descElement ? normalizeText(descElement.textContent) : '';
+          
+          // Extract speakers
+          const speakerElements = element.querySelectorAll('.show__guest__name');
+          const speakers = Array.from(speakerElements).map(el => normalizeText(el.textContent)).filter(Boolean);
+          
+          // Extract chapters (optional)
+          const chapterElements = element.querySelectorAll('.show__copy ol li');
+          const chapters = Array.from(chapterElements).map(el => normalizeText(el.textContent)).filter(Boolean);
+          
+          episodesData.push({
+            title,
+            url,
+            date,
+            duration,
+            description,
+            speakers,
+            chapters
+          });
+        } catch (error) {
+          console.error('Error processing episode element:', error);
+        }
+      });
+      
+      return episodesData;
+    }
     
-    episodeElements.forEach(element => {
+    // Layout B (UKW): table-based archive
+    const rowElements = document.querySelectorAll('tr.archive_episode_row');
+    if (rowElements.length > 0) {
+      rowElements.forEach(row => {
+        try {
+          const titleLink = row.querySelector('.episode_title a');
+          const title = titleLink ? normalizeText(titleLink.textContent) : '';
+          const url = titleLink ? titleLink.href : '';
+          
+          const dateElement = row.querySelector('.show__meta-data--date');
+          const date = dateElement ? normalizeText(dateElement.textContent) : '';
+          
+          const durationElement = row.querySelector('.show__meta-data--duration');
+          const duration = durationElement ? normalizeText(durationElement.textContent) : '';
+          
+          const subtitleEl = row.querySelector('.episode_subtitle');
+          const description = subtitleEl ? normalizeText(subtitleEl.textContent) : '';
+          
+          // Speakers: prefer explicit contributor names; fallback to avatar alt texts
+          const contributorNamesEl = row.querySelector('.episode_contributor_names');
+          let speakers = contributorNamesEl ? splitSpeakers(contributorNamesEl.textContent) : [];
+          if (speakers.length === 0) {
+            const avatarImgs = Array.from(row.querySelectorAll('.episode_contributor_avatars img[alt]'));
+            speakers = avatarImgs
+              .map(img => normalizeText(img.getAttribute('alt')))
+              .filter(Boolean);
+            // de-dupe while keeping order
+            const seen = new Set();
+            speakers = speakers.filter(s => (seen.has(s) ? false : (seen.add(s), true)));
+          }
+          
+          const chapters = [];
+          
+          episodesData.push({
+            title,
+            url,
+            date,
+            duration,
+            description,
+            speakers,
+            chapters
+          });
+        } catch (error) {
+          console.error('Error processing episode element:', error);
+        }
+      });
+      
+      return episodesData;
+    }
+
+    // Layout C (LNP): article-based archive (e.g. <article class="show">)
+    const articleElements = document.querySelectorAll('article.show');
+    articleElements.forEach(article => {
       try {
-        // Extract title and URL
-        const titleLink = element.querySelector('a.show__title__link');
-        const title = titleLink ? titleLink.textContent.trim() : '';
+        const titleLink = article.querySelector('a.show__title__link');
+        const title = titleLink ? normalizeText(titleLink.textContent) : '';
         const url = titleLink ? titleLink.href : '';
-        
-        // Extract date
-        const dateElement = element.querySelector('.show__meta-data--date');
-        const date = dateElement ? dateElement.textContent.trim() : '';
-        
-        // Extract duration
-        const durationElement = element.querySelector('.show__meta-data--duration');
-        const duration = durationElement ? durationElement.textContent.trim() : '';
-        
-        // Extract description
-        const descElement = element.querySelector('.show__description');
-        const description = descElement ? descElement.textContent.trim() : '';
-        
-        // Extract speakers
-        const speakerElements = element.querySelectorAll('.show__guest__name');
-        const speakers = Array.from(speakerElements).map(el => el.textContent.trim());
-        
-        // Extract chapters
-        const chapterElements = element.querySelectorAll('.show__copy ol li');
-        const chapters = Array.from(chapterElements).map(el => el.textContent.trim());
-        
+
+        const dateElement = article.querySelector('.show__meta-data--date');
+        const date = dateElement ? normalizeText(dateElement.textContent) : '';
+
+        const durationElement = article.querySelector('.show__meta-data--duration');
+        const duration = durationElement ? normalizeText(durationElement.textContent) : '';
+
+        const descElement = article.querySelector('.show__description');
+        const description = descElement ? normalizeText(descElement.textContent) : '';
+
+        const speakerElements = article.querySelectorAll('.show__guest__name');
+        const speakers = Array.from(speakerElements).map(el => normalizeText(el.textContent)).filter(Boolean);
+
+        // Chapters are shown as an ordered list inside a .show__copy block ("Kapitel:")
+        const chapterElements = article.querySelectorAll('.show__copy ol li');
+        const chapters = Array.from(chapterElements).map(el => normalizeText(el.textContent)).filter(Boolean);
+
         episodesData.push({
           title,
           url,
@@ -109,7 +249,7 @@ async function scrapeEpisodes() {
         console.error('Error processing episode element:', error);
       }
     });
-    
+
     return episodesData;
   });
   
@@ -118,7 +258,7 @@ async function scrapeEpisodes() {
   console.log(`Found ${episodes.length} episodes`);
   
   // Create episodes directory
-  await fs.mkdir(EPISODES_DIR, { recursive: true });
+  await fsPromises.mkdir(EPISODES_DIR, { recursive: true });
   
   // Process and save each episode
   let savedCount = 0;
@@ -146,7 +286,7 @@ async function scrapeEpisodes() {
       };
       
       const filename = path.join(EPISODES_DIR, `${episodeNumber}.json`);
-      await fs.writeFile(filename, JSON.stringify(episodeData, null, 2), 'utf-8');
+      await fsPromises.writeFile(filename, JSON.stringify(episodeData, null, 2), 'utf-8');
       
       console.log(`✓ Saved episode ${episodeNumber}: ${episode.title}`);
       savedCount++;

@@ -41,6 +41,11 @@ onMounted(() => {
 watch(() => settings.clusteringVariant, () => {
   loadData();
 });
+
+// Watch for podcast changes and reload data
+watch(() => settings.selectedPodcast, () => {
+  loadData();
+});
 </script>
 
 <template>

@@ -1,0 +1,804 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus.\nLogbuch Netzpolitik Nummer dreihundertundneunundsiebzig in äh rapider Folge auf die dreihundertachtundsiebzig, denn es ist äh erst der einunddreißigste Januar und wir sind trotzdem schon wieder dabei\nUnd äh ja, heute heißt es äh Hälfte raus, Klassenarbeit, Linos."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:47",
+      "text": "Digitale Bildung, eine ist der oder also digitale Bildung und Bildung soll heute unser Thema sein.\nEines der beiden Themen, die dich in vergangenen Folgen schon gesagt habe, ja, das werden wahrscheinlich einige bei uns vermissen.\nUnd äh bei so einem Thema, das machen wir nicht allein, sondern da holen wir uns einen Experten dazu für.\nBereich. Und das ist Steini. Vielen äh Hörerinnen bestimmt bekannt durch seine Vorträge bei den Kongressen.\nÜber, was heißt aber, Relativitätstheorie und äh Quantenphysik und das Universum und den ganzen Rest. Hallo Steini."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:01:35",
+      "text": "Ja moin, na."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:37",
+      "text": "Ja, schön, dass du äh dabei bist. Ähm heute,\nIst das eigentlich ein Spezial heute? Ja, ist ein Spezial, ne? Genau, ein Lochbuch Netzpolitik Spezial für euch. Denn ähm es gibt Aspekte äh zu diskutieren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:55",
+      "text": "So ist das. Und zwar, was machen wir mit unseren,\nmit unseren Kindern, äh die ja irgendwie mündige Bürgerinnen,\nsollen. Das ist ja das Versprechen der Bildung oder Steini. Ähm was ist eigentlich überhaupt? Warum machen wir das mit dieser Bildung? Ich glaube ja, wir machen das, damit wir hm die Kinder klar kriegen für den Arbeitsmarkt, damit die unsere Rente ran schaffen."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:02:19",
+      "text": "Ja, genau. Ja, ich freue mich schon. Ähm nee, äh also zunächst mal äh Experte, ne, das ähm das äh fühlt sich immer ganz schlecht an."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:27",
+      "text": "Du, heute ist mein äh Experte, wenn man irgendwie einen ganzen Satz bilden kann. Das das geht ganz schnell."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:02:35",
+      "text": "Aufmerksamkeitsspannung von mehr als zehn Sekunden, ja. Ich verstehe.\nÄhm äh also äh kurz mal, damit da niemand was falsch versteht. Ich bin jetzt also weder ausgebildeter Pädagoge noch äh,\nirgendwie äh ne äh Spezialist für digitale Bildung und Konzepte oder so, aber äh ich habe Kinder und äh ich beschäftige mich jetzt seit doch einigen Jahren mit dem Thema Bildung.\nUnterrichte selber jetzt also nicht klassisch als Lehrer, sondern ich versuche eher Kindern was beizubringen.\nÄhm ohne Lehrplan und ähm,\nbeschäftige mich jetzt auch seit drei, fast drei Jahren damit äh dass äh die ja Digitalität Einzug in Schulen hält, insbesondere erstmal den Schulen meiner Kinder und dann eben,\nJa, darüber hinaus. Und dabei ähm erfährt man einen großen Haufen lustiger Dinge und äh na ja, vielleicht macht einen das dann irgendwann zu einem Experten, kann's schon sein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:38",
+      "text": "Also aus Notwehr, Experte aus Notwehr."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:03:41",
+      "text": "Experte aus Notwehr, genau. Das trifft es."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:44",
+      "text": "Kinder jetzt in welchem äh Alter und wie lange betreibst du das jetzt schon so?"
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:03:48",
+      "text": "Na ja ähm äh meine meine Kids sind so zehn und,\nsiebzehn jetzt und die älteste, die ist schon raus, die äh da hat's Abi hinter sich studiert, aber äh ich mache das jetzt seit, ja, vier Jahren intensiv und,\nungefähr so lange auch äh mit ähm nachher drei Jahren Chaos macht Schule immer in Schulen gehen, mal Kindern was erklären und in dem Zeitraum auch unterrichtig programmieren für Mädchen, hauptsächlich, eigentlich nur noch,\näh Roboter programmieren, Nico Controller programmieren, Blüten so ein Zeug, weil ich glaube einfach, so lange äh,\nWie viel ähm äh Verschwinden denn einstelligen Prozentsatz an Studienabgängerinnen im Fachbereich Informatik,\nund so haben, brauchen die Jungs meine Hilfe nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:43",
+      "text": "Also bietest es nur für Mädchen an oder melden sich nur Mädchen?"
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:04:47",
+      "text": "Nee, ich bitte das nur für Mädchen an,\nÄh ich habe das vorher in in gemischten Zusammenhängen gemacht und das äh führt in ganz vielen Altersgruppen zu ganz schwierigen Situationen. Und meistens dazu, dass die Jungs irgendwie am meisten Bock haben, irgendwas kaputt zu machen,\nund alles besser wissen. Ist ein bisschen anstrengender. Da hatte ich dann keinen Bock mehr drauf, weil ich mache das ja freiwillig und ehrenamtlich und dann,\näh finde ich, unterstütze ich die, die da auch Bock drauf haben und die das auch ähm ja, die einfach das das funktioniert mit Mädchen besser, wenn die das unter sich machen, dann kommen die sich nicht doof vor und das macht unheimlich viel Unterschied.\nSo, das heißt nicht, dass nicht auch Jungs sowas lernen sollen und müssen und dürfen, darum geht's gar nicht, aber,\ndas das Gemisch zu machen halte ich zumindest in einem in so einem, das ist jetzt so siebte Klasse oder so ganz schwieriges Alter,\nPubertät. Da sollen Leute eigentlich überhaupt nicht in die Schule gehen, da sollen die sich irgendwie äh mit Abenteuern durch die Wildnis kämpfen und.\nDas Überleben lernen oder sowas, aber noch nicht in der Schule, sitzende Dinge tun."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:51",
+      "text": "Tja, da gibt's aber leider keine Alternative zu."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:05:56",
+      "text": "Nee, da haben wir Schulpflicht, ne? Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:57",
+      "text": "Genau. Selbst selbst mit Corona."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:06:03",
+      "text": "Selbst mit Corona, ja, ja und das ist ja auch ein bisschen schwierig und äh deswegen haben wir ja auch ähm ja.\nÄh eigentlich äh hätten wir schön zeitig anfangen können, dürfen und müssen uns damit zu beschäftigen, wie ähm Bildung auch digital funktioniert und dass so was wie eine Schulpflicht so eine Sache ist.\nDer man immer zu präsent sein muss, aber ja, hey.\nSo ist es erstmal noch und es wird auch noch ein bisschen so bleiben, staatliche Schule bewegt sich langsam."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:36",
+      "text": "Wie hast du dich denn da so äh\nalso was war einerseits der Trigger und äh auf welche Art und Weise hast du denn das äh gemacht üblicherweise ist es ja auch so, dass wenn man da äh vorstößt, dass man dann nicht unbedingt mit\ngroße, herzigen, warmen Umarmung empfangen wird."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:06:55",
+      "text": "Oh ja, also das ging los eigentlich damit, dass ähm an der ESBZ äh,\neinem meiner Töchter ist ähm muss meine Eltern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:04",
+      "text": "Was heißt das? ISBZ."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:07:05",
+      "text": "ESBZ eher evangelische Schule Berlin Zentrum. Ist eine freie Schule freie Tägerschaft. Es ist jetzt halt eine evangelische Kirche, aber äh ich kann das weg ignorieren.\nÄhm und äh da muss man Elternarbeitsstunden machen und äh ich gucke da halt, ja was gibt's jetzt hier äh an digitalen Themen. Es gab.\nEine eine AG digital und äh es war nicht sehr einfach, die haben sich jetzt nicht sehr hervorgetan, dass man sie leicht findet. Es hat mich also viel forschen und stöbern gekostet, um die zu finden.\nUnd dann da mitzumachen und äh Leute kennenzulernen und dann festzustellen, so ja, hier werde ich gebraucht. Hier kann ich was äh äh einbringen.\nWeil ähm ja, da war zwar schon ein bisschen was da, aber auch noch eine Menge zu machen. Und so fing's dann an, so habe ich dann äh da habe ich äh Micha kennengelernt, mit dem ich auch zusammen und Mel noch den Verein gegründet habe,\nCyberforedo und äh so ging's los und ähm.\nHaben wir dann ähm festgestellt, dass man wirklich, wirklich, wirklich bei Adam und Eva anfangen muss, wenn man versuchen will, Digitalisierung in der Schule,\nvoranzubringen, weil das ja ein Thema ist, mit dem wirklich niemand außer ein, zwei, drei Leute an so einer Schule schon mal irgendeinen Kontakt hatten und deswegen auch überhaupt kein Gefühl dafür, dass es wichtig sein könnte, sich damit zu beschäftigen.\nSo ging das los und so haben wir dann ähm einem kühnen Plan folgend, einen fast ein Jahr langen Prozess angeschmissen, bei dem's einfach nur darum ging.\nMal ein, wir haben das digitales Manifest genannt oder halt ein.\nÄhm ein ein sozusagen die die Grundlage dessen.\nWorauf wir äh unsere Arbeit basieren wollen. Also das digitale Leitbild der ISBZ ist da auch auf der Webseite irgendwas verlinken, könnt ihr dann schicke ich den Link noch rum."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:07",
+      "text": "Klar, klar."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:09:09",
+      "text": "Da haben wir ein Leitbild verfasst.\nDas musste jetzt natürlich so ein bisschen äh der, der, die Headline musste jetzt evangelische Kirche angehaucht sein, aber das könnt ihr einfach weg ignorieren. Und ähm in dem in dem Manifest.\nIst einfach nur mal beschrieben, was man gut finden könnte, wenn's um Digitalisierung an Schule geht. Und das war, glaube ich, die wichtigste Entscheidung, die wir überhaupt getroffen haben,\ndieses Manifest, diese dieses Leitbild dann auch durch die Schulgremien ging und es war auch so verfasst.\nUnd so erklärt und in der Sprache geschrieben, dass man das verstehen und gut finden kann, dass man sagen kann, ja das das sind so verschiedene Säulen, auf die wir,\nden digitalen Umgang an der Schule aufsetzen wollen.\nUnd äh verschiedene Ebenen, die man beleuchten will, das ist ein bisschen länglich, aber man kann das, wenn man sich das durchlest, gut äh ohne Weiteres gut finden. Und dann wurde das in den ganzen Schulgremien verabschiedet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:07",
+      "text": "Kannst du uns mal diese äh die Highlights und die äh wichtigsten Punkte dieses Manifest vielleicht mal so darlegen? Also was ist sozusagen die Management-Zamerie."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:10:14",
+      "text": "Zusammengefasst, grob zusammengefasst geht es darum, dass erstmal klar ist, äh es wird erstmal beschrieben in dem Manifest, dass ähm.\nDigitalisierung, eine riesige Chance und ein riesiges Problem gleichzeitig ist. Ja, also äh und zwar wie selten eins?\nÄhm und äh im Großen und Ganzen geht's jetzt äh bei den Risiken, ist klar, äh darum äh Privatsphäreverlust der Privatsphäre. Es geht darum, äh dass äh mit Fortschreiten von äh.\nDeep Learning und so weiter äh eine Menge Jobs verloren gehen werden durch Automatisierung, durch Robotik et cetera. Ja, dass die Jobs in Zukunft alle anders aussehen werden, man sich nicht drauf verlassen kann,\ndas gelernt, dann habe ich ja einen Job und den mache ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:03",
+      "text": "Aber jetzt nicht spezifisch in der Schule."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:11:06",
+      "text": "Nee, nee, nee, nee, es geht erst mal nur darum, was was kommt auf die Kinder zu? Also wir reden hier auch von Kindern, die sind dann irgendwas zwischen sechs und achtzehn Jahren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:13",
+      "text": "Okay, also du, das heißt, die Aussage ist, sagen wir mal, jetzt eine gesamtgesellschaftliche Aussage und nicht im Bezug auf Schule."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:20",
+      "text": "Bildung muss doch auch äh gesamtgesellschaftlich verstanden werden oder nicht, also dass deswegen."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:11:24",
+      "text": "Ja, natürlich. Ja, absolut. Sehe ich auch so. Also, vor allem die Kinder, die schlittern da ja überhaupt erst drauf zu. Ja, also ich bin da ja schon fast wieder raus auf eine Art,\nund äh aber die Kids haben das alles vor sich und äh äh für die ist das relevant, ja. Die haben nicht eine Zeit irgendwie\näh äh was weiß ich, dreißig äh Jahre, vierzig Jahre ihres Lebens verbracht, ohne dass irgendjemand Daten gesammelt hat, sondern die verbringen ihr ganzes Leben damit, dass jemand, wo überall nur er nur Content Daten über sie gesammelt hat. Ist eine ganz andere Voraussetzung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:55",
+      "text": "Hört ihr das auch total unstrittig. Ich wollte dir das einfach nur mal klarstellen, dass jetzt diese Aussage des Manifest nicht sich jetzt zunächst einmal an diesem Punkt auf die Schule bezieht, sondern es ist eine eine generelle Aussage über."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:12:06",
+      "text": "Generelle Aussage, diese Welt verändert sich drastisch schnell und äh äh in in einem Bereich, in dem die wenigsten Menschen.\nKinder nicht, die Lehrkräfte nicht, die Eltern nicht im Schnitt, ja? Natürlich gibt's überall mal ein paar, die das schon überblicken, aber im Großen und Ganzen äh kapieren's die Kinder noch am besten, aber so einen richtigen Überblick.\nKaum mehr darüber wohin hier eigentlich die Reise geht.\nSo und das erstmal hinzuschreiben und zu sagen, das ist eine Welt, auf die wir zugehen. Gleichzeitig aber hat die auch eine Menge Chancen.\nEine Menge Möglichkeiten, ja? Äh einen irrsinnig großen Raum zur kreativen Entfaltung äh Freiräume, sich selbst zu darzustellen, äh dass das, was man\nauch zu lernen, so ein also was wir für Möglichkeiten haben durch äh die Vernetzung äh der Menschen untereinander äh grandios.\nMuss man ja auch so sehen, was wir für Werkzeuge haben, da habe ich als Kind, als Jugendlicher nur von geträumt. Ja, das las man in Science-Fiction und das gibt's jetzt alles."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:12",
+      "text": "Feucht, feucht geträumt."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:13:14",
+      "text": "Ja, aber hallo, ja? Und äh äh und jetzt wachsen meine Kinder mit solchen Werkzeugen auf und äh,\nsolchen Möglichkeiten, das ist ähm ja, abgefahrene, kriegt Gänsehaut. So und äh in in diesem in in diesen Zwiespalt, ja, zwischen irrsinnigen Möglichkeiten und irrsinnigen Risiken,\nbewegen sich jetzt unsere Kinder und äh.\nIn einem Bildungssystem, in einem Schulsystem, in dem sie davon eigentlich nichts mitkriegen, so Recht.\nAlso die Schule hat in der Regel weniger Bandbreite als so ein Kind in der Hosentasche hat.\nUnd die PCs, die da stehen, haben vielleicht ein Fünftel der Leistungen, die die Smartphones heute so haben, die man so dann mit so hat.\nUnd ähm das ist die Realität, in der es dann um die es in der Schule geht und äh.\nJa, da kann man sich schon mal überlegen, äh ginge das nicht vielleicht auch besser und kann da mal so ein paar Ziele beschreiben, wo man eigentlich hin will.\nUnd ich äh wir nannten das so ein bisschen die digitalen Ethyten, also die Fingerübungen, ja, also erstmal verstehen, womit haben wir's eigentlich zu tun.\nWas ist eigentlich äh wie funktioniert ein Smartphone, ein Telefon, so ein Handy.\nFunktioniert groben Computer, wie funktioniert eine Programmiersprache, das ist so die die Fingerübung.\nAber dann geht's ja auch viel weiter und dann geht's um die Fragen, äh was ist eine digitale Identität und wie kann ich die pflegen und worauf muss ich achten.\nDamit mir da kein Scheiß passiert,\nDa ging's jetzt nicht darum, also in dem in dem äh Leitbild geht's eben darum zu beschreiben, dass die Schule sich damit beschäftigen möchte. Ja, da geht's doch gar nicht um eine Antwort wie,\nsondern nur darum, das sind Werte, mit denen wir uns beschäftigen wollen, wir möchten also die, dass die Kinder in der Schule, auch in der digitalen Welt zum mündigen Bürgern heranwachsen.\nDie Möglichkeit haben, äh.\nDiese Dinge zu beurteilen und sich frei zu entscheiden. Ja, heutzutage, äh, wenn du durch eine normale Schule gehst, hast du gar nicht die Möglichkeit,\nfrei zu entscheiden,\nwelchen Weg du im digitalen Leben gehen willst, weil da gibt's genau einen, ja? Und der heißt Microsoft, WhatsApp und Google Dogs oder so.\nHochkommt, ja? Und dann gibt's nur noch die Apple-Welt und das war's dann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:41",
+      "text": "Und das finde ich finde ich so wichtig, weil Entschuldigung, wenn ich da mal gerade ganz kurz rein äh grätsche, weil du halt sagst, ne, hier was ist ein Computer, was ist ein Smartphone, wie funktioniert das? Weil ich.\nIst mir irgendwie graust vor der Vorstellung, dass da jetzt Kinder groß werden, die mit ja wirklich leuchtenden Brettern,\näh aufwachsen, denen sie ihre Aufmerksamkeit schenken,\nohne Kabel irgendwie alles Mögliche drin passiert, ja? Also ich finde das so fasziniert, wenn du dir junge Kinder anschaust, die\nkönnen nicht lesen, die wissen nicht genau, was da los ist, aber denen kannst du ein iPad in die Hand geben, die finden da auf YouTube und die wissen, wo die Baggervideos sind, ne? Und können sich damit stundenlang auseinandersetzen. Die können nicht viel mehr Worte als Bagger sagen, aber die können schon mit diesem Brett interagieren.\nWas für ein magisches Instrument in den Händen eines aufwachsenden Menschen und,\nwie wahnsinnig das sein muss, wenn das also diese Konsumentenbretter ohne Keyboards, ja, wo du\nwo sie überhaupt gar keinen Einfluss haben, wenn die da nicht ein Fundament für bekommen, damit umzugehen. Also ich finde das so, du du sagst es so daher, ne, das muss man denen erklären, ne, das ist ja auch total richtig. Das Krasse finde ich halt so, wenn du das nicht tust,\nwo kommen wir dann hin? Also wie wie was für eine Welt in was für eine Welt blicken diese Menschen dann? Wie lernen die das, ne? Wahnsinn."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:17:02",
+      "text": "Das ist das der wichtige Punkt, ja? Und das ist auch was, was wir im Leitbild auch so beschreiben, nämlich dass es einen wesentlichen Unterschied zwischen Konsumieren und Produzieren gibt, ja? Und dass ein,\nTablet ist nicht einfach nur ein Tablett, ein Tablet, das ist eine Bibliothek, das ist ein Kino, das ist eine Musikbox, das ist ein ein\neine Spielhölle, das ist äh ja, das ist ein eine so eine eine gigantische Fülle von Dingen, die sich aber alle grob in zwei Hälften zerteilen lassen und das eine ist konsumieren und das andere ist produzieren.\nUnd und da muss man, denke ich, äh äh und und das haben wir halt so überlegt gemeinsam, darauf hinzuwirken, dass es eine Balance gibt\nWeil natürlich hilft es auch nicht, wenn alle nur noch produzieren und keiner konsumiert mehr."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:48",
+      "text": "Nicht alle Influencer sein, das ist ja für die Kinder grade der der Hauptberufswunsch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:54",
+      "text": "Das der Job ist."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:17:56",
+      "text": "So, aber diese diese Balance eben äh hinzukriegen, zu sagen, auch auch äh für sich zu entscheiden, die äh damit beschäftige ich mich jetzt mal nicht,\nne? Und äh aber wir schweifen so ein bisschen ab, darum geht's in dem digitalen Leitbild und der wichtige Punkt daran ist, wenn man so ein Leitbild hat.\nUnd alle haben ja dazu gesagt, weil's plausibel klingt und weil's vernünftig klingt,\nweil sie dann auch verstanden haben, dass das Team sind, mit dem man sich beschäftigen will, dann kannst du und nur dann kannst du im nächsten Schritt,\ndann so Entscheidungen getroffen werden an so einer Schule zu bestimmten Dingen sagen, ja aber Moment mal.\nLasst doch mal überprüfen, ob das irgendwie da Chor geht mit unserem digitalen Leitbild,\nUnd auf Basis dieses Leitbild wurde dann, haben wir gemeinsam an der Schule einen Ausschuss digitale Agenda, heißt der, gegründet und das könnte man nennen, die Ethikkommission der digitalen Welt.\nJa, an dieser Schule. Das heißt, wer immer da was machen will im im mit digitalen Werkzeugen.\nÄhm mit äh mit mit Kindern muss quasi erstmal durch diese Ethikkommission, muss also erklären, was er oder sie will.\nUnd äh wie das aussehen soll, welche Tools dafür verwendet werden soll, um sich mal einen Rat zu holen, mal äh auch eine Aussage zu holen, weil ist ja klar, die allermeisten Menschen können,\nSelbst wenn sie das verstehen, dass sie das sollen, nicht beurteilen, ob das, was sie da machen,\nvernünftig und gut ist oder gerade massiv äh Schaden verursacht, weil's die Privatsphäre der Kinder mal Freihaus nach USA liefert irgendwo hin.\nWo, woher willst denn das wissen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:41",
+      "text": "Was halt irre ist, weil du es halt also das Interface ist ja in beiden Fällen auch gleich, ne? Du siehst es der Sache ja wirklich nicht an, ob du jetzt\nirgendwo deine also ob's jetzt die Clubhausdebatte ist oder ne, ob's das Microsoft Word auf deinem Rechner ist oder das äh Microsoft Word, mit dem du irgendwie besser zusammenarbeiten kannst, weil's dreihundert äh fünfundsechzig heißt. Ne, das,\nAlso wie's da drunter aussieht, ja, siehst du ja von vorne nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:07",
+      "text": "Nochmal zum Verständnis äh Steiniger mit, dass klar ist. Du sagst ja jetzt, äh wir haben also äh mit diesem Leitbild, das habt ihr jetzt im Rahmen eurer Initiative entwickelt oder das war jetzt erstmal etwas, was so spezifisch für diese Schule gemacht hast und damit auf die Schule zugegangen bist."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:20:22",
+      "text": "Genau, nee, das haben wir in der Schule gemeinsam mit der Schule entwickelt. Also die Schule äh schreibt sich Großpartizipationen auf äh auf einen Zettel,\nund habe mir gedacht, na gut, jetzt sind wir hier äh ähm AG digital und dann machen wir doch mit.\nPartizipieren wir halt und haben dann eben einen eine Gruppe gebildet aus Eltern, Schülerinnen, Lehrerinnen äh und der Schulleitung.\nDas gemeinsam erarbeitet hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:50",
+      "text": "Das hat die Schule auch von vorne rein akzeptiert, gut gefunden oder musste da erst Überzeugungsarbeit geleistet werden. Wie war das?"
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:20:58",
+      "text": "Ja, es hilft schon, wenn man ein bisschen hartnäckig dabei bleibt, das zu erklären. Wie schon sagte, es hat fast ein Jahr gedauert, bis wir da waren.\nDa muss man schon äh es ist schon Überzeugungsarbeit, dass es die größte Arbeit, die zu tun ist, ist überhaupt das zu erklären, dass es hier was zu tun gibt.\nDas wissen die meisten gar nicht. Das ist so wie wie bis vor Kurzem die meisten Menschen gar nicht wirklich wussten, dass wir eine Klimakatastrophe haben und der Planet zum Teufel geht. Das muss man denen erst mal erklären."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:27",
+      "text": "Und bist du da von unten über die Lehrer eingestiegen oder von oben mit der Schulleitung, also was ist da der Ansatzpunkt gewesen?"
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:21:34",
+      "text": "Das ist schwer zu sagen. Also wir haben, es ging, es geht am besten über glaube ich zumindest in dem Fall, ging's am besten über interessierte Lehrerinnen.\nDa auch Bock drauf hatten, sich damit zu beschäftigen und äh es war halt ähm ja, weiß ich auch nicht,\nmühsam, kann ich nicht anders erklären. Also die ESBZ ist jetzt war zu dem Zeitpunkt auch nicht besonders bekannt, dafür ursprünglich, sich mit diesen Themen besonders gut und viel auseinanderzusetzen, aber,\nDas hat schon geholfen äh die Schule ist sehr offen, solchen Ideen gegenüber. Das hilft ungemein.\nUnd äh ich glaube aber für andere Schulen ist es einfacher, weil die können sich jetzt ja dieses von uns ausgearbeitete Manifest, also dieses Leitbild nehmen,\nkönnen es auf ihre Zwecke anpassen und sagen, guck mal, hier gibt's schon was, das ist irgendwie funktioniert das eigentlich schon mal ganz gut,\näh bauen wir jetzt so um, dass es für uns auch passt. Weil an jeder Schule gibt's irgendwie zwei, drei Leute, die das verstehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:38",
+      "text": "Kannst du nochmal kurz, dass wir äh klarstellen, wer wir ist, wenn du wir."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:22:42",
+      "text": "Wir ist im Großen und Ganzen also äh der Micha, also der Micha, heißt er, nennt er sich, Michael,\nÄh und und der äh und ich und äh dann an der Schule noch waren's damals zwei Lehrkräfte und äh zwei eine Schülerin, ein Schüler."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:59",
+      "text": "Und der Micha hat auch Kinder auf der Schule."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:23:02",
+      "text": "Genau, der hat auch eine Tochter auf der Schule und unsere Kinder sind inzwischen eng befreundet. Das war zu dem Zeitpunkt noch gar nicht der Fall."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:10",
+      "text": "Wie siehst du das denn, also wenn das.\nIst das denn jetzt irgendwie für euch ein ein wünschenswerter Zustand, dass man irgendwie zweitausend oder waren ja oder zwanzig neunzehn, wenn ihr damit angefangen habt,\ndass dass das jetzt an jeder Schule eine Initiative aus der Elternschaft sein muss äh\num irgendwie da ein digitales Leitbild hinzukriegen oder gäbe es auch andere Institutionen in der Bundesrepublik Deutschland oder im Land Berlin, äh die diese Aufgabe sich hätten annehmen.\nKönnen."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:23:42",
+      "text": "Hat das immer ganz schwierig, ne, hätte Fahrradkette. Ähm das setzt ja voraus.\nJemand ähm der in so einer Verantwortung möglicherweise ist, selber in der Lage ist, zu verstehen, zu begreifen, dass das echt ein Problem werden kann und wird.\nAlso das nicht zu tun äh ist ja erstmal nicht anders, als es die ganze Zeit schon ist, ja? Also vor vor was weiß ich, zwanzig Jahren gab's das alles nicht.\nUnd sich da nicht drum zu kümmern war kein Verlust. Ja und äh so wie heute noch die meisten Menschen glauben äh,\nwas vor in den siebziger, achtziger Jahren über sogenannte Drittweltstaaten erklärt wurde, was schon lange nicht mehr so stimmt, so glauben die Menschen ja das noch, was sie selber vor Jahren vielleicht selber in der Schule oder,\nkurz danach erfahren haben über die Digitalisierung an Schulen und so weiter\nJa, also äh will sagen, wenn du jetzt ähm im Kultusministerium sitzt oder äh in Berlin, im Bildungssenat und so weiter, dann bist du ja nicht automatisch Expertin oder sowas.\nFür diese Themen, ja? Und äh du bist ja da nicht automatisch äh äh mit mit äh,\nja Visionären, Ideen gesegnet und und weißt, was alles passieren wird. Insofern ist das schwer zu sagen, ob man hätte müssen, ja, natürlich hätte man müssen.\nMan hätte auch vor vierzig Jahren äh mit dem ganzen Umweltscheiß aufhören müssen. Jetzt kann man hinterher sagen, ja wussten wir doch alle. Hätte man wissen können die Wissenschaft hat's ja gesagt.\nSo, aber es reicht ja nicht, ne. Man muss es auch verstehen und man muss es auch überhaupt erstmal ja, sich dafür interessieren wollen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:30",
+      "text": "Ich glaube Lidos Frage ging so ein bisschen auch in die Richtung. Gibt es irgendwelche anderen Organisationen, äh die in irgendeiner Form sich jetzt äh ähnlich als Ansprechpartner für Schulen anbieten."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:25:42",
+      "text": "Gute Frage. Weiß ich, also gibt's bestimmt ein paar. Also äh Chaos macht Schule, wird ja ganz oft angefragt.\nDa geht's jetzt eher im Momentaufnahmen. Das mache ich ja auch schon seit einigen Jahren, dass wir dann von Schulen angefragt werden und das passiert tatsächlich relativ häufig. Wir hatten jetzt vor äh Corona hatten wir,\nNa ja, das sind dann schon äh äh vier, fünf manchmal sechs äh Vorträge pro Monat in irgendwelchen Schulen.\nÄhm aber wenn du guckst, wie viel Schulen es wirklich gibt, ist das jetzt auch nicht so viel. Da bin ich jetzt auch nicht so äh kann ich dir nicht sagen, wer wer sich da alles noch drum kümmert, aber ich merke, wie groß das Interesse an dem ist, was wir tun und,\nsagt mir schon, dass da ein großes Vakuum ist.\nDa auch äh ja ein ein Bedarf ganz offensichtlich ist und wir jetzt Dinge tun, von denen inzwischen mehr und mehr Leute begreifen, dass die unbedingt getan werden wollen.\nUnd äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:41",
+      "text": "Ja, also ich könnte auch nochmal ein Beispiel äh einwerfen. Es gibt ja zum Beispiel diesen Bundeswettbewerb Informatik,\noder ist es äh das ist auch schon vielen Schulen überhaupt nicht klar\ndass sie sich da mal problemlos einklinken können und sagen können, hier wir wollen uns als Schule am Bundeswettbewerb Informatik teilnehmen und unseren Schülern die Möglichkeit äh,\nan diesen Wettbewerben teilzunehmen."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:27:05",
+      "text": "Wettbewerbe gibt's ganz viele, also äh Lego-Roboter, äh Robotik, Programmierwettbewerbe und alles mögliche, aber darum geht's, glaube ich, in der Digitalisierung von Schule gar nicht,\nJa natürlich, das ist eine Komponente, ne.\nComputer benutzen, um damit irgendwie äh äh Programme zu schreiben und sich mit solchen Dingen zu beschäftigen, ist sicherlich eine Fähigkeit, aber das so ein bisschen wie CBU um sich über Funk, über Funkgeräte zu unterhalten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:31",
+      "text": "Ja gut, ich wollte das jetzt nicht als Universallösung anpreisen. Es hat nur festgestellt, dass in dem Moment, wo man sie darauf hinweist,\ndie überhaupt erstmal realisieren so, ah, so was gibt es, sowas sowas,\nda kommt was von außen, da gibt es Angebote, die man auch tatsächlich ohne Weiteres jetzt mal zur Anwendung bringen kann, ne? Das ist schon oft nicht bekannt."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:27:53",
+      "text": "Ja genau und es es gibt aber und das versuchen wir ja. Es gibt irgendwie keinen Ort, wo du das mal konzentriert findest, ja? Auch die Frage, die kriegen wir ganz oft, weil wir haben an der Schule, so hat's ja angefangen, erstmal gemeckert.\nIrgendwie Microsoft geht natürlich überhaupt nicht klar und also meckern ist immer ganz leicht.\nUnd dann kommt natürlich dann aber irgendwann berechtigterweise auch die Frage, ja was nehmen wir denn stattdessen.\nDann fängst du halt an, hier open Source Tools und wissen schon und Datenschutz und dann kriegst du erstmal große Augen, ja und wie mache ich das?\nUnd dann dann wird's natürlich schwierig,\nUnd so haben wir dann auch, äh, nachdem wir das an, an der Schule da gemacht haben, äh, auch festgestellt, dass das für viel mehr Leute, viel weiter trägt,\nJa, dass wir äh das auch einfach mal alles hinschreiben können. Ein Fragenkatalog einfach bearbeiten können und sagen, na ja äh gucken wir uns doch die Software mal an und formulieren einfach mal die Fragen, die man stellen müsste,\nbevor man an der Schule eine Software einsetzt, ja? Und idealerweise geben wir dann auch die Antworten dazu. Das können wir gemeinsam tun und,\nArbeit ist, die für jede Schule Sinn ergibt.\nHaben wir uns dann halt überlegt, na dann lasst doch mal einfach einen Verein gründen und gucken, ob wir Leute finden, die da auch Bock drauf haben und das haben wir dann gemacht äh zweitausendneunzehn aufm Kongress war das, genau.\nGegründet und überraschend schnell eine doch sehr kompetente und,\nGruppe von Menschen zusammen äh gekriegt, die jetzt sich da seitdem und das ist seitdem kein einziges Mal ausgefallen, jeden Dienstag trifft.\nUnd äh konkret an Dingen arbeitet.\nAlso ziemlich geil auch. Macht auch richtig viel Spaß. Gibt auch ein offenes Treffen immer Dienstag einundzwanzig. Nee, jeden zweiten Dienstag, einundzwanzig Uhr. Kann man gerne vorbeikommen. Äh äh Cyberforido Punkt ORG gibt's einen Link zu\nda findet man ihr auch relativ viele Informationen auch zu zu fragen, warum jetzt Zoom scheiße ist und sowas."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:29:58",
+      "text": "Was heißt äh was heißt in in pandemischen äh Zeiten vorbeikommen?"
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:30:04",
+      "text": "Big Blue Button."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:07",
+      "text": "Also online Konferenz, hm, okay."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:30:09",
+      "text": "Genau. Ja, ja, genau. Das ähm das ursprünglich war das natürlich anders gedacht, aber äh na ja, uns alle hat dann äh die Pandemie heimgesucht.\nUnd äh eigentlich waren wir zu dem Zeitpunkt auf dem Weg äh uns um Next Cloud und Messaging zu kümmern. Eigentlich war klar, wir müssen WhatsApp aus den Schulen rauskriegen, es geht gar nicht. Es war so eigentlich unser erster Showcase zu sagen, warte mal.\nWhatsApp, das\nKann nicht sein, dass das der Standard-Klassen-Chat ist und dass die Lehrer in den Klassen dann sagen, ey liebe Kinder, ich darf's euch nicht empfehlen, weil eigentlich ist es verboten, aber hm, vielleicht ermacht ihr doch mal auf WhatsApp einen Klassenchat.\nUnd äh das war eigentlich unser erstes Thema, mit dem wir uns beschäftigen wollten und dann äh.\nGewaltig und zwar klar, jetzt brauchen wir Video-Conferencing. So und dann haben wir an an unserer Schule erstmal ein hochgezogen.\nDas war ein wüster Ritt mit so einer kleinen äh Passwortgeschützen Wordpress davor, weil einfach war ja, es war ja nichts da, ne? Also nix, womit man jetzt auch äh die Schülerinnen hätte erreichen können,\nJa, du weißt, in in ein, zwei Wochen ist hier Lockdown und dann hast du ein Riesenproblem, das dir nicht irgendjemand hinten runterfällt und du musst die alle erstmal dazu kriegen, äh da darf wieder vorbeizukommen und die zu erreichen,\nSo und das war halt dann eine Kombi aus Wordpress und Jitzi. Auf dem Wordpress haben wir dann für diese zwei Wochen in Vertretungsplan geschaltet.\nWar äh gern genommen. Den gab's nämlich bis dahin auch noch nicht. Und da konnte man dann gucken, ob äh sich's überhaupt lohnt morgens aufzustehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:56",
+      "text": "Ja. Ich will lass mir das mal kurz ein bisschen äh sortieren, dass wir hier nicht zu viel Fachbegriffe unerklärt im Raum stehen haben. Also nachdem ihr sozusagen euren ersten Move gemacht hat und dieses äh Manifest, dieses Leitbild entworfen habt, darüber dann auch die Schule\nmal in die Diskussion bekommen habt. Äh ist das dann, wenn ich das richtig verstanden habe, äh schnell in so eine Bestandsaufnahme mit was brauchen wir denn jetzt eigentlich wirklich, um das auch konkret voranzubringen. Jetzt wo wir quasi das erste Mal eine Bereitschaft spüren. Und dann\nwar klar\nohne eine Infrastruktur funktioniert das nicht und da ist jetzt nicht nur die Infrastruktur in den Schulen relevant, also klar, es müssen irgendwie Devices äh in irgendeiner Form vorhanden sein, Computer\nmindestens aber es muss eben in irgendeiner Form auch 'ne Infrastruktur,\nCloud geben und da halt natürlich irgendwie nicht bei den kommerziellen Anbietern, sondern ihr habt dann eben Open-Source-Lösungen genommen. Big Blue Button hast du erwähnt, das ist also,\nin so eine integrierte Lern und Konferenz äh Oberfläche, ne?"
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:32:57",
+      "text": "Ja, ist eine Videokonferenz mit ein paar extra Tools dazu, genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:00",
+      "text": "Genau, mit so Whiteboards und so weiter, nur um das mal so ein bisschen einzusortieren, äh."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:33:04",
+      "text": "Genau. Und auch, ist auch ein Video."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:06",
+      "text": "Genau, ist konkret dann eben Videokonferenzing und Next Cloud, hast du ja auch erwähnt, ist eben äh eine Open-Source-Lösung, die so,\nDropbox Funktionalität hat, also Falls tauschen, äh et cetera und andere Infrastruktursachen, Kalender, äh diese Sachen."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:33:21",
+      "text": "Genau, Adressbuch, Notizen et cete."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:23",
+      "text": "Mhm, genau."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:33:24",
+      "text": "Ja genau, also Kollaboration im weitesten Sinne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:27",
+      "text": "Das heißt, ihr habt mit Cyber Foredu habt ihr sozusagen im Prinzip eure eigene Schulklaut aufgebaut, wenn ich das mal so sagen."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:33:34",
+      "text": "Angefangen, genau. Also wir haben das für die Schule an der Schule gemacht und äh äh in in der Pandemie eben, um dem Laden äh.\nSo ein bisschen am Laufen zu halten und ähm das gab so einen ganz lustigen und total abgefahrenen Effekt zwischen den äh Lehrerinnen und uns das hat sich gegenseitig so hochgeschaukelt.\nForm von Herausforderungen, die plötzlich allen Spaß machte.\nUnd daraus sind Dinge geworden, die so, weil sie, weil sie alle merken, wow, das funktioniert, ja, dieses äh Videokonferenzing geht\nwir können die Kids erreichen, wir können weiter unterrichten und daraus sind dann, da ist die gibt's auf auf Spotify, so da gab's jeden Morgen einen Podcast.\nSo einen guten Morgen-Podcast der Schule für alle Schüler er nimmt, das war der absolute Knaller. Ja, also,\nDie sind morgens aufgestanden, ich bin mit aufgestanden, weil ich den Podcast hören wollte, weil es absolut gut war. Ja haben äh,\ndenn äh zwei Lehrer gemacht aus der Schule und dann immer äh die die Schülerinnen haben dazu Content geliefert, dann gab's digitalen Sportunterricht,\nAlso es wurde immer kreativer, immer abgedrehter.\nUnd äh alle waren total begeistert und nach ein paar Wochen, am Anfang hat's tierisch geruckelt und alles war schlimm, bis für die Technik im Griff hatten.\nUnd äh nach ein paar Tagen funktioniert es dann und nach ein paar Wochen hatten wir da morgens vierhundertfünfzig Schülerinnen äh im Gitzi. Ne, jeden Morgen.\nUnd äh die hatten Bock drauf, ja, die wollten dann die Leute, die sind dann auch nicht zu spät gekommen, weil das war interessant und spannend, was da passiert ist.\nEs war eine Experience und äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:15",
+      "text": "Wo habt ihr denn die diese Ressourcen hergenommen jetzt so was aufzubauen? Ich meine so Videokonferenz für vierhundertfünfzig Leute ist ja jetzt äh auch nicht mal so eben gemacht."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:35:25",
+      "text": "Nee, das stimmt. Äh teils Eigeninitiative, teils Elternverein würde ich so sagen. Also der der Elternverein ist relativ äh aktiv an der ESBZ.\nUnd der hat dann auch Server finanziert und äh da kam eine Menge zusammen, sagen wir mal an an äh ja.\nIn der Menge Menschen, die auch gesehen haben, hier muss jetzt wirklich was passieren. Wir haben einfach eine fette Krise und äh,\nWenn wir jetzt in dem Bereich was tun können, dann machen wir das.\nUnd äh ja, dann haben wir halt Server gemietet und äh ganz interessant, weil äh ich glaube, die wichtigste Komponente an der Stelle war, dass die Schulleitung, weil wir vielleicht auch ein bisschen, weil wir das Manifest, das Leitbild hatten.\nKeinen Zweifel daran ließen, dass sowas wie Zoom oder Teams und so ein Zeug einfach nicht in Frage kommt, weil es entspricht nicht dem Leitbildpunkt.\nAn ganz vielen Schulen äh habe ich äh dann äh äh gesehen um mich rum, dass dann jede Klasse das irgendwie anders gemacht hat,\nJa, weil es gab keinen kein äh kein klares Statement. Es gab keinen Weg, der von vorne rein vorgegeben war. So wird's gemacht, Punkt.\nWenn's Scheiße ist, müssen wir es besser machen, sondern es war so, ja, es wurde viel rumprobiert und alle haben irgendwas anderes gemacht und da gab's dann was weiß ich, äh,\nvon Teams alles Kuddelmuddel, reih um und äh.\nEin riesen Durcheinander. Und das war tatsächlich da nicht an der Schule, sondern da gab's überhaupt keinen Zweifel, das wird so gemacht. Fertig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:03",
+      "text": "Das ist natürlich mit diesem Teams und Zoom muss man eher vielleicht auch sagen, auch teilweise halt so eine, ja, vielleicht nicht Notwehr, aber.\nJa Not Notstandssituation, die man da häufig findet, ne, dass jetzt also nicht jede Schule kann auf eine,\nfreiwillige und engagierte und kompetente zurückgreifen, die das dann hinkriegen und ich sehe, höre das dann schon an allen Ecken und Enden, dass die Leute sagen, komm, dann machen wir's jetzt halt mit Teams oder mit Zoom\nmit immer der gleichen Begründung, ne? Das funktioniert wenigstens und das finde ich natürlich.\nAlso es ist natürlich auch ein, also die Falle, in der man sich ja dann da befindet, ist klar, du kannst ihnen einerseits sagen, okay, das, was ihr da macht, ist,\nsicherlich keine Weise Entscheidung, aber solange du nicht mit einer gangbaren Alternative aufwarten kannst, ähm bist du natürlich auch in der Falle. Äh jetzt ist bei euch halt eine glückselige Situation, ne?"
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:38:00",
+      "text": "Nee, aber so ganz stimmt das nicht, was du sagst, weil ich finde, da müssen wir uns auch erstmal drüber unterhalten, über welche Grundwerte wir uns einigen. Und wenn einer der Grundwerte ist, um an der Schule Unterricht zu machen, wir halten uns an geltende Gesetze.\nUnd und das geltende Recht in Deutschland, dann kannst du das halt nicht machen. Also du kannst doch den Kindern jetzt auch nicht empfehlen, klaut euch bitte ein Notebook, das ist dann viel geiler, viel besser und damit könnt ihr richtig gut am digitalen Unterricht teilnehmen und es kostet auch nichts.\nDoch auch nicht empfehlen. Ist halt verboten, ja und?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:34",
+      "text": "Finde ich äh ich finde's super, dass du das ja, ja, nein, richtig. Ich finde es super."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:38:39",
+      "text": "Ja, das, das können wir doch nicht machen. Wir können doch nicht an der Schule unterrichten, ey come on, wir scheißen auf geltendes Recht.\nEs geht doch nicht. Und und oder sogar oder sogar finde ich fast noch schlimmer, gar nicht wissen, dass es geltendem Recht widerspricht, das zu tun.\nJa, da finde ich, muss man sich schon ein bisschen, da es ist dann auch schon eine Hohlschuld. Da müssen sich die Leute schon, bevor sie das machen, auseinandersetzen, ob das okay geht.\nJa? Und ähm natürlich äh hat hatte jetzt die Schule den Vorteil, dass wir uns drum gekümmert haben und da auch einen Ausschluss hatten, der sagte, nee, Freunde, geht nicht. Und du bist ganz schnell in der Querulanten Position, ne?\nGanz schnell bist du der ewige Nein-Sager und deswegen ist es so wichtig, dass dann auch gute Vorschläge kommen,\nUnd genau daraus ist dann ja auch entstanden zu sagen, da werden wir das für eine Schule können, können wir das auch für viel mehr. Weil,\nkannst auch als eine Schule gar nicht jetzt äh zwei Admins,\nfinanzieren, die das machen. Da will ja auch mal jemand in Urlaub und so, ne. Du kannst als so eine Schule gar nicht die Arbeit machen, die erforderlich ist, um eine Schule komplett digital zu betreiben.\nWir mussten ja erstmal ein Netzwerk aufbauen und und Wifi Adapt an die Wand schrauben und so ein Zeug.\nUnd äh deswegen aber zehn Schulen oder fünfzehn Schulen zusammen können sich sehr wohl zwei Admins leisten.\nUnd äh äh dann dachten wir na gut, was jetzt an der einen Schule funktioniert, funktioniert an der nächsten auch, da sind wir äh zur Schule meiner jüngsten Tochter.\nUnd haben denen dann auch einen BigBlue-Button installiert und Grundschule, ne? Ganz anderer Schnack. Und äh,\nda hat's auch zwei, drei Tage geruckelt und dann kommt immer dasselbe, ja, die Eltern sofort nehmen würde, alles toll funktionieren.\nUnd auch da wieder ganz klar die Schulleitung sagt, nee, kommt nicht in Frage, weil äh es entspricht halt nicht geltendem Recht und außerdem ist es ein Problem,\naus ganz vielen Gründen und ist dann einfach stur geblieben und es war gut und richtig. Und ich glaube, da da kommt's auch drauf an, dass man einfach ist so eine moralische Aspekt,\nArsch in der Hose hat zu sagen, kann ja sein, dass es besser funktioniert, technisch gesehen oder irgendwie, aber es geht halt nicht, weil es die Privatsphäre der Kinder,\ndas ist ein wirklich immens wichtiges Gut, ja? Mit so doll mit Füßen tritt,\nDas ist das nicht wert ist. Ja, genauso könnte man sagen, ja, wie äh wie soll ich denn jetzt nach Bank kommen, wenn ich nicht fliegen soll.\nWegen Klimakatastrophe. Ja und die Antwort ist na ja gar nicht. Also geht halt nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:21",
+      "text": "Ganz normal, damit wir das nicht einfach nur so im Raum stehen lassen. Dann sind wir mal so ausführen, warum jetzt eine äh die Nutzung von Zoom gegen recht verstößt, also gegen welches Recht verstößt es den\näh konkret und warum denkst du nicht, dass solche pragmatischen Ansätze mit, ich nehme jetzt etwas, was sofort überall verfügbar\nbevor ich auf äh die größere Lösung warte, warum das nicht für angemessen hältst."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:41:47",
+      "text": "Okay, also äh Zoom in Spitze. Erstmal klar äh du hast du hast hier mit Zoom und das ist ein Platzhalter für die anderen Dinger auch, äh du installierst ja eine Application auf dem PC der Kinder.\nKann das Mikro anmachen, die kann äh die Kamera anmachen, die hat Zugriff auf den Desktop,\ndas Pfeilsystem, das ist die perfekte Wanze, die da im Kinderzimmer steht. Jetzt kann man sagen, ja, aber äh äh die äh wären das schon nicht mit Missbrauchen.\nUnd dann stellst du aber fest, dass nach dem Patchwork-Act jedes amerikanische Unternehmen,\negal, wo es auf der Welt Business macht und ganz egal, was es da, wo, wie, welche Verträge unterschrieben hat, schlichtweg verpflichtet ist,\nden amerikanischen Diensten, wenn die das wollen, unbemerkten Zugang zu all diesen Staatenströmen zu verschaffen. Das ist geltendes Recht in USA.\nAmerikanische Unternehmen muss zum Beispiel der NSA diesen Zugang äh Zugang geben.\nUnd die Großen haben das auch alle immer.\nUnd die haben keine Möglichkeit rauszufinden, ob die NSA da jetzt grade was tut oder nicht oder es gibt auch noch andere Dienste in USA, die das tun,\nUnd dann gibt es äh europäisches, geltendes Recht, dass die Datenschutzgrundverordnung, die verbietet genau das.\nDie sagt, dass Menschen äh die Gewalt über ihren eigenen Datenstrom haben müssen und zu jedem Zeitpunkt im Stande sein dürfen, zu wissen, was wo und äh äh wie es gespeichert ist.\nVerwendet wird\nund das widerspricht sich einfach voll umfänglich. Deswegen hat der Europäische Gerichtshof auch beschlossen, dass der das sogenannte Privacy shielt. Das war ein Vertrag zwischen äh Europa und USA,\nnichts anderes getan hat, als äh zu sagen, äh äh ja, amerikanisches Recht entspricht zwar nicht der DSGVO, aber wir beschließen jetzt einfach mit diesem Vertrag, dass es trotzdem in Ordnung ist.\nAlso das amerikanische Systeme, trotzdem europäischem Recht entsprechen, obwohl sie das gar nicht tun.\nUnd äh der Europäische Gerichtshof hat, nachdem jemand drei Jahre lang geklagt hat, dass dann auch gekippt. So, deswegen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:13",
+      "text": "Max Schrenz äh haben wir auch eine Folge zu haben wir zweimal hier äh in der Sendung gehabt in den machen wir da noch.\nFür diejenigen die das vertiefen möchten muss ich ganz kurz hier Werbung zwischen Spielen."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:44:28",
+      "text": "Unbedingt. Also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:29",
+      "text": "Linus in unserem Podcast, Mensch. Aber äh Steini ist, ist aber nun auch so, dass das äh komplette Universitäten derzeit irgendwie ihren Unterricht über Zoom abliefern. Also, ich meine, so ganz äh kann das ja nicht hinhauen."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:44:42",
+      "text": "Ich weiß.\nDoch, doch, das ist äh ja, das ist halt nicht in Ordnung und in dem Moment, wenn sich jetzt ähm äh in Berlin zum Beispiel, wenn sich in Berlin jemand, und das können eben nur Betroffene,\nWenn sich da jemand beschwert bei der Berliner Datenschutzbeauftragten, äh dann äh geht die dem eigentlich normalerweise nach,\nund äh untersagt das dann.\nUnd deswegen gibt's da auch äh eine Liste von äh Tools, die okay sind und welche, die nicht okay sind und bei denen, die alle so eine rote Ampel haben, ne, ist eben Zoom und Teams und äh,\nund so weiter dabei. Aus genau diesem Grund. Und das ist auch völlig richtig so. Ja, das ist äh nur weil es gut funktioniert, heißt das ja noch lange nicht.\nDass wir Privatsphäre der Kids Richtung USA kippen. Und dann äh ja äh der nächste schwierige Präsident.\nPlötzlich irgendwelche Ideen hat, was man mit den Datensätzen machen kann, um andere Nationen unter Druck zu setzen, wenn die Kinder mal älter geworden sind.\nIst halt einfach nicht so eine gute Idee. Und äh was auch nicht eine gute Idee ist, ist, dass du in all diesen äh Unternehmen,\nKultur findest, die uns Konsumentinnen schon,\nzigmal belogen haben. Ja, also wie oft hat uns Microsoft belogen, darüber, was mit den Daten passiert? Ja, da gab's also einen Skandal nach dem nächsten Zoom, hat uns belogen, ja, da flossen dann äh,\nInformationen direkt an Facebook ab und so weiter, ohne dass sie das zugegeben haben, das musste ihnen dann erst bewiesen werden, dann hieß es, das sei aus Versehen gewesen, na ist klar, da ist also aus Versehen Code drin.\nDer dazu führt, dass Daten nach Facebook fließen. So und so weiter. Und das ist so ein bisschen das Problem,\nwenn wenn das Unternehmen gibt, die uns einfach schon X mal beschissen haben und belogen haben, wenn die dann irgendwann sagen, ja, na ja, jetzt machen wir's aber ordentlich, ne? Also natürlich wird Microsoft sich jetzt drum bemühen,\nzu sagen äh äh wir machen jetzt äh Server in Deutschland. Ja, das ist immer so dieses Deckmännliche mit der Telekom, haben sie auch schon mal probiert.\nWir machen jetzt äh Server in Deutschland. Ja das hilft nur genau nix.\nJa, davon wird jetzt äh äh das der der ähm Patriot Act immer noch nicht weg. Die sind immer noch verpflichtet, die Daten abfließen zu lassen.\nJemand möchte und das kannst du nicht verhindern. So, das sind alles Deckmäntelchen über ein gigantischen Businessmodell, das im wesentlichen darauf beruht,\näh große IT-Unternehmen gerne noch größer sein möchten und das äh beste Mittel, das du dazu haben kannst, ist möglichst viel über möglichst viele zu wissen.\nUnd äh ich meine, das äh habt ihr ja nun auch schon hinreichend oft.\nUnd äh äh das ist ja auch wirklich so. Ja, also Information ist ein immens wertvolles Gut und äh je mehr du über jemanden weißt, umso besser und je früher du also anfängst,\nLeute was rauszufinden, umso besser für dich, wenn das dein, deine Idee ist. Und äh.\nDavon äh zu schweigen, dass du natürlich auch so ein Login äh äh Syndrom kriegst, ja, dass du also wenn du hier äh an den Schulen mit Microsoft machst, ja, dann können die auch nur Microsoft.\nDas ist doch Productplacement, ja? Ich meine, Schule hat doch äh da wird jetzt drüber diskutiert, welche Geräte äh äh denn da angeschafft werden, damit da eine Diversität entsteht und dann haben sie aber auf allen Microsoft drauf.\nIst ja auch ein Problem.\nAlso können wir nicht, können wir nicht versuchen, möglichst viele verschiedene Tools zu zeigen, damit du als Kind dann auch, wenn du später mal,\näh äh im Job, irgendwas willst möglichst viel davon kennengelernt hast, dass du dich entscheiden kannst. Wäre ja auch eine gute Idee, oder? Mal ganz ab von dem,\näh rein rechtlichen Aspekt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:52",
+      "text": "Also das hat ja auch so einfach mal nur so einen ganz einfachen Aspekt, der ja Autonomie, die da mit einhergeht, auch also wer jetzt nicht pathetisch klingt, aber eben auch\nwenn du\nan diesem Moment, als als Schule oder als Bildungssystem aufgibst und sagst, alles klar, wir wir machen hier ein Product Placement und wir lehren äh unseren Kindern mit der Muttermilch, ja, diese Microsoft-Produkte zu nutzen,\nbrauchst du dir jetzt auch keine großartigen Hoffnungen zu machen, dass da jetzt noch irgendwie, na? Dass du jetzt noch\ndass du noch mehr bist, als äh das Öl des einundzwanzigsten Jahrhunderts äh statt vielleicht die, um das jetzt mal so zu strapazieren, ne? Also ich denke ja\nEs geht ja wirklich auch um die Zukunft und das auf dem das Fundament, auf dem die Kinder dann irgendwann einmal stehen als Bürgerinnen der Gesellschaft."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:49:44",
+      "text": "Absolut und vor allem ist es ja auch ein immenser Vorteil, wenn du als Kind in der Schule gelernt hast, dass Privatsphäre einen schützenswertes Gut ist, wenn du gelernt hast,\nwie du mit deinen persönlichen Identitäten im Netz umgehst, wie du die auch schützt, ja, wie du dich äh nicht ausspionierbar machst,\nweil das ist eine Qualifikation, die kannst du dann irgendwann, egal welchen Job wirklich gut gebrauchen.\nJa, weil auch äh also äh äh Industriespionage ist ein immens großes Problem."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:13",
+      "text": "Die die Lehre zu ziehen, äh lass uns lieber die die US-Dienste nehmen, wo wir mit unseren Daten bezahlen, die funktionieren besser, als wenn wir jetzt es selber versuchen, weil wir es nicht können. Das wäre halt eine katastrophale Lehre in dem Alter zu ziehen, ne."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:50:26",
+      "text": "Ja ja und ja vor allem, genau. Und du kennst da nichts anderes. Ja, du.\nSagen andere, na aber du musst ja dann auch mit äh Microsoft Word und äh äh MS dreihundertfünfundsechzig umgehen können.\nJa ähm äh auf eine Art stimmt das wahrscheinlich, aber das wäre für mich dann was, wo man sich's halt mal unter kontrollierten Bedingungen gemeinsam anschaut,\nund vielleicht auch lernt, aber bitteschön in der Umgebung, wo Microsoft auf gar keinen Fall erfährt,\nwas das jetzt wie der Mensch heißt in welcher Klasse er ist, welche Noten er hat,\noder sie und so weiter, ja? Und das ist ja gängige Praxis im Augenblick. Ja, dann kommen gehen Notenkonferenzen äh online äh über Excel in der Cloud,\nHallo."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:13",
+      "text": "Okay, lass uns mal nicht weiter äh darüber reden, was alles nicht geht, sondern lass uns vielleicht nochmal kurz darüber äh reden, was eigentlich wirklich erforderlich ist und wie man das herstellen kann. Ich meine, diese äh Kombination, die du da äh aufgeführt hast, mit et cetera,\nTeilaustausch, das ist ja alles so ganz grundlegende äh Dienste, die man benötigt, gar keine Frage, ne. Wenn man sie denn dann auch wirklich auch in einer,\npraktischen Art und Weise zusammengestellt bekommt. Ich habe jetzt ähm also,\nan der äh Schule eines meiner äh Kinder, da wird dann dieser HPI Schulcloud genommen.\nWeiß nicht, ob du dich mit damit auch ein bisschen äh beschäftigt hast. Ich stecke da jetzt nicht zu tief drin, aber ähm was auf jeden Fall ja erforderlich ist und was zumindest von dieser Software,\nzumindest in Teilen äh abgedeckt ist, dass sie halt auch einen tatsächlichen Arbeitsprozess der Schule abbildet.\nAlso allein so banale Sachen wie Hausaufgaben, äh Aufgaben, die zu erledigen sind, das Einreichen derselben, dass man sehen kann\nwas äh ist denn überhaupt noch zu tun? Bis wann muss es denn getan werden et cetera, was was fehlt mir noch? Also auch so eine To-do-Liste quasi. Äh das ist ja jetzt durch die Tools, die du bisher aufgezählt hast, äh überhaupt nicht abgedeckt. Was,\nHabt ihr denn da jetzt sozusagen gemacht und oder habt ihr da schon was gemacht in dieser Hinsicht oder ist das denkst du, das ist nicht euer Ding."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:52:40",
+      "text": "Doch auf eine Art schon. Also zunächst mal haben wir ja erstmal Pandemie bedingt uns äh jetzt fast ausschließlich mit Big beschäftigt.\nEinfach damit die Kinder sich weiter sehen können und miteinander reden können und den Kontakt zu ihren Lehrerinnen nicht verlieren und so weiter. Ähm,\ndas Ganze reicht natürlich nicht, ist klar und äh,\nHPI Schuhcloud hast du schon genannt das heißt auch so 'ne Lernmanagementplattform die eigentlich aus den Unis kommt.\nIn Berlin auch äh für die ganzen, also es steht zur Verfügung für alle ähm öffentlichen Schulen, also staatlichen Schulen.\nUnd ist halt ein Lernmanagementsystem, in dem ja, solche Prozesse abgebildet werden.\nIst ein sehr, sehr mächtiges Tool. Das macht's mitunter auch äh nicht ganz trivial\näh das äh äh gerade in der Grundschule zu benutzen, aber äh dient schon sehr direkt dieser Aufgabe und kann all das abbilden und äh,\nWird auch eines der nächsten Dinge sein, die wir, äh die wir umsetzen. Und ähm\nwir dann auch Schulen anbieten werden. Aber jetzt haben wir erstmal äh\nbig blue button zusammen mit äh im im Betrieb, also infan ist Cyber Fuido ist sozusagen der Verein, der sich um die Schulen kümmert und infra wann äh wird sollen eine Genossenschaft werden\nÄh ist jetzt erstmal eine GmbH, weil das schneller ging.\nÄh die sozusagen den IT- und Technikbetrieb macht, äh damit sich eben möglichst viele Schulen äh möglichst äh,\nein paar sehr fähige Adminsteilen, wenn du sie willst\nAlso infraren macht auch nicht nur Schulen, sondern auch IT-Betrieb für äh äh ja, gute Projekte, coole Projekte und so weiter, äh nicht profitgetrieben, sondern eher,\nTechnik interessiert und für die gute Sache, ne? Man muss halt wirtschaftlich trotzdem funktionieren, aber äh.\nLäuft schon ganz gut. Also derzeit haben ein ein äh satter fünfstelliger Anzahl Videokonferenzen jeden Tag finden da statt, zur Schulzeit.\nAuf den zum Beispiel.\nUnd da sollen jetzt eben Models dazukommen, dann kommt sich ja irgendwann Next Cloud, also die Kollaborationsplattform dazu, die eher für Lehrkräfte taugt und.\nWir machen relativ gute Erfahrungen mit dem Matrix Instant Messenger.\nMatrix Element, das passt so ganz gut zusammen, das wäre so ungefähr das das Technik, auf das wir uns da abzielen, sage ich mal."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:27",
+      "text": "Matrix Messenger setzt ihr dann für die für die Kids auf und die Elterngruppen kommen da auch rein, also die, die, die, die, die sprichwörtliche WhatsApp-Elterngruppe, konntet ihr die auch schon dadrauf migrieren oder."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:55:40",
+      "text": "Nee, Matrix, wir momentan, wie gesagt, haben wir wirklich im Betrieb nur Button, weil das einfach wahnsinnig viel Arbeit ist, so einen Bick Club Button so zu betreiben, dass es nicht nur funktioniert, sondern auch safe ist einigermaßen.\nWeil das auch einfach eine sehr schnell jetzt in letzter Zeit gewachsene Software ist, wo Features im Vordergrund standen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:03",
+      "text": "Dass du dann also, die wird auch wahrscheinlich also die wird gerade auch noch lebhaft entwickelt, ne?\nAlso neue Sachen reingebaut, äh neue Probleme entstanden, dann ist wahrscheinlich immer so das typische Witze, die neue Version jetzt installieren äh und das Feature haben oder äh berichten die Leute, mit denen Probleme, also so das typische.\nDie typischen Herausforderungen einer vitalen, eine vitale Software zu hosten."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:56:26",
+      "text": "Ja, ja, genau. Ja, vor allem hat hier eben auch äh eine Menge Bugs noch, ne und Sicherheitslücken, wo du dann drumrum schiffen musst und dann äh sind irgendwelche Pakete uralt, die da drin sind und dann musst du die erstmal auseinanderpflücken und aktuelle Softwareversionen reintun,\nSo, das wird jetzt auch gerade schnell besser, insbesondere, weil das auch inzwischen eine große Community gibt, äh von der wir auch Teil sind, die sich auch direkt mit ähm der Firma, die das hauptsächlich treibt, in Kanada, äh,\näh ja austauscht und das äh vorantreibt, also das funktioniert inzwischen auch sehr gut, aber es ist halt einfach wirklich viel Arbeit.\nGut zu machen und es ist auch das, was gerade am dringendsten gebraucht wird. Und deswegen machen wir das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:10",
+      "text": "Ja. Ist es nicht eigentlich so eine Tätigkeit, von der man sagen könnte, euer Ziel müsste die Selbstauflösung sein? Also."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:57:22",
+      "text": "Genau das es ist nicht unser Job, es wäre eigentlich äh der, der grade bei staatlichen Schulen ein Staatsjob\nIst die Aufgabe der Kultusministerien dafür zu sorgen, dass Schulen anständig äh mit diesen Themen umgeht. Das ist das die Aufgabe derer, die den Lehrplan machen, dafür zu sorgen, dass es einen Unterrichtsfach gibt, das sich mit\ndigitaler Identität und Privatsphäre im Internet beschäftigt. Das ist zwingend erforderlich\nAlso du kannst doch die Kids nicht einfach so, ja, das Kids, du brauchst äh äh Aufklärung über Cybermobbing und und über die Frage, äh was geht eigentlich alles\nwohin, wenn ich hier äh Office-Produkte oder Google Dogs oder sonst irgendwas benutze,\nAlso das, was wir machen, wenn wir so eine Schule gehen als Chaos macht Schule und und da erklären äh über die Datenschleimspur, ja, das muss es als Unterrichtsfach geben. Ist klar, dass die Leader wissen das auch nicht,\nstehen Lehrerinnen vor uns mit großen Augen und haben die meisten Fragen nach so einem Vortrag von uns. Und hätten die auch nicht geglaubt.\nWoher sollen sie's auch wissen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:29",
+      "text": "Ja genau, woher sollen sie's wissen? Ja, woher sollen sie's wissen? Von der aus ihrem Studium an der Universität, also ich äh ich,\nverstehe, ich ich rechne dir hoch an, dass du jetzt sehr äh diplomatisch mit diesem Missstand umgehst und dass du vor allem zielorientiert daran bist, ne und sagst, okay, das Problem ist da und wir gehen jetzt oder der Micha und du spezifisch, gehen jetzt in eurem,\näh fangt erstmal in dem Vorgarten an, in dem eure Kinder spielen und\nkonzentriert euch dann darauf da zu zeigen wie es geht und weiterzumachen. Ich ich rechne euch das hoch an, dass ihr auch wirklich toll, dass das digitale Ehrenamt hier durchzuführen. Aber dieser Missstand ist doch,\nAlso der ist doch wirklich jetzt seit Jahrzehnten gezüchtet und es kommen auch heute noch ähm\nnennen die Promovieren oder schließen äh Lehrerinnen, die Ausbildung zum Lehramt ab, ohne derartige Qualifikation als Grundvoraussetzung zu haben. Und so\nlandest du dann in einer äh in einer Situation, wo es jetzt ein paar glückliche Kinder auf dieser evangelischen Schule in Berlin Mitte gibt,\ndie,\nja das große Glück hatten, dass ein dass ein in einigen Familien anderer Kinder, die dazu sich ein paar Leute gefunden haben, die das jetzt wuppen. Und eine Straße weiter oder vielleicht fünf Block weiter ist eine andere Schule, wo du diese Kompetenzen nicht\nvorfindest und diese das dem Zufall zu überlassen, ist doch eine ganz fürchterliche Katastrophe."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "0:59:54",
+      "text": "Ja, natürlich, aber das hilft ja nichts, dazu braucht's gute Beispiele, weil in den Gremien, die das eigentlich zu entscheiden hätten,\nkannst du ja nicht auch automatisch erwarten, dass da Leute drin sind, die das wissen. Und die das können, das ist ja einfach nicht zwangsläufig so,\nJa, äh und das ist ja auch jetzt kein Einstellungskriterium oder kein\nkein äh Kriterium für die Mitarbeit, ne? Und das ist halt ein Prozess und der Prozess ist leider verglichen mit der Geschwindigkeit, mit der sich diese digitale Welt entwickelt, extrem langsam.\nJa, wenn du dir überlest, wie lange es gedauert hat\njetzt so ein bisschen flexibler zu werden, auch mal in Anfangszeiten von so einer Schule und das ist ja noch ganz in den Kinderschuhen, obwohl alle Wissenschaft seit Jahrzehnten sagen, es es gibt\nMenschen, die sind einfach, die soll man nicht morgens um acht in die Schule setzen, das bringt nix.\nUnd es gibt da gute Lösungen und so und äh das ist einfach ein wahnsinnig langsamer Prozess und äh ganz oft muss sowas auch erst aussterben langsam, ne?\nSo, aber äh gleichzeitig könnte man ja auch mal beschließen, dass es wichtig ist und natürlich musst du dann einfach an Schulen zwangsläufig Leute einstellen, die das können,\nvieles reicht ja nicht dass da irgendjemand im Kultusministerium das weiß sondern du brauchst an jeder Schule genauso wie du,\nPhysiklehrerinnen brauchst, genauso wie du Mathelehrer in Braut, du kannst auch von von Lehrkräften, die Deutschunterrichten nicht erwarten, dass sie äh Fragen in der Quantenphysik beantworten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:01:27",
+      "text": "Aber ich kann von jeder Schule, auf die ich ein Kind sende, im Prinzip ein, ja, vergleichbares Bildungsniveau\nin den Fächern Deutsch erwarten oder im Fach Mathematik, da gibt's einen Lehrplan, ja, dann dann ist der jetzt, da gibt's ja noch diesen Heckmeck mit, dass das irgendwie Ländersache ist und so, ne? Aber am Ende ist es so\ndesto mit natürlich auch nochmal Qualitätsschwankungen im in der in im Unterricht und,\nPassung und wie nett die Lehrerin jetzt ist zu deiner Tochter oder nicht, ne? Da gibt's immer noch Schwankungen, aber am Ende kannst du sagen, okay, du hast eine, also du kannst eine ein Abitur machen oder ein,\nSchulabschluss und da sind bestimmte Pflichtfächer dabei und in denen kannst du werden dir Basiskompetenzen vermitteln. So, das haben wir doch hingekrieg."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:02:13",
+      "text": "Und jetzt müssen wir beschließen, dass wir neue Basiskompetenzen brauchen, weil in den letzten zwanzig Jahren hat offensichtlich niemand mitbekommen, äh dass sich da was tut, was sich nicht in einem Unterrichtsfach namens Informatik abbilden lässt.\nDas ist ja das Problem. Das ist ja das, wovon wir reden, betrifft letztlich jedes einzelne, ich finde Fächer ja sowieso doof. Ja, aber es betrifft ja letztlich jedes einzelne Fach, jeden einzelnen Bereich.\nDes Lebens und damit natürlich auch des Unterrichts an so einer Schule,\näh äh betrifft es. Und äh damit muss man sich auseinandersetzen. Das ist ja eher so ein Fach wie Ethik, ja? Oder so,\ndas ist eben übergreifend, da geht's um Fragen, die ich immens wichtig in unserer Zeit finde, wo uns über die Frage mal unterhalten können, wozu dient Bildung eigentlich ja ganz bestimmt nicht, um den Kindern irgendwie Wissen zu vermitteln,\nDas ist vielleicht ein Teilaspekt, aber in erster Linie geht's doch darum, mal ähm ja, ein, ein, ein, ein Bewusstsein, ein Selbstbewusstsein zu,\nfördern Fähigkeiten zu vermitteln, sich Dinge anzueignen und vor allem mal äh Grundwerte zu erkennen, ja? Und das, die verlieren wir gerade.\nMit der ganz großen Kanne und zwar wegen der Inkompetenz des Umgangs mit diesen digitalen Medien.\nWir unterrichten müssten als Pflichtfach an Schulen ist sowas wie äh ja äh Sinn von Unsinn und unterscheiden.\nAlso wie wie entlarfe ich, wie erkenne ich äh Schwurbler? Ja, woran äh mache ich fest, dass mir gerade jemand Schwachsinn erzählt?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:53",
+      "text": "Gab's das nicht irgendwie."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:03:54",
+      "text": "Es fehlt, weil das Internet ist voll davon."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:55",
+      "text": "Lebenskunde oder so was."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:03:56",
+      "text": "Überhaupt kein\nGemeinsames Gefühl dafür, mehr, was eine glaubhafte Quelle ist. Und die Schule ist es auch nicht mehr. Und das ist ein wirkliches Problem. Und dazu brauchen wir eigentlich ein neues, ein eigenes wieder Selbstverständnis. Gab's mal, ist vollständig abhanden gekommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:12",
+      "text": "Und wenn wir heute zwanzig einundzwanzig darüber sprechen, dass wir das brauchen.\nDas heißt, dann können wir eigentlich immer noch davon ausgehen, dass es nochmal,\nunter best günstigsten Umständen mindestens zehn Jahre dauert, bis die ersten Kinder in den Genuss dessen kommen, weil\nLehrinhalte definiert werden müssen, die Lehrerinnen ausgebildet werden müssen, äh Anstellungen finden müssen und dann können wir in wenn es richtig flott geht in zehn Jahren, kann die erste Schülerin in den in den Genuss kommen,\nund es gibt trotzdem keine Bewegung in die Richtung."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:04:45",
+      "text": "Nein, das stimmt ja nicht ganz. Es gibt ja sehr viel mehr Schulen, außer nur die eine, bei denen das jetzt schon so ist und es gibt zwischen auch eine Menge staatliche Schulen.\nDa es sind ja die überwiegende Mehrheit der Menschen ist ja nicht scheiße. Ja, sie wissen's nur nicht und es spricht sich aber rum. Und das Gefühl dafür äh nimmt natürlich zu,\nwie auch das Gefühl für äh die Klimakatastrophe zunimmt.\nUnd dass das eben auch, dass man sich darum kümmern muss. Ich glaube, es geht schneller. Ich bin da optimistischer,\nweil wir überall, wo wir hinkommen, äh auf Leute treffen, die sagen, ja das ist aber geil und deswegen kämpfen wir ja auch nicht mehr zu zweit oder zu dritt, sondern jetzt mit zwanzig, fünfundzwanzig, dreißig Leuten inzwischen\nim Verein, ne? Und äh äh das das ist ähm und es gibt ja noch es gibt ja noch viel mehr Initiativen überall,\nbei denen das auch so passiert und ich kenne,\neine Schule, wo es, wenn's darum geht, jetzt die pauschal Einverständniserklärung für die Verwendung der Daten äh äh einfach so abzugeben, wo es nicht ein, zwei Leute gibt, die dagegen sind. Das ist nicht viel\nAber das ist ein Anfang. Ja und natürlich wirst du noch mit großen Augen angeguckt, wenn du sagst, nö, Microsoft erlaube ich nicht.\nFür mein Kind, aber ähm ja, das ist halt ein langer Weg. Was soll man machen? Hilft ja nix."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:10",
+      "text": "Jetzt gibt es ja durchaus schon Länder, die auch eigene Infrastrukturen gestartet haben. Ich habe da jetzt äh grade keinen echten Überblick. Vielleicht hast du einen, aber ich meine mich äh äh zu erinnern, dass\nThüringen oder Sachsen war's, ich weiß nicht ganz genau, zumindest so eine Modelinfrastruktur oder sogar auch Big Blue Button. Also es gibt hier,\nJa genau, es gibt ganz viele. Äh wie läuft das und was äh denkst du, womit wären die Länder generell jetzt beraten,\näh zu tun."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:06:42",
+      "text": "Also äh äh Nudel weist sich zufällig ziemlich gut. Die äh gibt's in Baden-Württemberg. Äh äh heißt das. Dann gibt es ähm,\nLernsachse in Sachsen, dann gibt es äh in äh Bayern. On-Campus macht es für Hamburg äh in Berlin äh gibt es den Lernraum Berlin,\nÄh das sind alles Models, die ähm quasi im staatlichen Auftrag betrieben werden. Ne, also im ähm Lernraum Berlin sind,\nvon den dreihundertsechzigtausend Schülerinnen, zweihundertdreißigtausend mit 'nem Account, also es ist jetzt auch nicht so, dass da gar nichts passiert,\nAber und dann gibt's eben noch die vorhin schon zitierte HPI Schuls äh Cloud, die jetzt teilweise auch äh in Bundesländern grundsätzlich als solches angeboten wird.\nUnd auch verfügbar ist. Das müssen nicht alle Schulen machen, das ist freiwillig. Ne, aber es steht immerhin zur Verfügung,\nund äh das ist ja schon mal ein guter Ansatz und äh was jetzt halt passieren muss und das haben jetzt alle in der Pandemie gemerkt, äh.\nJa äh äh dass wenn dann plötzlich im Lockdown alle Kinder auf einmal kommen, dann äh werden diese äh,\nServices weit außerhalb ihrer Spezifikation betrieben, ja? Dafür waren die so nicht in der Architektur vorbereitet.\nSo, das können die nicht oder nur ganz, ganz schlecht, weil das sind meistens relativ monolithische Architekturen.\nWeil das wichtig ist, dass die Schulen das nicht selber administrieren müssen. Das können die gar nicht. Und deswegen sind das meistens äh,\nmonolithische äh äh Models, die jetzt zentral verwaltet werden, aber wenn dann irgendwann morgens um Punkt acht, ja, äh dreißigtausend Kinder gleichzeitig kommen, dann qualmt's halt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:08:34",
+      "text": "Das ist genau der der Zustand, weshalb ich all diese Plattform Namen kenne, weil äh auf dem,\nPresseanfragenaccount des CCC, wo ich ja eine der Personen bin, die den betreut, da habe ich die alles schon gelesen\nwo dann irgendeine Zeitung oder auch ein überregionaler\noder hier die Landesfernseheranstalt sich dann meldet und sagt, wir haben hier was du gerade sagst, ne Lernsaxt, Lernraum und wie die alle heißen. Äh das funktioniert nicht, können sie uns als CCC sagen warum. Du weißt, dass Steini, weil ich dir ja diese äh\nfragen in letzter Zeit gerne weitergeleitet habe, du beantwortest sie dann, ne? Und daher kenne ich diese Namen, also man kann jetzt man muss schon sagen, die laufen dann eben mit.\nSchwierigkeiten."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:09:22",
+      "text": "Na klar. Na klar, weil die, weil ich meine, das ist das gleiche Präventionsparadox, das du auch hast bei der Pandemie, ne? Also ist völlig klar, äh hätten wir beim beim ersten Anschein, dass es irgendein Unbekanntes Virus\ngeben könnte sofort vor Lockdown erklärt, wäre das alles nicht passiert.\nJa? Aber äh dann hätten natürlich alle gesagt völlig überzogen, völlig überzogen, ja?\nUnd äh so äh und das sagen ja heute noch, ne, also nach wie vor ist es so, ja, äh nur um das Beispiel nochmal zu bemühen, wir haben ein neues, offensichtlich, wesentlich infekteres äh Virus.\nUnd das wissen wir jetzt seit fünf Wochen, sechs, ich weiß gar nicht, acht, dass das das erste Mal aufgetaucht ist irgendwo,\njetzt gestern haben sie die Grenzen geschlossen und du denkst dir, ja Freunde, was ist denn das? Dass also, ja, man hätte präventiv sofort wieder zack.\nMachen müssen und full Lockdown erklären, präventiv. So und genau das gleiche Problem an Macht ist natürlich nicht passiert. Warum nicht? Weil ja, du kannst damit keinen Blumentopf gewinnen. Alle sind sauer.\nSo und äh was man also hätte machen müssen, nachm ersten Lockdown beispielsweise, all diese Plattformen hätten jetzt richtig Fett investieren müssen,\nund sagen müssen, der nächste Lockdown kommt bestimmt und der wird schlimmer. Und dann kommen noch viel mehr, weil dann hatten alle Zeit, sich drauf vorzubereiten. Und dann platzt uns das System.\nKann man jetzt nachher im Nachhinein sehr gut sagen. Man hätte, äh kann also super sagen, ja, hätte, hätte man machen müssen. Das hätte richtig viel Geld gekostet und hätte äh ja, alle hätten gesagt, ja aber hä? Wozu jetzt das? Funktioniert doch?\nPräventionsparadox.\nSo und äh äh dann knallt's. Es muss halt zuerst wehtun, bevor wirklich was passiert, weil äh du hast keinen Vorteil davon, wenn du es verhindert hast, weil niemand wird wissen, dass du es verhindert.\nAlle werden nur sehen, hä, die haben da Riesenmenge Geld zum Fenster rausgeschmissen und irgendwelche teureren Experten bezahlt. Und wofür."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:29",
+      "text": "Ja, ich würde, ich würde ganz gerne es noch ein bisschen praktisch äh äh,\nwollen und vielleicht kannst du ja jetzt einfach mal aus der bisherigen Erfahrung sagen\nMonbal ist, lassen wir einfach mal weg, was alles versäumt wurde und so weiter. Ich denke, wurde schon so viel immer versäumt, dass es irgendwie schon fast müßig das in diesem Podcast noch zu wiederholen.\nDas das wissen wir einfach so, ne? Und äh da kann man sich natürlich jetzt auch lange drüber beklagen, aber damit kommen wir ja irgendwie auch keinen Schritt weiter. Jetzt habt ihr diese Infrastruktur betrieben. Äh es ist halt eigentlich eine Tätigkeit, die ihr gar nicht machen wollt. Ähm was sind, sagen wir mal so\näh fünf Schritte. Ich ziehe mir jetzt mal so eine griffige Zahl aus dem Kopf heraus, die eingeleitet werden müssten\nEinerseits welche Aktivität sollten Schulen deiner Meinung nach entwickeln?\nEs ist ja auch glaube ich oft Maßnahmen können ja zwar von oben beschlossen werden, aber man merkt ja auch teilweise, dass sie einfach gar nicht.\nAngenommen werden, dass es da Widerstände gibt et cetera. Also es muss ja irgendwie von allen Seiten kommen. Also was sollte sozusagen in Schulen geschehen? Auf der einen Seite und was sollte auf der politischen administrativen,\nLänderebene wahrscheinlich, weil wir nun mal Bildung, Landes orientiert organisiert ist in Deutschland, an der Stelle,\nkonkret passieren, dass du mit dem Projekt komplett arbeitslos wirst."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:12:59",
+      "text": "Ja, okay, fangen wir, fangen wir da finde ich gut.\nWir da an ähm es äh das, das, was wir als Leitbild entworfen haben könnte von den Ländern äh in den Lernplan mit aufgenommen werden in irgendeiner abgewandelten Form.\nUnd einfach äh äh per Gesetz als das wollen wir vermitteln. Ja, in Schulen, das ist äh Pflichtstoff.\nSo, ähm äh wie man's macht, muss man entwickeln, dauert lange, aber erstmal beschließen, dass man's will. Wäre ja schon mal eine gute Idee. So, nächster Schritt, jede Schule hat einen Hausmeister und genauso braucht jede Schule einen digitalen Hausmeister.\nEs braucht also jemanden, der dafür bezahlt wird an der Schule und zwar ordentlich bezahlt wird, dass er einen guten Job machen kann und zwar Vollzeit, dessen Aufgabe es ist,\ndas zu tun,\ndessen Aufgabe es ist, zu machen, dass es da ein funktionierendes Netzwerk gibt, dass es da funktionierende Geräte gibt, dass äh die Infrastruktur gewartet ist, äh der im Stande ist, äh\nMenschen dabei zu helfen, äh wenn ihnen Accounts verloren gegangen, Passwörter verloren gegangen sind und so weiter. Also einfach eine Stelle.\nMindestens, ja? Bei großen Schulen vielleicht zwei.\nEin Mensch, der einfach dafür da ist, sich genau darum zu kümmern. Momentan sind das äh Lehrkräfte, die sich äh dadurch hervorgetan haben, dass sie äh äh ein paar Fähigkeiten haben, die dann\nStunden dafür kriegen, dass sie das machen dürfen. Das sind dann ein paar Stunden in der Woche. Das reicht einfach hin und vorne nicht.\nPunkt, das geht nicht.\nSo und das das wären so die die ersten richtigen Schritte und dann äh klar, jede Schule, jede Schule braucht anständiges Internet. Also ich rede von anständigem Internet, ich rede von einer Glasfaser mit zehn Gigabit-Synchron.\nWarum denn nicht? Wo ist das Problem technisch? Gar nicht. Kein Problem.\nJa? Damit man überhaupt mal anständig damit äh wir aus der Situation rauskommen, dass es daran scheitert. Wir können Stand heute kein Hybridunterricht machen,\nmit einem Teil der Schülerinnen zu Hause und die anderen in der Schule, weil dann müssten die aus der Schule streamen, aus jeder Klasse, das geht gar nicht technisch, unmöglich. Ja. Das sind so die die da, damit würde ich mal anfangen.\nErstmal die Basis aufbauen, Technik am Laufen haben, jemand der sich drum kümmert,\ndieser ganze äh Digitalpakt mit Milliarden äh ist jetzt dafür da, dass Geräte gekauft werden und niemand kümmert sich darum,\nwie die verwaltet und gewartet werden, ne. Du musst, du kannst ja nicht Tablets kaufen und dann gehen die,\nWer denkt sich denn so was? Nee, du musst musst dir überlegen, wie die werden die verwaltet, was müssen jetzt Leute unterschreiben, wenn sie eins bekommen? Äh wie werden die überhaupt, wie kommt da Software raus? Wie kommen da Firmenwehrabties drauf? Und so weiter.\nDas muss jemand machen,\nmusst du finanzieren und das ist am Ende des Tages äh ja, meiner Meinung nach wichtiger als die Geräte selbst, weil die Geräte sind ja in drei Jahren wieder alt.\nSo, aber die Leute, die müssen eben äh mit diesen mit den Schulen sich entwickeln und mit der Technik sich entwickeln und müssen den Fokus haben, genau das tun, die müssen weitergebildet werden. Damit sind wir beim nächsten Punkt.\nAlle Lehrerinnen und Lehrer brauchen kontinuierlich Fortbildung in genau diesen Bereich.\nWeil Digitalisierung betrifft jeden Bereich der Lehrerinnen und Lehrer. Äh alle Fächer, alle Bereiche und deswegen musst du im Prinzip.\nWie äh äh im Medizinbereich äh müssen die müssen alle kontinuierlich so und so viel Fortbildungsstunden pro Jahr nachweisen, wenn sie weiter lehren wollen.\nUnd dazu sollte das ein Pflichtteil sein. Äh kann nicht sein, dass die äh dass die Lehrkräfte den Kindern empfehlen, nehmt doch WhatsApp.\nDann läuft auch was falsch. So und wenn wir, wenn wir das haben\nne, wenn wir an der Stelle sind, dann äh bin ich schon mal total happy. Dann können wir uns eigentlich noch um äh so Dinge, ja, äh inhaltlich dann diskutieren. Dann können wir schon anfangen über Fragen zu diskutieren, was wollen wir eigentlich an Bildung vermitteln.\nUnd was äh wie geht's welche Werte wollen wir vermitteln und so. Das sind dann Details, aber das wären die wichtigen Punkte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:23",
+      "text": "Okay, aber Infrastruktur ist hier jetzt erstmal rausgelassen, ne? Also was, was äh was sollten äh Länder jetzt für Infrastrukturen aufbauen und bereit halten?"
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:17:33",
+      "text": "Ja okay, äh ich ich finde, äh Länder sollten grundsätzlich dazu verpflichtet sein, äh äh per Gesetz, ausschließlich Open Source Software anzubieten,\nDatenschutzrechtlich geprüft ist. Ja? So und äh äh\nfinde ich finde ich irgendwie plausibel mit öffentlichen Geldern auch nur äh offene Software zu fördern und nicht irgendwelche Firmen reich zu machen, die hier nicht mal anständig Steuern zahlen.\nAlso zu sagen ähm äh wir wir fördern mit,\nÖffentlichen Geldern nur solche Software, die dann auch wieder allen grundsätzlichen und immer zur Verfügung steht, da wird doch ein positiv Selbstläufer drauf draus,\nja? Ich ich könnte mir also ohne Weiteres vorstellen, dass man jetzt\neinen guten Teil des Geldes nimmt und zu sagen Muddel hat eine etwas in die Jahre gekommene Nutzeroberfläche, die Userexperience ist,\nnicht optimal, dann äh.\nWerfen wir da mal äh äh in verschiedenen Projekten Geld drauf und gucken mal, äh wo was vernünftiges so rauskommt, wo wir sagen, das passt jetzt zu dem, was wir brauchen.\nWäre mal wichtig, ja? Also,\nWenn du so willst, Fördergelder, die gezielt dahin gehen, Open Source Software im Schulbereich, äh konsequent weiterzuentwickeln. Das ist ja mit der HPI-Schuld genau so passiert. Die ist ja genauso entstanden.\nAuch gut und richtig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:05",
+      "text": "Stichwort an der Stelle Public Money, public code, ähm Forderung, ich glaube, Kampagne so zwanzig siebzehn müsste das gewesen sein, äh\noft, glaube ich, die auf die FSFE zurück. Wie du gerade schon sagst, ja, ich finde das so schön, wie du es auch einfach mal da schätzt. Das ist eigentlich eine Selbstverständlichkeit, ne, dass jetzt irgendwie die öffentlichen Gelder nicht\nin irgendwelchen Privatunternehmen versenkt werden, sondern dass da eine Infrastruktur,\nunterhalten wird, die dann wiederum auch, ne, durch ihre Öffentlichkeit anderen zur Verfügung steht. Wenn du in Open Source investierst, investierst du ja halt ja, in eine Infrastruktur, die anderen zur Verfügung steht und das läuft halt alles dann\nsehr viel schöner, ne? Also."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:19:48",
+      "text": "Ja, vor allem in eine nachhaltige, also in ist doofes,\nne, nachhaltig, aber eine eine, die sich dann selbstständig, die von alleine besser wird, in einem selbst verbessernden Prozess. Momentan haben wir einen sich selbst verschlechternden Prozess. Das kann's ja nicht sein. Ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:04",
+      "text": "Aber wenn jetzt die HPI-Schuld auch so ein Open Source, also ich meine, das ist so ein, ne, das besteht ja auch teilweise aus äh äh Mode und so weiter und hat dann irgendwie nochmal eine andere Oberfläche oder."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:20:16",
+      "text": "Nee, nee, das äh die ähm ich glaube, die Idee war erst ausmute, was zu machen, dann kam aber raus, zumindest äh Gerücht, von dem ich weiß, äh dass das Mudel äh hübsch zu machen\nschwierig sein würde, ist einfacher als neu zu machen. Das ist eine andere Software.\nDahinter hängt dann auch ein big blue button äh im Betrieb als Videokonferenz sozusagen als Plugin, aber HPI Schulcloud ist eine eigene Open-Source-Software,\ndie ich auch,\nokay finde, äh schwierig finde ich noch, dass aber das äh muss man auch verzeihen, äh äh es ist nicht so Open Source, dass wir es jetzt als Infarun auch wirklich betreiben könnten,\ndavon ab, dass wir gerade gar nicht Zeit dafür hätten, aber äh äh ist zumindest letztens Stand, als wirkten, ist es jetzt nicht in einem Zustand, wo wir sagen, okay, hier ist alles, was wir brauchen, um's zu installieren und dann läuft's.\nSo, das das wäre vielleicht noch ein Anspruch, den man noch erfüllen müsste, sollen, müsste, es müsste auch klar sein, dass alles AGPL drei Punkt null oder besser,\ndamit es auch so bleibt, ne? Und äh also es es ist offene Software und es bleibt freie und offene Software\nDas wäre eine Forderung, die ich auch wichtig finde und dann finde ich gut, wenn es davon viele verschiedene gibt. Es gibt einige Initiativen, die gerade was entwickeln. Da passiert viel. Das Problem, das ich sehe,\nViele von denen ähm ja.\nAuch noch nicht so richtig kompetent sind, das so zu machen, dass es dann auch die äh wirklich für die Privatsphäre ein Gewinn ist.\nNe, weil das ist einfach schwierig. Das heißt, wir müssten uns dann auch darauf einigen, dass Software, die im schulischen Bereich eingesetzt werden will.\nQuasi geprüft ist. Daraufhin, ob sie die Kriterien erfüllt, die wir gemeinsam an Privatsphärenschutz äh haben.\nDas heißt, es muss staatlich finanzierte Pantests und Audits geben.\nUnd und quasi ein Stempel drauf von unabhängigen, kompetenten Menschen, die sagen, ja.\nEntspricht dem Stand und das müssen wir wie überall einmal im halben Jahr machen, weil.\nJa die Software wird ja durch neue Erkenntnisse schlechter, ja? Also war nicht jetzt wieder in Sudo ein Fehler entdeckt, mit dem sich äh mit dem man ruht werden konnte, also auch alte, abgehangene Software hat ja noch Fehler.\nNe, also.\nStaatlicher Audit auf äh solche Software. Einmal im halben Jahr oder vielleicht noch öfter, müssen wir gucken. Äh einmal im Quartal prüfen, ob die noch okay ist.\nUnd dann äh äh mit staatlichen Geldern weiterentwickeln.\nJa und dann haben wir ganz schnell einen Bereich, wo wir äh schön winken können und sagen, äh,\nnö äh äh Microsoft dreihundertfünfundsechzig brauchen wir gar nicht mehr. Auch übrigens im Businessbereich nicht mehr, weil wir haben Open Source Software. Die funktioniert viel geiler,\noder mindestens genauso gut und alle unsere Schülerinnen und Schüler können damit umgehen und wenn die dann an der Uni sind, können die das auch benutzen und wenn die dann in Firmen sind, können die das auch benutzen, ja wozu brauchen wir nochmal Office dreihundertfünfundsechzig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:31",
+      "text": "Jetzt gibt's natürlich, also diesen Versuch gab's doch mit dieser Bestrebung dem. Ja, also dem.\nDie Stadt München, ich bin mit dem Fall jetzt nicht mehr, ich hab den nicht mehr so hundert Prozent präsent, aber du wirst ihn vielleicht besser noch aufm Schirm haben und dass die Stadt München sich,\nwirklich bemüht hat, eben auf eine Lynox-Umgebung umzusteigen und äh in der Verwaltung mit Open Office und so zu arbeiten. Wenn ich das richtig erinnere, ist das ein bisschen äh gescheitert,\nähm auch am Widerstand der Leute und wahrscheinlich auch also der Angestellten und wahrscheinlich auch ein bisschen an der halbherzigen Umsetzung. Ähm wie wie beurteilst du das?"
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:24:15",
+      "text": "Ja, kann ich nicht genau beurteilen. Ich glaube, es ist am ehesten gescheitert an der Lobbyabteilung von Microsoft."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:24:22",
+      "text": "Das äh sehr gut möglich, ja."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:24:25",
+      "text": "Ganz im Ernst, also ich zumindest, was ich höre, gab es jetzt keine fachlichen inhaltlichen oder sachlichen Gründe.\nDie jetzt zwingend dafür sprachen, das Projekt aufzugeben und wenn ich richtig informiert bin, ist tatsächlich auch wieder auf dem Zettel es doch womöglich wieder zurückzuholen. Also ganz schöner Hick.\nAber dann ist halt so. Immer noch besser ist es nicht zu tun."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:24:50",
+      "text": "Also dafür zu bezahlen, dass man die eigene Kompetenz ja verliert und sich in eine Abhängigkeit begibt, ist halt wirklich schwer zu verargumentieren, ne? Also ist als\ndu hast gerade jetzt schon gesagt, eine nachhaltig ist es nicht, aber es ist so du du denkst du schiebst vielleicht auch nur ein Problem mal kurz auf die lange Bank oder vertagst es auf morgen, wenn wir den größeren Topf,\nhaben, aber diese Bank, diese lange Bank auf dieses Schiebs ist halt so lang, dass du's irgendwann dass du dann irgendwann den Anschluss verloren hast, ne."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:25:20",
+      "text": "Ja, vor allem hast du ein Login? Das ist genau wie wir jetzt die Querts-Tastatur haben und die nicht wieder loswerden. Weil, weil alle lernen Querz und dann ist es halt querts, obwohl das maximal ineffizient ist. Das werden wir nie wieder los."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:25:33",
+      "text": "Ja und die Lehrerinnen sagen den Kindern in der Schule, nimm doch die Querzastatur. So, so so geht's doch los."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:25:39",
+      "text": "Genau. So und deswegen und dann da dürfen wir da wir stecken schon viel zu tief drin und deswegen ist es jetzt schon ein Kraftakt da wieder rauszukommen. Ist genau wie die Klimakatastrophe. Das war alles gar nicht nötig,\nviel von dem Scheiß brauchen wir gar nicht und kämen wir auch ohne aus, aber jetzt haben wir uns so hart dran gewöhnt, dass wir gar nicht wissen, wie's anders geht.\nNicht alternativlos, dass wir jetzt da sind, wo wir sind, sondern wir haben uns nur drauf eingelassen, weil's halt bequem war,\nSo und jetzt geht's halt nicht mehr ohne ernsthafte Änderungen da wieder raus. Und die ernsthafte Änderung müsste sein, zu sagen und das ist übrigens auch Gesetz,\nStand heute in Deutschland Gesetz, ihr dürft Microsoft,\ndreihundertfünfundsechzig und Zoom und. Und wie sie alle heißen, an Schulen nicht benutzen. Auch wenn's weh tut.\nJa? Das kann ja nicht sein, dass wir nur, weil wir uns die ganze Zeit äh einfach einen Scheiß drauf gegeben haben, jetzt sagen, na ja, jetzt ist halt so, jetzt können wir's auch nicht ändern\nJa, also mit der Begründung geht die Welt zum Teufel, ja. Ich nehme immer den Beispiel zum Bezirk Klimakatastrophe. Das wird halt nix. So.\nDeswegen, lasst doch mal machen und es ist ja auch nicht ist ja auch nicht so, dass es gar nicht geht. Die Welt dreht sich ja auch ohne Office dreihundertfünfundsechzig weiter. Ja, ist ja nicht so, dass es überhaupt keine Alternativen gibt. Nur müssen die Leute lernen, dass es sie gibt.\nUnd sie müssen lernen, wie die funktionieren und schon die zweite Generation wird sagen, hä, Microsoft, nee, benutze ich nicht, kann ich nicht, will ich nichts komisch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:17",
+      "text": "Also das Jahr von Lynux auf dem Desktop wird ja schon äh regelmäßig ausgerufen, also man muss schon sagen, dass es jetzt nicht ganz so also ich ich stimme dir zu, dass es,\nmöglich.\nIst und auch möglich gemacht werden muss und der Grund, dass es nicht möglich, dass es sich nicht manifestiert, dass es nicht passiert, das sind wir, ne? Die Menschen,\ndie äh sich in diese Abhängigkeiten begeben und die diese Geschäftsmodelle füttern und die uns irgendwie,\nuns unsere Computer wegnehmen lassen, ja? Oder unsere digitale Autonomie wegnehmen lassen. Aber es ist nicht so, als wäre, also man muss ja schon sagen, es es erfordert schon einen Kraftakt\nne? Also es ist jetzt nicht so als läge das alles bereit und wäre ähm.\nDiese tolle Welt wäre da und wir wir sind alle nur zu blöd, sie zu sehen. Wir sind nur, glaube ich, zu blöd, sie uns zu bauen, ne?"
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:28:16",
+      "text": "Nee, das ist ganz harte Arbeit, weil wir es zu langsam schleifen lassen. Wieder die Parallele zur Klimakatastrophe. Das wird nur schlimmer,\nJe länger wir es weiterschleifen lassen. Nix wird besser, wenn wir nicht jetzt massiv damit anfangen.\nIn beiden Bereichen, ja? Und nur als Beispiel, es kommt dann immer, ach, Open Source Software und funktioniert ja nicht, ja?\nGesamte IT-Welt funktioniert fast ausschließlich auf Open Source Software,\nman auch noch mal sich vor Augen führen, ja? Die Amazon Cloud, die Google Cloud, die Microsoft Cloud\nAlle Services, alle Server, die auf denen du den lieben langen Tag bist, Facebook, whatever, alles funktioniert mit Open Source Software. Das gäbe es nicht, ohne diese Open Source Software in dieser Form."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:59",
+      "text": "Betrifft aber auch wirklich nur das Backend, ne? Also es ist wirklich\nOpen-Source hat die Cloud erobert, weil es eben spezifische Vorteile auch hat. Ja, also,\nQualität, es ist immer so eine Sache und ich.\nAuch nochmal vielleicht ein bisschen unpopulär nochmal so eine andere Perspektive einnehmen, weil ich kann halt auch ganz oft Leute gut verstehen, wenn sie sagen äh,\nmich interessiert dieser ganze Datenschutzscheiß an dieser Stelle, einfach mal einen Scheißdreck, weil,\nIch will gerne was benutzen, was auch äh funktioniert im Sinne von, dass ich's auch verstehe, dass ich's wirklich benutzen kann und dass es irgendwie performt und dass es irgendwie auch auf meinem langsamen Computer noch in der Lage ist, irgendwie mir eine Videokonferenz mit dreihundert Leuten bereitzustellen. Und das äh sind auch valide\nGründe. Ich finde, das muss man auch akzeptieren. Und äh so so sehe ich dafür äh äh bin, äh im Idealfall alles Open Source zu machen, weil das macht natürlich für eine\nstaatliche Infrastruktur für eine Bildungsinfrastruktur, insbesondere einfach super Sinn, weil wir kennen ja alle dieses Problem in dem Moment, wo man äh Muckellösungen von irgendwelchen mittelständischen Unternehmen hat, ja. Ich meine, wer garantiert, dass die morgen noch da sind, ne? Wer,\nwer investiert in irgendwelche Lösungen? Und wenn sie dann lange bleiben und lange supportet werden, dann haben die dann meistens auch äh relativ selten einen Grund, sich zu ändern und anzupassen und in irgendeiner Form fortschrittlicher zu werden, weil natürlich dann auch so dieser kommerzielle Druck\näh wieder raus ist. Wenn man eben konsequent auf äh auf eine Open-Source Entwicklung setzt, aber eben auch sagt, wir.\nDie\nOpen Source alleine ist nicht die einzige Bisslatte und wenn es Open Source ist, dann ist es super, weil guck mal, wie geil das hier der DSGVO entspricht, sondern es muss halt auch sein.\nÄh es muss performant sein, es muss irgendwie auch den Sicherheitsentsp\näh ähm Empfehlungen entsprechen. Und es muss auch in der Lage sein, man native Lösungen zu machen, die also auf den Computern, die die Leute benutzen, nicht immer alles nur im Webbrowser läuft, weil das natürlich auch wieder tausend Probleme mit sich bringt."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:30:59",
+      "text": "Voll. Ich stimme dir hundertprozentig zu\nDie Frage ist nur, wie kommen wir dahin, so, dass wir am Ende des Tages sagen können, ja, okay. Damit kann ich leben und dazu ist es erforderlich, dass wir sicherstellen, dass die uns nicht verarschen.\nJa, dass die, die diese kommerzielle Software uns anbieten, uns nicht verarschen und da nicht irgendwas im Code drin steckt, von dem ich nicht will, dass es auf meinem Rechner läuft.\nMir einen anderen Weg, wie wir das machen, äh äh ohne Open Source und wir können drüber reden. Das Problem ist nur, du kannst ja auch nicht hinstellen und sagen, ja, das wird dann TÜV geprüft.\nJa"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:31:37",
+      "text": "Ich ich sage nicht, ich sage nicht, ich sage nicht, kein Open-Source, ich sage nur nicht nur Open-Source und das Open-Source-Willen.\nSondern eben mit den selben Ansprüchen, ne? Und vielleicht\nauch hingehen und sagen, so hier, ihr seid doch in der Lage, Commercial Great Software zu machen, jetzt macht das mal bitte einfach in Open Source, dafür bezahlen wir euch jetzt auch, ne? Also, dass man auch den Level hochsetzt und dass man auch, ich meine, das bedeutet ja auch in der Regel,\nbereit sein, eben nochmal sehr viel mehr Geld in die Hand zu nehmen. So wirklich, um kompetitiv zu sein, ja? Und äh das ist, glaube ich, etwas, was wo wir die Mentalität noch nicht haben. Ich meine, wir geben,\nohnehin als Staat in Deutschland relativ wenig für die Bildung und für die Schulen aus im Vergleich zu anderen Ausgaben\nne? Und äh ich glaube, das ist einfach eine eine generelle Mentalität, die sich ändern muss und das hat viel damit zu tun, dass die Leute einfach keine,\nErfahrung haben, weder in den Schulen, noch an anderen Stellen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:31",
+      "text": "An dieser Stelle, die du gerade benutzt, da kann man aber doch wirklich auch von den Unternehmen lernen, was Steini gerade sagte, dass sie, ne, oder was ihr gerade auch gesagt habt, die Cloud läuft auf,\nFacebook ist einer der großen.\nEines der großen beitragenden Unternehmen in der LENUX Entwicklung und das läuft alles auf Lenux. Sie hat diese Unternehmen haben ja nicht die Entscheidung getroffen, ey lasst uns auf\nOpen Source Software, unsere Server fahren, weil die sich gedacht haben, yo, wir sind geile Hippies, wir wollen irgendwie Open Source machen, sondern die haben festgestellt, wir wollen Facebook betreiben, wir brauchen Server dafür, was ist\nder beste Weg, das zu tun und der beste Weg bedeutet für die mit dem geringsten Kosten,\ndie beste Performance zu haben. Und wenn es für die in irgendeiner Weise auch nur annähernd sinnvoll wäre, dass mit Microsoft-Servern zu machen, dann würden die es tun.\nAber natürlich sagen die sich, nein, wir betreiben diese Infrastruktur auf dem bestmöglichen Wege und das ist eben im,\nin einem Linux-Ökosystem in einem Ökosystem, weil sie da die Verbesserung, die andere bauen, noch frei Haus mit dazu kriegen. Und das ist auch der Grund, warum die jetzt nicht irgendwie,\nsondern sagen, jo, alles, was wir hier irgendwie kontriuen,\nin diese in dieses Open-Source-Ökosystem, sei es, ne, was auch immer sie da nutzen, aber insbesondere nehmen wir einfach mal nur den,\nwas wir basteln, das Kontributen wir auch zurück, damit das dadrin weiterlebt und wir nicht immer das wieder reinpatschen müssen. Das heißt, die haben genau das verstanden,\nund ähm ne, es hoffentlich passiert jetzt nicht, dass das Deutschland sagt, okay, wir bauen uns irgendwie\ndie Deutschland schulklaut, sondern hoffentlich passiert so etwas, ich mein ich hab jetzt auch wirklich keine\nbesonders herzlichen Erinnerungen an Mudel, was sich äh was es bei uns an der Universität damals schon äh gab, ja. Ähm.\nNatürlich ist es sinnvoll auch\nstaatenübergreifend international in eine Bildungsplattform oder in eine Videokonferenz hinlösung wie,\nZeit zu investieren und zu wissen, okay, von mir aus habe ich da jetzt mal was reingebaut, aber das lebt dadrin weiter. Facebook kommt übrigens auch nicht zu uns und sagt, hör mal, dieses schöne,\nhaben wir aber gebaut, seid uns mal dankbar dafür, dass ihr die auch benutzen solltet. Jetzt wird's mal Zeit, dass ihr was Schönes da reinbaut. Sondern die formen das äh,\nin der Richtung, in der sie es brauchen und sind froh, wenn die, wenn der Rest der Welt mit,\npartizipiert. Und ich glaube, also ohne das jetzt zu kennen, wahrscheinlich, kann Deutschland noch relativ viel in Mode kontriuen,\nbevor wir irgendwann Angst haben müssen, dass uns da jemand nennenswert, von dem profitiert, was wir geleistet haben, ohne was ohne selber was beigetragen zu haben. Und dieser Gedanke muss da einfach mal\nrein in alles, was öffentliche Infrastruktur ist."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:35:26",
+      "text": "Und wenn schon. Also ich würde jetzt ja sagen, ey, lasst doch mal alle Staaten zusammenliegen und alle Patente für diese Corona-Impfstoffe einfach befreien,\nDas ist am Ende viel billiger, als wenn wir jetzt alle dafür bezahlen äh die ganzen Firmen dafür bezahlen, äh äh dass sie Impfstoffe produzieren,\nDa können wir einfach zusammenschmeißen und sagen, ist jetzt freies Wissen.\nJa, weil es dient, es dient uns allen. Und genauso könnten wir sagen, wir schmeißen jetzt zusammen\nkaufen kaufen kaufen die Lizenz ab und machen sie auch im. Ich mein wir würden überrascht sein wie viel Open Source Software da drin steckt in Zoom, ne?\nEs besteht fast ausschließlich aus Open-Source-Software mit einem Päckchen drum rum."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:36:07",
+      "text": "Ich denke nicht, dass man das frei kaufen muss. Ich denke, das ist halt einfach äh nur die Anstrengung erforderlich ist,\nzu sagen, wir bauen jetzt ein Team auf, was halt einfach professionelle Clients produziert für jede Software, die wir brauchen. So und das ist dann dann macht man eine Analyse, was sind die relevanten Plattformen\nda gibt's derzeit im Wesentlichen so äh vier und wenn man Linus auf dem Desktop noch mit dazuzählt, dann äh sind es fünf so und damit hast du's im Prinzip abgedeckt und klar kostet das eine ganze Menge Geld. Native Kleins zu entwickeln und äh,\naufrechtzuerhalten und gutzuerhalten. Aber es wäre halt auf jeden Fall ein wertvoller Move,\num einfach mal von diesen ähm na ja um auch einfach kompetitiv zu sein. Das ist das, was ich meine, ja? Also darauf will ich hinaus. Ich äh nur Open-Source, äh weil's Open-Source ist und weil's so schön dem Datenschutz entspricht, dass das alleine reicht nicht, sondern der,\nbruch muss eigentlich noch sehr viel höher sein und sagen, nee, wir wollen einfach generieren und dann machen wir das eben auf EU-Ebene, dann ist auch genug Kohle da fertig."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:37:06",
+      "text": "Ja. Ja, du brauchst dann aber halt hunderte Leute in der QA, ne? Und du brauchst Prozesse, die das abbilden. Und so. Und das muss, das kostet halt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:37:11",
+      "text": "Ja, hunderte, ja, gut, aber hunderte Leute für Bildungs äh Infrastruktur, für die komplette EU ist jetzt einfach mal nix."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:37:20",
+      "text": "Eben. Genau. Und dann musst du halt aber auch in Summe vielleicht auch anfangen, Kriterien definieren, die erfüllt sein müssen. Da soll man's vielleicht vorher drüber äh einig sein, bevor wir's anfangen,\nDamit wir dann äh eben auch klar haben, äh hilft ja nichts, wenn's Open Source ist und es hat trotzdem Kinder reingeguckt, ob's äh äh jede Menge Zero Days hat.\nNe, es muss also auch gewissen Standards entsprechen und es muss dann auch äh diverse äh Male neu geschrieben werden wieder. Also wir brauchen einen Prozess dahin, der äh sagt, okay, so wie damals sich der technische Überwachungsverein gegründet hat,\nweil uns ständig äh Dampfkessel um die Ohren geflogen sind. So brauchen wir jetzt eigentlich,\nauch so was äh um um eben diese Software entsprechend in in Standards zu bringen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:10",
+      "text": "Ein Bildungsüberwachungsverein brauchen wir."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:38:15",
+      "text": "Damit haben wir ein, ja, also wir sehen, die Probleme unserer Gesellschaft.\nVererben wir in diesem Bildungsbereich und das ist das, was mich die ganze Zeit so nervös macht und ja, ich äh habe ja schon gemerkt, dass du Stein, die da äh,\nja, vielleicht auch ein bisschen desillusionierter, aber gleichzeitig konstruktiver bist als ich, weil ich könnte einfach nur auf den Tisch steigen und schreien, wenn ich das alles sehe, weil mich das so ärgert, weil das so lange.\nSich so lange schon abbildet und so lange klar war, dass diese Probleme da sein würden und wir die haben würden.\nAber jetzt vielleicht zusammenfassend am Ende.\nWo stehen wir und was würdest du aus deiner Erfahrung sagen, ist jetzt der richtige Weg nach vorne."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:39:06",
+      "text": "Ja, ich würde grob zusammengefasst sagen, wir stehen noch ganz am Anfang, nicht mehr ganz, ganz am Anfang, aber noch ziemlich weit vorne. Ich glaube, die erkennen jetzt gerade, dass es ganz schön was zu tun gibt und eine Menge Menschen erkennen grade, wow,\ndas aber doch auch ganz schön viel, aber und das ist, glaube ich, auch der der positive Aspekt daran, es äh wir sind aber auch äh als Gesellschaft ganz schön viele.\nUnd äh was wir halt tun müssen ist, gemeinsam dafür ein Verständnis entwickeln, dass das erforderlich ist, dass dies das Bildungssystem äh das Wichtigste ist, was wir an,\nSystemen für ein gemeinsames Zusammenleben auf äh äh als Gesellschaft haben, weil da werden all diese Dinge vermittelt und deswegen muss es,\naus meiner Sicht Priorität Nummer eins sein,\nweil alles andere leitet sich daraus ab und wenn wir, solange wir das stiefmütterlich behandeln und solange wir das totsparen, ist alles doof.\nUnd ich glaube äh da da muss was draus werden, äh wo wir als Gesellschaft erkennen, na ja, wenn's jetzt äh\nder Staat, den wir gewählt haben, also dass das, was wir gewählt haben, nicht macht, dann müssen wir vielleicht andere wählen oder wir müssen's halt irgendwie anders finanzieren, aber es kann nicht,\nnicht gemacht werden. So und ähm.\nIch sehe, wie das wächst. Ich sehe, wie das äh sich sehr schnell entwickelt und wo überall solche Projekte rauskommen. Und ich würde mir da mehr Struktur, mehr Organisationen wünschen.\nUnd äh aber das ist ein guter Anfang,\nund ein weiter Weg und äh ja, wir brauchen dafür ganz viele Leute, die mitmachen und ganz viel Geld um das Ziel finanzieren, aber es ist am Ende viel, viel, viel billiger,\nWenn wir das ganze Geld den großen Konzern in den Rachen schmeißen, also würde sagen, lass mal anfangen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:41:05",
+      "text": "Und die.\nVorbereitung für das digitale Leben ist das nur so eine Infrastrukturfrage oder wie siehst du die ja die Situation der Lehrerinnenausbildung oder des Lehrplans? Weil da."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:41:21",
+      "text": "Naja, das das haben wir ja ausgiebig diskutiert. Na klar.\nAusgiebig diskutiert, dann da müssen wir bei, das muss Bestandteil äh des des äh Alltags an Schule sein,\neigentlich müssen wir da noch ganz viele andere Sachen ändern, aber lass mal da kurz bei bleiben und äh lass mal, lass mal Schule geil machen, ja. Ich habe ich sage immer, wenn ich gefragt werde, was ist eigentlich dein Kriterium für eine gute Schule.\nUnd das erste Kriterium, das mir einfällt, ist auch das Wichtigste ist, dass meine Kinder gerne hingehen,\nmehr brauche ich fast nicht und dann muss ich nur noch sicherstellen, dass da kein Scheiß passiert mit\ndass sie nicht verletzt werden, dass sie nicht dass die Privatsphäre nicht verletzt wird ja und und der Rest ist eigentlich schon wurscht, wenn die wenn die Kinder gerne hingehen, dann war's geil, weil dann liefert's alles das, aber wenn sie kategorisch\nverleidet kriegen, Spaß da zu haben, dann ist eh schon doof, ne? So, also lasst doch einfach mal einen Fokus auf\nund nicht nur als Aufbewahrungsstation, damit die Eltern arbeiten gehen können und,\nlass da mal was Tolles draus machen, wo Kinder gerne hingehen, wo die Bock drauf haben und wo sie sagen, wow, äh,\nich ich will nicht zu Hause bleiben,\nOder ich will, ich will von mir aus auch digital und online. Ich will da wieder hin. Ich will morgens aufstehen, um das zu machen, weil ich da Bock drauf habe,\nDie meisten Kinder, die stehen in den Ferien früher früh auf oder an den Wochenenden und wenn Schule ist, dann oh nee, muss ich.\nDas das läuft falsch und äh das lassen wir machen und das ähm,\nhat natürlich auch damit zu tun, dass wir die Lebenswahrheiten der Kinder äh berücksichtigen und die ist viel, viel, viel digitaler noch als unsere."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:43:06",
+      "text": "Das stimmt. Ach, vielleicht ist es gar nicht so schlimm. Vielleicht lernen die Kinder es ja trotzdem selbst. Wir haben's ja irgendwie auch selber gelernt. Ohne die Schule."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:14",
+      "text": "Wir haben geschummelt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:43:18",
+      "text": "Du hast geschummelt, Tim, wie hast du geschummelt?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:20",
+      "text": "Na ja, ich hab's mir halt trotzdem angeeignet, obwohl alles dagegen stand."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:43:24",
+      "text": "Du bist Programmierer des des Monats irgendwie gewesen in der in den Achtzigerjahren in irgendein Reiseheft hast du mir erzählt. Das ist doch nicht schummeln, das ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:32",
+      "text": "War ich sogar noch in der Schule."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:43:34",
+      "text": "Okay.\nSteini, ich danke dir, dass du zu so später Stunde äh so so früh am Morgen ähm uns zur Verfügung gestanden hast, um aus deinen Einblicken in den,\ndie Statusquo und die Probleme und guten Ziele der digitalen Bildung zu sprechen. Ich denke, äh wir grüßen an der Stelle nochmal,\nden Micha, der sicher mit dir äh in diesem Bereich so breit engagiert hat und ähm."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:44:07",
+      "text": "Mel und all die anderen kriegt die gar nicht alle aufgezählt jetzt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:44:11",
+      "text": "Chaos macht Schule."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:44:13",
+      "text": "Und überhaupt alle, die da mit uns kämpfen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:44:17",
+      "text": "Und seid ihr noch bereit, äh jetzt von Anfragen überschüttet zu äh werden oder äh habt ihr die Schnauze voll?"
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:44:24",
+      "text": "Nee, nee, alle her. Wir brauchen viele Unterstützung. Kommt und helft uns. Alleine schaffen wir das nie im Leben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:44:30",
+      "text": "Alles klar. Gut, dann sage ich vielen Dank und ähm da sind wir schon durch mit unserer Sendung, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:44:38",
+      "text": "Wir sind durch mit der zweiten Sendung diese Woche. Toll!"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:44:42",
+      "text": "Wenigen Tagen und wieder fast zwei Stunden. Dann machen wir's hier mal äh jetzt ganz kurz und äh ich sage\nDas war's jetzt erstmal hier mit dem Logbuch Netzpolitik Spezial. Demnächst geht's natürlich wieder weiter mit normal. Vielen Dank an Steini, vielen Dank fürs Zuhören. Wir sagen tschüss und bis bald."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:45:03",
+      "text": "Tschau, tschau."
+    },
+    {
+      "speaker": "Andreas \"Steini\" Steinhauser",
+      "time": "1:45:04",
+      "text": "Danke, tschüss."
+    }
+  ]
+}

@@ -1,0 +1,944 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus. Oh nein, nicht schon wieder.\nLogbuch Netzpolitik Nummer einhundertvierundsiebzig und ähm tja heute ohne Linus, der ist äh\nirgendwie weg. Aber ich bin ja nicht alleine hier und ähm habe Verstärkung reingeholt ins Studio. Äh nämlich mit Frank, Frank Rieger, hallo und Ulf, Ulf Biermeier.\nIhr wart ja beide schon mal da, also irgendwie in der Sendung irgendwie. Wenn du auch noch nicht in der Mitte eben warst, wie ich gerade selber erst festgestellt habe, Ulf."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:00:55",
+      "text": "Hab's ja gefunden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:56",
+      "text": "Also ähm heute machen wir mal keine News Sendung, auch wenn's eigentlich um um News geht, aber halt nur um eine. Ähm und zwar geht's um tja.\nDie den den oder die Staats äh Trojaner beziehungsweise die ganze Trojaner Problematik, die ja nun grade mal wieder frisch auf den äh Tisch geworfen wurde.\nEs äh wurde bekannt, ich weiß gar nicht, gibt's schon irgendeine offizielle Statement dazu, aber es wurde sozusagen äh bekannt, dass das BKA nun selber an einem Trojaner arbeitet sozusagen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:01:34",
+      "text": "Dass sie dran arbeiten ist schon eine Weile klar jetzt, äh was sie jetzt äh was jetzt gab, war sozusagen die Fertigstellungsmeldung, also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:40",
+      "text": "Die Genehmigung."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:01:41",
+      "text": "Die Nähe, weil der, also das BKA hat ja, das war eine ewige Geschichte, also nachdem die erste Generation Staatstrojaner\nja vom Bundesverfassungsgericht abgeschossen wurde, hat das BKA gesagt, ja gut, dann fangen wir jetzt mal an und dann suchten die auf Reise nach Entwicklern, irgendwie war Hesse Jobs und irgendwie.\nAlso quasi schon eine eigene Kategorie bei Heise irgendwie\nsich darüber lustig zu machen und hat auch da irgendwie immer wieder drauf rumgehauen, ähm dass die äh das BKA halt da irgendwie gewisse Entwicklungsprobleme hat und also nicht aus den kommt\nund sie halt auch keine Leute finden, die in der Lage sind, da halt ihre Schadsoftware zu entwickeln. Insofern ist jetzt schon klein wenig überraschend, dass sie es tatsächlich geschafft haben jetzt also irgendwas zu haben, was sie wohl denken, einsetzen zu können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:21",
+      "text": "Zumindest geht das Gerücht, dass sie das geschafft haben, was da nun wirklich bei rausgekommen ist, was."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:02:24",
+      "text": "Wenn nicht, ähm die, also die, die Meldung selber ähm war von Verglücke in Deutschland."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:32",
+      "text": "Das gebracht."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:02:32",
+      "text": "Genau. Und äh dann gab's aber eine Bestätigung in der Bundespressekonferenz. Das ist tatsächlich sozusagen äh im Wesentlichen offiziell geworden."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:02:42",
+      "text": "Ja, der Sprecher des des Innenministeriums hat dazu ziemlich ausführlich Stellung genommen\nEr hat nämlich gesagt, dass es irgendeine Software fertiggestellt worden und das BMI hat grundsätzlich auch den Einsatz genehmigt ähm und zugleich.\nWurde aber kein Wort darüber verloren, was denn eigentlich an Prüfungen gelaufen ist, ne? Wir wissen's also nicht. Es wurde ganz lustig, es wurde so gemurmelt, die Datenschutzbeauftragte hätte das geprüft. Daraufhin dachte natürlich jeder, die Bundesdatenschutzbeauftragte\nund da allerdings.\nGab's denn Presseanfragen? Und ähm die Bundesdatenschutzbeauftragte hat dementiert den Bundestrojaner geprüft zu haben. Stellt sich raus, die hat ähm nur diese besondere Leistungsbeschreibung geprüft, also quasi den,\nPlan, ja, das soll, aber was denn da jetzt tatsächlich gebastelt worden ist, hat sie nicht geprüft. Und das finde ich schon mal sehr lustig, so ein bisschen so, als wenn man ein Haus baut und den Bauplan sich anguckt, aber keine Bauabnahme macht und einfach hofft,\ndass da kein Schmuck getrieben worden ist."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:03:36",
+      "text": "Komplexen Schadsoftware wie ein Trojaner ja auch eher unwahrscheinlich ist, dass man da sich komplett an den Bauplan halten konnte, insbesondere\nnatürlich auch anfordernd drin standen, die halt extrem schwer zu erfüllen sind. Also mal vielleicht noch kurz noch so ein bisschen zurückgehen auf die, was was tut denn so ein Hörner, was kann der denn? Und da gibt's halt so eine so eine künstliche Unterscheidung, ähm die oft das Urteil des Verfassungsgerichts\nStück weit zurückgeht. Dass sie das Verfassungsgericht gesagt hat, okay, wir haben halt einen einen Grundrecht auf die Integrität äh und Vertraulichkeit informationstechnischer Systeme und die\ndem Staat halt relativ hohe Hürden für die Infiltration setzen und.\nDa wurde halt Trojaner gedacht als ein ein Schadsoftware die halt im Wesentlichen alles kann, was halt so eine Schadsoftware technisch\nmöglich macht, nämlich halt falls auslesen, ähm auch falsch schreiben, ähm sämtliche Kommunikation mitlesen, Keyboard äh ja auslesen,\nAudio mithören und so weiter. Und da haben die äh die Strafverfolgung haben wir dann halt gesagt, naja, was wir eigentlich primär brauchen, ist ja,\nnicht so richtig so ein voller Trojaner, sondern so ein halber Trojaner, der eigentlich nur Telekommunikation mitlesen kann und haben dann diese diese lustige Kategorie des sogenannten Quellenüberwachungstrojaners\nerfunden, also die Quellen TKÜ, also Quellentele, Kommunikationsüberwachung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:58",
+      "text": "Gibt's diesen Begriff erst seitdem."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:05:01",
+      "text": "Den gibt's seit im Vorfeld dieses Urteils eigentlich, ne? Also so viel, so viel länger gibt's."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:05:05",
+      "text": "Zweitausendsechs oder so, ist ja zum ersten Mal aufgepoppt. Ganz genau, das ähm aber diese Unterscheidung ist in der Tat äh wie Frank sagt, äh so richtig klar erst geworden durch die Entscheidung aus Karlsruhe, ne? Und ähm und das Problem dabei."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:05:18",
+      "text": "Erklärst du nochmal kurz wie also dieser dieser Insel in diesem Urteil, was die die Quellenkommunikation ist, der ist ja so merkwürdig, ne? Also der wenn du den liest, denkst du, ist so ein so ein Fremdkörper in diesem Ort."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:05:27",
+      "text": "Ist ja auch gedanklich ein Fremdkörper und ich finde auch die zentrale Schwäche dieser Entscheidung, also Surprise, Surprise hat\ndie Trojanerentscheidung aus Karlsruhe ja deutlich weniger bewirkt an Rechtsstaatlichkeit als wir, denke ich, gehofft haben, einfach wegen dieses Insatz. Und zwar ist es so, wie Frank schon sagt,\nAlso eigentlich ist die Entscheidung, denke ich, sehr vernünftig, weil strenge Anforderungen gestellt werden an den Trojanereinsatz. Und dann allerdings\ngibt's diesen Einschub, der im Wesentlichen sagt, wenn so ein Trojaner nicht den ganzen Rechner ausspäht, sondern ausschließlich laufende Kommunikation, laufende Kommunikation, dann soll\nder Trojanereinsatz gar kein Eingriff sein in das neue Grundrecht. Das Computergrundrecht, ne, also das Grundrecht auf Integrität und Vertraulichkeit und Formationstechnischer Systeme."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:09",
+      "text": "Weil er sich ja sozusagen nur um die Kommunikation kümmert und den Rest nicht."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:06:13",
+      "text": "In Ruhe lässt, genau. So so die Theorie, ne. Also."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:06:14",
+      "text": "So theoretisch, so eine Theorie, genau. Und wir."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:16",
+      "text": "Welches Urteil hast du dich jetzt äh gerade bezogen, also was war das erste Urteil des Bundesverfassungsgerichtes, dass diesen Bereich überhaupt äh berührt hat?"
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:06:25",
+      "text": "Das ist ein Verfahren äh aus dem Jahr zweitausendsieben, da ging's um eine gesetzliche Genehmigung im Verfassungsschutzgesetz Nordrhein-Westfalen und da gab's so eine Art Blanko-Check\naller möglichen Ermittlungsinstrumente, unter anderem von Trojanern und da hat das Bundesverfassungsgericht im Februar zweitausendacht\ndie sogenannte Onlinedurchsuchungsentscheidung verkündet und diese Norm aus dem Verfassungsschutzgesetz NRW für verfassungswidrig erklärt und bei der Gelegenheit eben\ndas neue Grundrecht in Anführungsstrichen erfunden, also aus dem Grundgesetz abgeleitet von dem wir gerade Sprachen. Das nennt man so\ninformiert das Computergrundrecht und der volle Name ist Grundrecht auf Integrität und Vertraulichkeit, Informationstechnischer Systeme. Und ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:05",
+      "text": "Klage, die von äh Bettina Winsemann."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:07:08",
+      "text": "Glaube, genau, gehört Twister, ne?\nWar da mit dabei, aber auch die äh die äh die, ich sage mal, das äh Grundrechtsteam der FDP, ja, Gerhard Baum, Burkhard Hirsch und so, die waren auch am Start äh und ich glaube, noch ein paar andere, ich meine auch die humanistische Union war dabei, also es war eine ziemlich breite Koalition damals schon\nHat ja auch sehr schnell entschieden, also innerhalb nicht mal eines Jahres, wenn ich's richtig weiß. Naja und ähm der Witz ist dabei, aber diese, dass dieses Grundrecht eben eigentlich zwei Dimensionen hat, also Integrität und Vertraulichkeit. Integrität, also dass das\nnicht mehr manipuliert wird das System und Vertraulichkeit, dass keine Daten abfließen. Und nun gibt's da diese diese Sonderregel, dass wenn nur laufende Kommunikationen abfließt,\ngucken wir mal nicht so genau hin bei der Integrität, ne? Denn die ist natürlich genauso verletzt, egal was ein Trojaner letztlich darf äh und schauen nur mal hin, wenn nur laufende Kommunikationen abgeleitet wird, dann finden wir das mit der Vertraulichkeit auch nicht so schlimm. Also ich finde das nicht so wahnsinnig überzeugend, aber so hat Karlsruhe eben entschieden und das ist die eigentliche Hintertür in dieser Entscheidung."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:08:02",
+      "text": "Also was man äh also wenn man sich halt auch so die die mündliche Verhandlung dazu anguckt und auch die die Urteilsbegründung und so, dann ist die ja schon, also macht\nhat man so den Eindruck, die haben sich halt wirklich intensiv Gedanken darum gemacht, ne, also dass also auch im Detail nachgefragt und halt auch im Detail die ähm die einzelnen Probleme abgewogen, angefangen vom Targeting, also wie weiß man, dass man den richtigen Computer erwischt mit dem Trojaner, überm\näh Schäden, also was passiert, wenn man so eine Schadsoftware in so einen Rechner rein tut\nist dir denn noch zuverlässig so, welche Probleme können entstehen, wenn man den falschen Rechner erwischt und die die äh Schadsoftware nicht stabil ist und so. Also halt wirklich eine eine sehr tiefgehende Sache, wo sie dann am Ende zu kommen, so okay, in der Abwägung von den Grundrechten und so weiter\nsagen wir okay, nur wenn's wirklich um die Wurst geht, also wenn halt irgendwie man also wirklich aller schwerste Straftaten hat so und es keine anderen Möglichkeiten gibt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:52",
+      "text": "Farmverzug."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:08:52",
+      "text": "Nee, nicht mal Gefahrenverzog, sondern halt so schon so eine sehr tiefgehende, so nach dem Motto, da müssen mindestens drei Richter draufgucken und ähm also jedenfalls eine relativ,\numfängliche Abwägung, die eigentlich schon so ein bisschen in die Richtung geht von von den höchsten Abwägungen, die wir so haben in Deutschland in in bei Ermittlungs äh\nnämlich halt äh verwanzen, also Wohnraumwanzen, da ist das eh nicht, deswegen werden die auch nur sehr selten eingesetzt, ne? Da haben wir halt eigentlich alle gesagt, okay, so in der Gesamtabwägung ist das eigentlich ein relativ weises Urteil, weil\nman sagt, okay, man will ihnen dieses Mittel nicht vollständig verbauen, aber man will's halt so schwer machen, dass sie's wirklich nur selten einsetzen.\nUnd dann steht da so mittendrin so also wirklich so 'ne Stelle die logisch irgendwie kaum passt steht dieser eine Absatz\nQuellentelekommunikationsüberwachung, ne? Und die\nmich bis heute frage wie äh unter welchen Umständen ist denn der da so reingeraten und der liest sich halt total Lastminute so, also das ist halt so ein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:45",
+      "text": "Der, der sozusagen sagt, es sei denn, man beschränkt sich."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:09:48",
+      "text": "Auf die Telekommunikation."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:49",
+      "text": "Auf auf das und dann ist das alles nicht so schlimm."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:09:52",
+      "text": "Und das Hauptproblem dabei ist halt, dass die ähm also wenn man sich die Technik anguckt, dann ist halt so ein Quellentelekommunikationsüberwachungstrojaner, ist eigentlich eine Raumwanze.\nNe, also der nimmt halt Raumakustik auf.\nAber nur dann, so die Ermittler, wenn äh telefoniert wird. Also wenn der Scup benutzt zum Beispiel.\nNe, das heißt also, die sozusagen eine ja, bedingungsabhängige Raumwanze. So und wenn wir uns halt angucken, was so zum Beispiel bei diesem Digital-Strojaner der Fall war, die konnten halt nicht mal zuverlässig sagen, welche Software da gerade lief. So, also das war halt jetzt auch nicht, also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:26",
+      "text": "Ist ja auch nicht so, dass das Betriebssystem einem das jetzt einfach mal so ohne weiteres darlegen würde, beziehungsweise\nes könnte das vielleicht dann tun, wenn sich so ein Trojaner halt äh hauptamtlich anmeldet als hallo, ich bin der Trojaner\nmir doch mal bitte mit, wann ich abhören äh kann, so als wäre das so ein so eine Art Systemdienst. Ich glaube, so so wird das irgendwie auch gesehen teilweise."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:10:47",
+      "text": "Naja gut, ich meine, der digitales Trojaner hatte ja äh eine ganze Reihe von Features, über die man eher schmunzeln kann, also weil die äh weil das Bundesverfassungsgericht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:54",
+      "text": "Warte mal kurz,\nDamit wir zeitig mal das äh auch klarkriegen. Also wir hatten jetzt sozusagen die Vorgeschichte Onlinedurchsuchung, die Entscheidung, da fiel sozusagen diese ganze Einschränkung von elektronischer Verwanzung äh mit an mit dem Urteil, eben mit dieser,\nQuellenthek online Kommunikation, Ausnahme und äh jetzt ist ein bisschen Zeit vergangen und dann hatten wir zweitausendelf den Fall, dass eben von einem weiteren Staatstrojaner äh Kenntnis erhalten wurde.\nWelches Falles."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:11:24",
+      "text": "Genau, ein, ein letztes äh Sätzchen müssen wir noch einschieben zu dem Karlsruher Urteil, weil das gleich wieder wichtig wird. Und zwar ähm das Stichwort Grenzen. Also,\nwie gesagt, ist in der die Quellen-TKÖ, sondern Ausnahme von dem Grundrecht, gilt nur für laufende Kommunikation und sie, dass diese Ausnahme auch eingehalten wird, muss sichergestellt werden. Das steht in der Entscheidung\nausdrücklich drin und zwar durch technische Maßnahmen und auch durch rechtliche Maßnahmen. Das hat Karlsruhe ausdrücklich entschieden. Also es reicht nicht einfach nur das\ndass tatsächlich nur laufende Kommunikation mitgeschnitten wird\nsondern ähm technisch und rechtlich muss die Maßnahme, die da durchgeführt werden soll, auch tatsächlich beschränkt werden auf laufende Kommunikation und das ist in der Tat der Clou, ähm du hast es gerade schon angeschnitten, der nächste Trojaner, der hochpoppte, war nämlich zweitausendelf, der sogenannte Digitalstrojaner auch bekannt geworden als Bayern Trojaner\noder unter dem Stichwort o'zapft ist, denn der ist ja dem CCC zugespielt worden und dann ausführlich analysiert worden, Frank."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:12:20",
+      "text": "Genau, da haben wir halt von einem Anwalt eines Betroffenen ähm zuerst mal eine Anfrage bekommen so ähm.\nWürdet ihr denn mal gucken wollen. Ähm und das ging dann halt auch weiter. Also wir haben dann halt äh noch einen zweiten Anwalt gefunden, der halt irgendwie einen ähnlichen Fall hat und die hatten halt denen waren halt Sachen aufgefallen, dass die halt tausende von Screenshots in den Akten hatten. Ne, also da waren halt.\nScreenshots von Chats, so von Chat-Kommunikation."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:12:43",
+      "text": "Fünfzigtausend an der Zahl. Ja, eine ganze CD vor."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:12:47",
+      "text": "Ne, also dann haben die sich halt gefragt, ja so, wie geht denn das so? Und dann haben wir dann.\nHat so weiter gedauert und hin und her und so und am Ende hatten wir halt eine Festplatte von ähm von einem von den Betroffenen und dann noch von einem anderen Betroffenen\nmit der Maßgabe, dass wir die halt analysieren können und dort auch publizieren können, aber halt natürlich die Platten halt den Betroffenen gehören. Und ähm was da halt drauf war, war halt dann eben dieser dieser sogenannte Bayern Trojaner.\nVon Digitalsquare ähm und der ähm na ja, also die die Qualität dieses Trojaners ist halt schon so eher so ein Praktikantenjob so, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:21",
+      "text": "Also digital ist es ein deutsches Unternehmen. Genau. Gewesen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:13:24",
+      "text": "Genau, die halt früher, was hatten die gemacht, die hatten irgendwie so Probleme, dass sie irgendwie andere Behördensoftware gemacht haben und dann da rausgeflogen sind wegen irgendwie schattiger Geschichten und so. Da ach so, ah ja, sogar."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:13:33",
+      "text": "Ja, wegen Bestechung. Ja, ja, die hatten die hatten so schmutzige Deals mit dem Zollkriminalamt gemacht. Ich glaube, in Köln sitzt das. Und da sind auch Leute verurteilt worden wegen Bestechung oder Bestechlichkeit. Das ist genau und daraufhin waren die so ein bisschen auf dem Abstellgleis, soweit ich mich erinnere."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:47",
+      "text": "Reuter-Affäre. So heißt das."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:13:50",
+      "text": "Naja gut und die ähm ja und dieser Digitastrojaner, der konnte halt eigentlich alles, also das war halt so ein äh also ja ziemlich zusammengeschustert, hat die Daten über Proxiserver in den USA übertragen, auch sehr heikel.\nUnverschlüsselt genug und war halt von außen explodbar, das heißt also, wenn konnte halt also tatsächlich den den Trojaner selber nochmal\nals äh Einfallstor benutzen in den infizierten Rechner. Also war halt quasi die maximale Möglichkeit, dass es halt so. Und\nähm daraufhin denke ich mal, ist dann halt auch der äh dieser ganze Fahrplan, den es BKA schon nach dem äh,\nVerfassungsgerichtsurteil hatte, dass sie sagten, okay, wir brauchen aber trotzdem Trojaner und wir müssen jetzt da mal ran und so auch nochmal drastisch verzögert worden, ne? Deswegen haben die jetzt halt auch so lange gebraucht, weil die halt,\nähm wissen, dass wann immer sie jetzt diesen Trojaner einsetzen, die Wahrscheinlichkeit groß ist, dass er am Ende gefunden und analysiert wird und dann das ganze Theater noch mal von vorne losgeht, so, ne."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:14:48",
+      "text": "Der Witz bei diesem Digitastrojaner war, dass der im Grunde\nVoraussetzungen, die Karlsruhe aufgestellt hatte, zum Einsatz zu Quellen TKÜ eben nicht erfüllt hat, ne? Frank hat gerade hier schon sehr schön beschrieben, dass der technisch nicht beschränkt war auf laufende Kommunikation, sondern das war quasi der Full Take, ne, der konnte alles, der konnte sogar in\nDateien hochladen, ne? Der Club hat da ja so einen sehr schönen äh quasi Client geschrieben, ne, mit dem man da irgendwie Excels hochladen und starten konnte. Ja, das hat der Trojaner alles brav gemacht. Also der hat die\ntechnischen Grenzen, der Quellen TKI nicht sichergestellt. Aber, und das äh war dann in der politischen Diskussion fast das größere Problem. Der hatte auch Rechtlich keine saubere Grundlage.\nDenn der ist ja eingesetzt worden im Strafverfahren, das heißt also auf Grundlage der Strafprozessordnung und die Strafprozessordnung kennt aber überhaupt kein äh kein Gesetz um Trojaner einzusetzen. Die kennt halt nur an Gesetz für die normale Telekommunikationsüberwachung, also quasi Handy abhören oder Internetzugang mitschneiden\nund ähm dieses Gesetz haben die Ermittler aber ähm entgegen der Karlsruher Entscheidung trotzdem genutzt, um eine\ndurchzuführen, also gab es weder eine technische Begrenzung auf laufende Kommunikation, noch gab es eine geeignete Rechtsgrundlage.\nUnd das zieht sich bis heute durch. Äh das ist also einige wenige ähm gibt, die sagen, ist uns Wurscht, ob's ein Spezialgesetz gibt, wenn's irgendein Gesetz gibt\ndas Telekommunikationsüberwachung rechtfertigt, dann setzen wir halt auch gnadenlos Trojaner ein, denn welches Mittel man einsetzt, ja völlig wurscht, Trojaner oder Nicht-Trojaner, Hauptsache lauschen.\nUnd ähm da kommen wir vielleicht gleich nochmal zu, warum das eigentlich so problematisch ist."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:16:19",
+      "text": "Ne, also diese diese Ermittlerkreativität, die ja dann doch immer wieder da durchschlägt so, äh die zeigte sich ja eigentlich in diesem gesamten Verfahren auch, ne? Also das ist also der.\nDie dann halt doch 'ne relativ großzügige Interpretation der Strafprozessordnung an den Tag legen, um\nähm ja gut, ich meine, man kann's ja in gewisser Art und Weise verstehen, ja. Sie wollen halt zum Ziel kommen, sie wollen halt irgendwie äh Leute überführen so\nin dem Fall, den sie da hatten, äh also was so die bekannt gewordenen Fälle angeht\nwar das ja halt auch eher so Pillepalle, ja irgendwelche Anabolika-Schmuggler oder sowas, ja also so irgendwie nichts wo du jetzt irgendwie sagst, okay da kann man mal die große Chor des Rechtsstaats auspacken. Auch anders zum Ziel gekommen und\ndie diese aber diese Art zu denken so und dann halt auch so beleidigte Leberwurst zu sein so nach dem Motto jetzt habt ihr dieses Spielzeug weggenommen, wie sollen wir denn jetzt unseren Job machen?\nDie wir im Nachhinein dann auch immer wieder zu zu merken so, ne? Also so die also auch gerade so BKA Vertreter oder auch für den LKAs auf der Bühne war oder ein Kind von mir geredet hat, kam auch immer wieder so eine gewisse\nangepault halt dabei rüber so ein irgendwie so ja irgendwie ihr hindert uns daran irgendwie die bösen Jungs zu fangen so irgendwie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:28",
+      "text": "Vielleicht auch wirklich vorhaben so, also."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:17:32",
+      "text": "Klar plus der Punkt ist halt, also ich meine diese als wir diesen, diesen Trojaner hatten und dann die.\nVeröffentlichung klar war und äh das Timing auch klar war, ähm da haben wir ja dann natürlich probiert zu sagen, okay wir wir versuchen uns halt irgendwie fair zu verhalten und haben halt dem Innenministerium bisher Bescheid gesagt, ne? Also wir haben ja Bescheid gesagt, so pass auf\nIst jetzt Freitag ähm so ähm Montag kommt irgendwie die die Publikation. Ich glaube, ist auf dem Montag."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:17:58",
+      "text": "Nee, Sonntag, das war die die FAZ am Sonntag."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:17:59",
+      "text": "Am Sonntag, genau. Ja, sie haben, glaube ich, Freitag, Donnerstag oder Freitag Bescheid gesagt, dass ihr das hier Zeit hatten, die Trojaner abzuschalten, so, ne? Ähm.\nAuch da war das schon so ein also so eine\nso eine Attitüde so wie ja wie ihr dringt hier in unseren hochherrschaftlichen Bereich ein, ja? So ein so ein wie könnt ihr nur so, ne? Also so eine so nicht mal, also die hatten nicht im geringsten irgendwie so einen Scheiß jetzt habt ihr uns erwischt. Ding so, sondern eher so ein so eine,\nwie was was wagt ihr euch hier irgendwie in in in diesen Sphären irgendwie herumzutreiben, Attitude, ja."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:18:32",
+      "text": "Ja und das ist nämlich, das ist nämlich wirklich eine interessante Mentalität. Also ich persönlich äh habe überhaupt kein Problem damit, ähm wenn Ermittler sagen, wir müssen Verbrecher fangen. Das ist deren Job, ne?\nGanz ehrlich, ich bin auch ganz froh, wenn die so einen gewissen Jagdinstinkt haben, wenn man sich mal anguckt, wie die Polizei bezahlt wird, also,\nGeld kann man's nicht machen. Da da man muss da schon mit Überzeugung dahinterstehen. Das finde ich eigentlich sogar sympathisch, sonst funktioniert's ja nicht. Das Problem ist eben nur, ähm man kann das Recht nicht schützen, indem man das Recht.\nDas ist das alte Problem in einem Rechtsstaat, ne? Es gibt eben bestimmte Spielregeln für die Polizei, für die Justiz, für die Geheimdienste und die müssen eingehalten werden, sonst geht im Grunde alles den Bach runter, ja? Wenn also selbst die Polizei, wenn die Gesetzeshüter sich nicht mehr ans Gesetz halten, was ist denn dann eigentlich noch sicher?\nUnd dann hat auch zum Beispiel das Parlament keine Kontrolle mehr, ne? Das muss man ganz klar sagen. Das äh das Parlament regiert ja im Wesentlichen über Gesetze und wenn die nicht mehr eingehalten werden, dann haben wir alle nichts mehr zu sagen. Da macht die Polizei zum Beispiel, was sie will,\nUnd das ist auch so mein Problem, das ich habe mit diesem Trojaner-Einsatz ohne geeignete Rechtsgrundlage. Also ich verstehe schon, wie Frank auch sagt\ndass die gerne Trojaner einsetzen wollen, aber das wollen sie dann eben sauber machen und Rechtsgrundlagen gibt's dazu eben bislang nur im BKA-Gesetz und auch nur für die präventive Terrorismusabwehr, eben gerade nicht\nfür normale Strafermittlungen. Wenn man das will, dann soll der Bundestag das eben einführen. Aber der Witz ist ja, dass nach dem Karlsruher Urteil ähm der Bundestag durchaus\nspezielle Gesetze geschaffen hat, aber eben nur für das Bundeskriminalamt zur Terrorismus\nder Bundestag hat sich also bewusst entschieden, nur zwei ganz bestimmte Gesetze zu schaffen für Onlinedurchsuchung und Quellen-Ticker für das BKA zur Terrorismusabwehr.\nDas normale Strafverfahren hat der Bundestag das nicht geregelt und zwar im Bewusstsein dessen, was Karlsruhe gesagt hat. Und das kann doch nur bedeuten, der Gesetzgeber will eben nicht, dass das im Strafverfahren eingesetzt wird und\ndas muss man dann eben auch einhalten als Ermittler. Also für mich ist das einigermaßen unfassbar, dass jetzt ein Trojaner, wie das BMI sagt, ähm doch wieder im Strafverfahren eingesetzt."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:20:22",
+      "text": "Also zumal halt das große Problem, also der damals, dass die ähm der Trojaner im im für die Terrorabwehr zugelassen wurde, ähm hat ja auch durchaus einen rechtstrogmatischen Hintergrund, nämlich dass halt ähm in dem Fall, wo man halt einen.\nTrojaner auf so einen Rechner aufbringt, ist halt die Beweisintegrität dieses Systems ja irgendwie hochgradig fragwürdig, ne? Also du kannst ja nicht mehr sagen, nachdem du halt angefangen hast, da falls rauf zu spielen, also wenn man normale Computerforen sich macht so, dann\nwenn du halt Beweissicherung machst auf den digitalen Gerät, dann ist das allerletzte was du tun willst ist irgendein Wald auf diesem Gerät verändern\nNe, also weil du dann kannst du eigentlich nur noch so bedingte Aussagen darüber treffen, äh was jetzt auf diesem Gerät drauf war. Also und ähm halt, wenn da so ein Trojaner drauf ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:04",
+      "text": "Ein bisschen wie mit einer offene Chipstüte auf den Tatort kommen so, ne?"
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:21:07",
+      "text": "Ja genau, so halt so mal mit dreckigen, dreckigen Botten und offener Chipstüte da lang laufen und irgendwie seine Haarschuppen verteilen, ja. Und die ähm und diese\nDiese Integrität ähm des Beweismittels ist ja fürs Strafverfahren relativ wichtig. So, wir haben ja in Deutschland halt zwar eine relativ Lachse, äh Struktur der Beweiswürdigung, das heißt, der Richter kann im wesentlichen würdigen, was er will. Aber trotzdem ist natürlich so, dass in dem Augenblick, wo ich jetzt\nVerteidigen müsste, der halt ein kindoralisierten Rechner hat und ist da zum Beispiel immer Anwesenheit von bestimmten Falls auf diesem Rechner geht. So, dann wäre natürlich das allererste, was die tun, wo du diesen Trojan auseinandernehmen.\nOder mich darauf berufen, Entschuldigung, offensichtlich hat, hat dieser Computer Sicherheitslücken, weil sonst wäre der mit dem Trojaner gar nicht drauf gekommen. Äh keine Ahnung, wie diese Fallzahl drauf gekommen sind. Ne, also ist halt eine offensichtliche Verteidigung, die tatsächlich auch schon ein paar Mal benutzt wurde.\nIn dem Fall ging's dann halt um Rechner, die ähm kriminell troanisiert wurden. Und die äh deswegen ist halt die die Verwendung im Strafverfahren, wo man Beweise.\nGerichtsfest sichern muss, äh mit so einem Trainer natürlich massiv schwierig und das war auch einer der Hintergründe, warum sie erstmal gesagt haben, okay, na gut, wir brauchen uns für die Terrorabwehr, wo es halt vielleicht nicht unbedingt direkt um Strafverfahren geht, sondern um Verhinderung von Straftaten und vorhinein, äh wo es,\ndie Anforderungen halt doch nicht so groß."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:18",
+      "text": "So ein bisschen der digitale V-Mann, ne, so äh man schleust das sozusagen in dieses System ein und am Ende äh kann man das System gar nicht mehr bewerten, weil es schon komplett unterwandert ist und man gar nicht mehr weiß, was von."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:22:28",
+      "text": "Ja, das ist das ist eben genau das Problem, nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:30",
+      "text": "Eingeschleust wurden."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:22:31",
+      "text": "Das ist auch der Grund, weswegen diese Unterscheidung Trojanereinsatz quasi im großen Stil online durchsuchen und Quellenticker, Iso problematisch ist, weil eben die Integrität des Systems\ndurch jeden Trojaner ja im Prinzip gleichermaßen beeinträchtigt ist, ne? Drin ist drin, ja? Ähm das kann man allenfalls dann einfangen, wenn die Software\nim Detail geprüft ist. Also wenn man wirklich ganz genau weiß, was für ein ist da eingespielt worden, wenn das signiert ist und wenn die Quelltexte von irgendeiner unabhängigen Stelle überprüft worden sind, ne? Wir wissen alle, wie schwer das überhaupt ist,\nSoftware darauf hinzuprüfen, was sie nicht kann, ne? Man kann natürlich gucken, was macht die denn da eigentlich, aber welche Easter noch versteckt sind ähm das ist von außen eben so, sagen wir jedenfalls äh alle ITler und das ist, glaube ich, auch die Position des Clubs seit ewigen Zeiten. Das ist von außen eben einfach nicht sicherzustellen.\nUnd wenn man das sicherstellen will, gibt's eigentlich nur Quelltextprüfungen äh und bauen äh und signieren unter kontrollierten Bedingungen. Alles andere ist letztlich Voodoo."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:23:25",
+      "text": "Und selbst dann hast du halt ein Problem. Es gibt ja diesen schönen, vielleicht kannst du ja noch an die Links tun, den anderen C-Contest. Kennst du den? Das ist ein ein Wettbewerb, der äh darum.\nDarum der Hände genau.\nDa geht es darum den eine also Software zu schreiben die eine bestimmte Aufgabe erfüllt ohne dass man das Code ansieht.\nNe? Und ähm,\nAlso das äh wenn man da halt so reinguckt so was was da halt so geht, dann denkst du dir so, naja also Gott, South Code ordet gegen Leute, die nicht wollen, dass ihr South geordnet wird, ist halt äh auch eine echt schwierige Sache so. Und ähm,\nAlso damit kann man halt auch relativ schön zeigen so mit den mit den mit den Gewinnern von den Contesten. Ähm wie,\nAlso wie schwierig ist es halt eben diese Aussage zu treffen, dass man halt mit Sicherheit sagen kann, äh was dieser Trojaner tatsächlich jetzt tut oder nicht tut oder ob er nicht doch noch eine versteckte Nachladefunktion hat, die du halt über irgendeiner äh irgendeinen\nEine legale Funktion zum Beispiel aktivierst. Ja und das ist halt eine ähm\neine Schwierigkeit, die auch nicht weggehen wird, so und wo man halt nur sagen kann, okay, man kann halt mit hohem Aufwand und irgendwie viel Mühe und viele Augen gucken drauf, äh denen die Wahrscheinlichkeit, dass sowas da drin ist, halt reduzieren. So, aber man kann's das nicht\nkannst du heute nicht absolut sicherstellen."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:24:48",
+      "text": "Kann man nicht, ne? Aber trotzdem denke ich ähm wir hatten das Stichwort hier eben auch schon mal ähm.\nTrojanern, glaube ich, eine der zentralen Fragen eigentlich die Vertrauenswürdigkeit des Einsatzes, ne? Wir haben eben schon gesagt\nim Prinzip ist drin erstmal drin, wenn man auf dem Rechner ist, wenn man da irgendwelche Software fernsteuern kann, dann kann man prinzipiell so ziemlich alles machen auf dem System und deswegen ist die Frage, wie fängt man diese,\nunbeschränkten Möglichkeiten eigentlich wieder ein. Und ich denke, äh irgendeine Form äh den Trojaner wirklich effizient zu kontrollieren, ist,\nist einfach zwingend erforderlich in einem Rechtsstaat, damit man eben dieses Vertrauen herstellen kann. Ich meine, die Sicherheitsbehörden haben zweitausendelf mit dem Bayern Trojaner, jedenfalls bei mir, erhebliches Vertrauen verspielt, denn\nauch da, das darf man ja nicht vergessen, gab es ja Ermittlungsrichterliche Anordnungen und es wurde immer hoch und heilig versprochen,\nmachen hier nur Quellenticker über und was dann tatsächlich passiert ist, ähm war eben eine komplette Onlinedurchsuchung. Das muss man einfach so deutlich sagen. Das heißt also, da wurde ein\nBürger oder wurden es waren ja mehrere Trojanereinsätze, also mehrere Bürger mit verfassungswidrigen Mitteln ausgespäht, nicht? Das ist in einem Rechtsstaat so ziemlich der Gau. Und ähm und insofern muss man sagen, was das\nblinde Vertrauen angeht, nachdem unter die Polizei wird sich schon ans Gesetz halten\nähm damit kommt man jedenfalls auf diesem Gerichtsgebiet, denke ich, nicht weiter und ähm das ist jetzt nicht mal nur unbedingt der Tatsache geschuldet, dass die alle äh quasi böse Jungs wären, im Gegenteil, es ist eben auch vieles einfach Graubereich, nicht was ist denn eigentlich laufende Kommunikation, wir hatten eben schon das Stichwort,\nScreenshots, ja? Ähm da wurde dann damals argumentiert, naja, wenn ich mit einem Screenshot äh ein Chatfenster.\nBilde, dann ist das ja schließlich die Abbildung laufender Kommunikation, also darf ich das, ne? Und dabei wurde ausgeblendet, dass auf dem Bildschirm natürlich mehr zu sehen ist als nur das Chatfenster und außerdem sehe ich natürlich dann auch, was jemand in seinem Chatfenster gerade,\nwas aber möglicherweise noch gar nicht über die Leitung geht, hängt so ein bisschen von der Chatsoftware ab, ne? Aber möglicherweise muss ich ja nochmal unterdrücken. Das heißt also, das ist grade noch keine laufende Kommunikation bis dahinter gedrückt worden ist. Und insofern ist es einfach schon mal gar nicht so einfach zu definieren, was ist eigentlich laufende Kommunikation und das möchte ich\neigentlich jetzt ähm auch nicht irgendwelchen Polizeibeamten überlassen und zwar einfach deswegen, weil die verständlicherweise und ja auch\nirgendwie erwünschter Weise so einen gewissen Jagdtrieb haben, ne? Und dann im Zweifel eben die Grenzen der laufenden Kommunikation äh auch gerne mal überschreiten. Oder ein anderes Beispiel ist, ähm\nPGP, ja, also verschlüsselte E-Mails, da weiß man ja, wenn man die, wenn man da auf Senden drückt, dann gibt's im Grunde passieren zweierlei. Erstmal wird die E-Mail verschlüsselt, lokal und dann gibt's eine verschlüsselte Version und erst die geht über die Leitung.\nEhrlich ist. Ähm ist Gegenstand der laufenden Kommunikation nur die verschlüsselte E-Mail,\nAber äh da mache ich mir keine Illusionen. Selbstverständlich werden die Ermittler im Zweifel ähm schon einen Schritt vorher ansetzen, bevor da irgendwie kommuniziert wird, werden die natürlich die E-Mail\ndie dann ins GPG oder ins reingeschoben wird äh mitschneiden wollen, obwohl das streng genommen eben gerade keine laufende Kommunikation ist, ne? Die werden halt argumentieren, das verschlüsseln und das Absenden, das ist doch irgendwie ein Vorgang und das ist alles laufende Kommunikation, aber wenn man ehrlich ist, das ist gerade keine laufende Kommunikation. Wirklich kommuniziert wird, nur die verschlüsselte E-Mail\nund ich kann mir beim besten Willen nicht vorstellen, dass das die Polizei freiwillig einhalten wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:55",
+      "text": "Du hast gesagt, dass jetzt die aktuellen Ziele sind jetzt nicht nur im Ausnahmefall, sondern auch bei normalen Strafverfahren äh zum Einsatz gebracht zu werden, die Trojaner."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:28:06",
+      "text": "So sagt es das BMI, genau. Wir hatten."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:28:08",
+      "text": "Ohne ohne tatsächliche Rechtsgrundlage muss man dazu sagen."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:28:10",
+      "text": "Genau, also das, das ist zum Beispiel mal wieder, das muss man auch mal deutlich sagen, ein Verdienst von Netzpolitik, nicht, die die Presse hat im Großen und Ganzen\nentweder gar nicht nachgehakt oder einfach kommentarlos abgedruckt, was der BMI-Sprecher gesagt hat. Netzpolitik hat mal nachgehakt und hat einfach mal gefragt, liebe Leute, was ist denn jetzt eigentlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:25",
+      "text": "Politik Punkt org."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:28:27",
+      "text": "Also Markus und seine Leute,\nNetzpolitik Punkt org, die haben mal genauer nachgehakt und haben gefragt na ja auf welcher Rechtsgrundlage soll denn eigentlich der Trojaner zum Einsatz kommen? Wir haben eben schon gesagt, richtig saubere Rechtsgrundlage gibt's nur im BKA-Gesetz, ne, Terrorabwehr.\nDas steht natürlich in der Antwort des BMI auch drin. Daneben aber sagt das BMI, der Trojaner soll eingesetzt werden im Strafverfahren,\nWie gesagt, ohne Rechtsgrundlage und außerdem auch von den Geheimdiensten, wo es eben auch keine Rechtsgrundlagen gibt, jedenfalls keine spezifische für den Trojanereinsatz, ne. Ähm die wollen das im Grunde überall einsetzen, wo im Gesetz irgendwas von Telekommunikationsüberwachung steht,\nähm und dabei völlig ausblenden, dass das\neben keine normale Telekommunikationsüberwachung ist, sondern ein Trojanereinsatz, aber das steht in der Anfahrt sogar ausdrücklich drin, ein Trojaner ist nach BMI einfach nur eine spezielle Form der Telekommunikationsüberwachung und das dabei Rechner eben mit Schadsoftware infiziert werden, wird komplett ausgeblendet. Das finde ich schon äh\nAlso gerade im Licht der Bundesverfassungsgerichtsentscheidung und im Lichte des Bayern Trojaners Skandals ein starkes Stück."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:29:23",
+      "text": "Was ja auch äh kritisiert wurde, äh unter anderem von Gerhard Baum.\nIst, dass jetzt vor allem das ganze jetzt durchgezogen wird, obwohl im April nochmal eine neue Entscheidung in dieser Thematik ansteht. Was was für eine Entscheidung steht da konkret an?"
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:29:43",
+      "text": "Sie haben ja gerade gesagt, es gibt eigentlich nur zwei klare Grundlagen bislang für den Trojanereinsatz. Das sind eben diese beiden Paragraphen zwanzig K und zwanzig L im BKA-Gesetz.\nUnd ähm eine ganze Reihe von Paragrafen, unter anderem diese beiden aus dem BKA-Gesetz sind schon seit vielen Jahren bei dem Bundesverfassungsgericht wieder angegriffen. Da gibt's auch eine Verfassungsbeschwerde von\nBaum und Hirsch und noch ein paar anderen Leuten\nund da war im vergangenen Juli eine mündliche Verhandlung da war für den Club Konstanze kurz als Sachverständiger geladen, ich war da für Amnesty International und Netzpolitik Punkt org als Sachverständiger geladen\nUnd in dieser Verhandlung ging es um ganz vieles. Das war ein ganzer Tag mitten, wo ganz viele Aspekte des BKA-Gesetzes durchleuchtet wurden. Unter anderem\naber auch diese beiden Normen zum Trojanereinsatz. Und ähm das war vor allem deswegen so lustig,\nweil die auch als Experten geladen hatten, den Ermittlungsrichter des Amtsgerichts Wiesbaden ja, der also dort zuständig ist, Wiesbaden war, dass BKA dort seinen Sitz hat, ähm um Trojanereinsätze anzuordnen\nja? Äh also nicht etwa irgendwie in drei Richtergremium, Landgericht irgendwie sonst was. Nein, der Amtsrichter, der sonst eben\nirgendwie Wohnungsdurchsuchung anordnet und Blutentnahmen, der Amtsrichter macht dann eben mal Trojaner-Einsätze\nman muss sagen, das war ein sehr engagierter Kollege, aber der hat mal so ein bisschen Einblick gegeben, wie das eigentlich läuft, wenn da so ein Trojaner eingesetzt werden soll. Und da sagte dann so, naja, da kam dieser Antrag.\nUnd äh ja, Trojanereinsatz hatten wir auch noch nichts von gehört vorher, da haben wir das mal gegoogelt, worum geht's denn da eigentlich? Und dann haben wir mal ins Gesetz.\nUnd ja, da steht ja auch relativ wenig drin, wie das genau laufen soll\nUnd dann hat er also ganz offen zugegeben, er hat sich da im Wesentlichen mit seinen Amtsrichterkollegen in der Kaffeerunde beraten, wie so ein Trojanereinsatz rechtsstaatlich ablaufen sollte. Und dann hat er im Grunde Kraft seiner eigenen Kreativität sich mal überlegt,\nmüsste man das machen? Und hat da irgendwie so einen, ich glaube, sechsseitigen Beschluss geschrieben. Und ich mein, Respekt, ja, dass er sich so viel Mühe gegeben hat, das ist im Zweifel ja überdurchschnittlich viel Mühe\naber auf der anderen Seite kann das ja nicht wahr sein, ja, dass da irgendwie ein Amtsrichter, der\nOffensichtlich von der Technik völlig überfordert ist, ähm dann so kreativ werden muss und sich überlegen muss, was sind eigentlich die Spielregeln für den Trojanereinsatz, weil der Gesetzgeber dazu eben keine Spielregeln geschrieben hat? Das kann ja nicht wahr sein. Und ähm das war auch sehr deutlich.\nDass die Richterinnen und Richter des ersten Senats völlig schockiert waren\nAlso als die hörten, wie so ein Trojaner in der Praxis von der Leine gelassen wird, da konnte man entsetzen bis Panik auf den Gesichtern sehen und ähm man weiß nie, was das Bundesverfassungsgericht entscheidet. Aber ich würde damit rechnen, dass sie den Gesetzgeber da nochmal zum Nacharbeiten verpflichten und sagen, wenn schon Trojaner, dann muss der Gesetzgeber auch klare Spielregeln schreiben\nwas die Quellen angeht, muss eben in diesen Spielregeln auch drin stehen, wie die Beschränkung auf die laufende Kommunikation eigentlich sichergestellt werden kann."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:32:23",
+      "text": "Hat eigentlich dieser Amtszüchter in der Verhandlung da durchblicken lassen, dass das Urteil von irgendwie zur Onlinedurchsuchung kannte."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:32:29",
+      "text": "Davon war nicht die Rede. Nein, aber davon gehe ich aus, der war der war motiviert. Das war jetzt, das war wirklich jetzt nicht irgendwie äh der war ja nicht irgendwie am pfuschen oder so. Der war halt einfach nur völlig überfordert mit der Frage und ja. Auf der anderen Seite, wenn er sagt, wir haben's gegoogelt, das spricht jetzt nicht dafür, dass er das Urteil kannte."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:32:43",
+      "text": "Ja, also deswegen, also vielleicht hat er das Urteil dabei gefunden, dann hat er wahrscheinlich dadrin gesehen, Köln TKI schon okay und dann hat er angefangen, kreativ zu werden."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:32:50",
+      "text": "Ich weiß nicht, ob ich Ihnen das die Entscheidung von der er sprach, betraf interessanterweise, aber auch so eine Art volle Onlinedurchsuchung, ne? Das war also jetzt\nwirklich Terrorabwehr, Onlinedurchsuchung nicht Querenticker, wie was von der er da berichtete. Aber trotzdem, also das äh der Kern ist ja äh Trojaner einsetzen ohne gesetzliche Spielregeln und der Amtsrichter überliegt sich da irgendwas, das das kann's irgendwie nicht sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:10",
+      "text": "Aber das ist jetzt sozusagen die äh Situation. Das äh BKA hat jetzt offenbar einen Trojaner, über dessen technische Qualität man nicht viel äh sagen. Bestenfalls äh etwas munkeln äh kann.\nDer dann äh vielleicht in irgendeiner Form Maßnahmen, äh also wo Maßnahmen ergriffen worden im Design des Codes, der das Desaster, dieses Digitastrojaners irgendwie vergessen machen soll, kann man sich nicht so leicht vorstellen, aber,\nNehmen wir das jetzt einfach mal so äh hin."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:33:39",
+      "text": "Ich meine, es gab ja, es gab ja zwischendurch auch noch so Meldungen, dass halt zum Beispiel das ähm äh BSI Bundeslandversicherung Informationstechnik ähm herangezogen wurde, um an diesem Trainer mitzuarbeiten, ähm spezifisch hat denn als Politik der aufgedeckt,\nähm äh an dem äh mehr Kryptofunktion, also dass die halt sozusagen gefragt wurden, ob die.\nFunktion zum Daten nach Hause schicken, ob die hinreichend Kryptographisch abgesichert authentifiziert ist und wo aber.\nBis zumindest das von dem wir wissen so, ähm in anderen Fällen ist es halt aber auch schon so, dass es gerade das Innenministerium zum Beispiel sehr stark darauf gedrungen hat, dass da auch die anderen Leute, also in die Mehrwertabwehrabteilung beim BSI, die ja darüber große Erfahrung verfügt.\nDass die da halt mit reingeknechtet werden sollte, also um dafür zu sorgen, dass halt dieser Trojaner halt irgendwie möglichst.\nDiese Computerinfizieren kann. Und das bringt dann halt natürlich auch noch so einen Aspekt da rein, ähm der immer wieder gerne übersehen wird, nämlich, dass der Staat tatsächlich dann im Business ist.\nNe, das heißt, also der Staat braucht halt Sicherheitslücken, um Computer zu infizieren. Der Staat äh muss diese Software testen gegen Antivirus-Software, gegen moderne Betriebssysteme, um sicherzustellen, dass sie dagegen funktioniert.\nSo und ähm wenn wir uns halt so angucken, wieso halt die Entwicklung ist in über aktuellem Betriebssystem, insbesondere bei Mobilgeräten.\nDann wird das halt auch ziemlich schnell ein interessantes Spiel infizieren will mit einem Trojaner, das ist halt schon irgendwie kein, also nicht so einfach so. Da muss man halt schon irgendwie Geld auf den Tisch legen für Sicherheitslücken, beziehungsweise diese Sicherheitslücken entwickeln. Und eigentlich.\nWäre er der Staat und insbesondere auch das BSI.\nIn der Rolle zu sagen, okay, sobald wir Kenntnis von so einer Sicherheitslücke haben, sobald wir wissen, dass da so eine Sicherheitslücke ist, ist der erste Anruf natürlich erstmal zum Hersteller, um die Sicherheitslücke gefixt zu bekommen, weil davon sind wir alle betroffen.\nUnd jede ungefixte Sicherheitslücke, von der wir wissen, die halt eine Truanisierung ermöglicht, ist halt eine große Sicherheitslücke. Das ist halt eine Sicherheit nicht so ein\nsondern ist dann halt entweder eine eine große Sicherheitslücke oder eine also eine Kette aus verschiedenen Explods, die es halt ermöglicht, so ein so ein zum Beispiel so ein.\nIPad oder was auch immer zu infizieren und äh wenn so eine Lücke da draußen rumfliegt, dann finden die halt auch andere Leute. Ja und das hat äh dass der Staat halt in diesen Interessenskonflikt kommt, zu sagen, okay, ich muss jetzt.\nEigentliche aus der aus der Daseinsfürsorge abgeleitete Pflicht dem Bürger,\nHelfen seiner IT-Security in den Griff zu bekommen und irgendwie die Sicherheitslücken zu schließen. Mit meinem Interesse als Staat halt irgendwie in die Computer von Verdächtigen einzudringen, irgendwie ins Verhältnis bringen. Ist eigentlich\nrechtlich auch eine relativ unauflösbarer Konflikt, ne? Also ich meine, da gibt's auch nicht wirklich andere\nBeispiele für wo sowas entsteht, ne. Also so tatsächlich Sicherheitslücken in in Kauf genommen werden. Ist es bei Schlössern und Alarmanlagen eigentlich."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:36:27",
+      "text": "Also jedenfalls wüsste ich nicht, dass die quasi bewusst schwach gemacht werden, denn ganz ehrlich, wenn wenn man für eine Wohnung einen Durchsuchungsbeschluss hat, dann ruft man halt einen Schlüsseldienst und wenn's gar nicht anders geht, dann kommt das SEK mit der fünfzig Kilogramm\nund äh rennt die Tür ein, ne? Also das ist ähm das ist da gibt's in der Tat keine Parallele, dass man hofft, dass\ndass es irgendwelche Sicherheitslücken gibt, die sonst schon keiner finden wird und die so quasi in der Hinterhand hält, um die mal staatlicherseits einsetzen zu können. Also ganz interessant in dem Kontext, wo du jetzt sagst, Eiweiß Explods, ne, ähm es gab natürlich in der Tat auch schon mal iOS Trojaner, wenn ich weiß, von Finn Fischer oder so, das ist mal äh von von so einem kanadischen Institut auch äh analysiert worden.\nUnd äh die hatten sich diese\nad hoc Distribution, die normalerweise von Developern eingesetzt wird, um um Beta-Version zu verteilen, zunutze gemacht. Da muss man dann zwar so ein paar Warnungen wegklicken\naber ähm das ging früher so, dass man dann später nicht mehr sah, dass diese Software tatsächlich auf dem\nist, das geht heute aber so einfach nicht mehr. Also da hat Apple nämlich nachgearbeitet. Äh man muss da regelmäßig bestätigen und die entsprechende App wird mit so einem kleinen orangefarbenen Punkt gekennzeichnet. Ähm also dieser Distributionsweg, der ja keinen Export erfordert hat, der dürfte so ohne weiteres wohl nicht mehr funktionieren.\nUnd ähm ich weiß nicht, wie es gehen soll. Also ich habe gerüchteweise gehört, dass iOS trotzdem äh ins Visier genommen werden soll, aber da weiß ich persönlich nicht, wie es ohne Export gehen soll."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:37:44",
+      "text": "Ja, ich meine, irgendwas geht halt immer, wenn du halt spätestens, wenn das Telefon halt physisch eine Hand hast, dann hast du halt ähm.\nMeistens irgendwie Möglichkeiten, aber es wird halt schon verdammt hart. So und also insbesondere, wenn jetzt halt diese diese Apple FBI-Diskussion da noch mit reinholen, ähm dann ist halt klar absehbar, dass halt die\nähm die Hürde zum einen bringen, auf einigermaßen gut gesicherte IT-Systeme ähm wird halt schon hoch, das heißt nicht, dass es nicht geht\nalso ganz klar ist immer nur 'ne Frage des Willens aber es wird halt schon problematisch und die."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:17",
+      "text": "Bevor wir äh da vielleicht reingehen, äh wollte ich noch mal kurz äh halb zusammenfassen und nochmal nachfragen. Also das BSI war, das BSI konkret bei diesem Digitals äh\nTrojaner involviert war es nicht."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:38:31",
+      "text": "Bei dem neuen jetzt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:32",
+      "text": "Jetzt sind sie drin, aber mehr in so einer beratenden Funktion oder wie äh soll man das."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:38:37",
+      "text": "Ist halt unklar, ne? Also die Akten, die Netzpolitik Octa halt befreit hat, sagen halt nur, dass sie involviert waren, was das BSI vorher bestritten hatte.\nÄhm und die äh was die sagen, ist halt irgendwie, dass sie nur drin involviert waren, halt die Kryptofunktion zu prüfen,\nAlso hat zu prüfen, dass die Kommunikation nach Hause identifiziert ist und dass halt die ähm die Kontrollstruktur, also wie man halt auf diesen Trojaner Befehle gibt\ndie halt äh ordentlich verschwinden, autifiziert ist. So, das sind wir so und da könnte man halt in in weiter Interpretationen des der Aufgaben des BSI sagen, na gut, dafür sind sie halt zuständig, sicherstellen, dass irgendwie staatlicher IT-Kram halt irgendwie gesichert ist, also zumindest.\nAuthentifiziert ist, aber angesichts dessen, dass halt\nja eigentlich so der die Linie des BSI war ja so halt BSI für Bürger, wir machen kümmern uns um eure IT und wir warnen euch, wenn eure E-Mail-Adresse in irgendwelchen Forrungen geteilt wird und so. Also diese ganzen Geschichten, sowohl sie halt eigentlich sagen, okay\nmöchten eigentlich dein Freund sein, wir möchten,\ndir einen Vertrauensbehörde sein, wenn's um IT-Security geht und auch per Gesetz ja Sinn für Unternehmen, ne, also die müssen ja melden nach dem neuen IT-Sicherheitsgesetz, wenn sich halt schwere Angriffe hatten, dann müssten sie auch ans BSI mailen. Und dann so eine Behörde\ndazu zu bringen, ähm ja, quasi in staatlicher Influtrationssoftware zu machen und da halt irgendwie zu helfen, ist natürlich, also,\nexempliziert halt diesen, diesen Konflikt so zwischen eigentlich hat der Staat ja halt eine Fürsorgepflicht und auf der anderen Seite ist er dann plötzlich im Mehrwert Business mit all seinen Institutionen so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:06",
+      "text": "Das ist so ein bisschen als als äh man stelle sich mal jetzt vor, bei so einem viel benutzten Sicherheitsschloss, ja, was so äh jedes zweite deutsche Haus äh dann in der Hintertür sozusagen eingebaut hat, ja, würde man so eine grundsätzliche\nSchwäche finden, aber man würde sozusagen nicht davor warnen, äh weil, könnte ja sein, dass man bei einem dieser äh fünf Millionen Häuser mal.\nRein muss oder will, so ja und äh lässt es deswegen offen und im Prinzip ist das ja eigentlich ein,\nein Kernkonflikt, also es ist ja sozusagen also in meiner Sicht der Dinge zumindest\nwiderspricht es einfach der Politik, die das BSI an der Stelle eigentlich führen müsste, also nicht nur, dass sie da nicht involviert sein sollten, sondern eigentlich müsste die\npure Existenz eigentlich einer einer solchen Geschichte, äh bei denen die Alarmglocken äh läuten lassen und sagen, äh hör mal, wir können ja nicht\nTeil des äh Schwarzmarktes äh werden und dann noch dafür sorgen, dass sozusagen noch mehr Leute sich da drauf, das Interesse ist ohnehin da, das wissen wir aber, äh da sich sich da sozusagen auch noch zum Komplizen zu machen, ist ja\nauch schon problematisch."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:41:12",
+      "text": "Es ist in der Tat problematisch, ne? Wo, aber man muss dann noch wiederum dazu sagen, dass ja dieser konkrete Trojaner\njetzt eben soweit man weiß, jedenfalls von niemandem geprüft worden ist, nicht? Also auch das BSI war, soweit ich das jedenfalls verfolgt habe, war sie die Konzeptionierung eingebunden, das ist eben diese sogenannte besondere Leistungsbeschreibung, was im Wesentlichen in der der äh die technischen Spezifikationen des Trojaners sind und auch so die die Funktionsbeschreibung.\nAber ähm quasi die Software, ja, Quellcode oder Balanry hat, soweit ich das weiß, jedenfalls noch niemand geprüft. Ich habe gerüchteweise gehört, dass äh ein TÜV da eingebunden worden sein soll.\nInsofern nicht ganz äh unproblematisch ist, als der TÜV äh ja formal privat rechtlich ist. Das sind ja privatrechtliche Vereine, äh die\nStaat mit dem Business äh Autos prüfen zum Beispiel beliehen worden sind, nicht? Aber."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:42:00",
+      "text": "Na die hatten doch, aber die hatten doch bei dem anderen Turner, also fährt ja da zweiglasig, die haben ja noch an diesem Fin Fischer Trojaner,\nauch noch weiter basteln lassen. Das heißt also, die haben halt der dieser Firma Gamma,\ndie hatte auch schon damals im in dem Kontext bekannt wurde, dass deren Trojaner an,\nÄgypten zum Beispiel geliefert worden, als ägyptische Regime. Und die haben ja vom BKA so ein, also sie haben ja erst so einen Test, so einen Test machen lassen und dann haben sie diesen Trojaner prüfen lassen, ja von CSC.\nNe, also hat eine NSA-Zulieferer aus den USA, der halt auch eine deutsche äh hat und ähm also hat so eine große IT-Consulting-Bude, die halt auch Services macht. Und\ndie halt einen sehr tiefen Hintergrund in diesem ganzen NSA-Überwachungsbusiness haben und in Deutschland aber halt ähm viel in Behördensoftware machen\nund die haben äh ja also den Auftrag bekommen zu prüfen, ob dieser.\nDigitast, äh dieser dieser Finfischer Trojaner mit der Leistungsbeschreibung übereinstimmt. Ne, das heißt also, die sollten sozusagen eine,\neinen Penntest machen, wo sie geprüft, also prüfen, ob diese äh also ob da sozusagen äh die Einforderungen eingehalten wurden. Und genau das.\nBei diesem Zweifel auch passiert sein. Das heißt, wenn sich irgendjemand genommen haben, der bereit war, das zu tun und haben denen die Anforderungsbeschreibung auf den Tisch gelegt und dies auch für öffnen Tisch gelegt und sagt, hier prüft man schon. So und.\nDas ist natürlich auch ein so eine Frage, wo.\nWenn das dann irgendwie natürlich zu Gerichtsprozessen kommt, dann werden die sich halt genau wie damals die Banken immer sagen, so ja nee, bei uns ist alles sicher, wenn die sich halt da hinstellen und sagen, ja, wir haben's prüfen lassen\nGutachten in dem steht halt irgendwie die Anforderung, die Leistungsbeschreibungen wurden eingehalten. Alles schön legal hier, ne? Also die werden natürlich einen Teufel tun,\näh da irgendwie einem Betroffenen oder Angeklagten halt irgendwie Zugang irgendwie zucursen oder oder Beine rezugeben oder zu irgendwas anderem als vielleicht den Protokollen, die aus ihrer Software rausfallen, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:56",
+      "text": "Das ist so ein bisschen wie mit dem Abgasskandal jetzt auch, ne, ist ja auch alles geprüft worden, aber halt auf Basis."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:44:00",
+      "text": "Ja, klar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:01",
+      "text": "Sehr schwammigen äh Vorgaben."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:44:04",
+      "text": "Die Messwerte waren okay, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:05",
+      "text": "Es war alles richtig."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:44:06",
+      "text": "Und bei diesem dieses BSI-Problem ist halt insofern auch wesentlich, weil ähm\nschon seit vielen Jahren von das BSI heute eine unabhängige Behörde wird, also dass wir sagen, okay, der ähm um halt solche Vorfälle zu vermeiden, muss es halt aus der vor allem aus dem Verantwortungsbereich des Innenministeriums raus\nmomentan das BSI halt gerne dem Innenministerium nachgeordnete Behörde. Heißt, die sind halt auch weisungsempfänger. Und tatsächlich war wohl diese äh\nDiese Geschichte mit dem mit der Arbeit im Trojaner war halt einfach eine Weisung. Die konnten halt nicht anders, ne? Also die wurden dann halt einfach dazu verdonnert. Und ähm damit sowas nicht vorkommt, nochmal vorkommt, äh wäre es halt sehr sinnvoll, da dem\ndem BSI halt eine eine deutlich unabhängige Rolle zu geben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:45",
+      "text": "Wo würdest du es denn einsortieren?"
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:44:46",
+      "text": "Äh wie äh Datenschutzbeauftragte als unabhängige Bundesbehörde. Mit halt entsprechenden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:51",
+      "text": "Gar kein Ministerium unterstellt."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:44:54",
+      "text": "Also zumindest keiner inhaltlichen Fachaufsicht, ne, wenn überhaupt deine Rechtsaufsicht, wenn überhaupt, ja?\nAlso ich meine, es gibt ja solche Konstruktionen und die Bundesbeauftragte für Datenschutz und Informationsfreiheit ist ja inzwischen nachdem da äh Europa immer wieder Nachbesserungen gefordert hat, auch unabhängig geworden.\nAlso das ist eine\nVorgabe des europäischen Rechts schon die alte Datenschutzrichtlinie fordert, dass die nationalen Datenschutzaufsichtsbehörden äh eben unabhängig sind und das heißt also insbesondere nicht in irgendeine Weisungsstruktur eines Ministeriums eingebunden. Das war ähm der Bundesdatenschutzbeauftragte leider noch nicht\nlange Zeit nicht, aber ähm nachdem dann die Kommission einigermaßen Druck gemacht hat, äh hat's im vergangenen Jahr eine Novelle des ähm des Bundesdatenschutzgesetzes gegeben und seitdem ist diese Behörde tatsächlich unabhängig geworden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:39",
+      "text": "Jetzt ist ja diese ganze Debatte\ndoppelt aktuell, nicht nur jetzt durch diese Meldung, dass der Trojaner, der neue Trojaner im Anmarsch ist, in welchem Zustand er sich auch immer befinden mag, sondern du hast ja eben auch schon anklingen lassen. Wir hatten das ja auch äh letzte Woche bei Lokbuch Netzpolitik schon debattiert, die jetzt frisch aufgeflammte Debatte rund um äh Apple und das FBI.\nUm es nochmal kurz ähm anzureißen ähm gibt's sozusagen die Aufforderung des FBI an Apple\ndoch bitte eine spezielle Software bereitzustellen, weil sie halt in dieses eine Telefon nicht mehr hereinkommen und Apple stellt sich jetzt auf die Hinterbeine und sagt, nee, det äh wollen wir jetzt äh nicht und ist auch bereit, das wirklich bis zum höchsten\nGericht durchzufechten, an deren Entschlossenheit kann man, glaub ich, kaum zweifeln.\nEinige sehr interessante Fragen, die diese ganze Debatte aufwirft, die für meinen Geschmack hier tief mit rein reicht. Ich glaube, du hast jetzt, ich habe da eine Kolumne jetzt nicht gelesen, du hast eine FAZ, was jetzt an diesem."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:46:39",
+      "text": "Am Wochenende genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:40",
+      "text": "Wiederholen wir uns jetzt wahrscheinlich dann oder ich mich. Ähm ich fand jetzt besonders auch interessant die Frage.\nInwiefern, also in USA wird natürlich dann eben auch gleich über argumentiert, das lässt sich natürlich jetzt so ohne weiteres auf unser Rechtssystem nicht übertragen, aber so die äh Fragestellung zum Beispiel.\nKann eine Firma überhaupt dazu gezwungen werden, eine bestimmte Software.\nZu schreiben auf Wunsch äh des FBIs. Ja, es geht ja, du hast ja vorhin diese fünfzig,\nKilohammer, den man dann halt einsetzt, äh sozusagen, ne, um die Tür aufzukriegen. Im Prinzip fordert jetzt das FBI, weil sie sich das selber nicht herstellen können, weil das eben einfach alles nur noch im Zugriff von Apple ist in letzter äh Konsequenz. Fordert sie quasi das äh Erschaffen dieses digitalen fünfzig Kilo Hammers\nähm um halt dieses Telefon öffnen zu können. So und äh man merkt auch, dass das eine sehr politische Debatte ist, weil.\nMan sich den Fall anschaut, der ist irgendwie weitgehend aufgeklärt, es gab da andere private Telefone, die explizit zerstört\nwurden und wo aber auch schon die ganze Call Historie äh durchgegangen wurde. Also man weiß mit wem dieses Telefon äh telefoniert hat. Das sind ja alles wiederum Daten, die man vom Telefon Provider äh\nproblemlos bekommen konnte und auch bekommen hat\nJetzt geht's sozusagen nur noch um eine aktualisierte Information dieses Telefons, weil selbst von dem ja alle sechs Wochen sechs Wochen altes Backup vorliegt\nTrotzdem wird er eben mit harten Bandagen äh gekämpft und jetzt äh,\neröffnet das sozusagen diese ganze Vektor-Debatte, weil ja Apple auch selber sich auf die Hinterbeine stellt und sagt\nWir wollen auch überhaupt gar keine äh Pektor einbauen, weil wir das eben auch schon im Trojaner Fall hatten. In dem Moment, wo wir diese Tür einbauen,\nsehr viel wahrscheinlicher von anderen für ganz andere Dinge genutzt als eben für diese verhältnismäßig seltenen Fälle. Was hast du denn da so ähm."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:48:37",
+      "text": "Also ne, also wenn im deutschen Rechtssystem ist es halt durchaus ein bisschen anders, ne? Also da gibt's halt dieses dieses nachdem das FBI da vorgeht, ähm das ist ja eine."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:45",
+      "text": "Gehen will von von siebzehnhundertneunundachtzig."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:48:48",
+      "text": "Ja, das ist halt ist halt eine sehr, das ist eine sehr ist eine sehr interessante äh rechtliche Konstruktion, wenn man sich das mal anguckt. Und zwar ist der der Ursprung dessen, wann königliche Edikte im alten England und da konnte halt irgendwie der König sagen, du da, du machst jetzt das.\nEs war ein.\nNe, das heißt also, der König konnte halt einfach sagen, so, du bist Subjekt der Krone, du gehst jetzt mal da hin und machst das. So und also konnte sozusagen jeden, jede Person,\nanweisen, irgendwas zu tun. Und das haben die dann in ihr Rechtssystem übertragen, dass also ein Gericht.\nSozusagen den quasi beliebige Person, die irgendwie mit dem Verfahren zu tun haben, also die jetzt nicht dem Verfahren vollständig fernstehen.\nDinge tun, also die anweisen können, äh Dinge zu tun, die halt dem Verfahren dienlich sind. Ne, also was weiß ich, irgendwie. Du machst jetzt mal diese Tür auf, damit wir dieses Ding in Augenschein nehmen können, was auch immer.\nIn der, also deswegen ist dieses Ding von siebzehn neunundachtzig und deswegen, also ist das so alt und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:45",
+      "text": "Also im Prinzip die Einschränkungen der ersten Verfassung, also man hatte dann mal eine, aber man hat noch dazu geschrieben, na ja, aber äh manchmal gilt's nicht."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:49:52",
+      "text": "Nicht ja, nicht nur, sondern aber so in der, in der Historie\nwurde es dann immer weiter eingeschränkt, ne? Also da entstand dann sowas, was bei uns halt die Strafprozessordnung ist. So eine Strafprozessordnung steht drinne halt, hier ist die Liste der Dinge, die Ermittler tun dürfen, um halt irgendwie an Informationen zu gelangen und das ist ja im amerikanischen Rechtssystem viel mehr und durcheinander und aus\nGeschichte und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:11",
+      "text": "Und diese und diese sagenumwobenen Emenmente kamen sozusagen dazu, die das halt erweitert haben und."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:50:15",
+      "text": "Ja oder vielmehr eingeschränkt haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:17",
+      "text": "Genau, also die den Zugriff des Staates eigentlich."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:50:20",
+      "text": "Nachdem nachdem das FBI da vorgehen möchte, sagt halt, ist halt so ein quasi so eine Generalklausel, ne, also ist so ein äh so, so als wenn dann bei uns im Gesetz drin stehen würde, so und alles andere, was nützlich ist, so, ne?"
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:50:31",
+      "text": "Man muss schon sehen, das ist natürlich, es klingt jetzt erstmal total uferlos, allerdings ähm dürfen die Gerichte eben nicht alles anordnen, sondern immer nur quasi Maßnahmen an Orten als Annex zu einer Anordnung, die\nsie auf irgendeiner anderen Grundlage getroffen haben. Also,\nbeispielsweise wenn ohnehin schon eine Anordnung in der Welt ist zu einer Telefonüberwachung, dann kann man auf der Grundlage des Acts eine Telefonfirma verpflichten, noch ein ein Leitungsbündel zur Verfügung zu stellen, damit diese TKÜ-Daten ausgeleitet\nDas ist ein Beispiel. Oder\nkann, wenn man ohnehin ähm schon eine äh eine ein Hearing anordnet, also eine Anhörung von irgendeinem Beschuldigten, dann kann man damit ähm die Polizei zwingen, den vorzuführen, also quasi eine Ataxidienst zu machen. Also das heißt, es geht immer um kleinere Annex,\nAufgaben im Rahmen einer größeren Anordnung, die auf irgendeiner anderen Grundlage schon passiert ist. Und ähm die Argumentation des FBI ist jetzt hier, wir haben ja schon einen Beschluss, dass dieses iPhone ausgelesen werden kann und deswegen hat Apple ja auch schon die Daten aus der iCloud geliefert und\nUnd weil wir ja dieses Telefon auslesen, deswegen macht jetzt mal nochmal bitte die Kleinigkeit, dass ihr uns ein ein spezielles iOS liefert, ähm bei dem eben die Zahl der Tasten\näh der, der Versuche äh auf ein unendlich gesetzt ist, äh um ein neues Passwort auszuprobieren. Unter anderem, es gibt eine ganze Reihe von Funktionen, die das FBI gerne hätte\nAber ähm ich denke mal, schon allein diese Beschreibung.\nDeutlich, dass es hier eben gerade nicht um eine klitzekleine Annecks Maßnahme geht im Kontext einer größeren Maßnahme, sondern im Gegenteil, das was hier auf Grundlage des Acts gefordert wird, ist\neigentlich ähm wesentlich mehr als das bloße rausrücken von Telefondaten, es soll ja eben eine Spezialversion von iOS geschrieben werden und die sollen zum Beispiel noch nicht mal geflasht werden auf das Telefon, wie ja normalerweise das der Fall ist, sondern die soll komplett im Rahmen laufen.\nJa, das heißt also Apple soll im Grunde von null an eine Spezialfilmware\nfür dieses iPhone, wo man dann eben ähm nicht mehr begrenzt ist in der Zahl der Versuche, irgendwelche irgendwelche Passwörter durchzuprobieren. Das ist schon ein starkes Stück. Und ähm also jenseits der ganzen Verfassungsrechtlichen Fragen äh denke ich mal, dürfte da auch der Rahmen dieses Act\näh deutlich gesprengt sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:34",
+      "text": "Der er ohnehin, äh soweit ich das verstanden habe, äh insofern schon\ngesprengt ist, weil es ja eigentlich ein spezifisches Gesetz gibt, was dieses gesamte auch regelt in den USA, der sogenannte Communications,\nso und der ist halt noch aus der Clinton Bill Clinton äh error und ähm den ignoriert sozusagen das FBI, weil sich darin nämlich\näh so eine Allritz äh macht mal, was wir wollen. Äh Klausel eben gar nicht findet."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:53:03",
+      "text": "Nee, das Kalender war ja eine spezifische, also eine also eine spezifische gesetzliche Fassung, um halt irgendwie so den Wildwuchs, der da schon.\nIn den USA bestand halt irgendwie so ein bisschen einzuschränken und\naber auch den Strafverfolgern deutlich mehr Befugnisse zu geben und hat eben die Telekommunikationsfirmen halt so an der Grenze zur äh Liberalisierung des Telekommunikationsmarktes vorher gab, gab's die Notwendigkeit ja nicht, da gab's ja nur\nund als dann die Liberalisierung kam wollten sie halt damit halt die sozusagen diese Verpflichtung ja in Gesetz gießen so.\nInteressant daran ist halt eben die die Frage so wie weit muss denn eigentlich so 'ne Firma entgegenkommen.\nWie weit haben wir als Gesellschaft eigentlich das Vertrauen, dass die halt damit kein Schindluder treiben. Und das ist halt so ein bisschen so, wo ich auch so mit meinem Artikel hinten drauf hinaus wollte, zu sagen, so okay.\nWenn die sich halt die ganze Zeit irgendwie ordentlich benommen hätten, ne, also wenn die halt, also wenn FBI und die Geheimdienste halt die ganze Zeit irgendwie so agiert hätten, dass wir hinterher sagen würden, okay\nzwar oder so, mal hier oder da was raus, was sie gemacht haben, aber in der Gesamtschau finden wir das jetzt eigentlich nicht weiter tragisch, ne, also wenn die\nden Geist der Grundrechte atmen würden und halt irgendwie da so vorsichtig vorgehen würden\ndann würden wir darüber auch nicht wirklich diskutieren. Also dann würden wir sagen, so naja gut, Apple, mach mal, ne. So ist halt äh wenn sie's jetzt wirklich nur einmal wollen und sie haben's in der Vergangenheit auch immer nur eine kleine Handvoll von Fällen, wenn's wirklich um die Wurst ging gemacht so. Aber dem ist ja nicht so. Ne, also es war ja, ist ja so, dass wir\naus dem Snowdenenthüllung und aus vielen anderen Enthüllungen, die danach kamen, wissen, ähm dass die Strafverfolgungsbehörden und die Geheimdienste insbesondere\nja halt uferlos agieren, das heißt also, dass die halt immer, wenn sie den kleinen Finger kriegen, die ganze Hand nehmen und insbesondere halt die\nmehr dieses Programm, das Erste, was ja in dem NSS-Skandal hoch kam, war ja de facto die Ausnutzung von Zugängen, die für die Strafverfolgungsbehörden zu Computersystemen von großen Kommunikationsfirmen gelegt\nwurden durch die NSA. Ne, das heißt also diese diese ganze ist doch nur für Strafverfolgung wird doch nur selten verwendet. Theorie funktioniert halt überhaupt nicht mehr.\nIn der Vergangenheit ihm diese Grenzüberschreitungen gab und immer noch gibt\nEs ist ja so, dass diese dieses ganze Konstrukt von wir können diesen Behörden schon vertrauen, weil die machen halt nur ihren Job und nicht viel darüber hinaus\neinfach nicht mehr. Und daraus resultiert halt eben auch in den USA halt ja diese die Intensität dieser Diskussion, dass Leute verstehen, okay, dieses Telefon, da ist halt alles drin\nNe, also dieses Telefon ist halt irgendwie Teil meines ausgelagerten Gehirns. Wir sind halt eigentlich alle schon Cyborgs. So, wir holen hundertmal am Tag dieses Telefon aus der Tasche und gucken da drauf und wickeln unser gesamtes Leben darüber ab."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:40",
+      "text": "Und vor allem auch mittlerweile in zunehmenden Maße Informationen, deren wir uns selber überhaupt nicht mehr bewusst sind durch Sensoren und."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:55:46",
+      "text": "Genau, also ich meine, also nehmen wir mal halt irgendwie Health Kit, ja, so also,\ndann die Kombination mit deiner Uhr und dein Telefon weiß im Zweifel mehr über dich und dein deinen körperlichen Zustand als du selber, ja?\nÄhm das sind halt also diese diese Totalität der der Lebensspuren, die da drinne sind\nUnterlagen einsehen ne? Aber\nbei weitem nicht geht, aber Weitem nicht so weit, wie wenn du halt in dein Telefon guckst. Gibt's eigentlich noch sowas wie eine Tagebuchaufnahme im deutschen Recht?"
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:56:22",
+      "text": "Ja, es gibt diese Tagebuchausnahme grundsätzlich schon, aber die ist nirgendwo so richtig gesetzlich geregelt\nUnd deswegen äh ist das Bundesverfassungsgericht auch an dieser Stelle auf seine Lieblingstheorie äh verfallen, nämlich es kommt drauf an. Man muss abwägen, ja\nDas heißt also, wenn es jetzt irgendwie um Schwarzfahren geht, wird man im Zweifel das Tagebuch nicht auswerten dürfen, wenn's um einen Mordvorwurf geht, wird's im Zweifel gehen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:56:44",
+      "text": "Okay. Also gut, das ließe sich sozusagen nicht als Analogie heranziehen jetzt."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:56:49",
+      "text": "Nicht so wirklich. Es ist einfach im deutschen Recht gibt es ja praktisch keine harten Regeln. Das muss man immer sehen. Das\nBundesverfassungsgericht zieht sich fast immer auf Verhältnismäßigkeit zurück und das heißt dann immer, es wird irgendwie abgewogen. Und der Nachteil dabei ist, äh dass das Ergebnis eben vorher nicht klar ist und gerade im Strafverfahren führt das Abwägen fast immer dazu, dass es irgendwie doch geht.\nDas ist das Problem. Also."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:57:09",
+      "text": "Aber so eine Verpflichtung wie jetzt das FBI bei Apple anstrebt, wir nach deutschem Recht eigentlich nicht wirklich möglich, ne?"
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:57:15",
+      "text": "Ich denke nicht, da habe ich mich auch schon ähm habe ich schon lange drüber nachgedacht. Ich denke nicht, dass das gehen würde, einfach äh weil es in einem spezifischen Gesetz fehlt, nicht? Das ist ja schon in der\neine sehr intensive Maßnahme, intensiver Grundrechtseingriff und da ähm würde man wohl die Onlinedurchsuchungsentscheidungen heranziehen und sagen ähm dafür braucht es eine spezifische gesetzliche."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:57:34",
+      "text": "Nee, aber auch Leute, die die also die Heranziehung der Firma als Hilfspolizist in diesem Fall ähm wäre ja schon durchaus äh problematisch, ne?"
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:57:42",
+      "text": "Genau und da gibt's also jedenfalls soweit ich weiß, kein Gesetz, äh dass das regeln würde."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:57:46",
+      "text": "Also die der einzige Analogie, die mir so gekommen war, war irgendwie diese Abfrage von damals von Kreditkartendaten.\nWo die Staatsanwaltschaft ja am Ende damit durchgekommen ist, zu sagen, so wir hätten gerne nach einem bestimmten Muster von Daten gefragt. Na also quasi."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:57:59",
+      "text": "Mhm. Dieses Rastern, was damals bei Mikado passiert ist."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:58:01",
+      "text": "Quasi genau, ja, genau. Damit sind sie am Ende durchgekommen, bizarrerweise. Ähm aber das war ja sozusagen so die die das äußere Limit von ähm die Firma muss Informationsverarbeitung für uns machen, also für die Strafverfolger machen, ne."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:58:15",
+      "text": "Ja und da war die Argumentation ja auch ähm, dass man auf jeden Fall quasi alle Transaktionen hätte beschlagnahmen können."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:58:22",
+      "text": "Das ist der schonendere Eingriff, dass man halt nur die beschlagnahmt hat, die halt irgendwie ein Muster aufweisen, ja."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "0:58:27",
+      "text": "Und das macht ja auch Sinn. Aber ich finde, ich finde das jedenfalls sehr spannend, nochmal einmal ähm eben das so ein bisschen zusammenzufassen, was eigentlich die Apple-Argumentation ist\ndas ist ja im Grunde ein doppelter Dammbruch, ne? Es geht also zum einen natürlich darum, wenn man jetzt diese Technik schafft, um spezifisch ein iPhone zu knacken, dass dann natürlich das Risiko besteht, dass diese Technik\nnoch in anderen Fällen eingesetzt wird, also entweder weil das liegt oder wenn Apple da.\nDass dann jedenfalls, wenn man weiß, diese Software gibt es ja, die Anforderungen kommen werden, die wir einzusetzen, also diese konkrete Lösung in anderen Fällen einzusetzen. Das ist dann quasi der technische Dammbruch, ja, wenn man also einmal\ndiesen ähm diese Technologie geschaffen hat, dass dann auch die Anforderungen größer werden. Und das zweite wäre im Grunde der rechtliche Darmbruch, ne? Wenn also einmal klar ist, mit dem kann man eben viel mehr machen, als reine Anneks-Maßnahmen.\nDann gibt's in der Tat kaum noch eine Grenze. Da sagt Tim, guck auch völlig zurecht, ja was ist denn dann eigentlich noch die Grenze, die verhindert, dass das FBI in einem anderen Fall,\nverpflichtet, eine Spezialversion von iOS zu schaffen und auf einem Telefon zu installieren, die im Grunde so eine Art ständige Raumüberwachung ähm durchführt oder die ständig die Position ans FBI-Funk oder, oder, oder, ne. Also da äh das ist die Argumentation\ndas quasi ein rechtlicher Dammbruch droht\nUnd ich finde das auch total plausibel ehrlich gesagt. Also ich bin nun eben kein amerikanischer Jurist, aber ich sehe da in der Tat dann nicht mehr in den kategorialen Unterschied, ne. Wenn man gezwungen werden kann, alles Mögliche\nneu zu implementieren was es bislang noch nicht gibt dann wäre so was sicherlich im Zweifel auch wieder die kleinere Maßnahme."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:59:56",
+      "text": "Plus obendrein natürlich, dass es dann halt ja nicht nur um die USA geht, ne? Also ist halt ja die.\nÄhm also die große Sorge, die Apple ja da hat, ist, dass wenn sie halt jetzt vor dem FBI einknicken, das natürlich als nächstes die Chinesen und die inneren die Saudis um die Ecke kommen äh und sagen, okay, wenn ihr für FBI das bezahlt, für implementieren könnt, dann hätten wir das halt eben auch gerne."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:00:13",
+      "text": "Schönen Apple Store haben sie da in Shanghai. Das wäre doch schade, wenn dem was zuschließt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:18",
+      "text": "Ich äh frage mich auch immer, das ist sehr interessant zu sehen, wie jetzt auch diese Konfliktlinien in den USA so zwischen Silicon Valley, also dem digital geprägten äh äh Bereich, im Business Bereich\nund eben sagen wir mal der, der, der anderen Küste sozusagen dem, dem politischen Bereich, äh, läuft, mit grundsätzlich unterschiedlichen Auffassungen, ich glaube, Silicon Valley ist auch schon ein bisschen länger gepisst, eben wegen\nund was weiß ich, was ihnen das alles schon für Deals äh verhagelt hat, insbesondere in Europa."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:00:47",
+      "text": "Also Cloud Services in den USA gelten ja einfach als systematisch unsicher, ne? Wenn du wenn du nicht quasi klein machst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:54",
+      "text": "Genau.\nUnd ähm sie haben ja jetzt auch gesehen, hier mit äh Safehaber und so weiter. Das ist jetzt alles gefallen und das kann man im Wesentlichen ja auch alles genau auf die äh Snowdengeschichte zurückführen. Ich frage mich halt jetzt, wie ähm.\nDie deutsche Industrie äh sieht. Ich meine, Computerindustrie haben wir jetzt nicht mehr so äh richtig viel. So, wir haben vor allem nicht diesen direkten Vergleich mit\nSmartphone-Hersteller, die Rolle haben wir nun schon lange äh abgegeben, aber wenn ich mal überlege, ähm jetzt im Bereich Serverbetrieb\nähm ist das ja in gewisser Hinsicht auch zu vergleichen, weil natürlich auch ein Server, der jetzt irgendwo bei Dollar Hoster im äh Reck steht und genauso meine Daten vorhält und im Prinzip genauso angreifbar wäre, selbst wenn ich da technische Maßnahmen vornehme, dann entsteht ja im Prinzip eine ähnliche Situation."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:01:41",
+      "text": "Also die ähm äh also man so die großen deutschen Muster, also jetzt und die Telekommunikationsunternehmen äh,\nsind da halt natürlich äh massiv interessiert, ne, also die verfolgen auch diese diese rechtliche Auseinandersetzung beim sättigen, weil die natürlich sehr intensiv. Ähm\nZum einen, weil sie natürlich sagen, okay, in dem Augenblick, wo halt zum Beispiel Microsoft den Fall verliert, der noch ansteht, äh wo sie versuchen zu verhindern, dass.\nDie ähm amerikanischen Behörden ohne weiteres Zugang auch zu Cloud-Daten, die in Europa, in Irland zum Beispiel stehen, bekommt. In dem Augenblick freut sich natürlich die Telekom, weil sie dann sagt, okay, na ja, dann ähm\nmüsst ihr halt zu uns kommen, ne, also müsste halt zu einem europäischen Unternehmen kommen und die haben halt dementsprechend auch schon Vorkehrungen getroffen, also die haben halt ähm mit Microsoft so einen Deal gemacht, dass halt Microsoft Cloud-Infrastruktur halt auf Telekom-Infrastruktur läuft\nunter Telekom Management, aber quasi mit technischen Parametern von Microsoft. Das heißt also, die haben für den falschen vorgebaut, für die ist natürlich ein\neinen unverhoffter, unverhoffter Gelegenheit.\nGroße Teil des nicht-amerikanischen Marktes abzuräumen. Und was halt die ähm äh sag mal, die Software-Industrie angeht, ähm.\nAlso die meisten Leute, mit denen ich darüber gesprochen habe, die da unterwegs sind, also es gibt ja doch noch eine Menge Softwareentwickler in in Deutschland so, die schütten halt alle mit dem Kopf und sagen so, wie, was, wie, wie, wie kommen die auf die Idee, eigentlich nur\n'ne Firma dazu verpflichten zu wollen, halt da bestimmte Dinge zu implementieren, die es halt vorher nicht gab\nund ähm so ein allgemeine Gefühl da ist halt eher so, na ja gut, also wenn ihr da rein wollt und halt irgendwelche Tricks und irgendwelche habt, um es\ntun, dann bist du zwar unschön, aber dann ist das halt so. Also dann ist das halt irgendwie Bestandteil des normalen Wettrüstens so,\nähm also ja, wird halt zugemacht, wenn's irgendwie äh\nansonsten, naja, ähm aber halt irgendwie den die Firmen halt zum Hilfspolizisten werden zu lassen, ähm trifft halt auf universelle Ablehnungen. Also da ist halt irgendwie niemand irgendwie auch nur Willens irgendwie einen Finger krumm zu machen so."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:03:43",
+      "text": "Das finde ich ein interessantes Argument ähm da wurde nämlich gerade auch ausführlich darüber diskutiert in einem Podcast, den ich regelmäßig höre, sind amerikanische Podcast äh Call Intuition. Ich weiß nicht, ob da der ein oder andere von euch kennt.\nSehr schön. Und die beiden haben sich nämlich die Frage gestellt, jetzt stellen wir uns mal vor, Apple verliert den Fall, kann denn dann eigentlich Apple seine Mitarbeiter zwingen?\nJa, wenn jetzt also die Mitarbeiter einfach sagen, ähm also die das Core-Team sagt, nee, das halten wir für verfassungswidrig, das geht gegen unser Gewissen, wir machen das einfach nicht, muss Apple, die dann alle rausschmeißen oder so. Ich meine,\nletztlich sind es ja alles auch noch freie Individuen, ne? Und ich meine klar bei Apple herrscht sicherlich 'ne relativ strikte Firmenkultur, wo glaub ich jetzt nicht so wahnsinnig viel diskutiert wird nach allem was man hört, aber ich kann mir schon vorstellen, dass auch da Apple wiederum an Grenzen stößt, wenn die Leute einfach aus Gewissensgründen die Mitwirkung an einer solchen Software verweigern."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:04:35",
+      "text": "Ja, gut, ich meine, die haben ja ähm also die typischerweise werden halt die solche Anordnungen ambilant ja mit Strafanzrohungen verbunden. Das letzte Fall war, glaube ich, hier oder so, die da so nach.\nGlaube vierhundertfünfzigtausend oder so was pro Tag oder pro Monat oder so zahlen sollten, also hatte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:53",
+      "text": "Strafandrohung an wen? An das an Apple. Aber wenn die Entwickler sagen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:04:56",
+      "text": "Aber wenn die Entwickler sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:58",
+      "text": "Ich mache jetzt mal zwei Jahre mal was anderes. High and Fire, ich äh habe hier eh so einen Vertrag, wo ich jederzeit gehen kann."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:05:03",
+      "text": "Zumal halt zumal halt die Anzahl der Entwickler, die so eine, also dieses dieses spezifische Problem, also halt eben die ähm dieses wegmachen der der Prüfung\nähm da ging der Quote wird halt nicht so von so vielen Leuten bearbeitet werden, ne? Das werden halt irgendeine kleine Handvoll."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:18",
+      "text": "Gibt's auch nicht so viele Leute, die man mal soeben dazu kaufen kann, die in so ein Team reinpassen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:05:21",
+      "text": "Naja, zumal ähm, also ich meine, was was Apple dann natürlich halt tun könnte, wäre halt zu sagen, naja gut, dann haben wir jetzt verloren fürs fünf C. Ähm, tut uns leid.\nSo war halt eh eine Billiglinie, an der wir nichts verdient haben, dann bauen wir's halt jetzt spezifisch für dieses fünf C äh und nageln halt alles, was danach ist, so dermaßen gnadenlos zu, dass es einfach keine technische Möglichkeit mehr dazu gibt."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:05:41",
+      "text": "Das ist nämlich der finde ich die entscheidende Botschaft dieses Falls. Ähm\nEinfach Softwarelösungen zu entwickeln oder meinetwegen auch Hardware-Lösungen, wo eben in der Tat keine backDorme existiert, soweit wir das wissen, ne. Und ich meine, was Apple angeht, die sind ja in der Krypto ziemlich gut, also weit wir jedenfalls wissen, ist die App Store Krypto bis heute nicht gebrochen, auch,\neigentliche Softwaresignierungskrypto ist nicht gebrochen, klar, man kann euch einen einbauen und die ganze ähm die ganze Signierung abschalten, ne, aber die Krypto als solche ist ja anscheinend stabil\nund ähm sie haben ja in die neueren iPhone Modelle auch schon quasi ein Hardware-Modul eingebaut, das ist eine ganz eigene Firma hat und dafür die Codeprüfung, also die Eingabe von Passwörtern oder die Prüfung von eingegebenen Passwörtern zuständig ist\nund ähm wenn das in dem fünf C schon vorhanden wäre, gibt es ja jedenfalls einige IOS-Security-Leute, die sagen, dann wäre diese Möglichkeit, die das FBI jetzt verlangt, gar nicht mehr möglich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:30",
+      "text": "Ähm das ist noch so ein bisschen unklar, also konkret, das fünf C hat das noch nicht. Das ist sozusagen das, was mit dieser sechser Reihe erst dazukam, dieses Secure äh also Entschuldigung, alles was mit dem Limitatch-ID hat, ist was zu tun, ne."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:06:43",
+      "text": "Tata, die haben sie die Secure in Kleefeld so weit hochgerüstet, dass sie halt den, den Authentifizierungsvorgang mit in die Secure, also in den den Hardwarebasierten Teil."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:51",
+      "text": "Aber sie können immer noch die Software der der Firmware selber ändern. So."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:06:55",
+      "text": "Sie können die Flaschen, aber dann sollen an."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:57",
+      "text": "Gerät direkt angeschlossen ist."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:06:57",
+      "text": "Gelöscht werden, ne? Das ist das ist eben genau die Frage, das ist nicht offiziell klar, aber ähm so in der Security-Community heißt es immer, dass die Sequenz tatsächlich die Schlüssel löscht, wenn sie geflasht wird."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:07:09",
+      "text": "Also der ähm das wäre halt eigentlich auch der die logische Konsequenz von äh von dem Design. Ne, also wenn man so auf dieses Design guckt, dann ist es halt eben so angelegt, dass halt der ähm äh also normale US-Updates halt eben nicht zu einem.\nZu einer kompletten Löschung des Systems führen, aber halt einen äh wenn du halt den äh die Firmenware, die Security-Firmware Flash, dass dann halt die, die Keys dabei mit, also zumindest die.\nMit draufgehen, äh wäre halt so die logische Konsequenz. Und wenn selbst, wenn's jetzt noch nicht so ist.\nIst halt also der Pfad für Apple ist eigentlich vollkommen klar. Die Security-Design, so wie es angelegt ist, halt die möglichst viele Funktionen, möglichst kleine Hardwarekomponenten reinziehen, dafür zu sorgen, dass du dann halt da wirklich nur noch mal im Elektronikroskop rankommst, wenn du es wirklich musst\nist halt so angelegt, ne? Und und ist halt tatsächlich eben auch eine Sache, die wo Apple halt im Zweifel dann sagen wird, so, naja.\nEs ist ja nicht so, dass es keinen anderen Weg gäbe.\nAlso man kann ja immer noch hingehen und halt den Chip aufschleifen und halt irgendwie die ähm den Kita rauspopeln. Ist zwar richtig doll schwierig und richtig doll teuer und vielleicht gibt's auch nur zwei Laps auf diesem Planeten, die es können oder drei. Äh aber es ist nicht so, dass es keinen Weg gibt."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:08:21",
+      "text": "Also schlägt sich der Schlüssel auch in Hardware nieder."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:08:23",
+      "text": "Ja, den kannst du auslesen, das geht schon."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:08:25",
+      "text": "Okay, sind es nicht einfach nur irgendwie Ladungszustände in irgendeinem."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:08:28",
+      "text": "Na der der muss ja irgendwie auch da bleiben, wenn der ähm äh wenn die Batterie alle ist."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:08:35",
+      "text": "Ach, das heißt der Premier wird quasi reingebrannt tatsächlich."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:08:37",
+      "text": "Der wird halt in eine in One-Way-Flash.\nJa? Also man kann die, also man kann solche Kies halt schon auslesen, ist nun die, die Geschichte der äh Chipkartenanalyse, hatte dir lang und recht gezeigt, es ist halt nur mittlerweile richtig schwierig, weil die die Strukturgrößen, die die da verwenden, sind halt sehr klein\ndie werden auch Antitemper Mechanismen da eingebaut haben, die halt irgendwie den Zugriff auf bestimmte Sachen schwierig machen.\nBizarrerweise auch aus BAM-Gründen."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:09:03",
+      "text": "Und man hat ja auch nur einen Schuss, ne? Das muss man."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:09:05",
+      "text": "Du hast halt nur einen Schuss, aber du, also sag mal, gut, ich meine, wie es halt machst, man man sagt halt einfach so, in dem Augenblick, wo du halt eine Handvoll von Geräten hast, an denen du üben kannst.\nÄhm.\nSchaffst du's halt mit entsprechend talentierten Leuten und dem richtigen Equipment und genügend Zeit eigentlich alles zu reverseingen? Sowas so ein Hardwarevorliegen hast. So ist halt, gibt halt quasi keine irgendwie keine Hardware-Security-Mechanismen, die völlig unumgehbar sind.\nSo, nur der Aufwand ist halt relativ groß."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:09:31",
+      "text": "Aber ich meine, die Botschaft bei dem Ganzen heißt ja auf jeden Fall, ähm dass dieses Verfahren ein enormen Anreiz schafft für Hardwarehersteller und auch für Softwarehersteller tatsächlich Verfahren einzusetzen, wo sie selber, selbst bei bestem Willen oder schlimmstem Willen, wie man das jetzt sehen will,\nnicht mehr die Möglichkeit haben, solche Hintertüren einzubauen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:09:48",
+      "text": "Genau, aber im Endeffekt ist halt, ähm ich sage mal, wenn.\nAlso wenn's wirklich um die Wurst geht und sie wirklich halt wirklich an diese Daten ran müssen so, ähm dann würden sie halt auch die zehn Millionen ausgeben.\nUm halt irgendwie so ein von dem Ding zu machen und halt die Kiste rauszupopeln und dann halt irgendwie entsprechend die zu machen. Und das finde ich eigentlich auch in Ordnung. Ja, also das ist ja so, wenn wenn also wenn halt solche, solche Mittel und Methoden.\nSo aufwendig sind oder halt rechtlich so schwierig gemacht sind, dass sie halt nur in einer kleinen Anzahl Fälle wirklich verwendet werden können in der Praxis, dann ist das ja eigentlich okay. So, dann würden werden sich halt nur eingesetzt, wenn's wirklich um die Wurst geht, dann ist das halt nicht massentauglich."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:10:24",
+      "text": "Und ich meine, darum geht's ja letztlich. Es geht ja nicht darum, dass die Sicherheitsbehörden nicht mehr ihren Job machen können. Es geht darum, dass die eben nicht ähm nicht quasi als Go-to-Option erst mal irgendwelche iPhones auslesen, ja. Am besten noch per Trojaner."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:37",
+      "text": "Äh ich habe so das Gefühl, wir haben das Thema jetzt schon äh weitgehend ähm analysiert\nstellt sich natürlich jetzt die Frage, was ist jetzt hier auch für den Netzpolitischen Diskurs da vielleicht noch rauszuziehen? Also inwiefern wird, sagen wir mal jetzt gerade in diesem neuen Trojaner mal auf den auch nochmal zurückzukommen\nwie wird dem\ngerade begegnet, außer durch öffentlich äh Machung, was denkt ihr, was da so die nächsten Schritte sind, die ohnehin stattfinden, beziehungsweise die.\nVielleicht stattfinden sollten."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:11:12",
+      "text": "Ich meine, was ja ohnehin läuft, noch ist ja noch das Verfahren gegen Speaker A Gesetz. Ähm da wird's, denke ich mal, dann in den nächsten Wochen irgendwann auch ein Urteil geben."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:11:21",
+      "text": "Das Gericht hat wohl April angekündigt informell."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:11:24",
+      "text": "Okay. Ähm gut, dann also und da werden sie sicherlich neben vielen anderen Sachen, was ja dann sehr umfänglich ist, äh Gesetz, was da angegriffen wird, ähm wird vermutlich dann auch um den Trojaner gehen. Danach werden wir vermutlich mehr wissen. Also was sagt irgendwie die ähm.\nSozusagen die Auskonkretisierung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:41",
+      "text": "Prinzip beide Aussagen, äh so würde auch der der andere Fall vom Baum wird im April bekanntgegeben, BKA-Gesetz im April, okay? Mhm."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:11:48",
+      "text": "Und ähm also da werden wir sicherlich dann mehr wissen, so was irgendwie die die juristische Front angeht, so. Ähm was halt den Gesetzgeber angeht, ähm habe ich jetzt gerade momentan nicht so richtig das Gefühl, dass die da besonders aktivistisch unterwegs sind gerade, ne?"
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:12:03",
+      "text": "Ich weiß nicht, wer am Mittwoch ähm in einer Diskussion beim Deutschlandfunk mit Gerold Reichenbach von der SPD-Fraktion und der hat mehrfach auf den Koalitionsvertrag verwiesen, wo ja ausdrücklich drinsteht,\ndass die rechtlichen Grundlagen für die Quellen TKÜ, wie das so schön heißt, dort konkretisiert werden sollen, was wohl nur bedeuten kann, dass auch in der Strafprozessordnung ein solches spezielles Gesetz geschaffen werden soll. Ähm das Problem hier ist, dass die Union argumentiert, nein, äh\nTrojaner hin oder her. Es ist ja nur eine normale TKÜ und dafür haben wir ein Gesetz.\nUnd äh da muss man einfach abwarten, was passiert, ähm also die SPD wird das offenbar nicht jetzt zu einem zentralen Problem ihrer Agenda machen, aber immerhin ist es als Problem bekannt, mal schauen, ob's da noch einen Gesetzesvorschlag gibt. Ich meine, immerhin ist zuständig das BMJV, ne, Bundesministerium für Justiz und Verbraucherschutz unter Heiko Maas,\nes wäre durchaus denkbar, dass der einfach einen Entwurf auf den Tisch legt. Aber\nbislang ist da nichts."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:12:56",
+      "text": "Aber ich vermute mal erst nachdem BKA-Gersatzurteil."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:12:58",
+      "text": "Ja natürlich, das macht Sinn, darauf zu warten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:00",
+      "text": "Und ähm wie seht ihr das so mit der deutschen Computervertretungsfirmenvertretungslandschaft? Die regt sich irgendwie nicht so richtig, was machst du den Eindruck?"
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:13:12",
+      "text": "Na ja gut, ich meine, die ähm Bitscomo."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:16",
+      "text": "Na ja."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:13:23",
+      "text": "Also ich glaube, es wird einfach nicht, nicht als Problem der IT-Sicherheit wahrgenommen bisher."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:27",
+      "text": "Ja, ja, eben, das, das."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:13:28",
+      "text": "Nee, also das es stimmt nicht ganz. Also tatsächlich ist es so, dass halt die ähm ja zumindest die Security-Firmen ähm sehen, dieses Problem halt schon, also insbesondere halt, dass auch die und im Gesichtspunkt Vertrauen\nJa, also dass halt irgendwie Vertrauen deutscher IT Produkte, wenn halt solche Trojaner-Dinger unterwegs sind oder gar wenn es halt irgendwie Gesetze gäbe, die sich halt zu Hintertüren zwingen könnten, halt beschädigt wird. Ähm es gibt ja,\nwas irgendwie so die Verschlüsselung angeht\nähm ja die Ansage vom Investor, dass man da halt was tun muss mit dem klaren Unterton, das ist halt nicht im Verschlüsselungsregulierung geht, sondern halt eben um äh einfacheren Zugang oder einfachere Verwendung von Trojaner zum Umgehen von Krypto\nDas heißt, diese Diskussion ähm wird halt auch sicherlich die Industrie dabei betreffen. Äh also insbesondere halt auch die, die äh die Frage halt insbesondere, welche Kooperationszwänge,\nähm so Firmen unterworfen werden, was halt die ähm die Infiltration in den Rechner angeht.\nAlso es können die zum Beispiel gezwungen werden, so ein Trojaner in ein Softwareupdate einzubauen.\nKritische Frage, ne. Ähm äh die Diskussion wurde auf jeden Fall noch kommen und die wird natürlich umso härter werden, je besser halt die IT-Sicherheit so im Generellen der der Geräte wird. Und ähm da werden dann natürlich die Serviceanbieter halt schon.\nAlso das wird halt schon interessant werden und die haben natürlich kein Interesse daran, ne? Also weil nehmen wir mal an, halt die Telekom würde verpflichtet zu sagen, äh wir verpflichtet äh bei so einer Trojanerfiltration zu helfen, weil."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:14:53",
+      "text": "Hetzner, ne? Stellen wir uns das mal vor. Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:56",
+      "text": "Ja oder ich meine ja auch so so kommende Märkte, wo sie jetzt alle gerade ganz heiß laufen, so Smarthome, ja, äh."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:15:02",
+      "text": "IoT, IoT Kram und so, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:04",
+      "text": "Kühlschränke und so weiter, alle träumen immer davon, überall einen Rechner reinzustecken, dass das an sich schon eine kniftige Idee ist\nwas sozusagen die generelle Sicherheit einfach auf\nvon Produktionsmängeln, also Softwarequalität äh das kriegt ihr dann sozusagen nochmal extra einen oben drauf, wenn man dann einfach weiß, oha\njetzt habe ich hier irgendwie dreißig die weißes von von zehn Herstellern in meiner Wohnung und jeder einzelne davon könnte dazu gezwungen werden, hier Trojanersoftware, per Remote-Update einzuspielen, dann ist das Kundenvertrauen ja komplett weg."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:15:36",
+      "text": "Genau und darum, das ist halt eben der der Kern des Problems, weil wo halt auch die.\nSage mal so, die ganzen Zulieferer, die halt irgendwie in diesem IT-Bereich unterwegs sind, halt auch sagen, so ja, ah, fallen wir eigentlich nichts mit zu tun haben, ne? Also, ist eigentlich nicht, nicht unser, also wir wollen halt nicht da zum Hilfspolizisten gemacht werden, sondern wir wollen halt so sichere wie möglich Geräte ausliefern. Ähm\nweil letzten Endes ist es halt auch so, dass.\nWenn die Leute anfangen, Angst davor haben, Softwareupdates einzuspielen oder Softwareupdates auf Auto zu lassen, ne, so automatisches Softwareupdate zuzulassen, weil es zum Beispiel die erste Infiltration über so ein Softwareupdate gab,\nNe, also das wäre die logische nächste Konsequenz, aber wenn halt irgendwie klar wird, irgendwie die Infiltration fand statt über ein Softwareupdate, dann schalten plötzlich viele Leute ihre Softwareupdates ab und dann haben die halt ein richtiges Sicherheitsproblem, weil sie halt die die Sicherheitslücken nicht mehr\nzeitnah gefixt bekommen. Das heißt also diese diese Vertrauensfrage, die Frage, wie weit geht der Starter, wie weit ähm hängt der sich da aus dem Fenster? Auch was irgendwie den erzwungener oder erbetende Kooperation von Unternehmen angeht.\nIst halt von zentraler Bedeutung für die allgemeine IT-Security. So und da geht's dann halt eben um hunderttausende oder Millionen von Geräten, nicht um ein oder zwei. Und dementsprechend ist halt\ndiese Prioritätensetzung zu sagen, okay wir wollen nehmen große Sicherheitslücken bei auf vielen Geräten in Kauf, um halt so ein paar Strafverfolger in das Leben leichter zu machen. Die wird dann halt einfach nicht mehr gehen. Also die wird halt einfach vielleicht so zwei, drei Mal ausprobiert werden und dann irgendwann ist halt klar,\nso kann man halt nicht mehr denken so, weil dazu sind die Probleme, die wir im Allgemeinen, Antisemite-Bereich haben, halt viel zu groß."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:06",
+      "text": "Ja wird jetzt auch sehr interessant äh sein zu sehen, wie jetzt die anderen Unternehmen.\nAlso eine internationalen äh Gerätehersteller, also zum Beispiel.\nGoogle als Betriebssystemlieferant, aber eben auch Samsung, et cetera und wer sonst alles noch im Markt äh eine Rolle spielt, jetzt darauf Antworten, weil bisher äh\ntun die sich noch nicht besonders äh hervor in dieser ganzen Debatte, sind aber natürlich auch nochmal doppelt betroffen, weil sie gar nicht die Möglichkeiten haben, wie Apple zum Beispiel jetzt\nmal eben da eine komplett neue Architektur umzusetzen. Man sieht das ja.\nWie gering überhaupt allein schon so die Basisverschlüsselungsrate zum Beispiel in der Android Welt ist das könnte noch ein lustiger Tanz werden."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:17:48",
+      "text": "Ähm wird es auf jeden Fall, weil die, also da ist das Spiel halt viel komplexer. Da sind dann halt die die Hersteller der Baseball-Chips, ähm in denen halt einfach die diese heißt\ndrin ist natürlich im Spiel meistens vorkommen, aber auch Samsung als eigener Hersteller von solchen Dingern. Und die sind\ndie haben schon durchaus so Technologien, also wenn man sich so aktuelle Quorkom-Chips anguckt, da ist halt tonnenweise halt von ähm äh Krypto.\nBeschleunigern über eine harte, verbunkerte Keys, über Authentication, so ist da schon alles drin, kann man alles verwenden, wenn man möchte, auch als Android-Telefon-Hersteller. Allerdings ähm.\nIst da natürlich die die Barriere, insbesondere halt zum Beispiel für Samsung als ein südkoreanisches Unternehmen, die ja doch eher sehr staatsnah sind und eher so äh auf dieser, wir müssen ja irgendwie die Interessen der Strafverfahren und Geheimdienste, wir haben gegen die Userinteressen ausbalancieren, Schiene fahren\nähm die die sind dann natürlich in einer harten Zwickmühle. So und ich denke halt eher, dass halt also ähm im nicht Apple Bereich, der Push Richtung wir bauen neue Geräte, die halt\nauf ein ähnliches Niveau kommen, wie so ein iPhone, was halt irgendwie so die Bratessicherheit angeht, wird halt eher von so kleinen Herstellern kommen, so Richtung One Plus oder Xaomi oder so halt so Hersteller, die halt einfach einen ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:00",
+      "text": "Chinesenmatze geht voran. Wirklich."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:19:02",
+      "text": "Kann ich mir durchaus vorstellen, weil die haben die haben durchaus sehr Differenzierungsbedarf, ja. Die müssen ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:09",
+      "text": "Nee. Ja, mal gucken, wie das so im Reste von ankommt. Ja, aber das ist natürlich recht äh das ist im Prinzip eine Marktchance, weil einfach jetzt Vertrauen auf einmal einen ganz anderen Stellenwert hat."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:19:23",
+      "text": "Mhm. Und Vertrauen, das ist, glaube ich, auch immer das Stichwort noch bei den, bei den Staatstrojanern, die wir jetzt in unserem Lande so erleben. Ähm\nDa muss einfach noch eine Menge passieren, ne? Irgendein äh geheimes Audit von irgendeinem geheimen Unternehmen, am besten noch von der NSA-Tochter äh oder vom NSA-Zulieferer. Das alleine kann es jedenfalls nicht sein.\nAlso wir nehmen da nach wie vor gerne Samples."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:19:44",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:19:48",
+      "text": "Wir schauen da gerne mal rein. Also ich persönlich jetzt nicht, aber ich kenne da ein paar Leute."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:52",
+      "text": "Na ja, auf jeden Fall, die Dinge äh können sich doch manchmal schneller ändern, als man äh so glaubt, ne. Ich glaube, es ist noch keine fünf Jahre her, da ging irgendwie Facebookseiten alle noch über HTP. Ja, Ulf, Frank. Vielen Dank.\nIch glaube äh das haben wir jetzt erstmal ganz gut äh zusammengekratzt hier für Lokbuchnetzpolitik und ähm ja, das war's dann auch für diese Woche. Ich schätze mal, der Dinos, der ist dann auch bald äh wieder da und dann geht's hier im normalen äh äh."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:20:20",
+      "text": "Braun gebrannt oder so was."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:21",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Ulf Buermeyer",
+      "time": "1:20:23",
+      "text": "Super relaxt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:24",
+      "text": "Amäquator ist er nicht, aber ein paar bereiten gerade sind's schon. Wir werden's sehen. Ähm wir sagen tschüss.\nUnd äh ja, bis nächste Woche, tschau."
+    }
+  ]
+}

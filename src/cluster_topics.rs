@@ -18,6 +18,9 @@ struct Args {
     /// Variant name to load from variants.json
     #[arg(short, long)]
     variant: Option<String>,
+    /// Podcast ID for podcast-specific database paths
+    #[arg(long, default_value = "freakshow")]
+    podcast: String,
 }
 
 // ============================================================================
@@ -794,7 +797,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                             .topic_clustering
                             .as_ref()
                             .and_then(|s| s.use_llm_naming))
-                        .unwrap_or(true),
+                        .unwrap_or(false),
                 )
             }
             Err(e) => {
@@ -831,15 +834,16 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .topic_clustering
                 .as_ref()
                 .and_then(|s| s.use_llm_naming)
-                .unwrap_or(true),
+                .unwrap_or(false),
         )
     };
-    println!("📂 Lade Embeddings-Datenbank...");
-    let db_path = PathBuf::from("db/topic-embeddings.json");
+    println!("📂 Lade Embeddings-Datenbank (Podcast: {})...", args.podcast);
+    let db_path = PathBuf::from(format!("db/{}/topic-embeddings.json", args.podcast));
     if !db_path.exists() {
         eprintln!("\n❌ Keine Embeddings-Datenbank gefunden!");
+        eprintln!("   Erwarteter Pfad: {}", db_path.display());
         eprintln!("   Erstelle zuerst die Datenbank mit:");
-        eprintln!("   node scripts/create-embeddings.js\n");
+        eprintln!("   node scripts/create-embeddings.js --podcast {}\n", args.podcast);
         std::process::exit(1);
     }
     let db_content = fs::read_to_string(&db_path)?;

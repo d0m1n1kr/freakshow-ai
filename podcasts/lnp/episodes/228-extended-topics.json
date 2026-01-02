@@ -1,0 +1,179 @@
+{
+  "episodeNumber": 228,
+  "title": "LNP228 Interessierte Bürger",
+  "extractedAt": "2026-01-02T11:04:34.995Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "Quo Vadis Wahlcomputer?",
+      "subject": {
+        "coarse": "Politics",
+        "fine": "Voting Technology"
+      },
+      "durationSec": 201,
+      "positionSec": 164,
+      "summary": "In dieser Episode wird das Thema Wahlcomputer und deren Rolle bei der Bundestagswahl diskutiert. Linus Neumann, aktiv im Chaos-Computerclub, betont die Problematik der Nutzung von Computern zur Stimmabgabe, da diese nicht transparent sind und sich nicht kontrollieren lassen. Der Fokus liegt auch auf den Prozessen nach der Stimmabgabe, wie der Erfassung und Auswertung der Wahlergebnisse. Es wird auf die Software IFIVU und die Vielzahl von Wahllokalen in Deutschland hingewiesen, die insgesamt etwa 70.000 betragen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "228-ts.json",
+        "method": "time-window",
+        "pickedCount": 12,
+        "startSec": 144,
+        "endSec": 385,
+        "generatedAt": "2026-01-02T18:27:52.997Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "PC-Wahl und die Auszählung der Wahl",
+      "subject": {
+        "coarse": "Politics",
+        "fine": "Voting Process"
+      },
+      "durationSec": 823,
+      "positionSec": 365,
+      "summary": "In der Episode wird der Prozess der PC-Wahl und die Auszählung von Wahlen in Deutschland thematisiert. Linus Neumann und Martin Tschirsich erläutern die Vielzahl an Wahllokalen, die bundesweit existieren, und die Rolle der Software, insbesondere des Programms PC Wahl, das in Hessen und anderen Bundesländern zur Auswertung von Wahlergebnissen eingesetzt wird. Der Ablauf der Meldung von Wahlergebnissen von den Wahllokalen über die Gemeinden bis hin zum Bundeswahlleiter wird detailliert beschrieben. Zudem wird auf die Intransparenz der verwendeten Software eingegangen, die Bedenken hinsichtlich der Sicherheit und Nachvollziehbarkeit aufwirft.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "228-ts.json",
+        "method": "time-window",
+        "pickedCount": 47,
+        "startSec": 345,
+        "endSec": 1208,
+        "generatedAt": "2026-01-02T18:27:53.728Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "PC-Wahl: Konfiguration im Web",
+      "subject": {
+        "coarse": "Technology",
+        "fine": "Web Configuration"
+      },
+      "durationSec": 624,
+      "positionSec": 1189,
+      "summary": "In der Episode wird die Problematik der Webkonfiguration für die PC-Wahl thematisiert. Martin Tschirsich berichtet von Konfigurationsdateien, die Zugangsdaten für die Übertragung von Wahlergebnissen enthalten und die auf einem FDP-Server abgelegt werden. Es wird kritisiert, dass dieselben Zugangsdaten für verschiedene Wahllokale verwendet werden, was eine Manipulation der Wahlergebnisse ermöglichen könnte. Zudem wird erwähnt, dass die Dateien nicht signiert sind, was eine Überprüfung der Integrität erschwert. Die Software stammt von der Vote IT GmbH, und es wird auf die Sicherheitsrisiken hingewiesen, die durch die unzureichende Trennung der Zugänge und die große Anzahl an Personen, die auf das Netzwerk zugreifen können, entstehen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "228-ts.json",
+        "method": "time-window",
+        "pickedCount": 50,
+        "startSec": 1169,
+        "endSec": 1833,
+        "generatedAt": "2026-01-02T18:27:57.621Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "PC-Wahl: Schwachstellen und Angriffsszenarien",
+      "subject": {
+        "coarse": "Security",
+        "fine": "Vulnerabilities"
+      },
+      "durationSec": 1996,
+      "positionSec": 1813,
+      "summary": "In der Diskussion über die PC-Wahl werden Schwachstellen und Angriffsszenarien thematisiert, insbesondere in Bezug auf die Wahlergebnisdateien in Hessen. Es wird festgestellt, dass diese Dateien nicht signiert sind, was Manipulationen ermöglicht, ohne dass dies technisch nachgewiesen werden kann. Thorsten Schröder und Linus Neumann betonen die Bedeutung von Authentizität und Integrität der Daten, wobei digitale Signaturen und Prüfsummen als notwendige Maßnahmen hervorgehoben werden. Zudem wird kritisiert, dass die Software für die Wahlauswertung, die auf einem öffentlichen Server gehostet wird, Schwachstellen aufweist, die die Sicherheit der Wahl gefährden könnten.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "228-ts.json",
+        "method": "time-window",
+        "pickedCount": 112,
+        "startSec": 1793,
+        "endSec": 3829,
+        "generatedAt": "2026-01-02T18:27:58.039Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "PC-Wahl: Bug Fixes und Updates",
+      "subject": {
+        "coarse": "Technology",
+        "fine": "Software Maintenance"
+      },
+      "durationSec": 1227,
+      "positionSec": 3809,
+      "summary": "In der Episode wird die Problematik der Softwareupdates für das PC-Wahl-System thematisiert, insbesondere die Verwendung des MD5-Prüfziffernalgorithmus, der als unsicher gilt. Linus Neumann und Thorsten Schröder diskutieren die Schwächen von MD5 und die unzureichenden Sicherheitsmaßnahmen bei den Softwareupdates. Trotz der Einführung von digitalen Signaturen bleibt die Integrität der Updates fraglich, da die Prüfung der Signaturen nicht im Update-Prozess integriert ist. Zudem wird die Implementierung von PGP zur Verifizierung der Daten angesprochen, wobei Fragen zur organisatorischen Umsetzung und Sicherheit der Schlüsselverteilung aufgeworfen werden.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "228-ts.json",
+        "method": "time-window",
+        "pickedCount": 55,
+        "startSec": 3789,
+        "endSec": 5056,
+        "generatedAt": "2026-01-02T18:28:01.926Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "PC-Wahl: Bewertung der Risiken",
+      "subject": {
+        "coarse": "Risk Management",
+        "fine": "Risk Assessment"
+      },
+      "durationSec": 1030,
+      "positionSec": 5036,
+      "summary": "In der Diskussion über die PC-Wahl-Software wird die Anfälligkeit für Manipulationen und die damit verbundenen Risiken für die demokratischen Prozesse thematisiert. Tim Pritlove und Martin Tschirsich betonen, dass die Schnellmeldungen von Wahlergebnissen digital und somit angreifbar sind. Linus Neumann warnt vor dem Vertrauensverlust der Wähler, wenn Manipulationen ans Licht kommen. Es wird auf die Notwendigkeit hingewiesen, dass Wahlsoftware wie PC Wahl transparent und idealerweise Open Source sein sollte, um Vertrauen in die Wahlergebnisse zu gewährleisten. Zudem wird die Übernahme von PC Wahl durch das Unternehmen Wort IT und die mögliche zukünftige Strategie thematisiert.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "228-ts.json",
+        "method": "time-window",
+        "pickedCount": 56,
+        "startSec": 5016,
+        "endSec": 6086,
+        "generatedAt": "2026-01-02T18:28:02.685Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "PC-Wahl: Abschließende Gedanken",
+      "subject": {
+        "coarse": "Politics",
+        "fine": "Voting Technology"
+      },
+      "durationSec": 663,
+      "positionSec": 6067,
+      "summary": "In der Diskussion über die PC-Wahl äußern Linus Neumann und Thorsten Schröder Bedenken hinsichtlich der Qualität der verwendeten Software und der Sicherheit elektronischer Wahlen. Trotz der Herausforderungen und des mangelnden Vertrauens in die Technologie ermutigen sie die Bürger, wählen zu gehen. Sie betonen die Wichtigkeit der Sensibilisierung für mögliche Manipulationen und die Notwendigkeit, dass Menschen die Technologie kritisch hinterfragen. Neumann kritisiert die veraltete Software und die mangelnde Sicherheitskultur in Deutschland, während Schröder auf die Schwierigkeiten hinweist, mit denen sie konfrontiert sind, wenn sie auf Sicherheitsprobleme aufmerksam machen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "228-ts.json",
+        "method": "time-window",
+        "pickedCount": 49,
+        "startSec": 6047,
+        "endSec": 6750,
+        "generatedAt": "2026-01-02T18:28:06.330Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T18:28:06.330Z",
+  "transcriptFound": true,
+  "transcriptFile": "228-ts.json"
+}

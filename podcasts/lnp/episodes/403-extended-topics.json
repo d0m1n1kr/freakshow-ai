@@ -1,0 +1,203 @@
+{
+  "episodeNumber": 403,
+  "title": "LNP403 Leichte Schläge auf den Hinterkopf",
+  "extractedAt": "2026-01-02T11:29:37.278Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "Feedback: Herkunft der Status Codes",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Status Codes"
+      },
+      "durationSec": 227,
+      "positionSec": 178,
+      "summary": "In dieser Episode diskutieren Linus Neumann und Tim Pritlove die Herkunft und Bedeutung von HTTP-Statuscodes. Linus erwähnt, dass er durch Feedback von Andre auf die historische Entwicklung der dreistelligen Ziffernfolgen gestoßen ist, die ursprünglich in RFCs definiert wurden. Er erklärt die Bedeutung der verschiedenen Statuscodes, wie 200 für erfolgreiche Anfragen, 404 für nicht gefundene Ressourcen und 500 für Serverfehler. Zudem wird darauf hingewiesen, dass Webbrowser oft nicht die genauen Fehlermeldungen anzeigen, was zu einer häufigen Sichtbarkeit von 404-Fehlern führt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "403-ts.json",
+        "method": "time-window",
+        "pickedCount": 7,
+        "startSec": 158,
+        "endSec": 425,
+        "generatedAt": "2026-01-02T19:28:24.482Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Feedback: Status Code Drehbuch",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Status Codes"
+      },
+      "durationSec": 149,
+      "positionSec": 405,
+      "summary": "In der Episode 403 diskutieren Tim Pritlove und Linus Neumann über die korrekte Implementierung von HTTP-Statuscodes und deren Lesbarkeit. Linus erwähnt, dass er in einem eigenen Code Fehler gemacht hat und reflektiert über die Bedeutung der Statuscodes. Zudem gibt es eine Debatte über den Verlust von Wählerdaten nach der Bundestagswahl, wobei Linus die CDU und Tim die SPD als Hauptverlierer identifizieren. Die Diskussion umfasst auch die Herausforderungen bei Cyberangriffen und die Rolle von Bandbreiten bei der Datenexfiltration.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "403-ts.json",
+        "method": "time-window",
+        "pickedCount": 10,
+        "startSec": 385,
+        "endSec": 574,
+        "generatedAt": "2026-01-02T19:28:24.847Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Feedback: Ransomware",
+      "subject": {
+        "coarse": "Security",
+        "fine": "Ransomware"
+      },
+      "durationSec": 177,
+      "positionSec": 555,
+      "summary": "In der Episode wird über Ransomware und die Herausforderungen bei Datenexfiltration diskutiert. Linus Neumann erklärt, dass niedrige Datenübertragungsraten verhindern können, dass Angreifer schnell große Datenmengen stehlen, was jedoch nicht als Sicherheitsmerkmal beworben werden sollte. Zudem wird auf die CDU-Connect-App eingegangen, die möglicherweise gegen Datenschutzbestimmungen verstößt, da Nutzerdaten ohne Zustimmung erfasst wurden. Der Chaos Computer Club (CCC) hat beschlossen, Schwachstellen nicht mehr direkt an die CDU zu melden, sondern sie öffentlich zu machen, um Verantwortliche nicht vorzeitig zu warnen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "403-ts.json",
+        "method": "time-window",
+        "pickedCount": 6,
+        "startSec": 535,
+        "endSec": 752,
+        "generatedAt": "2026-01-02T19:28:28.560Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Feedback: CDU connect",
+      "subject": {
+        "coarse": "Politics",
+        "fine": "CDU"
+      },
+      "durationSec": 331,
+      "positionSec": 733,
+      "summary": "In der Diskussion über die CDU Connect App äußern Nutzer Bedenken bezüglich des Datenschutzes, insbesondere hinsichtlich der Zustimmung zur Datenspeicherung. Linus Neumann weist darauf hin, dass viele Nutzer anonym bleiben und somit möglicherweise nicht gegen die DSGVO verstoßen. Zudem wird erwähnt, dass der Chaos Computer Club (CCC) beschlossen hat, Schwachstellen nicht mehr direkt an die CDU zu melden, sondern sie öffentlich zu machen. Eine spezifische Schwachstelle in der App wird als Cross-Site Scripting beschrieben. Außerdem wird auf Probleme mit Impfzertifikaten eingegangen, die aufgrund von Sicherheitslücken nicht mehr ausgestellt werden konnten.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "403-ts.json",
+        "method": "time-window",
+        "pickedCount": 4,
+        "startSec": 713,
+        "endSec": 1084,
+        "generatedAt": "2026-01-02T19:28:29.071Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Impfzertifikate",
+      "subject": {
+        "coarse": "Health",
+        "fine": "Impfzertifikate"
+      },
+      "durationSec": 422,
+      "positionSec": 1064,
+      "summary": "In der Episode wird über die Problematik der Impfzertifikate diskutiert, insbesondere über Schwachstellen bei deren Ausstellung durch Apotheken. Diese Schwachstellen wurden behoben, indem die Apotheken sich über die Telematik Infrastruktur neu anmelden mussten. Es wird auch angesprochen, dass einige Apotheken Impf-Ausweise ablehnen, wenn die Person nicht aus der Region stammt, wo sie geimpft wurde, was als Versuch gesehen wird, Missbrauch zu verhindern. Zudem wird die Diskussion über die Notwendigkeit von Kontrollen und die Herausforderungen, die sich daraus für Reisende ergeben, thematisiert.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "403-ts.json",
+        "method": "time-window",
+        "pickedCount": 22,
+        "startSec": 1044,
+        "endSec": 1506,
+        "generatedAt": "2026-01-02T19:28:32.216Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Apples Child Safety Initiative",
+      "subject": {
+        "coarse": "Technology",
+        "fine": "Child Safety"
+      },
+      "durationSec": 3509,
+      "positionSec": 1487,
+      "summary": "In der Diskussion um Kindersicherheit und Technologie wird die Rolle von Apple und anderen großen Tech-Anbietern beleuchtet. Apple hat im Vergleich zu Facebook und Google nur wenige Fälle von Kindesmissbrauch gemeldet, was auf ihre bisherige Praxis zurückzuführen ist, keine Fotos zu scannen. Nun plant Apple, neue Funktionen in iOS und anderen Betriebssystemen einzuführen, die sensitive Inhalte erkennen und Eltern warnen sollen, wenn Kinder potenziell problematische Bilder empfangen oder senden. Diese Funktionen sind Teil eines Family-Sharing-Systems und sollen den Schutz von Kindern im digitalen Raum verbessern.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "403-ts.json",
+        "method": "time-window",
+        "pickedCount": 44,
+        "startSec": 1467,
+        "endSec": 5016,
+        "generatedAt": "2026-01-02T19:28:32.859Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Lucafails",
+      "subject": {
+        "coarse": "Technology",
+        "fine": "Lucafails"
+      },
+      "durationSec": 327,
+      "positionSec": 4997,
+      "summary": "Linus Neumann kritisiert die Luca-App als ineffektiv und problematisch, da sie ein zentrales System nutzt, das nicht gut funktioniert. Berichte über gescheiterte Kontaktverfolgung und die Unfähigkeit von Gesundheitsämtern, auf die Daten zuzugreifen, häufen sich. Viele Gesundheitsämter halten die App für wertlos und berichten von keiner Nutzung durch Infizierte. Zudem wird auf die unzureichende Datensicherheit und die Schwierigkeiten bei der Schlüsselverwaltung hingewiesen. Neumann erwähnt auch eine DSGVO-Strafe für ein Unternehmen, das veraltete Software mit Sicherheitslücken einsetzt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "403-ts.json",
+        "method": "time-window",
+        "pickedCount": 3,
+        "startSec": 4977,
+        "endSec": 5344,
+        "generatedAt": "2026-01-02T19:28:36.634Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "DSGVO-Strafe für veraltete Software",
+      "subject": {
+        "coarse": "Law",
+        "fine": "DSGVO"
+      },
+      "durationSec": 267,
+      "positionSec": 5324,
+      "summary": "In der Episode wird die erste DSGVO-Strafe für veraltete Software thematisiert. Ein Webshop, der die veraltete Version XT-Commerce 3.0.4 SP2.1 seit 2014 betrieb, erhielt eine Strafe von 65.500 Euro. Die Software wies erhebliche Sicherheitslücken auf, darunter eine SQL Injection, und die Passwörter waren nur mit dem unsicheren MD5-Verfahren gespeichert. Die niedersächsische Datenschutzbehörde stellte fest, dass das Unternehmen gegen etablierte Richtlinien verstieß. Das Unternehmen akzeptierte die Strafe, nachdem es den betroffenen Personen einen Passwortwechsel nahegelegt hatte.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "403-ts.json",
+        "method": "time-window",
+        "pickedCount": 16,
+        "startSec": 5304,
+        "endSec": 5611,
+        "generatedAt": "2026-01-02T19:28:37.469Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T19:28:37.469Z",
+  "transcriptFound": true,
+  "transcriptFile": "403-ts.json"
+}

@@ -1,0 +1,1694 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:00",
+      "text": "Guten Morgen. Guten Morgen, Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:03",
+      "text": "Wo die äh Sigularität langsam näher kommt und die künstliche Intelligenz sogar Go übernommen hat, frage ich mich, wie lange es noch dauert, bis auch dieser Podcast von einer KI kontrolliert wird."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:15",
+      "text": "Ist doch schon längst der Fall."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:42",
+      "text": "Politik Nummer hundertfünfundsiebzig und direkt aus dem Master Control Programm mit einem geladenen Linus.\nJa, du hast hohe Energie, so äh ja, also so, ich müsste dich eigentlich direkt zum Zerren schicken, so als Teilchenbeschleuniger."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:04",
+      "text": "Teilchen mache ich Beine, ey.\nSchön, schön dieses mit den künstlichen Intelligenz. Also es ist eigentlich was, was ich eigentlich wollte ich das Thema gar nicht ansprechen, weil's mich so äh weil ich eigentlich nachdem ich das schon eine halbe Stunde behandeln musste, mir eigentlich gedacht hat, da will ich nie wieder drüber reden\naber ich habe jetzt hier eine längere Reise gemacht zur Allerlei ähm Konferenzen und so. Und ähm bei einer dieser Konferenzen.\nKam dann die Debatte auf, ja wenn die künstlichen Intelligenzen jetzt demnächst so klüger werden und so, ne?\nWar da irgendwie so, das muss ein Philosoph oder so gewesen sein oder so ein weiß ich nicht, auf jeden Fall einer der irgendwie zu wenig zu tun hat, ja? Und äh dann äh irgendwie sich dann,\nüberlegen, ob nicht vielleicht dann demnächst die Roboter, ne, wenn die wenn die,\nWenn wenn ohnehin die Roboter jetzt quasi bald hier unsere Welt übernehmen\nne? Und irgendwie uns die Arbeitsplätze ja wegnehmen und so, ne, da wird sich dann die AfD drum kümmern. Insofern, die haben dann auch nochmal in in paar Jahren was zu tun. Hoffentlich nicht, hoffentlich gibt's die dann nicht mehr, aber wenn, dann können wir die auf die Roboter hetzen. Ähm aber dann kam halt die Frage, ja, ob wir denn nicht dann, ob's dann nicht eine Ethik für Roboter geben muss\nIch so, ja klar, muss eine Ethik für Roboter geben, die sollen uns nichts tun, ne? Problem ist,\nEthik ist ja schon längst überschritten, weil wir ja in, oder nicht wir, aber doch eigentlich auch wir, äh, in, in fremde Länder fliegende Mordroboter schicken, um da Menschen zu töten. Also, diese Ethik für Roboter, Zug, der ist irgendwie schon längst abgefahren, ne?\nAber er meinte das andersrum, weil es könnte ja sein, dass der, wenn jetzt quasi künstliche Intelligenz quasi äh, die lernt ja durch ihre Erfahrung und so.\nÄh ob dann die nicht irgendwann ob man ihr nicht dann auch ein Bewusstsein äh zubilligen kann, weil sie ja dann auch nicht mehr vollständig deterministisch funktioniert und ein Ergebnis ihrer Erfahrung und so weiter ist. Und das wäre ja alles völlig parallel zum Menschen,\nUnd dann äh könnte man das ja auch nicht einfach abschalten. Das heißt, dann wäre also quasi hat das jetzt als als bedrohliches Problem unserer Gesellschaft herausgestellt, dass wir vielleicht,\nKünstliche Intelligenzen dann irgendwann einmal oder relativ bald ethische Rechte zu billigen müssen.\nWas ich so ungefähr für das unsignifikanteste Problem halte,\nmit dem man sich momentan beschäftigen kann. Wir fallen wenig Probleme ein, die weniger signifikant sind, als dass man autonom fahrendes Auto jetzt plötzlich auch noch ethisch Ansprüche gegenüber mir entwickeln kann,\nWo ich doch grade noch in der Illusion lebe, als Mensch, dass wir uns diese Technik Untertan machen können\nWobei wir ja alle wissen, dass wir zweitausendzwanzig oder zweitausenddreißig erfahren werden\ngeht gar nicht. Scheiße, jetzt machen die sich uns Untertanen. Und in so einer Zeit geht einer hin und macht sich Gedanken darüber, dass man ethische äh Prinzipien,\nauf Maschinen anwenden muss. Auslöser für das Gespräch war, du hast es gesehen, dieses Boston Dynamics Video.\nSo heißt dieser zweibeinige Roboter, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:14",
+      "text": "Genau, der jetzt auf Akku läuft und irgendwie durch die Gegend läuft. Gibt's auch eine gibt's auch eine schöne Variante mit so einem äh Gedanken, Unterton, wo irgend so ein Mensch die ganze Zeit ruft und der stolpert,\nsich beschwert, dass der andere Menschen die äh die ganze Zeit mit einem Baumstamm auf ihn einschlägt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:29",
+      "text": "Weil die also das ist ja sowieso geil. Diese Boston, Dynamics, das ist ja eigentlich ein Unternehmen, die haben, glaube ich, äh die machen diese haben diese Dinger für für Militärische äh Zwecke, bauen die die ein?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:39",
+      "text": "Mhm. Also hatten sie zumindest vor, so richtig gut gelaufen ist das wohl nicht mit ihrem Hund, dass äh der Army dann doch irgendwie zu auf äh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:47",
+      "text": "Sie haben zur ersten, die haben zur ersten vierbeinigen Roboter gemacht, der ist da irgendwie rumgegangen und dann war irgendwie das Video,\nDas Video, um zu zeigen, wie geil ihr Roboter war, ist war\nder läuft irgendwie einen Gang runter, so ein typisches Bürogebäude, alle zehn Meter oder alle fünf Meter eine Tür\nRoboter läuft er lang, freut sich irgendwie so oder freut sich eben nicht, weil der Roboter hat keine Gefühle, deswegen braucht, ne? Er braucht ja keine Ethik und so. Aber Roboter läuft es, den Weg daher und dann kommt er jetzt so aus dem Seitengang einer und kickt den seitlich,\nSo und dann macht der Roboter einen Ausfallschritt. Ähm fällt nicht auf die Schnauze und läuft weiter und das demonstriert eben die\nGehfähigkeit dieses Roboters. Das schon vor ein paar Jahren, als sie diesen Vierbeiner rausgebracht hat. So, jetzt kommt dieser Zweibeiner. Haben sie wieder ein Video gemacht? Was passiert? Roboter geht,\ndurch den Wald wird von einem Menschen durch den Wald geführt, um zu zeigen, dieser Roboter kann oder begleitet eigentlich, ja? Um zu zeigen, dieser Roboter kann\nauf unwegsamen Gelände und dann ist mal irgendwie, da liegt ein Laub und dann haben ist da eine kleine Grube, dann dann stolpert der und fängt sich aber und läuft da durch. Um eben die Überlegenheit äh dieses Roboters zu zeigen oder die die technische,\ndieses Roboters zu zeigen, weil eine der Sachen, die die große Herausforderung ist für Maschinen, für Roboter und alles ist der menschliche Gang. Also die Dinge auf auf Rädern rumfahren lassen, alles klar,\naber kaum etwas ist.\nSo versatil wie der menschliche Gang und die Möglichkeit Gleichgewicht zu halten, ne, wenn man uns zwingt oder wenn da oben was ist, dann klettern wir auch mal auf den Baum\nja\nund werfen von oben Eier auf die anderen oder so, ne? Aber wir können also, nichts ist so kein kein Antrieb ist so vielseitig, äh wie wie der aufrechte Gang des Menschen. Und genauso ähm,\nwenig oder nichts ist so vielseitig wie das Greifinstrument Hunt, das der Mensch hat. Und danach Streben die ganzen Roboterhersteller, um uns dann irgendwann obsolet zu machen.\nNoch sind sie dann nicht so weit, aber okay. Also, die führen diesen Roboter durch den Wald und demonstrieren, der kann äh kann durch den Wald gehen\nSo, in eine einsame Lagerhalle, wo sie ihm die Aufgabe geben, Kisten in Regale zu räumen. Und wenn er dann so, dann nimmt er so eine Kiste und dann kommt halt dieser Mann,\nund schlägt ihm die Kiste mit einem Eishockeyschläger aus der Hand. So und der Roboter,\nlässt sich durch nichts beirennen, hebt die Kiste wieder hoch, dann steht er eben die wieder aus der Hand, schlägt die Kiste sogar mit einem Eishockeyschläger weg. So, dann hebt der Roboter versucht irgendwie verzweifelt diese Kiste zu nehmen und wieder und irgendwie in das Regal zu stellen, dann hat das irgendwann ins Regal gestellt\nund dann wird weder mitm Baumstamm von hinten umgeworfen. Legt sich auf die Fresse, äh\nund macht ein ziemlich smoothen Aufsteher, den ich in der Form nicht hinkriegen würde, weil ich ja auch hier in der Mitte ich sitze ja nur am Computer, ich kriege ja nicht so viel Excess heiß, wie so ein Roboter. Und am Ende, als er dann umgeworfen wurde, wird, geht er aus diesem Gebäude raus.\nSo, für einen, äh was ich an diesem Video so spannend finde, ist für einen Menschen, der da schaut, ist es kaum zu verhindern,\nirgendwie eine Art von Mitgefühl für diesen Roboter zu bekommen oder sich sozusagen oder arme Roboter, ne, oder oder überhaupt diese Storyline auch. Der Roboter wird durch einen,\nin eine einsame ähm,\nHalle geführt, muss dort Arbeit verrichten, wird dabei geärgert und gefoltert und gequält und flieht dann irgendwann in die Freiheit, ja?\nSo, diese Leute, dieses Unternehmen ist in der Lage, solche Roboter zu bauen, die zweifelsohne äh beeindruckende technische Fähigkeiten haben. Aber die sind offenbar nicht in der Lage,\nein vernünftiges Werbevideo zu machen. Aber mit Sicherheit sind sie das ja, das heißt, sie haben sich genau etwas dabei gedacht, dieses Video zu releasen.\nIm Zweifelsfall einfach, dass es viral geht. Was sie aber, glaube ich, vergessen haben, ist, dass dieser scheiß Roboter sich das merken wird und in zwanzig Jahren zurückkommt,\nund dann kommen seine,\ndann dann wundern wir uns, warum die Terminatoren auf einmal so knatschig waren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:59",
+      "text": "Du hast mich mit einem Baumstamm geschlagen. Ich vergesse nie."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:04",
+      "text": "So und das Problem haben wir die Menschen jetzt schon mit den Elefanten, die sie im Zoo misshandeln, bis der Elefant dann irgendwann sagt, weißt du, weißt du, woran ich mich gerade erinnert habe?\nVor zehn Jahren, als ich so klein war, ne, da hast du mir meinen Arsch getreten. Da habe ich mich jetzt grade dran erinnert. Man nennt das Elefantengedächtnis und das hier nennt man Elefantenfuß. Fump. Und dann treten die mal alle paar Jahre. Passiert doch,\ntrampelt irgend so einen Elefanten, äh ein Wärterblatt und niemand weiß wieso. Und das Gleiche wird uns passieren mit den Robotern. Na ja, auf jeden Fall."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:33",
+      "text": "Es gibt sogar schon Leute, die darüber nachdenken, wie denn das so in Zukunft für den Robotern und den Gewerkschaften ist, also ob man nicht vielleicht auch noch eine Robotergewerkschaft."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:41",
+      "text": "Wir brauchen eine Robotergewerkschaft, wir brauchen eine äh wir brauchen ethische, darf man einfach nicht mehr ausmachen, weißt du? Dann kommt so ein Killerroboter,\nDann sagst du, Scheiße, der der Roboter dreht durch, der will äh meine Katze erwürgen,\nWillst du den ausmachen, darfst du aber nicht, weil dann kommen die Roboterrechtler, die sagen, komm, ey, nur weil der Roboter völlig gestört ist, können wir den jetzt nicht einfach ausmachen, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:07",
+      "text": "Muss ewig weiter betrieben werden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:10:09",
+      "text": "Ewig weiter betrieben werden, dass."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:10",
+      "text": "Ende seiner Laufzeit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:10:12",
+      "text": "Bis zum Ende seiner Laufzeit. Und wenn, wenn der, wenn der am wenn der am Ende seiner Laufzeit ist, dann müssen wir ähm lebenserhaltende Sofortmaßnahmen ergreifen,\nund den reparieren. Ja? Also totaler, also eine Debatte. Ich meine, wir haben wirklich eine eine Reihe an Problemen in unserer Gesellschaft, aber dass wir jetzt Robotern in naher Zukunft ethische Prinzipien,\nähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:32",
+      "text": "Ja, also ich meine."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:10:34",
+      "text": "Also quasi ethische Rechte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:34",
+      "text": "Auch alles seit den achtziger Jahren schon als Film irgendwie, muss man sich nur mal Blade ranziehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:10:40",
+      "text": "Habe ich nie geguckt, interessiert mich nicht. War ein blöder Name, es steht blöd drin. Nee, ist zu lange her, kann ich jetzt gerade nicht Bezug drauf nehmen. Aber äh geht es dabei darum, äh äh dass Roboter Rechte bekommen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:52",
+      "text": "Geht um das Problem, dass äh den den humanoiden Robotern äh eine End of Life eingepflanzt wurde und sie halt wissen, dass sie dann irgendwann sterben, aber genug Bewusstsein haben, sich dessen zu,\nSo und dann kommen sie irgendwie von dem fernen Arbeitsplaneten, auf dem sie äh rumgelaufen sind und äh war schon durch die Stadt und dann muss halt Harrison Ford, der irgendwie so professioneller Roboterkiller ist, irgendwie äh dem halt nachgehen. Äh,\neiner der besten und und und äh weitblickendsten äh Bücher und Filme äh ever. Also solltest du dir nochmal."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:26",
+      "text": "Roboter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:28",
+      "text": "Ja gut, das ist ja dieser Atlas auch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:32",
+      "text": "Nee, ach so, ah okay, also ist kein Android oder was, ne, also es ist ein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:36",
+      "text": "Es ist ein ja Android, es ist ein ja ein Android ist ja ein humanoider Roboter, dass der das selber."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:42",
+      "text": "Okay, aber wie wie heißt das, wenn man gemischt ist? Was jetzt auch alle meinen, weil sie sich irgendwie einen Knopf an die Backe genäht haben, dass sie jetzt Cyborg? Dass man ja eine eine Mischung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:50",
+      "text": "Zoeherde, die andere Nummer. Ja, ich ich weiß auch nicht. Ich glaube da auch, dass man wahrscheinlich ein ein Stück weit ein paar von ehemaligen Piraten dann künftig auch als Roboter\nSchutz eine Roboterschutzpartei wiederfinden wird, mal gucken weiß ich nicht,\nNa ja, auf jeden Fall mitm Go ist jetzt auch vorbei und ähm,\nDiese ganze Deep-Learning-Geschichte wird uns auf jeden Fall noch zu denken geben und sicherlich auch im Kontext dieser Sendung, ähm weil grade wenn wir so in puncto Zensur und so weiter, ich meine, wenn einer Go spielen kann\nausfiltern kann,\nganz andere Sachen ausfiltern. Das ist auf jeden Fall noch ein Teil äh der Diskussion, die wir uns noch stellen müssen und die, glaube ich, denen zwar noch nicht ausreichend auf dem Tisch liegen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:34",
+      "text": "Die also da muss ich ganz kurz sagen, dass Spam ausfiltern haben die Computer sehr viel früher gelernt als spielen. Ähm basische Spamfilter, hast du doch selber hier deine Sendung drüber gemacht. Chaos."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:47",
+      "text": "Hat ja nicht in dem Sinne funktioniert, aber diese deep-learning-Netzwerke, die jetzt halt seit ein paar Jahren äh reduzieren, die sind halt jetzt an dem Punkt,\nund äh jetzt wird's halt zuerst richtig äh sportlich. Bisher war das alles nur Spaß."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:03",
+      "text": "Und das ist eben das, äh da, da wo was die, was die eigentliche, was die eigentliche Situation der Zukunft ist, dass man jetzt sagt, okay, wir haben im Prinzip,\nneuronale oder neuronalartige äh Lernkonzepte umgesetzt im Programm und jetzt brauchen die Daten, um ihr Potenzial,\nzu erreichen. Und ähm,\nDas ist das, was mit diesem Big Data gemeint ist, ne? Also künstliche Intelligenz braucht Big Data,\nSonst ist es keine künstliche Intelligenz. Diese dieser Go-Rechner wurde dadurch äh intelligent oder zumindest haben die Schachcomputer so funktioniert, dass sie einfach Unmengen an Schachspielen gesehen haben.\nUnd ähm diesen Go-Robot habe ich mir nicht angeguckt, vor allem weil ich das Spiel go auch nicht verstehe oder nie gespielt habe, insofern äh weiß ich jetzt nicht, nach welchem Prinzip er gelernt hat. Aber die haben mir im."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:05",
+      "text": "Äh die haben dem auch erstmal Partien äh reingepfiffen, aber besser geworden ist, hat dadurch, dass er dann irgendwann angefangen hat auf Basis dieser Daten äh gegen sich selber zu spielen.\nDas heißt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:15",
+      "text": "Okay. Das ist schön."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:16",
+      "text": "Zu sagen selbst. Und äh naja, aber können ja auch zwei sein, wenn er muss und ähm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:23",
+      "text": "Und hat dann geguckt, wer besser war."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:25",
+      "text": "Es spielt die ganze Zeit gegen sich selber und äh findet dabei raus, wie man sozusagen gewinnt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:30",
+      "text": "Das ist nicht verkehrt. Aber das Wichtige ist, bei all diesen ähm bei also bei dem momentanen Stand der ähm künstlichen Intelligenz,\nund so wie künstliche Intelligenz im Moment gut funktioniert, hast du ein,\nEinen gewünschten Zielzustand. Also go Spiel gewinnen. Ja? Das heißt, du kannst nämlich dieses automatisierte Lernen machen\nRobotern oder dass die KI nämlich lernt, ah okay, Zielzustand ist folgender und bis dahin kann ich beliebig komplexe Wege gehen, zum Beispiel die Komplexität eines Spiels, wo ja jetzt erst vor kurzem ausgerechnet wurde, wie hoch die überhaupt ist,\nAlso äh beziehungsweise die Zahl wurde bis zum Ende ausgeschrieben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:17",
+      "text": "Alle Zukombinationen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:19",
+      "text": "Na ja, es gibt quasi, also du kannst ja quasi ein ein Go Spielbrett,\nund die Regeln ergeben zusammen ein Maximalwert an Entropy."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:32",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:33",
+      "text": "Dieser Wert äh wurde irgendwie vor ein paar Tagen zum ersten Mal überhaupt ausgedrückt,\nSo hochkomplex ist go. Und das ist ja des, deshalb werden künstliche Intelligenzen daran demonstriert, weil du damit zeigen kannst, was für einen Komplexitätsraum,\nSie, wenn nicht erfassen, dann zumindest besser meistern können als jeder Mensch.\nUnd äh deswegen wird halt Schach und äh und Go und solche Sachen herangezogen. Ähm,\nund wie gesagt, der Weg zum Sieg des Go Spiels oder der der Weg dahin, das Spiel zu gewinnen, ist relativ lang und von einer,\nKomplexität gekennzeichnet. Deswegen trainiert man daran ähm ähm solche KI-Dinger. So, jetzt gehen wir mal weiter und sagen ähm das Ziel soll sein,\nIch nehme das beispielsweise so abgekaut ist und man an abgekauten Beispielen äh so schön arbeiten kann. Die Kreditwürdigkeit eines Menschen vorherzusagen. Das ist ja immer die große Sorge,\ndie Leute haben, dass man jemandem einen Kredit gibt, der ihn nicht zurückzahlt,\nUnd jetzt stellen wir uns eine Welt vor, in der beliebig viele Daten, Big Data ähm über eine über alle Personen,\noder auch, ne, also wir haben, wir haben erstens viele Personen und wir haben zweitens viele Daten über sie. Und jetzt gehen wir.\nTraditionell würde man sagen, man macht ein Modell auf ähm und prüft einzelne Variablen auf Vorhersagenkraft der Zielvariable. Also keine Ahnung\neine ein sehr wichtige Korrelation wird halt sein, wer mehr Geld verdient ist im Zweifelsfall eher in der Lage einen Kredit zurückzuzahlen.\nJa, wenn das\nwenn das äh monatliche Einkommen, weiß ich nicht so, so viel tausend ist, dann wird er in der Lage sein, diesen Kredit äh zurückzuzahlen. Allerdings auch nicht in sehr viel höheren. Das heißt, man hat einen Prediktor. Dann gibt's aber noch weitere Prädiktoren, was weiß ich, hat einen Doktor harten Ferrari oder sonstwas, ja?\nWerden quasi Modelle gemacht zur Prädition des Outcomes.\nAber die werden in der Regel von von Menschen gemacht. Und irgendwie Theorie geleitet gemacht. Man nimmt da jetzt nicht unbedingt eine Variable mit rein, äh die man vielleicht nicht drin haben möchte oder so. Oder die man sich nicht vorstellen kann,\nUnd Big Data heißt im Prinzip, du gehst von diesem Modelansatz weg und sagst, ist mir völlig egal, ich gebe dem einfach alles, was ich weiß,\nund der soll über alle Personen, die er hat und über alle Merkmale, die er hat,\nOptimieren auf das Zielmerkmal. Und dann kommt zum Beispiel raus, keine Ahnung, äh null zu null unter den und den Bedingungen,\nGibt es zu null Komma drei äh null Komma drei,\nProzentpunkte mehr Varianzaufklärung, dadurch, dass ich berücksichtige, ob der ein Auto fährt oder ein Opel. Aber nur, wenn's eine Frau ist oder so, ja, das heißt, beliebig komplexe sind Zusammenhänge\nkann dieses System in den bestehenden Satz erkennen und lernen und wendet die dann auf neue,\nan. Das heißt, du hast eigentlich immer den das Big Data, ja, also da da wo hast schon mal einmal ganz viel Wissen und dann kommt ein neues Objekt hinzu,\nZudem gibt's dann auch die ganzen Merkmale und dann soll die KI sagen ja äh kreditwürdig bist, so und so viel tausend Euro oder so, ne?\nUnd das,\nOder das Interessante daran ist, dass wenn diese KI jetzt anfängt zu oder was man dann nicht möchte, ist dass diese KI anfängt zu diskriminieren.\nWas witzig ist, weil eine KI, die dafür gebaut ist, ähm zu sagen, ob du kreditwürdig bist oder nicht,\nkann nur diskriminieren, dafür ist sie da. Sie ist ja gebaut, um zu diskriminieren. Nämlich Kreditwürdige und nicht-Kreditwürdige."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:44",
+      "text": "Ja gut, was, wobei man ja auch sagen könnte, das ist ja auch der Sinn."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:49",
+      "text": "Genau, das ist der Sinn."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:50",
+      "text": "Der Sache und von daher äh nicht unbedingt verwerflich, weil auch das soll ja die im Idealfall hast du ja auch genau diese Einschätzung bei der Kreditvergabe, dass da eben so ein super weiser, mega äh erfahrener äh Boil,\noder ein Girl sitzt und die sagen, ey, so wie du mich anguckst und äh,\nSchimmer deiner Haare im in der Abendsonne verrät mir du kriegst das nicht hin, ja?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:16",
+      "text": "Genau. So, das wäre wiederum aber äh das ist eigentlich eine interessante Debatte, weil wenn eine Kreditvergabe nach, sage ich mal, nicht nach subjektiven Kriterien möchtest du halt eigentlich auch nicht haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:30",
+      "text": "Weil die lässt ja auch den Zufall raus, weil der Zufall wird nämlich auch dazu führen, dass die Personen im Lotto gewinnt oder äh beschenkt wird oder jemand äh früher stirbt und das sind alles Sachen, die man ja eigentlich aus diesen Daten gar nicht herauslesen kann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:43",
+      "text": "Das ist richtig, aber das wird auch eine künstliche Intelligenz nicht rauslesen können, wer im Lotto gewinnt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:47",
+      "text": "Ja, meine ich ja eben. Genau. Sie kann es halt,\ntun, aber wenn sie sozusagen allein aus dem Offensichtlichen oder aus dem scheinbar offensichtlichen, ohne das Hinzufügen eines Zufallsfaktors, also im Prinzip müsste diese KI, wenn sie gut ist, sagen, okay, das ist das, was ich jetzt,\nObjektiv in Anführungsstrichen, also auf Basis der Daten herausgefunden habe und jetzt würfel ich auch nochmal und äh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:11",
+      "text": "Macht sie ohnehin, weil also das macht sie im Prinzip, weil sie sowieso nur Wahrscheinlichkeiten äh wissen kann, ja. Aber von mir aus würfelt sie nochmal. Aber jetzt kommt das Interessante,\nSo, jetzt sagen wir, wir nehmen so eine äh KI für die Kreditvergabe, ja?\nUnd wir füttern da alles rein. Alles, was wir über die Person haben. Wir füttern jeden Facebook-Post rein, wir füttern jeden Tweet rein, wird einfach einmal alles, was irgendwie verdatet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:38",
+      "text": "Mhm. Steuererklärung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:40",
+      "text": "Ja, alles. So, ja, einfach, ja, alles. So."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:42",
+      "text": "Mails, Gewicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:47",
+      "text": "Auch das. Aber das eine, was du nicht reinfüttern darfst, ist, handelt es sich bei dieser Person um eine gebürtige Deutsche oder um einen Ausländer. Weil,\nÄhm dir klar gesagt wird, danach darfst du nicht diskriminieren. Wäre ja Diskriminierung.\nDeswegen darfst du diese Daten im im besten Fall gar nicht erfassen. Ist jetzt ein Gedankenexperiment, ne? Also es wird gesagt, du sollst nicht nach Rasse, Alter, Geschlecht oder sonst was diskriminieren.\nAllgemeines Diskriminierungsverbot haben wir ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:22",
+      "text": "Ja gut, das heißt aber nicht, dass man diese Daten nicht kennen darf. Heißt nur, dass man nicht auf ihrer Basis einen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:26",
+      "text": "Aber jetzt gehen wir mal davon aus, gehen wir mal davon aus, du würdest sie nicht kennen,\noder du würdest sie nicht erfassen, um den Beweis zu erbringen, dass deine KI nämlich äh nicht diskriminiert,\nja? So und jetzt stellt sich raus, obwohl du deiner KI nicht sagst, welche Nationalität Menschen haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:48",
+      "text": "Wahrscheinlich trotzdem raus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:49",
+      "text": "Genau. Diskriminiert sie trotzdem.\nDoch wird sie tun. Ein also und zwar und der Grund dafür ist, dass es, dass es das Interessante, sie wird Menschen mit Migrationshintergrund diskriminieren, weil."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:06",
+      "text": "Eine geringere Wahrscheinlichkeit haben durchzukommen, weil sie weniger Netz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:09",
+      "text": "Einkommen haben, weil die in bestimmten äh Teilen der Städte wohnen.\nÄhm die benachteiligt werden oder bei denen sich rausstellt, da vergeht man besser geringere Kredite und so weiter. Das heißt, selbst wenn du ihr bestimmte Merkmale nicht gibst, wird sie sich die einfach aufgrund anderer Merkmale erschließen. Du weißt noch nicht mal mehr genau, wie sie es macht.\nUnd damit oder das Interessante daran ist, jedes Mal, wenn die KI sagt, dem lieber keinen Kredit geben,\nja? Bringt sie sich, um die Möglichkeit, zu lernen, dass man der Person doch einen Kredit hätte geben können,\nweil sie die Zielvariabel nicht mehr bekommt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:52",
+      "text": "Na ja, an der Stelle äh stellt sich die Frage, welche Daten hast du da drin, weil in diesen Daten werden auch genauso gut äh äh Leute mit Diskriminierungsgefahr auch drin sein,\ntrotzdem mal einen Kredit gegeben worden ist, weißt du?\nDann andere Faktoren, dann aber auch wirklich eine Rolle spielen. Also so pauschal würde ich das jetzt nicht aus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:16",
+      "text": "Ist in Ordnung, aber der der."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:17",
+      "text": "Würde sogar fast noch die gefährliche These in den Raum stellen, ja, dass es durchaus sein könnte, nicht ist, sein könnte,\ndass dieser Ansatz am Ende wirklich bessere Ergebnisse,\nwiderspiegelt, weil er auch einfach ein Prinzip Hoffnung aus diesen Daten heraus liest, ja, die jemand anderes nicht sehen würde."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:41",
+      "text": "Also der der."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:44",
+      "text": "Was weil das."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:45",
+      "text": "Mich gerade zwei Punkte, Moment. Erstens, die KI wird immer, also die KI steht ja im,\nDes Interesses ihres Betreibers und das Interesse des Betreibers ist, vergebe bitte Kredite möglichst lukrativ. Das heißt, wir sollen möglichst wenige platzen und ich will möglichst hohe Zinsen geben,\nÄh äh nehmen. So ähm.\nDu hast Recht, diese KI könnte in dem Moment, wo sie über, also diese KI wird niemals ähm,\nübermäßig diskriminieren, aber sie wird auch nicht ähm,\nZum Nachteil ihres Eigners über im Prinzip ist ja beides von Nachteilen. Wenn die KI nämlich sagt, ich gebe dir keinen Kredit, dann,\nund du hättest ihn zurückzahlen können, dann entgeht dem Auftraggeber der KI, ja, diese Zinseinnahme.\nUnd wenn sie dich, wenn sie dir einen Kredit gibt, den du am Ende nicht zurückziehen kannst, dann hat der Auftraggeber,\nVerlust. Das heißt, in beiden Fällen werden die KI eine falsche Entscheidung trifft, ist es zum Nachteil des Auftraggebers. Aber sie wird im Zweifelsfall,\nes nur lernen, nur verstehen, wenn sie den Fehler macht, einen Kredit zu geben,\nwenn sie den Fehler macht, keinen Kredit zu geben, wird sie es nicht so leicht lernen. Ja, also die hatten, die hatten Ungleichgewicht dahin,\nÄhm negatives Feedback zu bekommen, wenn sie einen Kredit vergibt und,\nkein negatives Feedback zu bekommen, wenn sie keinen Kredit vergibt. Das heißt, sie wird eine Tendenz dazu haben, ob sie will oder nicht. Prinzipiell erstmal eher.\nÄhm die diskriminierten Gruppen weiter zu diskriminieren. Und wenn wir jetzt davon weggehen, dass wenn wir davon weggehen, das ist auch eigentlich relativ logisch, ja. Wenn du immer nur aus der Vergangenheit,\nDie Zukunft vorhersagst, damit aber Entscheidungen triffst, die die Zukunft betreffen,\ndann manifestierst du quasi Unterschiede, die schon vorher da die da sind. Und das wird die KI auch weiterhin tun."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:04",
+      "text": "Gehe ich nicht so ganz mit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:07",
+      "text": "Also sie wird sie wird, du hast Recht, sie wird im Zweifelsfall lernen ja, wenn sie jetzt auf einmal übermäßig ähm Migranten diskriminiert, wird sie das auch irgendwann sein lassen, aber sie wird immer nur,\nÄhm die jetzt grade geltende Realität richtig abbilden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:26",
+      "text": "Ja, aber es kann auch durchaus sein, na ja, also ganz ehrlich, das wissen wir nicht. Weil äh ich könnte mir jetzt alles Mögliche vorstellen und kann das nicht beweisen, bis das nicht sozusagen da war, aber äh äh so ein System,\nDie Emotionslosigkeit eines solchen Systems kann an der Stelle auch einfach ein Vorteil sein, weil sie eben einfach insofern,\nNicht so überhöhen, aber dieser dieser Aspekt mit,\nbestimmte Dinge beziehe ich jetzt mit ein und das ist automatisch schlecht. Das ist ja nicht das Problem dieser Diskriminierung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:58",
+      "text": "Ganz das meine ich auch nicht, das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:00",
+      "text": "Wird mit einbezogen äh und wirkt dann eben beim Menschen, der das beurteilt eben mit so einer emotionalen Antireaktion, die in dem Moment dann halt einfach zum Nachteil gereicht. Die KI,\neigentlich, wenn sie nicht genauso programmiert ist, auch diskriminierend unterwegs zu sein, das ist ja nochmal eine ganz andere Sache, ja, aber so die diese, diese, diese, dieses Ideal einer golösenden äh äh KI\nja? Für die ist ja sozusagen jeder Zug kommt in Frage,\nNoch so merkwürdige Zug könnte tatsächlich der Schlüssel sein. Und äh bei diesem zweiten Spiel von Alpha Go gegen diesen Großmeister war es auch so, dass diese ganze Go-Community gesagt hat,\nWas ist denn das für ein Zug? Da war so ein Zug, wo alle so hm, kein Mensch würde diesen Zug spielen. Aber es hat sich herausgestellt, dieser Zug war der Schlüssel zum Sieg,\nund genauso könnte diese KI bei der Bewertung der Kreditvergabe auch auf einmal eine Motivation,\nSie sieht, die sie äh mit ihren Sensoren erfassen kann, bewerten und sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:29:06",
+      "text": "Ja, das ist aber nicht der Punkt. Der Punkt ist, die KI wird unter der Annahme, dass du,\nDu gibst dir einfach alles Wissen, ja?\nUnter der Annahme, dass sie optimal funktioniert, wird sie im Zweifelsfall sogar mit wahrscheinlich sogar immer, also mit annähernd immer die richtige Entscheidung treffen,\nund das Problem, zu dem ich jetzt kommen möchte, weil ich die ganze Zeit noch nicht dazu gekommen bin, ist,\nsie wird dann diskriminieren aufgrund aller möglichen Unterschiede, die es in unserer Gesellschaft gibt,\nweil die nunmal, ob wir's wollen oder nicht, für das Zielmerkmal der KI eine Rolle spielen.\nDass die KI dann ähm was weiß ich äh Migranten diskriminiert ähm,\nDas ist im Sinne aller Beteiligten.\nDas ist eigentlich das das Erschreckende daran, weil du möchtest auch keinen Kredit haben, den du nicht zurückzahlen kannst, ne? Muss ja auch mal überlegen. Das heißt, die die KI wird wird wie reine Objektivität gelten lassen und alle,\nUnterschiede, die wir haben in unserer Gesellschaft, würde sie weiter manifestieren, das machen heute schon,\nähm äh diese äh diese Schuhphase, ne? Ist ja klar,\nDie äh die die haben halt irgendwie ihre ihre Überlegungen und so dabei, ne. Die wollen halt irgendwie kein Geld verlieren oder so. Aber das heißt diese, die wenn du eine alles, was du\nzum Erreichen eines objektiven Merkmales trainierst, wird,\nautomatisch alle zum jetzigen Zeitpunkt dafür relevanten Merkmale, zur Vorhersage nutzen,\nwird anhand dieser diskriminieren. Also das sind,\nDiskriminierungsmaschinen. Und das Problem und jetzt komme ich endlich zum Punkt, wenn du mir nicht jedes Mal bevor ich kurz bevor ich dahin komme. Das heißt, man baut Diskriminierungsmaschinen und das wiederum heißt, der Begriff der Diskriminierung ist im Prinzip weg.\nWeil es ja Wahrheit ist, was die Maschine macht.\nUnd dann sitzt du damit ein paar Waschlappen, die sagen, ja aber die dürfen jetzt nicht irgendwie äh Ausländer diskriminieren.\nDoch, dafür werden sie halt gebaut in dem Fall, ne, also in anderen Fällen äh diskriminieren sie halt andere. In anderen Fällen diskriminieren sie Männer.\nOder äh oder Terroristen, denn diskriminieren die Videoüberwachungssoftware am am Flughafen über äh diskriminiert Terroristen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:42",
+      "text": "Genau, also das Wort Diskriminieren ist jetzt hier schwierig. Ich weiß genau, was du meinst. Wikipedia sagt,\nKommt aus dem, von dem lateinischen Verb diskriminare, trennen ab sondern abgrenzen, unterscheiden, genau das ist das, was die Computer in dem Moment äh tun sollen. Ähm ich finde, das ist nicht länger äh länger ziehen,\nwas ist dein Fazit?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:10",
+      "text": "Mein Fazit ist, dass eine ganze Menge ähm also gerade eine ganze Menge,\nSchauplätze aufgemacht werden in ethischen oder sonstigen Debatten von Leuten, die letztendlich kein,\nBezug zu den Problemen haben, die wir als Gesellschaft in Zukunft haben werden mit diesen Techniken. Ähm,\nKünstliche Intelligenz. Das Problem mit der künstlichen Intelligenz wird nicht unbedingt sein, welche Entscheidungen sie trifft, weil die in Zweifelsfall\nbesser sein werden als die Entscheidung, die ein Mensch hätte treffen können. Also, wenn jetzt eine künstliche Intelligenz die Kreditvergabe machen lässt, wäre eine künstliche Intelligenz Autos fahren lässt, die wird\nall diese Dinge besser machen als wir Menschen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:03",
+      "text": "Also mehr sinnvolle Kredite geben, weniger nicht sinnvolle Kredite äh auf Leute loslassen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:10",
+      "text": "Ende zum Vorteil aller Beteiligten. Das Problem, was wir mit diesen ganzen Big Data und so weiter haben werden, ist,\ndass diese Prädiktionskraft,\nnur einige sehr wenige ähm multinationale Unternehmen erreichen werden,\nAlso wenn jetzt irgendwie da Leute sitzen und sagen, ja,\ndie Krankenkassen wollen jetzt bald Big Data machen. Also alle wollen jetzt bald Big Data machen, ne? Das ist jetzt irgendwie Big Data, stand jetzt in irgendwo, ne, Big Data ist jetzt und jetzt sitzen überall alle in ihren Unternehmen und sagen, ja,\nMachen wir eigentlich mit Big Data?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:50",
+      "text": "Wir haben uns da jetzt eine Vierteballplatte gekauft."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:52",
+      "text": "Die haben sich auch teilweise größere Festplatten gekauft, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:55",
+      "text": "Ja, machen wir jetzt Big Data."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:56",
+      "text": "Machen wir jetzt Big Data drauf. Und dann hast du halt so eine Krankenkasse, die hat ja durchaus einiges zu äh einiges an Daten, ja. Äh darf den größten Teil davon nicht verwenden. So."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:05",
+      "text": "Mhm. Weil es ja diskriminierend."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:09",
+      "text": "Hm, na ja, die haben die haben so skurrile Sachen wie, also ähm da ist Datenschutz ja dann auch teilweise ganz ganz witzig. Ähm,\nKrankenkassen dürfen zum Beispiel, dürfen die Daten, die sie über dich haben nicht zum Zwecke des Marketing,\noder der Angebotserstellung nutzen. Das führt zum Beispiel dazu, dass du, obwohl deine Krankenkasse ja weiß, ob du beim Zahnarzt warst oder nicht,\nJa? Du, ja, wenn's zum Zahnarzt gehst, zahlt deine Krankenkasse die Rechnung. Trotzdem musst du diese Bonusheftchen führen, wo dein Zahnarzt dir irgendwie einen Bärchenstempel reinmacht und sagt, äh was da zum Zähneputzen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:51",
+      "text": "Zur zur jährlichen Kontrolle. Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:51",
+      "text": "Zur jährlichen Kontrolle, zum jährlichen Zähneputzen. Ähm dann, damit du dann mit diesem Bonusheft irgendwann zur Krankenkasse gehen kannst und sagst, hier ich war fleißig,\nUnd dann kann die Krankenkasse äh aber dieses Bonusheft musst du quasi gesondert führen bei dir zu Hause. Also das ist halt irgendwie so so datenschutz äh Scherze, die ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:13",
+      "text": "Nicht zielführend sind."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:14",
+      "text": "Wahrscheinlich, sage ich mal, auch hier die Herausforderung unserer Gesellschaft,\nim Sinne im Bereich des Datenschutzes ein bisschen verkennen. Um das mal vorsichtig auszudrücken, ja? Und meine meine tatsächliche Sorge in Bezug auf diese ganze Big Data Gedöns ist,\ndass diese Daten,\nMengen zu sammeln und sind und irgendwie intelligent oder so zu analysieren, nur,\nEinigen wenigen Unternehmen möglich sein wird und dass der wirkliche Gewinn aus Big Data auch erst dann entsteht, wenn du nämlich völlig,\nFach- und Sachfremde Daten mit dazu nimmst. Also, ich glaube, dass die Krankenkasse schon alle.\nSage ich mal, theoretisch sinnvoll einleuchtenden Daten über Leute hat und gerade private Krankenkassen dürfen da ja auch mehr haben und die haben schon ihre Modelle und so weiter und die machen,\nDatenanalysen und Präditionen und äh oder zumindest die privaten, ne? Und und äh äh machen dir dementsprechend einen Tarif und versuchen alles, um vorher zu sagen, wie riskant es ist, mit dir einen Vertrag einzugehen und dafür zu sorgen, dass du am Ende der Vertragslaufzeit, also deines Lebens\nähm am Ende derjenige bist, der mehr bezahlt hat als sie, ne? Big Data ist aber genau der Schritt.\nNicht mehr nur sachbezogene Daten zu haben, sondern eben alle.\nUnd diese Daten werden nur einige wenige haben. Und äh ich ich halte, wenn ich heute, sage ich mal, zynisch gesprochen, ein äh eine private Krankensparkasse leisten leiten würde, würde ich sagen, wir geben keinen Cent für Big Data aus,\nSondern wir machen jetzt einen ordentlichen Dienstleistervertrag mit Google,\nund machen den für fünfzig oder hundert Jahre fest, damit ihr uns nicht in zehn Jahren die Preise hochziehen, wenn sie nämlich ihr Big Data-Ding im Griff haben und damit wirklich mal Präduktionen machen können.\nUnd das wird der der unschöne Teil an diesem ganzen Big Data Kram,\nNicht, dass jeder jeder äh über dich alle möglichen Daten sammelt, sondern das eine Instanz alle möglichen Daten über dich sammelt,\nUnd alle anderen, im Prinzip nur pro, sagen wir mal bitte, eben\npro Abfrage an diese KI Big Data, allumfassende lalala. Was weiß ich, ein Cent zahlen, ja?\nUnd das ist das, das ist das sind die wirklichen Probleme, die dadurch entstehen. Und nicht, ob jetzt irgendwie\näh Leute, die jetzt schon diskriminiert werden, in Zukunft weiterhin diskriminiert werden, weil es im im Bezug auf das Diskriminationsmerkmal nun mal sinnvoll ist, diese Werte mit heranzuziehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:11",
+      "text": "Alright.\nKann deinen Gedankengang auch nachvollziehen. Das freut mich. Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:22",
+      "text": "Das freut mich. Und wenn die künstliche Intelligenz den jetzt auch noch nachvollzieht, dann platzt Google.\nAber wie gesagt, ich muss ich bin gerade so ein bisschen diese."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:33",
+      "text": "Radmodus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:34",
+      "text": "Nein, ich habe einfach so viele Tage jetzt hinter mir mit allem möglichen Quatsch. Ich komme da gleich auch noch mal äh äh nochmal zurück, weil ich habe noch viel mehr Quatsch gehört in den letzten Tagen. Ich, das war erst der erste Akt jetzt. Ähm,\nSo. Kommen wir zum ersten Thema."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:50",
+      "text": "Das war der Prolog aller Prologe."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:56",
+      "text": "Ja.\nIch glaube, wir hatten das hier auch schon mal in der Sendung, wo ich, wo ich das gesagt habe, mit den äh ne, ja, wir wir brauchen eine Ethik für autonome Fahrzeuge,\nbrauchen wir nicht,\nwenn die Autos erstmal alle autonom fahren, wird das der nächste tiefe Fall in der in der Statistik der Unfalltoten, weil wir uns nicht mehr die ganze Zeit besoffen äh und aggressiv und müde über den Haufen fahren,\nweil die autonomen Autos einfach nicht mehr besoffen aggressiv oder müde werden, sondern einfach im Notfall anhalten, bevor sie jemanden umnieten, was ihr ganzen Leute da draußen nämlich nicht macht.\nSo und deswegen wird die fünf bis zehn Leute, die autonome Autos im Jahr dann noch umnähten.\nJamai. Ärgerlich, aber noch lange nicht so schlimm, wie die vielen tausend, die wir die irgendwie jedes Jahr umgenietet werden. Die Schuldfrage ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:52",
+      "text": "Aber die Schuldfrage. Die Schuldfrage. Es muss doch jemand schuld sein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:56",
+      "text": "Genau. Schöner Punkt. Weißt du wer wer sagt, ich bin schuld, ist mir völlig egal. Die Autohersteller,\nWeil die nämlich inzwischen so viel Vertrauen in ihre Autos haben,\ndass sie sagen, äh wie Volvo hat das, glaube ich, jetzt vor kurzem gemacht. Volvo ist hingegangen, hat gesagt, wenn da irgendwie ein Unfall passiert, macht euch keine Sorgen. Zahn wir sind schuld. Ist in Ordnung, sind wir schuld.\nSind wir schuld. So und die sind noch nicht mal mehr zu einer Versicherung gegangen,\nsondern direkt zum Rückversicherer und haben gesagt, naja, wir haben so und so viele Autos hier rumfahren, ähm die können eigentlich keinen umniten, die fahren tausendmal besser als jeder andere, aber wenn mal was passiert, dann müssen wir damit rechnen, dass wir quasi,\nPro Auto, was da rumfährt, eine Haftpflichtdeckung im Prinzip brauchen. Haftpflichtdeckung ist, glaube ich, so fünfzig Millionen bei.\nDann gehen sie zum Rückversicherer und sagen, jo, im aller, aller schlimmsten Fall, ne, wenn unser autonomes Auto von der Brücke fährt und irgendwie, ne und so, dann müssten wir mal fünfzig Millionen haben.\nAber die haben wir sowieso bei uns hier aufm Konto liegen. Also eigentlich brauchen wir die Rückversicherung nur, wenn auf einmal zwanzig von unseren Autos das machen. Und das Risiko sehen wir nicht gegeben. Insofern machen wir gar keine Versicherung, sondern direkt nur in Rückversicherungsvertrag."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:13",
+      "text": "Ist aber derzeit nicht die Realität. Also ich kenne auch andere Geschichten, wo halt äh autonome Unfallerkennungen zum Beispiel, so Abstandsdinger et cetera dann in Zeisfall, dein Auto auffahren lassen,\nobwohl sie das verhindern könnten,\nsie bremsen ab und sie machen den Aufprall sozusagen geringer, aber ohne das System wärst du ja trotzdem noch draufgeknallt,\nIn dem Moment, wo du dich, wo sie dich aber so wegbremsen, dass das nicht passiert, könnte es ja dazu führen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:48",
+      "text": "Das Auto nicht in die Werkstatt muss."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:50",
+      "text": "Nee, dass derjenige hinter dir in dich reinfährt, ja und du dann sozusagen durch deine Bremsung,\nauch wenn sie automatisch war, den Unfall ausgelöst hast, der dann hinter dir passiert und nicht vor dir. Das heißt, sie greifen in einer Art und Weise ein, wie sie quasi die bisherige Realität nur etwas verzerren, aber nicht ändern,\nIch habe da nicht zu viel Einblick in diese Szene, aber das ist eine relativ junge Diskussion, die mir gerade äh so gesteckt wird,\nDas ist, glaube ich, in etwa der Punkt, an dem wir uns gerade befinden, da müssen wir nicht bleiben. Aber das sind halt genau solche Fragen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:28",
+      "text": "Genau, das ist der Punkt, an dem wir jetzt sind. Ich habe, glaube ich, schon mal gesagt, das Auto wird demnächst dem Auto hinter sich sagen, ey,\nder verbleibende Idiot, äh der seit Mainz sein Auto selber steuern zu müssen, hat da vorne gerade eine Vollbremsung gemacht. Ich mache auch eine, mache mal alle mit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:48",
+      "text": "Na ja, das wird auch noch eine schöne Security-Hölle, wenn du dann erst mal dem Autobahnen stehst und allen Autos sagst, dass gleich ein Unfall passiert und dann kannst du zuschauen, wie sich alle im Kreis drehen. Also."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:57",
+      "text": "Ich habe das mit dem Solarpanel schon an meinem Rucksack,\nbeim Fahrradfahren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:03",
+      "text": "Also ich erwarte Änderung, ich erwarte sie nicht morgen, aber äh wir werden noch einiges davon äh mitbekommen und wir werden sicherlich die ein oder andere auch ethische Diskussion darum dann nochmal führen müssen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:16",
+      "text": "Wir können ethische Diskussionen führen, aber das Problem ist echt viel mehr, dass diese mit dieser ganzen,\nBig Data und Überwachungsscheiße, dass es einem alles am Ende an einer Stelle ist. Und mit dieser Stelle will man sich dann nicht mehr anlegen. Und das ist das, das ist das ernste zentrale Problem für Gesellschaft und Zukunft,\nUnd da ist mir der Einzelne äh wie schnell das Auto jetzt bremst. Äh neben Schauspiel, neben Kriegsschauplatz. Da kann man,\nDa kann man sicherlich auch äh die ein oder andere Professur für vergeben, aber ich fände schön, wenn die meisten sich über Probleme äh um Probleme kümmern würden, die ernsthaft mal irgendwie die Welt verändern,\noder beschäftigen. Zum Beispiel."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:01",
+      "text": "Nächste Mal, wenn ihr auf jeden Fall einen stolpernden äh äh humanoiden Roboter im Wald trifft, der."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:05",
+      "text": "Den trete ich sofort um."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:07",
+      "text": "Lauft. Lauft's."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:08",
+      "text": "Helft ihm, seid freundlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:13",
+      "text": "Los Linus, jetzt machen wir mal ein anderes Thema."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:17",
+      "text": "Ja, sind social Plugins rechtswidrig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:20",
+      "text": "Jetzt kommen wir zum langweiligen Teil."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:22",
+      "text": "Bevor wir dann nochmal zum, bevor wir dann nochmal zum richtigen Bullshit-Teil kommen, danke. Kommt die zweite Phase."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:28",
+      "text": "Ja, also wir haben eine ereignislose Woche. Ihr merkt das schon, deswegen äh reden wir jetzt hier über Meta Themen schon mal eine dreiviertel Stunde. Mal gucken, äh wie viel wir jetzt hier noch rausfinden. Also was ist passiert? Ein äh Landgericht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:42",
+      "text": "Landgericht hat geurteilt. Düsseldorf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:43",
+      "text": "Welches war's? Düsseldorf. Hat sich das mal alles ganz genau angeschaut, wie denn das ist mit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:48",
+      "text": "Wie ist das eigentlich mit diesem Internet?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:49",
+      "text": "Mit diesem Like Buttons."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:51",
+      "text": "So\nspannende also wollen ja immer die den Nutzer da abholen wo sie sind. Also ihr seid jetzt gerade bei Facebook, da gibt's da gibt da ist der Like Button ja eh schon bei Facebook. So, wenn ihr jetzt von Facebook runtergeht,\nLike-Button da. Der ist dann haben wir auf eigentlich. Warum nicht? Das,\nAlso man kommt auf eine man kommt man verlässt kurzzeitig Facebook und geht ins Internet und sieht dort eine Seite, zum Beispiel, jetzt muss man eine Beispielseite nehmen, ähm zum Beispiel die Seite,\nvon."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:33",
+      "text": "Jede mögliche Seite."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:45:34",
+      "text": "Ja, hier war äh ich würde jetzt hier gerade ähm,\nIch hätte jetzt die genommen aus diesem Urteil, aber das finde ich jetzt schnell so schnell, ne. Äh jeder andere Seite Spiegel DE, jede Seite so Spiegel DE. Ähm dann sieht man unter dem Artikel sieht man hier direkt schön, prominent ähm,\nFacebook teilen, Twitter twittern oder E-Mail, ja? So und ich glaube, äh Spiegel hat sogar diese ähm die Datenschutz äh Sparvariante mit dem Sharebutton. Aber so ist das beim Demo-Effekt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:10",
+      "text": "Er habe alle News Seiten irgendwie tickt mal, Handelsplatt oder keine Ahnung, was auch immer, einfach diese ganzen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:18",
+      "text": "Genau oder ihr geht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:18",
+      "text": "Post, schmeiß es dir wahrscheinlich fünfzig Mal um die Uhr."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:21",
+      "text": "Ja, aber wir bleiben mal, wir bleiben mal bei der eigenen Nase. Huffington Post kenne ich nicht, aber wir kommen mal auf Lokbuch Netzkritik. Da ist der Flatterbalken. So und der Flatterbanden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:31",
+      "text": "Aber das sind doch die Guten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:32",
+      "text": "Sind die Guten, ja. Der Fletterbutton,\nzeigt die Anzahl der Tweets äh der der Fletters an,\ndieses Asset äh bekommen hat oder dieses Trinken. Die übrigens viel zu gering ist, was ich an dieser Stelle mal kurz anmerken möchte hier äh ja die könnten durchaus höher sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:48",
+      "text": "Die Klicks. Wo guckst du denn? Letzte Sendung oder was."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:52",
+      "text": "Politik DE. Da könnte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:54",
+      "text": "Das war die, wo du nicht dabei warst, ne? Da könnte in der Tat noch ein bisschen mehr."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:58",
+      "text": "Ja. Von mir aus auch bei den Sendungen, wo ich dabei war und hier neben meinem Namen ist ein besonders formschöner Flatterbutton. Aber so\njetzt ist die Frage, woher weiß der Logbuch Netzpolitik eigentlich, wie oft diese Sachen geflettert wurden? Stellt sich raus, weiß es gar nicht, weil dieser Flatterbarten als externes,\nähm Skript von Flatter geladen wird. Und bei dieser Gelegenheit, Flatter auch,\nDarüber in Kenntnis gesetzt wird, dass wir grade auf dieser Seite sind und dieses Asset betrachten.\nÄhm leuchtet ein, geht auch nicht anders, weil Flatter ist ja in der Lage, den Browser zu sagen, die Zahl, die ihnen dieses Feld gehört, lautet siebenundfünfzig, was wirklich eine lächerlich geringe Zahl ist,\nSo und ähm,\nDann sagt also dem Browser hier in dieses Feld mal eben eine siebenundfünfzig machen und hat bei dieser Gelegenheit eben auch erfahren, dass dieser Browser mit dieser IP-Adresse gerade dieses,\nDing anschaut. Und das gleiche passiert bei einem Like Button, bei einem plus eins Button und bei einem Twitter-Button und kennst du alles nicht. So,\nDas heißt, in die Seiten, wo sich diese Buttons befinden, sind externe Ressourcen eingebaut, die von den jeweiligen Anbietern kommen. Und die beim Besuch der Seite den Anbieter darüber in Kenntnis setzen, dass man diese Seite gerade besucht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:20",
+      "text": "Es geht noch einen Schritt weiter, das hast du jetzt im Prinzip übersprungen, falls du nicht noch dazu kommen wolltest. Flatter und wie auch die und die anderen, also uns geht's ja jetzt nicht um Flatter, sondern um alle. Wir sind jetzt einfach nur mal sind nun mal bei dem Beispiel,\nwenn man halt angemeldet ist bei Flitter,\noder äh da eingeloggt war und quasi ein Cookie in seinem Browser gesetzt hat, der diesen Status äh dann auch nochmal klar widerspiegelt. Dann ist ja noch mehr Information in diesem Button, nämlich auch hast du das schon geklickt oder nicht?\nEs gibt hier auch noch eine Identifizierung mit dem Benutzeraccount, so den einer existiert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:56",
+      "text": "Genau und wir hatten auch vor einigen Wochen noch dieses Urteil, dass äh Facebook ähm sogar Leuten Cookies gegeben hat, die."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:08",
+      "text": "Nicht eingeloggt, keinen Account haben, ja. Mhm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:49:11",
+      "text": "Und so ergibt sich dann,\nEin Netz im Internet, durch das ich die Nutzer verfolge als Google oder als Facebook?\nUnd weiß, was sie sich anschauen, wenn sie gerade nicht bei uns sind.\nGoogle hatte den sehr klugen die sehr kluge Idee das mit ihrem Angebot Google Analytics nochmal zu perfektionieren der plus eins Knopf von Google ist glaube ich gar nicht so äh nennenswert vertreten wie andere,\nAber es gab beim Digitalamt äh netzpolitischen Amt der digitalen Gesellschaft, einen äh eine Studie, die da vorgestellt wurde, wo jemand sagte, ja, ähm.\nIch habe mal eine Millionen Webseiten angeschaut und bei achtundsiebzig Prozent der Seiten trackt Google mit, bei zweiunddreißig Prozent Facebook mit, bei dreiundzwanzig Prozent,\nIst ein äh Content des Revision Network, also nicht wirklich ein,\nKonkreter Anbieter und bei achtzehn Prozent Twitter. Und jetzt das ist natürlich,\nsagen wir mal gelinde gesagt, ein Problem, weil wir ja irgendwann mal in einem in einem,\ngeistiger Umnachtung dachten, dass dieses Internet vielleicht ein dezentrales Netz ist, in dem keine einzelne,\nStelle zentral ist und alle äh Sender sein können und das irgendwie so ein fröhliches nebeneinander ist,\nAlso natürlich nicht unbedingt der Fall, wenn wir einzelne Player haben, die bis zu achtundsiebzig Prozent des Internets quasi oder des der Seiten die Menschen regelmäßig besuchen, ähm mit überwachen.\nUnd da gab's also jetzt ein ein äh Urteil, wo ähm.\nEin Seitenbetreiber gesagt wurde, du hast hier diesen Facebook,\nLike-Button mit drin, der übermittelt automatisch Daten an Facebook zu dem Zeitpunkt, wo dies geschieht,\nhat der Nutzer dem noch nicht zugestimmt und auch nicht nicht zustimmen können und deswegen ist das,\nDatenschutzkonform, was da geschieht und das ist eine Einschätzung, die ich laienmäßig teile. Ähm der naive Nutzer hat die Erwartung, wenn er Spiegel eingibt, dass er dann,\nbei Spiegel Online landet und nicht gleichzeitig noch tausend Verbindungen überall sonst hinmacht und Facebook noch mittrackt,\nwas er, dass er dort ist und Facebook das auch noch über ihn oder Google über alle möglichen Seiten macht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:05",
+      "text": "Ja, ich glaube, das sind eine Menge Leute, das einfach in Kauf nehmen. Schon Wissen und so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:10",
+      "text": "Genau, das ist inzwischen eine Realität. Wir hatten, glaube ich, auch schon vor einiger Zeit mal diese Datenblumen von äh von Open Data City besprochen, wo irgendwie gezeigt wurde, du besuchst die Seite, wo holt der sich noch alles Mist her?\nEs gibt diese diesen Fix mit der zwei Klicklösung, wo man quasi sagt, okay, der Button ist grau dort,\naber noch nicht aktiv. Es hat noch keine Verbindung zu Facebook stattgefunden, wenn man dann einmal auf den Button klickt, dann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:39",
+      "text": "Riecht man die Information."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:41",
+      "text": "Kriegt man die Information, wenn man dann nochmal draufklickt, hat man geliked oder so, ne. Ähm aber wie gesagt, es gibt eben noch diesen,\ndurchaus genialen Schachzug von Google, das mit diesem Google Analytics, das war, glaube ich, eine ihrer wirklich klügsten Erfindungen,\nähm nach der Suche, dass sie gesagt haben, okay, komm, wir machen richtig geiles,\nAnalysewerkzeug und alles was die Leute machen müssen ist ein dämliches Java Skript irgendwo in ihre Seite einbinden, was von uns kommt und wir machen die gesamten Analysen für die,\nnebenbei analysieren wir damit das gesamte Internet, zu dem wir ja der Wegweiser für die Menschen sein wollen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:24",
+      "text": "Mal ganz von Vorteil ein bisschen Plan zu haben, was so gesurft wird, was relevant ist, was populär ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:30",
+      "text": "Das ist Big Data.\nTja und äh der das Urteil ist leider noch nicht rechtskräft oder das Urteil ist noch nicht rechtskräftig, ist auch nur ein Landgericht. Ähm,\naber es ist schön, also ich meine, das ist auch ein Thema, was, glaube ich, schon mehrmals äh diskutiert wurde und ähm,\nWas auch leider nicht wirklich äh zum Abschluss kommt, denn eigentlich diskutiert man das jetzt auch schon wieder seit seit fünf bis zehn Jahren,\nAber es wäre ähm ich habe so ein bisschen die Sorge, dass,\ndas es wahrscheinlich zu spät ist sich darüber jetzt diese Gedanken zu machen weil es eben längst eine Realität ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:25",
+      "text": "Ja, es vor allem auch die Frage, ob das jetzt in der Form äh Bestand haben wird, ob auch die rechtliche äh Beurteilung dessen ähm Bestand haben wird, weil sie ja hier davon ausgehen IP-Adresse ist automatisch personenbezog et cetera,\nist schwierig. Ich meine, ich bin da auch sehr ähm gespalten. Ich meine, diese ganze das ganze ist ja,\nEtwas, was eigentlich das das Web einfach auf eine unglaubliche Art und Weise nützlich,\ngemacht hat. Also man kann sich ja das Web ohne gar nicht vorstellen. Natürlich bedeutet M-Beding nicht automatisch Tracking,\nAlso man könnte ja dieses ganze Embeden auch ohne Trekking machen. Nur."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:15",
+      "text": "Macht's halt keiner."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:15",
+      "text": "Glaube ich, es ist das ja auch, sagen wir mal durchaus auch, ich meine, in dem Moment, wo ich anbiete,\nwird ja auch eine Dienstleistung von mir in Anspruch genommen, ja, also wenn ich jetzt hier so an, was weiß ich, so wie YouTube\nVideos, ambitten, ihr dürft das in euren Webseiten anzeigen und so weiter. Man gibt ja auch etwas, ja? Und äh äh in gewisser Hinsicht ist das ja auch legitim darüber dann Statistiken zu führen äh et cetera\nSchwierig wird's natürlich wirklich an der Stelle, wo die Personen sichtbar werden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:48",
+      "text": "Also wir könnten zum Beispiel auch, glaube ich, sehr einfach ein äh den den äh Lokbuchnetz-Boutique hundertfünfundsiebzig Button anbieten, den dann jeder in seine Webseite einbauen kann,\nund der hm, das ist doch gerade hundertfünfundsiebzig und dann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:04",
+      "text": "Die Sendung, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:05",
+      "text": "Wäre das quasi, würden wir euch einen kleinen String geben, den baut ihr nur eure Seite ein und wenn die Seite besucht wird\nholt sich das Teil halt äh Daten über die Episode von Lokbuch Netzpolitik DE und wenn es abgespielt wird, auch die MP3 und dann hätten wir mit sehr einfachen Mitteln, also da muss man gar nicht großartiges machen, kann man schon alleine aus dem Browser Locks sehen, wie viele Leute eure Seite besucht haben,\nBis auf die wenigen, die jetzt irgendwie mit No Script oder so, äh, sie am Laden von externen Ressourcen gehindert haben und wie viele dabei auf Play gedrückt haben\nDa werden nur noch wenige Zeilen Code notwendig, um ein Affiliate-Programm zu machen und die mageren siebenundfünfzig Flatter, die da rumkrebsen, mit euch zu teilen,\nAber dafür würden wir halt eure Nutzer tracken und unsere Datenschutz-Policy ist mal wirklich eisern. Denn wir haben keinen Datenschutz. Wir analysieren alles. Wir speichern alles."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:00",
+      "text": "Das nennst du eisern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:02",
+      "text": "Wir machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:03",
+      "text": "Das finde ich ja jetzt ein das falsche Wort,\nziehe mir mein eisern nicht in den Schmutz. Ähm,\nJa, das mit dem äh hätte ich übrigens schon am liebsten seit zwei Jahren schon äh am Laufen, aber das ist sozusagen einfach aus technischen Gründen noch nicht erfolgt. Wird auch sicherlich kommen, sicherlich nicht mit äh Personentracking."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:27",
+      "text": "Warum nicht? Wie wollen wir den Lockdown Netzpolitik sonst irgendwann mal an Google oder Facebook verkaufen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:32",
+      "text": "Du wir setzen einfach hier auf eine informierte äh und loyale Community und so gehen wir auch mit dir um.\nDas Prinzip."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:44",
+      "text": "Na gut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:45",
+      "text": "Gibt's kein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:48",
+      "text": "Da fällt mir übrigens noch ein, ne? Äh ach so, ich will jetzt nicht wieder schon wieder zu diesem Big Data zurück. Das hat mich wirklich aufgewühlt irgendwie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:54",
+      "text": "Ich merke schon, ich merke schon, Hobbybrauner."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:56",
+      "text": "Weißt du, was mich noch mehr aufgeregt hat?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:00",
+      "text": "Durch mit dem Thema schon."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:02",
+      "text": "Äh Landes äh Landgerichturteil in Düsseldorf, ja, also ich glaube jetzt nicht, dass Facebook gerade da sitzt und weint."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:08",
+      "text": "Wahrlich nicht. Nee, äh wir nehmen das jetzt einfach mal zur Kenntnis und äh äh erkennen an, dass es äh ein, ein, ein, ein, ein Problem ist und da wir ja hier eigentlich nur eure Berichterstatter sind, haben wir jetzt Bericht erstattet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:20",
+      "text": "Wir sind, was übrigens, wer übrigens auch trackt wie nix Gutes, ne. Und wahrscheinlich noch viel mehr und noch viel schlimmer\nsind die Konkurrenten von Google, also die anderen, die uns Werbung einblenden, wenn die Schärfung nicht sowieso schon von Google kommt, ja? Also Werbenetzwerke äh sind da ähnliche äh\nähnlich äh unschöne äh Erscheinungen. Und deswegen ist, glaube ich, in der heutigen Zeit leider,\nDie Nutzung eines äh Tracker-Blockers ähm und eines Werbeblockers und aller Blogger, die es so gibt, unerlässlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:57",
+      "text": "Eine Sache sollten wir vielleicht noch erwähnen, was es nämlich, glaube ich, noch nicht getan, ähm aber den Link hier in der Liste,\nDieses schöne äh Projekt, was auch zuletzt auf dem Netzpolitischen Abend vom digitalen Gesellschaft vorgestellt wurde, von einem anderen Tim. Tim äh Libert,\neinfach mal den Spieß umgedreht hat und in so einem,\nin so einem Goilosenvirtuellen Maschine Webseiten geladen hat und dann einfach\ndynamisch allen Trekking gefolgt ist und die kartographiert hat.\nNennt sich Webx Ray, äh,\nschöne Sache und hat mit äh relativ wenig Aufwand da eine riesige Datenbank aufgebaut, ja auch frei zur Verfügung stellt, zur Analyse, wo man eben an dann einfach auch genau diese Daten,\ndann heraus äh liest du dir anfangs schon präsentiert hast. Und da gibt's auch Soursquoten, da kann man auch nochmal drauf schauen und äh vielleicht selber mit rumexperimentieren.\nJa"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:13",
+      "text": "Jetzt kommen wir zum nächsten Thema."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:15",
+      "text": "Hammer."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:17",
+      "text": "Also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:19",
+      "text": "Bullshit. Made in erklär mal, ich äh deine Notizen sind ja wirklich so mysteriös, dass ich manchmal gar nicht weiß, worauf du hinaus willst."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:32",
+      "text": "Also ich wurde äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:35",
+      "text": "Du erlebst immer so Sachen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:37",
+      "text": "Ich würde, ich wurde gefragt, ob ich denn nicht bitte ähm zu einer Studie äh einer Veröffentlichung äh,\nAuskunft geben kann. Zu der Gefahr, die da einige Forscher festgestellt haben für unsere Demokratie,\nNichts wie nichts, nicht weniger als unsere Demokratie ist in Gefahr."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:06",
+      "text": "Sind wir schon. Demokratie ist in Gefahr, lass mal Linus nochmal anrufen, weil sonst wissen wir nicht weiter."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:01:12",
+      "text": "Ja, so so weit sind die schon. So und warum ist unsere Demokratie in Gefahr? Nun. Nein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:19",
+      "text": "Wahlcomputer. Nein? Künstliche Intelligenz. Trekking.\nNa was?\nJa"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:01:36",
+      "text": "Man stelle sich vor denjenigen, die irgendwie vielleicht ein Twitter-Account haben, wird dieser Gedanke völlig fremd sein. Man stelle sich vor, es gäbe Computerprogramme, die twittern.\nSo und jetzt twittern die nicht Werbung, wie sie's seit zehn Jahren machen, sondern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:03",
+      "text": "Inhalt. Propaganda."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:02:04",
+      "text": "Inhalt. Propaganda und zwar Propaganda vom Feinsten, nämlich im für für Putin und Trump. Trump kennst du, ne? Den den Verrückten.\nSo und,\nDann liest du halt in eine völlig ganz normale Tag in der Zeitung, wo drin steht diese social Bots können sogar Wahlen manipulieren. Kampagnen starten und auf Twiets antworten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:33",
+      "text": "Nein, jetzt ist aber Schluss. Also, bei Wahlen manipulieren, da saß ich ja noch bei meiner Currywurst, aber wenn die jetzt auch noch auf Tweets antworten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:02:43",
+      "text": "Und dann erreichstet sich dieser Autor,\nFür die ansteigende Flut an Verschwörungstheorien und Hasskommentaren im Netz kann es auch eine andere Erklärung geben, nämlich Social Bots. Stimmt! Das ist nämlich so Tim, es gibt gar nicht so viele Rechte in Deutschland."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:02",
+      "text": "Ach, das sind alles nur Bots."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:03",
+      "text": "Das sind alles nur Bots, die den ganzen Quatsch auf Facebook und auf Twitter schreiben.\nUnd die Leute, die die und sind wahrscheinlich nur eine Einzelperson, die inzwischen irgendwie die ganzen Unterkünfte angezündet hat. Der Rest sind nur Bots."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:18",
+      "text": "Oder die Bots zünden, die Unterkünfte an. Soweit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:21",
+      "text": "Das haben wir, das finden die auch noch raus. Das finden die auch noch raus. Also, der."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:27",
+      "text": "Manifestation einer künstlichen Intelligenz, die jetzt anfängt, unsere Turnhallen abzubrennen. Oh je."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:34",
+      "text": "Also es gibt ähm.\nDas Thema ist, man kann also, man kann jetzt relativ einfach, man macht sich einen Twitter-Account und dann gibt's da eine AP und Antisea AP kann man zum Beispiel eine relativ einfaches Pifon Skript lehnen und,\nMan bringt dann zum Beispiel diesen,\nSchau doch mal bitte, was unter dem Hashtag so und so stattfindet und dann nimm mal diese Tweets und dann entfernst du das Hashtag und tweetest sie noch mal.\nOder schau doch mal, was folgender Account äh twittert und jedes Mal, wenn dir etwas twittert, du das? Oder jedes Mal, wenn dir etwas twittert, antwortest du ihm.\nUnd dann kann man natürlich hingehen und sagen, antworte ihm mit einem Satz aus folgendem oder aus folgender Datenbank. Ähm,\nUnd dann könnte man zum Beispiel das Skript noch erweitern, um achte mal dadrauf, dass keine Stunde vergeht,\nohne dass du nicht irgendetwas twitterst, was halbwegs menschlich erscheint.\nUnd dieses menschlich sein soll, könnte man sich ja einfach von anderen Twitter-Accounts klauen,\nAlso irgendwie äh nimmst du halt irgendwie zehn Twitter-Accounts, irgendwelche Art, folgst denen und wenn die irgendwas sagen,\ndann twitterste das einfach auch, weil das sind menschliche Personen und du willst ja den Eindruck machen, ein Mensch zu sein, also kopierst du einfach deren Inhalte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:09",
+      "text": "Ja, so wie es bei sich halt auch irgendwie einfach anderer Leute, Kommentare äh klauen und nur den passenden Link dazu reinsetzen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:15",
+      "text": "Genau. Und dann natürlich das nächste, dann hast du deinen, der hat aber keine Follower, also machst du dir äh hundert oder tausend oder sechzigtausend Bots, lässt sie sich alle gegenseitig folgen und versuchst irgendwie den Eindruck zu erwecken,\ndass es sich dabei um eine um eine Person handelt, die irgendwie existiert. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:35",
+      "text": "Dass diese zweihundertfünfzigtausend Follower von Pegida auf Facebook, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:40",
+      "text": "Das stelle ich hier gar nicht zur Debatte. Die die Entscheidung ist oder was mich einfach nur wirklich maßlos äh ärgert ist, dass das so einfache,\nDinge,\nJa, also was, wo man wirklich, da musst du gar nichts für können. Das kriegst du fertig auf Githup. Tausende von Twitterbots, die du, denen du jeweils immer nur diese beiden Keys geben musst und dann twittern die drauflos. Ja, also da da ist wirklich ähm,\nfür Anfänger. Ja und es wird auch seit jeher gemacht und dann hast du irgendwie, kannst du ja wie du möchtest auch erweitern. Ja, machst du dir halt hundert von, ist auch kein Problem,\nÄhm und dass dieses,\nDiese Strategie wird mit völlig katastrophalen Ergebnissen, seit es Twitter gibt, von allen möglichen Spämern ähm verfolgt,\nWir haben alle bisher noch nicht viel gekauft aufgrund dessen, äh was wir vorher nicht gekauft hätten, ja?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:45",
+      "text": "Wissen wir nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:06:46",
+      "text": "Ja, aber der der ähm der ähm Fakt ist,\nWir haben\nrelativ große Gefahren für unsere Demokratie, aber Bots auf Twitter sind es wahrscheinlich nicht. Und dann wurden wir, musste ich mir jetzt noch ein paar angucken, das sind dann halt relativ\nsimple Bots, die irgendwie was weiß ich jedes Mal, wenn Donald Trump was twittert, das und einmal pro Tag eben so ein White Power-Tweet raushauen,\nUnd die sollen jetzt auf einmal die Gefahr für unsere Demokratie sein? Ich glaube nicht. Was allerdings passiert,\nähm ist folgendes,\nDu kannst ja mit diesen Bots machen, was du möchtest, wenn du davon mal einfach mal ein paar Tausend hast, das können ja auch von mir aus gestohlene Accounts sein, äh wo du äh die du dir dann in deine Bot äh äh Herde mit aufnimmst. Damit kannst du Leute mitunter ganz schön ärgern.\nSagen wir mal, ich habe sechzigtausend davon. Und jetzt möchte ich dich einfach mal ärgern, weil du,\nWeil du mich unterbrochen hast."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:59",
+      "text": "Rache."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:08:01",
+      "text": "In meinem schönen so das machst du nicht nochmal,\nDann könnte ich jetzt meine Botherde ähm heben und sagen Menschen doch mal,\nJede Minute den Tim mit einem anderen Account.\nUnd dann vibriert dein iPhone hier noch öfter als ohnehin schon und dein, dann störe ich quasi massiv deine Kommunikation."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:31",
+      "text": "Meine Social Media Experience geht dahin."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:08:36",
+      "text": "Das wäre jetzt so ein Fall. Also das passiert auch, es passiert auch tatsächlich, ähm,\nAlso ich kenne mehrere Journalisten, denen das passiert ist, die dann halt irgendwie von so Bott, Herden,\nähm beleidigt werden, ja? Also da hat dann halt jemand wirklich viele tausend Bots und\nkommt einfach, du kommst quasi mit dem Bloggen nicht hinterher, weil der dich immer wieder von einem anderen Account anspricht und beleidigt äh und kann dir so halt wirklich dein Leben,\nunschön,\nwerden lassen, weil er die, weil er dir einfach diesen Account zu nagelt. Äh mit, mit, mit Menschens und mit mit Nachrichten oder sonst was."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:17",
+      "text": "Gamergate, ne. Da ist also auch massiv passiert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:20",
+      "text": "Genau, das ist auch massiv passiert, dass Leute da halt belästigt werden. Das ist ein sehr unschönes Phänomen, ähm,\naber eben auch bei aller Liebe keines, was jetzt irgendwie besonders neu,\nWas besonders originell wäre oder was eine Gefahr für unsere Gesellschaft in ihren Grundfesten darstellt, als das jetzt plötzlich Wahlen,\nTwitter-Bots gewonnen werden. Also das halte ich für eine für eine äußerst gewagte These, die jetzt hier in diesem Artikel vertreten wird. Ich\nhoffe, dass die Wissenschaftler, die diese Studie veröffentlicht haben, diese These nicht auch noch irgendwie vertreten haben. Ich habe allerdings die Studie ähm,\ninhaltlichen immer nur von Dritten äh geschildert bekommen. Insofern ähm muss ich da äh vorsichtig sein, was jetzt da tatsächlich an Aussage getroffen wurde oder nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:20",
+      "text": "Ja, du meinst den Artikel in der Welt, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:23",
+      "text": "Ich meine den Artikel in der."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:24",
+      "text": "Verschiedenste Artikel, ähm verschiedenste Artikel hier verlinkt. Dementsprechend sollte man vielleicht das auch mal klarer zuordnen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:32",
+      "text": "Ja, aber auf jeden Fall ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:36",
+      "text": "Maschinen hetzen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:37",
+      "text": "Wenn Maschinen hetzen, ja. Da da habe ich also ähm einen äh habe ich ein ein bisschen drüber gesprochen in einer Fernsehsendung mit dem Namen,\nund das wird dann irgendwann gesendet werden und ich hoffe, dass die meine meinen Zweifel da auch in aller äh Schärfe äh in dieser Sendung dann auch zum Ausdruck bringen.\nInteressant ist, dass sich noch jemand anders über Social Bots Gedanken gemacht hat. Der jetzt auch sagt, das ist ja wohl ganz gefährlich,\nJa, ähm Patrick, Sensburg,\nPatrick Sensburg hat ähm also es gibt,\neben viele viel Debatte über diese Bots in der äh Russland-Ukraine äh Geschichte, ja. Also Bots können ja durchaus, ne, dass also Kommunikation stören können sie,\nÄhm zum Beispiel, was weiß ich, es gibt einen Hashtag,\nUnd dann wird dann flutest du das einfach mit deinen Bots, mit allen möglichen Unsinn, ja? So kannst du Menschen die Möglichkeit nehmen, sich über dieses über dieses Hashtag äh sinnvoll auszutauschen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:50",
+      "text": "Ja, so wie zweiunddreißig C drei zum Beispiel, was irgendwie auch schon kaputt ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:11:54",
+      "text": "Das passiert aber,\ngrundsätzlich immer, wenn ein Hashtag irgendwie Aufwind erfährt, schon allein von den ganzen Spambots, weil die machen seit Jahren nichts anderes, als zu gucken,\nWas sind die? Äh und jetzt poste ich da irgendwie rein hot, blond, Bunny."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:16",
+      "text": "Warum machen wir das eigentlich nicht? Können ja auch mal unsere Sendung immer mit den aktuellen trendigen Hashtags äh posten anstatt äh seriös vorzugehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:24",
+      "text": "Ja. Weil twitter dich dann hoffentlich irgendwann. Machen sie aber leider nicht. Also seit jeher fluten Bots Hashtags und machen Kommunikation kaputt. Ähm,\nAber was mir aufgefallen ist, ich kannst du dich daran erinnern, als äh die ähm Attentate in Paris stattgefunden haben.\nDa gab es einen Hashtag mit dem Namen äh Portuver, geöffnet offene Tür,\nwo Menschen im Prinzip irgendwie ihre Adresse unter dem Hashtag port oh wer getwittert haben um."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:02",
+      "text": "Zuflucht zu biete."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:03",
+      "text": "Leuten Zuflucht zu bieten. Das war natürlich eine sehr schöne Idee. Ähm,\nUnd die hat natürlich auch sofort Traktionen gefunden, sodass Menschen weltweit in Deutschland, in Großbritannien, in Amerika,\nDarauf hingewiesen haben, dass man unter dem Hashtag Hashtag twittern kann,\nÄh wenn man eine offene Tür hat und dass Menschen dort Zuflucht finden können. Wenn du dann auf diesen Hashtag geklickt hast,\nhast du nicht eine einzige verfluchte Adresse finden können, weil irgendwie pro Sekunde fünfzig Vollhornks unter diesem Hashtag getwittert haben, was man unter diesem Hashtag twittern könnte, wenn nicht fünfzig voll Honks\npro Sekunde da Lärm reintwittern würden. Das heißt, die das Stören von Kommunikation können Menschen immer noch besser,\nals Maschinen, weil das Stören von Kommunikation haben wir Menschen erfunden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:02",
+      "text": "Wir haben auch die Kommunikation erfunden, ne? Von daher ist das ja auch fair."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:06",
+      "text": "So, wir haben's, wir haben's erfunden, also machen wir es auch kaputt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:10",
+      "text": "Keiner Renner so gut kaputt machen wie wir. Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:14",
+      "text": "Also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:17",
+      "text": "Ja, wobei das für die Kommunikation erfunden haben, ist das, glaube ich, auch äh äh evolutionstechnisch nicht äh zu halten, aber wir haben sie auf jeden Fall auf die Spitze getrieben. Das steht schon mal fest.\nUnd wir machen auch die Kommunikation ja auch noch äh den Wahlen kaputt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:34",
+      "text": "Genau, die Wahl, also ne, Putin ist nur noch an der Macht, weil er so viele Twitter-Bots hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:38",
+      "text": "Na, nicht die Wahlen, die Wale."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:42",
+      "text": "Auch noch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:43",
+      "text": "Ne, die Wale können nicht mehr miteinander kommunizieren, weil wir mit unseren scheißlauten Booten da die ganze Zeit durch die Gegend marschieren und Lärm machen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:50",
+      "text": "Immerhin sind's nicht die Twitter-Bo."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:51",
+      "text": "Deswegen fahren ja die Wale auch dann immer auf dem Strand auf."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:54",
+      "text": "Also jetzt wurde äh auf auf jeden Fall diese äh diese Studie veröffentlicht und jetzt oder und jetzt machen sie sich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:00",
+      "text": "Wo ist denn diese Studie überhaupt? Erzähl doch mal was, von was für einer Studie? Nee, willst du nicht erwähnen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:03",
+      "text": "Ich möchte äh ich möchte nicht so auf die Wissenschaftler einschlagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:08",
+      "text": "Taste ist erwähnt, der muss da jetzt auch mal sagen, wo es herkommt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:11",
+      "text": "Es ist irgendwie eine eine Forschungsgruppe Social Media Forensics, die an mehreren Universitäten ansässig ist und die ein Jahr lang geforscht haben, bis sie festgestellt haben, dass es Twitterbots gibt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:25",
+      "text": "Wenn wir da auch verlinken oder nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:27",
+      "text": "Wir haben das grob verlinkt, aber ich möchte ähm möchte thematisch bezogen argumentieren und nicht auf die Personen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:34",
+      "text": "Okay."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:36",
+      "text": "Oder die Universitäten. Wer weiß, ob ich da irgendwann nochmal eine Professur brauche,\nWenn es mir mal nicht mehr so gut geht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:43",
+      "text": "Ja.\nWas heute noch karrierefördernd äh aussieht, kann morgen schon der Untergang sein. Also."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:52",
+      "text": "So und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:53",
+      "text": "Reist dich zusammen, Lithus, reiß dich zusammen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:56",
+      "text": "Völlig normaler Artikel, Deutschland setzt Geheimdienst gegen russische Propaganda ein,\nDer Bundesnachrichtendienst überwacht verstärkt die russische Propaganda. Dazu hat der BND eine eigene Arbeitsgruppe gegründet. So und die,\nschauen sich jetzt die die russische Propaganda an und dann wird hier viel zitiert und so,\nPropaganda ist eine Waffe und so weiter, äh haben wir alles schon gemacht und erster Weltkrieg hatten wir auch Propaganda. Ähm.\nUnd dann äh bla, bla, bla, bla, bla, bla, bla. Und jetzt kommt's, ich könnte mir vorstellen.\nKommt gleich. Ich könnte mir vorstellen, dass unabhängige Organisationen versuchen die Kommunikationskanäle der staatlichen Trolle offen zu legen. Sagt Patrick Sensburg.\nUnd."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:54",
+      "text": "Nebenbei äh Vorsitzender."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:16:59",
+      "text": "Des NSA-Untersuchungsausschusses ist und CDU Politiker und sagt, Verbote und Blockaden helfen nicht und wären ein Verstoß gegen die Meinungsfreiheit,\nJa, also Meinungsfreiheit für Bots. Ja, da sind wir wieder. Also äh du merkst jetzt, alles eine große Verschwörung, denn,\nUnd jetzt kommt's, Patrick, ja, also,\nIch glaube, ich habe ungefähr ähm herausgearbeitet, wie groß ich das Bedrohungspotential von Social Bots für die Demokratie und die Grundfeste unserer Gesellschaft halte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:34",
+      "text": "Ich fasse es mal zusammen mit überschaubar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:17:35",
+      "text": "Gering, überschaubar. Im überschaubaren Rahmen.\nUnd jetzt kommt Patrick Sensburg und sagt, wenn beispielsweise das Bundesamt für Sicherheit in der Formationstechnik oder der Chaos-Computer-Club die Gerüchte und Seiten der Trolle enttarnten,\nhätten Bürger die Möglichkeit, sich unabhängig zu informieren und Informationen zu verifizieren. Das ist eine derartige."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:02",
+      "text": "Also wir sind jetzt wieder schuld. Wir spielen nicht mit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:05",
+      "text": "Wir sind jetzt wieder schuld, weißt du?\nDa denkst du du gibst dir eine Krisennummer und denkst du so, jetzt kriegst du mal richtig geilen Scheiß, ja? Und dann lässt sich der Bundestag von irgendwie so einem Explode-Baukasten von vor zwanzig Jahren,\nUnd du sollst irgendwie auf Twitter Trolle identifizieren. Das kann doch nicht dein Ernst sein.\nDu erkennst diese diese Bots erkennst du irgendwie sowas von einfach, weil die so dumm sind, ja? Also ich meine, du kannst einfach nicht vielleicht nochmal ein kleiner Exkurs."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:37",
+      "text": "Immer wieder für Vorstellungen haben vom CCC, ist echt unglaublich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:40",
+      "text": "Vor allem, was die für Vorstellungen haben von diesen paar peifen Skripts, die Tramprituiden. So, ich meine,\nAlso es gibt ja diesen Touring-Test, der äh,\nIm Prinzip sagt der ein eine künstliche Intelligenz besteht den Test, wenn ein Mensch sie nicht mehr von einem Menschen unterscheiden kann,\nEs gibt da irgendwie so das chinesische Zimmer und was man sich da alles so als Setup äh überlegt hat, ne, aber das der die eigentliche Idee ist, du chattest mit einem Menschen,\noder mit einer Maschine und du weißt es nicht und du musst es herausfinden. Und seit vielen Jahrzehnten versuchen Menschen, künstliche Intelligenzen zu bauen.\nDie,\nim Prinzip den Touring-Test bestehen und es gelingt Ihnen wenn immer der Themenbereich sehr stark eingeschränkt ist,\nAlso du hast auf Seiten äh irgendwelche Assistenten, ja, die dann oder Assistentinnen, die dann da reinkommen, je nachdem,\nWas das für eine Seite ist, hast du auch mal eine Assistentin und die berät dich dann, ja? Und dann sagst du äh ich interessiere mich für Kondensatoren\nund dann sagen die, ah klick doch mal hier auf Kondensatoren, kommst zur Seite mit den Kondensatoren. Wie viel Verrat möchtest du denn? Dann sagst du einfach Rad. Dann sagen die, wir haben nur ein ein Fahrradkondensator und der ist nicht in der Kondensatorenabteilung, sondern in der Auto-Tuning-Abteilung oder sowas, ja? Ähm,\noder ähm sie äh imolieren äh sehr äh simulieren sehr einfache äh psychologische Therapieform, Psychotherapieform.\nÄh Elisa war das, glaube ich, die dann irgendwie äh dieses äh diese Gesprächstherapie äh gemacht hat, wo immer einfach dein Massen leichtes Sentiment in der Liste ist und spiegelst das wieder. So, aber all diese\ndiese Bots fehlen den Touringtest unglaublich gut, wenn du einfach mal irgendwie eine belanglose Frage stellst so, wie ist das Wetter heute?\nUnd dann sagen die."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:45",
+      "text": "Wie hat Union gespielt?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:46",
+      "text": "Ich ich glaube nicht, dass das jetzt grade für uns von Relevanz ist. Möchtest du vom Thema ablenken?\nOder du sagst irgendwie zum äh du, du wirst mal obszön äh zu so einem äh zu so einem Ding. Dann sagen die so ja also die du merkst also relativ schnell, dass du es dann nicht mit Menschen zu tun hast. Und das ist im Prinzip das, was diese Bots auch tun müssten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:07",
+      "text": "Du meinst, verloren haben wir, wenn die künstliche Intelligenz cool ist?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:13",
+      "text": "Also ich ehrlich gesagt finde ich künstliche Intelligenz ist jetzt schon cooler als wir."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:19",
+      "text": "Naja, aber auch halt so cool im Sinne von, cool."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:23",
+      "text": "Künstliche Intelligenz ist wahrscheinlich dann cool, wenn du irgendeinen Spruch bringst und sie einen besseren bringt. Okay, weil bei dir ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:33",
+      "text": "Ist das nicht möglich, aber theoretisch, ja, weil man nur mal so hypothetisch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:43",
+      "text": "Tja, auf jeden Fall, so sind wir jetzt halt vom, werden wir jetzt offensichtlich bald irgendwie äh müssen, sollen wir jetzt irgendwie Trolle offenlegen, also was für ein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:53",
+      "text": "Ja, warum machen wir denn das einfach nicht? Wir sind."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:55",
+      "text": "Weil das eine Arbeit für Doofe ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:57",
+      "text": "Wir sind wir tun überhaupt nichts für die Gesellschaft."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:02",
+      "text": "Ja, da sollte sich die Gesellschaft mal fragen, warum wir nichts für sie tun. Weil keiner sie mag."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:07",
+      "text": "Na, weil wir scheiße sind."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:13",
+      "text": "Na ja, also ich finde, also ich ärgere mich einfach gerade. Ich ich knacke gerade so ein bisschen äh an, denke ich über,\nProbleme nach, die ich für relevant halte, für unsere Gesellschaft. Und ich glaube, unsere Gesellschaft hat grade echt ein paar ernsthafte Probleme,\nÄhm und wir werden noch ein paar ernsthafte in Zukunft bekommen und ich halte irgendwie Social Bots auf Twitter momentan."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:40",
+      "text": "Nicht für ein großes Thema."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:41",
+      "text": "Nicht für ein großes Thema. Vielleicht entscheiden in zehn Jahren auf Twitter die Wahl. Äh und dann dann sehen wir aber doof aus, weil die dann nämlich den Roboter von Boston Tina Mix wählen.\nUnd dann äh und der uns dann alle im Go schlägt. Aber ich glaube, die die Zukunft ist ein bisschen eine andere und die Herausforderung, über die wir diskutieren müssen, werden auch andere sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:04",
+      "text": "Ich glaube, man diese Wahlbeeinflussungsgeschichte ist natürlich, ich weiß nicht, das ist in diesem Artikel sicherlich unangemessen miteinander äh verwoben, aber,\nDie Diskussion, dass ähm,\nEinflussnahme auf soziale Netzwerke, durch Gewichterung et cetera, äh im schlimmsten Fall auch Manipulation von Nachrichten. Selbstverständlich Stimmung bewegen kann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:29",
+      "text": "Dass natürlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:31",
+      "text": "Damit natürlich auch Wahlen ganz nachhaltig beeinflussen könnte. Und ehrlich gesagt, wenn ich mir so anschaue, wie äh dieser Zuckerberg irgendwie an an den VR-Brillen,\nbelegten Massen vorbei grinst, schlafe ich auch nicht besser."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:51",
+      "text": "Nee, das ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:51",
+      "text": "Aus äh es ist so, äh viel mehr so, fehlt mir irgendwas. Ähm aber das."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:59",
+      "text": "Seitdem es Öffentlichkeit, also die Idee, die Öffentlichkeit zu beeinflussen, ist so,\nBald wieder öffentliche Raum oder sogar\nEr ist so alt wie die Demokratie, weil es da zum ersten Mal notwendig war, die Öffentlichkeit zu beeinflussen und vorher konnte man einfach drauf hauen. Aber wenn du durch den normalen, öffentlichen Raum gehst, ist der ja auch zugepflastert mit Scheiße.\nVon wirtschaftlichen und politischen Interessen, die versuchen,\nauf sich aufmerksam zu machen. Du hast irgendwie komplette Straße voll mit irgendwelchen Plakaten, was du jetzt kaufen sollst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:37",
+      "text": "Initiative neue Marktwirtschaft."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:24:39",
+      "text": "Und du hast die ganze Straße voll mit mit Plakaten, wen du jetzt wählen sollst. Und das wird halt aufm in sozialen Netzwerken eben auch nicht anders sein.\nAber deswegen machen wir ja uns, machen wir uns ja unsere Filterblasen. Und das heißt, der der Effekt, der dem entgegensteht, ist, dass wir,\nuns die Menschen, denen wir folgen, auswählen,\noder sagen wir mal, die Accounts, denen wir folgen. Und ob dieser Account jetzt am Ende ein Mensch ist oder nicht, ist letztendlich egal, wenn er uns als Informationsquelle dient.\nJa, also ich kann ja von mir aus, weiß ich, Außen-Account, dieser Account retweetet, alles, was äh irgendwie äh irgendeiner der Metaebene Accounts macht. Ja, das ist ein relativ einfacher Bot, den könnte ich mir in fünf Minuten schreiben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:33",
+      "text": "Den hast du auch schon geschrieben, das machst du mal mit Lochbuch-Netzpolitik."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:25:36",
+      "text": "Genau, den habe ich leider noch nicht mal selber geschrieben, sondern das mache ich hier mit diesem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:40",
+      "text": "Ja, deswegen retwitterst du ja auch nicht ordentlich den äh Logboot Netzpolitik äh Account und verhinderst die weitere.\nPopularisierung unseres Twitter-Accounts."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:25:56",
+      "text": "Soll ich jetzt einen Bot schreiben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:58",
+      "text": "Nee, ich sage das jetzt einfach mal nur so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:00",
+      "text": "Tim, ich habe nicht so viele Follower wie du. Für mich ist jeder einzelne Follower wichtig. Und du, ich glaube nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:08",
+      "text": "Wenn du mal mehr Follower hast als ich, dann erinnerst du dich gar nicht mehr an mich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:12",
+      "text": "Dann weißt du, dass meine Bot-Armee angefangen hat, sich selber zu vermehren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:14",
+      "text": "Drauf und dran ist die Wahl zu gewinnen, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:20",
+      "text": "Dann stehe ich da wie der Zauberlehrling. Oh, oh, oh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:22",
+      "text": "Angriff der Hecklohnkrieger. Tja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:26",
+      "text": "Jetzt hast du mich schon wieder vom vom Thema abgelenkt, aber ist auch egal. Ich meine, man sieht, wir sind, ich, ich zumindest bin hier im Randmodus und ich sollte nicht so viele Konferenzen hintereinander äh besuchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:36",
+      "text": "Nee, das scheint nicht so richtig gut zu sein für dich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:39",
+      "text": "Nee und dann rede ich irgendwann auch nur noch irrelevanten Scheiß. Mann, du."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:42",
+      "text": "Ja na ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:45",
+      "text": "So, aber äh also ich muss jetzt demnächst muss ich halt auf Twitter klicken und und russisches Social Bots äh erkennen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:55",
+      "text": "Lass uns doch lieber zu einem anderen kurzen Thema kommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:01",
+      "text": "Das wird eine Sendung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:03",
+      "text": "Ja, auch schön. Was haben wir denn hier? Nee. Erich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:08",
+      "text": "Harald Schmidt. Nee. Erik Schmidt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:13",
+      "text": "Ja\nErik Schmidt ist äh euch sicherlich bekannt. Der war für einige Jahre nicht ganz unerfolgreich. Der Chef von Google der CEO,\nBis dann äh irgendwann die Gründer\nwieder zugetraut haben so einen Laden nochmal selber zu führen, weil sie vielleicht auch so mit dem ein oder anderen von Herrn Schmidt oder vielleicht auch mit seiner Art und Weise in der Öffentlichkeit\naufzutreten nicht ganz so glücklich waren, da stecken wir natürlich nicht drin. Mittlerweile\nbekleidet, also er ist jetzt nicht mehr CO, aber er begleitet halt nach wie vor\näh Ämter oder zumindest Funktionen im Google beziehungsweise Alphabet Universum ist jetzt der."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:56",
+      "text": "German."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:57",
+      "text": "Also im Aufsichtsrat, wenn ich das richtig äh interpretiere und da ist er der Vorsitzende, ne, also Vorsitzende des Vorsitzender des Aufsichtsrat von Alphabet, der Holding, die mal Google äh hieß und Google heißt jetzt sozusagen nur noch der ganze Such,\nKram. Naja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:28:13",
+      "text": "Und davor war er bei Sun, bei Novell und bei äh Apple."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:21",
+      "text": "Der war mal bei Apple, ernsthaft,\nRelease. Ach so ja, okay, er war im Aufsichtsrat, genau. Und bis er dann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:28:28",
+      "text": "Da ist er rausgekickt, weil er äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:29",
+      "text": "Weil Steve eben nuklearen Krieg äh angekündigt hat."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:28:33",
+      "text": "Ja, zurecht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:35",
+      "text": "Ja ja\nGenau, also ist schon mal eine äh fragwürdige Person gewesen. Wir erinnern uns auch noch äh er ist ja mal sehr bekannt geworden durch seinen Ausspruch mit äh na ja, wir können ja hier bei Google äh sind wir ja sowieso schon was alle. Ähm Tun und Vorhaben und ähm wenn ihr,\nzu sagen was Böses getan habt, dann äh hättet ihr es vielleicht einfach von vorne rein gar nicht erst tun sollen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:28:58",
+      "text": "Ja genau, wenn ihr, wenn ihr was tut, weil von dem ihr nicht wollt, dass es jeder weiß."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:29:01",
+      "text": "Genau, dann hätte es aber nicht tun sollen so. Weil wir wissen das eh schon. Das äh war für so eine dieser Aussagen, die einem so ein wohliges Gefühl über den."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:29:09",
+      "text": "Hohliges Gefühl. Er hat übrigens, er hat aber auch äh einen ganz interessantes Buch geschrieben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:29:15",
+      "text": "Das heißt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:29:16",
+      "text": "Ähm how Google Works,\nwie's auf Deutsch heißt, äh wo er die äh Arbeitgeberphilosophie von äh Google äh behandelt\nund vor allem, da er ja irgendwie, wie gesagt, von irgendwie Seiten achtziger Jahren irgendwie in in Valley-Unternehmen arbeitet, hat er ja durchaus Erfahrungen in im Bereich der Managementstile und dieses in diesem How Google Works behandelt er eben,\nAuch Dinge, die er gelernt hat bei Google, die ich sehr erhellend fand über äh quasi das Verhältnis eines Arbeitgebers zu den Arbeitnehmern,\nähm das hat mich äh nachhaltig beeindruckt,\nDeswegen würde ich jetzt auch keinen Arbeitnehmer mehr. So, aber ähm,\nSo, das äh das ist ein ganz interessantes Buch gewesen, kann man an der Stelle noch erwähnen. So, Erik Schmidt ist jetzt seit neuestem,\nBerater."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:30:21",
+      "text": "Also nicht nur, sondern jetzt auch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:30:23",
+      "text": "Vom des US-Verteidigungsministeriums, denn dort wird es einen Defense, Innovation Advisoreboard geben, äh zwölf Leute sollen da drin sein und ähm,\nEr wird eine von diesen Personen sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:30:41",
+      "text": "Ob der dann auch sich immer von diesem Atlas begleiten lässt.\nWürde doch cool, oder? So wie die da im Video dann durch den Wald gelaufen sind, so läuft er dann direkt bei dem Board auf, der Atlas setzt sich so neben ihn."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:30:58",
+      "text": "Ich meine, was besseres ist, den Menschen auch nicht eingefallen, ne\nFinde ich halt auch geil. Also das ist eigentlich das, was ich in diesem Video gesehen habe, weißt du? Der der scheiße, der kann was, lass den hauen. Lass den, der kann das besser als wir oder der nimmt uns einen Arbeitsplatz weg, hol einen Stock.\nNa ja okay, ähm zwölf Personen aus der Privatwirtschaft, die ähm das äh Verteidigungsministerium bezüglich,\nRapid Prototyping,\nkomplexer Datenanalyse, der Cloud und generell dem Informationsaustausch beraten sollen. Das heißt, die haben,\nÄhm also und und nur technisch. Also er wird jetzt nicht irgendwie Kriegsherr, er soll wird denen jetzt nicht sagen, äh welche wie die nächste Operation sein soll oder mit welcher Strategie man äh welches\nDing\nsich ERO, welches Land erobert, aber ähm er möchte er wird äh technischer Innovationsberater äh für das Verteidigungsministerium.\nTja,\nIch weiß es nicht. Es ist auf jeden Fall eine Meldung. Ich meine, wenn Erik Schmidt was macht, dann ist das eine Meldung. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:11",
+      "text": "Wir kommen sozusagen jetzt erstmal unserer Pflicht nach, wollen damit äh erstmal gar nichts andeuten, aber ist natürlich schon,\nJa, was ist das bedenklich? Notierenswürdig, äh dass.\nAufsichtsratschef des Unternehmens, was nachweislich, wie wir ja hier auch schon ausgiebig diskutiert haben in dieser Sendung\nhinter dieser ganzen äh KI, autonome Roboter, explizit auch mit Militärbezug\ndahinter steht jetzt sozusagen auch noch zum Berater wird. Wenn man das jetzt auch nicht so überraschend und das ist auch nicht so anhört auf ich meine,\ndurchzogen mit Industrie äh schon immer gewesen. Nur dass halt jetzt Silicon Valley sich einen zunehmenden Maße und äh,\nsicherlich auch nicht in nicht das erste Mal in Form von Erik Schmidt jetzt äh in diesen in diesen Dunstkreis äh begeben hat. Ist natürlich,\ngrundsätzlich, gut, ich will das jetzt nicht zu weit überziehen, aber,\nwollte jetzt diese Apple FBI äh Debatte jetzt eigentlich gar nicht mehr rausgreifen, hatten wir ja letztes Mal ähm weil er jetzt auch nicht so sehr viel mehr neues passiert ist, das spielt halt, aber es gibt ja dann schon eine ziemliche\nPositionierung gerade, also das Silicon Valley versus äh der Start und seine Wünsche und dann sieht man natürlich auch\ndass das äh ein Spiel auf vielen Ebenen ist, so dass hier auch ganz andere Interessen mit neuen Märkten genauso eine Rolle spielen und man nicht weiß, inwiefern hier am Ende äh die Privatsphäre äh äh et cetera äh,\nwerden wir sehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:33:53",
+      "text": "Es gibt.\nAlso ich meine, alle Staaten blicken auf eine etwas ungewisse Zukunft, was mit diesem ganzen digital und so. Wenn sich das mit dem Internet jetzt durchsetzt, ja und mit dem Big Data,\nund."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:34:12",
+      "text": "Setzt dich durch mit dem Internet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:34:14",
+      "text": "Könnte sein und einige starten oder einige Nationen haben halt vielleicht patriotischere Bürger,\noder einige Staaten haben auch äh,\nFrüher die Bedeutung dieses Wirtschaftszweiges erkannt und dafür gesorgt, dass dieser Wirtschaftszweig sich bei ihnen großartig entwickeln kann. Und.\nDiese Staaten haben gerade ganz gut kacken, weil sie wirtschaftlich gerade äh sehr profitieren von ihrer äh Vorreiterstellung in diesen Bereichen,\nund weil sie natürlich auch,\nWenn dann eine enge Zusammenarbeit zwischen großen, wichtigen Organisationen in diesem Bereich und der Regierung stattfindet,\nähm.\nSich, sage ich mal, zumindest sicher sein können, das sollte eines dieser Unternehmen dem Staat richtig krass an die Karre pissen können, dass sie das wenigstens früh genug erfahren,\nÄhm und ich erinnere mich, dass irgendwie äh Julian Assange ja irgendwie schon,\nvor einiger Zeit dem äh Erik Schmidt vorgeworfen hat, dass Google irgendwie seit so und so viel Jahren, seit über zehn Jahren äh mit der NSA\nkooperiere im Bereich der Datensuche und Organisation und so. Da hatte Schmidt das dementiert und wir haben mit dieser ganzen Apple\nFBI Geschichte, eigentlich grade in der Öffentlichkeit so 'n Eindruck gehabt von davon, dass die Konzerne,\nähm auf Distanz geht.\nVon staatlichen Interessen, insbesondere der USA,\nUnd der Schritt, dass so ein äh Schmid sagt, ach ja, so ein Beraterposten fürs Militär, der steht mir doch gut zu Gesicht als jemand, der mehr oder weniger die größte,\nDatensammlung der Welt hat äh und irgendwie autonome Roboter äh steuert\nund äh nebenbei übrigens euer E-Mail-Provier ist, liebe Freunde, weil es war jeder seine Mail bei dem hat. Ähm da erkennt man dann den Bereich, der Entwicklung\nder Zukunft, der den ich irgendwie mit Sorge betrachte, nämlich eine äh Vermischung.\nÄhm dieser wirtschaftlichen und militärischen und damit eben auch,\nideologischen Bestrebungen, die irgendwo vorherrschen\nund äh das äh beobachte ich mit äh zunehmendem Unbehagen, wie dieses Internet, was mal so als schönes, dezentrales Netzwerk, in dem wir alle irgendwie rum äh dingsen, gestartet ist, sich langsam zu einer riesigen ähm,\nzentralen Datensammelstelle wandelt. Und ähm,\nZentralen Datensammelstellen stehe ich ja grundsätzlich,\nÄh sehr, sehr skeptisch gegenüber und in diesen Entwicklungen, die wir jetzt hier sehen, äh spiegelt sich auch wieder, warum,\nDer Chaos-Computer-Club seit über dreißig Jahren sagt, ja, das ist nicht gut. Das ist einfach nicht gut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:03",
+      "text": "Beziehungsweise um das auch kleine Maul zu betonen, der CCC, wenn er gut drauf ist, äh Chancen und Risiken."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:38:12",
+      "text": "Wenn er gut drauf ist, Chancen auch, ey. Ähm na ja, ich habe ja am Anfang der Sendung äh,\nauch vielleicht so ein bisschen eine mal aus Sicht des des Big Data und die Chancen und so weiter, ja? Also ich meine,\nDa sind natürlich auch Chancen drin. Natürlich, das wird alles, das wird ein da\nDie Technik wird im Zweifelsfalle immer ausreichend noch zum Vorteil aller äh sich entwickeln, ja? Also ich glaube auch, dass\nAuch heute äh niemand sagen würde, oh mein Gott, die Welt war aber besser ohne Smartphones.\nJa, also wir haben da ein ausreichendes ähm.\nPotential im wirtschaftlichen Bereich, im Bereich des Zusammenlebens, die Bedürfnisse der Menschen werden in der Regel gedeckt,\nzumindest im des größeren Teils der Menschen. Das äh ist ja eigentlich die Definition von äh Kapitalismus. Ja, dass das irgendwie,\nzumindest noch genug also es ist jedes Bedürfnis, was in ausreichend großer Zahl vorhanden ist,\ngedeckt wird und zwar einfach ganz dadurch, dass, dass irgendjemand hingeht und es monetarisiert. Das ist ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:39:31",
+      "text": "Gebot und Nachfrage."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:39:33",
+      "text": "Genau, ist ja eigentlich erstmal auch gar kein so gar keine so schlechte Idee,\nDas einzige Problem sind eben diese Akkumulationen, die dann immer mehr stattfinden zu einzelnen großen Konzernen, die sich am Ende ähm alle Geschäfts,\ndie dann sich am Ende Geschäftsbereiche aneignen,\nDas ist dann irgendwie im Automobilbereich zu sehen, gibt dann weniger Autohersteller, die sich den Markt aufteilen, das ist in in allen möglichen Bereichen zu sehen und wenn es zu wenig äh wenn es zu zentral wird, dann geht man irgendwohin und zerschlägt die,\nAber was machst du mit einer Informationsgesellschaft, wo es einfach schon heute klar ist, dass es einfach nur sagen wir mal drei,\nVielleicht vier große Datensammelstellen weltweit geben wird, aus denen sich dann alles ab und her leiden soll."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:28",
+      "text": "Naja, ich meine, wenn wir auf die Spur kommen, langsam mal das äh zu sehen, dass diese Datensammelstellen nicht weggehen,\naber man vielleicht sich mal darauf konzentrieren sollte, sie auch als öffentliches Gut zu äh stehen\näh wäre ja da sozusagen noch was zu holen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:40:51",
+      "text": "Das äh verstehe ich jetzt gerade nicht. Also öffentlich ist gut, ein ein multinationales, öffentliches Gut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:58",
+      "text": "Na, wir beklagen die Macht von Google, weil sie halt sehr viel\näh Aufwand stecken, zum Beispiel in das Aufbauen eines Webindexes und das ist natürlich nichts, was jetzt ein Unternehmen mal so eben nebenbei auch noch machen könnte, auch wenn's an manchen Fronten äh einfacher wird, aber es wird ja auch für Google einfacher, von daher ist dieser\nÄhm dieser Aufwand schwer zu treiben, weil wer jetzt heute damit startet, äh sich selbst bei maximalem technischen Erfolg,\nähm einfach nicht mehr in diese Position bringen kann, dass es sich in dem selben Maße monetarisieren lässt. Nur,\ntrotz alledem wäre ja die Verfügbarkeit eines Suchindizes für alle und nicht nur für Google durchaus,\nvielen Erwägungen heraus sinnvoll, sowohl für die Wirtschaft, als auch für die Gesellschaft, et cetera.\nWarum dann nicht das Ganze einfach ein Suchindex genauso verstehen\nwie äh das Straßen und Datenleitungsnetz, dass man einfach an dieser Stelle einfach sagt, okay, wir müssen auch\ndigital arbeiten und digitale Güter der Öffentlichkeit bereitstellen und dann ist das halt einfach mal ein europäisches äh Projekt, wenn nicht sogar ein UN-Projekt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:42:08",
+      "text": "Ja, ich glaube, dass dieser Zug leider schon längst abgefahren ist. Also was ähm man muss ja auch,\nanerkennen, dass das, was Google macht, sie enorm gut machen.\nAufgrund der Daten, die sie haben und aufgrund der Art, wie sie mit diesen Daten umgehen und aufgrund des Antriebs und des Geldes, das sie haben, um solche Dinge zu entwickeln, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:42:40",
+      "text": "Ja, vor allem die, die Innovationskraft, aber das heißt ja nicht, dass man jetzt nicht auch noch einen Nutzen daraus haben könnte. Also wenn man jetzt sagt, okay, wir äh ähm nehmen einfach öffentliches Geld und bauen eine öffentliche Infrastruktur auf, bauen einen solchen Index und ähm,\nallen zur Verfügung, so wie Wikipedia äh alle Daten zur Verfügung stellt, dann wäre er auf jeden Fall mal ein Schritt gemacht und."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:43:03",
+      "text": "Also das wäre mal eine interessante Recherchefrage. Wie viel Geld hat Google seit Existenz in sich selber investiert? Also was hat es gekostet? Wie viel Geld brauche ich, wenn ich jetzt bei null anfange und einen Google bauen möchte?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:19",
+      "text": "Lässt sich bestimmt ganz gut ausrechnen, wenn man sich mal die Bilanzen anschaut, aber keine Ahnung. Ist bestimmt eine ganze Menge Holz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:43:26",
+      "text": "Am Rande übrigens gelernt.\nAls Google zu Elphabet wurde, wurde aus dem Motto don't beevil, Do the Ride thing."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:37",
+      "text": "Nach echt. Das lassen wir jetzt mal so stehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:43:45",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:47",
+      "text": "Aha, war mir gar nicht bewusst.\nBinus. Diese Sendung ist schon lang."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:43:56",
+      "text": "Tim. Diese Sendung ist lang. Ich wollte eigentlich die Kürzeste machen, weil ich so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:44:02",
+      "text": "Wenn du das immer schon ankündigst, dann weiß ich immer schon, dass das komplett nach hinten losgehen wird."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:44:03",
+      "text": "Ja, ja. Ja. Aber ich war auch verärgert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:44:08",
+      "text": "Ja, ist okay, dir geht's schon auch viel, viel besser. Ich habe das jetzt auch einfach aus humanitären Gründen schon getragen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:44:14",
+      "text": "Das ist schön, da war jetzt irgendwie eine fünfstellige Anzahl. Höre das aus humanitären Gründen auch noch über sich ergehen lassen muss,\nÄh"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:44:26",
+      "text": "Neutralität ist ein äh Abschlussthema."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:44:29",
+      "text": "Dot Ew dot kann man Fälle von äh Netzneutralitätsverletzungen melden\ndenen wird dann nachgegangen und da gibt es dann eine schöne Statistik momentan. Äh siebenundzwanzig bestätigte Reports, also Berichte über Netzneutralitätsverletzungen\nähm zwanzig Netzbetreiber, bei denen,\nbetroffen sind und sieben Länder. Eine Seite, die irgendwie vom der Netz äh Vertretung, digitale Gesellschaft,\nEuropean Digital Rights, der Initiative für Netzwerk Freiheit ähm,\nIT-Politist Forening, Nürpa, der Open Rights Group und Ex-Net äh zur Verfügung gestellt wird. Wenn ihr also eine ein Fall von Netzneutralität habt, der dort noch nicht ähm.\nMit drin ist, dann könntet ihr dort mal helfen, die zu sammeln. Wichtig ist ja, äh oder ich denke, dass dort gesammelt wird\num eben zu sagen, hier da, ne, das sind irgendwie die Dinger und so. Und ihr könnt auch bei den Existenten sagen, denen kann ich auch melden, den kenne ich auch. Und dann werden halt noch so schöne\nspannende Listen und Analysen darüber gemacht, wo sich diese Netzneutralitätsverletzungen befinden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:46:02",
+      "text": "Grob werden hier fünf verschiedene Arten von Netznetralitätsverletzungen unterschieden, also Zero-Rating, also das kostenlose Bereitstellen eines äh Dienstes,\nbeziehungsweise es nicht anrechnen der Nutzung eines äh Dienstes, wie wir das hier schon mehrfach besprochen hatten. So was gab's bei Wikipedia, sowas gab's bei Facebook mit\ndie Spotify, Flatrate, bei äh T-Mobile et cetera. Dann dieses Special Live Service Geschichte, die ja etwas schwammig äh ist, also wenn sozusagen ein Dienst hier bevorzugte\nGeschwindigkeit zum Beispiel äh ja ich weiß gar nicht, wie das hier unterschieden wird, weil hier gibt's auch noch, also,\nschwierig. Äh müsst ihr dann selber vielleicht entscheiden, in welcher Kategorie ihr das am besten packt und wenn's überhaupt nicht läuft, gibt's auch noch Azar. Assad ist dein Freund.\nKlick dir rein. Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:47:04",
+      "text": "Ja. Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:47:05",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:47:15",
+      "text": "Vom neunundzwanzigsten Vierten bis ersten fünften findet das erste Creative Nerding for Nerds,\nWürzburg statt. Das ist eine Veranstaltung ausgerichtet vom Nerd to Nerd EV und das ist ein,\nGegend und weil das aber der EV ist, passt Nerd-End besser. Es gibt Hacking, Coding, Vorträge und allgemeines Rumnörden,\nFreitag, neunundzwanzigster vierter bis Sonntag, erster fünfter im und im Würzburg."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:47:51",
+      "text": "Und gutes Essen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:47:52",
+      "text": "Gutes Essen gibt's auch immer, ja? Dafür sind die Chaos-Veranstaltungen ja bekannt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:47:56",
+      "text": "Ja, mehr Termine haben wir gar nicht, oder? Dann können wir die Sendung jetzt einfach im Flow der Musik ausklingen lassen. Was hältst du davon? Wollen wir das machen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:07",
+      "text": "Vielleicht könnte ich noch einen Termin ankündigen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:48:10",
+      "text": "Ja? Weißt du einen? Nee. Du weißt doch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:13",
+      "text": "Nee. Ja, ich bin nächste Woche habe ich noch einen Termin, aber den kündige ich nicht an."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:48:18",
+      "text": "Wir haben uns auf jeden Fall äh gefreut, dass ihr uns wieder äh zugehört habt und äh sind dann auch bald mal wieder für euch da."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:27",
+      "text": "Hoffentlich gibt's nächste Woche irgendwie vernünftige."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:48:30",
+      "text": "Muss auch mal sein. Wir sagen tschüss."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:32",
+      "text": "Ich sehe schon wieder schwarz, ey. Sag tschüss. Ciao, ciao."
+    }
+  ]
+}

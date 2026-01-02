@@ -1,0 +1,323 @@
+{
+  "episodeNumber": 353,
+  "title": "LNP353 Ein Geisterfahrer? Tausende!",
+  "extractedAt": "2026-01-02T11:22:57.113Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "Stuttgart",
+      "subject": {
+        "coarse": "Location",
+        "fine": "Stuttgart"
+      },
+      "durationSec": 189,
+      "positionSec": 182,
+      "summary": "In Stuttgart gibt es soziale Konflikte zwischen der Partyszene und Punks, die sich im Schlosspark treffen. Linus Neumann und Tim Pritlove diskutieren über ein Interview aus der Sendung Report Mainz, in dem Punks zu Wort kommen. Die Stuttgarter Punks sind durch ihre auffällige Erscheinung und Kleidung eindeutig zu erkennen. Neumann hebt hervor, dass die Situation in Stuttgart im Vergleich zu anderen Städten, wie Berlin, anders ist, insbesondere im Umgang mit der Polizei. Die Diskussion zeigt die kulturellen Unterschiede und die Dynamik der Stuttgarter Szene.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "353-ts.json",
+        "method": "time-window",
+        "pickedCount": 12,
+        "startSec": 162,
+        "endSec": 391,
+        "generatedAt": "2026-01-02T19:10:13.809Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Feedback: Dirk Kretzschmar, TÜVit",
+      "subject": {
+        "coarse": "Feedback",
+        "fine": "Dirk Kretzschmar"
+      },
+      "durationSec": 283,
+      "positionSec": 372,
+      "summary": "In dieser Episode wird Feedback von Dirk Kretschmer, einem Vertreter des TÜV, zu einem kritischen Artikel über die Corona-App thematisiert. Kretschmer erklärt, dass seine Aussagen im Artikel fehlerhaft wiedergegeben wurden und dass er nicht für die negativen Äußerungen verantwortlich ist. Er betont, dass das Interview, auf das sich der Artikel bezieht, zu einem anderen Zeitpunkt stattfand und die Situation sich inzwischen geändert hatte. Zudem wird klargestellt, dass kein NDA verletzt wurde und dass ursprünglich geplant war, die Ergebnisse selbst zu veröffentlichen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "353-ts.json",
+        "method": "time-window",
+        "pickedCount": 6,
+        "startSec": 352,
+        "endSec": 675,
+        "generatedAt": "2026-01-02T19:10:13.520Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Feedback: Zero-Rating und DPI",
+      "subject": {
+        "coarse": "Feedback",
+        "fine": "Zero-Rating"
+      },
+      "durationSec": 394,
+      "positionSec": 655,
+      "summary": "In der Diskussion über Zero-Rating und Deep Packet Inspection (DPI) wird erläutert, dass Zero-Rating nicht auf IP-Ebene, sondern auf Layer 5 und höher erfolgt. Linus Neumann beschreibt, dass ein Anbieter es ermöglicht hat, Traffic zu 'weißen', solange bestimmte Erkennungsmerkmale vorhanden sind. Dies geschieht durch die Verwendung von Domainnamen und nicht nur durch IP-Adressen. Zudem wird die Problematik angesprochen, dass bei verschlüsseltem Traffic die DPI nur begrenzt funktioniert, da die Domaininformationen beim Aufbau des TLS-Tunnels sichtbar sind. Richard äußert sich kritisch zu der Aussage, dass Traffic den Provider nichts koste, und betont die hohen Investitionen in die Infrastruktur.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "353-ts.json",
+        "method": "time-window",
+        "pickedCount": 14,
+        "startSec": 635,
+        "endSec": 1069,
+        "generatedAt": "2026-01-02T19:10:18.526Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Feedback: Traffic-Kosten",
+      "subject": {
+        "coarse": "Feedback",
+        "fine": "Traffic-Kosten"
+      },
+      "durationSec": 470,
+      "positionSec": 1050,
+      "summary": "In der Diskussion über Traffic-Kosten wird festgestellt, dass die Nutzung von Daten im Mobilfunknetz kaum Kosten verursacht. Linus Neumann vergleicht dies mit Software-Abonnements wie Photoshop, bei denen die Kosten unabhängig von der Nutzung sind. Es wird argumentiert, dass eine vereinfachte Abrechnung ohne nutzungsbasierte Gebühren ökonomisch vorteilhaft sein könnte. Zudem wird auf die Herausforderungen bei der Abrechnung zwischen Internetanbietern hingewiesen, die oft zu Ungerechtigkeiten zwischen großen und kleinen Anbietern führen. Tim Pritlove zieht Parallelen zu solidarischen Systemen wie dem Gesundheitssystem.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "353-ts.json",
+        "method": "time-window",
+        "pickedCount": 8,
+        "startSec": 1030,
+        "endSec": 1540,
+        "generatedAt": "2026-01-02T19:10:17.478Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Feedback: AMS-Algorithmus",
+      "subject": {
+        "coarse": "Feedback",
+        "fine": "AMS-Algorithmus"
+      },
+      "durationSec": 68,
+      "positionSec": 1521,
+      "summary": "In der Episode wird der AMS-Algorithmus diskutiert, der Entscheidungen basierend auf verfügbaren Daten trifft, im Gegensatz zu menschlichen Vorurteilen. Linus Neumann und Tim Pritlove thematisieren auch die Kontroversen um die Zahl von 30.000 Verdachtsfällen im Bereich Kindesmissbrauch, die vom Justizminister Peter Biesenbach als irreführend eingestuft werden. Statt tatsächlicher Tatverdächtiger handelt es sich um Datenspuren wie IP-Adressen, was die tatsächliche Anzahl der Täter erheblich relativiert.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "353-ts.json",
+        "method": "time-window",
+        "pickedCount": 4,
+        "startSec": 1501,
+        "endSec": 1609,
+        "generatedAt": "2026-01-02T19:10:21.883Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Feedback: 30.000 Verdachtsfälle",
+      "subject": {
+        "coarse": "Feedback",
+        "fine": "Verdachtsfälle"
+      },
+      "durationSec": 122,
+      "positionSec": 1589,
+      "summary": "In der Episode wird über das Patientendatenschutzgesetz berichtet, das kürzlich verabschiedet wurde. Martin, ein Vertreter des Chaos Computerclubs, hat im Gesundheitsausschuss Stellung genommen und auf Schwachstellen hingewiesen. Die neuen Gesundheitskarten sollen künftig persönlich oder per Postzustellauftrag übergeben werden, wobei die Identifikation durch einen Ausweis sichergestellt werden muss. Es gibt jedoch Bedenken hinsichtlich der Praktikabilität dieser Regelung. Zudem wurde die AOK von der Datenschutzbehörde mit einem Bußgeld von 1,2 Millionen Euro belegt, was als Erfolg für die Datenschutzbemühungen gewertet wird.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "353-ts.json",
+        "method": "time-window",
+        "pickedCount": 2,
+        "startSec": 1569,
+        "endSec": 1731,
+        "generatedAt": "2026-01-02T19:10:22.945Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Update: Patientendatenschutzgesetz (PDSG)",
+      "subject": {
+        "coarse": "Update",
+        "fine": "Patientendatenschutzgesetz"
+      },
+      "durationSec": 374,
+      "positionSec": 1711,
+      "summary": "Das Patientendatenschutzgesetz (PDSG) wurde verabschiedet, einschließlich eines Änderungsantrags der Koalition, der die Zustellung der Gesundheitskarten regelt. Diese sollen künftig persönlich oder per Postzustellauftrag zugestellt werden, wobei eine Identifikation durch Ausweisprüfung erforderlich ist. Martin, ein Vertreter des Chaos Computerclubs, äußert Bedenken zur praktischen Umsetzbarkeit des Postzustellauftrags. Zudem blieb die Ausnahmeregelung, die Krankenkassen von DSGVO-Bußgeldern ausnimmt, im Gesetz erhalten, was als problematisch angesehen wird, da sensible Daten betroffen sind.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "353-ts.json",
+        "method": "time-window",
+        "pickedCount": 10,
+        "startSec": 1691,
+        "endSec": 2105,
+        "generatedAt": "2026-01-02T19:10:25.630Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Update: Open Tech Fund (OTF)",
+      "subject": {
+        "coarse": "Update",
+        "fine": "Open Tech Fund"
+      },
+      "durationSec": 236,
+      "positionSec": 2086,
+      "summary": "Der Open Tech Fund (OTF) steht unter Druck durch die Trump-Administration, die versucht, die Unabhängigkeit des Fonds zu untergraben. Ein Gericht hat eine Notfallregelung abgelehnt, was die Unsicherheit über die zukünftige Finanzierung des OTF verstärkt. Trotz der Freigabe von bereits zugesagten Mitteln bleibt die Hälfte der Gelder für 2020 eingefroren, was die Arbeit des OTF lähmt. Linus Neumann thematisiert auch die Gefahren von staatlichen Eingriffen in die Telekommunikation, insbesondere durch neue Gesetze, die es Geheimdiensten ermöglichen könnten, den Datenverkehr umzuleiten und Schadsoftware einzuschleusen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "353-ts.json",
+        "method": "time-window",
+        "pickedCount": 9,
+        "startSec": 2066,
+        "endSec": 2342,
+        "generatedAt": "2026-01-02T19:10:26.973Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Provider sollen bei Installation von Schadsoftware helfen",
+      "subject": {
+        "coarse": "Provider",
+        "fine": "Schadsoftware"
+      },
+      "durationSec": 1141,
+      "positionSec": 2322,
+      "summary": "In der Episode wird die besorgniserregende Möglichkeit diskutiert, dass Internetprovider bei der Installation von Schadsoftware durch Umleitung von Internetverkehr unterstützen könnten. Ein neuer Gesetzentwurf könnte Geheimdiensten das Recht geben, Geräte zu infizieren, indem sie Schwachstellen ausnutzen und Traffic umleiten. Die Diskussion beleuchtet, wie dies das Vertrauen in Internetprovider untergräbt und die Integrität von Systemen gefährdet. Linus Neumann und Tim Pritlove warnen vor den Folgen dieser Gesetzgebung und betonen, dass Branchenverbände wie Bitkom und Eco gegen solche Maßnahmen sind, da sie das Vertrauensverhältnis zu den Kunden gefährden.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "353-ts.json",
+        "method": "time-window",
+        "pickedCount": 28,
+        "startSec": 2302,
+        "endSec": 3483,
+        "generatedAt": "2026-01-02T19:10:29.758Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Kontaktlisten",
+      "subject": {
+        "coarse": "Data",
+        "fine": "Kontaktlisten"
+      },
+      "durationSec": 431,
+      "positionSec": 3464,
+      "summary": "In der Diskussion um Kontaktlisten während der Corona-Pandemie äußert Linus Neumann Kritik an der öffentlichen Debatte und den Datenschutzbedenken der Menschen. Er erwähnt eine App aus der Schweiz, die zur Erfassung von Kontaktdaten in Restaurants dient, und hebt hervor, dass diese App Sicherheitslücken aufweist, die es ermöglichen, Daten von anderen Restaurants abzurufen. Zudem wird ein Verstoß gegen die vorgeschriebene Löschfrist von vierzehn Tagen thematisiert. Neumann warnt vor den Risiken digitaler Lösungen, die hastig implementiert werden.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "353-ts.json",
+        "method": "time-window",
+        "pickedCount": 10,
+        "startSec": 3444,
+        "endSec": 3915,
+        "generatedAt": "2026-01-02T19:10:31.217Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "CWA-Scammer",
+      "subject": {
+        "coarse": "Scams",
+        "fine": "CWA-Scammer"
+      },
+      "durationSec": 802,
+      "positionSec": 3896,
+      "summary": "In der Episode wird die Corona-Warn-App und ihre Funktionsweise diskutiert, insbesondere im Hinblick auf die von Peter Felser von der AfD entwickelte App, die als 'Corona-Warnwarner' bezeichnet wird. Diese App wird als betrügerisch eingestuft, da sie falsche Behauptungen über die Nachverfolgbarkeit von Nutzern aufstellt und für 1,50 Euro verkauft wird. Linus Neumann und Tim Pritlove kritisieren die Unkenntnis oder bewusste Täuschung Felser und weisen darauf hin, dass die Corona-Warn-App sicher funktioniert, indem sie regelmäßig ihre Identifikatoren ändert. Zudem wird auf die unseriösen Behauptungen und die mangelnde technische Grundlage der 'Corona-Warnwarner'-App hingewiesen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "353-ts.json",
+        "method": "time-window",
+        "pickedCount": 34,
+        "startSec": 3876,
+        "endSec": 4718,
+        "generatedAt": "2026-01-02T19:10:34.041Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "PIMeyes",
+      "subject": {
+        "coarse": "Technology",
+        "fine": "PIMeyes"
+      },
+      "durationSec": 350,
+      "positionSec": 4698,
+      "summary": "PIMeyes ist ein Gesichtserkennungsdienst aus Polen, der es Nutzern ermöglicht, Bilder hochzuladen, um Informationen über Personen in einer Datenbank von 900 Millionen Fotos zu finden. Im Gegensatz zu Clearview, das nur für Strafverfolgungsbehörden zugänglich war, ist PIMeyes öffentlich verfügbar, was Bedenken hinsichtlich Datenschutz und Missbrauch aufwirft. Kritiker warnen vor möglichen Gefahren wie Stalking und der Verletzung von Persönlichkeitsrechten. Es wird diskutiert, ob der Betrieb solcher Dienste legal ist, insbesondere im Hinblick auf die DSGVO.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "353-ts.json",
+        "method": "time-window",
+        "pickedCount": 12,
+        "startSec": 4678,
+        "endSec": 5068,
+        "generatedAt": "2026-01-02T19:10:35.180Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Blueleaks",
+      "subject": {
+        "coarse": "Leaks",
+        "fine": "Blueleaks"
+      },
+      "durationSec": 759,
+      "positionSec": 5049,
+      "summary": "In der Episode wird über die sogenannten Blue Leaks diskutiert, die rund 270 Gigabyte an Daten von über 200 Polizeirevieren in den USA umfassen. Diese Daten stammen teilweise aus Anfragen nach dem Informationsfreiheitsgesetz und wurden von einem Kollektiv namens Didio Secrets veröffentlicht, das sich als Transparenzplattform versteht. Nach der Veröffentlichung wurden deren Twitter-Account und Server beschlagnahmt, was Fragen zur Rechtmäßigkeit und Pressefreiheit aufwirft. Linus Neumann kritisiert die unprofessionelle Handhabung der Leaking-Plattform und die fehlenden Kontingenzpläne, die zu einer mehrtägigen Offline-Zeit führten.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "353-ts.json",
+        "method": "time-window",
+        "pickedCount": 27,
+        "startSec": 5029,
+        "endSec": 5828,
+        "generatedAt": "2026-01-02T19:10:38.474Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T19:10:38.474Z",
+  "transcriptFound": true,
+  "transcriptFile": "353-ts.json"
+}

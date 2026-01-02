@@ -1,0 +1,227 @@
+{
+  "episodeNumber": 497,
+  "title": "LNP497 Real men use it after free()",
+  "extractedAt": "2026-01-02T11:43:25.795Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "El Hotzo fliegt raus",
+      "subject": {
+        "coarse": "Social",
+        "fine": "Media"
+      },
+      "durationSec": 619,
+      "positionSec": 99,
+      "summary": "In der Episode wird der Comedian El Hotzo, bürgerlich Sebastian Hotz, thematisiert, der auf Twitter einen geschmacklosen Witz über einen misslungenen Attentatsversuch auf Donald Trump gemacht hat. Dies führte zu einem Shitstorm, unter anderem von Elon Musk, der sich über die Duldung solcher Äußerungen auf seiner Plattform beschwerte. Tim Pritlove und Linus Neumann diskutieren die Reaktionen auf Hotzos Witz und die allgemeine Verkrampfung in der humoristischen Auseinandersetzung mit politischen Themen. Sie kritisieren die Doppelmoral im Umgang mit Humor und die Reaktionen auf Witze, die nicht immer als respektvoll oder angemessen empfunden werden.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "497-ts.json",
+        "method": "time-window",
+        "pickedCount": 46,
+        "startSec": 79,
+        "endSec": 738,
+        "generatedAt": "2026-01-02T20:00:05.810Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "LNP500",
+      "subject": {
+        "coarse": "Technology",
+        "fine": "Podcasting"
+      },
+      "durationSec": 108,
+      "positionSec": 718,
+      "summary": "In der Episode wird die bevorstehende Veranstaltung LNP500 am 31. August in Berlin thematisiert. Tim Pritlove und Linus Neumann sprechen über den Shirt-Vorverkauf, der bis zum 2. August verlängert wurde, sowie über die limitierte Verfügbarkeit von Tickets. Sie betonen die Beliebtheit der Shirts und die Notwendigkeit, schnell zu handeln, da die Tickets bald ausverkauft sein könnten. Zudem wird auf die Plattform subscribe.de verwiesen, wo weitere Informationen zur Veranstaltung zu finden sind.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "497-ts.json",
+        "method": "time-window",
+        "pickedCount": 15,
+        "startSec": 698,
+        "endSec": 846,
+        "generatedAt": "2026-01-02T20:00:05.170Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "US-Wahlen",
+      "subject": {
+        "coarse": "Politics",
+        "fine": "Elections"
+      },
+      "durationSec": 1393,
+      "positionSec": 1023,
+      "summary": "In der Diskussion über die US-Wahlen wird die Situation um Joe Biden und Donald Trump thematisiert. Linus Neumann äußert Bestürzung über ein missglücktes Attentat auf Trump und die Wahrnehmung von Bidens Alter und Verwirrtheit. Es wird darauf hingewiesen, dass Biden unter Druck steht und möglicherweise Kamala Harris als Vizekandidatin ins Spiel kommt, die mehr Schwung ausstrahlt. Zudem wird J.D. Vance, der als Trumps Vizepräsidenten-Pick gilt, als umstrittene Figur beschrieben, die aus dem Nichts in die Politik kam und enge Verbindungen zu Big Tech hat.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "497-ts.json",
+        "method": "time-window",
+        "pickedCount": 35,
+        "startSec": 1003,
+        "endSec": 2436,
+        "generatedAt": "2026-01-02T20:00:09.630Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Crowdstrike",
+      "subject": {
+        "coarse": "Security",
+        "fine": "Cybersecurity"
+      },
+      "durationSec": 2551,
+      "positionSec": 2416,
+      "summary": "In der Episode wird ein schwerer IT-Ausfall diskutiert, der circa 8,5 Millionen Windows-Systeme betraf und zum Blue Screen of Death führte. Der Ausfall wurde mit einem Treiber von CrowdStrike in Verbindung gebracht, der als Endpoint Detection and Response (IDA) fungiert. Dieser Treiber, der tief im Betriebssystem verankert ist, sollte schädliche Aktivitäten erkennen, stürzte jedoch aufgrund eines inkompatiblen Channel-Files ab, was den gesamten Betriebssystemkern zum Absturz brachte. CrowdStrike versorgt diesen Treiber regelmäßig mit Updates, die jedoch nicht immer reibungslos verlaufen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "497-ts.json",
+        "method": "time-window",
+        "pickedCount": 99,
+        "startSec": 2396,
+        "endSec": 4987,
+        "generatedAt": "2026-01-02T20:00:09.706Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Identify Mobile",
+      "subject": {
+        "coarse": "Technology",
+        "fine": "Mobile"
+      },
+      "durationSec": 1026,
+      "positionSec": 4968,
+      "summary": "In der Episode wird das Thema der Zwei-Faktor-Authentifizierung (2FA) behandelt, insbesondere die Sicherheitsrisiken, die durch unsachgemäßen Umgang mit Logfiles entstehen können. Linus Neumann erläutert, dass der Anbieter Identify Mobile Logfiles von versendeten SMS in einem ungeschützten Amazon S3-Bucket gespeichert hat, was zu einem Datenleck führte. Über 200 Unternehmen waren betroffen, und es wurden mehr als 198 Millionen SMS-Daten offengelegt. Die Diskussion hebt die Bedeutung von sicherem Logging und der richtigen Handhabung von sensiblen Daten hervor.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "497-ts.json",
+        "method": "time-window",
+        "pickedCount": 38,
+        "startSec": 4948,
+        "endSec": 6014,
+        "generatedAt": "2026-01-02T20:00:13.525Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "AI Act Timeline",
+      "subject": {
+        "coarse": "Regulation",
+        "fine": "AI"
+      },
+      "durationSec": 661,
+      "positionSec": 5994,
+      "summary": "Der AI-Act wird im August 2024 in Kraft treten und verbietet ab Februar 2025 bestimmte nicht akzeptable KI-Anwendungen in der EU, die zu Manipulationen und Täuschungen führen können. Ab August 2025 gelten Verpflichtungen für General Purpose AIs und ab August 2026 für Hochrisiko-AI-Systeme, insbesondere in Bereichen wie Biometrie und kritische Infrastruktur. Es gibt Bedenken, dass die Regulierung Innovationsnachteile für Europa mit sich bringen könnte, da Unternehmen möglicherweise in weniger regulierte Regionen abwandern. Kritiker bemängeln die Handwerkskunst des Gesetzes und die möglichen negativen Auswirkungen auf den Standort Europa.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "497-ts.json",
+        "method": "time-window",
+        "pickedCount": 24,
+        "startSec": 5974,
+        "endSec": 6675,
+        "generatedAt": "2026-01-02T20:00:14.036Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Bargeld-Limits bei Geldkarten",
+      "subject": {
+        "coarse": "Finance",
+        "fine": "Payments"
+      },
+      "durationSec": 89,
+      "positionSec": 6656,
+      "summary": "Im Transkript wird über die Einführung von Bargeld-Limits für Asylbewerberinnen in Form von Bezahlkarten gesprochen. Diese Karten erlauben das Abheben von maximal 50 Euro Bargeld, um zu verhindern, dass große Geldbeträge auf einmal abgehoben werden. Ein Sozialgericht in Hamburg hat entschieden, dass solche Bargeldlimits nicht pauschal für alle Karten gelten dürfen, sondern individuell unter Berücksichtigung von Faktoren wie Alter, Behinderung, Krankheit oder Familienumständen festgelegt werden müssen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "497-ts.json",
+        "method": "time-window",
+        "pickedCount": 3,
+        "startSec": 6636,
+        "endSec": 6765,
+        "generatedAt": "2026-01-02T20:00:17.825Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Huawei-Verbot",
+      "subject": {
+        "coarse": "Politics",
+        "fine": "Trade"
+      },
+      "durationSec": 397,
+      "positionSec": 6745,
+      "summary": "Im Transkript wird das Huawei-Verbot in Bezug auf kritische Management-Systeme im Mobilfunknetz in Deutschland diskutiert. Linus Neumann erklärt, dass bis Ende 2029 diese Systeme ersetzt werden müssen, wobei unklar bleibt, ob dies auch die Antennen von Huawei betrifft. Die Deutsche Telekom und Vodafone zeigen Widerstand, da der Austausch von Komponenten im Zugang- und Transportnetz eine Herausforderung darstellt. Neumann äußert Bedenken, dass der Austausch aus wirtschaftlichen Gründen motiviert sein könnte, da die europäische 5G-Technologie kaum konkurrenzfähig ist. Es wird auch angedeutet, dass die Netzbetreiber ohne Huawei in Schwierigkeiten geraten könnten.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "497-ts.json",
+        "method": "time-window",
+        "pickedCount": 21,
+        "startSec": 6725,
+        "endSec": 7162,
+        "generatedAt": "2026-01-02T20:00:19.075Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Datarade",
+      "subject": {
+        "coarse": "Data",
+        "fine": "Marketplace"
+      },
+      "durationSec": 522,
+      "positionSec": 7142,
+      "summary": "In dieser Episode wird über den Erwerb eines Datensatzes mit 3,6 Milliarden Standortdaten gesprochen, der 11 Millionen Mobile Advertising IDs in Deutschland umfasst. Diese Daten stammen von einem Data Broker und zeigen die Bewegungen von georteten Handys über zwei Monate. Linus Neumann erklärt, wie Apps Standortdaten sammeln und diese für Werbung nutzen können. Es wird auch auf die Möglichkeit eingegangen, die eigene Mobile Advertising ID zu überprüfen und herauszufinden, ob man in diesen Datensätzen enthalten ist. Die Diskussion hebt die Problematik des Tracking und der Privatsphäre hervor.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "497-ts.json",
+        "method": "time-window",
+        "pickedCount": 36,
+        "startSec": 7122,
+        "endSec": 7684,
+        "generatedAt": "2026-01-02T20:00:22.251Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T20:00:22.251Z",
+  "transcriptFound": true,
+  "transcriptFile": "497-ts.json"
+}

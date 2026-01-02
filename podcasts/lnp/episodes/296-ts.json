@@ -1,0 +1,1104 @@
+{
+  "transcript": [
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:00:00",
+      "text": "Guten Morgen Ninos. Guten Morgen Frank. Irgendwie sind diese Tage nicht so richtig gut. Ich habe gerade schon wieder eine Schwachstelle auf meiner chinesischen IP-Kamera gefunden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:09",
+      "text": "Da müssen wir doch jetzt endlich mal was gegen tun. Vielleicht mit einem Gesetz oder so."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:00:13",
+      "text": "Ja, ich finde, da braucht man juristische Lösungen für."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:37",
+      "text": "Logbuch, Netzpolitik mit einer Spezialsendung zum Thema juristische Lösungen für technische Probleme."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:00:46",
+      "text": "Im Bereich IT-Sicherheit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:47",
+      "text": "Im Bereich der IT-Sicherheit. Wir wollen uns,\nheute mal nur mit den Bemühungen des Staates auseinandersetzen, das mit der IT-Sicherheit irgendwie zu lösen oder irgendwie in den Griff zu bekommen und dabei irgendwie so insbesondere auch in,\nPositionen der Rolle des Chaos-Computerclubs in dem Bereich über,\ndie Jahre. Deswegen habe ich mir heute, habe ich mich heute eingeladen zu zu Frank Rieger.\nSprecher des Chaos-Computerclubs, Autor,\nBuches Cyber Award zusammen mit Constance Kurz, Aussprecherin des Chaos-Computerclubs und ich, Linus Neumann als äh,\nPodcast dabei, Logbuch Netzpolitik und auch regelmäßig in öffentlichen Äußerungen für den Chaos-Computerclub.\nVerbunden, das heißt wir bleiben so ein bisschen heute in der Familie."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:01:47",
+      "text": "Wo haben wir denn Tim gelassen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:48",
+      "text": "Äh der Tim hat heute keine Zeit, der macht einen anderen Podcast, der Tim ist ja gerade."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:01:53",
+      "text": "Spalter, Spalter."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:54",
+      "text": "Stimmt aber der wäre auch nur Chaos-Computerclub gewesen. Und äh Tim spreche ich dann morgen wieder. Wir werden mal schauen in welcher Reihenfolge wir die Sendung dann veröffentlichen. Das machen wir mal bis hin nach thematischer,\nDringlichkeit, deswegen sage ich jetzt auch gar keine Sendungsnummer hierzu, weil ich nicht genau weiß, ob ich nicht die Sendung mit Tim davor veröffentliche, obwohl sie danach ist,\nDas Ganze bleibt so ein bisschen äh äh innerhalb des Chaos-Computerclubs, wie man hört. Und es liegt, glaube ich, so ein bisschen daran, dass wir das als Fachgespräch führen wollen.\nWir haben in TV Fachgespräche warum man Fachleute und ich habe keine anderen gefunden äh."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:02:34",
+      "text": "Ja, ist auch ein bisschen schwierig, weil diese äh Schnittmenge von IT-Sicherheit und Juristerei,\nist halt äh auch nicht so einfaches Feld, insbesondere, weil wir da halt ja auch schon eine mehr als zehn Jahre lange\nGeschichte von Stümperei auf staatlicher Seite, insbesondere was die Gesetze angeht, haben und wir uns immer wieder damit auseinandersetzen mussten äh zwangsläufig, sondern es fing halt schon\nzweitausendsieben an äh mit den Hackertour Paragraphen, insbesondere im Paragraph zweihundertzwei C Strafgesetzbuch.\nDer äh in der gesamten Szene von Leuten, die sich mit IT-Sicherheit beschäftigen und die halt irgendwie explods äh,\nSchwachstellen suchen, äh doch für erhebliche Beunruhigungen gesorgt hat, weil zum ersten Mal,\nProgramme, also Software illegalisiert hat, explizit, nämlich äh in dem Augenblick, wo sie,\ndazu verwendet werden können äh ja IT-Sicherheitsprobleme auszunutzen werden sie.\nPrinzipiell unter diesen Fernsehprinzbällen, unter diesen Paragraphen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:44",
+      "text": "Das ist der zweihundertzwei C."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:03:47",
+      "text": "Strafgesetzbuch, genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:49",
+      "text": "Warne eigentlich die anderen zweihundertzweier vorher da, also zweihundertzwei ist ja so dieses Bündel Ausspähen von Daten oder Vorbereitungen des Ausspähens von Daten."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:03:57",
+      "text": "Weiß ich nicht mehr genau wie dort die Geschichte war. Muss man nochmal nachlesen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:01",
+      "text": "Müssen wir nochmal nachlesen, aber entscheidend ist es unter dem.\nWenn ich das richtig in Erinnerung habe, wir können die Paragraphen ja auch nochmal verlinken, dass das Ausspähen von Daten illegalisiert wird, aber das Entscheidende war zum Vorbereiten oder Beihelfen, dazu gehört auch überhaupt das in Umlauf bringen von Tools, die dazu geeignet sind."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:04:20",
+      "text": "Genau, also es war halt so der der jetzt, ich hab's wieder bei so einem der zwohundertzwo Ausspielen von Daten und der zweihundertzwo B-Abfang von Daten, die gibt's halt schon länger\nAlso die sind halt schon sozusagen die traditionellen Hacking-Paragraphen. Äh und der zwohundertzwo C war dann die Ergänzung um ums Werkzeug äh und.\nDer ist halt ziemlich schwammig formuliert, ne? Also das ist halt so eine so eine typische Formulierung, wo man sich als,\nSo mal normaler Hacker schon so ein bisschen wundert, ob man jetzt auch damit gemeint ist und deswegen äh sind halt ein paar Sicherheitsforscher damals was Bundesverfassungsgericht gezogen,\nzweitausendneun gab's denn eine Klageablehnung, äh die eigentlich sehr umfangreich war. Äh wir verlinken hier auch in dem Shownotes,\näh die erläutert,\nso ein bisschen die juristische Interpretation auch im Kontext des äh der Gesetzesbegründung und legt quasi fest, dass es,\nam Ende nur einen Zuschlagparagraph ist. Also das halt der Paragraph zwohundertzwo C nicht,\nfür sich benutzt werden kann, sondern nur wenn die klare, kriminelle Intention belegbar ist\nne, das heißt also, wenn du sozusagen in normal dummen Fall, du hast halt baust halt irgendwie die einen einen neuen Exploid und äh äh parallel dazu, chattest du auf einem unverschlüsselten System darüber, dass du jetzt gerade den neuen Expo\ngebaut hast, um deine Bank anzugreifen, dann äh würde der zwohundertzwo C greifen.\nFür sagen wir mal so Standardwerkzeuge sagen wir so Mieterspläue oder was auch immer oder Dinge die du halt mit dir führst auf deinem Computer, um die,\nIT-Sicherheit im Rahmen deiner deines Berufs oder deiner Forschungstätigkeit von Systemen zu prüfen ohne kriminelle Intention kann laut diesem\ndieser Begründungsverfassungsgerichts\nder zwohundertzwo C eben nicht angewendet werden. Und das halt so eine, so eine Einschränkung, die so ein bisschen schwierig zu verstehen ist, weil dieser Paragraph halt so, der liest sich so wie ich bin gemeint,\naber halt diese dieser, also ab äh zu dem äh in der Ablehnungsbegrundung Verfassungsgericht ähm ja ab Abstand sechzig, ne? Also ist halt,\nso danach muss das Programm mit der Absicht entwickelt oder modifiziert worden sein, es zur Begehung der genannten Straftaten einzusetzen. Diese Absicht muss sich für eine objektiv manifestiert haben, ne? Also das ist sozusagen die.\nDie Einschränkung dafür."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:49",
+      "text": "Und wenn die das so, wenn das Bundesverfassungsgericht das so in der Ablehnung formuliert, ist das dann quasi das ist geltendes Recht und das hat dazu geführt, dass es nach meiner Kenntnis so gut wie keine Verfahren überhaupt nach zweihundertzwei C gab."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:07:03",
+      "text": "Genau. Das ist halt so ein so ein ungewöhnlicher Fall quasi von Rechtssetzungen durch äh durch Klageablehnung ist,\näh aber äh so ein das halt so ein muss man halt so wissen, so ein bisschen zum zum Hintergrund dieser Geschichte, dass sie halt also erstmal versucht haben.\nAlso die ursprüngliche Intention dieses Gesetzes war ganz klar zu versuchen halt den\ndas ja Umgehen mit Werkzeugen zum Ausnutzen von Sicherheitslücken äh oder auch zum Finden von Sicherheitslücken einzuschränken. Also da gab's auch Diskussionen über Lizenzen und so im Kram, ne? Also, dass man halt so eine Hackinglizenz bräuchte und so\ndas ist dann aber."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:41",
+      "text": "Am Ende als Hacker wegen Urheberrecht drankommst, meine Liebe."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:07:45",
+      "text": "Ja jedenfalls aber du gut, das das hat er sich dann halt erledigt. Das war dann war dann halt irgendwie abgebogen. Aber das war halt so, dass was uns so zweitausendsieben, zweitausendacht, zweitausendneun beschäftigt hat, auch schon wieder zehn Jahre her."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:56",
+      "text": "Der Paragraph liest sich, wer eine Straftat nach zweihundertzwei A oder zweihundertzwei B vorbereite."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:08:01",
+      "text": "Also das Ausspielen und äh Abfangen von da, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:04",
+      "text": "Indem er,\nErstens Passwörter oder sonstige Sicherungscodes, die zu den die den Zugang zu Daten, Paragraph zweihundertzwei A, Absatz zwei ermöglichen oder Computerprogramme, deren Zweck, die Begehung einer solchen Tat ist,\nherstellt oder sich oder einem anderen verschafft, verkauft, einem anderen überlässt, verbreitet oder sonst zugänglich macht, wird mit Freiheitsstrafe bis zu zwei Jahren oder mit Geldstrafe,\nbestraft. Ich finde das ich habe gerade noch so einen leichten Schreck bekommen, weil ist natürlich schon jetzt irgendwie,\nAlso Passwörter kriegst du halt schon relativ einfach, ne?"
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:08:38",
+      "text": "Also der Punkt ist halt dieser also.\nEigentlich verstößt diese Formulierung dieses Paragraphen gegen Bestimmtheitsgrundsatz. Also der Bestimmheitsgrundsatz sagt eigentlich, dass du halt einen äh Gesetze nicht so formulieren darfst, dass du sie halt äh beliebig interpretieren kannst und,\nalso damals haben wir juristisch auch ein bisschen was dazu gelernt, nämlich, dass halt die äh Begründung des Gesetzes, also die Erläuterung des Gesetzes,\nin der deutschen News Podenz halt mit herangezogen wird und in dieser Erläuterung dieses Gesetzes sind halt diese Einschränkungen drinnen, die jetzt aber dann durch die Abhängung vom Bundesverfassungsgericht halt nochmal so ein bisschen stärker manifestiert wurden,\nund deswegen also ist halt so ein aber was wir da halt sehen, deswegen ist auch so ein bisschen erzählen ist.\nDass dieser Versuch in diesem gesamten Bereich zu agieren mit möglichst unbestimmt formulierten Gesetzen.\nNach dem Motto, wir wissen ja nicht, was kommt. Wir können das ja alles nicht so genau beschreiben.\nDeswegen formulieren wir es mal möglichst weit und dann gucken wir mal, was das Verfassungsgericht dazu sagt. Der hat sich seitdem tatsächlich ungebrochen fortgesetzt. Also auch die die neueren Sachen, zu denen wir gleich kommen,\nsind halt präzise halt an in dieser Denk äh Denkart formuliert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:10:01",
+      "text": "Wir haben aber natürlich auch währenddessen noch so ein paar Versuche gesehen, also ich glaube, wir sind ja wir werden jetzt ungefähr jetzt CCC-Vertreter die letzten die,\nsich weigern würden, zuzugeben, dass es in der IT-Sicherheit Probleme gibt."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:10:19",
+      "text": "Ja. Ach so. Ich, so Vorträge oder so, sage ich halt immer, wenn ich über IT-Sicherheit rede, so. Also wir ehrlich wären als Branche, IT-Security, müssten wir eigentlich die weiße Fahne essen.\nJa, also weil ich meine, wir haben halt die Situation, dass die die Technik, die wir gerade verwenden, ist halt leider schlecht.\nAlso das was da draußen ausgerollt ist, ist in der Regel halt kaum sicherbar.\nAuch die Snackold Tools, die man halt sich noch dazu installieren kann und ich meine selbst Suman Tech, also der führende Snack-Eul-Hersteller sagt, wir sehen nur fünfzig Prozent der Mehrwerte.\nWeil der Rest ist halt irgendwie so schnell modifiziert, dass wir nicht mit den Updates hinterherkommen, Custom oder unsere Juristiken versagen. Ich meine, muss wir vorstellen, wenn Sicherheitsprodukt ist quasi wie ein Schloss,\nWenn du das mal übertragen willst, was in der Hälfte der Fälle halt irgendwie einfach auf ist, wenn ein totaler Klinker.\nAlso so wir haben halt irgendwie ja eine Situation, wo wir glaube ich,\nschneller, mehr schlechte Software schaffen als,\nAlterssoftware fix und so. Also wenn man sich so anguckt, zum Beispiel gerade die Briten haben diesen ihren Report zu AVI veröffentlicht. Können vielleicht auch nochmal verlinken.\nWo die, also als Kontext zu dieser Diskussion, weil die auch gerade diese IT-Sicherheitsdiskussion grade sehr treibt so, also\nso, also wir haben ja immer gesagt, irgendwie Backdoors ist ein Problem. Und jetzt sind wir so ein bisschen überrascht davon, dass natürlich die Amis diesen äh aus eigener intimer Kenntnis, der der Vorgehensweisen jetzt halt den Chinesen unterstellen, dass überall Vectors einbauen\nund die Briten haben dann halt mal reingeguckt, also die haben halt seit fünf Jahren so ein Outlet-Projekt mit laufen. Und dieser Report liest sich halt so wie.\nIst halt genauso scheiße wie überall. Ja, also wir haben halt irgendwie so Sachen wie,\ntausende unsichere mit dem Copy und Strink Copy äh Geschichten einfach bei offensichtlich haben die nur durchgegrippt durch den Source. Kein Repreducer Bebilds heißt also du weißt nicht welche Bande, welches Beinerie gerade auf deinem Roter ist\naus welchen Source es gebaut wurde, kannst du nicht sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:26",
+      "text": "Das liegt bei bei Huawei, aber insbesondere daran, also ich habe ja öfter mal mit den Geräten zu tun gehabt. Das liegt ein bisschen daran, dass die ähm sehr schnell auf Kundenwünsche reagieren. Und,\ndir im Prinzip jeder einzelne Kunde von Huawei,\nkriegt sein Custom Bild, ja? Die die Positoris sind entweder sehr, sehr viele Brunches,\noder sehr, sehr viele Report-Sutories. Ich fürchte sogar letzteres und ähm."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:12:56",
+      "text": "Denn die haben was, was irgendwie eine zweistellige Anzahl Open SSL-Versionen gefunden, davon viele nicht Männlein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:02",
+      "text": "Ja, so."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:13:03",
+      "text": "So, da denkst du dir so, hm, sehr schnell. Genau, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:05",
+      "text": "Halt sehr schnell so, ne? Schnell heißt halt auch mit der mit der heißen Nadel gestrickt, aber wenn du.\nAlso aus Kundensicht fällt das immer sehr gut auf, ne? Kunde in dem Fall mobile äh die Betreiber mobiler Netzwerke, die dann zum Beispiel sagen, ja, wir möchten folgendes Feature,\nhaben mit dem nächsten Rollout und dann sagt, wo haben wir ja kein Problem. Und die anderen sagen, dieses Feature ist bei uns in der in der."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:13:30",
+      "text": "Der Rotmap in sechs Monaten vorgesehen oder zwölf Monaten oder was auch immer."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:33",
+      "text": "Oder wir haben's in der wir sind äh auf Version zwölf beispielsweise,\nwenn ihr dahin kommt, dann kriegt ihr auch dieses Feature und der das Mobilfunknetz ist üblicherweise so zwei Mainline äh zwei Main-Versionen hinten dran, ne? Also ungefähr sowas wie das Mobilfunk."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:13:48",
+      "text": "Genuss sieben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:49",
+      "text": "Fährt zwei Jahre spät zwei Jahre hinter der Entwicklung her. Ähm und und Huawei sagt halt, na ja, wenn ihr das haben wollt, das."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:13:57",
+      "text": "Morgen da, so, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:58",
+      "text": "Morgen kriegen wir schon hin. So, das kriegen wir da irgendwie gemercht so.\nUnd dann ist das Mobilfunknetz aber mit seinem Brunch halt fernab von allem was irgendwo nochmal."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:14:09",
+      "text": "Versionierung, was?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:11",
+      "text": "Das ist halt dann, dann hat halt irgendwann hat deine Version halt irgendwie sowas wie Mobilfunknetz, Land davor steht, ne? Und dann weißt du auch schon, dass die jetzt gerade allein auf hoher See bist und."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:14:24",
+      "text": "Nee und,\nWeil das Interessante daran war dann halt wir waren auch so Mechanismen beschrieben, die man irgendwie so kennt, ja? Dann haben die offenbar mal so eine IT-Sicherheitsinitiative gehabt und haben sich halt eine sichere äh Stream-Copyment Copy Funktionen äh reingemacht.\nAlso halt Alias und die dann halt dummerweise dann aber bei dem Bild den sie untersucht haben haben sie dann das Secure auf insecu gemappt.\nWeil irgendwas offenbar nicht funktionierte.\nSo, dann hörst du natürlich irgendwie, na ja und was soll ich sagen? Das ist überall anders genauso."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:03",
+      "text": "Das ist das Problem. Wir haben nun mal ähm einen Begriff, den wir häufig, glaube ich, verwenden, ist der der sogenannten Bagdor."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:15:11",
+      "text": "Backdorf. Mhm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:13",
+      "text": "Also im Prinzip würde ich vorsichtig die These vertreten. Du brauchst eigentlich gar keine Backdorfs mehr, wenn du genug Backs hast."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:15:20",
+      "text": "Also bei Hurawi würde ich definitiv sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:22",
+      "text": "Ne, du hast du hast so viele Fehler im Source Code, die du ja kennst, wenn du jemanden qualifizierten, der nach suchen lässt, dass du ähm dass du jetzt nicht mehr sowas machen musst, wie wir, wie Hardcorden da jetzt mal eben Passwort oder wir machen irgendwelch,\nChebolit-Funktion, die dir gut geben oder so."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:15:38",
+      "text": "Zu Wort macht immer was nur, macht nur Zisko, ja, die sind halt zu doof, ihre Bugs auszunutzen, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:42",
+      "text": "Hast du regelmäßig äh sowas wie User nehmen Sisco, Passwortisco auf irgendein.\nOb's Kuchen, Port nochmal als SSH-Laufen und kriegst es halt auch nicht raus. Ähm ich würde, jetzt sind wir wahrscheinlich so ein bisschen zu.\nIn unseren Bereich gekommen. Ähm ich würde gerne nochmal grob erklären, was ist überhaupt IT-Sicherheit und warum, warum spielt das so eine große Rolle.\nWir haben jetzt ähm im Prinzip einfache Sachen gefunden, wo man wo man programmierfehler,\nfindet, also unsicheres Programmieren sind im Prinzip ungeschützte Funktionen, die sich je nachdem in welchem Kontext die passieren einfacher oder schwieriger dazu ausnutzen lassen, das System zu übernehmen.\nÄhm, aber eigentlich haben wir mit der mit der Sicherheit von Computern schon so eine neue Art von,\nProblemklasse gefunden, weil das Besondere am Computer\nist ja, dass er universell programmierbar ist. Das ist eigentlich die große, die große Idee an Computer oder das das ist das, warum Computer so viel besonderer sind als alles andere. Du kannst den Dingern,\nbeibringen, was du möchtest. Und das war das, warum der Computer so viel besser ist, als wir hier jetzt gerade eine an der Wand hängen, eine Gitarre. Du wirst der Gitarre nicht mehr beibringen, Saxophon zu spielen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:17:02",
+      "text": "Außer dem Computer."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:03",
+      "text": "Außer mit einem Computer."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:17:05",
+      "text": "Da kannst du auch mit deiner Gitarre Saxophon spiel."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:07",
+      "text": "Gitarre, sagst du frisch spielen. Und genauso kann der Computer eben.\nÄh weitere Funktionen haben, wie führe doch mal die Tastatur, die auch der Tatatur gedrück.\nBefehle nochmal ab über das Internet an einen Server in Russland oder in China oder in den USA. Ähm, das heißt wir haben jetzt auf einmal so 'ne neue Problemklasse von Geräten die wir,\nIch meine, wirft die meisten Geräte, mit denen wir arbeiten, verstehen wir nicht. Jetzt haben wir aber auch noch welche, die wir.\nErstens nur nicht verstehen, sondern die zweitens auch noch universelle Funktionen haben können. Und diese universellen Funktionen können,\nso kompliziert oder unkompliziert sein, wie sie wollen.\nUnd so gibt's dann einen ganz neuen Problembereich, in dem wir beide im Prinzip beruflich tätig sind und das ist der der IT-Sicherheit, der im Prinzip darauf beruht, zu sagen, okay, wir haben.\nGanz grob drei Schutzziele für Systeme und Daten,\nVerfügbarkeit, Integrität, Vertraulichkeit, Verfügbarkeit heißt, okay, wenn das System weg ist, sind die Daten weg, können wir nicht damit arbeiten, ist relativ einfach,\nVertraulichkeit, ähm.\nIn also naiv interpretiert heißt die Daten dürfen nur uns zugänglich sein, wenn man jetzt aber mal so ein größeres Management reingeht, ist im Prinzip die Daten dürfen nur den Nutzern, Rollen und Systemen zugänglich sein,\nbei denen wir das wollen, wenn wir jetzt ein größeres Unternehmen oder ein größeres Mobilfunknetz anschaut, dann hast du im Prinzip für ein spezifisches Datum oder System.\nEin relativ komplexes Rollenkonzept, mit welcher, welcher äh welcher Person und welches System, welche Berechtigung,\nhat zum Zugriff auf welche Daten. Mit zum Mobilfunknetz, da gibt's eine zentrale Instanz, die,\nZum Beispiel regelt, wer sich in dieses Mobilfunknetz unter welchen Bedingungen einbuchen darf und unter welchen Bedingungen nicht die gleiche Instanz weiß, aber auch welche\nPerson sich gerade oder welcher Subscriber sich gerade wohl mobilfunknetz befindet, weiß zum Beispiel, aber auch mit welchen Schlüssel, gerade Verschlüsselt wird, wenn mit dieser mit diesem Substriber gesprochen wird. Alles drei Da.\nDie in unterschiedlichen Kontexten relativ komplexen unterschiedlichen Rechten unterliegen, sodass.\nNe, dieser Kiel ist sehr kompliziert, weil damit oder sehr kritisch, weil damit wird äh die Kommunikation verschlüsselt, für den gelten streckenweise andere Anforderungen, wie die, wie für die Information\nwo in unserem Netz befindet sich der Subscriber jetzt gerade, weil diese Information brauchst du unter Umständen auch, um sowas wie eine SMS zuzustellen oder einen ähm.\nOder einen äh Anruf durchzuleiten,\nUnd interessanterweise genau da sind ja auch die klassischen schönen Angriffe in den Mobilfunknetzen, die sich dann über zwei G drei G vier G manifestiert haben. Das ist dann eben.\nCorner Cases gab, wo man dann das äh doch mal fragen konnte, ey, kannst du dem Klima ganz kurz geben und der dann rausgegeben wurde, also das ist alles dieser Bereich, der Vertraulichkeit.\nUnd dann als dritte Schutzschutzziel Integrität, dass ich so ein bisschen so definieren würde als das System, macht das und nur das, was von den Programmierern intendiert wurde."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:20:21",
+      "text": "Na, beziehungsweise da hat keiner dran rumgefummelt. Muss man.\nSo zusammen zu was zu hören."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:28",
+      "text": "Genau, ne? Du, der hat keiner dran rumgefummelt,\ndass ähm die Daten, die du gestern abgelegt hast, sind morgen noch die gleichen und insbesondere beim,\nbei deinem ganzen Bootstrapping, wenn das System hochfährt, wird nicht noch irgendeine Funktion hinzugeladen, die beispielsweise jetzt weitere Funktionen hinzufügt, die du die du nicht haben möchtest. Und diese drei Ziele zu erreichen.\nIst leider fürchterlich schwer. Insbesondere wenn du dann noch einen aktiven Angreifer hast, der nicht nur ähm der also Schwachstellen nicht nur passiv ausnutzt, sondern vielleicht auch,\naktiv versucht sich dieses Systemes zu bemächtigen. Und das ist das, was eigentlich die IT Seite,\nJa, weiß ich nicht, wie viel Jahrzehnten Leute Informationssicherheit überhaupt versuchen, aber es beschäftigt die DIT seit seit so vielen.\nJahren. Und meine etwas.\nVorsichtige Teesitze, der wir später nochmal kommen werden ist theoretisch wäre das ja alles möglich, aber wir haben eigentlich einfach nur das also nur das kleine Problem, dass wir es nie hinkriegen.\nUnd dazu wurden wir ähm das Problem ist natürlich mit der fortschreitenden Digitalisierung so groß geworden, dass.\nJetzt der Gesetzgeber eben sagt, okay, da müssen, da müssen wir doch mal was machen. Und zwar nicht zum ersten Mal.\nHacking einfach zu verbiegen, wandern die ersten Bemühungen zweitausendsieben, zweitausendacht. Ähm.\nPaar Jahre später ähm waren dann.\nSo bewahren wir zum Beispiel mal als CC im Ausschuss äh digitale Agenda. Das war zweitausendvierzehn, wenn ich das jetzt richtig sehe, da war damals ich und ich habe eine Stellungnahme,\nvertreten. Da haben wir, glaube ich, alle dran rumgeschrieben. Da waren auch irgendwie du Konstanze,\nErdgeist, ein bisschen dran beschäftigt und das war jetzt auch nicht das erste Mal, dass diese Forderungen des CCC vertreten wurden. Die sind nämlich im Prinzip immer gleich. Nämlich, dass wir sagen.\nWir müssen irgendwie, wenn der Gesetzgeber da irgendwie oder die Regierung da irgendwie wirken möchte.\nDa muss erstmal die Qualität der Software erhöht werden und das Vertrauen ins Software erhöht werden. Also haben wir gesagt ähm soft die Software, der wir vertrauen, die muss ohnehin Open Source sein.\nWeil wenn sie es nicht ist, dann können wir ihr nicht vertrauen. Du hast gerade schon einen zweiten wichtigen Punkt gesagt. Open Force reicht noch nicht mal, sondern du willst auch,\nReproduct Bills haben. Ist immer so schwer auszusprechen äh meine Güte jetzt."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:23:16",
+      "text": "Report-User."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:17",
+      "text": "Reproduzierbare äh Pils der Software."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:23:21",
+      "text": "Reproduzierbares Gebaue."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:23",
+      "text": "Reproduzierbares Gebastel. Ähm das heißt du möchtest nicht nur, dass der Quelltext.\nAus dem die Software stammt für dich einsehbar ist, sondern du möchtest auch beweisbar.\nHaben, dass die Software, die du bekommst aus diesem Quelltext stammt. Dummerweise, das klingt wie ein triviales Problem, ist aber leider echt kompliziert, weil,\nim Prozess des Bilds, wenn du jetzt ein beliebiges Report-Sutori von mir aus,\nirgendwo auscheckst und sagst Konfigur make make in Store und oder ne Make Install machst du noch gar nicht, du machst nur,\nKonfigurmak, guckst dir die Binaries an, die dabei rauskommen, saß dann Make-Clean und machst nochmal Make, dann hast du andere Beine.\nWeil irgendwie."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:24:11",
+      "text": "Im einfachsten Fall ist halt irgendwie das Kumpel, die Compail-Uhrzeit irgendwo mit drin nebenbei äh aber wenn du Pech hast, dann war's halt auch irgendwas anderes so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:22",
+      "text": "Und das ist irgendwie echt ein ärgerlicher Prozess, der letztendlich dazu führt, wenn du naiv einfach nur Hashes vergleichen würdest, kriegst du jedes Mal bei jedem Bild eine andere Software. Das heißt, Open Source ist für dich quasi.\nSchon egal wenn du\nwenn dir jetzt dein Hersteller liefert und sagt, ja hier, das habe ich aus dem Source Code gebaut, den ich dir gezeigt habe und du sagst, ja wie, bei mir kommt aber was anderes raus und der sagt, ja, mach nochmal, siehst du, kommt wieder was anderes raus, kommt immer was anderes raus, Yolo, die Pläumer, ja ähm."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:24:53",
+      "text": "Aber so ist die Realität da draußen, ne? Also das ist der Norm, die Normalität."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:57",
+      "text": "So ist die ärgerliche Normalität und wahrscheinlich also es gibt relativ wenige Softwareprojekte die.\nDass wir das gelöst haben, also das jetzt von Huiway zu verlangen ist, also das Christoph bei Cisco oder sonst der Christoph wahrscheinlich echt nirgendwo Torbrowser, kriegst du's vielleicht inzwischen? Ich weiß, dass ich damit."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:25:15",
+      "text": "Ja. Ich weiß, dass ich da. Aber das war auch ein längeres Projekt bei den."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:18",
+      "text": "Da waren die jahrelang mitbefasst."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:25:19",
+      "text": "Meine Firefox-Real, also Reproducer will bauen, solltet war halt irgendwie nicht so einfach, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:24",
+      "text": "Das war ein Riesending und ich weiß, dass wir da jahrelang drüber gesprochen hatten, bis sie dann irgendwann bereit waren, mal auf den Kongress äh dann Talk drüber zu halten.\nAlso wer sich für dieses Problem interessiert, kann da äh reinblicken. Wir haben damals gesagt, okay, Open Source ist sowieso schon mal eine Grundvorsorussetzung reproduzierbares. Es gibt Bauer.\nGehört noch dazu und dann natürlich, wenn wir in diesem Open Source steckt ja auch drin.\nÖffentliche Gelder öffentlich verfügbarer Code, dann wollen wir wenigstens auch.\nHier eine Qualitätssicherung feststellen, da haben wir, glaube ich, gesagt, okay, Outdits, Backbound Tees, ne, die klassischen Maßnahmen, um diesen Code ähm.\nIn seiner Qualität zu steigern, zum Beispiel, dass mal jemand durchgrippt und sich anschaut, wie viele unsichere äh Speicherzugriffe sich da drin befinden und die mal sauber aussortiert,\nWir haben dann gesagt, okay, eigentlich wenn es hier um,\nkritische Infrastrukturen geht, dann wollen wir das dezentral haben, dezentral deshalb, weil Dezentralität, die die Resilienz des Systemes hoffentlich ein bisschen steigert und Ende zu Ende Verschlüsselung, weil das eben.\nEinzig sinnvolle bekannte Methode ist, um Vertraulichkeit so sicherzustellen, dass sie nicht an zentraler Stelle gebrochen werden kann.\nUnd dann wo die letzte Forderung etwas politischer,\naber ich denke auch da haben wir echt nochmal gezeigt wohin dass wir wissen wohin die Reise geht, nämlich wir wollen eine unabhängige und evidenzbasierte Sicherheits und Geheimdienstpolitik."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:27:01",
+      "text": "Wobei Evidenz basiert halt, dass es sowohl unabhängig als auch revidenzbasiert sind, halt so zwei so Atribute, die halt äh in der Politik äußerst unbeliebt sind. Also, wo man sie gefahren weggenommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:10",
+      "text": "Deswegen haben wir sie gefordert. Verschlüsselung ist in der Politik auch immer sehr unbeliebt in der Innenpolitik."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:27:18",
+      "text": "Ja, wobei da halt also sollte man vielleicht nochmal kurz ausholen, so eine der Grundlagen, wieso wir in Deutschland,\nbisher relativ wenig Stress damit haben, Verschlüsselung zu machen, dass das halt die\ngültigen äh Eckpunkte deutscher Kryptopolitik, die noch aus den Neunzigern stammen, von der Bundesregierung halt äh und sogar vom Innenministerium wieder bekräftigt wurden. Äh man also gesagt hat, okay, die äh der Staat,\nist prinzipiell Führverschlüsselung als wesentlicher Baustein von IT-Sicherheit, weil letzten Endes ist Verschlüsselung.\nSomit das einzige, was wir noch haben in der IT-Sicherheit, was man hinterher noch drauf slappen kann, was halt irgendwie tatsächlich die äh ähm.\nSicherheit so ein bisschen verbessert und die äh diese Eckpunkte deutscher Kryptopolitik sind.\nSo ein bisschen der zentrale Verteidigungsanker gegen alle Versuche zu sagen, wir wollen Hintertüren haben oder wir wollen KISGO haben oder ähnliche Dinge so und das heißt also die haben halt nicht Gesetzesrang, das ist halt,\nquasi so eine politische Absichtserklärung.\nDie ja deswegen halt nur so bedingt verlässlich ist, so also ich hätte hier eigentlich ganz gerne im Grundgesetz.\nNe, also halt äh wir haben allerdings auch immerhin äh verschiedene Orthos-Bundesverfassungsgerichts in denen das Recht auf digitale Selbstverteidigung.\nBestätigt ist. Also wo man halt sagt, okay äh der digitale Raum hat halt gewisse Unsicherheiten und der.\nBürger muss und darf Maßnahmen ergreifen. Da ging's zwar in in den Staatstreuern erurteilen.\nWo sozusagen nochmal gesagt wurde, okay, auch wenn du irgendwas dagegen tust, dass du tronisiert wirst, ist es dein gutes Recht, weil das sind halt allgemeine gute Handlungsweisen der IT-Sicherheit äh deine Systeme zu härten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:29:10",
+      "text": "Diese Staatstrianer Urteile, die finde ich ja nach wie vor sehr spannend. Äh vielleicht kannst du da auch nochmal ein bisschen was zu sagen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:29:18",
+      "text": "Na das sind also das Kernurteil ist äh von zweitausendacht, in dem das Bundesverfassungsgericht äh das Grundrecht auf die Vertraulichkeit und Digität informationstechnischer Systeme,\nfestgeschrieben hat und gesagt hat, okay, also äh prinzipiell gibt's erstmal ein Grundrecht, was natürlich wiederum auch eingeschränkt werden kann äh wo man sagt, okay, also das äh.\nStaatliche Infiltration von Sechnischen System,\nmit den Nutzer überwacht und Speicher mir ausgelesen werden können, das verfassungsrechtlich nur zulässig, wenn tatsächliche Anhaltspunkte einer konkreten Gefahr für überragend wichtiges Recht rechtsgut bestehen. Also Leib und Leben äh frei der Person oder\nGrundstück der Existenz und so weiter, ne? Ähm! Und die ähm.\nDieses dieser Grundsatz sagt aber eben auch, dass die äh,\nAnwendung von Trojanern halt nicht leichtfüßig passieren darf, so. Leider ist in diesem Urteil dann halt ein einschränkender Paragraph drinnen, also ein einschränkender Absatz, der halt sagt, okay,\nwenn's nur um Telefonabhören geht, dann ist das schon okay, also dann kann man halt also mit einem beschränkten Trojaner, die so Quellen, Telekommunikationsüberfahrungstrojaner\nda den könnte man anders regeln so und das ist halt das was wir jetzt gerade haben so der Zustand, dass also die Behörden noch immer damit kämpfen halt ihre\nzu bekommen, dass sie alle Plattformen trainieren können. Die Anwendung wird natürlich immer schön daheim gehalten, das heißt also es noch relativ wenig darüber bekannt, dass tatsächlich jetzt nach den äh,\ndamals hieß der die Bude Digitask,\ngenau Digitals, Trojanern, die damals verwendet wurden, die halt so eher so aus der My First Trojaner Ecke waren, was irgendwie so die Software anging, äh dass jetzt halt so nach und nach.\nEntweder Eigenentwicklung oder halt von den üblichen äh Diktaturzulieferern gebaute äh Trojaner halt irgendwie bei den Behörden eingesetzt werden sollen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:34",
+      "text": "Ich würde jetzt gerne auch auf die Gefahr, dass wir ein bisschen zu weit und zu grundsätzlich wären, aber wenn wir das Thema schon so ansprechen, würde ich echt nochmal gerne auf diese Digitasknummer kommen, weil das für mich immer noch so die coolste Aktion des CC ever,\nwar. Ähm du hast das gerade schon angesprochen, die in diesem Urteil,\nzur zum Grundrecht auf Vertraulichkeit und Integration informationstechnischer Systeme kam es im Prinzip zu so einer,\nFiktion oder zu so einer gesetzlichen Trennung, die sich heute bis heute hält und das ist die Trennung von Online-Durchsuchung\nwäre also irgendwie so eine Meterbreta auf deinem Rechner, LS äh Copy Everything so, ne und\ndann der Quellen-TKÜ zu sagen nur Kommunikationsprozesse dürfen abgehört werden und dann auch die Annäherung.\nOnline-Durchsuchung wäre sowas wie Grundsatz äh tatsächlich wäre angegliedert an Hausdurchsuchungen und Quellen TKÜ wäre angegliedert rechtlich an. Na ja, Richter hat gesagt,\ndürfen abhören."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:32:37",
+      "text": "Genau, also ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:39",
+      "text": "Und dann gab es eben diese diese Versuche, das war das muss zweitausendzehn, zweitausendelf gewesen sein, ne? Ozapft ist.\nDas war, da gab's dann also die ersten die ersten zaghaften Versuche, die.\nA und des Zolls ähm einen Trojaner zu bauen, der das tut. Der also den Computer,\ninfiziert, denn das der Zielperson und dann versucht ihr nur beim Kommunizieren zuzuschauen und die Versuche, die die Versuche waren, voll cool.\nWir machen das Mikrofon an und wir machen Screenshots während E-Mails geschrieben werden. Das war so ungefähr die die Herangehensweise des des Digitals Trojaners. Oder tausche ich mich da."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:33:20",
+      "text": "Das war tatsächlich das, was sie da getan haben, ja. Und hat auch noch aber das Ding konnte halt Lotoble Moduls, also man konnte halt einfach äh äh die Funktion modifizieren, wenn man denn wollte. Ähm und insofern war es halt unbestimmt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:36",
+      "text": "Also hier man konnte nach."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:33:37",
+      "text": "Ding kannst du eine Raumwande draus machen, ne? Also es war halt irgendwie kurz, also diese das halt auch weiterhin so ein Problem mit diesen äh.\nSo hatte Quellenticket, Utrojanern, die also eine angeblich beschränkte Funktion haben.\nWenn man das Mikrofon auf dem Endgerät anmacht äh dann ist das Ding hier erstmal eine Raumwand zu.\nUnd ein Raumwanzen hängen in Deutschland, also wirklich sehr, sehr hohe rechtliche Anforderungen. Also ist halt ein äh es war damals halt die, das Gesetze wegen dem Sabine Lotthäuser Schnarrenberger zurückgetreten ist und die\nAlso tatsächlich einen Raum zu verwanzen, ist so,\ndie strafprozessuale Maßnahme, die halt irgendwie am eigentlich am schwierigsten durchzubekommen ist. Äh eine Telefonüberwachung hingegen wird irgendwie wöchentlich hundertfach durchgestempelt von den Richtern. Und der technische Unterschied,\nzwischen dieser Raumüberwachung und einer Telefonüberwachung sind halt zwei Zellen Kot,\nnämlich die zu gucken, ob gerade eine Telefonie-Software aktiv einen Call hat oder nicht,\nne? Und äh wann das Zufall das ich hinbekommt oder nicht. Keine Ahnung wahrscheinlich eher nicht. So also ich meine weil letzten Endes geht's ja darum was denn die straffe Volksbehörden da tun. Und,\ndieses Problem ist halt, also wir haben's halt in den damals in dem Verfahren auch gebracht, wir waren der Gutachter äh beziehungsweise Sachverständige und äh aber.\nDas hat nicht verfangen leider, also tatsächlich diese der Glaube darin, die werden das schon richtig machen und da wird halt schon nichts passieren und die werden sicher Treu einer bauen, die wirklich nur dann das Mikrofon anmachen, wenn tatsächlich ein aktiver Call läuft.\nDer hat sich da halt leider verfestigt so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:24",
+      "text": "Und das ähm also das Ergebnis war der CC ist über Spenden aus laufenden Strafrechtsverfahren,\naus laufenden Strafverfahren oder abgeschlossenen Strafverfahren weiß ich überhaupt nicht, eigentlich auch völlig unerheblich auf irgendwie an Datenträger gekommen, die mit solchen Trojanern infiziert waren\nund hat sich dann hingesetzt und die mal auseinander genommen und geguckt, wie funktionieren die? Was machen die? Es gab eh in den fraglichen Strafverfahren dann schon durch irgendwie\nhunderte Seiten Screenshots grob sehr starken Grund zum Zweifel, dass diese Software sich an den engen rechtlichen Rahmen halten würde und das Ding wurde halt komplett aufgemacht. Ähm ein Command im Control Server dafür geschrieben, der\ndem Ding einfach beliebige Funktionen unterspielte über diese Modulfunktion und damit wurde gezeigt, dass dieser\ndieser Anlauf eines Staatstrianer zu schreiben, eben absolut in keiner Form rechtlich."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:36:26",
+      "text": "Also warum erzählen wir diese Trojanergeschichte? Weil ähm die dieses Spannungsfeld.\nZwischen der Verantwortung des Staates für eine, soweit Daseinsvorsorge, also für die Sicherheit einer Bürger.\nSich auch auf die IT-Sicherheit erstreckt,\nund für so einen Trojaner, beziehungsweise Benutzung von solchen Trojanern, ist es ungemein praktisch, wenn man Sicherheitslücken hat, die noch nicht gepatcht sind. So, das heißt also die Auslieferung dieser Trojaner,\nalso eine der Möglichkeiten dazu ist,\neben den Explorts zu benutzen und dann halt die entsprechenden Systeme zu infizieren, am besten aus der Ferne, weil da hat man am wenigsten Arbeit. So und da ist der Stahl natürlich jetzt in so einer Bedrohung, nämlich,\nwie soll denn eigentlich die Abwägung passieren zwischen der Start-Weiß von eurer Sicherheitslücke.\nUnd er hätte sie gerne noch eine Weile offen gelassen, weil damit halt entweder geheimdienstliche oder strafverfolgte Operationen offen. Und eigentlich ist dieser Konflikt nicht wirklich auflösbar. Die Amerikaner haben dazu versucht, so eine,\nMöglichkeit zu bauen, die nennen sie Security, wo eine Robility Equitys Proces, die beim Review der ersten Version halt äh sich als ähm eher, na ja,\nnicht so richtig toll,\nherausgestellt hat, wenig überraschend, weil die Geheimdienste einfach gesagt haben, so na ja, da tun wir halt nur die Backs rein, von denen wir wissen, dass sie ohnehin verbrannt sind und die Sachen, die halt wirklich äh\nDie Gurke wirklich großen Keulen sind da reden wir halt nicht drüber, wo dann halt so was wie Tunnel Bluebay rauskam, ne? Also erinnert's euch dunkel, der Exploid von der NSA, der dann halt irgendwie relativ zügig dazu führte, dass wir die größten\nund verheerendsten Mehrwertkampagnen überhaupt in der Geschichte bis wir hatten, wo halt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:14",
+      "text": "Stichwort vorne One Cry und Notpatial waren so."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:38:16",
+      "text": "Genau, Wonocreme Nord Petja waren so die beiden die halt ganze Redereien und sowas runtergefahren haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:23",
+      "text": "Elf Krankenhäuser in Großbritannien nicht mehr nicht mehr so witzig eigentlich alles."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:38:28",
+      "text": "Genau und das waren halt ein Exploid, auf dem die NSA jahrelang gesessen hat und äh der halt gegen quasi alle Windungsversionen funktioniert und.\nJa, wenn sie da nicht drauf gesessen hätten und halt irgendwie den äh äh den an Microsoft gemeldet hätten zum Patchen und zwar nicht erst als klar war, dass es liegt, sondern so,\nals sie ihn gefunden haben. Wer hat sowas wie schlicht nicht passiert.\nDas hat man relativ gute Illustration davon, das ist also eigentlich für so einen Staat nicht wirklich eine Option ist, äh so Explorthourting.\nZu machen und hört die eher sich da so Stockpaides hinzulegen. Jedenfalls nicht, wenn er versucht ehrlich zu spielen. So die Amis\ninteressiert sie natürlich nicht, weil die treffen diese Abwiegung halt irgendwie in der Regel hat zugunsten der Geheimdienste in Deutschland,\nes läuft diese Diskussion gerade intensiv und die wird halt auch im Kontext, dieses IT-Sicherheitsgesetz zwei neu geführt, weil,\nda drin eher auch definiert wird, dass ähm zum Beispiel das BSI halt als äh zuständige Behörde\nauch federführend bei der Meldung von IT-Sicherheitslücken ist, ne? Also wo halt man sagt, okay, wenn man dem Staat halt sein will, hier lieber Stadt, hier gibt's 'ne Sicherheitslücke, weil man halt grade kein Bock hat, sich mit dem Hersteller auseinanderzusetzen, weil,\näh dort äh in der Regel halt irgendwie nicht unbedingt nett ist, wenn der Hersteller halt nicht so gut drauf ist\ndann wäre der schon ganz schön, wenn man eine vertrauenswürdige staatliche Behörde hätte, wo man hingehen könnte und sagen könnte, hier liebes BSI,\nhier ist die Sicherheitslücke und hier ist es irgendwie die Sachen, die reproduzieren und dann sagt das BSI Dankeschön, gebt einem vielleicht noch ein bisschen Geld dafür und kümmert sich drum, dass der Kram gefixt,\nwäre eigentlich wohl ich eigentlich von meinem Staat erwarten, dass es so einen Service gib."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:15",
+      "text": "Deswegen machen wir das als CC regelmäßig für für Leute und mit Gel ohne die Leute zu bezah."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:40:20",
+      "text": "Ohne Geld halt, ne? Also."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:21",
+      "text": "Um den Menschen dabei zu helfen in sowas nicht verklagt zu werden oder sonstige Probleme zu beko."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:40:28",
+      "text": "Und äh also so aus meiner Sicht wäre halt ideal, wenn es sowas wie ein unabhängiges BSI gäbe, was halt ein staatliches Buckpointy-Programm,\nfährt mit dem, wo man halt einfach guten Gewissen zahlt, sich als Lücken melden kann. Nun ist das BSE aber dem Innenministerium unterstellt. Das heißt also die.\nÄhm die Diskussion darum, wie denn das BSI jetzt äh mit so gemeldeten Sicherheitslücken umgeht und ob es dann halt auch Zugriff von Strafverfahren, Geheimdiensten auf die Sicherheitslücken gi.\nDie bestimmten Teil dieser Diskussionen, dieses IT-Sicherheitsgesetz, weil da unter anderem halt diese Meldepflichten drinnen stehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:04",
+      "text": "Denn das BSI möchte im Prinzip sowas machen, wie die Guten ins Töpfchen, die schlechten ins Kröpfchen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:41:10",
+      "text": "Ich würde das noch nicht mal so sagen, weil die.\nDie Leute, die im BSI arbeiten, wissen natürlich, dass es halt eine absolut bescheuerte Idee ist, die irgendwie zu verpflichten, mit den Strafverfolgern zu kooperieren, was irgendwie äh so Sicherheitslücken angeht, weil.\nIn dem Augenblick wusste auch nur einen dokumentierten Fall gibt, wo eine Sicherheitslücke ans BSI gemeldet wurde, die dann halt von äh von einem Geheimdienst und Strafverfolger verwendet wird. Und sei es auch nur zufällig, dass äh selbst wenn's Paradise Covery wäre.\nIst das BSI als Meldestelle als vertrauenswürdige äh Ansprechinstanz erledigt,\nniemand wurde mehr äh der halt irgendwie so auch nur hartweg bei Trance ist, wurde, die mir irgendwie sichere Sicherheitslücken geben.\nDieser Konflikt,\nhat halt auch die die Diskussion halt jetzt um dieses IT-Sicherzusgesetz zwei null mitbestimmt, so dass man sagt, okay, eigentlich sollen wir, wird es BSI aufgewertet, als als diese Instanz aber andererseits,\nwenn da halt irgendwie Leute im Innenministerium darüber diskutieren, dass sie ja dann auch den Strafverfolgern helfen müssen mit ihren Wissen und ihren, ihren Fähigkeiten,\ndann äh redet halt niemand mehr mit denen, ne? Also dann sagt man halt, okay, dann kann ich auch gleich irgendwie zu irgendwie Serodium gehen und für irgendwie mein Backhalt noch Geld mitnehmen, so, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:25",
+      "text": "Stimmt. Also der der macht das macht das PSI dann nicht das das konkurrenzfähige Angebot.\nIch würde nur kurz, um nochmal darüber zu sprechen, was wir da für ein Risiko drohen einzugehen, immer wenn Menschen.\nEgal ob also ob staatlich oder sonst was, Schwachstellen offenlassen. Ähm,\nWenn eine Schwachstelle gemeldet wird und nicht gefixt wird, dann heißt das, die ist in allen betroffenen Systemen noch weiter vorhanden. Ähm,\nwenn wir nun die Abwägung treffen, zu sagen, okay,\nzur Bekämpfung des Kampfs gegen Arbeitslosigkeit oder Terror oder was auch immer äh wollen wir diese Schwachstelle verfügen, um einige wenige.\nZu hacken. Dann bedeutet das immer noch, dass wir alle anderen unbescholtenen Bürger, die die gleiche Software verwenden, dieser Schwachstelle ausgesetzt lassen. Und.\nWas man bei den und ja eben nicht vergessen darf ist diese wirklich desaströsen Schadenfälle.\nMehr äh Brauerei, sage ich schon. Rederei. Ähm wer es wäre noch schlimmer gewesen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:43:41",
+      "text": "Dann wäre es kritisch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:43",
+      "text": "Ja, es ist auch eine, ich glaube, die Produktion von äh Schokolade ist auch irgendwie zwei Wochen ausgefallen, weil irgendeine Produktionsstätte von Milka oder Rittersport oder also Nestle oder sowas\näh befallen war. Also wir sind da wirklich herrschaft an der Katastrophe vorbeigeschossen und.\nDas war zu einem Zeitpunkt, wo die Schwachstelle schon seit zwei Monaten bekannt war und seit einem Monat gefixt oder,\nja? Das heißt, da haben wir nur einen Vorgeschmack auf das Risiko bekommen, was in dem Fall die NSA über Jahre eingegangen ist. Denn hätte,\nwäre das passiert.\nUnter Ausnutzung dieser Schwachstelle zu einem Zeitpunkt, wo noch nicht die Patches von Microsoft dann irgendwann bestand, äh, äh, bereitgestanden hätten, dann hätte es nicht nur die erwischt, die aufgrund von komplexer IT-Nachlässigkeiten oder, oder, oder.\nIhre Systeme noch nicht gepatcht hatten, sondern dann hätte es die, hätte es alle getroffen, die noch nicht weil es gar keine Pätsche gab, Patches gab, das heißt auch\nimmer noch diese schwersten Fälle wan\nimmer noch nur ein geringer Ausblick auf das Risiko, ein Vorgeschmack, auf das Risiko, dem wir eigentlich über Jahre\nausgesetzt waren. Der offizielle Stand ist glaube ich die Schwachstelle hat über elf Jahre bestanden und es gab zumindest von der NSA Anhaltspunkte, dass sie sie über fünf Jahre kannten.\nImmer so ein bisschen der der Unterschied zwischen die Schwachstelle kann ja theoretisch. Ich glaub die älteste Schwachstelle bei Behebung war sowas wie,\nfünfundzwanzig Jahre alt.\nAls sie dann irgendwann mal jemand gefunden und gemeldet hat. Ähm das heißt also auf fünfundzwanzig Jahre hatten wir einen nicht klaren Zustand, ob diese Schwachstelle nicht vielleicht irgendjemandem schon bekannt war. Und das ist halt das, was weshalb ich es,\nIch persönlich ist immer für notwendig halte, Schwachstellen bei Bekanntwerden zu melden, auf das alle, die der Schwachstelle ausgesetzt sind, ähm,\ndavor geschützt sind und ich gehe dafür bei grundsätzlich davon aus, dass mit diesem alle immer mehr.\nUnbescholtene Bürgerinnen und Bürger und Anwender und staatliche Institutionen gemeint sind als potenzielle Kriminelle,\nsodass ich persönlich zu dem zu dem zu dem Schluss komme, dass eigentlich es immer falsch ist, eine Schwachstelle zurückzuhalten."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:46:09",
+      "text": "Also ich meine, die was wir gerade sehen ist, dass ist eine äh.\nJa, so eine so eine gewisse Wiederbelebung von gibt, weil viele Leute völlig angefressen davon sind, dass äh die Zusammenarbeit mit den Herstellern, den Betroffenen.\nSich halt häufig genug sehr zäh oder sehr bürokratisch oder auch juristisch unangenehm gestaltet und halt immer mehr Leute sagen, na ja Gott dann poste ich halt einfach den Profokonzept.\nAuf einer Mailing-Mist, da gibt's in der Melling Messe heißt Fulda Sclorder äh und sagt halt, na ja, dann euer Problem nicht mein Problem, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:48",
+      "text": "Und man sieht ja, also jüngstes Beispiel, was wir hier äh ausführlich behandelt haben, diese Reaktion von Vivi,\nbei denen ja eine quasi beziehungsweise Disclowser stattgefunden hat, weil,\nThorsten und Martin freundlich waren. Das Ergebnis ist sie äh sieht sie ziehen dich hin, sie verschleppen das fixen. Ähm veröffentlichen mit der Veröffentlichung,\nsind sie vorbereitet und diskreditieren dich noch al.\nSicherheitsforscher und äh sagen halt auf die Weise Dankeschön im Prinzip also eine da wird ja auch gezeigt, dass also jeder, der bei bei Vivi nochmal draufhauen möchte und es gibt ja,\nEventuell dann noch die eine oder andere Schwachstelle, ähm der wird das jetzt nicht nochmal Koordinate machen, sondern das wird sich im Zweifelsfall auf Full Discloger finden. Und da muss man sich natürlich wieder anhören lassen, ah hey, da habt ihr aber jetzt die ganzen Menschen in Gefahr gebracht, die noch\ndie dort äh die die Software da noch äh oder die ihre Daten diesen Idioten anvertraut haben. Ja\naber wenn du dir halt, wenn du dir anschaust, wie die versucht haben, eben Thorsten und Martin in in Misskredit zu bringen, dann verstehst du auch, dass die ähm\ndass dass der zweite oder dritte Hacker, der da nochmal vorbeigeht, sich eben auch sagen wird so, hör mal, wenn ich so oder so,\nin der Tonne lande, um mich von euch Miss in Misskredit bringen lassen soll, dann kann er besser auf Full Discloger posten. Und dann haben wir alle nochmal ein bisschen Spaß."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:48:20",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:23",
+      "text": "Ja, die Welt."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:48:24",
+      "text": "Also insofern wäre halt also um sozusagen den Bogen nochmal kurz zurückzuschlagen. Insofern wäre es halt gut, wenn's halt so eine so eine.\nUnabhängige Institutionen gäbe, die halt irgendwie einfach neutraler Backbound die Programme auslobt,\nund quasi hat sowas was so Rodium oder ähnliche äh äh die halt für die Geheimdienste Explods aufkaufen.\nEigentlich müsste der Staat sagen, okay, wir spielen einfach mit, aber wir machen's für die Guten, wir halten nichts zurück, so.\nUnd es wäre auch nicht mal fürchterlich teuer, ne? Also das hört ja irgendwie, wenn das im Vergleich zu den potenziellen Schadensvolumina siehst.\nIst selbst wenn man ein Expert für eine Million ankaufs ankaufst, der halt irgendwie nehmen wir mal an ein paar hunderttausend Router betrifft.\nDann hast du keine Ahnung, einen Euro fünfzig pro Router für die Absicherung.\nIst im Vergleich zu allen Folgekosten, die entstehen können, was den Rotheim Bottnetz wird, ein lächerlicher Betrag."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:49:21",
+      "text": "Wie hast du das gesagt zum zum Kauf weniger Jäger neunzig?"
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:49:26",
+      "text": "Genau, könnten wir das Problem zumindest deutlich eingrenzen, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:49:29",
+      "text": "Ja, das wäre also das ist eine, das mal so zu rechnen, ist echt eine eine."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:49:34",
+      "text": "Und ich meine und mal ganz ehrlich, also sag mal so ein, so ein Explored gegen halt so eine Plasterrouter-Serie, der wurde nicht für eine Million übern Tisch gehen, der würde für fünfzehntausend oder zwanzigtausend über den Tisch gehen so, ne? Und heißt also, dann werden's wenige Cent.\nÄh das das nicht passiert, hat er zwei Gründe. Zum einen vertraut niemand dem Staa.\nWeil hört und wie diese Auflösung des Konfliktes von staatlichen Export Hoting Versus irgendwie staatlicher Daseinsvorsorge nicht passiert. Und zum anderen.\nWildet offenbar niemand wirklich angehen. So alle sind irgendwie offenbar ganz happy mit diesem unklaren Status Quo, weit genug Arbeitsplätze schafft oder keine Ahnung, also."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:15",
+      "text": "Ich fände das tatsächlich so eine so eine richtig schöne, charmante äh Sache da für so eine eine staatliche Stelle zu haben."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:50:22",
+      "text": "Oder eine öffentlich-rechtliche Stelle."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:23",
+      "text": "Wenn der öffentliche Rechtliche Stelle, die die dann auch mit mit ähm,\nmit 'nem entsprechenden Hebel ausgestattet ist zu den Herstellern zu gehen und zu sagen, nee, pass mal auf, nichts diskutieren jetzt hier,\nnichts in der Öffentlichkeit, Forscher diskreditieren, nichts mit ähm Krisenmanager irgendwo losschicken, sondern fixen. Und zwar,\nbitte Asab, sonst haben wir hier noch ganz andere Hebel, ne? So also im Prinzip so ein Project Zero mit ähm,\nmit mit einer richtig harten Gesicht letztlichen,\nmit einem ordentlichen gesetzlichen Hebel dran. Und dann könntest du noch sowas machen wie okay, wir wir zahlen für Winobilitys irgendwie Geld.\nUnd dann könntest du noch sowas machen, wie was weiß ich. Drei Remote Code Execution in einem Jahr gemeldet, gibt äh hier Bundesverdienstkreuz oder so, ne? Kannst du auf einer stationär Zerodium Challenge coin, die ich zu Hause rumfliegen habe."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:51:20",
+      "text": "Gibt's einen Bundesorden, genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:51:21",
+      "text": "Geht zum Bundesorden, ne? So, schönen Cyberorden, ähm da könnte man echt was Schönes machen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:51:26",
+      "text": "Also wie gesagt, ich also Gegebenheit, die man staatlichen Machtstrukturen.\nWir diskutieren ja schon eine ganze Weile zum Beispiel darum, ob man das BSI zu einer unabhängigen Bundesbehörde machen sollte.\nFände ich glaube ich da so neu erfinden von öffentlich-rechtlich gut. Also sozusagen sagen ist eine Organisation, die ist öffentlich, sie dient der Öffentlichkeit aber sie ist nicht der Staat. Ne, also wo man halt sagt, okay, ähm.\nDie äh der Konflikt mit dem Staat ist möglicherweise nicht auflösbar, aber es gibt ja noch genügend andere Organisationsformen, die.\nEntweder vom Staat finanziert sind oder halt irgendwie aus äh keine Ahnung Industrieumlage oder was auch immer finanziert sind.\nBei denen halt die Unabhängigkeit so aufgebaut ist, dass man halt eben dadurch, dass man nicht die Bundesinnenministerium nachgeordnet ist,\nso 'ne Funktion realisiert. Und aus meiner Sicht wäre eigentlich das BSI in so 'ner personellen Ausstellung,\nda durchaus gut für geeignet, weil da arbeiten auch gute Leute, aber die diese Unterordnung und das Innenministerium äh,\nNa ja, die sorgt halt dafür, dass das Vertrauen halt im Zweifel nicht also gerade bei Sicherheitsforschern halt gerade nicht unbedingt gegeben ist, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:37",
+      "text": "Gerade bei unserem Innenminister. Ähm wollen wir,\nnochmal kurz zurück auf das IT-Sicherheitsgesetz einge."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:52:47",
+      "text": "Nur ganz kurz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:48",
+      "text": "Genau und also nur um das historisch kurz erwähnt zu haben. Es gibt ja bereits ein IT-Sicherheitsgesetz, das ist glaube ich zweitausendfünfzehn wurde das herabgelassen ähm da haben wir auch als CTC damals eine Stellungnahme zu gehabt, die,\nich dann im Ausschuss vertreten habe, das war dann der Innenausschuss wahrscheinlich. Ähm wo wir,\nuns darüber Gedanken gemacht haben. Da soll's so ein bisschen, sollte es ein bisschen darum gehen, ähm,\nDas war das Gesetz zur Erhöhung der Sicherheit informationstechnischer Systeme hatte aber spezifischen Fokus auf sogenannte kritische Infrastrukturen. Und da haben wir dran kritisiert erstens äh fehlende Ansätze zum Endnutzerschutz,\nDas Gesetz bezog sich eben nur auf kritische Infrastrukturen. Es ging nicht darum, Nutzerinnen und Nutzer zu schützen, ähm.\nDas waren sehr bürokratielastiges Gesetz, da sind die sind die Unternehmen streckenweise heute noch mit beschäftigt. Die Anforderungen zu erfüllen, weil es um sehr viel ja ähm,\nMindestanforderungen protokollieren ähm,\nSicherheitskonzepte schreiben, ging's um Sicherheitsmanagement. Ich nenne IT-Sicherheitsmanagement so ein bisschen sowas wie äh eigentlich Management ist immer,\nDie Verantwortung tragen,\nund dafür sorgen, dass man nicht zur Verantwortung gezogen wird. Das ist im Prinzip Management. Im Bereich der IT-Sicherheit zumindest. Also möglichst viele Häkchen irgendwohin machen, damit wenn dann mal\näh die äh Scheiße in den Ventilator fliegt, dass man dann möglichst sagen kann, ich habe aber alles gemacht, was was.\nGut und billig und gesetzlich vorgeschrieben ist, sodass man mir hier keine Fahrlässigkeit unterstellen kann, so dass ich eine nicht wirklich in der Haftung bin und nicht wirklich zur Verantwortung gezwungen werden kann."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:54:33",
+      "text": "Also daraus erwachsenes hört man auch eine Sache, die für die Zukunft durchaus wichtig wird. Und zwar wurde da,\nin der implementierung dessen äh einen Vorschlag von uns aufgenommen, wo wir gesagt haben, okay, äh es ist halt schwierig, den.\nIT-Sicherheitsstaat zu zertifizieren,\nweil du kaum in der Lage bist zu sagen, okay, wir haben jetzt irgendwie dieses Thema gründlich angeguckt, dann ist es aber mindestens drei Monate her oder vier Monate her, in der Realität eher drei Jahre, so man hat so die typischen, keine Ahnung,\nIT-Sicherheitszertifizierung nimmt. Und in dem Augenblick ist jetzt das Thema eigentlich schon durch, da braucht man eigentlich nicht weiter drüber reden, weil halt in der Zwischenzeit neue Explotechniken entwickelt wurden und so weiter. Da sind wir unser Forscher zu sagen, okay, lassen sie es mal dynamisch machen, also halt eine,\nLeute aus den einzelnen Branchen zusammenholen, die sich hinsetzen und drüber reden, was,\ndie IT-Sicherheitsmindeststandards in ihrer Branche sind, also welche Softwareversionen äh von Onki Curnals und äh verwendeten Librarys, irgendwie prozedurale Kirchungen und so weiter. Und daraus ist dann halt für diesen Bereich kritische Infrastrukturen.\nÄh sind halt die sogenannten branchenspezifischen Sicherheitsstandards geworden, also kurz B drei S. Und die sind halt nach so einem\ngenau dieser Idee aufgesetzt. So das funktioniert halt alles noch nicht so richtig gut, weil sich halt erst noch dran gewöhnen müssen und das bürokratische Setup davon halt an einigen Stellen irgendwie falsch inzentiviert ist so, aber grundsätzlich ist es halt\naus unserer Sicht der richtige Ansatz zu sagen so okay, wir brauchen halt eine Möglichkeit für jemanden, der halt irgendwie so ein IT-System betreibt.\nSicherzustellen, dass er die Mindestanforderungen erfüllt und die müssen halt branchenspezifisch sein. Das heißt also, dass nicht nur für kritische Infrastrukturen sondern eigentlich quasi so für alles\nund in diese Richtung zu gehen, da wäre natürlich das BSI halt auch der richtige Ansprechpartner für, also der richtige Personal richtig aufgestellt und so weiter und auch zuständig,\nnur ist halt diese Unabhängigkeit dabei halt so ein bisschen ja diese nicht gegebene Unabhängigkeit so ein bisschen im Weg."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:39",
+      "text": "Ich würde da noch ein bisschen drüber hinausgehen. Also dynamisch bedeutet einmal klar also Sicherheitsstandards können nicht statisch sein, weil IT-Sicherheit eben viel mehr ein Prozess ist als ein Zustand. Ähm wenn.\nWir haben jetzt sehr viel über Schwachstellen gesprochen. Schwachstellen werden gefunden. Schwachstellen werden beseitigt, das heißt, die Systeme müssen auf dem aktuellen Stand gehalten werden. Ist also eigentlich\neine Zertifizierung im herkömmlichen Sinne, in die einen Zustand betrifft ist in dem Bereich also,\nIm Prinzip nicht zielführend, weil du viel eher den Prozess haben möchtest, ja? Also die Schwachstelle zu.\nDie Schwachstelle nicht zu haben, ist ja nur ein Teil deiner IT-Sicherheit. Der weitere Teil ist zu erkennen,\nwas also darauf zu reagieren, wenn sie festgestellt wird und wenn sie ausgenutzt wird, dafür zu sorgen, dass der Schaden gering bleibt. Ähm,\nAlso eine Wiederherstellung, Erkennung und Sonstiges. Ähm.\nIch fand allerdings bei diesem IT-Sicherheitsgesetz eins ein bisschen das Problem, wenn da die Branche sich ihre Sicherheitsstandards selber schreibt und Strafen dafür bekommt, wenn sie die nicht einhält."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "0:57:43",
+      "text": "Deswegen braucht man da halt irgendwie nicht nur die Branche, sondern halt irgendwie ähm also,\nUnser Vorschlag war zu sagen halt so, da müssen dann halt irgendwie auch Leute aus dem BSI sein, die halt von den entsprechenden Fachabteilungen sind,\nund hört irgendwie zum Beispiel halt die aktuellen Trends halt bei Meri und so weiter kennen halt aus den Sirts die halt mit den\naktuellen Vorfällen zu tun haben. Viele Industrien haben ja mittlerweile eine äh Computer Merchandis Bandszentren\nwo halt die Information über die Vorfälle in dieser Industrie so ein bisschen zusammenlaufen äh\nund natürlich halt irgendwie Leute aus aus der Hacke Community und aus den äh äh akademischen äh Forschungsbereichen, die sich um die spezifischen Themen kümmern, sodass man da halt nicht nur so eine die Branche selber sagt, okay, zwo sechser Körner sind su\nweil haben wir alle und irgendwie äh.\nOpen ist es Evelson irgendwie irgendwie kleineren äh eins null, kann man eigentlich auch noch prima verwenden, weil haben wir ja auch alle. So soll natürlich nicht laufen, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:41",
+      "text": "Ähm genau, ich glaube aus dem IT-Sicherheitsgesetz wurde dann so ein bisschen was,\nAlso das letzte, was ich davon gehört habe, war glaube ich so im letzten Jahr noch, dass einige Branchen eben Schwierigkeiten hatten, die Standards einzureichen und zu erfüllen. Aber es war halt so ein, es war am Ende ein großer Verwaltungsakt,\nda ist jetzt nicht da fehlte es irgendwie an an den großen Sprüngen, die man vielleicht hätte erhoffen.\nÄhm es gab ja noch ein paar Kritik an Datenschutzschwächung und das äh BSI-Problem haben wir gerade schon öfter besprochen. Jetzt also,\nVier Jahre später.\nZiemlich genau auf einen aufs Jahr, auf den Monat genau vier Jahre später soll also das IT-Sicherheitsgesetz zwei Punkt null kommen, wo es jetzt also eine neue.\nEine neue Ausrechnung gibt, auch einen neuen Innenminister, unter dem das Ganze stattfinden soll und der Referentenentwurf ist jetzt vor wenigen Tagen von Netzpolitik Org veröffentlicht worden in paar Sendungen vorher,\nhaben wir schon mal über die Eckpunkte gesprochen, die das äh die irgendwie auftauchten. Ähm,\nwo im Prinzip schon mal so ein bisschen der.\nMan man merkte, es war so ein bisschen der der erste Test, ne? Die Eckpunkte wurden schon mal so veröffentlicht, um mal zu gucken,\nwo springt denn die Presse drauf? Wo gibt's die Kritik? Da waren natürlich auch einige Punkte drin, die ja geeignet waren, uns zu ärgern und zu provozieren. Und das äh,\nDie wurden ja dann auch von im Logbuch schon mal angesprochen. Wir wollen aber jetzt ein bisschen spezifisch auf den.\nAuf den Referenten Rentenentwurf, den Referentenentwurf ähm eingehen, denn da sind."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:00:30",
+      "text": "Echte Knaller drin."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:31",
+      "text": "Echte Knaller drin, ne?"
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:00:32",
+      "text": "Also die die Genese dieses Antisicherheitsgesetzes zwei null ist so ein bisschen das.\nÄh nach dem äh Regierungswechsel des Inministermeerprimärheit mit Ausländerrausgesetzen beschäftigt war. Und äh\nandere Themen eigentlich so ein bisschen unter den Tisch gefallen sind. Also funktioniert ja immer so, dass wir den Fachabteilungen werden halt irgendwie Entwürfe halt irgendwie zusammengebaut äh was Demokratie theoretisch auch schon ein bisschen schwierig ist, dass also die Mysterien\ndie Exkurtive sich die Entwürfe schreibt nach denen sie ihre Gesetze haben will, finde ich persönlich irgendwie eigentlich falsch, eigentlich sollte das tatsächlich aus dem Parlament kommen, aber gut. Ähm,\njedenfalls sie schreiben halt dann da so Papiere und Studien und Analysen und versuchen die Probleme rauszufinden\nmachen dann da halt so Entwürfe. Und die haben dann irgendwann den Status eines Referentenentwurfs. Da nun aber das Innenministerium hat das letzte Jahr halt irgendwie primär halt mit anderen Dingen beschäftigt war,\nalso halt dann die Finalisierung des Entwurfs und die die Einreichung halt in den äh äh in die Fraktionen und so. Ähm.\nKam da so ein gewisser Stau zustande und deswegen ist halt dieses IT-Seats-Gesetz zwei null, der zumindest der Referentenentwurf so eine gewisse Sammelkiste, wo wie alle,\nFachabteilungen, die halt irgendwie irgendwas mit IT zu tun hatten,\nund mit öffentlicher Sicherheit an wie ihre Wunschliste halt reintun. Und deswegen ist die halt auch so krass. Also deswegen sind da halt so viele Sachen drin, die halt äh,\nwo man eigentlich sagen würde, okay, es geht ja gar nicht so, also ein, also eine der krassesten Sachen ist halt dieser Passwortparagraph. Ähm,\nvorsieht, dass wenn jemand verdächtig wird, eine schwere Straftat oder eine Straftat mittels Telekommunikation begangen zu haben, also quasi alles äh sollen Behörden dessen Accounts übernehmen können,\nund der Verdächtige soll dazu verpflichtet werden seine Passworte rauszugeben äh und ja denen halt den Zugang zu ermöglichen so, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:02:35",
+      "text": "Spezifisch formuliert,\nauch gegen den Willen des Inhabers auf Nutzerkonten oder Funktionen, die ein Anbieter eines Telekommunikations oder Telemediendienstsystem verdächtigen zur Verfügung stellt,\nmittels derer der Verdächtige im Rahmen der Nutzung des Telekommunikations- und Telemediendienstes eine dauerhafte virtuelle Identität unterhält,\nzugreifen. Die Formulierungen sind immer sehr komplex, deswegen versuchen wir die, versuchen wir den, die Bedeutung zu ähm.\nZu erfassen, aber das ist natürlich echt äh,\nAbsatz, also gilt entsprechend mit der Maßgabe, dass die Zugangsdaten auch herauszugeben sind, wenn sie geeignet sind, eine Verfolgung wegen einer Straftat oder einer Ordnungswidrigkeit herbeizuführen.\nÄhm.\nJedoch dürfen die äh durch Nutzung der Zuwachsdanken gewonnen Erkenntnisse in einem Strafverfahren oder ein Verfahren nach dem Gesetz über Ordnungswidrigkeiten gegen den Verdächtigen. Äh verwendet werden. Nur mit Zustimmung verwendet werden. Also.\nEine Situation, die wir eigentlich seit jeher gefürchtet haben, ne."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:03:45",
+      "text": "Und die ähm es geht halt noch weiter, ne? Also dann haben wir halt sowas wie ähm.\nÄh Legitimierung des von Staatstrainereinsatz gegen Hacker. Äh das ist halt irgendwie auch so eine äh relativ äh.\nDeutliche Ansage, so dass sie halt wieder äh,\nja machen können und was sie wollen, dann äh Darknet Kriminalisierung, also halt die äh Teile des Entwurfs aus dem Bundesrat, äh wo es darum ging, dass der Betrieb äh von,\nanonymisierungssystem dann strafbar sein soll, wenn es halt irgendwie eine kriminelle Nutzung gibt,\nJa, also jetzt nicht mal irgendwie, dass sie, wenn sie spezifisch dafür gebaut wurden, sondern wenn es eine kriminelle Nutzung überhaupt gibt.\nDie dann strafbar sein sollen, was also da hatten wir,\nanalog zu dem, was wir halt vorhin diskutiert haben mit den, mit dem Hackertour Paragraph zwohundertzwo C äh haben sie da halt eine,\nunmöglich weite Formulierungen gewählt und auch in der Begründung nicht eingeschränkt. Sie haben quasi gesagt, ja also wenn wir so ein System sehen.\nDann sehen wir schon, ob's kriminell ist. Ne, also das ist halt so der der Standard, also mitnichten einer wie wie beim Verfassungsgericht formuliert halt irgendwie hart belegte, kriminelle Intention, sondern mehr so, na ja, so äh wenn wir's sehen, dann werden wir es schon wissen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:11",
+      "text": "Die Formulierung will ich tatsächlich nochmal kurz zitieren. Äh wer dr,\ninternetbasierte Leistung zugänglich macht, deren Zweck oder Tätigkeit darauf ausgerichtet,\nDie Begehung von rechtswidrigen Taten zu ermöglichen, zu fördern oder zu erleichtern, wird mit Freiheitsstrafe bis zu fünf Jahren oder mit Geldstrafe bestraft, wenn die Taten nicht in anderen Vorschriften mit schwerer Strafe bedroht wird\näh bedroht ist. Die Strafe darf nicht schwerer sein als,\ndie für die Tat im Sinne von Absatz eins angedrohte Strafe. Mit Freiheitsstrafe von sechs Monaten bis zu zehn Jahren wird bestraft, wer die Tat gewerbsmäßig oder als Mitglied einer Bande,\ndie sich so fortgesetzten Beziehung von Straftaten im Sinne dieser Vorschrift verbunden hat, begeht. Äh gilt nicht Verhandlungen äh für Handlungen.\nWenn die Begehung von Straftaten nur einem Zweck oder eine Tätigkeit von untergeordneter Bedeutung dasteht oder.\nHandlungen ausschließlich der Erfüllung rechtsmäßiger dienstlicher oder beruflicher Pflichten dienen.\nDer Hintergrund davon ist im Prinzip, ja, Darksnet Marktplätze."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:06:21",
+      "text": "Also das ist halt eines der der Dinge, die um die es ihnen da geht, sind.\nIhre Vorstellung von die von Medienberichten über Dark and Marktplätze geprägt ist. So und halt irgendwie so ein bisschen auch deren äh.\nWas sie halt so unter Strafverfolgungserfahrung haben, ne? Das heißt also man merkt halt so, dass sie.\nVersuchen das möglichst weit zu fassen und möglichst schwammig zu formulieren, weil sie Angst haben, wenn sie es halt zu eng formulieren, dass es dann halt äh äh ja das Internet spielt oder so, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:07:00",
+      "text": "Was ich, was ich spannend an dem Ding finde ist, ich werde ja auch nicht müde, Polizeiarbeit auch mal zu loben. Und.\nDer Darknet Marktplatz, der in Deutschland irgendwie eine Rolle in den letzten Jahren gespielt hat, war äh Deutschland im Depo-App. Ähm das Ding, worüber die Waffe gehandelt wurde.\nMensch, die der Mensch gekauft hat, der in München diese äh Schießerei äh veranstaltet hat. Einige,\nAnhaltspunkte dafür, dass das ein rechtsgerichteter Terrorist war, deswegen ist es ein verwirrter Einzeltäter in der öffentlichen Darstellung. Ähm\nDer Typ hat diese Waffe gekauft über den Marktplatz Deutschland in Deep-Web. Dort hat die Polizei dann den Händler,\nerkannt, hat bei dem einen Testkauf gemacht, hat den bei diesem Verkauf festgenommen, also relativ einfach, relativ,\neigentlich. Jo, wir wollen Knarre kaufen, zeig mal. Ah ja, übrigens hier verhaftet tschüss. Ja, wunderschön, zeigt auch ein bisschen die Grenzen des Darknet Handels, weil am Ende müssen ja Transaktionen.\nVon Waren stattfinden und am Ende müssen auch die Bitcoins wieder in sage ich mal stabilere Währungen getauscht werden, die ähm.\nNe, wo also auch am Ende äh häufig eine einen Link zu einer mit zu einer verfolgbaren Identität bestehen.\nDann sind sie hingegangen und haben gesagt, okay, wer betreibt denn diesen Marktplatz? Und den haben sie ja auch dranbekommen, ein äh junger Mann, von dem behauptet wird, er würde in Karlsruhe äh leben, der jetzt sich auch vor Gericht wiederfindet wegen Beihilfe.\nUnd der hat sich der ähm also den haben sie.\nÜber verschiedene Recherchen irgendwie bekommen, insbesondere aber darüber ähm in der Beihilfe verschuldig befunden, weil er die einzelnen Transaktionen und.\nHändlerprofile in seinem Marktplatz, den er da unterhält, selber äh geprüft und freigegeben hat. Der hat im Prinzip so eine Art äh Escrowe,\nService für die Transaktion gemacht und hat überhaupt irgendwie seit jeder einzelne jedes einzelne Angebot freigeschaltet und damit war er auch.\nOft also noch ist er nicht verurteilt, aber deswegen daher wird argumentiert, dass er der Beihilfe schuldig war in diesem Waffenhandel.\nUnd ich vermute, dass sie damit, wenn sich erweisen wird, dass er jetzt schuldig ist, äh relativ gute Karten haben, dadurch, dass sie ihn eingeloggt im Backen zu seinem.\nMarktplatz dort verhaftet haben zu Hause wird er wird die Verteidigung Schwierigkeiten haben?\nIch würde jetzt mal vorsichtig sagen, dass das eben echt auch mal eine Erfolgsgeschichte ist. Der Polizei."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:09:50",
+      "text": "Na ja, weil du halt irgendwie genügend Personal hast und äh da halt irgendwie auch eine.\nDas auch hinrecht zeitnah einsetzen kannst, dann schaffst du halt sowas auch, ne?\nAber also die das hat so ein so ein gewisser Kernpunkt, ne, dass die ganz viele von diesen Maßnahmen, die sie sich da gestatten wollen, also unter anderem halt auch irgendwie Staatstrainer gegen Hacker einsetzen zu dürfen.\nIst dem geschuldet, dass sie sagen, so, wir haben nicht genug Personal für die Anzahl der Fälle.\nDeswegen brauchen wir die den größeren Hebel, die Rationalisierung, die äh Zeitersparnis, die durch äh relativ mächtige technische Eingriffswerkzeuge kommt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:33",
+      "text": "Ich mich stören bei dieser Darknet Kriminalisierung noch zwei andere Sachen. Erstens,\nIn der Formulierung steht eigentlich nichts davon drin, dass das Darknet oder sonstiges ist, ja? Das heißt, es geht im Prinzip nur Internetdienste zu Begehung von Straftaten. Äh,\ndas kann man sehr viel weiter fassen als irgendwie Deutschland im Depo-App."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:10:53",
+      "text": "Also kann jeder, jeder VPN-Anbieter."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:57",
+      "text": "Jeder, genau, jeder VPN-Anbieter kann da schnell drunter fallen. Gut, die gibt's in Deutschland eh nicht mehr, weil Vorratsdatenspeicherung den Betrieb von VPNs irgendwie nicht wenig nur wenig sinnvoll macht, doch es gibt auch deutsche VPN-Anbieter, aber ähm."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:11:11",
+      "text": "Ähm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:11:12",
+      "text": "Keiner die heute noch irgendwie in der Breite empfohlen werden ansonsten haben wir in Kommentarfunktion, wenn ihr da andere Meinungen vertreten werdet."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:11:22",
+      "text": "So, ich muss da noch ein Bitt loswerden. Ich habe neulich gelernt, dass äh es gibt ja ganz viele so kommerzielle VPN-Anbieter, ne? Und ich habe neulich mit jemandem gesprochen aus der Branche und der meinte so ganz trockener, ja.\nWeißt du, so ein VPN für zehn äh Euro im Monat? Kannst du eigentlich nicht wirtschaftlich betreiben.\nSo, also wenn's unter zehn Euro kostet, kannst du eigentlich sagen.\nDie Wahrscheinlichkeit, dass der Anbieter die Daten verwertet, ziemlich groß, wenn er denn noch eine Telefonhotline hat. Weil das schafft er dann halt einfach wirtschaftlich schlicht nicht mehr. So und tatsächlich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:11:58",
+      "text": "Einfach zu viele Kunden, die sich beschweren, äh Datenvolumen was da durchgeht, Datenvolumen ist in dem Fall nicht günstig. Gerade vor PN Nutzer haben teilweise relativ hohe Datennu.\nTue ich jetzt bestimmte Protokolle, die die gerne sprechen, doch und sonstiges."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:12:16",
+      "text": "Also das ist halt so eine tatsächlich so ein, so ein Punkt, den man halt verdenken sollte, wo man halt seinen VBN Anbieter auswählt,\ninteressanterweise gehören ganz viele irgendwie so ungefähr demselben Firmenkongremerat und dieses Firmenkonglomerat.\nHat dann halt auch wohl offenbar noch so 'ne Datenhandels wo man halt also die die geklickten URLs zusammen mit dem Kreditkartenprofil irgendwie also den Realdaten aus der Kreditkarte, mit der man bezahlt hat, verlinkt bekommt so, das ist halt äh,\nja offensichtlich funktioniert ein Teil der Branche äh so. Also da sollte man sich dann schon lieber VBN Anbieter auswählen, die entweder teurer sind, also es nicht nötig haben oder äh politische Gründe haben, VPN zu betreiben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:56",
+      "text": "Kein deren Support Line ungefähr so ist, wenn du Probleme hast, helfen wir dir.\nAnsonsten geben wir das Geld zurück, weil da also es genau Augen auf beim VPN-Kauf. Ähm wir haben auch im im unserem Vortrag Thorsten und ich da ein bisschen über das Thema VPN Anbieter gesprochen.\nIn dem Vortrag. Äh du kannst alles machen, du darfst, kannst alles hacken, du darfst dich nur nicht erwischen lassen. Ähm.\nGenau, das ach so der, der zweite Punkt, danke Kriminalisierung, den ich noch kurz anbringen wollte. Ähm ist wenn.\nDer Verdacht, dass du Darknet Infrastruktur betreibst. Zum äh für irgendwelche illegalen Späße. Und unter diesen Paragraphen, ich meine\nDer Verdacht würde bei mir aufgrund meiner Telefonleitung auch sehr schnell entstehen, weil ich relativ viel Tor-Traffic habe. Ähm sodass ich bei der ersten Suche nach wer würde denn irgendwie da reinfallen? Hier Dagn\nund hinten hin Service zu betreiben, wäre ich sofort dabei. Außerdem habe ich inzwischen mache ich jetzt nicht mehr so viel, Tornotes betrieben. Das sind,\ndiese Server, die auf meinen Namen registriert sind, die sehr viel Traffic machen, die von all außen, also aussehen, als würden sie hin Services anbieten. Das heißt, so Anfangsverdacht bei mir äh für den Betrieb von hinten Services wäre gegeben.\nUnd dann gibt's direkt den gesamten Mantel, ne? Dann gibt's äh die gesamte Aktionsrahmen, Telefon abhören, Computerhacken und so weiter, weil eben dieses\nder der Betrieb einer solchen Plattform zu eine hohe Strafe ist und so ein großes Problem, das mir dann entsprechend die ganzen die ganzen Maßnahmen, der gesamte Maßnahmenkatalog für mich in Frage käme.\nUnd deswegen ist das so problematisch,\nauch wenn man beim ersten Lesen sagt, na ja, hier klar, so jemanden wie der Deutschland im Deep Web da betreibt, das sollte,\nunter Strafe stehen, wenn da Waffen gehandelt werden, klar da muss das unter Strafe stehen aber genau deswegen steht er schon nach dem alten Gesetz gerade vor,\nvom Kader und darf sich da ihr äh vor vor Gericht und darf sich darf sich da verantworten, weil es eben auch nach geltendem Recht ähm problematisch ist. Und wir haben bisher wenig ähm,\nsage ich mal, illegale Darknet-Infrastrukturen, die nicht unter das aktuelle äh Strafgesetz fallen würden."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:15:24",
+      "text": "Also die ich glaube was was man da halt sehen muss ist dass die die Angst.\nDa die Kontrolle zu verlieren groß ist. Also die haben halt offensichtlich Sorge, dass sie.\nDa halt einen wie so immer so schon sagen, rechtsfreien Raum haben, ja.\nDen's de facto nicht gibt, weil die die Straftaten an sich, also irgendwie was aber passiert an illegalen Sachen äh sind ja schon illegal.\nAber äh die fürchten halt, dass sie halt da äh ja.\nDer hat parallel Gesellschaften im digitalen Raum entstehen. Und ganz ehrlich.\nWenn ich so Sachen mache wie die da gerade mit Artikel dreizehn und was sie da sonst noch so bringen? Würde ich mir darum auch Sorgen machen, weil genau das wird nämlich passieren. Ne, also es wird vollkommen klar, dass also die.\nDie parallelen Infrastrukturen, die halt nicht mehr irgendwie so ohne Weiteres mit Google zu finden sind, werden da definitiv wachsen, so so wie je mehr Verfolgungsdruck, die halt für harmloses Zeug halt machen.\nDass du mehr Willen sind die Leute zu sagen, okay, na dann suche ich mir halt andere Mittel und Wege so, ne? Das ist halt auch so eine so eine Eskalationsspirale, die denen auch sehr schwer zu vermitteln ist, zu sagen, okay,\nStatus Quo schon irgendwie völlig unhaltbar findet und versuchen wollt jetzt irgendwie auch noch Tornotbetreiber zu kriminalisieren.\nRadikalisieren die sich halt auch,\nalso dann denken die sich Sachen aus, ist jetzt nicht so, dass die technologische Entwicklung da abgeschlossen ist, im Gegenteil, ich meine Tor ist mit dem, was wir momentan haben, nicht Stand der Technik, was irgendwie Anonymisierungssysteme angeht,\nwenn man's halt wirklich ernsthaft betreiben würde, dann wurde man darüber keine Videos klicken können und auch kein äh ja keine,\nirgendwie abrufen, sondern dann wäre es halt ein System, bei dem halt auch irgendwie keine Timing-Chorelation mehr geht und so weiter. Aber das haben wir gerade noch nicht, weil.\nDer momentane Bedarf halt von Tor und Altopie abgedeckt.\nWenn du jetzt anfangen wolltest wirklich zu kriminalisieren, dann entschafft ihr damit eine Grundlage für.\nDie nächste Generation Systeme, wo es denn wirklich auch keine technischen Möglichkeiten mehr gibt, die zu finden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:17:47",
+      "text": "Und die White Paper dafür haben wir eh schon."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:17:49",
+      "text": "Ja, die die Forschung ist daher, die ersten Implementierungen gibt's heute auch schon so wie Katzenpost und Co.\nWir sind halt momentan nicht besonders verbreitet, weil halt irgendwie na ja braucht's halt erstmal noch nicht, weil Thomas grad noch gut genug, aber in dem Augenblick, wo halt der Druck da so verschärft wird, dass.\nAllein der Betrieb der Infrastruktur schon strafbar ist.\nHeißt es halt, dass dann Systeme kommen werden, wo du halt nicht mal mehr sehen oder wissen kannst, dass Teil einer Infrastruktur ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:16",
+      "text": "Weil okay der Betrieb der Infrastruktur, ja du bist kurz davor, dass eigentlich also in wenn man streng genug liest, ist allein schon der Betrieb der Infrastruktur straffer."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:18:26",
+      "text": "Ja, ich meine, das heißt halt, es, also nachdem nach der Formulierung, dann hast du, wenn du wenn du einen äh zum Beispiel einen Exit betreibst und über diesen Exit passiert, ein guter Teil, krimineller Traffic. Dann unterstellen sie dir, das ist halt so gemeint, das ist halt etwas du möchtest und dann haben sie dich dran."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:41",
+      "text": "Und dann kannst du, wenn du diesen Bandenparagrapen noch drin hast, eine Bande, die sich der fortgesetzten Begegnung von Straftaten im Sinne dieser Vorschrift verbunden hat,\nbist du ganz kurz davor irgendwie sowas wie den Zwiebelfreunden zu sagen, hör mal.\nIhr habt doch hier ihr betreibt diese gesamte Torinfrastruktur von euren Exit geht's am laufenden Band irgendwas aus. Seit seit vielen Jahren beantwortet ihr jede ähm Anfrage\nmit nee, sorry, ist eine Anonymisierungsdienst ähm von uns aus sieht das so aus, als hättet ihr euch äh als.\nJa, als wärt ihr eine Bande. Da müssen wir nochmal eine Hausdurchsuchung machen. Die letzte ist ja noch nicht so lange her. Oh je. Ähm."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:19:19",
+      "text": "Ja, dann gibt's halt noch äh die Verstärkung der Strafe für den zweihundertzwo C, also den äh beziehungsweise die zwohundertzwo Paragraphen, also alle."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:26",
+      "text": "War noch nicht illegal genug."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:19:28",
+      "text": "Genau äh nach dem Motto jetzt äh machen wir da mal fünf Jahre draus statt zwei Jahre Mindeststrafe so. Ähm äh Höchststrafe und die ähm.\nProblem, dabei ist halt, dass die.\nAbschreckungswirkung von solchen Strafen wissen wir halt, dass es halt wenig bringt. Ne, also das heißt also wenn du halt irgendwie da erwischst du dann halt Kiddies, die.\nHalt irgendwie mal nicht nachgedacht haben. Also Leute, die sowas kriminell betreiben, ähm die lassen sich irgendwie von dem Unterschied irgendwie zwischen zwei und fünf Jahren sowieso nicht abschrecken und Geheimdienste ohnehin nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:07",
+      "text": "Zum Haldi ohnehin an, also dann nochmal Straftaten begehen, die in in ganz anderen Kontexten liegen, die eh nochmal ganz andere Strafmaße haben."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:20:15",
+      "text": "Na ja und also tatsächlich es ist dabei halt eben aber auch diese diese,\nVerschärfung beschränkt sich ja nicht nur auf die äh Erhöhung des Strafmaßes, sondern durch diese Erweiterung, die da halt in diesem Gesamtentwurf drinne sind.\nÄh also wie sowas halt wie dieser digitale Hausfriedensbruch, ne? Also dieses äh,\nwer IT-Systeme unbefugt benutzt, das halt irgendwie, na ja,\nheißt halt quasi, wenn du halt irgendwie durch Sepp läufst und mal irgendwie Standardpassworte ausprobierst, um halt irgendwie zu gucken, ob jemand halt irgendwie ein kaputtes IOT-System hat.\nDann soll's halt auch schon strafbar sein. So und damit.\nMacht man halt auch einen ganzen Teil Forschung kaputt, damit erwischt man eine ganze Menge Leute, die eigentlich Gutes meinen. Und das halt so eine, so ein Ding, wo.\nKlar sagen muss, was da passiert ist eine.\nEher antagonistisches Verhalten oder Verhältnis zu den ganzen Security-Forschern, zur Hackerszene, die halt ja eigentlich guten Willens ist.\nUm den Preis, dass man halt versucht irgendwie zum gefühlten Kontrollverlust, der da halt irgendwie droht abzubiegen.\nAber man tatsächlich macht sich die Leute zu Feinden, die einem dabei helfen könnten halt irgendwie das Problem zu vermeiden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:40",
+      "text": "Ich frage mich auch wirklich, also das die Frage wurde auch schon beantwortet, wenn das Ausspähen von Daten, also.\nIch meine, die Paragraphen, die den Bereich Hacking angehen, sind auf jeden Fall alle so formuliert, dass sie im Zweifelsfall mehr abdecken, als sie.\nIntendiert abdecken sollen. Ähm.\nOder begründbar abdecken sollen. Diese Idee digitaler Hausfriedensbruch ist drei Jahre alt, kam irgendwie aus Hessen ähm\nda wurde diese Idee ja schon diskutiert oder wurde hat die damalige Bundesregierung ja schon gesagt\nAlso wir sehen echt keine Strafbarkeitslücke bei unserem zweihundertzwei C. Wenn du ins wenn du bei strenger Lesart überhaupt für das für das Schreiben eines Hacking Tools schon dran bist, dann sehen wir hier wirklich nicht den das Problem,\nIT-Systeme auf unbefugt herunter zu, also die Schwelle auf unbefugt herunterzubringen, das das betrifft ja dann irgendwie auch.\nIch bin so ein bisschen, ich habe mich immer gefragt, wie kommen die darauf? So was wie in Täter, dass sie sich, dass sie sich um Innentäter sorgen, also der klassische Innentäter in so einem Unternehmen, der jetzt."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:22:48",
+      "text": "Der Buchhalter."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:49",
+      "text": "Ja, aber wenn der unbefugte die Bücher hält, ja? Also ich ich weiß noch nicht mal genau, welches Szenario die sich da vorstellen. Aber sie.\nWollen. Ähm ich glaube, dass das wurde auch in der, in diesem Eckpunktpapier, wo das Auffangparagraph, ne? Sollte nach, nach nachdem wir."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:23:06",
+      "text": "Mhm. Sollte nach. Zum Catchal."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:09",
+      "text": "Zweihundertzwei haben und Darknet kriminalisiert haben und und und wenn dann noch irgendeiner durchrutscht\ndann wollen wir noch so ein äh die neue Ennie stehen haben um zu sagen ähm hier dann war es aber immer noch digitaler Hausfriedensfrucht, also die unbefugte Nutzung eines IT-Syst,\nund da muss er echt langsam vorsichtig sein, wenn du nochmal neben jemandem sitzt und sagst, komm, ich greife mal kurz in deine Tastatur,\nBist du ruckzuck? Ähm bist du ruckzuck dran? Jetzt haben wir die ganze Zeit eigentlich nur so,\nja Strafverfolgung erleichtern Identitäten übernehmen, Staatstrojan dann eben Strafen erhöhen. Gibt's denn auch irgendwas, wo man sagen könnte,\nDa werden jetzt zumindest mal Schwachstellen gesenkt oder äh äh Schwachstellen ähm beseitigt oder.\nSchäden eingeschränkt."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:24:03",
+      "text": "Na ja, es gibt da halt so ein paar Verzweiflungsparagraphen in diesem Entwurf. Äh da geht's unter anderem darum, dass die BSI erlaubt werden soll, aktiv zu scamen und äh im Zweifel,\nauch äh Firmenwehr,\nDates ohne Zustimmung des Besitzers des Gerätes durchzuführen. Also halt äh Installationen Lücken schließender Software aus der Ferne äh vorzunehmen,\ndas muss man vor dem Hintergrund dieser Rauter äh Desastergeschichten sehen. Also diese Pflaster-Rauter,\nNummer äh wo halt ein Teil der Telekom-Route als Kollateralschaden bei einer ganz anderen Attacke erwischt wurde. Das hat die halt schon hart getroffen, so weil halt klar war,\nDas kann halt immer wieder passieren. Wir haben immer mehr ungesicherte IT-Geräte da draußen, die halt auch einfach am am großen, weiten Internet hängen und erreichbar sind,\nund äh die halt nicht gepatcht werden, weil die Leute, die Dinger besitzen, wissen gar nicht, was patchen eigentlich ist,\nAlso so ist halt wie so der Standard DSL-Router, der halt nicht aus der Ferne gewartet wird, sondern äh,\nja oder halt irgendwie Mobiltelefone oder sowas, die wo die Leute einfach keine Ahnung haben, wenn ein Auto Optik aus ist, dann ist halt die Software drauf zum äh Zeitpunkt, wo es gekauft wurde. Und da wollen sie halt das Recht haben, halt irgendwie diese Updates quasi äh per\naussuchen von Sicherheitslücken auf diese Geräte drauf zu bringen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:25:26",
+      "text": "Dazu also du der Telekom Routerausfall. Ich glaube, ich habe selten was erlebt, was die so hochgescheucht hat. Es waren\nAlso ich war zu zwei Anhörungen dazu im Bundestag. Einmal ich glaub Innenausschuss und einmal Verkehrsausschuss,\nWir beide waren dann im weiteren Verlauf mit Mirko. Ich weiß nicht, wie viele Male der, also\nschädliche Vertreter des CC im Innenministerium waren für diese routertechnische Richtlinie Router. Was Sarah davon zu halten ist, haben wir im Jahresrückblick des CCC dann auch nochmal zusammengefasst. Dieses\nAlso letztes Jahr zweitausendachtzehn und zweitausendsiebzehn, denn leider diese gesamte Nummer hat sich ja über zwei Jahre hingezogen oder so, um dann am Ende eine technische Richtlinie zu formulieren. Das nur kurz als."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:26:10",
+      "text": "Das Problem nicht löst, weil sie halt reine Freiwilligkeit vorsieht, aber ja gut, er."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:14",
+      "text": "Genau, also aber wen das nochmal interessiert, dafür aber haben wir im Logbuch öfter gesprochen und im in den Jahresrücken rückblickendes CC.\nDann jetzt dieser diese doch spannende Idee, okay, BSI hat Ahnung von einer Schwachstelle ähm,\nDer Routerhersteller ist längst nicht mehr unter seiner Adresse in Schensen zu erreichen. Ähm Updates gibt's sowieso nicht. Unsere Lösung für das Problem war,\nzu sagen, okay, erstens Hersteller zum Bereitstellen von Updates verpflichten,\nzweitens, wenn keine Updates mehr sind, äh Open Source Software erzwingen, ermöglichen das als Standard mit reinbringen, damit sowas dann selber äh wenigstens noch irgendwie weitergepflegt werden kann, denn letztendlich, wenn so eine Kiste,\nSchwachstellen hat, die nicht mehr gepatcht werden können oder nicht mehr vom Hersteller gepatcht werden, dann hast du als ähm,\nEndverbraucher zwei Möglichkeiten, entweder du schmeißt das Ding jetzt weg,\nökologische Konsequenzen, finanzielle Konsequenzen oder du betreibst es weiter, beides keine brauchbaren Alternativen für dich als Verbraucher. Jetzt geht der, jetzt gehen wir hier hin und sagen, okay.\nBSI darf aktiv scannen und darf in einem solchen Fall sogar,\nIntegrität deines Systemes verletzen, um es in seiner IT-Sicherheit zu erhöhen. Wie bewerten wir das."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:27:35",
+      "text": "Also ich kann die Verzweiflung verstehen, so aus der Rost diese diese Geschichte entstanden ist und ähm ich.\nAlso wir haben da halt so einen so einen Konflikt zwischen dem Grundsatz, also der Integrität äh und sagen wir mal Sicherstellung von der Funktionsfähigkeit des des Netzes so. Und ich würde,\naber tatsächlich eigentlich.\nIhr mir vorstellen, ähm dass es, wenn es so eine Ermächtigung gibt, dass die halt wirklich sehr, sehr, sehr sparsam und nach sehr sorgfältiger Prüfung eingesetzt wird und nicht als,\nStandardmittel. So, also ich kann verstehen, dass man so,\nso 'ne Keule im Schrank haben will, wenn's halt wirklich um die Wurst geht so, also je mehr abhängiger wir von digitalen Systemen werden, desto klarer ist eigentlich,\nso 'ne Situation entstehen werden so, also wo du halt dann plötzlich irgendwie eine halbe Million wildgeborene Kühlschränke hast so,\nund dann stehst du halt eigentlich vor zwei Optionen, entweder kannst du einfach dann sagen, okay, wenn halt.\nTraffic passiert, nehmen wir mal den einfachen Fall an, kann's halt im Zweifel den DSR-Anschluss zumachen und den Brief schicken und seinen guten Tarif DS-Anschluss geht solange nicht bis ihr System gepatcht haben. Was ja auch schon passiert, die Telekom verschickt ja so Briefe, ne? Also richtig viele sogar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:28:52",
+      "text": "Richtig viel sehen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:28:54",
+      "text": "Paar hunderttausend. Ähm oder halt irgendwie Notfallpädchen so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:28:59",
+      "text": "Glaub die machen aber nicht den ganzen die machen in der Regel dann halt die Ports zu oder so."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:29:04",
+      "text": "Ja. Also je nachdem wie viel da was da passiert so. Aber die äh.\nEigentlich wäre halt, ist das halt wirklich nur so ein Heftlaster auf ein Heftpflaster geklebt, ja? Also so ein so eine Notfallgeschichte, wo man sagt, okay.\nWenn man jetzt sich mal schlimme Fälle überlegt, nehmen wir an, keine Ahnung, Energieversorger oder ähnliche Dinge nehmen wir mal an Smartmeter\ngegangen und äh es gibt einen Explot in diesen Smartmetern und mit diesen ops genommen, zweihundert Metern könnte man halt irgendwie blinken als in den Stadtteilen spielen.\nEs gibt sonst keine andere Möglichkeit die upzudaten außer da irgendwie rumzulaufen an die den zu stecken hätte ich Verständnis dafür."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:29:46",
+      "text": "Ich sehe, also solche Fälle, mir sind.\nRelativ wenige bekannt, wo sowas mal passiert wäre. Ähm der bekannteste Fall in so einem IOT-Bereich ist, glaube ich, der sogenannte Breaker-Bot, der im Prinzip.\nÄhm also die Schwachstelle, die sich zum Updaten oder zum zum Übernehmen solcher Geräte genutzt äh äh,\nGeboten hat, genutzt hat, um die wirklich kaputt zu machen. Und äh die Argumentation desjenigen, der das gemacht hat, war oder derjenigen\nim Prinzip zu sagen, besser das Ding ist kaputt, als dass es jetzt irgendwie noch über Jahrzehnte ein Zombie da sein fristet und hier die Nile of Serviceangriffe zum Schaden anderer macht. Ähm.\nRelativ seltener, seltener Fall. Das andere, was mir einfällt, ist im Prinzip so eine.\nIch weiß nicht, ob das ein Team von Microsoft war, die den Kommanden Control-Server von so einem Botnet benutzt haben und dann,\nüber den Kommanden Control Server,\ndem Bot net gesagt haben, der Befehl lautet, ihr lieben Bots, desinfiziert euch jetzt alle mal selber und patcht euch. Ja, ich weiß noch nicht mal, ob die auch gepatcht wurden oder ob einfach nur die Infektion,\nentfernt wurde. Ähm das sind die beiden Fälle, die mir dazu einfallen über.\nTatsächlich Jahre, die ich eigentlich IT-Sicherheitsnews die ganze Zeit verfolge und ich sehe es irgendwie nicht den Fall,\ndass die das vielleicht unterschätze ich da jetzt auch das BSI, dass die in der Lage wären so schnell so spontan solche Probleme zu lösen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:31:19",
+      "text": "Also."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:31:21",
+      "text": "Telekom-Routerausfall, da war einfach die, die neunhunderttausend Router, die der von harten waren, glaube ich, einfach durch\nDorst zu dem Zeitpunkt, als sie gesagt haben, okay, jetzt können wir,\njetzt kommt jetzt kommt die Telekom, die sehr viel spontaner reagieren kann als das BSI und macht den Port nach außen zu\nsag den Leuten, startet die Geräte neu, pusht das Firmenwahl-Update und die sind innerhalb von einem Tag dahin gekommen und das war\neigentlich hab, waren wir uns alle einig, das war so schnell, dass wir schon fast den Verdacht hatten, dass das dass sie das Update schon liegen hat."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:31:55",
+      "text": "Dass es schon fertig war, ne? Ja, ja. Also.\nWie gesagt, ich kann's so ein bisschen verstehen, dass sie so haben wollen so. Äh äh allerdings äh ist es halt so invasiv und äh so risikobehaftet, dass.\nÄhm ist,\nziemlich klar sein sollte, dass es nur so ein absolutes Last Resort Ding ist und also wenn's wirklich um die Wurst geht, dass es keine anderen Mittel gibt, es keine andere Möglichkeit gibt, das Problem zu lösen und der potenzielle Schaden so groß ist, dass man sagt, okay, dann,\nkann man dieses Risiko vielleicht eingehen so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:26",
+      "text": "Also in dem Fall in engen Grenzen habe ich da im Prinzip überhaupt gar keine Einwände. Denke wird selten."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:32:32",
+      "text": "Wenn das BSI eine unabhängige Institution wäre. Weil das halt\nglaube ich auch so mein Problem dabei, das halt um neben mir, also ich nicht genau weiß, wenn die halt irgendwie plötzlich feststellen, dass sie Leute über die Glühlampen abhören können, weil halt man irgendwie äh in die neueste LED Farbwandel, WLAN-Glühbirne halt irgendwie eine neue Firma einspielen kann und dazu fällig noch ein Mikrofon drin ist,\nWas passiert denn dann, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:58",
+      "text": "Das Sicherheitsupdate kommt von den Kollegen vom BND."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:33:02",
+      "text": "Naja oder wie auch immer, ja oder sie und dann stellt sich plötzlich raus, dass äh\nBMI, beziehungsweise BMI nachgeordnete Behörden benutzen halt irgendwie die diese Sicherheitslücke, um halt irgendwie Leute abzuhören und das BSI will's gerne patchen, die findet dann die Entscheidung statt.\nAlso das ist halt so ein so ein Ding, wo\nOkay, an ganz vielen Punkten muss das BSI raus aus der äh Verantwortung des Innenministeriums und weg von den Straferfolgsbehörden,\nAlso noch viel deutlicher wird es halt bei diesem ganzen Thema Hackpack oder auch äh Anführungszeichen aktive Cyberverteidigung wo es äh darum,\ngeht, also das Beispiel, was ihr halt in diesem für dieses, diese Gesetzentwürfe äh da diskutieren.\nPrimär Übernahme von Bodnet Host, also was halt darum geht, dass man halt irgendwie, wenn's halt ein Whatnopp gibt und da gibt's halt äh Commerz in Kontrollhaus, dass man die legal übernehmen darf. So und da,\naber die Definitionsfrage, so was ist denn jetzt halt sind denn halt Systeme, die man da übernehmen können dürfen soll. Äh\nzählt dazu zum Beispiel halt auch irgendwie ein Darknet Mark Place, wo man zwar nicht weiß, wo er steht, aber der halt eine Sicherheitslücke hat, die halt durch diesen Service-Explort da ist und solche Sachen da fängt's halt an, richtig schwammig zu werden. So und da,\nbin ich,\nehre dagegen, weil es halt irgendwie eine so eine ziemliche Büchse, eine Pandora, die man da öffnet und ähm insbesondere halt mit einem BSI, was halt nicht unabhängig ist, wo man sagt, okay, die kann man sich wirklich nur um IT-Sicherheit\nbin ich da also kein großer Freund von."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:34:36",
+      "text": "Netzpolitik Org ähm in dem Artikel von Anna Biselli und Andre Meister spricht er davon, dass,\nDas BSI soll zur Hackerbehörde gemacht werden. Wir wissen, dass äh unsere äh Freunde beim BSI das äh sehr.\nSehr ein sehr großes Wort finden, mit dem sie sich auch nicht so wirklich wohlfühlen. Ich kann da auch deren Punkt verstehen, ne? Die sagen natürlich auch, ähm tja,\neinerseits haben wir hier für die Sicherheit sorgen, andererseits sind uns alle alle Hände gebunden. Wir dürfen noch nicht mal äh irgendwie scanns durchführen, wir dürfen noch nicht mal Leute äh informieren. Das wäre doch jetzt mal irgendwie das Mindeste, wenn wenn ihr euch\nihr in dem Sinn sage ich jetzt mal CC, im weitesten Sinne, wenn ihr euch die ganze Zeit eine aktive Rolle des PSI wünscht,\nJa und nicht nur zur Verwaltung und und Forschung.\nDann müsstet ihr doch da im Prinzip dabei sein. Und natürlich ist es auch skurril, ne? Wenn man jetzt, wenn man bei dem, bei den Scans bleibt und bei irgendwie\nwo wir gleich nochmal zukommen, Zugriff mit Standardpasswörtern\nne, ist natürlich skurril, wenn wir jeden Tag mit mit Showdan und äh sonstigen Scannern arbeiten und das BSI darf sowas nicht machen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:35:55",
+      "text": "Ja, also ich bin da, wie gesagt, auch an so einem Punkt, wo ich sage, okay, die müssen halt durchaus handlungsfähig sein so. Äh.\nAllerdings äh wäre meine Bereitschaft, die in Handlungsfähigkeit zuzugestehen, sehr viel größer.\nWenn ich mir sicher sein könnte, dass halt die äh nicht nur die Mitarbeiter, die halt sagen, so, wir wollen eigentlich sowieso nichts mit den Straffolgen zu tun haben. Äh das machen, sondern halt auch sowohl die politische, als auch die die Leitungsebene des Hauses genau dieser Ansicht ist. Und wird das halt nicht sichergestellt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:36:27",
+      "text": "Also halten wir fest.\nWir wir tun es grundsätzlich damit schwer irgendetwas mehr Rechte zu geben, was äh am Ende weisungsgebunden gegenüber Horst Seehofer oder seinem Nachfolger ist. Ich denke, das industriert das Problem.\nSehr schön. Dann werden wir noch bei den rechtswidrig erlangten Daten."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:36:48",
+      "text": "Der hat das halt diese dieser Komplex, der halt äh nach dem Bundestag Doxing da äh eingebaut wurde, weil die.\nDie suchten halt nach irgendeiner Möglichkeit das nabhaft zu werden, weil was da passiert war, weil das ähm einer oder mehrere Täter äh ihre gesammelten,\näh Datenbanken äh gedammt haben, äh als Adventskalender,\nDas heißt also, dass da äh Informationen aus dem Privatleben von Abgeordneten insbesondere auch Telefonnummern und so weiter dabei waren. Bei einigen auch übernommene Social Media Accounts mit äh\nSo mal relativ intime Details aus ihrem Privatleben, was dann wiederum für Probleme sorgt und dabei gab's also eine große Aufregung und die.\nDie Probleme, die sich dabei aus der juristischen Sicht des Innenministeriums ergaben, waren halt zwei gestalkt. Zum einen,\ndass man diese Daten aus dem Netz haben wollte, also halt möglichst irgendwie sicherstellen wollte, dass die von allen Upload-Plattformen, Pace bin, Pace Print Clowns äh,\nund so weiter und so fort verschwinden, damit halt nicht noch mehr Leute davon Kenntnis erlangen. Äh und zum anderen die Veröffentlichung an sich.\nWar halt oder da gab's eine wahrgenommene Strafbarkeitslücke. So und tatsächlich ist diese,\ndieser Teil wird halt durchgehen. Also das hört so, dass die Stimmung bei den Abgeordneten halt eines von persönlicher Betroffenheit ist. Das heißt also bei diesem Teil wird's halt quasi keinen Widerstand im Bundestag geben. Das wird so ein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:38:26",
+      "text": "Muss jetzt auch dazu sagen, also da würde ich auch vorsichtig sagen, zumindest, also das war auch ein Problem. Ich habe das ja,\nähm diesen Fall ja relativ genau verfolgt und hab, hat ja auch glaub ich mal angesprochen, dass ich da mit der ein oder anderen betroffenen Person im Austausch war und,\nwirklich also auf eine gewisse Weise beeindruckend war, ist das diese Daten waren ja von vorne herein auf so vielen unterschiedlichen Seiten gepastet. Also wenn du dir da die,\nquasi das Inhaltsverzeichnis angeschaut hast, der stand hier dann immer, das gibt bei dem Haus, bei dem Haus, bei dem Haus, bei dem Haus immer so irgendwie fünf Stück äh sofort irgendwie in verschiedenen, also es war ganz klar danach ausgewählt."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:39:07",
+      "text": "Und so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:39:09",
+      "text": "Verschiedene Juristiken, verschiedene äh gibt's ja immer so diesen Begriff Bullit-Proof Hoster, die wahrscheinlich erstmal unregelmäßig E-Mails lesen und sehr zögerlich äh reagieren und jetzt auch nicht unter Direktor ähm,\nunter direkter Weisung des oder Einflussbereichs, Juristik des Innenministeriums oder der Strafpolizei Strafverfolgungsbehörden in Deutschland stehen\nund die vielleicht auch, sage ich mal, darin erfahren sind, Inhalte zu veröffentlichen, wo es äh interessierte Parteien gibt, die dieser Veröffentlichung entgegenstehen wollen\nDas war schon, also,\nDas war nicht irgendwie so, guckt mal hier, ich habe das auf äh auf irgendwo gepostet, wo es schnell wieder weg ist, ne, sondern das die waren danach ausgewählt, dass das ist wirklich und es hat\nDas war erfolgreich, das hat nämlich teilweise wirklich Wochen. Wir sagen wirklich raus waren.\nIn der Zeit hatten die ähm andere schon wieder irgendwo anders hochgeladen, sodass das ähm ja also,\nDas ist ein Punkt, den der da wirklich zum Leid dieser Person auch beigetragen hat, insbesondere persönliche Daten und so.\nSo, was wird daraus, äh was wird daraus formuliert? Ich glaube, das ist einmal der,\nArtikel drei Paragraph fünfzehn B Pflichten der Diensterbringer stellt der Dienst der Anbieter fest, das rechtswidrig erlangte personenbezogene Daten\noder Geschäftsgeheimnisse über seinen Dienst dritten, unrechtmäßig zur Kenntnis gegeben oder veröffentlicht werden, so hat er unverzüglich das Bundeskriminalamt zu unterrichten.\nNe? Also du musst das nicht."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:40:43",
+      "text": "Mitteilungspflicht ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:40:44",
+      "text": "Das ist eine Mitteilungspflicht. Ähm zweitens äh Pflicht äh Paragraph hundertneun B,\nähm unter Artikel zwei Telekommunikationsgesetz, stellt der Erbringer öffentlich zugänglicher Telekoalitionsdienste fest, das sei Dienste rechtwidrig, rechtswidrigen Weitergabe,\noder Veröffentlichung rechtswidrig erlangter Daten genutzt wird, sollte der unverzüglich des Momentes das Gleiche. Moment habe ich, ich hatte doch noch ein.\nZwei? Nee, also offenbar einmal TKG, aber wo war denn die Löschung? Ich habe offenbar den falschen.\nAch doch, steht doch da drüber. Also er muss es melden,\nund er muss diese Daten dann eben auch löschen. Interessanterweise äh weiß ich aus einem aktuellen Fall, dass die,\nAnbieter, dass tatsächlich auch nicht dürfen.\nAlso die dürfen äh aktuell nicht löschen ohne Anordnung. Liegen zurecht,\nliegen zureichende tatsächliche Anhaltspunkte für eine unrechtmäßige Erlangen der Verbreitung\noder Verbreitung personenbezogener Daten oder Daten die Geschäftsgeheimnissen Geschäftsgeheimnisse beinhalten vor, so ist der Zugang zu diesen Daten durch den Diensterbringer im Sinne des Absatzes eins zu sperren\nBetroffene Nutzer sind zu benachrichtigen, sofern der Betroffene, sofern der betroffene Nutzer nach seiner Benachrichtigung innerhalb\nangemessener Frist widerspricht, hat der Dienstagbringer die Daten zu löschen.\nZuständigen Stellen und so weiter. Also jetzt eine proaktive Löschung ähm wahrscheinlich rechtswidrig erlangter Personenbezogener Daten. Und da ärgert mich ehrlich gesagt nur dran. Oder Daten, die Geschäftsgeheimnisse beinhalten."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:42:24",
+      "text": "Ja. Genau, das war halt auch so genau dieser Punkt, wo man sagt, okay, das heißt also selbst.\nPDFs von Menuels, von technischen Geräten.\nAuf denen nur vertraulich steht oder die halt irgendwie Reparaturanleitungen, die halt sonst nur hindern zugänglich sind, die aber es halt zum Beispiel ermöglichen, dass man Geräte repariert und damit länger benutzen kann und damit Umweltsauerei reduziert.\nPositive Informationsverbreitung, dass die dann wiederum darunter fallen sollen, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:42:56",
+      "text": "Und das ist äh da wäre es schön gewesen, einfach mal schön bei den Personenbezogenen Daten zu bleiben. Da wären wir beim Fall gewesen und dann zack hast du noch Geschäftsgeheimnisse drin. Da sehen wir, dass natürlich der,\nder Schutz des Individuums in Deutschland jedenfalls nicht höher sein kann als der Schutz des Unternehmens."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:43:16",
+      "text": "Profite sind natürlich wichtiger."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:43:19",
+      "text": "So haben wir jetzt erstmal glaube ich vieles besprochen, was in diese.\nVernetzpolitik äh Ork veröffentlichten Entwurf zu finden ist.\nWie würden wir jetzt mal ein erstes Fazit ziehen? Ich weiß, du hast gerade eben am Montag im welchem Ausschuss warst du? Im Innenausschuss ähm.\nDa zu den Ideen der Opposition Ausstellung genommen."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:43:47",
+      "text": "Genau, es war halt so ein bisschen ungewöhnliche Anhörung, weil die äh Opposition normalerweise es nicht geschafft hat, einen eigenen Ausschusssitzung irgendwie durchzuboxen, aber haben's in dem Fall halt geschafft, ähm.\nDie Besetzung von Seiten der Abgeordneten war äußerst sparsam, also es waren immerhin aus jeder Fraktion einer da, aus manchen auch zwei oder drei.\nÄhm Abgeordnete."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:44:11",
+      "text": "Oh, okay."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:44:13",
+      "text": "Äh also gut plus Mitarbeiter, ja. Äh die.\nAlso sagen wir mal so aus der CDU CSU Fraktion gab's halt irgendwie keine Fragen, die irgendwie,\nsich mit den kritischen Problemen beschäftigen aus der anderen Fraktion schon, also auch aus der SPD. Die,\nAusschusssitzungen gibt's ein Video von, haben wir auch verlink.\nAlso kann man sich heute nochmal angucken, nicht irgendwann wird's wahrscheinlich auch ein Wortprotokoll geben, glaube ich, was ich aber nicht ganz genau. Aber jedenfalls Video ist ganz okay. Und,\nda war es halt eigentlich auch so, dass also eigentlich durchweg alle Sachverständigen bis auf den äh Chef des BSI äh Herr Schönbaum äh.\nEher sehr kritisch gegenüber weiten Teilen dieses IT-Sicherheitsgesetzentwurfes waren. Also was halt tatsächlich passierte war, eigentlich sollte es um die Entwürfe der Opposition gehen,\naber da dann nun halt die,\ndie Referentenentwurf er auf dem Tisch lag, drehte sich Diskussion natürlich darum, weil es halt der Entwurf war, der nun diskutiert wird, dass die Oppositionsvorschläge verabschiedet werden, steht nicht zu erwarten, so deswegen drehte sich die Diskussion dann halt dahin. Und.\nEs wurde halt klar, dass die Probleme, die wir jetzt gerade angesprochen haben, sind halt nicht nur die Probleme, die wir so sehen. Also auch irgendwie äh äh hier Klaus Landefall, zum Beispiel vom Eco ähm und andere Sachverständige sahen halt genau dieselben Probleme.\nGab halt noch so eine ganze Zusatzdiskussion, ähm die sich primär darum drehte, wer ist denn nun eigentlich zuständig für das ganze Cyber in den deutschen Behörden,\nda hat halt der das war deswegen hab ich von der Stunde Verantwortung, dass er so dessen Spielfeld wo er zu versuchen rauszukriegen. Wer jetzt da eigentlich was macht so.\nDer ist halt, also mit dem haben wir auch unsere Differenzen, was jetzt irgendwie so der ist halt der Meinung, dass der Staat halt so ein Exploid Security wohl eine Bilities Assessment Programm braucht und äh das halt notwendig ist für die Aufgaben von BND und Co und Bundeswehr. Äh\nda haben wir halt ein bisschen, aber war jetzt so der Beurteilung dessen, dass halt irgendwie diese ganzen,\nBehörden sich da irgendwann selber Personalpool prügeln und wenig auf die Reihe bekommen.\nUnd die Zuständigkeit im Krisenfall halt auch völlig unklar ist, ist halt dann so ein muss dann so ein riesiger Konferenzraum sein, wo dann alle fünfunddreißig Akteure, die in Deutschland Cyber machen an einem Tisch sitzen. Also es wird bestimmt sehr unterhaltsam."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:46:42",
+      "text": "Man nennt das in der Psychologie Verantwortungsdiffusion, ja? Also es äh einfach zu viele, wenn du zu viele Zuständige hast, kannst du genauso gut keinen zuständigen haben."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:46:51",
+      "text": "Mhm. Und dann auch noch so die völlig ungeklärte Frage nach der Rolle der Bundeswehr, die dann halt so von denen selber so definiert wird, also die haben ja so ein, so ein äh,\nKommando äh CNO Kompetenz für Operation hieß es früher, hat glaube ich was mittlerweile Cyberoperationsraum oder so.\nÄh und die sagen halt ja, na ja, unsere Rolle ist ja nicht so richtig definiert, aber wir würden gerne bei allen wichtigen Sitzungen zu Krisenfällen mit am Tisch sitzen, weil,\nnicht weiß, ob die Krise soweit eskaliert, dass wir doch tätig werden müssen. Als Bundeswehr mit unseren Cybernetwork Operations. So, also so ist es halt so\ndann auf der Frage, auf die Frage so attackiert, auf\nder Grundlage, welcher Doktrin und welcher so Einsatzdoktrien braucht, als ein Militär schon so, ne? Und auf Grundlage, welches Parlamentsbeschluss, ja, damit dem Parlamentsbeschluss klar ist wichtig, aber eins ist doch Trainer, ja, haben wir noch nicht so. Lassen Sie das mal von was anderem reden,\nAlso das ist halt so eine, so ein völliges Verantwortungschaos, der äh der äh,\nauch mal versucht darzustellen, hier gibt's so eine Übersichtsgrafik, die sollten wir vielleicht noch verlinken, die ist nämlich, die ist nämlich relativ äh relativ äh.\nUnterhaltsam, weil sie halt auch völlig konfuß ist und äh interessanterweise wie äh dann in der Sitzung angemerkt wurde, nicht mal vollständig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:07",
+      "text": "Als staatliches Cybersicherheitsarchitektur Stand August zwanzig achtzehn. Oh ja."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:48:11",
+      "text": "Nee, da gibt's ein Update, du musst das Update verlinken. Oh je, genau. Du musst das Update verlinken, genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:13",
+      "text": "Oh je, ich muss das Update verlinken, okay? Ja, das ist, also das ist auch wirklich ein, also das ist tatsächlich sehr äh sehr tragisch, ne. Update verlinken. Ähm.\nJa. Das äh das übrigens, dass der Arne Schönburm da steht und sagt äh wir brauchen das, das finde ich super. Ähm ist natürlich klar, denn erstens ist davon,\nviel\nTeile des Gesetzes betreffen, seine Behörde, insbesondere auch der schöne Absatz über Erfüllungsaufwand, dass beim BSI ist ein Erfüllung\nAufwand in Höhe von achthundertvierundsechzig Planstellen ähm notwendig. Also wenn wenn es bei dem Gesetz darum geht, dass er halt achthundertvierundsechzig neue Mitarbeiterinnen bekommt, ist klar, dass er da jetzt äh Schwierigkeiten hat dagegen zu sein. Ähm,\nandererseits stellt sich natürlich aber auch ernsthaft die Frage, wo will der die denn her haben."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:49:07",
+      "text": "Äh das BSI kriegt tatsächlich Mitarbeiter, äh weil die also zum einen zahlen die relativ gut und die Arbeitsbedingungen sind sehr familienfreundlich. Ähm,\nist tatsächlich und da ist man halt auch nicht\nalso in der Regel nicht im Schädigbereich tätig, ne? Also es hat tatsächlich eine andere Sache, als wenn jetzt dann mal der BND hört, Leute sucht, dann müssen die hal\nschon eher oder Verfassungsschutz oder irgendwie oder zieht es oder so. Die bedienen sich halt primär an der Bundeswehruni, wo sie halt Leute schon mit dem entsprechenden Mindset halt finden und die dann halt irgendwie trainieren,\nund äh hingegen das BSI findet also gerade bei so Leuten, die halt eher so aus der Akademie kommen und mal was Gutes tun wollen, finden die durchaus Leute."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:49:49",
+      "text": "Aber nicht achthundertvierundsechzig. Also ich stelle den, ich stelle den."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:49:53",
+      "text": "Wahrscheinlich nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:49:54",
+      "text": "Die Suche nach qualifiziertem Personal im IT-Sicherheitsbereich dann doch relativ angestrengt geführt wird."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:50:03",
+      "text": "Zu relativ hohen Preisen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:50:05",
+      "text": "Ja und äh was ich also das, ne, das gibt's ja einige Indikatoren, erstens, dass alle alle versuchen, Leute anzustellen,\nZweitens, dass du irgendwie auf den den äh äh Job\näh asozialen Netzwerken am laufenden Band irgendwelchen Spam, kriegst von irgendwelchen Leuten, die einfach nur Suchbegriff äh IT-Sicherheit oder sonstwas hatten. Mit wem du redest, sagt dir, wie schwierig das ist, Leute zu finden. Ähm\nwenn du ein größeres Unternehmen in dem Bereich anschaust oder,\ngrößere Consultancy, die haben inzwischen äh auf Dienstsprache Englisch umgeschaltet und Leute aus aller Welt dort.\nAlso der Fachkräftemangel ist hier enorm und da sehe ich jetzt nicht, dass da achthundertvierundsechzig Stellen sofort besetzt werden, wobei sich dann auch die Frage stellt, ob das alles Fachkräfte sein müssen, können ja auch, also viel wird ja auch Verwaltung sein."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:50:55",
+      "text": "Na und die sind halt auch nicht die einzigen, die suchen, ne. Und alle anderen auf diesem Organigramm da suchen halt auch gerade."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:51:02",
+      "text": "Also das ist irgendwie so. Genau, alle anderen suchen auch. Das ist also irgendwie ein, das ist nicht das eine, das einzige schwarze Loch im Bereich der des IT Security Recruitings, was da gerade,\ndann aufgehen wird.\nÄhm also da halten wir fest, diese Verantwortungsdiffusion da mal ein bisschen zu sortieren wäre nicht schlecht und ähm.\nDann könnten wir natürlich hoffen, irgendwie, dass da, dass da was passiert,\nNun, du hast gerade schon öfter angefangen, so ein bisschen das Ganze einzuordnen. Ich glaube, das sollten wir abschließend nochmal tun. Worum geht es hier überhaupt und woran,\nhapert es. Also du hast gesagt, na ja, es gibt einmal diese diese Angst vorm Kontrollverlust, die der Staat da jetzt irgendwie hat und die ist ja wahrscheinlich auch noch nicht mal so,\nso hart unbegründet, ne? Diese Doxingfälle haben das.\nHaben die Bundesrepublik und ihre für die IT-Sicherheit zuständigen Stellen relativ blamiert. Die Frage sagt mal.\nWieso fällt das dieser Adventskalender erst Anfang Januar auf? War für einige sicherlich unangenehm. Ähm.\nDie verschiedenen Fälle Angriffe auf Bundesregierung, Angriffe auf Bundestag, haben verschiedene Stellen immer wieder mal schlecht aussehen lassen und dass es insgesamt in diesem Cyberbereich,\nnicht ganz so großartig aussieht, ist glaube ich auch klar."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:52:35",
+      "text": "Also äh aus meiner Sicht haben die da halt einen.\nDas klare Gefühl, dass ihnen gerade die Fülle davon schwimmen. Also, dass sie halt eine.\nÄh Situationen raufziehen sehen, wo die Abhängigkeit von IT-Systemen so groß ist, dass sie.\nOhne halt nichts mehr funktioniert und dass die dass man halt was tun muss und das ist halt so eine diese.\nNaja, diese langjährigen Bürokraten, die halt für solche Sachen zuständig sind. Die sind halt auch in gewisser Art und Weise halt so Kontrollmaximalisten.\nUnd äh ich hatte das damals irgendwie im ähm,\nin Villa Store beschrieben hat, so diesen dieses Mindset so von die sehen halt alle möglichen Bedrohungen heraufziehen so irgendwie von irgendwie Klimawandel über VIT Security, Flüchtlingswellen und so weiter und so fort. Ähm und,\nhaben das dringende Bedürfnis mehr Kontrollmechanismen zu haben, mehr Möglichkeiten zum Eingriff, mehr.\nMachtmittel, die sie halt benutzen können, um den Status quo aufrechtzuerhalten. Und,\nDaraus resultiert also das hat dieses Mindset, was dahinter steht. Man sieht's auch relativ deutlich in diesen Gesetzen, so dass halt also der alles was jetzt neu ist, eine hohe Dynamik entfaltet und wo halt klar ist, das haltet wie möglicherweise eher so ein bisschen grau oder darg,\nwollen die halt möglichst irgendwie versuchen halt irgendwie die Löcher am Damm noch irgendwie so zu stopfen so und daraus resultiert halt dieses äh dieses Gesetz auch mit diesem Darkner kriminalisieren und irgendwie,\nmöglichst alles löschen können, Terror Upload fügt, also also dieses ganze,\ndie wollen jetzt halt dieses wilde Internet, was es eigentlich auch schon nicht mehr gibt so, aber noch die letzten Reste davon wollen die halt möglichst auch noch aus trocknen\nso umhalt und wie das alles schön ordentlich zu haben, sondern so daraus zu sortieren dann so Sachen wie in Österreich, gerade diese Nummer mit äh dem Gesetz, was da gerade durchgeht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:54:34",
+      "text": "Oh"
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:54:35",
+      "text": "Dass du äh nur noch äh unter Angabe deiner Mobiltelefonnummer halt Kommentare im Internet veröffentlichen darfst."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:54:41",
+      "text": "Ein Jahr vorher haben sie gemacht. Titel äh Mobiltelefonnummer nur noch mit Ausweis, ne."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "1:54:45",
+      "text": "Genau. So,\nheißt halt also damit wäre halt irgendwie anonymes Posten halt irgendwie in in Österreich halt erledigt so. Und das sind halt das halt dieses Mindset was die haben. Also dieses\nwollen die Kontrolle haben. Natürlich macht sie dann halt auch fertig, dass halt irgendwie bestimmte Ausländer so möchte halt irgendwie mit solchen Methoden auch Virtus spielen. Ne, also die halt,\nDesinformationskampagnen,\nmachen die natürlich halt nervös, weil sie halt irgendwie an den Kern von Demokratie gehen, aber dafür, um das dann halt zu verhindern, schaffen sie dann halt erstmal, habt die Demokratie ab, indem sie Meinungsäußerungen und so weiter und sofort schwieriger machen so. Und dieses.\nAlso dieses Tote aus Angst vor dem Feind Dingen zieht sich halt durch dieses gesamte äh dieses gesamte Werk und wir denken, dass dass man da halt eher einen anderen Ansatz fahren sollte, also dass halt die.\nDie Methoden, wie man mit diesem IT Security-Problem angeht, nicht,\nHomepage und an den Symptomen sein sollte, sondern halt einen Herangehen an die grundlegenden Probleme. Äh und dat dauert zwar relativ lange, bis man damit fertig ist, wenn man halt einfach große Teile der Software neu schreiben muss zum Beispiel. Ähm,\nund äh.\nAusbildung verbessern muss, dafür sorgen muss, äh hat die auch in der Anhörung gefordert, zu sagen, niemand sollte in Deutschland mehr programmieren lernen, egal ob bei einer Schule oder Hochschule oder in der Ausbildung oder sonst irgendwo, ohne zu lernen, wie man sicher programmiert,\nJa, ist ja auch nicht so schwer. Sollte irgendwie ein Handwerk wie jedes andere auch, sondern man programmieren lernt, kann man gleich von Anfang an lernen, wie man sich ja programmiert. Der Aufwand ist nicht so groß,\nMan sollte es halt einfach verpflichtend machen und und des entsprechenden Ausbildungsmaterial zur Verfügung stellen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:56:20",
+      "text": "Hinzukommen, dass er, dass es ja jetzt modernere Programmiersprachen gibt, die einen auch vor vor vielen ähm vor vielen Fehlern versuchen zu bewahren, ne? Also wenn man irgendwie an die\nProgrammiersprachen denken, die jetzt zumindest versprechen, dass man in der Speicherverwaltung keine äh keine gravierenden Fehler mehr so einfach.\nGeschrieben kriegt, wenn man sich nicht sehr viel, wenn man sich nicht sehr viel Mühe dafür gibt. Ich sehe das Ding noch, also ich seh's irgendwie.\nVor allem wenn man auf den internationalen Vergleich blickt. Ähm sehe ich in Deutschland eigentlich noch eine eine ganze Sache. Also ich find's noch ein,\nSchritt schlimmer als es sein müsste. Ich habe ja so gesagt, es gibt eigentlich kein fundamentales, praktisch relevantes Problem in der IT-Sicherheit, was mich zumindest theoretisch gelöst wäre,\nund trotzdem sehen wir überall katastrophale Zustände, ja.\nEiner der auslösenden Gründe auf jeden Fall, dass es den Leuten einfach nicht beigebracht wird, wie sie sicher programmieren, dass denen nicht,\nbeigebracht wird, wie man wie man Sinnvolles Design macht äh von und auch wie man ein Fred Modeling macht, bevor das Produkt fertig ist. Statt nachher, ja? Und ähm.\nWas ich noch viel interessanter finde ist, ich habe ja jetzt.\nIm Prinzip viele Jahre zugebracht in der in der Forschungsgruppe, die sich im Prinzip mit.\nKomplexen Angriffen auseinandergesetzt hat, die gesucht hat, okay, wenn Verschlüsselung angewendet wird, dann finden wir\ndie Fehler in der Verschlüsselung und nicht die Fehler an den Endpunkten, wo sie jeder andere findet und sich einfach reinheckt. Und ich hab ein bisschen den Eindruck, dass IT-Sicherheit auch in der.\nIn der Forschung, wo sie betrieben werden sollte auf jeden Fall, wo es total richtig ist, aber dass die Forschung im Prinzip der Realität auch schon wieder voraus ist. Ja, wir diskutieren zum Glück und ich finde es nicht falsch. Wir finden, ich finde es richtig, dass wir heute,\nPost Quantim, Cryptographie diskutieren. Wir diskutieren heute die Lösungen von in zwanzig Jahren, ne? Das ist gut, ist notwendig. Forschung sollte vorangehen. Ähm,\nIn der Realität werden wir aber heute geohnt über Passwort eins, zwei, drei, ungepatchte Systeme und sonstige, das heißt wir während wir,\nIch nehme jetzt da auch dich mal mit rein als jemand, der in der Entwicklung von sicheren Systemen ähm und zwar mehreren kritischen Systemen eine.\nDeine Rolle ist, glaube ich, CTO, ne? Also die entscheidende Rolle spielst ähm während wir die Probleme wirklich.\nGanz andere Probleme lösen, passieren diese ganzen Hacks äh im Prinzip,\nschon auf so einer Basisebene, die da nicht eingehalten wird, ne? Schlechte Passwörter, ungepatschte Systeme, wo es dann nämlich am Ende irgendeinem,\nTeenager ermöglicht da reinzukommen. Das ist äh war immer die Frage bei diesem Doxing. Ja, wie, wie kann das ein Teenager machen? Wie kann das ein Teenager machen? Also\nein Teenager, der noch bei Mama wohnt, wo dann eigentlich meine flapsige Antwort war, ja, der, weil der Internet hat,\nWir haben das dafür gebaut, dass jeder Teenager, der bei Mama wohnt, auch daran teilnehmen kann. Aber eigentlich ist das Problem natürlich viel\nViel schlimmer, nämlich, dass wir die Basalanforderungen schon nicht erfüllen. Und deswegen können wir noch so viele Hochsicherheitssysteme ähm,\nversuchen zu entwickeln, wenn am Ende die die Unternehmen geordnet werden und die Privatpersonen geordnet werden, die,\ndie das Basissicherheitsniveau noch nicht mal einhalten. Und dann finde ich geht's noch, geht so eine,\neine Nummer weiter, wenn wir uns anschauen, was Deutschland jetzt so für IT-Sicherheitssysteme baut. Beispiel wie Beispiel Telematik,\ndem Beispiel besonderes elektronisches Anwaltspostfach. Beispiel Notarpostfach. Alles Themen, die wir in Lokbuch Netzpolitik schon äh rauf und runter diskutiert haben, die wir als CCC oder Mitglieder des CCC oder\nerweitertes Familienumfeld des CC, die offen CC Vortragen alles kaputt gemacht haben, ja? Jetzt stellen wir immer fest ähm,\nEs wurde.\nEs wurden diese das Basiswissen der IT-Sicherheit nicht angewendet. Es wurde gegen das, was quasi Forschungsstand und Best Practice ist in der IT-Sicherheit eklatant verstoß."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "2:00:47",
+      "text": "Nicht mal irgendwie gegen jetzt nochmal den ganz weit draußen stand, sondern so gegen so den so das das normale Handwerk, ja? Also."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:00:54",
+      "text": "Richtig, gegen, es wurde es wurde gegen Basiswissen, ja, nicht irgendwie oh guck mal hier, es braucht ähm,\nähm ne, irgendwelche Curus, die dir jetzt da oder oder irgendwelche Russgurus, die dir erklären, warum das jetzt irgendwie noch ein Fehler war, sondern einfach Schwachstellen, die wir bei denen wir nie Probleme hatten, die der Öffentlichkeit auch zu vermitteln und zu erklären, guck mal, da ist die Schwachstelle\nja. Eigentlich würdest du also bei einer Schwachstelle in einem nach nach heutigen best Practice gebauten System\nDie kriegst ja den meisten Leuten gar nicht mehr erklärt. Da können wir dann irgendwie akademische Diskussionen darüber führen, ne? Aber wenn das ist irgendwie so, wie bist du reingekommen? Ja, Passwort, eins, zwei, drei, das kriegen wir allen erklärt,\nähm und ich habe da so eine, so eine Meta-Theorie zu. Es gibt im Prinzip so.\nIn diesem ganzen wie Digitalisierung stattfindet. Wenn man jetzt mal extrem extrem pol,\nChina, ja? Extrem pool oder auch andere asiatische Länder. Ganz ganz krass, risikoblind,\nvoll Digitalisierung von allem Gesichtserkennung im öffentlichen Raum.\nAlles was geht, gib ihm, gib ihm, gib ihm und ähm natürlich auch sogar noch ganz offensichtlich die die Nachteile der Digitalisierung eigentlich gar nicht,\nGar nicht als Nachteile sehen, ne? Ähm.\nDas heißt, da hast du so eine ganz Blindeninnovationsgetriebenes Vorgehen und dem gegenüber würdest du eigentlich sowas sehen in\nwas Deutsche versuchen, ja wir machen das aber sicher und gründlich. Deswegen, man muss nicht immer der Erste sein, der alles digitalisiert, sondern wir machen das dann ordentlich. Und dieses ordentlich kriegt Deutschland eben auch nicht hin."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "2:02:30",
+      "text": "Genau, das hat das hat er sich so ein Problem, weil wir hätten halt die Chance ordentlich zu machen, aber wir verkacken es halt. Also es wird halt einfach nicht richtig durchgezogen,\nden Vorteil, den wir da haben könnten, auch wirklich auszuspielen, so. Und,\nDas hat auch so eine der Forderungen, die wir haben ist zusammen. Deutschland braucht halt eine defensive Strategie für den Umgang. Äh mit möglichen Angriffen im digitalen Raum. Wir brauchen halt einen.\nHerangehen, was sagt, wir setzen auf Verträge und wir setzen auf tatsächlich mehr effektive Sicherheit,\nund nicht darauf, dass wir halt irgendwie Offensivkapazitäten aufbauen in der Hoffnung, dass wir da irgendjemand abschrecken können, was sowieso nicht funktioniert. Dieses.\nAlso dieses dieses Problem zu verstehen, dass es ein lösbares Problem ist, dass es nur Geld kostet und wenn man sich da mal.\nWirklich eine Strategie überlegen wird, die den Namen verdient und nicht in Sammelsorium von Verantwortungsdiffusionen mit äh,\nDutzend Behörden, die alle mehr Plan stellen wollen,\ndann könnte man da sicherlich was tun. So, also das wäre halt, also ich bin jetzt nicht für einen Digitalministerium oder sowas. Es wurde halt auch nicht funktionieren, aber tatsächlich eine,\nRessort übergreifender Maßnahmen, um halt die effektive Sicherheit zu erhöhen, indem man halt zum Beispiel mit relativ viel Geld Open Source Software, Auditing und open Source Software neu schreiben,\nnach sicheren Maßstäben fördert, was dafür sorgt, dass wir über ein paar Jahre hinweg unsere Softwarebasis neu bauen. Wäre zum Beispiel so ein Ding, eine andere Sache, wäre Kennzeichnung von Geräten.\nWarum kann ich immer noch ein Tablet kaufen irgendwie äh äh wenn ich in in Elektromarkt laufe, was de facto Elektroschrott ist in dem Augenblick, wo ich aus der Tür laufe, weil es für den Herr vom Hersteller keine Updates mehr gibt und ich mich damit nicht mehr ins Internet trauen darf eigentlich?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:04:20",
+      "text": "Und das wäre nämlich, das wäre ja genau der Punkt, wo wo jetzt auch mal so gesetzliches Handeln überhaupt eine Wirkung entfalten kann."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "2:04:27",
+      "text": "Genau, also eine Kennzeichnungspflicht, ne, so statt halt wie Böse Roter TA, wo wir halt irgendwie am Ende mit einer freiwilligen, möglichen Selbstverpflichtung für so diese Update-Geschichten,\ndaher kommen, die du aber auch folgenlos halt nicht beachtet werden kann äh und es äh letzten Endes nicht mal eine Verpflichtung dazu gab zu sagen, okay, wenn du halt,\nauf den Router eine sichere, nämlich Open Source äh Firma wie Open Werte installieren willst, dafür,\nhast du kein Recht darauf, obwohl's eigentlich dein Router ist? Das war halt super enttäuschend. Das haben wir den BSI dann aber auch intensiv und mehrfach gesagt und auch den Leuten im BMI, dass diese Router TA Nummer aus unserer Sicht\ngenau so war, wie es nicht hätte laufen sollen, weil die sich halt komplett haben, einbuttern lassen äh von den den Kabelnetzlobbyisten,\nund also auch teilweise in den Sitzungen halt Sachen gelaufen sind, wo man sich fragte, wer jetzt hier eigentlich die Moderation hat und deshalb so 'ne,\nso ein Vorgehen, was halt zeigt, wie man's genau nicht machen sollte. Trotzdem interessanterweise ein Satz dazu noch, sieht es BSI diese Router TR als Erfolg.\nBizarre Weise."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:05:37",
+      "text": "Wie kommt ihr dazu."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "2:05:39",
+      "text": "Die kommen dazu, weil sie sagen, wir haben einen ersten Schritt gemacht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:05:43",
+      "text": "Ja genau, das ist."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "2:05:44",
+      "text": "Das ist halt so, weißt du so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:05:45",
+      "text": "Das ist genau das, da wollte ich nämlich noch kurz zu setzen zu sagen, das ist genauso diese äh wenn du gerade zuschaust, wie in den letzten viertel Jahrhundert, ja, sich dein gesamtes Land digitalisiert, dann kannst du IT-Sicherheit,\nnicht als Kompromiss\nsehen. Ähm und diese einfach mal kompromisslos an eine Sache ranzugehen und IT-Sicherheit kompromisslos zu sehen, das fehlt mir in all diesen Debatten. Weil ich gerade, ich habe ja gesagt, so dieses, also es gibt im Prinzip dieses Innovationsgetriebene\nund dem gegenüber gibt's diesen Stabilitätsgedank.\nUnd dieser Stabilitätsgedanke, den finde ich ja auch sehr gut, denn ähm nur ein, also ne, nur wenn man diese,\nSysteme mit Bedacht baut und ordentlich baut, dann können die auch ne irgendwie vielleicht mal paar Jahre halten, so und das das ist auch das, wo wir hin müssen. Was wir aber hin, was,\nin Deutschland eigentlich der, also der Nachteil von Stabilität wäre quasi diese Trägheit, ja? In Deutschland haben wir aber im Prinzip die beiden Nachteile,\nkombiniert. Also Innovationsinnovation\nNachteil, ähm! Unsicherheit, ja? Stabilität, Nachteilträger, wir haben aber träge Unsicherheit. Wir haben also wir haben keins von, wir haben nirgendwo den Vorteil, wir haben alle Nachteile dieser Digitalisierung kriegen wir voll zu\nso den den Hals runter und die Vorteile kriegen wir noch nicht einmal äh genossen. Und ich glaube tatsächlich.\nDass ähm die Probleme in der IT-Sicherheit in diesem Beispiel ähm Telematik, DML, Bea und so weiter. Was wir da sehen, ist.\nSchwachstellen, die dort gefunden werden, die sind in der Regel kannst du ganz klar sagen, das ist der Kompromiss, der eingegangen wurde, weshalb sich dort diese Schwachstelle befindet\nHier ist die ähm so und dann hast du weiterhin sind diese Systeme durch diese Kompromisse unglaublich komplex.\nKomplexität ist schon immer der Gegner von IT-Sicherheit gewesen, sodass ich äh irgendwann mal gesagt habe, das fand ich sehr klug. Äh Komplexität ist im Prinzip,\nfehlpraktizierte, falsch praktizierte Stabilität\nUnd das ist so ein bisschen das deutsche, das deutsche Ingenieurwesen, um jetzt nochmal noch größere Partners aufzumachen, ist jetzt so die Sachen so komplex zu bauen, dass man sagte, da kann jetzt nichts mehr schiefgehen so. Das haben wir so komplex gebaut, das kann doch nicht mal mir jemand verstehen\nUnd genau da glaube ich geht auch IT-Sicherheit eben den Bach runter. Bei."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "2:08:11",
+      "text": "IP-Säcke sagt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:08:13",
+      "text": "Beispiel kannst jedes Beispiel nehmen, ne? Äh insbesondere jetzt hier Telematik, die mir äh Notarpostfach und so. Ja, das muss aber dann noch mit dem IT-System funktionieren und das wieder das Ding. Longtale\nLegacy und so weiter, da jeder der IT-Sicherheit macht, jeder der Pantest macht\nguckt sich ein System an und sagt, erklär mal bitte, wo wir jetzt komplex oder gibt's hier irgendwelche Legissy Downgrades, das ist das, was du noch vier Stunden beim Kunden anfangst, zu machen, da findest du die ersten Schwachstellen. Und diese gesamten deutschen Systeme sind\nVoll davon, die ganzen Deutschen Herangehensweisen sind von, ja, aber dann können wir unsere Legacy-Systeme nicht mehr unterstützen oder dann können wir hier im Moment mal, dann wird das ja zusichern, dann kann man das auf einmal nicht mehr abhören. Wir haben ja hier eine äh Vorgabe einer Abhörst,\nDemail, ja? Und all das, also du findest diese gesamte all das, was wir an der Router TR diskutieren,\noder oder kritisiert, nämlich dieses das wird diskutiert, da wird.\nKompromittiert, wollte ich schon sagen, da wird erst ein Kompromiss gemacht und dann wird's kompromittiert. Deswegen sind diese beiden Begriffe wahrscheinlich auch so nah beieinander.\nDas fehlt mir und dieses in diesem IT-Sicherheitsgesetz,\ndas war das, was ich beim IT-Sicherheitsgesetz eins kritisiere, äh kritisiert habe und ich glaube, diesen Kritikpunkt würde ich auch beim IT-Sicherheitsgesetz zwei sagen, da wird wieder nichts.\nKeine erkennbaren mutigen Schritte in eine Richtung gegangen am Status quo etwas zu ändern."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "2:09:40",
+      "text": "Also letzten Endes, was halt passieren müsste, wären halt ein bisschen größere Würfe, die den.\nGenau diesen Status Quo langfristig auch ändern. Ne? Also dazu gehört zum Beispiel sowas wie äh die Erarbeitung von Ausbildungsmaterial. Ne, das ist halt irgendwie,\nWarum haben wir in Deutschland kein Open Source für frei verfügbares Ausbildungsmaterial, für Informatikunterricht? Für die gängigen Programmiersprachen, die da irgendwie üblich sind\nin denen es halt die Module gibt, wie man sicher programmiert und zwar grundsätzlich von Anfang an mit der Erklärung dazu. Und irgendwie in dem Augenblick, wo man Leuten mal zeigt, wie ein Buffer Oberflow-Explort zum Beispiel funktioniert.\nOder mit Steck Exploid oder so, also entweder einfache Sachen, dann verstehen die plötzlich auch.\nWarum es wichtig ist, darauf zu achten und halt irgendwie einfach,\nZum Beispiel Programmiersprache zu nehmen, indem einem sowas nicht passieren kann. Ja, also geht ja auch so, ne? Und die äh also wenn ich da zum Beispiel halt so Wissenschaftler sehe,\nhalt dann einfach irgendwie weil sie's nicht anders gelernt haben da halt mit Cerumfuchteln,\nund da halt so irgendwie Pointer und einem Copy Höhlen haben, wo man denkt so, Japan, das System sollte besser nirgendwo, wo irgendwie auch nur entfernt, Internetrelle ist. Äh,\nWarum denn, ja? Also muss ja nicht sein, geht ja auch einfacher und besser. Na ja, jedenfalls diese.\nDiese diese grundsätzliche Raniere zusammen, man versucht es halt äh mal im großen Wurf zu lösen, fehlt halt, dieses Gesetz ist halt ein Rumdokter an Symptomen äh was parallel dafür sorgt, dass die Leute, die helfen könnten, das Problem zu lösen,\näh nämlich die Hacker-Komödie und der die Security Research Community unnötig.\nJa muss man sagen zu Feinden gemacht werden, ne? Also weil ganz viele dieser Dinge sind halt grundsätzlich, gehen halt nicht okay. So, die da drin stehen und das.\nWird halt eher fürs Gegenteil sein. Es wird halt nicht viel mehr IT-Sicherheit sorgen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:11:39",
+      "text": "Tja, ich denke damit sind wir ähm so langsam am Ende unserer Bewertung.\nIch danke dir für die Zeit, die du dir genommen hast. Ich merke auch, dass es langsam hängen wird und wir beide noch ein bisschen arbeiten müssen und ähm,\nIch hoffe, dass,\ndas für dass es uns gelungen ist das Thema ein bisschen auch näher zu bringen, weil es ja immer so ein bisschen bei bei IT-Sicherheit, ich hab das, ich hab häufig so den Eindruck, ne, bei Ärzten gibt's irgendwie die.\nDie Halbgötter in weiß und bei Hackern ist so ein bisschen so die Halbgötter in schwarz, ne? Das das wenig verstanden wird was die tun. Und ich bleibe eigentlich bei der äh bei der Ansicht, dass.\nMöglich ist, sicherer zu werden und es schön wäre, wenn wir da irgendwie hinkämen und es wäre wirklich toll, wenn wir ein IT-Sicherheitsgesetz hätten, was äh Anreize in diese Richtung auch geben würde."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "2:12:44",
+      "text": "Ja, na ja, mal gucken, vielleicht ändert sich ja noch was am Referentenentwurf."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:12:50",
+      "text": "Vielleicht ändert sich noch was am Referententwurf. Immerhin, ich fand das ganz toll, dass du da bei der das\ndass diese Anhörung mal ein bisschen vorher war und das war auch ein bisschen der Grund, warum ich äh dich gebeten habe, dass wir nochmal eine Logbuch Spezial quasi zu dem Thema machen, weil wir sonst\nsehr häufig die Erfahrung gemacht haben im Prinzip,\nam fertigen den fertigen Entwurf im Ausschuss nochmal einmal kritisieren zu dürfen und uns da selten die Ehre zu Teil geworden ist, dass da nochmal irgendwas daran geändert wurde,\nmit."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "2:13:22",
+      "text": "Mal gucken, ich meine es hat also vielleicht, wenn die SPD halt irgendwie entdeckt, dass sie bei dem Thema doch mal risikofrei auch äh sich vielleicht äh mal Richtung Positives bewegen könnte, eigentlich na wie immer, bei der SPD ist die Hoffnung natürlich gering."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:13:37",
+      "text": "Also liebe innere Sicherheitspartei Deutschland, hier könnt ihr punkten, äh, indem ihr."
+    },
+    {
+      "speaker": "Frank Rieger",
+      "time": "2:13:42",
+      "text": "Genau. Ihr könnt es mal wirklich was für die Sicherheit tun und nicht nur äh so tun, als würdet ihr das, was die CSU als Sicherheit verkaufen würde und wir auch gut finden. Hauptsache, ihr fällt am Ende nicht um. Genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:13:51",
+      "text": "Hauptsache ihr feilt am Ende nicht um. Also, Cyber Ahoi, vielen Dank Frank. Alles klar. Ciao ciao."
+    }
+  ]
+}

@@ -3,6 +3,10 @@ import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+// Parse podcast argument FIRST (before other args)
+const podcastIndex = process.argv.indexOf('--podcast');
+const PODCAST_ID = podcastIndex !== -1 && process.argv[podcastIndex + 1] ? process.argv[podcastIndex + 1] : 'freakshow';
+
 function parseArgs(argv) {
   const args = {
     force: false,
@@ -10,11 +14,22 @@ function parseArgs(argv) {
     end: null,
     timeoutMs: 60000,
     retries: 2,
+    all: false,
   };
-  const a = argv.slice(2);
+  // Skip 'node' and script name, and also skip --podcast and its value
+  const a = [];
+  for (let i = 2; i < argv.length; i++) {
+    if (argv[i] === '--podcast') {
+      i++; // Skip the podcast ID value
+      continue;
+    }
+    a.push(argv[i]);
+  }
+  
   for (let i = 0; i < a.length; i++) {
     const k = a[i];
     if (k === '--force' || k === '-f') args.force = true;
+    else if (k === '--all') args.all = true;
     else if (k === '--start') args.start = a[++i] ?? null;
     else if (k === '--end') args.end = a[++i] ?? null;
     else if (k === '--timeout-ms') args.timeoutMs = a[++i] ?? null;
@@ -29,10 +44,6 @@ function parseArgs(argv) {
 const ARGS = parseArgs(process.argv);
 const START_EPISODE = ARGS.start !== null ? parseInt(String(ARGS.start), 10) : null;
 const END_EPISODE = ARGS.end !== null ? parseInt(String(ARGS.end), 10) : null;
-
-// Parse podcast argument
-const podcastIndex = process.argv.indexOf('--podcast');
-const PODCAST_ID = podcastIndex !== -1 && process.argv[podcastIndex + 1] ? process.argv[podcastIndex + 1] : 'freakshow';
 
 const PROJECT_ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const EPISODES_DIR = path.join(PROJECT_ROOT, 'podcasts', PODCAST_ID, 'episodes');
@@ -358,6 +369,8 @@ Options:
     return;
   }
 
+  console.log(`Processing podcast: ${PODCAST_ID}`);
+  console.log(`Episodes directory: ${EPISODES_DIR}`);
   console.log('Reading episode files...');
   const episodeFiles = await getEpisodeFiles();
   

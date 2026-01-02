@@ -1,0 +1,203 @@
+{
+  "episodeNumber": 133,
+  "title": "LNP133 Staatsbegräbnis in purem Gold",
+  "extractedAt": "2026-01-02T10:53:13.732Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "Nachlese: SIM-Malware",
+      "subject": {
+        "coarse": "Security",
+        "fine": "Malware"
+      },
+      "durationSec": 321,
+      "positionSec": 177,
+      "summary": "In der Episode wird über SIM-Karten und deren Sicherheitsaspekte diskutiert. Linus Neumann erwähnt, dass SIM-Karten über OTA (Over-the-Air) Updates konfiguriert werden können, was die Installation von Malware ermöglicht. Ein Beispiel ist die SIM-Karten-Malware, die Geokoordinaten per SMS an eine Zielrufnummer sendet. Zudem wird auf die Möglichkeit eingegangen, durch strategische Deregulierung Billing Records zu manipulieren. Es wird auch auf die Herausforderungen im Bereich der Telekommunikation und die Rolle von Dienstleistern eingegangen, die Billing-Outsourcing betreiben.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "133-ts.json",
+        "method": "time-window",
+        "pickedCount": 12,
+        "startSec": 157,
+        "endSec": 518,
+        "generatedAt": "2026-01-02T18:01:43.511Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Nachlese: Gemalto wurde gar nicht gehackt",
+      "subject": {
+        "coarse": "Security",
+        "fine": "Hacking"
+      },
+      "durationSec": 238,
+      "positionSec": 499,
+      "summary": "Im Transkript wird diskutiert, dass Gemalto nicht gehackt wurde, sondern nur die Office-Netze betroffen waren. Linus Neumann kritisiert die Argumentation, dass 3G- und LTE-Karten nicht verwundbar seien, und erklärt, dass die Verschlüsselung zwar komplexer, aber dennoch angreifbar ist. Zudem wird auf die Reaktion der Telekom eingegangen, die behauptet, ihre proprietären Chips seien nicht abhörbar. Es wird auch erwähnt, dass Microsofts Virenscanner, der Defender, nun den Superfish entfernt, was auf ernsthafte Sicherheitsprobleme hinweist.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "133-ts.json",
+        "method": "time-window",
+        "pickedCount": 8,
+        "startSec": 479,
+        "endSec": 757,
+        "generatedAt": "2026-01-02T18:01:44.099Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Nachlese: MS entfernt Superfish",
+      "subject": {
+        "coarse": "Software",
+        "fine": "Security"
+      },
+      "durationSec": 72,
+      "positionSec": 737,
+      "summary": "Microsoft hat seinen Virenscanner, den Windows Defender, aktualisiert, um die als schädlich eingestufte Software Superfish zu entfernen. Linus Neumann kommentiert, dass es bemerkenswert ist, dass ein Microsoft-Produkt ein anderes als schädlich identifiziert. Zudem entschuldigte sich der CTO von Lenovo für die Probleme, die Superfish verursacht hat. Neumann erwähnt auch, dass er einen Lenovo-Laptop ohne Superfish gekauft hat.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "133-ts.json",
+        "method": "time-window",
+        "pickedCount": 7,
+        "startSec": 717,
+        "endSec": 829,
+        "generatedAt": "2026-01-02T18:01:47.200Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "FCC hat die Netzneutralität geregelt",
+      "subject": {
+        "coarse": "Regulation",
+        "fine": "Netzneutralität"
+      },
+      "durationSec": 523,
+      "positionSec": 809,
+      "summary": "Die FCC hat neue Regelungen zur Netzneutralität in den USA eingeführt, die das Blockieren oder Drosseln legaler Inhalte, Anwendungen oder Dienste untersagen. Diese Regelungen erlauben jedoch eine angemessene Netzwerkoptimierung, solange sie nicht zur Geschäftsoptimierung dient. Zudem müssen große Anbieter Transparenz über Preise und Bandbreitenbegrenzungen schaffen. Kritisch bleibt, dass die FCC keinen Universaldienstfonds eingeführt hat, was den Zugang zur letzten Meile betrifft, wodurch Monopole der Netzbetreiber bestehen bleiben.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "133-ts.json",
+        "method": "time-window",
+        "pickedCount": 25,
+        "startSec": 789,
+        "endSec": 1352,
+        "generatedAt": "2026-01-02T18:01:47.696Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Zwangsrouter",
+      "subject": {
+        "coarse": "Hardware",
+        "fine": "Router"
+      },
+      "durationSec": 704,
+      "positionSec": 1333,
+      "summary": "In der Episode wird das Thema Zwangsrouter behandelt, insbesondere ein neuer Gesetzesentwurf des Wirtschaftsministeriums, der gegen die Zwangsrouter vorgeht. Der Entwurf sieht vor, dass Netzbetreiber verpflichtet werden, die notwendigen Informationen bereitzustellen, um eigene Router nutzen zu können. Aktuell definieren Netzbetreiber den Router als Teil ihrer Infrastruktur und verweigern oft die Daten für andere Geräte. Dies führt zu unzureichenden Geräten, wie den sogenannten 'Easy-Boxen', die oft nicht die gewünschten Funktionen bieten. Der Entwurf soll auch eine EU-Richtlinie umsetzen und die Wettbewerbssituation auf dem Markt verbessern.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "133-ts.json",
+        "method": "time-window",
+        "pickedCount": 43,
+        "startSec": 1313,
+        "endSec": 2057,
+        "generatedAt": "2026-01-02T18:01:52.141Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "WLAN-Gesetzesentwurf",
+      "subject": {
+        "coarse": "Regulation",
+        "fine": "WLAN"
+      },
+      "durationSec": 1008,
+      "positionSec": 2037,
+      "summary": "Im Transkript wird über einen Gesetzesentwurf des Bundeswirtschaftsministeriums zur Störerhaftung diskutiert. Linus Neumann erläutert, dass Nutzer, die ihr WLAN öffnen, haftbar gemacht werden können, wenn jemand über ihren Anschluss illegale Aktivitäten durchführt. Der Entwurf sieht vor, dass Hotspot-Anbieter unter bestimmten Bedingungen von dieser Haftung befreit werden, jedoch müssen sie Maßnahmen wie Verschlüsselung ergreifen. Dies könnte insbesondere Freifunk-Initiativen gefährden, die auf anonymen und offenen WLAN-Zugang setzen. Zudem wird die Haftungsfreistellung für Anbieter von nutzergenerierten Inhalten im Telemediengesetz in Frage gestellt, was zu einer Einschränkung der Freiheit im Internet führen könnte.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "133-ts.json",
+        "method": "time-window",
+        "pickedCount": 23,
+        "startSec": 2017,
+        "endSec": 3065,
+        "generatedAt": "2026-01-02T18:01:52.726Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "De-Mail noch ohne kritische Masse",
+      "subject": {
+        "coarse": "Communication",
+        "fine": "De-Mail"
+      },
+      "durationSec": 1044,
+      "positionSec": 3046,
+      "summary": "Im Gespräch über De-Mail wird festgestellt, dass der Dienst nicht den erwarteten Erfolg erzielt hat. Linus Neumann berichtet von einem Zwischenbericht der Bundesregierung, der zeigt, dass nur etwa eine Million Privatanwender und eine hohe fünfstellige Zahl von Organisationen De-Mail-Accounts haben, die jedoch kaum genutzt werden. Es wird kritisiert, dass die Bundesregierung durch obskure Standards und ein kompliziertes Vergabeverfahren für Dienstleister die Einführung von De-Mail behindert hat. Zudem wird auf die bevorstehende EU-Verordnung EIDAS hingewiesen, die möglicherweise die Interoperabilität von De-Mail gefährdet und bestehende Gesetze in Bezug auf Sicherheitsstandards beeinflussen könnte.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "133-ts.json",
+        "method": "time-window",
+        "pickedCount": 30,
+        "startSec": 3026,
+        "endSec": 4110,
+        "generatedAt": "2026-01-02T18:01:56.105Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "CitizenFour und Oscar",
+      "subject": {
+        "coarse": "Media",
+        "fine": "Documentary"
+      },
+      "durationSec": 307,
+      "positionSec": 4090,
+      "summary": "Der Film \"Citizen Four\" hat einen Oscar für die beste Dokumentation gewonnen, was als politische Botschaft der Academy gewertet wird. Linus Neumann hebt die Bedeutung der Arbeit von Laura Poitras hervor, die im Hintergrund agierte und den Film erst spät veröffentlichte. Der Film ist mittlerweile kostenlos im Internet verfügbar, was durch eine gerichtliche Anordnung bedingt ist. Es wird diskutiert, dass diese Verfügbarkeit dem Film zu größerer Bekanntheit verhelfen könnte, trotz möglicher finanzieller Bedenken für die Filmemacherin.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "133-ts.json",
+        "method": "time-window",
+        "pickedCount": 17,
+        "startSec": 4070,
+        "endSec": 4417,
+        "generatedAt": "2026-01-02T18:01:56.411Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T18:01:56.411Z",
+  "transcriptFound": true,
+  "transcriptFile": "133-ts.json"
+}

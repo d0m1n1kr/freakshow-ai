@@ -1,0 +1,654 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:21",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:22",
+      "text": "Guten Morgen Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:24",
+      "text": "Es ist auch tatsächlich morgen bei mir."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:28",
+      "text": "Ja, genau. Bei dir ist morgen, bei mir nämlich nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:31",
+      "text": "Ja, wie kommt's?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:36",
+      "text": "Du bist in ähm Kolumbien Koks kaufen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:39",
+      "text": "Ja genau, ich kann nicht genug davon bekommen. Zehntausend Kilometer, das muss sich ja auch lohnen, ne? Also weit reißt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:47",
+      "text": "So eine Reise muss auch finanziert werden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:49",
+      "text": "Ja, die ist ganz nett. Ist ein bisschen hoch hier so. Man muss äh gut durchatmen,\nUnd so, der Verkehr ist ein bisschen wild, aber na ja, damit habe ich eigentlich auch schon voll gerechnet. Ansonsten ist eigentlich alles ganz prima."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:09",
+      "text": "Dann äh können wir ja, können wir ja aufhören zu Podcasten. Aber ich habe natürlich wie immer äh schlechte Nachrichten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:17",
+      "text": "Wirklich. Was denn für welche?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:20",
+      "text": "Ähm der die erste schlechte Nachricht kommt aus Russland.\nÄhm da wurde im Juli ein äh Gesetz beschlossen zum Schutze der Kinder vor dem Internet.\nÄhm das hat jetzt äh der der das der Staatsduma, ich glaube, die heißt es, die Duma, der Duma oder Das Duma, der Duma."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:41",
+      "text": "Also in Deutschland meine ich wird immer von der Duma, also die Duma gesprochen. Aber ob das richtig ist, weiß ich nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:50",
+      "text": "Jetzt äh hatte das im im Juli beschlossen und jetzt ist es in Kraft getreten ähm.\nDas äh Gesetz will sich darum bemühen, den Zugang zu Webseiten mit Informationen, deren Verbreitung in der russischen Föderation verboten ist, zu begrenzen.\nUnd dafür haben sie sich eine einheitliche Liste von Domains URLs und IP-Adressen errichtet.\nWo sie dann das Internet äh und die Kinder vor Kinderpornografie, Drogen, Konsum und Suizidanleitungen schützen wollen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:27",
+      "text": "So, also äh Russlandgost, Zins Usula."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:30",
+      "text": "Genau, es ist ähm einhundert Prozent Zensursula und noch ein bisschen äh krasser wohl, Andre, äh der ja auch bei uns öfter Gast ist, äh titelte äh seinen Artikel zu dem Thema, glaube ich, mit ähm,\nNetzsperren in Russland. Alles wovor wir immer gewarnt haben und noch ein bisschen schlimmer. So ungefähr lautete glaube ich der Titel."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:51",
+      "text": "Ja. Na ja ist ja auch generell so die äh äh die russische äh Methode, ne, was die anderen versuchen mit Eleganz zu machen. Das machen die Russen immer mit viel."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:01",
+      "text": "Ja, äh in diesem Fall auch, also tatsächlich relativ viel. Ähm,\nund zwar also wenn es ein Gesetz ist, greift es ja dann bei den ähm Providern erstmal an und äh man muss sich also so vorstellen, es gibt also dann zwei Leute im Internet, einmal den Anbieter und einmal denjenigen, der auf diese Information zugreifen möchte,\nauf dem Kabel zwischen A und B sitzt ja quasi der der Provider und der kann dann da ähm äh dann den Traffic ja.\nTheoretisch, je nachdem wie gut er es machen möchte, eben beeinflussen, überwachen oder sonst was. Ähm das Problem, bisher war eigentlich das,\nkeiner ähm die Kapazität hatte, das ernsthaft mal mit dem gesamten Traffic zu machen. Ähm.\nAber mit neuer äh Router-Hardware, ähm mit DPI-Funktion ist das eben jetzt äh schon ein bisschen besser möglich. Da komme ich gleich nochmal zu. Ich wollte so ein bisschen die Geschichte der der Sperren erstmal ähm noch mal so erfassen. Wenn ich also jetzt sage,\nähm.\nUnd das war ja eigentlich zensursular, deswegen ist es, wie gesagt, ein bisschen schlimmer als Zensursulla. Bei Zensursula wollte ähm DNS-Sperrenlisten haben. Ja, das heißt also, genau der DNS-Server, der sagt, zu diesem Domain-Namen gehört dieser IP,\nda sollte die Antwort bei bestimmten Domains verhindert werden.\nOder unterbunden werden, der sollte dann einfach antworten, die gibt es nicht. Statt zu sagen, welche IP das ist. Was dann den ähm bösen Menschen\ndie Möglichkeit gegeben hätte, ähm DNS äh Server im Ausland zu nutzen ähm oder sich einfach so die IP sagen zu lassen und die direkt einzugeben,\nDas heißt, es ist eine relativ schlechte Methode zu sperren, weil sie halt sehr billig zum Gehen ist. Ähm und,\ndass der nächste Schritt wäre natürlich OK dann sperren wir die IP-Adresse,\nAber wenn ich die IP-Adresse sperre, dann fällt alles aus, was auf dem Server ist. Das heißt, ich habe riesige Kollateralschäden, zum Beispiel bei Share-Hosting oder wenn ich sage, ähm wie der russische Provider Wimpel kommt,\nder äh das YouTube-Video ähm wie ist denn dieses YouTube-Video?\nÄh Freunde der Moslems oder was, dieses dieses wo sie die diese Skandal wie du wo die."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:23",
+      "text": "Ja, ja, das äh Mohammed."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:26",
+      "text": "Live auf Mohammed oder so. Und äh das sollte Wimpel kommen, wollte das also sperren und ähm das einzige, was ihnen einfiel, war halt eine IP-Sperre für ganz YouTube,\nwas dann entsprechend Unmut in ihrer Kundschaft sicherlich hervorgerufen hat, während andere russische Provider genau das Video sperren konnten.\nUnd zwar haben die also DPI-Technologie benutzt, wo also nicht nur auf die URL oder äh nicht nur auf den Host nehmen oder auf die IP gesperrt wird, sondern genau die Anfrage\nanalysiert wird, das Datenpaket analysiert wird und geguckt wird, der will mit YouTube sprechen, was will der von YouTube haben?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:06",
+      "text": "Aber das funktioniert doch nicht mit äh SSL, wenn man HTPS macht, dann kann man ja noch diesen Inhalt gar nicht sehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:12",
+      "text": "Genau, mit SSL, eigentlich jede DPI-Funktion ähm sollte sich eigentlich mit SSL erledigt haben, aber ähm,\nes da die meisten Server ja auf sowohl auf SSL als auch auf äh also auf HTTPS und auf HTTP mit dem gleichen Antworten\nist eigentlich schon eine relativ alte Technik. Überall das S wegzumachen, ja? So dass du bei jedem request, der auf HTTPS geht\nden leitest du einfach sofort wieder auf HTTP weiter und überall wo jemand hat die PS anklicken könnte leitest du ihn immer woanders hin ja? Also du."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:49",
+      "text": "Also man nimmt es aus den Webseiten gleich raus, die Links."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:53",
+      "text": "Du nimmst also Möglichkeiten. Du nimmst dir erst mal aus den Webseiten raus und schreibst überall, wo hatte die PS steht schon mal HTTP hin.\nWo jetzt zum Beispiel HTTPS Doppelpunkt Slash YouTube steht, schreibst du hin HTTP Doppelpunkt Slash Slash YouTube,\nund du kannst dir auch eine Antwort fälschen. Also ich kann ja.\nObwohl theoretisch wenn ich also ich könnte ja theoretisch dir damit antworten ähm auf HTTP gibt's auf HTTPS gibt's keinen Dienst oder wenn ich ein Zertifikat habe, antworte ich dir auf HTPS. Ey geh mal auf HTTP.\nAber ich bin mir nicht ganz sicher, wie sie das machen, aber da werden sie sicherlich eine äh Lösung für gefunden haben, dass ihnen HTTPS da nicht reinspielt, denn MTS und Megaphone, die Provider waren also in der Lage, genau\nein einzelnes Video bei YouTube zu sperren. Ähm wie gesagt, ähm,\nHTTBS, umgeht das eigentlich, sofern der Provider nicht äh noch ein bisschen Möglichkeiten hat, auch da mit reinzufunken. Ähm.\nWas hat äh was DPI, was wir in dem bei unserem Live-Podcast auch so schon mal so ein bisschen besprochen haben. Außerdem ermöglicht sind Sperren, die jetzt vielleicht auch portunabhängig sind. Das heißt, ich muss nicht mehr nur auf eine genaue URL schauen, sondern zum Beispiel,\nkann ich Skype Traffic erkennen, obwohl Skype sich sehr darum bemüht, dass der Traffic keinerlei ähm statische Merkmale hat wie einen festen Port oder so,\nund außerdem ja auch verschlüsselt ist.\nÄhm also so mit so einer Technik operieren die jetzt in Russland und sperren unter anderem jetzt ähm das war hatte ich bei Netzpolitik Org bei Andres Artikel gelesen, zum Beispiel die Seiten vom Citizen Lab, das waren die Jungs, die sich den\nähm den äh Gamma-Staatstrojaner angeschaut hatten,\nPrivacy International, das waren die Jungs, die gegen den Gamma-Staatstrojaner die Exportbeschränkungen ähm hervorrufen wollen und eine Seite Namensagentura Punkt Ruh\ndie allerdings auf äh Russisch ist, ähm wo ich also vermute, dass sie da äh wahrscheinlich etwas sagen, was der Regierung nicht gefällt.\nDie sind also jetzt auch mit auf dieser Zensurliste, das heißt, okay, Russland ähm.\nHat offensichtlich jetzt überall äh DPI und ähm sperrt äh auch unliebsame Seiten. Äh was sie dann doch darüber hinaus empfohlen wurde, war, also dass man sagt, na ja, wenn ihr eh schon,\näh sperrt, dann könnt ihr auch direkt noch die IPs Locken, die versuchen darauf zuzugreifen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:38",
+      "text": "Wollen Sie denn eigentlich jetzt auch Skype äh sperren oder können Sie nur Skype sperren? Das habe ich nicht ganz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:44",
+      "text": "Skyfalls eher ein Beispiel aus Deutschland. Ähm wofür DPI in Deutschland benutzt wird.\nDie Russen, denen geht's glaube ich eher darum, also offiziell darum, äh Kinderpornografie, Drogenkonsum und Suizid-Anleitungen zu sperren und äh offensichtlich eher auch darum.\nHier Oppositionelle irgendwie zensieren zu können. Also Skype ist ja, glaube ich, deren geringere Sorge."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:17",
+      "text": "Aber sie könnten, wenn sie wollten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:10:19",
+      "text": "Ja klar, das das können sie sowieso, also mit DPI kannst du erstmal alles machen. Du du wenn\ndu, du siehst ja einfach den gesamten Traffic und kannst ihn, wenn du möchtest auch äh wenn du das Modul dir auch noch daneben stellst, auch manipulieren oder so. Ähm das ist nämlich ganz schön, was was sie äh\nAlso was ihnen, was sie weiterhin machen wollen, ist natürlich die IPs, die vielleicht auf diese verbotenen Seiten zugreifen, locken oder das direkt, weil sie ja dynamischer EPs vergeben, sind die Russen ja genauso zugezwungen wie jeder andere,\nwie jedes andere Land inzwischen auch aufgrund des Mangels ein IP V vier Adressen, dass sie,\nDie Damenische Adressen vergeben und dann eigentlich direkt das an die Datenbank angleichen können und den Account äh mit dem, mit den Kundendaten äh.\nQuasi locken und nicht nur die IP-Adresse. Also, dass sie sagen, was weiß ich hier,\nKunde A hat äh jetzt zum wiederholten Male versucht irgendwie Privacy International die Seite zu besuchen.\nDas Problem ist, dass du,\nTechnologie irgendwann an den Punkt kommen, das ist echt besonders schwierig da rauszuklettern. Also zu sagen HTTPS, okay ist vielleicht noch eine Möglichkeit\nsie werden früher oder später vernünftige Möglichkeiten finden zu unterbinden sie werden natürlich auch erkennen, dass du vielleicht ein VPN nutzt um irgendwie dich vor denen,\nDeine, deine Handlung im Netz zu verheimlichen, aber mit DPI hast du eigentlich für alle für alle Sachen immer so eine Möglichkeit, das irgendwie zumindest,\nheuristisch erkennen zu können. Und dann natürlich auch sagen zu können, okay, dann sperren wir dir jetzt halt den VPN Zugang,\noder wir bremsen den einfach, ist ja auch eine beliebte Sache, ne? Ist ja sogar beliebter als das Sperren bei Diensten, hatten wir ja auch schon besprochen, ist ja, bremst den einfach aus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:07",
+      "text": "Die libysche Methode sozusagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:10",
+      "text": "Aber jetzt kommt eigentlich noch der Hammer, weil die Russen nutzen DPI noch äh etwas besser. Die freuen sich also sehr. Zwar gibt es da das ähm.\nDas das Projekt Sorgen und ähm,\ndie wir auch schon mal so ein bisschen besprochen hatten, eigentlich aus so einem Land gehen ja dann nur relativ wenige dicke Leitungen raus, wo äh das ganze Internet durchkommt.\nUnd an den wenigen Knotenpunkten durch die aller Traffic läuft, haben die quasi irgendwie riesige Zentren, die äh sowieso alles versuchen mitzuspeichern. Und die freuen sich total, weil mit DPI,\nKönnen sie jetzt ähm quasi müssen sie nicht mehr alles mitspeichern, wenn sie sich um einen bestimmten Oppositionellen kümmern\nsondern sie können äh quasi nach Provider oder äh nach äh sonstigen Sachen filtern\nund freuen sich, dass sie äh quasi an den zentralen Punkt noch nicht mal mehr beim Provider, sondern an den zentralen Ein-und Ausgängen einzelne Personen filtern, speichern, äh loggen können und dadurch Arbeit und äh Festplattenplatz speichern. Also die sind sehr begeistert,\nvon die Russen offensicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:18",
+      "text": "Super, klingt so nach."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:22",
+      "text": "Also ähm.\nIst es jetzt, sage ich mal oder es scheint so, jetzt langsam der Punkt erreicht zu kommen, dass dieses DPI auch wirklich in dem Ausmaß skaliert, dass man das so ähm,\nanwenden kann, ja, also so zu einer richtigen Vollüberwachung, das das war ja immer auch die Frage, wie wie fett muss die Kiste sein, damit du das wirklich hinkriegst, ja, dass die nicht einfach nur die äh\ndie Arme hochlegt oder wie wie man so schön sagt, wenn wenn du da mal ein paar Gigabit äh durchbumst, durch so eine DPI-Kiste."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:55",
+      "text": "Zur Not wird das ein Internet dann sonst einfach äh langsamer gemacht, weil es erstmal wichtiger ist, alles zu überwachen, als das jetzt wieder an alles rankommt.\nStellt sich aber schon die Frage, ob das nicht über kurz oder lang dann doch äh die Fähigkeiten\ndes Landes das Netz so zu nutzen wie es eigentlich möglich sein sollte einschränkt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:15",
+      "text": "Ja äh ganz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:17",
+      "text": "Einiges gehen, aber wenn's dann irgendwie erstmal losgeht hier mit äh wir filtern jede Webseite, die dir ausgeliefert wird. Ich meine in gewisser Hinsicht sehe ich noch nicht so ganz, wie sie jetzt gegen so eine volle HTPS äh Umgebung sich da äh wehren wollen, aber."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:31",
+      "text": "Also würde ich jetzt mal ganz ehrlich sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:32",
+      "text": "Heutzutage in dem Sinne noch gar nicht, aber das muss natürlich die Antwort sein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:38",
+      "text": "Genau, also die, du hast du hast recht, die ähm wie wollen sie sich gegen HTTPS wehren, wenn das wenn das vernünftig umgesetzt würde von allen? Hätten sie's auf jeden Fall schwierig, aber ähm\nes ist ja du hörst ja immer wieder davon, dass Staaten,\nim Besitz von von SSL Zertifikaten sind, um genau äh einfach mähende Mittelattacken auf SSL zu fahren. Das sind ja völlig egal."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:03",
+      "text": "Hm, naja gut, hm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:05",
+      "text": "Grade ähm war jetzt äh hatte ich jetzt hier nicht zum Sendungsthema gemacht, aber der Angriff auf\nder wurde jetzt irgendwie ein Bericht dazu die Genotase eine große CA die aus den Niederlanden war die vor ein zwei Jahren,\ngroßartig auseinander genommen wurde da hatte sich ja jemand Zertifikate einfach für alle möglichen Seiten erstellt den wurde irgendwann langweilig dann hat der sich Zertifikate für Sternchen Punkt com erstellt,\nAlso der äh so Zertifikate zu mannelndem Mittel, da muss man Staaten schon durchaus äh die Kapazität ähm zutrauen, dass sie die einfach haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:44",
+      "text": "Okay, naja gut, also dann bleibt die Hoffnung sozusagen DNS äh und äh entsprechende Auslagerungen von äh Verschlüsselung,\nin das DNS-System. Das ist allerdings leider, leider, leider, noch etwas Zukunftsmusik, auch wenn die Technologie im Prinzip da ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:04",
+      "text": "Auch wenn jedes Jahr was Neues drüber erzählt, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:08",
+      "text": "Naja, das rollt sich aber langsam aus, also ersten Browser,\nkriegen das und so, aber natürlich noch ganz weit von entfernt, dass das in irgendeiner Form einer staatlichen Zensurinfrastruktur nennenswert äh Widerstand gebieten könnte.\nOkay."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:29",
+      "text": "Auch aus Deutschland gibt es schlechte Nachrichten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:31",
+      "text": "Dann komme ich nicht wieder."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:34",
+      "text": "Und zwar geht's um die Auskunftsverlangen bei IP-Adressen, ja? Also momentan ist das ja so, dass ähm,\nehrlich gesagt weiß ich nicht genau, wie der wie hundertprozentig wie der Ablauf ist, aber äh wenn man von der AlPir, von einer IP-Adresse den Halter äh feststellen möchte, dann muss man das mit einer einzelnen Abfrage beim Provider. Und,\ndie Bundesregierung äh hat jetzt einen Gesetzentwurf in die Manege äh geschmissen.\nWo sie ganz gerne hätten, dass es eine automatische Zuordnung von IP-Adressen zu den Nutzern.\nGibt auch bei den dynamischen IP-Adressen, wir sprachen das gerade bereits an und das bitteschön ähm,\nüber eine gesicherte Schnittstelle, also man könnte sagen, so die A, die wollen eine AP haben. Die hätten gerne eine AP von den Providern. Ähm,\nwo sie einfach eine IP-Adresse reinwerfen und äh die Adresse vom Anschlussinhaber äh zurückbekommen. Damit die Provider ihnen oder die sechzehn größten Dienstanbieter ihnen die Daten auf Anfrage unverzüglich und vollständig\nübermitteln können über eine gesicherte elektronische Schnittstelle. Und das möchten sie ganz gerne haben für.\nMitarbeiter des BKAs, der Bundespolizei des Zollfahndungsdienstes, des Verfassungsverfassungs,\nich komme immer mit diesem Twitter-Account durcheinander. Du kennst den Verfassungsschutz, ne? Den Verfassungsschutz? Äh Bundesnachrichtendienst und den militärischen Abschieddienst. Sie sollen also jetzt eine AP bekommen, bitteschön von den Providern, wo sie.\nÄh immer schnell feststellen können, wem eine IP-Adresse gehört. Ähm das ist also auch ähm ja, also das ist halt die,\nJa, was will man dazu noch sagen, ne? Also ich meine."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:26",
+      "text": "Wollen wieder Ärger haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:28",
+      "text": "Tja was, also wieder so eine völlig wirre äh.\nVöllig bescheuerte Idee, ne? Es ist ja gerade gut, dass es so dass es so ist, dass es dass es mit Schwierigkeiten verbunden ist. Ähm ich meine, das hast du ja.\nAber aber sie würden ja genau argumentieren und da glaube ich, da ist auch das Problem, das hatte den haben wir uns eingetreten, als irgendwann die Leute anfingen, IP-Adresse mit Nummernschildern zu vergleichen, wo man sagte, ja, das Nummernschild, was jemand hat.\nDass ähm dass.\nLässt ja dann im Notfall die Möglichkeit zu das zu identifizieren, wer wer das ist, aber so im normalen Leben kann keiner vom kein normaler Mensch vom Kennzeichen das äh das erkennen, ne.\nIst das einleuchtend?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:16",
+      "text": "Ja, ich meine, es ist ja eigentlich mehr eine Hausnummer als äh,\nein Nummernschild. Aber es stimmt natürlich schon, dass man mit so einer AP äh im Prinzip dann sozusagen einen Direktzugriff auf den Useraccount äh einrichten würde. Inwieweit das äh,\nunserer Gesetzeslage kompatibel ist, das ist mir allerdings schleierhaft."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:37",
+      "text": "Ja und was was mich jetzt sehr, was mich jetzt hier sehr äh oder was für viele Leute,\nsehr spannend ist, ist der ab, der Ausschnitt in diesen Gesetzentwurf, wo steht auch für Daten mittels derer der Zugriff auf Endgeräte oder auf Speichereinrichtungen,\ndie in diesen Endgeräten oder hiervon räumlich getrennt werden.\nDarauf wollen sie auch Zugriff haben. Und da das wird von eigentlich den meisten die ich jetzt gelesen habe interpretiert als sie wollen,\nPin-Codes und E-Mail-Passwörter auch haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:17",
+      "text": "Mhm. Auch für Daten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:20",
+      "text": "Frage ich mich äh in der Regel, also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:22",
+      "text": "Der Zugriff auf Endgeräte, was möglich wird oder was."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:29",
+      "text": "Ich lese ich lese also ja, sie wollen also quasi also mehrere in mehreren Artikel wird diese Äußerung so interpretiert, dass sie quasi eine AP haben wollen für die Passwörter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:39",
+      "text": "Aha, für welche Passwörter? Also reden wir jetzt hier so von von äh meinem Provider äh Kundenpasswort oder was?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:52",
+      "text": "Ja, also ich also ich bin halt wirklich, ich ich weiß es halt auch nicht, also ich zitiere jetzt einfach mal Jan Mönickes, dann habe ich's nicht selber gesagt.\nÄh der sagt ähm\nzusätzlich zur bisherigen manuellen Abfrage sollen die Tabelle Kommunikationsunternehmen gezwungen werden, in eine elektronische Schnittstelle zu investieren, die von zahlreichen Diensten künftig als der Quick Button gedruckt werden kann. Ja, haben wir ja soweit erzählt\nohne richterliche Auskunft oder vorherige Kontrolle\nkönnen dann nicht nur in alle vorhandenen Bestandsdaten im Sinne von welchem Kunden gehört die Rufnummer oder IP-Adresse, sondern eben auch\nPucks für Handys, Passwörter, Passwörter für die Cloud und viele andere schöne Sachen, ganz leicht, easy und ohne Kontrolle abgefragt werden.\nIch kann mir, ehrlich gesagt, nicht vorstellen, dass sie es ernst meinen, aber ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:45",
+      "text": "Ich ich kann mir vor allem äh äh gut vorstellen, dass der Shitstorm, den sie dann ernten, wenn sie das wirklich meinen wollen würden, äh so dermaßen groß ist, dass sie das ganze Gesetz gleich wieder zusammenfalten können."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:55",
+      "text": "Da gehe ich von aus, dass sie äh das äh hoffentlich bald mal wieder falten können, ja. Aber okay, also\nSpannende, spannende Sache, was sie sich da mit dem Passwörtern gedacht haben, ob sie gedacht haben, dass da keiner hinliest, wenn man da, wenn man das so verklausuliert, ähm\nAber ich bin, wie ja, auch nicht der Profi im Gesetzentwürfe lesen, deswegen verlinke ich den mal und wir halten da unser Auge drauf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:20",
+      "text": "Na ja, dann können wir ja froh sein, dass nur unsere Bundesregierung äh solche bösen Hintergedanken hat, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:26",
+      "text": "Ja ähm neben unserer Bundesregierung haben wir das natürlich auch die äh Mobilfunk Provider in etwas anderer Weise.\nUnd zwar äh kam vor einigen Tagen dann in den Medien der Konzerntelefoniker. Telefonica gehört und gehört Tee oder gehört unter anderem o two,\nO2 an die Börse gegeben oder so. Ähm und Telefonica hat eine eine Firma mit Sitz in Großbritannien.\nDie den Namen Telefonica, Dynamik Insights trägt. Ähm und die,\nbewerben ihren, die ihr Dienstleistung damit, dass sie Firmen,\nanalytische Analysen bereitstellen wollen, die es ihnen ermöglichen, effizienter,\nihre, ihre, ihr Business zu betreiben\nund also mehrere Produkte und Services entwickeln möchte, die verschiedene Daten nutzen, die ähm in ihren Netzwerken anfallen. Also äh anonymisierte und aggregierte Daten zum Beispiel,\nähm aus dem mobilen Datennetzwerk. Es ist zum Beispiel schon seit einiger Zeit bekannt, dass ähm.\nTom Tom, Daten kriegt über die Netznutzung von Vodafone, um dadurch zu erkennen, wo wohl grade Staus sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:54",
+      "text": "Ja, ja, das existiert schon seit äh vielen Jahren\nKooperation und das ist quasi die Basis der Verkehrs äh Daten äh Einschätzungen. Das heißt, wenn ich\nTom Tom Gerät sage, ich möchte jetzt hier gerne von A nach B, dann wird ähm werden die Straßen nicht nur jetzt danach berechnet,\nwas ähm was man da so für eine Höchstgeschwindigkeit fahren kann oder ob sich das in der Hauptstraße handelt oder äh eine Nebenstraße, sondern,\nSo war zumindest der ursprüngliche Ansatz bei Geräten, die jetzt nicht sind, das ist, glaube ich, diese IQ Technik heißt das bei Tom Tom,\nSie analysieren,\nBewegungsdaten von Mobiltelefon in diesen Straßen, das heißt, die schauen, was da so äh für Mobiltelefone vorbeischwimmen und was die für eine durchschnittliche Geschwindigkeit erreichen.\nUnd mitteln das dann auf die Uhrzeit und den Wochentag. Das heißt, sie haben quasi für jede Straße,\neinen Kennwert, der sagt, okay, hier darf man zwar so und so viel fahren, aber Montags um sieben Uhr äh wird dort aber nur die und die Geschwindigkeit erreicht und das fließt halt mit in diese Navigationsberechnung mit ein.\nBin mir nicht ganz sicher, ob ihr das mittlerweile auch schon so realmäßig haben, aber im Kern vermute ich mal auch, die Trafficanzeige bei äh Apple.\nUnd sicherlich auch bei Google äh wird ähnliche Daten heranziehen. In dem Fall halt direkt aus dem Smartphones."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:27",
+      "text": "Das ist ja mal interessant."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:29",
+      "text": "Finde ich eigentlich auch an sich noch recht vertretbar,\nwo es sich sozusagen um eine anonyme generalisierte äh über alle Teilnehmer hinweg äh zusammengerechnete Informationen handelt, ne? Da schaut man,\nquasi den Datenbestand an und sagt, okay, wir sehen hier Bewegung und wir können diese Bewegung auch irgendwie einschätzen. Das lässt ja nun keinerlei Rückschlüsse darauf zu, wer da jetzt gerade wo, wie schnell unterwegs ist, auch wenn sie natürlich diese Information,\ntheoretisch gewinnen könnten, aber ich bezweifle stark, dass das äh derzeit in den iPhones so implementiert ist. Sie sagen ja auch bewusst, dass das eben eine anonymisierte Information ist, die man dort quasi dem dieser Trafficanalyse spendet.\nSicherlich etwas, was auch Telefonica Dynamik Insights äh anbietet. Die Frage ist, ob das nun das Einzige ist, was sie dort äh anbieten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:22",
+      "text": "Ich glaube, dafür hätten sie nicht, wenn sie nur das anbieten würden, hätten sie nicht eine eigene Firma dafür gegründet. Ähm,\nEs gab dann einen Tagesschauartikel. Jetzt ist natürlich die Sache, okay, die äh Tagesschau ist jetzt nicht der äh die sind ja nicht immer die Fittesten, wo dann sowas drinstand wie, dass sie einem.\nIch würde sagen, das ist ein sehr hanebüchendes Beispiel, aber es wurde dann auch wieder überall zitiert, dass sie quasi einem,\nLadeninhaber sagen können, äh wie lange ein Kunde vor seinem ähm\nSchaufenster angehalten hat. Das halte ich ehrlich gesagt für eine sehr unrealistische Auffassung äh dieses Dienstes, weil die Ortung nicht so genau ist, dass ich mit Sicherheit sagen kann, dass der Kunde gerade vor einem, vor genau dem Schaufenster steht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:12",
+      "text": "Ja, das ähm gut, kommt drauf an, was für ein Schaufenster man da äh nimmt, wenn's jetzt so ein kleiner äh Schmuckerladen äh ist mit einem Fenster, dann ist es sicherlich schwierig, so eine Shoppingmaul kriegt man natürlich schon ganz gut analysiert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:25",
+      "text": "Die Frage ist ähm.\nJemand, der in seinem Geschäft darauf angewiesen ist, dass Leute vor einem Schaufenster stehen bleiben, wie viel Geld hat der über, um es einem Konzern zu spenden, der äh Mobilfunkdatenanalyse betreibt? Ja, also die Information, wie lange jemand von meinem Schaufenster in meinen kleinen Klamottenladen\nähm irgendwie auf der Neustraße in irgendeiner kleinen Stadt äh gestanden hat, die ist ja nicht äh nicht so enorm auswertbar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:55",
+      "text": "Vielleicht sollte man sich das eher so wie mit dem Verkehr vorstellen, weil tatsächlich ist ja auch die Information, wie viele Leute gehen in einen bestimmten Platz,\näh entlang. Ja, also der Alexanderplatz in Berlin ist sozusagen generell dafür bekannt, am meisten Fußgänger-Traffic zu haben in ähm.\nIn Deutschland. Das heißt, es gibt keinen Platz, über den so viele Leute gehen und das hat natürlich eine Auswirkung auf die Preise für dort angebrachte Werbung,\nAlso wenn du dort ein Plakat buchst oder irgendein anderes Display hast, was da äh an diesem Platz ist, dann richtet sich quasi der Preis,\ndanach, was die Meinung ist, wie viele Leute das dann eben auch effektiv sehen. Und man kann natürlich da generell Einschätzungen machen\nSo im Sinne von, na ja, wir haben da ja S-Bahn und so und so viele Leute steigen da aus und äh ein. Oder du kannst halt wirklich sagen\nhat heutzutage sowieso jeder äh ein Handy äh in der Tasche, äh wir haben den und den Marktanteil und wenn wir das jetzt mal über unsere Kunden hochrechnen, dann kommen wir im Prinzip auf den und den Wert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:58",
+      "text": "Ja.\nGenau, also für solche Analyse ist das sicherlich ganz angebracht. Ich glaube, am Alexanderplatz hängt seit Jahr, seit Monaten jetzt so ein Schild, über einhunderttausend äh Autos am Tag kommen, an diesem Plakat vorbei, die wollen offensichtlich diesen Plakatplatz da irgendwie ähm\nvermieden, aber äh bis jetzt hängt da nur ihr eigenes Plakat. Auf dem draufsteht, wie viele jeden Tag dran vorbeifahren. Äh ich habe hier gerade mal so äh ein das Werbevideos.\nDas Werbevideo von diesem Konzern, da geht's also jetzt um ähm um Bewegungsprofile erstmal und so.\nWas sie allerdings auch machen wollen und da wird's dann ein bisschen spannender. Die wollen diese Daten halt auch zur,\nfür Werbung bereitstellen und da dann auch mit den Bestandsdaten kombinieren in diesem Falle.\nDas heißt also irgendwie Alter, Geschlecht oder solche Dinge sich irgendwie äh da noch zu sagen lassen, dass sie also quasi dir zu diesem hypothetischen Schaufenster oder zu dem Alexander Pla\nauch sagen können, um wie viel Uhr des Tages da die meisten vierzehnjährigen deiner Zielgruppe langlatschen und so weiter,\nAlso man kann das, wenn man das gewissenhaft macht, sicherlich äh sehr spannende äh Daten raus gewinnen, aber wir wissen natürlich auch, dass,\ngewissen bei Konzernen immer eher 'ne untergeordnete Rolle spielt, früher oder später.\nUnd deswegen wurde dieses Thema jetzt mal äh wahrscheinlich auch ein bisschen zu äh.\nZum Leidwesen oder ein bisschen ungerecht gegenüber o two äh dann hier jetzt behandelt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:37",
+      "text": "Die haben schnellen Rückzieher gemacht, ne? Aber es stimmt natürlich, was du sagst, so äh diese generelle äh Geschichte, ne, also mal in dem Verkehr ist es egal, ob da jetzt äh gerade ein Sechzigjähriger oder ein Zwanzigjähriger ein Auto fährt, aber bei Werbungstreffic\nman sich sozusagen noch mehr Informationen rein, ne? Man kann halt sagen, okay, äh vormittags sind irgendwie äh Leute in dem Alter unterwegs am Nachmittag, in dem Alter. Das ist natürlich schon eine ganz andere Qualität."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:03",
+      "text": "Ähm auf jeden Fall das Ganze schlug solche Wellen, dass äh sich dann ein Sprecher des Wirtschaftsministeriums am Mittwoch,\ndahingehend äußerte und sagte der Hen der Handel mit über Handys gewonnenen Standortdaten ist nach Angaben der Bundesregierung grundsätzlich verboten.\nÄhm,\ndenn sie dürfen nur anonymisiert oder mit Einwilligung des Handybesitzers weitergegeben werden und dann auch nur an Dienste mit Zusatznutzen etwa zur Registrierung von Verkehrsströmen,\nja? Äh diese Bestimmung gelten äh gelten in dieser Form irgendwie in ganz in der ganzen EU. Jetzt ist natürlich so, dass ähm man bei dem,\nAbschließend eines Mobilfunkvertrages irgendwo auf Seite fünf von.\nFünf von dreizehn im Kleingedruckten sowieso das Häkchen hat indem man das erlaubt und genauso ist es auch bei.\nO2 eigentlich, aber das Ministerium sagt, sie hätten jetzt äh das geprüft und sagen, dass es bei,\nO2, was die davor hätten oder Telefoniker, dass das nicht in Ordnung wäre. Ja, also kann man jetzt mal, kann man jetzt eigentlich nur mal so,\nstehen lassen. Ich äh bin mir relativ sicher, dass es irgendwo in den AGBs von O2 sicherlich irgend so ein Häkchen gibt, wo ich alle, wo ich alle Daten an die abtrete, wenn ich ihr Kunde werde. Aber, okay. Es war auf jeden Fall mal.\nDas deswegen mit in die Sendung aufgenommen, weil es eben ein sehr äh interessanter,\nwieder mal so ein interessanter Punkt war, zwischen Datenschutz und einem relativ offenkundigen Nutzen für die äh.\nFür die Gesellschaft, beziehungsweise für den Teil der Gesellschaft, der sich ein Traumtom-Navigationsgerät kauft."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:54",
+      "text": "Ja, vielleicht ein schönes Thema für die äh demnächst stattfindende Sparkariade."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:59",
+      "text": "Ja, da können sie sich, da werden sie sich sicherlich drüber unterhalten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:02",
+      "text": "Und achtzehnten November ist es ja mal wieder soweit, dass da äh mal aus der anderen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:06",
+      "text": "Heißt mal wieder ja das sind die das ist die immer bei solchen Dingen den,\ngesellschaftlichen\nnutzen ähm äh diskutiert. Häufig allerdings dabei vergisst, dass wir hier eben trotzdem von einem gesellschaftlichen Nutzen sprechen, der wiederum nur für einen bestimmten Kundenkreis äh\nda ist. Also das äh weil eben Telefoniker diese Daten verkaufen möchte und nicht ähm irgendwie der Gesellschaft unbedingt damit dienen möchte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:38",
+      "text": "Mhm, das stimmt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:41",
+      "text": "Ja also äh ich glaube, niemand hätte was dagegen, wenn die es öffentlich, wenn die wirklich einfach öffentlich einsehbar so im Sinne von Open Data, äh diese ganzen Analysen raushauen würden,\nAber genau das machen sie ja jetzt wieder nicht, sondern verkaufen die irgendwo hin und eben auch zu Werbezwecken. Und da wird's dann wieder so ein bisschen bisschen äh.\nVerlinken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:03",
+      "text": "So, wie sieht's denn auf unserem internationalen äh Showpflaster aus?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:11",
+      "text": "Ja äh Wiki Leaks ist wieder ähm aktiv.\nUnd hat jetzt die äh angefangen zu veröffentlichen. Das sind irgendwie die Regelungen der USA,\nzum Umgang mit ihren Häftlingen, ich habe,\nnur mal irgendwie angefangen so ein Guantanamo-Dokument zu lesen. Ähm das war aber irgendwie alles sehr wir und ich habe das nicht so wirklich,\nhab da den Skandal noch nicht drin entdeckt und irgendwie das Medienecho blieb auch aus bis auf die Tatsache, dass es wieder etwas von gibt, hab ich nicht großartig Artikel dazu gefunden,\nwo sich jetzt da irgendwo ein Skandal drin verbirgt. Aber vielleicht äh vielleicht kommt das noch so.\nUnd ansonsten wollte ich ja noch kurz erzählen, dass ich ähm.\nVor einigen Tagen mal äh mir da die äh equarianische Botschaft angeschaut habe in London."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:06",
+      "text": "Ach du warst ja vor Ort, richtig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:08",
+      "text": "Ja genau, ich finde ja, ähm ich verlinke mal ein Foto, was ich da von der Protestierenden äh Masse äh.\nGemacht habe. Also da stand ein Mann, der war äh.\nJa, der war wahrscheinlich so irgendwie fünfzig oder so, Anfang fünfzig, Ende vierzig und ähm,\nverteilte äh Flugblätter beziehungsweise der einzige, der da war, waren ja wir und dann haben wir einen Flugblatt bekommen mit fünf Möglichkeiten.\nWie wir Wiki Leaks unterstützen können, indem wir, ich glaube, uns bei der britischen Regierung beschweren, bei der australischen Regierung beschweren, ähm,\nWikileak Skale spenden und dem Friends of Wiki League Social Network beitreten und einen fünften gab's auch noch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:58",
+      "text": "Schweden, vielleicht in Schweden noch beschweren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:00",
+      "text": "In Schweden auch noch beschweren. Nee, Schweden war da, glaube ich, Schweden war der nicht. Ähm und dann aber na also das Flugblatt, ich will da jetzt gar nicht so, will mich da jetzt gar nicht so drüber lustig machen. Da standen schon,\nwichtige Sachen drauf und auch so links irgendwie so, was die Manning Sache angeht und so weiter. Aber ähm\nInsgesamt versauert der äh Jules da ähm in der in der Hütte. Ich habe mich dann auch äh nicht getraut anzuklopfen, weil da standen stand immer noch dieser Polizist vor und der sah irgendwie\nnicht nach dem Polizisten aus, der irgendwie jetzt so zu Scherzen aufgelegt ist. Wenn ich, also ich hab's überlegt, ob ich ihm so einen Schuhkarton gebe und sage, hier äh\ngibt es bei dem Studienrein oder so, aber ähm ja, äh ging dann nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:42",
+      "text": "Ich bin ein großer, großer Fan von Julio und ich möchte gerne mit ihm singen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:46",
+      "text": "Ja. Genau, also äh kann man, kann man sich mal anschauen, bin mal gespannt, was sich da jetzt bei Wiki Leaks tut.\nNächstes Thema, da gibt's nämlich noch äh das ist jetzt wieder noch mal so ein bisschen Deutschland jetzt hier, kleine, also kleines äh,\nuninteressant ist aus, kommen wir zur Kategorie ohne Interessantes aus Deutschland. Äh wir berichteten ja schon über den Gesetzentwurf des äh Justizministeriums. Ähm,\nsich der im Rahmen der EU-Angleichung jetzt hier den Schutz äh bei irgendwelchen Musik wieder von,\nfünfzig auf siebzig Jahre und Schutz der Urheber\nUhr der Urwehrrechte von Komponisten und Textern auf siebzig Jahre nach dem Tod ausweiten wollte. Wir hatten das berichtet den Link füge ich dann nochmal ein,\nDieser Gesetzesentwurf des Bundesjustizministeriums ist jetzt äh Kabinettsbeschluss, das heißt, der wird dann jetzt bald ähm.\nEingebracht werden in den Bundestag ja? Reingereicht werden. Und man darf ja gespannt sein ob darüber diskutiert wird.\nOder ob es diesem Gesetzesentwurf ähnlich ergeht wie ähm,\nGesetzesentwurf, womit wir beim nächsten Thema wären, nämlich dem Gesetzesentwurf zur Störerhaftung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:09",
+      "text": "Noch einen kleinen äh muss ich nochmal kurz nachhaken. Also, um das klar zu machen, generell beim Urheberrecht gilt schon siebzig Jahre nach dem Tod für,\nbestimmte Tätigkeiten wie ich glaub Komposition.\nOder? Wo gilt denn schon siebzig Jahre? Siebzig Jahre gilt doch äh schon bei Büchern, et cetera, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:33",
+      "text": "Jetzt kommst du mit dem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:37",
+      "text": "Naja, also ich meine, das ist sozusagen nur so ein Teilbereich, wo es bisher noch nicht siebzig Jahre sind und wo es derzeit noch auf fünfzig Jahren steht und auf siebzig Jahre äh verlängert werden soll. Wenn ich das richtig sehe."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:49",
+      "text": "Die Schutz also es geht in dem Fall von fünfzig auf siebzig Jahren sollen die Schutzrechte für die Schutzdauer, für die Rechte der Anproduktionen, Beteiligten,\nausübenden Künstler. Ach so, an die Ausüben, ah genau, genau, es gibt ja die Trennung der ausübende Künstler und der."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:07",
+      "text": "Eigentlichen Komponisten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:09",
+      "text": "Und der eigentliche Komponist. Das heißt, der eigentliche Komponist hat ähm siebzig Jahre.\nÄh nach nach deren Tod."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:18",
+      "text": "Der Bläser, der da irgendwie die Posaune äh stemmt, der hat nur fünfzig Jahre und soll jetzt auch ähm auch noch bis zu siebzig Jahre nach seinem Tod zu seinem Recht kommen.\nDas ist so albern, oder? Also es ist wirklich äh wenn man sich das mal vergegenwärtigt, was das eigentlich bedeutet, äh fasst man sich doch echt an den Kopf. Das ist wirklich, also man hat manchmal das Gefühl, die Toten haben irgendwie mehr Rechte als die Liebenden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:46",
+      "text": "Ja. Ich, also ich weiß wirklich nicht genau, was also ich meine,\ndass wir überhaupt, wenn man die Geschichte kurz erzählen will, dass wir überhaupt so lange äh Schutzfristen haben, scheint hier, glaube ich, ähm an Mickey Maus und den Beats zu liegen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:07",
+      "text": "Ist es zumindest die äh die die gängige Verschwörung äh Theorie. Mhm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:13",
+      "text": "So die so das sind die einzigen Phänomene.\nDie überhaupt irgendwo in diese in diese Zeitdauer kommen ja also ist glaub ich vor einiger Zeit siebzig geworden oder so.\nDas heißt, die Beatles haben wir jetzt fünfzig Jahre rumgespielt, aber die Rechte hat ja, glaube ich, eh zwischendurch Michael Jackson gekocht. Wer weiß, wer jetzt im Moment die Bier ist, Rechte hat, aber die waren ja immer noch irgendwie eine ganz besondere Sache. Die."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:36",
+      "text": "Die leben ja auch noch. Also ich meine, das wird ja eh ohnehin erst nach dem Tod dann aktiv. Also es ist äh,\ngar keine Rolle, wie alt der jetzt ist oder wie lange das her ist, sondern es äh spielt ja ausschließlich eine Rolle, wann er stirbt. Was auch sozusagen,\näh bezugslos ist eigentlich auf das eigentliche Werk. Das das finde ich ja auch nochmal so besonders äh strange. Also ich meine, wenn man jetzt sagen würde,\nJahre nachdem dieses Werk äh in die Welt gekommen ist\nverwirrten die Rechte, dann würde ich sagen, ja, okay, meinetwegen, aber wenn sozusagen siebzig Jahre nach dem auch noch der letzte äh\ndaran in irgendeiner Form beteiligt war, gestorben ist, dann ist erst Schluss, ist wirklich vollkommen absurd, ne? Also musste sozusagen dann nur noch irgendwie in deinem Musikvideo ein Baby schaukeln und dann hast du's dann irgendwie auch gleich nochmal noch weiter,\nerweitert, he?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:28",
+      "text": "Das ist eigentlich echt cool, weil also siebzig Jahre nach dem nach dem Tod,\nist, übersteigt eigentlich immer noch die Lebenserwartung, da, also wenn du, wenn du normal lebst und stirbst, dann übersteigt siebzig Jahre nach deinem Tod, übersteigt immer noch die Lebenserwartung deiner Kinder.\nWeil die.\nFünfzig, du stirbst von mir aus mit siebzig, das heißt, dein Kind hat eine Lebenserwartung von achtzig, weil's irgendwie äh weil die Lebenserwartung der Menschen immer steigt, aber insgesamt sind sowieso noch neunzig Jahre ab der Geburt des Kindes. Mindestens."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:02",
+      "text": "Ja, vor allem deine Kinder äh kann ja sein, dass du deine Kinder dann doch schon ein bisschen früher in deinem Leben irgendwie zeugst und äh du dann eben selber erst fünfzig Jahre äh später stirbst und so, also\nDa können dann sozusagen auch noch die Kindeskinder äh von profitieren. Also es ist mir ist bisher noch keine wirklich schlüssige,\nähm Darlegung gekommen, warum das jetzt eigentlich so zu sein hat, weil vor allem, wenn wir wirklich von einem Schutzrecht.\nSprechen, ja? Hier soll ja die ganze Zeit immer irgendjemand geschützt werden. Ja, dann werden ja hier einfach Leichen geschützt. Das ist ein ein Leichenschutzrecht,\nund äh das,\nmacht mich einfach so äh äh verrückt und mich würde mal wirklich interessieren und das wäre, glaube ich, in diesem Zusammenhang jetzt, wo sie quasi das mal wieder neu eine Verlängerung beschließen wollen. Mit diesen fünfzig auf siebzig Jahren,\nFür die Beteiligten Künstler, was denn jetzt bitte da eigentlich die Argumentation ist, wer denn da jetzt eigentlich geschützt werden soll?\nAlso was ist sozusagen die Bedrohung für diesen äh bereits seit fünfzig Jahren vor sich hin verwesenen Leichnam, ja.\nÄh die eben jetzt dadurch, dass irgendjemand äh eine Datei gruppiert im Internet äh da äh widerfährt,\ndas würde ich wirklich gerne mal hören. Das könnte man eigentlich mal schön zu so einem äh Exempel äh statuieren in der ganzen Argumentation von Copyright-Schutzrechten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:27",
+      "text": "Ich bin mir sicher, dass ihr die Tagesschau Witwe äh dir gerne noch ein schönes Geschichtechen dazu erzählen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:34",
+      "text": "Ja ja, wenn sie dich selber schon lange tot ist.\nNa gut."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:40",
+      "text": "Störerhaftung. Ähm.\nDen Gesetzesentwurf von äh des Vereins digitale Gesellschaft zur Abschaffung oder Aufhebung äh oder Lockerung der Störerhaftung.\nBeim Betreiben von offenen WLANs. Der hat tatsächlich seinen Weg ähm ins in den Bundestag gefunden.\nUnd zwar hat ihnen die Linksfraktion adoptiert. Das war ja damals ein Gesetzesvorschlag, den der Verein digitale Gesellschaft zur Verfügung gestellt hat, gesagt hat, den kann jeder äh Copy,\nwir wir freuen uns über jeden, der den in den Bundestag copy pastet.\nEs hat dann die Linksfraktion, glaube ich, mit einer minimalen Änderung auch gemacht und dass der Wood dann irgendwann an einem Donnerstag um Mitternacht ähm.\nScheint er auf der Tagesordnung, dann wurden da ein paar Sachen zu Protokoll begeben und dann wurde er natürlich äh nicht angenommen. Aber immerhin.\nDigitale Gesellschaft hat es geschafft, ein äh Gesetzesentwurf,\nin den Bundestag einzubringen, wenn auch dann leider nur von der Partei, die im Bundestag per se sagen kann, was sie will und vorschlagen kann, was sie will,\nähm aber immerhin."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:58",
+      "text": "Vor ein paar Tagen auch eine neue Gerichtsentscheidung, wo die Störerhaftung äh eine Rolle gespielt hat.\nIch ähm versage jetzt gerade dabei, den passenden äh Link zu finden.\nIrgendeiner unserer Rechtsanwälte hat das, glaube ich, vertwittert.\nWeißt jetzt gerade nicht, wovon ich rede, aber es gab meines Wissens wieder eine Gesetzesentscheidung, wo diese Stürrerhaftung abgelehnt wurde und zwar war es ein Fall, wo,\nein ähm ich glaube Familienvater äh nachweisen konnte, dass er eben zu dem entsprechenden Zeitpunkt nicht zu Hause gewesen sei, ja, für diesen.\nAngenommenen Fallscherigenvorgang.\nUnd jetzt müssten die beteiligten Musikkonzerne, die da geklagt haben, die Rechtsanwaltkosten selber tragen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:45:56",
+      "text": "Ja, ich hab's äh mir schnell ergoogelt äh Filesharing Landgericht Köln verneint, Störerhaftung bei Familienanschluss.\nDas hieß der Familienvater, der ein Kind sein Nachwuchs hat offensichtlich oder hat offenbar einen Computerspiel in einer Tauschbörse heruntergeladen und angeboten.\nUnd.\nDann haben sie den Anschlussinhaber verklagt und der hat eben gesagt, ja ich arbeite tagsüber. So, tschüss. Ähm.\nUnd hat dann eine Unterlassungserklärung aber nicht bezahlt und offensichtlich hat das äh Landgericht da dem zugestimmt. Interessant. War mir so nicht aufgefallen. Äh.\nMit in die Shownotes\nWas mir aufgefallen ist, war ein äh eine Meldung über einen Amerikaner, der irgendwie auf einer Pay-Seite, auf einer Pay-Porno-Seite zehn Videos runtergeladen hatte und die dann äh als Torents angeboten hatte\nwährend der Anbieter aber jedes einzelne Video mit so einem Watermarkt versehen hatte,\nUnd ähm dann haben sie halt gesehen, dass ihre Videos ähm eben als Terrance kursieren und haben dann den Typen, der die runtergeladen hatte, weil weil das Video eben gekennzeichnet war, dass es von ihm heruntergeladen war.\nÄh haben sie den vor Gericht gemacht? Und der hat die Höchststrafe bekommen. Das waren, glaube ich, irgendwie waren dann wieder irgendwie ein paar Millionen oder so, weil weil das,\nweil er eben vor mit Vorsatz und so weiter gehandelt hatte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:41",
+      "text": "Ja, auch mit Vorsatz sind ja äh unsere Medien in Deutschland äh unterwegs, hat man sich den Eindruck."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:47:50",
+      "text": "Da wird's jetzt echt wirre. Es darf jetzt wirklich nur noch wirr."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:56",
+      "text": "Da die Planung online Bezahlschranken sollen eingeführt werden für deutsche äh Tageszeitungen, jetzt Paywalls überall."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:02",
+      "text": "Ja, also es waren irgendwie die Medientage in München und dann ging äh offensichtlich ähm.\nGing es dann natürlich müssen hier bei den Medientagen dann darüber diskutieren\nwie lange sie noch irgendwie Zeitungen drucken wollen und äh was mit denen äh was mit den Internetredaktionen ist und so und dann gab's welche, die sagen, ja die Internetreaktionen sind jetzt die Zukunft und andere haben wieder gesagt, ähm,\nJa, aber die, der Qualitätscontent in den Internetredaktionen, der kommt ja aus den Printredaktionen und so weiter. Und irgendwie ähm.\nSagten dann äh sagte dann erstmal der äh Geschäftsführer äh oder einer, der aus der FAZ-Geschäftsführung Tobiasan ähm beim Publishing-Gipfel,\ndass sie selbstverständlich 'ne Bezahlschranke für ihr Online-Angebot einführen wollen.\nWeil es aber das einzige was sie daran hindert ist dass es kein einfaches und kostengünstiges Bezahlsystem gibt,\nDie haben natürlich ein Problem. Also am liebsten wär denen natürlich sowas wie oder unterstell ich jetzt mal am liebsten wär denn ja was, wenn es irgendwie so was gäbe wie ein,\nallgemeinen Account, dass man sich einmal anmeldet zum Zeitungslesen in Deutschland und dann egal, wo man hingeht, immer Vorartikel von dem jeweiligen Anbieter.\nBetrag X abgezogen bekommt. Das werde ich natürlich am liebsten, was den den ist ja nicht wirklich daran gelegen, ähm dass man jetzt so,\ndas einen eigenen Account bei Süddeutsche zum Beispiel hat. Äh und mit diesem bei bei Spiegel sich dann wieder mit einem anderen Account ein äh,\neinloggen muss. Ich glaube soweit haben die den Markt schon verstanden außer vielleicht können wir vorstellen, dass der Springer Verlag sagt mir reicht das wenn wenn die einen Springer Account haben, ob die dann wild, Welt oder äh Bild oder was auch immer lesen wollen.\nAber die äh Süddeutsche zum Beispiel auch, Richard Redmann,\nGeschäftsführer der südwestdeutsche Medienholding äh sagt, wir wollen äh auch neue Payballs haben. Äh mit der Werbung funktioniert das irgendwie nicht.\nÄhm,\nund ja die Welt klar, Springer Verlag, äh die haben's aber äh äh ich glaube, die haben sogar konkrete Pläne bekannt gegeben. Ich bin mir gar nicht so sicher, ob sie äh nur den Plan.\nBenannt haben, also ich besuche diese Seite nicht, aber äh ja, also ähm man kann sagen, während also die Verlage lobbyieren für.\nNutzt Leistungsschutzrecht, damit Google dafür bezahlen muss, auf sie zu linken? Wollen sie gleichzeitig dafür sorgen, dass jeder, der auf einen Link zu ihnen klickt, erstmal bezahlen muss, bis er was sieht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:59",
+      "text": "Ja, also,\nIst ein bisschen schwierig das äh einzuschätzen. New York Times hat ja vor kurzem auch auf dem Paywall äh System umgestellt und ist bisher noch nicht\nwieder sein gelassen. Ähm mit der Ausnahme des Hurricane Sandy jetzt, da haben sie mal für ein paar Tage ihre Paywall auch ausgeschaltet, weil sie wohl äh,\ngesehen haben, dass das da nicht so eine tolle Idee ist. Wenn man die Leute informieren möchte, da immer gleich so eine Bezahlschranke zu haben,\nVielleicht gibt ihnen das wieder Auftrieb, ob jetzt die deutschen Tageszeitungen da ähnlich gut aufgestellt sind, wie die New York Times äh wage ich nicht zu beurteilen.\nGrundsätzlich glaube ich irgendwie nicht so richtig da dran, dass das äh so funktionieren kann, zumindest nicht für einen Großteil des Markte,\nbestenfalls wirklich für totale Marktführer, die absolut sind und die vor allem auch, sagen wir mal, äh über ihre Qualität sich definieren.\nJa? Da kann ich mir das durchaus schon vorstellen, wenn jemand sagt, okay, wir machen jetzt hier einen Fokus auf äh Qualitätsjournalismus, dass man da vielleicht äh die Leute mitziehen kann,\nDas nehmen sie natürlich alle für sich in Anspruch, dass sie Teil des Qualitätsjournalismus sind. Darüber könnte man jetzt nochmal breit diskutieren. Zusammenhang mit diesem Leistungsschutzrecht ist äh,\nJa, weiß ich auch nicht. Also, so richtig viel Hoffnung scheinen sie ja da nicht, äh, zu haben. In dem Zusammenhang fällt mir allerdings noch eine Nachricht äh ein, die über die ich gerade äh gestolpert bin vor ein paar,\nTagen. Ich schicke dir gerade mal den Link hier und zwar in Brasilien haben sich nämlich tatsächlich die Nachrichten äh,\nOrganisationen, also die Zeitung zusammenge äh rottet und haben jetzt einen gemeinsamen, koordinierten Austritt aus Google News äh bekannt.\nJa? Das heißt, sie ziehen sich sozusagen da kollektiv äh zurück. Also es macht ungefähr so neunzig Prozent des,\nMarktanteils in dem Land äh aus und äh meinen äh haben das wohl auch schon getan und meinten, das hätte irgendwie nur einen Einbruch um fünf Prozent ähm.\nSich gezogen an Zugriffen auf ihre Seiten, nachdem sie das gemacht haben. Ja und auch da geht's halt im Prinzip um so ein,\nLeistungsschutzrecht Ding. Also das ist halt auch irgendwie so ein internationales Meme, dem die ja gerade alle folgen. Das ist jetzt nicht unbedingt nur so etwas, was sie sich in Deutschland ausgedacht haben, weil sie das Internet nicht verstehen, sondern das ist sozusagen so eine globale Internetverständnisschwierigkeit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:34",
+      "text": "Interessant. Haben sie denn eine Alternativplattform dazu bauen wollen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:42",
+      "text": "Weiß ich nicht. Sie wollen sie einfach nur Google da so ein bisschen den Finger."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:42",
+      "text": "Also haben sie gesagt, okay, wir machen jetzt einfach hier Brasilien News oder was? Äh ach nee, das da können sie sich wahrscheinlich nicht drauf einigen, wer dann da oben stehen soll oder so. Nee klar, das sind hundertfünfzig Verlage sind oder so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:54",
+      "text": "Ich kenne jetzt auch den Markt in äh in Brasilien nicht. Vielleicht äh hat es einfach andere Parameter. Ich meine, in äh Belgien haben sie es ja auch schon mal probiert und das ist schwer nach hinten losgegangen. Und ich glaube, das wäre in Deutschland nicht sehr viel anders.\nWie sieht's aus? Ich glaube wir sind durch, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:54:13",
+      "text": "Wir sind durch mit einer, glaube ich, zugegeben etwas schlecht vorbereiteten Sendung. Ich gebe zu, ich war zwei Wochen unterwegs und habe mich nicht so vorbereiten können, wie ich das sonst immer mache.\nUnd ähm habe aber, glaube ich, die Aussicht jetzt in Zukunft wieder ein bisschen öfter äh zu Hause zu sein und mich nächstes Mal wieder besser vorzubereiten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:34",
+      "text": "Ja, hoffe ich auch, dass wir bald wieder die äh Chance haben, mal eine Sendung wieder live zu gestalten. Denn ich werde meine Reisen dann auch bald mal äh hoffentlich abgeschlossen haben. Mal schauen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:54:47",
+      "text": "Und weißt du, was mir jetzt gerade einfällt, Tim, was wir äh was wir so also richtig sang und klanglos haben, verstreichen lassen? Ähm wir haben sang und klanglos verstreichen lassen, den achtundzwanzigsten Oktober."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:03",
+      "text": "War, äh ein Jahr Lokbuch Netzpolitik oder was?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:07",
+      "text": "Ein Jahr Lokbuchnetzpolitik.\nIn der Woche haben wir noch nicht einmal gepodcast gecastet. Seht ihr mal, wie viel völlig äh äh.\nJa, ein Jahr ein Jahr Logbuch Netzpolitik. Ähm.\nMit jetzt der Folge dreiundvierzig, das heißt, es gab im Prinzip neun bis ja, acht, neun Ausfälle, kann man sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:34",
+      "text": "So würde ich das jetzt mal nicht sagen. So würde ich das nicht sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:42",
+      "text": "Aber wieso denn nicht?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:43",
+      "text": "Nicht so brutal. Das kann man ja auch anders äh sagen. Man kann sagen, wir waren hier irgendwie äh dreihundertsiebzig Tage unterwegs und haben's geschafft, dreiundvierzig Sendungen zu machen. Das ist immerhin alle achteinhalb Tage eine Sendung, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:56",
+      "text": "Du, der Ausfall ist ja auch irgendwie ziemlich gering. Also, ich halte das nicht für für besonders für Prozent, wo eigentlich besonders hoch. Wenn man sich überlegt, dass ähm.\nJa, wir äh relativ oft unterwegs sind beide. Und äh es einem immer wieder hingekriegt haben.\nJa, ein Jahr, vielen Dank äh Hörer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:19",
+      "text": "Genau, ja, der Zuspruch war sehr ermutigend, muss ich sagen. Vielleicht können wir da auch mal kurz drauf,\nich war eigentlich sehr angetan davon. Ich hatte jetzt so für so ein Nachrichtenformat durchaus damit gerechnet, dass das so eher ähm einfach so weggehört und äh entsprechend auch weggeschwiegen wird. Tatsächlich gab's aber dann doch äh sehr viel\nähm muntere äh Kommentarkultur und auch so einen persönlichen Gespräch\nwurde äh immer wieder signalisiert, dass das Format als solches wohl auch ganz gut funktioniert für die Hörer, sprich ähm tatsächlich den gestickten Ziel, kompakt\nInformationsverdichtung äh zu liefern mit ein wenig äh äh mit ein wenig Meinung und ähm ja\nWitz äh gewürzt ähm dass das etwas ist, was in der Podcastwelt ganz gut bestehen kann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:12",
+      "text": "Ja, also ich ich freue mich auf jeden Fall sehr und ich inzwischen, ja, da kann ich ja jetzt mal mit Stolz berichten, bekomme auch ich Geschenke. Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:20",
+      "text": "Wirklich? Sehr angemessen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:23",
+      "text": "Das hat mich auch sehr, habe ich mich sehr drüber gefreut und ähm das sind allerdings auch noch so wenig, dass ich jedem einzelnen davon ähm antworten kann und werde.\nNicht wie bei."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:37",
+      "text": "Schönes mit aus äh Kolumbien."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:42",
+      "text": "Ja, also nicht wie bei, wo das alles auf der Halde landet. Aber äh nee, also ist schön. Ich habe einen, ich habe äh ich äh ja, ah, ja, also da äh da kommen noch Antworten auf jeden Fall von ihr."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:55",
+      "text": "Ja äh hier jagt äh heute auch wieder ein Termin äh den anderen. Ich ziehe jetzt weiter. Ich denke, wir machen jetzt mal Schluss."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:05",
+      "text": "So machen wir das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:06",
+      "text": "Und ja, ein Gruß an äh alle Hörer, danke fürs äh Zuhören in diesem einen Jahr und wir bemühen uns hier auch weiterhin, den äh,\nTagesdurchschnitt äh weiter zu senken und fleißig weiter zu senden. Bis bald, tschüss."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:22",
+      "text": "Ciao."
+    }
+  ]
+}

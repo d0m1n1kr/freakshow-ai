@@ -15,9 +15,13 @@ function parseArgs(argv) {
   const PODCAST_ID = podcastIndex !== -1 && argv[podcastIndex + 1] ? argv[podcastIndex + 1] : 'freakshow';
   const PROJECT_ROOT = path.join(__dirname, '..');
   
+  const dbDir = path.join(PROJECT_ROOT, 'db', PODCAST_ID);
+  if (!fs.existsSync(dbDir)) {
+    fs.mkdirSync(dbDir, { recursive: true });
+  }
   const args = {
     inDir: path.join(PROJECT_ROOT, 'podcasts', PODCAST_ID, 'episodes'),
-    outFile: path.join(PROJECT_ROOT, 'db', 'rag-embeddings.json'),
+    outFile: path.join(dbDir, 'rag-embeddings.json'),
     podcastId: PODCAST_ID,
     episode: null,
     from: null,
@@ -29,7 +33,16 @@ function parseArgs(argv) {
     requestDelayMs: null,
   };
 
-  const rest = [...argv];
+  // Remove `--podcast <id>` from argv so order doesn't matter and arg parsing doesn't fail.
+  const rest = [];
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
+    if (a === '--podcast') {
+      i++; // skip value
+      continue;
+    }
+    rest.push(a);
+  }
   while (rest.length) {
     const a = rest.shift();
     if (a === '--in-dir') args.inDir = rest.shift();
@@ -79,13 +92,13 @@ function tryReadJson(p) {
 
 function loadSettings({ allowMissing } = { allowMissing: false }) {
   // Prefer settings.json, but in some environments it may be blocked (ignored/secret file).
-  const settingsPath = path.join(__dirname, 'settings.json');
+  const settingsPath = path.join(__dirname, '..', 'settings.json');
   const fromSettings = tryReadJson(settingsPath);
 
   if (fromSettings.ok) return { settings: fromSettings.value, source: 'settings.json' };
 
   // If settings.json is missing or unreadable, allow env-based config (and optionally fall back to settings.example.json)
-  const examplePath = path.join(__dirname, 'settings.example.json');
+  const examplePath = path.join(__dirname, '..', 'settings.example.json');
   const fromExample = tryReadJson(examplePath);
 
   const envLLM = {

@@ -3,11 +3,39 @@ import path from 'path';
 
 const DEFAULT_FEED_URL = 'https://feeds.metaebene.me/freakshow/mp3';
 const DEFAULT_PODCAST = 'freakshow';
+const PROJECT_ROOT = process.cwd();
+
+function tryReadJson(p) {
+  try {
+    if (!fs.existsSync(p)) return { ok: false, value: null, error: null };
+    return { ok: true, value: JSON.parse(fs.readFileSync(p, 'utf-8')), error: null };
+  } catch (e) {
+    return { ok: false, value: null, error: e };
+  }
+}
+
+function loadSettings() {
+  const settingsPath = path.join(PROJECT_ROOT, 'settings.json');
+  const fromSettings = tryReadJson(settingsPath);
+  if (fromSettings.ok) return { settings: fromSettings.value, source: 'settings.json' };
+
+  const examplePath = path.join(PROJECT_ROOT, 'settings.example.json');
+  const fromExample = tryReadJson(examplePath);
+  if (fromExample.ok) return { settings: fromExample.value, source: 'settings.example.json' };
+
+  return { settings: null, source: null };
+}
+
+function getFeedUrlForPodcast(podcastId) {
+  const { settings } = loadSettings();
+  const podcast = settings?.podcasts?.find((p) => p?.id === podcastId);
+  return podcast?.feedUrl || null;
+}
 
 function parseArgs(argv) {
   let podcast = DEFAULT_PODCAST;
   const args = {
-    feed: DEFAULT_FEED_URL,
+    feed: null, // default resolved after parsing (from settings.json podcasts[].feedUrl)
     output: null, // Will be set based on podcast if not provided
   };
 
@@ -19,11 +47,16 @@ function parseArgs(argv) {
     else if (a === '--help' || a === '-h') {
       console.log('Usage: node scripts/generate-episodes-mp3.js [--feed URL] [--podcast ID] [--output PATH]');
       console.log('');
-      console.log(`Default feed:   ${DEFAULT_FEED_URL}`);
+      console.log('Default feed:   from settings.json podcasts[].feedUrl (fallback: DEFAULT_FEED_URL)');
       console.log(`Default podcast: ${DEFAULT_PODCAST}`);
       console.log(`Default output: frontend/public/podcasts/{podcast}/episodes.json`);
       process.exit(0);
     }
+  }
+
+  // Resolve default feed from podcast settings unless explicitly provided.
+  if (!args.feed) {
+    args.feed = getFeedUrlForPodcast(podcast) || DEFAULT_FEED_URL;
   }
 
   // Set default output based on podcast if not provided

@@ -766,6 +766,15 @@ watch(activeTab, async (newTab) => {
   drawHeatmap();
 });
 
+// Watch for podcast changes and reload data
+watch(() => settingsStore.selectedPodcast, async () => {
+  clearSelection();
+  // Clear cache to force reload
+  heatmapDataCache.value = {};
+  await loadData(activeTab.value);
+  drawHeatmap();
+});
+
 // Watch for data changes and redraw
 watch([currentData, () => settingsStore.isDarkMode], () => {
   if (currentData.value) {

@@ -1,10 +1,10 @@
-# Freak Show Podcast Analysis & Visualization
+# PodInsights
 
-A comprehensive tool suite for scraping, analyzing, and visualizing the [Freak Show podcast](https://freakshow.fm) archive. This project extracts episode metadata, transcripts, and shownotes, then uses AI-powered topic extraction and clustering to create interactive visualizations showing the evolution of topics, speakers, and themes across 300+ episodes.
+A comprehensive tool suite for scraping, analyzing, and visualizing podcast archives. PodInsights extracts episode metadata, transcripts, and shownotes, then uses AI-powered topic extraction and clustering to create interactive visualizations showing the evolution of topics, speakers, and themes across multiple podcasts.
 
-**🌐 Live Demo:** [https://freakshow.freshx.de](https://freakshow.freshx.de)
+**🌐 Live Demo:** [https://pod-insights.freshx.de](https://pod-insights.freshx.de)
 
-**📦 GitHub Repository:** [https://github.com/d0m1n1kr/freakshow-ai](https://github.com/d0m1n1kr/freakshow-ai)
+**📦 GitHub Repository:** [https://github.com/d0m1n1kr/pod-insights](https://github.com/d0m1n1kr/pod-insights)
 
 ## Features
 
@@ -16,7 +16,7 @@ A comprehensive tool suite for scraping, analyzing, and visualizing the [Freak S
 - ✅ **Podcast-Metadaten**: Logo, Tab-Namen und URLs pro Podcast konfigurierbar
 
 ### Data Collection
-- ✅ Scrapes 300+ episodes from the Freak Show archive
+- ✅ Scrapes episodes from podcast archives
 - ✅ Extracts metadata (title, date, duration, speakers, chapters)
 - ✅ Extracts transcripts with timestamps and speaker attribution
 - ✅ Extracts shownotes with links and categorization
@@ -78,8 +78,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 ```bash
 # Clone repository (Git LFS will automatically download embedding databases)
-git clone <repository-url>
-cd freakshow
+git clone https://github.com/d0m1n1kr/pod-insights.git
+cd pod-insights
 
 # If you already cloned without Git LFS, fetch the LFS files:
 # git lfs pull
@@ -92,7 +92,43 @@ cp settings.example.json settings.json
 # Add your OpenAI API key (or alternative LLM provider)
 ```
 
+## Automated Pipeline
+
+For a complete automated processing of a podcast, you can use the `process-podcast.sh` script. This script orchestrates all steps from scraping to visualization generation:
+
+```bash
+# Process a complete podcast (all steps)
+./scripts/process-podcast.sh <podcast-id>
+
+# Example: Process Freak Show
+./scripts/process-podcast.sh freakshow
+
+# Example: Process Logbuch:Netzpolitik
+./scripts/process-podcast.sh lnp
+
+# Skip scraping if data already exists
+./scripts/process-podcast.sh <podcast-id> --skip-scraping
+
+# Skip RAG database creation
+./scripts/process-podcast.sh <podcast-id> --skip-rag
+```
+
+**What it does:**
+1. Scrapes episode data (metadata, transcripts, shownotes, speakers, chapters)
+2. Extracts and normalizes topics using LLMs
+3. Creates semantic embeddings for topics
+4. Performs topic clustering (V2 auto-v2.1 variant)
+5. Generates visualization data files (river charts, heatmaps, UMAP)
+6. Generates optional data (MP3 index, speaker profiles, TS-live files)
+7. Creates RAG database (optional)
+8. Organizes all files into the correct frontend structure
+9. Creates necessary symbolic links
+
+**Output:** All data files organized in `frontend/public/podcasts/<podcast-id>/` ready for frontend use.
+
 ## Step-by-Step Guide
+
+If you prefer to run individual steps manually or need more control over the process:
 
 ### Phase 1: Data Collection
 
@@ -506,7 +542,7 @@ cargo run --bin rag-backend
 ## Project Structure
 
 ```
-freakshow/
+pod-insights/
 ├── podcasts/               # Multi-Podcast Datenstruktur
 │   └── <podcast-id>/
 │       ├── episodes/       # Scraped episode data (per podcast)
@@ -820,15 +856,9 @@ This is a personal analysis project, but improvements are welcome! Focus areas:
 
 ## License
 
-This project is for personal/educational use. The Freak Show podcast content belongs to its creators.
+This project is for personal/educational use. Podcast content belongs to their respective creators.
 
 ## Credits
 
-- **Podcast:** [Freak Show](https://freakshow.fm) by Tim Pritlove and guests
 - **Technologies:** Node.js, Rust, Vue.js, D3.js, Puppeteer, OpenAI API
 - **Inspiration:** Exploring podcast evolution through data visualization
-
-## See Also
-
-- [Freak Show Official Website](https://freakshow.fm)
-- [Metaebene Podcast Network](https://metaebene.me)

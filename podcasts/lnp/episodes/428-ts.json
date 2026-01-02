@@ -1,0 +1,654 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:00",
+      "text": "Guten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:03",
+      "text": "Google schmeißt im Mai Apps aus dem Play Store, die heimlich Telefongespräche aufnehmen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:09",
+      "text": "Beide sind unerwarteter Erfolg jetzt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:33",
+      "text": "Logbuch-Netzpolitik Nummer 428 vom 25. April 222 und ich glaube wir haben uns ein bisschen Zeit gelassen oder seit der letzten Sendung. Ähm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:44",
+      "text": "Oder wenig gehabt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:47",
+      "text": "Will ich gehabt, äh was anderes zu tun gehabt. Manchmal muss man aber bestimmte Sachen auch einfach mal nachdenken.\nKopfnüsse sind so. Also im Mai schmeißt Google dann die Apps raus, die heimlich Telefongespräche abhören."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:05",
+      "text": "Ja das ist ja so ein altes Thema, das die Leute sich von ihrem Handy belauscht fühlen und ähm.\nNe? Ich habe über etwas nur da und da gesprochen, dann habe ich nachher Werbung dafür bekommen. Ich halte das nach wie vor eher im Bereich der Legenden, dass das tatsächlich auf diesem,\nNiveau, was die Menschen da befürchten, tatsächlich groß großflächig stattfindet, aber es gibt Apps, die sich die Schnittstelle zu Barrierefreiheit zu Nutze machen und damit tatsächlich,\neben auf Gesprächsaufzeichnungen zugreifen.\nUnd das hatte Google quasi in seinen Appstore Richtlinien nicht nicht wirklich verboten und jetzt kündigen sie das eben an, dass sie so etwas nicht mehr,\nzulassen werden, dann wird quasi der der Zugriff, der nicht zu barrierefreiheitszwecken stattfindet, ähm Verboten,\näh das dann eben auch äh ja so umgesetzt gegenüber Apps, die sie\naktuell im Play Store drin haben. Schon natürlich 'ne sehr unterhaltsame Sache, also das ist überhaupt 'ne zum Aufzeichnen der Gespräche und dass sie das Apps die auch noch nutzen und die dann Jahre später,\n20, 22 einfällt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:24",
+      "text": "Na ja, manchmal, ich weiß jetzt nicht genau, wie die ABIs so sind, aber du hast ja oft dieses Problem, dass in dem Moment, wo du in irgendeiner Form Unterstützung für Eingabe, Ausgabe, Systeme,\nMöchtest für Blinde für sonst wie eingeschränkte."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:39",
+      "text": "Das ist dann viel zu breit ist, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:40",
+      "text": "Ja und dass du dann auch so spezifischen Zugriff brauchst so. Ne, andere Tastatur, dann hast du eine Tastatur,\nPlug-in und so weiter. So darf das dann sich mit dem Internet verbinden. So äh vielleicht erstmal nicht und äh wer darf das überhaupt installieren? Und wie wird das geprüft und so weiter? Das das ist äh\nauch so betriebssystemspezifisch schon ein kniffliges Problem und äh sicherlich auch etwas, wo man nicht von vornherein immer alles richtig macht. So und dann muss man halt mal.\nSolche Meldungen ermöglichen, damit wir da einen Witz drüber machen können. Ich finde das eigentlich auch ganz gut."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:12",
+      "text": "Aber der der äh die Meldung ist natürlich äh schon geil, wenn die wie heimliche Aufzeichnungen von Telefongesprächen. Google ändert am 11. Mai die Regeln, das ist eine spannende sehr unterhaltsame Meldung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:28",
+      "text": "Google hätte Ihnen ja den HTTP-Status 428 schicken können,\nÄh das ist nämlich ähm der schöne Status Pre-Condition Required. Ja, also da ist dann schon nochmal ja könnt ihr machen, aber dann müsst ihr bestimmte Bedingungen dann doch noch mal äh erfüllen,\nJa und sowas sowas kann man damit äh machen, um das gleich auch mal abgeworfen zu haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:55",
+      "text": "Wunderbar. Okay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:58",
+      "text": "Schon mal Bescheid wissen so, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:00",
+      "text": "Ja, nur dass du's schon mal weiß."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:01",
+      "text": "Ja genau, das ist nämlich das ist nämlich der kleine Bruder von 4hundertzwölf, den hatten wir schon mal so, wenn das halt nicht passt, dann dann ist das halt gefailt, so. Aber hier wird gesagt, es war auf jeden Fall."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:13",
+      "text": "Noch nicht mal angegeben, ja. Wir brauchen's überhaupt erstmal. Dann also dann wir du gibst erstmal eine vier achtundzwanzig und deine vier zwölf. Und dann guckste erstmal weiter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:22",
+      "text": "Oder in die Röhre."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:24",
+      "text": "Die Arbeitsserver kannst du ja komplett in nächste Request kommt bestimmt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:29",
+      "text": "Gut,\nDann wollen wir doch mal hier einsteigen in die tolle Sendung. Feedback haben wir wieder ganz viel äh bekommen. Ach Leute, das ist immer ich meine, man kriegt immer das so mit, wenn wir so reinrauschen, dann,\nman sich das so äh manchmal ein bisschen aufmerksamer, manchmal weniger aufmerksamer durch und dann so wenn die Sendung dann irgendwann näher rauscht, dann blättert man nochmal durch den ganzen Wald, ist immer komplett erschlagen, so oh.\nSiebzig Kommentare. Total super. Wir haben ein paar rausgesucht.\nUnd ähm vor allem habt ihr euch ähm erstmal wieder ein bisschen äh erregt über unsere Feststellung, dass ja die Corona-Warn-App jetzt so ein bisschen end of live ist.\nWeiß jetzt nicht mehr so ganz genau, wie wir das jetzt gesagt haben, aber."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:17",
+      "text": "Es war primär. Ich habe gesagt ähm.\nBei so hoher Inzidenz äh schlägt dieses Konzept der,\nWarnungen viel. Ja, weil sie oder meine meine Äußerung war, weil weil sie quasi,\nzu häufig passiert und dann eben auch ohne Konsequenz ist und ich habe gesagt, dass eigentlich dieses Warnsystem und das eben Methoden sind für Niedriginzidenzzeiten\num Niedriginzidenz halten zu können. Das ist offensichtlich nicht mehr das erklärte Ziel.\nAus unterschiedlichen Gründen, auch weil wir jetzt es mit einer Virusvariante zu tun haben, die nicht mehr,\nGefahr birgt das Gesundheitssystem zu überlasten, so zumindest das, was einem,\nIn breiten Nachrichten erzählt wird, wenn man dann anschaut, wie Leute auf den.\nStationen das sehen, haben die damit unter auch andere Ansichten, ja weil die glaube ich auch einen anderen ähm,\nEinen anderen Schwellwert haben für wir sind überlastet verständlicherweise, weil sie die Arbeit machen müssen.\nAber du hast ja bestimmt einen Kommentar dazu rausgesucht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:41",
+      "text": "Habe ich ähm vielleicht noch mal dazu, also ich glaube, das hatten wir auch schon gesagt, ne? Also es ist äh,\ndie die Voraussetzungen sind jetzt andere und viele der eigentlichen Bedrohungen sind weg und diese Warmfunktion, ich meine da steckt ja auch im Namen,\nWarn-App, so diese die er dafür da war rechtzeitig Bescheid zu sagen, damit man selber Drittinfektionen quasi einschränken kann. Ist natürlich jetzt auch mit dieser super."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:09",
+      "text": "Kurz, ich glaube das war jetzt ein bisschen kompliziert formuliert. Also wenn du die Warnung bekommst bist du ja wahrscheinlich schon positiv oder eben nicht,\nkannst dann eben früh gewarnt sagen, ich schränke jetzt meine Kontakte ein oder nehme nicht an der Hochzeit teil, um dort nicht jemanden anzustecken oder ich lasse mich jetzt testen oder so was, ne? Das ist,\ndas ist ja das, wofür die App da ist und was was du meinst, dass nur so so sehr knapp gesagt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:33",
+      "text": "Genau und dazu muss ja dieser ganze Warn-Turnaround mit Testen und Rückmeldungen und Auslieferungen und\nKenntnis nehmen, auch entsprechend schnell laufen und das war ja dann zu einem Zeitpunkt, als die Pandemie losging und dieser Zeitraum so im Bereich von vier, 5 Tagen war\ndurchaus noch ein realistisches Ziel und wird halt jetzt in zunehmenden Maße unrealistischer, wo wir's eben mit so einem äh so einer Inkubationszeit von zwei\nbis 3 Tagen zu tun haben\nHeißt nicht, dass es nicht auch noch irgendwie helfen kann. Zweite Perspektive war natürlich definitiv die Situation in Großstädten und ist natürlich klar\nwenn du irgendwie unterwegs bist, dann dann hast du einfach so viel Kontakte und da wir uns einfach nicht mehr in dem selben Maße einschränken müssen und uns auch nicht mehr tun. Äh es ist,\nmehr oder weniger zwangsläufig, dass dann in solchen Situationen,\nmit so einem Lebensstil das Ding halt nur noch rot ist. Aber es gibt auch andere Perspektiven. Eine will ich vielleicht kurz rausgreifen, von Henning erschreibt\nEine Ergänzung äh zu eurer Lebensrealität der dauerroten CBA, dies mag für euch und andere gelten doch so viele Kontakte, die so viele Kontakte haben, dass diese Normalzustand ist.\nAls jemand, der aus gesundheitlichen Gründen im privaten Umfeld jegliche Coronainfektion ungeachtet der Varianten vermeiden will, wahrscheinlich vermeiden muss und bisher auch vermieden hat,\nergänzen. Es gibt neben dieser Lebensrealität auch die Pandemie Realität von Menschen, die weiterhin so eingeschränkt leben, dass sie noch nie eine rote App hatten.\nIch persönlich habe die CWA je nach Zeitpunkt auf bis zu drei Mobilgeräten dabei und von denen war bisher nur eine App zu einem Zeitpunkt mal rot,\nDa war ich mit idealem Eigenschutz,\neinige Stunden am Berliner Hauptbahnhof in der Geflüchtetenhilfe aktiv, ansonsten dauert grüne Apps hier, weil ich aus Gründen weiterhin alle irgendwie vermeidbaren Kontakte vermeide.\nViele Schattenfamilien ist die Pandemie halt überhaupt nicht vorbei und für sie sind Dauergrüne Apps normal, auch wenn die CWA Farbe vielleicht nicht mehr beim Contact-Racing hilft,\nvielleicht doch zur Messung, in welchem pandemischen Paralleluniversum Mensch lebt, umso wichtiger aber für Schattenfamilien,\nPodcast produziert damit wenigstens diese Normalität aufrecht erhalten bleibt und okay ne andere.\nHat er auf jeden Fall einen Punkt. Allerdings und das ist ähm,\nvielleicht auch mal etwas, wo man dann in Zukunft im Design dieses Warnsystems, wenn wir es denn noch mal brauchen sollten auch sich darüber Gedanken machen müsste, wie man sowas machen kann. Ich fand das ja immer schon,\nSchade, dass es nicht so eine wirkliche, also man hat halt so diese Warnung, ja, aber was in diesem ganzen System halt so nicht drin ist, ist so ein so ein so eine automatisierte äh visualisierung des Gesamtbedrohungspotentials.\nIn meinem Umfeld, ne. Und das ist glaube ich das, wofür die App jetzt auf jeden Fall auch noch taucht. Meine, das war ja auch am Anfang so, da war sie immer grün, grün, grün und man dachte sich, wozu brauche ich denn das? Kaum hatten wir dann einmal so richtig fette Welle.\nSo, dann ging das halt auf einmal los und dann haben wir halt gemerkt, so, oh, das funktioniert ja sogar. Insofern war das ja auch ganz gut. Okay, das dazu."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:10:37",
+      "text": "Ja, ich frage mich auch manchmal, das ist aber äh wenn ich mich nicht täusche.\nNie gekommen, äh wäre aber sinnvoll gewesen so eine die Warnung.\nAlso die überhaupt die wahren Geschwindigkeit zu erhöhen, dass man zum Beispiel bei einem positiven Schnelltest eine gelbe Warnung aussendet, ja. Ich,\nbisher von wenigen Fällen gehört, wo die Schnelltests falsch positiv waren, falsch-negativ hasse,\nEs gibt auch Fälle mit falsch-positiv. Im Schnelltest, ja, aber ähm.\nDas das wären halt zum Beispiel Möglichkeiten gewesen, diese diese Meldegeschwindigkeiten zu erhöhen. Aber da wir in der letzten Sendung ja immer noch von der Hotline gesprochen haben, äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:29",
+      "text": "Ist er im Bereich der Automatisierung äh des gesamten Prozesses noch einiges zu verbessern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:36",
+      "text": "Da ist noch nicht so viel passiert, ja und wird wahrscheinlich jetzt auch nicht mehr."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:40",
+      "text": "Glaube ich auch nicht, aber wer weiß wofür das noch mal gut sein kann. Das war jetzt sicherlich eine eine sinnvolle äh Erfahrung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:48",
+      "text": "Dazu, wir haben ja oder wir haben ja auch gesagt, okay, das Konzept wird jetzt langsam von einer anderen Realität überholt oder eingeholt. Wenn man auch nicht gesagt,\nman diese App jetzt deinstallieren soll. Wir haben gesagt die Luca-Apps soll man deinstallieren. Äh da kommen wir auch nachher nochmal zu. Insofern, wir benutzen die ja auch beide."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:08",
+      "text": "Immer noch, ja. Na klar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:09",
+      "text": "Selbstverständlich, ähm weil sie nicht weh tut und äh gleichzeitig aber muss kann ich eben sagen, ich kann in.\nMeiner Lebensrealität und da hat ja genau der Henning das den den wichtigen das wichtige Gegengewicht gebildet. Habe ich gesagt, ich in meiner Lebensrealität sind rote Warnungen jetzt nicht mehr.\nÄhm in Handlung umsetzbar.\nWährend ich jetzt auch nicht den Eindruck habe, dass ich jetzt Unmengen an Kontakten habe, aber ich bewege mich eben durch diese Stadt und äh trotzdem ist das natürlich in einer, wenn du nicht an diesem Punkt bist,\nUnd wenn viele von euch das nicht sind, würde ich natürlich weiterhin entsprechend äh auf rote Warnungen reagieren, klar.\nInsofern danke Henning für den Hinweis. Und viele andere, die ähnliche Kommentare hinterlassen haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:07",
+      "text": "Waren auch einige mehr.\nÄhnliche Reaktionen auch zu unseren Kommentaren rund um Laptops, äh Lehrer, Schulen, Digitalisierung,\nDas ist auch glaube ich so ein Thema, da kann man's auch irgendwie keinem recht machen. Also damit meine ich jetzt nicht euch Zuhörende, sondern halt irgendwie,\nGenerell glaube ich, kann man kann man's da nicht allen recht machen. Auf jeden Fall gab's sehr unterschiedliche\nEinschätzung in den Kommentaren so rund um diese Dauerstreitfrage klappt denn nun die Digitalisierung im Unterricht oder nicht? Da gibt's positive Beispiele, gibt's negative Beispiele.\nÄhm unter anderem wurde dann aber im Rahmen von Beschaffungsmaßnahmen Angst vor dem,\nApple Ökosystem geäußert, wo ich mich da wo ich mir dachte, so wie Apple Ökosystem, wo wird denn in Deutschland irgendwie Apple äh eingesetzt.\nWeil das war ja immer schon so ein ewiges Universum, was da äh eigentlich stattgefunden hat.\nNa ja, auf meinen angemeldeten Zweifel, dass man doch mit äh Sicherheit nicht zu Apple greifen würde, kam dann die Einschätzung von Felix und da lese ich mal vor.\nMichels glauben, dass in Niedersachsen, also es ging in dem Fall um Niedersachsen, äh Apple gewählt wird, weil es in Niedersachsen schon sehr viele Schulen gibt, an denen die Eltern iPads über das Unternehmen Gesellschaft für digitale Bildung, für ihre Kinder samt Versicherung leasen.\nIn Niedersachsen die Medienpädagogische Beratung des niedersächsischen Landesinstituts für schulische Qualitätsentwicklung sehr auf iPads zugeschnitten. Das gibt unglaublich viele Angebote zu iPads und die regionalen Medienzentren legen Schulen auch direkt nahe iPads\neinzuführen. Außerdem rollt die Landeshauptstadt Hannover gerade auch ein massives iPad-Programm aus und in dem Zuge werden in den Schulen gleich die PC-Räume abgeschafft,\nderen Weiterfinanzierung steht in Frage. Informatik-Kolleginnen und Kollegen sind dort natürlich schwer verzweifelt, aus Admensicht, weiß ich aber auch,\nwie gut sich iPads über ein MDM verwalten lassen.\nWobei die Vice Management ist das, ne. Ich kenne keine andere Lösung, wo man tausende Geräte so einfach verwalten.\nSo die Gründe, warum ich denke, dass die Wahl auf iPads fallen wird. Mein Punkt ist aber eigentlich der, dass iPads ohne sinnvolles pädagogisches Konzept ziemlich sinnlos sind. Außerdem wird soviel Bild verbrannt, was dann weg ist.\nIn Personal investieren damit jede Schule dann ein Admin bekommt um sich um die Schul-IT zu kümmern,\nwürde man nachhaltig Kompetenz aufbauen. Außerdem wäre das Geld auch besser in mehr Lehrerstellen investiert um die Unterrichtsversorgung zu verbessern,\nWas mich auch umtreibt, ist der ökologische Fußabdruck dieser Idee. Alle drei Jahre bei allen Schülerinnen und Schülerinnen in Niedersachsen alle Tablets zu tauschen. Wir haben teilweise Linux, Business, Notebooks, die über zehn Jahre alt sind, aber dennoch einwandfrei und schnell funktionieren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:52",
+      "text": "Ja da kann ich äh zuständig da ganz kurz einhaken darf, weil ähm.\nAlso hier sieht man wieder, okay, jetzt haben sie digitalen Unterricht. Wenn du jetzt sagst, okay, was ist.\nDas perfekte Schulbuch für eine Schülerin heute, dann bist du natürlich bei so einer Tabletform.\nJa, weil du sagen kannst, okay, guck mal, wir können du kannst auf dem Ding dein Schulbuch digital lesen. Wir können potenziell, was weiß ich, irgendwelche Hausaufgaben äh\nam iPad regeln, ne, das ist natürlich schon eine es ist ein leichtes Gerät.\nInsofern für eine Digitalisierung des Unterrichts kann ich mir sehr gut vorstellen, dass da viele zu der Überzeugung geraten, dass das\niPad ein sinnvolles Gerät ist für die Schülerinnen und Schüler. Gleichzeitig sagt betone ich ja auch immer.\nDas ähm ich irgendwie wahrscheinlich zu mit zu der letzten Generation gehöre oder zu der Generation gehöre, die einen Computer noch.\nVon da ist ein Gerät mit Tastatur ohne Internet.\nZu. Da ist ein Gerät ohne Tastatur in meiner Tasche und hat immer Internet, so\nbekommen habe und überhaupt noch gelernt habe, was ein Computer ist und mir graust es eigentlich und der vor, wenn Kinder, die jetzt oder vor, inzwischen kann man auch sagen, eigentlich\nvor zehn Jahren oder sowas oder 15 Jahren geboren wurden deren erster Kontakt mit Computern war eben.\nEin leuchtendes Brett und dass dieses iPad eben sehr wenig eigene.\nInformatiker oder Informatische ähm.\nKreationsmöglichkeiten bietet. Geht ja allein damit los, wenn du ein iPad hast, kannst du nicht damit ein iPad programmieren. Du kannst mit einem iPad äh du kannst ein iPad nur mit einem Computer programmieren und das heißt, die so das Wissen über wie,\nfunktioniert diese digitale Welt, um das zugänglich zu machen.\nDarin auch kreatives Potential zu entfalten. Dafür brauchst du halt einen Computer und das ist, glaube ich, auch das, äh wo worauf hier Felix,\nhinaus will, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:14",
+      "text": "Ja, also mehrere Sachen. Also erstmal es ist halt einfach.\nSo, was er auch sagt, so iPads lassen sich einfach gut administrieren. Das irgendwie eine total solide Plattform, die existiert jetzt irgendwie schon seit zehn Jahren. Das funktioniert gut so und die Geräte sind in dem Sinne auch noch nicht mal teuer, wenn da halt jetzt wirklich so mit diesen,\nBasismodellen einsteigst und das ist natürlich ein ganz wichtiges Ding. Was du sagst ist natürlich interessant und ich glaube das ist auch so ein bisschen so eine Perspektive,\ndie so aus unserer Computer-Bubble heraus immer kam, weil wir halt gesagt haben, oh wenn man mit Computern arbeitet, dann müssen ja auch Computer selbst,\ninteressant sein. Man lernt ja dann Computer,\nIch glaube, darum geht's hier gar nicht so sehr. Hier geht's um die Digitalisierung, hier geht's darum, die den Unterricht zu flexibilisieren und nicht um die Geräte als solche. Ja?\nKann da noch mit dazukommen, aber wenn ich irgendwie meine Schulbücher über Physik und Biologie darauf habe und da irgendwelche interaktiven Dinger habe und jederzeit Lehrfilme abspielen kann\net cetera. Äh ich meine, Fahrschule mache ich irgendwie auch im Webbrowser. Das funktioniert auch besser als mir irgendwie durch irgendwelche Bücher äh äh durchzublättern.\nVollkommen normal heutzutage und Ähnliches, was halt gut damit gemacht werden kann. Das soll doch bitte, bitte, bitte\ndann auch gut damit gemacht werden. Und wenn's iPads sind, gut, weil,\nÖkosystem, ich glaube diese Vorstellung davon, dass wenn man jetzt irgendwie ein paar Jahre lang irgendwie ein iPad als als quasi als universelles Schulbuch benutzt,\ndass man dann irgendwie nur noch nach Apple schreit, das ist auch ein Glaube, von dem ich nicht denke, dass dass,\nder stimmt so. Also das äh da haben wir wirklich andere Sorgen und das sieht man ja auch und die Einschätzung hier vom Kommentar war ja auch so dieses wir brauchen halt trotzdem erstmal Personal,\nWeil es oft auch einfach die Lehrer sind und das hatten wir ja letztes Mal auch angesprochen, die einfach gar nicht die Zeit haben, die dafür gar nicht bezahlt werden, gar nicht ausgebildet werden, dann auch äh da in ein System zu,\neinzusteigen und so ihre Lehre zu machen und sich gleich von allem zu verabschieden, was sie äh bisher gemacht haben. Das ist wahrscheinlich einfach ein langwidriger Prozess, weil bei uns der Druck einfach nie hoch war,\nCorona hat da jetzt so ein bisschen was verbessert, aber na ja. Ich habe noch einen zweiten Kommentar, den will ich noch hinterherwerfen, dann können wir das Thema auch abschließen. Äh Thomas schreibt.\nDenke, dass schulische Digitalisierung ein ähnlicher ClusterFuck ist, wie es Lillet damals zum Bildesministerium erzählt hat,\nauf der RC 3 Einsatz in meine Präsentation eingebaut, den ich vorher zu den Corona Apps gehört hatte,\nDigitalisierung muss man von vornherein denken, doch niemand im Schulsystem kann das. Die Verantwortlichen sind entweder Lehrkräfte oder Juristinnen, die Lehrkräfte unten sind überlastet.\nVon Regelungen bedroht, die Kommunen versuchen das so preiswert wie möglich über die Bühne zu bringen, allein der Prozess um die Kohle vom Digitalpakt zu bekommen,\nist absurdes Theater aber nicht sinnführend,\nDazu kommen dann noch digital Evangelistinnen unter den Lehrkräften und Didaktikerinnen, die alle das gelobte Land sehen, aber nie konkret werden.\nMit Fortbildungen zugeschissen, die nix tun als dich zu erklären, wie du die Dinge, die du vorher mit einer Tafel gemacht hast, jetzt mit einer App machst\nDie zentralen Fragen wie wie machen wir Medienbildung, was ist überhaupt digitale Schulung, was bedeutet sie für den Alltag von allen Beteiligten, welche Ziele haben wir gesellschaftlich, wenn wir von einem digitalisierten Schulwessen sprechen, wird alles aus meiner Sicht überhaupt nicht diskutiert,\nDa wird überall furchtbar gewurschtelt, weil die Forderung im Raum steht es zu machen,\nDas war's dann auch. Schule und Bildung müsste mit allen Stakeholdern von vornherein digital neu gedacht werden, aber das funktioniert natürlich nicht, weil die Jugend, die Minderheit in diesem Land ist und so und so nur begrenzt, bekannt ist,\ndass es jenseits von Grundschule und Gymnasium äh noch etwas existiert. Ich habe mich jetzt viel zu lange damit beschäftigt, dass es mich noch überrascht,\nLink noch auf diesen Talk. Ähm ja also da das ja auch in den Kommentaren auch noch mal an anderer Stelle angesprochen wurde, also.\nWir dissen jetzt hier auch irgendwie nicht die Lehrer. Äh ich sehe das einfach. Ich ehrlich gesagt, ich diss da gar keinen. Weil ich sehe halt einfach nur eine komplexe Gesamtkonstellation, wo es bisher noch niemanden gelungen ist,\nKnoten zu lösen und der wird sich wahrscheinlich erst langsam freiruppeln, ähm weil einfach niemand mit einem passenden Schwert daneben steht.\nÄhm irgendwie kulturell nicht so richtig auffette kriegen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:41",
+      "text": "Ich habe jetzt mal meine Vermutung, welchen Vortrag Thomas meint in auch noch mit in die aufgenommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:50",
+      "text": "So dann hatten wir noch äh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:53",
+      "text": "Dann gibt's ganz viel Brokkoli."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:54",
+      "text": "Rückenbehältung zu äh Brokkoli."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:56",
+      "text": "Doch auch mit Brokkoli machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:58",
+      "text": "Ja also ich sprach ja von Käsekuchen, von dem ich meine, dass da kein.\nBrokkoli reinkommt, aber Andy,\nNoch an. Ganz kurz zu den Themen Brokkoli und Kuchen, lieber Tim, das will man auch im Kuchen haben und auch mit Käse. Also lieber Tim, lieber Linus, packt das gehamsterte Mehl aus und probiert mal diese zwei Rezepte aus. Links sind anbei."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:22",
+      "text": "Das machen wir nicht hin. So geht das los. So geht das nämlich los. Das machen wir nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:26",
+      "text": "Was? Wieso? Herzhafter Brokkoli Chicorée, Haselnussblätterteigkuchen? Gehe ich mit?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:33",
+      "text": "Am Ende investieren wir in Bitcoin."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:35",
+      "text": "Und Lachs, Brokkolikuchen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:37",
+      "text": "Klingt super. Ich habe ja direkt gesagt, das ist für Gesamtbrokkoli."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:41",
+      "text": "Es ist halt einfach, man muss für Brokkoli einfach auch den richtigen Bereich finden. Da kann es dann auch irgendwie was bewirken, ja, aber Käsekuchen ist es nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:51",
+      "text": "Also herzhafter Brokkoli Creme, Chicorée, Haselnussblätterteigkuchen und Lachsbrokkolikkuchen sind das Bitcoin des Brokkoli."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:00",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:05",
+      "text": "Okay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:06",
+      "text": "Noch einen Kommentar hatten wir zu unserer kurzen Diskussion um äh Online-Wahlen. Da reagieren wir ja dann immer ähm ein bisschen gereizt, weil wir da so meinungsstark sind.\nGab dann noch einen längeren Kommentar von äh Kolja.\nDer, ich greife es gleich mal vorweg äh in der Partei Volt äh engagiert ist, das ist diese,\neuropäische Partei.\nAlso von sowohl von den Themen als auch von ihrer Organisationsform, die es halt in allen EU-Staaten gibt oder zumindest in allen geben soll und in vielen gibt.\nEr schreibt, ich freue mich sehr darüber, dass ihr Online-Wahlen thematisiert habt, da ich mich gerade im Rahmen meiner,\nArbeit, damit befasse ich. Folge eurer Argumentation hinsichtlich Parlamentswahlen, die Omnipräsenz der Kriterien in der Wahlcomputerentscheidung des Verfassungsgerichts.\nJedoch eine problematische und unvorhergesehene Konsequenz für unsere Demokratie an anderer Stelle. Sie hebelt in Parteien die Rechte einfacher Mitglieder aus, indem sie neben Delegiertensystemen keine anderen Parteitagsformen praktisch anwendbar macht.\nInnenausschuss des Bundestages hat für die temporäre Einführung von Online-Parteitagen während Corona eben jenes Kriterium,\nanstatt digital Übersatzungsänderungen und Wahlen abstimmen zu können, müssen diese in einem separaten Briefwahlgang bestätigt werden. Da Briefe teuer und einfache Parteimitglieder unzuverlässig sind,\nsich selbst reformwillige Parteien für ein Delegiertensystem anstatt von Mitgliederparteitagen um die benötigen Quoren einzuhalten und damit handlungsfähig zu bleiben,\nEs ist nämlich weder garantiert, dass eine Vorabstimmung auf dem Online-Parteitag das Briefwahlergebnis widerspiegelt,\nDoch dass alle Mitglieder die Briefwahlunterlagen zurücksenden,\nauslaufende coronaregeln sind ohnehin Präsenzparteitage notwendig, besonders verwirrend wird die Entscheidung des Innenausschusses,\nDie Alternativen betrachtet bei Online-Parteitagen bestand die Wahl zwischen Briefwahl und Online-Wahl. Bei dem Urteil zur Wahlcomputern war die Alternative eine Urnenwahl. Die Briefwahl wird aufgrund der höheren Wahlbeteiligung akzeptiert,\nobwohl die Wahlrechtsgrundsätze nicht eingehalten werden können. Das wäre also grundsätzlich auch für Onlinewahlen in Parteien möglich.\nDie umstrittene Anwendung des Kriteriums auf das Parteienrecht bremst die Entwicklung neuer Beteiligungsformen praktisch aus. Überlegt euch mal, wie schön es wäre, wenn Parteimitglieder nicht nur online Anträge stellen, sondern mit ihrer eigenen Stimme Wahlprogramme und Satzungsänderungen\nabstimmen könnten, wollt Deutschland hat während covid-Online-Parteitage durchgeführt, bei denen jedes Mitglied dieselbe Stimme durch ein Krypto thoken,\ndem mal an hier ist jetzt nicht äh Krypto Geld gemeint, sondern er ist in Kryptographie. Äh durch einen Krypto token hatte. Das hat viele Menschen angezogen, die nebenher inhaltliche Parteipolitik machen wollen.\nDie sich nicht auf die Wahl von Delegierten und Wahlkampfunterstützung beschränkt. Diesen Sommer\nist mit diesem demokratischen Traum Schluss und wir werden notgedrungen ein Delegiertensystem einführen. Die Alternative bestünde darin, wie die Piratenpartei mit dieser Parteitage in Präsenz zu veranstalten,\nan denen nur ein besonders aktives Klientel teilnimmt,\nPiraten gegen den Basisentscheid Online BEO oder die ständige Mitgliederversammlung als Parteitagsform sind zwar vielfältig drehen sich jedoch im Kern auch um die Auslegung der Kriterien,\nim Parteienrecht. Okay, das war jetzt ein langer Kommentar, aber ich fand's mal wertvoll, dass äh hier wiederzugeben.\nJa, also ist natürlich ein Punkt, ne, muss man mal sagen. So\nes ist natürlich klar, dass in einer idealen Welt, in einer idealen, digitalen Welt, so dieser direkte äh Zugriff auf äh eine Organisation oder eine Organisation auf seine Mitglieder,\nIhre Mitglieder wünschenswert wäre, wenn es gerade um so etwas geht wie Meinungsbildung. Und in gewisser Hinsicht kann man das ja machen, bloß,\nan dem Punkt, wo man eben abstimmen möchte und sich wirklich ähm auf etwas einigen möchte, auf Basis von von Mehrheitsentscheidung.\nLäuft man ja letzten Endes in dasselbe Problem und wahrscheinlich muss man ja auch mal abwägen, wie quasi das jeweilige Gefährdungspotential ist. Nichtsdestotrotz,\nist es natürlich so, überall da, wo dann Einflussnahme problematisch ist und da kam, glaube ich, die Piratenpartei auch ein Lied von singen.\nÄhm wie viele Leute dann auf einmal angelaufen kamen, als das Projekt erstmal ein bisschen Erfolg hatte\ndie vielleicht gar nicht so wohl meine Intention hatten, um dann quasi das Projekt auch von von innen zu äh ja durch irgendwie libatäre äh Träume auf der einen Seite und irgendwie so latent äh,\nproblematische Leute, sage ich mal auf der anderen Seite, die man sich alle noch so reingeholt und reingerufen hat in diesem,\nRausch des Wachstums.\nJa, dann dann hatte man auf einmal so eine gesamt Gemengelage unter den Mitgliedern, mit denen man nicht mehr klar kam und dann war auch halt diese Auseinandersetzung auf diesen Parteitagen irgendwie keine Freude.\nDiese ganzen Vor-Ort-Parteitage sind eben genau daran gestorben. So alle können halt mit mitmachen, aber eben nur, wenn man vor Ort ist und das bedeutete dann, dass immer so die.\nSag mal, ist etwas stramm so die größten Sesselpupser, äh die besten Chancen hatten irgendwie äh das Programm zu gestalten,\nLeute, die vielleicht irgendwie Kinder und sonst irgendwie einen Job haben, eben nicht die Möglichkeit hatten, mal eben beliebiges Wochenende auf so einem Parteitag rumzugammeln.\nUnd klar, dann ist natürlich das Delegiertensystem bei uns so, dass äh etablierte Systeme und man trifft halt eine Vorauswahl für Leute, mit denen man in irgendeiner Form vertraut,\nder Ansatz, den's damals bei den Piraten gab, also in irgendeiner Form mit so einem,\npermanenten äh Parteitag online quasi so eine so eine fortwährende Meinungsbildung,\nzu betreiben natürlich auch problematisch, weil du schnell wieder in diese Probleme reinläuft mit Komplexität des Systems, Vertrauen in das System et cetera, so gut es auch gebaut und gemeint gewesen sein mag,\ndann auch nicht alle dazu durchringen das zu benutzen. Weiß nicht, hast du da irgendwie eine Meinung zu Linus?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:30:34",
+      "text": "Klingt für mich nach so einem Bereich, wo leider ideal und.\nRealität so ein bisschen aneinander knallen weil.\nAlso wichtige Entscheidungen leben ja auch ein bisschen davon, dass man vielleicht den Kreis der entscheidenden,\nfestlegt und ich glaube eine Stärke solcher Delegiertensysteme ist, dass in der Regel wenigstens diese delegierte Person dann\nim Namen derer abstimmt, die sie delegiert haben\nund mit denen vielleicht auch eine Rücksprache hält und dafür oder sich zumindest darüber Gedanken macht, die richtige Stimme abzugeben.\nWährend wenn du jetzt sagst, okay wir machen alles offen, alles basisdemokratisch.\nÄh das also man sieht ja, wohin das also man sieht, dass es in der Realität Parteien bisher noch nicht so hinbekommen haben.\nUm das mal vorsichtig zu sagen, damit zu arbeiten, ne, dann entstehen dann kann auf einmal jede eine Abstimmung machen,\ndann hast du potenziell die falsche Struktur in deinen Abstimmungen, in so der Gestalt, dass ich halt quasi,\nThemenüberlappungen zwischen unterschiedlichen Abstimmungen gibt, dann ist immer nicht klar, wer sich gerade berufen fühlt oder dann hat mal jemand\nden Überblick verloren, weist sich an welcher Abstimmung ich mich beteiligen soll. Dann hat die auf einmal stattgefunden, ohne dass ich es wusste. Da sind also so eine Reihe an.\nJa Komplikationen drin, die meine Eindruck nach noch nicht so sinnvoll gelöst wurden,\nnicht, ob's da wie hießen die denn ein Liquid und oder Liquid Feedback oder was?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:23",
+      "text": "Genau, ja, das waren ja so die, also Liquid Deprogressiver, eher das Konzept."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:27",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:28",
+      "text": "War das konkrete äh System ähm was letzten Endes so ein bisschen die Basis für so einen permanenten Parteitag ist, der so,\nder einen Seite online ist, aber auf der anderen Seite auch noch einen Delegiertenmodell äh dahingehend enthielt, als dass man eben themenspezifisch seine Stimme auch,\nsolchen Delegierten ähm übergeben kann. Also ich kann entscheiden.\nWas weiß ich hier, wenn's um Security geht, so dann soll mal der Linus das entscheiden, weil da habe ich eh keinen Plan von, aber ich vertraue dir, dass der dass der Linus das schon irgendwie macht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:01",
+      "text": "Stimmt, das hatten die ja. Ja, ja, stimmt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:03",
+      "text": "So, das war so die das Modell und ich fand das eigentlich auch immer ganz charmant, aber es ist natürlich trotzdem eben auch ein sehr technokratischer Ansatz, der dann äh,\nerstmal die Leute wiederum begünstigt, die eben in solchen technokratischen Kontexten auch gut arbeiten können, was eben mitnichten für jeden\npasst, ja, andere brauchen einfach so die offene Debatte und die Diskussion um den Punkt und bereiten sich lieber in Gesprächsrunden mit ähm einem eingeschränkten Team vor.\nDas ist etwas, das muss ich erst noch mal evolutionär beweisen, dass das wirklich funktioniert und da muss ich halt auch sagen, so schön die Idee von Liquid Feedback ist, ich habe das jetzt nicht an vielen Stellen reduzieren sehen,\nNicht so, dass jetzt irgendwie andere Gruppen gesagt haben, oh wow, super, tolles Modell, ja? Ist zwar technisch sehr interessant und auch so,\nmit dieser Nachvollziehbarkeit der\nBeschlüsse und wieder abgestimmt wird und wie gerecht diese Abstimmungen sind, ne? Weil sie halt äh nach so einem äh elaborierten äh,\nVerfahren äh arbeiten, Schulze-Methode et cetera, also wo soll sozusagen wird die Gewichtung der Stimmen gut ist und nicht nur so plumpe Mehrheiten und äh\neine Rolle spielen. Das war schon alles ganz gut, aber trotzdem zeigt sich eben, dass dass das noch nicht so unmittelbar an Menschen andockt.\nDass das eben ein System allein ein Computerprogramm allein\nda nicht hilft. So und jetzt kann man natürlich sagen, okay gut, ne, wir wollen aber nur, dass die Leute von zu Hause wählen können, mehr wollen wir doch gar nicht, denn dann dann brauchen wir diese Delegierten nicht, dann können ja alle mitstimmen. Ja okay, gut, kann man machen, kann man kann man.\nMitexperimentieren. Habt ihr bei Volt ja offensichtlich jetzt auch getan, habe jetzt nicht viel rausgelesen, was diesen,\nTraum, wie es hier formuliert war, untermauert mit Erfahrung. Wer nochmal interessant das zu äh hören, welche Erfahrungen das gegeben hat, aber ich denke da sind wir noch nicht. Nichtsdestotrotz in dem Moment, wo,\nVolt ist jetzt irgendwie Regierungspartei, ja und es ist klar, dass jetzt eine ähm,\nParteientscheidung zu einem bestimmten Thema ähm durchaus Relevanz hat, gerade wenn das,\nso ein Online-System und so ein so eine äh Massenbeteiligung dann auch hochgewichtet wird in der\nPartei und dann irgendwie Koalitionsrelevanz hat et cetera dann werden natürlich auch die Kräfte stärker, die versuchen so etwas zu beeinflussen.\nUnd dann stellt sich irgendwann natürlich wieder die Security Frage. Ich will jetzt erst nicht auch damit alles komplett,\nich denke, dass wir ähm vielleicht experimentieren müssen mit Nuancen davon?\nEs muss auf jeden Fall klar sein, dass wir irgendwie so diese unmittelbare Machtdelegation, also die Zuteilung von Ämtern ähm et cetera.\nFreihalten müssen von solchen Betrugssystemen. Ich meine, wir haben früher immer viel darüber gewitzelt so, was äh die Russen vielleicht für einen Einfluss haben können mit ihrer ganzen\nExpertise Systeme aufzumachen und es gab ja schon immer die Berichte auch mit den Waldcomputern in den USA\nMittlerweile wissen wir halt wie groß das Interesse ist äh,\nRussland wird jetzt nicht nur über Russland ziehen, sondern generell natürlich gibt's auch andere äh Staaten und Gruppen, die gerne Einfluss nehmen wollen,\nWenn sie's denn können und in dem Moment, wo sie's können, machen sie's dann halt auch und das hat uns irgendwie,\nWahrscheinlich auch Trump eingebrockt, also jetzt nicht konkret online Wahl und auch nicht unbedingt die die äh Wahlcomputer, ne, aber die Beeinflussung über das Digitale und das geht,\ndann eben auch bis dahin äh Brexit, nächste Beispiel und in Frankreich sind wir jetzt grad mal wieder von der Schippe gesprungen.\nSoviel dazu."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:11",
+      "text": "Dann gibt's noch was Schönes. Eine schöne, ein schöner Kommentar von Julia."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:18",
+      "text": "Genau. Julia schreibt, hallo in die Runde. Ich gestehe nicht alle Kommentare geflissen, die ich gelesen zu haben, aber gerade beim äh Überlegen könnte ich eine kleine Erwähnung,\nzum Aufmacher Major der allwissenden Müllhalde finden, deswegen möchte ich hier meinen heutigen Zufallsfund teilen.\nMajory Vicky DE. Die Müllhalde von."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:39",
+      "text": "Heißt die doch, oder?\nOder hast du in Deutschland dann Majory?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:46",
+      "text": "Heißt.\nEhrlich gesagt gar nicht. Heißt die nur allwissende Müllhalde oder heißt sie Majurie, die ähm oder Marge Marge, Entschuldigung, jetzt war ich zu deutsch.\nZu deutsch. Ja? Also nochmal."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:01",
+      "text": "Ja, für den Briten bisschen zu deutsch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:05",
+      "text": "Das ist eine rein pragmatische Entscheidung. Da wissen die Leute, wie's geschrieben ist, ja.\nEt cetera wenn ich richtig Englisch reden würde, würde mich da wieder kein Mensch verstehen. Dann ist es auch alles nur so daher geredet. Also.\nIst die Wikipedia bei der abgelehnte ein schwarze Chance erhalten. Die heißt Margery.\nDas erhellte mir den Start ins Wochenende sehr.\nMir auch, Julia. Ich glaube, ich wusste das auch schon mal, aber ich habe das verlegt. Aber das Margerit, das äh da wo die ganzen abgefragten Artikel äh hinkommen, die sonst ähm keine Chance haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:50",
+      "text": "Okay, dann haben wir in der letzten Sendung ja,\nmal wieder über Heckbacks geredet, das ist die Hackpack Illusion, die ja Leute äh immer wieder umtreibt ähm.\nUm es nochmal zusammenzufassen. Es ist nicht so, dass man spontan mal etwas hackt.\nGeht nur sinnvoll, wenn man das äh langfristig quasi vorbereitet ähm oder sagen wir mal so, es wäre sehr die Wahrscheinlichkeit ist gering,\nwenn man gerade angegriffen wird in sehr schneller Zeit eine,\ndurch Hacking dem ein Ende bereitet\nJa, das gibt es andere Methoden, wie man dem Angriff ein ein Ende bereitet, äh zurückhacken, spontan\nist äh die unwahrscheinliche, unwahrscheinlichste Variante davon, wenn es halt das auch so ähm selten.\nJa, funktioniert. So, jetzt gab es dazu ja eine klare Positionierung im Koalitionsvertrag.\nÄhm und diese.\nDiese Formulierung heißt sogenannte lehnen wir ab. Warum lehnt man die ab? Erstens weil es ähm.\nWenn man hacken möchte, braucht man dafür Schwachstellen. Das bedeutet also, vor allem, wenn man schnell und spontan hacken möchte, muss man Schwachstellen geheim halten. Das wiederum geht zu,\neigenen Lasten.\nWeitere Argumente sind ja auch, dass insbesondere in so einer schnellen Situation man nicht unbedingt erkennt, wen wo kommt denn jetzt der Angriff her und wie\nwas der denn jetzt mal schnell weg, ja und deswegen ist in meinen Augen die einzig,\nsinnvolle Konsequenz, wenn man sich jetzt offensiv beteiligen möchte, dass man das macht, was andere auch machen, langfristig vorher infiltrieren.\nUnd dann im Fall des Interesses einen Schaden beifügen. Das geht aber natürlich nur mit den Zielen, die man im Rahmen quasi eines,\ngezielten Angriffs eines Cyber-Wars.\nVorher angreift, ja? Und du kannst jetzt nicht sagen, ah okay, äh der Russe hackt unsere kritischen Infrastrukturen.\nDeswegen hätten wir jetzt mal präventiv den Russen, falls der irgendwas kaputt macht\nja? Die Situation ist ja eher, dass die Monate drin hängen, keiner etwas merkt und dann hast du den Schaden. Also diese ganze Diskussion leider wirklich völlig falsch aufgestellt von Leuten, die eben keine Ahnung haben, wie man hackt und wie nicht.\nLeider das war ja schon in der letzten Sendung hatte die Bundesinnenministerin Nancy Feser die jetzt das befürwortet,\ndie FDP hat ja jetzt auf ihrem Parteitag auch drüber diskutiert und jetzt wurde der BSI-Präsident interviewt, dass es,\nkein so gutes Zeichen und hm zwar beim Redaktionsnetzwerk Deutschland. Jetzt müssen wir kurz auseinandernehmen, was er gesagt hat. Im Falle eines Falles geht es auch darum,\nDatenströme zu unterbinden und den Zugriff der Angreifer zu beenden korrekt.\nEs gibt bestimmte Formen von Gegenmaßnahmen, die dazu beitragen können, zum Beispiel die Abschaltung von Kontrollservern von Bordnetzen.\nRichtig, also korrekt Situation ist folgende, sagen wir mal ein Unternehmen ist ähm.\nInfiltriert worden, gehen wir mal davon aus, es geht jetzt nicht um\nHeck, der unmittelbaren äh Schaden, unmittelbare Störung hervorruft, sondern zum Beispiel um Spionage, ja? Dann kannst du jetzt dieses eine Unternehmen relativ einfach verteidigen, indem du sagst, okay\ndiesen DNS-Server schalten wir platt ne oder diesen DNS-Eintrag überschreiben wir mit einem Think Hall oder diese IP-Routen wir nicht mehr ja und es wäre aber natürlich dann eine potenziell sinnvolle Maßnahme, dass\nauch auf Deutschland ebene zu tun. Wir haben in der letzten Sendung auch darüber gesprochen.\nDas Microsoft äh Think Holding ähm betrieben hat zur Beendigung von Bod Netzen. Übrigens."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:25",
+      "text": "Kannst du noch mal kurz sagen, was Thinkholling ist?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:28",
+      "text": "Ja ja, das ist äh hatten wir in der letzten Sendung schon mal erklärt, dass so den Traffic umleitest. Also du es gibt äh gibt irgendwie eine Domain,\ndie die Angreifer benutzen, um ihre IP zu finden\nDas machen sie deshalb, weil sie davon ausgehen müssen, dass sie ihre IP regelmäßig ändern müssen, weil ihre Server vielleicht hochgenommen werden, aber solange sie die Domain kontrollieren, können sie ja immer woanders hinzeigen lassen.\nJa? Oder du hast zum Beispiel in deiner Schadsoftware drin, dass der eine Liste von Domains hat?\nWenn die erste, was weiß ich, gesperrt wurde, so nimmt er einfach die zweite. Ja, solche Dinge. Und ich habe in der letzten Sendung ja mich gewundert, weil in diesem Artikel, den ich gelesen hatte, nicht drin stand, wie Microsoft sich denn in dieser Domains.\nBemächtigt hat und äh tatsächlich war es so, dass sie das jetzt gerade wieder getan haben und zwar mit einem äh Botnet, das äh wie heißt es denn?\nSetloader oder Seeloader, ja und da haben sie sechs 65 Domains in ihr Thinkholling-Programm aufgenommen.\nUnd das machen sie, dass dass sie die quasi beschlagnahmen lassen über einen Gerichtsbeschluss. Also die haben beim United States District Court for the Nerven District of Georgia ähm,\nquasi per Gerichtsbeschluss diese Dinger äh diese diese Domains zugesprochen bekommen.\nUnd lassen die jetzt auf ihre auf ihren laufen. Und das Thinkhol ist dann in der Regel ein Server, der vielleicht, sage ich mal, noch die Zugriffe lockt, um dir nachher einen Überblick zu geben und zu sagen, pass mal auf, ich kriege hier.\n200 Zugriffe am Tag, 5 davon,\naus dem Land, 15 aus dem anderen. Das sind die IP-Adressen. Kannst ja mal gucken, ob du mit denen irgendetwas anfangen willst oder auch du erkennst dann irgendwann, es werden weniger, ne, solche derartige Dinge. Also Think Holding ist das, was äh hier,\nArne Schönbomben benennt und das halte ich jetzt für also das Argument ist zu machen.\nAber auch überhaupt nichts mit Heckback zu tun, sondern mit einer äh ja sagen wir mit einem Eingriff in das DNS.\nUm das Routen bösartiger äh Domains oder bekanntermaßen bösartiger verwendeter Domains,\nzu verhindern und den Zugriff darauf, Routing hat ja jetzt gar nichts mit zu tun. Das Auflösen solcher Domains zu verhindern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:58",
+      "text": "Ist eigentlich eine Verteidigungsmaßnahme."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:01",
+      "text": "Ja und hier eben könnte man also man könnte eben sagen, die die das wäre ja potenziell, etwas, was man auch auf einer äh Regierungsebene anbringen könnte.\nHm da sei kurz noch zu erwähnt, wir erinnern uns, dass wir mit äh Felix Reeder ja hier gesprochen hatten über die,\nalso diesen DNS-Anbieter, der unter anderem auch dir die Möglichkeit bietet oder der Best Afport betreibt Margaret Domains eben nicht aufzulösen.\nWurde dann Sony gesagt hat, ja gut, dann könnte er auch direkt mal die diese Piratenseiten nicht mehr auflösen. Das ist ja das Anhängige-Verfahren äh von der Gesellschaft für Freiheitsrechte,\nalso das fällt alles noch unter den Gegenmaßnahmen, wo ein das Argument zubringen ist.\nDass damit ähm Angriffe verhindert werden und potenziell wenig weiterer Schaden angerichtet wird, insbesondere weil du nur einen Prozess dafür brauchst oder eine rechtliche Grundlage.\nDie natürlich ihre Lücken haben kann und ihre Probleme, aber du brauchst keine Schwachstellen. Ähm weiterhin sagt er aber dann,\ntiefe Gegenmaßnahmen, also,\nauch hilfreich sein, um zu verhindern, dass auf Servern gespeicherte, erbeuterte erbeutete Datensätze weiter abfließen.\nAlso Vorstellung hier ist, du hast ein Wort Netz, es fließen Daten ab, ja, du weißt, Leute sind gehackt, du hast jetzt eine Schadsoftware gefunden, die schickt ihre Daten an ein äh Command and Confort Server, jetzt sagst du alles klar, wir\nlassen den jetzt mal sink holen, holen uns einen Gerichtsbeschluss vom Georgia oder was auch immer,\nund leiten diese Dinger um, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:55",
+      "text": "Mittels ne? Das glaube ich in."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:00",
+      "text": "Ja, genau, jetzt leitest du das irgendwie um. Ja und jetzt sagt er, jetzt sind aber die Daten da drauf aufm Server und die haben die Angreifer, die ja noch nicht abgezogen von dort. Die liegen da ja nur."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:13",
+      "text": "Ja ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:14",
+      "text": "Ne und jetzt müssen wir aktiv, jetzt machen wir.\nUnd nehme dir die Daten wieder weg, weil die ja keine Backups machen oder weil die die ja sicherlich nicht schon längst ausgewertet haben.\nÄhm das müsste aber, sagt er dann auch, fein austariert und wohl überlegt sein. Viel Glück mal eben schnell einen Commander Control Server zu hacken und das fein auszutarieren und wohl überlegt zu machen. Ähm.\nIch erinnere mich also es gibt Fälle, muss man tatsächlich sagen, in denen so etwas äh funktioniert hat, ja? Und zwar tatsächlich auch ähm.\nDurchaus einige, wo dann eben gelungen ist, die Server der Angreifer ähm zu übernehmen. Äh ich kenne auch persönlich von von einem Fall mit, wo dann tatsächlich\nDer Server übernommen wurde, wo die ganzen Wenzeles drin standen. Ähm also auch das jetzt eine.\nOption. Ähm allerdings natürlich keine, wo jetzt grade die Leute für argumentieren,\nWorauf sie suchen, ja? Insofern ähm weiß ich nicht, ob das jetzt eine sinnvolle Wortmeldung war.\nIn einer solchen Debatte jetzt, ne, wo alle denken, der Russe schaltet uns den Strom ab aufgrund des äh des Kriegs, den Wladimir Putin gegen die Ukraine führt, dass dann das BSI,\neiner so nicht informierten Debatte nun.\nJa, eine eine Nuance hinzufügt, die am Ende von allen nur gelesen wird, als der BSI-Präsident will den Hackpark. Ja und äh das ist äh denke ich. Also,\nder wäre mir dann die potentielle Schadensminderung durch das Zugreifen auf potenziell schon gelöschte Daten,\npotenziell bereits weiterkopierte Daten äh irgendwie nicht sinnvoll in Einklang damit zu bringen, dass man jetzt eine offen ähm.\nKapazität aufbaut und damit eben Schwachstellen potenziell zurückhält. Also es ist eine.\nEin schwieriger Bereich und ich hätte es in der letzten Sendung ja auch schon gesagt, in der Regel geht es bei diesen ganzen Heckback-Geschichten eben mehr darum, wie formulierst du das denn in ein Gesetz, dass es nur dann,\nmöglich ist und erlaubt ist und auch funktioniert und auch etwas bringt, wenn es sich wirklich um eine abwehrende, defensive Maßnahme handelt und nicht,\ndu eingesetzt hast, was dir mit seinen zu starken Einschränkungen.\nEigentlich gar nicht mehr ermöglicht irgendwelche Maßnahmen zu deinem Schutz zu ergreifen oder.\nDir so viel Freiraum gibt, dass du Maßnahmen zu deinem Schutz ergreifen kannst, aber nur indem du einfach die ganze Zeit den Feind selber heckst. Und das ist, denke ich, das, was hier,\ndass das Problem ist ja und das kommt und sieht man auch hier dem in dieser Debatte.\nDass alle immer von Hack-Back reden, wären das nicht das ist, was jetzt, sage ich mal, Leute im Innenministerium und beim Militär sich gerne wünschen,\nmeine eindringliche Warnung ist ja, dass der Text, der da am Ende stehen wird, sofern so etwas beschlossen würde, wird irgendwie sein,\nder und der darf Heckenpunkt.\nUnd dann wird als nächstes äh der Begriff Hackback aufgebohrt. Da finden sie dann irgendein neues äh fancy Wort, was wir brauchen.\nDann hast du innerhalb kürzester Zeit halt eine.\nOffensiv Kapazitäten in der Bundesregierung, die dürfen hacken, wen sie wollen, ja? Also so läuft es ja auch mit Überwachungsmaßnahmen, so läuft es ja auch mit den hackigen Befugnissen, die sie jetzt schon haben,\nWas also das Aufbringen von Staatstrojanern angeht, es wird ja so getan, als wäre das kein Hack,\ndas ist ja, das ist ja eine staatlich angeordnete Maßnahme, ja. Ich bitte dich,\nNe, also das ist äh ich denke, da das ist grade sehr tragisch, dass diese Diskussion in uninformiert geführt wird und während ähm.\nZumindest mal eine also eine halbwegs äh nicht ganz völlig unsinnige Wortäußerung inhaltlicher Weise hier stattgefunden hat ähm ist sie äh doch.\nEben das Öffnen einer Büchse der Pandora und das Spiel mit dem Feuer vor dem Hintergrund,\neine Regierung daraus macht und welche Debatte hier eigentlich gerade geführt wird. Noch dazu bei allem\nbei aller Liebe, das sind halt wirklich enorm seltene Fälle, wo du ernsthaft sagst, jetzt hecke ich aber die Angreifer zurück\nhast damit spontanen Erfolg und selbst wenn es dann jetzt so jetzt holst dir die Daten zurück überleg mal wie lange das dauert die zurückzukopieren,\nJa, also das ist alles ähm nicht wirklich. Das das deckt sich nicht mit der Hacking Realität, die da draußen stattfindet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:33",
+      "text": "Ja, so läuft's."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:37",
+      "text": "Tja ähm dann haben wir den Digital Services Act. Da gab's jetzt Trilog. 16 Stunden Diskussionsmarathon.\nUnd damit scheint sich die Europäische Union jetzt über den Digital Services Act ähm.\nGeeinigt zu haben, allerdings noch nicht in Schriftform. Das heißt, diese Dokumente, die kommen erst noch, was wir also jetzt kurz berichten, ist ein kurzer Überblick, über den das, worüber Sie sich wohl einig geworden sind.\nUnd wir werden dann, denke ich, im weiteren Verlauf nochmal den Patrick Breier in der Sendung haben. Am ehesten, wenn es jetzt auch an die Ausformulierung geht.\nJa, was also abgewehrt wurde, war, dass man bei äh Erwachsenenwebseiten hoch von hochladenden,\nTelefonnummern sammelt, weil das kannst du dir auch vorstellen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:32",
+      "text": "Das kommt jetzt nicht. Yay."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:54:34",
+      "text": "Das Lied, ne? Das liegt, da hätte ich mich so drauf gefreut.\nWeißt du irgendwie so wenn dann irgendwann mal da so ein kleiner Hackback stattfindet und äh und du zu jedem Pornovideo irgendwie auch noch die hochladende Person dazu hast.\nDas wäre äh wäre eigentlich ganz gut gewesen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:55",
+      "text": "Genau und dann kannst du kannst du dir gleich zeigen lassen, was dein Nachbar so mochte, dann hast du's nicht so weit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:00",
+      "text": "Also sehr geehrte sehr geehrte Kolleginnen und Kollegen, meine Telefonnummer hat sich geändert. Aha. Warum denn.\nNee, das ist also ich meine, da muss man wirklich sagen, was für eine Schnapsidee. Ähm.\nLöschpflichtenversuchmaschinen sind nicht mit aufgenommen worden. Ähm kein umfassendes Verbot personalisierter Werbung. Also die Idee war, tatsächlich zu sagen\npersonalisierte Werbung wird sowieso verboten. Wir legen den ganzen Sumpf trocken. Stattdessen sagen sie jetzt ja okay\nnur bestimmte sensible Daten dürfen nicht mit in diese personalisierte Werbung mit einfließen.\nÄh also was weiß ich, ne? Ähm,\npolitische Gesinnung oder ähnliches, weil die ja ohnehin nicht direkt erschlossen werden. Also das Problem bei der personalisierten Werbung ist ja, dass sie nicht mal unbedingt,\nDaten erfasst, sondern.\nSie sich aus ihrer Masse an Daten erschließen kann und daran kannst du dir gar nicht mehr hindern, ja? Also äh weil sie dich eben über diese Webseiten tracken, weil sie deine das, was du dir anschaust loggen,\nkönnen Sie eben zumindest, sage ich mal, nicht unterscheiden, ob du eine spannende Recherche zu Nazi-Inhalten machst oder ob du ähm.\nEben einer Biss. Äh das ist also die Beschränkung äh eher nicht ausreichend. Kein Verbot von,\nautomatisierten Filtersystem, also wäre jetzt mal eine Möglichkeit gewesen zu sagen, hier automatisierte Filter, wo wir verbieten, da muss irgendwie eine,\ninformierte Entscheidungen stattfinden, auch nicht verboten wurden und eine klare Stärkung von Ende zu Ende Verschlüsselung hat auch nicht stattgefunden.\nStattdessen gibt es einen stärker definierten Schutz vor ebenso personalisierter,\nÜberwachungswerbung bei Minderjährigen, also die genießen einen besseren Schutz vor\npersonalisierter Werbung als äh erwachsene Menschen. Einen besseren Schutz vor Produktfälschungen bei eBay und Amazon, ja, das ist äh die lassen einen damit eher alleine, weil sie sagen, wir sind ja hier nur die Handelsplattformen, das ist jetzt dein Problem, wenn,\nda jetzt eine Produktfälschung erhalten hast, das heißt da werden sie mehr in ihre Verantwortung gezogen. Es soll Algorithmentransparenz kommen.\nAber da ist der da steht der Text noch nicht und da muss man dann eben schauen, wie das da je nachdem, wie das formuliert ist, dann natürlich auch eine sehr schöne Transparenzsimulation stattfinden kann. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:47",
+      "text": "Was soll denn das heißen, Algorithmentransparenz?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:49",
+      "text": "Ja wenn da wenn du automatisierte Entscheidungsfindungen hast,\ndu deinen Besucherinnen und Besuchern irgend ein White Paper bereitstellst, in dem drinsteht, so ungefähr funktioniert das. Aber es ist, du hast natürlich total Recht, die meisten Sachen basieren eben heute.\nNicht mehr auf dem, was man Algorithmus nennt, sondern der Algorithmus ist,\neine massive Datensammlung mit Entscheidungsregeln,\nsodass hier wahrscheinlich, wenn jemand sagt, so ungefähr machen wir das. Wir nehmen alle Daten und dann gucken wir. Ne, das ist ja der Algorithmus letztendlich. Wenn du hier so eine AI äh am Laufen hast, dass da also eher eine Transparenzsimulation stattfinden wird.\nDann sollen die Plattformen Risikoanalysen über ihre Auswirkungen auf die Gesellschaft,\nanfertigen lassen, um ihren gesellschaftlichen ihr gesellschaftliches Schadenspotenzial halt auch klar selber\nzu bekennen, erkennen. Ich denke, das ist hier so ein bisschen der Bezug auf Francis Horgan, die er auch sagt, so Leute, das wussten die bei Facebook auch, was wir jeden Tag in der Zeitung gelesen haben, dass die Kinder sich inzwischen\noder dass die Jugendlichen und und jungen Menschen inzwischen bei der äh bei der plastischen Chirurgie im Prinzip Instagramfilteranfragen und nix mehr essen,\nSo also das dazu sollen sie quasi verpflichtet werden hm es soll Daten Zugangsrechte,\nvon diesen Plattformen für Forschung und NGOs geben, damit eben auch besser extern erfasst und überwacht werden kann, was bei denen abläuft\nDas könnte natürlich ein ein Highlight werden für mehr Rechenschaft, bin ich aber mal gespannt. Ich glaube, das wird einfach nur Streit geben und ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:39",
+      "text": "Stelle ich mir schön vor, diese Risikoanalysen der Plattform so. Das ist ja so ein bisschen wie so auf Zigaretten dann so diese Aufdrucke. Doch sich bei Facebook ein und kriegst dann erstmal so eine."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:51",
+      "text": "Die sollen sich erst\nselber damit, ich ich denke, es geht hier eher darum, dass die das nicht dass sie nicht behaupten können, sie wüssten's nicht, ne? Aber alles, alles, was ich gerade sage, ist noch nicht in finaler Schriftform, insofern muss man gucken, ob das ob das irgendwelcher Quatsch wird oder ähm ernst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:07",
+      "text": "Ich meine so ein so ein großer, dicker, fetter Banner, der bei Facebook beim Login steht, mit Facebook gefährdet ihre mentale Gesundheit?\nViele sind hier hängen geblieben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:19",
+      "text": "Das hat die Tabakindustrie aber auch über Jahrzehnte geschafft zu verhindern, ne? Also in in in einem Ausmaß, dass Menschen ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:28",
+      "text": "In manchen Ländern mehr, in manchen Ländern weniger so. Ich meine, kannst du ja mal äh angucken, wie weit die Tabakindustrie Neuseeland gekommen ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:36",
+      "text": "Also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:38",
+      "text": "Gibt's keine Tabakindust."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:38",
+      "text": "Nochmal, wir werden's sehen, ne? Ich denke nicht, dass das hier also hier steht nicht, du musst einen Warnhinweis aufbringen, sondern hier steht, du musst quasi deine eigenen Risiken erforschen, ja und die, ich denke, die Konsequenz daraus ist, ähm,\ndu wirst.\nDu kannst dann nicht mehr sagen, dass dir das nicht klar war. Das war ja das das ist ja der der Gag bei Francis Horgan, dass sie im Prinzip, was sie gesagt hat, waren ja äh relativ also mit gesunden Menschenverstand relativ offensichtlich zugängliche,\nPhänomene. Der entscheidende Punkt war, dass sie gesagt hat, die wissen das und die handeln trotz dieses Wissens nicht anders.\nJa und das denke ich wäre hier mit so einer Verpflichtung eben der die Reaktion darauf.\nBisschen bessere Nutzerinnenrechte bei der Inhaltmoderation, also große Plattformen müssen, wenn du jetzt einen Inhalt gelöscht kriegst oder geshadowband wird oder gesperrt wirst, müssen sie dich informieren und dir einen Beschwerdeweg anbieten.\nUnd bei falschen Sperrungen eben insbesondere auch, ja? Das heißt, wenn jetzt irgendwie sanktioniert wirst in so einem sozialen Netz, dann müssen die dir sagen, hier, das machen wir.\nUnd hier ist deine Möglichkeit, dich darüber zu beschweren. Das wird lustig und ähm dann sollen.\nDark Patterns für die Einwilligung verboten werden. Da bin ich aber mal gespannt, wie Sie das formulieren, ne? Ich meine, diese Dark Patterns für die Einwilligung, die hast du auf jeder Webseite, also äh um's nochmal kurz zu erklären, die,\nwo du auf eine Webseite gehst und die ist einfach so gebaut, dass das, was du eigentlich möchtest.\nSo kompliziert ist und irgendwie leicht, grau in äh auf auf leicht der Grau, äh auf irgend so einen kleinen Einpixelgroßen Knopf steht, während ein riesender, großer, blinkender Knopf sagt, hier klicken,\nmit dem du alle deine Rechte abgibst, ja? Das soll das wollen sie also verbieten, bin ich mal gespannt, wie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:36",
+      "text": "Oder so Account anlegen äh mit einem Klick-Account löschen, ist so ein KafK S ist Kafka Skess Labyrinth von einem Millionen Menüs mit unterschiedlichen User-Interfaces, die dich permanent im Kreis schicken und am Ende gibst du einfach."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:02:51",
+      "text": "Genau.\nNe, das irgendwie einfach mit also die einfach wo einfach mit der Tradition gebrochen wird, dass der nächste Knopf, der dir angeboten ist, der ist der auch in deinem Sinne ist.\nJa? Äh oder zu deinem Schutz dient, hm was wir eben also wir kennen diese Cookie-Bänder. Mal gucken, die haben sie aber damals auch verkackt. Insofern mal schauen, wie sie jetzt das Verbot von Dark Patterns hinkriegen.\nDer spannende Teil ist, der die Durchsetzung.\nDieses Digital Service ist Act. Soll bei einem Verbund der Kommission liegen.\nDamit du nicht einen Race to the Bottom hast, wie du's im Datenschutz hast, wo ähm dass man ja das Irrland Promodem kennt, wo alle ihren juristischen Sitz in Ihr Land haben,\ndamit Sie bloß nicht in der Situation landen, dass Sie deutschen Datenschützer diskutieren müssen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:46",
+      "text": "Das ist interessant, also mit Verbund meinst du jetzt äh irgend so eine Agentur, die dann quasi der Kommission angegliedert ist?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:53",
+      "text": "Ich denke, dass also die kommen dass die Kommission sich dann in ihr eigenes Gremium schafft und sagt, wir dieses Gremium setzt das jetzt durch,\nund zwar einheitlich in der EU und nicht äh ne, nicht irgendwie irgendeiner geht hin und sagt, wir machen die Arbeit nicht und hat dann auf einmal plötzlich Facebook und sonst was in seinem Land äh mit einem Briefkasten vertreten.\nDas ist ganz interessant. Lasst uns das Thema aber ähm mit Patrick äh nochmal besprechen. Sobald der Text steht.\nDann haben wir Neues,\nVon Pegasus, also Citizen Lab hat wieder neue neue Forschungsergebnisse über Pegasus. Wenn man so einmal so ein.\nSo eine die ordentlichen Direktionsregeln hat und vielleicht.\nNe, den guten Kontakt zu den Leuten, dann kann man da offenbar sehr viel erkennen und die haben jetzt äh erstmal festgestellt, dass aus dem Büro des britischen Premiers Boris Johnson,\nähm offenbar 2020 und 2021 Hinweise auf eine Infektion mit Pegasus gefunden worden sein, also Ten Downing Street und außerdem beim ehemaligen Fored and Common worth Office."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:10",
+      "text": "Vielleicht noch mal kurz erwähnen, was Pegasus ist. Pegasus ist so das Spyware von NSO. Von dieser NSO-Group für Mobiltelefone."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:19",
+      "text": "Die ja, man sollte noch dazu sagen, dass es ein Staatstrojaner ist, ne, also kannst du nicht einfach so holen, sondern du musst schon eine Unrechtsstaat sein und Kunde des Unternehmens, NSO Group mit Sitz in Tel Aviv, glaube ich.\nAußerdem haben sie ähm festgestellt, dass mindestens 65 Personen aus der autonomen Region Katalonien.\nAlso in Spanien Ziel von Pegasus waren,\nBei 51 Personen haben Sie ausreichende Hinweise auf eine Infektion gefunden, darunter auch Europaparlamentarierinnen super, wer hat denn wohl wer\nkönnte denn jetzt die autonome Region Katalonien irgendwie angreifen? Das würde mich jetzt, da frage ich mich natürlich, ob's vielleicht die Spanier waren?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:06",
+      "text": "Als sie dir haben Feinde, kann ich mir nicht vorstellen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:06:08",
+      "text": "Nicht verstehen, ne? Äh jeder katalonische Präsident seit 2010 wurde gehackt. Entweder während der ähm,\nwährend sie im Amt waren, bevor sie gewählt wurden oder sogar nach ihrem Ruhestand, äh die äh mehrere officials, die also in dem in der katalonischen Regierung sind, wurden gehackt,\njedes katalanische Mitglied des Europäischen Parlaments, dass die äh Independenz, also die Unabhängigkeit Kataloniens, unterstützt hat. Außerdem ihre Mitarbeiter.\nGeil, ne? Katalonische äh katalanische Mitglieder der Zivilgesellschaft inklusive Anwälte, die äh Katalanen repräsentiert haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:59",
+      "text": "Familie."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:07:00",
+      "text": "Familienmitglieder.\nJa, wunderbar. Außerdem haben sie sich jetzt nicht auf spanischen Grund beschränkt, sondern auch in Richtung der Schweiz gehackt. Also super, ne? Das ist eine echt eine Spitzen.\nSchwitzen-Tool, ja. Ähm der Explode, der dafür genutzt wurde, ähm.\nWurde vermutlich in iOS 31zwei gefixt.\nUnd ähm aber sie erkennen halt jetzt quasi die relevanten, forensischen Arteffekt, Art Effekte, dass ich glaube Eiweiß ist inzwischen bei fünfzehn, oder?\nJa? Also es ist eher alt aber äh.\nDer war quasi neu. Sie haben's also Sie haben den den Explode als Zero Day neu erkannt, den Sie vorher nicht kannten,\nder aber von 13 in in IOS 1312 gefixt wurde. Sie haben den Apple gemeldet und eben auch die Artefakte zur Erkennung äh mitgeteilt, um jetzt Apple zu ermöglichen da irgendwie gegen.\nPotentiell noch weitere Maßnahmen zu ergreifen.\nAlso mal wieder Spitzenarbeit vom Citizen Lab. Nicht so Spitze gearbeitet hat der Westminster Magic Sprit Squad in London,\nDenn der hat jetzt den formellen Auslieferungsbeschluss für Julian Assange erlassen,\nund damit liegt die Entscheidung nun bei Pretie Patel. Wir hatten in den letzten Sendungen ja schon dieses Szenario,\nam bösen, dunklen Himmel gesehen und es besteht glaube ich wenig Hoffnung darauf, dass ausgerechnet sagt, ich liefere denen nicht aus, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:51",
+      "text": "Die Chancen liegen eher bei null."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:08:54",
+      "text": "Es gibt jetzt noch eine Frist von vier Wochen, um weitere Einspruchsgründe vorzubringen. Ähm damit ist also ein weiterer Gang vor Gericht nicht ausgeschlossen. Ähm wenn Petertel nun.\nDem zustimmt, äh werden sie äh natürlich auch eine Berufung antragen äh äh beantragen. Das heißt, dieser Kampf ist,\nnoch nicht zu Ende, aber die tanzen auf immer dünnerem,\nund immer weniger Fläche Eis um das da noch irgendwie abzuwenden und das wird glaube ich ein ein ganz ganz ganz großes äh Desaster wenn Großbritannien das macht ja? Wir dürfen an dieser Stelle nicht vergessen.\nWeisen da jedes Mal darauf hin. Es geht hier um Veröffentlichungen, die ganz klar im Interesse der Öffentlichkeit und der Allgemeinheit waren, um Kriegsverbrechen.\nDas geht's nicht nur darum, weil Julian Ashorster das generell gemacht hat und das zu seinen Meriten gehört, sondern in diesen spezifischen Verfahren geht es auch genau darum, ja? Also auch die,\ndas Verfahren oder das, was ihm in den USA dann zur Last gelegt wird, betrifft spezifisch die äh Collatoral-Mördervideos, das betrifft spezifisch die Informationen, die,\nChelsea Medding.\nDer Öffentlichkeit bereitgestellt hat und da gibt es, denke ich, kaum jemanden, kaum jemanden, der das Argument führen kann ohne sich absolut lächerlich zu machen,\ndiese Informationen,\nwichtig waren, dass die im in den investigativen Journalismus gehörten, wo sie auch gelandet sind und dass das äh eindeutig ein ein journalistischer Akt war. Und dass die Verfolgung dieser Veröffentlichung,\ndurch die USA mit in einer Situation, wo sie jemandem 175 Jahre Haft aufbürden wollen, das wäre das Höchststrafmaß.\nSo viel braucht ihr aber nicht mehr, um den Mann fertig zu machen, ne? Da reichen viel weniger. Ja das ist ein absoluter äh.\nIst eigentlich irrsinnig, dass wir in weißt du zu zu Zeiten des Friedens.\nHat man zu so was häufig gesagt, das sind ja russische Verhältnisse, ne? Und die sind's natürlich auch heute noch. Sind auch heute noch russische Verhältnisse. Ähm aber.\nGerade in heutigen Zeiten versuchen sich ja Länder irgendwie moralisch über äh vielleicht irgendwie Putin zu erheben oder Regierungen.\nDas ist jetzt echt ein sehr, sehr äh also das das das torpediert diese Bemühungen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:49",
+      "text": "Ich bin vor allem mal gespannt. Meine sagen wir mal ehrlich, die Chancen, dass er nicht abgeschoben wird, sind sehr gering. Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:11:57",
+      "text": "Enorm gering, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:58",
+      "text": "Und ähm mit anderen Worten man muss sich jetzt einfach mal klarmachen, das wird stattfinden und dann wird er halt irgendwie in den USA,\neingeliefert, dann ist die Frage, was passiert dann? Ist natürlich alles mögliche zu befürchten, je nachdem, unter welche politische Fuchtel er dann jetzt erst mal äh gerät.\nNatürlich jetzt,\nSozusagen auch einen Klotz anbeihen. Ich weiß gar nicht, ob die Amerikaner jetzt wirklich unbedingt so scharf drauf sind auf diese ganze Story, aber immerhin haben sie ja diesen Auslieferungsantrag auch nicht zurückgezogen. Also mir ist nicht so ganz klar. Natürlich wollen sie dann irgendwie äh.\nDa das jetzt von Demokraten äh regiert wird diese ganze Geschichte um Trump und.\nAssange et cetera, WikiLeaks, äh da ist natürlich aufgreifen, also wird's also auf jeden Fall zu so einem Prozess kommen.\nDas Ganze kann uns noch sehr lange beschäftigen.\nAber es ist schade, dass Europa da so äh versagt hat und ich in der Lage war mal aufzustehen und zu sagen, so hier das ist aber dann doch schon eigentlich mal eher ein Fall für Pressefreiheit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:06",
+      "text": "Ja, das ist wirklich dramatisch.\nUnd es steht ja hier, ich will hier keine Teufel an irgendwelche Wände malen, aber ähm man kann sich ja die ähm.\nVorherigen Gründe, warum geurteilt wurde, dass äh Julian Assange nicht äh ausgeliefert werden soll, mal anschauen,\nOder mal in den Bereich der äh gesundheitlichen Probleme, auch der seelischen Gesundheit zu gehen. Ähm insofern würde steht hier auch, dass äh denke ich, ein sehr hohes Risiko im Raum, dass egal wie entschieden wird, eine.\nEin Verfahren vielleicht nicht mehr stattfindet.\nGanz ganz peinliche Sache und dummerweise echt irgendwie ein Thema, was nicht mehr also was grade wieder so untergeht, ne. Ich meine aus.\nKlaren, nachvollziehbaren Gründen, aber das war so eine Meldung, ne, die ist dann so mal einen Tag durchgegangen. Ich weiß noch nicht mal, ob's da eine Push Meldung für gab, aber das wird jetzt nicht weiter diskutiert. Da kommt jetzt nicht Anne Will und lädt irgendwie jemanden zu ein, ja?\nHat sich Karl Karl Lauterbach, glaube ich, auch gar nicht so geäußert bisher. Aber.\nOkay, kommen wir zu der etwas kürzeren Meldungen.\nImmer mein Hinweis ein Team, das wir jetzt kürzer machen. Das heißt, jetzt wird die Sendung noch mal richtig lang. Jetzt machen wir deep dives.\nLuca, Luca Sellout, der Lukas Sellout muss passieren. Wir haben damals, ich habe ihr immer gesagt,\nDie wollen die Nutzerbasis haben. Die kriegen sie vom Staat bezahlt. Durch die Coronaverordnung, dann haben sie Millionen Nutzer, dann verkaufen sie, ja? Dann haben sie ja alle möglichen Geschäftsmodelle gemacht.\nSie stehen ja eben mit so vielen Millionen äh in Stolz jetzt eben da und machen die Runde bei den,\nVenture Capital Buden und ich habe vor hm ich glaube inzwischen zwei Monaten schon den anonymen Hinweis bekommen,\nvon verschiedenen Venture-Kapitalisten, die mir sagten, Kummer,\nVögel waren heute bei mir, die wollen so und so viel Geld einsammeln, ja? Konnte dann natürlich nicht öffentlich drüber richten, berichten zu dem Zeitpunkt, aber es war ja immer klar und es war jetzt, man musste auch nicht,\nKlug dafür sein, dass man sich überlegt, dass die jetzt natürlich\ndiese Installationsbasis zu Geld machen, deswegen haben wir auch bei der ersten Warnung des CCC vor dieser App genau spezifisch geschrieben, die machen jetzt schon Pläne für die Zeit nach der Pandemie, um die Nutzerbasis zu vergolden.\nUnd,\nDas ist äh natürlich auch der Fall. Jetzt haben sie sich überlegt, wie weit muss man gehen, um jemanden zu finden, der nicht weiß, was das für ein Murks ist und bereit ist, da zu investieren, stellt sich raus, gar nicht so weit,\npaar tausend Kilometer Richtung Osten, da ist ein schönes Land mit dem Namen Russland und da findest du ein Investor\nan denen du jetzt für 30 Millionen Anteile an der Luka App äh äh abtreten kannst.\nGleichzeitig haben sie das Problem, dass sie ja eine ursprüngliche Datenschutzerklärung den Leuten angedreht haben,\nin der nicht drin stand äh unser Geld wird für einen Payment Service eines äh russischen Investors äh genutzt,\nsondern äh eben die quasi in den Verträgen hatten sich aufgehalten, dass sie die Nutzung jederzeit ändern können, aber wenn du deine ähm Datenschutzerklärung änderst, brauchst du natürlich die Einwilligung der Nutzerinnen.\nVersuchen Sie sich jetzt schon mal langsam zu holen. Sie wollen ja jetzt so eine Payment-App draus machen und wenn ich das richtig verstanden habe, machen Sie das jetzt irgendwie so ein bisschen eifer,\nAlphabeter-Test, ne, also so nach und nach erstmal bei einzelnen Nutzerinnen einholen und gucken, wie die reagieren, mit anderen Worten,\nwie muss deine wie muss dein Interface aussehen? Machst eine Push-Nachricht oder nicht, wie groß müssen wie klein muss der Knopf sein äh,\nzum Nein sagen, wie groß muss der zum Ja sagen sein. Also die arbeiten jetzt gerade daran, äh diese ärgerliche rechtliche Hürde,\nzu überspringen.\nGleichzeitig, wenn man einen Account löschen will, stürzt die App ab und wenn wir uns über die Webseite macht, kriegt man einen vier null vier.\nAlso es läuft alles nach Plan, ja? Kohle äh Kohle läuft. So. Gibt's einen schönen äh Artikel auch in der Zeit,\nwo dann einfach mal die Frage gestellt wurde, ne, die Luca-App sollte die Bekämpfung der,\nPandemie erleichtern. Nun wollen ihre Gründer darüber,\nneue Dienste anbieten und viel Geld verliehen. Dürfen Sie das?\nDas ob sie's dürfen oder nicht\nin dem Moment, wo die Leute einwilligen dürfen sie das, aber was sie hier mit dem deutschen Staat gemacht haben und mit der deutschen Gesellschaft ähm\nin einer Notsituation äh sich zu bereichern und dann diese Nutzerbasis weiter zu verkaufen. Ähm das ist äh das äh muss nicht juristisch bewertet werden, sondern einfach moralisch.\nUnd ich glaube, das ist auch die Frage, mit dem dürfen Sie das.\nEbenfalls moralisch zu bewerten sind ja Crypto Coins. Tim. Hast du noch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:37",
+      "text": "Ist ein reines technisches Argument. Freiheit, Freiheit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:44",
+      "text": "Freiheit von äh von wem nochmal?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:48",
+      "text": "Freiheit, von Regeln, Gesetzen, ähm mit Medikationssteuern, genau äh Betrugsverhinderungen, all das ist nervt doch einfach nur."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:59",
+      "text": "Das will man nicht haben.\nNetzwerk Org meldet, dass die EU an einem Bitcoin-Verbot tüftelt. Das heißt nicht, dass da jetzt fertige Pläne in den Schubladen liegen oder dass das bald käme, weil die haben,\nein paar Dokumente, die im Prinzip den Diskussion stand, also welche Parlamentarier, welche Leute positionieren sich da, mit welchen Argumenten wie und ähm letztendlich gibt es zwei,\ndie da jetzt als Möglichkeit der Einschränkungen diskutiert sind,\nkönnte die EU das Mining,\nvon Kryptowährungen mit Proof of Work verbieten sagt so Bitcoin Mining ist not a loud in the Neverlands.\nDann hast du aber das Problem, dass,\ndas ist natürlich immer noch woanders stattfindet und du dann damit einfach hier in Deutschland handelst, ne? Das heißt damit hättest du jetzt ähm\nder dem Ökosystem weltweit keinen Schaden zugefügt. Das aber ist natürlich das erklärte Ziel, weil es eine fürchterliche Energieverschwendung ist in Zeiten, wo wir\nuns diese Energieverschwendung möglichst verkneifen sollten, wenn wir den Planeten nicht in einen Feuerball verwandeln möchten.\nAlso ne, wie auch hier äh diskutiert wird, es hätte nahezu keine direkte Wirkung auf die globale Mining-Industrie und somit auf den Energieverbrauch wie,\nMichelle Rauchs ähm sagt, der der Universität Cambridge zu diesem Energieverbrauch forscht. Die haben auch von denen sind auch diese Studien wie viel.\nTerrawat Energie, die da für diesen Quatsch verballern. Deswegen müsste ein Verbot nicht nur das Mining, sondern eben auch den Handel mit Bitcoin treffen.\nDas soll also sagt, okay äh man darf sie nicht mehr äh man darf nicht mehr offiziell damit handeln.\nHandel bedeutet tauschen in äh Bargeld und damit werden die Exchanges dicht.\nNatürlich jetzt diese ganzen wie heißen sie? Und,\nCoinbase und was nicht alles, die jetzt, ne, die sich ja,\ndamit dieser Spekulation, also mit dem Handel.\nGoldene Nase verdienen. Übrigens in US-Dollar. Finde ich auch immer erstaunlich. Oder eben nicht erstaunlich, dass die ihr Geld schön brav in Dollar machen. Statt in in Bitcoin, wenn das doch so eine super Sache ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:33",
+      "text": "Ist aber nicht nur ein Dollar, die machen auch Euro."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:37",
+      "text": "Machen auch Euro,\nUnd äh und wenn du dir was kannst du auch gerne USD bekommen. Oh Mann, das ist alles so ein so ein Abzug, ne? Und du siehst, das kommt. Ich sage ja immer, äh hast du ja auch schon hundert Mal gesagt, ne? Das wird erst noch so groß,\nDas ist eine Finanzkrise verursacht, wenn wir uns dann endlich abschmiert,\nDas ist das das Problem und eine Finanzkrise schadet auch mir, sonst würde ich die Spinner ja machen lassen, was sie wollen. Dann können sie ihren NASA Dorsch an einer an einer, wie heißt die Straße, Hermannstraße,\nHermannstraße Naserdosch, habe ich schon mal erzählt, ne? Das ist ein Dorsch, aber mit einem Astronautenhelm. Investieren wir doch Tim. Da investieren wir, weil.\nMachen wir da machen wir am Anfang hundert, hundert Profit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:24",
+      "text": "Nee, wir liegen einfach unserer eigenen Coin auf. So macht man das heutzutage."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:29",
+      "text": "Nee, wir machen Token. Ich will in Token, ich will keinen Coin, ich will den Token."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:33",
+      "text": "Oder Token. Hauptsache Einhorn."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:37",
+      "text": "Also okay, da da regt sich was, da wird jetzt mal so der Diskussionsstand durchblitzen lassen. In China ist es ja schon.\nÄhm verboten. Ähm da war will ich jetzt nicht unbedingt Schiene als Vorbild sehen, aber irgendetwas muss man gegen dieses äh Phänomen machen, nicht nur aus der ökologischen Perspektive, sondern auch aus der ähm,\naus der Verbraucherschutzperspektive hier reihenweise die Leute verarscht werden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:06",
+      "text": "Man kann ja über China denken, was man will, aber man kann ihn jetzt nicht absprechen, dass sie nicht schnell reagieren, wenn sie irgendwie irgendwas erkennen, was ihr System bedroht\ndann.\nDa können Sie dann doch sehr rabiat und sehr sehr schnell werden. Und das ähm ist so ein bisschen so manchmal die Stärke von so autoritären Systemen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:28",
+      "text": "Ja also jetzt das den Satz werden sie dir jetzt in den Hals zählen unsere Coin Brüder unsere Countys."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:38",
+      "text": "Ja, aber ich meine, das ist sozusagen einfach eine eine eine Betrachtung. Ja, die schauen sich das halt an. Was passiert da? A ihr beratet hier Unmengen an Energie, während wir gerade krampfhaft versuchen genug äh Solar,\nund Windkraftwerke zu bauen, damit wir irgendwie unsere Kohle abschalten können, weil es einfach auch in China mittlerweile angekommen ist, dass das jetzt nicht so eine geile Idee ist mit Planet verbrennen und so.\nÄh da ist das jetzt einfach mal nicht hilfreich,\nhaben die Sicherheit gleich irgendwie in den nächsten Länder gestürzt und sie stürzen sich halt auch gerne in so Länder, die halt einfach auch arm sind\nja? Immer so mit diesem vorgeschobenen Argument so, na ja aber,\nUnsere Nachfrage entsteht ja überhaupt erst äh dass der Bedarf für alternative Energien, ja was totale Nebelkerze ist, die gehen natürlich in diese Länder rein, weil da halt Energie subventioniert wird vom Staat.\nJa, teilweise mit so Ausnahmen. Das hatten wir ja im Iran irgendwie so Kirchen. Ja so die durften da halt äh,\nkostenlos Strom beziehen und wo standen dann auf einmal die ganzen äh Server Recks, die Bitcoin berechnet haben? Genau da, ne\nund äh das treibt natürlich für alle die Preise nach oben, weil letzten Endes hier die Subvention ja nicht erfolgt, damit man irgendwie Coins meinen kann, sondern die Subvention ist dafür, dass die arme Bevölkerung sich die Energie noch leisten kann. Und das wird natürlich damit auch total unterwandert.\nSo und wir äh ich meine mittlerweile wird das meiste wieder in den USA gemeint und dann trägt es halt dort,\ndass der Energieverbrauch steigt und wir mit dem Bauen von Alternativen Energien nicht hinterherkommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:25:15",
+      "text": "Also ich habe würde die EU denkt darüber nach, ich aber ehrlich gesagt, ich glaube zwanzig vierundzwanzig ist da auch wieder Wahl. Also das das die haben das Problem jetzt wahrgenommen, kann sich nur noch um wenige Jahrzehnte handeln, bis sie's anerkennen. Ähm,\nkleiner Gag am Ende, äh weil der beim Prototype-Fund, wir haben ja hier schon öfter über den Prototype-Fund auch gesprochen. Da gibt es ein Projekt, das ist der Hassreden-Tracker. Wir geben Betroffenen von online Hassreden ein Werkzeug, um sich zu wehren.\nAus der Projektbeschreibung der Hassreden-Tracker ist ein Set zusammensetzbarer Software-Tools, die es von Belästigung und Hassreden in sozialen Medien betroffenen Menschen\nermöglichen, Informationen über ihre Erfahrung aufzuzeichnen und zu teilen, Speerlisten für Twitter und andere Social Media Plattformen,\nprivat kommentiert und geteilt sowie Verbindungen zwischen ExtremistInnen\nbetriebenen Konten identifiziert und im Fall von Hassreden in Archiven aufgezeichnet werden,\nJa? Ist jetzt irgendwie die Machine, die Twitter API, die Gitarre API und versuch's quasi, sammelst darüber auch äh Daten.\nRichtet sich spezifisch äh ja an Menschen, die äh von Hassrede,\nbetroffen sind und von wem geht Hassrede aus, häufig von Rechtsextremen Bewegungen? Ähm insofern ist da auch der Forschungsschwerpunkt dieses Projektes von Traffic Brown.\nUnd jetzt habe ich selber nicht ganz verstanden gab's in den USA irgend so ein Account der Lips auf TikTok heißt,\nAlso der ähm,\nEin soziales Phänomen in den USA ist, der gegen LGBTQ plus Leute hetzt und irgendwie halt äh ja.\nLiberals irgendwie fertig macht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:18",
+      "text": "Also liberals in USA sind nicht das, was die Liberalen bei uns sind, sondern das ist generell einfach so, dass linke, wir würden sagen potenziell sozialdemokratisches Spektrum."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:29",
+      "text": "Äh kritische CDU-Wähler, da verläuft glaube ich so die Grenze, ne?\nBeim beim ähm CDU Wähler beim christlichen CDU-Wähler oder."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:40",
+      "text": "Bodenständige Grüne auch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:42",
+      "text": "Ja, okay. Jetzt haben wir äh auf jeden Fall ist Taka Carlsen auf dieses Projekt aufmerksam geworden,\nund äh das spielt ja irgendwo eine Rolle und jetzt hat er festgestellt, dass das eine forward intelligence Operation ist, weil wir schließlich vor der deutschen Regierung,\ngefördert, ja, designt tolence.\nAmerican Citizens. Ja, also es gibt jetzt wir also jetzt es äh ein ja,\nIntelligence Projekt, was irgendwie so CIA-Style,\nin den USA irgendwelche äh Rechtsextremisten zum Schweigen bringen will und äh damit wirbt halt der,\nCarlsen jetzt für dieses Projekt, was sich natürlich jetzt hoffentlich bald sehr viel größere Beliebtheit erfreut. Also du fragst dich echt, wie.\nAlso was sich daran so faszinierend finde, ist wie unglaublich.\nDespirite designen müssen für ihre komische Hasssendung, in der sie erzählen müssen, dass die ganze Zeit hier die arme Rechten in den USA unterdrückt werden, sie auf der Suche sein müssen, um irgendwie für dieses Argument.\nOder für diese für diesen Standpunkt irgendein Argument zu finden, dass sie jetzt da irgend so ein noch nicht wirklich fertiges Open Source Projekt nehmen und das jetzt ihrer Millionen äh Hörerschaft vorführen.\nUm um irgendwie den weiter einzureden, ne? Es ginge ihnen irgendwie an die Meinungsfreiheit. Sie könnten.\nKönnten nicht mehr sagen, was sie was sie denken. Es ist wirklich faszinierend, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:29:25",
+      "text": "Ja, aber du weißt doch, äh man weiß doch, wie es ist. Die Wahrheit spielt ja hier jetzt hier keine Rolle. Ich meine, die unterhalten sich ja auch heute noch irgendwie über Pizza Gate,\nwo so ein Pädophilenring irgendwie im Keller einer Pizzeria äh aktiv geworden sein, die noch nicht mal einen Keller hat,\nUnd Fakten sind einfach an der Stelle vorkommen irrelevant. Es muss nur irgendwie so ein bisschen.\nKlingen und wenn's da auch noch Webseiten gibt, die irgendwas, was auch nur ansatzweise diesen Bericht äh Echo verleiht, äh gibt, ja, wo man drauf rumklicken kann, sagen kann, ja siehst du hier, da ist es doch alles, die Verschwörung ist real.\nDann dann spielt es keine Rolle, dann wird das einfach rausgehauen und dann muss es nur noch böse klingen. Es geht nicht dadrum, dass es stimmt\nEs geht darum, dass es ein Talking Point ist, den sie einfach erstmal in den Raum werfen\nwo sich dann alle wieder dran abarbeiten müssen, ja wieso, das stimmt aber gar nicht und so weiter und hurra, wir haben die ganze Zeit wieder um über die falschen Sachen geredet und so funktioniert das halt auch bei, der halt einfach ein Tool ist,\nKeine Ahnung von wem der alles bezahlt wird, aber das sind bestimmt nicht die nicht die nettesten Menschen auf diesem Planeten,\nSo und das fließt halt einfach rein. Ich meine, wer das nicht weiß, was das jetzt so daher gesagt, wir kennen den Vogel natürlich schon länger. Das ist halt so ein Moderator bei Fox News, der da halt einfach bei Fox News,\nso ziemlich das weitreichteste, krasseste, bekloppteste Magazin, Politmagazin.\nDas gleich nennen, ne, Show Abzieht, die so Fox News im Angebot hat. Also bekloppter als als Tacker Carlsen geht's\nnicht mehr und auch nicht gefährlicher als TKK ist. Man kann ihn schnell belächeln, man schaut sich den Typen an, wenn man so halbwegs noch alle in der Birne hat und denkt sich nur, aber was zur Hölle hast du falsches gegessen?\nAber das ist halt einfach äh berechnende,\nPropaganda für bestimmte Interessen,\nDas folgt schon einem Modell und da wird,\nwo halt wieder was ausgegraben, was heute\ndas Ablenkungsmanöver ist und wenn der Prototyp mit seinem Hassreden-Tracker da reinpasst, ich meine, das ist natürlich schon bezeichnet, dass sie sagen so, ja äh\ndürfen wir nicht mehr das dürfen wir nicht mehr hassen oder was? Ja, das ist ja im Prinzip so die Aussage, die dahinter steht und das ist ja schon für sich genommen total,\nabsurd, ja? Die wollen uns hier das Hassen verbieten. Äh ja, genau, das wollen wir auch, aber na ja.\nDie Welt ist, die weidet und das sind halt solche Figuren, solche Menschen, die,\nAlles die ganze Zeit immer schlimmer machen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:10",
+      "text": "Tja tja zum Glück haben wir nee ich äh doch wir haben wir haben zu viele von denen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:21",
+      "text": "Zum Glück gibt's uns, wolltest du sagen, Linus, ne? Wir machen ja immer alles nur besser."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:26",
+      "text": "Genau. So auch nächste Woche."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:29",
+      "text": "Genau. Wenn wir wieder zu euch sprechen werden, denn jetzt ist äh erstmal Schluss äh für heut."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:37",
+      "text": "Und in den nächsten Sendungen äh in der nächsten Sendung reden wir dann über so schöne Sachen wie ein EU-Ausweis mit Blockchain.\nUnd Neues von der Chatkontrolle. Also das wird wird auch wieder äh schmerzhaft und,\nBis dahin macht ihr nochmal einen kleinen längeren Spaziergang, um euch zu erholen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:56",
+      "text": "Genau, bis dann. Tschüss."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:58",
+      "text": "Bis dann, tschau tschau."
+    }
+  ]
+}

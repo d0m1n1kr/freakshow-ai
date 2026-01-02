@@ -2,6 +2,9 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 /**
  * Converts <episode>-ts.json (verbose objects) into <episode>-ts-live.json
  * optimized for live playback lookups.
@@ -19,6 +22,8 @@ import { fileURLToPath } from 'node:url';
 
 function parseArgs(argv) {
   const args = {
+    projectRoot: path.join(__dirname, '..'),
+    podcastId: 'freakshow',
     inDir: null,
     outDir: null,
     episode: null,
@@ -29,7 +34,8 @@ function parseArgs(argv) {
   const a = argv.slice(2);
   for (let i = 0; i < a.length; i++) {
     const k = a[i];
-    if (k === '--in-dir') args.inDir = a[++i] ?? null;
+    if (k === '--podcast') args.podcastId = a[++i] ?? 'freakshow';
+    else if (k === '--in-dir') args.inDir = a[++i] ?? null;
     else if (k === '--out-dir') args.outDir = a[++i] ?? null;
     else if (k === '--episode') args.episode = a[++i] ?? null;
     else if (k === '--all') args.all = true;

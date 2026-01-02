@@ -1,0 +1,1704 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:00",
+      "text": "Guten Morgen Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:03",
+      "text": "So, jetzt haben wir München gelobt letzte Woche, jetzt sind die auch Risikogebiet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:07",
+      "text": "Ja, ist doch bestens. So, dann können wir da jetzt erstmal günstig Immobilien shoppen. Und dann äh Gentrifizieren wir den Laden mal ordentlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:35",
+      "text": "Netzpolitik Nummer dreihundertundvierundsechzig vom zwölften Oktober zwanzig zwanzig in relativ schneller Schlagzahl sind wir gerade unterwegs ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:46",
+      "text": "Ja, wir melden, wir melden uns aber auch mit einem Spezial mit Gast, aber ich möchte vorher noch ganz kurz festhalten.\nEin Hut ab an den Klassenkampf der Beamten,\nJa, die halten die ziehen das durch, die zeigen Klassenbewusstsein. Mir ist nämlich heute Morgen aufgefallen, dass seit Beginn dieser Pandemie jedes Mal, wenn am Montagmorgen die Fallzahlen bekannt gegeben werden, dieser Standardsatz im Deutschlandfunk kommt\nAm Montag sind die Zahlen geringer, weil einige Gesundheitsämter am Wochenende nicht die Zahlen übermitteln, ja? Und eine derartige passiv aggressive Kritik über ein halbes Jahr\nja? Seelenruhig auf einer Backe abzusitzen, ja, das ist der Arbeitskampf der Beamten,\nund das finde ich super. Das finde ich spitze. Da können wir uns alle mal ein Beispiel dran nehmen. So eisenhart, dass einfach sich anzuhören und zu sagen.\nDienstag gehe ich wieder ans Faxgerät und das ist doch super. Ich finde das gut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:43",
+      "text": "So bist du ein bisschen passiv aggressiv. Ich habe so das Gefühl, du bist am Wochenende nicht beherbergt worden, ordentlich. Kann das sein? Haben sie dich wieder weggeschickt?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:55",
+      "text": "Ich wusste um elf nach Hause. Alleine.\nWir mussten den Zweifünfergruppen nach Hause gehen, um dort dann zu zehnt weiterzusau.\nIn meiner kleinen Bude.\nJa, also das äh lassen wir das, lassen wir."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:10",
+      "text": "So, wie schon erwähnt, wir äh haben heute einen Gast und den begrüßen wir erstmal, nämlich den Dustin. Dustin, Hoffmann, hallo.\nSchön, dass du bei uns bist ähm und wir werden jetzt äh gleich mal sehr ausführlich äh sowohl über dich als auch so über das Themenfeld sprechen, was du so in den letzten Monaten\nKann man schon Jahren sagen, fast, beackert hast und ähm ja. Das machen wir, oder?\nDas machen wir. Aber erstmal müssen wir noch kurz ein bisschen äh Feedback."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:42",
+      "text": "Wichtiges Feedback. Normalerweise, wenn wir Spezialsendungen haben, verzichten wir ja auf das Feedback, aber in diesen Fällen sehe ich mich äh gezwungen,\ndiese Ergänzung anzubringen. Und zwar habe ich ja in der letzten Sendung äh Vitamin D3 und Johanniskraut empfohlen. Und wurde jetzt durch\nMehrere Hörer und Hörerinnen darauf hingewiesen, dass äh bei Johanniskraut der Name nicht von ungefähr kommt, weil wenn man das zusammen mit der Pille nimmt,\nDas Risiko besteht, dass da neun Monate später ein kleiner Johannes durchs Bild hinkt. Und äh da habe ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:13",
+      "text": "Oder Johanna."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:14",
+      "text": "Oder eine Johanna, ja oder ein kleiner Linus.\nÄh insofern, das sollte äh das da müsst ihr euch das äh also zu Risiken und Nebenbewegungen fragen sie ihren Arzt oder Apotheker. Des Weiteren äh sollte ich außerdem noch davor warnen, dass man Vitamin D drei überdosieren könnte.\nÄhm ja, habe ich jetzt so nicht äh,\nAuf dem Schirm gehabt. Ich glaube, da gibt's andere Sachen, die man schneller und gefährlicher überdosieren kann, aber da wurde spezifisch nochmal drauf eingegangen im aktuellen Corona-Virus-Update, der amerikanische Patient, wo Professor Doktor Sandra Ziezeck\ndie Medikation des Donald Trump auseinander nimmt, der hat ja einen bunten Regen an äh Pillen\nzu sich genommen, um seine jetzige Immunität und Strahlkraft wiederherzustellen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:04",
+      "text": "Wirklich alles gegeben, ne? Wahrscheinlich sogar Adrenoch krumm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:08",
+      "text": "Ich glaube, dem haben die.\nAlso die haben dem alles gegeben, aber nichts, was ihm geholfen hat, ne. Der wollte ja, ich habe heute gehört, dass er ähm geplant hatte, bei seinem Auszug aus dem Krankenhaus,\nSuperspreader-Event. Ähm,\nerst in in gebeugter Haltung zu gehen, um sich dann ein das Hemd vom Leib zu reißen und dadrunter ein Superman T-Shirt zu haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:31",
+      "text": "Was wollte er tun?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:31",
+      "text": "Das wollte er tun, aber die haben's irgendwie geschafft, ihn davon abzuhalten. Ich weiß nicht, womit die den runtergespritzt haben, aber das ist uns zumindest erspart geblieben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:40",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:41",
+      "text": "Ähm genau, also Vitamin D3 bitte nicht überdosieren, wie alles andere auch nicht. Und äh Johanniskraut nur äh oder bei Johanniskraut eventuell die Verhütungsmethode überdenken oder den.\nKinderwunsch. So, dann musst du dich auch noch korrigieren, Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:57",
+      "text": "Ähm ja, nee, weiß ich nicht so genau, ob ich mich äh korrigieren äh muss, weil die Sache ist etwas verfahren, es geht natürlich um die tolle Geschichte mit dem Excel Spreadshit, die in den Vereinigten Königreich zum Einsatz kam,\nDa kann man natürlich herzlich drüber lachen. Äh die Details scheinen noch etwas komplexer zu sein. Zunächst einmal wurde in den Kommentaren darauf hingewiesen, dass es auch ähm Hinweise darauf gab, dass wohl in diesem Spreadsheet,\nDatensätze nicht, wie man das so gemeinhin erwarten würde in Zeilen abgelegt wurden, sondern in Spalten. Und das von daher nochmal ein Limit äh besonders gerissen wurde\nda bin ich mir noch nicht so hundertprozentig sicher, es gibt auch Erläuterungen, die dahingehend\ndas Vermitteln, dass dass diese CSV Dateien um die dann irgendwie mit Magros zu bearbeiten, dass deshalb alte Versionen von Excel eingesetzt wurden, um diesen Prozess zu automatisieren\nAlso.\nIch verlinke mal einen äh etwas längeres Video auf das, was sehr unterhaltsam ist, auf das ich hingewiesen äh wurde, wohl ein besser Nerdman hier, dieser ganze Fall wirklich in aller\nTiefe ausgearbeitet wird, das würde jetzt hier sicherlich ähm ein bisschen zu weit führen, ist auf jeden Fall sehr unterhaltsam."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:11",
+      "text": "Und ich glaube, ich würde noch eine ganz kurze kleine Ergänzung machen. Und zwar habe ich ja hier in unserer letzten Sendung, die wir am ähm Freitag aufgenommen haben,\nEin System grob skizziert für ein dezentralisiertes ähm Presence Tracking, also das\nwo ich die Zusammenkunft als Datentyp mal vorgeschlagen habe und das grob skizziert habe, ziemlich genau während wir die Sendung aufgezeichnet haben\näh wurde auf Gitarb veröffentlicht von Carmela Tronkoso, äh und Michael Weal. Das\nsind drei ähm\nForscherinnen, die auch schon an dem DP3T gearbeitet haben, dem Verfahren, was am Ende zu dem Google, Apple Contact racing geführt hat, also die haben.\nSchon quasi bei dem Contact-Tracing, dass entscheidende Verfahren skizziert und die haben quasi während der Sendung hier ein ausformulierten Draft eben für,\nwas sie,\nNotifyer nennen die haben ziemlich genau das dort ausformuliert was ich in der Sendung grob skizziert habe. Was ich sehr schön finde, weil äh wie das so ist, die\ndie richtigen Systeme sind eben dann doch so naheliegend, dass sie vielen Leuten gleichzeitig einfallen, in dem Fall ganz offensichtlich denen auch schon früher, weil sie waren,\nam Freitagmorgen schon in der Lage, dann fertigen, fertiges Whitepaper zu zu veröffentlichen. Was mich sehr gefreut hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:49",
+      "text": "Dreizehn Seiten Dokument, ich habe das noch nicht komplett äh konsumiert, aber auf jeden Fall haben die sich ein paar Gedanken gemacht und das werden wir sicherlich zum späteren Zeitpunkt nochmal ein bisschen genauer analysieren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:01",
+      "text": "Genau, ich wollte das hier nur an der Stelle korrigieren, weil ich da den Gedankengang am Freitag noch als meinen schilderte. Ähm und das hier offensichtlich wieder mal ein so naheliegender ist, dass sie mehrere hatten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:14",
+      "text": "Gut, das bringt uns zu unserem Gast, nämlich dem Dustin. Und ähm ja, was bist du denn für ein Netzpolitiker?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:08:22",
+      "text": "Oh, was äh ich äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:24",
+      "text": "Meinte, Entschuldigung, da habe ich dir gleich was unterstellt. Das äh wollte ich natürlich so überhaupt nicht tun. Nein, aber du bist ja im äh politischen äh Prozess, du bist Büroleiter von Martin Sonneborn, äh der Europa Abgeordnete.\nDer Partei, die Partei, wo er ja hineingewählt wurde zum zweiten Mal und ähm.\nWas ist denn so dein Weg in die Politik gewesen? Das würde mich natürlich erstmal interessieren.\nNetzpolitik, Politik im Allgemeinen, keine Ahnung, also was äh was hat dich letzten Endes da hin geführt zum Europaparlament, was hast du denn vorher so getrieben?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:09:07",
+      "text": "Also ich ähm komme komme aus Berlin. Ich habe ursprünglich äh Jura studiert und bin irgendwann Mitglied in wollte,\nIch wollte irgendwie hatte ich das äh Gefühl, mich politisch engagieren zu wollen und dann bin ich Mitglied in der Partei die Partei geworden, damals eigentlich weil ich es lustig fand und nicht wusste, wo ich sonst hin soll, das war zweitausendsieben,\nschon eine ganze Weile her. Habe da aber nichts gemacht, habe so vor mich äh hinstudiert und die Partei wurde zweitausendneun nicht zur Bundestagswahl zugelassen. Und das fand ich so,\nungerecht, weil die Gründe total, es war total eigenartig damals und da war ich so so sauer, dass ich zu meinem heutigen Chef gegangen bin bei einer Veranstaltung, wo er auch persönlich da war und gefragt habe, wie steht's um den Landesverband in Berlin? Er meinte, der ist in Aktiv, es gibt gerade keinen, habe ich gesagt, äh mache ich einen.\nUnd dann ähm mit ein paar anderen sehr guten Leuten haben wir dann ähm einen Landesverband in Berlin aufgebaut äh an Wahlen teilgenommen zweitausendelf, damals sind,\nhabe ich kandidiert in Kreuzberg zusammen mit zwei Jungs von KIZ und äh das war eine sehr gute, sehr gute Zeit damals."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:09",
+      "text": "Was ist KIZ?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:10:10",
+      "text": "Ist eine äh sind ist ein Rapper aus Berlin. Und,\näh ja, so bin ich dann da reingeraten und dann ist das irgendwie immer größer geworden und zweitausendvierzehn, das äh Bundesverfassungsgericht recht kurzfristig die Sperrklasse für die Europawahl gekippt und plötzlich ähm,\nwurde Herr Soderborn äh ins Europaparlament gewählt, womit\näh niemand von uns gerechnet hat. Also wir haben ja normalerweise bei uns, so war das immer so, wir haben Wahlpartys veranstaltet, Wahlsiegpartys, häufig auch schon ähm am Samstag,\nobwohl die Wahl am Sonntag ist, weil wir am Samstag einfach länger feiern konnten, weil die Leute am am dann am Sonntag ausschlafen konnten, weil wir ja nicht damit gerechnet haben, dass wir irgendwo einziehen, sondern wir haben ja.\nSo wie einfach so gefeiert\naus Prinzip und plötzlich hatten wir dann bei der Europawahl dann am Sonntag auch ein Wahlamt und irgendwann dämmert es den Leuten, dass das für ein Mandat reichen durfte. Wir hatten dann eine ähm sehr gute ähm äh,\nMathematik ähm Doktorinnen dabei, die dann irgendwann anfing zu rechnen und meinte, oh nee, das müsste jetzt eigentlich für ein Mandat reichen. Und ähm ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:17",
+      "text": "Wie knapp war das damals nochmal?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:11:19",
+      "text": "Wir hatten null Komma sechs irgendwas, glaube ich und man null Komma fünf fünf war."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:24",
+      "text": "Das war ja die erste Europawahl, wo diese Hürde weggefallen ist, ne?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:11:28",
+      "text": "Das war zweitausendvierzehn, genau das war ähm eine Punktlandung. Also wir waren die Partei, die mit den wenigsten Stimmen äh reingekommen ist damals. Und\nAllerdings ist es jetzt so, dass es eine andere Geschichte, aber die ähm GroKo aus Berlin hat ja dann nach Europa gesendet, dass sie ganz gerne diese Sperrkurse wieder hätte, ob Europa da nicht was machen kann. Das sind alles, das ist äh da ein anderes Thema, worüber wir lange reden könnten, aber jedenfalls haben sie sich drum bemüht, haben's nicht geschafft. Aber wenn jetzt eine kommen würde, wäre es wahrscheinlich zwei Prozent und die hätten wir\ndieses Mal ja auch geknackt, insofern haben, wir haben uns ins eigene Fleisch geschnitten. Hätte es eine Zwei-Prozent-Hürde gegeben, hätten wir jetzt drei statt zwei Abgeordneten. Aber wir machen das aus Überzeugung, insofern.\nWir sind weiter gegen die also auch wenn sie uns jetzt helfen würde."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:09",
+      "text": "Und dann bist du mit der Wahl von Martin Sonneborn direkt dessen Büroleiter geworden? Also er musste dann halt Posten an an Günstlinge."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:12:20",
+      "text": "Äh hat dann ähm hat wahrscheinlich so ein paar Leute Namen in den Topf gemacht und eingezogen und dann hat er, nein, wir kannten uns aus Berliner, er hatte früher ähm,\nhaben in Berlin zusammen Wahlkämpfe gemacht und haben gut zusammengearbeitet und dieses,\nim Europaparlament dieses Assistenten Abgeordnetenverhältnisses ja ein recht das ist ja ein besonderes Arbeitsverhältnis man verbringt ja so viel Zeit miteinander, sehr viel miteinander zu tun und es gibt ja auch so eine gegenseitige Abhängigkeit quasi, also was man halt das, was\nBeide Seiten machen fällt auf beide Seiten zurück. Auf eine gewisse Art und Weise und insofern braucht man da.\nIst es gut, wenn man den Leuten, mit denen man da zusammenarbeitet, vertrauen kann und weiß, dass man gut zusammenarbeiten kann und deswegen schätze ich mal, ich habe ehrlicherweise habe ich ihn das nie gefragt, aber ich nehme das mal an, dass das eine Motivation war, ähm mich zu fragen, ob ich Lust habe, äh.\nDa mitzumachen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:11",
+      "text": "Also was von Anfang an Büroleiter schon also jetzt auch am zweiten Durchlauf. Ist bestimmt einer der Unterhaltsameren Bürojobs in Europa."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:13:20",
+      "text": "Ja, das also ich ich kann mit Sicherheit sagen, dass es zumindest welche gibt, die weniger unterhaltsam sind."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:28",
+      "text": "Jetzt ist das natürlich so, also.\nIch war ja zu Beginn überrascht das, dass er sich überhaupt die Mühe gemacht hat, ein Büro laut Büroleiter zu bestellen, weil die ursprüngliche Absicht war doch, dass das da alle.\nJeden Monat oder äh oder alle sechs Monate rotiert und es wurde jetzt äh im Prinzip das Wahlversprechen äh war jetzt nicht unbedingt, dass es da oder das\nunterschwellige Wahlversprechen war jetzt nicht, dass da politische Arbeit stattfinden würde,\nAber genau das ist aber geschehen und zwar in einem inzwischen doch sehr benennt äh äh bemerkenswerten Ausmaß."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:14:04",
+      "text": "Ja, ich ein Wahlversprechen, das ist ja,\nWir würden die Leute eher enttäuschen, wenn wir die Sachen alle einhalten würden. Ich meine, wenn man Leuten Wahlversprechen macht, das funktioniert ja in der Politik nicht so, dass man die dann einhält. Insofern ähm habe ich da jetzt.\nFür mich persönlich war das natürlich ganz gut, weil ich äh mein mein Job hängt ja an dem äh Mandat des Abgeordneten. Das wäre auch ärgerlich gewesen, wenn ich die Formalitäten jeden Monat neu machen müsste oder keine Ahnung.\nAuch immer. Insofern war das äh äh begrüße ich die Entscheidung damals, ähm aber,\nÄh ja, das ist ein äh gebrochenes Wahlversprechen, ja. Wurde uns auch schon von, er hat uns auch schon mal einen SPD-Abgeordneter vorgeworfen, dass wir da ein Wahlversprech."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:42",
+      "text": "SPD Abgeordneter hat euch den Bruch eines Wahlversprechens vor."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:46",
+      "text": "SPD Abgeordnete werfen werfen anderer Partei vor, dass sie jetzt Politik macht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:50",
+      "text": "Ja. Ey, ihr habt versprochen, dass ihr hier genauso einfach mitspielt wie wir."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:14:55",
+      "text": "Wir bemühen uns natürlich aber immer noch darum, auch auch mal keine Politik zu machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:59",
+      "text": "Ja, nicht zu seriös rüberzukommen. Das ist euch wirklich nicht so gut gelungen, muss ich sagen. In letzter Zeit hatte ich äh eher so den Eindruck, dass äh\nMartin Sonneborn vielleicht eben auch so ein bisschen durch Zufall, aber ja dann auch öfter mal Zünglein an der Waage war, was so bestimmte äh Entscheidungen betraf im Europaparlament.\nMir scheint es schon so ein bisschen, dass er ein wenig äh gefallen daran gefunden hat, diese Rolle dann auch auszuspielen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:15:25",
+      "text": "Also der, also Teil der Wahrheit, wenn man halt so lange da ist und dann halt sieht\ndass es in der Regel eine bestimmte Gruppe von Leuten ist, die bestimmte Entscheidungen herbeiführt ähm und diese Leute in der Regel, dass die politisch die europäische Parteienfamilie der CDU, die EPP ist, ähm.\nKommt so ein Wunsch auf.\nZu ärgern und einfach mal, wenn man die Möglichkeit dazu hat, deren Treiben zu behindern oder zu verhindern. Und wenn für diesen Schritt,\nähm politische Arbeit notwendig ist. Da muss man den, muss man denen auch mal gehen, finde ich. Also das ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:00",
+      "text": "Wesentlich in der Schulklasse. Wo man sagt so, ey, die gehen mir jetzt inzwischen so auf den Sack, jetzt bin ich wirklich auch bereit zu investieren, nur um die zu ärgern."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:16:08",
+      "text": "Ja, das ist gehört,\ngehört da ein bisschen dazu. Ich meine, ich es gibt auch Leute, die schaffen das, schaffen das mit ähm auf andere Art und Weise, aber wir machen das auf auf unsere und wenn wir, wenn das bedeutet, dass man halt in einer Abstimmung mal\ndie das äh den\nKnopf an der richtigen Stelle für die Zustimmung drücken muss, um dann mit einer Stimme was zu entscheiden, worüber dann, wo dann die Köpfe der CDU-Abgeordneten rot werden. Ähm das ist natürlich ein,\nschöner Moment und das wollen wir uns auch nicht entgehen lassen. Dann läuft man natürlich auf das dünne Eis, dass man sich auch mal nachsagen lassen muss, dass man richtige Politik macht, aber man kann nicht alles haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:40",
+      "text": "Das Wahlversprechen oder die die Praxis war ja eigentlich immer abwechselnd die Knöpfe zu drücken, ne?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:16:45",
+      "text": "Das ähm machen wir aber schon oder das macht äh äh Martin schon sehr längere Zeit nicht mehr so. Das hat ja unterschiedliche Hintergründe. Ich weiß, es gibt immer noch es gibt immer noch äh\nPresse, die äh ähm das behauptet und uns das vorwirft, aber die ja, na ja, die haben auch viel zu tun einfach auch und da,\nman kann dann nicht erwarten, dass jetzt auch dann einfach mal Abstimmungsergebnisse reingucken. Weil er hat es ja auch lange genug selber propagiert, dass er das macht, insofern würde ich das jetzt den."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:11",
+      "text": "Also CDU ärgern ist quasi gelebte Satire."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:17:16",
+      "text": "Nein, das gibt aber einfach ein gutes Gefühl."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:18",
+      "text": "Muss die Zeit ja auch irgendwie rum."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:17:21",
+      "text": "Das ist ja auch irgendwie.\nDass es nicht zwangsläufig zwangsläufig Satire, das ist aber auch einfach ähm wir alle tun ja auch einfach mal Sachen, weil sie uns gut tun. Und wenn man das auch noch das Gefühl hat, dass es den Menschen Europas zu Gute kommt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:36",
+      "text": "Ja, also mir gelingt es auch nicht, das äh groß zu kritisieren, das mal so zu sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:42",
+      "text": "Ich würde an der Stelle noch kurz erwähnen. Du hast über diese Arbeit in der EU ja auch schon äh ausführlich berichtet auf dem fünfunddreißig C drei. War das glaube ich?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:17:52",
+      "text": "Ich glaube, es war sechsunddreißig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:54",
+      "text": "Letztes Jahr. Nee, so hattest du letztes Jahr."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:17:55",
+      "text": "Vorletztes Jahr was. Fünfunddreißig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:58",
+      "text": "Grade, ich habe auch gedacht sechsunddreißig, ehrlich gesagt und ich habe gerade beim Gucken auf Media CCD gesehen, dass es fünfunddreißig C3 war."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:18:05",
+      "text": "Dann war's eine Falle. Es war fünfunddreißig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:07",
+      "text": "Genau, der fünfunddreißig C drei äh die EU und ihre Institution wurde das nochmal äh wie man es leider so oft machen muss, weil selbst ich es äh oder auch ich es inzwischen,\nimmer noch nicht ganz verstanden habe oder nicht ganz durchschaut habe, die Institutionen, die es da gibt und die Prozesse, die da so stattfinden.\nNochmal einen Primer gegeben hast, was da überhaupt abläuft. Ähm Martin Sonneborn war auch vor Ort und ja, wir hatten, glaube ich, am fünfunddreißig C drei auch Nico Semsrott."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:36",
+      "text": "Oder war das der sechsunddreißig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:37",
+      "text": "Nee, das war gefümunddreißig C drei, weil ich weiß, dass wir da große Kritik hatten, dass zwei Parteivertreter auf den Bühnen äh waren."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:18:45",
+      "text": "Damals war aber noch nicht Abgeordneter, insofern, das ist ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:47",
+      "text": "Da war er noch voll im Wahlkampf, da erinnere ich mich auch, wie ich mit Nico darüber gesprochen habe und ihm äh gebeten habe, die Parteipropaganda äh zu minimieren und er gesagt hat, alles klar, wird er unter keinen Umständen tun.\nUnd da waren wir uns dann auch einig, ja. Ähm aber genau, der Vortrag sei nochmal ähm empfohlen. Ich glaube, den den ähm Vortrag von Martin Sonneborn können wir nicht empfehlen, weil der durfte irgendwie nicht veröffentlicht werden, ne?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:19:13",
+      "text": "Doch der ist auch der ist auch veröffentlicht, er hat nur, ich glaube, er hat der wurde nicht ähm nicht offiziell mit ähm aufgezeichnet, allerdings äh wäre das natürlich was naive Vorstellungen, dass in dieser Community, dass es nicht jemand mitschneidet und online stellt,\nähm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:29",
+      "text": "Genau, da ich erinnere mich da dunkel, da gab's irgendwelche ähm."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:19:32",
+      "text": "Ja, da, da habt ihr mich in die, habt ihr, da habt ihr mich, äh, in die, in die, in die Pfanne gehauen. Da dachte ich, gibt 'n Vortrag über die Uhr und plötzlich stand ich da vor so vielen Leuten und.\nÄh ins kalte Wasser geworfen. Ich habe nie einen Vortrag gehalten vor,\nvor so vielen Leuten und also besonders nicht vor so vielen Leuten, aber äh mich wurde ja die ganze Zeit damit vorbereitet, dass das ein sehr liebenswürdiges Publikum sei und das war dann Gott sei Dank auch so. Das war dann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:56",
+      "text": "Das war dein erster Kongress quasi."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:19:58",
+      "text": "Ja, ich war ganz begeistert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:00",
+      "text": "Ganz begeistert."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:20:01",
+      "text": "Bin auch letztes Jahr wiedergekommen ohne Protaktoren einfach um die Veranstaltung mal voll auskosten zu können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:07",
+      "text": "Was sollen wir dazu sagen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:09",
+      "text": "Ha, schön."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:10",
+      "text": "Aber vielleicht kannst du nochmal eine Außenperspektive auf die Veranstaltung äh schildern, die wir so nicht haben."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:20:16",
+      "text": "Ich hatte, ich, also ich war wirklich, ich wusste, dass das gibt,\nIch hatte aber keinen konkreten konkreten Kenntnis darüber, wie das da abläuft und ähm ich war begeistert darüber, dass das so ein.\nAlso erstmal die das die Themen, ich hatte von außen so ein hatte ich den Eindruck, dass es halt ausschließlich äh um hochtechnische Themen geht, die ja auch\näh in großer Anzahl da besprochen werden, aber auch viele politische Sachen, die Verbindung zwischen Politik und technischen Themen Netzpolitik ähm und,\nEin riesiges Themenspektrum und ich hatte den Eindruck, da sind tausende Leute, die da nur sind, um wie Staubsauger Wissen aufzusammeln, die sich für alles interessieren, für die unterschiedlichsten Sachen, die dankbar sind,\nDinge zu erfahren und,\ndie Kultur da war meine Wahrnehmung ist heute, wenn man irgendwo hingeht und mit Leuten über Themen spricht, von denen sie keine Ahnung haben, dann ist das ja häufig so, dass Leute versuchen, aus einer Unterhaltung rauszukommen oder man, dass man heutzutage nur noch gerne über Sachen\nvon dem man, in dem man sich wohlfühlt in Themenfeldern. Und da ist es eher so, wenn man anfängt über Themen zu reden, wovon jemand keine Ahnung hat, dann werden die Leute besonders aufmerksam und freuen sich besonders\nIch habe keine Ahnung davon, aber ich will alles wissen. Und ja, das war und ähm für mich war das auch so ein Ort. Es man spricht ja viel von\nOrten, an denen Menschen sein können, wie sie wollen. Das ist ja auch so ein Image, was Berlin hat, was ja, was ich für Quatsch halte. Ähm vielleicht anders als mehr als woanders, aber da war das so ein,\nIch hatte den Eindruck, dass ein krasser safe space ist, wo Leute, wo niemand dafür verurteilt wird, was äh äh wie er aussieht, was er sagt, was er denkt oder sie,\ngilt für alle, sondern so ein wirklich, äh dass Leute da.\nEinfach sie selbst sein können und das genießen können über Tage und äh ich war tief beeindruckt. Es hat deswegen bin ich ja auch wieder hingekommen und plante auch dieses Jahr zu kommen.\nAber dieses Jahr habe ich einiges geplant, sage ich mal, das ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:10",
+      "text": "Ist leider keine Spaßbremse, aber ich denke, das wird wiederkommen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:22:14",
+      "text": "Vorfreude dann aufstauen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:16",
+      "text": "Jetzt hast du aber im Rahmen deiner Tätigkeit ähm für Martin Sonneborn fürs EU-Parlament zu den eigentlich auch offizieller.\nWas ist denn so der offizielle Status jetzt als wir also bisher nicht Mitglied des Parlaments, sondern du bist."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:22:33",
+      "text": "Akkreditierter parlamentarischer Assistent."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:35",
+      "text": "Irditierter, parlamentarischer Assistent. Und was genießt man da so für äh Verpflichtungen und Freiheiten? Also gibt's irgendwas, worum du dich kümmern musst oder ist das jetzt nur durch die Zusammenarbeit mit dir, deinem Abgeordneten definiert?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:22:48",
+      "text": "Das ist durch die Zusammenarbeit mit den Abgeordneten definiert. Das ist ähm ganz kurz zur Einordnung. Das wurde zweitausendneun eingeführt. Vorher waren die, hatten die ganzen Assistenten,\nhatten ähm Verträge in den Mitgliedsstaaten mit ihren Abgeordneten, aber haben eigentlich in Brüssel gelebt. Das war so ein bisschen\nrechtlich alles schwierig und seit zweitausendneun werden alle Mitarbeiterinnen und Mitarbeiter der Abgeordneten\nbeim Parlament angestellt, unterliegen aber der Weisung der äh der Abgeordneten, so dass sie äh ja, dass das alles ähm offiziell geklärt ist. Wir haben dann quasi einen Vertrag vom Parlament\nund sind äh in Brüssel aber machen, was die Abgeordneten uns sagen. Aber was diese akreditierte parlamentarische Assistenz ist so der Sammelbegriff für diese für diesen\näh für diese Stelle, aber was die Leute konkret machen und definieren die Abgeordneten. Also da kann, das kann alles sein, von ähm Büroorganisationen\nbis hin zu ähm inhaltlicher Arbeit und also alles, alles was die Abgeordneten quasi brauchen, fällt unter diesen Begriff."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:46",
+      "text": "Aber wenn du so raus in die Welt äh äh gehst, dann hast du auch vergleichbare Freiheiten, was so den Zugang zur zu Dingen und Ländern betrifft."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:23:55",
+      "text": "Ähm nein, grundsätzlich\nNee, also Grund, also auf keinen Fall, wie die Abgeordneten selbst. Ähm allerdings ist es so, dass als dass sich ja offiziell Mitarbeiter von einer internationalen Organisation bin,\nIm Europäischen Parlament, das wiederum, wenn wir zum Beispiel zu dem Themenfeld, wo äh für das ich heute hier bin, als ich nach London gefahren bin, hätte ich eigentlich zwei Wochen in Quarantäne gemust,\naber konnte mir als Mitarbeiter einer internationalen Organisation vom Außenministerium in Großbritannien eine Ausnahmegenehmigung erstellen lassen. Das wäre nicht möglich gewesen für für wenn ich jetzt hier Mitarbeiter im Partei ähm\nin der Parteigeschäftsstelle gewesen wäre."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:34",
+      "text": "Also man hat schon so diesen Diplomatic Fastpass äh als Option quasi."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:24:38",
+      "text": "Normalerweise nicht. Das ist eine Ausnahmesituation. Also wir genießen da keine weiteren äh äh Privilegien und äh ja, also das ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:48",
+      "text": "Kein Diplomatenpass."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:24:49",
+      "text": "Nee, die Abgeordneten, also die deutschen Abgeordneten haben einen, ähm ich muss anstehen bei den normalen Passschaltern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:58",
+      "text": "Jetzt hast du dich ja ähm und du kannst mir gleich mal sagen, wann das geschehen ist, diesem Thema Wiki Leaks und Julian Assange angenommen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:25:08",
+      "text": "Ja, das das habe ich und zwar ging das, ich habe mich mit dem, ich wusste immer, als politisch interessierter Mensch grundsätzlich hatte ich das auf dem Radar, dass es das gibt und dass da was passiert, hatte mich aber nie in großer Tiefe damit\nbefasst, um ehrlich zu sein. Und eines Tages ähm hat äh mein mein Chef, das war nach dem.\nEs gab Berichte von dem Sonderbeauftragten für der hat so ein langer Titel, Republik veröffentlicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:38",
+      "text": "Haben wir hier auch schon ausführlich besprochen damals. Mhm."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:25:40",
+      "text": "Und da war er,\nso erbost über wie die Sache läuft, dass eine Rede dazu halten wollte. Und damals habe ich ich hatte keine Ahnung über die Hintergründe. Ich habe gesagt, ja vielleicht ja auch, ist ja auch sensibles Thema. Äh da vielleicht machen wir das\nbesser nicht und er so, der setzt sich mal damit auseinander. Dann habe ich angefangen, mich reinzulesen und dachte, okay, auf jeden Fall Rede halten.\nAuf jeden Fall wichtiges Thema. Ähm und hatte so ein bisschen gemerkt, dass ich selber mit dieser teilweise oberflächlichen Berichterstattung und hereingefallen bin und im so eine Distanz gewahrt habe, für die es eigentlich keine ähm.\nBerechtigung gab,\nweshalb ich das also ich schäme mich ein bisschen dafür aber gleichzeitig hoffe ich, dass es auch den positiven Effekt hat, dass ich äh anders an Leute herangehe, die heute noch,\nBerührungsängste mit dem Thema haben, um quasi, weil ich sagen kann, kenne ich\nÄhm ja und da wollteten diese Rede ähm gehalten und ich habe mich da reingelesen und irgendwann ging es dann los, dass ähm er, dass die Anhörung zu seinem Auslieferungsersuchen in Großbritannien anfangen sollte.\nUnd da gab's eine eine NGO, die sich für den Fall einsetzt, die im Europaparlament ähm Abgeordnete gefragt hat, ob sie nicht dahin kommen möchten äh als Beobachter, um sich das anzugucken, einfach damit eine Präsenz da ist, dass mehr Augen das sehen, einfach das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:59",
+      "text": "Welche NGO war das?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:27:00",
+      "text": "Das war ähm Bridges for media Freedom heißen die.\nÄhm die befassen sich ganz intensiv äh mit dem Fall und machen Briefings und haben auch Berichterstattungen zu den ähm,\nzu den Anhörungen gemacht und so. Und jedenfalls, die haben\nalso aber die haben halt einfach nur quasi darum geworben, da hinzukommen. Also die ist jetzt nicht so wie das immer so dargestellt wird bei NGOs und Lobbyorganisationen, dass die dann sagen, hier kommt mal nach London\nwir ähm bezahlen euch alles und so, sondern das war einfach nur so ein Punkt, das findet jetzt statt und es wäre toll, wenn ihr hinkommt,\nund ähm das ging damals aus zeitlichen Gründen, konnte mein Chef nicht fahren und ich habe dann gefragt, ja, dann wäre schon irgendwie schön, wenn wir da wären. Es war im Ende Februar,\nbevor ähm Covid in die hohen Wellen geschlagen hat, da war das noch ein chinesisches Problem damals. Ähm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:49",
+      "text": "Virus."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:27:50",
+      "text": "Genau, das war bei AIVA Weise dachten wir damals noch, dass das also ich hatte damals war ich noch ein bisschen naiv und dachte, dass ach das findet er so weit weg statt weg. Wie ja,\nUnabhängig dafür, also ja das ist besonders interessant, weil damit wir waren, dass da wollten natürlich unglaublich viele Leute rein\nnicht in einem Zentrum Londons, sondern das war in es war ein vorbereitendes für eine Woche, da haben die Parteien ihre juristischen Statements ausgetauscht, zu ihrer ähm ihre Dokumente vorgetragen, das\nZur Vorbereitung auf die äh Hauptverhandlung und das wurde damals verhandelt in der direkt am Gefängnis ist in dem Julian Assange momentan festgehalten wird\nÄhm und das ist so draußen in äh äh in London fährt man über eine Stunde aus dem Zentrum Londons hin.\nIst das so der Teil, den man sich nicht anguckt, wenn man als äh Tourist in London ist, weil das ist da das das wahre London. Da wo die Leute nicht mehr so höflich sind, wo quasi\nein bisschen, bisschen ist. Und auf jeden Fall ähm hat es da da stattgefunden. Wir waren unglaublich viele Leute. Da gab es dann so einen Container für die\nfür die Presse, da waren dann irgendwie sechzig Leute in so einem auf geengtem Raum zusammengepfercht ähm ohne richtige Belüftung und,\ndas im Nachhinein, wir haben jetzt mit den mit den Presseleuten viel drüber geredet, dass das nochmal gerade so gut gegangen ist, wenn einer damals schon Corona gehabt hätte in dem Ding, äh hätte das die Berichterstattung lahmgelegt\nNa ja, jedenfalls war das damals da, da bin ich hingefahren und habe mir das angeguckt und äh.\nDann auch schon, habe damals Berichte darüber geschrieben und äh habe\nNa dann war für mich klar, dass ich auch versuchen werde zur Hauptverhandlung zu kommen. Also weil damals haben wir halt nur die Anwälte ihre Position vorgetragen und die Hauptverhandlung ist, wenn man dann bekommen Experten und Zeugen. Und das war jetzt das, was gerade stattgefunden hat im September."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:29:37",
+      "text": "Du hast gerade so äh von deinen anfänglichen Reservierungen gesprochen, dieses dich diesem Thema\ntiefer zu widmen. Ähm.\nWir wollen da jetzt gar nicht so lange drauf rumreiten, aber vielleicht sagt doch mal, welche das so waren und wie du was dir da im im weitesten Sinne dich da von dem Gegenteil überzeugt hat."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:30:00",
+      "text": "Also,\nähm zur Einordnung ist, den meisten dürfte es ja bekannt sein, aber dass es gegen Julian Assange Ermittlungen wegen äh Vergewaltigungsvorwürfen in Schweden gab,\nähm und das war so ein ist das halt so ein Thema, wo.\nWo es grundsätzlich, wo ich das Gefühl habe, tendenziell erstmal, das Distanz zu wahren. Ähm und ich habe mich dann halt damit beschäftigt und,\nGrundsätzlich ist das wichtige, ich werde dich,\nnie zu, ich werde nicht herausfinden können, was da gelaufen ist, was da passiert ist, ob er was gemacht hat, ob er nichts gemacht hat. Momentan ist Unschuldsvermutung gilt ähm und diese Sachen sind einfach nicht Bestandteil des Auslieferungsverfahrens. Das ist das Allerwichtigste,\nDa geht es um, da geht es um die äh geht es um von Wiki Leaks veröffentlichte Dokumente. Ähm und das muss\nauch komplett abstrakt betrachtet werden. Wenn ähm es Fehlverhalten gab, dann muss er sich an anderer Stelle dafür\nmuss er das an äh an anderer Stelle ähm äh muss das an anderer Stelle geklärt werden, aber das hat mit diesem Verfahren nichts zu tun. Und deswegen muss man das äh isoliert betrachten und.\nDas war äh habe ich allerdings auch, wie gesagt, das war so eine wie so eine, so eine Barriere, die ich überspringen musste. Ähm um mich tiefer mit dem Thema zu befassen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:23",
+      "text": "Wie viele äh hast du denn dann dir sozusagen von der ganzen Geschichte dann noch äh reingezogen, weil ich meine WikiLeaks Geschichte ist ja jetzt nicht brandneu, sondern das geht ja schon eine Weile."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:31:33",
+      "text": "Ja, das ist okay, das meine ich damit, dass ich das irgendwie auf dem Radar hatte und immer so ein bisschen gelesen habe. Ja, ich habe dann angefangen, Artikel zu lesen, Hintergründe zu lesen, kann ich sagen, wie viel. Ähm ich würde,\nIch würde persönlich jetzt mich auch nicht als großen ähm Wiki Leaks äh Experten\nbezeichnen, weil ich mich halt im Großen und Ganzen auf diesen einen konkreten Vorgang beschränke und den den Prozess.\nGrundsätzlich ist mir habe ich aber auch Sympathien mit dem mit dem Hintergrund des Projekts einfach, weil das äh eine.\nDiese weil ich glaube, dass die eine wichtige Aufgabe erfüllen äh in der heutigen Zeit, was ja auch schon mehrfach unter Beweis gestellt haben.\nDass dass jetzt aus meiner Erfahrung aus dem dem Prozess heraus jetzt werde ich niemals mehr Zeuge sein können in dem Verfahren, weil das ist der Moment, den die äh Gegenseite rausschneiden und mir vorwerfen würde. Ähm aber ja, nie so,\ninsofern habe ich das äh grundsätzlich verfolgt, aber ich habe äh keine, keine, über die ganzen historischen Vorgänge, auch die internen Streitigkeiten, die es in der Vergangenheit gab, die habe ich, mit denen habe ich mich nur insofern beschäftigt, als dass sie relevant fürs Verfahren waren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:42",
+      "text": "Ähm dann lass uns doch mal genau besprechen. Also Wiki Leaks wir wir können jetzt hier nicht die gesamte Geschichte von Wiki Leaks aufrollen. Hm,\nIch habe die allerdings als äh Journalist und dann später hier im Podcast auch über wahrscheinlich den,\nden längeren Teil begleitet oder auch als Besucher der CCC Kongresse, bei denen diese Projekte ja vorgestellt wurden.\nÄhm Wikileaks hat von kleineren Leaks irgendwann,\nvor inzwischen elf, zwölf Jahren über ein paar sehr große, das Colletural Mördervideo Deekable League, die Eathcan Warlocks und was nicht alles äh bis hin am Ende zu Leaks von,\nähm Cyber Tools der CIA, also das Seven, eine ganze Menge an Dingen veröffentlicht.\nUnd dabei eine äh zu zu allerlei Kontroverse geführt. Jetzt.\nEndete das Ganze in einem nicht mehr durchschaubaren Kuddelmuddel der Vorwürfe, wo auch sehr viel, wie du gerade sagtest, der persönlichen Vorwürfe gegen Julian Assange. Gemischt wurde mit\nähm ja vielleicht politischer Verfolgung des Projektes Wiki League in dem insbesondere, was jetzt Veröffentlichung von Daten aus den USA,\nangeht oder Daten, die irgendwie, sage ich mal, denen deren Veröffentlichung nicht unbedingt in überall in in Deckung mit den Interessen der USA ist.\nÄhm was wird jetzt hier,\naktuell verhandelt, ja, denn die Vergewaltigungsvorwürfe sind es nicht.\nDie ähm es ist auch nicht die Schuldfrage zum Beispiel, wie sie beim Chelsea Manning verhandelt wurde, ähm muss sie auch überlegen, über welchen Zeitraum wir hier reden. Chelsea Menning war, wenn ich mich nicht täusche, sieben Jahre.\nIn Haft wurde von Barack Obama dann,\nFrühzeitig entlassen, was, glaube ich, wieder der Unterschied war, sie hat keinen Paten, sondern sie hat eine Aufschiebung des des N, des Restes ihrer,\nFreiheitsstrafe erhalten.\nUnd von all dem, was man WikiLeaks über die, über die, das Jahrzehnt und länger vorgeworfen hat, geht es jetzt spezifisch nur um die Interessen der USA,\nquasi die und das, was die USA geltend machen, um Julian Assange als Schuldigen ausgeliefert zu bekommen. Ist das korrekt?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:35:17",
+      "text": "Ja, im Großen und Ganzen im Großen und Ganzen schon. Also die USA, ähm Moment, es geht, das ist kein Verfahren. Genau, das ist der Unterschied zu dem, was äh äh bei Chelsea Manning in in den USA war momentan, ist es so, dass\ndie USA wollen, dass Julian Assange ausgeliefert wird, damit die in den USA der Prozess gemacht werden kann. Deswegen ist das jetzt auch kein Verfahren, wo ähm\nBeweise von der Anklage ähm vorgetragen werden, was auch maßgeblich daran liegt, dass die äh äh die meisten Beweise im Großen und Ganzen unter Verschluss gehalten werden, weil das ähm um sich um eine Anklage nach dem ähm\nSpionage Act handelt. Also es geht um äh\nSpionage siebzehn von achtzehn Anklagepunkte laufen unter dem äh Spionagegesetz. Das ist aus der Zeit des ersten Weltkriegs. Ähm in den USA entstanden\nund das wurde auch während des Verfahrens ähm eingeordnet, da gab's halt Leute, die die historische äh Einordnung für dieses Gesetz vorgenommen haben und dann halt gesagt haben, dass aus einer der repressivsten Zeiten der USA stammt, da ging es um ähm darum, dass halt die Leute,\näh das wurde gegen Leute zum Beispiel eingesetzt, die gegen den Krieg äh waren damals und ähm tja, das gab, also das ist ein spezielles Gesetz, nachdem er da ähm,\nabgeurteilt werden soll in den USA. Momentan geht es aber nur darum, dass er da rauskommt. Und für die Leute ist es wichtig zu verstehen, wie Auslieferungen normalerweise funktionieren, dieses System der Auslieferung basiert auf.\nDem gegenseitigen Vertrauen von Staaten in ihre Rechtsstaatlichkeit,\nDas ist vielleicht den meisten Leuten zum ersten Mal. Wer sich also nicht grundsätzlich damit befasst, aufgefallen, als ähm\nPutschdemont in Deutschland festgenommen wurde und nach Spanien ausgeliefert werden sollte, ist ein bisschen eine andere Sache, weil es danach EU-Haftbefehl ging. Aber normal."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:01",
+      "text": "Präsident in äh Katalonien, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:04",
+      "text": "Jetzt werden wir auch ausgeliefert. Kannst doch nicht einfach Katalonien anerkennen hier in so einer."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:37:10",
+      "text": "Ähm und der hat ähm da geht's ja eigentlich nur darum, dass dass die sagen, okay, wir wollen das ausgeliefert wird und dann werden die Leute ausgeliefert, weil man halt darauf vertraut, dass das,\ndass das äh ähm dass das schon in Ordnung ist, weil das ja alles Rechtsstaaten sind. Und zwischen dem zwischen der äh zwischen den Vereinigten Staaten und dem ähm Vereinigten Königreich gibt es halt.\nKommen und die haben jetzt gesagt, ja, wir wollen das ausgeliefert wird, es.\nDie äh Wahrscheinlichkeit, dass er sich strafbar gemacht hat äh ähm und ihm sollen USA das Verfahren gemacht werden. Darum geht es jetzt gerade in diesem Prozess. Also."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:43",
+      "text": "Nehmen wir mal ein einfacheres Beispiel jetzt eine ähm,\nwas weiß ich, ein jemand, der in den USA wegen Mordes gesucht wird, er ist nach Großbritannien untergetaucht, dann geht's.\nVerständlicherweise irgendwelche Prozesse, die diese beiden Länder zwischeneinander haben, um sicherzustellen.\nDass dieser Mensch einem Verfahren zugeführt wird, ja,\nund dass die Großbritannien darauf vertraut, dass die USA, wenn sie jemand wegen Mordes verfolgen und den Prozess machen, dass das da vernünftig läuft. Und wenn man das nicht hätte, würde das ja im Prinzip dazu führen, dass man,\nder Strafe immer einfach dadurch entgehen könnte, dass man in ein anderes Land geht, was ja durchaus auch ähm in in bestimmten Bereichen durchaus gängige Praxis ist, sowas zu machen.\nUnd ähm also nur damit also damit das hat ja schon seinen Grund, dass es so etwas gibt."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:38:34",
+      "text": "Ja, also grundsätzlich sind Auslieferungen, ähm was normal ist, was was stattfindet. Ähm und es ging zum Beispiel auch in dem\nDie Richterin, die da momentan, es gibt, man weiß nicht so viel über die Richterin, die da gerade das Verfahren leitet und dann wurde nur irgendjemand hat die Zahl rausgefunden, dass irgendwie sechsundneunzig Prozent ihrer\ndass sie sechsundneunzig Prozent der Auslieferungsversuche.\nUnd sie, das sind, sind wirkt aufm ersten Blick hoch, aber die meisten Auslieferungsverfahren sind auch ähm,\nnicht so problematisch. Gibt natürlich immer wieder problematische ähm Auslieferungsverfahren. Das ist äh ob er auch eine eine Besonderheit um Nummer einzuordnen, welchen Stellenwert diese Auslieferung haben ist. Die Richterin kommt,\nvom Westminster das,\nDas ist quasi, die macht normalerweise kleinere, die macht vergehen bis ein Jahr maximal Strafe und Auslieferung,\nso eine Art, also eine Amtsrichterin. So und das ist halt so relativ natürlich eine,\neine Richterin trotzdem, aber das ist halt normalerweise, das zeigt halt, welchen Stellenwert diese Auslieferung normalerweise haben. Das ist jetzt nicht so, dass das immer so ein großer Fall ist\nwo es äh das riesig aufwendig ist und so ein langes Verfahren. Normalerweise sind das nicht so aufwendige Verfahren, deswegen werden die auch an einem sehr niedrigen, äh sehr niedrig in der Hierarchie in der Gerichtsbarkeit behandelt. Denn."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:53",
+      "text": "Da wird dann mal schnell geguckt, alles klar, du wirst von einer äh Demokratie gesucht, wegen eines Verbrechens, was auch bei uns eines ist\ndie haben hier formal den Antrag gestellt und über die Details des Vorwurfs gegen dich brauche ich mir gar keine Gedanken zu machen, weil ich ja darauf vertrauen kann, dass in diesem anderen Land ein juristisches System,\narbeite, dass dir sicherstellt, dein dass da dass du deine Rechte wahrnehmen kannst auf Verteidigung und so weiter und dann wird das schon alles richtig sein, da musst du da jetzt hin."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:40:24",
+      "text": "Genau, das ist so der normale, der normale, normale Ablauf."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:27",
+      "text": "Eigentlich ein formaler Akt nur, der jetzt aber von einer Richterin behandelt werden muss, weil er juristisch geprüft wird, aber letztendlich ist das Alltagsgeschehen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:40:37",
+      "text": "Also äh die USA haben halten ähm die USA und Auslieferungsabkommen, äh ersuchen gestellt an Großbritannien und äh Julian Assange ähm geht dagegen juristisch vor. Das ist halt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:50",
+      "text": "Und mit welcher Begründung kann er das jetzt tun, weil er kann jetzt ja im Zweifelsfall alles, was vielleicht seiner Unschuld ähm seine seine Unschuld oder sowas zeigen würde, spielt wahrscheinlich gar keine Rolle, ne?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:41:04",
+      "text": "Ja, also ganz kurz ähm nochmal, wofür er was da jetzt ähm das Thema ist, weil da das ähm\ngibt da auch ähm ist ein bisschen, ist es recht kompliziert, aber im Großen und Ganzen, was die USA ihm vorwerfen, was auch immer wieder einer der Hauptpunkte im Verfahren war, war einerseits das Veröffentlichen von ähm,\nvertraulichen Dokumenten in den Fällen, wo die Veröffentlichung ohne Schwerzung von Namen erfolgt ist und dadurch Leute in Gefahr gebracht wurden.\nSie haben immer wieder erwähnt, dass äh dadurch zum Beispiel, dass es nicht um das Video geht. Ähm das ist allerdings auch,\nein Teil der Wahrheit, weil es es geht auch darum, dass geht auch äh ist es mit angeklagt, dass er im Besitz dieser vertraulichen Dokumente war und dann spielt das College Mörder-Video auch\nwieder mit rein. Es geht zum Beispiel darum, dass ihm vorgeworfen wird, sich mit Chelsea verabredet zu haben und sie angestiftet zu haben, ähm in Regierungssysteme einzudringen\nund dort Daten zu stehlen und dass er sie quasi motiviert hätte, mehr Daten zu äh mehr Unterlagen zu besorgen. Das sind die Vorwürfe, die im Raum stehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:12",
+      "text": "Und da müssen die Briten da auch prüfen.\nÄhm da ob das bei ihnen auch ähm strafbewerte Taten wären, weil da gibt's ja so ein bisschen diese je nachdem von welchem Land immer auch so die Anforderungen, dass das auch bei ihnen eine Straftat wäre, ne?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:42:28",
+      "text": "Das ist ja, das ist der ähm das ist der, so das Prinzip der Duo-Kriminality. Und das greift er auch. Das war aber im Verfahren, im Verfahren wurde das äh ähm nicht groß gechallengt, um ehrlich zu sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:44",
+      "text": "Vielleicht kannst du nochmal kurz, ähm, bevor wir in die Details, äh, gehen, noch mal kurz darlegen, was ist denn bisher,\nlaufen. Also du bist ja dann anlässlich dieser startenden Anhörung erstmalig in London aufgeschlagen, wenn ich das jetzt richtig mitbekommen habe."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:43:00",
+      "text": "Das zweite Mal. Also weil es im Februar, im Februar, also was es gibt, ähm sagen wir mal, es gibt\nZwei unterschiedliche oder sagen wir drei Typen von Anhörungen, die bisher gelaufen sind. Das ist so, dass es im Februar diese vorbereitende ähm vorbereitende Anhörung gab, bei der die ähm ähm\ndie beiden Seiten, die Anklage und die Verteidigung\nihre Schriftsätze vorgetragen ausgetauscht haben, wo sie grundsätzlich ihre Argument vorgetragen haben, dann gab es eine längere Pause, dann sollte es im Mai eigentlich weitergehen mit der Hauptanhörung\nund in dieser Hauptanhörung sollte äh äh werden, also das war das, was jetzt wegen Corona, wo das verschoben, das hatten wir jetzt im September. Da wurden halt,\nunterschiedliche Experten, Zeugen, Sachverständige gehört. Also dagegen wurden da quasi die meisten davon die absolut überwiegende Anzahl der Leute wurden von der Verteidigung bestellt. Die machen halt ihre Argumente auf. Wieso nicht an die USA ausgeliefert werden darf?\nUnd zu diesem, zu diesem, für ihrer Verteidigung haben sie entsprechende Zeugen geladen. Die dritte Art von äh Anhörung, die es gibt, es gibt einmal Monaten administrative Anhörungen\ndie gesetzlich vorgeschrieben ist, wo, weil er in Untersuchungshaft ist dauerhaft. Und da muss einmal im Monat geguckt werden, ob man das noch so weiter behalten darf. Aber da das sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:10",
+      "text": "Da, von wem angehört, also."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:44:12",
+      "text": "In diesem administrativen.\nDa kommt halt da kommt die Richterin, dann kommt die Anwälte zusammen, während Covid haben sie mehrfach immer drauf gedrängt äh auf ähm Freilassung auf Kaution, aus wegen gesundheitliche Risiken zu drängen, aber das äh darauf lässt sich die,\nRichterin nicht ein wegen Fluchtgefahr, ähm weil er also das da muss man wieder ein Stück zurück gehen, als er damals.\nÄhm es gab ja ein Auslieferungsersuchen von Schweden,\nähm wegen der Vergewaltigungsvorwürfe und damals, weil er Angst hatte, von Schweden in die USA ausgeliefert zu werden, ähm hat er, äh, stand dann unter Hausarrest mit einer elektronischen Fußfessel, die hat er sich entfernt und ist in die,\nvon gegangen und hat da politisches Asyl beantragt und bekommen und hat da mehrere Jahre dort gelebt. Und wegen dieses,\nweil er halt die Fußfessel damals entfernt hat. Ähm.\nArgumentiert die Richterin heute, dass halt Fluchtgefahr besteht und deswegen Kaution nicht in Frage kommt. Im Übrigen war das auch die."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:45:18",
+      "text": "Lochbuch-Netzpolitik Folge neunundzwanzig, berichtete unter dem Titel einmal Asyl und eine Flex, bitte. Nur um nur mal zu sagen, wir sind an den Themen dran, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:27",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:45:28",
+      "text": "Er hat ja und er hat er war dann dort in der Botschaft und als er dann dort quasi,\nraus Kompliment, also es gab ja in der Zwischenzeit ein Equador einen Regierungswechsel und die neue Regierung war dann nicht mehr so ein Fan von ihm und irgendwann wurde er dann da quasi rausgeworfen und die also die haben dann die britische die haben sein Asyl aufgehoben und die britische Polizei eingeladen,\nähm ihn rauszuholen\nDa wurde er dann rausgezerrt. Es gab diese schrecklichen Bilder. Und dann ähm wurde er äh verurteilt für das Verstoß gegen äh gegen die äh Kautionsauflagen. Dafür war dann ähm zuerst im Gefängnis.\nUnd das ist das ist aber abgesessen und seitdem sitzt er in Untersuchungshaft äh wegen des Auslieferungsersuchens, weil das Gericht sagt, dass Fluchtgefahr besteht, muss er halt da bleiben und in diesem\nin diesen administrativen Anhörungen geht es halt darum, dass weil halt niemand so eigentlich niemand dauerhaft in Untersuchungshaft bleiben, so ist ja keine Haftersatz, kein Haftersatz,\näh wird einmal im Monat, aber das ist ein formelles äh äh ein formeller Termin, ich habe mehrfach versucht, daran über ein Telefonkonferenz teilzunehmen, ist aber technisch nullmal funktioniert. Äh das dauert meistens fünf bis zehn Minuten und dann,\nähm ja, das spielt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:42",
+      "text": "Aber rechtlich spricht gar nichts dagegen, dass du da nichts dran teilnehmen können. Es ging nur zufällig die Technik nicht."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:46:47",
+      "text": "Diese Sachen, also.\nDie also ich will da mich nicht jetzt zu sehr drüber beklagen, weil in Deutschland die Möglichkeiten der fernen äh Prozessteilnahme und Prozessbeobachtungen noch deutlich eingeschränkter sind,\nähm die aber das ist da werden halt zur Telefonkonferenzen aufgemacht, wo man theoretisch dann das Verfahren verfolgen soll. Einmal hat dann zum Beispiel jemand bei Gericht vergessen, dass\nanzumachen\nein anderes Mal hat, jemand sein Mikrofon nicht ausgestellt und hat halt die ganze Zeit gesprochen, sodass niemand anderes was verstehen konnte. Das sind halt so äh das sind so technische Sachen. Das sind aber auch, es sind Leute vor Ort, es gibt äh Presse, die dieses Verfahren dauerhaft äh verfolgt. Das sind\nLeute dann da und gucken sich das an."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:28",
+      "text": "Okay, das heißt, in in Person warst du jetzt bei zwei Anhörungen, bei der im Februar und bei der jetzt im September."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:47:35",
+      "text": "Genau, das waren vier Wochen jetzt im September bei und bei der Anhörung war ich dauerhaft anwesend."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:47:42",
+      "text": "Die gingen nicht über einen Tag, sondern über wie viele Tage waren das insgesamt?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:47:46",
+      "text": "Es ging über vier Wochen, aber es sind da also vier Wochen äh Minus drei Tage.\nAlso siebzehn müssen's gewesen sein. Jetzt wenn mein, ich bin nicht so gute Mathe.\nÄhm dass also wir hatten, dass es jetzt auch um diese Besonderheit dieses Verfahrens zu der aktuellen Zeit am Donnerstag der ersten Woche,\nein bisschen eigenartig los. Die Anwälte der Anklage sind nicht aufgetaucht und dann gab's im Umfeld der Anklageanwälte einen Corona-Verdachtsfall.\nÄhm die äh eine Frau von einem der Anwälte hatte Symptome,\nwurden alle Leute getestet, da war es negativ, es war nur eine Grippe und dann ging's darauf los, dass es sind mal Tage ausgefallen, aber im Großen und Ganzen ging's, sagen wir mal vier Wochen und äh die war ich dauerhaft anwesend."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:33",
+      "text": "Ich würde an dieser Stelle, wir müssen das, glaube ich, zumindest mal noch äh erwähnen und empfehlen, bevor wir jetzt nämlich genau zu dem Verfahren kommen, die.\nEs ist ja sehr spannend, einerseits, wie diese verschiedenen Gründe, Julian Assange festzuhalten, Hand in Hand gingen, ne? Man hat ihn aus der Botschaft rausgeholt, eigentlich erstmal nur dafür eingekerkert, äh, dass er in die Botschaft reingegangen war\nWeil er damit ja gegen seine ähm Fußfesselauflagen in ein komplett anderen Verfahren ähm,\näh äh festgehalten wurde, damit der Fußfessel ausgesetzt wurde. Dafür wurde dann bestraft. Da hatten sie jetzt ein Jahr Zeit, das Auslieferungsverfahren anzustrengen. Ziemlich genau dann kamen die Amerikaner ja auch damit und haben gesagt, ah übrigens hier äh Auslieferung. Und der hatte quasi seine\neine Haftstrafe, glaube ich, jetzt grade abgesessen und ist jetzt quasi in der Auslieferungssicherungsuntersuchungshaft, aber was ist das."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:49:28",
+      "text": "Erstes Mal, ich habe das jetzt Untersuchungshaft genannt, es kann durchaus sein, dass das eine Auslieferungs äh das einen anderen technischen Titel hat. Aber es ist so eine Art Untersuchungshaft."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:49:35",
+      "text": "Wahrscheinlich einfach so, damit er sich der Auslieferung nicht mehr entziehen kann. Wird er da jetzt festgehalten, weil das eine Maßnahme ist, die diskutiert werden muss\nIst wahrscheinlich jede jeden Monat einmal dieser Call, von dem du gerade gesprochen hast, dann sagen die, ey, ihr haltet den hier gefangen dabei im Hochsicherheitsgefängnis dabei, ne, der hat keine Strafe oder der hat hier nichts gemacht, der muss einfach nur ausgewiesen werden, dann sagen die, ey\nsich hier schon mal die Fußfessel abgeflext, der bleibt hier sitzen bis wir das zu Ende verhandelt haben.\nUnd dann gucken wir. Und am am Ende könnte stehen, dass der als freier Mensch, na ja, frei in Anführungszeichen, da rausgeht, weil die Groß, weil Großbritannien sich entscheidet ihn nicht,\nauszuliefern oder sofort dann zum Flughafen fährt."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:50:15",
+      "text": "Die große deprimierende Wahrheit ist, dass beide Seiten, also dass die große deprimierende Sache äh für ihn und dem wenn sich Großbritannien dafür entscheidet, die nicht auszuliefern.\nHat die ähm Gegenseite die Anklage schon angekündigt in Berufung zu gehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:31",
+      "text": "Okay und das zieht sich dann wieder hin."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:50:34",
+      "text": "Also ja und wenn ihr ausgeliefert werden soll würde er das auch machen. Also das ist so äh es ist leider ähm äh anzunehmen, dass uns das noch eine Weile beschäftigt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:43",
+      "text": "Ich würde der Vollständigkeit halber, nur weil wir diese die Zeit in der Botschaft, das waren, glaube ich, ja, sieben Jahre, ne, die der dort dort verbracht hat. Ähm die sind wir jetzt so ein bisschen übergangen.\nÄhm ich würde da nur auch nochmal einen Kongressvortrag empfehlen und zwar von ähm Andi Müller Magun, Technical Aspects of the Swaylins in and around, die Equadorian Embacy in London, wo er\ndarüber berichtet, welchen Überwachungsmaßnahmen\ndurch den Astausch dort ausgesetzt war, wir inzwischen weiß die Öffentlichkeit da ja auch mehr drüber, dass es da diese Verstrickung gab mit dem.\nUnternehmen, dessen Name gerade nicht."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:51:24",
+      "text": "Global."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:51:25",
+      "text": "UC Global, die quasi die Sicherheit, die physische Sicherheit in der Botschaft gemacht hatten, aber so ein Side Contract offenbar mit der CIA hatten, ne?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:51:35",
+      "text": "Wir hatten dazu eine,\nAlso es gab eine schriftliches Zeugenstatement dazu, was ausgesprochen abenteuerlich ist. Ähm das ist auch Teil der äh das war Teil des Verfahrens, die Überwachung.\nAlso einer der Gründe, warum also die Verteidigung sagt, ist eine der Gründe, warum er nicht ausgeliefert werden darf, ist, dass er kein, dass ihm kein rechtsstaatliches Verfahren garantiert wird, weil er in der Botschaft das schon, als er in der Botschaft war, gab es ja das Auslieferungsversuch. Ich glaube, das erste,\nzweitausendsiebzehn ging das los."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:07",
+      "text": "Okay, ich äh wahrscheinlich gab's auch mehrere, ne?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:52:09",
+      "text": "Also jedenfalls war das halt so, ja, es gab mehrere. Also es gab ja jetzt gerade hier nochmal eine Aktualisierung äh im Juni, kurz bevor es die Anhörung losging. Also haben sie dann nochmal eins nachgeschossen. Diese, die, die sind sich ja da nicht nicht zu schade nochmal kurzfristig nochmal. Alles."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:22",
+      "text": "Auch die Verteidigung dagegen zu erschweren wahrscheinlich, ne?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:52:24",
+      "text": "Ja, klar, das und das und auch äh das, das ist ja alles sehr komplex und braucht Vorbereitungszeit, aber und vor allem wissen die halt, dass sie jede Verzögerung bedeutet halt auch, dass er da länger,\ndrin ist unabhängig davon die Sache vielleicht ist das auch ein kein schlechter Einstieg also es ging,\ndie Leute konnten nicht persönlich befragt werden, weil die beide, es gab zwei Zeugen aus dem aus dem Unternehmensumfeld, weil die beide ähm anonym äh sind,\nund bleiben sollen, weil es gibt in Spanien Verfahren gegen die Firma und die beiden stehen in Spanien unter Polizeischutz.\nWeil in dem,\nDas war der das ist ein bisschen von hinten aufrollen, aber im Abschlussstatement von einem der Zeugen wurde berichtet, dass in dem in dem Haus des Chefs dieser Firma wurde eine Pistole mit abgeschliffener Seriennummer gefunden,\nso dass die äh ja, dass dass es,\ndie jetzt unter Polizeischutz stehen und der Mann ist allerdings in Haft und da dem wird gerade das Verfahren gemacht. Der Hintergrund, was die Zeugen da berichtet haben, schriftlich war, dass Judo Assange in der in der Botschaft und hat da gelebt und es fing halt damit an\ndass die\neiner der Techniker, sollte die Kameras in der Botschaft austauschen, vorher gab's da Kameras, die haben halt alles aufgenommen. Ähm dann soll die Kameras austauschen, damit die auch Ton aufnehmen können.\nWeil das die alten Kameras nicht konnten,\nUnd dann äh aber es durfte keiner mitbekommen, dass die Ton aufnehmen. Also sie haben halt quasi erst die Kameras ausgetauscht, haben das die auch Ton aufnehmen. Später hat er davon berichtet, dass er irgendwelche Sticker an die Fenster machen sollten, damit die von außen mit.\nLasermikrofon besser äh aufnehmen können. Sie haben irgendwann angefangen, Wanzen zu verstecken. Sie haben ähm alle elektronischen Geräte am am Eingang.\nAm Eingang äh mussten die Leute die Geräte abgeben, die wurden, da wurden Kopien von erstellt, der hat zum Beispiel gesagt, dass er auch mal gesehen hat, er hat einen kopierten Datensatz von einem Anwalts-IPad gesehen. Ähm es wurde, es gab insbesondere die Ansage,\nbesondere die Gespräche mit den Anwälten zu überwachen, das ist natürlich für die Verteidigung ein wichtiger Punkt, ähm das hat er ausgesagt und der Hintergrund der Sache war, dass,\nder Chef dieser Firma, der ist wohl zu einer Messe in Las Vegas gefahren und ähm hat da einen, der.\nDas war schon, das war vor der Wahl Trumps war das hat er da jemanden kennengelernt der einer der größten Spender von,\nvon Trump war und,\nDann ist er zurückgekommen und hat in einen Auftrag bekommen für irgend so ein ein anderes Projekt und da ist dann eine neue Unternehmenskultur eingezogen, die beiden Zeugen haben das beschrieben mit dem dass der äh Chef gesagt hätte, wir sind jetzt auf die dunkle Seite gewechselt.\nUnd ähm sprach immer von den Freunden aus den USA,\nund die haben offenbar dann im Auftrag der der USA angefangen da ähm.\nDie Überwachung zu intensivieren, haben die Daten an die USA geliefert, das ist zumindest der Vorwurf, der im Raum steht und das die äh und.\nDa wurden auch Sachen berichtet, wie zum Beispiel, dass über extremere Maßnahmen diskutiert wurde. In dem Moment, wo Trump präsent geworden ist, ähm hat,\nder Zeuge in seinem Statement ausgesagt ist, dass alles viel schlimmer geworden, intensiver die Überwachung ist massiver geworden. Und dann wurden auch extremere Maßnahmen diskutiert, wie zum Beispiel, ob man nachts nicht eine Tür offenlassen kann.\nOder auch äh es wurde auch über Vergiftungsmöglichkeiten gesprochen. Also das äh ist was im Verfahren berichtet wurde von diesen von diesen anonymen Zeugen. Der Chef von ähm UC, was für Undercover steht, Undercover Global war der Firmenname.\nWar ähm, dass er plötzlich, das stand im Raum, dass er irgendwie zweihunderttausend Dollar im Monat für diesen Vertrag bekommen hat, der fuhr plötzlich teure Autos, hat sich neue Immobilien gekauft und äh ja, das äh,\ndieser Themenkomplex. Das war hat sich ein bisschen gelesen wie in einem äh äh beziehungsweise angehört, das wurde schriftlich vorgetragen. Es wurde mündlich vorgetragen, das schriftliche Statement hat sich ein bisschen angehört wie in einem Agentenfilm. Also das kann man auf jeden Fall,\nverfilmen das war totaler Wahnsinn. Man glaubt ja immer nicht, dass solche Sachen gibt, aber davon gab's in dem Verfahren ja leider mehrere Sachen. Also das war ähm,\nChallengeing teilweise sich äh das das anzuhören. Was auf jeden Fall herausfordernd."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:42",
+      "text": "Wahnsinniger also das ist natürlich wirklich wahnsinnige Verletzung von also es von.\nIch weiß gar nicht, wie vielen Gesetzen, ne? Also es ist ja im Prinzip dann also Großbritannien müsste allein schon dagegen Gesetzesverstöße haben, weil das ja Agententätigkeit im Interesse einer ausländischen Macht ist.\nEs ist irgendwie die Invasion der Privatsphäre von Julian Assange, ist die Invasion der Integrität der equadorianischen Botschaft, also das ist ja."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:57:12",
+      "text": "Ist es totaler Wahnsinn, das ist eine Sache habe ich zum Beispiel gerade noch vergessen, was auch eine besondere Rolle spielt. Julian Assange hat ja zwei Kinder und eine Verlobte. Ähm Stella Morris, ähm die ich in London auch\nbeim Verfahren kennenlernen durfte, die war als Legalteam ähm Teil des Teams hat sie in der fatorianischen Botschaft kennengelernt und\nda sind sie, sind sie ein paar geworden und das war den den Überwachern alles ein bisschen suspekt,\nda ständig irgendwelche Babys kamen, da haben sie zum Beispiel auch, wurde auch, hattet Zeuge ausgesagt, also ich, wie gesagt, ich spreche jetzt über dieses Zeugen Statement, ich war nicht dabei, gesagt, dass die ähm eine eine Windel\nMüllfischen sollen, um DNA Test zu machen, um festzustellen, ob das quasi irgendein Vaterschaftstest zu machen, um zu gucken, ob das Kind, ob's ein Kind von einer Songs ist.\nDas war auch übrigens ein Grund, warum die diese sie haben das lange ähm geheim gehalten, dass es die Kinder und die Beziehungen gibt. Ähm das ist durch das Gerichtsverfahren,\nIrgendwann ähm rausgekommen, weil die Verteidigung hat,\näh wollte äh Anonymität für Stella Morris und die Kinder sicherstellen und die Richterin hat das damals abgelehnt, hat gesagt, dass im Interesse ähm der Rechtsstaatlichkeit, dass das bekannt wird und das Gericht hat sie quasi dazu gezwungen,\ndass das veröffentlicht wird, also dass die Identität veröffentlicht wird."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:28",
+      "text": "Okay, wir sind jetzt schon äh vielleicht sollten wir einmal jetzt einen wichtigen,\nÜberblick machen. Also es geht jetzt in diesem Verfahren darum sich gegen diese Auslieferung in die USA zu äh wehren. Und er kann das nicht tun im.\nDurch Argumente der Unschuld oder sonstigen, sondern er kann das nur tun durch ähm im Prinzip formale Argument gegen letztendlich das rechtsstaatliche Verfahren,\nAlso oder oder ähm indem er das die Rechtstaatlichkeit des des Verfahrens ähm in Zweifel zieht."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "0:59:06",
+      "text": "Grundsätzlich gibt es unterschiedliche unterschiedliche Reichweite an an Sachen. Aber es es geht um grundsätzlich geht's um Formalität,\ndass das richtig ist. Ich habe zum Beispiel die Frage, hä wieso äh beschränken sich die Leute nicht mehr, darauf festzustellen, dass er Journalist war und dass es ein Journalistisch Tätigkeit war. Es ging in dem Verfahren darum, aber wichtig ist, dass die Verteidigung suchtsicher\nParagraphen aus diesem Auslieferungsabkommen zwischen den Vereinigten Staaten im Vereinigten Königreich raus und sagt, hier dieser Punkt spricht,\nDer Auslieferung entgegen dieser Punkt spricht der Auslieferung gehen. Da geht's zum Beispiel so, dass er nicht ausgeliefert werden darf, wenn das Auslieferungsersuchen politisch motiviert ist.\nEs könnte dem entgegenstehen, dass er\ndass sein Recht auf ein rechtsstaatliches Verfahren verletzt wurde. Es kann dem entgegenstehen, dass seine gesundheitlicher Zustand so schlecht ist, kann dem entgegenstehen, dass es das Suizidgefahr besteht.\nUnd das sind halt die Punkte, auf die sie die sie dann eingehen, wozu sie Zeugen laden, die das erklärt haben. Aber ist in dem Verfahren wurden auch Zeugen geladen, die ähm,\nDa geht's dann besonders um die politische Motivation, die den Stellenwert der Arbeit und der Veröffentlichung von von Wiki Leaks erläutert haben und erklärt haben, was das für journalistische Arbeit bedeutet, für die Forschung in bestimmten Feldern.\nAber auch ähm\nhaben sie Leute eingeladen, die berichtet haben, wie die Zusammenarbeit mit Wiki Leaks lief. Also vielleicht muss man nochmal ganz kurz ein ähm chronologischen Abriss darüber geben, was da eigentlich vorgefallen ist, wie diese,\nDas ist ja nicht so gelaufen, dass diese Daten von, also das ging um die Daten, die damals ähm ähm bekommen oder,\nwie ist das richtige Wort erlangt hat, erlangt hat und an Wikileaks gegeben hat, also WikiLeaks als Plattform für für Whistleblower, die Daten da abgelegt hat und,\nähm zur Verfügung gestellt hat und dann ist er nicht so gewesen, dass er das jetzt einfach alles ins Internet gestellt hat. Der Hintergrund war ja, ich weiß nicht, aber habt ihr dazu vielleicht auch schon eine Folge gemacht, dass sich das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:54",
+      "text": "Garantie, aber es ist gut, dass jetzt nochmal an der Stelle zusammen zu."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:57",
+      "text": "Chelsea Manning war damals äh Intelligence, Analystin ähm und hat,\nDadurch 'ne relativ also keine besonders hohe Security Cleans gehabt aber konnte eine ganze Menge an Daten zugreifen und hat die,\nextrahiert in von im Prinzip ihrem einem Arbeits, einer Arbeitsumgebung und hat dabei ähm,\nverschiedene Schwierigkeiten gehabt, die Daten überhaupt rauszubekommen. Zum Beispiel musste sie eine CD brennen, hat dann da irgendwas, was ich Britney, Britneys,\nan die Lehrer oder irgendwie sowas drauf geschrieben, um äh diese Daten daraus zu tragen und hat,\nin diesem Prozess der Datenextraktion bereits Kontakt zu gehabt. Und in diesem, in dieser Zeit des Kontaktes wurde ähm hat Assange auch,\nalso ein Chatpartner, dem von dem ausgegangen wird, dass es Julian Assange gewesen sei.\nIhr Empfehlungen gegeben, wie bestimmte Zugänge eventuell ausgeweitet werden könnten oder äh nach welchen Daten sie weiter suchen könnte. Und ähm.\nDas ist glaube ich so der Kernpunkt, der wodurch sie versuchen äh Julien Assange ist Rolle als hier Journalist,\nund ähm ja redaktionell überarbeiteter Veröffentlicher dieser Daten zu diskreditieren, weil er sie A.\nAngewiesen hatte, bestimmte Dinge zu tun und B.\nEs gab ja irgendwo in diesen Chats auch einen einen kleinen Auszug, wo es darum ging, äh ein geherschtes Passwort zu knacken. Das hat aber nach meiner Kenntnis oder nach meinem Verständnis,\nnicht erfolgreich stattgefunden, aber weil quasi die Sprache darüber war, wenn du uns diesen Hashtag gibst, dann kann man mal versuchen, den zu knacken, dass es dann auch automatisch so in diesem gesamten Bereich des äh Hacking,\nund so weiter geht."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:03:02",
+      "text": "Zum letzten Teil, zum letzten Teil haben wir auch einen ähm Sachverständiger gehört, die dann diese Chats analysiert haben und gesagt haben, zum Schuss gekommen sind, dass es technisch unmöglich war,\nvorhandenen Daten, das zu zu knacken, das ist das sind dann interessante Auseinandersetzungen, das da man hat dann quasi ein\ntechnischen Sachverständigen sagt, ist unmöglich und dann kommt die äh Anklage und sagt, ja, aber können die besten Hacker nicht durchs schwerste Passwort knacken? Und du denkst dir, ah\nDas ist äh äh technisch unmöglich, ist technisch unmöglich,\nhat dann nichts mehr mit Qualifikation zu tun, wenn quasi nicht die Bestandteile da sind, die, die man braucht, um das zu das war für mich zum Beispiel extrem schwierig, nachzuvollziehen, worüber da geredet wurde, weil da ist halt ein technischer Sachverständiger dann da war, der dem der dem Gericht äh versucht hat, zu erläutern, wie,\nWindows äh Passwörter erstellt, speichert, sichert und welche Angriffsvektoren es da gibt, was die Sachen überhaupt bedeuten über die, die sich da unterhalten haben in dem,\nDas ist äh äh ja, also für also ich habe also ich habe diese Chatlocks gelesen und dachte, keine Ahnung.\nEs hat also es wurde alles, wurde auch ähm ähm wurde ähm erläutert. Aber ja, so ist das ähm gelaufen. Aber was was ich gerade angesprochen habe von der Chronologie her ist, als er dann die Daten hatte. Hat\nsich ein äh so eine eine hatte sich eine Gruppe von Medienpartnern gesucht und gemeinsam diese diese Daten bearbeitet, die sollten quasi\nDiese Daten wurden\nbestimmte Daten wurden bestimmten Leuten zur Verfügung gestellt und ein engerer Zirkel hatte Zugriff auf den kompletten Datensatz. Das lief dann in der so ab, dass eine eine mit einem Passwort gesicherte, verschlüsselte Datei, die auch, haben wir auch einen Experten zugehört, ohne das Passwort unknackbar\ngewesen wäre."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:38",
+      "text": "Auf jeden Fall, das Passwort war zu lang."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:04:40",
+      "text": "Das war."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:41",
+      "text": "Und so aber das war zu lang."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:04:48",
+      "text": "Und ähm das war halt, die haben die Sachen haben sich die Sachen angeguckt, die haben die analysiert und das war nie der Plan\nirgendwas ungeschwert, einfach online zu stellen. Die die Idee war, dass die Leute nach Sachen gucken, die interessant sind, die für ihre Arbeit benutzen, die Sachen veröffentlichen, aber dann halt Namen, Schmerzen, damit halt Informanten bestimmte Quellen nicht gefährdet werden.\nUnd ähm das gab mehrere äh Sachverständige Zeugen dabei, also ne, es waren dann Zeugen nicht Sachverständige, die da bei dem Prozess dabei waren und alle berichtet haben, dass Wiki Leaks damit,\nunglaublichem, mit unglaublicher Akibi vorgegangen ist, dass das das ganze Verfahren verzögert hat, weil das ja riesige Datenmengen waren, ähm sicherzustellen,\ndass da halt nicht irgendwas einfach äh veröffentlicht wird. Und dann gab's noch die ersten Geschichten dazu. Was dann aber passiert ist, ist, dass ähm\nähm einen, es gibt ein Buch von einem Journalisten, der auch Zugang zu dieser Datei hatte, äh David Lay, ähm der hat dann in seinem Buch darüber berichtet, wie ähm Ensemble das Passwort gegeben hat und damals er hat ihm halt das Passwort auf einem Zettel gegeben\naber an einer Stelle hat ein Wort gefehlt, was nicht draufstand, die Stelle war auch nicht markiert, sondern er musste sich das Wort merken und auch die Stelle, wo es eingefügt wird. Und über diesen Vorgang hat er berichtet.\nUnd das Passwort in seinem Buch äh aufgeschrieben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:06:01",
+      "text": "Das war genau, der hatte über das Passwort berichtet und äh das waren also er hat's erwähnt und außerdem äh war das also nicht nur erwähnt, sondern es war auch der Titel des Buchkapitels und ähm jetzt war, dass die unglückliche\nSituation, die es weiterhin gab, dass in dem Zeitraum.\nAlso WikiLeaks hat diese Datei zum Download für diesen Journalisten bereitgestellt, auf ihrem Server, eine große Datei, mehrere Gigabyte. Ähm.\nVollständig verschlüsselt und dann gab es aber diese Situation, in der Wiki League sich immer wieder unter die Night of Serviceangriffen befand. Und dann haben sie in diesem Zusammenhang ähm quasi ihre Serverinhalte.\nBereitgestellt und Leute dazu aufgerufen diese Server zu Miron, damit die Informationen, die Wiki Leaks bereit stellt über unterschiedliche Wege trotzdem verfügbar waren.\nIn diesem Prozess des Mirroring sind überhaupt andere Leute an diese verschlüsselten Daten gekommen. Du konntest also dann irgendwie, ich bin mir nicht mehr ganz sicher, da da\nkönnte mich meine Erinnerung trüben. Ich glaube, das haben den als Tourent bereitgestellt, quasi und jetzt hatten sie quasi diese verschlüsselte Datei verteilt.\nUm dem Dedos zu entgehen, was nicht gut ist, ja, also das hätten sie nicht tun sollen. Ähm.\nAber das das war nur die das ist nur die Hälfte des Problems, weil genau dafür macht man Verschlüsselung, dass eine Datei in die Hände anderer kommt. Und dann hatte eben dieser Guardian-Journalist äh ich glaube, Inside Julian Assangesse und das Buch ähm,\ndas Passwort veröffentlicht. Und irgendjemand hat dann halt gesagt, ach guck mal hier, Passwort, verschlüsselte Datei, ich probiere das mal aus."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:07:43",
+      "text": "Ja, aber äh ja, also die äh auch dieses Mehring war auch Teil des äh wurde auch besprochen, weil,\nist bis jetzt nicht ganz klar ist, wie diese Datei dahin gelangt ist, weil das auch ähm die Mirror, die erstellt wurden nach der offiziellen Anleitung von Wiki Leaks, enthalten die Datei nicht.\nDie lag jetzt nicht äh ich glaube, die lag nicht gelistet irgendwo auf einem Server. Ähm aber es ist so, dass es halt gibt\ndie Leute teilweise wohl auch manuell vervollständigt haben. Es gibt unterschiedliche also wie zum Beispiel hat einer ein Anwesener einen der Geschäftsführer von Reporter ohne Grenzen Deutschland hat auch gesagt das Reporter ohne Grenzen damals auch Murra erstellt hat zum Beispiel. Ähm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:08:25",
+      "text": "Ich bin mir gar nicht sicher, ich glaube WikiLeaks hatte sogar irgendwie sowas. Die hatten zwischendurch so einen Service, dass du denen einfach nur einen SSH-Key\ngegeben haben und dann hätten sie dir den auf deinem Server eingerichtet oder so. Also es war Sinn. Das waren noch damals diese großen äh Auseinandersetzungen mit den Night of Service und so. Aber genau, irgendwie von WikiLeak Seite der Fehler\ndiese Datei in die Hände Dritter kam und von der äh David äh Lays Seite aus der Fehler dieses Passwort zu veröffentlichen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:08:53",
+      "text": "Und dann gab es als das wurde dann irgendwann,\nBekannt, dann gab es in Deutschland einer der ersten Artikel war am Freitag, ähm da wurde drüber berichtet, dass es diese Sicherheitslücke ähm gäbe vor der Veröffentlichung, haben die auch Julian Assange kontaktiert. Und der hat dann auch gesagt, Leute, wenn ihr das veröffentlicht.\nMacht keine Anleitung, stellt sicher, haltet es vage, äh dass wie quasi eins und eins zusammen zu zählen. Und als diese Sicherheits."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:20",
+      "text": "Wichtiger Punkt, damit hält Julian Assange quasi mit sich bemüht, diese Veröffentlichung zu verhindern."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:09:26",
+      "text": "Er hat auch, er hat also man muss wissen, dass zu diesem Zeitpunkt die Daten auch schon, das waren keine neuen Daten mehr, die wurden schon über Monate bearbeitet. Ich glaube, die waren da schon sieben Monate.\nKann es sein, dass sie die schon sieben Monate hatten, glaube ich. Die hatten die schon eine Weile und seit für diese sieben Monate wussten auch die USA, dass diese Daten quasi verloren gegangen sind,\nAls dann dieses Sicherheitsleck bekannt wurde, hat er auch die US-Regierung informiert und hat gesagt, Leute, Leute,\ndas kann jetzt passieren, das kann jetzt kommen, ist eigentlich nur noch 'ne Frage der Zeit,\nähm um damit die Bescheid wissen und im Zweifelsfall, obwohl sie sie, wie gesagt, sie hatten ja schon.\nEine lange Zeit um quasi zu gucken, was da drin steht und was da relevant ist. Und äh habe denen Bescheid gesagt und dann ging das relativ zügig, dass die Datei dann unverschlüsselt und in kompletter Vollständigkeit,\nöffentlich aufgetaucht ist. Ähm ich glaube, zuerst war es auf der US-Enthüllungsplattform Crypto,\nWo die Datei auch noch bis heute öffentlich verfügbar ist. Was insofern interessant ist, als dass der Betreiber von Cryptom oder einer der Betreiber von Cryptom auch ein schriftliches Statement abgegeben hat, in dem er daran erinnert hat,\ndie Datei dort verfügbar ist. Die Website in den äh,\neine US-Website ist und er bis heute noch keine einzige Aufforderung bekommen hat, diesen Datensatz zu entfernen und auch keinerlei strafrechtliche Verfolgung irgendwie da stattgefunden hat. Und.\nNachdem die Datei da war, gab es dann halt WikiLeaks äh intern ähm das Debatten darüber ähm\nob man jetzt auch den kompletten Datensatz veröffentlichen sollte, weil der halt eh öffentlich war und im Zweifelsfall mit dem Einführenden später auch online stellen, so Funktion, dass halt auch Leute gucken können, ob sie selber betroffen sind zum Beispiel, also da gibt's unterschiedliche Argumente, ich persönlich kann nicht einschätzen\nwarum das denn genau passiert ist. Jedenfalls haben sie dann den kompletten Datensatz ungeschwärzt, auch online gestellt.\nAber also das ist so wichtig, weil viele Leute denken und es wird auch manchmal so dargestellt, als ob der quasi diese Daten bekommen hat und dann komplett rücksichtslos ohne Rücksicht auf irgendjemanden, der es einfach online gestellt hat, so war das nicht.\nWaren ähm Prozesse in dem Fehler passiert sind.\nÄhm sich sicherlich, also ich meine, wenn's keine Fehler passiert wären, wären das jetzt äh nicht äh wäre das jetzt nicht online, aber das war kein das ist und war nicht so gewollt, wie es gelaufen ist. Das das steht äh,\naußer Frage."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:11:48",
+      "text": "Okay. Ähm jetzt aber genau trotzdem werfen sie den, werfen die USA äh Wiki Leaks oder Assange genau das vor, dafür verantwortlich zu sein, rücksichtslos."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:12:02",
+      "text": "Ich hatte noch eine, einen, einen Gedanken, den ich, den ich nicht äh vergessen möchte zu dem dazu, zu dieser zu diesem Gespräch mit Chelsea Menning, diesem Chatgespräch und dieser Unterscheidung zwischen Journalisten und ähm Aktivisten äh\nWir haben mehrere Investigativ-Journalisten gehört. Ähm sehr ähm,\nWüsteblauer und ähm Investigativ-Journalisten. Und die investigativ Journalisten sagen alle,\nso funktioniert investigativer Journalismus. Man sitzt nicht im Büro und da tauchen plötzlich Daten auf dem Schreibtisch auf und oh Mensch toll, da kann ich jetzt, sondern das funktioniert halt so. Man man hat halt irgendwelche, irgendwelche Leads, irgendwelche\nVerdachtsmomente, man kontaktiert Quellen, man fragt, ob sie was haben, dann kriegt man was. Und dann fragt man nach, ob sie noch mehr haben.\nZum Beispiel, weil man, wer wissen möchte oder auch um die ersten Datensatz zu verifizieren, man die haben halt alle\ngesagt, also die Verteidiger, die Anklage hat dann gesagt, ja, also das ist ja, was hat denn das mit Journalismus zu tun? Meint sie, ich glaube, sie haben\nein ganz grundsätzliches Fehlverständnis darüber, wie investigativer Journalismus funktioniert. Und ähm das hat auch eine große Rolle gespielt. Das wollte ich nur zur Einordnung, weil das sich auf dieses Chatgespräch ganz intensiv bezieht\ndass Journalismus funktioniert nicht von von alleine. Das funktioniert halt nicht so, dass die Daten einfach kommen, sondern man muss nachfragen, muss Leute äh.\nZum Beispiel auch denen wurde vorgeworfen, dass sie einen grundsätzlichen Aufruf äh gestartet haben, quasi Daten zu äh zu besorgen und da hochzuladen. Das gab es gab es in der Form auch. Also sie haben ja gesagt, hey, wenn es irgendwas gibt\nWhistleblower, wir sind eure sichere Plattform,\nguckt nach Sachen, schickt uns die, ich meine, wenn man als Enthüllungsplattform sich zum das Ziel, zum Ziel gesetzt hat, ähm,\nund solche relevante Unterlagen, die veröffentlichen ja auch nicht einfach Cryptom zum Beispiel, die veröffentlichen ja so gut wie alles, was denen in die Finger kommt, einfach so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:54",
+      "text": "Das ist nur einer."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:13:56",
+      "text": "Der, der, aber."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:57",
+      "text": "Glaube ich, ne? Macht Crypto."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:59",
+      "text": "Ähm."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:14:01",
+      "text": "Das war. Äh aber das das ähm Wiki Leaks ja auch einen Wickeligs hat ja schon immer einen einen Anspruch dahinter, bestimmte Sachen zu veröffentlichen und das äh mit einer mit einer bestimmten Zielsetzung.\nDas muss man schon differenziert betrachten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:18",
+      "text": "Was ist denn jetzt dein Eindruck von diesem Prozess? Also jetzt warst du ja selber da und hast da viel Zeit verbracht und äh hast dich selber mit der ganzen Geschichte ähm beschäftigt und hast auch.\nAuch selber ja eine relativ klare Position dazu, was dort bisher von WikiLeaks getan wurde.\nJetzt gibt's eben dieses Argument der USA, das hat uns irgendwie alles geschadet. Äh gibt den mal her, äh weil voll der Verbrecher,\nHast du den Eindruck, dass das im Rahmen dieser Anhörung und diesem juristischen Spiel, was da in UK abläuft.\nDass das also was.\nWas läuft da ab? Wie wird damit umgegangen? Und hast du den Eindruck, dass mit Julian Assange richtig umgegangen wird? Und dem Fall richtig umgegangen wird."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:15:11",
+      "text": "Grundsätzlich nein. Den Eindruck habe ich nicht. Ähm das ist\nAlso der Fall an sich erstmal, dass das so ein bisschen hört sich an wie eine Standardfloskel, aber es trifft auf jeden Fall halt einfach zu. Es hat äh unglaublich komplex. Mir hat jemand aus dem Verfahrensumfeld gesagt, dass wir da eine Aktenlage von von hunderttausend Seiten haben\ndie Richterin ähm kümmert sich da alleine drum.\nÄhm ist es, ist es sehr schwierig, aber ich würde grundsätzlich nicht so weitgehend sagen, dass es ein Schauprozess äh ist, die Richterin hat sich unterschiedliche Argumente angehört,\nund es gab welche, die besonders starkes Gewicht hatten und bei denen ich ehrlicherweise nicht weiß, wie sie die ähm,\nin ihrem Urteil nicht berücksichtigen kann. Und das sind die Sachen, da geht es um mentale Gesundheit und das Verhältnis, wie,\nsich die Inhaftierung auf Julian Assange seine Gesundheit auswirkt und wie die Gefängnisbedingungen in den USA sein könnten.\nÄhm und das wiegt für mich so schwer, dass ich,\nnicht vorstellen kann, dass sie dem Auslieferungsersuchen stattgebt. Also äh natürlich ist es, es gab äh es ist bei dem Verfahren immer wieder der Eindruck entstanden, dass sie ein bisschen.\nZugewandt war, die der der Anklage, weil die teilweise unerträgliche ähm Zeugenbefragungen vorgenommen haben\ndie der Ablauf in dem Verfahren ist so, dass die Verteidigung hat einen Zeugen benannt, dann haben die denen eine halbe Stunde zu seinem Statement, was er schriftlich eingereicht hat, befragt, um so eine Einleitung zu haben. Dann gibt es eine ein Kreuzfahrt durch die durch die Anklage und dann,\nnochmal nach nach befragt von der Verteidigung und diese Kreuzfahre. Gegen teilweise ewig,\nteilweise haben die sich überhaupt nicht mit den Inhalten beschäftigt. Da geht's dann nur darum den die Zeugen und die Sachverständigen zu diskreditieren. Das ging dann achtzig Prozent teilweise haben sich überhaupt nicht mit den Themen befasst und da hätte ich mir manchmal mehr gewünscht, dass die ähm\nRichterin mehr moderiert und reingeht, das hat mich schon äh überrascht,\nund äh ich am vierten Januar kommt ja, wird das Urteil gesprochen und ich werde mir das ganz genau angucken und bin sehr gespannt,\nEben mir wurde es mir eben ich sehe keinen keine Möglichkeit dafür, diese gerade diese ähm psychischen psychischen Gesundheitsthemen so auszulegen, dass eine Auslieferung in Ordnung ist. Also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:39",
+      "text": "Wird's denn noch weitere Anhörungen geben in irgendeiner Form."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:17:42",
+      "text": "Also momentan ähm ich habe ja gerade gesagt, das Urteil kommt am vierten Januar. Ähm da wird es das die nächste Sitzung zwischendurch gibt's diese administrativen ähm ähm Anhörungen. Da wird aber da wird nichts Inhaltliches besprochen. Ähm dieser Zeitraum ist jetzt so lang, weil die.\nVerteidigung hat drum gebeten vier Wochen Vorbereitungszeit für die schriftlichen Abschlussstatements zu haben,\ndann gibt es nochmal eine Frist von zwei Wochen für die Anklage drauf zu reagieren und deswegen zieht sich das alles hin bis die Richterin überhaupt quasi alles vorliegen hat um ihr ihre Entscheidung zu fällen.\nDient der nächste inhaltliche Termin wird der wird der vierte Januar in auch in London sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:22",
+      "text": "Und da rechnest du dann auch also da wird es dann auf jeden Fall ein Urteil geben oder kann das noch rausgezögert werden."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:18:30",
+      "text": "In dem Verfahren würde mich jetzt grundsätzlich nicht überraschen, aber ähm es ist fest vorgesehen, dass da eine Entscheidung fall."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:37",
+      "text": "Okay. Und dann Berufung entweder in die ein oder andere Richtung."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:18:39",
+      "text": "Gehen genau beide Seiten haben angekündigt, dass sie äh eine Niederlage nicht akzeptieren würden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:44",
+      "text": "Mhm. Wobei, ja, gut, äh die Frage ist, ob."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:49",
+      "text": "Eigentlich immer so, wenn man sich vor Gericht trifft, oder?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:52",
+      "text": "Ja gut, ich meine, das wird natürlich ein bisschen davon abhängen, wer dann äh der nächste Präsident ist in den USA."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:18:58",
+      "text": "Ja, das ist äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:00",
+      "text": "Oder denkst du, dass das unabhängig davon ist?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:19:03",
+      "text": "Naja, die USA können ja auslieferungsersuchen jederzeit zurückziehen,\nalso das ist, war zum Beispiel ein ein wichtiger Bestandteil auch in der Debatte, um eine mögliche politische Motivation des Ersuchens zu ist, das ja schon Untersuchungen während der Regierungszeit von Obama gab und,\nkeine keine Anklage erhoben wurde. Also in den USA wurde Anklage erhoben äh äh unter der Trump-Regierung und es gibt Berichte darüber,\nPresseberichte darüber, von Insidern, die gesagt haben, dass die Obama,\nAdministration explizit keine Anklage erhoben hat, weil sie gesagt haben, dass sich das Spannungsverhältnis zur Verfassungsgarantie Pressefreiheit in den USA nicht auflösen lässt. Und dass sie diesen Präzedenzfall nicht schaffen wollen,\nAnklage heute weist das zurück und sagt Hase. Ist ja quasi, das sonst steht irgendwo in der Zeitung, aber das war bestimmt gar nicht so. Und äh,\nDas ist aber schon ein macht ein es gibt macht einen Unterschied, wer gerade da Präsident ist und man könnte sich ja.\nWenn das Ziel war ähm Julian Assange als Person zu schädigen.\nOder an den Rand der Zerstörung zu bringen, dann haben sie ja ihr Ziel ohnehin schon erreicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:17",
+      "text": "Also das mit den,\nmit den politische Motivation in den USA, muss ich zumindest die die Alternative äh Erklärung, warum es unter Obama keine kein eröffnetes Verfahren gab, ähm.\nMal darlegen, weil es, also es ist richtig, es gab keine Anklage gegen\nJulian Assange unter der Obama äh Regierung\nähm Julian Assange hat aber immer wieder davon gesprochen, dass es ein gibt, also eine quasi versiegelte, versteckte Anklageschrift, die sehr schnell aus dem Hut gezaubert wird\nund die ist ja dann auch spezifisch aus dem Hut gezaubert worden, als das ganze Ding losging. Also\nquasi der war nicht aus der Botschaft raus, da hatten die US-Amerikaner eine eine Anklage da liegen und ein Auslieferungs äh ersuchen und ähm,\nvermute, dass sie das vorher nicht äh erhoben haben, diese Anklage, weil sie der Verteidigung keine Möglichkeit geben wollten, sich darauf vorzubereiten und zweitens.\nEs natürlich besser ist, wenn jemand die ganze Zeit sagt, die USA verfolgen mich die USA verfolgen mich, dass du sagen kannst, warte, warte, wir haben ja überhaupt nichts. Ähm die die ganzen Veröffentlichungen, um die es hier geht, fallen.\nIch bin jetzt nicht bei Walt Seven bin ich mir nicht ganz sicher, aber alle anderen Veröffentlichungen fallen auf jeden Fall in die Obama-Ära.\nMit anderen Worten wäre ich jetzt schon auch überrascht, wenn jetzt ausgerechnet ein Präsident Biden sagen würde, komm, äh Schwamm drüber. Also,\nBin ich mir nicht ganz sicher. Ich ähm würde zumindest die andere Interpretation äh noch mit anbringen wollen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:22:05",
+      "text": "Ja, also ich würde da auch jetzt weder drauf, also ich würde da kein Geld drauf setzen,\ndass ähm jetzt äh äh Biden hat sich in seinen Aussagen ja auch jetzt nie zu WikiLeaks oder ähm Assange bekannt, anders als äh,\nDonald Trump, der das ja schon mal gemacht hat, der ist ja da,\nAuch in dieser Angelegenheit, das war auch, wurde auch besprochen, dass wir zum damals bei der Veröffentlichung gesagt hat, hat er quasi die Todesstrafe empfohlen, dann später hat er gesagt, äh WikiLeaks Toll liebt er.\nUnd dann paar, ja, später hat er gesagt, WikiLeaks hat er keine Ahnung von noch nie gehört,\nDas ist quasi so, das ist äh auch Trump wird sich da auch selbst gerecht in der äh Wiki League ähm ähm in kompletter ja, also da war man, keine Ahnung, es spielt ja auch zum Beispiel ähm im im Raum, dass.\nÄhm das wurde auch besprochen. Da gibt es eine gab's ein äh eine Zeugenaussage zu, dass ähm ein OS,\nCongress Men.\nIn der ihn in der Botschaft besucht hat und gesagt hat, dass er im Auftrag von Donald Trump ihm eine eine Begnadigung äh ähm in Aussicht stellt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:16",
+      "text": "Wenn er sagt, dass die Clinton Mails nicht von den Russen gekommen wären."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:23:20",
+      "text": "Genau. Das war ähm das wurde auch erst gesagt. Und das wurde äh nicht, äh wurde von der Anklage nicht weiter ähm besprochen. Sie sagen, das kann sein, dass das passiert ist, aber die, die suggerieren, dass die nicht im Auftrag vom Präsidenten gehandelt haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:35",
+      "text": "Was äh dummerweise tatsächlich eventuell sein könnte, ne? Das war ich weiß nicht mehr genau, was welcher Congress Men das war, aber.\nJa genau, Rohrbacher, äh der aber der scheint wohl eh so ein bisschen komischer zu sein, aber ähm gleichzeitig ähm ja, also schon.\nAlso einer der Gründe, warum vielleicht auch in unserer Szene äh sehr kontrovers ist, ist natürlich die,\nzweifellose, zweifellos, zweifelhafte Rolle, äh die Wiki Leaks in.\nDem vor kurz vor dem Wahlkampf kurz vor der Wahl zwanzig sechzehn gespielt hat mit den Veröffentlichungen. Wo muss man auch ganz klar sagen, äh Julian Assange immer,\ndie Argumentation,\nvorgebracht hat, dass er sagt, nun, wenn wir Daten bekommen von unseren Quellen, dann ist das unser Versprechen als Plattform, die zu veröffentlichen. Und wenn nun mal nur die eine Seite so spielt,\ndie andere Seite nicht, dann können wir nicht äh Veröffentlichung zurückhalten, hätten wir das getan.\nHätten wir unsere komplette Glaubwürdigkeit als Plattform aufs Spiel gesetzt, weil wir dann politisch agiert hätten und nicht im Interesse der Wisseplower, die sich an uns wenden.\nSo die vorgetragene Argumentation, während man jetzt andererseits natürlich schon durchaus den Eindruck hat, dass äh Wikileaks unter Umständen eine äh.\nEine Agenda das ein oder andere Mal mit den Veröffentlichungen hatte und auch Veröffentlichungszeitpunkte äh strategisch gewählt haben könnte. Aber ähm dafür, das sind eben Verdachtsmomente oder Eindrücke."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:25:23",
+      "text": "Ich kann dazu nichts sagen, diese diese Causa war abseits von dem von der Zeugenaussage zu dem Congressman hat die keine äh Relevanz für das Verfahren gehabt, deswegen kann ich dazu nicht so viel sagen. Aber das äh klingt trifftig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:37",
+      "text": "Welchen also es ist ja jetzt auch recht brisant, dass diese ganze gerichtliche Auseinandersetzung,\njetzt ja auch mitten in diese Tradition von Vereinigten Königreich raus aus der Europäischen Union herausgekommen ist. Ähm inwiefern ändert das jetzt äh auch nochmal den Fall.\nJetzt grade gelten ja sozusagen noch alle europäischen Regeln, aber Ende dieses Jahres ja dann auch nicht mehr, also sozusagen vier Tage.\nBevor das Urteil gesprochen wird."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:26:16",
+      "text": "Glaube, dass dass jetzt für das konkrete Verfahren, insbesondere weil das ja sowieso ein zwischenstaatliches Abkommen, das Auslieferungsabkommen zwischen den USA und dem Grohvereinigten Königreich zwischenstaatlich ist. Ähm,\nGroßbritannien ja nur aus der Europäischen Union austritt nicht hingegen verlassen ja nicht den Europarat.\nUnd die damit auch also die die Sachen der Europäische Gerichtshof für Menschenrechte zum Beispiel bleibt halt weiter zuständig,\nSo in einem äh in einer Stufe vielleicht, wenn es wenn er wenn er mehrfach verlieren könnte, könnte er wahrscheinlich die Möglichkeit, dass er vor den europäischen Gerichtshof für Menschenrechte in Straßburg zieht. Und das bleibt weiter möglich, auch ohne das hat nichts mit der Europäischen Union zu tun. Ähm.\nSodass ich glaube, dass äh.\nIch hoffe, ihr sagt nichts falsch, aber ich gehe davon aus, dass das für für das Verfahren, das war zumindest kein Thema, da hat jetzt niemand versucht, ähm die Entscheidung am dreißigsten Dezember zu haben, ähm damit es einen Unterschied macht. Ähm also das war hat keine Rolle gespielt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:17",
+      "text": "Trotzdem hat ja dieses dieses special relationship zwischen Großbritannien und den USA spielt ja schon eine Rolle."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:27:24",
+      "text": "Ich habe keine ähm Belege dafür,\nAber es würde mich auch nicht überraschen, wenn im Hintergrund äh äh es politischen Druck gibt. Äh die ähm Veröffentlichung oder die nach seitdem wir diese Sache mit ähm Trump und der Ukraine hatten,\nähm würde wäre heute, glaube ich, niemand mehr überrascht darüber, wenn sie sagen, hey Leute, ähm das ist Teil eines Stilpakets, bei dem äh wir ihr wollt was von uns, wir wollen was von euch. Äh ich äh,\nhabe dafür keine Belege, deswegen würde ich das jetzt auch nicht so würde ich das nicht so breit treten, aber würde mich auch nicht überraschen, wenn das im Hintergrund passiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:03",
+      "text": "Trotzdem ändert sich ja die Perspektive der EU auf diesen Fall dahingehend, dass es ja dann letzten Endes eine Entscheidung eines äh Ex-Mitglieds ist, das dann eben nicht mehr äh in der EU ist. Wo hast du überhaupt den äh Eindruck, dass es\nquasi, dass die EU als solche oder das EU-Parlament vielleicht auch\nda auch schon dabei ist, in irgendeiner Form eine Position dazu zu finden oder hast du eher den Eindruck, dass das Parlament und die Kommission sich da komplett äh raushalten oder.\nTendieren Sie eher dazu sich jetzt wieder einzumischen, weil es ist ja kein Mitglied mehr, auf das man draufhauen kann."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:28:37",
+      "text": "Also es gibt eine Reihe von fraktionsübergreifenden Reihe von Abgeordneten, die sich für das äh mit der Sach beschäftigen und sich für das Thema einsetzen im Februar waren auch ähm waren auch mehr Leute aus dem Europaparlament anwesend.\nÄhm wegen wegen der Covid-Restriktion.\nWar das jetzt momentan nicht der Fall, aber das Europaparlament hat jetzt in der Angelegenheit keinen, keinen konkreten Einfluss.\nEs sind einzelne Abgeordnete, die das begleiten und ich gehe davon aus, dass die das weitermachen und im Falle einer Entscheidung sich entsprechend dazu äußern werden,\ndamit Großbritannien ähm weiß, dass die Leute da da aufmerksam sind und denen auf die Finger gucken. Aber.\nDas Europäische Parlament kann da ja auch nichts machen, also das ist ähm außer sagen, dass ihnen was nicht gefällt, da in dem konkreten Fall."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:29:33",
+      "text": "Klar, dass sie da jetzt keine Entscheidungsgewalt haben über irgendetwas ist mir schon klar, ich wollte nur mal so ein bisschen so ein Gefühl dafür zu bekommen, wie wie denn das generell bewertet wird, weil das ist ja dann auch vielleicht nicht ganz unerheblich, wenn man jetzt das mal weiterdenkt, so welche\nPosition nimmt die Kommission ein, welche äh äh wird sich Ursula von der Leyen dazu äußern?\nIst das etwas, was das ohnehin schon ziemlich zerrüttete Verhältnis zwischen Großbritannien und der EU noch weiter schwächen könnte?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:29:58",
+      "text": "Ich mein Eindruck ist, dass das äh das von diesen von diesen ähm offiziellen Führungsebenen.\nDa nichts kommen wird, weil die mit dem Fall für sich politisch nichts gewinnen können.\nUnd deswegen da den äh das die Standardfloskeln abspielen, sagen sie vertrauen in die Rechtsstaatlichkeit und die Rechtsstaatlichkeit des Verfahrens."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:30:23",
+      "text": "Was ja auch das also was ja schon irgendwie ich meine also ich finde es ist beides irgendwie,\nundenkbar, was bisschen die Faszination dieser dieses irren Verfahrens ausmacht. Ich meine, ist einerseits nicht,\nfür mich schwer vorstellbar, dass Großbritannien als Five-Eis-Partner den USA, der, was weiß ich,\nschon.\nDer Speerspitze der westlichen Demokratien im weitesten Sinne sagt so übrigens den geben wir euch nicht weil der ähm bei euch kein faires Verfahren bekommt.\nUnd und es handelt sich um um jemanden, der der sagen wir mit seinen Veröffentlichungen, was er da getan hat, was ihm da vorgeworfen wird, natürlich auch gegen militärische Interessen Großbritanniens verletzt hat.\nUnd oder die militärischen Interessen Großbritanniens und diplomatischen Interessen Großbritanniens verletzt hat, dass das irgendwie ein wahnsinniges Ding wäre, wenn wenn Großbritannien sagt, den liefern wir nicht aus.\nGleichzeitig wär's aber auch genauso ein wahnsinniges Ding, wenn Großbritannien sagen würde, den liefern wir jetzt aus.\nWeil natürlich die Menschenrechtsverletzungen so offensichtlich sind, dass man die gar nicht wegdiskutieren kann."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:31:35",
+      "text": "Aber dafür haben sie hat die Richterin ja eine eine Strategie, die sie fahren kann\nÄhm und das würde mich jetzt zu dem Themenfeld bringen, was vielleicht eine kurze äh Triggerwarnung braucht. Ähm wir haben in dem Verfahren drei Tage lang ähm medizinische Gutachten gehört, von Leuten, die denen die psychische,\ndie psychische Gesundheit von ähm Julian Assange bewertet haben und darauf eingegangen sind, wie es ihm im Gefängnis geht, ähm wie seine bestimmte Haftbedingungen ähm Einfluss auf seine psychische Gesundheit haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:09",
+      "text": "Wer das nicht hören möchte, kann jetzt äh einfach dieses Kapitel überspringen, dafür hat unser Podcast ja Chapter Max im nächsten äh geht's für euch weiter, wenn das ein Thema ist, mit dem wir euch nicht so gerne auseinandersetzen möchte."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:32:21",
+      "text": "Und wir haben dazu unterschiedliche unterschiedliche Sachverständige gehört, unter anderem ein.\nEin ähm ähm ältere, sehr erfahrenen Professor für Neuropsychiatrie ähm aus London, der ähm untersucht hat und ihm eine\nMittlere bis schwere Depressionen attestiert hat, die maßgeblich auch davon abhängt, wie er gerade untergebracht ist und in Belmar, in dem Gefängnis, in dem er gerade ist, war er eine Zeit lang im Medical Wing untergebracht und das ist so eine\nquasi Isolation, da hat man wenig Kontakt zu anderen Leuten und die Ärzte haben darüber berichtet, dass sein Gesundheitszustand,\nähm was also seine psychische Gesundheit massiv in den Keller gegangen ist\nÄhm dann das äh ich habe auch in meiner Berichterstattung bin ich da nicht genau drauf eingegangen. Ich werde das auch jetzt nicht machen. Da geht's da geht es viel um die Hintergründe, wann\nkonnte man erstmalig bei ihm sehen, dass er unter Depressionen leidet und da geht es geht es rein in die Kindheit, Gespräche mit Eltern, Freunden, Familie. Ähm und,\nist es so, dass er während dieser Zeit in der Isolation hat ihn eine Krankenschwester als lebenden Geist bezeichnet.\nUnd mit diesem Verfall des ähm Gesundheitszustands geht bei ihm auch eine stark steigende,\nSuizidgefahr einher. Das wurde, da gab es zum Beispiel,\nzwei Gefängnismitarbeiter haben in einem Bericht geschrieben, dass er,\nähm quasi, dass sie den Eindruck hätten, dass er nur noch schwer dem diesem Wunsch nach Suizid widerstehen könne. Und das ist interessanterweise nicht in den, in den medizinischen Akten aufgetaucht, die sind da\nbisschen selektiv offenbar eine Auswahl. Allerdings liegen diese liegen diese Unterlagen vor\nund nachdem er dann wieder normalen ähm Trakt kam und wieder mehr Kontakt auch auch telefonieren konnte mit seiner\nFamilie ging es ihm dann besser, wurde irgendwie Medikamente auf andere Medikamente eingestellt und so. Ähm das ist ging ging ihm dann besser,\nAber es ist so, dass er abhängig von den Haftbedingungen da starken,\nähm äh depressiven Episoden unterliegt. Und das ist.\nSo dass ich kann muss ich auch nicht weiter drauf eingehen, ich hab in meinen Videos mal davon gerichtet, aber es ist so, dass er sich konkrete Hilfsmittel für einen möglichen Suizidversuch,\nähm zurechtgelegt hat, parat gelegt hat. Ähm und es ist so, dass dieser Professor aus.\nDen ich angesprochen habe, Mister gesagt hat, dass mit all seinen Berufserfahrungen, die er hat und nach allem, was er.\nKann er sagen, dass er davon überzeugt ist, dass Julian Assange einen Weg finden wird, sich das Leben zu nehmen, wenn die Auslieferung bevorsteht.\nDas war und das ist jetzt ein ein Punkt, der\nAlso das muss man dann in der Relation setzen und ganz da ganz kurz, ich würde das Thema vielleicht an der, an der Stelle abschließen, vielleicht dass die Leute für Leute, die jetzt wieder einsteigen, die den Teil gerade übersprungen haben, ähm,\ndas steht in der Relation mit ähm mit den Gefängnisbedingungen in den USA.\nÄhm weil wir haben einige Sachverständige gehört, die berichtet haben, wie unter welchen Bedingungen er in den USA hinhaftiert sein könnte. Und in den USA gibt es ja keine Isolationshaft,\naber,\nEs gibt ähm sogenannte die werden verhängt gegen Leute, ähm wenn die Angst besteht, dass sie,\nähm ähm Informationen, die eine Gefahr für die nationale Sicherheit sind, an andere Leute weitergeben können. Und,\nSie haben die äh die US-Anklage hat nicht ausgeschlossen, dass solche Maßnahmen verhängt werden können,\nWie sehen solche Maßnahmen konkret aus? Dazu haben wir eine ähm eine ehemalige Gefängnisleiterin von einem äh vom MCC in in New York. Das äh ist äh ähm das Gefängnis, in dem,\nDaniel äh äh Mister Appstein ähm kürzlich,\nums Leben gekommen ist. Ähm die hat das geleitet und hat berichtet, wie diese Maßnahmen in dem Gefängnis zum Beispiel umgesetzt werden. Und da\ndas ist ein Gefängnis, also das für Untersuchungshaft. Ähm da sind die Leute, die diesen Maßnahmen unterliegen, dreiundzwanzig Stunden am Tag in der Zelle,\nSie essen in der Zelle, sie kriegen das Essen durch eine Luke, sie essen alleine, sie haben keinen Kontakt zu anderen Häftlingen, sie reden, die Wärter reden nicht mit denen.\nÄhm und für eine Stunde am Tag gibt es äh Erholung, Recreation,\nund für diese Stunde werden sie in eine andere Zelle gebracht, die baugleich mit der ist, in der sie eigentlich sind.\nDiesmal leer, da sind keine äh Trainingsgeräte drin, da ist nichts drin und in der dürfen sie dann eine Stunde im Kreis gehen.\nUnd dann kommen sie wieder zurück in ihre Hotel. Das ist die sogenannte Erholungszelle. Und das ist quasi was ähm\nwas ihm drohen könnte. Die USA sagen, ja, ist ja quasi, das wird ja alles hier super äh bei uns alles super ähm überprüft und zertifiziert und das äh ist ja alles gar nicht schlimm. Und wahrscheinlich würde er den Maßnahmen ja eh nicht unterliegen. Und da hatten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:37:40",
+      "text": "Chelsea Menning kann dein Lied von singen. Die hat ja derartige äh Haftbedingungen die ganze Zeit erfahren, ja? Also es."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:37:48",
+      "text": "Ja und äh wir wissen ja auch, dass ähm sie,\ndass ihr, ja, dass dass äh was das für Folgen für sie hat, das ist ja bekannt. Ähm aber das zum Beispiel ähm und wie dieses Verfahren dann läuft, die hatten dann als äh eine interessante, zeugende Anwältin aus den USA, die hatten einen Auslieferungsverfahren äh betreut von einem von einem äh,\nTerroristen, glaub da muss braucht man nicht mutmaßlich sagen.\nAbu Hamza ähm äh und da Abu Hamza läuft der Name, der ist relativ bekannt gewesen, ist da so ein Hassprediger, Tourist, der weil der hatte vor im Vorfeld irgendwann mal beide Hände verloren, hatte an einer Hand, der hat ein Auge verloren, hat an einer Hand so einen Metallhaken gehabt,\ndeswegen brennt sich das Bild zumindest im Kopf. Und der wurde ausgeliefert an die USA und während des Verfahrens haben die äh während des Auslieferungsverfahrens die ganze Zeit ja also\nkommt wahrscheinlich nicht mal ein Hochsicherheitsgefängnis, das wenn dann nur ganz kurz und diese Maßnahmen ist unrealistisch, dass er diesem unterliegen wird, der ist jetzt seit fünf Jahren in einem Hochsicherheitsgefängnis unterliegt diesen Maßnahmen,\nkürzlich würden die auch quasi, wurde alles, wurde auch alles zurückgesetzt ähm und verlängert, weil er gesagt hat, weil er in einem zugelassenen Brief an seinen Sohn.\nÄhm äh gesagt hat, dass er seinem Enkel, der ein Jahr alt ist, ausrichten soll, dass er ihn liebe. Das wurde als ähm unautorisierte Kontaktaufnahme mit Dritten gewertet\nund äh als Vergehen gegen die Auflagen und deswegen alles alles auf null. Also das ist, wo, womit da, womit da zu rechnen ist. Und die Versprechung, dass er diesen Sachen nicht unterliegt\ndie ja nicht mal gemacht werden, weil gesagt wird, es wird nicht ausgeschlossen, dass solchen Sachen unterliegt sind ja ähm,\nnicht sehr überzeugend und wie ich halt grade berichtet habe, ist in ähm seine ähm mentale Gesundheit.\nReagiert sehr empfindlich auf diese auf diese Haftbedingungen und.\nDa auch ein Zeuge hat auch gesagt, dass es gibt keine wissenschaftliche Studie, die sagen würde, dass jemand bei psychischer Gesundheit,\nnicht nach elf Tagen oder so am Rad drehen würde, wenn man quasi keinerlei Kontakt zu anderen Leuten hat. Die dürfen dann,\nund dürfen telefonieren einmal im Monat dreißig Minuten oder zweimal fünfzehn,\nalles komplett überwacht natürlich. Ähm mit der Familie, das ist ja ähm das tschechische ein schreckliches Bild."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:40:02",
+      "text": "Was vielleicht juristisch auf auf Anhieb nicht unbedingt einleuchtet, aber was natürlich für die Haftfähigkeit,\nVon ihm und seine äh Gefahr äh für die mentale Gesundheit. Natürlich ein einen Einfluss hat, ist wie der die letzten sieben Jahre verbracht hat,\ndie ähm ja auch unter, also in einer äh Zelle, wo er nie raus durfte, ne, nie raus\nkonnte. Das ist ja äh die die US-amerikanische Regierung argumentiert ja, Entschuldigung, der hätte ja jeder Zeit hätte, der aus dieser Botschaft rauskommen können. Was erzählt der denn, der wäre da die ganze Zeit? Hätte er die ganze Zeit drin sein müssen, ne, also diese Bedingungen hat er sich ja selber zugeschrieben\nauch unter diesen krassen Überwachungs äh Maßnahmen gelebt hat. Das heißt, der hat schon sieben Jahre ähm.\nAcht Jahre absoluten Irrsinn hinter sich und vielleicht hat spielt das jetzt für die für die Frage, ob das jetzt selbstverschuldet war oder nicht, keine Rolle, aber sicherlich für sein.\nFür die Stabilität seiner äh geistigen Gesundheit."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:41:08",
+      "text": "Außerdem haben wir noch äh eine Medizinprofessorin aus Boston gehört, die ihn auch schon in der Botschaft von Equador untersucht hat.\nUnd auch da schon festgestellt hat, dass er in einem sehr schlechten Zustand war. Weil für die Leute, die die den die Sachen nicht kennen, ist, dass als er in die äquatorianische Botschaft am Anfang gegangen ist, war da ein,\ngern gesehener Gast, hat ein gutes Verhältnis zu den Leuten da gehabt. Ähm und dann gab's den Regierungswechsel,\ndann hat sich das verändern, wurde immer schlimmer, also er hat immer weniger Freiheiten genossen und äh,\nDeswegen ist es ja auch, wer die Sachen von Nils Mälzer, dem UN-Sonderberichterstatter für Folter ließ, der hat ja auch damals gesagt, dass schon in der Equarianischen Botschaft, dass er da,\nähm Anzeichen von Folter,\nzeigt, also von Folteropfern, dass er Symptome hat, die Folteropfer haben. Er hat jetzt nicht gesagt, er hat jetzt nicht konkret gesagt, die foltern dem, sondern er hat halt gesagt, ist einfach so, dass er diese Anzeichen hat und das äh spielt natürlich eine riesige Rolle, dass seine,\nDas am Anfang ging das vielleicht noch und dass da immer schlimmer wurde und das schon quasi,\nQuasi-Haftfahrt. Das wurde im Verfahren auch diskutiert, weil die sobald jemand gesagt hat, dass er da inhaftiert war, äh sind die bei der Anklage aufgesprungen und haben gesagt, naja, genau das, äh was du gerade gesagt hast, ja, jederzeit gehen können.\nWas ich gerade aber eigentlich sagen wollte, war der der Bogen, den ich geschlagen habe zu diesem.\nWas kann die, was kann die Richterin machen, um Gesichtswahn aus der Sache rauszukommen, ohne zu sagen, die USA sind kein Rechtsstaat."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:42:39",
+      "text": "Das ist der Bezug."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:42:40",
+      "text": "Sie kann sagen, ihm geht es, er ist in einer so schlechten psychischen Verfassung, dass er nicht ausgeliefert werden kann, weil das würde ihr die Möglichkeit eröffnen, dass ähm die Auslieferung abzulehnen, ohne,\ndie USA zu bewerten.\nUnd das ist für mich persönlich, wenn es wenn die Auslieferung abgelehnt wird, ähm gehe ich davon aus, dass es daran festgemacht wird, eben weil sie sich nicht\nweil sie jetzt keine Abhandlung über die Rechtsstaatlichkeit in den USA halten wird, auch wenn das während des Verfahrens großes Thema war."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:43:11",
+      "text": "Und was äh welche Konsequenz hätte das? Also dann würde man ja sagen, also,\nkönnten die USA dann sagen, das ist jetzt eine juristische Frage, bist du schließlich Jurist, also kann ich dir das erfahren? Du weißt das ja. Äh könnten könnten die USA dann nicht sagen, alles klar, dann ähm\npäppelt den mal bitte wieder auf, lasst den mal ein bisschen an die Sonne und in zwei Jahren holen wir uns den dann."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:43:33",
+      "text": "Können sie versuchen, mal gucken, wo er in zwei Jahren ist.\nAch so, dass sie in der weiter in in unter in unter ja, dass ähm also das Grundsätzliche ist das ja so, dass die ähm dass das ja in zwei Jahren nicht anders wäre. Auch dieses in Verbindung zu diesen Haftbedingungen.\nÄhm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:43:51",
+      "text": "Das wiederum wäre aber dann natürlich eine eine konkrete Kritik an den Haftbedingungen der USA."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:43:57",
+      "text": "Ja\ndann könnte sie, könnte könnte die USA ja, aber es wäre eine konkrete äh Kritik daran, dass die USA nicht ausgeschlossen haben, dass diese Kontaktsperren gegen ihn verhängt werden\nÄhm das ist ja in einem diplomatischen Umfeld auch möglich, dass man sich äh eine Verbalnote holt, in der quasi ausgeschlossen wird, dass er diesen Maßnahmen. Ich meine, im Endeffekt haben sie auch keine Kontrolle mehr dadrüber, wenn der in den USA ist, können die machen, was sie wollen.\nAber trotzdem könnte die Richterin sagen, sich die Versprechen einholen, dass das halt äh äh dass das nicht passiert.\nAber,\nIch wie gesagt, es ist nicht klar, ich es kann in beide Richtungen gehen, aber wenn es gegen eine Auslieferung geht, halte ich das für die für die wahrscheinlichste Möglichkeit, die sie wählt.\nUm das zu rechtfertigen, weil.\nDie zu den medizinischen also medizinischen Zeugen hat auch die Anklage zwei Leute geholt und da war ein Professor aus Oxford, der hat im Großen und Ganzen.\nAuch quasi bestätigt, dass dass er halt einfach in einem sehr schlechten Zustand war, als er als er auf der Krankenstation war und da alleine war, äh.\nDas einheilige Meinung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:45:09",
+      "text": "Nicht dran zweifeln. Also du hast ja, du hast ja gerade selber auch angesprochen, die Bilder, wie ihr da,\nschon aus der äh equadurianischen Botschaft gezerrt wird, die sprechen ja auch für sich, ne, ziemlich ungepflegt. Äh dieser äh.\nBad, der ihm da irgendwie gewachsen ist, äh wahrscheinlich aufgrund mangelnder weiterer Pflege, die er sich hat, selbst hat zukommen lassen. Das ist schon alles sehr, sehr.\nSind schon sehr sehr klare Anzeichen, oder?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:45:40",
+      "text": "Also wie gesagt, die.\nDie äh Sachverständigen haben ihn ja intensiv untersucht und wenn da halt irgendwelche Professoren aus Oxford und aus äh von Kings College zum Ergebnis kommen, dass er in einem schlechten\npsychischen Zustand ist, dann nehme ich das auch mal so hin. Das ist natürlich das, das muss man sich vorstellen, wenn man in dem Verfahren sitzt, das ist abstrus wie die Anklage versucht, diese die ähm ähm Expertise der Leute anzugreifen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:46:08",
+      "text": "Wer sitzt da, vielleicht kannst du nochmal ein bisschen überhaupt von diesem Verfahren, denn das es ist ein Verfahren, auf das die Welt blickt, dass aber nur sehr wenige Menschen,\nsich dort live anschauen, ne. Ich weiß, ähm ich habe gesehen, Reporter ohne Grenzen, Christian, mir ist da, glaube ich, vor Ort gewesen, ne?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:46:26",
+      "text": "Ja, aber das da gibt's auch eine Hintergrundgeschichte. Der war da nicht zugelassen.\nAlso der war auf der Besuchertribüne. Die haben keine, die haben keine er oder seine Kollegin Rebecca Vincent oder die haben noch einen dritten Kollegen, der gelegentlich da war. Die äh äh waren da, die wollten\nin den normalen Gerichtssaal, da kam sie aber nicht rein und es gab fünf Plätze auf der Besuchertribüne und für die ersten beiden Wochen waren drei davon für VIPs, reserviert, die nie gekommen sind. Es gab quasi zwei Plätze auf der Besuchertribüne. Und das bedeutete, dass."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:46:55",
+      "text": "Weil die gar nicht auf weil die auf auf äh mediales Interesse ihrer Verfahren nicht vorbereitet sind, oder?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:47:02",
+      "text": "Emden nehmen äh Covid ähm äh Social Distancing. Das bezieht sich nicht auf die Presse. Das sondern nur die Public Gallery, die Presse, bei der Presse war das anders. Also da kann ich kann ich gleich erzählen. Ähm aber die haben ähm NGO-Beobachtern\nAuch Amnesty nicht keinen besonderen ähm Status zuerkannt, sodass die mit der Öffentlichkeit sich anstellen mussten. Was bedeutet, dass da Leute um fünf Uhr morgens sich angestellt haben?\nEs gab aber unter den Aktivisten war so eine Solidarität, dass da kamen halt irgendwelche Leute und haben sich um fünf angestellt und haben ihren Platz dann in NGO-Beobachtern gegeben.\nSo so lief das. Das da haben halt wirklich, da gab es halt Leute, die sicher die sicherstellen wollten, dass die das sehen können, dass die für die angestanden haben.\nWurde dann in den letzten Wochen ein bisschen besser, weil dann die drei VIP-Plätze ähm oder in den letzten anderthalb Wochen besser ist, die VIP-Plätze ähm aufgehoben worden. Und äh das zu dem Gesamtsetup, das waren zwei Gerichtssäle. In dem einen Gerichtssaal, dem Hauptsaal,\nwar die Richterin, die beiden ähm ähm Anwaltsteams, der.\nDer Anklage und der Verteidigung und hinten Julinason sitzt nicht mit seinen Anwälten, das war schon ein großes Thema bei der S-Nudau, sitzt hinten in so einem Glasdock, in der so Panzerglas mit so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:14",
+      "text": "Auch total daneben ist, ne? Also das ist doch wirklich, wie sollen die Anwälte Ihnen verteidigen, gegen irgendwelche."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:48:20",
+      "text": "Das Verfahren muss immer unterbrochen werden, wenn sie ihn konsultieren, wenn er sie konsultieren will. Deswegen war das Verfahren ständig unterbrochen. Ähm und in dem Raum saß am Anfang keine Presse.\nUnd ich auch nicht,\nAlso dass das am Anfang niemand drin ähm der es gab der der Clark, der verantwortlich für diesen Saal war oder für das Verfahren, der war extrem bemüht und hat sich dann bemüht, das irgendwie hinzubekommen. Der der hat dann\nsich drauf eingelassen oder beziehungsweise möglich gemacht.\nAlso vielleicht im Nachbarraum die Presse aus dem Nachbarraum und da da gab's einen Videostream von dem Verfahren. Und einer von den Pressevertretern durfte dann mit in den Hauptsaal für den Fall immer, manchmal ist das hinten aufgestanden, hat was gesagt,\nund das haben wir nicht verstanden im Presseraum, weil er kein Mikrofon hat.\nUnd deswegen saß immer einer dann drin und hat von da, sobald er was gesagt ist, rübergekommen und gesagt, er hat das gesagt, das kam am Anfang zum Schluss nicht mehr vor."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:49:11",
+      "text": "Warum hatte er kein Mikrofon?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:49:13",
+      "text": "Weil er an dem Verfahren sich nicht äußern soll, darf er seine Anwälte sprechen für ihn.\nDas ist so vereinbart. Er ist selber, er selber sagt nicht aus. Und manchmal konnte er sich nicht an sich halten und dann wurde er von der Richtung immer harsch zurückgewiesen, dass er quasi.\nÄh und seine Anwälte sprechen für ihn. Insbesondere bei den Zeugenbefragungen, wenn er, da hat er manchmal von hinten was gesagt, ich hab's auch nicht immer verstanden,\nIch selbst war zwei Tage im Hauptsaal und wurde dann wieder in den Presseraum zurück gebeten, weil dann die Corona-Maßnahmen verstärkt wurden und die ein bisschen mehr äh\nda beachten wollten und das war das war ein bisschen schwierig. Insgesamt glaube ich gab es auch nur fünf akkreditierte Pressevertreter, die vor Ort äh in dem Presseraum saßen, in dem ich dann mit saß\nÄhm und es gab online Zugang äh einen Videostream, für den sich die Presse akkreditieren konnte."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:50:02",
+      "text": "Okay, also das heißt, die also es gab mehr als fünf Akkreditierte Presse äh und die waren aber dann, die mussten die waren nicht notwendigerweise vor Ort, sondern die haben Videos einen Online-Stream bekommen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:50:13",
+      "text": "Genau,\nGenau, das das war nicht einfach, es gab viele Zeugen wurden auch per Videostream zugeschaltet, zum Beispiel aus den USA, was halt immer wieder mit technischen Problemen einhergegangen ist. Da will ich jetzt allerdings nicht so sehr auf dem Gericht rumhacken, weil ich glaube, das ist für für\nalle Leute, die sich mit solcher Technik auseinandersetzen, einfach die Mega-Hölle, wenn sich Leute aus von einem anderen Kontinent mit eigener Technik\näh in so ein Verfahren reinklinken und da funktioniert irgendwas funktioniert halt immer nicht. Und dann haben die auch nicht so viel Einfluss darauf, weil die nicht vor Ort sind. Das war ähm bisschen nervig. Äh New York Times hat, glaube ich, auch einen Artikel über die ganzen technischen Probleme gemacht.\nDie Klimaanlage in dem Gerichtsgebäude zum Beispiel ist auch dort, ist absurd, weil die nur zentral gesteuert werden kann, wenn die die ein Grad verändern, dann wird's in einem Raum super heiß, im anderen super kalt. Wir hatten teilweise im Presseraum siebzehn Grad.\nDas ist äh sind so, das sind so Details, das ist alles so ein bisschen äh komisch da. Aber die Presse, wie gesagt, es gab relativ wenig Presseleute vor Ort,\nDas sind dann vor allem waren was das ein bisschen anders verzieht. Ich glaub das haben wir bei uns nicht so das hat stattgefunden in London im Old Bailey\nder britische, der britische Bundesgerichhof äh Strafsachen. Das Hauptstrafgericht des Landes. Und die Hauptpresseleute von den großen Outlets BBC oder Presse Sociation, die haben eigene Bürostar.\nDie Leute waren da waren die waren relativ viel da und haben das Verfahren verfolgt und auch ein paar andere vereinzelte ähm.\nÄhm Journalisten und dann gab's äh wohl etliche, die das äh Passtream verfolgt haben. Eigentlich sollte es auch einen Stream für politische Beobachterinnen und Beobachter geben, wo auch Europaabgeordnete hätten mir zuschauen sollen. Es wurde aber am ersten Tag wieder zurückgezogen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:51:49",
+      "text": "Wir sind eigentlich die äh also wenn es einen Stream gibt, dann gibt's auch, wie wir ja grade schon festgestellt haben,\nMöglichkeit, den aufzuzeichnen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:52:00",
+      "text": "Das ist eine Straftat."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:52:01",
+      "text": "Okay, ist nicht erlaubt."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:52:03",
+      "text": "Nicht sowohl Audio als auch man darf man darf also da gibt es nicht mal das was wir in deutschen Gerichten haben, dass so Fotografen bis zum Anfang des Prozesses Fotos machen dürfen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:52:11",
+      "text": "Es gibt immer nur diese Bilder, ne?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:52:13",
+      "text": "Keine Fotos, kann auch dufte, kein Foto aus dem Gerichtssaal oder so machen, selbst aus dem Presseraum nicht. Hätte ich da ein Foto gemacht äh und das hätte man mitbekommen, wenn ich da äh wäre ich sofort rausgeflogen, nie wieder reingekommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:52:24",
+      "text": "Was ist der, der Hintergrund einer solchen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:52:27",
+      "text": "Mir haben die äh mir haben die britischen ähm wir haben britische Gerichts äh Prozessbeobachter gesagt, dass sie grundsätzlich diese,\nunterstützen, auch in dem Gebäude nicht, dass zum Beispiel keine Fotos von Zeugen gemacht werden können in Strafverfahren, aber es gab wohl mal einen Fall, ich kann's, ich kann's nicht überprüfen, ich habe das nicht nachguckst, hat noch jemand erzählt, das mal ein Foto geschossen wurde\nvon einer Person, der gegenüber gerade die Todesstrafe verhängt wurde.\nDas irgendwie der Auslöser für so eine Debatte war und das dann oder ich weiß nicht mehr genau, das äh irgendwie das hatte was damit zu tun und das ist für die in Deutschland darf ja, darf man ja während des Verfahrens auch äh keine Fotos machen oder Aufzeichnungen. Das ist im,\nIn Deutschland wäre das, soweit ich weiß auch überhaupt nicht möglich, einen Videostream von einem Verfahren anzubieten. Nach draußen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:53:14",
+      "text": "Nämlich jetzt auch gewundert, hätte er mich jetzt auch gewundert, wenn das äh so ohne weiteres äh möglich gewesen wäre."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:53:22",
+      "text": "Ja, vielleicht noch ganz kurz zu diesem Gerichtssetting, was auch noch interessant ist, was die Leute sich vor Augen halten müssen, ist, dass das Anwaltssystem in Großbritannien,\nziemlich einzigartig ist und nicht so funktioniert wie bei uns und auch nicht so, wie in den USA, die haben so eine Trennung zwischen den Anwaltskategorien Sulisitor und Barista, Celicitors sind so die Anwälte wie bei uns, die machen die beraten, die machen Unterlagen\nnormaler Anwaltstätigkeiten wie Barista, sind Leute, die nur vor Gericht stehen und sprechen.\nUnd entsprechend äh hoch ist das Niveau, die Eloquenz, die da vorgetragen wird. Die haben beide Seiten hatten\nextrem renovierte Anwälte aus ihrem Gebiet. Also es gibt so einen Top fünf und Assange hatte zwei davon und die Anklage auch einen\naus der Top fünf der ähm Auslieferungsanwälte. Der Hauptanwalt, warum kann ich Hobbyanwalt sagen, einer von den beiden Anwälten von Assange äh\nwird in einem Anwaltsmagazin als bezeichnen. Es sind ich glaube das hat achtundsiebzig Anwalt, das sind extrem erfahrene ähm,\nLeute\nextrem eloquent, das war äh ganz angenehm zu sehen. Das ist die, ich glaube, dass die durchschnittliche Qualität von Gerichtsverfahren in Deutschland deutlich niedriger ist, als das, was wir da gesehen haben, von den von der ersten Garde der\nder Auslieferungsanwälte."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:54:44",
+      "text": "Zweite Anwalt von Asance einer Anwältin, oder?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:54:49",
+      "text": "Das ist die äh ich will jetzt nichts falsch machen. Ich glaube, sie ist Junior Pariser. Ähm er hat der zweite Anwalt des Marx Hammers. Ähm und es gibt äh auch, oh ich habe ihren Namen gerade vergessen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:55:00",
+      "text": "Garres? It's fällt mir der Nachname nicht ein. Das ist aber peinlich."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:55:08",
+      "text": "Die äh sie hat allerdings auch sehr wenig Redeanteile gehabt und zum Großteil nur schriftliche Statements vorgetragen. Ich glaube, sie hat ansonsten einen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:55:15",
+      "text": "Ist relativ alt ähm."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:55:18",
+      "text": "Äh sie hat aber, ne Moment, sie äh sie hat nicht ähm nicht gesprochen. Das war eine.\nIch kann, ja, das das kann vielleicht irgendwo in der Beschreibung auftauchen. Ich das finden wir noch heraus, mir fällt's jetzt spontan nicht ein.\nÄhm aber auf der anderen Seite, auf der anderen Seite gab es auch drei Anwälte äh und eine als zwei Anwälte und eine Anwältin, die gesprochen haben. Ähm die haben sich dann so Themenkomplexe aufgeteilt, zum Beispiel gab\nvon der äh Anklage der QC, also der Hauptanwalt der,\nTitel, es ist ein Titel, der wird verliehen für besonders erfahrene Anwälte, Queens Country ähm und zwei normale Barester und davon war eine Frau,\ndie hat sich um die Befragung zu den Gefängnisbedingungen äh äh mit diesen Sachen beschäftigt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:56:09",
+      "text": "Heißt Garif Peers ist eine Menschenrechtsanwältin.\nIn den USA sehr bekannt. Achtzig Jahre alt und die ist sehr äh äh bekannt, weil sie irgendwelche ähm Fälle im Bereich der ähm Verfolgung von IAA.\nBeschuldigten in den äh siebziger Jahren äh aufgeklärt hat in Menschenrechtsverletzungen in dem Bereich."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:56:36",
+      "text": "Ja, aber sie ähm also da sind noch mehr Leute in dem Legal Team auch aus dem in dem,\naber nicht gesprochen haben. Also da sitzen da saßen noch mehr Leute, da sie war auch immer da, hat aber nicht gesprochen und ähm dass ich auch gerade den Namen sie hatte nicht so viele,\nnicht so viele Redeanteile bei dem, bei den Assange Sachen, aber es gab noch die die kleiner Redeanteile hatte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:57:02",
+      "text": "Hast du denn den Eindruck, dass Julian Assange ausreichend und angemessen juristisch vertreten ist? In diesem Fall."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:57:11",
+      "text": "Ich glaube, dass er eine sehr gute juristische Vertretung hat, aber dass die.\nMöglichkeiten der Vorbereitungen äh problematisch waren, auch covid-bedingt am Anfang am ersten Tag haben sie äh drum gebeten, irgendwie sich mal eine Stunde Zeit zu nehmen, weil sie ihr Mandanten seit sechs Monaten nicht gesehen haben.\nDas sind natürlich Faktoren die 'ne die 'ne erhebliche Rolle spielen.\nDas ist zumindest fragwürdig und nicht ideal. Die Qualität seiner seiner Vertretung ähm steht außer Frage. Also oft ist zumindest mein Eindruck. Aber die,\nDie Vorbereitungen insbesondere mit.\nAllein der Umstand, dass seine seine Anwaltsgespräche in der Botschaft abgehört wurden, äh steht der natürlich der Aussage entgegen, dass das alles in Ordnung gelaufen ist. Also ohne Frage, die Vertretung ist sehr gut,\nMöglichkeiten seiner äh Abstimmung und Koordinierung mit der Vertretung äh sind aber.\nSind ähm zweifelhaft und problematisch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:58:20",
+      "text": "Wenn da schon so viele Verstöße gegen geltendes Gesetz stattgefunden haben, also wenn er abgehört wurde und das eigentlich alles nicht erlaubt ist, ist dann dieses ganze Verfahren eigentlich zulässig."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:58:31",
+      "text": "Naja, das Verfahren, das Verfahren dient ja auch dazu, das klingt jetzt absurd, aber das Verfahren dient ja auch dazu, ähm seine Rechte zu wahren. Also äh das Verfahren ergeht ja jetzt gegen dieses Auslieferungsersuchen vor,\nähm.\nDie Alternative wäre, ja, Auslieferung, insofern äh ist das, dass jetzt diese, das Verfahren stattfindet und in seinem äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:58:56",
+      "text": "Okay, ich habe mich falsch ausgedrückt. Also wäre sozusagen eine Entscheidung für dieses Auslieferungsverfahren überhaupt unter diesen Bedingungen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "1:59:05",
+      "text": "Du meinst, dass die Richterin direkt am ersten Tag hätte sagen sollen, was soll der Quatsch äh äh das ist ja alles eindeutig,\ndas persönlich ähm äh würde ich niemandem übel nehmen, wenn äh wenn wenn man das so sieht, diese Interpretationsmöglichkeit ähm finde ich,\nsteht im Raum, allerdings äh laufen halt Gerichtsverfahren so nicht ab. Das kann die äh die Richterin halt nicht machen,\nalso äh natürlich steht das alles, wenn man diese Geschichten hört mit der Überwachung, durch das durch UC Global, wenn man die Sachen um die Gesundheitszustand hört.\nWenn man sich anhört wie Gefängnisse in den wie die Gefängnisbedingungen in den USA sind. Das sind alles konkret greifbare Sachen. Ich glaube man man wünscht sich seinem schlimmsten Feind nicht, dass er äh sein Leben lang in diesen in einem US-Gefängnis verbringen muss."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:59:55",
+      "text": "Und vor allem wenn schon der Präsident schon äußerte, wäre ja mal die Todesstrafe ganz angemessen. Ich meine, gut, wir wissen, der sagt heute das und morgen sagt er das, aber man hat gesagt, dass gesagt."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:00:04",
+      "text": "Ja, also die, ich glaube, Todesstrafe steht steht nicht im Raum, sonst das wäre auf jeden Fall ein Auslieferungshinderungsgrund. Ähm das äh inzwischen kennt Trump ja Vikiliks nicht mehr. Das insofern ist das äh,\nAber eher natürlich, dass es äh dass es alles so hochproblematisch, wenn man wenn äh,\nWenn wenn diese Sachen da hört, diese politische Motivation, wir haben ja Leute dazugehört, die darüber berichtet haben, dass das einfach auch ein Bestandteil von Trumps War und Journalismus.\nDas sind Sachen, da kann man drüber kann man drüber diskutieren. Also das sehe ich auch so,\naber das ist halt eine eine Sache, über die man diskutieren kann, aber die psychische Gesundheit, die Gefängnisbedingungen in den USA, die Überwachung der Botschaft. Das sind halt Sachen, über die man nicht diskutieren kann. Das ist halt das, das,\ndas hat halt stattgefunden, das ist halt so gewesen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:00:53",
+      "text": "Das hast du vorhin gesagt, für das Europäische Parlament, die Kommission, wie auch immer, verschiedenste äh Würdenträger, politische Akteure,\nsei ja in diesem Verfahren nicht viel zu holen. Hast du, glaube ich, äh formuliert oder da wären nicht viel zu gewinnen\nman natürlich jetzt auch draufschauen, sagen so, äh Moment, hier geht's um die Verteidigung von Pressefreiheit, sollte das mal nicht äh höchstes gut sein."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:01:17",
+      "text": "Natürlich absolut. Ich meine, also das sage ich ja jetzt nicht, weil ich, das habe ich vorhin nicht gesagt, weil ich das gut und unterstützenswert finde, aber wenn ich mir angucke, wie\nwie bei uns in innerhalb der Europäischen Union momentan solche Werte den Bach runtergehen, in Polen, in Ungarn. Ähm,\ndann habe ich den Eindruck, dass es momentan den Akteuren auf der in der politischen Führung der Europäischen Union nicht einmal gelingt, den eigenen Laden zusammenzuhalten, äh.\nSodass es,\ndass ich da keine großen Hoffnungen äh reininvestiere. Ich meine, wir diskutieren gerade anderes Thema, diese Rechtsstaatlichkeitsmechanismen äh im Haushalt und solche Punkte und da da,\ndas kriegen die halt nicht mal für uns, das kriegen wir nicht mal von selbst hin und deswegen, natürlich geht es um Pressefreiheit, äh aber.\nIch habe da vielleicht bin ich auch einfach nach sechs Jahren in Brüssel da. Äh,\nhabe ich da meine Illusionen einfach verloren oder meine meine Hoffnung. Ich würde mir natürlich absolut wünschen, dass es anders ist und dass Ursula von der Leyen aufsteht und sagt ähm,\ndas finden wir schrecklich und reißt euch zusammen, lasst den Mann frei. Also da würde ich sagen, äh bravo. Ähm allerdings äh ahne ich, dass sie mir diese Gelegenheit nicht geben wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:02:34",
+      "text": "Na ja gut, ich meine, man kann ja natürlich nichts davon ausgehen, dass wenn jetzt die Kommissionspräsidentin äh äh eine Forderung an England stellt, insbesondere noch an den Justiz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:02:43",
+      "text": "Sie ja schon ein paar Mal ver."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:02:44",
+      "text": "Ja, also dass das jetzt irgendwie besonders viel bewirken würde, äh aber es wäre."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:02:48",
+      "text": "Ja kein Grund das nicht zu tun."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:02:49",
+      "text": "Nee, ich meine, es wäre natürlich in gewisser Hinsicht eine eine Positionierung auch innerhalb Europas und ich meine, sie hat ja zumindest gesagt, dass sie ja äh jetzt so mit dem Weg von äh Ungarn nicht ganz so glücklich äh ist, weiß ich ganz genau, wie sie es in ihrer Rede nochmal formuliert hat.\nDas galt ja schon als ähm ein außergewöhnlicher Hinweis und es mir natürlich auch bewusst, dass äh man jetzt hier nicht das sagen wir mal in dem Moment, wo man.\nDas Fenster mit der Realität mal kurz äh durchlüften lässt, dass wir hier nicht von Wahrscheinlichkeiten reden. Trotz alledem, wenn man jetzt auf diesen Fall schaut,\nBedeutung hat er für dich. Das ist ein ganz grundsätzlicher Fall, wo es um Pressefreiheit geht und in dem Moment, wo die,\nmit einem Auslieferungs äh Verfahren, einer Auslieferung an die USA weitergeht, äh würde diese mit den Füßen getreten werden."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:03:41",
+      "text": "Absolut. Das ähm das äh ähm sich auch so. Das ist das, worum es ähm im Kern geht.\nWir haben jetzt hier über viele Sachen geredet, die so technisch, juristische Natur sind, aber im Großen und Ganzen geht's darum, das ist auch das, wovor ähm,\nJournal Journalistinnen und Journalisten auf der ganzen Welt Angst haben, weil das bedeuten die Auslieferungen und die dann eine Anklage und Verurteilung von Assange in den USA bedeuten würde, dass,\nniemand in der Presse, im Journalismus sich nicht mehr sicher sein äh sich mehr sicher sein kann, ähm dass man nicht irgendwann in den USA im Knast landet, weil man irgendwas veröffentlicht, was denen nicht passt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:04:20",
+      "text": "Julian Assange blickt nur, um das hier nochmal zu betonen, weil wir's glaube ich noch nicht gemacht haben, auf einhundertfünfundsiebzig Jahre Haft."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:04:27",
+      "text": "Das ist die Maximalstrafe, gab unterschiedliche also die äh Anklage sagt das ja, Quatsch, das ist ja quasi kriegt eine ganz wahrscheinlich eine ganz kleine äh Strafen nur, aber wir haben mehrere Experten gehört, die gesagt haben, dass wenn er verurteilt wird\nist es wahrscheinlich, dass er zumindest den Rest seines Lebens im Gefängnis verbringen wird. Wir kennen ja diese äh,\nsuper hohen Strafen hier nicht, aber ich meine ob für Juniors jetzt spielt's auch keine Rolle, ob er hundertfünfundsiebzig oder vierzig Jahre äh Gefängnis bekommt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:04:54",
+      "text": "Der das scheint seine US-amerikanische mh.\nAngewohnheit bei den Anklagen einfach möglichst viel aufeinander zuhaufen, was also erstens viele,\nnatürlich Höchststrafen, aber vor allem auch viele unterschiedliche Vorwürfe, um die Verteidigung,\nzu erschweren und im um quasi einfach zu sagen, okay, wir hauen wir hauen mal das alles drauf, weil da müssen sie sich erstmal gegen alles verteidigen und äh am Ende wird schon genug hängen bleiben, ne. Das heißt, sie versuchen erstmal, suchen erstmal nach allem, was sie haben und selbst,\nAlso allein stellen wir uns vor, der würde.\nÄhm also jetzt gibt's eine Berufung gegen das äh Auslieferungsverfahren so oder so. Das heißt, der früheste Termin für die Auslieferung wäre wahrscheinlich in noch mal einem Jahr.\nOder wie muss man sich das vorstellen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:05:47",
+      "text": "Das kann ich nicht, ähm ich kann, ich kann nicht einschätzen, wie lang momentan ist es so alles so schwierig ähm Planung zu äh zu zu machen wegen der Pandemie."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:05:57",
+      "text": "Okay, aber dann äh gut, dann,\nnoch ein Jahr, dann mehrere Jahre Verfahren in den USA, bis da alle rechts erschöpft sind. Und stellen wir uns vor, am Ende wird der freigesprochen. Dann haben die ihm trotzdem ähm zwei zwei Jahrzehnte seines Lebens locker,\nruiniert und das wäre ja schon also das wäre dann schon genug für eine massive Einschränkung der Pressefreiheit,\nAlso um die trotzdem zu haben, ne? Also das das der Punkt, den ich bringen möchte. Allein, dass man dass diese Anklagen erhoben werden können, ist ja schon schlimm genug."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:06:31",
+      "text": "Ich habe das, ich habe das vorhin schon mal bei im Chelsea angesprochen, glaube ich,\nansprechen wollte ist, dass weil du das vorhin gesagt hast, die haben sie ja im in dem äh in dem in dem Zusammenhang mit dem Asanceverfahren jetzt auch nochmal ähm eingeknastet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:06:47",
+      "text": "Richtig und sie hat sich geweigert äh auszusagen und war insgesamt wie lange dafür in Beugehaft."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:06:53",
+      "text": "Jahr, glaube ich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:06:55",
+      "text": "Mal eben, zack."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:06:57",
+      "text": "Und musste auch pro Tag so eine relativ hohe Strafe zahlen. Ähm was ich vorhin angedeutet habe, ähm mit ähm mit diese dieses Unternehmen äh Menschen zu ruinieren.\nDass es äh quasi das deckt sich mit dem, was was du gerade gesagt hast, selbst wenn man ihn jetzt freispricht, was ich sehe, ist die Taktik der der Regierung in den Vereinigten Staaten das Signal auszusenden. Leute,\nwenn ihr wenn ihr gegen uns arbeitet, wenn ihr uns schadet, wenn ihr versucht uns zu schaden,\nWir stellen sicher, wir machen, wir können euch ruinieren.\nUnd äh das ist das ist bei Chelsea so, das ist bei Assange Zone, das ist halt auch, wie sie jetzt zum Beispiel gegen Edwood Snowden mit den äh Buchtantimen vorgehen.\nDas ist äh die die wollen allen Leuten klarmachen, dass es so ein äh das senden halt dieses Signal aus, dass wie mächtig sie sind."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:07:57",
+      "text": "Wird, gibt's einen eigenen Begriff für? In den USA. Ähm,\nAlso Mischung aus rohr, also Krieg und dem also dem Krieg durch,\ndem Krieg durch äh Gerichte, dass du einfach die Leute zuschüttest mit allem möglichen Mist und die müssen sich ja jedes Mal ähm dagegen.\nVerteidigen. Übrigens Chelsea war von achten März bis sechzehnten Mai.\nÄhm in Beugehaft, dann war sie eine Woche in Freiheit, dann wurde sie wieder direkt aus dem gleichen Grund wieder neu inhaftiert und nach einem.\nSuizidversuche mehr als zwanzig zwanzig wurde sie äh eben aus den gesundheitlichen Gründen, aus der Beugehaft entlassen. Da sind die gnadenlos und."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:08:49",
+      "text": "Ja, das ist ähm.\nJa, das ist, was ich meine. Die ist, das spielt da, spielt im Endeffekt dann für das, was sie damit erreichen wollen, spielt es ja gar nicht mehr so eine große Rolle,\nob die wie diese Verfahren ausgehen. Weil, das ist, ich kannte den Begriff nicht, aber der passt natürlich sehr gut."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:09:08",
+      "text": "Der Weg ist das Ziel im Prinzip, ja."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:09:10",
+      "text": "Und ich habe deswegen ähm äh großen Respekt vor den Leuten, die,\nIch meine, alle Beteiligten, ähm die, die, über die wir hier sprechen ähm oder halt auch andere Whistleblower,\nWir haben auch zum Beispiel als Zeugen, das war wir haben Daniel Elsberg gehört als Zeugen der die Pentagon Papers damals im Kontext des Vietnamkriegs veröffentlicht hat. Der hat auch berichtet wie er damals quasi Anime of the State war und wie lange es gedauert hat. Das muss so ein bisschen bis,\nDas funktioniert halt so, dass die Leute veröffentlichen Unterlagen und sind Staatsfeind. Und sobald alle Leute tot sind, die irgendwie zur Verantwortung gezogen werden könnten\nDann werden so, kann man langsam drüber reden, dass das ja auch Mehrwert hatte und dass diese Sachen veröffentlicht wurden. Inzwischen hat er ein gutes gesellschaftliches aber es ist halt so, ist einfach so lange her,\ngrundsätzlich wird halt versucht, die Leute.\nKaputtzumachen, damit halt andere nicht auf die Deko so zu machen. Und ich habe deswegen auch großen Respekt vor Leuten, ähm Chelsea Menning war das klar, Edward Snowden, war das klar? Julian Sauge war das klar, dass äh welches Risiko,\nund die haben halt diese, die haben ihre.\nIhre quasi ihre Freiheit und Existenz aufs Spiel gesetzt. Wir können ja bei Julian Assange, wenn wir hören, dass die da drüber reden irgendwie, ihnen zu vergiften und müssen wir über Existenz sprechen.\nZu setzen für die richtige Sache quasi, für das gute Ziel, dass äh sollte sollte man sich immer vor Augen führen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:10:36",
+      "text": "Also das, ich meine, diese Aussichten zeigen im Prinzip, dass also jetzt dass dass Julian Assange noch mal in seinem Leben Frieden gegönnt wird, ist eventuell ausgeschlossen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:10:50",
+      "text": "Kann ich nicht bewerten, weil ich's natürlich ihm sehr wünsche und hoffe,\nÄhm und ähm ich habe das ja gerade dargelegt, wieso ich das so sehe. Äh ich hoffe, dass er, äh dass er dann nicht ausgeliefert wird aus den ähm zahlreichen genannten Gründen und wünsche mir sehr, dass er,\ndann in in Frieden leben kann. Äh wobei,\nich natürlich nicht weiß, ob er äh in Freiheit seine seine Tätigkeit wieder aufnehmen würde und äh,\nDas ist in der Spekulation, das weiß ich nicht, aber ich bin mir sicher, dass die USA ähm alles, also die US-Regierung, alles dran setzen wird.\nÄh weiter sicherzustellen, dass er ähm in der in einer in einer unvorteilhaften Position oder in der schlechten möglichen, schlechtestmöglichen Position verbleibt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:11:40",
+      "text": "Du hast eingangs gesagt, dass du dich mit dieser Thematik nicht.\nVorher nicht besonders vertieft beschäftigt hast, also aus also nicht über das normale politische Interesse eines politisch engagierten politisch äh Interessierten und tätigen Menschen hinaus.\nHat das dieses Verfahren, diese Zeugenaussagen dort jetzt so zu sehen, hat das.\nEtwas daran geändert, wie du auf als beispielsweise auch, ne, deine Ausbildung als Jurist deine Erfahrung in der Politik blickst.\nOder was ist schon zynisch genug nach äh sechs Jahren EU-Parlament."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:12:21",
+      "text": "Ich glaube du meint, dass mehr mehr Zynismus brauche ich glaube ich nicht, aber ähm um das klarzustellen, also ich habe das Wiki Leaks als Plattform ist ja jetzt auch nicht so eine klassische Endverbraucherplattform,\nauch heute nicht. Ähm und ich glaube, dass sich im Großen und Ganzen für meine Arbeit auch heute ähm nach wie vor nicht so viel darauf zurückgreifen würde, worum es bei WikiDeks geht, ist,\nprofessionelle Leute, Leute aus der Wissenschaft, Leute aus dem investigativen Journalismus oder Journalismus allgemein Zugriff auf diese Daten haben und damit,\nSachen von Mehrwert produzieren können,\nund das wurde in in aller Hand beispielfällen wurde das dargelegt, wieso das bei dir zum Beispiel bei den Dokumenten um die es hier geht der Fall ist. Und das war damals wichtig, ohne dass ich quasi konkret selber diese Inhalte da konsumiert habe und es ist heute noch genauso wichtig. Äh,\nund der Stellenwert natürlich, dadurch, dass ich mich jetzt intensiv mit einzelnen Fällen befasst habe. Und die mir,\nmir äh wir haben zwei Aussagen gehört, die einmal von äh Caletta de Masseri und eine von,\nIst ein deutscher Staatsbürger der mazedonischen Grenze festgenommen und später von der CIA nach Afghanistan verschleppt wurde, um da mehrere Monate ähm äh ähm gefoltert wurde.\nDer kam dann, den haben sie dann irgendwann an der albanischen Grenze ausgesetzt, dann kam er wieder nach Deutschland, hat für Gerechtigkeit gekämpft und obwohl die Bundesregierung, was dann später auch durch Veröffentlichung rauskam, wusste, dass das passiert ist. Also spätestens nachdem er zurück war.\nWurde er nicht unterstützt oder,\nihm quasi, wurde er nicht unterstützt in seinem Kampf für Gerechtigkeit. Das ist dann das sind äh wenn man die Geschichten liest, wie das da gelaufen ist, das man kann sich kaum vorstellen, dass sowas passiert, aber das ist sind alles inzwischen äh dargelegte,\nähm Fakten oder da war zum Beispiel eine Aussage von Dean Gates, da war damals der Reuters-Chef in Bagdad, als diese der Vorfall der in dem College Mördervideo ähm,\nbeschrieben wurde, äh passiert ist. Und da wurden ja zwei seiner Leute ähm von dem Helikopter äh ermordet,\neinfach mal zu sagen, später, die haben ja dann später gesagt, die haben sich nicht klar als Presse ausgewiesen\nDu musst dann gegen so eine Kampfhubschrauber ähm und der hat es dann berichtet, wie die äh wie die US-Militär ist, mit denen er eigentlich\ngutes Verhältnis hatte, weil er halt da vor Ort berichtet hat, versucht haben ihn zu täuschen. Die haben ihn dann Ausschnitte aus dem Video gezeigt, der kannte vorher schon Ausschnitte, aus denen man die Interpretation hätte ziehen können, dass man da eine Gefahr sah.\nHaben dann immer versucht das ganze Video zu bekommen, haben es nie bekommen und dann wurden die Sachen veröffentlicht und hat gesehen, die haben den halt, die haben dann halt getäuscht die ganze Zeit. Die haben den bewusst getäuscht äh und das sind,\ndass quasi solche, solche Sachen, solche Fälle, wenn ich schon das da höre und denke, wow, das das sowas wirklich gibt.\nSachen kommen ja erst durch investigativen Journalismus raus und dafür solche Arbeit\nsind diese Unterlagen unglaublich wichtig. Da war zum Beispiel jemand, der die äh die NGO, die die todeszivilen Todesopfer im Irakkrieg zählt. Er meinte, er ist durch die durch die ähm von WikiLeaks veröffentlichten Unterlagen ähm,\nhaben sie fünfzehntausend mehr zivile Todesopfer zählen können, die vorher unbekannt waren.\nJa und insofern ist das äh nach wie vor ein unglaublich wichtiger Arbeit, dass es mir das war mir vorher bewusst, aber ist mir natürlich durch das Verfahren nochmal klarer geworden, wo ich konkrete Fälle höre und Leute, Journalisten und Aktivisten, die darüber berichtet haben, wie ganz konkret,\ndiese die Plattform ihnen bei ihrer Arbeit geholfen hat."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:15:56",
+      "text": "Da habe ich dann auch gesehen und gelesen, dass ähm.\nUm eben diese Plattform immer wieder anzugreifen, Julian Assange auch zur Last gelegt wird. Er habe ja dazu aufgerufen, er hätte, er habe Menschen.\nMotiviert dort äh.\nDinge einzureichen, ja? Also auf Vorträgen, die äh klar benannt sind an an Orten, wo du ja auch schon vorgetragen hast. Nee, nicht an gleichen Orten auf Bühnen, ja, es war noch äh in.\nHamburg und Berlin diese Vorträge.\nUnd auch auf anderen äh Veranstaltungen in äh Holland an diese in unserem Dunstkreis sind, wo äh womit.\nUntermauert werden soll, dass es sich hier eben nicht um Journalismus handele, sondern um ja motiviertes.\nVorgehen, ja? Und gezielt strafrechtlich relevantes Vorgehen, was jetzt nicht unbedingt an der Aufklärung von Missständen interessant wäre, sondern äh interessiert wäre, sondern an der, ja, Zersetzung.\nSystems kannst du uns über also inwiefern hat das da vor Ort auch nochmal eine Rolle gespielt."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:17:15",
+      "text": "Das ist eine ähm das hat eine große Rolle gespielt. Ich habe das ein bisschen angeschnitten. Ähm da geht es halt um die Frage, ist,\nWiki Leaks als Plattform und Julian Assange als Person ähm.\nRücksichtsloser Aktivist, der einfach um jeden Preis alles veröffentlichen würde.\nUnd das wurde in dem Verfahren von all den Leuten, die mit denen zusammengearbeitet haben an den Unterlagen, ähm äh ganz klar zurückgewiesen,\nWikiLeaks ist ja keine Plattform, die einfach irgendwas, was so reinfliegt, einfach so veröffentlicht, sondern halt immer mit einer mit einer gewissen Zielsetzung. Deswegen gab es ja bei diesen Unterlagen, die für die ja jetzt für für die er jetzt da,\nausgeliefert werden soll, gab es dieses Medienteam, was die Sachen durchgegangen ist, gab es die Schwärzungen. Ähm es geht, geht darum.\nJa, es geht darum ähm da zum Beispiel auch einer berichtet, dass\ndass die ein Friedensforscher hat erzählt, dass das die Kriegsführung von Staaten verändert hat, weil dadurch, weil die USA in Afghanistan und Irak der Öffentlichkeit die ganze Zeit erzählt haben,\nläuft super Leute und durch diese unterlagen im Nachhinein rauskam, dass das halt von Anfang an ein riesiges Desaster war. Und dass sich heute starten.\nEinfach nicht mehr in solche militärischen Konflikte stürzen würden, in auf diese Art und Weise, was äh der dieser Friedensforscher auch damit in Verbindung gebracht hat, dass wir heute wissen, wie es wirklich gelaufen ist und nicht nur die Varianten kennen, die öffentlich dargestellt wurden. Ähm,\nes ist halt\nInsofern halte ich diesen Vorwurf da zu sagen, er sei kein Journalist, weil er dazu aufgerufen hatte, dieses Aufrufen, das geht ja auch damit einher, er hat da nicht Leute aufgerufen, kopiert mal,\näh kopiert man einfach ähm alles, was ihr, was ihr finden könnt und dann veröffentlichen wir das, sondern es ist halt Ausschau halten und wenn es Fehlverhalten gibt, dann.\nSammelt, was sie kriegen könnt und dann äh veröffentlichen wir das mit der Zielsetzung.\nDas ja nicht aus Schadenfreude oder um um Leute ohne Grund äh zu zu schädigen, sondern mit der Zielsetzung, dass die Zustände besser werden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:19:20",
+      "text": "Ist es ja auch so, dass mittlerweile auch alle Zeitungen, solche Leaking,\nKanäle anbieten und ja im Prinzip jetzt auch nicht anders bewerben. Ja, da steht ja auch nicht drin. Hier äh Informationen zum Umsturz von äh beliebigen Staat, sondern,\nJa, also wenn ihr uns äh Informationen zugänglich machen wollt, von denen, wie ihr der Meinung seid, dass wir da mal draufschauen sollen und die vielleicht gegebenenfalls veröffentlichungswürdig sind, dann bitte schön, hier ist die anonyme Box, wo ihr es reinschmeißen könnt."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:19:47",
+      "text": "Das ist ähm ein schöner ähm ohne äh ohne Anwesend gewesen zu sein, äh hast du damit auch schon einen Punkt der Verteidigung auch antizipiert. Sie hatten auch ein Zeugen da, der in dem Umfeld arbeitet und eine äh Open Source Software anbietet für Medienplattformen\nfür für Jobs von Leaks\nwo Whistleblower ihre Daten können und meinte, hätte, ja sind das jetzt alles, ist das, sind das jetzt quasi alles Kriminelle, diese ganzen Media Outlets. Große Zeitungen, die haben halt einfach eine Plattform, wo Leute Unterlagen ablegen können, anonym und gesichert. Und der der Mann, der\nden technischen Hintergrund anbietet. Ich weiß jetzt nicht mehr genau wer es war\nviele Zeugen gehört, wie sie sich vielleicht aus dem Gespräch herausführen lässt. Ähm hat er davon berichtet, dass es das gibt, genau. Also das ist ein valider Punkt äh anzubringen, dass das.\nEr hat dazu gehört."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:20:34",
+      "text": "Und wenn man jetzt von diesem Verfahren hört, ja, dann also dass es ist bestimmt nicht, dass.\nTägliche Medien geschehen, ne. Es gibt irgendwie so auch denke ich einer der Gründe, warum das so ähm besondere Anerkennung auch und eine besondere Beachtung,\nähm verdient, dass du dich da hingesetzt hast. Du hast darüber live getwittert, auch in einer,\nenormen Detailtiefe oder in einer enormen\nHäufigkeit und Genauigkeit, das äh ist also vergleichbar mit den Liveblogs, die Netzpolitik org aus den Untersuchungsausschüssen äh oder dem NSA Untersuchungsausschuss da geliefert hat\nDu hast ähm YouTube-Videos gemacht, nach so gut wie jedem Verhandlungstag, hast gerade gesagt, zwei musst du noch."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:21:21",
+      "text": "Fehlende Räche, weil zurück in Brüssel hat mich so ein bisschen der der restliche politische Alltag eingeholt, aber da ähm ich mache noch eins zu dem, ich habe muss noch eins machen zu den Aussagen von UC Global\nStatements, weil die wollte ich nochmal im Detail lesen und sie vorstellen und dann wollte ich noch ein Abschlussvideo machen, was nochmal alles zusammenfasst."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:21:38",
+      "text": "Sodass das sowieso jetzt hier noch mal unseren Hörerinnen, auch insbesondere ans Herz gelegt, das zu konsumieren. Gleichzeitig also so es ist eigentlich ein.\nRiesiges Verfahren und wenn man mal etwas darüber liest, dann sind es meistens Aufrufe von Leuten, die nicht unbedingt Journalisten sind, vielleicht auch, die im Prinzip sagen, dieses Verfahren verdient mehr Anerkennung durch Journalistinnen und Journalisten.\nAber so wie erklärst du dir, dass das welche Phänomene haben dazu geführt, dass das mehr oder weniger unter ferner Liefen läuft?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:22:13",
+      "text": "Also ist bis\nGab ja Berichterstattung, ARD zum Beispiel hat zum Auftrag, denn in den, ich glaube, Hauptnachrichten, Tagesschau, Tagesthemen haben sie das behandelt, sie hatten die dann zeitgleich zum Verfahrensauftakt, diesen großen Dokumentarfilm über die Überwachung mitgebracht. Ähm,\nglaube, ein wirklich erheblicher Faktor, der in diesem Verfahren eine Rolle spielt, ist, dass es schon so lange läuft, ähm dass dass es für Leute schwierig,\näh äh bleibt äh für Leute schwierig, am Ball zu bleiben. Ähm.\nAber also es gab ja äh Berichterstattung und das.\nNatürlich mehr ist besser und ähm ich kann zum Beispiel, ich weiß nicht, bei wer bei deutschen Media-Outlets ähm sich den Livestream angeguckt hat.\nUm das quasi.\nZu verfolgen. Also es war jetzt von der deutschen Presse niemand im Gerichtssaal vor Ort. Vielleicht haben die Leute, ich weiß, dass es auch deutsche ähm Outlets mit ähm Videostream-Zugang gab,\nVielleicht haben sie das da geguckt, hoffe ich zumindest. Und ähm dann ist wenn man vier Wochen dauerndes Verfahren hat, ist es für viele Medien schwierig,\nden den,\ndem Berichterstattungszeitpunkt richtig zu wählen, weil sie ja den Anspruch haben, was mit Nachrichtenwert zu liefern. Also wäre natürlich schön gewesen, wenn es Leute, wenn es mehr konkrete Begleitungen gegeben hätte\nähm aber im Großen und Ganzen ist die Frage, wann, wann sollen sie jetzt, wann soll Tages, Tagesschau zum Beispiel hat er zum Auftakt was gemacht? Ähm\nDa muss man aber auch sagen, dass dann gleichzeitig in dieser Woche auch äh da dieser Brexit-Wahnsinn mit dem äh mit dem äh mit diesem neuen Gesetz da war und die ganze EU ausm Haus, das ist ja nicht so, dass da hundert Leute sitzen, sondern die beschmachen ja noch andere Themen\nund dann waren vier Wochen verfahren. Jetzt haben wir nicht mal ein Ergebnis, haben nicht mal Abschlussstatement.\nSo dass das jetzt für für die Leute die Nachrichten machen, schwieriges, schwierig ist, da jetzt was zu veröffentlichen. Ich gehe davon aus, äh wünsche und hoffe mir, dass dann das äh Urteil äh angemessen begleitet wird.\nAber äh mehr Berichterstattung wäre natürlich schön.\nDas sind die Gründe, die ich mir jetzt, ich will das gar nicht verteidigen, das sind die Sachen, die mir, die mir, die ich mir als Gründe vorstellen kann, warum das so ist. Äh ich bin ja kein Journalist, deswegen kann ich nur mutmaßen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:24:41",
+      "text": "Aber na, ich find's trotzdem wichtig, da auch mal drüber zu sprechen, weil auch da ranken sich natürlich ähm Verschwörungstheorien drauf."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:24:50",
+      "text": "Also die, zumindest ist es äh so, dass wenn darüber berichtet wird, die Stimmung und der Tenor,\nrecht eindeutig ist. Also es gibt\nim journalistischen Umfeld schon ähm schon Solidarität. Das merkt man auch, dass Reporter ohne Grenzen die ganze Zeit da ist. Es gab dann auch nochmal einen einen Aufruf von von ähm\nGünter Wallraff und Sigmar Gabriel im Tagespiegel. Ähm.\nDass also wenn wenn ich habe schon den mein Eindruck ist, dass im in den journalistischen Kreisen dass die dass es dass der Stellenwert des Verfahrens und die Sympathien schon recht klar sind."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:25:35",
+      "text": "Hast du deinen Einblick in die britische Presse?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:25:38",
+      "text": "Also ich hatte vor Ort, also wir hatten im es wurde berichtet und ähm sie hatten auch, sie hatten ja,\njeden Tag jemand da, nicht dauerhaft vom BBC war jemand da, aber die meiste Zeit waren Leute da auch die größte Presseagentur in UK hat das Verfahren fast dauerhaft begleitet.\nUnd immer einzelne Sachen, aber ich habe jetzt nicht verfolgt, wie viel da konkret gelaufen ist, um ehrlich zu sein, aber es waren zumindest Leute da.\nGrundsätzlich, wie gesagt, mein, also meine dich will's nicht verteidigen, ich bin der Meinung, mehr ist besser.\nUnd äh aber äh ich sehe auch die Herausforderungen für für Journalisten und Journalisten.\nDieses, dieses Verfahren in der Komplexität zu covern. Ich meine, wir sehen ja jetzt, wie lange wir schon jetzt darüber sprechen.\nUnd ähm so eine lange Aufmerksamkeitsspanne hat ja der ähm durchschnittliche Konsument vom öffentlichen, rechtlichen Rundfunk, öffentlich-rechtliche Rundfunk gar nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:26:39",
+      "text": "Wäre auf jeden Fall jetzt eine echt lange Headline gewesen, was wir."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:26:44",
+      "text": "Ja, jetzt habe ich einen neuen äh neuen Slogan gehört, alle anderen sagen immer einen, du sagst einem Notte Journalist.\nInteressante Einschränkungen. Ich bin ja kein Journalist, aber."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:26:58",
+      "text": "Ich will, ich will, ich will nicht den will nicht den den Eindruck Eindruck erwecken. Das ist ja in dem Verfahren habe ich allerdings gelernt, dass ich während,\nBeim Verfahren, wenn ich drüber schreibe und berichte durchaus mich einer journalistischen Tätigkeit hingebe, die von der Pressefreiheit gedeckt sein sollte, ohne Journalist zu sein, also,\num quasi auch so den, den juristischen Charakter dieser Aussage nochmal mit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:27:20",
+      "text": "Und du hast einen YouTube-Kanal, wo du über deine ganzen äh Erfahrungen täglicher berichtet hast bei den Hearings. Immer so zehn Minuten oder so."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:27:29",
+      "text": "Das wurde immer länger, dann tendenziell ging's Richtung zwanzig Minuten. Ich habe äh versucht, ähm das zu parallel laufen zu lassen oder Twitter.\nDie Plattform, über die man Leute erreicht, ähm\nWenn man darüber berichtet, dass Leute verfolgen das da, ähm ist aber keine gute Plattform, um diese Sachen dauerhaft zu dokumentieren.\nAlso jetzt zurückzugehen und da irgendwas zu finden, was ich da irgendwann mal an einem Tag gemacht habe, das ist herausfordernd. Ähm deswegen habe ich noch zusätzlich äh\nVideos gemacht, ich hab da ein bisschen rumexperimentiert, ich hab das auch zum zum ersten Mal gemacht und deswegen gibt's da auch\nSchwankungen, die ich nicht von der Hand weisen kann und nicht mal versucht habe, auch mal ein Video äh in der Bar zu zu machen und dann war das vielleicht doch ein bisschen laut im Hintergrund. Aber jedenfalls habe ich mich einfach hingesetzt und bin meine Aufzeichnung vom Tag nochmal vor der Kamera durchgegangen für die Leute, die\nnicht den ganzen Tag auf Twitter sitzen und das lesen können mich das nochmal zusammengefasst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:28:22",
+      "text": "So ein bisschen wie der Podcast technische Aufklärung seinerzeit auch alles."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:28:26",
+      "text": "Die haben das ja auch, die haben kombiniert die unterschiedlichen Möglichkeiten, direkt aus dem frischen Erinnerungsvermögen zu Podcast, da waren auch die Leute regelmäßig dabei, die äh das geschrieben haben, wenn."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:28:39",
+      "text": "Da ging's so in den NSA Untersuchungsausschuss, bei dem Podcast und im Prinzip ist das hier eine vergleichbare Situation."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:28:45",
+      "text": "Äh ja, demnächst ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:28:47",
+      "text": "Du ganz alleine warst."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:28:48",
+      "text": "Dass, dass, dass ähm, ja, das war auch so von meine Idee. Ich habe am Anfang überlegt, ob ich vielleicht skripte und mir was aufschreibe, aber ähm,\nmit der Überlegung jeden Tag ein Video zu machen. Ist ja, man sitzt den ganzen Tag in dem in dem Gericht\nsein äh gehe ich ins äh Hotel, mache eine halbe Stunde Pause und dann setze ich mich vor die Kamera und spricht da rein, wenn ich noch ein Skript schreiben würde, dann ich muss das ja auch danach noch äh technisch bearbeiten, schneiden. Ähm und,\nähm dann am Laptop äh ähm.\nAusspielen, das dauert ja auch alles so. Verfahren, die nicht so, das dauert alles ewig, deswegen habe ich irgendwann gesagt, komm, ich setze mich jetzt hier davor und erzähle, was ich was ich mir aufgeschrieben habe, woran ich mich erinnere, um ein bisschen Anekdoten haft, also das ist ein relativ\ngroßen Detailtreue berichte ich darüber, was in konkreten Situationen Leute gesagt haben. Einfach um das auch zu dokumentieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:29:40",
+      "text": "Das macht es authentisch und wenn man authentisch rüberkommt, dann hat man auch die Chance, YouTube Star zu werden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:29:45",
+      "text": "Wollte übrigens nur kurz anmerken, also ohne da jetzt irgendjemand kritisieren zu wollen, aber da den ganzen Tag mitschreiben\nmitzuschreiben ist ja auch eine dermaßen anstrengende Tätigkeit, dass gerade bei technischer Aufklärung die Live-Bloggerin von Netzpolitik org regelmäßig\nnicht mehr dabei waren, weil es eben so ein weil die so einen stundenlangen Tag mit live mitschreiben hinter sich hatten, dass sie das auch diese,\ndann noch darüber nochmal zu sprechen und zusammenzufassen und zu berichten, einfach auch gar nicht mehr geschafft haben, weil so fertig waren."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:30:16",
+      "text": "Ich bin ja auch kein kein Muttersprachler. Also ähm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:30:21",
+      "text": "Anstrengender macht er die und er ist auf Deutsch getwittert."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:30:24",
+      "text": "Ich habe auf Deutsch getwittert, was ähm sie da in die Anwälte sich in eloquentestem Englisch um die Ohren gehauen haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:30:32",
+      "text": "In so einem so einem British Court, da reden die auch nicht Muttersprache. Das ist nochmal noch mal ein ganz anderes Englisch, was sich da entfacht."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:30:38",
+      "text": "Ja, die ist zum Beispiel so, dass die die haben auch so relativ viele Floskeln, das ist ganz äh lustig, wenn die die Anwälte sich, äh wenn der über irgendwas sprechen möchte, was der andere Anwalt vorher gesagt hat, dann die besprechen sich gegenseitig als my learnet friend an\nes ist alles sehr fummel, mein learning Friend.\nUnd die Richterin haben sie, die Richterin, weil das so ein hohes Gericht ist für die Richterin als Miledi angesprochen. Das sind so es ist äh man merkt dann wieder äh dass man in es gibt ja dann so einige sehr."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:31:08",
+      "text": "Oder ohne? Okay. Aber so mit Klamotten und so."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:31:12",
+      "text": "Die haben alle, die waren alle vernünftig angezogen da. Aber ja, nee, das war auf jeden Fall schon herausfordernd, ich hab das auch in einem Gespräch bei der Berliner Zeitung, hab ich das gesagt, dass ich eigentlich schon jeden Tag mit Kopfschmerzen ausgegangen bin."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:31:23",
+      "text": "Das kann ich mir gut vorstellen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:31:26",
+      "text": "Und dann dazu kommen auch das das natürlich die technischen, also es ist so ein Blumenstrauß an an Sachen einerseits, dass dann Videostream nicht in perfekter technischer Qualität ähm,\ndann hat man dann äh äh ähm Lego Englisch,\nund siebzehn Grad im Raum, ne, weil quasi der der bunte Blumenstrauß an an Widrigkeiten, aber ich will mich äh nicht beklagen, ich bin grundsätzlich ähm auch ähm äh dankbar. Es gab ja viel Kritik an dem an Zugang zum Verfahren.\nBerechtigte Kritik. Insofern äh bin ich dankbar, dass ich das Privileg hatte, da zugelassen zu werden.\nUnd das als politisch beobachtet. Das ist ja auch nicht selbstverständlich. Die hätten auch einfach nein sagen können, hätte ich ja nichts machen können.\nAlso das war schon eine proaktive äh nicht also ich habe mich schon nach gefragt, aber grundsätzlich haben die das zugelassen und das muss ich auch schon anerkennen. Das hätten die auch einfach ablehnen können.\nDabei sitze."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:32:23",
+      "text": "Ja, falls da noch eine Anhörung äh kommt oder was die Urteilsverkündung wird wahrscheinlich nicht so schnell ausfallen, da wirst du da nicht hinfahren oder doch?"
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:32:31",
+      "text": "Doch am vierten Januar plane ich schon, wenn sie mich wieder reinlassen, dann äh würde ich, würde ich da wieder hinfahren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:32:37",
+      "text": "Wird das dann auch länger dauern."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:32:38",
+      "text": "Nee, das soll, das wird ein Tag sein, ähm, wahrscheinlich, aber es geht, äh, also, es wird, also, ein Tag ist dafür geplant, aber für mich ist das jetzt auch.\nÄhm einfach das, ich wette halt, ich kann das ja ansonsten nicht verfolgen,\nund äh ich habe jetzt bisher jeden einzelnen Tag dieser Verhandlung verfolgt äh und der Vollständigkeit halber wär's schon schön, wenn ich jetzt auch noch den einen letzten Tag ähm,\nin diesem Blog, der äh des Verfahrens begleiten könnte, weil das ja, ja, es sind, das sind ja auch nicht so viele Leute, die.\nDie das gemacht haben. Also ich finde das jetzt auch wichtig, das vollständig zu."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:33:16",
+      "text": "Ich wollte nur sagen, es gibt auch so akkubetriebene Heizdecken, falls es also dann wieder so eine unterkühlte britische Situation ist, dann kann man da vielleicht mit Technologie."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:33:22",
+      "text": "Besuche. Auf der Besuchertribüne saßen die Leute mit dicken Daunenjacken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:33:27",
+      "text": "Ja, aber der nächste der Trend ist jetzt ganz klar die akkubetriebene Halsdecke."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:33:32",
+      "text": "Vielleicht kriegt man auch einfach demnächst so ein Privatheizpilz. Ja, dass du dass du deinen eigenen Heizpilz wieder mit mit dir umtragen darfst und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:33:39",
+      "text": "Wie gesagt, man macht das jetzt direkt in die Kleidung. Es gibt auch irgendwie Socken, die warm sind, Unterwäsche sicherlich auch, also kannst du deine Temperatur kriegt einstellen, muss nur genug Akkus mitnehmen."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:33:50",
+      "text": "Steckdosen gab's ja. Ich darf nur den Adapter nicht vergessen, dann ist er quasi ähm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:33:57",
+      "text": "Also da die Briten haben ja wirklich eine der verrücktesten äh Steckdosen. Äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:34:03",
+      "text": "Geht aber noch. In Britannien geht's ja zur Not auch noch ohne Adapter."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:34:05",
+      "text": "Du kannst übrigens auch, also zumindest diese kleinen Eurostecker, die kriegst du da auch reingequetscht, wenn du mit einem Schlüssel den Dritten in der Mitte eindrück."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:34:13",
+      "text": "Zur Seite drücken und dann kannst du die sind ein bisschen zu breit eigentlich, die werden so ein ganz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:34:17",
+      "text": "Löcher sind minimal zu breit auseinander, aber äh ja, wenn ich in Großbritannien bin, habe ich regelmäßig den Adapter vergessen und dann halt,\nDas mittlere Loch, ja? Mittlere Loch, unten da den Schlüssel rein oder ein was anderes äh blockierenmäßiges deiner Wahl und dann den.\nReingeht."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:34:35",
+      "text": "Ich hatte bisher noch nicht drüber nachgedacht irgendwelche Metallgegenstände in Steckdosen zu."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:34:41",
+      "text": "Kannst du fangst du erstmal mitm Plastikteil an und mit dem mittleren Loch, ja, dass die anderen beide."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:34:45",
+      "text": "Kannst ja kannst ja auch so ein Holz äh Eis Eis Eis am Stiel kaufen und diesen Holzstab, der passt da auch ganz wunderbar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:34:52",
+      "text": "Was auch geht, wenn du den, wenn du den Original-Pin zur Hand hast von einem anderen Stecker, den du rausgezogen hast, was weiß ich, von der Heizdecke vom Nachbarn, ja, dann den reinstecken und also da, ja, gibt's Möglichkeiten."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:35:03",
+      "text": "Das ich werde ich äh denke, das wird Aufmerksamkeit erregen, wenn ich das nächste Mal mit äh Schraubenzieher und Holzstäben im Gericht auftauche und anfange äh an der."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:35:13",
+      "text": "Sagst du einfach, wieso, das haben die bei der Botschaft doch auch gemacht."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:35:16",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:35:18",
+      "text": "Super."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:35:22",
+      "text": "Also vielen Dank für dieses Engagement, auch wenn man hier an dieser Stelle durchaus zugeben darf, dass du das jetzt, das hast du im Rahmen deiner beruflichen Tätigkeit gemacht. Ja. Das ähm gibt also keine Spenden."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:35:33",
+      "text": "Nein, auf keinen, auf keinen Fall. Ich habe das das äh ich äh bin dankbar, dass ich die auch dass ich die Möglichkeit hatte, das zu machen. Ähm und dass ich war da im Rahmen meiner beruflichen Tätigkeit da, äh ich war da äh.\nJa, es war Teil meiner meiner Arbeit, insofern ist das äh äh ich freue mich, dass ich die Möglichkeit dazu hatte, aber es es war Teil meiner Arbeit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:35:55",
+      "text": "Ja, Wahnsinn. Ähm diese Arbeit kann man sich sicherlich auch ähm anders und angenehmer gestalten. Ähm insofern.\nDoch sehr viel. Vielen herzlichen Dank, dass du ähm davon berichtet hast. Vielen Dank, dass du heute unser Gast warst. Das ist jetzt die eine Gelegenheit noch Sachen loszuwerden."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:36:16",
+      "text": "Herzlichen Dank für die Einladung. Mein erster äh erste Mal, dass äh vielen Dank für das für das Gespräch und äh ja, ich glaube, jetzt haben wir wie lange wie lange sprechen wir. Ich habe, ich glaube, ich habe genug geredet für heute."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:36:31",
+      "text": "Wir hoffen, du hast noch keine Kopfschmerzen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:36:33",
+      "text": "Haben auf jeden Fall genug beisammen. Fein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:36:36",
+      "text": "So, damit haben wir dieses Thema, was wir ähm.\nIn den letzten Wochen ein bisschen äh haben schleifen lassen, wo ich auch zugeben kann, weil ich im Hinterkopf hatte, da hole ich mir mal die richtige Person zu in die Sendung.\nZumindest bis zum bis jetzt aufgerollt und wenn ich dich richtig verstehe wird jetzt wenn alles nach Plan läuft in diesem Bereich erstmal nix mehr großartig passieren, weil es keine Anhörungen mehr gibt.\nÄhm und dann hören wir am vierten Januar das äh den die Schlüsse zu den Milady gekommen ist."
+    },
+    {
+      "speaker": "Dustin Hoffmann",
+      "time": "2:37:16",
+      "text": "Genau. Also für die Leute, die die,\nEs wird jetzt, das Verfahren wird jetzt quasi erstmal schriftlich weitergeführt, die Abschlussstatements beider Parteien werden schriftlich eingereicht. Ähm, für die Leute, die 'n besonders großes Interesse daran haben, dieses Verfahren zu verfolgen, werden die bestimmt noch irgendwo auftauchen,\nähm das passierte in der Zwischenzeit schon was, äh aber,\nJa, also es wird jetzt quasi keine Verfahren mehr geben über die äh berichtet wird. Wenn die Unterlagen vorliegen, kann ich mir, also wenn die Abschlusstatements vorliegen, werde ich mir die auch äh,\nkann ich mir vorstellen, dass ich die ich werde darüber berichten. Vielleicht mache ich auch Videos noch mal dazu und werde da ein bisschen vorstellen, was da drin steht. Aber das hat jetzt, es gibt keine Anhörung mehr bis zum,\nJanuar, außer diese administrativen, die ich angesprochen habe, die finden weiterhin statt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:38:03",
+      "text": "Dann vielen Dank nochmal und für's Auskunftgeben Botschaft."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:38:09",
+      "text": "Ich habe noch kurz äh außerdem Jani und Robin zu danken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:38:16",
+      "text": "Und ich danke fürs Zuhören und wir hören uns nächste Woche wieder. Das war's mit Logbuch. Sagen tschüss und bis bald."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:38:22",
+      "text": "Tschau, tschau."
+    }
+  ]
+}

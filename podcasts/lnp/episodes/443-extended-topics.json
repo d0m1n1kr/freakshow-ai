@@ -1,0 +1,179 @@
+{
+  "episodeNumber": 443,
+  "title": "LNP443 Auf YOLO konfigurieren",
+  "extractedAt": "2026-01-02T11:35:25.829Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "Digitalisierung des Gesundheitswesens / Gematik",
+      "subject": {
+        "coarse": "Health / Digitalization",
+        "fine": "Health / Gematik"
+      },
+      "durationSec": 255,
+      "positionSec": 183,
+      "summary": "In der Episode wird die Digitalisierung des Gesundheitswesens in Deutschland thematisiert, insbesondere die Rolle der Gematik, die für die Telematik Infrastruktur verantwortlich ist. Die Gematik, eine GmbH, die zu 51 Prozent dem Bundesministerium für Gesundheit gehört, entwickelt Spezifikationen und Verfahren für ein digitales Gesundheitswesen. Es wird auf die Herausforderungen und Chancen der Digitalisierung eingegangen, sowie auf konkrete Anwendungen wie die elektronische Patientenakte und das E-Rezept. Die Diskussion beleuchtet die Notwendigkeit, die bestehenden bürokratischen Prozesse zu verbessern und die Digitalisierung voranzutreiben.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "443-ts.json",
+        "method": "time-window",
+        "pickedCount": 20,
+        "startSec": 163,
+        "endSec": 458,
+        "generatedAt": "2026-01-02T19:41:09.088Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Die Gesundheitskarte (eGK)",
+      "subject": {
+        "coarse": "Health / Digitalization",
+        "fine": "Health / eGK"
+      },
+      "durationSec": 512,
+      "positionSec": 438,
+      "summary": "Die elektronische Gesundheitskarte (eGK) ist ein zentraler Bestandteil der Digitalisierung im Gesundheitswesen. Sie dient als Patientenidentifikation und enthält grundlegende Informationen wie Name und Krankenversichertennummer. Die eGK ermöglicht Ärzten, über das Versicherten-Stammdatenmanagement (VSDM) die Versicherungsdaten eines Patienten online zu überprüfen. Die Telematik-Infrastruktur (TI) bildet das Netzwerk, in dem verschiedene Akteure wie Ärzte, Patienten und Krankenkassen miteinander kommunizieren. Die eGK ist eine Smartcard mit PIN, die für kryptografische Operationen genutzt werden kann, jedoch ist das Wissen um die PIN in der Bevölkerung gering.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "443-ts.json",
+        "method": "time-window",
+        "pickedCount": 54,
+        "startSec": 418,
+        "endSec": 970,
+        "generatedAt": "2026-01-02T19:41:10.430Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Elektronische Patientenakte (ePA)",
+      "subject": {
+        "coarse": "Health / Digitalization",
+        "fine": "Health / ePA"
+      },
+      "durationSec": 1104,
+      "positionSec": 951,
+      "summary": "Die elektronische Patientenakte (ePA) ist ein zentraler Bestandteil der Telematik-Infrastruktur im Gesundheitswesen. Um eine ePA zu nutzen, müssen Patienten eine Gesundheitskarte mit PIN besitzen und diese bei ihrer Krankenkasse anlegen lassen. Ärzte können dann Dokumente in die ePA hochladen, jedoch ist der Zugriff auf diese Daten nur mit ausdrücklicher Zustimmung des Patienten möglich. Zudem sind Krankenkassen verpflichtet, die ePA anzubieten, und Ärzte müssen diese Funktion ebenfalls bereitstellen, um finanzielle Kürzungen zu vermeiden. Die ePA bietet somit eine digitale Möglichkeit zur Verwaltung von Gesundheitsdaten.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "443-ts.json",
+        "method": "time-window",
+        "pickedCount": 88,
+        "startSec": 931,
+        "endSec": 2075,
+        "generatedAt": "2026-01-02T19:41:13.084Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Akzeptanz und Nutzen des Gesamtsystems",
+      "subject": {
+        "coarse": "Health / System Acceptance",
+        "fine": "Health / Overall System"
+      },
+      "durationSec": 469,
+      "positionSec": 2056,
+      "summary": "In der Diskussion um die Akzeptanz und den Nutzen der Telematik-Infrastruktur (TI) und der elektronischen Patientenakte (EPA) wird deutlich, dass viele Ärzte die Systeme als belastend empfinden. Hohe Kosten und der Zwang zur Nutzung führen zu Unzufriedenheit. Die TI wird als sicherer, aber unstrukturierter Datenablageort beschrieben, der nicht die gewünschten Funktionen zur Verwaltung von Gesundheitsdaten bietet. Es fehlen klare Strukturen und die Möglichkeit, granular auf Daten zuzugreifen, was die Benutzerfreundlichkeit einschränkt. Zudem wird auf die Notwendigkeit hingewiesen, maschinenlesbare Gesundheitsdaten zu integrieren, um die Funktionalität zu verbessern.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "443-ts.json",
+        "method": "time-window",
+        "pickedCount": 37,
+        "startSec": 2036,
+        "endSec": 2545,
+        "generatedAt": "2026-01-02T19:41:14.296Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Konnektoren mit Verfallsdatum",
+      "subject": {
+        "coarse": "Health / Technology",
+        "fine": "Health / Connectors"
+      },
+      "durationSec": 1388,
+      "positionSec": 2526,
+      "summary": "Der Konnektor, eine wichtige Hardware für Arztpraxen, wurde 2017 eingeführt und hat ein Ablaufdatum für seine Zertifikate von fünf Jahren. Nach Ablauf dieser Zertifikate wird der Konnektor nicht mehr akzeptiert, obwohl die Hardware weiterhin funktionsfähig ist. Dies führt zu hohen Kosten für den Austausch, die letztlich von den Versicherten getragen werden. Die Gematik, die für die Zertifikate verantwortlich ist, hat kein Verfahren zur automatischen Verlängerung der Zertifikate implementiert, was zu einer massiven Menge an ungenutzter, aber funktionierender Hardware führt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "443-ts.json",
+        "method": "time-window",
+        "pickedCount": 112,
+        "startSec": 2506,
+        "endSec": 3934,
+        "generatedAt": "2026-01-02T19:41:17.121Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Der Konnektor-Hack",
+      "subject": {
+        "coarse": "Health / Security",
+        "fine": "Health / Connector Hack"
+      },
+      "durationSec": 1189,
+      "positionSec": 3914,
+      "summary": "In dieser Episode diskutieren Linus Neumann und Flüpke über einen Konnektor-Hack im Gesundheitsbereich. Flüpke beschreibt, wie sie einen Konnektor aufschraubten, um dessen verschlüsseltes Dateisystem zu analysieren. Sie fanden Wege, um die PIN für den Zugang zu berechnen und entwickelten einen Patch, der es ermöglicht, mit Smartkarten zu kommunizieren, ohne die bestehende Software zu verändern. Der Patch könnte theoretisch von Herstellern übernommen werden, um die Integrität des Systems zu wahren, jedoch bleibt die Implementierung aufwendig. Die Diskussion berührt auch die Herausforderungen bei der Zertifikatsverlängerung und die Notwendigkeit, mit der GEMATIK zusammenzuarbeiten.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "443-ts.json",
+        "method": "time-window",
+        "pickedCount": 82,
+        "startSec": 3894,
+        "endSec": 5123,
+        "generatedAt": "2026-01-02T19:41:18.709Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Hack-Nebeneffekte",
+      "subject": {
+        "coarse": "Health / Security",
+        "fine": "Health / Hack Side Effects"
+      },
+      "durationSec": 801,
+      "positionSec": 5104,
+      "summary": "In der Diskussion um die Sicherheit der Gematik-Infrastruktur wird die Verwendung von 2048-Bit-Schlüsseln kritisiert, da diese ab 2024 als unsicher gelten. Flüpke und Neumann argumentieren, dass die Gematik alternative, hochwertigere Smartkarten integrieren könnte, um die Datensicherheit zu erhöhen. Es wird auf die Möglichkeit hingewiesen, bestehende Systeme durch Software-Updates zu verbessern, anstatt kostspielige Hardware-Austausche vorzunehmen. Zudem wird die inkonsistente Handhabung von Sicherheitsstandards durch die Gematik thematisiert, was zu Fragen über die tatsächliche Datensicherheit führt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "443-ts.json",
+        "method": "time-window",
+        "pickedCount": 43,
+        "startSec": 5084,
+        "endSec": 5925,
+        "generatedAt": "2026-01-02T19:41:21.437Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T19:41:21.437Z",
+  "transcriptFound": true,
+  "transcriptFile": "443-ts.json"
+}

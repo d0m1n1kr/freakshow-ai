@@ -797,6 +797,21 @@ onMounted(async () => {
   }
 });
 
+// Watch for podcast changes and reload data
+watch(() => settingsStore.selectedPodcast, async () => {
+  try {
+    const response = await fetch(getPodcastFileUrl('speaker-speaker-heatmap.json'));
+    heatmapData.value = await response.json();
+    // Load speaker metadata for images
+    await loadAllSpeakerMeta();
+    if (heatmapData.value) {
+      drawHeatmap();
+    }
+  } catch (error) {
+    console.error('Failed to load heatmap data:', error);
+  }
+});
+
 // Watch for data changes and redraw
 watch([heatmapData, filteredMatrix, filteredSpeakers2, () => settingsStore.isDarkMode], () => {
   if (heatmapData.value) {

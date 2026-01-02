@@ -1,0 +1,809 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus.\n284 Sendung jetzt ich finde wir könnten langsam mal viral gehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:08",
+      "text": "Dann müssen wir ein Lynchmob Anfällen am besten auf WhatsApp."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:33",
+      "text": "Logbuch Netzpolitik Nummer 284 vom 28 Januar 2018 und ich weiß nicht also.\nMit der Reichweite ob du das jetzt richtig Methoden vorschlägst gerade."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:50",
+      "text": "Ich beobachte nur und lerne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:52",
+      "text": "Von wem denn."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:55",
+      "text": "Von CT scan viral geht wir müssen auf jeden Fall mehr Fake News machen und nahrhaft.\nDas ist beides nicht unbedingt unsere Stärken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:06",
+      "text": "Nee das stimmt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:07",
+      "text": "Wobei ich es ja letzte Woche schon versucht habe mit Fake News.\nIch habe Korrekturen bekommen und zwar wichtige und richtige.\nDenn ich habe Gäste letzte Woche über Hawaii pinpoint im Prinzip direkt zwei Sachen nachvollziehbar und eindrücklich hätte ich auch beim sagen merken müssen falsch erzählt\ndie ich in den Kommentaren mehrfach korrigiert bekommen habe dafür herzlichen Dank\nbin ganz froh dass das in solchen Fällen dann doch sehr gut funktioniert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:42",
+      "text": "Ja die Leute hören einen wirklich zu."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:45",
+      "text": "Ja die können wirklich zu das war eine Übung zur Prüfung eurer Medienkompetenz nein das war einfach nur Schluss den ich geredet habe erstens,\nhabe ich gesagt bei heberden point würden keine E-Mails gespeichert werden das ist nicht richtig und das hätte ich auch.\nAlso ich weiß nicht genau was ich kann ich weiß warum ich sag gleich wie ich dazu gekommen bin das zu sagen aber genau also es werden Emails gespeichert die speichern die.\nBetroffenen E-Mail-Adressen und in welchem\nleg diese E-Mail-Adressen betroffen sind um Ihnen diese Auskunft geben zu können das muss natürlich auch so sein denn sonst wird ja dieses Feature mit der Domain notification nicht funktionieren wenn ihr also im Besitz einer\nganzen Domain seit was weiß ich Linus Bindestrich neumann.de oder Logbuch Bindestrich Netzpolitik de.\nDann könnt ihr dort auch Nachweise dass euch die gesamte Domain gehört dann bekommt ihr auch über alle E-Mail Adressen dieser Domain eine Notification und das würde ja nicht gehen\nwenn die nicht die E-Mail-Adressen im Plaintext dort gespeichert hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:53",
+      "text": "Aber sonst wäre ja nur ein Hash und man könnte nur vergleichen ob diese eine ist die man gerade."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:58",
+      "text": "Richtig und das habe ich da falsch dargestellt II was ich falsch erklärt habe war die.\nPound passwords Epi von.\nMHW bin Pound wo man also ein für eingegebenes Passwort prüfen kann.\nOb es in dieser Datenbank ist und da habe ich das Speicherkonzept verwechselt,\ndem von Lars Pass welches ein Passwort Manager in der Cloud ist in den ich mich kurz vor der Sendung eingelesen hatte und da habe ich dann einfach die beiden.\nDer Speicherkonzepte vollständig durcheinander gebracht also wie funktioniert die Point Passwort Sepia ihr errechnet Lokal,\ndie Prüfsumme von eurem Passwort das heißt für den Zeitpunkt hat das Passwort eure,\neuren Rechner noch nicht verlassen und die Prüfsumme dir da errechnet ist eine SHA1 Prüfsumme die hat insgesamt 160.\nBitte also irgendwie,\nein möglichkeitenraum mit sowas wie 48 Nullen oder sowas relativ große Möglichkeiten wie viele es da gibt und ihr schickt dann von dieser Prüfsumme nur,\ndie ersten 5 Zeichen in der hexadezimal Repräsentation,\nnur die ersten 5 Zeichen von insgesamt müssten das dann 40 Zeichen sein.\nDie ihr dann dorthin schickt also die ersten 5 Zeichen von einem sehr viel länger von einer sehr viel längeren Prüfsumme schickt ihr dorthin und dann bekommt ihr von der von der App hier zurück,\nalle dort vertretenen Prüfsummen die mit diesen fünf Zeichen beginnen.\nUnd zu den jeweiligen Prüfsummen wie oft sie da drin waren und das ist sehr elegant weil das auf eine Weise,\nDoppel blind ist ihr verratet nur die ersten 5 Zeichen eurer sehr viel längeren Brühe.\nUnd die Antwort die ihr bekommt sind alle vertreten impressum die mit diesen fünf Zeichen beginnen,\nob das aber überhaupt eure Prüfsumme ist das prüft ihr wiederum Lokal.\nUnd wenn man sich anschaut wie viele Zeichen halt noch übrig sind in der Prüfsumme die ihr habt ist es also sehr gut möglich dass sie eine vollständig andere habt die nicht in dieser Liste vertreten ist.\nUnd dann könnt ihr aber diese Entscheidung trefft ihr Lokal das heißt,\nwenn ihr mit dieser App hier redet weiß die LP 1 nicht die vollständige Prüfsumme eures Passwortes und ihr wiederum,\nkriegt kriegt eine Auswahl an Antworten und die Epi weiß noch nicht einmal ob ihr am Ende ein unsicheres Passwort habt oder nicht also es ist tatsächlich dort für blind und das ist auf diese Weise sehr elegant gelöst dann.\nAlso so so kann man das machen ja fünf Zeichen einer 160 Bit SHA1 Prüfsumme kann man schon mal verraten,\nwar ja noch genug Entropie übrig ist am Ende der Prüfsumme und so kann man.\nSo kann man arbeiten sag mir aber natürlich uns längere Zeitdauer unterhalten dass man trotzdem Leute nicht animieren möchte einfach.\nIhre Passwörter in Weboberflächen einzugeben und da haben wir dann auch in den Kommentaren ein einfaches perl script\ndie Kommunikation mit dieser LPE durchführt wo ihr also quasi genau\nprüfen könnt aha hier wird diese SHA1 Prüfsumme errechnet hier werden die ersten 5 Zeichen genommen die werden dorthin geschickt was ich zurückbekomme die dieser dieses Array diese Sammlung an password Hash ist die werden,\nwieder Gerät wieder geprüft mit meinem eigenen.\nUnd dann kann man so in der Form tatsächlich damit arbeiten wie das immer so ist mit mit Code den jemand anders geschrieben hat und empfohlen hat.\nSollte man trotzdem verstehen bevor man ihn tatsächlich ausführt also wenn er das nicht versteht dann lass da lasst euch von jemandem helfen der versteht.\nUnd dann könnt ihr die Spawn password API verwenden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:29",
+      "text": "Bitte eine sehr elegante Methode alles geheim zu halten nur zum Verständnis also hier wenn nicht die ersten 5 Zeichen des Passworts gesendet sondern bezieht sich immer alles nur auf diese Hashes und bleibt von daher die ganze Zeit in der Wolke und unklar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:43",
+      "text": "Genau also aus den Aussehen Hashes.\nKommt man nicht zurück auf das Passwort und erst recht nicht aus den ersten 5 Zeichen des Herrschers insofern so so ist das schön so gehört sich das und wenn diese Kommunikation sichergestellt ist dann kann man es besser,\nwahrscheinlich nicht machen.\nSorry dass ich das falsch erklärt habe wie gesagt ich habe mich vorher mit Lars Pass auseinandergesetzt und bin da einfach vollständig in diesen beiden Erklärungen vermischt und hin und her gesurft und habe da Äpfel mit Birnen verwechselt.\nUnd dann gibt's noch einen wichtigen dritten Hinweis das auch wirklich nur über mich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:24",
+      "text": "Was hast du eigentlich gegen Dichter und Denker."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:26",
+      "text": "Was habe ich gegen Enzensberger nichts habe ich gegen erstens Berger.\nIch weiß noch genau wie ich in dieser Sendung sagt und ich wollte sagt wie hieß noch mal dieser bekloppte der früher bei der Vater geschrieben hat und dann zur Verschwörungstheoretiker beim Kopp Verlag wurde und was für ein Ziel war\nVoßkuhle und dann dachte ich sofort coole kann es nicht sein dass sich der Vorsitzende Verfassungsgericht.\nDas ist irgend so ein komischer Name und dann der richtige komischer Name wäre gewesen Ulfkotte,\nalso Voßkuhle Ulfkotte wenn ich dich kennt ihr seid auf Ulfkotte wichtig gekommen ist ich habe ich Enzensberger gesagt weil ich alles 3 komische deutsche Namen finde,\nalso der Verschwörungstheoretiker ist Ulfkotte und der ist dann alles aber inzwischen schon Tod den hat es relativ früh erwischt.\nUnd im Entenberg erlebt glaube ich noch Voßkuhle auch beide bleiben uns bitte erhalten und beide schreiben bisher nicht beim Kopf Alltag und ich hoffe dass es dabei bleibt,\nsorry dass ich da durcheinander gekommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:33",
+      "text": "Du hast wahrscheinlich die ersten 5 Zeichen des Namens irgendwie in dein Heft reingetan."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:40",
+      "text": "Ich habe nur die ersten 5 Zeichen gehasht und dann bin ich hier ein bisschen durcheinander gekommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:44",
+      "text": "Das kann schon mal passiern ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:46",
+      "text": "Sorry ansonsten bleibt das Thema Passwort-Safe ein.\nEin spannendes Thema in den Kommentaren und E-Mails sie so bekomme,\nich glaube es war sogar schon in der vorletzten Sendung gestern relativ viel drüber gesprochen wurde ja das.\nAlso was ist die Rolle von OpenSource und sicher ja also das quasi gesagt wurde da XY ist nicht sicher weil nicht OpenSource,\noder XY ist sicher weil OpenSource und ich bestelle regelmäßig fest dass.\nHier teilweise viel Schlüsse gezogen werden deswegen würde ich das gerne mal kurz aussprechen das Thema eine Software kann natürlich sicher sein.\nUnabhängig davon ob sie OpenSource ist oder nicht das ist zunächst einmal,\nja ein ganz anderes Feature ja also dann ganz eine ganz eigene ein ganz anderer Bereich Software kann eine\nhat die Software eine hohe Qualität oder nicht ist erstmal unabhängig davon\nob sie OpenSource ist oder nicht ja es gibt Open-Source-Software in schlechter Qualität und es gibt closed source software in schlechter Qualität das ist zunächst einmal unabhängig Kernfrage bei dieser Open-Source Geschichte ist.\nDas Vertrauen ja und wie wir alle wissen vertrauen ist gut aber Kontrolle ist besser und wenn man richtig paranoid werden möchte wir wollen ja gar nicht vertrauen müssen sondern wir wollen,\nsicher sein das ist ja das eigentliche Thema hier.\nUnd da kommt natürlich die Überlegung zum Tragen mit der Open-Source-Software bei Open-Source-Software kann eine Kontrolle erfolgen.\nBei Closed Source Software in der Regel nicht ich komme gleich noch mal."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:44",
+      "text": "So einfach ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:46",
+      "text": "Ich komme gleich noch mal kurz den Einschränkungen,\nso deswegen heißt es wenn es wirklich um hoch Sicherheitsanwendungen geht dann ist natürlich die Open-Source-Software deshalb zu bevorzugen weil man sie kontrollieren,\nkann aber diese Kontrolle muss natürlich auch jemanden machen,\nsomit wenn das nicht passiert dann ist OpenSource am Ende und da sich als Gesichtspunkten genauso,\nkritisch oder unkritisch zu betrachten wie closed source also opens den Sicherheitsgewinn oder den Vertrauens und den Kontroll Gewinn bei Open-Source-Software haben wir nur wenn auch jemand,\ndiese Kontrolle durchführt und es wird sehr häufig der Fehlschluss gemacht dass etwas nur weil es Open Source ist.\nSicher sein das ist ein Fake."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:43",
+      "text": "Ja das haben wir auch vor allem gesehen insbesondere hatten das ja ja auch glaube ich mehrfach schon drin\nOpen SSL die library die viele Software benutzt hat um diese SSL-Verschlüsselung zu machen da sind dann halt irgendwann mal so ganz haarsträubende Fehler gefunden die da halt auch schon seit Jahren fast einem Jahrzehnt\ndrin rum lagen und\nobwohl es halt so dieses Prinzip von wem war das noch mal von Eric Raymond der hat ja mal diesen the cathedral and the bazaar in diesem epischen Text zu Open Source Entwicklung gesagt so gif,\nenough eyeballs all bugs are shellona sind noch Leute hin gucken dann sind halt irgendwie alle Ligen alle Fehler irgendwie offen zutage\nja nur dann brauchst halt auch diese eyeballs bzw müssen halt auch hin gucken und das\ndieses Verständnis für Security auch etwas ist wahrscheinlich erst den letzten Jahren so richtig gereift ist und bei Leuten sind Selbstverständlichkeit erzeugt dass man darauf zu achten hat zeigt sich eben das eben infeel Open Source,\nTanz haarsträubende Bugs noch rum lagen und die sich einfach so keiner gekümmert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:52",
+      "text": "Genau und der da kann man natürlich jetzt mal draufschauen warum ist das so ja ich habe da mit einem guten Freund von mir auch regelmäßig Gespräche drüber der.\nIn der Körne und Linux Entwicklung und so weiter tätig ist und sagt weißt du wir schreiben\nirgendwie tausende Zeilen zehntausende Zahlen open source code\nder irgendwie in aller Welt verwendet wird ne und bauen hier an der großen Dinos Geschichte und alle alle paar Monate oder Jahre\nkommt irgendsoein Security researcher vorbei findet irgend einen klitzekleinen Fehler und trommelt sich auf die Brust und sagt hier wie cool ich bin ich habe ein Fehler gefunden und ihr seid alle doof\nja so ein bisschen Lust die Perspektive der,\nder kreativen soll ich mal der der schaffenden auf dieses Phänomen und das ist natürlich auch ein,\nalso auch eine eine Perspektive die man die natürlich da gegeben sein muss ja weshalb ich grundsätzlich ja immer dafür plädiere.\nEs ist wichtig diese Kontrollarbeit und diese qualitätssicherungs Arbeit auch\nzu ermutigen denn der Unterschied ist dieser Sicherheitsforscher der NADA vorbeikommen und sich irgendwie auf die Brust klopft weil er weil er ein Fehler gefunden hat der macht das in der Regel in seiner Freizeit oder unbezahlt ja vielleicht gibt's mal ein Bug Bounty oder so,\naber in Wirklichkeit wäre es sehr sehr viel schöner wenn wir vielmehr auch diese Qualitätssicherung and.\nMit Anreizen Versehen würden was übrigens etwas ist was wir rccc die ganze Zeit,\nfordern ja ist so eigentlich jedesmal wenn wir zu allgemeineren Fragen der IT Sicherheit gefragt werden sagen wir\nbitte bitte bitte erhöht doch die staatliche Förderung von\nQualitätssicherung in der Open-Source-Software mit anderen Worten Bug Bounties wo also der eine unabhängige Stelle sagt,\nfinde eine Schwachstelle in diesem Open Source Code trage dazu bei dass sie verschwindet.\nUnd du erhältst als Kompensation für deine Mühen folgendes Kopfgeld was wir auf die Schwachstelle aufge\nSepp Abend und da gibt's ja auch schon von Julia Reda da massiv angestrengt diese ich glaube 1000000 Euro die die\ndie die Europäische Union da ausgelobt hat für verschiedene Schwachstellen so etwas muss es sehr viel mehr geben.\nDenn da komme ich jetzt zu einer etwas unpopulären Sicht für die Open-Source Fanatiker.\nDenke immer noch dass eine der besten Methoden die Sicherheit einer Software oder eines Systems\nzu beurteilen ist zu schauen was die Schwarzmarkt Preise für eine Schwachstelle darin sind denn je höher die oder\noder die weißmark Preise wenn es bug-bounty es gibt aber in der Regel werden die fetten Preise auf dem Schwarzmarkt bezahlt denn je mehr da die.\nKriminellen und nicht vertrauenswürdigen Instanzen dieser Welt bereit sind zu zahlen,\nfür eine Schwachstelle desto eher brauchen Sie die im Zweifelsfall und desto sicherer kann ich mich mit dieser Software\nalso die Schwarzmarkt Preise oder die bug-bounty Preise für Schwachstellen sich anzuschauen ist ein relativ guter Indikator für,\ndie Softwarequalität.\nJa oder für die Sicherheit einer Software natürlich kann es auch da mal zu hohe Preise geben oder zu niedrige Preise aber als Indikator ist das erstmal in relativ guter.\nGuter Blick darauf zu sehen ne wie sieht denn der Markt für Angreifer aus ja,\nist das irgendwie für wenige 10000 € dann Exploit zu haben oder sind wir da im 100000 € Bereich ja und das wiederum zeigt eben.\nDie mag Mechanismen dahinter dann auch auf ärgerlicherweise werden die besten Preise immer von denen moralisch wenig gefestigten Instanzen gezahlt.\nIm Zweifelsfall am Ende ein Kriminelle und Geheimdienste verkaufen und.\nDem sollten wir vor allem deshalb auch entgegentreten mit mutigen Bug Bounties um eben die gute faire.\nDem gemein die gute faire und gemeinwohlorientierte Sicherheitsforschung entsprechend zu incentivieren und dafür zu sorgen dass jemand der eben gut genug ist irgendwo Schwachstellen zu finden das,\ndann,\nund nicht sagt ach weißt du was ich kann mir eine Haus kaufen wenn ich diese Schwachstelle hier an jenes komisches unter komisches Unternehmen verkaufe welches mir was weiß ich.\n250000 € für diese Schwachstelle bezahlt und ich habe keine weiteren Fragen die gestellt werden müssen.\nUnd mit diesem diesem Schwarzmarkt müssen wir dann leider konkurrieren und es ist notwendig dass wir da als Gesellschaft ernstzunehmende Angebote schaffen sonst passieren uns immer wieder solche Scherze,\nwie du es gerade schon angesprochen hast wie wir es mit Open SSL gesehen haben der heartbleed bug ne oder wie letzte Woche wunderschön passiert mit sevenzip.\nSevenzip eine recht beliebte Kompressions Software die Leute immer benutzen weil sie weil sie sagt ja wir wir verschlüsseln die Dateien mit AES.\nDa hat sich jetzt hier offen Sicherheitsforscher namens Michael Stanek gesagt,\nach ja okay wenn ich das verwenden soll naja ist ja auch im voraus dann schaue ich mal kurz rein und findet sofort halt irgendwie eklatante Schwächen in der AES Implementierung wo sie nämlich dann den initialisierungsvektor für die Verschlüsselung\nmit mit Arbeit machen also quasi letztendlich.\nDal einfach die Verschlüsselung so schwach initialisieren dass es mit geringen Aufwand möglich sein sollte alle,\nso auf diese Weise verschlüsselten Dateien zu knacken und diese\nForm der Verschlüsselung auf IV alle schwören die sich seit Jahren empfiehlt weil alles an hier das ist alles und hier das ist OpenSource hat halten nie jemand die Kontrolle gemacht und da haben wir natürlich dann ein Ungleichgewicht von.\nVon Vertrauen und da denke ich müssen wir,\npolitisch gegensteuern da muss relativ dir Geld darein dass wir sagen ok diese Open-Source-Software die\ndie pflegen wir dass es ohnehin ein Problem die Open-Source-Software ist in der Regel underhanded wenn wir jetzt nicht irgendwie vom Linux-Kernel reden ne.\nDas heißt ich hier wollen wir Qualitätssicherung hier wollen wir\nvor allem qualitativ hochwertige Programmierer haben und dann müssen wir gemäß dieser dieser Forderungen public money public code noch sehr sehr viel besser werden nicht nur in Deutschland sondern auch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:27",
+      "text": "Ja das von dir erwähnte Projekt was Julia Reda und noch ein weiterer Parlaments Kollege ist nämlich jetzt gerade nicht erinnere angeregt haben heißt hossa\nEU free and open source software auditing Community und das läuft doch immer noch hat eine zweite Auflage bekommen.\nProjekte wie KeePass und Apache sind da halt angefordert worden um ebensolche Audits dann durchzuführen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:52",
+      "text": "Ich glaube sevenzip war da auch irgendwie im Bug Bounty program oder sowas ich weiß nicht genau wie das weitergeht aber so oder so guter erster wichtiger Schritt aber wie sie sagte Frank kürzlich.\nIm Prinzip könnten wir so die die wichtige Software zu einem Bruchteil des Preises eines Jäger 90 oder einer,\neines durchschnittlichen Auftrages an McKinsey der deutschen Bundeswehr in Deutschland entscheidende Fortschritte machen ja.\nDann kam noch kurz dieser eine Frage ja wie sieht das denn aus wenn man so eine wenn man so Passwort Ableitungen hat ja also irgendwie Domainname,\n+ Master Passwort gehasht und das ist dann wiederum das Passwort mit dem man sich einloggt na ja hat das gleiche Problem.\nEs gibt ein Masterpasswort und wenn das einmal betroffen wurde.\nDann wird man alles andere werdet ihr alle Passwörter ändern müssen und genau davor soll euch ja,\nPasswort safe schützen die andere Frage die dann noch kam ist ja was ist aber wenn meine wenn mein Rechner Trojan isiert wird dann liegt ja mit dem Passwort safe alles auf dem Rechner und mit einem Keylogger Krieg\nder Angreifer oder die Angreiferin dann auch noch mein Passwort dazu ist zu sagen Trojaner also Schadsoftware auf eurem Rechner.\nImmer das Game Over unabhängig davon ob wir jetzt ein Passwort safe verwendet oder nicht wenn eure Maschinen einmal mit shards of er infiziert sind und die Schatz Software ist darauf.\nAuslegt eure Passwörter zu klauen er hat Dir ohnehin verloren.\nJa und zwar unabhängig davon ob ihr ein Passwort safe benutzt oder nicht.\nWenn ihr ein Passwort safe benutzt dann wird eben das Passwort zu dem Passwort safe geklaut und alle Passwörter die da drin gespeichert sind wenn ihr keinen benutzt habt ihr die ganze Zeit eure Passwörter ein dann werden die eben geklaut insofern.\nFür den Fall dass euer Rechner Trojan isiert wird habt ihr mit einem Passwort safe also eine minimal größere Angriffs Oberfläche aber,\nwas die Passwort ist ja eigentlich verhindern sind\nzu einfach und so kurze Passwörter Wiederverwendung von Passwörtern und sie verhindern größere Probleme wenn ihr mal ein Passwort ändern ist oder eben das Passwort für ein Passwort safe\nÄndern wolltest es einfacher die jeweiligen Passwörter zu wechseln.\nInsofern Passwort-Safe verringern die Angriffs Oberfläche.\nIn den Bereichen die im Zweifelsfall wahrscheinlicher sind also eure Passwörter werden im Zweifelsfall\ner gefunden weil einer der Service ist die er verwendet,\nnicht ordentlich auf sie aufgepasst hat eure Passwörter werden eher gefunden weil ihr sie mehrfach verwendet wir eure Passwörter werden eher gefunden weil sie zu einfach und zu kurz sind.\nAlf,\ndass eure Maschine Trojan isiert wird das ist einfach nur meine Mengen Betrachtung wie werden Passwörter gestohlen das heißt nicht dass das Risiko Szenario per Trojaner werden eure Passwörter gestohlen vor euch nicht auch in Frage kommt.\nAber wenn man einfach nur anschaut wie wird der größere Teil der Passwörter gestohlen dann ist es eben nicht mit Schadsoftware.\nUnd vor diesem Hintergrund ja ihr habt eine etwas größere Angriffs Oberfläche bei Chartsoftware Infektion Schatz auf der Infektion sind aber nicht euer größtes Risiko,\nrein zahlenmäßig betrachtet insofern.\nTrotzdem würde ich hier zu einem Passwort safe raten natürlich.\nSind aber die gängigen Sicherheitsmaßnahmen gegen die Infektion von Schadsoftware genauso wichtig dazu gehört\nordentlichen Adblocker zu verwenden ordentlichen Tracker Blocker alles alles raus was man nicht unbedingt braucht was nicht zum Inhalt der Seite gehört.\nAlle Software auf dem aktuellen Stand halten\nnicht allen scheiß anklicken nicht ein scheiß runterladen nicht ein scheiß installieren also insgesamt einfach Systeme auf dem aktuellen Stand halten und sich und für Fischadler für Infektionen eben auch eine möglichst geringe.\nAngriffs Oberfläche be."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:25",
+      "text": "Selbst aber auch den Vorteil dass sie einen Halt auf solche liegst auch hinweisen können falls sie sehen halt a-ok du hast hier ein Passwort da und da bei der und der Plattform da gab es jetzt gerade ein liegt ganz unabhängig davon ob wir,\ndein Login davon betroffen war oder nicht einfach mal ändern kann ich Schaden wovon."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:45",
+      "text": "Valerie bilety ilert es echt schöne also wenn man sich da mal so durch arbeitet und dann ebenso durch ein paar tausend Passwörter geht die man über die Jahre so angehäuft hat und das Ding eine Satire dieses Passwort ist übrigens relativ einfach dieses Passwort hier.\nIst in der Hawaii pinpoint Datenbank und so weiter da kann man richtig schön kann man so richtig schön mein Tag sortieren und dann kann man eben,\nauch besser schlafen achso dann war natürlich noch der. Na ja was ist denn wenn ich dieses wenn ich dieses diesen Passwort-Safe synke Jan also über irgend Cloud Angebot ich meine den kannst du.\nWas was ich bei Apple in der iCloud legen den Katze in deine nextcloud legen den kannst du über BitTorrent Sync Sünden was auch immer der Sync Mechanismus deiner Wahl ist.\nSofern die Verschlüsselung ordentlich gebaut wurde sollte das im Prinzip egal sein Ja und denn ein Angreifer bräuchte immer noch Zugang.\nZudem Sünching Service den ihr Bett jeder benutzt den wird im Zweifelsfall einfach kriegen.\nDeswegen genau ist der Safe ja verschlüsselt dass er dann noch das Passwort dafür braucht das wird im Zweifelsfall nicht so einfach bekommen aber ihr merkt.\nEs gibt eben und das ist sich regelmäßig wenn ich irgendwie Vorträge über das Thema halte es gibt nicht das ist.\nHundertprozentig sicher und das nicht es gibt einfach nur eine Überlegung was sind die.\nDominanten Bedrohungsszenarien was sehen wir wie Angriffe funktionieren und was sind gegen diese mehrheitlich\nstattfinden Angriffe sinnvolle Verteidigungs Methoden für jede Verteidigungs Methode gibt es auch wieder neues Angriffsszenario und Seis am Ende einfach nur dass ihr nach dem Passwort gefragt werdet ja also ihr werdet keine,\nhundertprozentige Sicherheit erlangen das heißt aber nicht dass sie nicht eine bessere Sicherheit erlangen sollt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:48",
+      "text": "Jetzt bist du absolut 100% Medien kompatibel weil du den tollen Satz gesagt hast 100 hundertprozentige Sicherheit wird es nicht geben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:58",
+      "text": "Ja das nervt tschuldigung das ist der der Satz der wird tausendfach zitiert und der wird jedesmal in den falschen Kontext gesetzt weil was die Leute daraus daraus regelmäßig schließen\nist so eine Unsicherheit Nihilismus ist keine Sicherheit geben also lassen also versuchen wir es gar nicht erst das ist falsch,\nes gibt einfach ein ganz klares ganz klein. Von das ist das anderes Szenario für das bin ich verwundbar oder nicht und die gear weniger verwundbar ich dafür bin desto sicherer bin ich es heißt nicht dass ich sich her bin.\nUnd das ist irgendwie der Unterschied ihr könnt euch eben überlegen ob ihr in eurer was weiß ich\neuch bevorstehenden Zeit 60 Jahre mit der Informationstechnologie bis ihr euch endlich zur Ruhe setzen können mit den ganzen Scheiß nichts mehr zu tun habt.\nOb ihr in der Zeit bei jeder bei jeder einfachsten Angriff Kampagne sofort mit dabei sein wollt als Opfer oder ob ihr sagt ok bei mir soll es halt ein bisschen besser sein als Bonobo 23.42.\nUnd entsprechend möchte ich ein bisschen besser dastehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:04",
+      "text": "Ich bitte dich das war damals ein Qualität Passwort."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:30:07",
+      "text": "Ja also heute noch.\nWo man da überall mit rein kommt ne wenige Passwörter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:14",
+      "text": "Sehr universell einsetzbar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:30:17",
+      "text": "Universal Passwort.\nJa also das ist echt cool universaler Sport ist sehr gut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:25",
+      "text": "Der ist meine universalpasswort da gibt's ja auch ne also."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:30:28",
+      "text": "Cyberpunk cypherpunks."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:30",
+      "text": "Genau das wollte ich auch gerade erwähnen falls ihr irgendwann mal in einem Hotspot steht der euch nicht reinlassen will und wo irgendwelche wo eine Registrierung erforderlich ist probiert es erstmal mit Cyberpunk cypherpunks also mit PH\nund das könnte gut sein dass ich das immer noch ausreichend rumgesprochen hat beeilen dass man genau\ndamit sich registriert um es anderen Leuten sozusagen leicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:30:54",
+      "text": "Also es ist immer gut einen Notfall Generalschlüssel dabei."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:00",
+      "text": "Frau Dietrich.\nDer Daten Dietrich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:06",
+      "text": "Okay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:09",
+      "text": "Dann gucken wir doch mal auf wie die Leute so gut in das funktioniert hat."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:17",
+      "text": "Hat sehr gut funktioniert denn wie ich ja schon den letzten Sendung angekündigt habe ich habe ja echt gerade laufen mit den Ankündigungen ich höre jetzt langsam auf Ding an zu können weil die Ankündigung war einfach der letzten Sendung schon gesagt,\nnach Kollektion 1.com Kollektion 2 bis 5.\nSie sind auch gekommen bzw Vanja ist schon da sind nur jetzt auch in die Öffentlichkeit in der Öffentlichkeit diskutiert.\nDie sind entsprechend größer.\nUnd dieses Mal war das Hasso-Plattner-Institut schneller als Treuhand der übrigens immer noch mit O,\nund y&t geschrieben wird und nicht eure Passwort Treuhand ist\ndie eurer Passwort Treuhand ist nämlich das Hasso-Plattner-Institut in Potsdam das ebenfalls einen Service anbietet um Adressen zu checken der\nidentity Leak Checker kurz TLC und der hat jetzt.\nDieses Mal die Kollektion zwei bis fünf auch schneller drin gehabt als ever been point wir reden von.\nMilliarden verschiedene Email-Adressen 750 Millionen waren vorher nicht im.\nILC identity Leak Checker und man kann dort eine E-Mail-Adresse,\neingeben und die haben das so gelöst man gib deine E-Mail-Adresse ein und dann schicken die an die E-Mail-Adresse das Ergebnis was ganz nett ist weil,\nsage mal ist man kann natürlich heilbar bin Pound.\nAuch benutzen gegen Leute ja also wenn man jetzt z.b. sieht aha mich interessiert da mein.\nMeine Zielpersonen dann gebe ich das mal gebe ich mal deine E-Mail-Adresse ein bei herber bin Pound und dann steht diese E-Mail-Adresse ist in folgenden liegt vorhanden.\nDann weiß ich schon mal nach welchen liegst ich suchen muss wenn ich die nicht eh schon gesammelt habe er also.\nIch denke das ist nur ein ganz schwacher Abstrich in der B-Note aber es ist trotzdem sehr viel schöner das so zu machen\nwie das HPI dass man einfach dann per E-Mail informiert im Zweifelsfall kommt ihr an diese geliebten Passwort Dateien ohnehin dran\noder kommt ein Angreifer da dran insofern ist das jetzt nicht,\nMission Skritt ich diese Informationen öffentlich auch anzugeben aber schöner ist es auf jeden Fall so wie das HPE das hier gemacht hat ich habe beim HP ihr aber nicht\neine Domain Suche gefunden was das für mich dann leider größtenteils unbrauchbar macht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:03",
+      "text": "Bitte deine E-Mail-Adresse nicht alle auswendig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:05",
+      "text": "Nee die kenne ich nicht alle auswendig die müsst ihr aus dem Passwort safe exportieren.\nKönnte ich auch mal machen aber dann werde ich bin ich der doofen mit mit mit Copy und pace und so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:19",
+      "text": "Das mal ausprobiert mal gucken was die Antwort."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:23",
+      "text": "Also eine Domain de Domain Suche wer schon ist schon ewig her was man haben.\nSo, endlich mal ich hoffe dieses Thema jetzt endlich hinter uns gelassen zu haben aber ich muss aufhören ich freue mich tatsächlich das hat,\nglaube ich jetzt meinen nachhaltig gewirkt also was ich so oft fütter lese anzieht was ich an\nE-Mails bekommen was ich einen Kommentar in der zu der Sendung sehe haben sich wirklich eine größere Menge Leute jetzt dazu entschieden\nMall in ihren Passwörtern aufzuräumen und da ein zeitgemäßes Konzept an den Start zu bringen.\nZwei-Faktor-Authentifizierung nicht vergessen da können wir hoffen.\nDas inzwischen die Führerschaft Logbuch Netzpolitik überdurchschnittlich gut geschützt ist und das doch schon mal schön."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:16",
+      "text": "Komme jetzt zum Zoo in Politik."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:20",
+      "text": "Genau letzte Sendung schon angekündigt ne dass die die die AFD wird geprüft vom bfvs."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:28",
+      "text": "Genau gut so.\nZeit wird's jetzt wo man das wohl offensichtlich nicht länger verzögert bekommt tut sich ein bisschen was nicht im ausreichenden Maße aber immerhin,\nwas passiert es gab halt ein Gutachten auf Basis dessen halt jetzt beschlossen wird das die AFD doch oder wo jetzt geprüft wird ob den sie jetzt auch wirklich beobachtet werden soll.\nDieses Gutachten ist jetzt gelegt worden bei niemand anderem als unseren Freunden von Netzpolitik.\nPunkt Arktis einfach mal komplett instead."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:06",
+      "text": "Ergebnis des Gutachtens ist es wird vorgeschlagen die AFD zu beobachten und jetzt muss man natürlich überlegen was sind die unterschiedlichen,\nalso was ist der Unterschied zwischen prüffall Beobachtung.\nUnd ich glaube dass der Unterschied besteht darin welche Methoden die dann auch zur zur Verfügung haben.\nUm Informationsgewinnung vorzunehmen.\nBei dieser Prüfung mussten sie im Handel sich im Prinzip auf die Internetauftritte öffentliche Äußerungen und so das was man irgendwie was man eben finden kann bei der Beobachtung.\nWären auch geheimdienstliche Mittel zulässig.\nWird Edith wohl finden wir bei netzpolitik.org dieser Flügel wird vom Verfassungsschutz also dieser rechtsextreme Flügel\nden sie tatsächlich der Flügel nennt der wird vom Verfassungsschutz im Zuge des Gutachtens als sogenannter Verdachtsfall deklariert und all beim Verdacht Fall dürfen sie dann auch geheimdienstliche Mittel verwenden ich glaube bei Beobachtung nicht also gibt's prüffall Beobachtungs Fall Verdachtsfall,\ndiese Einstufung ist also nicht irrelevant auch für die Mittel die das Bundesamt für Verfassungsschutz hier nutzen darf interessant finde ich wie,\nworauf dieses dieses Gutachten hauptsächlich basiert also sie haben gesagt sie haben sich primär auch Internetauftritte angeschaut.\nUnd haben die Facebook Profile von etwa 80 Partei funktionieren analysiert,\nund irgendwie AFD junge Alternative Flügel patriotische Plattform und so weiter.\nUnd dieser ich glaube was war das 400 Seiten oder so dieses 400 Seiten Dokument hat 965 Quellenangaben Gala daran darunter allein 379 mal Facebook.\nAlso immer wieder Facebook Facebook Facebook und da,\nschreiben an unsere Kollegen bei netzpolitik.org auch keine im Bundestag vertretene Partei hat so viele Anhänger in den sozialen Netzwerken wie die AFD.\nSie hat dort mehr Fans als CDU und SPD zusammen die Spitzenpolitiker liegen regelmäßig in Rankings ganz vorne\ndie Postings von Partei und funktionieren bekommen viele Interaktionen Facebook ist die kommunikative Hauptschlagader,\ndieser Partei und das ist.\nSag mal vorsichtig nicht unbedingt überraschend dass das bei einer neuen verhältnismäßig neuen Partei der Fall ist nichtsdestotrotz ist das natürlich.\nProblematischer aber.\nIch denke man bei der AFD auch wenn das eine alte Leute Partei ist musste sie trotzdem unter.\nDen Gegebenheiten des 21 jahrhunderts sich Gründen bewerben und so weiter und das ist ihr offenbar entsprechend gelungen.\nWarum finde ich das so ja also es macht da mit so einem größeren Block Block mit CK auf.\nWelche Rolle spielen denn.\nDiese sozialen Netzwerke in der politischen Willensbildung und in der politischen Information.\nUnserer Bürgerinnen.\nUnd Bürger und Wahlberechtigten und so weiter wir haben ja viele verschiedene Phänomene Himmelsphänomen fake-news wollte gesagt wird der werden Unwahrheiten behauptet die verbreiten sich in den sozialen Netzwerken wir haben.\nWas ich für das größere Problem halte die Zielgruppen gerichtete Werbung in diesen sozialen Netzwerken ja dass man also quasi sagen kann ich hätte ich würde gerne\nmännliche Personen weißer Hautfarbe zwischen 25 und 30 ansprechen die sich für\nfolgende YouTube Kanäle interessieren oder die sich für folgende Produkte interessieren\nund den würde ich gerne folgende Werbung zeigen während ich weiblichen.\nDunkelhäutigen Person eine andere Werbung präsentieren möchte und so quasi zielgruppenorientiert werben kann oder auch eben.\nQuasi Anti Verben kann ne also wie wir uns immer wieder erinnern die Wahl 2016 in den USA Wahl 2016.\nJa genau Amtseinführung 2017 also November 2016.\nEntscheidende Strategie der republikanischen Partei war Nichtwähler zu gewinnen sondern dafür zu sorgen dass Hillary Clinton Wähler verliert.\nJa weil also das war einfach die die Bären Strategie und wenn man sich anschaut wie das\nwie die Wahlen in den USA über die Jahre entschieden werden scheinen die Republikaner einfach grundsätzlich über so einem Plateau an Wählerinnen und Wählern zu verfügen.\nWelches relativ gleichbleibend ist Wahlen bei den Demokraten haben anziehen mehr Fluktuation und über diese Fluktuation ob die Leute wählen gehen.\nGewinnen die Republikaner oder verlieren die Republikaner die Wahl."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:08",
+      "text": "Genau da gibt's ja verschiedene Methoden wie man Leute von der Wahl abhalten kann die klassischen sind halt so höhere Prüfsteine um die Leute überhaupt sich erstmal registrieren lassen zu können und dann zusätzliche ID Jakes\nja was soll ich denn aus Dakota haben sie es ja jetzt gerade probiert mit wir brauchen da mal eine richtige Adresse die irgendwo eintragen musst was z.b. die Indianer in den Reservaten so nicht haben etc.pp aber mit face\nbruckwirt natürlichen komplett neues Kapitel aufgeschlagen weil man eben die Leute auch dazu motivieren kann so nach dem Motto hier Hillary Clinton die ist ja was weiß ich so und so wie du es nicht magst und\ndas kann ja nicht deine Wahl sein geh mal besser nicht wählen dass es sozusagen denn die Folge davon lassen,\nhaben Sie wahrscheinlich sowohl nicht explizit gesagt aber darauf ist es halt ausgelegt und beim brexit ist es ja ganz ähnlich genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:04",
+      "text": "Da konntest du zum Beispiel die Republikaner konnten auch sehr schön darauf bauen wie jetzt irgendwie diese eindeutig nicht Fähren,\nVorgehensweisen im Democratic National Council gegenüber Bernie Sanders waren ja die konnten also z.b. eine sinnvolle Strategie war Defenders Anhänger,\nmöglichst wütend und Clinton feindlich zu halten dass die am Ende nicht zur Wahl gehen ja wenn das Anhänger wählt niemals Donald Trump,\nja das wird einfach nicht passieren aber eventuell kriegst du einen seine das Anhänger davon abgehalten Hillary Clinton zu wählen.\nUnd das ist natürlich von der Wahlkampfstrategie eine sehr viel eine sehr viel sinnvollere Herangehensweise zu sagen er wir versuchen jetzt aus dem seine das wlan Trump Fehler zu machen\nist sehr viel weniger tiefer tiefer sprechen als zu sagen wir arbeiten jetzt daran dass die Sender svehla die Wahl boykottieren.\nUnd damit Hillary Clinton stimmen Kosten.\nUns aber nicht lange lange Rede kurzer Sinn soziale Netzwerke haben viele viele Möglichkeiten der Einflussnahme wir diskutieren in der Gesellschaft viele die Frage ist wer,\nrelevant und welche werden sinnvoll erfaßt zunächst einmal würde ich aber gerne darauf auf die Charmeoffensive von Mark Zuckerberg eingehen.\nDer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:33",
+      "text": "Wohlgemerkt du sprichst von charme und nicht von Scham."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:37",
+      "text": "Ich kam mit ech das ist auch ein schöner sein und übrigens."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:45",
+      "text": "Die Charmeoffensive."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:46",
+      "text": "Shazam ICH Scharmützel der.\nHat jetzt also einen offenen Brief geschrieben den REWE als Facebook Post veröffentlicht hat er wurde dann irgendwie von ZEIT-Online veröffentlicht und von.\nVon Wallstreet Schorle und so weiter indem ihr irgendwie so schreibt ja SWR so also vor 15 Jahren ungefähr nächsten Monat wird Facebook 15.\nHätte er ja diese diese dieses Ding gegründet und es sei ihm von,\nschon immer darum gegangen den umfassenden Austausch von Menschen zu ermöglichen der Zweck unseres Dienstes wird besteht darin Menschen zu helfen mit Familie Freunden und Gemeinschaften in Kontakt zu bleiben,\ndas ist gut das war ja vorher nicht möglich ne weißt du noch Tim vor 15 Jahren als wir immer unsere Familien verloren haben\nund auf einmal allein auf der Welt waren und mich mehr mit unseren Freunden kommunizieren konnten weil wir nur Internet hatten und noch nicht Facebook das war dieser schreckliche Zeiten Tim weißt du das noch,\nmeine Güte war das tragische da mussten wir im Internet versuchen Leute zu finden.\nDieter Eck zum Glück haben von Facebook und hat uns hat uns das ermöglicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:04",
+      "text": "Also man muss sagen er hatte auch einen Punkt ja also ich denke schon dass das hat sich nicht das Feature ist was am Anfang die Leute auch wirklich zu Facebook gebracht hat ganz ehrlich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:17",
+      "text": "Also,\nerstmal erzählt dieses Facebook gestartet hatte hat er doch ursprünglich war das doch so ein so ein seine ursprüngliche Idee war doch irgendwie Menschen nach."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:28",
+      "text": "Tindaya."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:30",
+      "text": "So und irgendwie zu sagen er die Leute sind alle so hässlich hier ich baue eine Plattform wo wo ihr sehen könnt wie hässlich die alle sind ja und also das ist wirklich eine.\nSchon eine sehr schöne sehr euphemistische Schilderung dessen was er da vor 15 Jahren für eine Version hatte\nich glaube dass jeder und jeder eine Stimme haben und in der Lage sein sollte sich mit anderen auszutauschen um dieses Ziel eine Plattform für alle umzusetzen braucht man einen Dienst die sich jeder leisten kann der beste Weg besteht darin die Leistung von Facebook kostenfrei anzubieten\ndurch Werbung ist dies möglich tja da bin ich ja jetzt mal.\nDa bin ich mal etwas skeptisch ja denn würde Facebook seine Milliarden Nutzer.\nAuch nur sagen wir mal so was wie 0,01% ihres monatlichen Einkommens Kos\nkosten was ich dann immer noch jede Person leisten könnte dann hätte Facebook immer noch größere Umsätze als es jetzt haben ja also das ist eine nicht unbedingt so\nphilanthropische Einstellung die Facebook da hat und.\nEr erkennt dann immerhin an dass das tracking bei Facebook sehr umfassend ist\nund sagt er das würde aber zu unserer eigenen Sicherheit passiert ja dass die das dass wir quasi auf Facebook\ngetrackt werden und die möglichst alle unsere Schritte die wir tun ob wir jetzt irgendwie auf eine Werbeanzeige reagieren oder nicht dass das alles zu unserer Sicherheit wäre damit Facebook nachher\nund Fake-Profile löschen kann ja das ist doch schön das hat natürlich nichts damit zu tun dass Facebook bei einer Konversion.\nSehr viel mehr Geld bekommt als bei der einfachen Anzeige einer Werbung nein nein das passiert alles nur,\nzu unserem Schutz außerdem was ich auch besonders perfide fand er stellt sich dann da also Freund der klein und mittelständischen.\nUnd sagt mehr als 90 Millionen kleine Unternehmen nutzen Facebook und sie machen.\nGroßen ein Großteil unseres Geschäfts aus der rühmt der sich noch mit dass er quasi die kleinen und mittelständischen Unternehmen abschrift.\nStatt nur für die großen zu arbeiten ja also das auch das finde ich das ist alles sehr sehr verquer zu lesen und eigentlich schwer nachvollziehbar warum leben\nmehr Plattform gegeben wird als er mit seinem scheiß Facebook da hat in dadurch dass man diese offenen Briefe dann auch noch auf Zeit online und dem Original,\nAbdruck immerhin auch mit Entgegnungen Auszeit online ist dann gleichzeitig eine eine Kritik,\ndieses dieses Briefes oder eine Seite mal eine gerade eine Richtigstellung des Briefes erfolgt weil er darauf sagt er würde er wäre bereit das Facebook reguliert würde\nund das ist natürlich totaler Unsinn denn er Facebook kämpft ja seit jeher.\nGegen die eigene Regulierung ja die haben Lobbyisten überall in jedem Gespräch mit der EU-Kommission haben sie immer gesagt wir brauchen keine Regulierung wir brauchen keine Regulierung,\ndenn Regulierung würde Innovation verhindern dass antworten Sie egal ob sie auf Fake News angesprochen werden,\nauf Wahlmanipulation oder auf hate speech jedes Mal saß die Facebook Lobbyist da Sachen bitte bitte nicht regulieren denn wir wir können das mit unserer Innovation.\nSelber in den Griff kriegen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:26",
+      "text": "Ist natürlich auch über die Frage was versteht man unter Regulierung na das eine ist wir schränken euch mal in eurem treiben eine wie z.b. durch die datenschutz-grundverordnung und setzen hier einfach Mindeststandards an dir euch einfach halten muss,\nwomit dann bestimmte Dinge nicht mehr möglich sind aber das ist\nnatürlich die die Form von Regulierung an die wir zuerst denken die andere Form der Regulierung ist das was wir jetzt gerade sehen\nhiermit den Upload filtern ja reguliert mal schön dass das dass unser Treiben hier zum Standard wird wo die anderen sowieso nicht mithalten können also\ndas ist so bisschen doppelsprech in echt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:51:01",
+      "text": "Also diese diese diese andere diese zweite ist fängt die Regulierung das ist ja ich denke,\nauch also ein so ein Grundgesetz des Kapitalismus und Häschen oder ein Naturgesetz ist Kapitalismus ich glaube auch sehr gut beschrieben wenn ich mich nicht täusche in the master Switch von tim,\nwenn ich da jetzt nicht gerade die Bücher verwechseln wo auch gesagt wird im Prinzip wenn.\nWenn Konzerne erstmal eine marktbeherrschende Stellung haben dann freuen die sich Überregulierung,\nweil die Regulierung Markteintrittsbarrieren für Konkurrenten darstellt und letztendlich wenn du einmal marktbeherrschend bist die Regulierung sehr häufig zur Zementierung deiner marktbeherrschenden Stellung beitragen kann\nund das scheint mir inzwischen bei Facebook auch der Fall zu sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:53",
+      "text": "Genau das."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:51:55",
+      "text": "Aber was machen sie da kommen wir jetzt zu,\n2 Maßnahmen von YouTube und Facebook die.\nDie unangenehmen Phänomene der sozialen Netzwerke in irgendeiner Form einschränken sollen dem vorweg,\nich denke das Kernproblem nur um das noch mal zu betonen ist dass Facebooks Einnahmequelle Werbung ist und dass Facebook zielgerichtete Werbung ermöglicht,\ndas und und alle sozialen Netzwerke das ist ja der Grund warum die innerhalb kürzester Zeit.\nDiese die die Werbeetats in den anderen Bereichen so so haben sinken lassen also früher hast du eine Anzeige in der Zeitung geschaltet oder irgendwann Poster plakatiert du hattest keinerlei Möglichkeiten zu messen.\nOb dieses Poster jetzt erfolgreich war wie viel dir das gebracht hat oder nicht mit Google Facebook und sonstigen Anbietern.\nKannst du ganz genau sagen ich möchte nicht nur dass dieses Poster in dem jüngeren Teil der Stadt aufgehängt wird sondern ich möchte dass das Poster nur genau der von mir definierten Zielgruppe angezeigt wird und ich kann nachher ganz genau sehen.\nWie viele von denen ich tatsächlich angesprochen habe man kann also eine sehr evidenzbasierte Werbung schalten.\nZielgruppenorientiert das ist das entscheidende Mann hat jetzt nicht mehr nur eine Zielgruppe sondern potentiell so viele Zielgruppen wie man möchte und dieses dieses Instrument der Macht.\nGibt Facebook an jeden der Farben will und der Geld dafür hat ja und das fanden wir eben ich sag mal von von 12 Jahre von Facebook Existenz total witzig.\nBis dann auf einmal jemand klar wurde ach scheiße das funktioniert ja auch im politischen Bereich.\nUnd dann wurde uns auf einmal Clara das könnt ihr ein Problem sein vorher wenn du es nur die richtigen Schuhe angeboten werden dann fand wir das immer total großartig und an diesen,\nKernproblem von von all diesen kostenlos und Erbe basierten Geschäftsmodellen ändern die Maßnahmen die jetzt von Google und.\nFacebook eingerichtet wurden überhaupt nichts das wollte ich nur schonmal vorher."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:14",
+      "text": "Okay na dann guck mal noch mal was für Maßnahmen hier überhaupt ergriffen wurden fängt an,\nmit YouTube YouTube hat also ist ja ein\nGoogle Konzern hat natürlich ähnliche Probleme mit Fake News Verbreitung und hat jetzt angekündigt\ndass sie Maßnahmen ergreifen wollen gegen virale Fake News\nund auch ganz konkret gegen diese verschwörungs Videos Verschwörungstheorien die in Videos halt immer wieder neu unterfüttert werden nine-eleven und irgendwie die flache Erde und all dieser ganze Mumpitz das sind wohl\nDinge die die Runde machen und wo halt die Algorithmen von YouTube verstärkend wirken.\nWas hat das für ein impact also auf der Homepage von YouTube wenn man sich da ein lockt mit seinem Account dann kriegt man ja so Empfehlung.\nUnd diese Empfehlungen basieren halt oft einfach auf anderen populären Videos die einem vielleicht gefallen\nkönnte denn was ja die Plattform möchte ist dass du dort verweilt dass du dir halt irgendwie Nacht für Nacht dich von Video zu Video durch Tanks weil umso mehr du auf dieser Oberfläche dieser Plattform bist umso mehr Werbung kannst du zur Kenntnis nehmen umso mehr Geld\nverdient YouTube damit Größenordnung 200000000 Videos werden pro Tag von YouTube über die Homepage,\nempfohlen also für alle Mensch zweihundert unterschiedlicher Millionen unterschiedliche Videos mich das richtig deute.\nLeider steckt natürlich ein Algorithmus mal versucht er ist irgendwie rauszufinden und früher war es mal für das rauszufinden was was könnte interessant sein ne Vergleich mit der eigenen history ab was hat mich mir bisher angeschaut was interessiert mich was interessiert mich.\nNicht aber dann eben vor allem was ist denn dann in diesem Segment auch populär und am Anfang haben sich dann halt schnell auf so\ndingl Wiener okay hier das haben sich schon so viele Leute angeschaut das muss ja toll sein was hat sich automatisch alles was schon mal so ein bisschen Verbreitung gefunden hat\nneu beschleunigt hat das wurde dann über die Zeit angepasst und likes und dislikes wurden mit rein gebracht und nicht nur hier ist wie viel views an auf wie viel Verweildauer das ist also nicht nur wie viel Leute haben angefangen da und wir einzuknicken sonnwies Landau,\nsignifikant Zeit mit verbracht all diese ganzen Dinge sind mir eingeschlossen,\nhat aber allerdings nicht unbedingt dazu geführt dass Quatsch nicht weiterhin nach oben gespült wird\nnaja und jetzt möchten sie halt ganz gerne gegen diesen Borderline konnten wie sie das nennen oder\nVideos die einen inmis informieren könnten Vorgehen ja also bitte den der verschwörungs unseren gibt's ja auch echte Probleme hiermit Wunderheilungen und Homöopathie wenn du Krebs hast dann hilft das hier und nimmt dieses Mittelchen etc es gibt aber eine ganze Menge lustigerweise ist\nsie meinen in ihrer Pressemitteilung naja das würde ja auch nur weniger als 1% der Videos betreffen ich mir dachte so wow.\nHit Prospekt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:37",
+      "text": "Einprozenter YouTube-Videos ist mehr als du gucken kannst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:41",
+      "text": "Bei 0,1 oder so würde ich ja schon die braunen aber irgendwie ein Prozent das echt ne ganze Menge.\nKeine Ahnung ob sie jetzt geglaubt haben dass diese Zahl irgendwie,\nbeschwört wirken nicht man erkennt das ja so von der Telekom ja wieso denn unsere unsere Leitungen funktioniert ja auch in 99% der Fälle also wie du."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:02",
+      "text": "Kriegen doch 1000 km."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:05",
+      "text": "Nee also ich werde so 99% Zuverlässigkeit klingt ja erstmal super heiß auf das Date wird Leitung auch 3 Tage ja,\nso schön ist das jetzt nicht also ich hoffe mal der hat sich nur einer vertippt und die Zahl der Videos liegt deutlich niedriger ist aber auf jeden Fall\nZoo.\nJetzt wollen wir also das widiger bewerben sprich es geht jetzt hier nicht um eine Löschung das geht nur darum dass dieser empfehlungs Algorithmus möglichst diesen ganzen Quatsch außen vor lässt\nund ja wie könnte es denn anders sein wie geht man denn jetzt hier ran um diese.\nSchöne neue Welt zu bescheren Mama nimmt hat eine Schienen learning kombiniert mit,\nwieso das so schön denn human evaluators\nalso sie holt Dich da Leute die halt sich im Prinzip diese ganzen Schmutz anschauen müssen das Prinzip\ndas Problem haben sie ja jetzt auch schon und die sollen da sozusagen raus zu diktieren ok ist das Unsinn oder ist das nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:14",
+      "text": "Also es gibt jetzt eine eine Verschwörungstheoretiker."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:17",
+      "text": "Genau also das Problem haben das Problem bei machine learning das hatten wir glaube ich auch schon öfter mal angeschnitten ist ja\nmachine learning ist ist im Prinzip mit eine Taufe Technologie aber du musst trotzdem um diesen Trainings Vorgang erfolgreich zu machen irgendwie eine Wahrheit Quelle haben und\nwelldone uns fährt mal diese Wiese noch mal Thai glaube ich ne von Microsoft dieses.\nTeil was ich auf Twitter gewagt hatte und sich dann quasi von Twitter hat weiter trainieren lassen ja wo das Ding dann innerhalb von 24 Stunden zu sinnvollen hat sie geworden ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:57",
+      "text": "Ja ich glaube das geht also ich ich halte dieses das für eine lösbare Aufgabe,\nalso wenn du in der Inventur innerhalb eines Tages in Twitter bot zum Nazi kriegst dann wirst du ja wohl irgendwie so eine YouTube gucken der irgendwie innerhalb von eines Tages zum 1A dr Axel Stoll werden lassen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:16",
+      "text": "Ja sicher nicht also es kann halt in jede Richtung gehen mit anderen Worten es hängt halt hochgradig davon ab\nwas diese jungen evaluate hast du meinen Indira evaluation also im Prinzip können die auch genau in die andere Richtung marschieren\nbitte also die Truppe von flach Erdland dahin setzt dann ist halt YouTube Stunden und brauchbare."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:36",
+      "text": "Bilder des blauen Planeten Verschwörungstheorie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:42",
+      "text": "Okay jetzt erstmal die sagen okay alles klar YouTube tut mal was aber das andere Loch was wir uns natürlich dann hier potentiell\nzum reinfallen vorbereiten ist natürlich wieder ok Wer erzeugt denn jetzt hier die Wahrheit also welches Expertengremium ist denn jetzt hier quasi zuständig hier Klarheit zu schaffen weil natürlich\nwissen wir alle okay so flache Erde und so und das Mark ist noch relativ,\neinfach abzufangen sein ne aber im Prinzip kann halt dieselbe Technologie und wird diese selbe Technologie auch auf Dinge angewendet werden die in irgendeiner Form politisch\nfragwürdig ist oder politisch unterschiedliche Meinung zum Ausdruck bringt gut das,\nProblem hatten wir von Anfang an das wird dadurch jetzt nicht unbedingt besser muss man aber im Hintergrund Hinterkopf behalten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:01:33",
+      "text": "Also.\nDie Idee das jetzt bei YouTube,\nunbedingt flach erdler oder Trump Leute diese diese Prüfung machen würden halte ich für erstmal jetzt nicht dass das wahrscheinlichste bitte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:57",
+      "text": "Das wollte ja mit das wollte ich damit auch nicht sagen ich wollte nie wollte nur damit sagen man hat jetzt hier quasi ein Gremium was versucht das Richtige zu tun ja nur was definiert halt langfristig.\nDas richtige ja also wer wer kontrolliert die Kontrolle."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:02:15",
+      "text": "Ja also,\nja also ich denke das Entscheidende ist hier.\nDie bei diesen Empfehlungen ist so ein bisschen also ich glaube das ist eine relativ sinnvolle Möglichkeit ist dort anzusetzen ja weil.\nDiese Empfehlungen.\nTeilweise eben in so in so doofe Richtungen gehen ja und es ist schon nicht verkehrt zu sagen ok wenigstens unsere unser\nguck doch mal weiter System ja soll die Leute jetzt nicht auch noch an die Verschwörungstheorien heranführen.\nDer andere Maßnahmen werden wir verbieten die wir machen jetzt hin so oder sonst was und hier gibt es jetzt nur in dem empfehlungs Algorithmus,\njetzt eine Kontrolle Kontrollmöglichkeit unter Kontrolle Option zusagen,\nwenigstens führen wir die Leute jetzt nicht noch an die flacherdler und Infokrieger und sonstige unseriöse Personen ran und ich würde gerne einen. Auf jeden Fall noch machen.\nAlso Verschwörungstheorie ist ist natürlich so ein vorsichtiger so ein so ein problematischer Bereich weil der Verschwörungstheorien sind in der Regel.\nUnsinnige Behauptungen die auch nicht aufgrund der Faktenlage.\nWiderlegt werden können ja die gehen immer also jedes jedes.\nGegenbeispiele jedes Indiz und jeder fakte gegen die Verschwörungstheorie spricht wird dann automatisch als in irgendeiner Form fabriziert gefälscht von der CIA bereitgestellt diskreditiert ja,\nVerschwörungstheoretiker erheben Behauptungen und Anschuldigung ohne einen einzigen.\nEinen einzigen Beleg oder ein einziges belastbares Indiz dafür zu zeigen.\nAußer dass alle anderen belastbaren Indizien genau die andere Richtung zeigen gefälscht seien.\nJa das ist das sind Mechanismen und ein Muster die sind als die sind einfach erkennbar ja also die sind,\ndefinierbar und die sind auch überprüf,\nja und wenn du dir solche Verschwörungstheoretiker anguckst die haben ein spezifisches Repertoire an Argumentationen die sie vortragen\nja das ist immer ewig ja das ist aber im Interesse des Mossad und so weiter die sind und,\nund sonstige Schutzbehauptung sind einfach zu fälschen gewesen ja insofern glaube ich schon dass es.\nDass man das sinnvoll erkennen kann was eine Verschwörungstheorie ist und was nicht und ich halte es auch nicht für so blöd diese Idee mit den mit dem fact checking und so die wir bis jetzt selten sinnvoll realisiert gesehen haben.\nDie aber grundsätzlich schon.\nJa halbwegs funktionieren könnte davon unberührt bleibt aber natürlich der grundsätzliche.\nDie grundsätzliche Anspruch den ich immer der Vollständigkeit halber wiederholen möchte das Filtern von was irgendwie.\nGlaubwürdig und ernsthaft und was Unsinn ist muss in eurem Kopf stattfinden jegliche Form der Bevormundung ist hier grundsätzlich erst einmal abzulehnen das heißt aber nicht.\nDass jegliche Form der Korrektur und der Einschätzung die andere Leute für euch vornehmend abzulehnen falls abzulehnen ist ihr müsst der der der Filter muss in eurem eigenen Kopf sein und dieser Filter muss.\nTrainiert sein und der muss durch Bildung trainiert sein und der muss durch im sei mal im weitesten Sinne wissenschaftliches und.\nAufgeklärtes und journalistisches Denken trainiert und.\nDas ist irgendwie das was leider leider leider in dieser Debatte immer so ein bisschen.\nUnter die Räder kommen und zwar in beiden Seiten ja sie einerseits die Leute die auf so einen Mist\nrein fallen dir die denken denn jede Form der der Kontrolle Hilfe ihren Armen Seelen irgendwie ein bisschen unter die Arme zu greifen.\nBei der informations Einschätzung wird dann sofort als bösartige Zensur Maßnahme gesehen während,\nandererseits natürlich auch tatsächlich das Risiko des ausnutzen es als Zensur Maßnahme besteht insofern natürlich wollen wir solche Filter nicht aber wir wir wollen sie nicht weil wir hoffen dass Sie Filter in euren Köpfen sind.\nUnd leider sind die nicht in jedem Kopf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:12",
+      "text": "Ja also ich wollte jetzt auch nicht sagen dass das von sich aus ne schlechte Idee ist das zu tun ich glaube es bleibt ihnen in der derzeitigen Situation auch relativ wenig übrig als das so zu realisieren\nwie gut so komplexe Dinge wie die Bewertung von Wahrheit sich durch machine learning letzten Endes auch wirklich Appel es bleibt abzuwarten sie wollen das ganze jetzt erstmal in den USA ausprobieren und wenn es denn dann funktioniert weltweit ausdehnen\nich würde mal sagen USA besteht doch gerade der größte Bedarf aber ich hoffe das kommt dann auch schnell nach Britannien."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:07:51",
+      "text": "Okay komm wir zur neu eingeführten Maßnahme bei Whatsapp ein Unternehmen der Facebook Gruppe.\nDie mussten sich dem Phänomen,\nIndien ist zu letzter Zeit regelmäßig zu lynchmorde kam ja da wurden.\nFake News über WhatsApp Gruppen verbreitet und zwar dass es sich bei bestimmten Personen irgendwie um Kinder Kindesentführer,\nhandeln würde und dann wurden ihr die Videos von diesem Menschen verbreitet über whatsapp,\nund einige der betroffenen Personen wurden sogar zu Tode geprügelt 420,\nlynchmorde soll es im vergangenen Jahr in Indien gegeben haben aufgrund,\ndieses Phänomens Indien hilflos hat dann irgendwie Werbung geschaltet und irgendwie Menschen versucht darauf aufmerksam zu machen dass Sie bitte nicht jeden Scheiß glauben dass der der ihn\nDänin irgendjemand über WhatsApp geschickt hat das Problem in diesem Fall bei Whatsapp war das.\nDie Kommunikation ja nicht öffentlich stattfindet und WhatsApp sogar verschlüsselt ist so dass die Inhalte nicht ohne weiteres einsehbar waren das heißt wir hatten hier so ein virales Phänomen was,\nfernab der Öffentlichkeit in eben privaten\nGruppen stattfand und sogar hier sich einer inhaltlichen Kontrolle zwecks Analyse oder Eindämmung oder sonstigen entzogen hat was.\nGrundsätzlich gut ist\nja es ist gut dass es solche Kommunikationsmittel gibt es ist natürlich sehr schlecht wenn sich mit diesem Kommunikationsmitteln Methoden\noder oder Situationen ergeben bei denen Menschen zu Tode kommen Grundproblem ist hier bleibt bleibe ich bei die.\nMangelnde Kompetenz der Menschen im Umgang mit solchen.\nBeschuldigungen aber wir müssen.\nAuch einsehen dass das immer wieder der Fall ist gerade auch in den USA wieder sehr schön.\nWann war das letzte woche dieser Fall zwischen diesen Schülern und den.\nNative Americans und dieser islamischen radikalen Gruppe\nam Washington Memorial war das glaube ich dir dann irgendwie nach und nach aus verschiedenen Kameraperspektiven gezeigt wurde und sich daneben auch unterschiedliche Bilder ergeben haben ja und alle sahen immer\nzunächst einmal ihre eigene Weltanschauung bestätigt ja und das ist natürlich ein grundsätzlicher Effekt.\nDer Psyche der Menschen mit dem BMI umgehen müssen okay was hat face was hat WhatsApp gemacht denn gesagt na ja um derartiges viral gehen und irgendeiner Form einzuschränken\nin seiner exponentialität begrenzen wir.\nDie Anzahl an Personen an die man eine Nachricht weiterleiten kann von vormals 20 auf 5 Personen.\nJa das war also diese diese WhatsApp Dinger waren also immer so leite dieses dieses Video oder diesen Aufruf an an alle weiter und dann haben die Leute konnten die Leute aufheben bis zu 20.\nPersonen weiterleiten und jetzt sind es halten bis zu 5 Personen ich bin mal gespannt ob das jetzt.\nEine eine sinnvolle Einschränkungen dieses Phänomens zur Folge hat aber vielleicht ist es grundsätzlich nicht blöd ein Messenger der ja einer.\nGezielten Kommunikation in vorher definierten Gruppen oder zwischen Individuen.\nDienen soll und dafür konzeptioniert wurde da in irgendeiner Form.\nSag ich mal die Funktion der exponentiellen Weiterleitung und Verbreitung von Informationen irgendwie einzuschränken.\nJa also diese diese Funktion nicht unbedingt prominent in den Messenger zu haben halte ich grundsätzlich auch für gut weil das.\nDiese diese messenger dann halt auch nutzbar hält ja also wenn ich wenn ich irgendwie öffentlich relevante Informationen haben will dann kann ich mir die irgendwie offen Blog\nbei Facebook oder auf Twitter anschauen und wenn ich in einer Kleingruppe eine Abstimmung machen möchte dann kann ich das eben mit einem messenger tun und ich halte es sinnvoll.\nDen Messenger Messenger sein zu lassen und die Öffentlichkeiten öffnen gleichzeitig glaube ich aber nicht dass das Phänomen.\nSich dadurch eindämmen lässt ob jetzt im ob der Exponent jetzt ob wir ob jetzt 20 Personen oder fünf Personen informieren kannst das sollte ehrlich gesagt dass das Phänomen im Zweifelsfall nicht nicht sinnvoll einschränken,\nkönnen glaube ich also kann ich mir nicht vorstellen dass."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:16",
+      "text": "Weil sie frage ich mich auch gerade über nachgedacht klar kann man sich sagen ok wenn dann die fünf auch wieder weiterleiten RC aber du,\neinerseits degradiert du natürlich dieses Mittel von ich sage jetzt mal ganz vielen Bescheid Zurich\nmuss mir schon mehr darüber Gedanken machen welche fünf ich jetzt eigentlich nehme das so dass eine was soll kleinen Faktor spielen könnte und damit es daneben.\nÜberhaupt noch dieselbe Zahl an Menschen erreichen müssen halt noch mehr Leute auf diese Entscheidung treffen es weiterzureichen das heißt da fallen halt unter Umständen noch mal ein paar ebenen Weg aber das wird man am Ende nur sehen können wenn man halt diese,\nFunktion qualitativ auswerten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:58",
+      "text": "Und wenn ich das richtig verstehe ist das ein Filter der in der App ist ja also dass der kommt erst nach Update und ich glaube der bläst sich im Zweifelsfall so wieder beschrieben ist sehr einfach umgehen indem ich einfach die Nachricht kopiere und in irgend eine WhatsApp Gruppe mit mit 40 EmpfängerInnen Piste\nja also das ist wirklich nur die die Weiterleitungsfunktion von Whatsapp selber\ndie sie wohl offenbar hatten ja ich kann also hier redet der Blinde von der Farbe weil ich habe gar keine Kotze."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:30",
+      "text": "Du hast keine WhatsApp beruflich zu deine Nachrichten heller."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:34",
+      "text": "Ich gucke mir die an ich gehe da hin und guck aber,\ndiese ganzen diese ganzen aber das ist auch irgendwie ein Phänomen hier diesen Newsletter und so die ist jetzt wieder gibt ne und und WhatsApp Gruppen die die diese,\ndie Diesel Outlets jetzt aufmachen kenne ich alles nicht ist auch will ich auch nicht haben tschuldigung ich gehe noch ich bin noch ich ich kaufe mir zwar keine Zeitung aus Papier aber ich gehe immer noch hin und will nicht dass mein Handy Piep.\nNaja komm jetzt zum dritten Themenbereich unschöne Phänomene in sozialen Netzwerken.\nVieldiskutiert der Einfluss von Bots.\nWer hier schon länger mithört weiß dass ich dazu ja auch im Bundestag glaube ich ein oder zweimal zur Anhörung war und dann bisschen was zu gesagt habe die.\nÄußerung über die oder die Einschätzungen wie negativ Ports sind reichen von ein vernachlässigbares Phänomen bis Untergang jeglicher Zivilisation.\nUntergang jeglicher Zivilisation ist öffentlichkeitswirksam besser zu vermarkten das heißt da hatten wir entsprechende Diskussionen drüber wunderschön.\nDie vorletztes Jahr der Michael Krey mit seinem Vortrag.\nAuf dem 34 C3 auseinandergenommen der ja auch übrigens ne mit Dank,\ninsbesondere an Euch liebe Hörerinnen und Hörer endet weil ihr diese Forschung ermöglicht habt durch das Spenden eurer Twitter.\nZugriff Sepia Account also der Vortrag noch mal zu dem Thema sehr.\nAns Herz gelegt jetzt gibt's eine wunderschöne Studie zum Thema Fake News wir haben auch hier war ja die.\nDas dass die an die die die Sorge die an die Wand gemalt wurde ja es werden Unwahrheiten verbreitet.\nUnd das ist ein Fan ein einen eine Bedrohung der Demokratie weil dann bricht uns eine Grundannahme Weg nämlich das.\nDie Menschen irgendwie faktenbasiert ihre Meinung.\nBilden ja und oder ihre Interessen bilden und die daneben der politischen Umsetzung zu führen in Form von,\npolitischen Meinung die sie vertreten und politischen Parteien die sie wählen und jetzt gibt es also hier dass das Phänomen das.\nUnwahrheiten behauptet werden und in den sozialen Netzwerken Verbreitung finden.\nFrage ist wie groß ist dieses Phänomen.\nUnd zweitens wie wirksam ist dieses Phänomen ist es tatsächlich so dass irgendein.\nAlter Griesgram auf Facebook postet heute haben sie wieder auf dem Dorfplatz in Hammel geschächtet und danach 20 Frauen.\nDann lesen das Leute und saniert reichts AFD ja oder sind selbst AFD Leserin Wählerinnen und Wähler vielleicht ein bisschen.\nPizza in der Einordnung von ihren Informationen also vor allem die Frage lassen sich die Leute auch durch.\nDiese Fake News manipulieren und manipulieren heißt in dem Fall dass sie danach etwas anderes denken oder etwas anderes tun als sie es vor dem Konsum dieser fake-news getan haben denn nur dann wäre das ja wirklich ein.\nIn dem Sinne Manu manipulatives Phänomen nun diese Studie erschienen in silence,\noder 11 erscheint läuft nächste Woche 11 oder diese Woche 11 die sind folgendermaßen vorgegangen dir gegangen die haben sich 16.000 Twitter Konten ausgewählt die zwischen August und Dezember 2016 aktiv an,\nalso genau um den Zeitbereich US-Wahl.\nDie glaube ich am 9. September am 9. November war ne ja die haben dann die Nutzernamen.\nUnd die tatsächlichen Namen der Besitzer mit dem Wahlregister abgeglichen um sicherzustellen dass ich dabei auch um Personen handelt also hier umgekehrt nicht eine Studie an Bord sein eine Studie an Personen.\nUnd sie wollten wissen wie viele erfundene Geschichten diese Person in ihrem Newsfeed eingeblendet bekommen haben.\nWie sie überhaupt diese Nachrichten konsumieren und welchen gesellschaftlichen Gruppen sie angehört haben,\nna und wollten also wissen okay haben die Fake News bekommen und wenn ja wie sind Sie damit umgegangen Ergebnis nur 1,12 bis 1,\n24 Prozent der Tweets zu politischen Themen waren der Untersuchung zufolge überhaupt falschnachrichten ja also falschnachrichten sind ungefähr 1% dessen was die Leute an Tweets bekommen.\nUnd während des letzten Kampagnen Monats hätten die Wählerinnen in diesem twitter feed demnach zwischen 185 und 224 potenziell erfundene Geschichten sehen können,\nim Zweifelsfall haben wir aber nicht den gesamten twitter feed gelesen sondern nur einen Teil davon so dass es im Schnitt vielleicht\n10 Uhr gewesen sein weil die durchschnittliche Person nur 5% der Tweets überhaupt wahrnimmt.\nAll das übrigens zitiert von einem Artikel auf Zeit online von Lisa Hegemann die diese Studie.\nSehr gut zusammengefasst hat und dann stellt sich also heraus bei extrem rechts eingestellten Personen.\nFührten 72% der links auf traditionelle Nachrichtenseiten bei extrem Links eingestellten waren es 86% der geteilten ORF.\nAlso.\nAn dem politischen an den beiden extrem Seiten des politischen Spektrums ist immer noch drei Viertel der Nachrichten bei den traditionellen Medienhäusern traditionell deshalb hier relevant weil die zur Vereinfachung und zur,\nKategorisierung ihre Plattform eingeteilt haben in ok Journalist isches Outlet das entsprechenden.\nHochqualitativen Kontrollen unterliegt dann,\njournalistische Sound etwas im Prinzip kaputte qualitative Kontrollen hat und gerne auch mal Unsinn verbreitet da haben sie z.b. infowars eingeordnet und dann eben noch das Outlet was einfach grundsätzlich,\noffenbar absichtlich und wieder bessere wider besseren Wissens Agyness in die Welt setzt also diese drei Kategorisierung hatten sie.\nDas heißt eine relativ großzügige Einsortierung wo sich infowars nur als Outlet mit mit defizitären fact-checking kategorisiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:04",
+      "text": "Finde dann die anderen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:07",
+      "text": "So und.\nDann haben sie gesagt ob die Leute das jetzt auch noch selbst verbreitet haben also genau dieser virale Effekt ja also nicht nur haben wir es bekommen sondern sie geben es weiter.\nJa das hängt vor allem und da sehe ich mich in allen bestätigt was ich bisher gesagt habe von der politischen Einstellung ab die die Personen schon vorher hatten\nweniger als 5% der Menschen links oder in der Mitte des politischen Spektrums verbreiteten fake-news weiter bei den rechts oder extrem rechts eingestellten Personen waren es 11 % bzw 21%\nwas heißt das unterm Strich wir neigen dazu unsere Position und Einstellungen festzuhalten.\nDas heist ob jemand Fake News verbreitet.\nSagt primär etwas über die Einstellung dieser Person aus und hat viel weniger Einfluss darauf ob nun andere Personen.\nAufgrund auf Basis dieser Fake News nur sagen ich ändere meine Meinung\nund das erklärt auch wiederum lange Schluss dieses diese enthemmte Kommunikation der AFD Vertreter auf Facebook weil sie da eben unter sich.\nNoch mal das auch noch mal sagen dürfen na das wird man ja wohl noch sagen dürfen Gruppen auf Facebook und.\nDas ist auch relativ kongruent mit allen anderen Forschungsergebnissen von Jahrzehnten Psychologie das ist sehr sehr viel schwieriger ist und sehr sehr viel mehr braucht als vielleicht ein Tweet oder eine Fake News um Menschen.\nIn ihren politischen Einstellungen.\nOder auch nicht um den politischen Einstellungen zu ändern also eine Meinung einer Person zu ändern ist sehr.\nSchwierig die Meinung einer Person zu bestätigen ist sehr einfach so heißt das vollständige Entwarnung für Fake News,\nnein nicht unbedingt es ist immernoch alarmierend dass wir Bevölkerungsgruppen haben die inzwischen soweit sind dass sie jeden Stoß glauben.\nIch habe das mal habe ich auch hier in der Sendung schon öfter mal zitiert ja die,\ndie haben ja auch Anlass dazu egal in welchem Land gegenüber der politischen Klasse wenn man da mal so einen Fazit über sag mir mein Verlauf von 10 Jahren zieht durch auszusagen.\nDie Behauptung dass die etwas Unwahres sagen oder dass die ihre Versprechen im Zweifelsfalle nicht halten dafür gibt es eine empirische Datenbasis.\nUnd deswegen glaube ich den nicht und ich glaube jetzt sogar ihr ne dass die Regierung LSD vom Himmel.\nSchießt mit Flugzeugen als dass ich noch irgendetwas glaube was sagen aber die SPD zur Rettung des Sozialstaates sagt ja die haben ja auch ein Anlass,\nso zu denken und das denke ich ist das hier viel größere und viel viel besorgniserregend darauf Phänomen nicht unbedingt,\nmehr Verbreitung finden und dass Leute das Sehen und sein oh mein Gott jetzt werde ich aber AFD weil ne Hammel geschächtet oder was auch immer ja sondern,\ndass wir inzwischen Bevölkerungsgruppen haben die soweit sind dass sie zur Bestätigung ihrer Einstellung so etwas heranziehen das noch nicht mal mehr in Frage stellen.\nUnd und sich da drin auch noch bestätigt sehen und daneben dieses Phänomen haben down the rabbit hole ja das heißt.\nEigentlich besorgniserregende Phänomen ist dass wir Menschen haben die so ein Scheiß glauben und das ist enorm schwer wird.\nMit mit solch mal Argumentationen Fakten und sonstigen diese Leute irgendwie noch mal in die Nähe der Spur zu bringen.\nAlso so würde ich zumindest diese diese Studie interpretieren das Problem ist nicht dass das,\nimmer das Fake News Verbreitung finden sondern das Fake News auf einen Nährboden fallen bei bestimmten Leuten die inzwischen offenbar leider so weit von der.\nVon welchem einer rationalen Realität entfernen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:35",
+      "text": "Aber es passt natürlich auch trotzdem mit dem was wir vorhin gesagt haben noch zusammen dass man sehr wohl eben selbst wenn jetzt nicht weiter geteilt wird,\nnur oder die Meinung wird dich geändert wird es zumindest Leute sobald beeinflussen kann dass sie sagen können ok."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:56",
+      "text": "Also es kann es kann viel passieren mit diesen Leuten und wir werden uns Gedanken darüber machen wie wir die irgendwie wieder hin über die irgendwie wieder."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:05",
+      "text": "Gerade gerückt bekommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:06",
+      "text": "Wie war die gerade gerückt bekommen ja und gerade gerückt heißt hier erstmal nur.\nBevor das jetzt irgendwie hier als Gehirnwäsche Motivation raus gelegt wird gerade rücken heißt erstmal nur dass sie bitte.\nAuf Basis von Tatsachen und Fakten und einer sinnvollen Einschätzung und Gewichtung dieser Tatsachen ihren Meinungsbildungsprozess durchführen,\ndie können am Ende immer noch dabei langen dass sie dann heißt denn dann eben FDP wählen ja\noder oder wen auch immer,\naber wenigstens auf Basis und unter Berücksichtigung der Fakten die machen den ganzen Quatsch ja nicht umsonst mit der Wissenschaft mit der Erforschung und mit dem Journalismus der relativ hohe\nQualitätsstandards hat und stets bemüht ist die auch einzuhalten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:06",
+      "text": "Gut, machen wir weiter."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:28:13",
+      "text": "Wird Zeit für ein bisschen mehr Dystopia."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:15",
+      "text": "Ja ich find auch die Sendung ist viel zu da halt habe ich schon zu diesem Zeitpunkt viel zu positiv."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:28:23",
+      "text": "Kommt noch kommt noch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:24",
+      "text": "Gerechter kommt auch was guck mal sag mal das Gesundheitswesen an da ist doch bestimmt alles in Ordnung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:28:31",
+      "text": "Im Gesundheitswesen ist alles in Ordnung ja wie jeder weiß der Krankenkassenbeiträge Zoder in der Privatversicherung ist oder man krank daher.\nAlso was hat sich was hat sich was hat uns die Digitalisierung im Gesundheitswesen gebracht da was haben wir jetzt so schöne Sachen die haben gehen Datenbanken\nwir haben Gesundheits-App und Gesundheits-App und wir haben,\nIOT bei medizinal Geräten Assistent für Sachen die wir immer schon haben wollen wo man sich fragt wie wir sonst wie wir froh erst gesund wurden ohne sowas ne\nwas haben wir dadurch für schöne neue Phänomene.\nMalware in Krankenhäusern ja schön dieses war noch auf wann war das denn 20/16 ne diese schönen Ransomware Infektionen in Krankenhäusern wo dann.\nH&M in Neuss war dieses eine Krankenhaus in Deutschland und gibt ganz glaube ich zwei drei prominente Fälle in Deutschland.\nDann gabs noch diese wannacry Fall in Großbritannien wo einfach mal ich glaube 11 Krankenhäuser auf einen Schlag.\nWieder mit Stift und Papier gearbeitet haben und keinen Zugriff auf Ihre auf die Patientendaten hatten wo also,\nmein relativ nah an bedroht lebensbedrohlichen Situationen für Menschenleben war,\ndas ist also jetzt eine an der soll ich mal dein schönes ein eines der Phänomene der Digitalisierung Gesundheitswesen dann.\nWie wir hier in Logbuch Netzpolitik ausführlich gesprochen haben Martin tschirsich hat sich die gesundheits-apps angeschaut und eigentlich bei jeder katastrophale Sicherheitslücken gefunden.\nNoch dazu was der denke ich sehr viel spannendere oder der ebenso spannende Teil seines Vortrags ist.\nDie Tatsache dass diese Unternehmen das einpreisen und quasi schon Einschätzung haben wie viele Daten sieht pro.\nZeiteinheit verlieren welche Schäden\nihnen dadurch entstehen durch Wiedergutmachung Strafzahlung und so weiter dass es quasi alles schon Teil des Geschäftsmodells ist und das irgendwann 2050 sowieso alle Gesundheitsdaten öffentlich sind wenn die so weitermachen.\nUnd dann jetzt kürzlich.\nDas Promi doxing Phänomen was jetzt mal wieder allen gezeigt hat ach so scheiße Daten können öffentlich werden was machen wir denn dann mit Gesundheitsdaten.\nWenn das passiert also das ist ja jetzt dass das neue ja und jetzt jetzt kommen wir kombinieren wir mal hier unseren,\nunsere doxing Sparten hier ne wenn die in der ganze in zehn Jahren gemacht hätten dann wäre auf jeden Fall bei dieser Anzahl Personen.\nVon der ein oder anderen Person auch eine Gesundheitsakte dabei gewesen einfach also das einfach Gesetz der großen Zahlen wenn du so viele Leute Hack so viele Daten sammelt dann kommst du auch.\nWenn dann eben diese gesundheits-apps entsprechende Verbreitung gefunden haben an solche Gesundheitsdaten mit im Zweifelsfall Passwort 123.\nUnd Darm sich jetzt natürlich die Öffentlichkeit hat sich darüber Gedanken gemacht und vor allem natürlich auch die Chefs der unions Abgeordneten im Bundestag EU Parlament und Länderparlamenten die jetzt sagen aha.\nWenn dieses Risiko besteht wenn unsere Krankenhäuser abgeschossen werden wenn unsere persönlichen Daten hier veröffentlicht werden wenn der tschirsich sagt ist alles unsicher ja dann was ist die notwendige Konsequenz daraus,\nganz klar wir brauchen einen Notfallplan.\nUm innerhalb kurzer Zeit auf den Abfluss sensibler Daten digitale Wirtschaftsspionage oder Sabotage reagieren zu können mit anderen Worten hack back.\nUnd wir brauchen härtere Strafen denn wir wissen härtere Strafen haben schon immer.\nVerhindert ja und Sicherheitslücken verschwinden auch durch härtere Strafen Straftatbestände die verschwinden tatsächlich dadurch weil der Martin ja jetzt schon immer wieder.\nMit irgendwelchen\nrechtlichen Auseinandersetzung nicht vor Gericht aber irgendwelche Anwälte die dann mal drohen oder hier irgendwelche Krisenmanager die auch mal persönlich anrufen und drohen zu tun hat das heißt Sicherheitsforschung findet immer in dieser rechtlichen Grauzone Stadt und klar wenn man da die Handschellen anzieht\ndann werden Sicherheitslücken eben nur noch von Kriminellen ausgenutzt und nicht von interessierten Patienten.\nDie sich hier um den Schutz unserer Daten bemühen also,\neine maximal dumme Forderung die mit dem Problem überhaupt nichts zu tun hat nämlich die Unsicherheit in diesem Bereich entsprechend gibt es demgegenüber eine Gruppe von IP Experten,\nDatenschutzbeauftragten die einen offenen Brief an,\ndenke es ist immer schwierig das da stolpert die Zunge wenn man kurz noch mal denkt will kann doch gar nicht sein Gesundheitsminister Jens Spahn ich habe extra noch mal geguckt nichts Gesundheitsminister Jens Spahn ist Gesundheitszeugnis."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:33:51",
+      "text": "Na ja sei froh.\nDann sei froh dass er nicht was anderes ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:33:58",
+      "text": "Ich finde das wäre super Bäcker da würde ich morgens mein Bäcker in meine Brötchen holen bei mir einsparen hätte ich nichts gegen hier\ndiese diese diese Etiketten und Datenschutzbeauftragten wollen nach den jüngsten Vorkommnissen weiterführende Pläne gibt's natürlich auch noch ne denn als nächstes in der Digitalisierung kommt natürlich dann künstliche Intelligenz und so weiter.\nSie zeigen also hier die Risiken auf und sagen die Begeisterung über die Technik trübt den Beteiligten offenbar den Blick auf die Risiken,\nwir müssen Flächen deckend systematisch und proaktiv investieren in Sicherheitskonzepte.\nNatürlich auch notfalls Konzepte physikalischen Einbruchschutz elektronische Signaturen kryptografische Verschlüsselung identity Access Management und Security incident.\nEms emergency management systems rollenspezifische Bildung für alle herstellerunabhängige und nach Möglichkeit dynamische Gütesiegel für die für die Cloud sowie Produkte Dienstleistung Apps.\nPenetrationstest also gefordert wird nichts anderes als eine sinnvolle rangeht.\nDie diese Schutzmechanismen stärken soll denn die beste Verteidigung gegen Angriffe ist VAT ID.\nUnd nicht Gegenangriff und nicht härtere Strafen oder irgendwelcher Stoß sondern die Investition in Sicherheitskonzepte eine Regulierung die vernünftige Sicherheitskonzepte mandatiert.\nUnd die alles andere insbesondere den leichtfertigen Umgang mit unseren Daten wir irgendwie bei CGM life und bei Vivi und wie sie alle heißen einfach nachweisbar.\nUnd es ist nicht nachvollziehbar dass.\nDas auf diese Weise politisch so leichtfertig mit diesem riesigen umgegangen wird und so inkompetent mit diesem riesigen umgegangen wird und ich bin sehr froh dass ich diesen Thema jetzt.\nDie Ärztezeitung angeschlossen hat die dieses Thema relativ groß aufgehängt hat in ihrer aktuellen.\nAusgabe der diesen offenen Brief gefeatured hat verschiedene Interviews mit mit Martin in diesem Bereich geführt hat und hoffentlich hoffentlich hoffentlich ihre Interessengruppe der Mediziner.\nJetzt auch mit dem mit der entsperren Inkompetenz in entsprechenden Forderungen aus startet hier für eine Sicherheit der Patienten und Patientinnen zu sorgen das wäre sehr schön denn.\nAlso es ist ich finde es katastrophal wie nach solchen also nach Jahren.\nDerartiger Phänomene.\nAusfälle Ausfall kritischer Infrastrukturen Ransomware Angriff auf ein Krankenhaus und das Krankenhaus kommt dann zum Erliegen das ist ein Ausfall kritischer Infrastruktur das ist eines der größten Bedrohungsszenarien die wir überhaupt,\nAltstadt haben und es ist katastrophal dass nachdem wir jahrelang darüber gesprochen haben\npolitisch Verantwortlichen Leuten nichts besseres einfällt als einen naheliegend und offenkundig unsinnige\nnicht das Problem betreffende Lösung dass da müssen wir was gegen Unternehmen.\nUnd es wäre schön oder ich begrüße hier dass die dass die Ärztinnen und Ärzte als Interessengruppe sich dieses Themas und ihrer Verantwortung annehmen und ich hoffe dass die A.\nIhrem das was in ihrer Macht steht,\ntun um hierfür eine Regulierung zu arbeiten die entsprechende Sicherheiten vorsieht zweitens auch das in ihrer Macht stehende tun,\nihre Patienten und Patienten vor dem vor dem vor der Nutzung von solchen.\nSetz setz ins Gesicht schussanlagen wie dieser vivy-app zu zu bewahren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:16",
+      "text": "Ja ist immer ganz interessant mit der verbotspartei CDU die immer so ein bisschen den Trend dazu halt auch hat sowas denn mal auch so\nprimär glaube ich auch als Einschränkung der wirtschaftlichen Entwicklung zu deuten was die Mutti ja wie sollen denn unsere Unternehmen hier ordentlich auf diesem Markt mithalten wenn wir ihn da so die Daumenschrauben anziehen und jetzt müssen die sich auch noch um so Sachen wie Sicherheit kümmern,\nsehen aber einfach nicht das ein Prinzip,\neigentlich die beste Wirtschaftsförderung überhaupt wäre an dieser Stelle mal die Anforderung nach oben zu schrauben ja natürlich ist das dann,\naufwendiger entsprechende Produkte im Markt zu tragen natürlich ist es dann aufwendiger diese durchzuführen und natürlich auch teurer\naber man erreicht damit dann auch ein internationalen Werte Status wo man mithalten kann das wird wenn man dieselbe Logik jetzt auf den Maschinenbau an\nsitzen würde dann würde man halt sagen na ja\nist doch egal wenn die Maschinen nicht rund laufen das ist ja billiger herzustellen was werfen wir denn jetzt hier die ganze Zeit den Herstellern Knüppel zwischen die Beine dass man am Ende dadurch dass man das so nie gemacht hat\nmit Qualität überzeugt und daneben auch die entsprechende internationale Anerkennung bekommt das müsse dieser Vergleich müsste doch eigentlich jeden sofort gewahr werden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:39:30",
+      "text": "Genau der müsste jeden sofort gewahr werden was was hören wir ansonsten was hören wir stattdessen in der Öffentlichkeit CDU irgendwas das ist unsicher da muss man halt verbieten das auszunutzen und diese diese brems-und verbotskultur nimmt dann.\nDa steigt dann jemand die Christian Lindner FDP natürlich dann drauf und sag digital first Bedenken second was.\nQuasi der orthogonal also auf der Ebene der andere komplett dämlichste Vorschlag ist,\nbeide sind komplett dumm weil sie am eigentlichen an der eigentlichen Herausforderung Vorbeigehen ja und es ist schwierig zu verstehen warum nicht gesagt wird natürlich wollen wir,\nvon mir aus auch Digitalisierung im Gesundheitswesen aber wir machen die von vornherein nur.\nSo wie es sich gehört und wir setzen dafür ganz klare dem dem dem dem Jahr dass wir schreiben,\nangemessene Sicherheitskonzepte Verschlüsselungs Konzepte datenschutzkonzepte Daten löschungskonzept für Daten verteilungs Konzepte und so weiter voraus statt jetzt irgendwelche Startups.\nDaran zu lassen deren der nachvollziehbar und bekanntes Geschäftsmodell\nimmer nur darin besteht ein möglichst schnell möglichst viele Kundinnen und Kunden zu binden um möglichst schnell den scheißladen gewinnbringend zu verkaufen\nbevor jemand anderes auffällt dass sie die Sandburg auf Sand gebaut war.\nJa und das ist es ist leider leider.\nSehr sehr traurig und man könnte so schöne man könnte so schöne Dinge bauen mit der mit den informations-technologien die wir heute schon haben denn eines darf man nicht vergessen.\nWas der Martin auf Zeit sind immer Verstöße gegen,\nschon bekannte Regeln der Informationssicherheit und der technischen Umsetzung von Informationssicherheit das sind Fehler,\nVerstöße gegen das was schon gesichertes Wissen und best practice der Menschheit ist.\nJa also zum Heulen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:41:52",
+      "text": "Ja das muss man."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:41:55",
+      "text": "Let's move on das citizen Lab wird bei uns regelmäßig.\nBesprochen und zwar handelt es sich dabei um die Forschungsgruppe um Ronald Deibert an der Mank School.\nDie an der Universität von Toronto in\nKanada angebunden ist und das citizen Lab ist da eine also eine kleine Forschungsgruppe dessen Lehrstuhl die sich spezifisch mit Angriffen.\nAuf Menschenrechtsgruppen auseinandersetzen Menschenrechtler Menschenrechtsgruppen und zwar spezifisch natürlich Chartsoftware Kampagnen die haben.\nIm Rahmen ihrer Forschung viele Staatstrojaner Kampagnen entdeckt.\nÖffentlich gemacht insbesondere haben Sie diese Pegasus Malware des unter,\nnSo Group in verschiedenen Fällen gefunden sie haben Angriffe auf Vertreter von Amnesty International,\nöffentlich gemacht sie haben jetzt kürzlich bei dem Mord des.\nJournalisten khashoggi den Zusammenhang zur Chartsoftware der NSA Gruppe,\nhergestellt und man kann hier wirklich sagen da sind enorm.\nGute Leute tätig die an einer enorm guten Sache arbeiten nämlich der Erforschung und Verhinderung von Einsatz von Schadsoftware gegen.\nZu Verletzung von Menschenrechten und.\nAlso Journalisten in Mexiko Oppositionelle in Panama khashoggi und so weiter in all diesen Fällen fand man Nebentätigkeit der nSo Group eines der führenden Hersteller für.\nStaatstrojaner gegen iOS also zur Infektion von iPhones nicht nur aber auch und.\nDie melden die Herz das ist quasi so eine Art gezielte Kampagne gegen Mitarbeiterinnen und Mitarbeiter der des citizen Lab gab wo,\nsie angesprochen wurden sie über linkedin\nob sie denn nicht irgendwie an einem Job interessiert werden ne interessante ist Forschungsteam das war immer so das Jobangebot waren.\nImmer den den Fähigkeiten und Interessen der jeweiligen Person sehr.\nSehr gut angepasst und hat sich also der erste Mitarbeiter mit einem Menschen da getroffen der dann irgendwie über Geld reden wollte und dann irgendwann das Gespräch dahin lenkte.\nUnd die NSA und ob denn die betroffene Person Israel hasse oder und ob sie aus\nAntisemitismus immer wieder die nSo Group angreifen würde der der ist dann der Betroffene ist dann halt relativ\nmit einem unguten Gefühl nach Hause gegangen hat seine anderen Kolleginnen und Kollegen darüber informiert und als dann der nächste von denen angesprochen wurde sind die etwas besser vorbereitet zu diesem Treffen.\nDenn sie haben erst bei der RV Seattle press bescheid gesagt und dann sind sie ja zu dem Treffen gegangen wo dann also beide mit Kamera verkabelt waren also einmal der Ansprechpartner Schienen offenbaren kamera irgendwie im im.\nIm Hemd stecken zu haben so ein so ein Detektiv Kuli weiße mit einer kleinen Kamera drin.\nDer Typ vom citizen Lab hat halt irgendwie mehrere gopros irgendwo versteckt\nbeide hatten jemals noch mal jemand anderen dasitzen SV Seattle press am anderen Tisch derjenige der ihn der interviewt hat hatte aber auch offenbar noch irgendwie einen ein Mitwisser am anderen Tisch sitzen.\nUnd das Gespräch ging dann auch relativ schnell dahin so gibt es Stress bei euch auf der Arbeit weil erzähl mir davon nicht ich liebe sowas ist sowas zu hören dann wollte er mit ihm über den Holocaust sprechen über Antisemitismus\nund ob er denn irgendwie die nSo Group hassen würde oder so\nund dann kam aber die LP also die Associated Press Journalisten und haben dann gesagt hallo übrigens wir sind von der Association press und ist aufgefallen dass es ihr und,\nmöchten sich ja was dazu was sagen.\nWoraufhin woraufhin der dann irgendwie ich muss ihn überhaupt nichts sagen irgendwie geflüchtet ist dann konnte aber nicht abhauen weil er die Rechnung nicht bezahlt hatte\nwenn sich dann irgendwie in einem in einem Hinterzimmer des\ndes Restaurants versteckt hat und ja also offenbar aufgeflogen ist die lassen sich wieder etwas ihr teepresse noch citizen Lab lassen sich jetzt irgendwelchen Spekulationen hinreißen.\nOb das jetzt irgendwie ne.\nIsraelische staatlich gelenkte Kampagne oder von der NSA lang IV amateurdetektive waren oder sonstiges klar ist die Gespräche waren relativ eindeutig darauf ausgelegt von ihnen.\nMöglichst Kontroverse Aussagen zu provozieren die eben unter Umständen geeignet gewesen wären.\nDas citizen Lab irgendwie öffentlich in Misskredit zu bringen denn das citizen Lab hat ein denke ich.\nÄußerst guten Ruf in der Öffentlichkeit.\nUnd den hat es sich natürlich erarbeitet und natürlich wäre es jetzt eine mögliche,\nOption diese unabhängigen Forscher anzugreifen wenn man jetzt einen von ihnen in in die Nähe des Antisemitismus bringen.\nKönnte nichtsdestotrotz.\nBin ich natürlich froh dass das citizen Lab sich dagegen hier wären konnte und den die Flucht in die Öffentlichkeit.\nErgriffen hat es ist natürlich auch klar wer auf diese in diesem Themenbereich arbeitet der hat.\nMächtige und skrupellose Feinde und insofern kann man das durch alle durchaus als\nAuszeichnungen sehen aber das sei natürlich auch allen anderen eine Warnung die sich in ihrer Arbeit.\nMächtige Feinde machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:48:49",
+      "text": "Erinnere mich so ein bisschen an 30 C3."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:54",
+      "text": "Warda.at Präsentation oder weshalb erinnert sich daran."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:48:59",
+      "text": "Na ja beim 30t 33 Karlsruhe Kirsch Kongress.\nHatte diese wunderschöne Aktion mit den Schauspielern die angeheuert wurden um den um auf Kongress mal\nunbescholtene Hacker auf eine ähnliche Art und Weise anzusprechen mit hier wir sind ja ein tolles Unternehmen und können uns nicht mal unterhalten und jetzt mal die Telefonnummer Oma so rauszukriegen wer denn eigentlich\ndie überhaupt erstmal auf den Leim geht wenn solche Leute anfangen auf der Veranstaltung Akquise zu machen.\nUnd da wohnt ja dann doch sehr beeindruckende Zahlen veröffentlicht die ich,\nwie finde für die Seele an den Kongress recht schmeichelhaft sind also es wurden wir 500 Leute angesprochen von um welchen Damen und so und,\ndavon haben sich überhaupt nur drei ja zurückgemeldet woraufhin,\nda hat mich das jetzt gerade erinnert nass im benachbarten Hotel auch zu seinem Gespräch mit dem Geschäftsführer dem gefakten kam und naja,\nzwei von diesen dreien waren halt dann am Abend sich dann tatsächlich überrumpeln lassen und zu einem\nzum Unterzeichnen eines n dies bewegen lassen womit dann die ganze Veranstaltung auch schon beendet wurde weil dann wurde Alisa NDR einfach vor ihren Nasen zerrissen und wurden mit einem ordentlichen dududu wieder,\nnach Hause geschickt um einfach klar zu machen dass man solchen Angeboten nicht folgen sollte und hätte,\nist ja dann auch mit Kamera gleich aufgelaufen und Mikrofon alvarium Kamera bei Fifa mit Mikrofon bewaffnet und wollte den ganzen Laden hochgehen lassen könntest du kurz noch davon abgehalten werden\nkosten rabattsammler zumachen und wurde dann eingeweiht wie du das eigentlich gedacht war.\nAlso ja das ist schon wichtig dass man da eine gewisse Widerstandsfähigkeit entwickelt und mit jedem sollte klar sein dass nicht unbedingt jede Anfrage die auf einen zukommt,\nso gemeint ist wie sie formuliert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:51:05",
+      "text": "Sehenswert auf jeden Fall das 30 C3 Klausing indem diese Schauspielergruppe das auch noch mal darstellt\nund außerdem würde ich bei der Gelegenheit gerne noch so große sich was zu diesem Recruiting Bemühungen auf dem auf den C3 veranstaltung sagen\ndas sehen wir äußerst ungerne auf unseren Community Events und.\nMir ist irgendwie zu Ohren gekommen dass irgendwelche Unternehmen das auch auf dem 35 C3 versucht haben oder Peng ich davon ob du jetzt gute oder schlechte Absichten hegen in ihren Geschäftsmodellen diese,\nArt von Vereinnahmung und wirtschaftliche Ausnutzung unseres Community Events sehen wir,\nganz ganz ganz ungern und ich würde eigentlich jeden Unternehmen sehr davon abraten so etwas in Erwägung zu ziehen das trifft.\nGenauso irgendwie die übermäßige Erwähnung des Unternehmens.\nBei Speakern das betrifft solche rekrutierungs Versuche und ich denke wer auch immer so etwas versucht ist tatsächlich mit dem Klammerbeutel gepudert weil auch die Community\nda in der Regel nicht besonders verzeihend ist und wir sind sehr stark motiviert das auch so.\nZu so beizubehalten insofern nutzt mal die Zeit zwischen den Jahren für eure Freizeit und lasst mal eure Recruiting Bemühungen,\nzu Hause wenn ihr auf unseren Events auf.\nWeil das mit dem Staatstrojaner so eine gute Idee ist und weil diese Unternehmen die die betreiben ja so eindeutig vertrauenswürdige Unternehmen sind die,\neigentlich natürlich niemals mit mit denen Autokratien und Diktaturen dieser Welt zusammenarbeiten würden.\nMöchte die möchte Europol jetzt auch einen Staatstrojaner haben,\ndas geht aus einer kleinen anfragen\neiner kleinen Anfrage der Linksfraktion insbesondere Andrej hunko hervor der das vom Bundesinnenministerium,\nmitgeteilt bekommen hat ja das Europol derzeit nämlich einem marktsichtung für den Ankauf eines Stars Werners durchführt und bis Mitte Februar eine Ausschreibung laufen hat und dann das Projekt anlaufen lassen wird.\nUnd das BMI schreibt sogar in der Antwort dies kann auch die Frage umfassen ob aus technischen Gründen.\nDie Notwendigkeit besteht Schwachstellen sowie Fehler bei Algorithmen und Implementierung bei der Entschlüsselung verschlüsselter Kommunikationsinhalte einzusetzen das ist ja schön.\nÜbersetzt heißt dieser Satz wir beschäftigen uns auch mit der Frage ob Software gezielt unsicher gelassen wird damit wir sie hacken,\ndas bedeutet dieser Satz der ist aber natürlich amüsant formuliert dass man sagt aus technischen Gründen die Notwendigkeit besteht was also der der denkt man sehr schnell hier gibt eine technische Notwendigkeit nein es gibt keine technisch notwendig,\nes gibt eine\nwenn überhaupt politisch motivierte Notwendigkeit dass Schwachstellen auf unseren Geräten geheim geblieben gehalten werden als unser Risiko verbleiben,\nund zwar für alle damit ihr einige wenige hätten könnt also wieder und wieder einfach.\nSchädliche Bemühungen die hier stattfinden insbesondere wenn es um diese diese Staatstrojaner geht.\nAlle Mission mit es gibt eine an einer Hand abzählbar an.\nSah ich mal von Unternehmen die belastbare Produkte in dem Bereich anbieten,\nspontan fallen mir ein hacking Team Gamma und nSo ja es gibt noch zwei drei andere die mir jetzt gerade entfallen ZW ich glaube einer von denen ist auch schon wieder platt und alle diese Unternehmen.\nHaben Kunden die.\nMenschenrechtsverletzungen dokumentiert haben ja das heißt man und das sind deren Kunden diese Unternehmen haben nämlich genau.\nBisher aufgrund der bei uns stattfinden politischen Diskussionen sehr wenige Kunden in lupenrein Demokratien und werden seit Jahren finanziert von eben.\nWeniger.\nMenschenrechts freundlichen Staatswesen die sowas daneben insbesondere zur Sicherung der politischen Macht einsetzen und offenbar sehr viel weniger für die Ziele der Strafverfolgung die immer,\nvorgegaukelt also schlechtes auch.\nAuf EU-Ebene was hier droht das nämlich dann die EU-Mittel an diese ethisch äußerst zweifelhaften Unternehmen fließen und damit eine,\nSchwächung der Sicherheit unserer Geräte quasi mitfinanziert wird statt dieses Geld zu nehmen dafür zu sorgen dass unsere Geräte besser geschützt,\nund dann wundert man sich am Ende wenn wir gesund ist dann auf einmal aus der Cloud weg sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:56:35",
+      "text": "So jetzt schauen wir mal in die Schweiz da passiert auch was."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:56:45",
+      "text": "Genau da gibt es eine Volksinitiative für ein Voting Moratorium was ist damit gemeint in der Schweiz gibt es in mehreren Kantonen schon.\nSo E-Voting Systeme E-Voting heißt du du willst quasi über eine Webseite.\nUnd das ist natürlich mit allerlei Problemen behaftet,\ninsbesondere den wird ja nicht kontrolliert ob du wirklich willst oder jemand anders die Sicherheit dieser Systeme die Manipulation San Fähigkeit dieser Systeme\nob tatsächlich am Ende das bei rauskommt was du gewählt hast all das ist hier,\nfeetje leichtfertig riskiert.\nUnd dieses Moratorium sagt nun wir möchten bitte das E-Voting.\nVerboten wird.\nBis es nachweislich mindestens genauso sicher ist wie das herkömmliche Papierwahl Verfahren.\nUnd dann kommt die kernform die die die hier die entscheidende ist insbesondere müssen die wesentlichen Schritte der Stimmabgabe.\nVon den Stimmberechtigten ohne besondere Sachkenntnis überprüft werden können.\nUnd Nachzählung müssen Zufall sie zuverlässig möglich sein das mit dem nachvollziehen ist der entscheidende Punkt bei.\nOnline Wahlsystem.\nUnd zwar von Laien nachvollziehbar diese Systeme können einfach gesagt.\nGeheime Wahl ermöglichen.\nDann ist aber nicht mehr einfach nachvollziehbar und vor allem beweisbar das und wie die Stimmen zustande gekommen sind.\nOder Sie können eine überprüfbare Wahl.\nErgebnisse Silke überprüfbare Wahlergebnisse zur Verfügung stellen dann ist aber die geheim das Geheimnis der Wahl verletzt denn,\nder das System muss ja quasi beweisen wie jede einzelne Stimme zustande gekommen ist und wenn es das kann dann kann es auch letztendlich nachvollziehen was jede einzelne Person,\ngewählt hat.\nNun gibt es einige universitäre Ansätze die durch mehrfachverschlüsselung und so weiter das Ziel erreichen wollen dass jede Person ihre eigene Stimme überprüfen kann.\nNicht aber die aller anderen einsehen kann und dann wird behauptet dass deshalb das Wahlsystem vollständig überprüfbar wäre und gleichzeitig vollständig geheim was.\nImmer noch die Quadratur des Kreises ist denn wenn so etwas behauptet wird diese.\nKann die Allgemeinheit nicht mehr nachvollziehen und wenn wir heute eine Wahl haben mit Papier.\nDann sind einem einem sich mal grob trainiert ein Bonobo diese.\nIst dieses Verfahren einleuchtend ja am Anfang gibt es eine leere Urne dann kommt der Papier rein nachher wird das Papier gezählt\nwir können nicht mehr sehen wer wir wissen nicht mehr wer welchen Zettel reingeworfen hat wir wissen aber wer Zettel rein geworfen hat und wir können den kompletten Wahlvorgang,\nsoll ich mal ob der was weiß ich dritten Schulklasse verstehen.\nUnd auch seine Manipulationsmöglichkeiten verstehen und seine Kontrollmöglichkeiten vollständig verstehen und das ist die entscheidende Vertrauen stiftende Maßnahme für die Wahl überhaupt.\nUnd hier wird eben gefordert verbietet E-Voting Systeme für die nächsten 5 Jahre\nnach 5 Jahren kann das Verbot aufgehoben werden wenn mindestens genauso sicher und das System nachvollziehbar ist für Laien und das wird im Zweifelsfall da würde ich mich.\nRelativ weit aus dem Fenster lehnen geheim und verleihen nachvollziehbar wird es nicht geben.\nVon mir aus kommt jetzt irgendjemand mit einer genialen Idee um die Ecke die mich jemand anders in den letzten Jahrzehnten die Menschen sich über E-Voting Gedanken machen hatte aber\nich bin mir relativ sicher dass das unwahrscheinlich ist insofern ist es hier relativ.\nZu unterstützen sie relativ klug und uns zu unterstützen wie dieses Monat Moratorium forget Design einfach nur stand heute,\ngibt es nicht für Laien nachvollziehbar und genauso sicher das heißt Nachvollziehbarkeit geheim und so weiter ist nicht\nsichergestellt deswegen verbieten wir es bis zum Beweis des Gegenteils und des das heißt hier werden einfach nur über dieses über diese Idee des Moratoriums einfach mal die Anforderungen zementiert die ein System.\nErfüllen müsste.\nIn der Vermutung dass es kein System gelingen wird und würde es jemanden gelegen dann könnten wir auch drüber diskutieren ich denke nur dass es niemandem gelingen wird und das ist also jetzt eine.\nVolksinitiative die entsprechend.\nStimmen braucht in der Schweiz ja ich glaube das war das so etwas wie 100.000 oder so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:02:37",
+      "text": "Ein Minimum braucht erstmal zugelassen zu werden mal zu."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:02:42",
+      "text": "Ja die brauchen erstmal ich muss gerade schauen.\nAlso ich glaube das wird jetzt erstmal nur vorgestellt und man kann noch nicht abstimmen.\nWenn ich das richtig im Kontakt bin mit dem.\nChaos Computer Club Schweiz die werden erst in einiger Zeit werden dann irgendwann anfangen zu sammeln.\nUnd da wird natürlich für.\nGeworben werden insbesondere auch von uns also liebe Schweizerinnen und Schweizer haltet die Volksinitiative für ein E-Voting Moratorium auf.\nDem Schirm beteiligt euch daran und leistet diesen wichtigen Schritt zum Schutz der.\nDes heiligen Aktes der Demokratie ich denke hier auf ein nicht vertrauenswürdiges.\nOder nicht nachvollziehbare System zu setzen die ist jetzt teilweise in einigen Kantonen schon der Fall ist für Laien nicht nachvollziehbar System das hat.\nUnabhängig von der Feder und Manipulation.\nAnfälligkeit schon das große Risiko dass jemand die Behauptung einer Manipulation in den Raum stellen kann,\nund diese Behauptung nicht mehr von Laien überprüft werden kann ja das heißt wir haben wirkt wir verkomplizieren einfach nur den den Sachverhalt und sehen somit.\nAnlass für Misstrauen in das System diese Frage ist schon unabhängig davon.\nDem System tatsächlich zum Misstrauen ist oder nicht aber im Moment haben wir ein Verfahren dem,\nwie gesagt ein Drittklässler sein im Zweifelsfall folgen kann und wir wollen das jetzt austauschen durch Verfahren wo irgendwelche IP Experten sagen das hat schon so seine Richtigkeit und,\ndas ist unsinnig das zu tun wenn wir ein Verfahren haben was einfach und nachvollziehbar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:04:43",
+      "text": "Fall muss man das ganze ja auch im Zusammenhang sehen mit dem jetzt hier auch schon in dieser Sendung wieder ausführlich diskutierten Rechtspopulismus und der entsprechenden Vorgehensweise\nbei so Verschwörungstheorien dass man halt einfach erstmal alles in Frage,\nund in dem Moment wo die Dinge einfach unklar erscheinen werde natürlich solche Argumente automatisch dadurch auch unterstützt,\nwenn jetzt also irgendeine Volksinitiative wieder mal kommt und so entschieden wird wie es den Rechtspopulisten nicht in den Kram passt,\ndann kannst du wahrscheinlich schon die Uhr danach stellen das dann eben irgendwann das kommt mit na ja die mächtigen haben ja dieses Häme manipuliert und deswegen das wäre ja eigentlich alles ganz anders aus,\nund dann stehst du da mit leeren Händen weil alles was du sagen kannst ist ja aber hier diese fünf von uns ausgewählten Security Ex,\nRatten sind der Meinung das ist schon alles irgendwie OK so aber ansonsten kann es halt keiner nachvollziehen da stehst,\nim Saal und das ist etwas was man insbesondere in der Schweiz ja was er würde ich nun das Land auf diesem Planeten ist was einfach,\ndieses Prinzip Wahlen und Volksabstimmungen irgendwie geradezu zu einer Religion nein das."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:06:02",
+      "text": "Dann direkt erstmal Minarettverbot."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:06:07",
+      "text": "Es ist ich korrigiere mich gleich werde ich sprechen nein wo ist einfach eine signifikante kulturelle Bedeutung hat ne das ist das Ganze demokratische Selbstverständnis der Schweiz basiert darauf,\nund ist auch dort aber mal in einem Maße noch durchführbar wobei ich sagen würde so für Deutschland funktioniert das schon.\nJa von Großbritannien mal ganz zu schweigen wo wir gesehen haben wo wir dahin gekommen sind wenn du einfach überhaupt nicht die Kultur hast um solche Abstimmung zu machen also Schweizer System wäre ja woanders kaum noch einführbar also muss einfach über so eine lange Zeit,\nwachsen sein dementsprechend ist es halt auch wichtig,\ndass dieser kulturelle Kids da eben auch frisch bleibt und ich kann das nur unterstreichen was du gesagt hast das war alles richtig.\nDer Kern der Kernpunkt ist wirklich mehr es ist vor allem man kann ja diese ganze Debatte machen und nicht lest das ja auch so zwischen ist halt auch ein bisschen raus ne dass man sagt da ja das ist nicht sicher diese Systeme sind nicht sicher.\nVollkommen unwichtig ob die jetzt irgendwie gerade sicher sind oder nicht sondern nur dass man überhaupt nicht beweisen kann ob sie es jetzt gerade waren oder nicht dass es das eigentliche Kernproblem\nund ich kann an dieser Stelle und habe das auch schon hier glaube ich jedesmal wenn wir das Thema hatten darauf verwiesen und werde es erst ein weiteres Mal tun,\nnehme ich den ca 118\nwo ich mich mit Ulrich Wiesner unterhalten habe nachdem in Deutschland das Wahlcomputer Urteil des bundesverfassungsschutzes ergangen ist was im."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:07:44",
+      "text": "Bundesverfassungsgericht tschuldigung nicht der Bundesverfassung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:07:47",
+      "text": "Katze die ganze Zeit über die falschen Themen,\nleider türlich das Urteil des Bundesverfassungsgerichts genau in dieser Causa und er\nleitet in diesem Gespräch auch noch mal sehr gut hier warum das die richtige Entscheidung war und warum auch nach dieser Entscheidung im Prinzip Wahlcomputer in Deutschland tot sind weil eben einfach\ndas nicht mehr hergestellt werden kann dieser Anforderung an einen transparenten und nachvollziehbaren Vorgang der ist\neinfach mit Elektronik nicht machbar und jeder der das zurzeit noch nicht gemacht hat weil sie einfach mal reinhören.\nDann hat man auch die richtige Argumentation für eine solche Volksinitiative in der Schweiz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:08:37",
+      "text": "So wir können noch ein paar Daten verknüpfen tippen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:08:42",
+      "text": "Genau Daten wollen ja auch verknüpft werden das ist ja dieses ursprünglich das eigentliche in innewohnende Konzept von Daten.\nWir wissen dass alle sie hungern geradezu danach dachte sich auch die Polizei konkret\nist in der EU schon seit längerem davon die Rede aus Polizei Kreisen dass man doch den Datenaustausch für Polizei relevante Ermittlungs Daten mal.\nInternationalisieren sollte innerhalb der EU spricht es gab schon immer die Forderung einiger EU-Mitgliedsländer dass man auch,\nauf die polizeilichen Ermittlungsakten anderer Länder Zugriff erhalten können soll dies.\nBefindet sich offiziell immer noch im Prüfungs Zustand also die EU,\ndieses Ansinnen aufgenommen und es wird halt geprüft\nbisher ist der Status so dass ihm nur ein Austausch über in über rechtskräftige Verurteilungen möglich ist das heißt es ist\nderzeit richtig nicht möglich dass du marche Deutschland in Frankreich mal sagt der ok hier Dollar Person wie sieht's denn da aus was habt ihr denn da vorliegen was ermittelt ihr denn da wir würden das ganz gerne auch mal wissen weil wir haben den auch so ein bisschen im.\nDas soll sich aber nach dem Wunsch bestimmter Polizei Kaiser halt ändern und die EU ist dem Ansinnen generell.\nAufgeschlossen gegenüber und diskutiert ein\npolizeiregister Informationssystem ein europäisches das heißt dann auf englisch ganz geschmeidig European Police records informations-system oder noch kürzer,\nkibris.\nWeil das eben diskutiert wird hat die EU 2005 also vor 2015 schon eine Machbarkeitsstudie in,\nAuftrag gegeben was von belgischen Behörden durchgeführt wurde und dann 2015 vorgelegt wurde\ndas befindet sich aber offiziell bis heute noch in Auswertung\nalso die Studie existiert schon seit ein paar Jahren und ist aber offiziell sozusagen noch überhaupt nicht vollständig zur Kenntnis genommen worden allerdings stellt diese Studie ein\ngrundsätzlichen Polizei fachlichen Bedarf fest sagt also Prinzip na ja das wäre schon ganz geil wenn wir das hätten weil das würde ja so zeigen die Arbeit auch\nvereinfachen kann man vielleicht auch nachvollziehen wenn meine gerade Belgien ist natürlich hier in interessanter Fall nicht wahr wir haben diese ganzen\nErmittlung gesehen bei den Terroranschlägen die ist ja in Frankreich zuletzt gab wo daneben die Täter auch in Belgien waren die sind da wird dann eben auch ermittelt\nund man fragt sich halt okay alles klar wie kann denn jetzt da eine grenzüberschreitende polizeiliche Koordination\nablaufen und an der Stelle sind natürlich dann den Behörden ebendiese national Grenzen gesetzt.\nHallo Person abhängig davon wie man eben die Auswirkungen davon beurteilt.\nEs gibt hier eine Einschränkung ja also zwischen Rheinland-Pfalz und Nordrhein-Westfalen wäre ein solcher Daten austauschen möglich geht aber halt nicht wenn es mir die belgische Grenze.\n2018 hat die EU jetzt in Vorbereitung\nein Projekt namens automation of data exchange processes adip gestartet dass es dann so Frank auch schon etwas konkrete technische Vorbereitung man merkt schon also grundsätzlich will man da irgendwie hin nur hat man noch nicht alle Schritte genommen und in diesem Rahmen\nhat jetzt auch,\ndas BKA Software anstatt gebracht um eben diese Vernetzung dezentraler Datenbestände zu testen ja und wenn sich Ihr hier in einem potentiellen Echtbetrieb,\nmein\nna ja so wie das jetzt hier im Test ist fühlt sich schon fühlt sich mal total real an Wind kommt von vorne,\nRegentropfen schlagen ein echt alles total echt bei uns,\nwie soll das Ganze überhaupt funktionieren also e-press ist so gedacht dass man hier so eine Treffer kein Treffer mit oder hat mir das so schöne heißt das halt Polizeibehörden\nkönnen eine Abfrage vornehmen\nbei in einem anderen Land indem sie quasi sagen hier für diese Person hat da da was.\nDu musst quasi den Namen sagen oder was auch immer an Metadaten noch zu Identifizierung dieser Person erforderlich ist weil bei Michael Müller wissen wir alle ist das irgendwie bisschen schwierig können mehrere von geben.\nPütt Bürgermeister sein oder nicht auf jeden Fall,\nmuss dann wenn etwas vorliegt wenn man diese Rückmeldung bekommt immerhin noch mit einer Anfrage begründet werden warum man den das jetzt noch,\nhaben will das ist sozusagen die Idee was also du bist in der ersten Ausbaustufe noch nicht vorgesehen ist ist ein direkten und unmittelbaren Zugriff auf diese Daten zu gewinnen.\nDie Software die das BKA jetzt hier zum Einsatz bringen kommen von Fraunhofer von der Abteilung Focus von Fraunhofer und hört auf den schönen Namen\nGerman University of au pair.\nPaul Abkürzung auch mit dieser deutschen deutschen universal Software ist also BKA jetzt gerade,\nam Testen echte Test zwischen Staaten handy jetzt hier so nicht stattfinden sollen eigentlich 2018 schon begonnen haben,\nTim so ist bezieht sich unserer Kenntnis im übrigen auch unter Einbeziehung des Europol Informationssystem cis.\nJa also da geht sozusagen auch um die zentrale europäische Polizeibehörde diese Test sollen aber dann mit.\nPseudonymisierten Testdaten arbeiten muss eine ganz schöne Formulierung ist weil das heißt ja dass es sich eigentlich um echte Daten handelt die dann nur,\nein wenig verschleiert werden.\nJa was soll das alles eigentlich also klar man will halt vorallem Reisende Gewalttäter in Griff kriegen.\nDa setzte sich die Frage wer hier das erste Opfer sein könnte\nmir fallen da halt z.b. die G20 Proteste ein die war ja hier auch vor einiger Zeit ausführlich mal diskutiert haben wie denn das so läuft ja also diese Verfolgung von Menschen die an solchen Demonstrationen teilnehmen\nwäre auf jeden Fall hier ein Tage davon kann man glaube ich schwer ausgehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:16:01",
+      "text": "Da muss man vielleicht noch kurz ergänzen\nes ist ja nicht so dass alle Menschen die zu Protesten auch internationaler Art\nanreisen Gewalttäter sind es ist nur so dass die aufgrund der hohen Polizeipräsenz sehr schnell mal in dem Verdacht stehen und dieses diese Klassifikation als.\nGewalttäter politisch oder Gewalttäter Sport passiert eben relativ schnell wenn man im Rahmen solcher Großdemonstrationen,\ndann mal von der falschen an der falschen Stelle von der Polizei getestet und überprüft wird ja sie haben ja\ndas Phänomen muss ja vor dem Hintergrund gesehen werden dass es einige immer noch rechtlich sehr zweifelhaften.\nDatenbanken gibt in denen Menschen als bestimmte\nPersonengruppen als bestimmten Personengruppen zugehörig katalogisiert werden Seil politische\nGewalttäter Gewalttäter Sport und so weiter das sind alles Dateien und Akten\nsind Attribute die also Menschen relativ Verdacht und f***\nunabhängig mal schnell beigefügt werden wenn sie an an irgendeiner Stelle kontrolliert wurden sei es beim Fussballspiel ne der hatte gab es dann irgendwie Ausschreitung am Fußballspiel war sie dummerweise bei dem dahin Fußballspiel und in der Nähe kommst dann in der Personenkontrolle und dann wird einmal zack bis Sie vorgemerkt und\nbeim nächsten Mal hast du auf einmal Probleme mit der Anreise und dergleichen Phänomene."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:17:43",
+      "text": "Ja das muss man mal sehen wohin sich das entwickelt wenn man jetzt glaubt es gebe solche Informationsaustausch dann aber entsprechend noch überhaupt nicht auch weit gefehlt denn es gibt ja noch sehr viel mehr schöne Systeme unter anderem das Schengen\nSchengener Informationssystem SIS was heute schon sogenannte Ausschreibung zur verdeckten und gezielten Kontrolle\nermöglicht das ist wieder schön formuliert kurzgesagt mit gezielte Kontrolle ist wenn man halt\njemanden in eine Gruppe los schickt und dann wird auch jemand mal komplett auseinander genommen also nicht die Person aber sozusagen die Besitztümer sprichst wird als irgendetwas durchsucht die Person durchsucht Wohnung durchsucht oder eben eine verdeckte Kontrolle die im Wesentlichen nur bedeutet dass Leute beobachtet werden oder immer wenn sie auffällig werden und das polizeibekannt wird dann diese Information der Bewegung\nentsprechend weitergereicht werden kann das sind sogar der Artikel 36 fahren und die anderen eben auch europäische Grenzen überschreiten kann\ndazu sind dann auch ein paar Statistiken rausgekommen worden die zeigen wie oft denn sowas überhaupt schon.\nEinsatz kommt das ist schon relativ erheblich hätte jetzt gerade die absoluten Zahlen nicht im Kopf aber 2018 sind diese Zahlen erheblich gestiegen\ndas liegt im Wesentlichen an Frankreich also da ist es halt hochgegangen da können wir uns halt auch schon denken woran das gelegen hat die von mir zitierten\nTerror Fälle in der letzten Zeit durften erheblich zu beigetragen haben auch wenn es jetzt nicht weiter klassifiziert ist UK ist da auch ganz weit vorne was auch immer die so im primär im Interesse hatten wenn die allerdings für dich im brexit weitermachen fallen sie aus diesem SCR-System sowieso raus das wären sie schon noch\nbereuen in Zukunft denke ich mal."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:19:35",
+      "text": "Dann halte ich das Schengener Informationssystem hat also nicht unbedingt mit dem Schengen Abkommen zu tun oder.\nWeil Großbritannien ist ja nicht Schengen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:19:45",
+      "text": "Richtig da hast du recht das ist ein EU Informationssystem.\nJa sie profitieren immer von vielen wo sie nicht will aber dazu beitragen, sehr interessant ne und ich Fall lohnen auszusteigen.\nJa also.\nAuch das soll gegebenenfalls künftig noch erweitert werden so dass man eben zusätzlich zu dieser Klassifizierung einer verdeckten Kontrolle\nauch noch eben die spezifische Ermittlungs Anfrage bekommen soll so dass dann eben auch dort gezielte Informationen fließen können also nicht nur ein einziges System soll es ist immer mehrere Dinge die hier parallel vorangetrieben werden auf jeden Fall\nbefindet sich das alles in Vorbereitung bzw kommt noch konkreter im Test zumindest beim BKA."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:20:40",
+      "text": "So und jetzt kann man sich natürlich die Frage stellen wieso soll das denn schlecht sein werden Polizeibehörden,\nauch über Ländergrenzen zusammenarbeiten das natürlich nicht schlecht es ist natürlich klar ich meine wir stellen fest dass.\nAngreifer im Internet international operieren wir stellen fest dass von mir aus auch der Terrorismus international operiert und ist natürlich klar dass.\nDie Polizeien auch über Länder,\nBundes und Bundesländer und Staaten Grenzen hinaus kooperieren sollen,\ndas Problem ist natürlich immer diese Zusammenfassung von Daten in möglichst einfachen.\nInformationssystem und den also die diese vielen Daten an einem Platz mit geringer Kontrolle beim Zugriff da haben wir ja schon,\nin Deutschland unsere Probleme mit ein Thema dass wir hier in Logbuch Netzpolitik bisher gar nicht so ausführlich immer behandelt haben sind die Rechtsextremen Polizisten.\nDie die polizeilichen Informationssysteme nutzen um Ihre Nazi Kolleginnen und Kollegen zu informieren so z.b. ein aus Südhessen,\nStamm der Polizeibeamter,\nder in den Jahren 2015 und 16 Polizeidaten auf Wunsch seiner bekannten Martina H abgerufen und ihr übermittelt hat.\nSo wäre es Martina H Martina H ist die Anführerin der REM.\nEine also die Arya man kann sich ungefähr vorstellen welche,\nwelche Aufnahmekriterien diese Gruppe hat und welche politischen Haltung,\nja hat sie und deswegen steht die gute Martina mit ihren mit ihrem magischen Freund Karsten m auch in Halle vor Gericht denn am 1.Mai 2017.\nHat sie zusammen mit haben die beiden zusammen mit offenbar acht anderen Personen mit zwei Autos jagt\nauf Gegendemonstranten zu einem Naziaufmarsch gemacht und diese mit Steinen beworfen und irgendwie eine Wandergruppe angegriffen also wir sehen\ndie Bekloppten Kommissar Autos ob es Islamisten sind oder Aria.\nJetzt gibt es jetzt wird also wegen dieser Angriffe auf Menschen.\nMan könnte sagen politisch motivierten Gewalttaten man könnte sagen Terrorismus wird jetzt gehen die gute Martina H und den Karsten m ermittelt oder in die stehen da vor Gericht und die Polizei hatte in.\nZuge dessen der guten Martina auch mal das Handy weggenommen.\nUnd hat sich ihre Chats angeschaut und auf dem Handy haben diesen Chat mit dem Polizeibeamten Beamten.\nDer Polizist ist inzwischen.\nAber auf eigenen Wunsch in Niedersachsen tätig ja der hatte sich also aus Südhessen da verabschiedet es jetzt in Niedersachsen tätig und jetzt geht's ihm hoffentlich.\nAn den Kragen,\nweil das Vertrauen dass wir in unsere Polizeibeamten setzen darf natürlich nicht auf diese Weise missbraucht werden schlimmer tragischer und bedauerlicherweise ist das aber auch kein,\nEinzelfall das Polizisten in das politisch rechtsextreme Spektrum abgleiten und dann.\nIn diesem Rahmen auch ihre Privilegien missbrauchen ja wir haben.\nIn der niedersächsischen Polizei sogar Reichsbürger ja zwei Fälle.\nWo ist wo in Niedersachsen wo also dienstrechtliche,\nVerfahren wegen Verdachts der Zugehörigkeit zu den reichsbürgern geführt werden das auch echt skurril ist ne also glaubt nicht dass die Bundesrepublik Deutschland,\nund bist aber bei der Polizei tätig als Beamter im Zweifelsfall noch ne aber das heißt ja noch lange nicht dass es sich alles eine große Phase ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:25:03",
+      "text": "Nein nur weil die mir Geld überweisen heißt noch lange nicht dass es dir."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:25:06",
+      "text": "Das Geld ist eh wertlos ich tausch das alles hier gegen gegen Scheine Viking Papiergeld mit Reichsadler oder also,\nganz ganz gefährlich und das darf man eben nicht vergessen das ist.\nWenn wir auf solche Fälle aufmerksam machen dann wird das häufig von Vertretern der Polizei irgendwie als so ein Misstrauensvotum wollte etwas sagen alle Polizisten sind Nazis nein,\naber nicht sagen aber genau damit auch Nazis unter dem Polizisten auffallen müssen eben auch hier\nKontrollmechanismen hin ja vertrauen ist gut Kontrolle ist besser geht auch in diesen Fällen und so einen Kontrollmechanismus kann eben auch eine Einzelfallprüfung sein statt\njeden dahergelaufenen Polizist.\nNach Lust und Laune in diesem System Daten suchen zulassen und seinen Nazi Freundin zu geben die dann.\nMenschen in Gefahr bringen.\nJa ich denke dass insbesondere dieser ich möchte noch mal darauf eingehen dass dieser dieses Promi doxing und diese Anti-Antifa Listen und was es sonst noch für Dinger gibt regelmäßig.\nMit schrecklichen,\nBeeinträchtigung der Privatsphäre der körperlichen Unversehrtheit der Zielpersonen einhergehen,\nund wenn es nun mal dieses Potenzial gibt das Polizisten das ausnutzen dann tun sie es auch wir haben zum Glück genug Polizisten.\nDass wir leider eben auch eine ganze Reihe schwarze Schafe darunter haben und das ist ein Fakt mit dem wir eben umgehen müssen und das ist sicherlich eine.\nUngünstige Idee zu sein lass uns mal die datentöpfe die wir den präsentieren möglichst auch noch international in jede Richtung Ausweis."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:26:54",
+      "text": "Aber das Problem ist halt schon auf nationaler Ebene gelöst werden dafür."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:27:02",
+      "text": "Nationaler Lösung für nationale Probleme das wird den reichsbürgern gefallen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:27:06",
+      "text": "Na Jana ich meine am Ende muss man auch akzeptieren dass die EU nun mal ein supranationales Konstrukt ist und wer letzten Endes davon grundsätzlich profitieren dass ich die Dinge in zunehmendem Maße auch Europäisierung aber dazu müssen natürlich dann auch erstmal da drunter haben\nsolide abgesichert sein Gegenbiss."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:27:26",
+      "text": "Genau absolut richtig also natürlich sollen diese Polizeibehörden möglich zusammenarbeiten das gilt auch in Deutschland haben wir ja schon Probleme oder werden ja Probleme beklagt in der Zusammenarbeit der Landespolizeien ja das natürlich soll alle diese\nZusammenarbeit stattfinden,\naber sie soll einer Kontrolle unterliegen und das wird in der Regel durch vernünftige formale Prozesse gemacht und es ist eben schlecht wenn er einfach riesige Datenbanken gebaut werden auf die Jan und man einfach im Rahmen der normalen Arbeit Zugriff hat und die daneben\nhier einem derartigen Missbrauch anheimfallen ich denke es völlig in Ordnung zu sagen Mannschaft.\nZeig mal diese Möglichkeit des Datenaustausch ist die muss es ja geben aber eben nicht automatisiert.\nJa da müssen wir die entsprechenden Stellen miteinander kommunizieren gegenseitige Anträge dazu muss es einen papertrail geben und nicht irgendwie Martina H ruf mal bei ihrem Nazi\nPolizei Kumpel an und sagt sag mir mal eben wo der oder der wohnt wir sind hier gerade mit dem Auto unterwegs unterwegs und wollen einen überfahren,\nja das geht halt so nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:28:46",
+      "text": "Schauen wir uns doch mal an wie der Trend ist in dieser Hinsicht schlecht genau wir hatten ja schon in den letzten\nMonaten auch häufiger darüber berichtet ein Land nach dem anderen fällt in puncto Polizeigesetz\nund als nächstes ist Sachsen dran nachdem die Bayern da schon beschlossen haben Nordrhein-Westfalen das ist jetzt schon durch.\nGerade nicht mehr so ganz in der Spur auf jeden Fall auch in Sachsen hat man gedacht auch so neues Polizeigesetz Mama auch mal weil was kann schon schief gehen auch hier ist also ein neues Polizeigesetz,\nauf dem Weg was ähnlich wie das eben der Trend in der anderen Ländern gezeigt hat entsprechende rechts und,\nFreiheitseinschränkung mitsichbringt insbesondere betrifft das halt immer so diese Bedingungen unter denen Leute überhaupt erstmal in Haft genommen werden kann oder in Gewahrsam nehmen nicht in Haft sein Gewahrsam genommen werden\nkönnen wir haben das ja in Bayern schon gesehen dass eben quasi ohne klare Begründung dort Leute im Prinzip tagelang festgehalten werden kann\nohne dass irgendwas konkretes gegen sie vorliegt zwss in irgendeiner Form von der Polizei justiziabel aufgearbeitet worden ist\nSachsen wir das also jetzt auch einführen da gab es jetzt am 26 Januar also am.\nSamstag eine Demo war ein paar tausend Leute in Dresden dagegen auf die Straße gegangen sind,\ndas reicht natürlich alleine nicht aus um hier Schlimmeres zu verhindern sind alle aufgerufen in Sachsen.\nSich bei den Bündnissen anzuschließen da gibt es auch schon ein entsprechend großes\nPolizeigesetz stoppen heißt das Bündnis wo sehr viele Gruppen schon dabei sind auch unter einer passenden url Polizeigesetz Strich stoppen.de da kann man sich dann\nentsprechend informieren auch informieren kann man sich bei einem\ndas 35 C3 genau zu diesem Thema mit Constanze Kurz und Marie Bröckling die dort diese ganze Problematik,\nzusammengefasst haben und in."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:31:14",
+      "text": "Genau das\nalso mit mit so vielen Bundesländern die ja jetzt alle diese Novellen anstoßen müssen und bei der Gelegenheit so eigentlich aus Datenschutz Erwägungen da Anpassung vornehmen müssen bei der Gelegenheit einfach noch mal die Schublade aufmachen sagen das hatten wir sonst noch alles für für Ideen\ndie wahrhaben wollen das findet jetzt in allen Bundesländern mehr oder weniger Stadt und ist natürlich ein bunter.\nStrauß der über denen sich erstens schwierig gestaltet einen Überblick zu behalten der andererseits aber vor allem auch jeweils die Initiativen Lokal in den Bundesländern.\nStrapaziert und.\nMit einer Aufgabe betraut ja also wir brauchen jetzt gerade in jedem einzelnen Bundesland,\nden Protest die Aufarbeitung die Untersuchung und genaue fachge fachspezifische Einschätzung dieser neuen Polizeigesetze 16 an der Zahl das ist nicht mehr von einer\nGruppe zu leisten und entsprechend sehen wir das eben.\nDa die sich in jedem Bundesland immer andere Initiativen formieren das ist gut net filtec org Marie hält da den den Überblick und da müssen wir jetzt mal.\nIn jedem einzelnen Bundesland die einer kritischen Prüfung zu führen schauen wo uns da noch einen ein schwarzes Schaf unter den Paragraphen untergejubelt wird,\nund das ist jetzt so die Aufgabe der des vergangenen und den nächsten zwei Jahren Zweifelsfall."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:32:58",
+      "text": "In dem Zusammenhang sei auch noch auf einen neuen Podcast hingewiesen mit dem schönen Namen denk Angebot dass es nämlich der neue Podcast von Katharina nocun also known as\ndie war ja hier auch schon zu Gast hatten und ja sie hat die erste Folge dieses\nCast hast du dich genau diesen selben Thema gewidmet Polizeigesetze wo sie sehr ausführlich und sehr umfassend durch dieses Thema durch marschiert über einen sehr,\nziemlich lange Marsch weiter als ich dir gerade die sind und das ist Stunde 47 lange also dritte dann noch,\nlänger und noch detaillierter drüber als wir das beide Logbuch Netzpolitik jemals könnten hat das ganze ab."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:33:43",
+      "text": "Unsere Sendung ist jetzt zweieinhalb Stunden gleich lang."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:33:45",
+      "text": "Ja aber wir reden nicht nur über dieses eine Thema\nnee aber es ist wunderbar aufgearbeitet in vielen kleinen Häppchen also fast genau noch mal zusammen die einzelnen Prozesse ist ja aber was eben auch im Einzelnen für Maßnahmen darin enthalten sind\nsehr empfehlenswert ich habe die Preview davon schon gehört jetzt ist es dich rausgekommen verlinken wir alles in den Shownotes."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:34:13",
+      "text": "So jetzt aber kommen die letzten beiden mal flotti."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:34:15",
+      "text": "Lotti Karotti Österreicher eine schöne Meldung Smartmeter Verweigerer verlieren ihren Stromanschluss was ist das\neine Kundin im Burgenland will kein Smart Meter haben Smart Meter das sind diese tollen neuen elektronischen Geräte die verschiedene Features mit sich bringen die müssen also nicht nur wie viel Strom verbraucht wurde sollen sie sind\nSmart ich hoffe ihr habt die Anführungsstriche gehört warten sie weil sie einerseits einen fernauslesen ermöglichen und damit quasi das\nöffnen der Türe nicht unbedingt erforderlich ist weil die Leute nicht selber.\nLeute nicht selber gezwungen sind ihre Zähler abzulesen sollen sie übermitteln das daneben automatisch entweder durch so eine funkauslesung von denen aus der Nähe wo quasi jemand mit einem entsprechenden Gerät die Dinger aus ein paar Metern sind 20 m Abstand auslesen kann\nwenn nicht sogar dieses Mal mit einer Lage sind selber diese Stromverbrauch regelmäßig auszulesen und\nan den strombetreiber Stromnetzbetreiber zu übermitteln."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:35:27",
+      "text": "Jetzt kann ich mal wie du in der letzten Sendung sagen viel zu kompliziert denn Smart Meter kann man einfach sagen dass es AOT am Starkstrom Anschluss."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:35:40",
+      "text": "Goodwill double mit der Erklärung.\nZufrieden ist es gut ich habe es aber deshalb so ausführlich gemacht um zu erklären warum denn diese Kunden das sozusagen nicht wollte,\ndenn diese Smartmeter liefern halt ByDesign auch alle 15 Minuten also regelmäßig den Ver\nund man kann sich schnell ausmalen was das eben für neue überwachungs Potenziale bedeutet wenn man sich am Stromverbrauch auch sehr schön Aktivitäten in der Wohnung nachlesen kann ja auf jeden Fall wollte sie.\nIch haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:36:13",
+      "text": "Den Strom zu zu anderen Zeiten günstiger ist doch alles für dich gut dann kannst du nachts die kannst du nachts die Waschmaschine laufen lassen mit dem günstigen Nachtstrom."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:36:25",
+      "text": "Ja das war früher auch schon so dazu braucht man keinen Smartmeter,\nja ich kann ja generell also ist ja nicht so dass es hier keine Argumentation dafür gebe natürlich würde ich als Stromnetzbetreiber\nden tatsächlichen Strombedarf einzelner Verbraucher so detailliert wie möglich erfassen können um einfach mal nett besser zu planen weil das ist natürlich das\nkein Problem bei so einem Stromnetz jetzt stellt sich die Frage darf dürfen die das\nso und in Österreich gibt's eigentlich ein Gesetz Paragraph 83 der Elektrizitätswirtschaft uns\ndes organisations Gesetzes von 2010 steht eigentlich fest dass Netzbetreiber den Wunsch eines Endverbrauchers kein intelligentes Messgerät zu erhalten\nzu berücksichtigen haben was auch immer das wiederum heißen mag und aus diesem Gesetz abgeleitet gibt's seit 2018 eine entsprechende Verordnung in den dieses Widerspruchsrecht zwar grundsätzlich anerkannt wird\naber sich dabei nur auf ihm dieses Feature diese automatischen viertelstündlich\nSpeicherung Übertragung des Zählerstandes an den Netzbetreiber richtet also das ist dann so ein bisschen das."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:37:39",
+      "text": "Also also du kannst den der Funktion des dismart mit einer bestimmten Funktion widersprechen aber nicht im Smart Meter selber ja und weil das Smart Meter Open Source ist kannst du sicherlich auch überprüft ob sie früh geführt hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:37:52",
+      "text": "Genau das ist,\nne na ja auf jeden Fall hat er das jetzt Konsequenzen keine Ahnung wie das ausgeht aber der Stromnetzbetreiber fühlt sich jetzt in Österreich nicht mehr an einen versorgungszug gebunden wenn der nicht auch ein\nneuartiges Ablesegerät."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:38:10",
+      "text": "Übersetzer Freilauf andere Phänomen Bereiche ne,\njetzt kann dir der Strom Anbieter sagen wenn du nicht hier so ein so ein Schrott wenn du nicht das Risiko haben willst eines digital Gerätes an deinem Stromanschluss ja welches,\nauch wieder mit Unsicherheit und den ganzen Kram er Blackout haben wir alle gelesen das schöne Buch von Marc Elsberg was genau das Phänomen auch die Bedrohung für.\nFür die kritische Infrastruktur Stromnetz darstellt durch den Einbau derartiger Smartmeter datenschutzrechtliche Probleme wenn du bei den ganzen Stress nicht mitmachen willst dann brauchst du keinen\ndann kriegst du einfach keinen Strom mehr bevor das machen die nicht mit ihren Gesundheits-App,\nsie will wie sie wollen ihre Röntgenbilder nicht in der Cloud haben ja dann operieren weil sie eben nicht ganz einfach."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:39:01",
+      "text": "Ca"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:39:04",
+      "text": "So Thema Problem Thema gelöst so können sie gucken wo sie bleiben.\nWie Sie wollen keinen EPA Soja increasing kein Perso Sack direkt nach Tür kontrolliert also der phänomenal phänomenal."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:39:25",
+      "text": "Wollen Sie denn 5g haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:39:26",
+      "text": "Von 5g Bäume haben das kriegen wir natürlich nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:39:30",
+      "text": "Ne"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:39:31",
+      "text": "Es gibt es es stehen jetzt die vier teilnehmenden Unternehmen an der einen 5g Versteigerung fest bzw die vier die sich beworben haben daran teilzunehmen.\nAlso als einen Antrag auf Teilnahme an der Auktion haben gestellt Deutsche Telekom Vodafone.\nTelefonica die also die drei verbliebenen deutschen.\nNetzbetreiber die also über ein eigenes Netz verfügen im 2G 3G 4G Bereich und.\n1 & 1 eine Marke von United Internet die,\nkein eigenes Mobilfunknetz hat sich im Moment als sogenannter MVNO Mobile virtual network operator bei den anderen Kapazitäten Bucht ich glaube bei Telefonica,\nund Vodafone kann man sich doch sogar aussuchen ob man D-Netz oder E-Netz haben möchte wenn man sich bei,\n1 & 1 1 Mobilfunkvertrag holt die möchten jetzt auch ein eigenes Netz betreiben.\nUnd jetzt wird die Regulierungsbehörde im Laufe des Februars entscheiden ob diese Unternehmen auch zugelassen werden für die Auktion.\nIst üblicherweise eine Formalie allerdings ist es auch schon mal passiert bei früheren Option dass Bewerber nicht zugelassen wurden also maximal diese vier Bewerber würden dann daran teilnehmen.\nUnd.\nInteressant ist dass alle Teilnehmer eigentlich unzufrieden sind mit den Vergabebedingungen die etablierten Netzbetreiber beschweren sich über die harten Auflagen und.\nHaben eine Klage gegen die Vergabebedingungen eingereicht in der sie quasi die die Auflagen dass wir dann auch nicht bauen müssen sind viel zu hoch und,\ndie Neueinsteiger im United Internet waren eher skeptisch ob die Regeln für die Newcomer überhaupt genug Planungssicherheit bieten ja also.\nBin jetzt in Unternehmen die United Internet kommt und sagt wir wollen hier an diesen.\nMilliarden Versteigerungen teilnehmen da muss ja mit dem Zuschlag eben auch eine Planungssicherheit einhergehen.\nAlso dass sie im Zweifelsfall dieses Geld geliehen bekommen oder die Investition vor ihren InvestorInnen und Investoren rechtfertigen können,\nProbleme die wir nicht hätten wenn wir sowas als Infrastruktur.\nDes Landes oder des Bundes bauen betreiben und dann den Anbietern gegen einen entsprechenden Obolus zur Verfügung stellen.\nAber jetzt gibt's also erstmal dieses.\nDiese vier Bewerber Unternehmen und wir werden.\nWie sich das entwickelt inzwischen nach Peter Altmaier ist nun auch unser Bundespräsident.\nUnter die Mobilfunk runtergegangen und Steinmeier sagte wenn ich im Grenzgebiet zu Frankreich Tschechien oder Polen unterwegs bin dann habe ich oft kein deutsches Handynetz geschweige denn überhaupt mobiles\nInternet zum Glück war das ausländische Netz so stark dass ich darüber telefonieren konnte,\nsagt also Steinmeier ja ich bin froh dass die Jungs echt mal bisschen übers.\nVon mir aus auch mit ihren mit ihren Diesel Treckern lass dir ruhig mal die.\nDie die die Landluft schnuppern.\nDann hilft das nämlich danach Scheiße riecht in unserem Mobilfunknetzen und vielleicht wäre schön wenn sich daran etwas ändern würde wir haben ja in der Folge mit Thomas Rudolph schon ausführlich darüber gesprochen das sit,\nnicht unbedingt danach aussieht dass wir dieses Problem in näherer Zeit loswerden.\nAber haben wir wenigstens auch weiterhin Themen für das obwohl."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:43:37",
+      "text": "Glaubst du für Frank-Walter wird jetzt auch LMP weil wir so wie der jetzt seine Texte formuliert hat Machtgefüge der schreibt ihr einfach ab."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:43:44",
+      "text": "Stimmt er letztes Jahr erstmal aber er ist leider das Problem mit soll ich mal um Fakten Würdigung bemühter Berichterstattung ist eben.\nDass sie die Leute immer erst dann würdigen wenn sie nicht mehr im Fakten schaffen Business sind ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:44:05",
+      "text": "Lass das ist das Problem."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:44:07",
+      "text": "Frank Walter hat ja lange Zeit auch selber Fakten geschafft.\nJetzt wurde nach oben weg befördert und muss sie nur noch kommentieren da geht natürlich eine entsprechende Freiheit mit einher.\nDamit wären wir jetzt am Ende der der Themensammlung zu beginnen vor der Sendung nicht gesagt hin wenn wir uns kurz fassen schaffen wir diesmal auch ein paar mehr Themen in der gleichen Zeit das Projekt ist denke ich als gescheitert.\nZu beurteilen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:44:36",
+      "text": "Ich guck mal kurz wer am meisten geredet hat das Zimmer."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:44:41",
+      "text": "Ich habe ja auch am meisten zu sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:44:42",
+      "text": "Dann mal los schnell Abspann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:44:47",
+      "text": "Ja ein Dank an Armin und Wolfgang ist hier noch herzlich mitgeteilt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:44:57",
+      "text": "Okay und ich bedanke mich bei dem einen Spender der nicht nur jetzt angefangen hat für Logbuch Netzpolitik\nmonatlich einen Betrag zu überweisen sondern auch gleich dankenswerterweise auch noch für die letzten 5 Jahre diesen Betrag mit überwiesen hat als beitragsnachzahlung.\nDas wollte ich jetzt erstelle mal würdigend erwähnen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:45:22",
+      "text": "Das ist sehr gut weil so entgeht man dann eben auch die Strafzahlungen der letzt der Logbuch Netzpolitik einzugszentrale.\nDie kommen die kommen unangekündigt zu Hause vorbei und prüfen ob ihr ein neuartiges Empfangsgerät habt ja und entsprechend wird dann ein geringer Beitrag erhoben.\nZieh dir bitte an uns zahlt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:45:50",
+      "text": "Genau euer Einhorn Status wird sozusagen erhoben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:45:53",
+      "text": "Die Logbuch Netzpolitik Einhorn einzugszentrale sehr sehr vielen Dank für jegliche Unterstützung die unserem Projekt hier zukommt.\nWir bleiben dabei darum möglichst selten zu werden und uns den Inhalten zu widmen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:46:11",
+      "text": "Du zahlst also das war es bis bald Leute."
+    }
+  ]
+}

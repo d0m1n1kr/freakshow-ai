@@ -1,0 +1,1634 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:02",
+      "text": "Guten Morgen Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:03",
+      "text": "Du, ich glaube, ich habe mir hier einen Trojaner eingefangen, aber ich war doch die ganze Zeit im sicheren Netz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:08",
+      "text": "Lass ihn uns isolieren, kontrollieren und analysieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:34",
+      "text": "Lokbuchnetzpolitik Nummer zweihundertsechsundvierzig vom sechsten März zweitausendundachtzehn. Ist dir aufgefallen wie diszipliniert dich jetzt über dieses Datum rein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:45",
+      "text": "Ich hätte ja so gerne gestern noch den Podcast gemacht, weil es da so eine so ein Videoausschnitt von Horst Seehofer gibt, der sehr betont sagt, wir haben fünften März."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:56",
+      "text": "Das hätten wir jetzt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:01",
+      "text": "Ich weiß da nicht genau, oder übermorgen haben wir, aber es ist mir guckt es. Den fünften März. Boah."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:07",
+      "text": "Der zählt jetzt die letzten Tage, solange er noch Vorsitzender ist. Der will das ja auch bis zum letzten Tag auskosten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:14",
+      "text": "Ja. Bevor dann der Heimat Horst wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:18",
+      "text": "Im Autohaus,\nIch frage mich, ob ihm auch den äh Vorschlag der Gleichstellungsbeauftragten gefallen hat. Die deutsche Nationalhymne, Vaterland, auf Heimatland äh umzutexen. Nebst einen gegen anderen kleinen Änderungen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:34",
+      "text": "Ja, das habe ich, das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:35",
+      "text": "Fünf Heimatministerium wäre das doch eigentlich mal eine gute Vorlage, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:38",
+      "text": "Ich finde, man könnte das auch einfach in Stadt Deutschland Multikultiland singen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:42",
+      "text": "Deutschland eigentlich multik."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:47",
+      "text": "Multikulti Land einig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:48",
+      "text": "Das ist vom Versmaß jetzt noch überarbeitungswürdig, aber na ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:54",
+      "text": "Ja, kann man halt bei dem bei der Gelegenheit auch direkt mitmachen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:56",
+      "text": "Aber ich meine, was sollte er gegen Heimatland haben? Spricht einem nix gegen,\nIch meine, das wäre dann zumindest mal eine Maßnahme, worum man nachvollziehen kann, warum es jetzt ein Heimatministerium braucht. Weil ansonsten ist mir nicht so ganz klar, ich meine Innenministerium,\nIst ja jetzt nicht so, dass man das Gefühl hat, es würde sich auf irgendwas anderes beziehen als die Bundesrepublik Deutschland. Oder ist Heimat nochmal was anderes."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:23",
+      "text": "Das werden wir erst sehen, was Heimat ist. Also, Nadja, was hat er da für hundertzwanzig oder hundertsechzig Posten nochmal oben drauf? Dafür, dass er sich jetzt auch um Heimat kümmert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:34",
+      "text": "So Heimatbeauftragte. Aha."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:35",
+      "text": "Meine ich gelesen zu haben, bin ich Heimatbeauftragte, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:42",
+      "text": "Was nie alles gibt. Na gut, aber äh das soll hier nicht unser Thema sein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:47",
+      "text": "Genau das überlassen wir."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:48",
+      "text": "Sondern wir kümmern uns natürlich hier um die wichtigen Sachen,\nausschließlich. Ich war jetzt ein bisschen äh unterwegs und ähm hat mir sicherlich das ein oder andere nochmal äh erzählen äh lassen müssen. Aber bevor wir das machen in Westermanier,\nSchauen wir uns mal an, was so die äh Feedback-Fraktion so zu sagen hat. Die letzte Sendung mit dem schönen Titel, die Schmusi-Schnittstelle\nunter anderem das Thema Schufa am Start und Open Schufa und die gesamte Auseinandersetzung darum und wie die Schufa das selber so sieht und wie wir das auch so ein bisschen so sehen\nDazu gab's einen Kommentar vom Synapsen Kitzler, der äh beitrug äh\nZur Schufa-Selbstauskunft wurde ein ganz erheblicher Punkt nicht genannt. Die Selbstauskunft, die kann man per Post ist einmal pro Jahr\nkostenlos im Gegensatz zu sonstigen Produkten der Schufa, zum Beispiel der Onlineauskunft. Dies ist geregelt im Bundesdatenschutzgesetz,\nso auch auf selbst auf Kunst Punkt net zu lesen et cetera."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:52",
+      "text": "Ja, war ich hatte ich für so selbstverständlich gehalten, dass ich's gar nicht mehr erwähnt habe. Ja, aber das ist natürlich ein wichtiger Punkt. Einmal im Jahr darf man das kostenlos bekommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:03",
+      "text": "Dann äh gab's einen weiteren Hinweis von Benedikt zum Thema Selbstauskunft nach BDSG, nehmen wir so ein bisschen a\nwie die SM. Äh ihr verweist hier auf Selbstauskunft Punkt net, einen Dienst, der die Anfragen gleich direkt verschickt und gegebenenfalls gegen Aufpreis auch mahnt und einmal im Jahr daran erinnert. Eine Alternative wäre der Auskunftsgenerator von Datenschmutz\nDatenschmutz DE,\nHier werden nur die Briefe als PDF erzeugt angeblich ich hab's nicht nachgeprüft komplett per Javaskrip, sodass das auch etwas datensparsamer ist. Versand muss man sich hier freilich selbst kümmern, was aber in Zeiten kostenloser Internetfaxe\nzum Beispiel E-Post kein Problem darstellen sollte. Nutze ich dieses Jahr das zweite Mal. Kleiner Danke für die Erinnerung und war zwanzig siebzehn auch zufrieden, hat alles geklappt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:53",
+      "text": "Ja, also das das stimmt zur Selbstauskunft Punkt net. Ähm die wollen dann auch die animieren einen dann auch, dass,\nzu tracken. Also hast du auch die Antwort bekommen und solche Scherze und das habe ich dann irgendwann abgeschaltet, weil ich keine Lust hatte, das da einzutragen. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:12",
+      "text": "Ich tat mich nur mit dieser Unterschrift schwer.\nDie man da mit der Maus irgendwie das gelingt mir einfach nicht. Also vielleicht ist es auch egal. So."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:24",
+      "text": "Tim. Du wirst doch wohl mit der Maust."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:27",
+      "text": "Nein, ich konnte noch nicht mal Tim richtig schreiben mit der Maus und deswegen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:31",
+      "text": "Konnte man da nicht auch einen Scan hochladen? Ich meine, ich hätte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:35",
+      "text": "Habe ich so nicht gesehen, aber dann war dann sozusagen auch schon so ein bisschen meine Ausprobierphase beendet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:40",
+      "text": "Es es wurde auch kommentiert, wir hätten in der Sendung nicht äh gar nicht so viel über Selbstauskunft Punkt net geredet, wie ich behauptet habe. Ähm ich kann da nur erzählen, ich habe mal über Selbstauskunft Punkt net letztes Jahr ähm mir vom BKA,\ndie äh die Daten schicken lassen, ja? Und ähm dann hatte ich,\neinschreiben, persönlich und so weiter im Briefkasten äh also den den Abholzettel da liegen und bin dann zu meiner Postfiliale gegangen, habe gesagt, ja, hier äh,\nWas ist das, ne? Einschreiben ist ja immer, also Einschreiben ist ja immer schlecht eigentlich. Wenn man ein Schreiben bekommt, ist in der Regel schlecht,\nist Absenderamtsgericht oder."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:27",
+      "text": "Polizei."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:28",
+      "text": "Oder Polizei oder Vermieter oder irgend so geheimdienst, irgendjemand.\nUnd ich sag, ich komme mit meinem Zettel dahin und auf diesem Abholzettel war alles angekreuzt irgendwie so ähm,\nEinschreiben, Rückschein, persönlich, äh einmal die komplette, der komplette Katalog, ich weiß noch, es waren irgendwie sieben Euro fünfundvierzig Porto, ja, für einen Brief. Und die äh die ähm,\näh die Person, die mich da bedient hat, sagte schon so, oh, das ist aber seltener, wollen wir mal schauen,\nging dann zu ihrem ähm zu ihrem Karton da, wo mal, wo die Briefe drin liegen, die Leute abholen und sagt, guck dir das an und sagte, oh.\nDrückte mir dieses Ding in der Hand und sagte so, oh, oh, oh, so nicht so. Und ich auch so, weil ich das gar nicht mehr dran gedacht hatte, dachte auch so,\nOh fuck. Ist ein paar Wochen her war das ich das bestellt hatte. Und dann sagte sie, na ja,\nWollen wir mal hoffen, dass nichts Schlimmes ist, ne? Na ja, ansonsten sehen wir uns nachher wieder, wenn ich mit diesem, aber das war wirklich den Umschlag, habe ich aufbewahrt. Da war einmal alles drauf, ne? Also,\nUnd der Hintergrund war natürlich, dass das äh deshalb länger gedauert, weil das natürlich eigene Prüfung ist, dann kriegst du auch beim BK dann eben diesen Hinweis, ja, die Auskunft, die wir in äh teilen, gilt vorbehaltlich,\nweiterer aktuell anhängiger Verfahren über die wir keine Auskunft geben, das heißt Chris jetzt nur das, was äh was abgeschlossen ist und wo die,\nÄhm wie war das nochmal das, was abgeschlossen ist und wo es keinen besonderen Grund gäbe, die das ähm nicht zu sagen.\nJa kannst dir ja vorstellen, was deine am Ende noch über ist, ne? Also ist nichts. Ist klar. Aber dick vom Datenschutzbeauftragten und vertraulich und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:24",
+      "text": "Da ist nichts drin. Ich dachte jetzt kommt noch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:28",
+      "text": "War auf jeden Fall ein dicker Umschlag."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:30",
+      "text": "Na ja, das diskutieren wir äh später mal. Gab aber noch mehr Feedback ähm,\nhier ging's dann im weiteren um die äh warte mal, was war nochmal? Kloster Kontext mit dem Auslesen der Passwörter aus dem Browser ähm was äh war da nochmal der der Themenanlass dazu."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:55",
+      "text": "Diese Malware, die der Flugsimulator ad One Hersteller mitverteilt hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:00",
+      "text": "Exacley, genau. Eh, äh, Entschuldigung, AWO sagte dazu, ich weiß, dies ist kein Tech-Podcast, aber du könntest Linus entweder bei der nächsten Folge oder hier in den Kommentaren ein wenig näher erläutern, wie dies,\nMit dem Auslesen des Passwortspeichers, den funktioniert, beziehungsweise worum das eigentlich geht. Naiverweise hätte ich gedacht, dass genau so etwas nicht funktionieren sollte. Außerdem wäre interessant,\nwas die Rahmenbedingungen sein müssen, dass Programme diesen Passwortspeicher auslesen können. Also zum Beispiel kann das auch eine Webseite oder können das nur Programm auf dem selben Rechner laufen und Zugriff auf die auf dem selben Rechner laufen und Zugriff aus Dateisystem haben,\nJa, den Punkt haben wir so ein bisschen offen gelassen. Wir hatten dann nach der Aufnahme auch da das hier auch nochmal kurz das auch nochmal kurz aufgegriffen, aber äh vergessen, dass in der Sendung anzusprechen, dass äh ist natürlich jetzt erstmal ein,\nDie Pens so,\nÄhm also zum Beispiel auf meinem Computer hätte mich das jetzt selber äh errascht, weil halt der Passwortspeicher quasi bei den Systemschlüsselbund äh abgesichert ist. Da ist dann so ein Auslesen nicht so ohne Weiteres machbar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:10:06",
+      "text": "Sven K hat aber dazu die richtige Antwort gegeben. Der der nächste Kommentar, den brauchen wir nämlich, der so schön, den kann man so runter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:13",
+      "text": "Genau\nDer schreibt die Passwörter müssen ja irgendwo auf der Festplatte gespeichert sein. Üblicherweise in einer Datei, in dem Verzeichnis, in dem das Browserprofil liegt und wenn man kein Masterpasswort verwendet, müssen sie dort so gespeichert sein\nder Browser allein aus dem Inhalt dieser Datei die Passwörter berechnen kann,\ninsbesondere können sie nicht verschlüsselt sein, denn dann müsste man ja den Schlüssel eingeben, bevor der Browser die Passwörter entschlüsseln kann. Man könnte zwar die Passwortdatei verschlüsseln und den Schlüssel in einer anderen Datei ablegen, aber das würde nichts grundsätzlich ändern\nDas bösartige Programm würde dann einfach beide Dateien auslesen. Um auf Desktop Betriebssystem,\nEntschuldigung. Und auf Desktop Betriebssystem ist es üblich, dass alle Programme eines Nutzers Zugriff auf alle Dateien des Nutzers haben. Das heißt,\nDer Flugsimulator kann die Passwortspeicherdatei aus dem Browserprofil lesen und da diese Datei nicht verschlüsselt sein kann, kommt er so leicht an die Passwörter. Es gibt Bestrebungen, das zu ändern, sodass Programme nicht mehr ohne weiteres Zugriff auf die Daten anderer Programme haben,\nauf Mobilbetriebssystem wird das ja seit jeher so gemacht, also gemeint sind hier so Sandboxkonzepte, aber das ist nicht ganz so einfach, weil viele Programme intizit davon ausgehen auf alles zugreifen zu können, auf das der Nutzer zugreifen kann, weil sowas ja immer.\nMan will äh und man will den Nutzer ja auch nicht mit jede Menge wollen, sie diesen Zugriff erlauben, Dialogen nerven. Webseiten hingegen haben keinen direkten Zugriff auf das Dateisystem, also können sie dem Passwortspeicher auch nicht auslesen, es sei denn, es gibt einen Backenbrowser,\noder einer Browsererweiterung. Also alles äh richtig erklärt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:43",
+      "text": "Verbandwort, hundert Punkte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:45",
+      "text": "Genau, also wenn ihr entweder so auf Mac ist es halt, wenn man da Safari verwendet, dann ist es halt so, dann liegen halt die Passwörter in dem Systemschlüsselbund oder in die Benutzer äh Schlüsselbund und ähm der Zugriff darüber geht halt nur,\nwenn ein Programm dafür auch autorisiert wird, also wenn es ein anderes Programm als der Browser selber macht, dann würde man so einen Dialog."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:06",
+      "text": "Es erlauben, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:07",
+      "text": "Genau oder man nutzt halt eine Schwäche des Browsers aus. Das kann natürlich sein, der hier in den Zugriff darauf dann schon hat zu diesem Zeitpunkt und dann könnte man sich Szenarien vorstellen. Also ist jetzt nicht komplett ausgeschlossen,\nGrundsätzlich, wenn ihr Passwörter im Browser speichert, dann solltet ihr das auch immer noch mit einem zusätzlichen Passwort versehen, egal welcher Browser das ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:28",
+      "text": "Kernpunkt ist, wenn ihr ohne Passwort drankommt, kommen andere auch ohne Passworte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:32",
+      "text": "Genau, aber nur wenn halt sofer dann eben auf dem Rechner ist und nicht einfach so aus dem Netz, dann wie viel schon richtig beschrieben braucht's weitere Sicherheitslücken, aber auch davon ist ja auch schon mal berichtet worden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:43",
+      "text": "Gibt's wunderschöne Angriffe, aber da wollen wir jetzt gar nicht ins Detail gehen, aber da gibt's einen vielleicht? Nein, okay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:48",
+      "text": "Aber auf jeden Fall äh vielen Dank für diese Kommentare, wir sind immer besonders froh, wenn wir da äh entsprechend korrigiert oder ergänzt werden und ähm da haben wir alle was davon. So und dann gab's."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:00",
+      "text": "Noch ein schöner."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:01",
+      "text": "Noch einen schönen Angriff, da war dann auch irgendwie eine Datei offen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:06",
+      "text": "Also wenn ich, wenn ich mich nicht täusche."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:08",
+      "text": "Also ich ich habe das nur so, ich habe, wie gesagt, weil jetzt die letzten Tage viel unterwegs und habe das so am Rande ein bisschen ähm mitbekommen, also es geht um den heißt das jetzt schon so, bundeshack.\nBundeshack, also ist ja nicht der erste Bundeshack, gab ja schon mal einen anderen da mit dem Bundestag, da haben wir uns ja hier auch schon ausführlich drüber unterhalten, jetzt gab's wohl einen zweiten Angriff\nunter anderem das Außenministerium äh in Mitleidenschaft gezogen wurde und man fragt sich, äh ja was erlaube Bundesnetz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:38",
+      "text": "Du hast gerade schon gesagt, es gab diesen Bundestagshack,\nNur um den nochmal kurz zu äh rekapituländevertausendfünfzehn. Ja, vermutlich Anfang zweitausendfünfzehn losgegangen. Mai zweitausendfünfzehn entdeckt und der betraf die Rechner von,\nAbgeordneten und deren Mitarbeitern im Bundestag. Und deren IT-System nennt sich Palacom,\nparlamentarisches Kommunikationssystem oder so steht es wahrscheinlich für. Und dann war das dann tönte das BSI nämlich groß rum und sagte kommt äh hier zu uns,\nwir haben euch schon immer gesagt, dass ihr ähm das ein, dass das Palacomund undicht ist, kommt lieber in unser sicheres Netz,\nDas ist der der IVBB, der Informationsverbund Berlin äh Bonn,\nUnd der, der ist sicherer, weil es tatsächlich das Witz als gerade was in dem in den Medien. Weil wir filtern irgendwie was weiß ich, fünftausend oder fünfzigtausend Verbindungen und in Palaco werden nur,\nTausende oder fünftausend Verbindungen gefehlt hat. Deswegen ist unserer sicherer. So, das war so der Punkt. Und der Bundestag sagt, dann wir werden uns nicht in diesen IVBB begeben, weil.\nWir sind die Legislative,\nund das BSI unterliegt der Exekutive und es ist nicht hinnehmbar, dass wir ähm in einem, dass wir unser Netz betreiben lassen von jemandem, der im Prinzip an die Einweisung des Innenministers gebunden ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:15",
+      "text": "Das ist ja auch eine ganz sinnvolle Argumentation."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:18",
+      "text": "So, jetzt äh das war also alles zweitausendfünfzehn. Äh Geschichte geht weiter. Jetzt war achtundzwanzigster Februar zweitausendachtzehn äh war es sehr interessant. Ich saß am am in einem Café und habe ein,\nGeschäftliches Gespräch geführt und dann sich Push-Nachricht auf dem Handy."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:39",
+      "text": "Was war das Datum."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:40",
+      "text": "Achtundzwanzigster Februar kriege ich eine Push-Nachricht auf dem Handy. Ähm Bundesregierung gehackt,\nUnd ich sage zu meinem Gesprächspartner ähm tut mir leid, aber unser Gespräch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:54",
+      "text": "Ist beendet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:56",
+      "text": "Wird jetzt nicht mehr realistisch weiter für weiterzuführen sein,\nweil mein Telefon wird jetzt nicht mehr aufhören zu klingeln. Und dann sagte der so guckte mich da noch so ein bisschen an so im Sinne von.\nMhm. So\nWollen wir mal schauen, ob's wirklich klingelt. Zack, zack, zack, zack, zack, bist dann irgendwie nach dem vierten Anruf, hat dieses Café schon darüber gelacht, dass ich immer wieder drangegangen bin, währenddessen schon die weiteren getutet haben\nund ich allen immer gesagt habe so, ich sage ihnen dazu nichts, weil,\nIn dieser Nachricht steht nichts, wozu man irgendetwas sagen kann. Ja aber sie können doch sagen, ob ob der IVBB sicher ist. Ich so, näher,\nJetzt kann ich ihnen sagen, dass es wahrscheinlich nicht ist, weil ja ein System da drin gehackt wurde. Ja, können sie denn was zu APT achtundzwanzig sagen, das war die Hackergruppe, der äh genannt\nzu dem Zeitpunkt noch, von der behauptet wurde, sie wär's gewesen, habe ich auch gesagt, nein, niemand,\nKann anhand des jetzt gemeldeten Informationsstandes etwas dazu sagen und deswegen werde ich keine Interviews dazu geben. Anfangs waren sie dann noch beleidigt oder äh haben das nicht verstanden?\nIch sage mal vorsichtig,\nVierundzwanzig und achtundvierzig Stunden später haben sie auch verstanden, warum ich das nicht gemacht habe, denn ähm es gab also eine ganze Reihe von Leuten, die das getan haben und sich dann nachher, glaube ich,\netwas korrigieren mussten mit ihren Aussagen. Aber bleiben wir der,\nBleiben wir beim Thema. Ähm eben die Geschichte, die uns gemeldet wurde war.\nIm Dezember wurde erkannt, dass es.\nEinen laufenden Angriff mit erfolgreicher Infektion auf Systeme im IVB ag ab. Also das im Regierungsnetz.\nUnd ähm seit Dezember wir werden sie also jetzt da dran diesen Angriff zu untersuchen, den Angreifer zu isolieren und irgendwie Forensik zu betreiben, um zu herauszufinden, wie das denn geschehen ist.\nSie gehen aber davon aus, dass der Angriff unter Umständen schon seit einem Jahr andauert.\nSie wissen aber, dass nur sehr wenige Daten bisher exfiltriert wurden. Ähm wenige Daten, sie wissen aber wohl nicht welche,\nUnd wenige Daten wird hier etwa offenbar in, in Megabyte oder Gigabyte äh bemessen,\nDie Meldung kam raus, da wird's interessant von,\nder DPA und sehr kurz darauf von der Süddeutschen. Die Süddeutsche hat aber.\nEtwas anderen Angriffshergang geschildert und andere befallene Systeme,\nals die DPA. Da fährt die DPA eine Attribute vorgenommen, nämlich gesagt, es handelte sich bei den Angreifern um eine Angreifergruppe, die allgemein unter dem Namen APT achtundzwanzig bekannt ist.\nÄhm APT steht für Advanced Passistant Fred. Also eine ein fortgeschrittener äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:10",
+      "text": "Dauerhafte dauerhafte Bedrohung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:11",
+      "text": "Dauerhafter dauerhafte Bedrohung, das soll bedeuten, dass.\nDie angreifende Gruppe oder die Bedrohung, die da ist, dass es der nicht egal ist, wen sie hackt, sondern dass sie dich als Ziel hat\nDas ist im Prinzip der Unterschied zwischen einem zwischen, sage ich mal, so einem Drive-By-Angriff oder einem Massenangriff und jemanden, der genau weiß, jetzt als Ziel hat,\ndiese spezifische."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:37",
+      "text": "Die wollen nicht Bitcoin von dir, die wollen genau die Daten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:40",
+      "text": "Ne, die wollen nicht irgendwie ein fettes Cluster wie bei Tesla hacken und am Ende damit Kryptowährungen meinen, sondern die wollen, die wissen, wen sie da angreifen, die wollen nur den angreifen und die werden auch nicht aufgeben, bis sie's geschafft haben,\nÄhm,\nDas also Advanced Passistant Fred und die werden halt nummeriert und benannt und dann gibt's immer großes äh großes Feiern, dass man dann irgendwie meint\nHinweise zu haben aus welchen Ländern oder mit welchen Motivationen dieser Angreifergruppe vorgeht. Dann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:15",
+      "text": "Stand dabei nicht, woher diese Schlussfolgerung, also worauf die beruht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:19",
+      "text": "Richtig, das war äh es war noch, es stand noch nicht einmal, es ist bis heute noch nicht öffentlich wie dieser Angriff überhaupt stattgefunden hat. Also es steht da nicht, waren Fischingangriff oder wurde ein Server geohnt oder was auch immer. Also es gab,\nkeine öffentlichen Informationen über den Angriffshergang, über Angriffsvektor oder sonstiges, ja? Es gibt keine Information darüber, ob und wie sie eine, wie sie eine Attribute vorgenommen haben wollen,\nUnd mir kam das an dem an dem Tag schon direkt so komisch vor, weil sie sagen, wir haben das ein Jahr lang nicht gemerkt ähm,\nAber jetzt wissen wir, es ist APT achtundzwanzig. Wo."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:00",
+      "text": "Wir wissen auch, dass es seit einem Jahr."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:02",
+      "text": "Und wir wissen es erst seit einem Jahr drin ist. Was wiederum gut sein kann. Ich meine in so einem in einem als sicher geltenden Netz guckst, hast du natürlich unter Umständen sehr viel Logging ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:12",
+      "text": "Irgendwas fällt auf und dann fällt dir auf, dass das schon hätte vor einem Jahr hätte auch schon auffallen können, wobei man sich dann wieder fragt, warum ist das, soll ich das denn nicht schon vor einem Jahr aufgefall."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:21",
+      "text": "Genau und vor allem ist interessant, äh was wir von vornherein komisch vorkam, weshalb ich also mein können sie denn nicht was zu APT achtundzwanzig sagen? Ja, und dann habe ich gesagt, nee, weil,\nMir kommt das komisch vor. Ich sage nichts zur APT achtundzwanzig, weil ich glaube nicht, dass es eher APT achtundzwanzig war. Relativ einfache Begründung, APT achtundzwanzig.\nGelten jetzt nicht als die hohen Künstler und ähm,\njedes Mal, wenn eine Hackerangriff irgendwo entdeckt wird, dann wird, werden natürlich ähm sogenannte Indicators of Compromiz gesammelt, also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:59",
+      "text": "Welche Methode wurde gewählt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:01",
+      "text": "Oder wo wo mit welchem Koman in Control Server kommuniziert ist, welche Arten von Protokollen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:07",
+      "text": "Welche Mengen an Rechnern kamen zum Einsatz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:10",
+      "text": "Alles Mögliche, ne? Jeder, jede eigen jede spezifische Eigenschaft dieses Angriffs wird ausgewertet ähm und,\nQuasi katalogisiert und dann in weit im bei weiteren Angriffen über Ähnlichkeit quasi davon ausgegangen zu sagen okay das sieht so aus als wäre das diese Gruppe gewesen, weil,\nNutzt den gleichen Command Control Server. So war's ja beim Bundestag tatsächlich, ne? Aber okay, anderes Thema. Oder ähm,\nDie Aktivität der Angreifer war zu einer bestimmten Zeitzone. Die sind eher,\nNe, die haben eher morgens die Daten abgesogen, wenn die Maschinen an waren und ziehen zweifels unsere Leute aufgestanden sind und sie schlafen gegangen sind. Alles und das ist das Entscheidende. Alles Indizien, nichts davon beweise, immer nur indikatoren und alles auch fälschbar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:01",
+      "text": "Und vor allem wenn's ABT achtundzwanzig gibt, gibt's auch ABT neununddreißig und siebenundvierzig und hundertsechsundvierzig und ob,\nZwei von denen nicht vielleicht dieselbe sind oder nicht sogar der einen mehrere Sachen zugeschrieben werden, die von verschiedenen kommen Nobedy Noas."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:17",
+      "text": "Exakt aber interessant ist vor allem wenn du jetzt sagst, es ist APT achtundzwanzig.\nDa wo sie sagen, es ist APT achtundzwanzig, was bisher auch immer sehr auffällig,\nalso sehr oft, also waren die Indikatoren sehr stark. Und jetzt oder sehr plump, nahezu verdächtig plump, sodass man da schon wieder sagen kann, na ja, also wenn ihr aufgrund dieser wenigen,\nIndikatoren hier eine Attribute macht, dann ähm.\nKönnten die halt auch gefälscht sein. Wobei dann sich wieder die Frage stellt, haben sie alle Indikatoren öffentlich gemacht. Es kann ja sehr gut, ne? Wir sind ja hier in den Spy Games."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:53",
+      "text": "Wer definiert denn diese diese APT-Diste? Warte ganz kurz worauf ich noch genau? Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:56",
+      "text": "Warte ganz kurz worauf ich noch hinaus will ist, wenn du, wenn du nach einem Jahr feststellst, huch, wir haben hier ein APT achtundzwanzig in der Bude, in der Bude,\ndann frage ich mich wieso hastet ein Jahr lang nicht festgestellt, dann aber offenbar sehr schnell und sehr einfach. Also entweder."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:13",
+      "text": "Das ist kompliziert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:14",
+      "text": "Weiß jetzt entweder es ist kompliziert oder ist es einfach so. Also das war mir von vornherein irgendwie so ein bisschen unklar. Ich glaube, wer diese, also es gibt jetzt keine direkten ähm,\nähm ähm also ich glaube, es geben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:30",
+      "text": "Es gibt jetzt es gibt jetzt nicht so ein Hackerverzeichnis wie irgendwie Bach, äh, Oratorien äh zusammengestellt sind so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:36",
+      "text": "Nee, ich also die wäre ich weiß gar nicht, wer damit angefangen hat. Ich glaube, das war."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:41",
+      "text": "Verzeichnet es römisch fünf dreiundzwanzig Abschnitt A. Wir spielen Ihnen jetzt eine leise Musik ein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:48",
+      "text": "Ich müsste mal gucken, also da hat glaube ich irgend so eine von den großen Security-Firmen vor paar Jahren mit angefangen. Da war das irgendwie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:55",
+      "text": "Gibt's denn noch andere Kürzel außer APT, die da sich da etabliert haben?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:00",
+      "text": "Na ja, die haben ja auch, die haben ja dann auch nochmal immer alle zwanzig Namen, ne? Also dann hast du noch äh Fancy Bär und so, dann die Gruppen haben ja die haben ja, die schreiben ja nicht, ne, im Gegensatz zu irgendwelchen Aktivistengruppen,\ndie das auch als.\nUrinmarkierung sehen, schreiben die natürlich nicht dran. Hackt bei sowieso neunundsechzig oder was, ja, sondern.\nAber lassen wir das. Also.\nAlso entweder du weißt, dass es dass die es sind,\nUnd dann weißt du aber auch, dass du sie ganz einfach hättest, raushalten können anhand der Indicators auf Compromise, die man über die schon gesammelt hat oder du weißt es nicht und konntest sie deshalb auch nicht raushalten. Und dann frage ich mich, wie hast du die Attribute gemacht? Also das passte irgendwie alles nicht. Ähm,\nInteressanterweise kam ja dann auch nicht keine vierundzwanzig Stunden später die Meldung,\nwar gar nicht APT achtundzwanzig, sondern war eine Gruppe, die sehr viel länger schon bekannt ist unter dem Namen\nTourlar oder Snake die ebenfalls aber natürlich ne hier Mailand oder Madrid, Hauptsache Russland, ne? Ist ja klar. Alles."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:11",
+      "text": "Alles hacken, was in der drei nicht auf Bäumen ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:16",
+      "text": "Ja klar, alles äh war natürlich immer äh äh war auf jeden Fall der Russe. Und dann haben sie gesagt, das war jetzt diese Gruppe. Konnten aber wieder nicht sagen, wieso. Ja?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:25",
+      "text": "Wer sagt denn das überhaupt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:27",
+      "text": "Das sagen ja wiederum dann die Journalisten nicht, welche Quellen sie da haben. Ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:30",
+      "text": "Weil sie Quellen haben. Also sie haben irgendwelche Quellen von irgendwelchen Leuten, die der Meinung sind, sie könnten das einblicken, obwohl eigentlich derzeit nur die Bundestag äh Bundeshessen die Bande. Bundes der Bundestylber."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:42",
+      "text": "Das BSI ist da an der Nummer dran. So die ähm also Fakt ist, es gibt,\nkeinerlei auch nur im entferntesten belastbaren Aussagen dazu, die waren in der ersten Meldung haben sie die falsche Hackergruppe beschuldigt oder vielleicht auch die richtige äh auf jeden Fall haben sie nachher eine andere gesagt.\nUnd es gibt bisher noch keine öffentlichen Informationen darüber wie dieser Angriff erfolgt ist. Trotzdem haben sich alle,\nCybergesellen schon irgendwie vorne ins Fernsehen gestellt und haben irgendwie von den unsicheren Netzen geredet, wo mir auch, wo ich mich auch frage, so Freunde, wann haben Hacker denn jemals Netz gehackt,\nHecken immer Endpunkte, immer Computer, ja? Also sei es Server, äh also solange die nicht mit einer Spitzhacke kommen,\nHaben Sie nicht das Netz gehackt,\nSie haben einen Server in diesem Netz gehackt oder vielleicht auch ein Router in diesem Netz. Aber das als sicher geltende Netz. Ich meine, die sitzen da an ihren Windows-Rechnern,\nArbeiten mit Office oder was auch immer,\nund äh sagen dann ja, aber wir sind ja hier im sicheren Netz. Also ist ja allein schon so hirnrissig, aber die gesamte jeder, jede Nachrichtensendung. Das sichere Netz wurde gehackt. Das sichere Netz wurde gedeckt, oh je, oh je, oh je."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:01",
+      "text": "Wir wissen alle, ein USB-Stick in den falschen Pott gesteckt und schon nimmt das Unheil seinen Lauf. Und noch nicht mal das ist jetzt eine klare Vermutung, dass es darüber lief. Wir wissen's halt einfach nicht. Da kann sich was reingefunkt haben, äh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:13",
+      "text": "Also es wird relativ bald äh denke ich, dass berichtet werden, wie es passiert ist. Und ich mache mal so die vorsichtige Prognose. Da werden nochmal ein paar Leute echt blöd gucken,\nweil da, was ich bisher an."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:25",
+      "text": "Ein paar Leute, die derzeit schon darüber berichtet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:27",
+      "text": "Ja, die ist schon sehr mutig berichtet haben, werden unter Umständen nochmal ähm,\nsehr blöd gucken. Denn es gab eine äh Meldung schon vor ein paar Tagen von ähm äh Paloalto Networks äh die das ist so ein Hersteller von Network Monitoring Tools.\nÄh oder äh die einen längeren Blogpost darüber hatten,\nwie ein bestimmter Angriff stattgefunden hat. Und zwar ist das äh sagen sie hier Government Entities und schildern einen\nFishingangriff. Sehr, sehr ausführlich mit äh mit spezifischer Analyse, da ging's also um einen Excel-Shee ähm in dem Excel-Schied ist sehr,\nelegant versteckt die die Paylote, also tatsächlich, also den hat man gesehen, da muss ich sagen,\nschöner, schön, schön, schöner Angriff, weil du hast halt irgendwie den.\nDeine eigentliche Playlot ist in dem Excel-Schied. Ähm Base vierundsechzig encodet.\nWorauf normalerweise solche Monitorenkisten äh sei, ob die jetzt auf dem Mailserver hängen oder sonst was ansprechen. Die haben aber vor dieses Basics die vorgeschrieben, Beginn Setificit und dahinter Encetivicit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:29:52",
+      "text": "Womit das halt so als übliche übliche Kryptowolke angesehen wird, die man sich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:29:55",
+      "text": "Womit das sehr gut sein kann, dass das ein oder andere Monitoring Tool ähm den Kontext nicht betrachtet, dass das gerade in einer Excel-Zelle steht, sondern sagt, ach ja, hier äh ein schönes Zertifikat wunderbar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:08",
+      "text": "Mhm.\nAlso vielleicht nochmal kurz äh für Leute, die jetzt schon wieder fast aussteigen. B vierundsechzig ist so eine im Internet seit Ewigkeiten etablierte Methode, wie man halt so Binäre äh Daten, so wie sie über die Leitungen äh gehen, so darstellen kann, dass man nur so normale Buchstaben,\nZahlen benutzt, damit man so mal eben eine E-Mail reinpasten kann, ohne dass beim Versenden der Mail da relevante Informationen äh weggehen und man kann halt das problemlos hin und her konvertieren, ist einfach nur eine andere Darstellung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:30:35",
+      "text": "Wird in der Kryptographie sehr häufig verwendet, um eben eine einfache\ntextbasierte Repräsentation der Daten zu haben. Wenn ihr euch irgendwie euren PGP Public anschaut oder eben ein Zertifikat, dann ist das in der Regel,\nvierundsechzig kodiertes wie Nervformat.\nÄhm schöner, schöner Angriff und dann haben sie irgendwie die Indicators auf Compromiz und so nett, sind natürlich irgendwie der eine oder andere, die eine oder andere Recherche,\nGruppe ist halt dann da drauf und hat das als den Angriffssektor geschildert in ihrer Berichterstattung und ich hab wie gesagt so den ein oder anderen,\nähm Hinweis, dass es wahrscheinlich nicht so so gelaufen ist.\nAlso ein riesiges, ein riesiges Kuddelmuddel, ganz einfach, weil wir keine Informationen haben. Wir wissen nichts. Wir können das auch nicht beurteilen,\nweil wir,\nweil wir keine gesicherten Informationen haben, dann ist die Rede von siebzehn Rechner wurden übernommen. Ja, ist das jetzt viel oder wenig? Weiß ich nicht, kommt drauf an, wie kritisch die sind,\nSo und so viele MB oder GB wurden da rausgeholt, ist das jetzt viel oder wenig, kommt drauf an, wie kritisch die sind. Also alles irgendwie\nähm alles irgendwie sehr komisch, aber der auf jeden Fall gibt es eine größere Späraktion, die hier Palo Alto\neben aber auf APT achtundzwanzig, atribuiert. Gleichzeitig kommt dann die Meldung Spiegel rennt voraus. Äh also die Spiegel,\nPrintredakteure rennen raus und sagen, die Stiftung, Wissenschaft und Politik wurde gehackt\nAPT achtundzwanzig wird verdächtigt und müssen dann nachher kurz danach raufschreiben. Äh die Stiftung erklärte mittlerweile auf Nachfrage der DPA, sie sei nicht erfolgreich gehackt worden, sie hätte lediglich im September, im Dezember zweitausendsechzehn\nEine Fishing-Mail bekommen, also ein riesiges Theater in der Berichterstattung, wirklich peinlich, peinlich, peinlich, für aber ich kann auch natürlich die Journalisten verstehen, die ähm,\nDie müssen halt mussten halt berichten, ne. Die wollten natürlich auch berichten und waren dann immer so, ja, war ja noch immer gehört sie nicht dazu, was sagen, können sie nicht dazu, was sage ich denn."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:43",
+      "text": "Sagen sie irgendwas."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:44",
+      "text": "Ja, ist, sagen sie irgendwas. Ich nee, ich sage überhaupt nichts, weil das alles, man kann nix sagen, es gibt hier keine Informationen und ich mache mich jetzt hier nicht zum Cyberhorst. So, das habe ich jetzt schon gesehen, äh wie die anderen das gemacht haben und genau deswegen habe ich das nicht gemacht, ja.\nÄhm.\nDas war wirklich, also ich und ich habe eine, wie gesagt, so einen kleinen Spaß äh äh festgestellt, als ich dann so ein oder zwei Tage später immer merkte so,\nGut, dass sie nichts zu APT acht zwanzig gesagt hast, gut, dass du nichts zum Angriffsverlauf gesagt hast, weil ich dann eben nachher äh Informationen sich mir andeuteten, dass sie doch ein bisschen anders ist, als es da dargestellt wurde\nund wir können halt jetzt nur.\nDarauf warten, dass wir da irgendwann mal mehr äh zu erfahren. Ähm wichtig ist natürlich schon zu zu sagen, die überhaupt die Idee, es gäbe ein sicheres Netz,\nist,\nhalt Unsinn. Also so nur weil das Netzsicher ist, heißt es ja nicht, dass du dich mit deinem Gerät anders verhalten kannst. Und im Zweifelsfall ist der Angriff eben auf.\nGeräte in Kombination mit Personen gegangen und nicht darüber, dass das Netz,\näh gehackt wurde, ja? Also ein Netz ist relativ\nsimpel, das ist eine Verbindung zwischen Computern, die dann unter Umständen bestimmten Regelungen unterliegt, wo quasi gesagt wird, okay, folgendes Programm oder folgender Hose darf auf diesen Service zugreifen anderer nicht\nund dann geht's natürlich los, dass man sich ähm Mühe geben muss, sich dadurch zu schlawinern und dann kann es einem das Netz,\nschwerer oder einfacher machen sich dadrüber äh zu bewegen, vielleicht eine Sicherheitszone äh zum gehen, eine Firewall-Regel äh zu umgehen oder ähnliches,\nDas nennt sich die Letral Movement-Phase und da kann ein Netz sicherer oder unsicherer sein, aber nur durch das Netz,\nWirst du am Ende nicht äh klüger. Du musst am Ende einen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:57",
+      "text": "Ne, also,\nich finde diesen Begriff Netz jetzt doch sehr losegefasst so, ne? Also was ist Netz? Ist Netz, die Kabel zwischen den Geräten oder ist Netz,\nAlles, was zu der Infrastruktur gehört, um die Computer miteinander zu verbinden, die da sind oder ist Netz der Name für alles, was da dran ist, einschließlich der Computer. Und ich finde,\nAlle drei Sichtweisen sind irgendwie legitim und kontextabhängig und man weiß jetzt nicht wer was, wie, wo benutzt er es einfach zu schwammig? Man könnte jetzt kritisieren\nso überhaupt zu argumentieren, ist schon mal Quatsch, eben weil das so schwammig ist. Ähm ich würde sogar fast soweit gehen und sagen,\nDie ganzen Router und Switches, also die ganzen Hilfsgeräte, die jetzt nicht unbedingt Endgeräte sind, sondern die eben nur dazu da sind, diesen Datenfluss innerhalb einer Organisation herzustellen. Das kann man schon als Netz bezeichnen und das sind natürlich technisch\nauch wiederum Computer und wir wissen sehr wohl, dass eben auch solche Geräte anfällig sind. Es kann sehr gut sein, dass irgend so eine Zisko-Box oder was auch immer da rumsteht,\ndass da eine Sicherheitslücke äh existiert, sondern existieren auch welche und oder ein Zero Day oder was auch immer, dass sich dort etwas einnistet, was dann einfach in dem Moment in der Lage ist, den Datenstrom zwischen den anderen Rechnern,\nzu horchen und wenn dann halt irgendeine interne Kommunikation stattfindet, die eben nicht ausreichend verschlüsselt ist, dann ist das natürlich auch etwas, was man nach außen schieben kann oder."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:18",
+      "text": "Aber das ist ja genau das, worauf ich hinaus will. Du vertraust dem Netz sowieso nicht, sondern machst deine äh deine Services dicht und machst eine äh eine sichere Kommunikation, authentisierte Kommunikation, verschlüsselte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:29",
+      "text": "Sollte so sein. Sollte so sein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:30",
+      "text": "So sein. Und wenn du das getan hast."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:33",
+      "text": "Aber uns haben sie doch gesagt, das ist nett ist sicher."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:36",
+      "text": "Wenn du das getan hast, dann werden halt die Endpunkte angegriffen. Nun ja, also,\nIch denke, es wird nicht mehr lange dauern, bis dann der äh bis es dann gesicherte Berichtete Erkenntnisse dazu gibt, wie dieser Eingriff tatsächlich stattgefunden hat. Bis dahin werde ich da auch nicht weiter drüber spekulieren,\nWeil ich mich eben nicht zum."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:54",
+      "text": "Cyberhorst machen willst. Cyberhaus, genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:55",
+      "text": "Und Cyberhorst machen möchte. Spannend an dieser Frage, an diesem Problem ist aber noch was oder an diesem Vorfall und dieser Berichterstattung ist noch was anderes und da kann man sich echt den Kopf dran zerbrechen. Also erstens,\nSüddeutsche und DPA kommen relativ in relativ schneller Folge mit unterschiedlichen Informationen,\nWas mich zu der vorsichtigen Hypothese verleitet, dass die unterschiedliche Quellen hat.\nSchon mal schlecht ist für die Bundesregierung, weil."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:28",
+      "text": "Mehr als eine gibt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:30",
+      "text": "Ja, weil's mehr als eine undichte Stelle gibt, offenbar. Jetzt beklagt die Bundesregierung sich sehr spezifisch.\nDass hier ein Geheimnis verrat vorliegt,\nund dass die Veröffentlichung dieser Information für eine laufende Operation schädlich war,\nAldi Waldi,\nsie gesagt haben, wir haben ja den Angreifer oder diesen Angriff am neunzehnten Dezember entdeckt. Übrigens auch da wieder unterschiedliche Berichterstattung. Einerseits,\nwird an einigen Berichten behauptet, sie hätten ihn selber entdeckt und zwar mit Hilfe irgendwie Netzwerkmonitoring wie VBB.\nAn anderer Stelle wird gesagt, sie werden durch einen befreundeten Nachrichtendienst,\ndarauf hingewiesen worden, dass da was bei ihnen nicht stimmt. Beides kann sehr gut sein, ja? Also einer ein befreundeter Nachrichtendienst,\nkönnte ja sein, dass der zum Beispiel da so auch so ein bisschen rumseibert und irgendwann feststellt, du äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:40",
+      "text": "Unsere Dokumente liegen da jetzt auch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:42",
+      "text": "Irgendwie eure Dokumente liegen da äh passt mal auf äh unsere Augen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:46",
+      "text": "Also nicht nur eure, sondern unsere auch die, die wir euch gegeben haben, die liegen gerade."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:51",
+      "text": "Genau, passt mal auf, was da, was da los ist, kann sehr gut sein. Auch dazu bisher keine äh keine gesicherten Angaben. Hm.\nJetzt sagt er aber, das äh Innenministerium na ja, wir haben diese Information erlangt,\nAuch wieder, ne? Und wir hatten die Information. Wir haben dann angefangen, den Angriff forensisch zu untersuchen und ihn den Angreifer zu isolieren.\nUnd in einer kontrollierten Umgebung den Angriff weiterlaufen zu lassen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:25",
+      "text": "Also ein Sandboxing Modell, so nach dem Motto, wir tun hier so als Hetze jetzt neues Target, aber wir beobachten dich dann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:31",
+      "text": "Das steht zu vermuten und jetzt ist natürlich also,\nDa scheinen sich jetzt die Geister. So, wenn du jetzt ein Geheimdienst bist und möchtest wissen, wer dich da aus welchen Gründen gehackt hat und welche Informationen er hat oder welche Kapazitäten dieser feindliche Geheimdienst hat, dann ist das,\nUnter Umständen sehr kann es sinnvoll sein, das zu tun.\nDenn unter Umständen lernst du ja noch mehr über deine Angreifer,\nwenn du da in der Systeme alle quasi in auf ein nicht funktional dichten Zustand schaltest, werden die komplexere Angriffe versuchen,\nUnter Umständen fällt denen dabei das ein oder andere Zero Day aus der Tasche und du sammelst schön in die Katers of Compromiz, ja? Jeder Angriff,\njeder Angriffstechnik, die noch zum Einsatz kommt, die du aufzeichnen kannst und detektieren kannst. Gib dir natürlich Wissen über,\ndie Angreifer,\ngibt dir Möglichkeit in anderen Netzen nach derartiger Aktivität zu suchen. Hilft dir bei der Attraktion? Hilft dir beim Aufspüren der Angreifer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:41",
+      "text": "Das ist ungefähr so, als ob da so noch so ein äh Garage äh neben deinem Haus hast, die dir jetzt äh besonders attraktiv erscheinen lässt für Einbrecher, aber im Wesentlichen ist da kein Wert drin, sondern nur Kameras, die dabei zuschauen, mit welchen Techniken sie vorgehen und."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:55",
+      "text": "Du sicherst die Garage, aber wie ein Irrer und guckst, was die machen, wenn sie mit komplexeren Sicherungssystemen äh konfrontiert werden. Ja, analysierst die Angreifer. Höchst interessant.\nIst die eine Perspektive? Ich persönlich, weil ich ja nicht im Geheimdienstbereich bin, vertrete eine ganz andere Perspektive, nämlich zu sagen, Freunde,\nIn eurem sicheren Netz sind die seit einem Jahr drin. Ihr wart noch nicht mal in der Lage, euer eigenes Netz zu isolieren,\nUnd jetzt meint ihr hier, ihr wärt in der Lage, diese Angreifer in eurem eigenen Netz kontrolliert zu isolieren, das klingt mir ein bisschen ambitioniert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:38",
+      "text": "So, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:40",
+      "text": "So, ne? Wer jetzt die andere Möglichkeit da drauf zu blicken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:43",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:44",
+      "text": "Nein, sagen sie, wir hatten aber die ganze Zeit die Hand am Stecker, wo der Osten so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:50",
+      "text": "Aber. Nein, wir leben sowieso in der Matrix und das ist hier alles nur virtuell."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:56",
+      "text": "Und jetzt kommt was, was wahrscheinlich äh die ein oder andere Zuhörerin äh überraschen wird. Wenn das nun mal der Befehl war,\noder die Entscheidung war und das Innenministerium sich entschieden hat, das jetzt so verfahren wird, dann ist es natürlich\nenorm wichtig, dass niemand öffentlich weiß, dass die Bundesregierung darüber im Bilde ist, dass sie sich da einen Angreifer eingetreten haben und diesen Angreifer beobachten,\nDenn solange der das nicht merkt und sich vielleicht un ähm beobachtet wähnt.\nKann es natürlich sein, dass er äh mehr über sich preisgibt,\nUnd unter dieser Annahme fragt man sich natürlich tatsächlich, welche Leute hielten das hier für notwendig die Öffentlichkeit zu informieren? In diesem Fall.\nDie DPA. Also ich meine, die DPA macht,\nVorlagen für Schnellmeldungen, aber keine investigativ Recherche. Und so war ja auch die DPA-Meldung. Äh Bundesregierung, der Heck der Russe war's. Ja, also im im übertragenen Sinne, ne? So, hm.\nWir hatten halt diese Attribute, die sich der nachher widersprochen wurde, die hatten dann irgendwie drinstehend ist, wer das Verteidigungsministerium betroffen, äh was nachher sich als falsch rausstellte.\nOder dem nachher widersprochen wurde, wo es dann natürlich auch sofort wieder Spekulationen gab, naja, Verteidigungsministerium und Außenministerium arbeiten enger zusammen unter Umständen äh.\nGab's da mal jemanden, der von dem einen Netz in das andere gegangen ist? Vielleicht hat das Verteidigungsministerium andere Delektionsregeln, das aber nur unter der Voraussetzung, dass äh die der Hinweis nicht doch von einem befreundeten\nGeheimdienst kam, welche auch immer das wohl gewesen sein mag. Ähm.\nLetztendlich das ganze Ding ist jetzt hier seit sechs Tagen in der Öffentlichkeit. Wir wissen überhaupt nichts. Alle spekulieren sich einen Wolf,\nAber diese äh Frage, warum DPA und warum jetzt diese Meldung.\nBleibt mir tatsächlich unklar,\nAlso mir ist nicht ganz klar, warum ob es irgendeine ob man das jetzt mit Whisle Blowing äh bezeichnen kann oder ob das einfach nur wichtig turei war von jemandem. Hm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:26",
+      "text": "Ob überhaupt was passiert ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:28",
+      "text": "Na, da wird schon was passiert sein. Also ähm ja da wird was passiert sein. Also das war ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:38",
+      "text": "So offensichtlich, dass er nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:39",
+      "text": "Ja, also es war na ja Journalisten erzählen ja dann auch vielleicht mal so was die Initiale.\nWas ihr edizieller Eindruck ist, ne? Wenn sie jetzt jemanden anrufen, ob da ob die darüber im Bilde waren oder nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:56",
+      "text": "Leute so regieren und so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:58",
+      "text": "Ja und das, also das war aber man fragt sich halt tatsächlich, äh warum und ich würde unter Umständen echt sagen so.\nKann man wahrscheinlich tatsächlich als Geheimnisverrat bezeichnen. Und mir ist bis jetzt noch nicht ganz klar, warum, womit diese Person ihren diesen,\nmit Durchstechen der Information an die Öffentlichkeit rechtfertigt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:30",
+      "text": "Bei könnte ja im schlimmsten Fall sagen, das war einfach eine Warnung an die Angreifer. Man hat dann vielleicht unter Umständen jemanden eigenen Fleisch, der da auch behilflich gewesen ist. Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:45:44",
+      "text": "Unter Umständen,\nAlso laut Aussage der Bundesregierung, wobei man da jetzt ja auch wirklich vorsichtig sein muss, aber so bestand keine Gefahr. Sie hat den Angreifer isoliert. Ähm,\nDann gab's ja irgendwie die Meldung. Der Angriff läuft weiter und ja also selbst also unwahrscheinlich, dass der noch weiterläuft, weil die Angreifer lesen ja auch Zeitungen und das war halt sogar irgendwie Washington Post Allmeldung äh weltweit,\nIch bin da sehr insgesamt eben sehr unzufrieden mit der oder die Informationslage,\ngibt, lässt eben keine näheren Analysen zu. Man kann sich nur, was man sowieso gesagt hat, sagen so mit der.\nKomplexität an Software, die da verwendet wird, diese,\nDeshalb Betriebssysteme, diese sonstigen Kommunikationssysteme. Das ist alles äh sehr komplex, das muss schmaler gebaut werden. Das muss mit ähm,\nalso mit mit schmaleren Betriebssystemen, schmaleren Anwendungen, weniger äh Multipurples oder äh multifunktionalen,\nSystem gebaut werden, wenn man das sicher haben möchte und solange da irgendwie am Ende irgendwelche Desktop-Systeme dranhängen,\näh ist das natürlich auf Dauer ein ähm ein ähm.\nEin eine Gefahr, die immer wieder da sein wird. Solange man sich nämlich einfachen Hackingangriffen,\ndann letztendlich doch aussetzt, indem man eben ja per E-Mail kommuniziert und Zugang zum Internet hat, egal wie gefiltert der dann noch ist. Äh ja, wer wird man wird man sich mal irgendwann drum kümmern müssen,\nwenn man wollte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:33",
+      "text": "Ja, dann ähm Hobbymus, hab Habimus Groko,\nwie es aussieht. Jetzt gibt's äh dann endlich mal auch eine Regierung wieder eine neue. Ich fand jetzt die Interimsregierung irgendwie ganz geil, weil da war jetzt sagen wir mal so der der."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:47:54",
+      "text": "Wenn sie ABT achtundzwanzig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:55",
+      "text": "Unsere Interimsregierung ABT achtundzwan,\nJa gut, also die SPD hat dann irgendwie ihren äh ausufernden demokratischen Prozess der Basisabstimmung über die Annahme dieses Koalitionsvertrages,\nUnd damit die Entscheidung äh diese Koalition auch zu Beginn zugestimmt mehrheitlich mit zwei Dritteln\nähm und man hat da betont äh versucht nicht zu jubeln und nicht irgendwie die Kritiker noch weiter äh zu beunruhigen,\nUnd jetzt kriegen wir halt so na ja quasi die alte Riege in bisschen frisch angepinselt.\nJetzt sind auch glaube ich alle Unionsministerposten sind klar, bei der SPD dauert das noch ein paar Tage, ich weiß nicht genau, wann, wann und wollen die sich denn dazu äußern, die müssen sie jetzt erstmal nochmal kloppen, nochmal ein paar Leute rausschmeißen, noch ein paar,\nnoch einen neuen Vorsitzenden finden oder so, keine Ahnung, was die da noch jetzt auf den letzten Metern alles noch bringen. Ähm,\nAuf jeden Fall gibt's jetzt auch geile neue CSU-Minister.\nUnd das interessiert uns natürlich besonders, weil aus Gründen, die wir nicht so richtig nachvollziehen können, liegt ausgerechnet, dass digital äh ich hätte jetzt fast gesagt, Ressort\nsag mal das digitale Aufgabenfeld im Wesentlichen so in dem auf der Tennisseite von CSU geführten Ministerien."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:49:34",
+      "text": "Weil wir damit so eine gute Erfahrung hatten, ne? Also Dobrindt war ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:39",
+      "text": "Die äh die Fleischgewordene Nullnummer."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:49:42",
+      "text": "Zum Glück müssen wir nicht über die Dieselskandal reden. Aber können wir. Nee, aber wir machen erst, also Dobrindt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:52",
+      "text": "Hat eigentlich nichts hingekriegt.\nEinfach null kein Fortschritt in gar nichts und uns damit auch tiefer reingeritten, was nicht nur die digitale Infrastruktur betrifft, sondern auch einfach Verkehr im Allgemeinen. Da,\ngar nichts, ist einfach alles scheiße. Sorry, aber ist äh kann man einfach nicht anders sagen, weil ist ja nichts passiert, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:15",
+      "text": "Ein Vollversagen, also gab's einen wunderschönen Artikel ja auch zu, wenn wir jetzt nur nochmal kurz über diese Dieselsache reden. Ähm auf Spiegel online die schwarze Null. Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:24",
+      "text": "Super Titel, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:28",
+      "text": "Dieselskandal jahrelang einfach nur durch Nichtstun ausgesessen und letztendlich ich mein wer leidet jetzt die Menschen,\ndie Dieselfahrzeuge haben, ja? Massive Wertverluste an ihren Karren, insbesondere wenn die alt sind, ähm das heißt, du hast."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:45",
+      "text": "Die Drohnen. Fahrverbote, die."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:47",
+      "text": "Genau, wegen der Fahrverbote den Wertverlust, so die Karre wirst du auch nicht mehr los\nSo, wenn du jetzt irgendwie eine eine Familie mit einem normalen Einkommen bist, ne, hast unter Umständen ein paar Jahre alten Diesel da stehen, wenn du Pech hast\nkannst du damit demnächst nicht mehr zur Arbeit fahren, verkaufen und ein anderes Auto kaufen, kannst du dir auch nicht, weil dieses Auto quasi nichts mehr wert ist. Das heißt, du wirst jetzt unter Umständen ähm,\nein tiefes Loch in die Familienkasse reißen, um dir ein Fahrzeug kaufen zu können, mit dem du ähm.\nIn die Innenstadt fahren kannst, wenn du wie die meisten Leute äh vielleicht ein Auto gekauft hast, was halt ein paar ein paar Jahre auf dem Buckel hat ähm und noch einen Rest wird dieser Restwert ist jetzt quasi innerhalb kürzester Zeit,\nvernichtet worden, den kannst du abschreiben. Ähm, das heißt, das bleibt jetzt wirklich auf den auf den kleinen Leuten sitzen,\nalles nur damit VW,\nund die Hersteller dieser Fahrzeuge in also damit ist auch niemandem geholfen, ne? Haben gerade kam ja die Meldung irgendwie, Toyota sagt alles, verkaufen keine Diesels mehr, lass mal sein so. Ähm.\nGearscht sind, die sind die sind die kleinen Leute, diese Fahrzeuge haben ähm und die,\nkönnen das jetzt irgendwie, können diese, können diesen Mist jetzt auslöffeln, ja?\nHätte man damit Hardwarenachrüstung, Zwangsmaßnahmen und sonstigen mal äh gearbeitet, dann hätte man hier Politik für die Bürger und für die,\nLuft, die die Bürger atmen machen können, hat er darauf verzichtet. Also selbst das äh er hatte einen Job, einen Job. Netzwerk, er sollte also,\nMit den Autos und mit den Digital beides."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:28",
+      "text": "Einfach komplett nichts erreicht und äh ich meine, es sind nicht nur die Leute, die leiden, äh die jetzt einen Diesel haben, so ich meine, es leiden natürlich auch alle anderen, die sich in der Umgebungsluft von Dieseln und nicht nur von diesen, das ist für mich diese ganze Diskus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:42",
+      "text": "Und am Ende leiden auch die Hersteller von diesen Scheißautos."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:44",
+      "text": "Ja, weil äh die Innovationsbremse ist natürlich da. Am geilsten fand ich die Meldung vor ein paar Tagen. Äh ist schon ein bisschen länger, ja. Vor ein paar Wochen irgendwie. Äh deutsche Hersteller überrascht von Nachfrage nach Elektrofahrzeugen. Ja, no Shit,\nSorry also das ist so wie äh im Jahr zweitausend irgendwie Technikhersteller überrascht von Nachfrage nach Internet. Also,\nWas soll man denn dazu noch sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:10",
+      "text": "Das ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:12",
+      "text": "Ja, das Ding ist durch und ähm da geht's jetzt hin und wir sind irgendwie äh im Internetausbau sind wir äh sowohl mobil als auch äh was Kabel betrifft irgendwie im besten Fall irgendwo auf Platz zwanzig,\nWenn ich noch schlimmer in allen äh relevanten Vergleichen und äh auch der sonstige Verkehr liegt's halt genauso. Und ich finde, das ist halt auch ein Ausdruck einer eines sich nicht,\nDen Realitäten stellen wollens in diesem Land und dann würde ich jetzt auch nicht sagen, das ist jetzt nur die CSU, ist nicht die CSU. Das ist.\nEtwas in diesem Land, was sich in Form der CSU am deutlichsten zeigt\nJa, aber du hast dasselbe Problem in der CDU, du hast dasselbe Problem in der SPD, die hat sich genauso schützend von den Volkswagen Konzernen gestellt und damit will ich auch jetzt gar nicht sagen, dass alle anderen Parteien jetzt deutlich besser. Es ist nicht eine Frage der von Parteien, ist 'ne Frage,\nwie wir einfach auch unser Land selber\nsehen. So und nicht nur dieses Land, sondern einfach auch Europa und am Ende natürlich auch den ganzen Planeten. Und es wird einfach mal Zeit, dass äh wieder jetzt aufwachen und äh neuen\nNeue Grundhaltung annehmen, die da einfach heißt, lass uns mal äh in die Zukunft blicken und mal herbeifühlen, wie die Dinge wohl in zehn Jahren wohl liegen werden.\nSchon hier diesen diese lustige Sache mit CSU fordert jetzt WLAN\nin in Bussen bis zwanzig fünfzig haben wir das dann auch mal, ja? Ich meine, in jedem scheiß Drittweltland hast du irgendwie WLAN-Bus in irgendeiner schrieb doch in den Kommentaren, ja ich will hier gerade Lockboden-Nespel, ich bin gerade irgendwo auf den Bergen in in Bolivien oder wo das war,\nWLAN und hört darüber,\nne, über das WLAN des Busses. Ja, verstehst du? Der natürlich LTE hat so, ne? Darüber hört er dann sozusagen noch Netzpolitik, wie wir uns und wie die Bäuche halten und uns fragen, ob's zwanzig fünfzehn, fünfzig WLAN als Technologie überhaupt noch gibt,\nAlso ob das dann zu dem Zeitpunkt nicht von fünf G oder sechs G so abgeräumt ist, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:17",
+      "text": "WLAN-Diesel."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:18",
+      "text": "So WLAN ist der neue Diesel irgendwie so, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:22",
+      "text": "Dieselbetriebener WLAN."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:24",
+      "text": "Ja, da ist da ist auch was\nne? Weil was was uns dieses bekloppte zwei Komma vier Gigahertz äh äh WLAN an Frequenzen klaut, ja, die man irgendwie echt besser nutzen könnte. Eigentlich müssen wir für die Abschaffung von WLAN bis zwanzig fünfzig\nkämpfen, damit er Grenzen freigegeben für sinnvollere Protokol."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:40",
+      "text": "WLAN-Verbot."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:41",
+      "text": "So sieht's nämlich aus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:42",
+      "text": "In den Innenstädten. Ja, natürlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:43",
+      "text": "Aha, sie haben also noch WLAN in ihrem Laptop. Aha, hm, na ja, ist ja interessant."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:47",
+      "text": "Haben Sie denn auch 'ne grüne Plaket."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:48",
+      "text": "WLAN frei, Spaß dabei. Oh Mann,\nAlso, das ist so die Gemengelage. Schauen wir jetzt nochmal, was ich jetzt konkret."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:03",
+      "text": "Betreibt nicht ihren äh achthundertzwei elf achthundertzwei elf A."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:10",
+      "text": "So geht's ja nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:10",
+      "text": "Doch Euro fünf. Haben sie denn da eine Hardware-Nachrüstung vorgenommen? Ja, so hast du ja mal notwendig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:18",
+      "text": "Bei der Tat. Oh Go."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:20",
+      "text": "Stattdessen kriegen wir Breitbandverbote. Na ja ähm der."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:28",
+      "text": "Geht ja doch aber B muss jetzt wirklich dringend Magazin werden, so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:32",
+      "text": "Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:34",
+      "text": "Ja, eigentlich wollten wir über."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:36",
+      "text": "Genau, weil die, weil das mit der mit der CSU und der digitalen Infrastruktur so gut gelaufen ist.\nGeht jetzt die bisherige Staatssekretärin im Bundesministerium für Verkehr und Infrastruktur, Dorothee Bär.\nIns Kanzleramt, als Staatsministerin für Digitalisierung,\nDie CSU rennt quasi rum und sagt, egal, wir haben vier Minister, guckt mal, wir sind so geil. Staatsministerin ist aber im Prinzip das Gleiche wie Staatssekretärin, also die haben sie ist halt jetzt im Kanzleramt,\nfür die Digitalisierung zuständig. Das ist im Prinzip die ähm die Reaktion auf die Forderung eines Digitalministeriums\nwo ja dann\nwurde, na ja, Digitalministerium schön und gut, aber das das betrifft innen, das betrifft Wirtschaft äh das betrifft äh was weiß ich, Justiz.\nÄhm, wir können keinen Digitalministerium schaffen, weil es,\nIm Prinzip eine übergreifende Position geben muss und deswegen damit's jetzt irgendwas gibt, damit die Leute die Fresse halten, äh machen wir halt halt jetzt eine Kanzleramtsministerin, eine Entschuldigung, eine Staats,\nMinisterin für Digitalisierung im Bundeskanzleramt. Und das ist die äh Dorothee Bär, die vorher Staatssekretärin unter Dobrindt war. Dobrindt.\nGehe mit dem Wind und ähm dafür kommt der Andreas,\nScheuer, ein der vorher CSU Generalsekretär war, ähm wird jetzt also Bundesminister für Infrastruktur und äh Diesel.\nUnd ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:18",
+      "text": "WLAN hat Minister."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:24",
+      "text": "Bundesminister für WLAN und Diesel.\nSo und Doro Tibet hat dann heute, also das war heute die große Meldung, da hat sie gesagt, ja also sie ähm,\nSieht ihr auf jeden Fall defizite bei der digitalen Entwicklung, äh jedes Ministerium in Deutschland müsse ein Digitalministerium sein und sie fordert eine stärkere Digitalisierung der Schulen. Da hat sie natürlich völlig Recht,\nDa hat sie eine ganze Reihe äh kluger äh Forderung, sagt sie, die Ministerien haben unterschiedliche Geschwindigkeiten. Hier geht das viel, viel, viel zu langsam. Alles schöne Sachen.\nMan fragt sich nur, na ja, was hast du denn dann als Staatssekretärin gemacht? Da warst du doch eigentlich an der Stelle dich um diese Sachen zu kümmern im äh Bundesministerium für Verkehr und Infrastruktur. Und dann äh,\nfinde ich finde ich es noch sehr gelungen, dann sagt sie, ja also auch äh der Staat,\nMüsse Vorreiter sein, Behörden müssten endlich so vernetzt werden, dass Bürger nicht Stunden auf Ämtern vergeudeten. Nur um sich zum Beispiel umzumelden, hat sie Recht, finde ich äh,\nkann man angemessen umsetzen, damit habt ihr ja auch mit einem E-Government Gesetz vor Jahren eigentlich mal die Grundlagen geschaffen und mit dem E-Perso-Gesetz kommt ja alles nicht zum zum Einsatz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:38",
+      "text": "Und kriegst irgendwie Georgien und äh äh esst dann kriegen das auch schon seit sechs bis zehn Jahren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:43",
+      "text": "Ja, jede Mensa kriegt das inzwischen hin, halbwegs sichere Zahlungsvorgänge. Na ja, lassen wir das, ne? Ähm.\nAlso halbwegs sicher. Bevor jetzt die nächste kommen und sagen, ich habe aber mit dem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:52",
+      "text": "Ich habe aber mit den Mensagate."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:55",
+      "text": "Ich habe aber mit äh mit dem Myfair äh Classic Offline Clowner äh mir gerade mein Mittagessen mit Zeit mach das,\nNicht zu laut Grinsen dabei, immer\nGentleman genießt und schweigt. So. Ähm Start-up-Unternehmen dürfen nicht an bürokratischen Hürden verzweifeln, auch im Gesundheitsbereich legen viele Chancen. Das Land brauche endlich eine smarte Datenkultur.\nVor allem für Unternehmen, allerdings sei der Datenschutz in Deutschland wie im achtzehnten Jahrhundert.\nHabe ich kurz überlegt, im achtzehnten Jahrhundert, da hatten die meisten Leute keine Daten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:33",
+      "text": "Gab's das Wort Daten da überhaup."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:34",
+      "text": "Es gab keinen Daten, nein, den gibt's erst seit Mitte des neunzehnten Jahrhunderts überhaupt den Begriff. Insofern ein Datenschutz, wie im achtzehnten Jahrhundert, wer tatsächlich eine Katastrophe, da hat sie Recht, denn dann hätten wir keinen und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:45",
+      "text": "Und."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:46",
+      "text": "Da hat sie auch wieder wahrscheinlich wollte sie nicht, aber sie hat Recht, wir haben nämlich keinen, wir haben im Datenschutz effektiv ähm das Recht des Stärkeren, wie im achtzehnten Jahrhundert üblich.\nIch fürchte nur, dass sie das anders äh gemeint hat. Man sagt ihr,\nein eher eine Industrienähe nach.\nWas man auch daran erkennt, dass die Industrie eine sehr hohe Kompetenz bescheinigt. Ähm, werden wir also sehen, was wir da jetzt in."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:20",
+      "text": "Na gut, immer das drückt, um's vielleicht mal nicht ganz so polemisch äh auszudrücken. Das drückt eine gewisse ähm Sack ist richtig.\nBesorgnis aus, die glaube ich in äh konservativ wirtschaftlich orientierten Kreisen vorherrscht mit so äh neuen oder nicht ganz so neuen Regelungen wie dem Datenschutz an sich und speziell auch mit der Datenschutzgrundverordnung, die jetzt Einzug hält\nsich quasi in ihrem wirtschaftlichen Gebaren eingeschränkt zu\nsehen so. Da ist ja auch sicherlich was dran, weil das ein Ende ist, Datenschutz natürlich auch genau das. Es ist halt nicht einfach alles machen, was ihr könnt und wie alles überall hinschreiben und dann ist alles äh braun, sondern äh es\nist halt gerungen worden mit dieser Datenschutzgrundverordnung über einen Modus, in dem man das im.\nZu machen hat\nund äh sicherlich mag es Auswüchse geben dieser Grundverordnung, die ich jetzt mit Sicherheit nicht auswendig runterbieten kann, wo solche Schwierigkeiten entstehen, so, aber ich denke, es wäre jetzt auch mal geboten, dass einfach auch mal,\nproaktiv anzugehen und zu sagen, okay, wir wir sorgen jetzt dafür\ndass wir diese Kompetenz auch aufbauen, dass auch der Staat die entsprechende Begleitung und Beratung äh bringt, dass es da Stellen gibt und dass man mit Handelskammern und mit was weiß ich äh da noch alles mit reingreifen kann in den Wirtschaftsprozess das eben auch macht, sodass man da eben in dem Punkt auch fit ist, weil es ist nun mal so.\nIch will da halt jetzt nicht so beklagen hören mit, oh Gott, die Wirtschaft ist aber eingeschränkt, weil,\nDieses nicht so richtig drüber nachdenken, wie denn das mit den Daten ist, führt unter anderem eben auch.\nZu diesen Sicherheitslagen, über die wir jetzt schon so viel gesprochen haben und ich denke, es ist grundsätzlich angemessen, hier jetzt mal einen anderen Fokus mal reinzunehmen, das sollte natürlich auch die Aufgabe sein\neiner digitalen Staatssekretärin oder wie auch immer man sie jetzt äh da offiziell bezeichnet. Außerdem wollte ich auch nochmal sagen,\nIch find's ein bisschen enttäuschend, dass sich diese GroKo, also,\nenttäuschend aber nicht unerwartet, ja? Ähm, trotzdem enttäuschen, dass man sich nicht durchgerungen hat, auch ein digitales Digitalministerium zu schaffen oder zumindest diese Digitalkompetenz so hoch anzusiedeln und auch so,\nzentral zu machen. Also klar zu machen, wo ist denn jetzt wo ist denn jetzt die Kompetenz? Ist jetzt ein Verkehrsministerium."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:54",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:56",
+      "text": "Oder ist es jetzt im Kanzleramt,\nWer, wer ist da die Hackordnung? Ja, also das ist jetzt immer noch unklar. Wir hatten die Situation schon vorher, da hatten wir ja noch irgendwie den den Bundesgabriel, der ja im Prinzip mit seinem Wirtschaftsministerium auch irgendwie sich Internet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:11",
+      "text": "Wir erinnern, wir erinnern uns vor vor vier Jahren, als die erste oder war der als GroKo kam, dass dann haben ja vier, nee, drei haben ja gesagt, wir sind jetzt Digitalminister. Dobrindt, Gabriel und äh Maas, glaube ich, waren das.\nOder wer war der Dritte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:27",
+      "text": "Dorint und ähm weiß jetzt gerade gar nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:37",
+      "text": "Aber das war keine Ahnung, das war irgendwie damals das Thema, ne. Ich gucke das mal eben. Gabriel,\ndrei gesagt, wir sind aber jetzt hier, die sind im Prinzip alle nach vorne gegangen und haben gesagt, hier wir sind äh äh genau Thomas Demizier war das, der war nämlich damals noch in."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:53",
+      "text": "Ach ja, Innenministerium muss sich natürlich auch kümmern, genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:56",
+      "text": "Genau, die, die drei sind dahingegangen und haben gesagt, hier wir sind ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:01",
+      "text": "Na gut, also das will sich natürlich äh der der Horst will ja nicht zum Serverhaus werden, deswegen ähm.\nNimmt er daran, glaube ich, nicht teil. Das würde eben jetzt für dich auch keiner mehr abnehmen. Ja, er muss ja auch um die Heimat kümmern, ne? Heimat, Heimat ist der Teil von Deutschland ohne Internet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:18",
+      "text": "Ich würde sagen, der bleibt schön auf hundertsiebenundzwanzig null null eins und.\nGuck mal, was man da noch kaputt machen kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:32",
+      "text": "Der hundertsiebenundzwanzig null null eins Minister."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:36",
+      "text": "Da sich zum Ziel zu setzen,\nAlso das hat auch strukturelle Vor- und Nachteile so natürlich hätte uns jetzt ein\nDigitalministerium mit maßgeblicher Richtlinienkompetenz über alles sehr gut gefallen, wenn das aber dann am Ende in den Händen der CSU gelandet wäre\nwerden wir da wahrscheinlich auch nicht allzu glücklich drüber gewesen und das ist natürlich das, was ich hier so ein bisschen,\nVerwunderlich finde mir so ein bisschen Sorge auch macht das wie du gerade schon genau sagtest.\nKonservativ, wirtschaftsnah. Und konservativ wirtschaftsnah ist 'ne Digitalpolitik die eben nicht unbedingt die,\nden Fokus bei den Nutzern setzt. Und bei der bei bei Chancen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:34",
+      "text": "Auch nicht viel nachzuweisen hat bisher, weil so hatten wir das bisher immer, ne? Also es ist äh jetzt nicht unbedingt gerade ein Erfolgsrezept bisher, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:06:43",
+      "text": "Konservativ wirtschaftsnah haben wir bisher relativ viel,\nund wenn dann falsch gemacht, das ist ähm in in dieser Digitalbüro im im digitalen Politikbereich tatsächlich nicht unbedingt ein ein Politikansatz, der sich als besonders erfolgreich,\ndarstellen kann. Wollen wir mal schauen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:08",
+      "text": "Gibt ja noch eine andere äh Personalie, ich weiß nicht, ob du das noch äh irgendwo nun notiert hast in dem Zusammenhang ähm geht ja auch,\ndennoch eine weitere Ministernennung, aber nicht auf Bundesebene, sondern in Schleswig-Holstein ist nämlich der Nachfolger von dem äh wie heißt der Jochen Habeck, der jetzt äh Grünen-Chef oder einer der beiden Grünen Chefs geworden ist\ndem folgt jetzt nach Jan Philipp Albrecht, der hier schon öfter mal erwähnt wurde. Leider nicht zu Gast war irgendwie."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:07:37",
+      "text": "Nee, aber wir haben auch häufiger ja mit Ralf gesprochen in seinem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:41",
+      "text": "Seinem Mitarbeiter genau die gemeinsam eben auch für diese Datenschutzgrundverordnung ähm ja verantwortlich waren kann man sagen also er war ja Berichterstatter im entsprechenden Ausschuss auf EU-Ebene und hat äh wie das ja auch in diesem schönen,\ndie man hier auch mal kurz rezensiert haben, äh schön zusammengefasst wurden, da kräftig hinter den Kulissen\ngekämpft, um eben auf Parlamentseben und letzten Endes eben auch auf EU-Ebene diese Datenschutzgrundverordnung zusammengezimmert zu bekommen. Mhm.\nJa, da hat er sich so einige Miriten mit verdient und das äh führte jetzt dazu, dass er eben Nachfolger wird und zwar\nim Amt des Umweltministeriums in Schleswig-Holstein, aber in Schleswig-Holstein ist eben auch die Digitalisierung in diesem Digital, in diesem Umweltministerium angesiedelt. Deswegen ganz, ganz lustigen Kniff finde, weil ähm\nWas nicht ein Verkehrsministerium wird's da ja sicherlich auch noch geben. Ähm ja, ich\nbin da sehr gespannt, was da diese Berufung so nach sich ziehen wird. Ist natürlich gerade, ich find's ganz spannend, weil wir haben ja nun viel über gerade diese Problematik mit Flächenländern.\nUnd der Internetversorgung\nhier eine Initiative entstehen könnte, die vielleicht mal zeigt, äh wie der Hase äh läuft, zumal ja auch die Nähe zu Dänemark und den skandinavischen Modellen an der Stelle vielleicht auch nochmal einen weiteren Einfluss bedeuten kann und ich glaube, Schleswig-Holstein hat da durchaus die Möglichkeiten, das zu machen. Da es sich dabei ja auch noch um so eine\nJamaika-Koalition handelt, ist es natürlich nochmal besonders spannend, welche\nKompromisse vielleicht äh da äh entstehen. Ich will da jetzt nicht zu viel herbeiträumen, aber ich fand die Personalie jetzt in dem Zusammenhang ganz interessant."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:26",
+      "text": "Also meins äh in Schleswig-Holstein kaufen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:29",
+      "text": "Äh war's kaufen? Land oder Aktien."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:36",
+      "text": "Zwischen zwischen Flensburg."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:38",
+      "text": "Also ich kenne auf jeden Fall ein paar Leute, die würden sich von so einer Initiative durchaus äh äh ne, also."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:43",
+      "text": "Müssen sie nicht mehr über die Grenze fahren, um Netz zu.\nJa, ich bin ja erstmal ein bisschen in enttäuscht, wenn wir ihn auf Europaebene dann verlieren, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:00",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:03",
+      "text": "Wenn ich nicht in Schleswig-Holstein wohne, nicht in Schleswig-Holstein wohnen würde, würde ich mich natürlich freuen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:07",
+      "text": "Aber ist natürlich auch eine ganz andere ganz andere Art und Weise jetzt hier mal Einfluss auch auf die Politik zu nehmen und ich denke, dass man halt gerade im Bereich man ist ja auch,\nbisschen bedrückend, ja? Ich meine, so sehr man jetzt über den Stand der Bundespolitik schimpft, ist kenne, ich kenne ja auch kein Bundesland.\nWas hier in irgendeiner Form mal nennenswert Aktivität entfaltet durch eine andere Herangehensweise. Also ich weiß, dass es auf kommunaler\nebene verschiedene äh Projekte gibt, die mir mal mehr mal weniger gut funktionieren, teilweise auch das Problem haben, dass kaum, dass sie mal eine kommunale Infrastruktur gebaut haben, gleich die Telekom Tag später auch noch anfängt\nbuddeln und dann lohnt sich alle Investitionen nicht mehr. Also das ist halt genau das Problem an der Stelle muss natürlich auch mal zentral anders koordiniert werden. Man muss halt alle an einen Tisch bekommen. Und ich denke, das ist das ist glaube ich das, was einfach derzeit noch\ngenerell gefehlt hat, ja? Also diese ganzen Digitalminister haben sich äh vor allem immer durch irgendwelche New Projects und Ankündigungen und ja und ne, weder in Bussen und so weiter,\nimmer so profiliert, aber es war halt immer alles so eine Ankündigungspolitik, aber dass mal wirklich jemand mal ernsthaft gesagt hat, okay, wir bilden jetzt mal hier einen Ministerübergreifendes,\nMinisteriumsübergreifendes Gremium.\nJa, wenn man jetzt kein Digitalministerium einführt, was diese Rolle so übernehmen könnte, wie ein Finanzministerium, weil Finanzen betrifft alle,\nDigital betrifft ja auch alle, könnte man ja zumindest sagen, vielleicht liegt hier auch eine Chance für die Kanzlerin, dass sie halt ihre Staatsministerin, Frau Bär jetzt losschickt und sagt hier\nHör mal, ja, du äh hast jetzt hier Quar meiner ähm Leit, wie heißt das? Äh,\nKraft der Raute vielleicht hier den offiziellen Hashtag irgendwie um loszugehen und und du baust jetzt hier so ein Gremium auf.\nAlle Minister sind gezwungen ihre Kernausrichtung,\nund zwar egal welcher Partei, ja? Weil das, wie heißt der jetzt nochmal die Richtlinienkompetenz? Das meine ich gerade, ja? Die Richtlinienkompetenz der Kanzlerin\nKönnte ihr sie da sozusagen in so eine Rolle versetzen? Ich weiß nicht, ob das passieren wird, aber das wäre in der Situation meiner Auffassung nach das einzig Sinnvolle, man sagt, okay\ndu redest jetzt mit allen mit und ich verpflichte alle Ministerien meiner Regierung dazu,\nIn diesem von dir geleiteten Koordinationscremung alle Aspekte der Zukunftsplanung von allem,\nHier den Digitalaspekt mit allen anderen abzustimmen. So einen permanenten, runden Tisch zu haben, an dem sozusagen nix an digital vorbeigeht. Und nicht\nwieder mal ein Förderprogramm und da nochmal dreißig Millionen auf irgendwelche Geleitungen, die dann keiner benutzt. Das ist das alles Stückwerk und das ist alles Quatsch. Das muss sich generell was ändern. Es muss sich was ändern in der digitalen Infrastruktur, wenn sie über Behörden müssen, das und das können\nJa, ne? Sind wir auch der Meinung, Frage ist natürlich auch\nWie müssen sie das können? Noch mehr so Bea Projekte und und und sonstige Leuchtturmdinger, die äh Millionen verbraten, dann am Ende nochmal eine Redundante bekloppte Technologie auf auf Basis von Scheiß, der seit zwanzig Jahren nicht mehr benutzt werden sollte, zu bauen\nführt einfach."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:25",
+      "text": "Können wir drauf verzichten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:26",
+      "text": "Führt einfach zu gar nichts, ne? Hier muss einfach eine eine konsistente Strategie angestrebt werden, hier muss ein Plan geben und alle Ministerien meinetwegen sogar auch das Landwirtschaftsministerium müssen damit eingebunden sein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:40",
+      "text": "Farm vier Punkt null."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:42",
+      "text": "Ja, weil ich meine auch es betrifft halt alles, so es gibt mir wird jetzt kein Ministerium\neinfallen, was in irgendeiner Form ein Zuschnitt hat, wo digital keine Rolle spielt und das muss sich jetzt einfach verdammt nochmal durchsetzen, weil diese die beiden CSU-Minister hier der Scheuer und die Bär, die sind jünger als ich. Das ist ja jetzt mal was Neues.\nSo, jetzt liefert aber auch mal. Na, weil ich hier als alter Sack das schon irgendwie äh peile, dann erwarte ich mal."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:10",
+      "text": "Stimmt, bald bist du, weißt du, deren äh äh Kernzielgruppe."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:14",
+      "text": "Ja. Wieso? So sieht's aus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:15",
+      "text": "So kannst du so machst du das. Wir kaufen dir einen Stock und dann gehst du bei denen zu jeder Veranstaltung und sagst, oh jetzt erklären sie mir aber mal, Frau Bär."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:23",
+      "text": "Was was für ein Stock so ein Gehstock oder ein oder ein Rohrstock, ein Rohrstock hätte ich gern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:28",
+      "text": "Du kriegst einen Rollator mit so einem WLAN-Router voll d."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:30",
+      "text": "Ich habe noch WLAN. Nee, ich gehe da lieber mit dem Rohrstock hin und immer wenn sie irgendwie sagen, ja, das müssen wir jetzt aber nicht so konsequent durchziehen, oder? Gibt's gleich eins auf die Finger.\nDas würde ich gerne machen. Einfach daneben sitzen und immer einen auf die Finger hauen. So. Nee, nee, nee, nee, ihr kümmert euch da jetzt drum? Hier. Los. Los."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:51",
+      "text": "Los ran an die Schippe. Hier muss überall Glas gelegt werden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:53",
+      "text": "Ich gehe hier nicht mehr weg."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:56",
+      "text": "Okay, also wir wir schauen uns das mal äh gespannt an. Immerhin war auch also immerhin.\nIst Dobrindt weg? Ist schon mal."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:08",
+      "text": "Das ist schon mal ein Sprung davon."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:10",
+      "text": "Sprung nach vorne. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:12",
+      "text": "Und und das ist, ich meine, diese, die Bärs äh achtundsiebzig geboren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:17",
+      "text": "Nee, die ist glaube ich noch jünger. Äh ich glaube, die ist sogar in den Achtzigern geboren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:23",
+      "text": "Nee, nee. Achtundsiebzig.\nUnd der Scheuer ist vierundsiebzig. So. Die könnten schon was davon mitbekommen haben, dass da was ist mit den Computern und dem Netz und so.\nDie twittern auch. Also sie zumindest was nicht, wie es bei ihm ist. Die hat bestimmt ein Team Team Scheuer."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:45",
+      "text": "Bescheuert. Ja, wir werden, werden sehen, wir gucken vorsichtig und positiv gestimmt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:53",
+      "text": "Wir sitzen sitzen hier, schauen zu und haben diese Fotos noch. Und Rohrstock."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:56",
+      "text": "Wir sitzen hier mit laufendem Dieselmotor. Wir laufen um diesen Motor-Dorostock und bereiten unsere Flucht vor.\nSo, Uploadfilter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:08",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:16:10",
+      "text": "Hattet ihr ja auch schon besprochen in der Brüsselfolge äh,\nAntiporters, äh, im Koalitionsvertrag,\nnicht vorgesehen im Koalitionsvertrag steht also direkt drin, das lehnen wir ab. Aber die EU-Kommission lässt sich ja so leicht nicht,\naus der Ruhe bringen und hat eine Empfehlung jetzt formuliert wie denn mit illegalen Onlineinhalten umzugehen sei.\nUnd äh sagen also sie wollen wirksame Maßnahmen für den Umgang.\nDie Verfügbarkeit illegaler Online-Inhalte hat schwerwiegende negative Folgen für Nutzer, für andere betroffene Bürger und Unternehmen, sowie für die Gesellschaft insgesamt.\nUnd es ist äh entscheidend äh die Inhalte zu sperren, um weiteren Schaden zu vermeiden. Viele Anbieter von Online-Diensten haben diese Verantwortung anerkannt und entsprechend gehandelt mit anderen Worten. Sie haben Upload-Filter.\nUnd sie empfehlen doch jetzt äh natürlich Thomas hatte das ja auch schon sehr äh genau gewürdigt. Ähm,\nSie hätten doch ganz. Also sie mischen in diesen Texten die ganze Zeit Urheberrechtsverletzung und Terror, ne? Das war ja schon immer so, ist jetzt in der Netzpolitik nichts Neues. Ähm und sagen, also es möge doch jetzt bitte jeder äh Anbieter,\nUploadfilter implementieren und wer sich dazu nicht in der Lage sieht, der könne sicher Hilfe von den großen Anbietern.\nLeisten lassen, muss ja nicht die Zensur, das Zensurrad muss ja nicht neu erfunden werden, ne? Man kann ja,\nsich damit mit den existierenden Systemen auseinandersetzt, ist doch gar kein Problem, wenn du einfach deinen Content Upload nochmal schnell von der Konkurrenz prüfen lässt, ähm ob der vielleicht äh besser gefiltert wird oder so,\nHaben sie jetzt also sehr schön,\nEine Empfehlung, also allein die Idee, ja, die die EU-Kommission empfiehlt, desto freiwillig etwas tust."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:24",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:26",
+      "text": "Sehr meise führen damit im Prinzip durch die Hintertür diese Upload-Filter,\ngegen für Urheberrechtsverletzungen einfach ein, ja, weil diese Empfehlung heißt natürlich wir legen, also,\nÜberhaupt die Idee, ja, dass die das etwas empfohlen wird. Wir empfehlen das, mach das mal, weil du weißt ja, was passiert, wenn du's nicht machst, dann sehen wir uns nämlich gezwungen, hier ähm ein Problem,\nzu lösen und du weißt, was passiert, wenn wir ein Problem lösen, hast du nämlich zwei neue. Und äh damit, ja, ist doch so.\nUnd ähm,\nDer Thomas Rudel schreibt dazu, was ist der demokratiepolitisch sowieso schon bedenklich, wenn hier einfach quasi an am tatsächlichen Handeln vorbei äh Realitäten erzwungen werden.\nGleichzeitig der Schwarz äh Schwarzwald-Rote Koalitionsvertrag äh schließt es äh lehnt es als unverhältnismäßig ab. Andererseits kann die Kommission dann aber weiterhin äh behaupten, sie hätten nichts an der E-Commerce-Richtlinie gerüttelt,\nlassen das quasi das das geltende Recht bleibt gleich, aber durch eine freundliche Empfehlung ähm wird die Realität eine andere,\nUnd das ist natürlich echt äh,\nschwierig, E-Commerce-Richtlinie deshalb wichtig, weil Hostinganbieter von der Haftung freigestellt sind. Auch wenn auf ihren Plattformen illegale Inhalte liegen, sie müssen sich, müssen natürlich reagieren, aber sie müssen nicht,\ndie das Einstellen illegaler Inhalte vermeiden und ich denke, das ist nach wie vor eine sinnvolle Regelung. Weil wir so den.\nGenuss der Meinungsfreiheit und der Pluralität uneingeschränkt haben und gleichzeitig ähm.\nNach Hinweis auf illegale Inhalte diese schnell entfernen können und somit eine ein Gleichgewicht auch zwischen dem Anspruch auf Rechtsdurchsetzung,\nund einer äh einer äh freien Einstellung und einer freien Entwicklung pluralistischen Entwicklung dieser,\nPlattformen haben und drittens,\nEine rechtliche Methode haben, einen rechtlichen Weg haben, dass nämlich die Illegalität eines Inhaltes,\nfestgestellt werden muss und nicht durch einen Upload-Filter eines Diensteanbieters entschieden wird und wir damit dann als unrechtmäßige,\nalso als als unrechtmäßig von Blocking Betroffene keine ernsthafte,\nklargestellt haben, ja? Also wir haben hier im Prinzip das gleiche Problem wie beim Netzwerkdurchsetzungsgesetz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:13",
+      "text": "Ja, das ist auch interessant, nicht, dass man ja hier auch so ein bisschen ähm die technische Machbarkeit,\neigentlich so ein bisschen in Frage stellt, so nach dem Motto, ja, nee, es gibt einfach keine einfache Methode, uns fällt jetzt hier auch nichts besseres ein, wie man das machen soll. Aber nehmt doch mal hier diese Lösung von irgendeinem Anbieter, äh der noch nicht mal in der Europäischen Union ist\nund äh ja auf der anderen, auf der anderen Seite quatschen sie die ganze Zeit irgendwas von ja, man müsste ja jetzt hier auch Artifical Intelligence und Supercluster, Computer und Power und so weiter, da gibt's ja in diesem ganzen Digitalisierungsklimbin auch verschiedene\näh Entwicklungslinien und äh Vorgaben, die dort erfüllt werden sollen. Das kam bei meinem Brüssel-Gespräch auch hier und da immer mehr wieder zum zur Sprache und wie stolz sie ja darauf sind, dass sie das jetzt alles irgendwie fördern und überhaupt die\nzu endlich mal wieder in die Top fünfhundert der schnellsten Computer kommen und so weiter, dass es auch nicht so albern. Auf jeden Fall\nfrage ich mich dann so, na ja, wenn das nicht machbar ist, mit mit euren eigenen Mitteln so, vielleicht wäre das ja dann sozusagen erstmal der erste Schritt, ja? Macht irgendwie ein\nein Open Source Maschinenleuting, was hier quasi auch als Referenz dienen kann, dann habt ihr dann vielleicht auch eine eine Basis solche Erkenntnisse zu machen, aber so gibt's halt einfach überhaupt gar keine Standardisierung, außer Google hat gesagt, das ist so\nund das geht einfach auch gar nicht. Also es ist einfach."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:36",
+      "text": "Werden wir sehen, hoffentlich wird dieser Empfehlung nicht Folge geleistet, aber."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:41",
+      "text": "Also der Andros Ansipp ist ja sehr klar dagegen gewesen. Muss man, muss man sagen, also es kam ja in unserer Sendung auch nochmal raus, dass er sich also an der Stelle Upload-Filter,\nDas war überhaupt nicht sein Ding. Übrigens auch aus einer Erfahrung heraus, ja, die\nder kommunistischen Zeit in äh Estland zu tun hatte, als das Teil der Sowjetunion war. Das war dann ganz klar die Argumentation auch, ne? Also, nee, ich habe schon mal in so einem Land gelebt, irgendwie, wo halt von vornherein die Zensur alles äh abschneidet und wir wollen solche Systeme gar nicht haben, also äh sagen wir mal, auch solche,\nÄhm links grün versifften äh Argumente, ja, die wir hier gerne auf den Tisch legen. Äh finden sehr wohl auch auf Kommissionsebene ihre, also auch auf Kommissarebene\ndurchaus auch anklagen. Die sind sich da halt nicht alle einig und wir wissen auch und das muss man auch verstehen, finde ich,\nMuss man auch verstehen. Ja, es ist nicht so, es gibt da nicht so die eine Haltung. Die Kommission ist so oder denkt so oder so. Das ist also teilweise\nzwischen den einzelnen Kommissaren, die Gemengelage sehr unterschiedlich und das hat sehr viel auch damit zu tun, woher kommen die, was haben die für Erfahrungen bisher äh gemacht und ähm,\nIch weiß nicht, ob der Dropstar schon gelutscht ist. Andererseits, was halt auch sehr stark rauskam, an der Stelle kann ich auch nochmal auf die Brüssel-Sendung äh verweisen.\nDieses ganze Copyright-Ding beherrscht diese gesamte digitale Debatte einfach massiv. Das kam einfach,\nganze Zeit, wie schlimm denn das ist und das Copyright und sie sorgen sich halt letzten Endes in diesem ganzen Digitalisierungsding sehr viel mehr darum, dass ich irgendwie auch auf Mallorca nochmal einen Sky äh Fußball gucken kann,\nals ne generell jetzt hier über Lösungen einer digitalen Infrastruktur beziehungsweise eines,\nder Titel der ganzen Geschichte eines eines gemeinsamen digitalen Marktes,\nnachzudenken. Also das ist ja gut, ich meine auch an der Stelle, ne, sind das Leute über fünfzig, die hier äh agieren und,\nKeine Ahnung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:24:53",
+      "text": "Also hier ist ja sehr schön, die sagen dann einleitend, fangen sie an mit ja und Terror und so weiter, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:57",
+      "text": "Ach ja und Terror war da auch die ganze Zeit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:24:59",
+      "text": "Dann kommen sie irgendwann weiter, sagen sie, Begriffsklärung auf Seite elf. Im Sinne dieser Empfehlung bezeichnet der Ausdruck illegale Inhalte, alle Informationen, die nicht im Einklang mit dem Unionsrecht oder dem Recht eines betroffenen Mitglieds\nStates stehen und dann geht's äh ruck zuck weiter, ne, wie äh Übermittlung von Hinweisen, Unterrichtung der Inhalte, da äh Anbieter, aber vor allem\nHosting Dienst äh Anbieter sollen aufgefordert werden in Bezug auf illegale Inhalte, soweit angemessen, besondere proaktive, verhältnismäßige Maßnahmen zu ergreifen,\nSolche Maßnahmen können den Einsatz von Systemen zu automatisierten Erkennung illegaler Inhalte umfassen. Ähm,\nDann wollen sie aber natürlich auch äh Sicherheitsvorkehrungen um zu verhindern, zu vermeiden, dass Inhalte entfernt werden, die nicht illegal sind, sollte es unbeschadet der Möglichkeit,\nfür Hosting, Dienste, Anbieter ihre Nutzungsbedingungen in Übereinstimmung mit dem Unionsrecht und den Rechtsvorschriften der Mitgliedsstaaten festzulegen und durchzusetzen wirksame, geeignete\nSicherheitsverkehrungen geben, damit gewährleistet ist, dass Hosting Diensteanbieter in Bezug auf die von ihnen gespeicherten Inhalte umsichtig und angemessen vorgehen. Insbesondere, wenn sie Hinweise und Gegendarstellungen verarbeiten\nund über die Etwaige Entfernung oder Sperrung von als illegal angesehenen Inhalten entscheiden. Der Satz heißt,\nSie sollten eine möglich, sie sollten eine Kontaktstelle bieten, wenn ein illegaler Inhalt.\nEin legaler Inhalt fälschlicherweise entfernt wurde. Sollen aber natürlich auch,\nuntereinander zusammenarbeiten, Zusammenarbeit zwischen Hosting Diensteanbietern, ja? Sollten sich soweit angemessen untereinander sowie insbesondere mit Hosting Diensteanbietern, die aufgrund ihrer Größe oder ihrer Reichweite nur über begrenzte Ressourcen und Fachkenntnisse verfügen.\nJa, also wirklich die Idee jetzt.\nDass flächendeckend über alle Hosting Anbieter zu machen und dann irgendwie den kleinen zu sagen, Google hat das Problem mit der Zensur doch schon gelöst oder Facebook oder wer auch immer. Das sind wirklich haarsträubende,\nIdeen. Und steht halt jetzt äh die Kommission dran. Da steht nicht dran, die Kommission außer anderes Ansip."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:11",
+      "text": "Ja, kann auch sehr gut sein, dass Herr Ansep da äh nicht so gut dasteht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:20",
+      "text": "Ja, dann gibt es gerade noch ein ähm.\nGroßes Thema, das gerade hochkocht.\nUnd zwar, dass der Werbung auf Webseiten. Und was denn davon zu halten ist, wenn fremde Inhalte eingeblendet werden, denn nichts anderes ist ja,\nWerbung, diese Werbung kommt, wir haben ja hier glaube ich schon öfter behandelt, aber ich will das nochmal äh grob erzählen.\nWenn ihr jetzt auf so eine Seite geht und auf dieser Seite befindet sich Werbung,\ndann kommt diese Werbung. Ich nehme jetzt mal als Beispiel Spiegel online, weil sich da die Debatte gerade entfaltet. Oft nicht,\ndirekt von der Seite, die ihr besucht, wird von einer weiteren, von einem weiteren Server geholt,\nein Ad Netzwerk. Also dieses Endnetzwerk liefert quasi auf den unterschiedlichen Seiten,\nWerbung aus, die gebucht wurde, rechnet die ab und so weiter, die haben also im Prinzip die Anzeigefläche.\nAuf den Webseiten,\nzur Verfügung gestellt bekommen. Die kriegen dann also quasi eine Kiste, wo sie sagen, hier wird euer Code eingebunden und dann könnt ihr damit machen, was ihr wollt. Und dann machen die so fette Overlay-Anzeigen, indem sie schöne Javerskrips schreiben, die was weiß ich,\nFlugzeug die ganze Zeit über den Text fliegen lassen bis man es geschafft hat das kleine Kreuz zu klicken, was die ganze Zeit vor der Maus wegrennt oder so, ne? Sowas,\nist also dann,\nDa sind wir dann im Bereich der aktiven Inhalte. Wir wir haben also in dem Moment nicht mehr nur die Situation, dass ihr Inhalte von anderen Servern holt, wobei natürlich ihr auch diesen anderen Servern gegenüber,\nverratet, dass ihr gerade diese Seite besucht,\nsondern diese Server natürlich auch euch wiedererkennen. Also die erkennen euch, ob ihr jetzt auch Spiegel online seid, auf Süddeutsche DE oder wo auch immer. Also jetzt alles nur illustratorische Beispiele.\nÄhm.\nDas heißt, sie tracken euch, die wissen, wie es euch geht, die wissen, was ihr, was ihr euch so anschaut, was euch vielleicht interessiert, die sind auch auf den Werbe äh und Einkaufsseiten dabei, auf denen ihr sucht und so kommt es dann eben auch, dass ihr euch über euren,\nWebspaziergang verfolgen und euch unter Umständen auf mehreren Seiten äh den gleichen Koffer anbieten. Wie das jetzt bei mir gerade der Fall ist\nda ich den meinen Werbeblogger mal kurz ausgemacht habe, um mir das anzuschauen und ich tatsächlich gerade einen neuen Koffer kaufen muss, ne? Stellt sich fest, stellt sich raus,\nder Koffer äh ist überall mit dabei. Dadurch, dass diese Inhalte nicht nur,\nstatisch sind. Also statisch wäre ein Bild oder.\nEin Stück Text, sondern dynamisch, also sie ändern sich und vor allem auch interpretiert. Es sind regelmäßig Javerskrips dabei, die dann eben äh mehr mit eurem,\nBrowser machen und die vor allem Tech äh ähm äh Programme, Skripte auf eurem Rechner ausführen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:30:30",
+      "text": "Auf eure Menschen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:30:32",
+      "text": "Ähm er hat das Ganze noch einen sehr unschönen Nebeneffekt, der ist nämlich mein Injava Skript, wie in jeder anderen äh Skript oder Programmiersprache auch,\nSchöne Sachen und böse Sachen schreiben kann und es sich nicht einfach unterscheiden lässt, was das ist. So ist es auch in der Vergangenheit schon vorgekommen.\nAuch auf Spiegel online. Dass Angreifer sich quasi dort Werbeflächen gebucht haben und bösartige Javaskripte eingeblendet haben\ndie natürlich dann relativ schnell entdeckt wurden und dann wurden wurde deren Einbeblendung unterbunden, aber es ist tatsächlich so, dass Myware ähm.\nMywareverbreitung unter anderem sehr gerne über Werbeflächen stattfindet. Weil man die relativ einfach buchen kann und keiner Fragen stellt. Da gibt's natürlich einen Unterschied, ob ihr jetzt was weiß ich auf irgendeiner,\nShady Seite im Internet,\nunterwegs seid, wo das regelmäßig passiert, was weiß ich, ne? Sie können ein iPhone gewinnen, Achtung, ihr Mac ist mit allen Virus infiziert, laden sie hier die Datei runter,\nund was es da sonst noch so für Scherze gibt, aber das ist eben auch ein Bestandteil dieser Ed-Industrie, das Tracking ohnehin.\nUnd ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:31:43",
+      "text": "Auch sehr schön ist in letzter Zeit so. Äh ich glaube Salon dot com hat das irgendwie ausprobiert. Äh so nach dem Motto ah ja okay, du hast hier so einen äh Adblocker dann äh erlaube uns doch während du deine Seite lies hier noch ein paar Krypto-Currency\nCoins zu meinen und immer hier dein Rechner zu benutzen ist es wirklich absurd auf Fa."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:00",
+      "text": "Das ist auch da, das das hatte, wie hießen diese Seite? Äh die hatten die hatten das quasi als also die haben das im Prinzip gibt's eine Seite, die sagt, wir äh bieten das an,\nunter fairen Bedingungen, also du wir Stadt Werbung.\nBindest du so ein Mining Java Skript ein und dann wird Monero gemeint. Beim Monero kannst du halt offenbar ganz gut auf CPU meinen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:26",
+      "text": "Der Salon war das, Salonbo."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:28",
+      "text": "Ach so heißt die Seite auch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:29",
+      "text": "Salon dot com."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:30",
+      "text": "Ah okay und ähm dann gab's natürlich Probleme, okay, kann der Meiner.\nMeint er auch, wenn du den Tab nur offen hast und aber die Seite gar nicht anguckst und so weiter, also das war eine interessante Idee.\nDie natürlich ich mein,\nwird man sehen, was da am Ende wirklich bei rumkommt, ne? Äh aber die die Idee ist jetzt erstmal da und genau das kannst du natürlich diese Salon dot com sind natürlich die wenigen, die da sind natürlich die, die das jetzt irgendwie versuchen das wenigstens fair zu machen,\nIm Sinne von du hast zugestimmt oder so,\nim ersten Anlauf war das nicht so, dass du einfach unten in dein in deine Webseite das Ding gemacht und dann haben äh ging halt der Lüfter an. Wenn man deine Webseite.\nAngeguckt hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:33:23",
+      "text": "Ich finde das irgendwie auch eine ganz elegant, also ich find's jetzt gar nicht mal so so bekloppt so, es ist ein ganz eleganter äh Trade, den man da äh macht, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:33:32",
+      "text": "Ich würde ich fand das sogar tatsächlich ganz interessant. Wir sollten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:33:34",
+      "text": "Zahl doch einfach mit, bezahl doch einfach mit Strom."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:33:38",
+      "text": "Bezahl auch mit Strom oder zum Beispiel mit dem Strom deines Arbeitgebers. Also wir sollten auf jeden Fall äh uns das also tatsächlich überlegen, ob wir halt so eine Mining Dings machen,\nspezifische Seite, wo wir das einbinden auf Lockbuchnetzpolitik und dann könnt ihr äh wenn ihr nach Hause geht. Bei bei der Arbeit den Computer anlassen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:33:57",
+      "text": "Wenn ihr den Podcast hätten bisher für uns auch irgendwie Kryptomünzen schürfen. Oh Weiher."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:34:05",
+      "text": "Aber die Idee ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:34:06",
+      "text": "Das machen wir nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:34:07",
+      "text": "Nee, war die, die Idee ist wirklich ähm,\nAlso dieses dieses Werbeding kommt jetzt langsam an seine Grenzen und äh und zwar an die Grenzen des Akzeptablen. Mit dem AdBlocker und dem AdBlocker Blocker und dann bauen und jetzt musst du irgendwie um Spiegel online anzuschauen, brauchst du.\nLetztendlich um das lesen zu können, brauchst du einen AdBlocker? Mit AdBlocker Blocker und dann.\nDem einem Userskript, was wieder was deren AdBlocker Blogger wieder irgendwie außer außer Gefecht setzt, weil auf Spiegel online ja dann nach einer Zeit dieses fette Fenster kommt. Äh die Werbung wurde nicht geladen und so weiter. Das heißt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:34:48",
+      "text": "Borsten Edblocker, Blocker, Blocker. Blocker, Blocker. Blocker."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:34:51",
+      "text": "Ja, locker, blocker, blocker. Also auf jeden Fall, du brauchst äh spezifische Userskripte, die dir einbinden, das können wir bei der Gelegenheit übrigens auch direkt mal verlinken, welche man dann nimmt. Ähm damit.\nDamit ihr da sicher diese Seite besuchen könnt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:05",
+      "text": "Bestimmt wieder Umgebung von Cookie reit geschützten Material."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:35:10",
+      "text": "Ja wunderschönerweise in dem Fall aber ähm,\nIn dem Fall aber so, dass sie's glaube ich nicht wirklich feststellen können, weil wenn sie's feststellen können, Ten würden sie das ja wieder äh rückgängig machen. Also es ist so ein Einzeilenskript, was einfach diesen dieses Overlay wieder unsichtbar macht, ne? Ah, du hast irgendwie vierzehn,\nFremde Inhalte, die dir You Block Origin äh sperrt auf Spiegel online. Äh sieben von Ghost Ree, dann brauchst du ein das AdBlock Wall, entfernen Userskript und so,\nähm alles, weil sie keinen anderen Weg finden, ihren Kabuft da zu finanzieren. Und dann schreiben sie dazu Blogposts zu.\nMachen sie eine Ausnahme, äh sie können uns vertrauen. Ja, was kript ist so alt wie das Wort White Web neunzehnhundertfünfundneunzig von Netzgapep entwickelt äh und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:59",
+      "text": "Was ist denn das für ein Argument."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:36:00",
+      "text": "Ja und Werbeblocker sind in der Kritik. Ja also Spiegel Online kann sich da finde ich gerade nicht weit,\nRauslehnen, weil sie mit dieser mit dieser komischen Scam-Werbung, die sie da ja jetzt haben, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:36:13",
+      "text": "Hantieren sie mit diesem extrem scharfen Messer. Es ist schon hunderte von Jahren alt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:36:18",
+      "text": "Auch interessant, was sie da jetzt haben, ne? Also diese Debatte wird weiterhin geführt und die muss auch geführt werden und da muss auch irgendwie etwas passieren. Dann ähm die müssen das, also niemand sagt, die sollen ihre Arbeit da kostenlos machen.\nÄhm aber sie sollten doch wirklich endlich mal eine Möglichkeit uns bieten in den Genuss zu kommen und dafür überhaupt mal vernünftig zu bezahlen. Also ich meine."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:36:44",
+      "text": "Du am Ende."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:36:45",
+      "text": "Guck dir das mal an, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:36:46",
+      "text": "Ende kopieren die alle mein Businessmodell."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:36:48",
+      "text": "Du du scrollst da runter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:36:50",
+      "text": "Man kann sich das nicht an."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:36:51",
+      "text": "Oben drüber was, dann wird nach dem zweiten Artikel wird auf einmal schiebt sich die Seite auf, dann ist da irgendein Audi Video und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:36:59",
+      "text": "Vor allem was mir das an\nmobilen Daten raubt, ja? Also solche Webseiten, also das ist das Schlimmste, dass ich permanent diese ganzen Videos reingedrückt bekomme und einfach megabeitweise da da."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:37:11",
+      "text": "Auf dem iPhone."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:37:13",
+      "text": "Ja natürlich habe ich das, aber das, das, das, das ist ja sozusagen die, also das ist ja auch einer der Gründe, warum ich das mache, weil mir ansonsten so viel Videocontent eingeblendet wird, der einfach\nDatenintensiv ist, so und dann bezahle ich quasi da mit meinem teuren Mobilfunktarif."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:37:29",
+      "text": "Und ich würde sagen, also bei den ganzen Animationen hier geht mindestens genauso viel drauf, als würdest du in Jara Skrip Monero meinen. Da ist er aber locker mit der Mütze."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:37:39",
+      "text": "Genau, nimmt doch, nimmt doch irgendwie hier, ich spinne euch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:37:42",
+      "text": "Also es geht überhaupt nicht und ich habe jetzt regelmäßig, wenn man irgendwie so mal bei Bekannten irgendwie lass mal ganz kurz an den Computer und dann machst du dieses Internet auf und das\nblinkt, rechts und links und du denkst irgendwie kannst du kein Informationen gar nicht finden. Also ich bin wirklich ein größerer Teil des Browser Setups, ist halt wirklich dafür zu sorgen, dass dieser, dass dieser Mist da verschwindet und ähm,\ndas geht halt so nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:05",
+      "text": "Ja was denkst du denn? Ich meine, drehen wir es doch mal um. Was was denkst du denn, was ein Modell sein könnte, was an der Stelle auch sticht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:38:14",
+      "text": "Sie soll, also was, ich, sie sollten von mir aus das mit ihrer übertriebenen Werbung da machen, ähm sie sollten nur irgendeine eine realistische Möglichkeit für mich bieten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:25",
+      "text": "Gibt's ja, es gibt ja hier so Spiegel Plus und Daily und das kostet auch alles extra."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:38:30",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:32",
+      "text": "Na ja, also es ist äh nicht so, dass sie jetzt nichts hätten, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:38:35",
+      "text": "Da sind die Preise, aber also da da bin ich auch wirklich interessiert, da würde ich mich sehr freuen. Wir wissen ja, dass wir mitunter in der Spiegel-Online-Redaktion ähm gehört werden und die Spiegel Spiegel Online hat ja jetzt glaube ich zu\ndie ziehen ja inzwischen mit dem Blatt gleich auf,\nso was die Einnahmen quasi angeht. Also das irgendwie das liegt einerseits natürlich daran, dass kaum noch jemand sich diesen diese Baumscheiben kauft. Äh andererseits daran, dass das ja offenbar\nalso gerade Spiegel online eben eine der meistgelesenen meist aufrufenden Seiten, ist entsprechend eine hohe Werbeeinnahm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:39:07",
+      "text": "Eigentlich die in Deutschland die Nummer eins so. Was im Übrigen auch viel damit zu tun hat, dass sie,\nsehr, sehr, sehr innovativ waren, sehr früh, ja? Also äh viele von euch werden das vielleicht gar nicht mehr so wissen, aber damals so, als man die Webseiten in Deutschland noch an einer Hand abzählen konnte. Der Spiegel,\ndas war natürlich dann auch immer wieder so ein Pilotprojekt eines Redakteurs, der sich da halt mal reingeschmissen hat, weil er gedacht hat, hm, das riecht nach Zukunft so, das sollten wir mal machen. Und der Spiegel ist hal\nallen vorausgewiesenen Deutschland, das war einfach die erste Nachrichtenseite, die gesagt hat\nInternet, wir wissen zwar noch nicht genau, was, wie, wo und so, aber wir machen das mal und das ist einer der Gründe, warum der Spiegel an dieser in dieser Rolle ist,\nin in der er jetzt ist. Das ist also auch äh ein verdientes Ergebnis\nja? Auch wenn man jetzt nicht mit allen auswüchsenden Einzelnen da ähm zufrieden sein soll, aber das das war sozusagen auch eine frühe Orientierung. Von daher\nKann man jetzt dich dem Spiegel kann man jetzt nicht vorwerfen, dass dass sie da nicht mit dem mit der Zeit gehen, das tun sie."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:40:12",
+      "text": "Neunzehnhundertvierundneunzig haben die damit angefangen. Zweitausendvier haben wir zwanz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:17",
+      "text": "Und das ist wirklich, wirklich, wirklich früh, weil zu dem Zeitpunkt war einfach da kannte ich einfach noch viele Leute, die noch niemals ans Web geglaubt haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:40:26",
+      "text": "Da gab's doch nicht mal Java Skrip."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:28",
+      "text": "Da gab's auch keine Maske. Da gab's so einiges noch nicht. Da gab's eigentlich noch nix, wo man sagen würde, okay, das ist jetzt hier die Revolution außerhalb."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:40:36",
+      "text": "Spiegel online."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:37",
+      "text": "So ein paar Visionären so, die halt von vorne rein gesehen haben. Das kommt jetzt so mit dem Netz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:40:43",
+      "text": "Man könnte jetzt ja hoffen, dass Spiegel online eben auch auf diese Weise irgendwie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:48",
+      "text": "Wege findet er da auch wiederum die Zukunft anzudocken."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:40:51",
+      "text": "Weil diese Plusangebote finde ich auch ärgerlich ähm.\nWeil sie letztendlich ja dann nicht mehr öffentlich zugänglich sind.\nIch würde, ich finde, der den einfachen Deal, pass auf, entweder wir ballern dich hier mit Werbung zu oder du äh kaufst hier irgendwie was von uns. Äh fände ich ganz schön. Mich würde tatsächlich mal interessieren,\ndas weiß ich auch wirklich nicht, was machen die denn pro Nutzer.\nJa, also was, was verdienen sie denn an mir nicht? Oder was verdienen sie an mir? Ich würde da gerne meine Transparenz haben,\nweil ich selbstverständlich.\nDarüber mir im Klaren bin für diese Inhalte auch meinen Beitrag leisten zu wollen. Übrigens auch bei Heise möchte ich das auch sehr gerne.\nJa gibt's CT-Abo, erstens, also ist nicht der, ich möchte den einen größeren Betrag zukommen lassen und zweitens brauche ich dieses Papier nicht, also muss man halt in digitale Abo gehen oder so, ne? Ähm,\nist bei denen eine Selbstverständlichkeit, weil die eben ebenso wie Spiegel Online ebenso wie Netzkritik Org zu unseren Primär,\nprimären Informationsquellen gehören. Ähm,\nAber diese diese Verteidigung der Online-Werbung und das diese Auswüchse der Online-Werbung gehen einfach gerade zu weit. Und ähm die gehen ja so weit, dass,\nApple sich da inzwischen gegengewandt hat, ne? Mit den Tracking Verhinderungsmaßnahmen in IOS und in Safari Desktop glaube ich auch, weiß ich gar nicht genau.\nÄhm und das Google auch gesagt hat, okay, wir machen jetzt hier im Prinzip so ein Exceptible Ads Programm\nwarst im Prinzip das war also in in ihrem Chrome. Was das war, womit AdBlock Plus ja irgendwann auch mal angefangen hat und dann gesagt hat, ey, geiles Geschäftsmodell äh sie haben doch hier eine schöne App, wäre doch schade, wenn die nicht exaktibel wäre, also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:42:49",
+      "text": "Ja, na ja, also man muss äh den also da nicht zu sehr drauf einzuschlagen, muss man sagen, die haben ja zumindest schon mal so ein Modell von äh akzeptabel Standards auch.\nÄhm ja und da spielt natürlich dann auch solche Modelle rein wie,\nne, jetzt machen wir das ganze Fass äh hier auf, ne? Also ich denke schon, dass am Ende,\nDer Schlüssel zum Erfolg ist halt irgendeine Form von attraktiven,\nTechnisch realisierbaren Micropayment.\nUnd ob das über eine Kryptocarrenziel läuft oder ob das irgendwie äh eine Flexibilisierung unserer existierenden Zahlungswege ist. Habe ich ehrlich gesagt noch keine qualifizierte Meinung zu,\nBeides ist möglich. Ähm zumal ja auch die das Kryptomünzwesen bisher noch nicht,\ngezeigt hat\ndass sie A in der Lage sind, sich mal auf irgendwas zu einigen, geschweige denn, dass es schon eine klare technische Vision davon geben kann, was denn nun eigentlich die Kryptomünze der Zukunft ist,\nBitcoin ist es nicht, das wissen wir, ja? Bitcoin ist derzeit eher eine Leitwährungsvergleichbar zu Gold. Ja, Bitcoin ist so.\nDas Gold der Kryptowelt und ähm definiert so ein bisschen das generelle Interesse in so etwas, ja? Während\nandere technische Lösungen hier greifen müssen und wenn man sich äh vorstellt, dass man äh quasi in seinem Webbrowser ein ähm\nso Satoshi per Klickmodus äh hat, ja, dass man da rechts oben so einen äh blauen Stern hat, der sagt ähm für diese Seite zahle ich\nja und dann kriegt man eben eine monatliche oder perview oder was auch immer äh Geschichte ran. Nun wissen wir natürlich auch. Jetzt haben wir uns so ausführlich über\ndie Cyberhorster unterhalten, ne? Dass das natürlich dann auch eine Angriffsfläche wiederum ist im Web, die dann auch erstmal steht eine Zeiten überleben muss. Also da gibt's keine einfachen Antworten drauf."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:45:06",
+      "text": "Ich stelle mir halt gerade so vor, wie du dann da irgendwie bei äh im Laden stehst und dir den McPro kaufst, weil du sagst, spiegelt einer hat's verdient. Ich meine, die Moneros im Java Skript mit zehn Kernen.\nWeil der Journalismus es mir wert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:45:20",
+      "text": "Nicht sogar vielleicht noch mitgehen, keine Ahnung, aber im nächsten Moment fragt man sich natürlich auch so\nViel Geld habe ich da jetzt eigentlich gerade gemeint. So, also ja, könnte ich da nicht lieber einfach für mich meinen lassen und dann kaufe ich mir das Abo. Also das ist,\nIch, also ich verstehe halt auch ihre ihr Problem,\nweil sie sich natürlich in einer Marktrealität befinden, in der in der eben zwar viel über Alternativen geredet und viele Alternativen in den Raum gestellt werden, aber bisher einfach keine dieser alternativen ganz klar kommuniziert\nich bin die Zukunft, äh, geht mit mir und ich würde hier mal zugute halten, dass dass diese Debatte, die sie da führen, halt den Zeitraum ein bisschen verzögern soll, bis\nwirkliche Änderung des Modells äh überhaupt nicht mehr ähm.\nBis bis es sozusagen nicht mehr sich nicht mehr anders machen lässt als einen anderen Weg zu gehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:46:25",
+      "text": "Na ja. Also diese diese Mining Geschichte hat halt den schönen Vorteil, dass das anonym funktionieren kann, ne? Das heißt, also wenn du jetzt anfängst,\npro Klick zu bezahlen oder auch nur was weiß ich, einen Cookie mitlieferst und wenn du den hast, äh bist du eingeloggt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:46:44",
+      "text": "Kryptowährungsbezahlung könnte auch anonym funktion."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:46:48",
+      "text": "Ja teilweise, du würdest ja immer noch quasi preisgeben durch eine Art Login Verfahren, dass du berechtigt bist, die Werbefreiseite zu sehen. Und damit kann die Seite."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:47:02",
+      "text": "Ja, du zahlst halt generell."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:47:03",
+      "text": "Ist ja eine ist ja in die Lage versetzt deine Seitenaufrufe zu tun."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:47:05",
+      "text": "Ja. Nee, ist auch ist das nochmal ein weiteres Problem, was noch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:47:09",
+      "text": "An diesem Spiegel Plus kaufen wir für einen Tag, kauf diesen Artikel und solche Scherze\nDas äh da habe ich irgendwie auch keine Lust drauf. Ne, irgendwie am Ende da meine zweiundvierzig Cent zu zahlen und dass halt irgendwie klar ist, dass ich diesen Artikel gekauft habe. So kann das auch nicht laufen. Das finde ich an diesem\nMining halt ganz interessant, dass sie im Prinzip sagen könnten, hallo, sie sind Cookie frei auf unserer Seite, möchten sie die Werbung sehen, dann kriegen sie von uns den will Werbung sehen, Cookie und die volle,\nvolle HD-Film Audi. Dieselmotor, neueste Generation ähm oder sie kriegen den anderen Cookie Mining und dann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:47:48",
+      "text": "Also Mining und der Stromverbrauch damit wäre auf jeden Fall billiger,\nals Video angucken und LTE Verbrauch. Solange die die Bits hier noch in SMS äh Bitpreisdimensionen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:04",
+      "text": "Du hast Recht, da sind Spiegel online. Bitte denk dran, das hat alles Sekundärkosten vor uns auch noch. Das ist alles so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:48:10",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:11",
+      "text": "Der Overheld muss auf jeden Fall kleiner werden. OK so die Debatte wird geführt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:48:18",
+      "text": "Oh, guck mal hier, äh, Update zu unserem letzten Thema. Scheuer gegen blaue Plakette und Fahrverbote für Dieselautos."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:25",
+      "text": "Ja, kann er dagegen sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:48:26",
+      "text": "Geht ja super weiter. Na ja. Letztes Thema."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:31",
+      "text": "Ja, wir haben letzte Sendung ja schon darüber gesprochen, dass die AfD missliebige Webseiten gerne aus dem Internet raus hätte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:48:39",
+      "text": "Mhm. Wie zum Beispiel wir sind AfD Punkt DE."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:42",
+      "text": "Ja und äh jetzt dann auch noch die Seite ähm AfD im Bundestag DE und David Zett, also da wird's jetzt wirklich äh,\nAlso da wird's ja jetzt amüsant, ne? Da wird's jetzt wirklich amüsant. Das ist ja,\neine Seite von eine Domain, die dem Magazin der,\nrechte Rand gehört, die Recherchenanalysen und Perspektiven auf rechte Parteien im Bundestag bieten. Irgendwie ordentliche,\nähm Darstellung, also je was weiß ich, wie viele Abgeordnete hat die AfD\nin welchen Bundesländern? Wer ist da? Whats den niedrigsten? Zwei Stimmenanteil, WhatsApp, den höchsten Zweitstimmenanteil. Äh wer hat Direktmandate der AfD Informationen über diese Partei? Also was man üblicherweise\nWatchblock nennt, ne.\nUnd diese dumm, diese Seite ist eben nicht nur unter der rechte Rand DE erreichbar, sondern ähm auch unter äh,\nAfD im Bundestag DE und haben sie jetzt eine Unterlassungsaufforderung bekommen und das man man man,\nAlso das ist sorry, das geht nicht,\nda muss das ist eindeutig ein klarer Fall von äh Themen fokussierter Seite, die die AfD im Bundestag als Thema hat,\ndie auch in ihrer Aufmachung in keiner Form hier offene Verwechslung setzt,\ndie unter einem ordentlichen Impressum firmiert, da allein auf die Idee zu kommen, diese Seite irgendwie aus dem Internet klagen zu wollen, ist äh nicht akzeptables Vorgehen.\nTut mir leid.\nWenn ihr mit der Demokratie und der öffentlichen Auseinandersetzung mit euren Inhalten nicht klarkommt, dann äh.\nMüsst ihr euch darüber Gedanken machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:50:49",
+      "text": "Ja, Kölner Anwaltskanzlei Höcker heißt die auch noch, die da an den Laufen kommt. So wie auch. Ich erinnere an Adolf Höckler."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:51:02",
+      "text": "Ja, das ist also ähm bedenkliche ähm Bemühungen hier das dumme Urteil, was wir letzte Woche schon äh besprochen haben, was erstinstanzlich sie offenbar auch.\nErmutigt hat, solchen solche Kapriolen zu schlagen. Nichts gut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:51:23",
+      "text": "Ja, jetzt wird sich zumindest gewehrt, ne? Also."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:51:25",
+      "text": "Ja natürlich wird sich dagegen bewehrt, muss auch wir haben ja äh den, wir sind AfD äh Fall letzte Woche besprochen, der ja sehr gut finanziell äh ausgestattet wurde und ähm ich denke, das wird hier,\nähnlich sein, ich bin mir auch sicher, dass diese äh Verfahren spätestens zweitinstanzlich auch richtig entschieden werden.\nAber ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:51:53",
+      "text": "Bis dahin vergeht noch etwas Zeit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:51:54",
+      "text": "Bis dahin vergeht noch Zeit, bis dahin werden Leute genervt und beschäftigt, die sich eigentlich wichtigeren Dingen widmen könnten und genau das ist der Plan solchen Vorgehens."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:52:05",
+      "text": "Ja, einschließlich uns. Ja. Denn wir haben jetzt auch schon wieder, ne? Was haben wir auf der Uhr? Ja, auch schon wieder nah an den zwei Stunden dran."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:52:15",
+      "text": "So sind wir aber jetzt auch fertig. Gut, alles klar, tschüss hier, Feierabend."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:52:19",
+      "text": "Genau. Tschüss hier und Feierabend, noch ein Dankeschön an."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:52:22",
+      "text": "Sven, Alexander und Matthias."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:52:25",
+      "text": "Genau und an alle tollen äh Hörer von den von einigen wenigen, die ich auch die Gelegenheit hatte äh in den letzten paar Tagen mal wieder ein paar zu treffen bei Hörerinnen treffen, die ich jetzt,\nhoffe wieder etwas häufiger zu machen, weil ich hatte."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:52:40",
+      "text": "Es wird eine Bahncard, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:52:42",
+      "text": "Ich habe wieder eine Bankkarte, das macht's etwas einfacher, trotzdem brauche ich natürlich immer nochmal einen Anlass, irgendwo hinzufahren, aber man flexibilisiert dann doch äh schon mal was und mir ist äh einfach auch wieder aufgefallen,\nWas mir eigentlich auch schon Feuer aufgefallen war, äh\nWir haben ganz tolle Hörer. Es sind alles Leute, die interessante Dinge äh erzählen äh können, die ähm\neiner so entweder mit interessanten Sachen sich beschäftigen oder zumindest in der Lage sind einfach äh auch sehr gepflegte, interessante Gespräche und Diskussionen zu führen. Also mir war äh nie langweilig und es war immer alles sehr interessant und aufschlussreich, was da so an den\nTisch kommt und wird das jetzt einfach auch mal wieder häufiger aufnehmen, es erdet auch immer ganz gut. Das kommt noch dazu,\nähm ja, aber kann dir sagen, das ist auch ähm ist auch eine,\neine eine Zielgruppe, die den Aufwand lohnt.\nNe? Womit der Aufwand dann für heute erstmal abgeschlossen wäre. Reicht's aber auch. Nicht übertreibe, nicht übertreibe. Okay, alles klar. Vielen Dank. Tschüss. Ciao ciao."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:53:44",
+      "text": "Ja, genau, jetzt reicht aber. Schön und nett, aber jetzt äh so okay, alles klar, vielen Dank. Tschau, tschau."
+    }
+  ]
+}

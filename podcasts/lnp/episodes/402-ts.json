@@ -1,0 +1,754 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:00",
+      "text": "Guten Morgen Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:03",
+      "text": "Du, ich habe eine Idee. Wir könnten doch mal eine werbefreie Version von Logbuch Netzpolitik starten. Gegen Bezahlung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:11",
+      "text": "Haben wir doch schon."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:34",
+      "text": "Buchnetzpolitik Nummer vierhundertundzwei vom, was haben wir denn heute? Äh fünf\nda August, du hast recht, zwanzig einundzwanzig, so sieht's nämlich aus Leute, ein Donnerstag und wir sind am Start. Ja und wir äh halten Schritt\nMit der gesamtwirtschaftlichen Entwicklung.\nJa, vier null zwei, also letztes Mal haben wir ja schon ein bisschen rumgewitzelt. Ähm dass das sozusagen ja so ein wieder mal so eine Zahl ist, auf die Nerds reagieren.\nDas stimmt auch irgendwie, ne? Und ich dachte, vielleicht könnte man das auch mal ein bisschen genauer erklären, warum das eigentlich so ist. Weil es geht ja vielleicht nicht unbedingt jedem so, ne. Also,\nDieser vierer Bereich,\ndieser dreistellige Viererbereich, naja, der ist halt einfach allen Leuten, die sich das Web eine Sekunde genauer angeschaut haben, ähm ja, einfach als Fehlermeldung oder vielmehr als Status kurz quasi so als Rückmeldung aus diesem World Wide Web.\nBekannt. Und das ähm,\nhat ja eine relativ wichtige Rolle gespielt so in der gesamten Entwicklung des Internets, weil mit dem Web kam so ein bisschen der Durchbruch und deswegen sind irgendwie diese Response Codes äh zu so einem gewissen Ruhm äh gekommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:50",
+      "text": "Das sind ja HTTP-Statuscodes, der der Browser kommt, macht die Anfrage, ne, sagt äh in der Regel so etwas wie Get oder\näh Post, also sagen wir einfachste, macht ein Getrickwest auf eine bestimmte Seite und sagt, ich hätte gerne den Inhalt dieser Seite,\nwenn alles gut geht, ist ist eigentlich die die Antwort, die vom Server dann kommt, der Statuscode äh zweihundert, ja,\ngefunden und hier ist der Inhalt und dann sagt der\nBrowser, boah geil ey hier jetzt fange ich an, das HTML zu rändern oder was weiß ich, ne? Ähm gemäß dem damit umzugehen und wenn da äh etwas nicht äh\nso läuft, wie man's vielleicht erwartet hätte oder wie es der der Clint eigentlich erwartet hat, dann gibt's da eine eine bunten Strauß an unterschiedlichen ähm\nFehlercodes, die auch nicht immer richtig verwendet werden, ne? Oder es ist auch, es sind auch nicht alles Fehler, also zum Beispiel gibt's ja auch äh diese diesen Dreierbereich, ne,\nDrei null äh eins drei null zwei äh für\nTemporay und Permanent Reads, aber einer, ich glaube, der drei null eins ist eigentlich found und der Red wäre eigentlich ein anderer. Irgendwo gibt's da doch so einen klassischen, also was, was viele gerne falsch machen, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:12",
+      "text": "Genau, also grundsätzlich, dieses Status kurz in so Zahlenblöcke eingeteilt und wie du schon richtig gesagt hast, so der Zweierbereich ist der so ja eigentlich alles okay,\nMit verschiedenen Abstufungen. Der Dreierbereich ist so, ja, meinetwegen aber nicht hier\nund zeigt dann eben auf verschiedene Arten und Weisen woanders hin, im im Netz, so entweder halt vorübergehend oder eben auch dauerhaft, so nach dem Motto ja äh sorry, du hast hier eine alte Adresse, die hat sich dauerhaft geändert, kannst dir gleich merken, du brauchst gleich wieder zu fragen und so wird natürlich auch nicht alles richtig benutzt, wieder richtig angezeigt, noch äh richtig verwendet, aber zumindest gibt's das alles\nNaja, dieser vierer Bereich, na, der ist natürlich insofern am lustigsten, weil er halt erstmal so die klassischen,\nFehler äh macht und Fehler sind ja irgendwie immer das das Lustigste, ne? Und so vierhundert ist halt so allgemein so ja irgendwie Bad Request, also\nschön, dass du was von mir willst, aber ich verstehe die Frage nicht. Und letzte Woche hatten wir ja so dieses so nach dem Motto\nJa, meinetwegen, aber du darfst hier irgendwie gar nicht rein, weil du hast hier nicht die entsprechenden Zugangsdaten äh vorher abgeliefert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:17",
+      "text": "Und und heute?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:19",
+      "text": "Ja und heute äh sind wir bei einem dieser äh Status kurz, die zwar irgendwann mal eingerichtet wurden, aber die eigentlich nicht so richtig benutzt werden,\ndas ändern wir jetzt mal. Vier null zwei heißt nämlich Payment Require. Ja?\nUnd das war so ein äh Statuscode, wo man sich dachte, naja, irgendwann wird man ja vielleicht auch mal was bezahlen im Netz und so, ne? Und dann muss man das ja auch irgendwie anzeigen und dann fließt sowas einfach in solche Standards mit rein. Aber ist halt irgendwie bis heute noch nicht wirklich\ngenutzt worden, weil man halt einfach dazu übergegangen ist, einfach normale Webseiten anzuzeigen, wo es dann eben so Menschen lesbar draufsteht und man überlässt das dann eben nicht dem Browser. Manchmal ist das eine gute Idee, manchmal ist das auch nicht so eine gute Idee, wie auch immer. Auf jeden Fall existiert das Ding und da ich aber heute vier null zwei ist,\nmal wieder über Geld reden. So eine lächerliche Ausrede."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:13",
+      "text": "Rede, Rede von Geld, Tim. Geld äh grundsätzlich finden wir gut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:16",
+      "text": "Ja, ich hatte ja ein neues Businessmodell. Du meinst, wir haben das schon."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:22",
+      "text": "Nee, das also das können wir jederzeit anbieten, ohne Mehraufwand. Das sind ja die besten Businessmodelle,\nja, wo man äh wo man ohne mehr Aufwand, mehr Geld,\ndas ist also das unterscheidet äh den Erfolgreichen, das erfolgreiche Businessmodell vom äh nicht erfolgreichen Businessmodell, ne. Also, sage ich mal, wenn du nicht mehr Aufwand hast, ja und mehr Geld kriegen kannst,\nDas ist äh das, was der der Fachmann ein ein skalierendes Businessmodell nennt.\nJa? Und uns skalierende Businessmodelle sind sehr gut. Äh am besten wäre exponentiell skalierend."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:58",
+      "text": "Jetzt muss man nicht übertreib."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:00",
+      "text": "Und ich habe eine, ich habe eine ganz einfache Idee. Ähm ja, ähm wenn jede Hörerin nur äh drei Leuten Logbuch Netzkritik empfiehlt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:11",
+      "text": "Ja super, Schneeballsystem."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:13",
+      "text": "Und und dir aber dann bittet, dass auch drei Leuten zu empfehlen.\nDann hast du ein exponentielles äh exponentielles Wachstum."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:24",
+      "text": "Mhm. Aber erstmal nur höhere Rennen, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:28",
+      "text": "Ja ja, in dem Bereich brauchen wir auch noch ein bisschen exponentielles Wachstum. Scheint mir."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:31",
+      "text": "Das stimmt allerdings auch, genau. Und dasselbe könnte auch mit Geld funktionieren. Aber ist schwieriger. Definitiv."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:38",
+      "text": "Zinsen, meinst du?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:39",
+      "text": "Nee, so einfach aus exponentielles Wachstum. Das ist so dieses Schneeballsystem, sowas, was immer mal wieder äh so reöciert, ne, wo dann Leute sagen, so ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:49",
+      "text": "Das sind auch sehr gute Geschäftsmodelle. Schneeballsysteme."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:52",
+      "text": "Du gibst mir tausend Euro und so und dann überredest du einfach nur zehn Leute, auch noch tausend Euro und die dann auch wieder und dann werden alle reich so, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:59",
+      "text": "Geht Schneeballsysteme gehen lange Zeit echt gut, ja?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:04",
+      "text": "Mhm. Das stimmt. So lange, bis es dann nicht mehr funktioniert und dann sitzen die Leute halt auf ihrer Kohle."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:12",
+      "text": "Schneeballsystem auf jeden Fall auch ökonomisch eine sehr interessante Erfindung gewesen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:16",
+      "text": "Soweit wollen wir es jetzt gar nicht kommen lassen, aber wir wollten einfach nochmal dezent darauf hinweisen, dass natürlich auch diese ganze Podcasterei durchaus finanzielle Unterstützung gebrauchen kann, weil wir haben ja äh sozusagen auch Aufwand\nund äh manifestiert sich vor allem natürlich in Zeit. Und gar nicht mal so wenig, wenn man hier äh richtig viel los ist.\nUnd natürlich der ganze andere äh Mumpels. So, die Server wollen gefüttert werden und weinen. Und Geräte wollen gekauft werden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:47",
+      "text": "Bald gibt's neue Max, ja. Das wird alles gekauft werden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:49",
+      "text": "Genau. Das was da steht so eine komplette neue Produktpalette vor uns und."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:57",
+      "text": "Also das kann man bei der Gelegenheit ja schon mal sagen, dass du hier auf dem, wie heißt der Käsehobel äh Mac Pro, ne? Was ist welches Baujahr ist dein Mac Pro?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:05",
+      "text": "Zweitausendneun. Wie gesagt, könnte man wieder."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:07",
+      "text": "Junge, Junge. Der ist der ist, da würde ich vorsichtig sagen, der ist abgeschrieben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:12",
+      "text": "Der ist definitiv äh abgeschrieben, ja und ähm der äh schreit eigentlich auch schon die ganze Zeit nach Rente.\nAber bisher konnte ich ihm diesen Gefallen noch nicht tun.\nTja, also mit anderen Worten, wir wollen jetzt gar nicht hier groß äh rumeiern, aber einfach mal die Gelegenheit äh aufgreifen. Ihr habt die Möglichkeit, uns zu unterstützen. Das wisst ihr auch schon,\nwas am besten funktioniert, sind einfach,\nDaueraufträge, kleine Zahlungen, egal wie viel, könnt ihr euch selber ausdenken, was euch halt irgendwie möglich ist.\nDazu findet ihr natürlich in den äh beziehungsweise sowieso auf der Webseite und ähm wenn ihr da LNP reinschreibt, dann freut sich auch der Linus, weil dann kriegt er auch was ab.\nSonst nicht. Nee, natürlich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:58",
+      "text": "Also bitte mal alle eure Daueraufträge kontrollieren, dass da auch LNP drin vorkommt. Ja, oder noch, noch einen zweiten Dauerauftrag an mich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:07",
+      "text": "Ach so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:11",
+      "text": "Auch jede Folge kriegt er jede Folge halt so viel Werbung und dürft sie doppelt so oft hören. Wird 'nen Deal."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:16",
+      "text": "Aha, okay. Kriege ich dann auch die Hälfte von dem irgendwie, also wenn ihr mal Ninos was hinschickt, dann schreibt aber auch Tim rein. Da kommt er voll in die."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:23",
+      "text": "Nee, dann dann lehne ich die ab."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:27",
+      "text": "Genau. Mit vier null drei dann verbitten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:32",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:33",
+      "text": "Da kommen wir dann nächste Woche drauf. Na gut, äh jetzt lassen wir euch aber auch schon wieder in Ruhe, weil hier geht's ja äh nicht dadrum, euch die ganze Zeit die Ohren vollzusäuseln, sondern wir haben nur grad die Gelegenheit genutzt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:46",
+      "text": "Wenn das HTDP, äh wenn der wenn der Standard uns das ermöglicht. So, dann sind wir beim Feedback."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:54",
+      "text": "Das war umfangreich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:56",
+      "text": "Das war umfangreich und äh gerade schon kurz bei der Vorbereitung zu Tim gesagt. Das ist äh sehr schön, aber auch\närgerlich, dass wir so viele kompetente Kommentare mit Hintergrundwissen zum Thema Broadcast, Katastrophenschutz und sonstigen bekommen haben, die,\nleider, also erstens zu viel und zweitens zu lang sind, dass wir die alle ähm verlesen können, deswegen aber auf jeden Fall, wenn euch dieser Bereich.\nNoch mehr äh interessiert, dann äh schaut auf jeden Fall mal in die Kommentare,\nzur letzten Sendung und ich nehme da jetzt mal exemplarisch so ein bisschen den,\nden längsten äh und der kommt von Jan ähm und ich werde den jetzt etwas etwas für euch äh kürzen.\nAlso Jan sagt, erstens ich bin, wie so viele andere auch der Meinung, dass einer App überlegen ist, zumindest für den eigentlichen Zweck der Warnung. Zweitens, äh und das ist der der wichtige\nder wichtige oder einer der vielen wichtigen Punkte in diesem Kommentar. Ähm das Argument einer Mitarbeiterin des BBK,\nwar tatsächlich der Datenschutz, aber anders als es in der Diskussion,\nangebracht wird. Ihr Punkt war, dass man in Deutschland niemanden so ansprechen darf, wenn die Person nicht vorher eingewilligt hat.\nAlso nicht, dass Datenschutz in irgendeiner Weise datenschutzrelevante Daten beim.\nVersand von Nachrichten anfielen, sondern dass man einfach nicht jemanden äh kontaktieren darf,\nwenn diese Person nicht zugestimmt hat. Wir haben auch in der letzten Sendung eben diesen Aspekt,\näh behandelt, dass da eben gar keine Daten anfallen pro Person. Und deswegen ist das äh als Korrektur hier zu werten. Gleichzeitig korrigiert äh den Jandern oder ergänzt die Janne, den Jan dann auch die Sandra\nWeil Jan sagt, ich habe keine Ahnung von äh bin im Datenschutz nicht so sattelfest, aber könnte das eventuell der Punkt sein? Er sagt Sandra, nein.\nÄhm es man braucht zwar eine Einwilligung, aber es gibt viele Rechtsgrundlagen, ähm wo man.\nDiese Anforderung nicht hat und zwar berechtigtes Interesse oder man kann einfach sagen, hier ne, das BBK darf das. Und dann wäre diese Sachen äh erledigt. Ja, also dass das Argument ähm,\nzählt nicht, ja? Dass man jetzt sagt so, ach, wir hätten dir gerne eine Warnung geschickt, aber du hattest ja nicht gesagt, dass du eine."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:36",
+      "text": "Interesse daran hast, zu überleben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:39",
+      "text": "Ähm so weiter äh Dritten, drittens, weiter als den Kommentar von Jan. Die App,\nbieten ja durchaus mehr Funktionen, beispielsweise eine Warnungsverhalten für einen Bereich, in dem ich mich persönlich gar nicht befinde, aber zum Beispiel Angehörige. Äh das kann man mit\nkannst nicht mal eben so machen, ja, stimmt, würde ich aber äh auch sagen, ist nice to have, aber jetzt nicht im Rahmen des Katastrophenschutzes ein,\nein Must äh Feature. Ähm sagt er aber außerdem, klar, du kannst weiterführende Verhaltenstipps und so weiter geben,\nfür die Prävention, das da hat die App durchaus einen gewissen Mehrwert. Ja, das ist halt eben ich finde,\nalso diesen Mehrwert sehe ich, ja? Und da den muss eben, muss man man kann ja dann halt so eine, so eine App machen, Katastrophe pro, ja, wo man vielleicht noch mehr Informationen bekommt, ja? Ist Premium-Content,\nDa kannst du eigentlich eine App machen, Tim. Fremian machen wir. Bis zu drei Katastrophenwarnungen im Monat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:41",
+      "text": "Die sind kostenlos, ja? Also."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:46",
+      "text": "Kostenlos ab."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:47",
+      "text": "Genau. Ab dann wird's."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:49",
+      "text": "Wenn du dann noch Empfehlungen haben möchtest, ja, da kannst du natürlich das Paket, äh, das Prepperpaket buchen.\nJa? Als äh das aber ne, das ist klar. Okay, wir spinnen rum. Viertens, sagt Jan. Die Anwendung der warnenden Stellen ist relativ entspannt machbar. Dazu ein kleiner Exkurs ist das modulare Warnsystem,\nÄh früher mal satt was, weil es über Satelliten funktioniert.\nStation, welche die Warnung erstellt, ist auf zwei Wegen angebunden. Therestisch über eine MPLS Leitung und redundant über Satellit. Der Betreiber des Systems ist die Firma MICOM\ndie eine Tochter diverser Nachrichtenagenturen ist und da kommt der Spaß auch her.\nEs wird Infrastruktur genutzt, die sonst für die Verteilung von Nachrichten in Redaktionssystemen gedacht ist. Laut Aussage des Betreibers ist das ganze System so teuer und unwirtschaftlich.\nDass sich keine freiwillige Konkurrenz dazu findet. Ähm Movas SE Station, also Senn und Empfang stehen in vielen Bundesländern direkt bei den jeweiligen Leitstellen, beispielsweise in NRW und in Rheinland-Pfalz entscheidet sich Seil also,\nBei kleineren Lagen der Einsatzleiter vor Ort, dass eine Warnung ausgesendet werden soll, wird diese in der örtlich zuständigen Leitstelle, also da, wo die eins, eins, zwei, abgefragt\nFeuerwehr und Rettungsdienst alarmiert werden, erstellt und in das System eingespeist. Die Ausleitung findet bei selbst statt, wobei die Warnung sowohl an diverse Apps, Katva, Nina, Biwap\nFFA.\nMedien wie Radio, TV, Nachrichtenagenturen sowie andere Empfänger deutsche Bahn, Betreiber von Werbetafeln übergeben wird. Wo genau, wie genau, da bin ich jetzt raus, aber ich meine, ich hätte dazu mal irgendwo was gelesen, müsste ich nochmal nachschauen. Okay, das ist schon mal sehr gut.\nWas müsste also in Zukunft gemacht werden? Man müsste in Anführungszeichen einfach eine Anbindung an die Mobilfunk Provider schaffen.\nDie ähnlich wie die Schnittstelle zu den Warnapps funktioniert. Die Betreiber erhalten einen Polygon des Warenbereichs.\nUnd den Inhalt der Warnung samt einer Klassifizierung, dass Polygion bis auf die Infrastruktur gemappt werden, was sich sicher relativ entspannt darstellen lässt, zumal die leichte Unschärfe hier ja nicht schaden wird,\ndann sagt er noch was zu Sirenen, das lasse ich jetzt mal aus, darüber hatten wir schon gesprochen.\nAlso sechstens, zum gerne zitierten Warntag. Man sollte nicht vergessen, dass man hier ein Szenario aufgefahren hat, welches so in der Praxis der Warnung der Bevölkerung fast nicht vorkommt. Welches Szenario soll das sein? Äh wenn ich mal,\nin Deutschland möglichst jeden fahren soll. Ja, nuklearer Angriff, oder? Oder?\nUnfall wäre jetzt etwas, wo ich denke, müsste man alle sofort fahren. Mir fällt da nicht wirklich was ein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:32",
+      "text": "Ja, aber es, ich meine, es\nWenn man sicherstellen will, dass ein System im im Bedarfsfall gut funktioniert, dann ist es gar kein gar kein Problem, wenn man's mit einem, mit einer Lagetesse, die so ein bisschen über das normale hinausgeht, weil dann kann man auch davon ausgehen, dass der Normalfall funktioniert.\nAlso das äh ist jetzt auch nicht so das na also ist natürlich ein Problem, aber es sollte ein lösbares\nProblem sein, genau diesen Zustand herzustellen, weil da hat man, wie man so schön sagt, etwas ein bisschen Luft nach oben, ähm damit man dann im Zweifelfall sich auch drauf verlassen kann, dass der normale, übliche Fall auch funktioniert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:09",
+      "text": "So jetzt genau, dann sagt Jan weiter\nIn der Praxis sieht es meist ganz anders aus, Warnungen sind lokal begrenzt, vielleicht an der Ortschaft, vielleicht auch mal der Landkreis. Das funktioniert und wir täglich von Behörden genutzt. Mit der heute vorhandenen Infrastruktur, welche ich immer noch ideal finde, siehe Punkt eins. Der Warntag ist daher,\nimmer noch immer, ich glaube, er meint immer noch nicht ideal finde. Äh\nDer Warntag ist daher eher ein kommunikatives, als ein technisches Disaster gewesen. Wieso fahre ich ein durchaus funktionierendes System mit einer solchen Aktion gegen die Wand?\nKeine Ahnung, war vermutlich irgendjemand schlauer als alle anderen und damit meine ich durchaus nicht den Kollegen Unger, der seinen Hut nehmen musste.\nSiebtens, damit kommen wir zu des Pudelskern. Die Technik hätte eine Warnung der Bevölkerung in den Überschwemmungsgebieten durchaus erreichen können. Wer bis hier hindurchgehalten hat beim Lesen, kann sich aber mal die Situation eines sich in die\nSituation einer Entscheidungsträgerin versetzen, die in einem ganzen Landstrich eine Evakuierung antworten,\nanordnen soll. Ich war nicht dabei, ich kann und werde hier niemand in Schutz nehmen, aber was vermutet,\ndenn die erste kluge Klugscheißer-Gemeinde, welche politische Konsequenz einem Landrat droht, der ganze Orte räumen lässt, in denen dann nachher nur ein paar Tropfen vom Himmel fallen. Das ist echt ein massives Problem\ndas sich auch gar keine Lösung habe. So, das äh der.\nDer ausführliche Kommentar. Wir hatten auch noch einen weiteren zu diesem und zwar von.\nSimon, ähm der äh sagte, also es gibt dieses und so weiter, ja,\nDas war auch genau das, was beim Warentag letztes Mal ausgefallen ist, weil es mit der Anzahl der gleichzeitig ausgesendeten Warnungen überlastet war. Die Apps waren da also gar nicht das Problem,\nsondern das Baby ist schon daran gescheitert, die App-Server zu alarmieren. Sale Broadcast wären davon wohl genauso betroffen gewesen.\nEinige äh viele ähm Links dazu. Und ähm,\nin der äh in den Antworten auf Simon wiederum gibt es einen Kommentar von OTC. Ähm.\nÄhm der äh von der Katastrophe insofern betroffen war, dass sie in der Katastrophennacht evakuiert wurden,\nund das Wasser aber auf kurz vor ihrem Haus halt gemacht hat. Und er schildert ein bisschen wann die wann sie die Warnungen bekommen haben. Also,\nAls wir um drei Uhr dreißig von den Nachbarn wach gemacht wurden,\nWasser ein paar Meter vor unserer Tür stand und wir evakuiert wurden, war der Strom längst weg. Entsprechend war das Netz ebenfalls weitestgehend weg, Frauen, Kinder sind weggefahren. Ich habe noch den Nachbarn geholfen und den Keller etwas aufgeräumt. Ausgeräumt, nicht aufgeräumt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:07",
+      "text": "Wenn man schon mal wach ist, können wir auch mal den Keller aufräumen. Wie sieht das hier denn aus?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:14",
+      "text": "Na ja, ähm nachdem die Flut durchs Tal gerauscht ist, stellte sich jedenfalls Horst Seehofer vor die Kamera\nder Mann, der nach dem letzten Sirenendebakel, dem BBK-Chef von der SPD durch ein Part drei Freund ersetzt hat und sagte, man brauchte jetzt Sale Broadcast. Es ist traurig zu erkennen, dass wir scheinbar mittlerweile in einem System leben, in dem nur unter dem.\nEindruck von Katastrophen, eigentlich selbstverständliche Dinge durchgeführt werden können. Ebenso ist es sehr schade, dass Horst Seehofer nicht persönlich verantwortlich gemacht wird, sondern dass er sich wie ein,\nneben stehender ein nicht Verantwortlicher vor die Presse stellt und Missstände, die von ihm selbst verantwortet werden anprangert und deren Beseitigung ankündigt. Ja also ist eigentlich alles mit Herr Horst Seehofer ist äh schade.\nFür meine ertrunkenen Nachbarn in der nächsten Straße kommt das zu spät. Vielleicht finden ihre Angehörigen ja Trost in einer solchen Ankündigung. Ähm ja, also viele äh Kommentare zu diesem Thema.\nUnd ähm seien, seien wir mal gespannt, äh wie das jetzt mit äh Broadcast in Zukunft.\nFunktionieren wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:32",
+      "text": "Ja, also äh ein guter Hinweis, dass jetzt äh Sale Broadcast allein hier das Problem auch nicht gelöst hätte, weil unter Umständen die Nachricht gar nicht erst bis dahin gekommen ist. Das lässt sich jetzt im Einzelnen natürlich äh schwer\nteilen an welcher Stelle jetzt dieses System gefehlt hat und ähm\nja, was ich auch ganz interessant fand, ich hab's auch nochmal kurz nachgelesen, find ich auch ganz gut, wusste ich aber bisher noch nicht, dass eben auch diese ganzen Stadtwerbetafeln,\nNe, so von Ströer und Wall und so weiter, die ja in der Regel für sie äh Stadtmöblierung, wie das heißt, äh da die Aufträge bekommen und quasi,\nBushaltestellen bauen, aber dafür dann eben quasi mit Werbefläche äh bezahlt werden, die sie sich dann wiederum von wärmenden bezahlen können, dass die dann auch noch angeschlossen sind. Nicht, dass ich jemals da eine Warnung drauf gesehen hätte,\naber ja, nicht blöd."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:19",
+      "text": "Sind regelmäßig Warnungen drauf, was weiß ich irgendwie, Schat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:22",
+      "text": "Kauft das, kauft."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:23",
+      "text": "Konzert oder sowas."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:28",
+      "text": "Okay, ja, da hast du recht. Schon interessant. Also, sag noch mal einer das funktioniert nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:41",
+      "text": "So, dann hatten wir über äh die Impfzertifikate gesprochen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:46",
+      "text": "Oh ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:47",
+      "text": "Ähm wo\nAlso kurze Erinnerung, wo sich Martin äh sich zusammen mit Andre Zich die Möglichkeit äh erschaffen hat, äh auf diesen Server zuzugreifen und damit\nähm Impfzertifikate auszustellen. Und da hat äh Martin äh offenbar die Sendung gehört und kommentiert, schöner Beitrag zum Thema Impfzertifikate. Ähm und er zitiert\nwahrscheinlich was ich gesagt habe, wenn du jetzt jeder Apotheke und jeder Arztpraxis wirklich eine Tourkarte und eine eigene Software gegeben hättest, dann wäre das nie fertig geworden. Das hatte ich, glaube ich, gesagt.\nKommentar von Martin,\nHier wird es jetzt idiotisch. Voraussetzung zur Ausstellung von Impfzertifikaten. Über besagtes DAV Portal war schon immer ein Anschluss an die Telematik-Infrastruktur TI\nobwohl das DAV Portal selbst aus dem Internet erreichbar ist. Ein solcher TI-Anschluss beinhaltet eine Signaturkarte\nUnd zwar eine SMCB mit PIN und eine Signatur Anwendungskomponente, nämlich den Konnektor und das Kartenterminal.\nConnector, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:58",
+      "text": "Die Apotheken haben das schon."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:01",
+      "text": "Gleiches Spiel bei den Arztpraxen. Das heißt, die betroffenen Apotheken und Arztpraxen melden sich sowieso alle bereits mit Signaturkarte und PIN an der Telematik Infrastruktur,\nVerfahren also durch Signatur einer Nuns an. Ähm.\nDiejenigen, die den Teil jetzt nicht verstanden haben, unerheblich, die ihn verstanden haben, herzlichen Glückwunsch. Ähm letztendlich also was meint ihr einfach sagt, diese die Anmeldung erfolgt durch das Anbringen einer elektronischen Signatur,\nDadurch meldest du dich überhaupt da an. Die Infrastruktur für dezentral signierte Impfzertifikate ist also bereits fertig.\nVermutungen noch zur Frage, warum man neben den Gastzugängen auch die Zugänge der regulären DAV-Mitglieder abgeschaltet hat.\nAuch DAV-Mitglied werden ist nicht schwer. Okay.\nJa äh danke danke für äh an Martin. Das DRV-Mitglied Martin, für die.\nFür diese äh Ergänzung. Ja, das also da habe ich natürlich wirklich einfach nicht dran gedacht, dass die TI ihr wirklich genau das Ausrollen von.\nKryptographischen Keypes ist und du hättest jetzt äh also da entweder hätten die sich jetzt selber mit diesen Karten,\ntatsächlich direkt die Impfzertifikate unter äh unterschreiben können oder du hättest eben einen Service machen können, wo du dich mit der TI-Karte anmeldest und ausweist, ja und dann ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:42",
+      "text": "In deinem Namen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:43",
+      "text": "In deinem Namen das unterschrieben, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:45",
+      "text": "Oh Mann, ey."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:46",
+      "text": "Tja, aber da hätte man wahrscheinlich mit Leuten reden müssen, deren Schwerpunkt nicht Blockchain ist.\nDie dann kurzfristig zu zu Zertifikaten gezwungen werden. Okay, dann gab's noch einen äh noch einen äh Kommentar zu dieser Impf äh Revocation. Ja, ich hatte ja äh gesagt, dass.\nWenn man eine ähm.\nSigniere Infrastruktur unterhält oder eine äh dann muss man den Fall berücksichtigen.\nDas ausgestellte Zertifikate eventuell vor dem ab, vor der vor dem Ablaufen ihrer Gültigkeit revogt werden müssen und weil,\nPrüfung des einzelnen Zertifikates ja offline und ohne weitere Informationen funktionieren kann und dass die Stärke des Systemes ist, braucht man einen Weg zur Revocation und der kann nur sein, dass man eben.\nAn einer öffentlich zugänglichen Stelle. Im Prinzip, sagen wir mal, designierte Informationen.\nUnd sagt, hiermit rufe ich zurück.\nDas Zertifikat mit der Nummer so und so, ja? Das heißt, es gibt dann eine öffentlich zugängliche Revocation-Liste. Ähm,\nZu dem Thema kommentierte Matthias von Impfeinträgen. Habt den Standard dazu nicht gelesen, aber ich habe gehört, das gibt's auch auf EU-Ebene explizit nicht wegen Datenschutz,\nweil dazu müsste man sich die Impfinfos irgendwie speichern, damit man da eine Revolution raushauen kann.\nDas also ich glaube, ich weiß, dass das diskutiert wurde, aber ich bin mir eigentlich relativ sicher, dass das äh ähm.\nNicht ähm also dass sie diesen Teil dann doch eingesehen haben, dass du nämlich äh deine Impfzertifikate sonst äh äh\nalso einfach anhand der Seriennummer revoten kannst. Du kannst ja sehen, ja? Aber jetzt äh entscheidender Punkt von Matthias, aber die X fünf null neun,\nZertifikate, mit denen die Impfzertifikate signiert sind, können revogt werden. Also du kannst im Prinzip du revox nicht das einzelne Zertifikat, sondern direkt,\ndas, was es das Ding signiert hat.\nÄhm viele Länder haben tatsächlich Revocation mit ihren Zertifikaten, aber von vielen davon führen die URLs ins Leere. Äh vier null vier oder sogar notfond."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:16",
+      "text": "Das kommt dann später."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:17",
+      "text": "Viele Länder sagen einfach,\nes gelten nur die Zertifikate in der Trust-List und die Trust-List darf nicht älter als achtundvierzig Stunden sein, sollte besser, stündlich geupdatet werden. Ähm,\nIch glaube, dass es in Deutschland auch so, weil ich aus den Gesprächen mit den Entwicklern\ndieser Impf äh Infrastruktur der Infrastruktur der technischen äh weiß, dass sie eben auch immer diese Trust-List sich neu holen müssen. Also.\nEs gibt die Möglichkeit der Revocation, aber so also technisch gibt's die auf jeden Fall, aber irgendwie implementiert ist sie eben äh trotzdem nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:55",
+      "text": "Ja und vor allem, das war jetzt natürlich alles ein bisschen schwierig zu verstehen. Man kann sich das ja so vorstellen, wie so ein\nvon äh es gibt so einen Top-Level Zertifikat und da drunter sind dann andere Zertifikate und darunter sind andere Zertifikate. Und je nachdem, wie weit man das halt treiben\nwill, hast du halt so den Staat, die Länder\ndie ausgebenden Stellen, regionale Unterteilung und dann eben runter bis zur einzelnen Apotheke oder eben zum Arzt.\nJa, das wäre so das ideale Bild in diesem Denkmodell, wo du dann eben an jedem dieser Knoten sagen kannst, so,\nalles ab hier gilt nicht mehr. Ne, also wenn du den ganzen Landkreis abschneidest, dann fällt halt alles andere automatisch mit äh,\ndas ist halt das, was nicht stattgefunden hat. Also das hier, was Revogt äh werden kann, äh gut, schön, aber hängt eben sehr davon ab, wie filigran das alles ausgegeben wird und das haben wir ja eben bei dem Beispiel gehabt mit der,\nTelematik und den Apotheken, obwohl da im Prinzip ein Apothekenspezifisches Zertifikat existiert, ist es wird es so nicht mit reingeschrieben in diese Kette,\num das eben kurz zu halten, das hatten wir glaube ich auch schon mal diskutiert, damit das irgendwie alles in diesen QR-Code noch reinpasst, was natürlich nochmal ein anderes Problem ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:30:10",
+      "text": "Jo, dann haben wir noch einen Kommentar. Wir haben ja relativ ausführlich über diese NSO\nPegasus-Geschichte gesprochen und da hat Andreas ein paar Anmerkungen, die sich primär darauf beziehen, dass ich äh die Zahlen genannt, aber nicht,\nalle vollständig ins richtige Verhältnis gesetzt habe. Deswegen äh vielen Dank für diese wichtige äh Ergänzung. Also Andreas, ein paar Anmerkungen zum NSO Projekt. Amnesty International,\nzu insgesamt siebenundsechzig Nummern konkret untersucht, ob ein Hack mit Pegasus vorlag oder versucht wurde\nUnd auf siebenunddreißig Geräten\neine erfolgreiche oder versuchte Pegasus Infektion nachgewiesen. Ich hatte nur die Zahl siebenunddreißig genannt und nicht, dass die eben aus der Gesamtmenge siebenundsechzig Untersuchungen kamen\nAlso nicht siebenunddreißig von siebenunddreißig, sondern siebenunddreißig von siebenundsechzig.\nBei den übrigen dreißig gab es kein schlüssiges Ergebnis, zum Teil, weil die Geräte nicht mehr verfügbar waren.\nAußerdem wird die Präsenz einer Nummer unter den fünfzigtausend von den Journalisten als Indication of Intend interpretiert.\nGegenüber People of interest\nAuch die Journalisten selbst gehen nicht davon aus, dass tatsächlich alle fünfzigtausend überwacht wurden oder das auch nur versucht wurde, wie\nLinus sagt. Wenn ich das gesagt habe, ja, also falsch, sorry. Quelle, hat dann Guardian dazu. Das Ganze ist natürlich trotzdem ein Skandal, aber es könnte auch juristisch relevant sein, derartige\nFeinheiten korrekt darzustellen. Ist das eine Drohung? Ist das eine Drohung? Hat er mir gedroht? Nein, danke, danke Andreas, nein, wichtig, ähm.\nWichtiger Hinweis fünfzigtausend Zielpersonen ist 'ne 'ne echt wär wirklich enorm und ja die,\nerfolgreiche äh äh also die die Analysen äh beides Wichtige Ergänzung. Danke dafür.\nDas war das Feedback soweit. Also es gibt noch sehr viel mehr, könnt ihr gerne äh lesen, ist auch empfohlen immer zu lesen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:19",
+      "text": "Ich habe noch eine kleine Anmerkung, die vielleicht kein unmittelbares Feedback ist, aber noch eine kleine Korrektur. Wir hatten uns recht skeptisch geäußert bezüglich der verfügbaren Kinotermine des Films. Alles ist eins, außer der Neue,\nwart ihr dann schon wieder abgeschreckt. Ich habe dann selber mal geschaut, allerdings nur für Berlin und war dann überrascht, dass dann doch einige Kinos den Film, zumindest in dieser Woche, äh,\nnoch gefahren haben, also ihr solltet durchaus mal schauen, wie's bei euch aussieht,\nmindestens in größeren Städten, denke ich, ist die Chance noch recht gut. Und ja, mal gucken, wenn ihr da alle hingeht, dann läuft er vielleicht auch noch ein bisschen länger."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:53",
+      "text": "In Lübeck läuft der Film im Filmhaus Köngistraße. Am Samstag äh fünfter achter, heute Abend fünfzehn Uhr. Also wenn ihr euch beeilt müsst ihr jetzt los, dann schafft ihr's vielleicht noch. Hat uns auch jemand äh als Kommentar.\nVielleicht ist es auch die Königsstraße. Ich weiß es nicht. Ähm findet ihr schon."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:13",
+      "text": "Ja, wir werden jetzt hier nicht alle Termine äh recherchieren, das könnt ihr selber machen. Ihr habt ja Internet, hoffentlich.\nInternet. Gut, dann kommen wir zu dem ersten richtigen Thema. Äh hast du kontrollierst du eigentlich deine Chats? Linus?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:30",
+      "text": "Meine Chats sind außer Kontrolle."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:32",
+      "text": "Außer Kontrolle ist alles außer Kontrolle. Den Zustand kenne ich irgendwie.\nJa. Siehste mal, genau. Und die EU möchte gerne helfen. Möchte dir gerne helfen, dass deine Chats außer Kontrolle sind und möchte sie ganz gerne in die Kontrolle mit reinnehmen.\nUnter ihre Kontrolle, weil das halt einfach äh findet die EU einfach ganz äh geil. Ja, was ist passiert?\nWährend ihr alle noch im Sommer wart und wir auch, hat die EU mal wieder was beschlossen, das Parlament,\nhat sich da zusammengerauft und hat am sechsten Juli.\nEine neue EU-Verordnung verabschiedet und ihr erinnert euch, für Ordnung, das ist das, was sofort für alle gleichzeitig äh gilt, im Gegensatz zur Richtlinie, die dann immer mehr äh Teilkatastrophen nach sich ziehen,\nDazu kommen wir auch gleich noch. Ähm,\nund ja, hat äh eine EU-Verordnung eben zur Chatkontrolle angenommen. Diese erlaubt es, E-Mail und Messaging Anbietern ähm ja,\nprivate Nachrichten, unterschiedlich und vor allem in Echtzeit nach äh verdächtigen Inhalten zu durchsuchen.\nWohlgemerkt die Betonung ist auf erlaubt ist diesen Anbietern das zu tun.\nWas heißt jetzt noch nicht, dass sie das dann gleich tun, aber sie könnten es halt tun? Also es ist ihnen dann quasi hier nicht mehr verboten. Da wundert man sich doch, irgendwie hatten wir nicht gerade irgendwie so eine äh Verordnung, in der das irgendwie genau verhindert werden soll,\nJa, aber diese neue Verordnung zur Z-Kontrolle wiederum ist eine Ausnahmeverordnung in Bezug auf die ähm Verordnung. Das heißt, die wird hier entsprechend eingeschränkt.\nVon den deutschen Abgeordneten stimmten die CDU und die CSU weitgehend geschlossen dafür, wenn ich das äh richtig sehe, ja\nGenau, ist so, alles grün. Bei der SPD äh wurde mehrheitlich dafür gestimmt. Ähm.\nMit der Ausnahme von äh vier aufrechten äh Kämpfern, die sich trauen da, gegen die Fraktionsmeinungen zu äh stimmen,\nder Rest interessanterweise einschließlich der AfD,\nwohl was zu verbergen, ne? Äh die wandern dagegen. Na ja, auf jeden Fall große Mehrheit im Parlament, fünfhundertsiebenunddreißig, dafür hundertdreiunddreißig. Dagegen vierundzwanzig haben sich enthalten,\nNa ja, was heißt denn das jetzt? Das bedeutet, dass es jetzt ein Rechtsmittel gibt, um Chatverläufe äh automatisiert, also.\nDa ist natürlich von,\nKünstlicher Intelligenz die Rede. Ich sage mal mit Machine Learning ähm zu durchkämmen. Sprich, da Algorithmen gegen zu fahren, die in irgendeiner Form verdächtiges finden soll.\nWir wissen alle, was das bedeutet. Das bedeutet, dass es alles so ein bisschen so ein reinhorchen in so einen Datensalat und man guckt halt, ob man irgendwas findet, was man vorher schon mal gefunden hat,\nAlgorithmen natürlich auch nur so gut sind, wie sie vorher trainiert werden und trainiert werden, können sie halt nur mit Dingen, die eben vorher schon klar und bestätigt sind. Und äh\nob das dann immer auf Neues auch passt, das ist äh die eine Frage, die andere Frage ist\nWie genau ist dieses Matching? Und die Erfahrung zeigt, nur wirklich extrem gut trainierte Sachen, wo man sehr klare Aussagen auch dazu machen kann, also wo\nquasi auch die Vorlage, das Trainingsmaterial zweifelsfrei irgendetwas identifiziert.\nÜberhaupt zu überzeugenden Ergebnissen führen.\nJa, das bedeutet, man möchte ganz gerne hier nach Kindesmissbrauch äh Fotos, Fahnen und äh oder Anbahnungs,\nirgendwie herausfinden, sprich da soll schon eine relativ elaborierte Interpretation von Kommunikationsverläufen stattfinden,\ndas Ganze natürlich anlasslos. Und das äh hat natürlich dann den entsprechenden Widerstand auch erzeugt bei Leuten, denen das wichtig ist und die sich da auskennen.\nPatrick Breyer von den Priaraten. Wir hatten ihn ja hier auch schon mal in der Sendung, hat sich hier auch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:37",
+      "text": "Zu dem Thema, ja?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:38",
+      "text": "Auch unter auch unter anderem auch zu diesem Thema genau ist er nach wie vor sehr engagiert, es gibt eine eine.\nEin Dokument einer ehemaligen Richterin des EUGH, Nienon Colne Ritch, die äh der Meinung ist, dass wir halt alles grundrechtswidrig,\nund Patrick Breyer will halt jetzt dagegen klagen, er sucht ähm nach Leuten, die ihn da unterstützen, äh unter anderem auch nach ähm potentiellen Missbrauchs\nOpfern, die also quasi in zweierlei Hinsicht hier betroffen sind, aber die selber befürchten, dass ihnen durch diese Verordnung ihre sicheren Kommunikationswege genommen werden.\nDas wäre jetzt alles schon schlimm genug,\naber das eigentliche Problem ist, dass die EU-Kommission bereits schon an einer Verschärfung dieser Verordnung arbeitet. Denn ich hatte ja anfangs betont,\ndass sie sich hierbei um die Erlaubnis handelt, dass Anbieter diesen Vorgang überhaupt durchführen,\nDas heißt ja nicht, dass sie dann auch automatisch damit beginnen. Also, was sagt die Logik der Überwachung? Die Logik der Überwachung sagt, da brauchen wir jetzt aber auch noch eine Verordnung, die dann eben auch die Leute dazu zwingen kann, das zu tun, wenn wir das gerne hätten,\nUnd genau das sollte eigentlich jetzt schon im Juli nachgereicht werden, ist aber aufgrund erster Proteste bereits auf den September verschoben worden. Dann will also die EU-Kommission einen entsprechenden\nPlan ähm ankündigen, wie denn hier ein Zwang zur Nachrichtendurchleuchtung implementiert werden soll.\nJa und das bedeutet halt unterm Strich, dass hier gerade bei Messaging Diensten, also bei E-Mail ist eher nicht viel zu holen, aber bei Messagingdiensten im Prinzip Druck ausgeübt werden kann auf Anbieter, also in dem Befall dann halt auch,\nHersteller von Telefon und Betriebssystemen, sprich Google, Apple et cetera, aber auch kleineren äh Messaging Dienst dann Dienstanbietern oder eben auch,\nGrößeren vor allem, WhatsApp, et cetera, äh diese ento-ent in Kryption mit entsprechenden Backdoors zu versehen, denn ansonsten ist ja so ein Mitlesen überhaupt nicht möglich.\nJa, also das Hauptproblem ist hier ganz klar, die Gewährung von Zugriff öffnet das Ganze dem Missbrauch der äh Überwachung äh und ja.\nDas äh könnte bedeuten, dass halt mittelfristig dadurch die gute Krypto, die wir da teilweise noch sehen, einfach nicht mehr,\nBetreibbar wäre in Europa, zumindest in der EU."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:01",
+      "text": "Also die dies, also die also du kannst schon weiter verschlüsseln,\ndass dieser Scan soll ja soll ja auf deinem Endgerät stattfinden, aber der ist dann Teil dieser App, ja, das heißt die die was weiß ich, dein Messenger gibt sich zwar Mühe, die Nachrichtenende zu Ende zu verschlüsseln\nPrüft ihr aber nach Abituren äh Kriterien, die von einer.\nDritten Instanz vorgegeben werden und leitet potentiell die Inhalte aus, ja? Was schon wirklich ähm absoluter Irrsinn ist, vor allem bei der Menge an, also\nbei einer solchen bei der Menge an Nachrichten, die gesendet werden. Ähm jede noch so kleine ähm.\nJede noch so kleine Wahrscheinlichkeit eines Falls positives sofort irgendwo in den sechs, siebenstelligen Bereich,\nne? Weil einfach so Unmengen an Nachrichten und so weiter äh durch die Gegend gesendet werden. Und das ist schon wirklich eine\nziemlich üble Sache, zumal wir ja.\nAuch das das lässt sich ja nun wirklich nachzeichnen, neue Überwachungsmethoden immer mit Terrorismus.\nUnd äh Kinder, Kindesmissbrauch begründet werden ähm,\nbis sie dann irgendwann für Alltagskriminalität zur Verfügung stehen, ne? Und ähm wenn wir jetzt an unsere Telegramm-Folge denken,\näh ne, so ein so ein Algorithmus, der Kindesmissbrauch erkennen soll, der kann sicherlich auch ähm andere Dinge erkennen, von denen man sich vielleicht äh Fotos sendet, ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:44",
+      "text": "Vor allem bedeutet, ich meine, man muss sich immer wieder klarmachen, was was das bedeutet. Machine Learning ist so ein diffuser Suchalgorithmus\nder gar nicht so klar benannt werden kann. Als wir diese ganze Skandal um äh die BKA, äh NSA, die ganzen Abhör ähm Skandale, die durch die Snoaden\nausgelöst wurden. Da haben wir immer noch von den, äh was war noch gleich der Begriff der\nähm Suchbegriffe, was war da noch der der, der, der Name dafür, für die äh für den Anlass der Ausleitung, die die Suchbegriffe selber."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:21",
+      "text": "Selektor."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:24",
+      "text": "Genau, die Selektoren, ja? Die konnte man dann quasi benennen, da kann man so eine Liste ausdrucken und sagen, so, das, das, das, das, das. So funktioniert das beim Machine Learning nicht mehr. Maschine Learning ist irgend so ein\nBrei, der sich irgendwie aus äh Millionen von Integration von so Lernvorgängen irgendwie ergibt, woraufhin dann so ein Algorithmus\ndie sozusagen den zu untersuchenden Text oder die Bilder bekommt und dann sagt dieser Bit-Prei halt irgendwie so ja oder nein.\nAber du kannst in diesem Bitbrian nicht ansehen, wo nachher eigentlich wirklich selektiert.\nDas ist natürlich auch ein Problem für die Kontrolle, ja. Also wer beschließt jetzt da, wonach gesucht wird, wer kann diesen Bit Brei eigentlich wirklich äh korrigieren äh und und kontrollieren und und und verifizieren oder nachweisen, dass irgendetwas da nicht\ngesucht wird. Und das ist natürlich schon ein wirklich ähm sehr leistungsfähiges Überwachungssystem,\nweil man im Prinzip nach allem suchen kann.\nDa es ja hier auch um die Kommunikation, also auch um das hin und her, Anbahnung und so weiter geht, ja, ist es ja gar nicht mal nur das einzelne Untersuchung von einzelnen Nachrichten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:32",
+      "text": "Sondern auch die Inhalte, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:33",
+      "text": "Sondern Inhalt oder auch auch im Kontext des Hin und Hers. Und dann kannst du halt alles entdecken."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:39",
+      "text": "Und ne, was was also eine Sache, die immer.\nWas, was die sagen wir mal, die Laien äh des Themenbereichs immer nicht verstehen ist, wenn das Ding deine,\nTextnachrichten untersuchen soll, auf, was weiß ich, Anbahnungsversuche oder deine Fotos auf äh illegale Inhalte, dann muss das jedes einzelne Foto und jede einzelne Nachricht,\nanschauen, ja? Es ist nicht so, dass man sagt, ja, äh wir wir wir schauen uns ja nur die bösen Sachen an. Nein, der prüft jede einzelne Nachricht. Und wird äh,\ntechnisch eben jeden eingehenden Inhalt gegen diese gegen dieses Ding äh scannen und viel Spaß,\nbei euren zukünftigen Anbahnungsversuchen im im Erwachsenenumfeld,\ndas Ding dann auf einmal meint, ey Moment mal, hier findet doch ein Anbahnungsversuch mit einer äh Minderjährigen statt. Ja, das kann also da da hat man ja dann auch diese, also neben\ndiesem Überwachungs-Albtraum, der eigentlich allen klar sein sollte und den einige hier offenbar für positiv halten, muss man ja noch dazu sagen, dass es eine.\nGeradezu groteske,\nÜberschätzung der Leistungsfähigkeit von Technik ist, davon auszugehen, dass das irgendwie überhaupt funktionieren könnte. Ja, ähm weil also diese ähm.\nAlso die sogenannte Artificial Intelligence wird ja.\nGrandios überschätzt in einigen Bereichen, teilweise aber auch grandios unterschätzt, weil die Menschen nicht also sagen wir mal, nicht unbedingt die informatische Komponente des Problems.\nOder die stoch hastischen Komponenten des Problems tatsächlich erfasst haben, was sich mit Sicherheit erkennen lässt unter welchen unter durch aus welchem,\nAus welcher Informationsmenge und was nicht. Und ich halte es für äh tatsächlich selbst wenn man das bauen würde und machen würde und so, halte ich das für eine äh für eine Detektion, die sich nicht inakzeptablem.\nMaß überhaupt realisieren lässt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:53",
+      "text": "Schön formuliert. Ihr habt keine Ahnung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:45:57",
+      "text": "Der äh was sich also das ist, glaube ich, äh muss ich wirklich sagen, eines der.\nUnterschätztesten und am wenigsten berichteten Probleme in der Netzpolitik jetzt gerade. Ja\nobwohl, und das muss man wirklich dann auch mal hoch anrechnen, Patrick Breyer hängt ja an dem Thema dran, aber er ist irgendwie im deutschsprachigen Bereich der einzige, steht da allein auf weiter Flur, kriegt noch nicht mal irgendwie seine seine Greens damit an Bord, so 'n diesen Mist äh abzulehnen, das ist schon wirklich äh,\nja, krass.\nHat er seine schwedischen und äh tschechischen Kolleginnen dabei, aber äh ja, das sind ja die vier da, ne. Das ist wirklich äh.\nSehr äh ärgerlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:50",
+      "text": "Ist so. Also falls ihr in irgendeiner Form.\nHier mithelfen äh könnt, also gegebenenfalls äh in Frage kommt, die Klage zu unterstützen oder sonst in irgendeiner Form auf dieses Thema aufmerksam machen könnt, dann macht das doch bitte. Äh wir haben Links zu zwei,\n-Einträgen von Patrick Preyer, wo er unter anderem auch ausführlich darstellt, wie man sich da noch mit einbringen kann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:47:15",
+      "text": "Ähm also was kann was könnt ihr tun? Ja, darüber reden, andere informieren, hat irgendwie.\nVorbereitet. Sharepics und so weiter. Äh die Hashtags Chat Control.\nOder man kann mit seinen äh im Parlament reden,\naber das ist natürlich jetzt auch schon relativ spät, Medienaufmerksamkeit haben wir hiermit versucht äh zu generieren äh und natürlich auch mit den Service-Providern reden,\ndass man denen sagt, ey ähm macht äh macht das bitte nicht.\nÄh ja wendet euch dagegen, schützt mich als euren als euer als euren Kunden. Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:02",
+      "text": "Meinte auch, dass also Umfragen relativ deutlich zeigen, dass eine klare Mehrheit gegen diese Pläne ist. Das Hauptproblem ist natürlich wie immer, keiner kriegt's mit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:10",
+      "text": "Ja und diejenigen, die also natürlich mit dem Thema ähm.\nDokumentierter Kindesmissbrauch hast du natürlich auch etwas, wo wo du seit jeher,\nim Prinzip, sage ich mal, dein, dein, dein Abgeordnete, Person sagt, hm, ich möchte eigentlich nicht, dass sich irgendjemand bei mir meldet und fragt, wieso ich für Kindesmissbrauch bin.\nJa? Das hat ja schon,\nsehr gut funktioniert oder drohte sehr gut zu funktionieren als es um diese Stoppschilder ging ne? Wo dann eben auch gesagt wurde das kann ja wohl nicht. Wo also jede Kritik daran\nvon Gutenberg übrigens auch und von der Leyen dann irgendwie.\nSo erschickt wurde so, also der das könnten sie sich überhaupt nicht vorstellen hier, ne, dass da solche äh dass man jetzt hier als Proponent von äh Kindesmissbrauch auftritt und das äh würden sie sich doch wirklich verbieten, so ungefähr, ne?\nOK"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:11",
+      "text": "Ja und dann ähm ja ich weiß gar nicht, wie ich das einleiten soll. Das ist schon wieder. Also wir hatten ja schon mal davon berichtet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:49:20",
+      "text": "Es es ist ja die die wenigen einige von euch werden's bemerkt haben. Das sind ungefähr anderthalb Monaten eine Bundestagswahl stattfinden soll und dass die Parteien,\njetzt äh sich in den Wahlkampf begeben. Und äh diese Wahlkämpfe koordinieren.\nDie Parteien ähm ich glaube, das machen auch alle mit Hilfe von Apps, ja? Und da hat die CDU eben diese App CDU-Connect.\nIn der sich die Wahlkämpferinnen der CDU quasi koordinieren. Da registrierst du dich drin, da hast du irgendwie ein bisschen Gamification, dann kannst du irgendwie eine Straße langgehen und die erfassen dann auch ähm,\nzwar nicht die Namen, aber so also Daten so, okay, da war ich,\nPerson hat folgende Einstellung hinsichtlich der CDU und hier habe ich noch ein Kommentarfeld oder so ja? Und natürlich schreiben die sich dann gerne das Kommentarfeld einfach den Namen der Person rein äh der nämlich normalerweise nicht erfasst wird.\nDiese App hat sich im wenn ich mich nicht täusche Anfang Mai.\nLilith Widmann angeschaut. Wir haben auch im Logbuch darüber berichtet. Es war die äh Sendung mit dem äh da war ein Hacker drin. Ähm denn sie hat äh festgestellt, dass diese App ähm.\nQuasi im Hintergrund auf APIs zugreift und dabei keine Authentisierung vornimmt oder keine\nkeine Prüfung vornimmt, ob man berechtigt ist, diese Daten abzurufen. Ergebnis, die persönlichen Daten von achtzehntausendfünfhundert,\nWahlkampfhelferin mit E-Mail-Adressen und Fotos, persönlichen Daten von eintausenddreihundertfünfzig Unterstützerinnen der CDU, inklusive Adresse, Geburtsdatum und Interessen waren frei verfügbar und\nEbene halbe Million Datensätze über diese politischen Einstellungen und Notizen der kontaktierten Personen. Alles, alles frei im Internet verfügbar.\nSo was hat sie gemacht? Sie hat die äh diese Schwachstellen gemeldet und zwar der äh Datenschutz,\nVerantworten der CDU, ja? Datenschutzbeauftragten sorry, das ist der Begriff dem BSI,\nund der Berliner Datenschutzbeauftragten.\nDas ganze Ding wurde äh gebaut von natürlich nicht von der CDU selber, sondern von allen Unternehmen PXN oder so heißen die.\nGanz kurz gucken, nicht dass das jetzt das falsche Unternehmen, die Agentur PXN ist äh für diese App verantwortlich. Ähm.\nGenau, sie hatte das jetzt gemeldet, was passiert. Ähm innerhalb kürzester Zeit wurden diese Datenbanken äh abgeschaltet.\nCDU hat Besserung gelobt, hat wahrscheinlich dieser Agentur, die den Mist äh geschrieben hat, in den Arsch getreten und ich glaube, einige Zeit später war die App dann wieder verfügbar, hatten sie ihre,\nSchwachstellen äh gefixt. Jetzt muss man natürlich sagen, also das ist also eine das war keine Schwachstelle, sondern das war einfach ein,\nfundamental Fail. Ja, also überhaupt sozusagen, ach ja geil, wir machen da irgendwie eine API und da kann die App, die ballert dann darauf rum und das merkt schon keiner, dass wir das\nWieso sollte irgendjemand anderes darauf zugreifen ohne die App, ja, oder wieso sollte wieso sollte das jemand machen? Das haben sie offenbar nicht dran gedacht und.\nAlso ein bei dieser Menge Daten, ne, zwanzigtausend oder annähernd zwanzigtausend ähm.\nPersonenbezogene Daten mit äh mit Adresse und dann noch eine halbe Million ähm irgendwie auf Straßenebene, wo viel dann auch reinkommentiert wurde, wer die Person ist, über politische Einstellungen,\ndas ist schon ziemlich hart. So,\nund äh die Lilith Widman hat dann äh das der CDU gemeldet. Die haben dann, sind dann auch irgendwie ein Austausch mit ihr getreten,\nund sie berichtet aus diesem Austausch zwei Dinge. Erstens, sie hätten sie hätten ihr einen Beratervertrag angeboten,\nJa, das ist nicht ähm.\nDas ist nicht unüblich, dass man eben sagt, okay krass, du hast offenbar Ahnung, du hast uns hier gerade kostenlos eine Schwachstelle gemeldet, wir bieten dir jetzt an,\ngegen Honorar für uns tätig zu werden.\nÄhm üblicherweise lehnt man das aber ab. Ja, es sei denn, man man ist jetzt wirklich in einer in einem großen, krassen Bereich und man weiß, okay, hier die brauchen wirklich jemanden und natürlich bietet sich das an, weil ich da jetzt als Forscher,\nBekenntnisse drin habe. Übrigens kleiner Punkt am Rande,\nniemals nie, nie, nie, nie, sollte man als Forscherin selber das anbieten. Und sagen, übrigens, hier eine Schwachstelle, ihr könntet mich übrigens für den und den Tagessatz beschäftigen\ndas geht schief, ja, das wird gerne mal äh missverstanden, als ein Erpressungsversuch\nWas man aber auch als Erpressungsversuch missverstehen kann, ist, dass die CDU in diesem Fall der Lilith gesagt hat, ähm ja hier.\nBeratervertrag angeboten und dann als sie quasi oder den hat sie nicht,\nDieses äh Angebot hat sie nicht wahrgenommen, ja. Und haben dann gesagt, dass sie also rechtliche Schritte gegen sie einleiten würden. Was du, wo ich jetzt sagen würde, das ist etwas, was du sehr oft hörst\nja? Aber wo eigentlich kaum jemand so unglaublich dumm ist, das auch tatsächlich zu machen, ja? Das ist äh so eine Mischung aus\nFrustration und Inkompetenz, ne? Man ey, das ist so eine schöne App und jetzt ist die, jetzt ist die, äh, nur weil da so ein Hacker drin war.\nBin ich sauer, ich verklag die Sau, ja? Und dann schläfst du 'ne Nacht drüber und merkst, dass die die Person, die da grade eigentlich einen riesigen Gefallen getan hat,\ndiese Schwachstelle zu melden und zwar kostenlos, damit du sie beseitigen kannst. Insofern hat wurde auch hier eben dieser Drohung keine.\nBesondere ähm.\nKeine besondere äh Bedeutung beigemessen, bis dann eine Nachricht bei ihr einging und zwar eine E-Mail von einem Herrn, der beim äh LKA.\nSieben zwei vier.\nTätig ist, sehr geehrte Frau Wittmann, auf hiesige Dienststelle, bearbeite ich als Hauptsachbearbeiter ein Ermittlungsverfahren unter der Vorgangsnummer XY. Der Inhalt dieses Verfahren betrifft die CDU-Connect-Applikation.\nIndem sie als Beschuldigte geführt werden. Ich benötige von ihnen eine ladungsfähige Anschrift und bitte sie mir diese schriftlich oder gerne auch telefonisch zu übermitteln. So,\nim Klartext heißt das, die CDU.\nSicherheitsforscherin äh hat Strafantrag gegen die Sicherheitsforscherin gestellt, ähm die ihr eine Schwachstelle gemeldet hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:13",
+      "text": "Das ist nicht der Klartext, der Klartext ist, diese Wichser.\nDas ist der Klartext."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:21",
+      "text": "Also das ist wirklich äh es ist wirklich unglaublich ähm also an an Dummheit nicht zu überbieten so etwas zu tun, ja?\nÄhm tja.\nWir haben dann so ein bisschen überlegt, was ähm man da so macht. Also die Lilith ist auch im CCC aktiv, hat zum Beispiel hier zu dem äh elektronischen Personalausweis an der letzten Stellungnahme auch mitgearbeitet und ähm.\nIch habe das dann irgendwie ja, erstmal so zur Kenntnis genommen, dann hatten wir einen kurzen Austausch, habe ich gesagt, hier übrigens eine Anwälte haben wir natürlich und.\nKosten wirst du da auch nicht haben in diesem Bereich. Ähm das dafür sind wir ja nun mal der äh CCC.\nTja und dann habe ich irgendwie gedacht, naja jetzt also will ich auch ganz ehrlich, meine,\nwar eigentlich diese Sache nicht großartig jetzt schon an die Glocke zu hängen, weil das riecht ja nach etwas, was relativ langfristig gibt. Ja, ein Geschenk, das.\nRegelmäßig weitergibt und ähm\nvor allem wenn man dann als Beschuldigte kann man ja über einen Anwalt äh oder Anwältin Akteneinsicht verlangen und das kann ja sehr unterhaltsam werden, ja? Ähm ich bin eigentlich so ein bisschen, ich warte immer dadrauf, also\nich mache also das Risiko eine Strafanzeige zu bekommen, wenn man eine Schwachstelle meldet, ist natürlich immer da. Aber es ist ähm enorm.\nAlso es ist, man hat eben selten das Glück, jemanden zu finden, der so doof ist. Ja, irgendwo ist immer noch, selbst bei dem beknacktesten einer im Raum, der sagt, Leute.\nIch habe eine, ich habe die Befürchtung, das ist keine gute Idee.\nWeil das hat ja noch nie jemand gemacht. Äh und vor allem nicht erfolgreich. Äh abgesehen von übrigens auch dramatischen Fällen, die ähm jetzt zum Beispiel bei dem StudiVZ-Hacker.\nAndere Geschichte. Also ich habe mich eigentlich immer auf so einen Fall gefreut und dachte irgendwie so okay, äh halten wir mal still. Dummerweise war das jetzt halt schon auf Twitter bekannt und äh alle meinten sich dazu melden zu müssen. Und dann habe ich mir gedacht, da müssen wir natürlich auch als CCC reagieren.\nUnd dann haben wir als CCC eine Pressemitteilung veröffentlicht, äh veröffentlicht mit dem Titel\nCCC meldet keine Sicherheitslücken mehr an CDU. Der wäre den Fall erklärt haben und äh dann sagen, leider erweist sich die CDU als äußerst undankbar\ndie ehrenamtliche Nachhilfe. Sie hat beim LKA-Strafantrag gegen die Aktivistin gestellt. Shooting the Messenger wird die dysfunktionale Strategie genannt, nicht das Problem zu lösen, sondern jene anzugreifen, die darauf hinweisen. Das macht die CDU nicht nur in diesem Fall\nsondern auch mit der Digitalisierung und anderen wichtigen politischen Problemsfeldern. Insofern ist dies dieses destruktive Vorsehen Vorgehen nur konsequent, sagte,\nLinus Neumann, Sprecher des Kaufcomputerclubs. CTC wünscht CDU viel Glück bei zukünftigen Schwachstellen.\nLeider hat die CDU das implizite Ladies and Gentlemen Agreement der responsible einseitig aufgekündigt, um künftig rechtliche Auseinandersetzungen zu vermeiden, sehen wir uns leider gezwungen\nBei Schwachstellen auf System der CDU zukünftig auf Meldung zu verzichten, kündigte Neumann an, der CCC bedauert\nausdrücklich, dass damit das Risiko anonymer Veröffentlichung\nfür die CDU und ihre freiwilligen Unterstützerinnen steigt. Die Verantwortung für zukünftige, derartige Veröffentlichung weisen wir vorsorglich von uns.\nEs hat nicht so lange gedauert, bis dann mein Telefon klingelte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:07",
+      "text": "Echt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:10",
+      "text": "Das ging relativ schnell. Äh ich kann aber nicht sagen, mit wem ich da gesprochen habe und was die Inhalte waren.\nAber äh ja, das äh ist natürlich, glaube ich, auch der CDU klar, was das potenziell bedeutet, wenn du anderthalb Monate vor der Bundestagswahl leider,\nden CCC angepisst hast, so äh vor allem in einer Zeit, in der das BSI gerade vor den Angriffen auf die Parteien warnt, ja, das ist ja das, was das\nBSI sagt halt grade, ne, hier Bundestagswahl, oh Gott, oh Gott, oh Gott, oh Gott. Und äh warnt halt irgendwie die Parteien, haben irgendwelche Handreichungen und so weiter. Äh Sorgen sich vor äh Hack and League,\nOperationen und so. Äh das ist natürlich jetzt also das hatte das hatte CDU dann schon verstanden.\nÄhm und es dauerte dann nicht mehr so lange, bis Stefan Hennewick,\nder CDU-Bundesgeschäftsführer ja doch hat noch ein bisschen gedauert um zwanzig vor drei hat er diesen Tweet folgenden Tweet dann folgenden,\nveröffentlicht. Vor einigen Wochen haben wir Anzeige im Zusammenhang mit der Sicherheitslücke der Connect App erstattet. Alfred\nUnsere Anzeige richtet sich nicht gegen das Verfahren von Lite Widmann\nVerfahren sind ein guter Weg, um Betroffene auf Sicherheitslücken aufmerksam zu machen. Ich halte diese Verfahren für einen wichtigen Baustein, um IT-Sicherheit zu erhöhen.\nAllerdings kam es im Zusammenhang mit der Sicherheitslücke unserer App angeblich auch zu einer Veröffentlichung personenbezogener Daten durch Dritte, sowie zu öffentlichen Hinweisen auf die Sicherheitslücke,\nvor der Information an uns, außerhalb des.\nIch habe heute mit Lilith Wittmann telefoniert. Sie hat mit\ndiesen beiden Vorgängen nichts zu tun. Die Nennung ihres Namens in der Anzeige war ein Fehler, für den ich sie um Entschuldigung gebeten habe. Beim LKA habe ich die Anzeige gegen sie zurückgezogen.\nMit Lillit Widmann habe ich besprochen, dass ich die Klarstellung und Entschuldigung hier auf Twitter veröffentliche,\nDer interessante Tweet ist hier der der Dritte. Äh,\nEs kam im Zusammenhang mit der Sicherheitslücke unserer App angeblich auch zu einer Veröffentlichung Personen da bezogener Daten durch Dritte. Ähm.\nJetzt ist die Frage angeblich.\nGab es die oder nicht? Gab es, gibt es irgendwo einen Link mit den personenbezwungenen Daten? Hat jemand abgezogen und veröffentlicht? Ähm oder verhandelt oder im Darknet gepostet oder sonst was? Warum steht da angeblich.\nWahrscheinlich äh ich kann mir das jetzt nur so erklären. Also dass angeblich wird ja nicht ohne Grund stehen. Und ähm.\nWenn sie, wenn sie wirklich wüssten, dass diese Daten veröffentlicht wurden, dann müsste da stehen, es kam zu dieser Veröffentlichung. Ich vermute dir wahrscheinlich einfach irgendeinen Tweet gelesen, wo einer meint, die Daten sind schon längst im Darknet und haben gesagt, oh shit, Darknet,\nSo, also und haben vermutet, also hier steht ja ganz klar, dass sie nicht, sie bestätigen nicht, dass diese Daten veröffentlicht wurden, mit anderen Worten, was weiß ich, wer angeblich ich wer hat das denn angegeben? Und dann.\nZu öffentlichen Hinweisen auf die Sicherheitslücke vor der Information an uns.\nAußerhalb des also irgendjemand hätte öffentlich diese Schwachstelle.\nBekannt gegeben, bevor sie davon erfahren haben. Das ist ja das, was da äh gesagt wird. Ehrlich gesagt,\nAlso aus dem Teil kann ich mir keinen Reim machen, beziehungsweise ich kann mir einen draus machen, aber den darf ich nicht öffentlich machen. Ähm.\nAlso wenn Sie Hinweise haben, dass diese Schwachstellen auch von anderen ausgenutzt wurden, dann äh.\nBietet sich natürlich an eine Strafanzeige gegen Unbekannt zu stellen. Ja, das äh bleibt ihnen ja auch unbenommen und dann können sie eigentlich noch glücklicher sein, dass äh ausgerechnet die äh Lilith die Sache schnell gefunden hat und gemeldet hat,\nbevor vielleicht noch mehr Schaden entstanden ist. Aber\nspezifisch, ist ja hier gar kein Schaden entstanden und dann fragst du dich natürlich, wieso benennst du dann die Lilit Widmann als Beschuldigte? Du kannst ja niemand hindert dich daran, eine eine Strafanzeige gegen Unbekannt zu erstatten, aber ähm,\näh als diejenige, die in die Schwachstelle gemeldet hat, als äh Beschuldigte zu führen, ist eben nicht besonders äh.\nJa, das gilt gemeinhin als unfein. Wenn äh ja, doch, das ist unfein, Tim, das ist gehört sich nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:03",
+      "text": "Das,\nman so sagen. Ja, nee, das ist äh schlechter. Die haben's total vergeigt, also da da ist irgendwas intern völlig schiefgelaufen. Irgendjemand hat da freigedreht und äh keine Ahnung, äh war vielleicht auch etwas rachsüchtig unterwegs und die haben da irgendwie ihre Strukturen auf jeden Fall nicht im Griff. Und jetzt äh\nsehen, dass ja die Felle davonschwimmen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:26",
+      "text": "Und jetzt kommt meine, also juristisch kann ich das nicht ganz genau beurteilen. Ich bin mir, ich glaube nicht,\ndass du, also wenn du also eine Anzeige heißt ja erstmal, du du bringst quasi.\nDass äh ähm du du setzt die Staatsanwaltschaft oder die Polizei darüber in Kenntnis, dass eine Straftat,\nstattgefunden hat und stellst Strafantrag, ja?\nIch glaube, wenn ich das richtig verstehe, kannst du nicht einfach sagen, achso, ja, hier, übrigens, nee, ich hab's mir anders überlegt, ich möchte doch nicht, dass die bestraft werden, vor allem weil ja\npotenziell die Geschädigten, wenn es jetzt hier zu einer Veröffentlichung dieser Daten gekommen wäre, äh gar nicht äh die CDU sind, sondern die Leute, deren Daten, die CDU da verarbeitet hat\nja? Das heißt, es ist im Zweifelsfall nicht ohne weiteres,\ndamit getan, dass jetzt hier der gute Herr Hennewick äh dem LKA sagt übrigens, ich möchte nicht, dass die äh beschuldigt wird, dass es jetzt, wenn die Ermittlungen stattfinden.\nLiegt das im im Ermessen dieses LKA, also ganz ohne weiteres können die das jetzt nicht,\nanhalten ist meine meine Wahrnehmung, insofern werden wir mal sehen,\nwie das äh wie das weitergeht. Man muss auch sagen ähm der.\nMarkus Drenger hatte das, glaube ich, auch gesagt. Wenn du in diesem Bereich tätig bist.\nBereich der IT, IT-Sicherheit vertrauen, also dann willst du keine Strafanzeige haben,\nja? Du willst nicht irgendwo in den Akten vermerkt haben, dass es äh das gab, weil das potenziell,\nin bei bei Datenauskünften irgendwie im Führungszeugnis steht und so weiter, ne? Wenn also eingestellte Verfahren natürlich nicht, aber äh sagen wir mal ähm.\nDu möchtest dich jetzt, was weiß ich, du arbeitest, möchtest gerne im Büro einer Bundestagsabgeordneten arbeiten.\nUnd diese Bundestagsabgeordnete setzt sich mit einem Geheimdienstskandal auseinander, haben wir ja jede Legislaturperiode mindestens einen, geht's eine Untersuchungsausschuss, brauchst du Zugang zu einem zu irgendwie äh\ngeheimen Informationen, dafür brauchst du irgendwie eine Clearince, ja? Und wenn dann da irgendwie diese Geheimhaltungs äh ne\nGeheimschutz, was weiß ich, wo die dann irgendwie äh diese Untersuchungen machen, mit dir reden, gibt's ja die kleine und die große. Ne, und bei sowas, da gucken die natürlich in in die in die Datenbank und sagen, hm, hör mal, du hattest doch mal hier wegen wegen Hacking,\nÄrger, ne? Und da ist das durchaus 'n.\nIst es nicht gut, ja? Wenn äh wenn wenn sowas in deinen Akten steht, das kann eben doch durchaus äh längerfristigen Schaden haben. Insofern ist es aber auch gut, dass wenn das der Fall ist, ja,\ndieser Fall eben auch öffentlich gut dokumentiert ist.\nSo dass du hier dann eben zu deiner äh Ehrenrettung äh anbringen kannst. Das sind einfach nur ein paar beknackte äh Christdemokraten waren.\nDen du den du geholfen hast, kostenlos."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:41",
+      "text": "Ja. Aber Hilfe, Hilfe gibt's jetzt trotzdem erstmal nicht mehr, oder?\nIch meine, das muss das muss jetzt erstmal komplett geklärt werden, was Wasser, was da passiert ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:08:54",
+      "text": "Ich würde auch sagen, das warten wir jetzt mal ab. Ja, also da äh da das das warten wir jetzt mal ab. Was da jetzt so rauskommt, ne? Also die Kuh soll ja erstmal vom Eis, denke ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:06",
+      "text": "Vom Eis, genau und irgendjemand muss über die Planke äh äh marschieren so, also wir erwarten jetzt einen Bauern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:13",
+      "text": "Ich hätte, ich kenne einen guten Bauern, ich kenne einen guten Bauern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:17",
+      "text": "Ich kenne auch schon einige Bauern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:19",
+      "text": "Laschet, das ist ein guter Bauer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:21",
+      "text": "Genau, Seehofer gleich mit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:26",
+      "text": "Der hat auf jeden Fall die dicksten Kartoffeln. Der."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:30",
+      "text": "Ich würde sagen, wenn die jetzt, wenn die zurücktreten, dann sind wir wieder, dann sind wir wieder clean."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:34",
+      "text": "Es gibt ja jetzt auch so eine Sache, dass dann jetzt irgendwie also äh äh sie hat sich jetzt, das hätte ich also hat dazu habe ich auch geraten, eben einen Anwalt genommen und der Anwalt will natürlich Geld haben.\nUnd äh da denke ich jetzt zum Beispiel, da hat sie dann um Spenden gebeten, was ich ja äh äh.\nUnnötig finde, weil ja relativ klar ist, dass diese finanziellen Unannehmlichkeiten von der CDU beglichen werden, die ihr den Scheiß eingebrockt haben, da brauchen wir gar nicht drüber zu diskutieren, dass das die CDU zahlt.\nOder oder ist das jetzt, steht das jetzt auf einmal zur Debatte? Da kann mir nicht vorstellen, Tim, dass das jetzt zur Debatte steht, dass sie jetzt ihre eigene Verteidigung bezahlen muss oder irgendjemand anderes die Verteidigung bezahlen muss, als die CDU. Das kann gar nicht sein, oder?\nVorstellen, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:23",
+      "text": "Fehlt noch das passende äh die passende Pressemitteilung der CDU steht noch aus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:29",
+      "text": "Ja, habe ich, also die habe ich auch noch nicht gefunden, aber ich kann mir echt nicht vorstellen, dass die Lilith das jetzt selber zahlen muss oder irgendjemand ihr Geld spenden muss, um das zu bezahlen, das äh kann ich mir hier wenig vorstellen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:41",
+      "text": "Vorstellen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:42",
+      "text": "Ja, insofern schauen wir mal, wie wie sich das weiter entwickelt. Es war auf jeden Fall ähm.\nJa, ich, also insgeheim hoffe ich ja immer darauf, wenn wir in der responsible Disclosure machen, dass dass es dann mal eine Anzeige, dass es mal zu einer Anzeige kommt. Und es ist auch, also es ist nicht selten, dass damit gedroht wird, ganz im Gegenteil.\nDass äh ist auch einer der Gründe, warum,\nsehr häufig, ich mache für andere, also sehr häufig kommen Leute aus dem CCC oder auch nicht aus dem unbedingt aus dem Chaos, melden sich bei mir und sagen, hier pass mal auf, dieses und jenes gefunden.\nÄhm bin da nicht so erfahren im Austausch mit denen. Äh oder ne, in diesen Kommunikationen und äh vielleicht kannst du das einfach kurz für mich übernehmen,\nund dann melde ich mich bei den Leuten und sag so, ich bin der und der ich überbringe die Nachricht einer anderen Person und damit wäre halt quasi äh dadurch ist dann klar, dass sie, dass ich ihnen nicht die Gelegenheit gebe,\nüberhaupt irgendjemanden anzuzeigen, weil ich von vorne herein sage, äh dass ich hier nur die Nachricht überbringe und nicht diese Forschung angestellt habe und zweitens wissen die meisten Leute im Bereich der IT-Sicherheit, wenn sie mit dem CCC\nhaben auch mit wem sie da Kontakt haben. Das äh äh schwächt dann auch immer so den den Klagewillen.\nOder die Leute googeln einfach mal, wie ist es Leuten ergangen? Die gegen den CCC geklagt haben.\nEine Welt aus Schmerz, eine Welt auf Schmerz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:17",
+      "text": "Insofern Hashtag danke CDU."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:22",
+      "text": "Ja, okay, also ich mache mal weiter, ne? Wir haben ähm noch ein paar Sachen, eher, eher kleinere Meldungen, die Urheberrechtsreform ist, ist jetzt in Kraft getreten, Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:36",
+      "text": "So sieht es aus und äh das bedeutet vor allem, dass äh sie in Deutschland in Kraft getreten ist, weil die Urheberrechtsreform ist ja eine Richtlinie der EU.\nUnd wie das immer so ist mit Richtlinien, die müssen ja dann erstmal umgesetzt werden. Im Gegensatz zu den Verordnungen, hatten wir ja vorhin schon, ne, die quasi sofort und vor allem überall gleich gelten,\nist hier eine entsprechende Umsetzung\nerforderlich. Und nach die die CDU und Jahrtausend Sachen versprochen hat im Vorfeld, was da alles nicht kommt. Kommt das jetzt alles? Und zwar im Rahmen des Urheberrechte, äh Urheberrechtsdienste, Anbieter Gesetz Dank\nUnd das gilt jetzt seit dem ersten achten. Das ist also quasi die deutsche Implementierung von diesem Artikel siebzehn der EU Urheberrechtslinie.\nDas bedeutet Plattformen müssen jetzt äh gegen eine sich gegen eine Haftung für Inhalte wappnen\nJa? Und das bedeutet dann im Umkehrschluss, dass sie sich natürlich dann bei den Nutzern äh entsprechend absichern und von diesen Nutzern entsprechende Lizenzen zur Nutzung dieser Inhalte verlangen,\ndafür äh Tools bauen,\nund natürlich auch die Uploadfilter einführen, weil dann muss ja geklärt werden, wenn da was hochgeladen wird, dass es irgendwie nicht äh böse Urheberrechtsverletzung ist,\nDas ist ja das, was die CDU immer gesagt hat, was auf gar keinen Fall kommt. Und das kommt jetzt. Insofern auch hier wieder Hashtag danke CDU.\nAber ist ja alles nicht so schlimm, sagt die CDU, weil es gibt ja noch Ausnahmen, um sozusagen hier die Mehmeme und die Kulturfreiheit und äh was weiß ich noch alles zu retten\nleider in entsprechend klar definierten Rahmen, äh die da heißen, du kannst,\nhochladen fünfzehn Sekunden je eines Filmwerks oder Laufbilds. Da heißt unter einer Tonspur.\nHundertsechzig Zeichen eines Texts und richtig geil. Hundertfünfundzwanzig Kilo Bite je eines Fotos oder einer Grafik.\nKilo bald. Also wenn man jetzt nicht grade irgendwie,\nzweitausend oder sonst irgendeinen modernen äh abgefahrenen AI-basierten Kompressionsfilter macht, dürfte bei hundertfünfundzwanzig Kilo bald von keinem,\nnennenswert viel äh übrig bleiben und ich meine, war überhaupt so. Also wer checkt denn jetzt hier irgendwie seine gepasteten Bilder da drauf, dass sie irgendwie genau unter hundertfünfundzwanzig Kilo Bike sind? Und ab hundertsechsundzwanzig Kilo bald kommst du an den Knast oder was?\nAlso Hitlery Acts ist damit erstmal nicht mehr möglich, weil das einfach mal länger läuft als fünfzehn Sekunden und das gehört halt auch einfach dazu. So, ja? Und das bedeutet Hitler,\nWird selber nicht auf die urheberrechtslinie äh angemessen reagieren können.\nUnd das ist doch ein Skandal.\nNa ja\nImmerhin soll es äh Forschern und Forscherinnen möglich sein, äh die Auswirkungen und die konkrete Umsetzung\nzu messen, es sollen also entsprechende Schnittstellen bereitgestellt werden, die dann halt Statistiken oder was weiß ich, abwerfen, damit man das eben mal messen kann, wie viel das jetzt eigentlich benutzt wird und keine Ahnung, was dann letzten Endes sich dabei alles ablesen lässt, äh ob.\nDie Anzahl der positiven, negativen Meldungen et cetera. Äh da gemessen werden kann. Keine Ahnung, werden wir sehen.\nAllerdings äh gibt es ja aber auch noch eine Klage, die beim EUGH anhänglich ist und die kommt ja überraschenderweise aus Polen,\nJa, also ist ja jetzt nicht gerade so das erste Land in Europa, was einem gerade mal so einfallen würde, wenn's darum geht, irgendwie rechtlich was abzuklären. Aber das ist sicherlich immer noch so eine Auswirkung der Akta\näh Proteste einst, die ja äh in Polen so ein bisschen ihren Anfang genommen haben. Da war irgendwie am meisten Mobilisierung\nUnd da war ja dann die polnische Regierung relativ schnell eingeschüchtert und offensichtlich gibt's davon noch so ähm ja, Restbeben.\nAuf jeden Fall ist diese Klage anhänglich. Es gab aber jetzt wohl gerade eine Meldung des Staatsanwalts, äh der wohl eine Ablehnung der Klage empfiehlt und äh ist ja immer generell so, man nimmt, das ist jetzt nicht immer so gewesen. Gerade in letzter Zeit gab's ein paar Ausnahmen, aber so grundsätzlich folgt das EUGH äh\noft? Ich will jetzt nicht sagen in der Regel, aber meist äh der Empfehlung dieser Staatsanwälte\nEr schlägt allerdings vor, dass dieser Artikel siebzehn im Lichte der Grundrechte so interpretiert werden muss, schreibt Heise das nur eindeutig illegale Inhalte automatisch\ngesperrt werden dürfen, Diensteanbieter können ihm zufolge nicht verpflichtet werden, eine Wiederverwendung von Auszügen aus Werken in anderen Zusammenhängen präventiv zu filtern.\nJa, das würde dann quasi so ein bisschen mehr Nebenfreiheit äh machen und Hitler hätte vielleicht wieder eine Chance.\nÄh so ganz nebenbei, dieses Leistungsschutzrecht, was ja auch damit äh eingepackt ist, gilt schon seit dem siebten Juni,\nProvider sind natürlich nicht so begeistert. Der Eco,\nVerband der Provider äh in Deutschland moniert, insbesondere den Flickenteppich, der jetzt hier wieder durch diese ungleichen Umsetzungen der EU äh,\nherausgekommen. Das war natürlich jedes Land diese\nRichtlinie etwas anders interpretiert, andere Grenzen hat, andere Dinge als geht schon oder passt doch nicht. Äh interpretiert, sodass so äh quasi von dieser EU Richtlinie, die ja eine Einheitlichung von Recht\nanstrebt immer, ja, eigentlich genau wieder so ein System hast, wo dann doch jeder Anbieter, je nach Laden, je nach EU-Land eine eigene Abstimmung dieser Rechtsinterpretation äh vornehmen muss, ne.\nJa. Ja und die GF die geht ja auch noch gegen Uploadfilter vor."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:44",
+      "text": "Genau, da haben wir ja auch mit Julia äh hier schon drüber gesprochen, aber vielleicht fasst es trotzdem nochmal zusammen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:50",
+      "text": "Also die GF äh sagt, ähm damit wir Upload-Filter vor Gericht bringen können, brauchen wir deine Hilfe. Seit dem ersten August nehmen wir im Rahmen von Julia Reders Projekt Control C,\nmit dir lange drüber gesprochen, auch darüber, wie cool dieser Name ist. Hinweise über fälschliche Sperrung, legaler Inhalte wegen angeblicher Urheberrechtsverletzung unter folgender Adresse\nentgegen, Uploadfilter at Freiheitsrechte Punkt org. Sprich, wenn ihr konkret betroffen seid.\nDann ähm wäre das eine Möglichkeit, die äh Betroffenheit dann durchzureichen. Was mich so ein bisschen zu der Frage bringt,\nWas ist eigentlich hier mit unseren hypererregten Youtubern, die sich irgendwie äh so,\nviel Werbe und Anti-CDU Protesten und viel Hashtag äh aufgebäumt haben. Da habe ich jetzt irgendwie nicht mehr so viel gehört."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:41",
+      "text": "Da ist irgendwie nicht mehr so viel gewesen, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:43",
+      "text": "Ich weiß nicht, ob nicht viel gewesen ist und ich das noch nicht mitbekommen habe oder ob dann wirklich nichts."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:49",
+      "text": "Glaube, die haben äh jetzt also ich,\nalso ich ich würd's mal so interpretieren. Ich glaube, die haben ihre Frustration jetzt durchaus mitgenommen und das ist ja nicht so, als würde man aus dem äh YouTube-Bereich äh gar nichts mehr gegen ähm,\nalso würde man im YouTube Bereich nicht mehr äh gegen die CDU vorgehen. Ähm aber so ja diese.\nEs fehlte wahrscheinlich dieser Community, der, der, der lange Atem oder die die lange Aufmerksamkeitsspannung so ein Thema so lange zu begleiten, ne. Aber ich ich denke auch tatsächlich, es wird ja oft auch so wahrgenommen, dass.\nIrgendwie halt klar ist, dass junge Menschen.\nFür die CDU ohnehin verloren sind und hoffentlich keiner von denen oder nur nur ganz wenige,\nüberhaupt auf die Idee kommen mit dieser Partei interagieren zu wollen und das ist denke ich auch einer der langfristigen Schäden für die CDU,\nden Axel Voss und dieses gesamte.\nWeitere Verarbeitung dieses Themas oft in Deutschland äh angerichtet haben für diese Partei, Pech gehabt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:11",
+      "text": "Naja, also wir werden ab jetzt einfach beobachten müssen, was äh diese Gesetzesnovelle an konkreten Schäden so zutage bringt. Es wird auf jeden Fall für viel Verunsicherung sorgen und äh ja, wir sind gespannt, was sich da\nso tut."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:26",
+      "text": "Im Bereich des Kampfes gegen Urheberrechtsverletzungen gab es,\nSchon vor einiger Zeit, ja, das ist jetzt eine Meldung eigentlich aus äh aus dem Juni, äh die wir aber nicht behandelt haben, die ähm aber relativ katastrophal ist und hier immer so ein bisschen äh unten,\ndie jetzt so unter in den Themen ist, die wir wenigstens nochmal erwähnen müssen, weil sie auch in Zukunft sicherlich noch eine äh Rolle spielen. Und zwar gibt es ein paar Unternehmen, die DNS\nanbieten. Äh also die betreiben DNS-Server, ja? Und zwar öffentliche.\nDie ähm die man sich eben einstellen kann, ja? Und einer davon ist äh Quad neun.\nOder nein und die wurden äh also die betreiben einen DNS-Server, ne, kannst du kostenlos verwenden, wenn ich das richtig äh sehe äh mit hoher Privatsphäre und äh,\nne, blocken, aber auch irgendwie also du hast den Vorteil, dass sie was weiß ich, gucken wo Schadsoftware ist und dann einfach das DNS abschalten und äh du kannst sie eben, was weiß ich, auf deinem Gerät oder am Router neun neun neun als IP-Adresse für den DNS einstellen und dann läuft's, ja?\nÄhm so, die wurden.\nWir waren früher in den USA, sind vor kurzem irgendwie in die Schweiz umgezogen, aus Datenschutzgründen und die haben dann jetzt äh wurden verklagt von Sony\nund der Kanzlei rasch\nUnd die haben eine einstweilige Verfügung gegen Quad9 erwirkt, in der ihnen verboten wird, ähm.\nOder in der sie gezwungen werden, den Zugang zu einer Domain zu unterbinden.\nUnd diese Domain ist ein Sharehoster, auf dem Alben von Sony offenbar zugänglich gemacht werden.\nWie gesagt, ein DNS Serverbetreiber, ja? Nicht den Sharehoster selber oder so, sondern, und, und auch nicht nur,\nSony Alben, sondern Quad neun soll quasi aus seiner\naus seiner Datenbank der DNS-Einträge diesen Share-Hoster rausnehmen und seinen Nutzerinnen und Nutzern nicht mehr diese Domain auflösen.\nAndrohung von zweihundertfünfzigtausend äh Euro äh Ordnungsgeld oder alternativ Ordnungshaft.\nUnd das ist das äh Ergebnis, ja? Und jetzt ist natürlich die Frage, wie wie argumentierst du das denn rechtlich? Weil DNS-Sperren.\nIn Deutschland wir ja eigentlich nicht haben, insbesondere nicht, wenn sie rechtlich angeordnet sind. Es gibt dann hier diese äh äh\nClearingstelle Urheberrechte im Internet, wo die sich im Prinzip halt verschwören. Und sagen, wir machen das freiwillig, ja? Wo, was eigentlich etwas ist, wo wogegen man wiederum klagen müsste, aber ähm hier jetzt also eine einstweilige Verfügung gegen den Betreiber eines DNS-Servers\nÄhm und das ist äh heftig, ja und zwar werden sie als Störer betrachtet.\nWeil sie eben über diesen kostenfrei verfügbaren DNS-Server diese Domain den Zugriff auf diese.\nErmöglichen und das Landgericht Hamburg, wo dieses Verfahren stattgefunden hat, es stellte eben fest, dass Quad9 nicht wie ein Internetservice Provider oder ein Domain-Registrat.\nVon den Haftungsprivilegien profitieren würde.\nJa? Ähm sondern die sagen, du bist also du, du hast hier einen Server, der hilft den Leuten dabei, ne, also ich meine, der hat ja überhaupt nicht den Zweck dieser eine Domain aufzulösen, sondern er hat den Zweck aller aufzulösen, also auch die. Ja, aber sie müssen, wir sind jetzt zum Sperren verpflichtet.\nAuch gegen Cloud-Flair, die ähm also Cloudflair ist ja eigentlich bekannt als eben hoch Verfügbarkeits-Hosting eigentlich. Ähm die aber auch ein äh ein DNS-Server betreiben unter, ich glaube, eins, eins, eins, eins, war das. Ähm,\nAuch gegen die hatte rasch ein Urteil erwirkt, äh allerdings ging's da eher um den CDN-Kram und nicht um die äh um die DNS-Services.\nÄhm ich finde besonders besorgniserregend, dass Quad neun ja nur einer von vielen DNS äh Resäuvern ist.\nUnd ähm die haben irgendwie einen Marktanteil von ein Prozent.\nUnd jetzt ist natürlich die äh die Frage, was machen die jetzt mit den anderen?\nJetzt auch kriegen wir jetzt von dem äh berüchtigten Landgericht Hamburg jetzt alle DNS-Serverbetreiber demnächst einstweilige Verfügungen.\nDas finde ich schon echt ziemlich krass."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:18",
+      "text": "Hast du verstanden, warum jetzt eigentlich das Landgericht Hamburg äh in der Lage ist, da so eine."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:26:22",
+      "text": "Weil es das Landgericht ach so ähm interessante Frage.\nAlso normalerweise gehst du vor das Landgericht Hamburg, weil da völlige,\nalso weil da Richterinnen tätig sind, die erstens immer immer und grundsätzlich im Sinne dieser ähm Abmahnkanzleien.\nEntscheiden und außerdem mit den ähm aktuellen.\nLegislativen Entwicklungen nicht vertraut sind.\nJa, ähm das ist tatsächlich so, ja. Äh hier Beate Hubrik, äh die Anwältin von Freifunk, ja, die ähm.\nKlagt da äh regelmäßig drüber, gibt auch andere Landgerichte, aber der Klassiker ist eben tatsächlich dieses äh in Hamburg, wo wir ja.\nEigentlich diese ähm.\nWie war das denn jetzt Moment? Die Störer, wir hatten doch diese Gesetzesänderung, die ursprünglich auch mal von digitale äh Gesellschaft ähm.\nAngestellt wurde, wo es nämlich die äh Haftungsprivierung des Paragraph acht TMG für Diensteanbieter.\nDie gilt natürlich auch eigentlich für Freifunkbetreiberinnen und das also da gab es eben Gesetzesänderungen, die.\nInsbesondere diesen Abmahnkram betreffen, ne? Also dass du dann irgendwie hier das sind ja auch bekannte Freifunkfälle, irgendwie so eine Neunzigjährige, die der sie irgendwann mal ein neues.\nNeues Telefongerät hingestellt haben, weil sie ihr Wildscheibentelefon abgeschnitten hatten und die dann ein offenes WLAN hatte, äh wo dann in ihrer\näh in ihrer ähm\nAbwesenheit, irgendwelche Leute falsch herum über WLAN gemacht haben, von dem sie nicht wusste, dass sie das hat, ja? Und ihr trotzdem jetzt irgendwie äh vor Gericht steht.\nNa ja, aber das, also Landgericht Hamburg ist eines derer, der bekannten, wo du als.\nEben als Anwaltskanzlei, die sich auf diesen Bereich spezialisiert hat, hingehst und warum die jetzt ausgerechnet dieses Schweizerunternehmen dort ähm.\nAnklang konnten, kann ich, kann ich jetzt nicht juristisch genau herleiten, ich kann nur sagen, dass sehr naheliegend ist, das dort zu tun."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:55",
+      "text": "Ich bin mir sicher, zu dem Zeitpunkt, wo ihr das jetzt hört."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:28:58",
+      "text": "Dass ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:58",
+      "text": "Einen Kommentar bei uns, äh der das äh ausführlich erläutert. Ja. Lass weiter äh machen. Wir hatten da noch einen Fall, den wir eigentlich letzte Woche schon berichten wollten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:29:13",
+      "text": "Ja, das war, also ist eigentlich eher eine lustige Anekdote. Und zwar gibt es äh wir alle kennen ja, also Software, die\nDateien auf Festplatten verschlüsselt und dann äh eine Zahlung fordert zur Bekanntgabe des,\nfür die Entschlüsselung benötigten Schlüssels.\nUnd da gibt es unterschiedliche Gruppierungen, die das machen, ne. Wir hatten hier über EMOTED gesprochen, wir hatten auch über gesprochen, hatte sich irgendwann, ich glaube\nzwanzig neunzehn oder so dann zur Ruhe gesetzt und ähm jetzt gibt es äh gerade eine Gruppe, die äh von sich reden macht, nämlich die Gruppe Revil\nund es gibt auch übrigens Spekulationen, dass Revil,\neigentlich die Leute sind nur neu aufgezogen. Wie dem auch sei?\nÄhm was die was passiert ist, es gibt eine Software mit dem Namen,\nähm oder von dem Unternehmen. Und diese Software hat ähm.\nIst im Prinzip ein Managementsystem für managed Service-Provider. Was bedeutet das? Du holst dir im Prinzip, du sagst, was weiß, also Beispiel für einen Managed Service. Du hättest gerne ein Exchange-Server,\nDu möchtest ihn aber eigentlich nicht selber administrieren? Und dann gehst du zu so einem äh dann gehst du halt zu einem\nProvider zu einem MSP und sagst, okay, ich hätte gern hier so einen Exchange äh Server, ihr kümmert euch darum, dass der,\nUpdates fährt und so weiter, ne? Der dass der da ist, wenn der kaputt geht äh müsst ihr Ersatz beschaffen und so weiter. Und ich kann, was weiß ich, Nutzerinnen anlegen und habe so diese ganz normalen äh Administratorenrechte. Und dafür bezahle ich euch dann eben\neinen einen monatlichen Beitrag für einen Exchange-Server. Im im Gegensatz zu ähm,\nEinen Server, auf den ich selber installiere, was ich möchte\noder äh ich ich klicke einen Account auf eurem Mailserver, ne, also da dazwischen befindet sich eben diese äh managed\nService Provider Geschichte. So und wenn du jetzt managed äh Serviceprovider bist, dann hast du natürlich und du bietest jetzt zum Beispiel äh Exchange an. Das ist jetzt nur so ein Beispiel, dann hast du wiederum das Problem, dass jetzt diese Flotte an Servern hast, die du ja irgendwie managen musst\nUnd um da äh ein skalierendes Geschäftsmodell zu finden, hast du eben dann so eine Management-Software\ndie letztendlich dir die.\nDie Möglichkeit gibt, diese ganzen Server gleichermaßen zu administrieren oder zu managen. Und diese Software.\nEine Unified-IT Management-Software bietet,\nan. So und das ist dann natürlich auch wie alles heutzutage kannst du ja nicht mehr aushalten, irgendeine Web,\nOberfläche, ja? Und in dieser Adminoberfläche hatten die eine Schwachstelle. Und die ermöglichte den administrativen Zugriff.\nAuf diese Server, die dieses Cassaya dann managed und zwar mehr oder weniger, ohne dass man das Passwort kennt. So, jetzt hatte Casteller wiederum, kannst du dir als Cloud-Lösung holen,\noder als eigene oder so selber betreiben. So und jetzt hatten diese Revill Leute diese Schwachstelle in dem und haben einfach,\nmal so durchs Internet gescannt, wo überall Kassey auf Server sind, haben die übernommen und haben dann diese Server managen ja viele andere und haben dann einfach mal,\ndiese Corsair-Server, die sie übernommen haben, auf die Manageservices, die die die ja dann verwalten, überall ihre draufgeschoben,\nund haben gesagt, voll geil. Ihr könnt jetzt,\neinzeln jeder einzelne Wiederherstellungsschlüssel pro Server kostet. Ähm ich glaube, weil irgendwas so fünfundvierzig oder fünfundfünfzigtausend US-Dollar, ja? Ähm,\noder ähm wir haben auch hier unser, unser Familienpaket der KI, der für alle gilt, der kostet äh siebzig Millionen.\nUnd ähm das äh wurde dann natürlich erstmal äh das ist natürlich weltweite Nachrichten geworden. Es das,\nOberüble daran ist, diese Schwachstelle in der Adminoberfläche, die wahre denen die war denen bekannt.\nJa? Die denen wurde quasi ähm mitgeteilt von, ich glaube ähm.\nVon von der holländischen Security Firma. Ich weiß nicht mehr genau, welcher das war. Äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:34:07",
+      "text": "Wie lange vorher."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:34:09",
+      "text": "Ich weiß auch nicht mehr genau wie lange vorher, weil es war den auf jeden Fall bekannt und es war auch so, dass diese Leute sich darum gekümmert haben, die gerade zu äh zu ähm.\nZu beseitigen, ja? So dass, dass, das ist es nicht. Aber ja, wahnsinnig schnell genug, vor allem,\nBei den Servern, die eben nicht unter der Kontrolle von waren, sondern die eben diese MSPs nochmal selber irgendwo betrieben haben,\nTja, äh ach so, hier ist die Timeline. Sie haben am ersten April mit der Forschung begonnen, einundzwanzig und sie haben,\nam sechsten April einundzwanzig informiert und am siebten Juli, also drei Monate später eine eingeschränkte Veröffentlichung mit.\nOje, das war auch nicht nur eine Schwachstelle, sondern insgesamt sieben.\nÄh\nLocal Inclusion.\nAlso einmal so das komplette Buch.\nUnd jetzt war aber der, der jetzt soweit so, so schade. Jetzt kommt aber der der eigentlich der spannende Teil.\nAlso diese ganze Sache wird natürlich sofort weltweite News, weil wegen dieser hohen Forderung von siebzig Millionen Dollar. Stellte sich aber irgendwie raus, es,\nwar wohl keiner bereit, diese siebzig Millionen Dollar zu zahlen. Deswegen haben die Revillle Leute dann gesagt, naja okay, äh wir sind ja keine Unmenschen, nehmen wir mal fünfzig Millionen.\nJa? Er hat gesagt, wir wir würden also fünfzig würden uns reichen. So und dann.\nMeldete sich irgendwie Joe Biden in dieser Angelegenheit zu Wort und es kam wohl auch zu einem Gespräch zwischen beiden und Putin und ähm nichts Genaues weiß man nicht,\nplötzlich ist diese Revill Gang verschwunden. Also die Website, diese Darknetseiten, von denen zur Zahlung,\ngibt's nichts mehr, ja? Ähm die ganze Gang ist äh verschwunden. Das ist eigentlich sehr schlecht,\nweil ähm wenn du wenn du so etwas hast und die sich einfach, ne, zu zu diese Gang verschwindet, weil das sind ja potenziell die einzigen, die noch den Schlüssel für deine Entschlüsselung haben.\nJa, deswegen eigentlich bist du ganz froh, wenn du noch Kontakt zu denen haben kannst. Wenn du jetzt wirklich diesen Schlüssel brauchst. Vergeht aber noch mal ein bisschen Zeit.\nUnd plötzlich hat die,\nGeneralschlüssel, also dieses Teil, was vorher mal siebzig Millionen gekostet kosten sollte, dann fünfzig und jetzt quasi eigentlich nicht mehr käuflich ist, weil's weil diese Revillgruppe sich halt äh offenbar,\nentschieden hat, die IT nicht mehr zu betreiben. Und sagt, nö, wir haben da nicht für bezahlt, aber wir können auch nicht genau sagen, wo wir den her haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:37:22",
+      "text": "Also mit anderen Worten, das Ganze ist auf Staatsebene mal soeben gelöst worden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:37:26",
+      "text": "Also es ist völlig unklar, was da äh los war, ja. Ähm.\nIch habe keine Ahnung. Also ich ich kann wirklich nur, also es wird natürlich spekuliert, dass äh die US, die USA,\nin irgendeiner Form mit äh Russland da geredet haben und gesagt haben, folgendes, ähm.\nDas finden wir nicht gut, was ihr da gemacht habt so. Äh.\nAm Ende waren eintausend Firmen betroffen, laut Kasseler. Dafür, dass eintausend Firmen betroffen sein sollten.\nHat man aber am Ende doch nur relativ wenig von nur relativ wenig Schaden gehört. Das einzige, was irgendwie öffentlich bekannt wurde, war das so ein schwedisch äh, nee, doch schwedischer Supermarkt, hatten konnte keine.\nKonnte keine Kartenzahlung mehr annehmen, weil offenbar die Server von dem Payment-Back-End betroffen waren, aber sonst hast du eigentlich kaum was gehört. Und,\nInsofern fände ich's jetzt auch überraschend, wenn jetzt ausgerechnet.\nIn einem solchen Fall, wo jetzt nicht so katastrophale Sachen sind. Ich meine, es ist nicht lange her, dass diese Pipeline da Cologne Pipeline fünf Millionen gezahlt hat, ne. Ähm und hier sind jetzt.\nKeine äh kritischen Infrastrukturen der USA.\nBetroffen gewesen, zumindest nicht nach öffentlicher äh Informationslage. Insofern ist das sehr also es deutet daraufhin,\nJa, diese äh dass, dass, dass es da irgendeine Form von diplomatischer und äh von Regierungsseite eine Einmischung gab,\naber so richtig passt das alles nicht zueinander, weil Russland kann es ja eigentlich völlig egal sein. Also die einzige Erklärung wäre, es gab total viele Ziele in Russland,\nJa, wenn wenn das der Fall gewesen wäre, würden wir das alles totalen Sinn machen, das habe ich aber nicht gelesen, weil wir wissen ja, ähm die russische Cyberpolitik ist ja so ungefähr.\nLiebe Hacker, da draußen ist das Internet, hackt was ihr wollt, außer es befindet sich in Russland. Weshalb er übrigens waren auch diejenigen, die ich hier in meinem Vortrag ähm hier in der Hecken behandelt habe.\nWo ähm sie.\nUns angeboten haben, als wir so eine Demo äh VM mal verschlüsselt haben, absichtlich, wo sie uns angeboten haben, die kostenlos wieder herzustellen, wenn wir beweisen, dass wir Bürger der russischen Föderation sind, ne? Weil und die hatten auch,\nin ihrer ähm in ihrer Software.\nQuasi ein Check drin, ob das äh ob du das Keyboard eingestellt hast und haben dann gar nicht erst verschlüsselt. Also die hatten technische Schutzmaßnahmen dagegen, russische,\nSysteme zu infizieren, weil sie wussten,\nsage ich mal die eine ist, in der sie Ärger bekommen können. Ja, Russland liefert ja jetzt nicht irgendeinen Hacker aus, nur weil weil die USA das haben wollen, ja? Russland und USA haben ja gar keine,\nähm wer kein Auslieferungsabkommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:36",
+      "text": "Also liebe Leute\nund Unternehmen vor allem, wenn ihr euch äh irgendeinem Service Provider mit eurer Security, in eurer Systeminfrastruktur anvertraut, dann lieber zweimal hinschauen\nja? Im Zweifelsfall vielleicht doch selber betreiben, aber vor allem so oder so eine ordentliche Backup-Strategie haben oder Tastatur."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:40:57",
+      "text": "Tastatur trägt weit, ja? Oder zumindest eine ein Freund oder so, der notfalls mal einen russischen Pass außer äh aus der Schublade holen kann, das hilft, das hilft. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:41:10",
+      "text": "Das ist so ein Wagzin, hilft aber auch nur zu fünfundsiebzig Prozent, also die Effektivität ist nicht nicht bei hundert Prozent nicht beklagen, äh wenn's dann doch nicht funktioniert hat, bitte."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:41:21",
+      "text": "Meinen Vortrag zu dem Thema lege ich nochmal hier in die Shownotes, der wird gemeinhin.\nGanz positiv äh aufgenommen. Ähm man muss aber noch eins dazu sagen, das haben wir jetzt auch, glaube ich, schon öfter mal behandelt, aber also.\nJahrelang funktionierte sehr gut, weil Leute keine Backups hatten. Es hat sich dann jetzt doch in den letzten fünf Jahren wohl doch durch rumgesprochen, dass Backups eine gute Idee sind,\nweshalb diese Gangs immer mehr dazu übergehen, auch mit der Veröffentlichung von Daten zu drohen.\nÄhm was spielt theoretisch ein riesiger Unterschied ist, weil wenn jetzt quasi kannst du meine Dateien entschlüsseln, ist äh ist eine Dienstleistung, die sie auch demonstrativ.\nSie können einmal demonstrieren, dass sie diese dass sie diese Fähigkeit haben\nindem sie dir eine Datei entschlüsseln. Das hat ja zum Beispiel auch immer angeboten, gesagt. So hier übrigens eine der Teil\nentschlüsseln wir dir kostenlos und das diente einfach nur dem Herstellen eines Vertrauensverhältnisses, dass sie in der Lage sind, die Dateien zu entschlüsseln, weil ja immer wieder ähm irgendwelche Strafverfolger oder so, die\ndie die Verleumdungen in die Welt setzen. Nee, nee, nee, geben sie denen bloß kein Geld, die stellen in die Datei nicht wieder her. Was bis auf wenige,\nunbeabsichtigte Fälle einfach nicht wahr ist, ja? Ähm,\nvon der Ausnahme wie äh Nordpetja oder abgesehen, die dafür auf ausgelegt waren, Dinge kaputtzumachen\nÄhm aber das ist eine andere Geschichte. Also üblicherweise sind das ehrbare Kaufleute und selbstverständlich stellen die Dateien wieder her. Ähm selbstverständlich veröffentlichen die aber auch\nDateien wenn du nicht zahlst und das ist natürlich jetzt sehr unschön, weil ähm wenn die mit der Veröffentlichung von Dateien drohen,\nund du zahlst. Ne, dann können die sich das jeden Tag überlegen, dass diese ähm.\nDiese Transaktion gar nicht abgeschlossen ist, sondern dass du ja nur für die letzten drei Monate gezahlt hast, die sie gebraucht haben, um dein Geld auf den Kopf zu hauen,\nJetzt ist die Kasse leer und sie brauchen wieder Geld. Scheiße, genau, muss man mal bezahlen. Ja, so rein spielt theoretisch eben ein großer Unterschied, ob du,\nerpresst wirst oder ein Lösegeld zahlst.\nMir ist aber auch noch kein äh Fall bekannt, in dem es eine Nachforderung gegeben hätte\nauch wenn die Angreifer ja durchaus in der Lage wären, eine solche Nachforderung geltend zu machen. Das liegt wahrscheinlich daran, dass das Geschäft gerade äh immer noch im Wachstum begriffen ist und sie genug Neukunden haben, äh um\nnicht jetzt die alten Kunden nochmal ähm ja an äh After-Sales."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:44:15",
+      "text": "Ja, es muss ja auch klar kommuniziert werden, dass das eben auch was bewirkt, dass äh wenn die Leute zahlen, sonst zahlen die ja nicht mehr."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:44:22",
+      "text": "Sonst zahlen die nicht, ne. So, dann diesen Fall, den gibt es außerdem äh in in Anhalt Bitterfeld.\nEiner Kommune, die auch vor paar Wochen im Juli,\nähm gehackt wurde. Anfang Juli war das, glaube ich, der Landkreis Anhalt Bitterfeld.\nUnd da ist die komplette Kreisverwaltung, den eben\nhochgenommen worden. Ich gehe davon aus, dass das eine irgendeine Windows-Umgebung ist mit einem und dann wurde das halt äh platt gemacht. Da ist natürlich sehr\nalso die haben da, das war halt es einfach mal alles, was die haben, was da getroffen waren. Und die haben sogar.\nLandrat hat da den Katastrophenfall ausgerufen, hauptsächlich um ähm ja spontan,\nähm finanziell äh agieren zu können in großen Summen, die eben notwendig sind, um diesen diesem Schadensfall begegnen zu können, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:45:27",
+      "text": "Aha. Hatte ich aber jetzt nichts in meiner Nina App. Nee."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:45:33",
+      "text": "Hattest du nicht musst du mal Notifications fahren, halt Bitterfeld. Das Problem ist, die Infrastruktur um die Warnung auszulösen, haben die auch nicht mehr, weil.\nNee, tatsächlich.\nHier gibt's diesen schönen Begriff finanzielle Belange von Bürgern, zum Beispiel die Auszahlung der Sozialhilfe, die sind komplett ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:45:55",
+      "text": "Runtergefahren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:45:56",
+      "text": "Äh die haben da auf jeden Fall gerade äh gut zu tun. Und da stellt sich natürlich eine.\nJa, wie soll man das sagen, eine eine Frage, das ist, also es ist nicht überraschend, wenn jetzt irgendwie so eine kleine Kommune da, von der man vorher nie gehört hat, äh da wird man sich ungefähr vorstellen, welches IT-Budget die haben und ähm.\nWie viel, ne, wie attraktiv die auf im auf dem internationalen Arbeitsmarkt sind, um dort hochkompetente äh Personen zu bekommen, die ähm.\nMit üppigen Gehältern ausgestattet sich zum Lebensinhalt machen, eine geile IT für diese für diesen Landkreis zu machen. Und äh,\nSo, ne? Natürlich Landkreise haben in der Regel nicht viel Geld. Die müssen dann an vielen Stellen sparen. Und dann ist das äh eben auch gerne mal passiert.\nFrage ist, wie wie sollen Landkreise damit umgehen? Ja, soll man sich jetzt irgendwie entscheiden, zum Beispiel gemeinsame IT zu unterhalten\nKlammer auf, gibt es bereits. Es gibt äh fast in jedem Bundesland, wenn ich mich nicht täusche, diese kommunalen Dienstleister, die dann irgendwie sagen, hier, wir.\nWir spezialisieren uns auf das, was eben diese Kommunen brauchen und stellen das als Manageservice bereit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:47:24",
+      "text": "Da kann nichts passieren. Bleibt ein Problem."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:47:30",
+      "text": "Ja, also Cyber, Cyber bleibt äh Cyber bleibt. Okay, damit sind wir, glaube ich, durch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:47:38",
+      "text": "Äh ja, mit den Themen sind wir auf jeden Fall durch, genau.\nJa, das war äh Ausgabe Nummer vier null zwei. Payment Require, nicht vergessen.\nJa leichte äh Rückgänge über den Sommer könnt ihr jetzt äh ausgleichen durch euer Engagement. Sonst ähm.\nFunktioniert vielleicht auch irgendwas nicht mehr bei euch. Man weiß es ja nicht. Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:03",
+      "text": "Wer weiß? Sonst, sonst müssen wir irgendwann, also ich habe da noch so einen ganz kleinen Audday im in äh.\nIm AAC Code. Äh nun ich bin da gerade mit den Revillleuten in Verhandlungen, wie viel, wie wir da ob wir da nicht irgendwie.\nNe, so ein kleines Joint Venture machen, so ein so ein Ex."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:48:23",
+      "text": "Okay. Mhm. Payment ist äh Manageservice. Nee Leute, vor uns habt ihr überhaupt nichts zu befürchten äh und äh nächste Woche sind wir auch wieder im Ohr bei euch, aber für heute ist erstmal Schluss.\nBis dann, tschüss."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:48:40",
+      "text": "Tschau, tschau."
+    }
+  ]
+}

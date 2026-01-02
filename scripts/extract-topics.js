@@ -379,7 +379,7 @@ function findEpisodeNumbers() {
  * Hauptfunktion
  */
 async function main() {
-  console.log('🚀 Starte Topic-Extraktion für Freakshow Episoden\n');
+  console.log(`🚀 Starte Topic-Extraktion für ${PODCAST_ID} Episoden\n`);
   console.log(`LLM: ${settings.llm.provider} - ${settings.llm.model}`);
   console.log(`Sprache: ${settings.topicExtraction.language}`);
   console.log(`Keine Maximalzahl - extrahiere alle Hauptthemen\n`);
@@ -388,8 +388,17 @@ async function main() {
   const episodeNumbers = findEpisodeNumbers();
   console.log(`Gefundene Episoden: ${episodeNumbers.length}\n`);
 
-  // Verarbeite Kommandozeilen-Argumente
-  const args = process.argv.slice(2);
+  // Verarbeite Kommandozeilen-Argumente (filtere --podcast Parameter raus)
+  const rawArgs = process.argv.slice(2);
+  const args = [];
+  for (let i = 0; i < rawArgs.length; i++) {
+    if (rawArgs[i] === '--podcast') {
+      i++; // Skip podcast ID
+      continue;
+    }
+    args.push(rawArgs[i]);
+  }
+  
   let episodesToProcess = episodeNumbers;
   let forceOverwrite = false;
 

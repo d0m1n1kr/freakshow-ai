@@ -1,0 +1,1479 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:02",
+      "text": "Guten Morgen Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:03",
+      "text": "So, die Sendung geht erst los, wenn du mir beweisen kannst, dass du ein Mensch bist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:08",
+      "text": "Ich beweise nicht, also bin ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:31",
+      "text": "Logbuch Netzpolitik Nummer 503 vom, was haben wir denn heute? 13.\nOktober 2024 ist immer noch das Jahr.\nGenau und da sind wir wieder. Euer Rohrschachttest für Nachrichtenverarbeitung sozusagen.\nIhr müsst dann da drauf schauen, was wir hier so von uns geben oder euch das\nanhören und dann erwarten wir irgendeine Reaktion.\nDie messen wir über einen magischen Rückkanal, den wir installiert haben,\ngeheim, in eurem Podcast-Client, haben wir reingehackt und dann machen wir uns\nunsere Gedanken über euch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:13",
+      "text": "So wird das sein, Tim. So wird das sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:17",
+      "text": "Du meinst, wenn ich das sage, dann muss das so sein?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:19",
+      "text": "Dann muss das so sein, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:21",
+      "text": "Ja, mit der Erkennung von Menschen ist es ja ein bisschen schwierig geworden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:27",
+      "text": "Mark-Uwe Kling hatte das, glaube ich, in Quality Land, ich weiß gar nicht,\nob es in 1 oder 2 war, schon vorhergesehen, dass irgendwann, also Captures,\nalso weißt du eigentlich die genaue Abkürzung, wofür Capture steht?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:43",
+      "text": "Ich bin schon dabei."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:45",
+      "text": "Das war bei der DEF CON dieses Jahr Frage.\nBeim Hacker Jeopardy. Der Completely\nAutomated Public Touring Test to tell Computers and Humans apart.\nAlso der automatische öffentliche Touring Test zur Trennung von Menschen und Computern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:11",
+      "text": "Also zur Unterscheidung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:12",
+      "text": "Zur Unterscheidung. Und der eben, der am Ende die Antwort, die Frage beantworten\nsoll, bist du denn ein Roboter beziehungsweise Computer oder nicht?\nUnd genau, im Buch Quality Land beschreibt Marc-Uwe Kling auch genau das,\nerklärt auch diese Abkürzung da, das habe ich glaube ich daher auch gelernt.\nund sagt dann, dass aber irgendwann die Captures so schwierig wurden,\ndass man die nur noch mit KI lösen konnte.\nUnd dass sie deshalb andersrum funktionieren, nämlich dadurch,\ndass Menschen sie nicht mehr gelöst kriegen.\nUnd dieser Moment ist jetzt eingetreten, weil inzwischen getrainierte KIs Captures\nbesser lösen als Menschen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:57",
+      "text": "Es war auch schon immer so ein bisschen albern. Ich meine, wer weiß denn schon,\nwie amerikanische Wasserhydranten aussehen? Rot."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:03",
+      "text": "Das lernt man, hast du kein Internet oder was?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:07",
+      "text": "Aber das ist immer so ein Amerika-Zentrismus, dass sie immer davon ausgehen,\ndass so ihre Infrastruktur auch überall sonst auf der Welt genauso aussehen.\nAlso da sind sie sicherlich nicht die einzigen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:19",
+      "text": "Naja, also deutsche Hydranten hätten sich einfach nicht geeignet, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:23",
+      "text": "Ja, aber ich meine."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:24",
+      "text": "Aber das wäre auf jeden Fall mal. Da musst du langsam mal eine KG trainieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:27",
+      "text": "Da hat der Amerikaner auf jeden Fall Probleme. Da hast du sozusagen so ein Capture-Totel,\nAmericans and Germans apart."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:33",
+      "text": "Ne, dann siehst du halt diese, kennst du doch diese weißen Schilder,\nwo dann steht, wo der Hydrant ist? Die weißen Schilder mit dem roten Rand, ne?\nUnd dann hast du nämlich so ein Schild im Bild und dann musst du aber zeigen,\nwo der Hydrant ist. Da steht ja auf dem Schild, drei Meter in die eine,\ndrei Meter in die andere Richtung.\nUnd dann musst du nämlich ein anderes Feld antippen.\nDas kannst du nur noch mit, das kann nur noch KI. Das kann nur noch KI."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:57",
+      "text": "Naja, auf jeden Fall, das ist dann ein Kaptgar. Kaptgar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:04",
+      "text": "Okay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:05",
+      "text": "Ja, der Turing-Test, um halt Deutsche und Amerikaner auseinanderzuhalten.\nIst das ein Hydrant oder nicht?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:10",
+      "text": "Ich brauche einen Thuring-Test, um Thüringen, Sachsen,\nja, und wie heißt, sag mal noch ein paar neue Bundesländer, also Thüringen, Sachsen, Anhalt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:28",
+      "text": "Brandenburg, Berlin, ja, heile Berlin, nicht ganz so neu."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:37",
+      "text": "Gibt es nicht noch einen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:38",
+      "text": "Ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:39",
+      "text": "Nur fünf?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:40",
+      "text": "Ja, fünf neue Länder, FNL. Fünf neue Bundesländer."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:46",
+      "text": "Suddenly it all makes sense."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:48",
+      "text": "Das ist eigentlich ganz einfach. Normalerweise, ich kann die auch ganz gut auseinanderhalten.\nIch kenne ja auch alle Hauptstädte aller Bundesländer.\nDas weiß ja auch nicht jeder."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:00",
+      "text": "Nehmen wir mal die Hauptstädte der neuen Bundesländer. Brandenburg.\nWahrscheinlich Potsdam."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:07",
+      "text": "Richtig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:08",
+      "text": "Mecklenburg-Vorpommern, Schwerin. Sachsen, wahrscheinlich Dresden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:17",
+      "text": "Jetzt wird es hart. Thüringen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:21",
+      "text": "Thüringen ist gar nicht so einfach. Ich dachte, ich lasse Sachsen-Anhalt mal raus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:27",
+      "text": "Weiß ich auch nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:31",
+      "text": "Thüringen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:38",
+      "text": "Thüringen. Das ist eine unangenehme Sache. Jetzt kannst du keine Sau anhören.\nThüringen. das Land ohne Prominente. Erfurt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:50",
+      "text": "Ah ja, okay. Und Sachsen-Anhalt?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:54",
+      "text": "Osbusch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:56",
+      "text": "Das hätte ich wissen müssen, wusste ich aber nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:00",
+      "text": "Wir wissen China. Wir wissen auch keiner, was die Hauptstadt von Hessen ist\nund wir wissen auch keiner, was die Hauptstadt von Rheinland-Pfalz ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:08",
+      "text": "Hauptstadt von Hessen würde ich vermuten Frankfurt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:11",
+      "text": "Tja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:11",
+      "text": "Ist es aber nicht.\nWiesbaden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:16",
+      "text": "Ja. In Rheinland-Pfalz?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:18",
+      "text": "Weiß ich nicht, da fahr ich nicht hin."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:19",
+      "text": "Auf der anderen Seite von der Brücke.\nWiesbaden auf der anderen Seite ist Mainz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:27",
+      "text": "Mainz?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:28",
+      "text": "Ja. Wie singt und lacht. Das ist so ein Konglomerat."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:32",
+      "text": "Jetzt müssen wir alle Bundesländer machen. Was haben wir denn noch für Bundesländer?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:38",
+      "text": "Tja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:40",
+      "text": "Ich hab jetzt die Wikipedia-Seite der neuen Bundesländer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:43",
+      "text": "Kann ja alle sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:44",
+      "text": "Schleswig-Holstein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:45",
+      "text": "Kiel."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:47",
+      "text": "Hamburg."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:48",
+      "text": "Hamburg."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:51",
+      "text": "Niedersachsen. Hannover.\nNordrhein-Westfalen. Düsseldorf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:01",
+      "text": "Gibt es nicht mehr so viel. Baden-Württemberg."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:05",
+      "text": "Stuttgart.\nMünchen. Bayern. Bayern umgekehrt.\nDas waren jetzt noch nicht alle 60."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:15",
+      "text": "Das ist jetzt nämlich die Frage. Haben wir schon was vergessen?\nUnd die Antwort ist ja. Wir haben das vergessen, was wir immer vergessen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:22",
+      "text": "Saarland."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:24",
+      "text": "Unser Flächenmaß."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:26",
+      "text": "Saarbrücken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:27",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:30",
+      "text": "Und Bremen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:32",
+      "text": "Ja, und Bremen. Ja, das ist auch so ein Flächenmaß, was mir zu selten angewendet wird.\nWo keiner weiß, was Sache ist. Es ist nicht so, dass sich daran jetzt irgendwas\nfestmacht, aber ist auf jeden Fall auch so eine Art Touring-Test,\num irgendwie Deutsche und Deutsche auseinanderzuhalten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:49",
+      "text": "Jedenfalls,\nwurden wir, hast du mich, also in der vorletzten Sendung habe ich irgendwie,\nweiß ich nicht, Sachsen oder Thüringen oder so verwechselt.\nUnd dann hast du mich korrigiert und es war aber wieder falsch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:05",
+      "text": "Alles durch anderem."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:06",
+      "text": "Wir haben zum Glück sehr ausführliches Feedback dazu.\nUnd XYZ sagt, sehr gut erkannt, die Verwechslung zieht sich mittlerweile durch\nzwei Sendungen und sollte bitte korrigiert werden.\nHat er recht oder sie. Ein paar Fakten dazu.\nDer Osten Deutschlands besteht nicht nur aus Sachsen, Okay, gut.\nIn Sachsen musste nach der Landtagswahl das Ergebnis der Sitzverteilung wegen\neines Fehlers in einer Berechnungssoftware korrigiert werden.\nQuelle Mitteldeutscher Rundfunk.\nIn Thüringen verfügt die AfD\nüber eine Sperrminorität. Hat er auch nochmal eine Quelle mit angegeben.\nEs ist wichtig, solche Tatsachen korrekt wiederzugeben. Habt Dank.\nUnd da hast du recht. Lord Sexy hatte das auch schon angemerkt.\nJa, ist richtig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:03",
+      "text": "Die Thüringen-Sachsen-Konfusion ist jetzt final aufgeklärt worden. Ist doch gut."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:10",
+      "text": "Thüringen oder Sachsen, Hauptsache Zone.\nDer muss sein, der muss sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:19",
+      "text": "Den müsste er jetzt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:20",
+      "text": "Ja, der muss sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:21",
+      "text": "Den müsste er.\nRückmeldung zu Sprengstoffen. Genau. Ist auch ein explosives Thema, was wir hatten.\nFlorian R. schreibt uns zum Thema Detektion von Sprengstoffen.\nIch habe mich mal mit der Detektion von Sprengstoffen an Flughäfen beschäftigt.\nKurz eine Einschätzung. Erstens, die Menge ist sehr klein.\nSo klein, dass sie vermutlich nicht ausreicht, um zu einem Absturz zu führen.\nAlso wir hatten von diesen zwei Gramm gesprochen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:54",
+      "text": "In den Pagern in Libanon. Die dann an die Hisboiler verteilt wurden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:00",
+      "text": "Genau. Zweitens, es gibt zwei Arten von Detektoren. Einmal die Swaps,\ndamit wird über eine Oberfläche gewischt, zum Beispiel die Tastatur.\nWas dahinter steht, ist die Annahme, dass bei der Arbeit mit Sprengstoff Spuren verteilt werden.\nDa keiner der Pager-Besitzer mit diesem Sprengstoff hantiert hat,\nsehe ich das nicht als besonders aussichtsreich, da Sprengstoffe zu erkennen.\nDrittens, Gasdetektoren sammeln Dämpfe von Sprengstoffen analog zu den Spürhunden.\nDie reagieren auf die Marker, aber auch auf den Sprengstoff.\nHier ist die Detektion nicht einfach, aber möglich. Ich vermute jedoch,\ndass das Zeug auch gut eingepackt war und bei sauberem Arbeiten und passender\nVerpackung haben sich diese Detektoren genau wie Hunde Schwierigkeiten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:10:42",
+      "text": "Es hatte dann noch jemand weiter dazu kommentiert,\ndass wahrscheinlich die Träger dieser Pager jetzt nicht unbedingt so einen Vielflieger-Status\ngenießen und des Weiteren,\nselbst wenn sie fliegen,\nwas wollen die mit dem Pager im Ausland? Der kann ja nicht roamen.\nAlso der, sodass hier noch die Wahrscheinlichkeit dann relativ gering wäre, aber nicht gleich null.\nGleichzeitig kann man ja schon wieder darauf schätzen, äh, darauf setzen,\ndass irgendjemand dann am Ende schon mit so einem Ding, ähm,\nin der Tasche ins Flugzeug steigt.\nAber, ähm, genau, hier sagt er also User Unknown, äh.\nHisbollah-Kämpfer, insbesondere das Fußvolk, dürfte zu großen Teilen sehr viel seltener fliegen.\nInlandsflüge dürften ein sehr seltenes Phänomen sein. Pager dürften im Ausland wenig nützlich sein.\nUnd Pager dürften den Träger als Hisbollah-Mitglied verraten,\nweswegen die Mitnahme auf Reisen womöglich von der Leitung strikt untersagt sein könnte.\nGegenanzeigen, selbst wenn es strikt verboten wäre, meine Spekulation,\nwürde im Laufe mehrerer Monate durchaus jemand mal sein Gerät aus Schusseligkeit\nmit auf Reisen nehmen. B.\nSollen die Geräte ja auch zivil bei Rettungsdiensten etc.\nhier und da noch im Einsatz sein, sind also vielleicht doch kein so guter Indikator\nfür einen Hisbola-Kämpfer.\nDas Argument mit der Beimischung von Aromen überzeugt mich deutlich besser,\nzumal der israelische Geheimdienst sicher ausreichend Möglichkeiten hat zu testen,\nob die Geräte mit dem Sprengstoff von Technik oder Hunden erschnüffelt werden kann.\ndas ist richtig also wenn die Israelis eins haben, dann ist das jede Möglichkeit an einem,\nFlughafen irgendwas zu finden also das ist das haben die auf jeden Fall da brauchst\ndu dir keine Sorgen machen,\ndas war so bescheuert wir sind einmal da irgendwie von ich weiß nicht,\nob ich die Story sogar schon mal hier erzählt hatte bis auf der Unterhose, sag es,\nerst, wir waren eine größere Reisegruppe,\nund,\nich weiß,\nich erzähl die Story nochmal, wenn ich sowas schon erzählt habe Du hast es nicht erzählt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:08",
+      "text": "Aber ich hab es zumindest vergessen aber das heißt natürlich auch nichts Wir\nwaren eine größere Reisegruppe."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:12",
+      "text": "Abflug Tel Aviv nach Berlin und waren alle technisch interessiert und hatten\nauch entsprechend viel Elektronik im Rucksack und,\nKommt dann irgendwie an und noch bevor du unten bei diesem Check-in bist,\nkam so eine Offizierin da zu uns und trennte unsere Gruppe.\nUnd dann wurden die Gruppenteile getrennt befragt.\nUnd dann haben die sich danach unterhalten, ob wir beide das gleiche erzählt haben.\nUnd ich hab dann irgendwie so, da unten, da wusste ich ja noch gar nicht,\nich bin gerade an der Tür. Ja, da dachte ich, das wäre dann danach vorbei und\nhab dann gesagt, wäre jetzt wohl ein bisschen übertrieben oder so.\nUnd dann schrie die mich an in diesem Flughafen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:58",
+      "text": "Der Check wäre ein bisschen übertrieben, meinst du?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:00",
+      "text": "Ja, und das war aber noch gar nicht der Check. Das war erstmal so,\nwo dann ein Aufkleber auf deinen Pass kommt, rot-gelb oder grün oder so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:10",
+      "text": "Ja, ja, ja, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:12",
+      "text": "Und dann sagte ich so, ja meine Güte jetzt hier. Und dann sagte sie,\nSir, do you want a bomb on your airplane?\nUnd schrie irgendwie durch den Flughafen.\nUnd ich so, you can't say bomb at an airport.\nDann ging das weiter, dann haben die uns da angeschrien und weiß ich nicht was.\nSo und und dann irgendwie eingecheckt und stempelt. Achso, und dann hat sie\nin meinen Pass geschaut und hatte gesehen, dass ich in Ägypten war."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:44",
+      "text": "Ja.\nDa bist du auf jeden Fall schon mal in der Sonderbehandlung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:50",
+      "text": "Ob ich das irgendwie witzig finde, hier die Feinde Israels zu besuchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:53",
+      "text": "Oh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:54",
+      "text": "Ja, und da habe ich gesagt, ich habe die jetzt nicht als Feinde Israels besucht,\nsondern weil man da irgendwie ganz gut tauchen kann.\nUnd okay, die war äußerst unangenehm. Und dann?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:08",
+      "text": "Absichtlich natürlich. Die wollen dich natürlich dann unter Stress setzen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:11",
+      "text": "Klar, das ist ja überhaupt nicht gelungen. Ich habe ihr sofort angeschrieben.\nSo, pass auf. Und jetzt...\nDas ist einige Zeit her. Und damals hatten wir, oder haben wir ja immer noch,\naber damals haben wir es noch sehr viel häufiger benutzt,\nunser Equipment zum Abhören von 2G, also GSM-Verbindungen.\nUnd dieses Equipment bestand ja primär aus den Osmocom-Telefonen,\nden Motorola C123, also so ganz basic 2G-Telefone, 90er Jahre Technologie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:51",
+      "text": "Das sieht auf jeden Fall super spookig und verdächtig aus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:54",
+      "text": "Nee, noch viel besser. Und mit einem so einem Telefon kannst du immer nur auf einen Kanal.\nOder beziehungsweise auf eine Hopping-Sequence. Wenn du aber sicher..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:04",
+      "text": "Alle Hopping-Sequences abklappern willst, dann brauchst du ganz viele Telefone. Wie viele?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:12",
+      "text": "Es wird noch viel besser.\nLuca hatte eben so zwölf oder sechzehn. Aber diese Telefone waren außerdem,\ndie haben ja alle seriell gesprochen, deswegen hatten wir ein selber gelötetes PCB,\nwo die Kabel rauskamen, in die Telefone gingen und dann mit USB in den Computer so.\nUnd jetzt pass auf, und damit das ordentlich transportiert werden konnte,\nhatten wir auch noch Boxen, graue Boxen, in denen immer vier Telefone so angeordnet\nwaren und dann in der Mitte so ein PCB.\nUnd dann hattest du diese Boxen und dann hast du halt davon drei,\nvier Stück und dann hast du, war das ausreichend reduziert auf USB-Ports,\ndass du dann über USB mit den Dingern reden konntest."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:07",
+      "text": "Hattet ihr auch noch so ein Sieben-Segment-Countdown-Timer vorangebracht?\nund offensichtlich so ein rotes und ein schwarzes Kabel, was so ein bisschen hervorsteht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:19",
+      "text": "So und pass auf, wir gehen da hoch, da muss dann den Flughafen hoch und dann,\nRucksack, ne, und dann erster legt seinen Rucksack da aufs Band,\neinmal alles auspacken, Kameraequipment, große Kameraequipment.\nUnd dann Luca, sein Rucksack da drauf, kriegt den wieder und ich wusste ja noch nicht, was da drin ist.\nUnd dieser Kontrolleur holt da irgendwie diese Handys,\ndiese aneinandergelöteten Handys mit den eigenen selbstgebastelten Platinen\nund den USB-Kabeln und sagt so, was ist das?\nUnd Luca so.\nMobile-Phones, ja? Also hat er ja recht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:08",
+      "text": "Oh, super."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:11",
+      "text": "Wofür brauchen sie so viele Mobiltelefone?\nZum Testen. Stimmte auch. Ja, stimmte.\nDer Nachteil war, dass wir halt naja, die Sicherheitskonfiguration israelischer\nMobilfunknetze damit getestet haben und auch Schwachstellen gefunden hatten.\nDie waren nämlich teilweise nicht verschlüsselt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:35",
+      "text": "Und ihr habt euch nicht von dem Telekom-Operator einen Freifahrtschein für den\nFlughafen ausstellen lassen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:40",
+      "text": "Nein. Wir waren ja im Urlaub da. Das kommt nämlich als nächstes."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:45",
+      "text": "Im Urlaub macht er das."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:47",
+      "text": "So, was machen wir im Urlaub? So, dann kommt er und sagt, was testen Sie denn? Ja, Mobilfunknetze.\nOkay, wofür brauchen Sie das? Und Luga so, for work. Und der Typ so,\nI thought you were here on vacation.\nWeil wir unten gesagt hatten, wir waren auf Urlaub."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:05",
+      "text": "Ja, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:06",
+      "text": "Aber der Gag war, dann hat der dann nämlich mit seinem Mikrofasertuch da überall\ndrüber gewischt, hat das in diese Spektro-Analyse-Ding gegeben und dann so,\nja, alles klar, kannst du einen packen und dann durften wir damit fliegen.\nNachdem die uns da, die haben uns zwei Stunden angeschrien und am Ende haben\nwir uns mit 16 Handys und selbst gelöteten Kabeln völlig problemlos in das Flugzeug gelassen.\nAlso ja, fand ich gut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:31",
+      "text": "Und ihr musstet euch nicht bis auf die Unterhose ausziehen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:33",
+      "text": "Nee."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:35",
+      "text": "Wow."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:36",
+      "text": "Also die wussten, wer so einen Quatsch macht, der hat auch nichts mehr im Bobbiss."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:41",
+      "text": "Mit einer falschen Antwort habe ich das geschafft.\nDie wollten dann wirklich jedenfalls irgendwie meines Koffers auseinandernehmen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:52",
+      "text": "Ja, nee, das hatten wir nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:54",
+      "text": "Du gehabt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:55",
+      "text": "Aber ja, es war auf jeden Fall ganz geil, wie der diese Handys sieht,\ndas ist auch eine Scheiße."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:00",
+      "text": "Ja, also das muss man denen schon lassen, also was so Security-Prozeduren und auch so,\nMassenabfertigung betrifft, ich war ja in Israel noch so zur Corona-Zeit,\nals es gerade so den ersten Dip gab und die gerade das Land aufgemacht haben,\nda konnte man dann irgendwie mal hin, so für ein paar Monate genau,\nin das Loch bin ich dann reingekommen und wie die dann dieses ganze Testing,\nam Flughafen, weil es war dann Pflicht vor Ort, so, du musstest also vor Ort\neinen Test machen, wie die das organisatorisch da gelöst haben,\nwie man da durch die Hallen geschoben wurde, es war einfach so perfekt und so optimiert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:35",
+      "text": "Nur Respekt dafür. Ganz grundsätzlich, also Flugreisen ab Israel machen überhaupt\ngar keinen Spaß und wenn man da hinfliegt, will man auch nicht irgendwie mit\nL.I. fliegen oder so, weil die,\nähnlich wie die Amerikaner natürlich den,\nder Security in den jeweiligen Abflughäfen nicht trauen. Und dann nochmal ihre eigene aufbauen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:59",
+      "text": "Das ist aber nicht nur, wenn du mit L.A. fliegst."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:02",
+      "text": "Ja, aber da dann nochmal ganz besonders, aber ja klar, das ist die ganze Zeit auf den Geist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:09",
+      "text": "L.A. fliegst du, wenn du dir wirklich sicher sein willst.\nDas ist sozusagen das Feature. Na gut, soviel zu dem Thema.\nJa, bleiben wir im kriminellen Bereich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:29",
+      "text": "Das war ja sehr schön. Haben wir eigentlich alle Kommentare schon durch?\nHatten wir nicht drei? Ja, aber nur zwei."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:38",
+      "text": "Ich habe aus drei zwei gemacht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:40",
+      "text": "Wir haben das gemeinsam beantwortet.\nBöse Zungen behaupten, dass in diesem gesamten Bereich mit den Kryptotokens\ngar nicht alles mit rechten Dingen zu tun."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:55",
+      "text": "Meinst du, dass da Schindluder unterwegs ist? Und das getrieben wird auch?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:59",
+      "text": "Und ja, sagen wir mal so, diese ganzen Leute, die Tokens ausgeben,\ndie sagen ja, ist wie eine Bank.\nInsofern sollte man sich ja denken können, dass da nicht alles mit rechten Dingen zugeht.\nWeil wenn man schon sagt, wir sind wie eine Bank, dann ja, also sie,\nwas sich da, was da häufig zur Vermutung steht, ist, dass da unter Umständen\nPump and Dump Schemes laufen,\nalso wo absichtlich ein Token hochgeschrien wird, hochgejubelt wird,\num ihn dann abzuverkaufen.\nAußerdem machen sie das in Kombination mit solchen sogenannten Wash-Trades.\nDas ist im Prinzip, also ein Wash-Trade ist ein Teil eines Pump-and-Dump-Schemes quasi,\nwo du die ganze Zeit im Kreis handelst und dabei die Preise langsam hochziehst.\nWenn dann das Handelsvolumen eines Tokens zunimmt und auch gleichzeitig der\nPreis, dann ist das natürlich eine hochinteressante Indikatorenkombination für Leute,\ndie Bock haben, schnell reich zu werden. Und.\nDas FBI hat da jetzt 18 Personen und Organisationen, die an Betrügereien um\ndie Kryptowährungen beteiligt waren, angeklagt.\nUnd zu dem Zweck haben sie unter anderem einfach ihren eigenen Token gemacht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:37",
+      "text": "Das ist schon ziemlich advanced."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:39",
+      "text": "Das ist schon ganz gut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:42",
+      "text": "Falls ihr es noch nicht gemerkt habt, also diese Kryptowährungen,\nwie sie immer hießen, werden nie als solche verwendet, also so gut wie nie,\nsondern im Wesentlichen ist es hier einfach ein Anlagenhandel und es geht einfach darum,\nmit Anlagen Geld zu verdienen und das funktioniert halt ganz gut,\nwenn da immer so viel Betrieb drin ist.\nAlso wenn man in irgendeiner Form von außen dafür sorgt, dass irgendwie viel\nTradingvolumen ist und jetzt ist hier viel Interesse, dann springen dann entsprechend\ndie Glocken an und dann steigen halt auch mal schnell die Kurse.\nNur oft ist es halt kein wirkliches Nachfragephänomen, sondern eben nur das\nResultat von so einer Aktivität, die nur dazu hervorgerufen wird,\num das Interesse daran zu haben.\nUnd dann kaufen die Leute eben zu einem schon leicht überhöhten Preis in der\nErwartung, dass er noch höher steigt, tut er dann aber nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:44",
+      "text": "Und der Token, den das FBI dafür verwendet hat, der heißt, oder die Chainer\nauch immer, möge mir verziehen werden,\nSaitama ist die FBI Currency,\ndarauf abgebildet wahrscheinlich Saita Reality und Saita Chain und dann gibt es noch andere,\nUnd Betroffene, Chains, Robo Inu, VZZN, Lillian Finance und Nextfund AI,\nwo das FBI jetzt quasi weiß, wer da betrogen hat.\nAber wenn man sich jetzt mal hier bei CoinMarketCap anschaut,\nwas mit diesem Saitana passiert ist, seitdem das FBI das gesagt hat, ist er runtergegangen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:33",
+      "text": "Wirklich?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:34",
+      "text": "Ja. Jetzt müsste man dem FBI natürlich sagen, also ganz ehrlich,\nso das Dampf von Pump and Dump hat aber da jetzt das FBI vollzogen.\nDas ist inzwischen eigentlich schon fast wieder, würde ich sagen,\nda kann man schon wieder einsteigen.\nEr wurde noch, also zu anderen Zeiten gab es dann höheres Handelsproblem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:54",
+      "text": "Also wenn ich das richtig sehe, ist das Saitama nicht das, was von der FBI gelauncht wurde,\nsondern um Manipulationen auf diesem Saitama-System zu finden,\nhaben sie ein Next Fund AI Projekt sozusagen gestartet,\nmit dem sie ein eigenes Token auf der Ethereum Blockchain gestartet haben und\ndamit haben sie das dann irgendwie überwacht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:24",
+      "text": "Oh, okay, dann habe ich das falsch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:28",
+      "text": "Kurz zusammengefasst, das Detail ist an der Stelle auch nicht ganz so wichtig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:31",
+      "text": "Seitama, Nexfand, Thüringen, Sachsen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:33",
+      "text": "Das ist alles das Gleiche. Das Ding ist nur, also das ist ja die eigentliche Meldung.\nAlso, dass die, erstens, das FBI ist da schon richtig hinterher,\nhier die ganzen kriminellen Aktivitäten, die es in diesem Bereich gibt und ich\nglaube mir, da gibt es genug, das irgendwie zu fangen und sie,\ngehen auch schon so weit, dass sie da eben selber aktiv in diesen Handel mit\nreingehen und dafür sorgen, dass Leute ihnen sozusagen auf den Leim gehen und\ndaran können sie dann eben entsprechende Aktivitäten messen.\nUnd das ist wirklich schon ziemlich krass, finde ich, weil das bedeutet vor\nallem, das FBI hat Leute, die was von der Materie verstehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:18",
+      "text": "Ja, das wird in Deutschland so nicht passieren, Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:22",
+      "text": "Aber kann ich mir auch nur sehr schwer vorstellen. Also ich kann mir vorstellen,\ndass es Leute gibt, die was von der Materie verstehen, aber ich kann mir nicht\nvorstellen, dass die entsprechendes Backing und entsprechendes Funding haben,\num eine größere Aktion zu launchen.\nAber vielleicht werden wir ja auch eines Besseren belehrt und sind da alle viel\nfitter und toller drauf, als wir das so denken.\nIch halte das allerdings generell für eine gute Idee, in diesem Segment die\nAugen offen zu halten, weil da wird auf jeden Fall eine Menge Kohle von links\nnach rechts gezogen, um sie aus den Taschen von Leuten zu ziehen,\ndie denken, das wäre immer noch eine tolle Sache."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:58",
+      "text": "Aber du hast recht, genau. Sie haben Nextfund.ai gegründet und haben sich von\nanderen Leuten dann erklären lassen, wie macht man denn so schöne Pump-and-Dump-Skinys?\nUnd die haben dann gesagt, ja, pass auf, das machen wir hier so und so und so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:11",
+      "text": "Ja, hast du aufgepasst."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:15",
+      "text": "Hast du aufgepasst? Ich schalte schon immer ab, wenn du..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:19",
+      "text": "Ja, das geht mir nicht anders."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:21",
+      "text": "Big News, da hat jemand betrunken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:23",
+      "text": "Ich schaue ab und zu mal so auf web3isgoinggreat.com und es ist einfach eine\npermanente Geräuschkulisse von Betrügereien,\nvon, wie heißt das nochmal gleich, wenn man den Teppich, Ruckpulls,\nwenn irgendwelche neuen Systeme aufgebaut werden, die Leute schmeißen ihre Kohle\nrein und dann verschwindet auf einmal dieses Unternehmen so komplett so,\nja danke für euer Geld wir sind dann mal weg und so, das findet halt einfach täglich statt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:55",
+      "text": "Wir haben in der letzten Sendung ja über das Überwachungspaket gesprochen und\nda haben sich ja dann, meine Güte,\ndann haben sich irgendwie ein paar Grüne gesagt, sie wollen da nicht mehr mitmachen,\nalso nicht bei den Grünen, sondern bei dem Überwachungspaket ausnahmsweise mal nur.\nUnd jetzt haben aber die stellvertretenden Fraktionsvorsitzenden gesagt, ja, ja,\ndie Koalition ist sich jetzt einig und wir werden das jetzt am kommenden Mittwoch\nim Innenausschuss des Bundestages einbringen und dann wollen wir das im Bundestag\nam liebsten schon irgendwie in der darauffolgenden Sitzung so ungefähr im Bundestag\nbeschließen, in der darauf kommenden Sitzungswoche.\nund dann kann das eigentlich schon am 18. Oktober in den Bundesrat.\nAlso ja, jetzt wollen sie es doch, also,\nich verstehe es wirklich nicht, wir haben in der letzten Sendung schon genug\ndrüber gesprochen, aber ich verstehe irgendwie nicht, wie die sich das,\nwas dieser Quatsch soll.\nAlso in dieser, vor allem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:06",
+      "text": "Was versuchen sie damit zu retten? Also sich?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:30:11",
+      "text": "Naja, also eine Idee ist ja, oder eine Perspektive, die man so haben kann,\nist warum wählen Leute eigentlich diejenigen, die ihnen die ganze Zeit Angst machen?\nSo, weil sie davon ausgehen, dass diese Leute wenigstens das Problem erkannt\nhaben und sich bemühen werden, es zu lösen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:31",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:30:32",
+      "text": "Und wenn man davon ausgeht, dass das irgendwie, dass das für Menschen eine Rolle\nspielt, dann könnte man daraus ableiten, dass man den anderen nur zu vorkommen\nmuss, das Problem zu lösen.\nJetzt ist aber natürlich, wenn das Problem eigentlich gar nicht gibt,\ndann wirst du das ja auch nicht lösen.\nDas scheint das Problem zu sein, was die Ampel hier nicht so ganz verstanden hat.\nAber ja, es ist katastrophal. Solingen, also Solingen, neue Bundesländer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:07",
+      "text": "Aber,\nEntschuldigen? Neue Bundesländer?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:11",
+      "text": "Äh, alte Bundesländer, Entschuldigung, natürlich, meine Güte.\nOh, jetzt war mein Witz ja total. Alte Bundesländer, Nordrhein-Westfalen ist\ndas wahrscheinlich sogar, oder?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:19",
+      "text": "Ich vermute, ja. Last time I checked."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:24",
+      "text": "Keine Landeshauptstadt?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:27",
+      "text": "Das ist sogar ganz in der Nähe von Düsseldorf. Mehr in Nordrhein-Westfalen geht gar nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:34",
+      "text": "Ich habe eine andere Vorstellung davon, wo Nordrhein-Westfalen ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:38",
+      "text": "Ich denke, du kennst dich da aus in Nordrhein-Westfalen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:40",
+      "text": "Eben, aber Düsseldorf steht ja nicht für Nordrhein-Westfalen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:43",
+      "text": "Das ist nur die Hauptstadt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:44",
+      "text": "Ja, das ist ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:45",
+      "text": "Wie kann denn das passieren? Wie kann denn Düsseldorf, wieso ist die so unpopulär\neigentlich? Was ist überhaupt mit Düsseldorf?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:53",
+      "text": "Düsseldorf?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:53",
+      "text": "Warum haben denn alle in Nordrhein-Westfalen ein Problem mit Düsseldorf?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:57",
+      "text": "Kein Problem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:58",
+      "text": "Sondern?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:59",
+      "text": "Ist einfach, ja, ich weiß nicht. Also, es hat ja kein Problem mit Düsseldorf.\nDas einzige Problem, was ich mit Düsseldorf habe, ist, wenn ich sage,\nich komme aus dem Ruhrgebiet, dass die Leute sagen, Düsseldorf, ne?\nUnd dann muss man sagen, Düsseldorf ist halt nicht Ruhrgebiet.\nEs ist nicht Ruhrgebiet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:18",
+      "text": "Ja, aber es heißt ja nicht Nordrhein-Ruhrgebiet, sondern Nordrhein-Westfalen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:21",
+      "text": "Es heißt aber auch Nordrhein-Rhein-Westfalen. Ich weiß es auch nicht.\nDüsseldorf ist, es ist halt nicht Ruhrgebiet.\nIch habe überhaupt gar kein Problem mit Düsseldorf. Ich bin gerne in Düsseldorf.\nIch war dieses Jahr schon in Düsseldorf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:40",
+      "text": "Wirklich?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:40",
+      "text": "Bin jedes Jahr in Düsseldorf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:42",
+      "text": "Ah, echt?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:43",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:43",
+      "text": "Ich weiß ja nicht, Hannover kennt man gar keine Ahnung. In Düsseldorf kann man."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:49",
+      "text": "Also, Düsseldorf, guck mal, die Stadt, die muss ja herausragend schön sein.\nAlso bei einer Stadt, die ein derartiges Bier braut, ja, und trotzdem bleiben die Leute da.\nDa kannst du dir ungefähr vorstellen, was das für eine prächtige,\nwunderschöne Stadt ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:08",
+      "text": "Okay, also, Problem ist Altbier oder was?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:12",
+      "text": "Altbier ist...\nIch weiß, also ich habe nichts gegen Düsseldorf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:18",
+      "text": "Okay, gut. Wir müssen das auch nicht weiter vertiefen. Ich dachte nur,\ndu kannst mich da ein bisschen mehr aufklären, wo das Problem eigentlich ist mit Düsseldorf."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:24",
+      "text": "Es gibt kein Problem. Hast du mit einem Kölner geredet oder was?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:28",
+      "text": "Nein, ich höre das halt immer nur so. Was habe ich mit Nordrhein-Westfalen zu tun?\nIch komme da nicht her und ich habe da keine Erfahrung mit. Ich war noch nicht\nmal auf dem Karneval in Köln. Nicht einmal."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:39",
+      "text": "Und in Düsseldorf?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:41",
+      "text": "Auch nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:41",
+      "text": "Natürlich war ich auf dem Karneval in Düsseldorf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:43",
+      "text": "War noch nie auf dem Karneval."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:43",
+      "text": "Und in Köln. Ja, klar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:46",
+      "text": "Und? Nimmt man da irgendwas fürs Leben mit?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:51",
+      "text": "Kommt drauf an, wie viel du trinkst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:55",
+      "text": "Wie gesagt, die Region bleibt mir ein Rätsel, aber ich habe auch nicht unbedingt ein Problem damit.\nJetzt weder mit Köln noch mit Düsseldorf."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:06",
+      "text": "Wenn du zu wenig trinkst, trinkst du nichts mit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:08",
+      "text": "Wenn du zu viel trinkst."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:09",
+      "text": "Trinkst du nichts mit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:10",
+      "text": "Hauptsache Union gewinnt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:12",
+      "text": "Spielt Fortuna Düsseldorf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:14",
+      "text": "Sind wir noch beim Thema eigentlich jetzt?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:17",
+      "text": "Okay, gut.\nChatkontrolle. Ja, machen wir nächstes Thema. Nächstes Thema."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:26",
+      "text": "Irgendwie kommen wir heute immer so ein bisschen vom Thema ab."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:29",
+      "text": "Wir müssen darüber hinwegtholen, dass eigentlich nichts Interessantes zu erzählen\ngibt. Das ist ein Problem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:38",
+      "text": "Das Thema macht einen Schmank aus unserem Leben. Das interessiert euch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:43",
+      "text": "Vor zehn Jahren am Flughafen. Wie habe ich dir schon erzählt?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:47",
+      "text": "Das sind doch keine schmutzige Details aus unserem Lebenskanal.\nDas ist das, was euch interessiert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:53",
+      "text": "So, ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:55",
+      "text": "Jetkontrolle."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:57",
+      "text": "Genau, also Ungarn wollte das ja unbedingt durchprügeln. Markus hat es ja in\nder letzten Sendung noch erzählt.\nAber die Sperrminorität hat gehalten,\nmehrere Länder und deswegen wurde das Thema bei dem EU-Ministertreffen nur am\nRande behandelt und es besteht weiterhin keine Einigkeit.\nAlso hat auch Ungarn mit seinem Anlauf das jetzt nicht geschafft,\ndie Chatkontrolle durchzusetzen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:30",
+      "text": "Wobei ich mich da jetzt wirklich frage, ob das sozusagen eher eine Opposition\ngegen Ungarn ist, weil die es dann wieder übertreiben wollten und weil die generell\ndaran nicht so besonders beliebt sind oder ob das Thema halt einfach keine Einigung\nerfährt. Wir wissen es nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:44",
+      "text": "Mein Traum wäre, ich würde eigentlich immer hoffen, dass es um inhaltliche Auseinandersetzungen geht.\nAber Hoffnung stirbt zuletzt, aber sie stirbt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:57",
+      "text": "Hast du die Reden von diesen grünen Europa-Parlamentsabgeordneten gehört?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:04",
+      "text": "Ich weiß nicht, wann ich, also die einzigen Ausschnitte aus Parlamentsreden,\ndie höre ich im Podcast Parlamentsrevue.\nIch kann mir das nicht angucken. Ich gucke auch keine Talkshow,\nAnne Will hatte gar keine Talkshow mehr.\nich kann also eine Parlamentsrede Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:25",
+      "text": "Die willst du vielleicht nochmal nachhören, weil da haben sich zwei Grüne wirklich\nhervorgetan, während Orban wirklich neben ihnen saß als Präsident,\nhaben die da halt eine Rede gehalten und haben auf ihn eingeredet und haben\ngesagt, sie sind einfach ein fucking Diktator und sie haben ja in Europa nichts\nzu suchen und euch schmeißen wir raus und ihr seid korrupt und das war wirklich volles,\nProgramm Richtig gut. Ich suche nochmal die Links raus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:50",
+      "text": "Aber ging es da um Chatkontrolle?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:52",
+      "text": "Nee."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:52",
+      "text": "Da sind wir schon wieder vom Thema abgewogen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:54",
+      "text": "Ja, aber es hat was mit Orban und damit mit Ungarn zu tun."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:58",
+      "text": "Okay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:58",
+      "text": "Also ich wollte damit ja nur ausdrücken, die Stimmung ist nicht besonders gut,\nwas Orban betrifft, nachvollziehbarerweise.\nUnd die Stimmung ist so schlecht, dass sie sich also wirklich ernsthaft drei\nMeter neben ihm irgendwie ans Mikrofon stellen und dann minutenlang auf ihn einreden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:13",
+      "text": "Man soll ja auch nicht hinter dem Rücken über die Leute reden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:15",
+      "text": "Finde ich gut. Das stimmt.\nWeiter im Text. Karlsruhe hat mal wieder was entschieden. Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:30",
+      "text": "Keine Landeshauptstadt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:33",
+      "text": "Ne, das stimmt. Aber auch wichtig. In Deutschland ist alles, jede Stadt hat was.\nEntweder du bist Landeshauptstadt oder irgendwas kriegst du immer ab vom Kuchen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:43",
+      "text": "Wie jede Stadt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:45",
+      "text": "Ja, jede Stadt hat irgendwie eine, Also jede nennenswert große Stadt hat irgendwas\nabbekommen von unserem föderalen Gesamtsystem.\nUnd Karlsruhe dürfen halt die Richter hochholen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:57",
+      "text": "Generalbundesanwalt und Bundesverfassungsgericht. Und KIT."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:01",
+      "text": "Ja, ist jetzt nicht so bundesregelmäßig, aber hat auf jeden Fall auch Bedeutung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:06",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:07",
+      "text": "Das stimmt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:08",
+      "text": "Aber jede Stadt hat was abbekommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:11",
+      "text": "Ja, irgendein Institut, irgendeine Behörde, irgendein Gericht,\nirgendwas Wichtiges ist überall zu finden.\nIst jetzt nicht alles in Berlin. Auch Leipzig. Was ist denn da?\nWeiß ich nicht, keine Ahnung. Irgendwas ist da auf jeden Fall. Irgendwas ist immer.\nDas ist so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:30",
+      "text": "Kongress."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:31",
+      "text": "Auch nicht mehr.\nNaja, auf jeden Fall haben sie die Köppe zusammengehalten, weil die Gesellschaft\nfür Freiheitsrechte, GFF, geklagt hat.\nZusammen mit so diversen Beschwerdeführern.\nGegen das BKA-Gesetz, was ja ein weiteres Mal reformiert wurde,\nnachdem Karlsruhe schon mehr als einmal, oder was, nur einmal, ich weiß nicht.\nAlso auch schon ein weiteres Mal vorher gesagt hat, Leute, so wie ihr das macht, geht das nicht.\nDas müssen wir jetzt mal ein bisschen einschränken.\nUnd es ging halt wieder darum, dass diese ganzen Überwachungsbefugnisse,\ndie in dieses PKA-Gesetz reingeschrieben wurden, dass die so nicht verfassungsgemäß sind.\nWer hätte es gedacht, Linus? Wer hätte es gedacht?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:24",
+      "text": "Auf jeden Fall nicht das Bundesverwaltungsgericht. Das ist nämlich nicht in\nKarlsruhe, sondern in Leipzig.\nAh ja, ich musste kurz gucken, was ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:35",
+      "text": "Meine These stimmt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:36",
+      "text": "Das Bundesverwaltungsgericht ist eines\nder fünf obersten Bundesgerichte in Deutschland und es ist in Leipzig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:43",
+      "text": "Okay, und jetzt wo du vom Thema wieder abgelenkt hast, führ mal wieder zurück\nund erklär mir mal, was die dann jetzt beschlossen haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:51",
+      "text": "Das Bundesverwaltungsgericht in Leipzig nicht zu verwechseln mit dem Bundesverfassungsgericht,\nbei dem gegen das BKA-Gesetz in Karlsruhe wiederum alte Bundesländer vorgegangen wurde.\nInsbesondere hat man sich damit zwei Aspekten der BKA-Gesetznovelle,\ndie noch aus der rot-rot-schwarz-roten Regierung stammten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:20",
+      "text": "Die sogenannte Große Koalition, die Älteren erinnern sich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:23",
+      "text": "GroKo 2.\nUnd da wurde entschieden, dass man quasi die ganzen Datenbanken zusammenführt\nzu einer großen, einmal alles Datenbank, der Inpol.\nUnd da soll so ungefähr einfach einmal alles rein.\nUnd dann weiterhin wurde in\ndiesem BKA-Gesetz geregelt, dass das BKA Kontaktpersonen überwachen darf.\nWas ist eine Kontaktperson? Eine Kontaktperson wird nicht selber einer Straftat bezichtigt,\nsteht aber im Kontakt mit einer Person, die dem Durchführen oder der Planung\neiner Straftat bezichtigt wird.\nund das Urteil des Bundesverfassungsgerichts in Karlsruhe,\nNicht in Leipzig und auch nicht in Erfurt, weil Erfurt ist in Thüringen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:34",
+      "text": "Ich lasse es."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:35",
+      "text": "Thüringen. Was gibt es noch?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:38",
+      "text": "Wo? In Thüringen oder in Erfurt?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:41",
+      "text": "Eigentlich nichts. So und dann das Bundesverfassungsgericht hat also jetzt geurteilt,\ndie Überwachungsbefugnisse des BKA gegenüber bloßen Kontaktpersonen sind verfassungswidrig,\nweil sie das Recht auf informationelle Selbstbestimmung dieser Personen verletzen.\nAlso kann es nicht einfach irgendjemand überwachen, nur weil er Kontaktperson ist.\nUnd für die Speicherung und Nutzung von Informationen in der polizeilichen Datenbank in Pol,\nsagt Karlsruhe, naja, da müsst ihr wenigstens mal klare Grenzen definieren,\nwas quasi eine Speicherungsschwelle ist,\ndamit es da reinkommt.\nSonst erwarten wir hier eine massiv anwachsende Bevorratung von personenbezogenen\nDaten und deswegen hätten wir gerne mal irgendwie eine Speicherungsschwelle,\ndamit jetzt nicht jeder Fußballfan oder was in dieser Inpol-Datenbank landet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:46",
+      "text": "Genau, Fußballfans sind auch ein gutes Thema. Einer der Beschwerdeführerinnen,\nfünft an der Zahl glaube ich in diesem Fall, war auch aus dem Fußballumfeld\nund war selbst davon betroffen, muss man ja sein, sonst kann man da auch nicht\nentsprechend vorstellig werden.\nUnd das ist halt, es gibt ja diese Datenbank, Gewaltdäter Sport,\ndie sozusagen so eine Untertabelle ist in diesem System und dort stehen eine\nganze Menge Leute drin und da stehen aber auch eine ganze Menge Leute drin,\ndie nicht wirklich jetzt als Gewalttäter in irgendeiner Form schon gemeldet sind,\nsondern das sind halt Leute, die irgendwie nur mit dabei waren.\nDa ist dann irgendwie ein kompletter Bus auf der Autobahn rausgezogen worden\nmit Fans und irgendwie einer hatte ein Edding dabei und dann wurde sofort Schmierereien\nunterstellt und dann landen aber dann irgendwie alle,\ndie im Bus sitzen, landen dann halt auf einmal auch in der Datenbank.\nDa kann man sich denken, ja okay, gut, in der Datenbank, was ist das schon das Problem?\nDas Problem ist, dass es dann eben auch häufiger zu weiteren Untersuchungen,\nAufhaltungen führt, dann werden also Leute, dann werden Stadionverbote ausgesprochen\noder Leute dürfen irgendwie nicht ins Ausland reisen, um an irgendeinem Spiel,\nAuswärtsspiel ihrer Mannschaft teilzunehmen etc.\npp. Und das wird schon von den ganzen Fanhilfen seit Jahren verurteilt, zu Recht.\nUnd sieht so aus, als ob jetzt dieser Widerspruch, der hier in Karlsruhe ausgesprochen\nwurde, vom Bundesverfassungsgericht, auch diesen Teil betreffen kann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:23",
+      "text": "Das stimmt ja sogar wirklich der war in einem Werder Fanbus unterwegs und bei\neinem Zwischenhalt in Göttingen soll jemand mit einem Edding irgendwas hinterlassen\nhaben und deswegen wurden,\ndann alle in dem Bus ich dachte das wäre gerade ein Beispiel was dem tatsächlich\npassiert und in Konsequenz durfte er nicht zum Champions League Spiel nach Entschredde,\nweil die Bundespolizei ihm die Ausreise untersagt hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:52",
+      "text": "Und das ist halt, das ist jetzt ein Fall, aber ich habe schon von vielen solchen\nFällen gehört und das ist halt einfach ein Problem.\nIch meine, es ist ohnehin diese ganze Wahrnehmung von Fußballfans als Gewalttäter,\nals potenzielle Gewalttäter, also nicht, dass da nicht auch was passiert,\naber dass das jetzt ein überbordendes Problem ist, das kann man so,\nglaube ich, nicht mehr festhalten.\nEs gibt ja auch in der Öffentlichkeit so eine Wahrnehmung, die ja noch aus den\n90ern stammt, als dieser Hooliganismus um sich griff.\nDa war es aber halt jetzt mitnichten so, dass das jetzt primär vom Fußball aus\nging, sondern es war einfach nur, dass diese Hooligan,\ndieser Trend, es war ja fast schon wie so ein Jugendsport, dass man sich eben trifft zum Schlagen.\nUnd die haben sich dann halt einfach in Veranstaltungen untergemischt,\nwo halt sowieso schon viele Leute sind.\nUnd dann wurde es eben im Rahmen von Fußballspielen und drumherum oft ausgetragen\nund fiel dann wiederum auf den Fußball zurück."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:02",
+      "text": "Ja.\nDie haben, also wenn die sich da treffen und sich gegenseitig die ganze Zeit\nauf die Fresse hauen, kann man ja eigentlich davon ausgehen,\ndass sich das Problem früher oder später von alleine löst, oder?\nJa gut, aber hat sich dann auch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:15",
+      "text": "Oder? Jetzt regen sich trotzdem dann wieder alle auf. Ja, es hat sich insofern\ngelöst, als das von den Fußballvereinen wiederum durch Fanarbeit da gegengehalten wurde.\nDass halt die Leute aus den Fanszenen rausgehalten wurden, dass die Fanszenen\nsich da selber auch gereinigt haben von diesen Leuten und einfach dafür gesorgt\nhaben, dass sie wieder ihr Fußballding machen können.\nAber in dem Zuge sind halt immer wieder diese ganzen begleitenden Maßnahmen\nhochgefahren worden und es gibt halt generell immer so diese Wahrnehmung,\noh Gott, jetzt Fußballspiel, es wird wieder alles ganz schlimm,\nwir brauchen ganz viel Polizei.\nBis hin zu der Forderung, dass eben jetzt die von der Polizei und dann sozusagen\nvom Kontrollapparat selbst aufgestellten Regeln mit,\nwenn Veranstaltungen die und die Größe und Dimensionen hat und das trifft dann\nbei Fußballspielen oft zu,\ndann muss auch so und so viel Polizei da sein.\ndann stehen da irgendwie Herrscharen an Polizeiwannen rum und bohren sich in\nder Nase nicht, dass die nicht auch manchmal,\nsinnvoll sein können, dass die da sind aber es führt eigentlich eher dazu,\ndass genau diese Präsenz dann zu Problemen führt einerseits und andererseits,\nkommen dann eben Bundesländer wie Bremen zum Beispiel dann auch auf die Idee\nsagen, das ist aber ganz schön teuer mit diesen vielen Polizisten,\ndie wir da hinfahren müssen, auf eure Veranstaltung könnt ihr da nicht mal für bezahlen.\nUnd dann war es schon so ein bisschen an dem Punkt, wo die Leute für ihre Überwachung\nauch noch selber bezahlen.\nDas ist dann irgendwie auch ein schwieriges Feld."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:47:48",
+      "text": "Jetzt weißt du, was Überwachungskapitalismus wirklich heißt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:53",
+      "text": "Den Witz kenne ich schon aus meinem Lieblingsfilm Brasil aus den 80ern.\nJa, dass die Leute einfach irgendwie mehr für ihre Überwachung bezahlen sollten.\nDas ist da literally ein Joke in dem Film.\nKann ich wirklich sehr empfehlen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:10",
+      "text": "Den Film Den kann man sehr empfehlen, ich kann mich nur tatsächlich an die Szene\nnicht erinnern, dass wir mehr bezahlen müssen Alright, also wir können wieder\nmit dem Edding ins Stadion,\nEndlich,\nHoffnung Und vielleicht können wir demnächst sogar vermummt da wieder hin Meinst du?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:36",
+      "text": "Ja, mir gefällt das auch nicht, dass ich da die ganze Zeit mein Klargesicht zeigen muss."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:40",
+      "text": "Ja, also man muss ja tatsächlich mal drüber nachdenken mit dieser biometrischen\nÜberwachung, die uns früher oder später ins Haus steht,\ndass wir in Deutschland auch noch ausgerechnet bei den demokratischen Versammlungen,\nbei den Demonstrationen ein Vermummungsverbot haben.\nUnd es ist relativ interessant,\nalso wenn du mal bei einer etwas aufgeheizteren Demonstration bist,\nwenn da jemand auf die Idee kommt, die Kapuze zu tief ins Gesicht zu ziehen\noder gar sich zu vermummen,\ndann geht das relativ schnell, dass die Person wirklich sofort aus dem Verkehr\ngezogen wird von der Polizei und angegriffen wird und das hat dann empfindliche\nStrafen hinter zur Folge,\nweil irgendwie man eben bei einer Demonstration da so eine alte,\nich weiß gar nicht, wie man das beschreiben soll, so eine archaische,\nzeig dein Gesicht, wenn du dafür einstehst oder so, was man ja vielleicht erstmal\nintuitiv nachvollziehen kann.\nso eine Überlegung, dass man sagt, wir wollen, wenn die Leute schon demonstrieren,\ndann sollen sie dafür auch mit ihrem Gesicht stehen können. Ähm.\nJetzt kannst du dir aber überlegen, mach mal irgendwie ein CSD in Bautzen oder\nso oder mach mal eine Demonstration da in der Nähe oder zu einem Thema,\ndas irgendwie gerade von Rechtsradikalen besetzt wird,\ndann wird dieses Vermummungsverbot natürlich auch verwendet,\num Menschen dort zu filmen.\nUnd dann bist du, wenn du irgendwie mal auf dem falschen Foto bist oder so,\nunter Umständen relativ schnell mit langfristigen Problemen ausgestattet.\nUnd gilt natürlich auch andersrum, dass jetzt, sagen wir mal,\neine der Möglichkeiten, warum die Neonazi-Szene so bekannt ist,\nist natürlich auch, dass man sie, wenn sie auf die Straße geht,\nhalt einfach fotografieren kann und sich damit auseinandersetzt, wer da wer ist. aber.\nMan sollte das jetzt nicht abhängig davon machen, wer jetzt die Guten und wer\ndie Bösen sind, sondern was eine Regel für das Zusammenleben ist und ich muss\nirgendwie sagen das Vermummungsverbot,\ntja also ich glaube es hat natürlich, es hat einen ganz guten oder hat potenziell\neine Wirkung dabei unter Umständen aus einer Demonstration heraus stattfindende Straftaten,\neinzudämmen oder zu verhindern, ungefähr zweimal im Jahr oder so,\nvielleicht auch dreimal, aber für viele, viele andere Demonstrationen und damit\neigentlich für den größeren Teil der Masse an Demonstrationen,\nist das eigentlich eine nicht nachvollziehbare und unter Umständen auch nicht zumutbare Auflage."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:02",
+      "text": "Ja, es ist schwierig. Also ich kenne da keine belastbaren Zahlen,\nan denen man das irgendwie festmachen könnte.\nAber das war ja immer das Argument, dass quasi von einer Vermummung Putin,\ndass dadurch sozusagen von vornherein auf einmal Straftaten auf Demos möglich\nsind und das muss ja verhindert werden.\nUnd diese Straftaten sind ja dann häufig Auseinandersetzungen mit der Polizei gewesen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:28",
+      "text": "Die sich der Demonstration in den Weg stellt oder sonst was."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:31",
+      "text": "Wo auch immer dann sozusagen, also da wird es beide Seiten gegeben haben.\nDa wird es Übergriffe auf die Polizei gegeben haben, die nicht gerechtfertigt waren.\nGenauso wie wir das auch immer wieder leider beobachten müssen,\ndass es Übergriffe von der Polizei gibt, die nicht gerechtfertigt sind."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:48",
+      "text": "Die Polizei darf sich aber vermumpen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:49",
+      "text": "Ja, die Polizei sich auch ganz gut vermummt und sich auch immer trefflich gegen\neine Nummernkennzeichen von Mitarbeitern wert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:58",
+      "text": "Gewährt hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:59",
+      "text": "Gewährt hat, das hat eine Weile gedauert, aber das ist natürlich dann,\ngilt das im Prinzip ja für alle."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:06",
+      "text": "Jetzt gibt es aber natürlich eine neue Entwicklung, Gesichter,\nSuchmaschinen und überhaupt die Diskussion biometrischer Überwachung in diesen\nSicherheits- und Überwachungspaketen der Bundesregierung,\nwo man sich ernster fragen muss, naja, wenn das jetzt noch alles kommt,\nwenn hier demnächst dann die Stadt mit intelligenter Videotechnik ausgestattet ist…,\nMuss er denn? Also ist dann ein Vermummungsverbot noch zeitgemäß?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:40",
+      "text": "Ja, also was das ja bedeutet im Prinzip ist,\nman beobachtet mit hochauflösenden Kameras einen Demonstrationsblock und macht,\nder Computer analysiert in Echtzeit diese Bilder, das ist ja mittlerweile keine\nZukunftsmusik mehr, sondern das haben wir ja jetzt hier auch schon mehrfach durchdiskutiert.\nWir erinnern mal vielleicht kurz an diesen Fall der aufgegriffenen Terroristin,\ndie durch eine Websuche aufgefunden wurde.\nNicht ursprünglich durch die Polizei, sondern in dem Fall eben durch so ein\nJournalistenteam, die selber sehr überrascht waren über ihre Ergebnisse,\naber es gibt ja diese ganzen Datenbanken und,\nes gibt in zunehmendem Maße eben jetzt diese Bestrebung, solche Datenbanken\neben auch aufzubauen und dann eben auch automatisiert anzuwenden.\nIm Prinzip sind solche Systeme nicht nur vorstellbar, sondern man kann sich\ndas heute zusammenbauen. Das ist machbar.\nDie Technik dafür ist da.\nDas heißt, man hält eine Kamera auf einen Demonstrationszug durch und kann es\nim Prinzip in Echtzeit die Namen durchrollen sehen.\nWeil es ist halt insbesondere auf Video nochmal sehr viel besser erkennbar,\nweil du eben mehrere Positionen siehst, etc.\neines Gesichtes über die Zeit und da muss man sich mittlerweile überhaupt gar\nkeine Illusionen mehr machen.\nGesichtserkennung ist halt machbar und damit sozusagen eine Echtzeit vollständige\ndigitale Identitätserfassung im öffentlichen Raum.\nMit einer politischen Agenda verbunden, weil das ist nun mal das,\nwas so eine Demonstration üblicherweise repräsentiert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:23",
+      "text": "Ja und das ist doch, also dann muss man doch wirklich sagen, dass sich hier die,\ndie Außenbedingungen oder die technologischen Bedingungen dann doch durchaus\nverändert haben und da muss man in meinen Augen durchaus mal die Frage stellen\nUnd das tun jetzt auch Leute, nämlich Amnesty International,\ndie GFF und die Humanistische Union sagen, wie wäre das denn,\nwenn man das jetzt mal sein lässt.\nUnd wir reden hier nicht von Kleinigkeiten, bis zu ein Jahr Haft für Vermummungen\nbei einer Demonstration.\nAllein das Mitführen von Vermummungsutensilien kann eine Geldbuße von bis zu\n500 Euro nach sich ziehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:09",
+      "text": "Vermummungsutensilien. Also sowas wie eine Skimaske zum Beispiel."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:15",
+      "text": "Ja, oder eine FFP2-Maske. Das war ja auch ein großes Thema.\nDas war ja tatsächlich Thema bei diesen Corona-Demos."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:30",
+      "text": "Na gut, die, die demonstriert haben, die waren ja jetzt nicht diejenigen,\ndie unbedingt eine Maske tragen wollten.\nAber man kann auch eine Gegendemo machen, wo dann alle eine Maske tragen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:41",
+      "text": "Kommt immer drauf an, welche Demo das war."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:43",
+      "text": "Aus Sicherheitsgründen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:45",
+      "text": "Ich finde es auf jeden Fall mal nicht schlecht, das zu diskutieren.\nDer Vollständigkeit halber sei aber auch erwähnt, dass dann beispielsweise so\nDinge da, wo Videoüberwachung ist, dann teilweise argumentiert wird oder erzwungen\nwird, dass die dann ausgeschaltet wird, wenn eine Demonstration stattfindet.\nman kann es jetzt nicht überprüfen. Erstens kann es jetzt nicht überprüfen und\nzweitens, ja gut, dann schalten sie die Kameras aus, aber du kannst ja heute\nsowieso bei jeder Demonstration irgendwie\nPolizisten mit so einem riesigen Selfie-Stick, die da eh alles filmen.\nUnd erstaunlicherweise immer, wenn da so Polizeigewalt stattfindet,\ndann passiert auf einmal auf der anderen Reihenseite was ganz Spannendes,\nwas sie auf einmal filmen.\nApropos Interessantes auf der anderen Rheinseite,\ndas Antwortverhalten bei Telegram hat sich verändert und zwar auf,\ndass das Antwortverhalten bei Bestandsdatenauskünften.\nPavel Durov war ja jetzt einige Zeit in Frankreich, ist er eigentlich schon raus wieder?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:59",
+      "text": "Nö, also der ist nicht mehr in Haft, aber der ist meines Wissens noch in Frankreich\noder ich hab da vielleicht was übersehen, ich schau noch mal kurz nach."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:07",
+      "text": "Also ich glaube der ist auf freiem Fuß, aber wartet noch auf ein Verfahren,\nwie auch immer du suchst das mal raus,\njedenfalls war es bisher immer so, dass wenn du bei wenn jetzt so Nachrichtendienste\noder Polizei bei Telegram nach den Bestandsdaten eines Accounts gefragt haben,\nbekamen sie keine nennenswerte Antwort.\nBestandsdaten sind nicht die Verkehrsdaten, aber beispielsweise so etwas wie\ndie E-Mail-Adresse oder die Telefonnummer, auf die ein Account kommt.\nAngemeldet wurde. Und wenn du jetzt bei Facebook eine Bestandsdatenauskunft\nmachst, dann sagt Facebook, okay,\nwas haben wir zu diesem Account hier, was weiß ich, das ist die E-Mail-Adresse\nTim at hast du nicht gesehen und der wohnt in Berlin.\nUnd wenn eine solche Anfrage bei Telegram einging, hat Telegram die üblicherweise\nabgelehnt und gesagt, das machen wir nicht.\nUnd jetzt gibt es einen Transparency-Report von Telegram und der weist aus,\ndass im Jahr 2024 insgesamt 53 Anfragen aus Deutschlands zu IP-Adressen und\noder Telefonnummern beantwortet worden seien.\nUnd davon seien insgesamt 115 Nutzer betroffen gewesen.\nUnd die deutschen Sicherheitskreise bestätigen das und dass Bestandsdaten und\nbei unmittelbarer Gefahr für Leib und Leben auch Emergency Disclosure Requests beantwortet werden.\nJa, und auch die Anfragen deutscher Behörden etwa zu religiösem Extremismus\nund Terrorismus seien zeitnah beantwortet worden.\nInteressant, also haben sie\nihn jetzt vielleicht doch, hat er seine Gesinnung gewechselt, der Pavel.\nAußerdem laufen ja gegen ihn in Frankreich Ermittlungen wegen mehrerer mutmaßlicher\nStraftaten und hat jetzt gesagt, er will sich darum bemühen,\ndass die illegalen Inhalte, die es bei Telegram gibt,\nnicht auch noch beworben werden.\nEr hat zum Beispiel in einem Telegram-Post auf seinem Channel gesagt,\nTelegram ist ja schon sehr gut, man kann sehr gut nach Gruppen suchen zu bestimmten\nInhalten und dass das natürlich quasi…,\nAlso wenn du da jetzt so eine Terroristengruppe hast, dann hast du über Telegram\nnicht nur die Kommunikation in dieser Gruppe, sondern auch noch,\ndass andere dich finden können.\nUnd das wollen sie jetzt ein bisschen einschränken. Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:19",
+      "text": "Ja, also Paul, Pavel Durow ist, wenn ich das richtig sehe, ich sehe keine andere\nNachricht diesbezüglich, nach wie vor frei auf Kaution, also er befindet sich in Frankreich und ja,\ndem scheinen sie also schon relativ klar deutlich gemacht zu haben,\ndass es so wie bisher nicht so weiterlaufen kann.\nAlso wenn jetzt sogar schon die Deutschen auf einmal Antwort bekommen,\ndann hat das einfach schon mal Gehör gefunden.\nKlar, der fürchtet natürlich jetzt um seine Haut.\nDie Truppe, die ihn da wohl für die Verhaftung gesorgt hat,\ndas ist halt auch eine dedizierte Cybercrime-Unit, die sogenannte Unalko-Einheit\nund die steckt halt auch schon so bei anderen Aktionen wie gegen dieses Encro-Chat,\nüber das wir schon mal berichtet haben dahinter und so weiter.\nAlso die sind da, glaube ich, relativ klar.\nAlso da wäre ich gerne mal Mäuschen gewesen bei dieser Verhandlung so,\ndem scheinen sie dann doch relativ klar gemacht zu haben, dass sie einfach überhaupt\nkeinen Bock auf seine Nummer haben, um es mal einfach zu formulieren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:02:32",
+      "text": "Fragt sich, warum Nancy Faeser das vorher nicht gelungen ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:35",
+      "text": "Ja. Die hat halt gefragt, ob sie bitte, bitte vielleicht, ob er nicht mal was schicken könnte.\nJa, ist halt einfach, die französische Methode ist da, glaube ich,\nein bisschen expliziter."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:02:53",
+      "text": "Okay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:54",
+      "text": "They don't fuck around much.\nIch hab da immer so den Film Nikita irgendwie vor meinen Augen.\nIch weiß auch nicht warum.\nDen ich auch sehr empfehlen kann. Zweite Filmempfehlung jetzt schon. In einer Sendung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:10",
+      "text": "Nur noch Filme empfohlen. Also Brasil wird hier aber doch sehr oft empfohlen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:15",
+      "text": "Wirklich? Ich glaub, das ist das erste Mal, dass wir den empfohlen haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:18",
+      "text": "Nein, das hat schon hundertmal gesungen. Dieses Lied von Brasil und so. Naja, ist egal.\nSiehste? So, wir machen Sendung zu Ende, bevor du jetzt den nächsten Lied singst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:30",
+      "text": "Also mit dem Singen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:31",
+      "text": "Filme kannst du empfehlen, Tim, aber singen..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:34",
+      "text": "Ist nicht, meinst du? Pass nicht zu unserem Style, meinst du?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:37",
+      "text": "Ne, passt einfach nicht zu deiner Radio-Gesicht, äh, Stimme."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:46",
+      "text": "Das ist jetzt ein bisschen hart. Jetzt muss ich ein bisschen weinen.\nNe, passt schon. Leute, kurze Sendung von uns und..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:56",
+      "text": "Ihr hört uns sehr bald schon wieder."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:57",
+      "text": "Genau, ja, wir haben schon wieder Wir haben schon wieder was vor.\nMal gucken. Mal gucken, ob das passiert.\nGenau, was dabei rauskommt. Insofern entlassen wir euch. Kurze Sinn.\nKönnt ihr auch mal einen anderen Podcast hören?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:10",
+      "text": "Nö, lassen wir die anderen. Gebt mal in die frische Luft, macht mal irgendwas\nanderes. Nicht immer nur Podcast hören. Hört mal schön weiter unseren Podcast."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:17",
+      "text": "Vielleicht gehen die Leute ja auch mit unserem Podcast in die frische Luft.\nIst der Gedanke schon mal gekommen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:22",
+      "text": "Ich glaube, die sitzen zu Hause und schreiben mit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:24",
+      "text": "Meinst du? Achso, Aufsatz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:26",
+      "text": "So würde ich das erwarten. Also nein, nicht Aufsatz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:29",
+      "text": "Hefte raus, Logbuch-Netzpolitik ist wieder erschienen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:32",
+      "text": "Die wichtigsten so ein paar Stichpunkte, dass man halt sprechfähig ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:37",
+      "text": "Man mitreden kann. Auf der Party meinst du jetzt in der Küche."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:42",
+      "text": "Ja, wir wollten sonst die Nerds sein auf der Party. Also ich war immer in der Küche."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:47",
+      "text": "Auf einer Party ist man immer in der Küche, weil in der Küche sind die interessanten\nGespräche. Ich weiß nicht, warum das so ist.\nOb das mit der potenziellen Versorgung zu tun hat, aber ich weiß nicht,\ndie Küche hat glaube ich irgendwie erzeugt irgendwie eine andere soziale Reaktion."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:03",
+      "text": "Deswegen hat wahrscheinlich auch jeder eine in seiner Wohnung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:06",
+      "text": "Das ist der einzige Grund."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:07",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:07",
+      "text": "Falls man eine Party macht, damit die Leute auch was zu diskutieren haben.\nGut, wir entlassen euch und wünschen euch schöne Folgetage. Nach dem Konsum dieser Sendung.\nSo ist es. Machen wir das. Bis bald."
+    }
+  ]
+}

@@ -29,6 +29,11 @@
   },
   "search": {
     "title": "Ask the Freak Show",
+    "titleByPodcast": {
+      "freakshow": "Ask the Freak Show",
+      "lnp": "Ask Logbuch:Netzpolitik",
+      "ukw": "Ask UKW"
+    },
     "queryLabel": "Query:",
     "placeholder": "Enter question...",
     "button": "Go",
@@ -57,6 +62,15 @@
       "persona2": "roddi: Can you give me home automation tips?",
       "neutral": "Neutral: Apple Quo Vadis?"
     },
+    "examplesByPodcast": {
+      "lnp": {
+        "discussion1": "Linus Neumann VS Tim Pritlove: What do you think of Apple's response to the Digital Markets Act?",
+        "persona1": "Linus Neumann: What do you think about the electronic patient record?"
+      },
+      "ukw": {
+        "neutral1": "UKW: What's the situation in Ukraine?"
+      }
+    },
     "discussionMode": {
       "none": "No discussion mode (single person)",
       "selectSecond": "Second discussion partner",
@@ -75,14 +89,15 @@
   },
   "about": {
     "title": "About this Project",
-    "subtitle": "Technologies and tools behind the Freak Show River Visualization",
-    "freakshow": {
-      "title": "Freak Show",
-      "description": "This project is based on the podcast Freak Show. Learn more at "
-    },
+    "subtitle": "Technologies and tools behind the podcast visualization",
     "projectDescription": {
       "title": "Project Description",
-      "content": "This interactive AI application analyzes and visualizes the topics and speakers of the Freak Show Podcast over the years. Using AI-powered text analysis, semantic search, and clustering algorithms, topics are grouped and their temporal development is displayed in river diagrams. With speaker personas and discussion mode, questions can be answered in the style of the podcast hosts. The project was developed at 39C3."
+      "content": "This interactive AI application analyzes and visualizes the topics and speakers of podcasts over the years. Using AI-powered text analysis, semantic search, and clustering algorithms, topics are grouped and their temporal development is displayed in river diagrams. With speaker personas and discussion mode, questions can be answered in the style of the podcast hosts. The project was developed at 39C3."
+    },
+    "supportedPodcasts": {
+      "title": "Supported Podcasts",
+      "loading": "Loading podcasts...",
+      "none": "No podcasts configured"
     },
     "multiPodcast": {
       "title": "Multi-Podcast Support",
@@ -272,8 +287,8 @@
       }
     },
     "footer": {
-      "madeWith": "Created with ❤️ for the",
-      "podcast": "Freak Show Podcast",
+      "madeWith": "Created with ❤️ for",
+      "podcast": "podcast analysis",
       "copyright": "© 2025 • All data based on publicly available podcast information"
     }
   },

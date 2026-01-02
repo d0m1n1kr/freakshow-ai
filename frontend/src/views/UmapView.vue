@@ -310,6 +310,11 @@ watch(() => settings.clusteringVariant, () => {
   loadData();
 });
 
+// Watch for podcast changes and reload data
+watch(() => settings.selectedPodcast, () => {
+  loadData();
+});
+
 // Recreate chart when filters change
 watch([searchQuery, highlightCluster], () => {
   if (umapData.value) {

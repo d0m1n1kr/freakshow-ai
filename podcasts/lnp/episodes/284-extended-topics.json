@@ -1,0 +1,467 @@
+{
+  "episodeNumber": 284,
+  "title": "LNP284 Urteil des Bundesverfassungsschutzes",
+  "extractedAt": "2026-01-02T11:13:51.103Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "Feedback: HIBP",
+      "subject": {
+        "coarse": "Feedback",
+        "fine": "HIBP"
+      },
+      "durationSec": 423,
+      "positionSec": 74,
+      "summary": "In dieser Episode diskutieren Linus Neumann und Tim Pritlove über Feedback zu Linus' vorherigen Erklärungen zu HIBP (Have I Been Pwned). Linus korrigiert seine falschen Aussagen über die Speicherung von E-Mail-Adressen und das Speicherkonzept der Passwort-API. Er erklärt, wie die API funktioniert, indem sie nur die ersten fünf Zeichen einer SHA1-Prüfziffer sendet, um die Privatsphäre der Nutzer zu wahren. Zudem wird auf die Wichtigkeit hingewiesen, Code zu verstehen, bevor man ihn ausführt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 11,
+        "startSec": 54,
+        "endSec": 517,
+        "generatedAt": "2026-01-02T18:47:21.749Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Feedback: Dichter und Denker",
+      "subject": {
+        "coarse": "Feedback",
+        "fine": "Dichter und Denker"
+      },
+      "durationSec": 90,
+      "positionSec": 497,
+      "summary": "In dieser Episode diskutieren Tim Pritlove und Linus Neumann über Dichter und Denker, wobei Neumann auf Verwirrung bezüglich der Namen von Personen eingeht, insbesondere Ulfkotte und Voßkuhle. Neumann erwähnt, dass Ulfkotte ein Verschwörungstheoretiker war und bereits verstorben ist. Zudem wird das Thema Passwort-Safe und die Rolle von Open-Source-Software angesprochen. Neumann betont, dass die Sicherheit von Software unabhängig von ihrem Open-Source-Status ist und dass Vertrauen und Kontrolle zentrale Aspekte sind.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 6,
+        "startSec": 477,
+        "endSec": 607,
+        "generatedAt": "2026-01-02T18:47:22.028Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Ist Open Source gleichbedeutend mit “sicher”?",
+      "subject": {
+        "coarse": "Security",
+        "fine": "Open Source"
+      },
+      "durationSec": 758,
+      "positionSec": 588,
+      "summary": "In der Diskussion um die Sicherheit von Open-Source-Software wird betont, dass Sicherheit nicht automatisch mit Open Source gleichzusetzen ist. Linus Neumann argumentiert, dass die Qualität und Sicherheit von Software unabhängig von ihrem Lizenzmodell sind. Vertrauen ist wichtig, aber Kontrolle ist entscheidend; Open-Source-Software ermöglicht Kontrolle, erfordert jedoch auch aktive Überprüfung. Es wird auf die Notwendigkeit hingewiesen, mehr Anreize für Qualitätssicherung in der Open-Source-Community zu schaffen, um Sicherheitslücken zu schließen, wie sie beispielsweise bei OpenSSL und Sevenzip aufgetreten sind. Zudem wird die Idee von Bug Bounties als Anreiz zur Verbesserung der Sicherheit diskutiert.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 10,
+        "startSec": 568,
+        "endSec": 1366,
+        "generatedAt": "2026-01-02T18:47:26.221Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Nachtrag: Password-Sicherheit",
+      "subject": {
+        "coarse": "Security",
+        "fine": "Password"
+      },
+      "durationSec": 523,
+      "positionSec": 1346,
+      "summary": "In der Diskussion über Passwort-Sicherheit betonen Tim Pritlove und Linus Neumann die Wichtigkeit, Passwörter regelmäßig zu ändern, insbesondere wenn es Leaks gibt. Sie sprechen über Passwort-Safes und deren Synchronisation über verschiedene Cloud-Dienste, wobei die Verschlüsselung eine zentrale Rolle spielt. Linus weist darauf hin, dass es keine hundertprozentige Sicherheit gibt, sondern nur relative Sicherheit basierend auf Bedrohungsszenarien. Zudem wird das Hasso-Plattner-Institut erwähnt, das einen Service namens Identity Leak Checker anbietet, um E-Mail-Adressen auf Leaks zu überprüfen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 16,
+        "startSec": 1326,
+        "endSec": 1889,
+        "generatedAt": "2026-01-02T18:47:25.742Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Collection 2-5 sind da",
+      "subject": {
+        "coarse": "Collection",
+        "fine": "Data"
+      },
+      "durationSec": 247,
+      "positionSec": 1869,
+      "summary": "In der Episode wird über die Veröffentlichung der Kollektionen 2 bis 5 des Hasso-Plattner-Instituts (HPI) gesprochen, die schneller als die Treuhand verfügbar sind. Diese Kollektionen enthalten Milliarden von E-Mail-Adressen, von denen 750 Millionen zuvor nicht im Identity Leak Checker (ILC) vorhanden waren. Der ILC ermöglicht es Nutzern, ihre E-Mail-Adressen zu überprüfen und informiert sie per E-Mail über mögliche Sicherheitsrisiken. Linus Neumann betont die Wichtigkeit von Passwortsicherheit und Zwei-Faktor-Authentifizierung. Zudem wird die Prüfung der AFD durch den Bundesverfassungsschutz (BFVS) erwähnt, die auf einem Gutachten basiert.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 12,
+        "startSec": 1849,
+        "endSec": 2136,
+        "generatedAt": "2026-01-02T18:47:29.659Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "BfVS vs. AFD",
+      "subject": {
+        "coarse": "Politics",
+        "fine": "BfVS vs. AFD"
+      },
+      "durationSec": 548,
+      "positionSec": 2116,
+      "summary": "In der Episode wird die Prüfung der AfD durch das Bundesamt für Verfassungsschutz (BfVS) thematisiert. Ein Gutachten schlägt vor, die AfD zu beobachten, wobei der rechtsextreme Flügel als Verdachtsfall eingestuft wird. Dies erlaubt dem BfVS, geheimdienstliche Mittel zur Informationsgewinnung zu nutzen. Die Analyse basiert stark auf den Internetauftritten der Partei, insbesondere Facebook, wo die AfD eine hohe Anhängerschaft hat. Die Diskussion beleuchtet auch die Rolle sozialer Netzwerke in der politischen Willensbildung und die Strategien zur Beeinflussung von Wählern.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 8,
+        "startSec": 2096,
+        "endSec": 2684,
+        "generatedAt": "2026-01-02T18:47:30.218Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Charme-Offensive von Mark Zuckerberg",
+      "subject": {
+        "coarse": "Social",
+        "fine": "Mark Zuckerberg"
+      },
+      "durationSec": 591,
+      "positionSec": 2665,
+      "summary": "Im Transkript wird über die Charme-Offensive von Mark Zuckerberg und Facebook gesprochen, die anlässlich des 15-jährigen Bestehens der Plattform stattfand. Linus Neumann kritisiert, dass Zuckerberg in einem offenen Brief behauptet, Facebook habe immer den Austausch zwischen Menschen gefördert, während die Realität oft anders aussieht. Es wird erwähnt, dass Facebooks Geschäftsmodell auf Werbung basiert und dass die Plattform umfassendes Tracking nutzt, um die Nutzer zu überwachen. Neumann äußert Skepsis gegenüber Zuckerberg's Aussagen zur Regulierung von Facebook und weist darauf hin, dass das Unternehmen seit jeher gegen Regulierung kämpft, um seine marktbeherrschende Stellung zu sichern.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 13,
+        "startSec": 2645,
+        "endSec": 3276,
+        "generatedAt": "2026-01-02T18:47:34.002Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "YouTube nutzt ML gegen Verschwörungstheoretiker",
+      "subject": {
+        "coarse": "Technology",
+        "fine": "Machine Learning"
+      },
+      "durationSec": 814,
+      "positionSec": 3256,
+      "summary": "YouTube hat Maßnahmen angekündigt, um gegen die Verbreitung von Verschwörungstheorien und viralen Fake News vorzugehen. Der Algorithmus, der Empfehlungen für Videos generiert, hat dazu beigetragen, dass unseriöse Inhalte populär werden. YouTube plant, Machine Learning und menschliche Evaluatoren zu kombinieren, um problematische Inhalte zu identifizieren und aus den Empfehlungen zu entfernen. Es wird jedoch auch die Herausforderung angesprochen, wer die 'Wahrheit' definiert und wie die Kontrolle über die Inhalte ausgeübt wird. Die Diskussion beleuchtet die Schwierigkeiten bei der Filterung von Informationen und die Notwendigkeit, kritisches Denken zu fördern.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 16,
+        "startSec": 3236,
+        "endSec": 4090,
+        "generatedAt": "2026-01-02T18:47:34.331Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "WhatsApp gegen virale Fake News",
+      "subject": {
+        "coarse": "Social",
+        "fine": "WhatsApp"
+      },
+      "durationSec": 434,
+      "positionSec": 4071,
+      "summary": "WhatsApp hat eine neue Maßnahme eingeführt, um die Verbreitung von Fake News einzuschränken, insbesondere in Bezug auf lynchmorde in Indien, die durch Falschinformationen in WhatsApp-Gruppen ausgelöst wurden. Die Weiterleitungsfunktion wurde von 20 auf 5 Personen begrenzt, um die exponentielle Verbreitung von Nachrichten zu reduzieren. Es wird jedoch bezweifelt, dass diese Maßnahme das Problem signifikant eindämmen kann, da Nutzer weiterhin Nachrichten kopieren und in großen Gruppen teilen können. Linus Neumann und Tim Pritlove diskutieren die Herausforderungen im Umgang mit Fake News und die Rolle von sozialen Netzwerken.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 5,
+        "startSec": 4051,
+        "endSec": 4525,
+        "generatedAt": "2026-01-02T18:47:37.868Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Studie zu Fake News",
+      "subject": {
+        "coarse": "Research",
+        "fine": "Fake News"
+      },
+      "durationSec": 783,
+      "positionSec": 4506,
+      "summary": "In der Diskussion über Fake News wird festgestellt, dass die Verbreitung stark von der politischen Einstellung der Personen abhängt. Während weniger als 5% der Menschen mit linken oder mittleren Ansichten Fake News weiterverbreiten, sind es bei rechts- oder extrem rechts eingestellten Personen 11% bzw. 21%. Dies deutet darauf hin, dass Menschen eher dazu neigen, ihre bestehenden Meinungen zu bestätigen, anstatt ihre Ansichten aufgrund von Fake News zu ändern. Besorgniserregend ist, dass bestimmte Bevölkerungsgruppen so weit von einer rationalen Realität entfernt sind, dass sie Fake News als Bestätigung ihrer Einstellungen akzeptieren, ohne sie in Frage zu stellen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 11,
+        "startSec": 4486,
+        "endSec": 5309,
+        "generatedAt": "2026-01-02T18:47:38.615Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "IT-Sicherheit im Gesundheitswesen",
+      "subject": {
+        "coarse": "Security",
+        "fine": "Healthcare"
+      },
+      "durationSec": 828,
+      "positionSec": 5289,
+      "summary": "Im Gesundheitswesen gibt es erhebliche Sicherheitsprobleme, die durch die Digitalisierung verstärkt werden. Linus Neumann erwähnt Ransomware-Angriffe auf Krankenhäuser, die zu lebensbedrohlichen Situationen führen können, sowie katastrophale Sicherheitslücken in Gesundheits-Apps. Experten fordern proaktive Investitionen in Sicherheitskonzepte und eine Regulierung, die angemessene Sicherheitsstandards vorschreibt. Die Diskussion dreht sich um die Notwendigkeit, die Sicherheit von Patientendaten zu gewährleisten und die Verantwortung der Politik und der Gesundheitsbranche in diesem Bereich zu betonen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 12,
+        "startSec": 5269,
+        "endSec": 6137,
+        "generatedAt": "2026-01-02T18:47:41.744Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Angriffsversuche auf CitizenLab",
+      "subject": {
+        "coarse": "Security",
+        "fine": "CitizenLab"
+      },
+      "durationSec": 646,
+      "positionSec": 6118,
+      "summary": "Das Citizen Lab, eine Forschungsgruppe unter der Leitung von Ronald Deibert an der Universität Toronto, untersucht Angriffe auf Menschenrechtsgruppen und hat unter anderem die Pegasus-Malware der nSo Group aufgedeckt. In einem aktuellen Vorfall wurde ein Mitarbeiter des Citizen Lab von einem angeblichen Recruiter angesprochen, der versuchte, kontroverse Aussagen zu provozieren, um das Citizen Lab in Misskredit zu bringen. Diese Situation zeigt die Risiken, mit denen Forscher in diesem Bereich konfrontiert sind, und die skrupellosen Methoden, die gegen sie eingesetzt werden. Linus Neumann äußert sich auch kritisch zu den Rekrutierungsversuchen auf Community-Events und warnt vor den Gefahren von Staatstrojanern, die von Unternehmen wie nSo und Hacking Team entwickelt werden.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 6,
+        "startSec": 6098,
+        "endSec": 6784,
+        "generatedAt": "2026-01-02T18:47:43.326Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Eurotrojaner",
+      "subject": {
+        "coarse": "Security",
+        "fine": "Eurotrojaner"
+      },
+      "durationSec": 232,
+      "positionSec": 6765,
+      "summary": "In der Schweiz gibt es eine Volksinitiative für ein Moratorium bezüglich E-Voting-Systemen, die bis zur nachweislichen Sicherheit dieser Systeme im Vergleich zu herkömmlichen Papierwahlen gefordert wird. Die Initiative betont die Notwendigkeit, dass die wesentlichen Schritte der Stimmabgabe von Laien überprüfbar sein müssen. Es wird argumentiert, dass die Geheimhaltung der Wahl und die Nachvollziehbarkeit der Ergebnisse in Konflikt stehen, was die Glaubwürdigkeit von E-Voting-Systemen in Frage stellt. Der Vorschlag zielt darauf ab, E-Voting für fünf Jahre zu verbieten, bis ein sicheres und nachvollziehbares System entwickelt wird.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 2,
+        "startSec": 6745,
+        "endSec": 7017,
+        "generatedAt": "2026-01-02T18:47:46.055Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Schweiz: Volksinitiative für e-Voting Moratorium",
+      "subject": {
+        "coarse": "Politics",
+        "fine": "e-Voting"
+      },
+      "durationSec": 720,
+      "positionSec": 6997,
+      "summary": "In der Schweiz gibt es eine Volksinitiative für ein Moratorium zum E-Voting, das bis zur Nachweisbarkeit der Sicherheit dieser Systeme im Vergleich zu herkömmlichen Papierwahlen gefordert wird. Die Initiative zielt darauf ab, E-Voting zu verbieten, da die Sicherheit und Nachvollziehbarkeit für Laien nicht gewährleistet sind. Es wird betont, dass die wesentlichen Schritte der Stimmabgabe ohne besondere Sachkenntnis überprüfbar sein müssen. Der Chaos Computer Club Schweiz unterstützt diese Initiative und ruft die Bevölkerung zur Teilnahme auf.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 11,
+        "startSec": 6977,
+        "endSec": 7737,
+        "generatedAt": "2026-01-02T18:47:47.789Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "BKA testet die europaweite Vernetzung von Polizeiakten",
+      "subject": {
+        "coarse": "Law Enforcement",
+        "fine": "Police Records"
+      },
+      "durationSec": 721,
+      "positionSec": 7718,
+      "summary": "Das BKA testet ein System zur europaweiten Vernetzung von Polizeiakten, um den Datenaustausch zwischen EU-Mitgliedsstaaten zu erleichtern. Derzeit ist nur der Austausch über rechtskräftige Verurteilungen möglich, während ein umfassender Zugriff auf polizeiliche Ermittlungsakten noch in der Prüfungsphase ist. Die EU diskutiert ein europäisches Polizeiregister, das die grenzüberschreitende Zusammenarbeit verbessern soll. Das BKA nutzt Software von Fraunhofer zur Erprobung dieser Vernetzung. Ziel ist es, insbesondere Reisende und Gewalttäter besser zu identifizieren und zu verfolgen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 7,
+        "startSec": 7698,
+        "endSec": 8459,
+        "generatedAt": "2026-01-02T18:47:50.186Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Rechtsextreme Polizisten nutzen polizeiliches Informationssystem",
+      "subject": {
+        "coarse": "Law Enforcement",
+        "fine": "Right-Wing Extremism"
+      },
+      "durationSec": 486,
+      "positionSec": 8440,
+      "summary": "Im Transkript wird das Problem des Missbrauchs polizeilicher Informationssysteme durch rechtsextreme Polizisten thematisiert. Ein Beispiel ist ein Polizeibeamter aus Südhessen, der Daten an Martina H., die Anführerin einer rechtsextremen Gruppe, weitergab. Diese und andere Personen stehen wegen politisch motivierter Gewalt vor Gericht. Es wird betont, dass es notwendig ist, Kontrollmechanismen einzuführen, um den Missbrauch von Daten zu verhindern und das Vertrauen in die Polizei zu wahren. Zudem wird auf die Problematik von Reichsbürgern innerhalb der Polizei hingewiesen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 8,
+        "startSec": 8420,
+        "endSec": 8946,
+        "generatedAt": "2026-01-02T18:47:51.856Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Sächsisches Polizeigesetz",
+      "subject": {
+        "coarse": "Law",
+        "fine": "Policing"
+      },
+      "durationSec": 325,
+      "positionSec": 8926,
+      "summary": "In Sachsen wird ein neues Polizeigesetz eingeführt, das ähnliche Einschränkungen der Rechte und Freiheiten mit sich bringt wie in anderen Bundesländern, darunter Bayern und Nordrhein-Westfalen. Dies betrifft insbesondere die Bedingungen, unter denen Personen in Gewahrsam genommen werden können, oft ohne klare Begründung. Am 26. Januar fand in Dresden eine Demo mit tausenden Teilnehmern gegen das neue Gesetz statt. Es gibt Initiativen wie das Bündnis \"Polizeigesetz stoppen\", die sich gegen die neuen Regelungen einsetzen. Zudem wird auf einen neuen Podcast von Katharina Nocun hingewiesen, der sich ausführlich mit dem Thema Polizeigesetze beschäftigt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 7,
+        "startSec": 8906,
+        "endSec": 9271,
+        "generatedAt": "2026-01-02T18:47:54.443Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Österreich: Smart-Meter-Verweigerer verlieren Stromanschluss",
+      "subject": {
+        "coarse": "Policy",
+        "fine": "Smart Meter"
+      },
+      "durationSec": 312,
+      "positionSec": 9252,
+      "summary": "In Österreich verlieren Smart-Meter-Verweigerer ihren Stromanschluss, da Netzbetreiber nicht mehr verpflichtet sind, diese Kunden zu versorgen. Smart Meter sind elektronische Geräte, die den Stromverbrauch fernauslesen und regelmäßig übermitteln. Ein Gesetz aus 2010 erlaubt es Verbrauchern, keinen Smart Meter zu erhalten, jedoch gibt es Einschränkungen bezüglich der automatischen Übertragung der Zählerstände. Die Diskussion um Datenschutz und Überwachung durch Smart Meter wird ebenfalls angesprochen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 15,
+        "startSec": 9232,
+        "endSec": 9584,
+        "generatedAt": "2026-01-02T18:47:56.150Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "5G-Auktion",
+      "subject": {
+        "coarse": "Technology",
+        "fine": "5G"
+      },
+      "durationSec": 296,
+      "positionSec": 9564,
+      "summary": "Im Transkript wird die 5G-Auktion in Deutschland thematisiert, an der vier Unternehmen teilnehmen möchten: Deutsche Telekom, Vodafone, Telefonica und 1 & 1 (eine Marke von United Internet). Die Regulierungsbehörde wird im Februar entscheiden, ob diese Unternehmen für die Auktion zugelassen werden. Es gibt Unzufriedenheit mit den Vergabebedingungen, da etablierte Netzbetreiber Klage eingereicht haben und die neuen Anbieter Bedenken hinsichtlich der Planungssicherheit äußern. Bundespräsident Steinmeier erwähnt die Probleme mit dem Mobilfunknetz in Grenzgebieten zu Frankreich, Tschechien und Polen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "284-ts.json",
+        "method": "time-window",
+        "pickedCount": 10,
+        "startSec": 9544,
+        "endSec": 9880,
+        "generatedAt": "2026-01-02T18:47:58.448Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T18:47:58.448Z",
+  "transcriptFound": true,
+  "transcriptFile": "284-ts.json"
+}

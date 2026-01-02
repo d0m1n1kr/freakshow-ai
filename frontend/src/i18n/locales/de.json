@@ -29,6 +29,11 @@
   },
   "search": {
     "title": "Frag die Freak Show",
+    "titleByPodcast": {
+      "freakshow": "Frag die Freak Show",
+      "lnp": "Frag Logbuch:Netzpolitik",
+      "ukw": "Frag UKW"
+    },
     "queryLabel": "Query:",
     "placeholder": "Frage eingeben...",
     "button": "Los",
@@ -57,6 +62,15 @@
       "persona2": "roddi: Kannst du mir Tipps zur Hausautomatisierung geben?",
       "neutral": "Neutral: Apple Quo Vadis?"
     },
+    "examplesByPodcast": {
+      "lnp": {
+        "discussion1": "Linus Neumann VS Tim Pritlove: Was haltet Ihr von Apples Reaktion auf den Digital Markets Act",
+        "persona1": "Linus Neumann: Was hältst du von der digitalen Patientenakte"
+      },
+      "ukw": {
+        "neutral1": "UKW: Wie ist die Lage in der Ukraine?"
+      }
+    },
     "discussionMode": {
       "none": "Kein Diskussionsmodus (Einzelperson)",
       "selectSecond": "Zweiter Diskussionspartner",
@@ -74,15 +88,16 @@
     }
   },
   "about": {
-    "title": "Über das Projekt",
-    "subtitle": "Technologien und Werkzeuge hinter der Freak Show River Visualisierung",
-    "freakshow": {
-      "title": "Freak Show",
-      "description": "Dieses Projekt basiert auf dem Podcast Freak Show. Mehr Infos unter "
-    },
+    "title": "Über PodInsights",
+    "subtitle": "Technologien und Werkzeuge hinter der Podcast-Visualisierung",
     "projectDescription": {
       "title": "Projekt-Beschreibung",
-      "content": "Diese interaktive AI-Anwendung analysiert und visualisiert die Themen und Sprecher des Freak Show Podcasts über die Jahre. Durch KI-gestützte Textanalyse, semantische Suche und Clustering-Algorithmen werden Themen gruppiert und deren zeitliche Entwicklung in River-Diagrammen dargestellt. Mit Speaker-Personas und Diskussionsmodus können Fragen im Stil der Podcast-Hosts beantwortet werden. Das Projekt wurde auf dem 39C3 entwickelt."
+      "content": "Diese interaktive AI-Anwendung analysiert und visualisiert die Themen und Sprecher von Podcasts über die Jahre. Durch KI-gestützte Textanalyse, semantische Suche und Clustering-Algorithmen werden Themen gruppiert und deren zeitliche Entwicklung in River-Diagrammen dargestellt. Mit Speaker-Personas und Diskussionsmodus können Fragen im Stil der Podcast-Hosts beantwortet werden. Das Projekt wurde auf dem 39C3 entwickelt."
+    },
+    "supportedPodcasts": {
+      "title": "Unterstützte Podcasts",
+      "loading": "Lade Podcasts...",
+      "none": "Keine Podcasts konfiguriert"
     },
     "multiPodcast": {
       "title": "Multi-Podcast-Unterstützung",
@@ -272,8 +287,8 @@
       }
     },
     "footer": {
-      "madeWith": "Erstellt mit ❤️ für den",
-      "podcast": "Freak Show Podcast",
+      "madeWith": "Erstellt mit ❤️ für",
+      "podcast": "Podcast-Analysen",
       "copyright": "© 2025 • Alle Daten basieren auf öffentlich verfügbaren Podcast-Informationen"
     }
   },

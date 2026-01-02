@@ -1,0 +1,934 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:02",
+      "text": "Guten Morgen Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:03",
+      "text": "Alte Socke hast du da mit allem Recht behalten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:06",
+      "text": "Ja außer da wo ich Geld gesetzt habe ich also meine letzte Hoffnung mein Fünfer zurückzubekommen ist der brexit jetzt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:33",
+      "text": "Logbuch Netzpolitik Nummer 282 vom 14. Januar 2019 und,\nja nach dem mal wieder ganz buntes Deutschland,\nsich unseres Gesprächs Themas angenommen na ja die war ja schon vorher am diskutieren aber man hatte das Gefühl irgendwie gings die ganzen Tage nur\ndarum worüber wir auch in der letzten Sitzung schon so ausführlich gesprochen haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:04",
+      "text": "Jetzt wahrscheinlich nicht anrufen obwohl das Thema Gesetz sonst hätte sich ja keine Sau dafür."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:11",
+      "text": "Na ja du bist ja dann auch gleich schon wieder durch alle Talkshows der Mitte der Welt getourt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:16",
+      "text": "Eine eine Talkshow reich und ganz viele Radiosendung eine eine Talkshow Markus Lanz erfahre ich das war das war sehr nett muss ich tatsächlich sagen.\nJa ja also die betet ein unglaublich nettes Team dort und das hat tatsächlich aber einfach angenehm und freundlich und nett da kann ich ihn kann ich echt nicht anders sagen.\nObwohl der Kubicki da war sie auch eigentlich ganz lustiger Vogel so ne dass ich fand das tatsächlich ganz ganz ganz nett dort kann mich nicht beklagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:57",
+      "text": "Wollen wir dann erstmal mit Feedback anfangen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:02",
+      "text": "Genau also ich habe relativ viel Feedback aufgenommen deswegen versuche ich das jetzt relativ schnell auch durchzuarbeiten und zwar in der Reihenfolge wie es hinterlassen wurde\nGeorg kommentiert durch liebes Aussagen bekommt man den Eindruck Siegismund Fabian.\nSei möglicherweise an der rechten Gesinnung und deswegen nicht unter den Opfern.\nUnterwirt gesagt hat sich aber in seinen Videos klar gegen Rechts positioniert,\nund aktiv versucht Aufklärung unter seinen Zuschauern zu betreiben also habe ich glaube ich nicht beabsichtigt oder hoffentlich auch nicht getan dass ich ihn da in der rechten Gesinnung,\nbeschuldigt habe auf jeden Fall nicht meine Absicht mir ist.\nNur aufgefallen dass das trotzdem relativ viel über den Angreifer und seine Motivationen verrät finde jemanden Hack den er respektiert und dann die Daten aus Respekt nicht zu veröffentlichen\ntrotzdem aber nicht an sich halten zu können und damit angeben zu müssen dafür dass er den gehackt hat als es,\ndeutete mal wieder sehr auf Ihren die komische Motivationslage des Angreifers hin da kommen wir ja später auch noch zu.\nDann haben wir uns ja relativ ausführlich noch über Sicherheitsmaßnahmen unterhalten die relativ sinnvoll sind natürlich sind wir dann noch\n2/3 mehr eingefallen und wir fahren jeden Tag noch mehr ein deswegen habe ich da auch noch einen kleinen Blogpost zugeschrieben den man unter Linus Neumann de finden kann auch da nicht vollständig aber schon mal die wichtigsten Sachen\njedenfalls kommentierte zu der Idee verschlüsselte Backups in der Cloud.\nLara angenommen ich lade heute meine Backups vorab verschlüsselt nach dem derzeitigen Stand der Technik in mein S3 bucket oder etwas Vergleichbares es Treiber SS3.\nS3 bucket S3,\nS3 bucket ist bei bei Amazon secure simple storage also sind Cloudspeicher die man sich bei Amazon zu Gigabyte Preisen mieten kann.\nIch lasse die Daten da über die nächsten 20 Jahre liegen.\nSelbst wenn dich die Dateien feuerlösche könnte es ja sein dass Amazon sie auf ewig aufbewahrt wie wahrscheinlich ist es aus deiner Sicht das in 20 Jahren quantentechnologie verfügbar ist mit deren Hilfe\nsich die heute verfügbaren kryptoverfahren ohne allzu großen Aufwand brechen lassen dann wären meine Daten ja für Dritte einsehbar wenn auch zeitlich versetzt\nnun wie wahrscheinlich das sein wird das also in dem Fall würde man wahrscheinlich eine AES-Verschlüsselung wählen wie wahrscheinlich das ist das.\nAis in 20 Jahren gebrochen ist oder nicht kann ich nicht als Wahrscheinlichkeitsaussagen sagen kannst nur als ne,\ntheoretisch möglich Aussage sagen und es scheint theoretisch möglich zu sein aber.\nDie Frage die ich denke.\nDie sich hier stellt ist Lara denkt das schon genau richtig man muss sie natürlich überlegen Mannschaft sich dadurch wieder ein anderes Angriffs Risiko nämlich was ist wenn jemand,\nin 20 Jahren\nden Advanced encryption Standard oder was auch immer ich benutzt habe geknackt hat und dann meine Dateien entschlüsselt werden den würde ich in Antworten.\nIn 20 Jahren wäre ein unverschlüsseltes Backup schon zehnmal verlorengegangen ja also da wären schon da wäre der hätte schon 20 Datenlecks gegeben auch wenn es kaputt ist wird es im Zweifelsfall nicht ohne Aufwand,\nentschlüsselt werden können sondern es wird halt jeden Aufwand geben also wenn Verschlüsselungsverfahren\nder geknackt werden dann ist es in der Regel braucht es einen Aufwand sie zu knacken und dieser Aufwand kostet zu Beginn sehr viel Geld und dann irgendwann vielleicht zehn Jahre später\nnichts mehr oder nur noch wenig das heißt es wird immer noch mit Aufwand verbunden sein das Backup zu entschlüsseln und.\nDie dieser Aufwand wird wahrscheinlich für eine ganze Menge anderer Daten als erstes getrieben als dein Backup\nund in der Zeit könntest du dann eben darauf immer noch darauf so dafür sorgen dass dein Backup gelöscht wird denn in Zweifelsfall lässt du das ja nicht 20 Jahre dort einfach liegen.\nGrundzahl 20 Jahre dafür sondern besetzt dass unter Umständen wenn der AF Bruch immer näher an dem am Horizont erscheint durch ein anderes jetzt könnte es sein dass Amazon ausgerechnet dein\ndein Backup aufbewahrt um das 20 oder 30 Jahre später mit quantencomputing zu knacken ich würde einfach nur davon ausgehen alle anderen Wege,\nhaben dir früher Probleme also haben die Andy früher an den Zustand eines Problemes geführt als das zu darauf zu vertrauen.\nAlso.\nIch finde genau richtig über so über das nächste Risiko nachzudenken und das eben auch zu evaluieren man muss ja nur genau darüber nachdenken was sind denn jetzt hier wahrscheinlich eintretende Bedingungen ja z.b. habe ich heute auch irgendwie so ein Artikel gelesen\ndas wie groß der vorgewarnt wird das Zwei-Faktor-Authentifizierung über SMS,\nauch nicht der Weisheit letzter Schluss ist weil ja SMS auch über SIM-Karten cloning über wenn sie über 2G zugestellt werden geknackt werden können alles richtig,\naber ein Account ohne zwei Faktor über SMS ist noch schlechter gesichert ja also keine einzige Sicherheitsmaßnahme die irgendjemand empfiehlt,\nist ultimativ sein es geht immer um die Kombination,\nund das mit dem SMS habe ich glaube ich schon in meiner Stellungnahme geschrieben zu dem LG ist.\nWeil ich vor fünf Jahren oder so habe ich haben wir das schon klar mehr da auch schon drauf hingewiesen das heißt aber nicht dass das man,\ndarauf verzichten sollte das ist ein Unterschied zwischen auch diese Sicherheitsmaßnahme ist nicht ultimativ und deswegen verzichten wir auf sie ja das sind zwei sehr unterschiedliche paar Schuhe und in diesem Fatalismus,\ndarf man da nicht verfallen dann haben wir uns darüber unterhalten das ja beim 35 C3.\nFlaggen geklaut wurden.\nWurde in an verschiedenen Stellen im im Internet berichtet etwas eigentümliche Nummer sollte wohl oder es wird vermutet dass damit ein Zeichen gegen Nationalismus,\nder gesetzt werden sollte und hier hat sich bei uns in den Kommentaren Joshua gemeldet in der zum Kommentar ich mal ganz vorlesen werde.\nHallo ihr beiden die geklauten Flaggen waren meine und wurden geklaut während ich geändert habe also als freiwilliger Helfer,\nauf dem Kongress mitgearbeitet habe die Hackerspaces aus dem Norden hatten keine eigenen also habe ich meine Flaggen mitgebracht,\ndas tut mir besonders weh da ich mir derzeit einfach keine neuen Flaggen leisten kann nachdem ich darüber getwittert hatte,\nhaben sich einige Leute gemeldet und mittlerweile.\nWerden diese allerdings ersetzt also wahrscheinlich hat sich Geld wurden diese Annette wären diese ersetzen bekommt also neues sehr freundlich von allen die da eingesprungen sind.\nNatürlich hinterlässt das jetzt kein besonders gutes Gefühl bei meinem ersten kongressbesuch und das hatte mich an Tag 4 auch echt fertig gemacht.\nIch habe mittlerweile eine E-Mail bekommen und weiß zumindest wer das Graffiti Capture the Flag no borders no Flex an die Trennwand geschrieben hat.\nAllerdings sagt dieselbe Person auch das sieht die Flaggen nicht,\nden Nationalismus Vorwurf der mir immer wieder zugetragen wird kann ich nicht nachvollziehen die Flaggen von Schweden Norwegen Dänemark und EU waren schließlich Wegweiser und sollten es leichter machen nordischen,\nHackerspaces die nordischen Hackerspaces und die ist Emily the cold north zu finden außerdem waren es ja Flaggen von mehreren Ländern also sind symbolisiert das doch eher Weltoffenheit als nationalistische Verschlossenheit,\nfalls noch jemand eine finnische Flagge findet Helsinki Heckler vermisst auch noch eine kleine finnische.\nDc7ia,\nso in der PS ich hätte die Flaggen auch echt gerne wieder ich will auch gar nicht wissen wer es war ja die Flaggen hatten auch einen emotionalen Wert und war nicht einfach wertlose Symbole zum wegwerfen,\nsollten diese jemanden beim Abbauen noch aufgefallen sein 1,50 m mal 90 cm jeweils Schweden Norwegen Dänemark."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:53",
+      "text": "Ja das zeigt wieder mal schön wie sowas komplett in die falsche Richtung läuft also ich finde die Aktion nach wie vor scheiße."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:06",
+      "text": "Ja ist also wenn man kann da ja von mir aus ins Gespräch treten wenn man sich von einer schwedischen oder norwegischen Flagge irgendwie beleidigt fühlt.\nEs ist einfach ja ist bedauerlich und könnte könnte mal sehen was er da jetzt geil ist gemacht habe coole Aktionen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:25",
+      "text": "Genau erster erster Kongress Besucher super Eindruck vom Kongress irgendwie voll voll die offene Community ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:34",
+      "text": "Vielen Dank an Andy fahren Sammler."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:38",
+      "text": "Genau also falls ja irgendwie zufälligerweise zu hören solltest oder reingehört werdet dann pack die Dinger mal ins.\nPaket wenn er euch da nicht traut ist direkt zu schicken könntest auch zu uns schicken und schicken wir es dann aber weiter oder."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:54",
+      "text": "Ja also direkt schicken ich weiß gar nicht ob Joscha seine E-Mail."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:57",
+      "text": "Ja ich denke da."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:58",
+      "text": "Das macht man heute ja nicht mehr so gerne dass er seine Adresse nirgendwohin schreibt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:03",
+      "text": "Ja eben deswegen würde ich mich da."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:05",
+      "text": "Eine Metaebene die Metaebene ist gerne Treuhänder für für sämtliche Nationalflagge."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:12",
+      "text": "Schickt mir alle Nationalflaggen der Welt Länder der Welt kommt zu mir so aber jetzt bitte nicht irgendwelche Flaggen schicken soll wenn dann schon auch bitte genau die mit dem immozionale wert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:26",
+      "text": "Und nur treuhänderisch.\nDann fragt Wolfgang ist es denn nicht auch gefährlich alle Passwörter in einer zentralen Stelle zu haben wenn also bei einem\nPasswort safe das passt doch kaputtgeht kommt man doch auf einmal an alle Informationen oder nicht ja das hat er Wolfgang vollkommen recht das ist das neue Risiko,\nwas man sich dadurch eintritt wenn man ein Passwort safe,\neinrichtet in dieser Form dem würde ich entgegenhalten dass dieses Risiko wenigstens überschaubar,\nund irgendwie menschengerecht verständlich ist ja längeres Passwort ist länger geschützt und man spart sich eben dafür viele andere Risiken die man sich eintritt wenn man nun eine.\nWenn wir jetzt überall das gleiche Passwort verwendet oder irgendwie so eine eine naive,\nPasswort Ableitungsfunktion wo man dann irgendwie sagt bei bei web.de ist das Passwort web.de Passwort und bei den anderen ist das Passwort Gmail Passwort oder so,\nund vor allem ist diese sind technische Verschlüsselungsmethoden eben doch um einiges besser als.\nDas was man jetzt irgendwie vielleicht mit dem Stift und Papier hinkriegt insofern,\ndurchaus hat diese Methode wie jeder andere auch ein neues Risiko eine Schutzmaßnahme ist immer auch eine Verlagerung,\nder Risiko Oberfläche ja oder mit also man hat auf einmal woanders ein Risiko\naber dieses Risiko an der Stelle mit dem verschlüsselten Passwort safe ist eben eines was wir als Menschen ganz gut verstanden haben und was wir auch halbwegs sinnvoll kontrollieren können.\nDu hast ja auch den Vorteil sollte dein Part das Passwort deines Passwort safe,\ndir Abhandenkommen dir also nicht abhanden sondern jemand anderes in Erfahrung bringen und du merkst das kannst du sofort ändern und hat alle Passwörter wieder neu geschützt ja also du hast du\nkauf dir hier eine ein kleines größeres Risiko und verlierst dafür eine Menge anderer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:42",
+      "text": "Tanja hat mir noch ein Hinweis zu unserer Aufreihung Spenden würdiger Organisationen da hatten wir ja eine kleine Auswahl getätigt die in unseren Augen und unserer Meinung nach\nEmpfangs Würdigkeit aufweisen,\ndiese Liste kann man natürlich beliebig fortführen es wurde dann noch drauf hingewiesen das ja\nauch die Electronic Frontier Foundation hier gemessen an unserem\nAntra Maßgabe spendet dahin wo wirklich was passiert nun also wo es tatsächlich messbare Ergebnisse gegeben hat ist natürlich TIFF auch ganz vorne\nallerdings hatten wir uns im Wesentlichen zunächst einmal auf den deutschsprachigen Raum konzentriert wenn ich das richtig sehe aber die FFK mal an der Stelle natürlich auch,\nerwähnen da wohnen wir drauf hingewiesen von hirnblockade Namen Kommentar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:37",
+      "text": "Ebenfalls würden wir glaube ich noch darauf hingewiesen neubörm haben wir vergessen zu erwähnen ich meine da ist Max Schrems hat nicht nur einmal unter Beweis gestellt dass da was passiert wo er im Auftritt.\nUnd wirkt also n-way Obi non of your business 9 und 3 wurde auch noch erwähnt ja also.\nBitte nicht beleidigt sein wenn wir zu ihr und ich hatte ja schon gesagt irgendwas haben wir vergessen entscheidend ist denke ich viel weniger was wir empfehlen sondern wo ihr sagt da passiert etwas mit dem Geld und das was da passiert davon möchte ich mehr haben.\nDann wurde kommentiert eine Frage von Alberto glaube ich warum Links nicht an,\nschicken das habt ihr nicht beantwortet was wird denn Schreckliches passieren vielleicht ist es eine blöde Frage aber wenn ihr Infotainment vorgemacht müsst ihr damit rechnen dass blödes wie ich daher komme,\nmehr wissen wollen gibt keine blöden Fragen gibt nur blöde Antworten deswegen erkläre ich auch das natürlich sehr gerne das Thema mit den Links,\nrührt daher dass es sehr einfach ist ein Link an eine andere,\nStelle zu setzen also wenn du eine eine E-Mail-Nachricht bekommst und da steht irgendwie groß drauf was weiß ich Volksbank oder was und dann steht da ein riesiger blauer Knopf und da steht drauf klicke bitte jetzt hier.\nUnd du landest dann auf einer anderen Seite als der tatsächlichen Seite der Volksbank dann bist du.\nOpfer eines Phishing Angriffs geworden und es ist äußerst schwierig das,\nzu jeder Sekunde deines Lebens genau richtig zu erkennen und deswegen ist dein Vorschlag würde es reichen den Link zu kopieren.\nDabei einen Buchstaben wegzulassen und den beim peesten manuell einzugeben mir ist nicht ganz klar was die Idee soll mit dem einen Buchstaben weglassen.\nDas erschließt sich mir nicht so ganz im entweder ist der Link\neindeutig oder bei diesem Phishing Seiten in der Regel antwortet die eh immer nur die Phishing-Seite egal was du dahin schickst das hilft also allenfalls bringt das deren Tracking durcheinander aber solange die am Ende deiner\ndeine Zugangsdaten haben.\nDann kommen sie auch noch schön an dein Konto dran es ist tatsächlich das ist das Klicken von links in Emails ist das wo die meisten Menschen.\nZu Hecking opfern werden die halt oder einem Angriff zum Opfer fallen das ist das Einfallstor numero,\nUNO und deswegen ist es sehr gut sich da von vornherein das abzugewöhnen das überhaupt zum."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:33",
+      "text": "Kleiner Tipp falls ihr\neigentlich meint der Link sei wohl doch schon in Ordnung aber euch aus irgendwelchen Gründen dann doch nicht so sicher seid oder mal ganz sicher gehen wollt man kann z.b. auf der Kommandozeile mit passenden Tools sowie Curl oder so mal eben auf solche URL zugreifen\ndann findet halt der Zugriff statt ohne dass er gleich so ein kompletter.\nBrowser von außen mit Daten befüllt werden kann und wenn da kuriose Weiterleitungen stattfinden oder merkwürdige Daten angeflogen kommen die nicht aussehen wie eine Webseite\nsieht man das dann an der Stelle halt sofort ohne dass dann eben etwas aktiv ist was auch ausgenutzt werden kann von solchen.\nAngreifer."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:22",
+      "text": "Ich werde trotzdem vorsichtig ich würde auch da das ist kein kein absoluter Rad ein absoluter Rad ist,\nklick einfach nicht auf die Links wenn Amazon was von dir will\ngehe über deinen Bookmark zu Amazon und log dich dort ein im Zweifelsfall bist du schon eingeloggt und du kannst sehen was die von dir wollen das gleiche gilt für deine Bank und für alles andere bevor der jetzt noch mit mit curl Hand hier ist oder so,\neinfach."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:46",
+      "text": "Lisa ist er ja nur,\nnaja ist ja guck mal wenn du bin ich jetzt gerade mich irgendwo registriert habe in einem neuen Portal dann kriege ich irgendwie 30 Sekunden später eine Mail mit den Stick Sie hier auf den Link und dann ist da die E-Mail bestätigt ist die Wahrscheinlichkeit\nrelativ gering aber wenn man auch in solchen Momenten der Totalen Sicherheit aus irgendwelchen Gründen sicher gehen will dann wäre das eine Methode."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:09",
+      "text": "Aber genau da kriegst du Weiterleitung weil diesen Bestätigungslink aber es stimmt natürlich wenn man sich bei einem Portal anmelden manchmal gibt's halt so\nalso ein unerwarteter Link den ich in der wo ich weiß wo wo ich auch im Browserfenster noch stehen habe gehen Sie bitte jetzt in Ihr E-Mail-Postfach.\nUnd so gucken sie dass da eine E-Mail von uns ist und ihre Anmeldung zu bestätigen ja\nnatürlich kriege ich so einen Link ja weil das irgendwie weil da steht in dieser Sekunde mir diese E-Mail geschickt und die kommt in der Sekunde an ja aber wenn also üblicherweise diese Phishing Angriffe heutzutage noch zeichnen sicher er dadurch aus,\ndass sie unerwartet kommen und in der Regel mit einem.\nUngemachte und dazu noch mal empfohlen habe ich glaube ich in der letzten Sendung auch dieser kleine Artikel den ich dazu mal geschrieben habe den ich auch auf meinem Blog veröffentlicht oder zu Seite.\nVerlinkt habe dann haben wir noch eine nee den hatten wir.\nDas meine schon ozium sortiert im."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:17",
+      "text": "Nein aber ich nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:17",
+      "text": "Dann kommentiert Rainer.\nIch hatte ja erklärt dass ich Backups gerne an an unterschiedlichen Stellen verteile.\nWie hältst du die Backups aktuell oder nimmst du mit deiner Eichhörnchen Strategie einfach in Kauf dass du eventuell nur Backups wieder findest,\ndie die Daten der letzten paar Jahre nicht,\n3 Jahre alt werden die Backups sich aber um das noch mal zu erklären mit der Eichhörnchen Strategie natürlich inzwischen blicke ich auf irgendwie einen Datenstand von,\nvielen Jahren zurück.\nUnd natürlich ist es da schön auch zu wissen dass man was was ich vor fünf Jahren mal ein Backup der davor gelegenen 15 Jahre irgendwo positioniert hat.\nZweitens gibt Orte an die man häufiger geht und es gibt Orte an die man nicht so häufig geht was ich z.b. vielen Leuten empfehle ist wenn man jetzt z.b. so ein Mac hat mit Time Machine.\nZwei Festplatten kaufen kleine handliche tragbare nicht irgendwelche riesige Klumpen sondern es gibt diese,\nwas ist da drin zweieinhalb Zoll sind da wahrscheinlich drinnen an an Einbaugröße oder wie die heißen von western Digitals irgendwie 2 Terabyte,\nvon 60 € oder so oder so eine so eine Platte direkt zwei kaufen beide.\nFull Disk encrypted als TimeMachine Backup nutzen.\nUnd dann geht man immer schön hin und wechselt was weiß ich jeden Freitag oder jeden zweiten Freitag,\neinfach die Platte die zu Hause steht mit der Platte Liebe am Arbeitsplatz steht ja finde ich z.b. eine sehr schöne,\neine sehr schöne Möglichkeit oder man hat einfach an beiden Orten eine ja wenn ich,\nmorgens wenn ich Tag acht Stunden im Büro sitzen dann kann da in Ruhe ein Backup rödeln und wenn ich am Wochenende zu Hause sitze kann da in Ruhe Entdecker brodeln oder man wenn man jetzt einen stationären Rechner Backup dann hat man eben zwei.\nUnd lagert eben immer mal wieder eine von beiden woanders aushält somit beide auf dem aktuellen Stand.\nAuf dem halbwegs aktuellen Stand und wichtig ist eigentlich dass sich die Daten.\nIn irgendeiner Form halbwegs an einem anderen Ort befinden Land erst so dass dass die nicht in der gleichen Tasche sind die geklaut wird\noder die in den See fällt und oder nicht in der gleichen Wohnung die niederbrennen oder oder in die eingebrochen wird das reicht ja dann schon,\nfür die für die meisten Fälle um sich einfach unglaublich viel Leid und Ärger zu ersparen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:01",
+      "text": "Gut damit haben wir genug Beratung nachgeliefert würde ich sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:08",
+      "text": "Genau in kleinen Blog-Post habe ich da so als Checkliste ich kann mir gut vorstellen dass das schwierig ist wenn man jetzt irgendwie,\nimportcars die Empfehlungen hört sich die allem zu merken deswegen habe ich so eine klitzekleine Checkliste verblockt Artikel dazu ist in den."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:25",
+      "text": "Ja du hast ja auch Leute animiert gleich passende YouTube Videos zu machen mit entsprechenden Zusammenfassung also das verdicken war auch noch mal."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:35",
+      "text": "Stimmt auf YouTube ist es auch noch das können wir auch noch da reintun genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:39",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:40",
+      "text": "Zug video.\nSo und dann kommen wir ja wie es weiterging im doxing Fall ich habe mich ja in der letzten Sendung relativ weit aus dem Fenster gelehnt.\nUnd habe gesagt den werden die relativ bald haben und die letzte Sendungen haben wir am 6. Januar aufgenommen und im Zweifelsfall haben sie den Täter schon quasi während unserer Sendungen Finke Sitzsack."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:09",
+      "text": "As we speak sozusagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:11",
+      "text": "Würde das aber erst glaube ich zwei Tage oder drei Tage später bekanntgegeben zwar hatte ich dann auch noch im,\nfertig mit allem mit der dpa die hatte mich dann auch noch mal dazu gefragt ob ich denn davon ausgehe dass Sie den Kriegen oder nicht und auch da habe ich mich dann weit aus dem Fenster gelehnt und habe gesagt.\nKann nicht lange dauern das hilft ich habe aber bei der dpa die ein Schalke gemacht wenn kompetente Polizisten auf der Erbse."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:42",
+      "text": "Da kam sie alle ins Grübeln."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:46",
+      "text": "Naja es ist ist kursierten halt das ist glaube ich bis heute nicht öffentlich es kursierten halt so ein paar Datenpunkte relativ schnell in verschiedenen Kreisen,\ndie dann doch in eine sehr entschiedene Richtung zeigten.\nIch erzähle jetzt mal hier hauptsächlich davor sich auch in in öffentlichen Quellen gefunden habe.\nKommen wir mal zu dem Täter Selb,\nder ist das für ein ich auch ganz interessant dieser dieser Täter wurde ja dann von den Journalisten und Journalistinnen auch sofort,\ndie einen haben dann halt den den Nachnamen Vornamen und die anderen haben das Dorf geschrieben und am Ende konntest du dir relativ schnell\nzusammensuchen werden da wahrscheinlich ist dann wurde noch im dritten Fernsehbeitrag das Haus gezeigt und dann hatten sie den den Täter halt auch gejoggt.\nAlso ist das ist halt die die Ironie des Schicksals vantis."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:53",
+      "text": "Sollten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:54",
+      "text": "Der hat sein also das womit er laut also.\nEs gibt eine Person die sich als quasi Kronzeuge oder so darstellt und sagt sie habe den entscheidenden.\nTipp gegeben der zur Ergreifung des Täters geführt hat und die erzählt die Variante so.\nDer Täter hat bereits 2016.\nUnter einem damals noch anderen Pseudonym die Konten der Youtuber Jan Meyer und Brammen übernommen beide kenne ich nicht aber die sind bekannt.\nLied habe ich schon mal gehört."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:42",
+      "text": "Jaja PietSmiet ist schon echt einer der bekannteren Youtuber apecrime ist wohl der Hände von dem Jan Meyer."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:51",
+      "text": "Gut die wurden 2016 gehackt und der wieder lachen weil das ein eine einzige Werbung für den Vortrag von Thorsten und mir.\nAlso der Täter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:08",
+      "text": "Bin ja auch gehalten habt während er gerade aktiv wurde."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:11",
+      "text": "Leider war glaube ich schon fertig da der nur noch veröffentlichte aber da hat er gesagt da war er."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:15",
+      "text": "Aber da der bestimmt weitere Fehler gemacht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:19",
+      "text": "Dachte er auf weitere Fehler gemacht ja,\nund zwar hat er ein VPN benutzt ja und das ist man benutzt das Wort wenn man sicher sein möchte benutzt man sowieso kein VPN weil die VPN Anbieter\noder mehrere VPN Anbieter einen bekanntermaßen verraten und,\ndiejenigen die es nicht tun den muss man Vertrauen und eine der wichtigen Regeln unseres Vortrags war ja wir wollen einfach nicht darauf angewiesen sein irgendjemanden Vertrauen zu müssen insofern ist es völlig egal ob deine VPN Anbieter\nder cool ist oder nicht ja du willst niemanden in der Situation wissen.\nDass du ihm vertrauen musst diesen Fehler hat der gute Junge mehrmals gemacht aber er hat jetzt dann noch dazu den Fehler gemacht dass das VPN auf seiner auf seinem eigenen Rechner lief.\nUnd quasi TV VPN Verbindung abgebrochen ist und in dem Moment,\nmacht der Rechner einfach ganz normal weiter der geht nämlich dann über seine normale IP das heißt er hat nicht seine Routing so konfiguriert dass der einzige Weg den der Rechner überhaupt,\nins Internet kannte durch dieses VPN führte.\nKann man mit ein paar einfachen ip-devils Regeln auf einer Maschine hinkriegen es empfiehlt sich aber auch das haben wir in unserem Vortrag gezeigt.\nQuasi einfach ein eigenes Netzwerk zu bauen wo der einzige Weg nach draußen das VPN ist und wenn dieses VPN stirbt die Verbindung stirbt dann haben deine Rechner keine Internetverbindung mehr.\nDiesen relativ.\nBasalen Sicherheitsmechanismus hatte der Täter nicht und hat somit dann seine IP-Adresse Zufälle also die seinem Elternhaus zuordenbare IP-Adresse.\nAm Tatort hinterlassen und hat dann weil offenbar hier PietSmiet und apecrime anzeigen gestellt haben auch relativ zügig.\nBesuch vom BKA bekommen das in dem Fall.\nMehmet hat nun jetzt hat er den nächsten Fehler gemacht ich habe das erklärt mit man will niemanden vertrauen.\nEr hat dann quasi live aus einer Hausdurchsuchung an seinen Mittäter und späteren,\nja\nVerräter sorry in seinen späteren von seinem Kumpel Mittäter und verrät,\ngeschrieben wo die Bullen kommen gerade ja und hat da dazu auf den Telegramm benutzt auch das wär jetzt nicht meine erste Empfehlung,\nfür.\nIn dem Moment als die Polizisten jetzt also bei diesem anderen an einen Dritten der,\nglaube ich inzwischen freiwillig im Fernsehen war insofern glaube ich brauche ich ihn auch nicht mehr zu anonymisieren das war der Jan der Jannis.\nDer hat halt dann als ihm bei ihm die Polizei vor der Tür stand gesagt ja nee das muss der und der gewesen sein,\nder hat übrigens an Demo dem Tag 2016 nach Hausdurchsuchung gehabt und dann war das für die für das BKA natürlich die führen ja grob Tagebuch über ihre Aktionen da mussten der Tisch nur noch schnell in die Datenbank schauen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:49",
+      "text": "Wurde denn da waren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:50",
+      "text": "Wo waren wir denn wo waren wir der 40-50 wie heißt dieses location tracking von Google."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:57",
+      "text": "Zeit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:59",
+      "text": "Die haben ihre timeline geschaut auf den Google Tracking und haben eingesehen AWO waren wir da auch alles klar dann gehen wir mal dorthin so.\nEr wurde dann der Täter geschnappt Jan es hat dann auch noch über den Täter erzählt,\nder habe öfter davon berichtet dass er dann auch tatsächlich zu den Adressen hingefahren ist ne was dann echt normal die ganze das ganze offen etwas,\nnoch creepy Aris Level bringt also bei Böhmermann hätte z.b. vor der Tür gestanden und hätte um die Daten zu.\nZu apfelkleid zu verifizieren noch mal ein Foto vom Briefkasten gemacht.\nWo ich hoffe der kriegt jetzt die die Hilfe die er braucht dann wichtiges Thema.\nWar das jetzt politisch motiviert oder nicht zu dem zudem,\nals dieser Fall in den Medien war oder als dieser Fall als erstes behandelt wurde gab es einfach eine ganze Reihe an Presseanfragen an,\nnetzpolitik.org was sieht der auch das gesamte Team von Let's petit coq in den Medien Markus Beckedahl Constanze Kurz\nAnne CCC natürlich,\nwo ja auch Constanze Kurz die als Sprecherin ehrenamtliche Sprecherin des TTC ebenfalls die Presseanfragen erhält\nFrank Rieger und ich und wir haben dann letztendlich Erdgeister auch noch dabei im Prinzip haben wir hat ja ganze CCC dann zwei Tage lang diese ganze Pressearbeit gemacht.\nUnd Constanze war im ZDF wohl gefragt worden\nob sie wie ist der mit der politische Motivation aussieht und sie hat dann gesagt na ja also man sieht ja hier relativ da eine Partei fehlt und die meisten Leute die da irgendwie zu Wort kommen.\nDie haben sich jetzt irgendwie nicht besonders liberal positioniert das deutet schon.\nAuf eine politische Ausrichtung hin woraufhin dann irgendwie Henryk Broder kennst du die."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:09",
+      "text": "Ja das ist der ist ganz schön rechts ab."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:13",
+      "text": "Der hat ja der davon also ich meine der hat jetzt noch nie viele Sympathiepunkte gesammelt aber der Arbeit der schreibt er jetzt inzwischen nur noch auf sumsum Fringe Block dana Achse des Guten wo er sich denn irgendwie,\nmeine Güte das ist so peinlich ja also erstmal im ersten Satz sofort versucht irgendwie constanzes Äußeres zu beleidigen.\nMeine Güte ey und und dann irgendwie sagt so hahaha die Strategen die haben ja an alle 1000 Datenlecks durchgeschaut und wissen jetzt schon dass es ein rechter ist so ein Unsinn und in den Kommentaren hast du dann irgendwelche sofort sososo.\nSoja of the Spezialisten die sich dann beschweren dass diese linksradikalen immer anonym auftreten würden weil der Bruder nämlich nicht geschrieben hat wie die Constanze heißt sondern einfach nur sie noch nicht mal mit Namen benannt hat sondern einfach nur\nals unansehnliche Frau beschimpft\nja hast du direkt zu der Debatte die Linken sind immer anonym die Linken sind immer anonym das ist wirklich ein ein ein Klo und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:20",
+      "text": "Vor allem Konstanzer ist ja auch mega anonyme viel zu."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:23",
+      "text": "Ja gerade Constanze die anonyme Constanze keiner also das ist wirklich na ja aber warum."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:28",
+      "text": "Such mal such mal nach CCC Sprecherin was da so der Mensch ist oder matching Center ist sehr überschaubar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:38",
+      "text": "Es ist wirklich na ja aber ich ich erwähne das eigentlich nur weil das wieder so ein bisschen das 100 IV Mint wie vor Augen Wartezeit.\nIch bin immer wieder so ein bisschen ja wenn ich ehrlich sein soll auch ein bisschen amüsiert.\nWas das für arme Schweine sind die mit diesem wunderschönen Internet echt nichts besseres anfangen können als der irgendwie Gift rein zu gießen naja warum erwähne ich das nun ja weil der Täter.\nDann wohl auch sich in diese Richtung.\nGezogen fühlte was jetzt auch überhaupt keine Überraschung ist wenn man sich anschaut wie er schreibt denn darauf basierte ja auch unsere sofortige Analyse\nnun ja das BKA sagt der Beschuldigte gab an\ndass er die Daten ausgespäht und veröffentlicht hat und zwar weil er sich über die Geschädigten wegen bestimmter öffentliche Äußerung geärgert hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:36",
+      "text": "Geärgert ist eine sehr schöne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:38",
+      "text": "Hört sich geärgert so und das ist natürlich schade wenn du den geärgert hast aber das heißt ja nicht dass es politisch motiviert sein.\nJa und da hat er zwar nicht fertig auch auch auch ein sehr schönes sehr schön Artikel Recherche und Interview zu wo,\ngesagt wird wie unterscheidet sich denn politisch motivierte Straftat von einer allgemein Kriminalität und da wird halt ihr wie gesagt so politisch motivierte Straftaten sind,\nbedrohen vorallem die demokratischen Grundwerte unseres Gemeinwesens und die Achtung der im Grundgesetz konkretisierten Menschenrechten,\nwenn das nicht irgendwie der Fall ist oder du das gar nicht beabsichtigt hast sondern du dich nur geärgert hast dann ist das nicht unbedingt politisch motiviert dann ist das verwirrter Einzeltäter,\nund das sehr interessant weil indem in dem Interview rauskommt dass selbst die Morde des NSU ja,\ndie die haben sich ja auch nur geärgert,\nüber die Ausländer die sie dann einfach getötet haben ja das ist wird auch auch das wird nicht als politisch motivierte Straftaten geführt weil es eben damals wir kennen den Skandal ja zu genüge\ngibt es auch einen sehr guten Vortrag zu beim 35 C3 von nsu-watch natürlich an dieser Stelle empfohlen weil.\nDas geführt wurde ja damals eben die unter Bandenkriminalität und wenn du das einmal unter nicht politisch motiviert,\nim abgelegt hast dann müsstest du halt korrigieren und die Korrekturen werden erst am Ende des Jahres eingepflegt und hat irgendwie keiner drum gekümmert ja also wenn man sich aber jetzt die weiteren Recherchen anschaut weil der Täter ja.\nAus einer sei ich mal etwas.\nPubertären brollo Kultur stammt wo alle natürlich sofort den Mund aufmachen da haben sich natürlich einige Journalisten umgehört und,\ndenn dann irgendwie auch fest auch hier der Jan es bestätigt ja der Täter hat sich über die Aktion Reconquista Internet geärgert die sich gegen Reconquista germanica\ngerichtet hat da hat sich der Täter offenbar massiv dran gestört\nJulia Zitat er ist auf jeden Fall ein bisschen rechtsorientiert rechtsextrem auf keinen Fall würde ich jetzt mal sagen aber er hat ein starkes Problem mit den Flüchtlingen bzw mit der Flüchtlings,\nhat sich abgrundtief negativ über Flüchtlinge geäußert z.b. sowas gehört nicht nach Deutschland und genau so negativ zum Islam.\nDass das nämlich alles Terroristen sein also ich würde sagen der Täter war ein glasklarer Fall von das wird man ja wohl noch sagen dürfen.\nDer sich ein bisschen geärgert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:29",
+      "text": "Ja bisschen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:30",
+      "text": "Er war jetzt nicht recht da hat er Henryk Broder natürlich total recht ist ja nicht recht ansonsten,\nhat er irgendwie auf Twitter folgt er dem rechtsextremen Fake news portal anonymous news.ru."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:45",
+      "text": "Oh Gott das ist ganz furchtbar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:47",
+      "text": "Und seine Favoriten,\nenthielten auch innere also was er irgendwie bei Twitter Tweets die ihm gefallen haben diese Begriffe wie linksgrünversifft,\nund ähnliches aber wie gesagt das wird man alles wohl noch sagen dürfen.\nWir sind ja hier nicht bei der Gedankenpolizei und würden so jemanden jetzt Nazi nennen darf man ja auch gar nicht was gehört ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:10",
+      "text": "Nee machen wir auch nicht aber ich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:12",
+      "text": "Vollpfosten entweder."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:13",
+      "text": "Der ich ich könnte könnte mir auch ich habe auch den Eindruck dass er etwas rechts braun verschlägt ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:20",
+      "text": "Redstone verschlägt der Vollpfosten ist ein Kind und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:25",
+      "text": "Gebraucht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:27",
+      "text": "So dann weiter jetzt hier stehen geblieben.\nIch frage noch mal durch ach ja genau ansonsten hatte hat er wohl mit einem Youtuber Youtuber die Allgemeinen als DVA geführt wird und irgendwie.\nAuch sich offenbar mit Videos irgendwie an die Welt wendet aber irgendwie auf Korane uriniert oder sowas oder anzündet und sowas."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:01",
+      "text": "Ja das ist auch irgendwie ein ganz schräge durchgedrehtes Tini der da einfach die die hätte auch ordentlich vorantreibt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:11",
+      "text": "Sounter hat dann der auch davon war ein begeisterter Fan also ein klarer Fall von das wird man ja wohl noch sagen dürfen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:19",
+      "text": "Schau doch ein klarer Fall von verloren im Netz ja also was weiß ich ich kenne ja seine ursprüngliche Disposition nicht aber\nwir haben das Handy letzten 2-3 Jahren vielfach beobachtet Leute verlieren sich halt in irgendwelchen\nblasen und geraden dann in so eintrudeln Sohn raus weil sie dann halt einfach innerhalb dieser Welt einfach auch gar nichts anderes mehr\nwahrnehmen und wenn du dann halt erstmal\nan solchen vergifteten Brunnen ich schon diesen gerade erwähnten im. RO Portal,\nsaugst dann dann kommt auch nichts Gutes mehr in dich rein und dieser,\nÄrger ja oder Diesel Wut könnte man ja auch eher sagen die ist irgendwo dann auch unbegründet aber sie wird halt immer wieder verstärkt und immer wieder verstärkt,\nunklar,\nreicht das auch junge Leute sind nicht nur die alten Wutbürger die durchdrehen so dass es einfach auch ein generationenübergreifendes Ding und bei manchen\nführt eine Verwirrung nur dazu dass man glaubt die Erde sei flach das ja irgendwie noch zu ertragen aber wenn sich dann halt aktiv gegen.\nLeute richtet also entweder hier so allgemein Ausländer Flüchtlinge\ndann ist das schon schlimm genug und wenn dann eben auch noch einzelnen Leuten Paddock Siegen nachgestellt wird bzw Munition geliefert wird das Leute auf die Idee kommen könnten diesen nachzustellen dann wird es einfach auch hochgradig kriminell."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:59",
+      "text": "Dann also was was kann was kann unser Täter gelernt haben na ja also er hat offenbar ein bisschen zuviel gechattet bisschen zu viele Spuren hinterlassen wer was von Security versteht\nnutzt eigentlich telegram nicht und nutzt auch nicht wohin der offenen Thorsten unserem Vortrag sagt\nbenutze das stwd du dich am besten auskennst und ich denk halt irgendwie oder sorry und,\nIdentität und Anonymität ist eben was anderes als Verschlüsselung ja also er hat es geht eben,\nwenn man sich wenn man sich schon als Krimineller engagieren möchte eben darum anonym zu sein und nicht Pseudonymen ja so wie ich glaube ich setze mal schon sagte du kannst auf jeden Fall ein,\nentweder ein erfolgreicher krimineller sein oder ein berühmter kriminell am Ende hat ihnen aber wohl das zum.\nIst in ja das zum Verhängnis geworden dass er.\nEin Zufluss geht Geltungsbedürfnis hatten also Lektion 1 du willst niemanden vertrauen müssen also gib niemanden die Möglichkeit dich zu verraten oder zu erpressen erst recht ich Leuten die genauso ein übertriebenes Geltungsbedürfnis haben wie du.\nDa kommen wir natürlich jetzt zu unserem unseren anderen.\nIn dieser Fall Mittäter Schrägstrich Zeuge Schrägstrich Verräter viele Begriffe werden für Jan es verwendet.\nDer.\nRelativ früh ja auf Twitter schon getwittert hatte dass er irgendwie in Kontakt mit dem Täter Orbit gestanden hatte und das auch immer wieder öffentlich gemacht hat ja also man spätestens wenn.\nLeute den du vertraust irgendwie Screenshots von euren Chats Posten weißt du du hast den falschen Leuten vertraut.\nJetzt ist natürlich die Frage wie bewertet man das Handeln von diesem janez und das will ich sagen kann man eigentlich allen jedem selbst überlassen er sagt,\nvon mir aus hätte ich mich bei den Behörden nicht gemeldet da das BKA aber so einen Druck aufgebaut hat habe ich eben kooperiert,\nund die gesamten Infos die ich dazu habe herausgegeben bzw dieses brisante Details wann genau die Hausdurchsuchung bei dem warm.\nEs ist eigentlich so ein bisschen bemitleidenswert sich anzuschauen wie er jetzt gerade versucht irgendwie die auf der schmalen Planke zu gehen dass er einerseits nicht als Verräter gilt.\nAndererseits aber irgendwie trotzdem noch noch ihr wie cool ist in dieser in dieser toxaphene ja und das ist da wäre wahrscheinlich auch besser gewesen ein 2tes nicht abzusenden jedenfalls dieser Jan.\nEs hat früher eine Webseite betrieben die dox.sx hieß\nbenennt sich weiterhin bezeichnet sich als Security researcher und hat ihr macht bietet ihr was mit Privatsphäre Consulting an das hat mich ehrlich gesagt ein bisschen an diese kennt ihr diese 20 Jahre alten TV-Beitrag über Christian Lindner.\nDer hat der hat irgendwie als Teenager irgendjemandem eine Webseite gemacht und dann kam er direkt mit dem Anzug in die Schule."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:21",
+      "text": "Ich bin jetzt bisnis."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:26",
+      "text": "Leider genauso wenig die Gegend oder Mercedes oder so da geht's mir relativ lustig und ich würde es auch nicht schlimm das ist irgendwie so eine Phase hatten wir ja alle mal ja dass man das irgendwie finden,\nstelle ich ja auch also erst jetzt also Security researcher\ner hat aber eben mit seinem Privatsphäre Consulting Business hat eben so eine leide leider sind in leichten Marlowes dass er eben diese Webseite dox.sx betrieben hat und noch dazu wirklich auf.\nAlso auf katastrophal kindische Weise verraten hat dass er die betrieben hat versucht das glaube ich noch so ein so ein bisschen zu leugnen,\nund ich weiß auch nicht genau ob es öffentlich ist wie wie man das wie wie offensichtlich er da den Beweis geliefert hat dass er das war deswegen lasse ich das jetzt mal,\naußen vor Erde außerdem noch ein Amazon Werbebanner im Quelltext der Seite denn wenn einer dich nicht verrät ist es Amazon ne das ist auch eine sehr geniale Idee.\nUnd naja ich meine.\nPrivatsphäre Beratung von jemanden der seiner der doxing Seite betreibt und dann noch nicht mal in der Lage ist die anonym zu betreiben das ist halt auf vielen leveln.\nAusbaufähig außerdem wird eben im weiteren in der weiteren Recherche angelastet dass er für diese vulgäre Analyse diesen Neonazi Youtuber da.\nSo ein bisschen den Strohmann gebeamt hat also für den Domains angemeldet hat oder sowas was ihm mehrere Male Besuch vom Staatsschutz.\nBereitet hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:08",
+      "text": "Ist schon bemerkenswert ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:09",
+      "text": "Die nehme ich die volksverhetzende Inhalte auf dem Youtube-Kanal bemängelt haben und die Spur eben zu zu ihm\ngefunden haben es gibt auch eine Bestätigung der Staatsanwaltschaft Stuttgart das in diesem Zusammenhang ein Verfahren\nläuft im Zweifelsfall wegen Beihilfe oder sowas keine Ahnung also ist ja dann auch alles irgendwie Jugendstrafrecht muss dann ja auch nicht im wie großartig behandelt werden,\nhat aber,\nauch irgendwie 2016 damit angegeben dass er kann ich auch nicht geil sind 2016 schon damit angegeben dass er einen anderen Betreiber einer doxing Plattform ans BKA verraten hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:51",
+      "text": "Homann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:52",
+      "text": "Hat dann aber irgendwie kurz vorher schon hatte er seine eigene doxing Seite angemeldet also,\ndas würde ich eine riesige OpSec Fällen nennen mit jemanden zusammen zu arbeiten der dafür bekannt ist dass es schon öfter mal Leute ans Messer geliefert hat wann finde ich aber natürlich jetzt die Frage ist das jetzt vor dem Hintergrund.\nAls negativ zu betrachten betrachten dass er den Täter ans Messer geliefert hat oder nicht und da scheiden sich natürlich auch die Geister ja.\nNatürlich sind alle froh dass der Täter gefunden wurde und dass der jetzt hoffen hoffentlich irgendwie mal die Hilfe bekommt ihr brauch andererseits ist das natürlich nie besonders hoch angesehen.\nWenn Leute andere.\nVerraten ja also das ist das finde ich sehr interessant wie das auch so ein bisschen zweischneidig in der in der Presse eben auch behandelt sie eine davon einerseits sagt na ja ok,\nwir feiern den jetzt weil er den anderen verraten hat wobei natürlich ganz klar ist dass der auch nicht unbedingt die weißeste Weste hat.\nAber naja.\nKomische komische Leute und ich finde es halt irgendwie interessanter ich habe damit mit Interesse diese Recherchen gelesen über die über die Motivationen dieser Menschen weil ich mir denke soweit Sophie klassenchat gab er.\nOder so im Internet ja also es gibt so coolen Scheiß den man irgendwie womit man sich auseinandersetzen kann und dann.\nBleiben die Leute halt an irgendwelchen vulgären Youtubern Pape.\nUnd und versuchen den anderen Menschen Leid zu bereiten in dem Zusammenhang habe ich auch etwas Neues gelernt nämlich Minecraft griefing kennst du Minecraft griefing Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:46",
+      "text": "Na das sind so Leute die anderen Leid in Minecraft Welten zu fügen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:54",
+      "text": "Kinderdecke der treffen sich dann machen welchen Minecraft Server auf und sagen jetzt spielen wir zusammen Minecraft und bauen was schönes ja,\ngehe ich jetzt so schlecht mir das vor ich habe ist nur nicht so auf Minecraft gespielt aber man kann da wahrscheinlich auch was Schönes bauen ich habe in Minecraft noch nichts Schönes gebaut ich habe immer höchstens so wie ich in Erdlöchern vor dem Wort vor den Zombies verstecken können und danach versuchte den Stock zu hauen oder so,\nalso ich bin Dani weit gekommen ja aber,\nwenn da jetzt ist sieht man ja auch häufiger wenn wenn ihr die Kids im im Chaos Umfeld unterwegs sind dass dir dann da in ve welchem prächtigen Bauten in in Minecraft sich bewegen und dafür das wird halt auf einem zentralen Server gemacht dann treffen die sich umbauen über schönes ja,\nfrüher haben wir Lego gespielt nein ich will,\nfrüher Witze machen und dann gibt's eben Leute die sagen Acai dann gehen wir jetzt auch auf diesem Server und machen den da das Spiel kaputt und nimm den Spaß daran weg und dann wurden sie ewig geblockt und dann haben sich mit dem Serverbetreiber gestritten und dann haben sie die neue laufservice Angriffe gemacht.\nDrum also quasi mit Anfragen dieses Server zu zu überlasten auch daran hat sich dieser Jannis beteiligt zumindest hat er das,\nhat er eine Eingeständnis darüber abgelegt heute leugnet er das dass er das getan hat.\nMeine Güte ja also das ist wirklich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:16",
+      "text": "Ja das sind.\nJa das sind a********** übrigens an der Stelle vielleicht auch noch mal so ein anderer Tipp irgendwie wenn irgendwie Leute in eurer Community auftauchen die irgendwie solches Verhalten an den Tag legen.\nDu zwei Möglichkeiten also wenn ihr da in dieser Community in irgendeiner Form wie soll ich sagen das sagen habt oder Einfluss genießt oder sozusagen.\nDa top of the game seid ja dann verweist ihr solche Leute möglichst schnell aus euren Hallen,\ndenn diese Menschen werden am Ende nur Ärger bringen und am Ende eure Community springen.\nBora."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:07",
+      "text": "Oder Sie bringen euch den Knast."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:08",
+      "text": "Ja oder eben aus also machen einfach Ärger auf allen Ebenen und da gilt es einfach wirklich auch mit wehret den Anfängen also das ist wichtig dass man Leute einfach auch schnell\nrausdrängen tja Leute die anfangen auf Mailinglisten rum zu paulun und so oder da ist man dann mit Appeasement schnell auf der falschen Fährte ist ganz wichtig dass man\neinen guten Stil der noch deiner Community vorherrscht möglichst frühzeitig auch immer wieder verteidigt wenn das auch nur ansatzweise ins Wanken gerät\nz&w wenn ihr euch in einer Community auf einmal wieder findet wo so ein Verhalten generell toleriert wird und stattfindet\ndann sucht euch doch eine neue Community da werdet ihr nicht glücklich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:54",
+      "text": "Vor allem auch ne du hast jetzt gesagt wo so ein Verhalten toleriert wird er richtig geil finde ich ja wo dann so ein Verhalten auch noch ewig gefeiert wird ja also das ist ja dann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:03",
+      "text": "Na ja das ist dann der nächste Schritt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:54:05",
+      "text": "Dann ist ja wirklich dann weißt du du bist bei den bei den Heranwachsenden Männern gelandet der Frauen machen sowas irgendwie nicht also fällt mir fällt mir irgendwie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:14",
+      "text": "Würde ich so pauschal jetzt nicht sagen aber ist auf jeden Fall typischer."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:54:21",
+      "text": "Also Fazit.\nDer dieser Jannis wird sich jetzt mal ihr wie entscheiden müssen entweder er ist jetzt halt der der der der Mensch der,\nder den anderen ans Messer geliefert hat und steht dazu ja dann muss aber auch vielleicht eine bessere Motivation\nanführen als die Polizei war so gemein zu mir und dann muss er sich vor allem auch eviso Tweet sparen Sie ey jo er ist wieder frei\nherzliche Grüße ist auch keine Größe von dem der dich den Knast gebracht hat warum ist er wieder frei BKA gibt an.\nDass der Täter,\nausführlich korporiert hat alles gestanden hat und irgendwie quasi auch noch eine Herstellung eines Backups aus der Cloud ermöglicht hat und wo um damit halt den BKA,\nvollständigen Datenzugriff zugeben und im Zweifelsfall packt er jetzt gerade in Ruhe über den Rest der doxing Szene aus und dann können sie sich da alle,\nder gegenseitig noch eine Runde doxen sie haben eine heule."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:31",
+      "text": "Oh ja danke du mal so richtig auf heute wird zurückgesetzt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:38",
+      "text": "Spannend fand ich übrigens auch dass das dann da jetzt auch von einigen Journalisten.\nAber natürlich auch von dem Jan es irgendwie die Idee kommt man man möge sie doch jetzt bitte mit hochdotierten Jobs wahlweise beim BSI oder in der Security consulting."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:58",
+      "text": "Echt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:02",
+      "text": "Wer wurde."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:05",
+      "text": "Diebesgut."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:08",
+      "text": "Ey ganz ehrlich ne ich mein so eure charakterliche Eignung hat jetzt erstmal schon mal unter Beweis gestellt Sonne und im zweiten.\nIn wie oft mal kriegt er das mit der Security auch nicht so ganz hin weil die Fehler die am Ende zur Ergreifung geführt haben waren echt peinlich so\nund zwar bei beiden sowohl das wo die beim Jannis vor der Tür standen als auch was am Ende den den Orbiter in Knast gebracht hat oder in geliefert hat das reicht nicht für ein Consulting Job aus Freunde.\nDa müsste noch mal besser noch mal zurück ans am Tag breit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:46",
+      "text": "Da ich verzeihe ihr geht jetzt erstmal direkt ins Gefängnis und zieht nicht 4000 Mark ein und dann irgendwann mal wieder auf los."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:54",
+      "text": "Ich würde also ich finde ich bin ja deswegen auch so ein bisschen knatschig weil es tatsächlich.\nEin fatales Signal wäre also.\nWenn die sich irgendwann noch mal ein kriegen würden werden ja werden die an und dann irgendwie die resozialisierungsmaßnahmen ihrer wohl gehüteten Elternhäuser Wirkung zeigen und sie in,\nein paar Jahren vielleicht noch ein bisschen mehr gelernt haben und irgendwie bereit sind soll ich mal brauchbare Mitglieder der Gesellschaft zu werden dann soll den selbstverständlich\nnichts im Weg stehen ja es soll aber niemals es darf nicht sein,\ndass die für den Scheiß auch noch daraus in irgendeiner Form capital.\nZiehen ja also wenn in wenn in fünf oder zehn Jahren aus denen irgendwas geworden ist.\nUnd dann noch irgendwie damit angegeben wird oder versucht wird Kapital zu schlagen dass sie mit dem kam irgendetwas zu tun hatten dann haben wir als Gesellschaft etwas falsch gemacht ja es ist ganz wichtig jetzt zu sagen dass.\nIst erstens technisch nicht beeindruckend gewesen zweitens,\nethisch nicht beeindruckend gewesen drittens wart ihr auf der falschen Seite und einfach nur Kinder wir sind bereit euch dass das irgendwie zu verzeihen\nJa und dir wird wieder ein euch in diese Gesellschaft ein in von der ihr vielleicht auch.\nIrgendwann mal ausgegrenzt worden seid dass ihr irgendwie auch keine anderen Betätigung mehr hattet in eurem Leben oder so alles drin aber jetzt auch noch zu meinen daraus schlagen wird Kapital bei wie hier die großen die großen Boxer sind oder so so nicht das geht nicht,\ner geht so nicht muss ich ganz ehrlich sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:50",
+      "text": "Ja also vorallem reißt euch mal ein bisschen am Riemen lernt mal ein bisschen Empathie also mehr als afd-wähler werde werdet ihr nicht so auf der Karriereleiter da müsste dann schon noch mal\nbisschen die Jedi die Selbstüberschätzung einstellen und man bisschen Rücken durch Drücken und klarkommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:12",
+      "text": "Empathie ist ein sehr guter Punkt im das ist das ist etwas was ich.\nMal so sagen kann ich würde den mal ein.\nTelefonat mit ihren Zielpersonen empfehlen einfach mal anrufen sagen sie niemals meine Stunde Zeit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:36",
+      "text": "Nummer hab da ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:38",
+      "text": "Nummer habt ihr ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:39",
+      "text": "Duda."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:41",
+      "text": "So einfach mal sagen so ich wollte mal hören wie sie denn wie geil sie mich denn finden weil ich ja hier sind cooler Hecht bin,\nwollte ich mir mal von ihnen vielleicht sagen lassen wie wir sie dazu zu ihren E-Mail stehen die ich da veröffentlicht habe und ob ich ob das nicht ob ich nicht eine geile Sau bin oder so ja kann ich nur empfehlen.\nIch habe mit mehreren betroffenen Person gesprochen dessen mordet dann auch noch mal ein bisschen ein.\nDann gabs natürlich noch eine dass sich einig nur kurz am Rande erwähnen diese Woche in Leipzig 2-3 Tage später oder so einem.\nVeröffentlichung von ich glaube in der Presse stand um die um die 200 Adressen.\nMir kams weniger vor von irgendwie linken links grün versifften die auf in die Media veröffentlicht wurden mit dem Kommentar wir kriegen euch alle.\nWanne.\nGanze AFD Liste war verhältnismäßig schlecht recherchiert muss ich mal sagen und es war auch offenbar eine Liste von Personen wo sich sich irgendjemand geärgert hat dass sie etwas gesagt haben.\nEinige der Personen haben das auch öffentlich angegeben dass Sie auf dieser Liste sind andere nicht deswegen nenne ich da jetzt einfach mal keine Namen auch da war ich mit.\nDen Leuten in Kontakt.\nJa Martin Paul hat darüber getwittert Journalist bei der Tat und sagt,\nbis heute hat sich die Polizei nicht bei den getroffenen zurückgemeldet die proaktiv bei der Polizei Anzeige erstatten und die etwa um Rückmeldung gebeten haben,\nwas die Polizei nicht geschafft hat hat die unabhängige Opferberatungsstelle reach out Berlin stattdessen bereits getan sich an alle Betroffenen gewendet und ihn,\nBeratung anzubieten der Unterschied die Polizei wurde gebeten sich zurückzumelden Richard wurde von vielen den Betroffenen gar nicht,\nkontaktiert müsste nicht eine Polizei,\ndie in einer solchen Angelegenheit wie er Strafanzeige kontaktierte ebenfalls Beratung anbieten oder wenigstens auf Beratungsmöglichkeiten Verweis.\nUnd damit würde ich gerne den Block einleiten indem wir haben uns mal auf die politischen Konsequenzen dieser gesamten Geschichte konzentrieren.\nI hat mir glaube ich von den letzten Sendungen behandelt,\nhack back ne also hack back start will Offensive Fähigkeiten haben um jetzt.\nIm Falle eines Angriffs in irgend einer Form zurück zu hacken totaler Unsinn staatliches hacking Specht am Ende uns alle denn auch staatliches hacking braucht Schwachstellen und wir wollen keine Schwachstellen haben.\nDas ist glaube ich relativ einfach erklärt wird früher das später vielleicht auch die CDU CSU noch verstehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:06",
+      "text": "Das ist aber offenbar schwierig weiß nicht hast du diesen Dialog gesehen von Anke."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:17",
+      "text": "Anke Domscheit-Berg und dem Armin Schuster oder wie der heißt bei."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:22",
+      "text": "Irgend zatox Sendung balasso."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:24",
+      "text": "Mit Maybrit Illner ja da muss man noch also Stefan Meier heißt er tschuldigung Stefan Meier ja da muss man noch ein bisschen länger die Sachen erklären."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:36",
+      "text": "Ja aber das war war erstaunlich nah also wie er da einfach wie er meint diese ganze Staatstrojaner Nummer verteidigt hat und offensichtlich wirklich,\nglauben diesen Bullshit den sie im im gesteckt haben dass das ja alles nur zielgerichtete Maßnahmen sind also quasi das Ding einfach überhaupt nicht in seiner ganzen\nKonsequenz versteht das Erwachen Probleme dieser ganzen Argumentationskette auf der Seite sie nicht begreifen dass eben diese ganze Unsicherheit,\nletzten Endes von ihnen mich verschuldet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:10",
+      "text": "Das ist etwas was also.\nJa das ist ein weiterer Politiker bei dem wir ein Defizit sehen dass er nicht versteht wie alt die Sicherheit funktioniert übrigens auch wie viele Personen die in solchen Angriffen zum Opfer fallen.\nDass man das immer noch davon ausgegangen wird also der dass sie in keiner Form verstanden haben wie hacking funktioniert wie Sicherheitslücken funktioniert und funktionieren und wie,\nkeine Sicherheitslücke funktioniert er.\nUnd dann quasi sich regelmäßig stramm vorne hinstellen also strammen im durchaus doppeldeutigen Sinne,\nvorne vorne hinstellen und sagen Verschlüsselung ist nicht absolut man kann auch,\nDateiverschlüsselung leben oder würde nur weil es verschlüsselt ist heißt ja nicht dass der Staat nicht trotzdem rein sehen darf und du denkst dann so eine du hast Verschlüsselung heißt Verschlüsselung nicht Verschlüsselung unter bestimmten Bedingungen aber ich würde gerne also\nAqua cambam es gibt noch eine sehr schöne Forderung die auch sich breitgemacht hat,\nund zwar härtere Strafen bei Hacks von Mandatsträgern ja Andrea Lindholz von der CSU Vorsitzende des Innenausschusses sagt,\nwir Abgeordnete sollten aufgrund unserer exponierten Stellung Teil der kritischen Infrastruktur Deutschlands werden dann wäre ich auch bereit bei Hackerangriffen auf Mandatsträger eine schärfere Strafandrohung zu befürworten,\nwurde von mehreren Politikern erstmal so ins Feld geführt und darunter auch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:54",
+      "text": "Übersetzen ich verstehe das nicht was sie sagen will."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:59",
+      "text": "Die mersedeh möchten gerne kritische Infrastruktur werden es gibt in Deutschland eine kritisverordnung da wird drin festgehalten was ist kritische Infrastruktur in Deutschland das spielt insbesondere eine Rolle bei mighty Sicherheitsgesetz,\nund wenn du wenn du unter kritische Infrastruktur fällst ne dann gnade dir Gott was kriegst du Auflagen wie hole und dann da musst du irgendwie ein Auditor nach dem anderen bei dir reinlassen.\nUm um die Auflagen und Sicherheiten zu erfüllen die Sicherheitskonzepte vorzulegen und so weiter nach IT Sicherheitsgesetz dann oder liegst du nämlich,\nden Meldepflichten nach IT Sicherheitsgesetz zu denen unter anderem eben auch also Meldepflichten und so weiter und sind Auflagen gehört auch,\ndass du eben sicherheitskontakte meldest dein Sicherheitskonzept den BSI vor legst undsoweiterundsofort ich glaube das habe ich ein bisschen besser verstanden als,\n17 eigentlich möchte niemand kritische Infrastruktur sein und es ist natürlich auch die Frage.\nWas sie da jetzt mit kritische Infrastruktur meint sich selbst als Person oder ihren Twitter-Account denn in der Regel wurden hier hier.\nPrivate Account aufgemacht mit höhere Strafen bei Angriffen auf Mandatsträger,\nda mein die ziemlich genau das mit nämlich dass sie sagen wir sind hier mit der die den hohen Wein der Demokratie.\nMächtig ja und wenn man uns Hack ist das was anderes als wenn man irgendjemand anderen hack.\nGib dir natürlich so nicht da muss ich ganz ehrlich sagen ich kann ich kann den Gedanken verstehen ja aber gehackt wurden hier private account,\nund eure privaten Accounts\ndann betrat die doch bitte auf Gerät ist dann geht dein zieht doch mit euren E-Mails in den Bundestag dann könnt ihr euch auch beschweren dass eine Verfassungsorgan angegriffen wurde wenn ihr da zum Opfer fallt und dann kann man da unter Umständen auch höhere Strafen geben aber wenn,\nihr hingeht als.\nAls Privatperson die hauptberuflich Bundestagsabgeordnete sind oder nebenberuflich Bundestagsabgeordnete kennen wir auch viele,\ndann heißt das natürlich nicht das nur weil ihr ziepel Sohn eines Sex seit die Leute jetzt anders bestraft werden als bei jeder anderen Privatperson.\nMan dazu die direktes geben auf die rechtlichen Grundlagen nicht her ne also wir haben den was ist das erste gb202 davon sind die ganzen Hacker Paragraphen wir haben das Grundrecht auf Unversehrtheit informations.\nTechnischer Systeme und der heißt es nicht irgendwie einige Daten sind gleicher als andere na die ist also diese Forderung geht nicht ich fand das sehr schön weil es da auf Twitter wunderschöne Antworten gab und zwar einmal von.\nPraxl der sagt nachher wenn die Abgeordneten kritische Infrastruktur werden ja dann würde ich mich freuen wenn diese Infrastruktur ganz nebenbei auch selbstkritisch wird.\nDas fand ich war nicht sicher nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:11",
+      "text": "Selbstkritisch selbst kritische Infrastruktur."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:14",
+      "text": "Selbst kritische Infrastruktur.\nUnd und Conny oder Kuoni antwortete die Abgeordneten sind eher kritische Sicherheitslücke als kritische Infrastruktur beide im haben natürlich hier.\nDurchaus ein Argument also härtere Strafen in solchen Fällen geht nicht das werde ich ihm ist auch spannend weil.\nDieser Angreifer ja was war die Zeit ihr was um die 50 Leute gehackt hat und wenn man sich das jetzt mal anschaut da sind halt einige sind ja nur YouTube Anne und da gibt's nicht den Youtuber bringt nicht so viel Strafe wie in Mandatsträger ja oder\nJournalisten wurden ja auch gehackt das bringt natürlich überhaupt nichts mehr die also das geht nicht so eine Abwägung da und ich glaube das ist auch ein klar.\nIch verstehe das ich verstehe den. Aber gesetzlich dass ich sowas nicht fahren kann ja man kann natürlich ich denke hier.\nMan kann dir von der besonderen Schwere der Tat man könnte auch z.b. von einer politisch motivierten Tat sprechen ja aber das wollte sdka ja bisher nicht nächste Konsequenz 350 neu stellen für das BSI.\nAnkündigte Horst Seehofer an ja ich weiß nicht wie eigentlich haben ja im Cyber Bereich alle.\nMorgen alle Regierungsstellen große Schwierigkeiten überhaupt Leute zu zu finden insofern bin ich mal gespannt womit der sbsi diese stellen.\nBesetzen wird viel größer ist das Problem dass das BSI nämlich den BMI also dem Bundesministerium des Inneren,\nunterliegt und deswegen nicht unabhängig es ja wenn und aus diesem Grund lehnt übrigens ja auch dass der Bundestag den Schutz.\nDurch das BSI ab ja weil sie sagen ey das ist Exekutive das BSI unterliegt der Exekutive wir haben ja eine Gewaltenteilung wir können nicht die Sicherheit unserer.\nUnser Kommunikationsnetzwerke einem Organ an oder einer Behörde anvertrauen die der Exekutive unterliegt sehr sinnvolle,\nArgumentation sinnvoll wäre es zu sagen ok das BSI vollständig unabhängig und dann nicht nur beratend und unterstützend sondern eben auch mit entsprechenden Konsequenzen und diese Konsequenzen Eisenhardt,\nauf defensive Ausrichtung ja zentrale Forderung beten wir vom CCC am laufenden Band rauf und runter.\nThema Hack und Back wir wollen alles Geld was irgendwie im Bereich IT Sicherheit oder,\nCyber oder sonst was ausgegeben wird in rein Defensive Methoden verschlüsseln sichere Betriebssysteme schmale Codebasis für kritische Pakete ja,\nFrank hat das glaube ich ihm immer gesagt zum Preis von wenigen Jäger 90 ja.\nKönnte also ehrlich gesagt zum Bruchteil eines Jäger 90 könnte es im Zweifelsfall die die die die Bundesrepublik Deutschland in dem Bereich richtig richtig weit voranbringen,\nund hier diesem offensiven einfach mal entgegentreten dann hat Seehofer noch angekündigt das Cyber-Abwehrzentrum doppelplusgut.\nOhne das jetzt zu konkretisieren ich habe aber eine Vermutung worauf das hinausläuft und zwar,\nwenn ich das richtig verstanden habe ich bin ja kein Jurist aber ich höre den Juristen ja gerne aufmerksam zu ist die Gefahrenabwehr Ländersache und deswegen haben wir ja auch die ganzen,\nLandeskriminalämter in jedem Bundesland und die wehren sich irgendwie gegen die Einflussnahme durch das Bundeskriminalamt das bedeutet natürlich auch dass die gesamten,\nKräfte die da existieren die da aufgebaut werden Ida bestehen.\nDass Sie dass die Länder quasi miteinander konkurrieren ja also Nordrhein-Westfalen konkurriert mit Niedersachsen um kompetentes Personal bei der Polizei.\nIn allen Bereichen und in diesem diese Idee des Cyber-Abwehrzentrum doppelplusgut ist die Zusammenarbeit der Länder.\nUnd der Bundespolizei zu stärken.\nGeht nur leider nicht so einfach weil das eben das Grundgesetz berührt weiterhin könnte sich dahinter natürlich auch noch verbergen die Idee die Geheimdienste,\nda oder insbesondere den ylands kann das Bundesamt für Verfassungsschutz hier näher zu der Polizei zu bringen und auch das natürlich ein.\nNicht unkritisches Unterfangen da müssen wir uns jetzt die Augen offen halten was da so kommt.\nDann wurde uns ein neues ID Sicherheitsgesetz angekündigt dass Aldi Sicherheitsgesetz 2.0.\nRenate ist sogar der der härkönen der der Staatssekretär von der Staatssekretär des Innenministeriums in dem Bereich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:37",
+      "text": "Was hast immerhin 20 nicht 40."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:42",
+      "text": "Warum nicht mal zwei. Unterstrich final jetzt aber wirklich letzte Änderung. Doc X.\nFinde ich auch nicht verkehrt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:51",
+      "text": "Da wirst Du zumindest jeder sofort was gemeint ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:54",
+      "text": "Also zum zum Aldi Sicherheitsgesetz habe ich zum ersten RT Sicherheitsgesetz zum Aldi Sicherheitsgesetz 1.0 war ich ja damals.\nSachverständiger im Innenausschuss ich mache das gerne ein weiteres Mal und hoffe dass es dieses Mal vielleicht zielführender,\nläuft interessantes aber auch das einen eine Novelle des AT Sicherheitsgesetz ist wenn ich mich richtig erinnere auch schon in d.\nIn den Koalitionsvertrag steht insofern das scheint er so mal eben außer.\nSchublade geholt was haben wir noch was haben noch einmal hier Wasser immer noch und das halbe als haben wir lesen noch mal schnell vor der hat aber hier der Stefan Meier bei Maybrit Illner,\ndann auch noch davon gesprochen man wolle also eine bessere Früherkennung der Veröffentlichung gestohlener Daten haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:49",
+      "text": "Früherkennung klingt interessant."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:51",
+      "text": "Früherkennung naja das ist ja also es wurde ja auch nicht unberechtigt die Frage steht wie kann das sein dass diese Daten so lange,\nunbeachtet blieben während des eigentlicher ein Twitter-Account mit sehr vielen Followern war übrigens an dieser Stelle mal eine Rüge ganz ganz,\nstrenge Rüge von mir ja die haben sich ja gerühmt wie sonst wär.\nDass sie diesen Twitter-Account nach nur anderthalb Tagen offline hatten und haben dann gesagt er dir das muss aber schneller gehen komme ich gleich auch noch mal zu ja aber dass die die die Dumps die der Täter ja sehr sehr sehr.\nAkribisch an vielen verschiedenen Stellen verteilt hat und zwar weil er genau wusste.\nWenn das hier hochgeht dann gucken dann sehen die zu dass sie diese Daten\nso schnell wie möglich aus dem Internet raus kriegen und deswegen lade ich die direkt jedesmal an 345 stellen in unterschiedlichen Jurisdiktionen hoch bei unterschiedlichen Anbietern um das zu einer nahezu.\nUnmöglichen Sisyphos Arbeit zu machen die wieder aus dem Netz zu kriegen.\nDas denke ich sollte bei einem eventuellen Verfahren echt nicht außer Acht gelassen werden denn das ist in meinen Augen.\nZeig das noch mal so einfach eine besondere Schwere der Schuld ja wenn man nämlich sagt,\nich weiß dass dir das aus dem Netz löschen wollen werden und ich gehe aber hin und ich versuche dem entgegenzuwirken indem ich das an vielen verschiedenen Stellen hochlade das aber nur zu der zu dem Vorgehen des des Täters hier das andere ist.\nDas.\nDass die sich freuen diesen Twitter-Account ewig platt gemacht zu haben aber an diesen anderen Stellen die da verlinkt waren findest du diese Daten auch heute noch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:53",
+      "text": "Nein ist nicht dein Ernst was sind das für stellen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:17:58",
+      "text": "Na das sage ich jetzt hier nicht aber ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:59",
+      "text": "Nährwerte von welcher Art sind diese Server sind das."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:02",
+      "text": "Ja irgendwie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:03",
+      "text": "Große Hosta oder kleine irgendwas."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:07",
+      "text": "Ich habe jetzt nur also ich habe jetzt keine keine genaue Kontrolle aller links gemacht aber ich habe,\nhalt heute noch eben wie gesagt mit einigen Personen bin ich ja im Gespräch und dann habe ich halt mal so rum geschaut und einige der Links funktionieren auch heute noch wir haben heute wie du eingangs sagtest,\nden 14. Januar.\nSo da wäre ich ja dann doch mal bin ich ja überrascht dass dass das da jetzt nicht jemand hinter ist und dass da ne also nur mal so zum Vergleich diejenigen die Logbuch Netzpolitik länger hören.\nAls es um diesen diesen Daten hack gegen von diesen französischen Gefängnis Bauplänen und.\nAtomkraftwerk Zulieferern und was da alles auf dem Server war da ist die Polizei in Dortmund rein marschiert hat ein ganzes Haus durchsucht und hat mit Gewalt im Keller aufgebrochen und dann Server raus zu reißen.\nJetzt haben wir und das war über Ländergrenzen hinweg auf Anfrage der der der französischen Strafverfolgungsbehörden in dem Fall."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:17",
+      "text": "Ja aber Linus das war noch linke."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:20",
+      "text": "Genau das waren linke aber also tatsächlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:23",
+      "text": "Da muss man doch sofort mit dem Panzer aufmarschieren aber wenn das so ein kleiner Schnuller hat sie."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:29",
+      "text": "Verärgerte verärgert nein verärgerte das war ein verärgerter das war ja kein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:33",
+      "text": "Ja die sind ja nur verärgerte Schneider Nazis und mein Gott der Junge war doch früher so ein süßes Kind."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:41",
+      "text": "Ja also der würde den Arm mergers ne na der hat also also ich finde noch Daten online.\nUnd da sollte mal was passieren denn diese also die Verfügbarkeit dieser Daten ist für die betroffenen Personen ein schweres Leid,\ndas muss man ganz einfach mal so sagen hat übrigens auch Annerod sehr gut aufgeschrieben die auch noch mal einen Blog Post geschrieben hat was bei diesem.\nWas bei dieser Debatte,\nalles unter den Tisch fällt aber ich will noch mal ganz kurz zu diesem Früherkennungssystem wie funktioniert wohl ein Früherkennungssystem auf die Veröffentlichung von persönlichen Daten wer Früherkennung sagt meint monitoring,\ndas heißt im Zweifelsfall die wollen bessere Zugriffe auf die sozialen Netzwerke haben ja das heißt da werden wir in in kurzer Zeit dann eine neue überwachungs Debatte führen dürfen.\nWeil ein paar Bundestagsabgeordnete ihre Accounts mit schlechten Passwörtern gesichert haben.\nSpannend finde ich auch.\nWir diskutieren trotzdem noch sowas wie personalausweispflicht im Internet wir diskutieren Klarnamenpflicht wir haben einen und Impressumspflicht ja\nwenn jemand sich entscheidet den den Tim zu doxen ja eine Parade Tim hat sich schon selber gejoggt weil das muss.\nWeil er eben diese dieses Angebot Metaebene unter einer Impressumspflicht,\nbetreibt und da denke ich kann man sich spätestens jetzt wenn klar ist dass Rechtsradikale irgendwie,\nListen führen von Menschen die über deren Äußerungen sie sich geärgert haben und dann ewig überschreiben wir kriegen euch alle wenn.\nMassenhafte Datensammlung hier über Youtuber passieren über Bundestagsabgeordnete.\nDann muss man sich irgendwann auch mal überlegen brauchen wir eine Kultur in der wir diese Daten den Leuten größtenteils frei Haus liefern finde ich ernsthaft.\nProblematisch.\nZumindest denke ich sollte den Menschen die Möglichkeit gegeben werden dieses Impressum nicht öffentlich zuführen ja ich hätte z.b. gerne so eine Option die zu.\nIch mache das hier unter Impressumspflicht aber diese Daten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:14",
+      "text": "Wird und wo hinterlegt und hier ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:15",
+      "text": "Werden irgendwo werden hinterlegt und da kommen sie nur Aufrichter richterliche Anordnung raus und ich werde darüber in Kenntnis gesetzt,\ndass das stattgefunden hat ja wäre ja mal so ein Beispiel\nstattdessen was was hören wir hier raus polizeiskandal ne Polizistin lesen lesen solche Daten teilweise einfach aus dem Melderegister nen herzlichen Glückwunsch da fühlt man sich natürlich noch sicher in seinem Land.\nHonolulu und dann achso dann hat.\nKatarina barley noch erwähnt dass wenn in dem Zusammenhang mit dem Datenleck haftungsansprüche gegen Unternehmen bestehen\nkönnen die Betroffenen Verbraucher sie gemeinsam im Rahmen einer musterfeststellungsklage geltend machen das wäre ja zumindest mal was ja.\nDenn so hundertprozentig ist ja noch nicht jeder einzelne Hack aufgeklärt und da stellt sich natürlich schon auch die Frage,\nob unter Umständen in zum z.b. diesem ohne wo per E-Mail dann gesagt wurde schreib mal bitte die Zwei-Faktor-Authentifizierung aus und der Mitarbeiter von Twitter das gemacht hat das sowas sollte natürlich\nuntersucht und ihre Erdbeeren und da wären wir doch froh wenn es da auch mal irgendwie eine klare irgendwie Form von\nbest-practice gebe damit sowas nicht passieren kann denn immer wenn sowas Dienste übergreifend ist wird halt haarig ja ich hatte das ja in der letzten Sendung auch schon erwähnt wenn eben die Informationen die der eine Dienst.\nAbfragt vom anderen Dienst freigegeben wird ja und da da da kann Sicherheit irgendwann nur noch.\nNur noch schwer funktionieren.\nTja was was man irgendwie was hinten rüber fällt wie gesagt hat Anne Roth noch mal sehr schön aufgelistet sie sagt es fehlt Beratung für Betroffene es fehlen,\nkompetenter Polizeidienststellen es gibt irgendwie keine geklärten Zuständigkeiten bei Gerichten denn regelmäßig diese ganzen Youtuber,\ndie von dem Orbit da offenbar ja schon seit Jahren geärgert werden ja oder die Minecraft Spieler,\njanasdiary irgendwie geärgert werden wobei er behauptet das sind alles Psychopathen voll die gestörten Alter das war ich nicht gut.\nBei denen hat sich irgend ihr einer so\nso ernsthaft drum gekümmert ja es gibt ja genug Youtuber die sagen ey ich wurde hier gedoxxt meine Daten und dann laufen sie bei der lokalen Polizeidienststelle ein und da wird gesagt ja und wie soll ich dir da jetzt wieder aus dem Internet raus kriegen das darf natürlich so nicht passieren.\nAnne merkt auch an ist fehle in Deutschland eine gesetzliche Grundlage auf der dagegen vorgegangen werden kann wenn Menschen digital,\nbedroht und angegriffen werden und zwar in der Regel durch eine Kombination der verschiedenen bisherigen Straftatbestände der Satz ist ein bisschen kompliziert.\nDeswegen sei verwiesen auf ihren Vortrag ich glaube wenn ich es richtig sehe hatte den Titel die digitale Seite der häuslichen Gewalt.\nOder der das war der Untertitel und,\nder Titel war irgendwie cyberstalking doxing und so weiter also verlinken wir gleich noch mal in den in den Shownotes wir hatten nämlich dieses Jahr beim Kongress 2.\nVorträge zum Thema Stalking das war einmal der von Annerod.\nDer eben sich insbesondere mit dem mit dem Ding mit der digitalen Seite auseinandergesetzt hat was also Menschen da so tun.\nUnd dann hatten wir noch von Corinna Winter und Jan kalbitzer den Vortrag von eben in dem Fall,\nPsychiater und Psychologen die dem Phänomen Bereich einfach auch mal so den Forschungs und Kenntnisstand zu diesem Phänomen Bereich,\nwiedergegeben haben beide empfohlen und in den Shownotes vorhanden.\nStatistiken\nmengelt bemängelt eine natürlich auch gibt ihm keiner weiß wie viele Fälle von doxing ist da draußen gibt\nund da zeigt sich natürlich auch wieder so ein bisschen diese etwas zu kurz gedachte Überlegung\nwenn der Bundestagsabgeordnete sagen wenn wir betroffen sind ist das aber was anderes Bundestagsabgeordnete,\nstreng genommen Person des öffentlichen Interesses Jahr\nes gibt andere die behaupten deren solche Daten von denen müssen er öffentlich sein richtig übel ist das wenn dass irgendwelche Leute betrifft die nicht öffentlichen Interesse sind wo sich keine Zeitung dafür interessiert dass das bei denen am laufenden Band irgendwelche Spinner vor der Tür stehen.\nUnd eben auch für solche Menschen ist das ein großes Problem wenn nicht sogar ein größeres für die.\nIch sage jetzt mal so für die Niemande ja die einfach nur ein friedliches Leben führen wollen,\nund die dann plötzlich damit leben müssen dass irgendein Google Treffer ihre ihre Adresse ist mit hier wohnt die linke Zecke geht dahin Haut den aufs Maul.\nUnd dann werden sie da belästigt.\nVor allem sagt sie spielt ein Verständnis dafür welche Folgen doxing für einzelne hat macht Angst es wird dazu dass sie sich aus der Öffentlichkeit zurückziehen niemanden mehr trauen vielleicht umziehen ihren Job kündigen es kostet zum Teil,\nsehr viel Geld und das kann man immer fordern macht sie auch ist auch deswegen nicht weniger richtig Bildung.\nSoweit Menschen mit Smartphones und Tablets in Kontakt kommen müsst,\nmüssen sie auch Zugang zu Informationen haben das und wie sie sich sinnvoll schützen müssen also schon.\nDer Kita sollte das Standardprogramm sein und dann kann man sich eben auch vorstellen oder wünschen,\nhatte ich ja auch in der letzten Sendung schon gesagt dass die Anbieter dann auch noch mal mitziehen und sagen pass auf Zwei-Faktor-Authentifizierung ist bei uns nicht irgendwie,\ndass das doppelplus wenn Sie heute besonders kräftig zubeissen müssen sondern das machen wir jetzt.\nUnd damit sind wir glaube ich mit diesem Thema durch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:49",
+      "text": "Das will ich doch auch mal das war doch sehr umfassend."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:28:53",
+      "text": "Bzw hoffen wir mal dass die jetzt also sinnvolle sinnvolle politische Impulse.\nHabe bisher noch nicht gesehen das muss ich echt mal kritisch anmerken man kann natürlich hoffen dass die jetzt noch kommen es war auch vielleicht ein bisschen zu früh jetzt schon sinnvolle politische Impulse zu erwarten.\nIch hoffe dass sie kommen werden und es wäre natürlich toll wenn,\nwenn wir am Ende da was positives draus haben sonst wäre das alles all dieses Leid alle diese Probleme all diese Berichterstattung umsonst gewesen das wollen wir ja denke ich auch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:29:34",
+      "text": "Man sieht aber hierbei wieder sehr schön wie wie wichtig das doch ist für die politische Klasse diese Problematik auch mal wirklich am eigenen Leib zu spüren auch wenn dann hier in der ersten Reaktion\nkomplett übers Ziel hinaus geschossen wurde und quasi auf ner Grundlage unvollständiger Informationen gearbeitet wurde,\nnaja also geradezu dieses jetzt müssen wir aber hier irgendwie Dollar Gesetz verschärfen damit wir da zurückschlagen können also diese ganze\nstraf Attitüde ja wenden dann erstmal die die Gesetze verschärft sind das wird alles herzlich wenig bringen müssen,\nan der Stelle zu einem ganz anderen Paradigma.\nUnd von deinen Impressums Beispiel an der Stelle sehr gut und lass etwas andere fordert dass es halt einfach auch mal kurrente Maßnahmenkataloge\ngibt wie man eben als Betroffener auch dann entsprechend Schutz findet das sind wirklich wichtige Sachen diese ganze typisch.\nMuss sagen leider wirklich so typisch konservative Rhetorik mit naja was böse ist da müssen wir dann,\nirgendwie die Strafe irgendwelche Zähler hochzählen das schreckt nicht ausreichend ab\nnicht weil hier auch einfach da die auf Deckungsquote viel zu geringes man sieht ja hier wie lahmarschig die Reaktion und die unvollständig die Reaktion ist also wenn diese ganzen die meisten diskutierten\n24 links der letzten Woche in Deutschland immer noch nicht down sind.\nDann zeigt es einfach vollständig wie ineffizient und mit wie wenig Verständnis für dieses Problem hier an dieser Stelle einfach noch gearbeitet wird,\nbist du's einfach dieses Deutschland auch irgendwo also sorry."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:31:27",
+      "text": "Ich musste dazu natürlich auch sein da gibt es gibt ja natürlich auch a********** diese Daten immer wieder hochladen muss das spielt natürlich jetzt auch noch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:31:39",
+      "text": "Ja aber doch nicht unter denselben oder 11."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:31:53",
+      "text": "Wir bleiben aber noch bei einer ganzen Reihe Daten Reichtümer Hilfe.\nIm Besonderen datenreichtum haben die Provider die.\nNie endende Geschichte um die Vorratsdatenspeicherung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:11",
+      "text": "Wiedergänger."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:13",
+      "text": "Ich weiß gar nicht ich müsste noch mal schauen ich glaube ich habe das irgendwo mal.\nIch habe das mal für eine für eine für einen Bericht oder so mal recherchiert wann das erste Mal der Begriff Vorratsdatenspeicherung auftaucht habe es auf jeden Fall 10 Jahre her oder länger dass uns dieses Thema beschäftigt.\nAldi GD das Kommunikationsdaten bei den Providern.\nGespeichert werden für den Fall dass da mal jemand reinschauen möchte was hat mich eigentlich nie jemand machen würde.\nAußer natürlich die Polizei und.\nFortan Speicherung wurde in Deutschland erst erlassen dann wird dagegen geklagt dann wurde sie wieder erlassene wurde wieder dagegen geklagt der aktuelle Stand ist die Bundesnetzagentur hat im Sommer 2017 auf Basis eines\nalfa fahren einen Erlass verpasst,\nder die Fahrzeiten Speicherung effektiv aussetzt und die Basis davon war ein Beschluss des Oberverwaltungsgerichts Nordrhein-Westfalen.\nUnd das Verwaltungsgericht in Köln hat in zwei Hauptverfahren geurteilt dass das Gesetz zur Vorratsdatenspeicherung.\nNicht mit dem EU-Recht vereinbar ist und jetzt ganze Ding liegt ihr wie so ein bisschen auf Eis wir erinnern uns das war wenn ich mich nicht täusche so eine mal wieder so eine Glanzleistung von.\nUnserem jetzigen Außenminister Maas.\nIch will nicht sagen dass halt es hätte besser machen sollen ich bin eigentlich mit der jetzigen Situation relativ zufrieden wir hatten schon schlechtere situation will man meinen denn.\nEigentlich nach love Leitfaden der Bundesnetzagentur müssen z.b. IP-Adressen sollen IP-Adressen nach 7 Tagen gelöscht werden IP-Adressen also welcher Anschluss hatte wann welcher IP-Adresse.\nZugewiesen und das hat die behnitz einmal erhoben und stellt fest,\ndie Mobilfunkbetreiber speichern einmalige Kennung von hin von den Handys und vergleichbaren Endgeräten also die E-Mail international mobile Equipment identity bis zu vier Monate,\nund die Funkzellen ebenfalls ja.\nNee die die Funktion eine Woche lang ja also die Funkzellen in den das Gerät eingebucht war die also darüber Auskunft geben wann ihr wo wart,\nwenn eine Woche lang gespeichert Rufnummern Datum und Uhrzeit von anrufen sowie die im sie zur Identifizierung D-Netz\nTeilnehmer international Arbeitsplatz Treiber identity also das was auf eurer SIM-Karte ist das also ihr ihr seid.\nWerden teilweise bis zu sechs Monate lang aufbewahrt das geht ja sogar über die Vorgaben der Vorratsdatenspeicherung hinaus.\nUnd der AK Vorrat klagt bringt das entsprechend ein und wir können hoffen dass diese ordnungswidrige Speicherung von Telekommunikations und Verkehrsdaten.\nDurch den Acker Fahrrad ordentlich vorgegangen.\nJetzt hatten wahrscheinlich alle und in und in den in Sorge um die Telefonnummer einiger weniger Politikerinnen und Politiker ganz vergessen dass sie irgendwann in den letzten Jahren war mal in einem Marriott Hotel waren.\nUnd da waren ja was war das jetzt 500 Millionen Datensätze abhandengekommen da lässt Marriott verlauten ja und Passdaten waren auch dabei das war einige Zeit noch unklar,\nich hatte das ja hier auch in der,\nin der Sendung gesagt ich gehe davon aus weil die das natürlich die in jedem schönen Datensatz reinschreiben und andauernd erfassen mit welchem passt die Leute da erscheinen man die auch andauernd zeigen muss man im Ausland im Hotel ist ja bestätigt.\nUnd ansonsten,\ngibt's jetzt Angreifer die eine Versicherung gehackt haben und die.\nNun eine Versicherung bitterol dass sie,\ndie daten zu den nine-eleven Fällen liegen könnten das ist deswegen ganz spannend also.\nDiese ganzen nine-eleven also das 11. September das war natürlich für Versicherer ein spürbares Ereignis und das wurde natürlich ohne Ende.\nVor den Gerichten erklärt ja die haben sich natürlich darüber gestritten war das jetzt Terror oder nicht wie war jedes Haus ein einzelner Angriff oder wann beide Häuser ein Angriff was sie sich eine Rolle dafür spielt\nob die etwas was ich 50 Milliarden oder 100 Milliarden auszahlen müssen undsoweiterundsofort also auch da.\nAn zentraler Stelle geht's euren datengut keine Sorge die kommen so schnell nicht weg und die verdienen halt jetzt nur Geld jemand an."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:37:31",
+      "text": "Damit mit den eigenen Daten ist es so ein bisschen wie mit diesem Gartenzwerg in dem Film Amelie."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:37:41",
+      "text": "Den musst Du mir noch mal erklären was da was macht ihr mit dem Gartenzwerg."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:37:48",
+      "text": "Adi amelie hat ihren Vater damit glücklich gemacht indem sie im erste Gartenzwerg geklaut hat und dann hat dieser Gartenzwerg alle paar Tage Postkarten aus aller Herren Welt geschickt und reist durch die ganze Welt und so hat man das,\nfür das war Franz alleine da die ganze Zeit von Postkarten bekommen Hallo ich bin jetzt hier guck mal.\nIch komme gut rum mach dir keine Sorgen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:38:13",
+      "text": "Und M.\nDann auch noch sehr schön am Sonntag das müsste gestern gewesen sein gibt's die gab es die größte Daten Vereinigung\naller Zeiten denn die Daten aller Meldeämter wurden in einer Klartext Datenbank zusammengeführt nur zu Forschungszwecken nämlich ein kleiner Testlauf für die große europaweite Volkszählung 2000,\n21 denn die Europäische Union würde gerne einen Zensus durchführen\nund damit man mit der alten nicht am Ende so blöd dasteht wie in Hessen bei der Wahl möchte man natürlich schon mal prüfen was den passiert wenn man so 80 Millionen.\nDatensätze oder irgendwelche Meldeämter Datensätze zusammenführt und da hat man sich gesagt wo kann man denn solche Daten mal her dann nehme am besten einfach die die war schon haben nämlich die von den Meldeämter an wird jetzt eine große Datenbank,\nzusammengeführt coole Ideen es gab dann eine\neine ein Eilantrag dagegen vom Acker Zensus aber ich habe bis jetzt nirgendwo,\nMedienberichte gefunden was daraus geworden wäre insofern gehe ich davon aus dass da nichts draus geworden ist und das jetzt einfach zum jetzigen Zeitpunkt schon passiert ist bin mal gespannt wenn das dann doch noch abgewendet werden konnte und das einfach.\nIch nicht gefunden habe oder es vor der Aufzeichnung er nach unserer Aufzeichnung werden unser Aufzeichnung erst veröffentlicht wurde dann kriegen wir bestimmt die Korrektur in unserem Kommentar.\nSo bleiben wir aber bei YouTube Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:39:52",
+      "text": "Oh ja oh ja da so ganz nebenbei gehen laufen die Geschäfte ja auch in den trilogverhandlungen,\nweiter wir hatten nun mehrfach darüber berichtet und uns ja auch mit Julia Rede auch schon direkt in der Sendung\nunterhalten es geht natürlich um die Novelle des Urheberrechts auf europäischer Ebene und insbesondere mit den zwei Sonderaufträge an\ndas Leistungsschutzrecht auf der einen Seite\nunten auf der anderen Seite was immer noch ein richtiger Zankapfel zu sein scheint Artikel 13 die Geschichte mit den upload-filter muss sagen hier ist,\nwar ganz interessant auch ein bisschen Bewegung in das Spiel rein gekommen wir sind da mittlerweile nicht die einzigen die rum blöken mit natürlich viel zu viel Verspätung würde ich sagen aber so früh war jetzt auch nicht dabei,\nist das ganze dann auch gerade in YouTube Kreisen hochgekocht ist es von diversen,\npopulären YouTube an auch schon aufgegriffen worden.\nUnd ja was ist die Situation die Situation ist dies wird\nverhandelt das heißt ja Trilog das ist ja dieses Finale abstimmen über eine konkrete Richtlinie oder eine konkrete Verordnung zwischen\nden dreyhaupt Entitäten der EU also nämlich die Kommission die das ja ursprünglich mal initiiert hat dem Parlament das\ndazu dann Stellung nehmen muss das ja auch getan hat aber das eben diese Artikel 13 diese upload-filter Geschichte da drin belassen hat,\nund,\nzu guter Letzt natürlich der Regierungsebene also der europäischen Länder spricht der Rat der Europäischen Union und.\nDiese Verhandlungen laufen derzeit und wie Julia Rehder in ihrem Blog berichtet ist man sich wohl schon weitgehend einig.\nAlso aktuellen Entwurf wenn alle Betreiber die also potentiell Urheberrecht behaftete Inhalte,\nposten bzw Posten lassen werden verpflichtet,\nupload-filter einzuführen weil sie halt selbst für die Inhalte ihrer User direkt,\nhaft also steht jetzt noch nicht explizit drin mit ihr müsst das darüber realisieren aber de facto ist das daneben der einzige Weg weil ohne komplett Überwachung kann man eben nicht verhindern dass solche\nso eine hast du dann auch mal gezogen und wird sprich upload-filter werden dann halt zwingend vorgeschrieben sei es gibt noch ein paar Punkte die sind noch offen,\nDavid Dora diskutiert ob man jetzt da Tabs rausnimmt wobei das natürlich dann wieder so eine Frage ist wie definiert man eigentlich Startup ja es wird auch darüber gesprochen\nnach unbekleidet Einbau die den Umfang der Verpflichtungen so proportional zu Unternehmensgröße definiert es scheint da in demselben Bereich zu spielen.\nAber und man fühlt sich halt die ganze Zeit über irgendwelche Klarstellung zu machen so ja nee Liga alle Inhalte soll natürlich auf gar keinen Fall geblockt werden dass wir uns total sicher dass das funktioniert würde ich sagen,\nja noch umstritten sind so Dinge wie auf eine Plattform,\ndenn irgendwann vielleicht mal auch nachweisen kann dass ich ja alles getan hat um das zu verhindern und wenn das nachgewiesen werden kann dass sie dann vielleicht auch noch aus dieser Haftung Haar ausfällt\nda fragt man sich halt auch wie sowas ohne vollautomatische Systeme überhaupt funktionieren soll.\nUnd es wird auch ja weil darüber eben auch Kritik kam das sagt man aber auch,\nSimon zumindest dass diese Kritik auch schon Wirkung hat auch wenn dann die daraus resultierende Debatte nicht unbedingt immer richtig gelagert ist das halt parodies also Parodien also die Verwendung von,\nCopyright Material um,\nhumoristisch satirisch im Netz präsent sein sprich - das soll ja dann auch überleben aber das ist halt auch so eine merkwürdige Deklaration eines Wunschgedanken.\nJa was ist zu tun das ganze soll,\nam 21 Januar sprich in einer Woche zu einem finalen Gesetzesentwurf kommen spricht dann sollen die trilogverhandlungen abgeschlossen sein.\nHier ist es sicherlich sinnvoll sowohl war Parlament spricht über Parlamentsabgeordnete als auch über den Rat sprich Minister der\njeweiligen Regierungen unserem Fall halt die deutsche Regierung nicht klappt Peter Altmaier ist hier primär zuständig noch mal Druck zu machen um da\nvielleicht auch noch Schlimmeres zu verhindern sieht nicht unbedingt danach aus aber das ist sozusagen jetzt,\ndie letzte Abteilung die Aufregung ist groß werden ja auch darüber berichtet dass mittlerweile eben auch die angeblich davon so profitieren denn,\nVerlage hier beim Leistungsschutzrecht jetzt irgendwie auch auf einmal der Meinung sind das wäre für sie ja überhaupt nicht von Vorteil und diese upload-filter ja auch nicht die Einsicht kommt etwas spät.\nArm kann gut sein dass wir uns hier so brexit Style etwas an die Backe kleben mit dem ehrlich niemand wirklich glücklich ist und die am Ende genau die Unternehmen,\nVorteil von den die ganze Zeit die Rede ist das ja mal müssen zurücktreten müssen spricht die großen konnten Konzerne die sich solche upload-filter und ihre maintenance überhaupt leisten können und dann vielleicht demnächst auch ein neues\nEinkommens einen neuen Einkommensbereich haben nehme ich diese mega teuren upload-filter gebührenpflichtig an alle anderen zu vermieten um die Kohle wieder rein zu bekommen und am Ende die,\nRegeln zu setzen was im Internet in quasi legal ist und was.\nKurt opsahl war ja bei euch irgendwie auf der Bühne als er den Jahresrückblick gemacht hat auf dem 35 C3\nAIFF und hat das Thema auch noch mal angesprochen das zeigt die Aufregung ist keineswegs nur auf Deutscher oder europäischer Ebene zu finden\nwas ist eigentlich eine weltweite Problematik mal hat jetzt auch gemerkt international das eben EU-Gesetzgebung im bezug auf internetregulierung\nrelevant ist das ist spätestens seit der gdpr so der Dacia,\nGrundverordnung wo soweit durchgesickert spricht dies die Aufmerksamkeit für europäische Gesetzgebung ist mittlerweile eine globale zumindest im westlichen der westlichen Welt sagen wir's mal so\nund dementsprechende sahen sie sich dort auch bemüht hier aufgerufen,\nda auch noch eine Wiki Seite auf die wir verlinken können wo noch mal alles zusammengefasst ist was man jetzt noch tun kann.\nOder verlinkt man natürlich noch mal."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:46:49",
+      "text": "Ja und sie Zeit rennt ja das muss jetzt passieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:46:54",
+      "text": "Muss passieren,\nnicht essen nicht nur deshalb weil diese Artikel 13 schlimmes sein weil und hier sieht man auch glaube ich daneben warum diese Motivation\nbei der Kommission so groß ist hier überhaupt voranzuschreiten mit snapload Filtern im Prinzip die Verschärfung,\ndieser Situation schon ante portas ist also es gibt ein neues Projekt und.\nWie sollte es anders sein was unbedingt verhindert werden muss ist terrorpropaganda denn wir wissen ja alle terrorpropaganda das ist ja das Schlimmste überhaupt da können wir die ganze Nacht nicht schlafen wegen seiner ganzen terrorpropaganda dann will ich es nicht sagen\ndass das nicht für sich genommen auch ein Problem darstellt aber hier wird halt feucht geträumt davon dass man den\nwenn man jetzt diese tollen upload-filter hat sie doch auch gleich dafür verwenden kann um Unternehmen zu,\nSwing damit nicht nur Copyright Material zu erkennen sein eben auch terrorpropaganda weil dafür haben wir digitale künstliche Intelligenz in der Mangel und menschlicher Intelligenz säuft hier die Maschinen voran geschickt werden um unsere Zahlen hinter Rohr vom Hals zu halten zumindest Netz\nund man träumt also von einer entsprechenden Richtlinie die hier Maßnahmen festlegen soll.\nAlle Anbieter auch noch verpflichtet werden terrorpropaganda auch noch mit raus zu filtern.\nJa die träumen davon dass Inhalte innerhalb einer Stunde offline genommen werden wenn darauf hingewiesen wird sowas ist natürlich in der Regel nur über solche automatisierten Systeme zu.\nErreichen und hat etwas Hand es wäre jetzt hier irgendwie Alarm schlägt das.\nMittlerweile schon bis zur un ja also die UN,\nbeobachtet diesen ganzen gesetzlichen Prozess 3 Sonderberichterstatter kritisieren hier in dem Zusammenhang sowohl schwammige Definition und realistische Löschfristen,\nund die damit verbundene komplett Überwachung durch Upload fehlt,\nund kritisiert insbesondere dass eine der Zeit auch noch in der Diskussion befindliche Freiwilligkeit zur Löschung,\naber speziell problematisch sein ihrer rechtsdefinition.\nWeil sie erfahrungsgemäß dann einfach von privaten Initiativen ausgenutzt wird die quasi alle.\nDen direkten privaten weg machen spricht da kommt dann irgendwie\nwelche Initiativen von Europol und von anderen Gruppen die einfach der Meinung sind hier\ngibt es Inhalt der ist unserer Meinung nach terrorpropaganda macht den doch mal weg und darüber quasi Einfallstor für eine private,\nauch noch ermöglicht ohne dass das hier in unter einer Form noch in deiner Rechtssicherheit ausgesetzt wäre.\nAlso das ist was wir verlinken zu diesem ganzen Artikel zu dem Thema."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:50:02",
+      "text": "Ja schade da war was nicht schönes Kennung verloren oder sonst immer so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:50:08",
+      "text": "So unterhaltsam auch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:50:10",
+      "text": "Ich habe aber ich habe tatsächlich noch ein Bonbon mitgebracht ich habe einen Jumbo."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:50:16",
+      "text": "Ein Bonbon."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:50:17",
+      "text": "Ein Baum wo ein Thema ich kann es es ist zergeht auf der Zunge und schmilzt und zwar l Sharp.\nFaszinierende mexikanischer drug lord,\nder ja wirklich also ich muss zugeben dass ich solche Sachen durchaus mit Interesse verfolge diese Kriminellen Parallelwelten die da existieren wo quasi,\neinzig und allein aus dem eis der illegalisieren einer Substanz ebenso.\nJa Millionäre Milliardäre entstehen riesige Organisationen und die Weise in der Illegalität sind,\neben größtenteils durch durch Drohnen und morden funktionieren ja das ist finde ich immer wieder\nja\nebay spannend zu sehen wie dünn irgendwie die Decke der Zivilisation ist ja dass du nämlich mit dir diese Mafiastrukturen wo denkst du ja nee der der der der steht aber in Deutschland der Anstand gegen naja ich meine\nam Ende steht einfach dagegen dass das die einfach nur morgen ja jeder Mensch der da mitmacht.\nHat in der Regel am Ende keine andere Wahl wenn du so eine Organisation aufbaust dann musst du natürlich aufpassen dass,\ndich deine Leute insbesondere deine engsten Vertrauten nicht verraten und was hat der El Chapo offenbar gemacht was jetzt in seinem Verfahren,\nzuz Zoll an das Licht der Öffentlichkeit kam ja der hatte mit,\nSmartphone Trojaner gearbeitet ja ist dann moderne junger Mann und der hat also dafür gesorgt dass sich mal seine engsten Leute und auch irgendwie seine Frauen und Geliebte,\ndass er die unter Kontrolle hatte und dafür gibt es ein Angebot das übrigens denke ich zurecht als äußerst.\nAsozial kritisiert werden kann und zweitens ist Angebot flexispy das ist also ein Unternehmen das mehr oder weniger in seiner Werbung sich auch spezifisch an.\nJa sama an Ehemänner richtet um ihn irgendwie zu ermöglichen ihre Partnerin,\noder Partner zu zu überwachen und es ist einfach ein Trojaner der eben auch das Telefon aufgebracht wird\nder dann so mit dem Handy SMS Nachrichten einsehen kannst das calllog einsehen kannst also mit wem hat die Person telefoniert in neueren Version kannst du glaube ich auch das Mikrofon einschalten und quasi das,\ndass das Handy hat als Wanze benutzen einmal so so alles was das Stalker herzbegehrt bietet ihr flexees.\nUnd für Android und iOS aber auf iOS letztes halten Jailbreak voraus ne.\nDa musst du halt eine iOS-Version haben die in Jailbreak kann ich glaube dass dir das auch noch mal für andere,\nangeboten haben dieses Unternehmen ist schon länger im im Business und es ist länger her dass ich mich damit auseinandergesetzt habe ich habe einmal die die das Android binary vor längerer Zeit angeschaut oder eher die Android-App das apk\nund ziemlich übler Spaß vor allem weil.\nWie geht der Trojaner der sowas machen soll braucht ja einen, dann control Server das heißt das was das Handy,\nalso ab das Handy funktioniert ja ganz normal weiter jetzt hat sie nur eine weitere Applikation drauf eine die im Hintergrund läuft die die Nachrichten klaut und weiterleitet.\nDie vielleicht auch mal das mikrofon anmacht und so weiter er seine spionage-app und jetzt ist natürlich der. Wenn wenn unser El Chapo jetzt hat ich möchte gerne die sms nachrichten von meiner Frau haben oder so ne aber davon meinen Angestellten,\ndann müssen die ja irgendwie den Weg zu ihm finden,\nund den Weg finden Sie natürlich über das Internet nämlich die gehen dort zu dem sogenannten command-and-control Server also das Handy schickt die ganze Zeit seine Daten am laufenden Band an diesem command and control Server,\nund bei flexispy wird dieser command and control Server nicht von El Chapo betrieben,\nvon dem Unternehmen dem er für die Dienstleistung ein Jahr lang das Handy zu teuer lisieren Geld.\nHoffe du kaufst also da Lizenzen ja das ist richtig so ekelig das ist so ein ekliges Geschäftsmodell ja und noch dazu.\nWeißt du wenn du wenn du schon mit uns eh schon echt auf dem falschen Dampfer wenn du so was tust ja aber du bist so richtig auf dem falschen Dampfer wenn du das davon hoch mit dem command and control Server von jemand anders tust.\nBei dem dann die Polizei ein reitet und sagt ey gib mal hier,\ndie Daten und genau das ist passiert der der Chabo hatte quasi den größeren Teil seiner seiner Seite seiner belastenden Beweise die gegen ihn jetzt sprechen ist sind von den Handys von seiner\nvon seiner Frau und von seinen engsten Mitarbeitern die heraus Kontrollfreak tun,\nmit dieser mit dieser kommerziellen Spyware ausgestattet hat und genau die Daten haben sich zärtlich die Polizei geholt.\nDas doch ein Bonbon oder."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:55:59",
+      "text": "Ist wirklich unfassbar immer wie blöd muss man denn sein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:56:04",
+      "text": "Das ist das ist das ist echt mal so ich glaube Torsten und ich können nächstes Jahr wieder einen Vortrag über OpSec."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:56:13",
+      "text": "Nett zu mir ist hast du deinen ersten slide schon mal zusammen ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:56:14",
+      "text": "Weil die erste Folie haben wir schon was fertig ja so und das ist echt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:56:22",
+      "text": "Also ich bin bin auch gerade\nTal total geprellt hier einfach von dieser Webseite von von diesem Unternehmen er hat diese asozialen auch gar kein Blatt vor den Mund nehmen ne Software zur elterlichen Kontrolle Mitarbeiterüberwachung,\nblablabla kriegen sie ja alles direkt geliefert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:56:44",
+      "text": "Ja das ist richtig das ist richtig perverser Scheiß und es ist.\nAuch echt nicht cool ja also genau elbkinder gestellte ja das ist.\nGuck mal hier die verteidige schicken die sogar die fertigen Telefone vor vor Trojan dizier das war damals noch nicht so oder musstest du das noch selber,\nanbringen was wahrscheinlich auch für die so ein bisschen das Problem war geil dann hast du sogar noch hier sind flexispy expresar sicher wenn das flexispy Auto vor der Tür steht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:57:19",
+      "text": "Ja privat Überwachung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:57:23",
+      "text": "Ja das ist richtig also ganz ehrlich wir hören ja relativ viele Leute zu wenn ihr auch nur im entferntesten mit dem Gedanken spielt sowas zu machen ja.\nLass es sowieso sein aber.\nWenn ihr erst recht nicht mit einem Unternehmen was das S&S Service anbietet ja also Trojaner essenservice ist echt keine besonders gute Idee ja der der gibt ihr nämlich also.\nAm Ende bezahlt ihr ja nur dafür dass ihr den Zugriff habt auf die Daten.\nDie dieses andere Unternehmen gesammelt hat ja also das ist wirklich wirklich skurriler scheiße und man sollte sich da echt von fernhalten zum Glück als wir das damals untersucht haben\nwar das also war die Verbreitung dieser Software noch sehr gering.\nOffenbar jetzt nicht mehr aber es ist wirklich also auch.\nIch meine wenn man sowas macht dann ist das in der Regel widerrechtlich ja der Didi bewerben ja auch sehr klar und durch die Blume\nan Menschen zu widerrechtlichen Verwendung und dann ist das sehr schlecht wenn auf eurer Kreditkartenabrechnung sich sowas findet ja also Oma nee\naber ich fand es andererseits auch echt beruhigend dass offenbar selbst irgendwie der Chabo hat glaube ich genug Geld ja.\nDer Stern das selbst der sich nicht irgendwie eigene vernünftige.\nSchatz was er für für iOS-Geräte organisieren konnte finde ich dann wiederum ganz okay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:59:12",
+      "text": "Naja aber die ganze Technologie wird ja immer erschwinglicher man kann die Totalüberwachung outsourcen\nan alle möglichen Leute die man kennt und auch an ganze Menge Leute die man nicht kennt insbesondere wenn man an dem ganz neuen Trend SmartHome teilnimmt da ist,\nauch total super alles der absolute Brüller gerade sind nämlich so die Tür klingeln mit\nin den Smart Home Bereich mit rein zu nehmen oder ihm auch die Schlösser damit und das ist gerade ein sehr beliebter Sport weil wer will das nicht wenn zu Hause jemand klingelt dass man dann auf seinem smartphone während man gerade irgendwo shoppen ist oder so direkt mit der Person also mit dem,\npaketkurier CD,\nper Bild telefonieren kann und Infusionen geben kann was weiß ich vorgeben kann zu Hause zu sein aber trotzdem nicht öffnen zu wollen\nwas auch immer man damit beabsichtigt gibt's auf jeden Fall zu kaufen integriert sich ganz toll in seinen super Smart Home Netzwerk bestimmt hat kein Mensch wirklichen Plan wie sich das dann in das eigene Haus Netzwerk,\neinbringt und was für technische Schwachstelle ist noch aufmacht brauchst aber gar nicht die Dinger sind ByDesign schon problematisch zeigt sich nämlich das wenn man so eine.\nKamera z.b. Folgen Ring installiert das von amazon.de."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:00:46",
+      "text": "Gekauft worden oder Amazon hat die glaube."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:00:48",
+      "text": "Ja genau die haben die gekauft das war bis vor kurzem noch eine separates startup.\nNaja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:01:03",
+      "text": "Ja wer hätte damit rechnen können ne ich glaube um die optische ob die optische Erkennung zu optimieren ja da sind dann irgendwelche."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:01:12",
+      "text": "Trainieren unsere künstliche Intelligenz genau das war nämlich das Problem das Problem der ganzen künstlichen Intelligenz und dem deep learning was von dem wir so viel hören und was er angeblich so unglaublich intelligent ist\nda braucht man dann halt auch in irgendeiner Form Wahrheiten denn auch eine künstliche Intelligenz lernt nicht das Richtige\nwenn nicht eine menschliche Intelligenz irgendwann mal vorher gesagt hat oder währenddessen was denn nun eigentlich die Wahrheit ist die ist hier zu lernen gilt und dann\nhaben sich einfach auf den Weg begeben und die Kamera einfach für\nirgendwelche Mitarbeiter irgendwo freigeschaltet sichern was Sie auf deine Haus Kamera ausschauen dürfen und dann auf dem Bild irgendwie Dinge anzuklicken mit hier ist ein Hund hier ist ein Straße hier ist Paketbote hier ist keine Ahnung was da alles noch gedeckt wurde."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:02:04",
+      "text": "Genau das hat das wird wird in der Ukraine dann erledigt und der Autor seine bitte hatte auch sogar Bilder von der Oberfläche wo du dann also siehst ne Bild und dann hat die\nsagt die AIDA ist was da ist habe ich das richtig erkannt als so und so ähnlich wie wir das machen wenn wir captures müssen ne\nzeig mir mal wo hier Autos sind und der der entscheidende Satz der die den er dann noch in sind hat Ring never encrypted customer Videos ist Horst tot Lied because the corporate\nbecause of a corporate sense the encryption with make the company less valuable also Ring hat niemals die Videodaten seiner Kunden verschlüsselt weil sie ein,\nwirtschaftlichen Sinn oder in wirtschaftliche Ahnung hatten dass das Unternehmen weniger wertvoll würde wenn Sie die Videodaten die sie da sammeln verschlüsselt und Asylrecht sie wurde ja dann von Amazon gekauft ja.\nWann wann also wann sind in anderer Schönebeck in dem Zusammenhang ist übrigens auch gerade von nicht ob von cory Doctorow.\nAuf auf Bäumen auf boeing-boeing veröffentlicht wo also ein der Hersteller von einem.\nTV sagt naja wenn du nicht wenn du kein Smart-TV haben willst dann muss das teurer sein weil.\nWir ja Geld damit verdienen dass wir dich beim Fernsehen die ganze Zeit trinken und gucken was du mit dem Fernseher machst und damit kriegen wir damit verdienen wir ja Geld und deswegen musst du quasi draufzahlen wenn du ein dummes Fernsehen haben möchtest und nicht in Smart Fernsehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:03:45",
+      "text": "Ja das ist jetzt,\ndas ist jetzt so die die die Drucker Tintenpatrone des 21 jahrhunderts ja also der die Fernseher werden immer größer immer toller 4k 60 Zoll Wahnsinn\nund Kost nur 300 € und man fragt sich eigentlich an welcher Stelle verdient jetzt eigentlich wer hier überhaupt noch irgendwie Geld\nja Tante out das sind alles Aftersales Einnahmen die jetzt hier mit einkalkuliert werden und da ist Samsung ganz vorne die anderen aber sicherlich genauso dabei und\nist glaube ich nicht ganz falsch wenn man mal darüber nachdenkt seinen Fernseher noch mal entweder mit speziellen Firewall-Regeln zu versorgen um so bestimmte Verbindung vielleicht zu unterbinden\noder überhaupt nicht ans Netz anzuschließen was hat sich denn den Sinn eines solchen Fernseher ist ein bisschen in Frage stellt.\nLauren einfach nur als.\nMonitor zu benutzen für andere devices die vielleicht mehr Vertrauen genießen um dort ein Bild anzuzeigen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:04:54",
+      "text": "Also ich sehe keinen Grund meinen Fernseher ins Internet zu hängen aber ich habe auch keinen insofern kann ich das auch wahrscheinlich schwer nachvollziehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:05:01",
+      "text": "Naja security updates wären natürlich schon mal einen Grund."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:05:05",
+      "text": "Ja wenn der also ich sag mal wenn er nicht anfährt wenn er nicht am Internet hängt so dann habe ich im Zweifelsfall sehr viel weniger Security Update Bedarf ne also.\nAber wer weiß was diese Dinger inzwischen können so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:05:19",
+      "text": "Na, auch Feature Update selbst nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:05:22",
+      "text": "Ja klar nachher neues neue Spyware."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:05:24",
+      "text": "Malware neue Spyware."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:05:26",
+      "text": "El Chapo hat einen neuen flexispy für den Fernseher."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:05:29",
+      "text": "Also liebe Kokain Bosse dieser Welt irgendwie vielleicht kauft ihr euch keine neue Smart TV,\nkönnte sein dass die Kamera irgendwo eingeschaltet ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:05:41",
+      "text": "Stück."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:05:43",
+      "text": "Das wird noch das wird noch wirklich lustig werden also ich denke dann mit dem werden wir noch eine ganze Menge Spaß haben in Zukunft."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:05:52",
+      "text": "Wie auch mit unseren Termin Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:06:06",
+      "text": "Genau die Termine machen euch glücklich und der erste Termin den wir zu nennen haben ist schon am 28,\nJanuar denn dort findet das letzte Chaosradio was bei Fritz auf,\nUltrakurzwelle noch ausgestrahlt wird statt Ausgabe Nummer 253 wird also,\ndas letzte analog ausgestrahlt Chaosradio sein Chaosradio selber wird natürlich nicht beendet sondern fortgeführt das ganze findet statt,\nin der Öffentlichkeit und ihr könnt dabei sein nämlich in Berlin im säälchen am Holzmarkt in Berlin-Mitte.\nKommt zahlreich bringt Freunde haben Spaß wenn ihr mit Chaosradio irgendwann in eurem Leben mal was habt anfangen können."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:07:00",
+      "text": "Dann am gleichen Tag ist in Siegen der Datenschutztag am oder ich glaube der ist überall aber in Siegen\ngibt es dann ein Vorteil des Datenschutzbeauftragten der Universität Siegen Sebastian Zimmermann der einen thematischen Einstieg bietet und danach schreiben wir gemeinsam Auskunftsersuchen,\nautomatisiert und leicht können anwesend Ihre Anfrage schnell an mehr als 80 Organisation stellen darunter Schufa Flensburg national und international Geheimdienste und viele viele mehr der Spaß steht Spaß,\ndabei im Vordergrund das ist also der dritte Europäische Datenschutztag im hackspace siegen am 28.01 ab 20 Uhr viel Spaß\ndort."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:07:44",
+      "text": "Oder ein bisschen mehr in der Zukunft am 22 bis 24 März findet in Köln die mittlerweile X subscribe Starter bin ich mit\nschuld\ndas ist das große Treffen für podcaster.de gibt Vorträge und Workshops und vor allem trifft sich dort die Community hat Spaß miteinander und tauscht sich aus wir konnten jetzt leider im letzten Jahr keine subscribe\ndurchführen aus verschiedenen Gründen jetzt hast du mal wieder geklappt und wir haben einen schönen Ort dafür gefunden nämlich nichts weniger als die Veranstaltungsräume,\nim Deutschlandfunk in Köln und im Radeberg Ring.\nDer CFP ist raus wenn Ihr dran teilnehmen wollt wenn ihr Lust haben Vortrag zu halten oder auch nur irgendeinen Workshop selbst organisieren wollt dann bitten wir darum dass ihr das bei uns online ein Tüte tickets,\ngibt's demnächst laufen gerade noch die letzten Absprachen,\nhätte ich dann auch hier in den Schuhen und zu meiner fliegen wenn es insoweit ist aber auf jeden Fall alle Informationen findet ihr auch schon mal bei uns im Blog.\nJa so viel soviel haben wir zu den Termin.\nWollen wir haben sicher die auch noch ein paar andere lustige Geschichten jetzt gehabt die wir euch noch erzählen können,\nalles auf einmal ist ja dann auch ein bisschen Fett oder und es ist nur schwer solange dabei wir finden ja mal kein Ende."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:09:15",
+      "text": "Ja in der in der selten erfüllten Hoffnung dass nächste Woche weniger los war haben wir uns ein paar Themen fürs nächste Mal aufgehoben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:09:25",
+      "text": "Schulz aus wünschen euch noch viel Spaß auf allen Daten wegen bleibt sicher und immer schön lächelt ihr wisst die nächste Kamera ist nicht weiter."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "2:09:37",
+      "text": "Bis bald ciao ciao."
+    }
+  ]
+}

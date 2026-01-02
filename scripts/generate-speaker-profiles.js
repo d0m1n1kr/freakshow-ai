@@ -483,7 +483,8 @@ async function main() {
     }
   }
 
-  const settingsPath = path.join(__dirname, 'settings.json');
+  // settings.json lives in the project root (next to settings.example.json), not in scripts/
+  const settingsPath = path.join(__dirname, '..', 'settings.json');
   if (!fs.existsSync(settingsPath) && !args.noLLM) {
     console.error(`❌ settings.json not found at ${settingsPath}. Create it (see settings.example.json) or run with --no-llm.`);
     process.exit(1);

@@ -1,48 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
   <defs>
-    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    <linearGradient id="fav-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#2dd4bf"/>
     </linearGradient>
-    <linearGradient id="brain-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    <linearGradient id="ai-fav-grad" x1="0" y1="0" x2="32" y2="32">
+      <stop stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#6366f1"/>
     </linearGradient>
   </defs>
+
+  <!-- Blue/Teal background -->
+  <rect width="32" height="32" rx="7" fill="url(#fav-grad)"/>
+
+  <!-- Equalizer Bars (Full Width representation) -->
+  <rect x="2" y="25" width="3" height="3" rx="1.2" fill="white" opacity="0.35"/>
+  <rect x="7" y="23" width="3" height="5" rx="1.2" fill="white" opacity="0.55"/>
+  <rect x="12" y="24" width="3" height="4" rx="1.2" fill="white" opacity="0.7"/>
+  <rect x="17" y="22" width="3" height="6" rx="1.2" fill="white" opacity="0.85"/>
+  <rect x="22" y="24" width="3" height="4" rx="1.2" fill="white" opacity="0.7"/>
+  <rect x="27" y="25" width="3" height="3" rx="1.2" fill="white" opacity="0.45"/>
+
+  <!-- Simplified Microphone -->
+  <rect x="10" y="4" width="12" height="18" rx="6" fill="white"/>
   
-  <!-- Background circle -->
-  <circle cx="50" cy="50" r="48" fill="url(#bg-gradient)" stroke="#4f46e5" stroke-width="2"/>
-  
-  <!-- Freak Show "F" stylized -->
-  <path d="M 25 30 L 45 30 L 45 35 L 30 35 L 30 45 L 42 45 L 42 50 L 30 50 L 30 70 L 25 70 Z" 
-        fill="white" opacity="0.9"/>
-  
-  <!-- AI Circuit/Neural Network pattern (right side) -->
-  <!-- Nodes -->
-  <circle cx="60" cy="35" r="3" fill="url(#brain-gradient)"/>
-  <circle cx="70" cy="35" r="3" fill="url(#brain-gradient)"/>
-  <circle cx="55" cy="50" r="3" fill="url(#brain-gradient)"/>
-  <circle cx="65" cy="50" r="3" fill="url(#brain-gradient)"/>
-  <circle cx="75" cy="50" r="3" fill="url(#brain-gradient)"/>
-  <circle cx="60" cy="65" r="3" fill="url(#brain-gradient)"/>
-  <circle cx="70" cy="65" r="3" fill="url(#brain-gradient)"/>
-  
-  <!-- Connections -->
-  <line x1="60" y1="35" x2="55" y2="50" stroke="#fbbf24" stroke-width="1.5" opacity="0.7"/>
-  <line x1="60" y1="35" x2="65" y2="50" stroke="#fbbf24" stroke-width="1.5" opacity="0.7"/>
-  <line x1="70" y1="35" x2="65" y2="50" stroke="#fbbf24" stroke-width="1.5" opacity="0.7"/>
-  <line x1="70" y1="35" x2="75" y2="50" stroke="#fbbf24" stroke-width="1.5" opacity="0.7"/>
-  <line x1="55" y1="50" x2="60" y2="65" stroke="#fbbf24" stroke-width="1.5" opacity="0.7"/>
-  <line x1="65" y1="50" x2="60" y2="65" stroke="#fbbf24" stroke-width="1.5" opacity="0.7"/>
-  <line x1="65" y1="50" x2="70" y2="65" stroke="#fbbf24" stroke-width="1.5" opacity="0.7"/>
-  <line x1="75" y1="50" x2="70" y2="65" stroke="#fbbf24" stroke-width="1.5" opacity="0.7"/>
-  
-  <!-- "AI" badge in bottom right corner -->
-  <rect x="68" y="75" width="20" height="12" rx="3" fill="#fbbf24"/>
-  <text x="78" y="84" font-family="Arial, sans-serif" font-size="8" font-weight="bold" 
-        text-anchor="middle" fill="#4f46e5">AI</text>
+  <!-- Clear AI Badge -->
+  <rect x="11.5" y="14" width="9" height="6" rx="1.5" fill="url(#ai-fav-grad)"/>
+  <text
+    x="16"
+    y="17"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    fill="white"
+    font-family="system-ui, -apple-system, Segoe UI, sans-serif"
+    font-size="3.6"
+    font-weight="800"
+    letter-spacing="0.2"
+  >AI</text>
 </svg>
-
-
-
-

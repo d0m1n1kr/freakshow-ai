@@ -87,7 +87,22 @@ else
     BINARY="cluster-topics-v2"
 fi
 
+NEED_BUILD=false
+
 if [ ! -f "target/release/$BINARY" ] || [ "$REBUILD_ALL" == "--rebuild-all" ]; then
+    NEED_BUILD=true
+fi
+
+# Safety check: ensure the binary supports --podcast (multi-podcast scripts rely on it).
+# If the compiled binary is stale (older CLI), force a rebuild.
+if [ "$NEED_BUILD" = false ]; then
+    if ! "./target/release/$BINARY" --help 2>/dev/null | grep -q -- "--podcast"; then
+        echo -e "${YELLOW}⚠️  Existing $BINARY does not support --podcast (stale build). Rebuilding...${NC}"
+        NEED_BUILD=true
+    fi
+fi
+
+if [ "$NEED_BUILD" = true ]; then
     echo -e "${BLUE}🔧 Building $BINARY...${NC}"
     cargo build --release --bin "$BINARY"
 else
@@ -98,8 +113,8 @@ fi
 echo ""
 echo -e "${BLUE}🔬 Running clustering ($VERSION)...${NC}"
 
-# Run the binary with --variant argument (reads settings from variants.json)
-"./target/release/$BINARY" --variant "$VARIANT_NAME" || {
+# Run the binary with --variant and --podcast arguments (reads settings from variants.json)
+"./target/release/$BINARY" --variant "$VARIANT_NAME" --podcast "$PODCAST_ID" || {
     echo -e "${RED}Error: Failed to run $BINARY${NC}"
     exit 1
 }
@@ -151,7 +166,11 @@ fi
 node scripts/generate-topic-river.js --podcast "$PODCAST_ID" "${TOPIC_RIVER_ARGS[@]}" || {
     echo -e "     ${RED}✗ Failed to generate topic-river-data.json${NC}"
 }
-if [ -f topic-river-data.json ]; then
+# Script writes into frontend/public/podcasts/<podcast>/ by default
+TOPIC_RIVER_OUT="frontend/public/podcasts/$PODCAST_ID/topic-river-data.json"
+if [ -f "$TOPIC_RIVER_OUT" ]; then
+    mv "$TOPIC_RIVER_OUT" "$OUTPUT_DIR/"
+elif [ -f topic-river-data.json ]; then
     mv topic-river-data.json "$OUTPUT_DIR/"
 else
     echo "     (skipped - file not generated)"
@@ -159,10 +178,26 @@ fi
 
 # Cluster-Cluster Heatmap
 echo -e "  ${YELLOW}→${NC} Generating cluster-cluster-heatmap.json..."
+TEMP_TAXONOMY_LINK="frontend/public/podcasts/$PODCAST_ID/topic-taxonomy.json"
+COPIED_TAXONOMY=false
+if [ -f "$OUTPUT_DIR/topic-taxonomy.json" ]; then
+    # Some generator scripts expect topic-taxonomy.json in the main podcast dir.
+    cp "$OUTPUT_DIR/topic-taxonomy.json" "$TEMP_TAXONOMY_LINK"
+    COPIED_TAXONOMY=true
+fi
+
 node scripts/generate-cluster-cluster-heatmap.js --podcast "$PODCAST_ID" || {
     echo -e "     ${RED}✗ Failed to generate cluster-cluster-heatmap.json${NC}"
 }
-if [ -f cluster-cluster-heatmap.json ]; then
+if [ "$COPIED_TAXONOMY" = true ]; then
+    rm -f "$TEMP_TAXONOMY_LINK"
+fi
+
+# Script writes into frontend/public/podcasts/<podcast>/ by default
+CLUSTER_CLUSTER_OUT="frontend/public/podcasts/$PODCAST_ID/cluster-cluster-heatmap.json"
+if [ -f "$CLUSTER_CLUSTER_OUT" ]; then
+    mv "$CLUSTER_CLUSTER_OUT" "$OUTPUT_DIR/"
+elif [ -f cluster-cluster-heatmap.json ]; then
     mv cluster-cluster-heatmap.json "$OUTPUT_DIR/"
 else
     echo "     (skipped - file not generated)"
@@ -170,10 +205,23 @@ fi
 
 # Speaker-Cluster Heatmap
 echo -e "  ${YELLOW}→${NC} Generating speaker-cluster-heatmap.json..."
+COPIED_TAXONOMY=false
+if [ -f "$OUTPUT_DIR/topic-taxonomy.json" ]; then
+    cp "$OUTPUT_DIR/topic-taxonomy.json" "$TEMP_TAXONOMY_LINK"
+    COPIED_TAXONOMY=true
+fi
+
 node scripts/generate-speaker-cluster-heatmap.js --podcast "$PODCAST_ID" || {
     echo -e "     ${RED}✗ Failed to generate speaker-cluster-heatmap.json${NC}"
 }
-if [ -f speaker-cluster-heatmap.json ]; then
+if [ "$COPIED_TAXONOMY" = true ]; then
+    rm -f "$TEMP_TAXONOMY_LINK"
+fi
+
+SPEAKER_CLUSTER_OUT="frontend/public/podcasts/$PODCAST_ID/speaker-cluster-heatmap.json"
+if [ -f "$SPEAKER_CLUSTER_OUT" ]; then
+    mv "$SPEAKER_CLUSTER_OUT" "$OUTPUT_DIR/"
+elif [ -f speaker-cluster-heatmap.json ]; then
     mv speaker-cluster-heatmap.json "$OUTPUT_DIR/"
 else
     echo "     (skipped - file not generated)"

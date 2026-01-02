@@ -29,6 +29,11 @@
   },
   "search": {
     "title": "Demande le Freak Show",
+    "titleByPodcast": {
+      "freakshow": "Demande le Freak Show",
+      "lnp": "Demande Logbuch:Netzpolitik",
+      "ukw": "Demande UKW"
+    },
     "queryLabel": "Requête :",
     "placeholder": "Entrer une question...",
     "button": "Go",
@@ -57,6 +62,15 @@
       "persona2": "roddi : Peux-tu me donner des conseils pour la domotique ?",
       "neutral": "Neutre : Apple Quo Vadis ?"
     },
+    "examplesByPodcast": {
+      "lnp": {
+        "discussion1": "Linus Neumann VS Tim Pritlove : Que pensez-vous de la réaction d’Apple au Digital Markets Act ?",
+        "persona1": "Linus Neumann : Que penses-tu du dossier médical numérique ?"
+      },
+      "ukw": {
+        "neutral1": "UKW : Quelle est la situation en Ukraine ?"
+      }
+    },
     "discussionMode": {
       "none": "Pas de mode discussion (une seule personne)",
       "selectSecond": "Deuxième partenaire de discussion",
@@ -75,14 +89,15 @@
   },
   "about": {
     "title": "À propos du projet",
-    "subtitle": "Technologies et outils derrière la visualisation River de Freak Show",
-    "freakshow": {
-      "title": "Freak Show",
-      "description": "Ce projet est basé sur le podcast Freak Show. En savoir plus sur "
-    },
+    "subtitle": "Technologies et outils derrière la visualisation de podcasts",
     "projectDescription": {
       "title": "Description du projet",
-      "content": "Cette application IA interactive analyse et visualise les sujets et intervenants du podcast Freak Show au fil des années. Grâce à l'analyse de texte assistée par IA, la recherche sémantique et aux algorithmes de clustering, les sujets sont regroupés et leur évolution temporelle est affichée dans des diagrammes en rivière. Avec les personas d'intervenants et le mode discussion, les questions peuvent être répondues dans le style des animateurs du podcast. Le projet a été développé au 39C3."
+      "content": "Cette application IA interactive analyse et visualise les sujets et intervenants de podcasts au fil des années. Grâce à l'analyse de texte assistée par IA, la recherche sémantique et aux algorithmes de clustering, les sujets sont regroupés et leur évolution temporelle est affichée dans des diagrammes en rivière. Avec les personas d'intervenants et le mode discussion, les questions peuvent être répondues dans le style des animateurs du podcast. Le projet a été développé au 39C3."
+    },
+    "supportedPodcasts": {
+      "title": "Podcasts pris en charge",
+      "loading": "Chargement des podcasts...",
+      "none": "Aucun podcast configuré"
     },
     "multiPodcast": {
       "title": "Support Multi-Podcast",
@@ -272,8 +287,8 @@
       }
     },
     "footer": {
-      "madeWith": "Créé avec ❤️ pour le",
-      "podcast": "Podcast Freak Show",
+      "madeWith": "Créé avec ❤️ pour",
+      "podcast": "l'analyse de podcasts",
       "copyright": "© 2025 • Toutes les données basées sur des informations de podcast publiquement disponibles"
     }
   },

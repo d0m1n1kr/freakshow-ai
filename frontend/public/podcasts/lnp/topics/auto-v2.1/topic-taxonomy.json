@@ -1,0 +1,3810 @@
+{
+  "createdAt": "2026-01-02T21:01:02.267425+00:00",
+  "method": "hdbscan-v2",
+  "embeddingModel": "text-embedding-3-large",
+  "embeddingsCreatedAt": "2026-01-02T11:50:34.670Z",
+  "totalTopics": 4404,
+  "uniqueTopics": 4176,
+  "settings": {
+    "clusters": 185,
+    "outlierThreshold": 0.9,
+    "linkageMethod": "hdbscan(min_cluster_size=2, min_samples=2)",
+    "useRelevanceWeighting": true
+  },
+  "statistics": {
+    "clusterCount": 185,
+    "outlierCount": 0,
+    "outlierPercentage": "0.0%"
+  },
+  "clusters": [
+    {
+      "id": "chatkontrolle",
+      "name": "Chatkontrolle",
+      "description": "7 Topics in 37 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 37,
+      "relevanceSec": 22908,
+      "sampleTopics": [
+        "Chatkontrolle",
+        "Chatkontrolle-Kampagne",
+        "Chatkontrolle, es könnte ganz schnell gehen",
+        "Update Chatkontrolle",
+        "e-Privacy-Ausnahme “Freiwillige Chatkontrolle”"
+      ],
+      "episodes": [
+        402,
+        412,
+        429,
+        431,
+        436,
+        440,
+        441,
+        444,
+        447,
+        448,
+        450,
+        452,
+        453,
+        454,
+        455,
+        459,
+        460,
+        464,
+        469,
+        471,
+        472,
+        479,
+        483,
+        484,
+        488,
+        495,
+        502,
+        503,
+        519,
+        528,
+        532,
+        534,
+        535,
+        536,
+        537,
+        538,
+        539
+      ]
+    },
+    {
+      "id": "staatstrojaner",
+      "name": "Staatstrojaner",
+      "description": "16 Topics in 23 Episoden",
+      "isOutlier": false,
+      "topicCount": 16,
+      "episodeCount": 23,
+      "relevanceSec": 18834,
+      "sampleTopics": [
+        "Staatstrojaner",
+        "Staatstrojaner von Gamma und Hacking Team entdeckt",
+        "BSI und der Staatstrojaner",
+        "Der neue Staatstrojaner",
+        "Staatstrojaner in Österreich"
+      ],
+      "episodes": [
+        25,
+        33,
+        135,
+        139,
+        174,
+        179,
+        182,
+        198,
+        216,
+        224,
+        241,
+        245,
+        294,
+        296,
+        329,
+        349,
+        351,
+        395,
+        398,
+        423,
+        433,
+        452,
+        530
+      ]
+    },
+    {
+      "id": "chaos-communication-congress",
+      "name": "Chaos Communication Congress",
+      "description": "10 Topics in 13 Episoden",
+      "isOutlier": false,
+      "topicCount": 10,
+      "episodeCount": 13,
+      "relevanceSec": 16726,
+      "sampleTopics": [
+        "29C3",
+        "30C3",
+        "31C3",
+        "33C3",
+        "34C3 in Leipzig"
+      ],
+      "episodes": [
+        49,
+        87,
+        89,
+        126,
+        127,
+        202,
+        205,
+        221,
+        237,
+        241,
+        280,
+        281,
+        539
+      ]
+    },
+    {
+      "id": "digital-services-markets",
+      "name": "Digital Services & Markets",
+      "description": "8 Topics in 11 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 11,
+      "relevanceSec": 14582,
+      "sampleTopics": [
+        "Konsultation: Digital Services Act",
+        "EU: Digital Services Act",
+        "DSA (Digital Services Act)",
+        "Digital Services Act & Digital Markets Act",
+        "Digital Services Act / Digital Markets Act"
+      ],
+      "episodes": [
+        348,
+        352,
+        362,
+        375,
+        384,
+        416,
+        420,
+        428,
+        429,
+        483,
+        528
+      ]
+    },
+    {
+      "id": "impfpass-digitalisierung",
+      "name": "Impfpass-Digitalisierung",
+      "description": "11 Topics in 13 Episoden",
+      "isOutlier": false,
+      "topicCount": 11,
+      "episodeCount": 13,
+      "relevanceSec": 14486,
+      "sampleTopics": [
+        "Immunitätsausweis",
+        "Österreich: Immunitätsausweis",
+        "Immunitätsausweis reloaded",
+        "Elektronischer Impfpass",
+        "Elektronischer Immunitätsausweis"
+      ],
+      "episodes": [
+        344,
+        352,
+        360,
+        367,
+        382,
+        384,
+        392,
+        394,
+        398,
+        403,
+        411,
+        413,
+        419
+      ]
+    },
+    {
+      "id": "vorratsdatenspeicherung",
+      "name": "Vorratsdatenspeicherung",
+      "description": "11 Topics in 17 Episoden",
+      "isOutlier": false,
+      "topicCount": 11,
+      "episodeCount": 17,
+      "relevanceSec": 13792,
+      "sampleTopics": [
+        "Ausbau der Vorratsdatenspeicherung in UK",
+        "Vorratsdatenspeicherung",
+        "Vorratsdatenspeicherung in Europa",
+        "Neue Rufe nach Vorratsdatenspeicherung",
+        "Vorratsdatenspeicherung vorabgestimmt"
+      ],
+      "episodes": [
+        19,
+        21,
+        89,
+        93,
+        128,
+        135,
+        143,
+        153,
+        205,
+        297,
+        349,
+        411,
+        440,
+        441,
+        468,
+        505,
+        511
+      ]
+    },
+    {
+      "id": "leistungsschutzrecht",
+      "name": "Leistungsschutzrecht",
+      "description": "11 Topics in 15 Episoden",
+      "isOutlier": false,
+      "topicCount": 11,
+      "episodeCount": 15,
+      "relevanceSec": 13778,
+      "sampleTopics": [
+        "Leistungsschutzrecht für Presseverlage",
+        "Gesetzesentwurf zum Leistungsschutzrecht",
+        "Kabinett beschließt Gesetzesentwurf für das Leistungsschutzrecht",
+        "Leistungsschutzrecht",
+        "Leistungsschutzrecht im Bundestag"
+      ],
+      "episodes": [
+        15,
+        28,
+        35,
+        46,
+        48,
+        50,
+        52,
+        57,
+        59,
+        93,
+        119,
+        136,
+        159,
+        239,
+        327
+      ]
+    },
+    {
+      "id": "it-sicherheitsgesetze",
+      "name": "IT-Sicherheitsgesetze",
+      "description": "8 Topics in 10 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 10,
+      "relevanceSec": 8360,
+      "sampleTopics": [
+        "IT-Sicherheitsgesetz",
+        "IT-Sicherheitsgesetz beschlossen",
+        "IT-Sicherheitsgesetz 2.0 ante portas",
+        "Cybersicherheitsgesetz",
+        "IT Sicherheitsgesetz 1.0"
+      ],
+      "episodes": [
+        113,
+        138,
+        143,
+        287,
+        289,
+        296,
+        347,
+        372,
+        382,
+        383
+      ]
+    },
+    {
+      "id": "eu-netzneutralität",
+      "name": "EU-Netzneutralität",
+      "description": "10 Topics in 11 Episoden",
+      "isOutlier": false,
+      "topicCount": 10,
+      "episodeCount": 11,
+      "relevanceSec": 8315,
+      "sampleTopics": [
+        "EU-Parlament zu Netzneutralität",
+        "Netzneutralität à la EU-Kommission",
+        "Netzneutralität in Europa",
+        "EU-Parlament stimmt für Netzneutralität",
+        "Netzneutralität in den USA und der EU"
+      ],
+      "episodes": [
+        4,
+        71,
+        89,
+        98,
+        115,
+        119,
+        155,
+        185,
+        270,
+        285,
+        435
+      ]
+    },
+    {
+      "id": "netzneutralität",
+      "name": "Netzneutralität",
+      "description": "9 Topics in 9 Episoden",
+      "isOutlier": false,
+      "topicCount": 9,
+      "episodeCount": 9,
+      "relevanceSec": 8147,
+      "sampleTopics": [
+        "Verletzungen der Netzneutralität",
+        "Netzneutralitäts-Verordnung",
+        "Netzneutralitätsverordnung",
+        "EU Verordnung zur Netzneutralität",
+        "FCC hat die Netzneutralität geregelt"
+      ],
+      "episodes": [
+        25,
+        74,
+        77,
+        94,
+        133,
+        193,
+        236,
+        319,
+        352
+      ]
+    },
+    {
+      "id": "digitale-gesundheitsakte",
+      "name": "Digitale Gesundheitsakte",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 8086,
+      "sampleTopics": [
+        "Das Digitale Versorgungsgesetz",
+        "gematik",
+        "Digitalisierung des Gesundheitswesens / Gematik",
+        "Elektronische Patientenakte (ePA)",
+        "Elektronische Patientenakte"
+      ],
+      "episodes": [
+        320,
+        325,
+        443,
+        505,
+        520,
+        522
+      ]
+    },
+    {
+      "id": "corona-warn-app",
+      "name": "Corona-Warn-App",
+      "description": "7 Topics in 10 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 10,
+      "relevanceSec": 7580,
+      "sampleTopics": [
+        "Corona Tracing App",
+        "Corona Warn App",
+        "Corona-Warn-App",
+        "Corona-Warn-App Update",
+        "Corona-Warn-App Update-Pläne"
+      ],
+      "episodes": [
+        347,
+        349,
+        363,
+        365,
+        367,
+        375,
+        387,
+        389,
+        392,
+        394
+      ]
+    },
+    {
+      "id": "störerhaftung",
+      "name": "Störerhaftung",
+      "description": "11 Topics in 14 Episoden",
+      "isOutlier": false,
+      "topicCount": 11,
+      "episodeCount": 14,
+      "relevanceSec": 7472,
+      "sampleTopics": [
+        "WLAN-Störerhaftung",
+        "Digitale Gesellschaft: Gesetzesentwurf zur Aufhebung der Störerhaftung",
+        "Gesetzentwurf zur Störerhaftung",
+        "Störerhaftung vor dem EuGH",
+        "Störerhaftung"
+      ],
+      "episodes": [
+        20,
+        30,
+        122,
+        134,
+        163,
+        165,
+        176,
+        177,
+        182,
+        233,
+        263,
+        468,
+        469,
+        470
+      ]
+    },
+    {
+      "id": "eidas-reform",
+      "name": "eIDAS-Reform",
+      "description": "4 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 6,
+      "relevanceSec": 7451,
+      "sampleTopics": [
+        "eIDAS-Richtlinie",
+        "eIDAS",
+        "eIDAS-Reform Digitale Identität",
+        "eIDAS und DPI"
+      ],
+      "episodes": [
+        423,
+        447,
+        459,
+        463,
+        475,
+        485
+      ]
+    },
+    {
+      "id": "dsgvo",
+      "name": "DSGVO",
+      "description": "5 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 6,
+      "relevanceSec": 7433,
+      "sampleTopics": [
+        "EU: Datenschutzverordnung",
+        "EU-Datenschutzreform",
+        "EU-Datenschutzverordnung",
+        "Datenschutzgrundverordnung",
+        "5 Jahre DSGVO"
+      ],
+      "episodes": [
+        49,
+        56,
+        66,
+        165,
+        167,
+        462
+      ]
+    },
+    {
+      "id": "un-cybercrime-abkommen",
+      "name": "UN Cybercrime-Abkommen",
+      "description": "4 Topics in 10 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 10,
+      "relevanceSec": 7364,
+      "sampleTopics": [
+        "UN Cybercrime Convention",
+        "UN Cybercrime Treaty Verhandlung",
+        "Cybercrime-Abkommen der UN",
+        "Cybercrime Convention unterzeichnet"
+      ],
+      "episodes": [
+        447,
+        450,
+        459,
+        475,
+        484,
+        488,
+        498,
+        509,
+        535,
+        536
+      ]
+    },
+    {
+      "id": "julian-assange",
+      "name": "Julian Assange",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 7025,
+      "sampleTopics": [
+        "Julian Assange",
+        "Julian Assange in Haft",
+        "Assange"
+      ],
+      "episodes": [
+        295,
+        301,
+        416,
+        496
+      ]
+    },
+    {
+      "id": "digitale-agenda-deutschland",
+      "name": "Digitale Agenda Deutschland",
+      "description": "4 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 6,
+      "relevanceSec": 6925,
+      "sampleTopics": [
+        "Digitale Agenda für Deutschland 2013 – 2017",
+        "Digitale Agenda",
+        "Ausschuss Digitale Agenda",
+        "Digitalministerium"
+      ],
+      "episodes": [
+        86,
+        110,
+        113,
+        296,
+        518,
+        523
+      ]
+    },
+    {
+      "id": "cyber-sicherheitsstrategien",
+      "name": "Cyber-Sicherheitsstrategien",
+      "description": "4 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 5,
+      "relevanceSec": 6911,
+      "sampleTopics": [
+        "Cyber-Sicherheits-Strategie 2016",
+        "Cyber-Sicherheitsstrategie",
+        "Cyber-Sicherheitsagenda",
+        "Cyber-Sicherheitsrat"
+      ],
+      "episodes": [
+        188,
+        201,
+        406,
+        435,
+        442
+      ]
+    },
+    {
+      "id": "acta-in-der-eu",
+      "name": "ACTA in der EU",
+      "description": "7 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 7,
+      "relevanceSec": 6668,
+      "sampleTopics": [
+        "ACTA, ACTA, ACTA",
+        "ACTA im EU-Parlament",
+        "ACTA ad acta",
+        "EU-Gesetzgebungsprozess",
+        "Entscheidung im Rechtsausschuss"
+      ],
+      "episodes": [
+        14,
+        26,
+        48,
+        239,
+        288,
+        292,
+        535
+      ]
+    },
+    {
+      "id": "re-publica-events",
+      "name": "re:publica Events",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 6546,
+      "sampleTopics": [
+        "re:publica 13",
+        "re:publica Nachlese",
+        "re:publica 15",
+        "re:publica 2016",
+        "re:publica 2017"
+      ],
+      "episodes": [
+        60,
+        102,
+        140,
+        181,
+        221,
+        301
+      ]
+    },
+    {
+      "id": "ai-act-insights",
+      "name": "AI Act Insights",
+      "description": "3 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 6,
+      "relevanceSec": 6340,
+      "sampleTopics": [
+        "AI Act",
+        "Feedback: AI Act",
+        "AI Act Timeline"
+      ],
+      "episodes": [
+        479,
+        480,
+        484,
+        486,
+        497,
+        538
+      ]
+    },
+    {
+      "id": "wahlen-2023",
+      "name": "Wahlen 2023",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 6095,
+      "sampleTopics": [
+        "Wahlen in Deutschland",
+        "Wahlchaos in Hessen",
+        "Auszählung der US Wahl",
+        "Wahlen in den USA",
+        "US-Wahlen"
+      ],
+      "episodes": [
+        76,
+        276,
+        367,
+        368,
+        497
+      ]
+    },
+    {
+      "id": "überwachungspaket-österreich",
+      "name": "Überwachungspaket Österreich",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 5988,
+      "sampleTopics": [
+        "Überwachungspaket für Österreich",
+        "Überwachungspaket Österreich",
+        "Überwachungspaket"
+      ],
+      "episodes": [
+        214,
+        227,
+        503
+      ]
+    },
+    {
+      "id": "elon-musk-twitter",
+      "name": "Elon Musk & Twitter",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 5983,
+      "sampleTopics": [
+        "Elon Musk will Twitter kaufen",
+        "Elon Musk kauft Twitter nicht",
+        "Musk kauft Twitter",
+        "Warum Elon Musk Twitter gekauft hat"
+      ],
+      "episodes": [
+        429,
+        435,
+        445,
+        468
+      ]
+    },
+    {
+      "id": "urheberrechtsreform",
+      "name": "Urheberrechtsreform",
+      "description": "7 Topics in 8 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 8,
+      "relevanceSec": 5829,
+      "sampleTopics": [
+        "Urheberrechtsreform in Österreich",
+        "EU: Urheberrechtsreform",
+        "Copyright-Reform",
+        "EU-Urheberrechtsrefom",
+        "Urheberrechtsreform"
+      ],
+      "episodes": [
+        56,
+        163,
+        266,
+        283,
+        362,
+        363,
+        380,
+        393
+      ]
+    },
+    {
+      "id": "contact-tracing",
+      "name": "Contact Tracing",
+      "description": "5 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 4,
+      "relevanceSec": 5528,
+      "sampleTopics": [
+        "Contact Tracing: Technische Details",
+        "Contact Tracing wird Exposure Tracing",
+        "Contact Tracing in Österreich",
+        "Contact Tracing in Europa",
+        "Problemstellung Contact Tracing"
+      ],
+      "episodes": [
+        339,
+        342,
+        343,
+        387
+      ]
+    },
+    {
+      "id": "hass-im-netz",
+      "name": "Hass im Netz",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 5462,
+      "sampleTopics": [
+        "Hetzen in den Netzen",
+        "Hass im Netz in AT",
+        "Hatespeech",
+        "Hass im Internet"
+      ],
+      "episodes": [
+        267,
+        367,
+        380,
+        533
+      ]
+    },
+    {
+      "id": "corona-wirtschaftsauswirkungen",
+      "name": "Corona-Wirtschaftsauswirkungen",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 5297,
+      "sampleTopics": [
+        "Corona: Wirtschaftliche Auswirkungen",
+        "Wirtschaftliche Folgen der Corona-Krise",
+        "Feedback: Wirtschaft und Corona"
+      ],
+      "episodes": [
+        334,
+        337,
+        339
+      ]
+    },
+    {
+      "id": "luca-themen",
+      "name": "Luca Themen",
+      "description": "3 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 5,
+      "relevanceSec": 5088,
+      "sampleTopics": [
+        "Luca App",
+        "Lucafails",
+        "Luca Sell-out"
+      ],
+      "episodes": [
+        387,
+        390,
+        401,
+        403,
+        428
+      ]
+    },
+    {
+      "id": "emotet-ransomware",
+      "name": "Emotet Ransomware",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 5033,
+      "sampleTopics": [
+        "Emotet",
+        "Emotet Ransomware",
+        "Emotet-Takedown"
+      ],
+      "episodes": [
+        279,
+        321,
+        378,
+        386
+      ]
+    },
+    {
+      "id": "blockchain-zertifikate",
+      "name": "Blockchain-Zertifikate",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 4958,
+      "sampleTopics": [
+        "Digitaler Impfausweis mit 5 Blockchains",
+        "Zeugnis-Blockchain",
+        "Digitale Blockchain-Zeugnisse doch nicht so einfach"
+      ],
+      "episodes": [
+        385,
+        421,
+        427
+      ]
+    },
+    {
+      "id": "verschlüsselungsrecht",
+      "name": "Verschlüsselungsrecht",
+      "description": "7 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 7,
+      "relevanceSec": 4787,
+      "sampleTopics": [
+        "Massenverschlüsselung einziger Schutz gegen Massenüberwachung",
+        "Geplante europäische Aktion gegen Verschlüsselung",
+        "Technik: Verschlüsselung",
+        "Recht auf Verschlüsselung",
+        "Angriff auf Verschlüsselung"
+      ],
+      "episodes": [
+        130,
+        190,
+        242,
+        328,
+        368,
+        426,
+        488
+      ]
+    },
+    {
+      "id": "5g-auktionen",
+      "name": "5G-Auktionen",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 4784,
+      "sampleTopics": [
+        "Vergabe der 5G-Lizenzen",
+        "5G-Vergabebedigungen stehen fest",
+        "5G-Auktion",
+        "5G Auktion abgeschlossen"
+      ],
+      "episodes": [
+        277,
+        278,
+        284,
+        307
+      ]
+    },
+    {
+      "id": "piratenpartei",
+      "name": "Piratenpartei",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 4744,
+      "sampleTopics": [
+        "Piratenpartei Parteitag",
+        "Das Jahr der Piraten",
+        "Piratenpartei",
+        "Zehn Jahre Piratenpartei"
+      ],
+      "episodes": [
+        6,
+        48,
+        116,
+        195
+      ]
+    },
+    {
+      "id": "julian-assange",
+      "name": "Julian Assange",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 4683,
+      "sampleTopics": [
+        "Berufungsanhörung Julian Assange",
+        "Geheime Anklage gegen Julian Assange",
+        "Assange Anhörung",
+        "Urteil im Assange-Verfahren",
+        "Assange darf in Berufung gehen"
+      ],
+      "episodes": [
+        13,
+        277,
+        333,
+        375,
+        419
+      ]
+    },
+    {
+      "id": "netzpolitik-org-jubiläum",
+      "name": "netzpolitik.org Jubiläum",
+      "description": "4 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 5,
+      "relevanceSec": 4016,
+      "sampleTopics": [
+        "10 Jahre netzpolitik.org Konferenz",
+        "Die Arbeit von netzpolitik.org",
+        "11. Geburtstag von netzpolitik.org",
+        "netzpolitik.org"
+      ],
+      "episodes": [
+        119,
+        149,
+        152,
+        269,
+        400
+      ]
+    },
+    {
+      "id": "de-cix-und-bnd",
+      "name": "DE-CIX und BND",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 4009,
+      "sampleTopics": [
+        "BND hat DE-CIX-Schnorchelei mit NSA geteilt",
+        "Eikonal: BND überwacht DE-CIX",
+        "BND am DE-CIX",
+        "DE-CIX verklagt BND"
+      ],
+      "episodes": [
+        106,
+        117,
+        136,
+        195
+      ]
+    },
+    {
+      "id": "netzsperren-debatte-schweiz-eu",
+      "name": "Netzsperren-Debatte Schweiz & EU",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 4003,
+      "sampleTopics": [
+        "EU: Glückspiel-Websperren",
+        "Netzpoliitk in der Schweiz",
+        "Netzsperren-Debatte",
+        "EU-Netzsperren",
+        "Schweiz: Netzsperren"
+      ],
+      "episodes": [
+        72,
+        102,
+        162,
+        188,
+        230,
+        439
+      ]
+    },
+    {
+      "id": "nsa-untersuchung",
+      "name": "NSA-Untersuchung",
+      "description": "2 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 4,
+      "relevanceSec": 3953,
+      "sampleTopics": [
+        "Bundestag: NSA-Untersuchungsausschuss",
+        "NSA-Untersuchungsausschuss"
+      ],
+      "episodes": [
+        96,
+        99,
+        126,
+        147
+      ]
+    },
+    {
+      "id": "linus-torvalds-auftritte",
+      "name": "Linus Torvalds Auftritte",
+      "description": "9 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 9,
+      "episodeCount": 6,
+      "relevanceSec": 3819,
+      "sampleTopics": [
+        "Linus bei SWR1 Leute",
+        "Linus im KiKa",
+        "Linus bei Rocketbeans",
+        "Linus bei Rocketbeans Almost Daily",
+        "Linus zu Gast bei Podcasts"
+      ],
+      "episodes": [
+        201,
+        286,
+        288,
+        290,
+        318,
+        433
+      ]
+    },
+    {
+      "id": "koalitionsvertrag",
+      "name": "Koalitionsvertrag",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 3710,
+      "sampleTopics": [
+        "Der Koalitionsvertrag",
+        "Koalitionsvertrag: Resumee",
+        "Koalitionsvertrag"
+      ],
+      "episodes": [
+        87,
+        243,
+        414,
+        520
+      ]
+    },
+    {
+      "id": "podcast-finanzierung",
+      "name": "Podcast-Finanzierung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 3701,
+      "sampleTopics": [
+        "Podcastgeschichte wird gemacht",
+        "Podcasts und Finanzierungsmodelle im Wandel"
+      ],
+      "episodes": [
+        272,
+        471
+      ]
+    },
+    {
+      "id": "backdoor-sicherheit",
+      "name": "Backdoor-Sicherheit",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 3620,
+      "sampleTopics": [
+        "Backdoors in Open-Source-Software",
+        "Backdoor everything",
+        "xz-Backdoor"
+      ],
+      "episodes": [
+        79,
+        237,
+        491
+      ]
+    },
+    {
+      "id": "informationsfreiheitsgesetze",
+      "name": "Informationsfreiheitsgesetze",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 3617,
+      "sampleTopics": [
+        "Informationsfreiheitsgesetz",
+        "Informationsfreiheitsgesetze",
+        "Informationsfreiheitsgesetz Österreich"
+      ],
+      "episodes": [
+        48,
+        299,
+        485,
+        519
+      ]
+    },
+    {
+      "id": "google-kartellrecht",
+      "name": "Google Kartellrecht",
+      "description": "4 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 6,
+      "relevanceSec": 3611,
+      "sampleTopics": [
+        "Kartellverfahren gegen Google",
+        "EU-Kartellstrafe für Google",
+        "Kartellstrafe gegen Google",
+        "Google Kartellverfahren"
+      ],
+      "episodes": [
+        180,
+        262,
+        294,
+        365,
+        469,
+        531
+      ]
+    },
+    {
+      "id": "it-sig-2-0",
+      "name": "IT-SiG 2.0",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 3535,
+      "sampleTopics": [
+        "IT-SiG 2.0: Eingangsstatement",
+        "IT-SiG 2.0: Stellungnahme",
+        "IT-SiG 2.0: Eingriffe in Systeme"
+      ],
+      "episodes": [
+        383
+      ]
+    },
+    {
+      "id": "nso-überwachung",
+      "name": "NSO-Überwachung",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 3520,
+      "sampleTopics": [
+        "NSA-Exploits in the wild",
+        "NSO Pegasus",
+        "NSO-Exploit",
+        "NSO"
+      ],
+      "episodes": [
+        219,
+        401,
+        416,
+        511
+      ]
+    },
+    {
+      "id": "chaos-communication-congress",
+      "name": "Chaos Communication Congress",
+      "description": "4 Topics in 8 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 8,
+      "relevanceSec": 3486,
+      "sampleTopics": [
+        "36C3",
+        "37C3",
+        "CFP 37C3",
+        "38C3"
+      ],
+      "episodes": [
+        318,
+        325,
+        349,
+        442,
+        480,
+        502,
+        505,
+        509
+      ]
+    },
+    {
+      "id": "julian-assange",
+      "name": "Julian Assange",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 3468,
+      "sampleTopics": [
+        "Julian Assange beantragt Asyl in Ecuador",
+        "Julian Assange erhält Asyl in Ecuador",
+        "Julio Assanchez fliegt aus der Botschaft"
+      ],
+      "episodes": [
+        29,
+        34,
+        263
+      ]
+    },
+    {
+      "id": "künstliche-intelligenz",
+      "name": "Künstliche Intelligenz",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 3396,
+      "sampleTopics": [
+        "Künstliche Intelligenz",
+        "Die Entwicklung der KI"
+      ],
+      "episodes": [
+        175,
+        527
+      ]
+    },
+    {
+      "id": "faschismus",
+      "name": "Faschismus",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 3331,
+      "sampleTopics": [
+        "Faschisten",
+        "Grüße aus dem Faschismus",
+        "Now trending: Faschismus"
+      ],
+      "episodes": [
+        441,
+        481,
+        510
+      ]
+    },
+    {
+      "id": "roaming-debatte",
+      "name": "Roaming-Debatte",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 3296,
+      "sampleTopics": [
+        "Netzneutralität vs. Roaming",
+        "Ende von Roaming & Netzneutralität",
+        "Doch kein EU-Roaming",
+        "Jetzt doch wieder Roaming"
+      ],
+      "episodes": [
+        144,
+        145,
+        195,
+        197
+      ]
+    },
+    {
+      "id": "nsa-und-deutschland",
+      "name": "NSA und Deutschland",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 3295,
+      "sampleTopics": [
+        "Deutschland und die NSA",
+        "USA und die NSA",
+        "NSA in Deutschland"
+      ],
+      "episodes": [
+        103,
+        105
+      ]
+    },
+    {
+      "id": "e-rezept-und-epa",
+      "name": "e-Rezept und ePA",
+      "description": "4 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 5,
+      "relevanceSec": 3267,
+      "sampleTopics": [
+        "e-Rezept",
+        "Digitale Patientenakte und E-Rezept",
+        "e-Rezept und Patientenakte",
+        "ePA: Das E-Rezept und Gesundheitskarte"
+      ],
+      "episodes": [
+        439,
+        441,
+        467,
+        479,
+        522
+      ]
+    },
+    {
+      "id": "wannacry-ransomware",
+      "name": "WannaCry Ransomware",
+      "description": "5 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 3,
+      "relevanceSec": 3258,
+      "sampleTopics": [
+        "WannaCry: Vorgeschichte",
+        "WannaCry: Auswirkungen",
+        "WannaCry: Politische Komponente",
+        "Hackback auf Ransomware",
+        "Ransomware beim Guardian"
+      ],
+      "episodes": [
+        221,
+        316,
+        449
+      ]
+    },
+    {
+      "id": "krypto-kriege",
+      "name": "Krypto-Kriege",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 3247,
+      "sampleTopics": [
+        "Cryptocalypse!",
+        "CryptoWars 2.0",
+        "Cryptowars",
+        "Cryptowars Season 23 Episode 42"
+      ],
+      "episodes": [
+        78,
+        120,
+        168,
+        366
+      ]
+    },
+    {
+      "id": "netzsperren-rechtsprechung",
+      "name": "Netzsperren-Rechtsprechung",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 3106,
+      "sampleTopics": [
+        "EuGH zu Netzsperren",
+        "EuGH-Generalanwalt zu Netzsperren",
+        "EuGH erlaubt Urheberrechts-Netzsperren",
+        "BGH-Urteil zu Netzsperren",
+        "BGH zu Netzsperren"
+      ],
+      "episodes": [
+        5,
+        87,
+        97,
+        161,
+        171
+      ]
+    },
+    {
+      "id": "trump-twitter-debatte",
+      "name": "Trump-Twitter-Debatte",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 3065,
+      "sampleTopics": [
+        "Donald Trump",
+        "Twitter vs. Trump"
+      ],
+      "episodes": [
+        234,
+        348
+      ]
+    },
+    {
+      "id": "funkzellenanalyse",
+      "name": "Funkzellenanalyse",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 3020,
+      "sampleTopics": [
+        "Funkzellenüberwachung",
+        "Funkzellenabfrage",
+        "Funkzellenabfragen"
+      ],
+      "episodes": [
+        11,
+        48,
+        78
+      ]
+    },
+    {
+      "id": "vds-rechtsfragen",
+      "name": "VDS-Rechtsfragen",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2969,
+      "sampleTopics": [
+        "VDS-Gesetz",
+        "VDS-Gutachten des Wissenschaftlichen Dienstes",
+        "VDS-Konsultation"
+      ],
+      "episodes": [
+        141,
+        209,
+        531
+      ]
+    },
+    {
+      "id": "e-voting-schweiz",
+      "name": "E-Voting Schweiz",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 2955,
+      "sampleTopics": [
+        "Schweiz: E- und Online-Voting",
+        "Schweiz: Volksinitiative für e-Voting Moratorium",
+        "Feedback: E-Voting Moratorium Schweiz",
+        "Cybervoting",
+        "Cybervoting in der Schweiz"
+      ],
+      "episodes": [
+        230,
+        284,
+        285,
+        287,
+        291,
+        294
+      ]
+    },
+    {
+      "id": "snowden-enthüllungen",
+      "name": "Snowden-Enthüllungen",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 2914,
+      "sampleTopics": [
+        "Snowden",
+        "Edward Snowden",
+        "NSA-UA: Snowden"
+      ],
+      "episodes": [
+        70,
+        74,
+        212,
+        366
+      ]
+    },
+    {
+      "id": "hackerparagraph-reform",
+      "name": "Hackerparagraph-Reform",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 2906,
+      "sampleTopics": [
+        "Hackertool-Paragraphen",
+        "Reform des Hackerparagraphen",
+        "Hackerparagraph"
+      ],
+      "episodes": [
+        296,
+        478,
+        483,
+        505
+      ]
+    },
+    {
+      "id": "strafrechtssystem",
+      "name": "Strafrechtssystem",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2862,
+      "sampleTopics": [
+        "Vor Gericht",
+        "Richtervorbehaaahahhaaa",
+        "Die Anklage und der Knast"
+      ],
+      "episodes": [
+        326,
+        356,
+        466
+      ]
+    },
+    {
+      "id": "http-status-codes",
+      "name": "HTTP Status Codes",
+      "description": "17 Topics in 17 Episoden",
+      "isOutlier": false,
+      "topicCount": 17,
+      "episodeCount": 17,
+      "relevanceSec": 2785,
+      "sampleTopics": [
+        "HTTP 405",
+        "HTTP 409",
+        "HTTP Status 410",
+        "HTTP 411",
+        "HTTP Status Code 412"
+      ],
+      "episodes": [
+        405,
+        409,
+        410,
+        411,
+        412,
+        416,
+        417,
+        421,
+        422,
+        423,
+        425,
+        427,
+        428,
+        451,
+        501,
+        502,
+        505
+      ]
+    },
+    {
+      "id": "chatgpt-interaktion",
+      "name": "ChatGPT-Interaktion",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 2751,
+      "sampleTopics": [
+        "Prolog: ChatGPT",
+        "Chatbot-Manipulation"
+      ],
+      "episodes": [
+        447,
+        518
+      ]
+    },
+    {
+      "id": "router-zwang",
+      "name": "Router-Zwang",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2749,
+      "sampleTopics": [
+        "Zwangsrouter",
+        "Firmwarezwang für Router",
+        "Urteil Telekom-Router"
+      ],
+      "episodes": [
+        133,
+        152,
+        227
+      ]
+    },
+    {
+      "id": "online-wahlen",
+      "name": "Online-Wahlen",
+      "description": "5 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 3,
+      "relevanceSec": 2705,
+      "sampleTopics": [
+        "Feedback: Briefwahl vs. Onlinewahl",
+        "Feedback: Onlinewahl-Konzepte",
+        "Feedback: Onlinewahl der Gesellschaft für Informatik",
+        "Feedback: Digitale Wahlen",
+        "Feedback: Online-Wahlen bei Parteitagen"
+      ],
+      "episodes": [
+        319,
+        409,
+        428
+      ]
+    },
+    {
+      "id": "corona-fake-news",
+      "name": "Corona-Fake News",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 2674,
+      "sampleTopics": [
+        "Fake News",
+        "Corona: Fake News",
+        "Feedback: Corona Fake News"
+      ],
+      "episodes": [
+        203,
+        206,
+        334,
+        335
+      ]
+    },
+    {
+      "id": "cyberkriminalität",
+      "name": "Cyberkriminalität",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 2568,
+      "sampleTopics": [
+        "DDoS-Teenager verhaftet",
+        "Doxing: Täter gefasst"
+      ],
+      "episodes": [
+        138,
+        282
+      ]
+    },
+    {
+      "id": "logbuch-netzpolitik",
+      "name": "Logbuch Netzpolitik",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 2526,
+      "sampleTopics": [
+        "Ein Jahr Logbuch:Netzpolitik",
+        "Netzpolitische Jahresrückblicke",
+        "Logbuch:Netzpolitik Zweihundert",
+        "6 Jahre Logbuch:Netzpolitik"
+      ],
+      "episodes": [
+        43,
+        48,
+        198,
+        234
+      ]
+    },
+    {
+      "id": "tesla-autopilot",
+      "name": "Tesla Autopilot",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2497,
+      "sampleTopics": [
+        "Tesla Autopilot",
+        "Tesla Autosteer doch nicht so geil",
+        "Tesla deaktiviert Autopilot"
+      ],
+      "episodes": [
+        188,
+        286,
+        330
+      ]
+    },
+    {
+      "id": "ttip-demos",
+      "name": "TTIP-Demos",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2394,
+      "sampleTopics": [
+        "TTIP Demo",
+        "TTIP-Demo",
+        "TTIP-Gegendemo in Hannover"
+      ],
+      "episodes": [
+        118,
+        156,
+        180
+      ]
+    },
+    {
+      "id": "schufa-services",
+      "name": "Schufa Services",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 2338,
+      "sampleTopics": [
+        "Feedback: Schufa",
+        "Schufa",
+        "Schufa CheckNow"
+      ],
+      "episodes": [
+        246,
+        252,
+        370,
+        388
+      ]
+    },
+    {
+      "id": "eid-gesetz",
+      "name": "eID-Gesetz",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2228,
+      "sampleTopics": [
+        "eID-Gesetz",
+        "eID-Gesetz beschlossen",
+        "e-ID-Gesetz"
+      ],
+      "episodes": [
+        219,
+        222,
+        394
+      ]
+    },
+    {
+      "id": "urheberrecht",
+      "name": "Urheberrecht",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 2168,
+      "sampleTopics": [
+        "Und täglich grüßt das Urheberrecht",
+        "Urheberrechts-Wahnsinn in der Schweiz",
+        "#Zensurheberrecht",
+        "Urheberrecht",
+        "Zensurheberrecht"
+      ],
+      "episodes": [
+        23,
+        66,
+        90,
+        126,
+        307
+      ]
+    },
+    {
+      "id": "cyberwar-analysen",
+      "name": "Cyberwar Analysen",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 2165,
+      "sampleTopics": [
+        "Cyberwar: Security Nightmares",
+        "Feedback: Cyberwar",
+        "Cyberwar"
+      ],
+      "episodes": [
+        272,
+        287,
+        427,
+        431
+      ]
+    },
+    {
+      "id": "öffentlicher-rundfunk-feedback",
+      "name": "Öffentlicher Rundfunk Feedback",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2107,
+      "sampleTopics": [
+        "Feedback: Datenelche in Schweden",
+        "Feedback: Öffentlicher Rundfunk",
+        "Feedback: CWA Meldungen"
+      ],
+      "episodes": [
+        264,
+        265,
+        358
+      ]
+    },
+    {
+      "id": "uploadfilter-debatte",
+      "name": "Uploadfilter-Debatte",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2101,
+      "sampleTopics": [
+        "Uploadfilter wirken",
+        "Uploadfilter überraschend alternativlos",
+        "Uploadfilter"
+      ],
+      "episodes": [
+        298,
+        313,
+        393
+      ]
+    },
+    {
+      "id": "abmahnungen-im-urheberrecht",
+      "name": "Abmahnungen im Urheberrecht",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 2088,
+      "sampleTopics": [
+        "Urheberrechts-Abmahnungen für Blogger",
+        "Streaming-Abmahnungen"
+      ],
+      "episodes": [
+        44,
+        89
+      ]
+    },
+    {
+      "id": "zentrum-für-politische-schönheit",
+      "name": "Zentrum für Politische Schönheit",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2070,
+      "sampleTopics": [
+        "Feedback: Zentrum für politische Schönheit",
+        "34C3: Zentrum für Politische Schönheit",
+        "Zentrum für politische Schönheit"
+      ],
+      "episodes": [
+        237,
+        238,
+        477
+      ]
+    },
+    {
+      "id": "österreichische-datenskandale",
+      "name": "Österreichische Datenskandale",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2064,
+      "sampleTopics": [
+        "Österreich: Post Datenskandal",
+        "Österreich: Datenskandal rund um das ERsB",
+        "Datenskandale Österreich"
+      ],
+      "episodes": [
+        319,
+        352,
+        423
+      ]
+    },
+    {
+      "id": "langsame-internetverbindung-deutschland",
+      "name": "Langsame Internetverbindung Deutschland",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 2026,
+      "sampleTopics": [
+        "Das Internet ist gar nicht so schnell, wie drauf steht",
+        "Internet ist langsamer als versprochen",
+        "Internet in Deutschland ist langsam",
+        "Stellt sich raus: Das Internet in Deutschland ist langsam"
+      ],
+      "episodes": [
+        61,
+        215,
+        240,
+        322
+      ]
+    },
+    {
+      "id": "altersverifikation",
+      "name": "Altersverifikation",
+      "description": "3 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 5,
+      "relevanceSec": 2022,
+      "sampleTopics": [
+        "Age Verification",
+        "Feedback: Altersverifikation",
+        "Altersverifikation"
+      ],
+      "episodes": [
+        450,
+        456,
+        519,
+        520,
+        535
+      ]
+    },
+    {
+      "id": "maaßen-und-afd",
+      "name": "Maaßen und AfD",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 2022,
+      "sampleTopics": [
+        "Maaßen und die AfD",
+        "Hans-Georg Maaßen und die AfD"
+      ],
+      "episodes": [
+        264,
+        267
+      ]
+    },
+    {
+      "id": "chelsea-manning",
+      "name": "Chelsea Manning",
+      "description": "3 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 6,
+      "relevanceSec": 1988,
+      "sampleTopics": [
+        "Chelsea Manning",
+        "Chelsea Manning frei",
+        "Chelsea Manning in Beugehaft"
+      ],
+      "episodes": [
+        189,
+        207,
+        222,
+        291,
+        301,
+        310
+      ]
+    },
+    {
+      "id": "wikileaks-news",
+      "name": "WikiLeaks News",
+      "description": "2 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 5,
+      "relevanceSec": 1977,
+      "sampleTopics": [
+        "Wikileaks",
+        "Neues von WikiLeaks"
+      ],
+      "episodes": [
+        4,
+        8,
+        43,
+        78,
+        359
+      ]
+    },
+    {
+      "id": "zahlungsverkehr",
+      "name": "Zahlungsverkehr",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 1954,
+      "sampleTopics": [
+        "Anonyme Zahlungen",
+        "Bezahlkarte",
+        "Feedback: Bezahlkarte",
+        "Feedback: Erstattung von Transaktionen",
+        "Bargeld-Limits bei Geldkarten"
+      ],
+      "episodes": [
+        435,
+        491,
+        492,
+        493,
+        497
+      ]
+    },
+    {
+      "id": "cyberwehr",
+      "name": "Cyberwehr",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1928,
+      "sampleTopics": [
+        "Die Bundeswehr macht jetzt auch Cyberwar",
+        "Bundeswehr cybert, Bitkom applaudiert",
+        "Cyberwehr und das BSI"
+      ],
+      "episodes": [
+        27,
+        153,
+        218
+      ]
+    },
+    {
+      "id": "zuckerberg-anhörungen",
+      "name": "Zuckerberg-Anhörungen",
+      "description": "4 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 3,
+      "relevanceSec": 1906,
+      "sampleTopics": [
+        "Anhörung von Mark Zuckerberg im US-Senat",
+        "EU-Kommission möchte Zuckerberg auch anhören",
+        "Zuckerberg im EU-Parlament",
+        "Anhörung von Zuckerberg im US-Congress"
+      ],
+      "episodes": [
+        250,
+        255,
+        319
+      ]
+    },
+    {
+      "id": "datenspende",
+      "name": "Datenspende",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1900,
+      "sampleTopics": [
+        "Datenspenden",
+        "Corona Datenspende",
+        "Datenspende"
+      ],
+      "episodes": [
+        336,
+        340,
+        342
+      ]
+    },
+    {
+      "id": "digitale-gewaltgesetzgebung",
+      "name": "Digitale Gewaltgesetzgebung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1882,
+      "sampleTopics": [
+        "Gesetzentwurf zu \"Hasskriminalität\"",
+        "Gesetzentwurf zur Bekämpfung \"Digitaler Gewalt\""
+      ],
+      "episodes": [
+        351,
+        458
+      ]
+    },
+    {
+      "id": "österreichische-politik",
+      "name": "Österreichische Politik",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1863,
+      "sampleTopics": [
+        "Wahl in Österreich",
+        "Situation in Österreich"
+      ],
+      "episodes": [
+        232,
+        423
+      ]
+    },
+    {
+      "id": "doktorandenfeedback",
+      "name": "Doktorandenfeedback",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1856,
+      "sampleTopics": [
+        "Feedback: Ausschreibungen und Doktortitel",
+        "Doktorarbeiten",
+        "Feedback: Doktorarbeiten"
+      ],
+      "episodes": [
+        390,
+        394,
+        396
+      ]
+    },
+    {
+      "id": "digitale-wirtschaftspolitik",
+      "name": "Digitale Wirtschaftspolitik",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1823,
+      "sampleTopics": [
+        "Digitales Wirtschaftswunder",
+        "EU-Digitalsteuer"
+      ],
+      "episodes": [
+        176,
+        267
+      ]
+    },
+    {
+      "id": "vorratsdatenspeicherung-österreich",
+      "name": "Vorratsdatenspeicherung Österreich",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1822,
+      "sampleTopics": [
+        "Österreich und die Vorratsdatenspeicherung",
+        "Vorratsdatenspeicherung in Österreich",
+        "Österreich: Vorratsdatenspeicherung",
+        "Österreich: Vorratsdatenspeicherung verhindert"
+      ],
+      "episodes": [
+        28,
+        46,
+        50,
+        270
+      ]
+    },
+    {
+      "id": "polizeigesetze-deutschland",
+      "name": "Polizeigesetze Deutschland",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1816,
+      "sampleTopics": [
+        "Bayrisches Polizeigesetz",
+        "Polizeigesetz Niedersachsen",
+        "Sächsisches Polizeigesetz",
+        "Neue Polizeigesetze: Sachsen"
+      ],
+      "episodes": [
+        249,
+        264,
+        284,
+        539
+      ]
+    },
+    {
+      "id": "cyberwar-analyse",
+      "name": "Cyberwar-Analyse",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 1805,
+      "sampleTopics": [
+        "Cyberwar: Motivation zum Thema",
+        "Cyberwar: Begriffsdefinition",
+        "Cyberwar: Angriff auf Gefühl und Gedanken"
+      ],
+      "episodes": [
+        272
+      ]
+    },
+    {
+      "id": "datenschutzverletzungen",
+      "name": "Datenschutzverletzungen",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1785,
+      "sampleTopics": [
+        "Passwort-Herausgabe",
+        "Rechtswidrig erlangte Daten"
+      ],
+      "episodes": [
+        296,
+        333
+      ]
+    },
+    {
+      "id": "rechtsextremismus-in-behörden",
+      "name": "Rechtsextremismus in Behörden",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1784,
+      "sampleTopics": [
+        "Rechtsextremismus-Datei",
+        "Rechtsextreme Polizei"
+      ],
+      "episodes": [
+        38,
+        360
+      ]
+    },
+    {
+      "id": "digitale-gesundheitsfeedbacks",
+      "name": "Digitale Gesundheitsfeedbacks",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 1772,
+      "sampleTopics": [
+        "Feedback: Digitales Gesundheitssystem",
+        "Feedback Digitalisierung und Ärzte",
+        "Feedback: elektronische Patientenakte"
+      ],
+      "episodes": [
+        251,
+        259,
+        506,
+        512
+      ]
+    },
+    {
+      "id": "telegram-insights",
+      "name": "Telegram Insights",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 1740,
+      "sampleTopics": [
+        "Recherche zu Telegram",
+        "Wer steckt hinter Telegram?",
+        "Was geht da eigentlich alles auf Telegram?"
+      ],
+      "episodes": [
+        399
+      ]
+    },
+    {
+      "id": "künstliche-intelligenz",
+      "name": "Künstliche Intelligenz",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1726,
+      "sampleTopics": [
+        "Dawn of AI",
+        "AI Institute"
+      ],
+      "episodes": [
+        224,
+        504
+      ]
+    },
+    {
+      "id": "europawahl",
+      "name": "Europawahl",
+      "description": "4 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 5,
+      "relevanceSec": 1711,
+      "sampleTopics": [
+        "EU-Wahl",
+        "Europawahl 2019",
+        "Europawahl",
+        "Europawahl und AfD"
+      ],
+      "episodes": [
+        297,
+        301,
+        303,
+        493,
+        495
+      ]
+    },
+    {
+      "id": "feedback-apps",
+      "name": "Feedback-Apps",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1695,
+      "sampleTopics": [
+        "Feedback: Google Play Store",
+        "Feedback: Web vs. App",
+        "Feedback: Check In Apps",
+        "Feedback: App Stores"
+      ],
+      "episodes": [
+        263,
+        313,
+        391,
+        480
+      ]
+    },
+    {
+      "id": "assange-auslieferung",
+      "name": "Assange-Auslieferung",
+      "description": "3 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 5,
+      "relevanceSec": 1665,
+      "sampleTopics": [
+        "Auslieferung: Assange",
+        "Assange-Auslieferung",
+        "Assange soll ausgeliefert werden"
+      ],
+      "episodes": [
+        305,
+        415,
+        426,
+        428,
+        433
+      ]
+    },
+    {
+      "id": "internet-drosselung",
+      "name": "Internet-Drosselung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1619,
+      "sampleTopics": [
+        "Kabel Deutschland drosselt Filesharer",
+        "Volumen-Drossel auch bei DSL"
+      ],
+      "episodes": [
+        28,
+        59
+      ]
+    },
+    {
+      "id": "zensursula-diskussion",
+      "name": "Zensursula Diskussion",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 1602,
+      "sampleTopics": [
+        "Zensursula Revisited",
+        "Feedback: Zensursula",
+        "Zensursula 2.0"
+      ],
+      "episodes": [
+        307,
+        308
+      ]
+    },
+    {
+      "id": "trustpid",
+      "name": "TrustPID",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1600,
+      "sampleTopics": [
+        "trustPID",
+        "Kurznachrichten: TrustPID"
+      ],
+      "episodes": [
+        431,
+        453
+      ]
+    },
+    {
+      "id": "russische-internetzensur",
+      "name": "Russische Internetzensur",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1573,
+      "sampleTopics": [
+        "Internetzensur in Russland",
+        "Russland macht Internet dicht",
+        "Russland sperrt Signal (und YouTube)"
+      ],
+      "episodes": [
+        43,
+        319,
+        498
+      ]
+    },
+    {
+      "id": "afd-verbot",
+      "name": "AfD-Verbot",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1531,
+      "sampleTopics": [
+        "AfD-Verbot: Wie es dazu kam",
+        "AFD Verbot"
+      ],
+      "episodes": [
+        477,
+        507
+      ]
+    },
+    {
+      "id": "facebook-datenleck",
+      "name": "Facebook Datenleck",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1497,
+      "sampleTopics": [
+        "Facebook-Leck",
+        "Datenleck bei Facebook",
+        "Facebook Datenleck"
+      ],
+      "episodes": [
+        273,
+        312,
+        507
+      ]
+    },
+    {
+      "id": "bka-gesetz",
+      "name": "BKA-Gesetz",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 1485,
+      "sampleTopics": [
+        "2009: BKA-Gesetz",
+        "Urteil zum BKA-Gesetz",
+        "BKA-Gesetz"
+      ],
+      "episodes": [
+        179,
+        498
+      ]
+    },
+    {
+      "id": "kryptowährungsregulierung",
+      "name": "Kryptowährungsregulierung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1470,
+      "sampleTopics": [
+        "EU tüftelt an Bitcoin-Verbot",
+        "Digitaler Euro"
+      ],
+      "episodes": [
+        428,
+        465
+      ]
+    },
+    {
+      "id": "böhmermann-debatten",
+      "name": "Böhmermann-Debatten",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 1470,
+      "sampleTopics": [
+        "Quellenschutz: Böhmermann vs. Hessenthaler",
+        "Recherche: Böhmermann vs. Schönbohm",
+        "Böhmermann"
+      ],
+      "episodes": [
+        461,
+        482
+      ]
+    },
+    {
+      "id": "staatstrojaner-klagen",
+      "name": "Staatstrojaner-Klagen",
+      "description": "4 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 5,
+      "relevanceSec": 1462,
+      "sampleTopics": [
+        "Verfassungsbeschwerde Staatstrojaner",
+        "Verfassungsbeschwerden gegen Staatstrojaner",
+        "Verfassungsklage Staatstrojaner",
+        "Klage gegen Staatstrojaner"
+      ],
+      "episodes": [
+        264,
+        265,
+        370,
+        411,
+        435
+      ]
+    },
+    {
+      "id": "rassismus-und-gewalt",
+      "name": "Rassismus und Gewalt",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 1460,
+      "sampleTopics": [
+        "Rassismus und Polizeigewalt",
+        "Willkür und Rassismus",
+        "Rassismus als menschliches Problem"
+      ],
+      "episodes": [
+        349,
+        361
+      ]
+    },
+    {
+      "id": "frag-den-staat",
+      "name": "Frag den Staat",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 1452,
+      "sampleTopics": [
+        "5 Jahre \"Frag den Staat\"",
+        "FragDenStaat und Co.",
+        "10 Jahre Frag den Staat",
+        "Ermittlungen gegen Frag den Staat",
+        "Verfahren gegen Frag den Staat"
+      ],
+      "episodes": [
+        197,
+        299,
+        401,
+        478,
+        485
+      ]
+    },
+    {
+      "id": "facebook-datenschutz",
+      "name": "Facebook-Datenschutz",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1430,
+      "sampleTopics": [
+        "Datenschutzkampagne",
+        "Facebook-Datenschutz in Belgien",
+        "Wem Facebook alles Daten gibt",
+        "Facebook macht jetzt auf Datenschutz"
+      ],
+      "episodes": [
+        63,
+        160,
+        258,
+        290
+      ]
+    },
+    {
+      "id": "ermittlungen-eingestellt",
+      "name": "Ermittlungen eingestellt",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1425,
+      "sampleTopics": [
+        "Merkelfon-Ermittlungen eingestellt",
+        "Ermittlungen gegen ZPS eingestellt"
+      ],
+      "episodes": [
+        123,
+        295
+      ]
+    },
+    {
+      "id": "whistleblowerschutz",
+      "name": "Whistleblowerschutz",
+      "description": "4 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 3,
+      "relevanceSec": 1419,
+      "sampleTopics": [
+        "Landesverrat",
+        "Datenhehlerei und Whistleblower",
+        "EU-Whistleblowerschutz",
+        ".eu: Whistleblowerschutz"
+      ],
+      "episodes": [
+        165,
+        291,
+        297
+      ]
+    },
+    {
+      "id": "gesichtserkennung",
+      "name": "Gesichtserkennung",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 1412,
+      "sampleTopics": [
+        "G20 Gesichtserkennung",
+        "Gesichtserkennung",
+        "Gesichtserkennung in .de"
+      ],
+      "episodes": [
+        265,
+        325,
+        328,
+        333
+      ]
+    },
+    {
+      "id": "impf-feedback",
+      "name": "Impf-Feedback",
+      "description": "4 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 2,
+      "relevanceSec": 1405,
+      "sampleTopics": [
+        "Feedback: Impffragen",
+        "Feedback: Relative Häufigkeiten",
+        "Feedback: Impfquoten",
+        "Feedback: Impfstatus"
+      ],
+      "episodes": [
+        414,
+        419
+      ]
+    },
+    {
+      "id": "iranisches-internet",
+      "name": "Iranisches Internet",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1375,
+      "sampleTopics": [
+        "Iran will Internetzensur lockern",
+        "Internet Blackout im Iran",
+        "Internet im Iran"
+      ],
+      "episodes": [
+        95,
+        322,
+        440
+      ]
+    },
+    {
+      "id": "cwa-faqs",
+      "name": "CWA FAQs",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 1363,
+      "sampleTopics": [
+        "CWA FAQ: Datenverbrauch",
+        "CWA FAQ: Internationale Nutzung",
+        "CWA FAQ: App-Zwang"
+      ],
+      "episodes": [
+        350
+      ]
+    },
+    {
+      "id": "aktivismus-und-finanzierung",
+      "name": "Aktivismus und Finanzierung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1343,
+      "sampleTopics": [
+        "Aktivistische Arbeit und Finanzierung",
+        "Konkreter Aktivismus"
+      ],
+      "episodes": [
+        400,
+        432
+      ]
+    },
+    {
+      "id": "bradley-manning-prozess",
+      "name": "Bradley Manning Prozess",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1325,
+      "sampleTopics": [
+        "Prozessauftakt Bradley Manning",
+        "Urteil Bradley Manning",
+        "Verurteilung Bradley Mannings"
+      ],
+      "episodes": [
+        67,
+        74,
+        76
+      ]
+    },
+    {
+      "id": "gchq-überwachung",
+      "name": "GCHQ Überwachung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1323,
+      "sampleTopics": [
+        "GCHQ hat Journalisten abgehört",
+        "GCHQ hat illegal Menschenrechtsorganisationen überwacht"
+      ],
+      "episodes": [
+        129,
+        144
+      ]
+    },
+    {
+      "id": "open-tech-fund",
+      "name": "Open Tech Fund",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1271,
+      "sampleTopics": [
+        "Update: Open Tech Fund (OTF)",
+        "OpenTechFund",
+        "Open Tech Fund vor dem Aus",
+        "Open Technology Fund"
+      ],
+      "episodes": [
+        353,
+        377,
+        518,
+        519
+      ]
+    },
+    {
+      "id": "huawei-verbot",
+      "name": "Huawei-Verbot",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1253,
+      "sampleTopics": [
+        "Huawei-Ban",
+        "Huawei-Verbot"
+      ],
+      "episodes": [
+        362,
+        497
+      ]
+    },
+    {
+      "id": "blockchain-feedback",
+      "name": "Blockchain-Feedback",
+      "description": "4 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 2,
+      "relevanceSec": 1247,
+      "sampleTopics": [
+        "Feedback: Blockchains",
+        "Feedback: More Blockchains",
+        "Feedback: Blockchain-Zentralisierung",
+        "Feedback: Blockchain in Projektvergabe"
+      ],
+      "episodes": [
+        386,
+        422
+      ]
+    },
+    {
+      "id": "chaos-communication-camp-2023",
+      "name": "Chaos Communication Camp 2023",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 1241,
+      "sampleTopics": [
+        "Chaos Communication Camp 2023",
+        "Camp 2023: Blinkenlights Vortrag",
+        "Camp 2023: HackBack Vortrag"
+      ],
+      "episodes": [
+        465,
+        467
+      ]
+    },
+    {
+      "id": "protestbewegungen",
+      "name": "Protestbewegungen",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1240,
+      "sampleTopics": [
+        "Großdemo gegen bayrisches Polizeiaufgabengesetz",
+        "Artikel 13: Demos vor CDU-Zentralen"
+      ],
+      "episodes": [
+        253,
+        290
+      ]
+    },
+    {
+      "id": "radio-dreyeckland",
+      "name": "Radio Dreyeckland",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1210,
+      "sampleTopics": [
+        "Razzia bei Radio Dreyeckland",
+        "Radio Dreyeckland wehrt sich",
+        "Radio Dreyeckland"
+      ],
+      "episodes": [
+        451,
+        456,
+        538
+      ]
+    },
+    {
+      "id": "datenjournalismus",
+      "name": "Datenjournalismus",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 1199,
+      "sampleTopics": [
+        "Journalismus",
+        "Algorithmen und Journalismus",
+        "Datenjournalismus"
+      ],
+      "episodes": [
+        425,
+        432
+      ]
+    },
+    {
+      "id": "alles-ist-eins",
+      "name": "Alles ist Eins",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1196,
+      "sampleTopics": [
+        "Alles ist eins. Außer der 0.",
+        "Premiere: Alles ist eins. Ausser der 0.",
+        "Alles ist eins außer der Null"
+      ],
+      "episodes": [
+        366,
+        397,
+        445
+      ]
+    },
+    {
+      "id": "schweizer-referenden",
+      "name": "Schweizer Referenden",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1195,
+      "sampleTopics": [
+        "Referendum gegen Schweizer Nachrichtendienstegesetz",
+        "Referendum Schweizer Nachrichtendienstgesetz",
+        "Referendum für Volksabstimmung gegen BÜPF"
+      ],
+      "episodes": [
+        160,
+        171,
+        178
+      ]
+    },
+    {
+      "id": "darknet-kriminalität",
+      "name": "Darknet-Kriminalität",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1168,
+      "sampleTopics": [
+        "Darknet-Waffendealer gefasst",
+        "Die Darknet-Fürsten aus Kleve und Bad Vilbel",
+        "Über 170 Festnahmen von Darknet-Händlern"
+      ],
+      "episodes": [
+        191,
+        301,
+        360
+      ]
+    },
+    {
+      "id": "pegasus-überwachung",
+      "name": "Pegasus Überwachung",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1166,
+      "sampleTopics": [
+        "BKA kauft NSO Pegasus",
+        "BND nutzt Pegasus",
+        "Pegasus gegen NYT-Journalist eingesetzt",
+        "Pegasus in Polen"
+      ],
+      "episodes": [
+        406,
+        409,
+        411,
+        417
+      ]
+    },
+    {
+      "id": "facebook-regulierung",
+      "name": "Facebook-Regulierung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1165,
+      "sampleTopics": [
+        "Facebook und FTC",
+        "Facebook-Fahndung"
+      ],
+      "episodes": [
+        6,
+        45
+      ]
+    },
+    {
+      "id": "postident-feedback",
+      "name": "Postident Feedback",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1135,
+      "sampleTopics": [
+        "Feedback: Ausweisnummer",
+        "Feedback: Postident",
+        "Feedback: Postident und e-Perso"
+      ],
+      "episodes": [
+        386,
+        437,
+        439
+      ]
+    },
+    {
+      "id": "bnd",
+      "name": "BND",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1117,
+      "sampleTopics": [
+        "BND als Nachrichtendienstleister",
+        "Der BND",
+        "BND"
+      ],
+      "episodes": [
+        196,
+        326,
+        506
+      ]
+    },
+    {
+      "id": "datenelch-merch",
+      "name": "Datenelch Merch",
+      "description": "4 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 5,
+      "relevanceSec": 1090,
+      "sampleTopics": [
+        "LNP Shirts",
+        "Shirtverkauf",
+        "Es gibt wieder Shirts",
+        "Datenelch-Shirts und anderer Merch"
+      ],
+      "episodes": [
+        203,
+        302,
+        414,
+        454,
+        477
+      ]
+    },
+    {
+      "id": "bnd-gesetz",
+      "name": "BND-Gesetz",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1074,
+      "sampleTopics": [
+        "Das BND-Gesetz",
+        "BND-Gesetz"
+      ],
+      "episodes": [
+        346,
+        371
+      ]
+    },
+    {
+      "id": "ai-feedback",
+      "name": "AI-Feedback",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1071,
+      "sampleTopics": [
+        "Feedback: AI-Art",
+        "Feedback: Das Wesen von AI",
+        "Feedback: Selfmade AI"
+      ],
+      "episodes": [
+        439,
+        458,
+        540
+      ]
+    },
+    {
+      "id": "vorratsdatenspeicherung-eugh",
+      "name": "Vorratsdatenspeicherung EuGH",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1067,
+      "sampleTopics": [
+        "EuGH urteilt über Vorratsdatenspeicherung",
+        "VDS bleibt europarechtswidrig",
+        "Nationale VDS vor dem EuGH",
+        "VDS vor dem EuGH"
+      ],
+      "episodes": [
+        99,
+        251,
+        327,
+        413
+      ]
+    },
+    {
+      "id": "us-wahlen-und-social-media",
+      "name": "US-Wahlen und Social Media",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1061,
+      "sampleTopics": [
+        "Social Media Konten und die USA",
+        "Social Media und die US-Wahl"
+      ],
+      "episodes": [
+        304,
+        512
+      ]
+    },
+    {
+      "id": "klarnamenpflicht",
+      "name": "Klarnamenpflicht",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1051,
+      "sampleTopics": [
+        "Klarnamenpflicht",
+        "Klarnamenpflicht und Licht ins Darknet"
+      ],
+      "episodes": [
+        303,
+        327
+      ]
+    },
+    {
+      "id": "corona-updates",
+      "name": "Corona-Updates",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1048,
+      "sampleTopics": [
+        "Corona-Alarm",
+        "Corona-Situation"
+      ],
+      "episodes": [
+        334,
+        335
+      ]
+    },
+    {
+      "id": "biometrische-sicherheit",
+      "name": "Biometrische Sicherheit",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1042,
+      "sampleTopics": [
+        "Biometrie-Superdatenbank der EU",
+        "Illegale Zugriffe auf Polizeidatenbanken",
+        "Biometrische Überwachung"
+      ],
+      "episodes": [
+        222,
+        356,
+        536
+      ]
+    },
+    {
+      "id": "feedback-kultur",
+      "name": "Feedback-Kultur",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1019,
+      "sampleTopics": [
+        "Feedback: Schwaben und Baden",
+        "Feedback: Genderdeutsch",
+        "Feedback: Schweden",
+        "Feedback: Unterschicht"
+      ],
+      "episodes": [
+        253,
+        435,
+        453,
+        461
+      ]
+    },
+    {
+      "id": "lnp-modelle",
+      "name": "LNP Modelle",
+      "description": "3 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 5,
+      "relevanceSec": 986,
+      "sampleTopics": [
+        "LNP256",
+        "LNP300",
+        "LNP500"
+      ],
+      "episodes": [
+        249,
+        295,
+        297,
+        496,
+        497
+      ]
+    },
+    {
+      "id": "cell-broadcast",
+      "name": "Cell Broadcast",
+      "description": "4 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 6,
+      "relevanceSec": 958,
+      "sampleTopics": [
+        "Feedback: Cell Broadcast Center",
+        "Feedback: Cell Broadcast",
+        "Cell Broadcast startet",
+        "Cell Broadcast"
+      ],
+      "episodes": [
+        363,
+        433,
+        454,
+        462,
+        463,
+        464
+      ]
+    },
+    {
+      "id": "ki-feedback",
+      "name": "KI-Feedback",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 938,
+      "sampleTopics": [
+        "Feedback: KI und Programmieren",
+        "Feedback: KI und Linguistik"
+      ],
+      "episodes": [
+        528,
+        529
+      ]
+    },
+    {
+      "id": "politische-persönlichkeiten",
+      "name": "Politische Persönlichkeiten",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 933,
+      "sampleTopics": [
+        "Stephan Brandner",
+        "Hans-Christian Ströbele"
+      ],
+      "episodes": [
+        322,
+        437
+      ]
+    },
+    {
+      "id": "g20-polizeigewalt",
+      "name": "G20 Polizeigewalt",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 920,
+      "sampleTopics": [
+        "G20: Gewaltanwendung der Polizei",
+        "G20 Gewalt"
+      ],
+      "episodes": [
+        225,
+        352
+      ]
+    },
+    {
+      "id": "grundrechte-diskurs",
+      "name": "Grundrechte-Diskurs",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 910,
+      "sampleTopics": [
+        "Feedback: Grundrechte",
+        "Feedback: Privilegien vs. Grundrechte",
+        "Feedback: Grundrechtsgelaber"
+      ],
+      "episodes": [
+        347,
+        385,
+        391
+      ]
+    },
+    {
+      "id": "fake-news-awareness",
+      "name": "Fake News Awareness",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 904,
+      "sampleTopics": [
+        "Neues von Fake News und Hatespeech",
+        "Impfung gegen Fake News"
+      ],
+      "episodes": [
+        219,
+        308
+      ]
+    },
+    {
+      "id": "internetgeschichte",
+      "name": "Internetgeschichte",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 899,
+      "sampleTopics": [
+        "50 Jahre Internet",
+        "Internet"
+      ],
+      "episodes": [
+        319,
+        355
+      ]
+    },
+    {
+      "id": "sicherheitslücken",
+      "name": "Sicherheitslücken",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 881,
+      "sampleTopics": [
+        "Impfzertifikate-Apotheken-Hack",
+        "CDU gehackt"
+      ],
+      "episodes": [
+        401,
+        495
+      ]
+    },
+    {
+      "id": "peter-steudtner",
+      "name": "Peter Steudtner",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 869,
+      "sampleTopics": [
+        "Peter Steudtner frei",
+        "Spendenaufruf Peter Steudtner",
+        "Peter Steudtner"
+      ],
+      "episodes": [
+        234,
+        260,
+        322
+      ]
+    },
+    {
+      "id": "fluggastdaten-abkommen",
+      "name": "Fluggastdaten-Abkommen",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 867,
+      "sampleTopics": [
+        "Fluggastdaten-Abkommen EU/USA",
+        "PNR (Fluggastdatenabkommen)"
+      ],
+      "episodes": [
+        17,
+        18
+      ]
+    },
+    {
+      "id": "lnp-jubiläen",
+      "name": "LNP Jubiläen",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 864,
+      "sampleTopics": [
+        "9 Jahre LNP",
+        "11 Jahre LNP",
+        "13 Jahre LNP"
+      ],
+      "episodes": [
+        366,
+        445,
+        505
+      ]
+    },
+    {
+      "id": "epicenter-works-finanzkrise",
+      "name": "Epicenter.works Finanzkrise",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 859,
+      "sampleTopics": [
+        "Finanzproblem epicenter.works",
+        "epicenter.works braucht Kohle",
+        "Epicenter.works hat im Oktober ums Überleben gekämpft"
+      ],
+      "episodes": [
+        352,
+        505,
+        508
+      ]
+    },
+    {
+      "id": "social-media-feedback",
+      "name": "Social Media Feedback",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 818,
+      "sampleTopics": [
+        "Feedback: Social Media",
+        "Feedback: Soziale Medien"
+      ],
+      "episodes": [
+        471,
+        512
+      ]
+    },
+    {
+      "id": "digitale-gesellschaft-schweiz",
+      "name": "Digitale Gesellschaft Schweiz",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 817,
+      "sampleTopics": [
+        "Digitale Gesellschaft Schweiz",
+        "Digitale Gesellschaft sucht Geschäftsführung",
+        "Digitale Gesellschaft sucht Leitung"
+      ],
+      "episodes": [
+        185,
+        235,
+        356
+      ]
+    },
+    {
+      "id": "sim-karten-sicherheit",
+      "name": "SIM-Karten Sicherheit",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 732,
+      "sampleTopics": [
+        "SIM-Karten Sicherheitsprobleme",
+        "Anonyme SIM-Karten"
+      ],
+      "episodes": [
+        132,
+        329
+      ]
+    },
+    {
+      "id": "sicherheitsfeedback",
+      "name": "Sicherheitsfeedback",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 709,
+      "sampleTopics": [
+        "Feedback: MITM für die Sicherheit",
+        "Feedback: Sicherheitsmaßnahmen",
+        "Feedback: Sicherheits-Checkliste"
+      ],
+      "episodes": [
+        248,
+        282
+      ]
+    },
+    {
+      "id": "digitalpakt-bildung",
+      "name": "Digitalpakt Bildung",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 704,
+      "sampleTopics": [
+        "Digitalpakt",
+        "Digitalpakt-Problem gelöst?",
+        "Digitalpakt Schule"
+      ],
+      "episodes": [
+        278,
+        286,
+        287
+      ]
+    },
+    {
+      "id": "gema-youtube",
+      "name": "Gema & YouTube",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 686,
+      "sampleTopics": [
+        "Gema vs. YouTube 2. Teil",
+        "Gema vs. YouTube"
+      ],
+      "episodes": [
+        25,
+        170
+      ]
+    },
+    {
+      "id": "einhornstandarten",
+      "name": "Einhornstandarten",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 653,
+      "sampleTopics": [
+        "Feedback: Einhornstandarte",
+        "Einhornstandarte",
+        "Einhorn- und Totenkopfstandarte"
+      ],
+      "episodes": [
+        427,
+        448,
+        477
+      ]
+    },
+    {
+      "id": "ngo-spenden",
+      "name": "NGO-Spenden",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 651,
+      "sampleTopics": [
+        "Feedback: Spendenwürdige Organisationen",
+        "Spenden an NGOs"
+      ],
+      "episodes": [
+        282,
+        297
+      ]
+    },
+    {
+      "id": "nsa-snowden-debatte",
+      "name": "NSA-Snowden-Debatte",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 634,
+      "sampleTopics": [
+        "Bundesregierung verweigert NSA-UA Informationen zu Vorwürfen gegen Snowden",
+        "NSA-UA darf Bundesregierung bitten, Snowden einzuladen"
+      ],
+      "episodes": [
+        199,
+        202
+      ]
+    },
+    {
+      "id": "polizei-feedback",
+      "name": "Polizei-Feedback",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 622,
+      "sampleTopics": [
+        "Feedback: Polizeiverhalten",
+        "Feedback: Polizei",
+        "Feedback: Polizei-Abfragen vergessen"
+      ],
+      "episodes": [
+        190,
+        261,
+        419
+      ]
+    },
+    {
+      "id": "social-bots",
+      "name": "Social Bots",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 621,
+      "sampleTopics": [
+        "Feedback: Social Bots",
+        "34C3: Social Bots",
+        "Social Bots"
+      ],
+      "episodes": [
+        203,
+        238,
+        388
+      ]
+    },
+    {
+      "id": "frontex-debatte",
+      "name": "Frontex-Debatte",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 616,
+      "sampleTopics": [
+        "Frontex vs. Fragdenstaat",
+        "Frag den Staat vs. Frontex",
+        "Frag den Staat und Frontex"
+      ],
+      "episodes": [
+        333,
+        390,
+        408
+      ]
+    },
+    {
+      "id": "wahl-hacking-usa",
+      "name": "Wahl-Hacking USA",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 556,
+      "sampleTopics": [
+        "Wahlmanipulation & Hacking",
+        "US-Wahl: Hacking"
+      ],
+      "episodes": [
+        204,
+        365
+      ]
+    },
+    {
+      "id": "uber-hack-feedback",
+      "name": "Uber-Hack Feedback",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 550,
+      "sampleTopics": [
+        "Feedback: Uber-Hack",
+        "Feedback: Hack & Back"
+      ],
+      "episodes": [
+        237,
+        255
+      ]
+    },
+    {
+      "id": "freifunk-gemeinnützigkeit",
+      "name": "Freifunk-Gemeinnützigkeit",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 542,
+      "sampleTopics": [
+        "Gemeinnützigkeit von Freifunk",
+        "Gemeinnützigkeit für Freifunk-Initiativen",
+        "Freifunk gemeinnützig"
+      ],
+      "episodes": [
+        276,
+        283,
+        372
+      ]
+    },
+    {
+      "id": "sicherheitsfeedback",
+      "name": "Sicherheitsfeedback",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 531,
+      "sampleTopics": [
+        "Feedback: haveibeenpwned",
+        "Feedback: Efail"
+      ],
+      "episodes": [
+        255
+      ]
+    },
+    {
+      "id": "datenlecks",
+      "name": "Datenlecks",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 382,
+      "sampleTopics": [
+        "Neues Leak",
+        "Datenleck der Woche",
+        "Datenleck bei Corplife"
+      ],
+      "episodes": [
+        286,
+        305,
+        525
+      ]
+    },
+    {
+      "id": "edri-stellenangebote",
+      "name": "EDRi Stellenangebote",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 345,
+      "sampleTopics": [
+        "EDRi sucht neuen Executive Director",
+        "EDRi sucht hEad of Plicy",
+        "EDRi sucht neuen Senior Policy Advisor"
+      ],
+      "episodes": [
+        250,
+        302,
+        310
+      ]
+    },
+    {
+      "id": "reporter-ohne-grenzen-jobs",
+      "name": "Reporter ohne Grenzen Jobs",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 252,
+      "sampleTopics": [
+        "Job bei Reportern ohne Grenzen",
+        "Job bei Reporter ohne Grenzen"
+      ],
+      "episodes": [
+        286,
+        410
+      ]
+    },
+    {
+      "id": "feedback-analyse",
+      "name": "Feedback-Analyse",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 197,
+      "sampleTopics": [
+        "Feedback: Quellenzuordnung",
+        "Feedback: Hermeneutik des Verdachts"
+      ],
+      "episodes": [
+        390,
+        520
+      ]
+    }
+  ]
+}

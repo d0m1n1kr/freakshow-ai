@@ -1,0 +1,1019 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:02",
+      "text": "Guten Morgen Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:04",
+      "text": "Sag mal, wir hatten noch gesagt, dass du mir nicht mehr daher schnüffeln sollst. Dachte, wir hatten da ein Abkommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:12",
+      "text": "Also ich mache das ja nicht wissentlich. Ähm das passiert.\nAus Versehen, aber jetzt nicht absichtlich oder so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:43",
+      "text": "Logbuchnetzpolitik. Nummer einhundertundvierzig und jetzt wieder hier in äh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:52",
+      "text": "Das ist schön, das freut mich, Tim. Und ich möchte auch an dieser Stelle lobend erwähnen, wie früh du aufgestanden bist, um damit deine Republika geprägte Stimme ein bisschen auf den frühen Morgen zu schieben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:02",
+      "text": "Ja, ich kann ja hier meine Schlafzimmerstimme nicht allen vorenthalten, das muss ja auch irgendwie sein.\nOder damit werde ich dir das das Podcast."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:13",
+      "text": "Der bist doch eh schon."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:15",
+      "text": "Ja, gibt's auch noch so ein paar andere Kandidaten. Da wird schon ganz ganz gut so die Google gerollt, teilweise. Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:24",
+      "text": "Echt wohl, wo der noch, wer wäre jetzt am Beispiel?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:26",
+      "text": "Die Hörsuppe zum Beispiel."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:29",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:30",
+      "text": "Also ja ist schon schon ganz schön. Aber jetzt aber so nach so einer Woche Durchzeichenkonferenz geschehen kann ich voll in der Obersten Liga mitspielen, kein Problem."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:44",
+      "text": "Ja, ich bin ja leider ferngeblieben, aber wir kommen gleich zu den Konferenzen. Ich ich habe so ein bisschen schlechtes Gewissen. Ich will einmal noch ein Feedback vorlesen,\nwas ich jetzt irgendwie ich glaub ein oder zwei Folgen schon vergessen habe und das,\nDas äh finde ich schade, deswegen würde ich das jetzt einmal ganz schnell hinter mich bringen, weil ich so,\nganz panisch bin. Und zwar haben wir eine anonyme Zuschrift bekommen.\nLautete und da ging es um ähm die Flugzeug äh Sicherheit und zwar das\nne, weil das jetzt hier diskutiert wurde, okay, wir lassen uns doch die,\nfernsteuern, während mein Einwand war, dann wird der Terrorist nicht mehr da drin sitzen, sondern fernsteuern,\nÄhm und da haben wir auch über die Firewall und Netzwerksysteme in den Flugzeugen gesprochen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:34",
+      "text": "Da wurde ja auch, da wurde, wurde ja auch heiß diskutiert äh und uns auch teilweise ähm Realitätsferne vorgeworfen. In den Kommentaren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:43",
+      "text": "Genau, ja, Realitätsfern sind wir ja ohnehin. Wir haben ja Ideale. Das ist ja also viel weiter von der Realität kann's ja gar nicht wäch.\nAber okay, hier kam jetzt mal jemand mit Kompetenz und der schrieb ähm also unter anonym ähm,\nKabinennetz und Cockpitnetz waren bis vor ein paar Jahren durch eine Firewall getrennt. In diesem Fall meinte er also eine,\ndedizierte Appliance Firewall. Inzwischen werden die unterschiedlichen Systeme wie auch die Firewall virtualisiert auf gemeinsamer Hardwarebetrieb,\nDas ist eine eine sehr ähm aus ökonomischer Perspektive sicherlich sehr zu,\nbegrüßende, also und auch aus Stromverbrauchs äh Fragen sehr zu begrüßende Entwicklung. Aus äh aus Fragen der IT-Sicherheit natürlich eher äh etwas Unheilige, äh Entwicklung, dass man eben mehr und mehr einfach virtualisiert,\ndann quasi alles auf einem Gerät laufen hat, aber in verschiedenen virtuellen Containern. Blöd ist natürlich, wenn dann halt,\nwenn diese Virtualisierung nicht vernünftig funktioniert und da einer irgendwie rausklettert oder es schafft\nein den den Hypervisor abzuschalten, dann ist halt auch direkt alles kaputt. Aber okay,\nWeiter geht's, die Begründung für den Netzzugriff im Cockpit,\nEntertainment-System muss die aktuellen Flugdaten erhalten, um sie.\nDie Flugroute auf der Landkarte, ne, also hat man bei also, wenn es kein innereuropäischer Flug ist, hat man das,\nab zwei, drei Stunden Flügen hast du ja nicht immer so einen kleinen Fernseher,\nregelmäßig die Kameras durch und dann siehst du, jetzt fliegt er da lang und dann siehst du da, ah München, München ist lang\nund äh ja dann siehst du von oben und dann kommt dann, dann kommt wieder so eine Animation mit der Welt, Kugel und so. Und dafür muss das Flugzeug natürlich auch genau wissen, wo es ist und deswegen dieses GPS wird da durchgegeben,\nOffenbar ist bislang niemandem,\nniemandem die Idee gekommen, dem Kabinennetz einen eigenen GPS-Empfänger zu spendieren und die Leitung zu kappen.\nAlso stimmt tatsächlich, das Kabinennetz und das Cockpitnetz sind erstmal nur durch eine äh Firewall getrennt.\nGab es."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:07",
+      "text": "Das ist äh um dann vielleicht nochmal kurz nachzuhacken. Also.\nJetzt fällt mir sicherlich gleich die Argumente kommen, dass wenn du jetzt wirklich all diese ganzen Flugdaten und wann kommen wir denn voraussichtlich an und so weiter. Ich meine, da reicht ja ein GPS-Empfänger nicht. Ne, also ist ja sozusagen es gibt da schon aufbereitete Informationen, die quasi\nteilweise wohl im Flugzeug generiert werden, teilweise vielleicht auch von außen kommen.\nMüsste sich halt schon Gedanken darüber machen, auch so etwas entsprechend zu\nähm so in der Logik eines Flugzeugbauers ist das natürlich schon etwas, wo dann die Ökonomie,\nähm sich durchsetzt, nachvollziehbarer Prozess so von außen, aber natürlich nicht ohne Sicherheitsimplikationen, das muss man sich schon klar machen und auch solche\nTrennung, was es ja gerade schon gesagt hat, sollte man es nochmal kurz aufschlüsseln,\nalso sozusagen wenn zwei Systeme auf dem selben Computer laufen, als wären sie eigentlich zwei Computer,\naber es ist eben jetzt auch noch nicht so, dass äh man nicht schon auch dort Sicherheitslücken entdeckt hätte. Auch das ist\ndurchaus alles schon mal irgendwo gebrochen und die grundsätzliche Annahme, dass sowas per se sicherer sei als eine Firewall oder so äh ist einfach eine Fehlernahme. Und in dem Moment, wo halt zwischen diesen beiden virtuellen Systemen auch noch Daten ausgetauscht werden\nist es quasi wie, ja, ein Kabel zwischen zwei Rechnern und was das für Implikationen haben kann,\ndas äh sind wir ja täglich im Netz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:49",
+      "text": "Jo\nDann gab's zur zur letzten Folge noch eine Ergänzung von ähm äh Herr oder Frau Feuerwasser. Äh dass Betroffene von polizeilichen Abhörmaßnahmen informiert werden müssen,\nwenn das Verfahren abgeschlossen ist. Das gibt es auch schon in Deutschland.\nPraktisch, findest das aber so gut wie nicht statt. Denn da schreibt dann ein Beamter einfach einen Vermerk Restwahrscheinlichkeit oder Restrisiko, dass da doch noch etwas zu finden sein könnte.\nUnd um eventuelle zukünftige Verfahren nicht jetzt schon zu gefährden, wird dann halt lieber noch nicht informiert,\nAlso das heißt, informiert über eine Abhörmaßnahme wirst du erst dann, wenn.\nSie mit absoluter Sicherheit sagen können, okay, der ist diese Zielperson ist absolut unschuldig und wir haben keinen keinerlei Restwahrscheinlichkeit, dass wir die irgendwann nochmal abhören wollen.\nDeswegen können wir sie jetzt auch darüber in Kenntnis setzen. Und man kann sich natürlich vorstellen, dass diese polizeilichen Abhörmaßnahmen natürlich eher dann angeordnet werden.\nWenn man irgendwie eine Form von Verdacht hat, ja und dann,\nweiß man ja auch, wie Polizisten mit dem Ausräumen von Verdacht,\neinräumen von Verdächtigungen und insofern äh kann man sich das sehr gut vorstellen, dass dann ähm entsprechend relativ wenig Menschen auch nur darüber in Kenntnis gesetzt werden, dass sie abgehört wurden, weil man weiß ja nicht, ob man die nicht vielleicht doch nochmal,\nam Telefon einmal vom vom Joint erzählt, ja, vielleicht müssen wir da nochmal bei."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:38",
+      "text": "Sind ja schon mal einmal bei uns in den Fokus gekommen, dann muss da ja auch, vielleicht kann da mal auch was dran sein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:45",
+      "text": "Den gab's immerhin schon polizeiliche Ermittlungen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:47",
+      "text": "Genau, sogar von uns, ja? Also äh man kann wahrscheinlich davon ausgehen, dass wenn die zuständigen Beamten dann in Rente gegangen sind, dass der Fall dann auch final abgeschlossen ist.\nAus Polizeiperspektive muss man auch dazu sagen, ist das natürlich ein Stück weit auch,\nnachvollziehbar, ja? Manchmal hast du vielleicht einen Hinweis, dann schaffst du halt eine eine Maßnahme\nUnd vielleicht hattest du so, sagen wir mal, die entscheidende Nebeninformation noch nicht, um da jetzt auch wirklich auf eine richtige Spur zu kommen, da wäre das natürlich äh aus taktischer Sicht etwas töricht vorschnell\ndem Überwachten quasi so, ach ja übrigens, wir haben dich jetzt mal überwacht, äh packe jetzt mal, verbrenne jetzt mal alle, alle Ordner,\näh also ich kann das ein Stück weit nachvollziehen. Sicherlich,\nmuss man dort aber einen Modus finden, der dann eben diese Auskunft,\nPflicht dann auch zu einem Zeitpunkt dann auch aktiviert, die,\nangemessen ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:53",
+      "text": "So ist es. Und dann haben wir noch einen kurze einen kurzen Aufruf und zwar ähm wurden wir angesprochen von jemandem, der gerne mit seinem D-Mail-Konto mal was ausprobieren würde,\naber leider niemanden kennt, der auch eins hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:10",
+      "text": "Bitte melde dich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:10:13",
+      "text": "Der Hörer, falls sich unter der Hörerschaft jemand befindet, der, der oder die jetzt mal die Gelegenheit ergreifen möchte, die erste D-Mail,\ndes Lebens zu schreiben so, ihr habt jetzt die Gelegenheit ähm,\nwendet euch dann bitte mal vertrauensvoll an mich über das äh Kontaktformular verlinkt, in den,\nShownotes, dann stelle ich da gerne äh den Kontakt her und dann könnt ihr meine,\neine D-Mail schreiben, solange das noch kostenlos ist,\nWobei da noch der Hinweis, die werden natürlich immer kostenlos sein. Das wird dir, kannst du jetzt nicht irgendwann nochmal Geld dafür nehmen. Das ist natürlich totaler Quatsch. Also das Ding ist tot, aber wer nochmal versuchen möchte, das Pferd zu reiten oder wenigstens einmal erzählen möchte, damals, als ich eine D-Mail schrieb\nJetzt ist die Gelegenheit, wir machen jetzt hier so ein eine DBL-Kontaktbörse."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:00",
+      "text": "Zum."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:05",
+      "text": "D-Mail-Freundschaft, wer eine D-Mail-Freundschaft haben möchte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:07",
+      "text": "Ja, ich meine, vielleicht wäre das ja auch noch ein Weg, das,\nJa? Äh,\nlerne, lerne, lerne jetzt äh andere Leute in deiner Nachbarschaft kennen, die auch mit dem Finanzamt kommunizieren wollen.\nJetzt auf der."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:35",
+      "text": "Wollen vertraulich kommunizieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:36",
+      "text": "Hände zu Ende verschlüsselst.\nOh Gott. Na ja, also warum nicht? Ja, also vielleicht können wir ja nochmal ein richtig schönes Social Netzwerk äh draus machen, dass die paar Leute, die da noch dabei sind, sich zumindest auch noch mal kennengelernt haben, bevor es abgeschaltet wird,\nSowas."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:59",
+      "text": "Kann man okay. Na komme mal, kommen wir mal zu den zu den ernsten Themen.\nRepublika. Ich konnte ja leider nicht. Ich hatte es ja gesagt, ich bin ja aus Solidarität mit den Lokführern und den Bestreikten gleichermaßen bin ich dieses Jahr nicht zur Republika gegangen.\nVerzichtet, Solidarität."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:18",
+      "text": "Mhm. Ja. Da hofft man natürlich immer, dass es scheiße wird.\nGenau die verpasst hat, die die doof war. Aber da war ich ja schon nicht mehr dabei und so,\nEs gibt sicherlich ein paar valide Kritikpunkte an der Republika insgesamt,\nWas aber mal wieder ein schönes äh Treffen, denn wie so für viele andere Konferenzen gilt, am Ende geht man ja dahin\num äh Menschen zu treffen und zu sprechen und Ideen und Projekte und keine Ahnung, was äh auszutauschen. Und das konnte man aber auch wieder äh auch in diesem Jahr wieder trefflich äh tun auf dem großen Hof äh\nverbringt man dann halt dann relativ viel Zeit. Es gibt natürlich auch Leute, die sehr viel Zeit in,\nden Besuch von Vorträgen investieren, da gehörte ich in eingeschränkten Maße dazu, ich hab\nsagen wir mal so ein bisschen meine Spezialthemen,\nÄh sprich äh alles Podcast spezifische versucht ähm abzuklappern. Da gab's ja so einiges dieses Jahr,\nAber dann gibt's ja auch noch so unglaublich viel anderes dort und das kann einem immer schnell äh überlasten und irgendwann ist so ein Tag ja auch zu Ende."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:34",
+      "text": "Der Astronaut war da, ne? Alexander Gerst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:35",
+      "text": "Alexander Gerst, das habe ich auch noch kurz gesehen,\nden Weg so,\nSo ein Event zu sein, der auf einer breiten Basis versucht gesellschaftliche Anregungen auszuspucken. Das sage ich mal so. Äh aus meiner Beobachtung, denn es ist,\ngenerell schon so ein bisschen schwierig geworden die Frage ja was ist denn die Republika eigentlich irgendwie mit mit einem Satz zu beantworten?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:12",
+      "text": "Auf Spiegel Online steht immer Netzkonferenz, Republika."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:16",
+      "text": "Ja gut, Netzkonferenz, aber ich meine, geht's noch generischer? Ja, also das, das, das ist halt ähm,\nEin sehr äh weites Feld, so also man,\nnetzpolitischen Aspekten,\naus technischen Sachen\nweniger, aber sagen wir mal Businesstrends spielen da eine Rolle, ähm technische Trends im Sinne von, was halt äh Anwendungen, Netzwerke und ähnliche ähm Dienste sind, die jetzt ein besonderes Interesse erzeugen.\nMan merkt schon, letztlich natürlich, wer auch äh hinter der Republika Orga steht und das ist ja halt äh in einer Hinsicht eben,\nUnd ähm letzten Endes auch das ganze Team von Netzpolitik org. Das merkt man einfach, dass,\nder netzpolitische Bereich oder der sagen wir mal, überhaupt der politische Bereich, der einfach hochkarätig,\nvertreten ist. Ich muss zugeben, dass ich jetzt zu diesem Zeitpunkt noch nicht sehr viele,\ngeben kann, weil ich einfach jetzt noch nicht alles gesehen habe. Ich habe von einigen Sachen gehört, die ganz gut gewesen sein sollen, aber die werde ich jetzt mal hier nicht groß anpreisen, bevor ich da nicht selber nochmal einen Blick drauf gemacht habe, also stellt euch nächste Woche noch mal auf einen kleinen äh Veranstaltungsrückblick ein\nansonsten ähm,\nFand ich ja mal wieder ganz interessant. Ich meine, die Eigenwahrnehmung ist ja immer ein bisschen schwierig, wenn man auf so einem Event,\njahrelang gewesen ist, ich hab glaub ich keine Republik ausgelassen nächstes Jahr ist ja dann die,\ndie Zehnte schon angesagt. Ähm.\nDann hat man natürlich schnell das Gefühl, so oh Gott, es ist alles so groß geworden. Und das ist auch von mir persönlich durchaus ein Kritikpunkt. Ich finde, es gibt einfach viel zu viele Sessions. Es ist\nEs ist so breit gestreut, dass es einfach den Fokus äh verliert. Also wenn wenn man wirklich jeden irgendwie äh noch unterbekommt, dann ist natürlich auch die Auswahl des Programms irgendwo knifflig. Trotzdem gibt's halt immer wieder,\ngute Highlights, man würde sich bloß manchmal wünschen, es ist etwas verdichteterweise mit irgendwie zwölf Bühnen und so weiter, da da wird man halt auch irgendwann äh kirre, so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:26",
+      "text": "Also diese ich war äh zwei Sachen, die mir dazu kurz einfallen. Ähm,\ndrei sogar. Erstens, äh die Republik wird nicht nur von New Thinking gemacht, sondern auch von Spreeblick, nicht, dass die nachher beleidigt sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:37",
+      "text": "Äh ja, entschuldigen. Da wollte ich noch drauf kommen, also genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:40",
+      "text": "Ah okay. Dann ähm finde ich dieses ähm,\nVeranstaltung gehst, ne? Du hast jetzt gerade erzählt, uns vorher unterhalten haben, auch schon,\nangesprochen, ne? Also die Leute, die auf so Businessmessen oder sowas gehen, ne, für die ist die Republika,\nnach wie vor irgendwie so ein absolutes Hardcore-Independent-Ding, ne, also die ähm,\nWenn ihr jetzt mal auf so eine DMEX-Ko oder sowas gehst, ne, das sind halt irgendwelche Business-Veranstaltungen, davon ist die Republika immer noch meilenweit entfernt. Ich glaube, da muss man nochmal so ein, ein Norden, auch aus welcher Perspektive wir denn da vielleicht drauf blicken,\ndie jetzt wie du halt über Jahrzehnte inzwischen mit dem mit dem CCC Kongress involviert sind, wo es,\nalso wo es ähm wo Sponsoren eben auch ihre Slots bekommen. Da da sponsert dann halt Daimler und erzählt dann kriegt halt äh Tag eins, Bühne eins\nund erzählt über wie das Auto der Zukunft, ne? So."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:46",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:47",
+      "text": "Die können aber auch nicht auf so viele Freiwillige zurückgreifen, wie der, wie der Kongress. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:53",
+      "text": "Also um das gleich klarzustellen, es sind auch schon mal Sponsoren,\nsehr wohl also sind sehr wohl Sponsoren genannt worden im Rahmen des."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:01",
+      "text": "Am Ende, das stimmt, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:03",
+      "text": "Das bezieht sich meistens auf Netzwerkequipment und so weiter. Das ist auch in Ordnung,\naber es ist halt nicht so, dass es da irgendwelche Gold-Premiumabteilungen gibt und schon gar nicht, dass man sich in irgendeiner Form als Teil des Programms äh einkauft oder auch nur visuell in irgendeiner Form sichtbar ist auf diesem Event. Das ist halt ein Spezifikum des Kongresses. Das kann nicht jeder machen, das ist vollkommen nachvollziehbar.\nFrage ist natürlich wirklich, wie weit dickt das eben ein und\ngenerell immer das Problem, wenn man halt mit mit Werbung Sponsoring arbeitet, inwiefern verfälscht es deine eigene Botschaft. Das ist halt jetzt mal äh\nVon der anderen Seite sieht,\nwar ganz interessant so auch Feedback zu sammeln von Leuten, die äh sagen wir mal viel auch so im normalen Schlips-Business unterwegs sind, aber eben auch Teil der Republika schon immer waren in dieser Szene. Die meinten dann halt so, na ja, also äh hier meine Kollegen, die hier irgendwie aufgelaufen sind, die die\ndie laufen ja immer noch äh äh rum, als würden sie sich in,\nWeltraum befinden. Also für die ist es irgendwie äh vollkommen,\nnur mit Schnappatmung äh zu kommentieren, wie's da halt zugeht, für die ist das eine totale Freakshow, sind aber auch vollkommen begeistert und auf der anderen Seite, wenn dann halt, ist jetzt ein interessanter Effekt, ne, wenn die dann sehen, so, oh hier, Daimler und die,\ngroße, große Unternehmen sind hier irgendwie Teil dieses Events, präsentieren sich hier auf die ein oder andere Form.\nÄh ja, das sind so unsere potenziellen Kunden und die sind auch hier, da,\nda verschiebt sich irgendwie was im Hirn. Also das passt irgendwie erstmal nicht so in ihre Welt rein. Und ähm das das kann auch ein positiver Aspe\nIch meine, das ist alles immer noch sehr entschlips. Das ist irgendwie äh Casual Dress ist da einfach äh die Normalität auf der Republika,\nglaube, ich habe nicht eine Krawatte gesehen auf diesem ganzen Event und da waren wahrscheinlich wieder, keine Ahnung, sechstausend Leute."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:58",
+      "text": "Ähm der aber äh das will das genau jetzt das war der Aspekt, den ich noch ansprechen wollte. Ich glaube echt, dass also Business ist da, Business würde ich da echt nicht sagen. Ich würde sagen.\nWas die Republika macht ist,\nPolitik. Also sie hat eine sehr klare netzpolitische Einordnung. Klar, das wäre alles andere wäre sehr verwunderlich. Und eigentlich Netzkultur.\nOder? Also ich meine, das ist halt wirklich Netzkultur, der da Open Data und solche solche Sachen spielen da alle immer eine große eine große Rolle. Und natürlich dann auch irgendwelche.\nÄhm ähm Konsumententechnologiephilosophen, die sich dann irgendwie Gedanken darüber machen, wie,\nähm das ist schon an vielen, an vielen äh Bereichen schon sehr interessant,\ndas äh das denke ich schon, dass das dass das,\nvon den Vorträgen her eine eine Reise wert ist, wenn auch ich bin gleich ich immer den den Hof auch eher bevorzuge. Das mache ich bei anderen Veranstaltungen genauso. Ähm.\nWas die ähm Ansammlung des äh oder was die Beliebigkeit des Programms angeht mit der,\nMenge an ähm die es dort gibt ähm muss man auch wissen, die haben glaube ich auch nochmal.\nIch habe letztens mal irgendwo die Zahl gehört, der Einreichung bei der Republika,\ndie ist, glaube ich, noch mal um einiges höher als beim Kongress."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:30",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:30",
+      "text": "Aber dann müsste, glaube ich, aber ich glaube, dass sich die Quote der angenommenen Vorträge, die es wiederum sehr viel.\nViel größer beim Kongress, werden aber wiederum die absolute Anzahl an abgelehnter,\nEinreichung wieder höher ist, dadurch dass sie so viele Stages haben.\nAlso weißt du, man kann da nicht sagen, dass das jetzt so besonders beliebig wäre, also da da reinzukommen, hast bist du trotzdem noch und da liest du trotzdem noch eine\nsehr viel größeren Wahrscheinlich, wenn du dich, wenn du da einreißt, unterliest du immer noch einer sehr viel größeren Wahrscheinlichkeit, abgelehnt zu werden, als angenommen zu werden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:03",
+      "text": "Ja, also so oder so, man merkt, das Interesse ist auf jeden Fall da noch lange nicht äh Alarm und da geht eine Menge und man lernt eine Menge Leute äh nette Leute,\nEine Menge netter Leute kennen, das ist noch zu früh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:22",
+      "text": "Und zwei Vorträge können wir, glaube ich, schon mal noch empfehlen. Einmal ähm unser Thomas hat einen Vortrag gehalten zur Netznetralität. Das hat er, glaube ich, auch in der letzten,\ngehalten, das war auch spannend. Die beiden verlinken wir hier an der Stelle."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:41",
+      "text": "Okay. Äh Thomas Vortrag habe ich auch gesehen, der war wirklich gut. Da kommen wir dann auch gleich nochmal auf ein anderes Detail am Ende. Ja, wollen wir mal in unser Programm einsteigen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:54",
+      "text": "Ja ähm.\nAbkommen. Das Noespy-Abkommen, wir hatten es ja schon fast vergessen.\nWir hatten das ja schon fast vergessen. Ähm.\nErinnerst du dich?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:11",
+      "text": "Ja, aber ich äh noch lebendige Erinnerungen irgendwie. Das äh war doch der, der das Ende der der äh der gesamten Überwachungs-Affäre gleich zum zu Beginn."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:22",
+      "text": "Genau, da war die ja vorbei, schon."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:24",
+      "text": "Da war das dann einfach durch das Thema."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:25",
+      "text": "Also genau, als die Geheimdienst-Affäre vorbei war, ja, im Sommer zweitausenddreizehn.\nÄhm gab es ja dann die die Diskussion um ein Norteabkommen, das die Bundesregierung jetzt fordern würde und dann äh haben sie später auch eine Zusage der USA bekannt gegeben.\nSüddeutsche, dieser Rechercheverbund von Süddeutsche Zeitung, NDR und WDR. Da mal so ein paar ähm geheime Dokumente sich angeschaut und da geht es hauptsächlich um die Kommunikation zwischen Merkels Außenpolitischen Berater Christoph Heusgen.\nUnd um E Obamas, ehemaliger Chefstrategin für Europa, Caron Don\nnächsten äh oder ne Berater, die die da so dranstehen,\nnie in Themenbereichen und die führen natürlich dann so, die schreiben sich dann halt Mails oder so, ne?\nUnd das Schöne ist, ähm während es um diese,\nals die Deutschen dann anfing, mit ey lass mal ein Abkommen machen, ähm,\nHat Donfried natürlich gesagt, ja, äh also sie haben den mehrmals vertröstet und hat erklärt, sie müssten die rechtliche Grundlage für eine solche Zusage prüfen.\nAbkommen sollte ja beinhalten, dass wenn die NSA auf deutschem Boden,\nspioniert, sie sich an die an die an geltendes Recht in Deutschland hält. Das war das Noseabkommen, das war der Inhalt, ja? Und.\nEs ist natürlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:06",
+      "text": "Sie erstmal nachschauen, ob ihnen das überhaupt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:13",
+      "text": "Schreibt dir jemand, der schreibt dir, der schreibt dir die die,\ndie Chefstrategin für Europa,\nvon den USA sagt dir, du sagst ihnen, hey, können wir nicht ein Abkommen unterzeichnen, dass ihr uns an die Gesetz, dass ihr euch an unsere Gesetze haltet, wenn ihr in unserem Land spioniert und die sagen,\nSorry, ich weiß überhaupt nicht, ob wir da eine rechtliche Grundlage für haben. Schön. So,\nschreibst dir, also das wird halt so ein bisschen schöner aus diesen E-Mails zitiert. Er schreibt sie am nächsten Tag, sie habe betrübliche Nachrichten.\nJeder versteht natürlich die schwierige Lage der Kanzlerin. Die Frage, ob deutsches Recht auf deutschem Boden respektiert wird,\nInterpretation der deutschen Gesetze unter Einschaltung von,\nHerten geklärt werden. Hier liegt der Fokus natürlich darauf, ob wir das US-Recht einhalten,\nExperten fühlen sich nicht dafür gerüstet die Einhaltung des deutschen Rechts zu beurteilen.\nSagt die, nachdem sie zu dem Zeitpunkt haben sie, glaube ich, ähm,\nElf Jahre Zusammenarbeit in Bad Aibling. Ja, und dann sagen die, hör mal, unsere Anwälte sind dafür da, ähm,\nähm dass das US-Recht zu biegen, aber doch nicht das Deutsche, so. Da sind die haben die das sollen die gar nicht studiert, dann müssen die erstmal ein Auslandssemester machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:33",
+      "text": "Das ist so super."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:37",
+      "text": "Schreibt der Heuskin sofort zurück ähm ja ähm,\ndie Experten aus unseren Ministerien können euch ja unterstützen,\nAchtung der deutschen Gesetze auf deutschem Boden bleibt die Schlüsselfrage und dann sagen sie ähm gibt's denn eine interne Mail aus dem\nohne das Wissen der deutschen Sicherheit, Sicherheitsdienste und gerade da wollen wir sie ja auf deutsches Recht verpflichten,\nwenn wir sie schon nicht kontrollieren können.\nIst das erbärmlich. So und Anfang August.\nDa haben wir auch drüber berichtet, reisten dann die Chefs von Verfassungsschutz, Bundesnachrichtendienst,\nInnenministerium in die USA, das war haben wir auch ausführlich darüber berichtet und trafen da NSA-Chef Kiew Alexander und James Klepper\nnachher auch nochmal eine Rolle spielen wird, der Direktor der Z,\nalso eigentlich quasi der der Oberchef der Geheimdienste, ja? Der führt alle Geheimdienste, ähm die Reporten quasi an ihn."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:54",
+      "text": "Also wahrscheinlich mehr mehr so ein mehr so ein Koordinator für die ganzen Geheimdienste, weil die natürlich für sich genommen sehr autark arbeiten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:07",
+      "text": "Fünf Seiten, ganz schön witzig, wenn man sich überlegt, wie viele Leute dahin geflogen sind, aber okay. Fünf Seiten BND-Protokoll, ähm.\nDa wird eine angebliche erste Annäherung festgehalten. NSA-Chef Alex Sender habe beschwichtigt, Deutschland sei doch kein Zielland. Ähm,\nund Klepper sagt ähm überrascht mit einem Vorstoß, er könne sich die Bildung einer Arbeitsgruppe vorstellen.\nUnd zwar nach dem Vorbild der Abhöranlage in Bad Aibling zweitausendzwölf.\nÄh zweitausendzwei, Entschuldigung. Das ist genau die, wo wir jetzt grade noch den anderen Skandal wegen der Selektoren haben, nur mal so als Beispiel, ne, wo das ist aber das Thema, wo wir nachher zu kommen, da muss man sich alles so ein bisschen auseinanderhalten,\nUnd äh bei Bad Aibling hieß es, hier gab es ja, dass Memor random of Agreement, ja, wir halten uns an deutsches Recht. Was sie dann einfach nicht getan haben, ja. Das war der, das war das, was der,\nwas der Klepper da mal angedeutet hat. Ähm man könnte eben ein solches Abkommen für ganz Deutschland ähm.\nTreffen. Er selbst,\ndarüber aber keine ad hoc Entscheidung treffen. Er habe keine Prokura, denn das Ganze ist eine politische Frage,\nDie Antwort liegt im weißen Haus. Das heißt, der hat gesagt, na ja, man könnte sich ja vorstellen, das funktioniert ja eigentlich ganz gut mit dem Member Random of Agreement, weil da müssen wir uns ja nicht dran halten,\nDeswegen könnten wir das eigentlich auch gerne für ganz Deutschland machen, aber ich habe da sowieso gar keine Entscheidungshoheit. Und dann Mitte August, als sie zurückkam,\ntrat hier unser Pofalla roll der Typ ey. Trat dann vor die vor die Medien und sagte ja,\nWir haben eine Zusage der US-Seite für ein no Spy-Abkommen, ich erkläre die Affäre hiermit für beendet.\nSteffen Seibert, Regierungssprecher, der übrigens immer noch Regierungssprecher ist, der hat noch nicht in irgendwie in die Wirtschaft gewechselt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:06",
+      "text": "Kommt ja aus der Wirtschaftszahl aus der Medienwirtschaft. Also aus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:30:10",
+      "text": "Aber man geht ja dann auch irgendwann. Man geht ja dann, genau das ist ja nicht Wirtschaft,\nÖffentlich-Rechtliche, ich bitte dich. Ähm das, also das ist ja nicht Wirtschaft, wenn du also Wirtschaft ist ja, wenn du ähm deine Kunden\nmehr oder weniger lauteren Mitteln überzeugen muss für dein Produkt zu bezahlen. Und das ist ja bei bei öffentlich rechtlichen nicht der Fall.\nAber okay, das ist eine, das ist eine das ist eine Rand.\nSo, also.\nSeibert sagte, es wird ein Abkommen geben.\nDann schrieb, ähm Häuschen an Donfred.\nJa äh hi äh und so, ne? Was die Vereinbarung angeht, wäre es echt großartig, wenn sie irgendwie öffentlich den Beginn solcher Gespräche oder Verhandlungen loben könnten, das wäre für uns,\nextrem hilfreich.\nSchreibt,\nschreibt der der außenpolitische Berater von Merkel, an die an die,\nChefkoordinatorin von Obama. So, ja. Eine, eine.\nSo behält da rum, so wir wir haben hier die großen Schuhe an und müssen ein Feuer austreten, es wäre echt hilfreich, wenn ihr einfach nur sagen könntet, dass wir uns unterhalten, ja?\nDann kommt von der US-Botschaft, also von äh dem Gebäude in,\nin Berlin neben dem Brandenburger Tor, von wo aus äh so der Verdacht ja die ähm die ähm nahe Radio Radiosignalüberwachung der der deutschen Parlaments und Regierungsgebäude stattfindet. Ähm,\nBeschwerde, denn Hans-Peter Friedrich, damals noch Innenminister,\nder hat ja jetzt zurück in die Landwirtschaft gewechselt oder so, ne? Aber egal. Friedrich hatte gesagt, wir haben die Zusage, dass ein solches Abkommen bald geschlossen werden kann.\nUnd der stellvertretende Leiter der US-Botschaft in Berlin, Jim schrieb an Holskin, Christoph Holsken. Guten Morgen Christoph.\nIch habe mich über die Bemerkung von Friedrich gewundert. Das wird Washington noch mehr verwirren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:20",
+      "text": "Ich sag's Papi."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:26",
+      "text": "Also mit anderen Worten.\nAlso die diplomatisch in der Diplomatie ist es ja immer sehr, sehr wichtig, dass die enorm höflich sprechen. Und kleine äh Verstöße des Protokolls in der Diplomatie sind ja schon ähm,\nAlso es sind ja dann so Affronts, ne, also irgendwie sowas wie\nich komme wegen Krankheiten nicht zu der Konferenz oder so. Das sind ja dann das sind ja dann schon Direktskandale, weil man eben auf diese auf dieser Ebene sich nicht die Blöße geben kann, emotional zu sprechen. Man vertritt eben einen ganzen Staat und das muss man dann eben\ndiplomatisch tun. Ist ja auch in Ordnung so.\nWenn man da jetzt mal zwischen den Zeilen liest, ja, das ist halt das diplomatische Äquivalent von,\nOktober, im Oktober kam dann das Merkel-Handy raus, ne? Das also das ist noch dazu zu sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:22",
+      "text": "Ich finde, ich finde das auch so bemerkenswert. Ja, dass dass sie sich äh,\nAuch in die Öffentlichkeit getraut haben, ohne wirklich so eine Absicherung nach hinten zu haben, ja. Macht so ein bisschen so den Eindruck, als ob er irgendwie so zur zur Botschaft gegangen ist\nUnd dann so am am Zaun mit irgendwie so ein Sicherheitspersonal, Menschen,\nhat. Weißt du so, das ist so der Grad an Absicherung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:46",
+      "text": "Die haben einfach gelogen. Tim, die haben einfach gelogen. Das äh die haben einfach gelogen. Und zwar auch wissentlich und der aus dem einfachen, aus dem einfachen Grund, dass sie wissen, okay, selbst wenn das zwei Jahre später rauskommt,\nkriegen wir haben wir netto immer noch Schaden verhindert?\nUnd genau das wird jetzt passieren. Im Oktober kam dann dieser ganze Merkel-Handy-Skandal, dann abhören unter Freunden geht gar nicht und so,\nund im Januar zweitausendvierzehn hat dann der der liebe Christoph Häuskin,\neiner erneuten ähm individuellen Erniedrigung,\nletzten Versuch unternommen Januar siebter Januar.\nLiebe Karen.\nAm Donnerstag habe ich einen, habe ich ein erstes Treffen mit unserem neuen Kanzleramtsminister Altmaier und dem neuen Koordinator der Geheimdienste, Staatssekretär Fritsche.\nMein erster Eindruck in den hatte, ähm hatte. Mein erster Eindruck in den ersten Gesprächen mit den beiden ist folgender.\nText erfüllt unsere Erwartungen nicht, weil er die Möglichkeit nicht ausschließt, dass die USA deutsche Bürger ohne unsere Zustimmung und ohne unser Wissen aussperren. In Klammern,\nund er kriegt einen halben Tag später die Antwort von Karin Don.\nIch kann sie nicht korrigieren, da sie recht haben. Dies wird kein Abkommen werden und ich glaube, jeder hier auf unserer Seite hat das auch.\nJederzeit fortwährend zum Ausdruck gebracht.\nDas ist der, das ist eben das, das diplomatische äh Äquivalent von."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:38",
+      "text": "Fuck you."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:39",
+      "text": "Gar nichts mehr sagen. Bist du. Und Christoph Heusken erklärt den Kampf um ein No-Spy-Abkommen für beendet und schreibt an,\nja? Ich verspreche diesen Ausdruck künftig nicht mehr zu verwenden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:54",
+      "text": "Oh Mann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:56",
+      "text": "Das ist wirklich, wirklich krass. Ende vom Lied war dann Steinmeier war dann Ende Februar zweitausendvierzehn nochmal in Washington.\nUnd gab dann nachher bekannt, er war dankbar für die Bereitschaft der Amerikaner zu einem gemeinsamen\nCyber-Dialog unter Beteiligung der Wissenschaft und der Zivilgesellschaft. Da habe ich, glaube ich, ähm im Deutschlandfunk damals morgens um sieben oder was äh zu kommentiert. Ähm.\nDas da war dann auch das Gelächter ziemlich groß. Ähm als,\nAber also der die also nicht über das, was ich gesagt habe, sondern über das, was da geschehen ist,\nJa, ich meine, die haben einfach gelogen, fertig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:41",
+      "text": "Ja und vor allem habe ich auch so den Eindruck, dass sie.\nSie haben nicht nur äh gelogen, Sie haben, sagen wir mal, entgegen den diplomatischen Interessen der USA gehandelt. Sie haben,\nja, es ist ja nicht so, dass gemeinsam mit ihnen gelogen hätten, jetzt wahrscheinlich keinen interessiert, sondern sie haben halt so äh ja, wir behaupten jetzt einfach mal, die Amerikaner hätten das und das,\nzugesagt, obwohl sie es nicht haben, was natürlich dann auch nochmal zu einer\nJa, ja. Weiteren,\neigentlich auch alles in die falsche Richtung geht. So, ich meine, dieser Unmut hätte sich ja sehr viel mehr von Deutscher in Richtung USA-Seite entfalten müssen. Stattdessen müssen sie sich jetzt noch klein mit Hut äh zusammenfalten lassen.\nDas ist schon 'ne ziemlich absurde Situation und zeigt natürlich auch wie das Kräfteverhältnis hier an der Stelle ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:41",
+      "text": "Das ist äh äh also ich finde daran genau zwei Sachen bemerkenswert. Einmal, dass sie, dass sie lügen, okay, darüber könnten wir uns jetzt äh aufregen, aber man merkt irgendwie, dass da auch jetzt so wirklich überrascht auch kaum noch jemand ist.\nZweitens, dass sie dass sie so blöd sind, dass.\nSogar zu machen und der uns irgendwie offensichtlich einerseits versuchen, auf die Amerikaner dadurch Druck auszuüben.\nUnd sich andererseits halt zu absolut arschkriecherisch, den den Amerikanern gegenüber am Ende noch dafür ähm entschuldigen,\nmüssen, ja, weil sie halt weil sie halt sich da verrannt haben. Und das ist natürlich schon wirklich da ist man jetzt nicht ähm.\nStolz drauf, wenn die, wenn die Angestellten von gewählten Vertretern ähm in dieser Form halt meinen Interessen zu vertreten, ne.\nDas ist schon ein bisschen erbärmlich, finde ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:40",
+      "text": "Ciao. Tatsache ist,\num es mal zusammenzufassen, dieser ganze Notekram war einfach nichts anderes als eine,\nAblenkungsversuch der Öffentlichkeit, so eine kleine Nebelwolke, die man gezündet hat, um irgendwie so den Eindruck zu ähm,\nRegen,\nin so einem Schock so oh Gott, ach nee, also das tut uns jetzt aber wirklich leid, da sind wir wohl ein bisschen zu weit gegangen, hätten halt jetzt irgendwie zugesagt, dass er das jetzt so nicht mehr machen würden.\nVon es war\nja? Man kann davon ausgehen, äh in zunehmendem Maße, denke ich, wird das auch so durch die ganze Faktenlage nahegelegt.\nDie Bundesregierung war sich immer vollkommen bewusst, wie der Hase läuft. Sie haben selber zusammengearbeitet,\nkomme jetzt auch gleich nochmal im Detail drauf. Äh über Jahre. Es ist eine totale Normalität,\naber eben mit sehr äh einem sehr asymmetrischen Grundverhältnis. Und.\nDeutschland wird dich in dem Maße ein nutzen aus dieser Zusammenarbeit äh gezogen hat, wie es die USA gezogen hat, darf glaube ich bezweifelt werden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:10",
+      "text": "Ja zeigte auch der BND Untersuchungsausschuss, der jetzt in der letzten Woche stand,\nhat. Da waren ähm.\nZwei Personen,\nEU, der war schon zum zweiten Mal da, DB, der war zum ersten Mal da,\ndann auch nochmal der äh Gerhard Schindler, der aber nur in der nichtöffentlichen,\nSitzung alle drei vom BND, Gerd Schindler, natürlich dessen,\nPräsident. Und da ähm der EU,\ndann gefragt, ja haben sie sich denn schon mal mit der, mit Selektorenlisten beschäftigt? Und dann sagt der, jein.\nJein. Fragt dann auch noch so nach so, tschuldigung, was ne? Dann sagt er, ja, also die Kontrolle dieser sogenannten Selektoren ist ja nicht unser Job.\nDenn das war also jemand, das war der Direktor von Bad Aibling, wenn ich mich nicht täusche,\nWarum sollten wir da nochmal draufschauen? Bad Aibling holt die diese Selektoren mehrfach am Tag,\nvon über die Datenleitung von den Amerikanern und einmal die Woche gehen sie dann nach Pullach zur Kontrolle und ob da jetzt bestimmte Suchbegriffe ungesetzlich sein könnten, war ihm egal.\nDenn er hat Weisungen empfangen. So ERU."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:40",
+      "text": "Also dieser RU arbeitet wurde das,\nIn Bad Aiblingen selber, okay.\nWenn die Zentrale, also in dem Fall die BND Zentrale äh ihnen die Selekturen schickt, das schauen sie sich nicht weiter an, weil es ja die Zentrale und die weiß ja äh alles."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:57",
+      "text": "So funktionieren Hierarchien, klar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:59",
+      "text": "Aber sie werden abgeholt von einem amerikanischen Rechner."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:04",
+      "text": "Naja, das hatten wir schon öfter besprochen, dass die ähm um das kurz zu ähm nochmal in Erinnerung zu rufen,\ndas das Setup, was oder das Gebäude, was dir der BND da in Bad Aibling nutzt, gehörte früher der NSA,\nals das an an den BND übergeben wurde.\nBunker gebaut, in dem sie drin sitzen. Die beiden,\nalte NSA-Gebäude, was sie freundlicherweise dem BND überlassen haben,\nund die äh das neue NSA Gebäude, was nebenan ist, verbindet eine Glasfaserleitung und darüber findet einerseits der Austausch der Selektoren, andererseits aber natürlich auch der Austausch der abgefischten Daten statt.\nDas heißt, letztendlich hat die hat die äh die NSA ihre alte Anlage ähm,\nihre alte Anlage an einen Dienstleistleister outgesourct, der Dienstleister hieß BND,\nund den haben sie halt über eine Glasfaserleitung, die die beiden Gebäude verbannt. Gesagt, hier sucht danach und äh gebe mal die Daten zurück. Und auf beiden fand keinerlei ähm Kontrolle statt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:15",
+      "text": "Und von dort geben sie es dann nach Polar zur Kontrolle und dann legen sie los."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:29",
+      "text": "Ändern. Und einmal die Woche wird's nach Pullach geschickt zur Kontrolle. Und wenn Pullach nichts einzuwenden hat, geht's so weiter.\nAber das Entscheidende finde ich vielmehr, was der,\nes ist natürlich jetzt einerseits sagt man dann,\nkann man sich natürlich jetzt hinsagen und sagen, RU, bist du verrückt? Ähm du bist ja ein unverantwortlicher ähm.\nMensch und du kannst dich ja nicht irgendwie da hinsetzen und alles alle Verantwortungen loswerden, dadurch, dass du Weisungen empfangen hast. Wir haben letzte Woche auch mit Thomas darüber gesprochen, da gibt's ja die entsprechenden Milgrim-Experimente und so, aber so funktionieren Hierarchien halt,\nDerjenige, der die Weisung empfangen hat, ist auch von der Verantwortung befreit\ndes, so werden Menschen in Kriege geschickt, so funktionieren Geheimdienste, so funktionieren Unternehmen. Das ist ganz normal, dass das du ähm dass du weisungsgebunden bist durch eben.\nÄhm durch durch äh durch durch bestimmte vertragliche Bindungen und das ist eben\nin einer Behörde noch stärker natürlich so als in einem Unternehmen. Aber grundsätzlich,\nin fast allen größeren Organisationsformen so, dass es eine Hierarchie gibt und in der werden Verantwortung nach oben gereicht. Und was er jetzt da tut, ist, dass er letzt,\neigentlich durch diese Äußerung, wo er sagt, ist mir egal, ich habe Weisungen bekommen, deutet er schon sehr klar hin, wo die Verantwortung liegt, nämlich nach oben.\nJa? Und da sind wir dann halt relativ bald beim Herrn ähm,\nInsofern ist das jetzt einerseits als als Psychogramm ganz interessant,\nmacht er aber natürlich auch genau das Richtige\naussei, also seine Aussage ist sehr geschickt, weil er sagt, na ja, ich bin weisungsgebunden, die Kontrolle lag an jemand anderem.\nAlso habe ich einfach gemacht, was mir habe ich diese Praxis aufrecht erhalten. Gleichzeitig.\nDeutet sie aber jetzt auch schon so dahin,\nsie am Ende sagen werden, naja, ah, hin und her, wir hatten ja diese Vereinbarung und so und dann die die finden jetzt so langsam ihren Weg, wie sie aus der Nummer wieder rauskommen,\nDas war nämlich jemand, der.\nTatsächlich problematische Selektoren gefunden hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:57",
+      "text": "Der auch ein arbeitet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:45:59",
+      "text": "Ich weiß nicht genau ob der in Bad Aibling oder in Pullach gearbeitet hat ich würde jetzt vermuten in Bad Aibling der meldete nach eigenen Angaben diese problematischen Selektoren.\nAber nicht nach oben und er habe keinem Vorgesetzten informiert. Warum nicht? Wird er dann gefragt? Und da sagt er,\nruft sich auf sein Recht zur Verweigerung der Aussage,\nklar, weil er sich damit natürlich eben des ähm,\ndes Landesverrats äh schuldig gemacht hat und auf jeden Fall irgendwie der irgendwelche Dienstpflich,\nverletzt hat, ja. Das heißt, die,\nscheinen, sich da unten jetzt schon äh jemanden gefunden zu haben, dem sie jetzt halt irgendwie eine schöne äh schöne Villa in der Karibik angeboten haben\ndafür, dass er mal hier ein ein fürs Team nimmt, ne? So würde ich das jetzt mal ähm,\nbösartig interpretieren. DB konnte aber eh nicht reden, weil er alle paar Minuten von einem äh Regierungsdirektor des Kanzleramtes unterbrochen wurde\nund gesagt wurde, ja das also diese Aussage können wir jetzt leider nicht treffen,\nmüssen nachhaltigen Schaden von der Bundesrepublik abwenden.\nDie sich diesen NSA Untersuchungsausschuss da anzutun, da habe ich wirklich auch zunehmenden Respekt vor allen die,\nAuch vor den Journalisten und den dem Team von Netzpolitik Ork, die das, die sich das da jeweils noch immer antun,\nIn der nichtöffentlichen Vernehmung war dann Gerhard Schindler dran, BND-Präsident.\nUnd der musste dann erklären, dass seine Behörde technisch nicht mehr nachvollziehen kann,\nwelche Abhördaten aus der BND-Fernmeldeaufklärung seit zweitausendvier an die Amerikaner weitergegeben worden sind.\nHaben die eine Datenweitergabe an die USA getätigt, die sie nachlässig oder gar nicht kontrolliert,\nund auch nicht protokolliert haben. Natürlich haben sie die nicht protokolliert,\ndu bist ein Geheimdienst und sowas wie das das ähm,\nStasi-Hauptquartier ähm gestürmt wird,\nda reinrennen und ähm die Leute am Akten schreddern hindern und ihre Akten daraus schleppen, du nachher eine ähm,\neine Gauck-Behörde hast, wo der, wo der, wo dein Scheißgeheimdienst komplett über Jahrzehnte aufgearbeitet wird. Sowas siehst du halt auch als Geheimdienstdirektor nur einmal passieren.\nDa lernt man aus den Fehlern anderer,\nSo und wenn deine Aufgabe ist, Daten zu sammeln und du der Geheimdienst bist, der der alle Daten, die irgendwo anfallen, sammelt und auswertet,\nweißt du, dass du selber keine Daten anfallen lässt, weil wär's ja blöd. Du siehst ja, was damit passiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:58",
+      "text": "Ja\nÄhm woher weiß man eigentlich, was er denn gesagt hat, wenn das äh nicht öffentliche Sitzung war?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:49:17",
+      "text": "Ich vermute, dass diese Informationen sich darauf beziehen, dass das die ähm.\nDass die äh Journalisten mit den Politikern, die in dem nichtöffentlichen Teil sitzen, sich unterhalten. Und dass die Politiker quasi dann Synopsin dessen, was man als ähm.\nEssenz, die jetzt keinerlei,\nOperationen bedroht, nochmal weitererzählen kann, das tun\nAber wir erinnern uns ja auch daran, dass es schon mehrmals, äh es war dann, glaube ich, im letzten Jahr,\nDrohung von ähm ähm Peter Altmaier gab so, ey, wenn ihr da nicht aufhört, dann,\ndann machen wir einen Deckel drauf, weil wenn der, wenn der BND Untersuchungsausschuss jetzt plötzlich neue Erkenntnisse,\njede Woche in die Presse bringt, dann werden wir die die Angelegenheit ja niemals los und dann zeigen wir euch alle an wegen Landesverrat. So und ähm.\nHier würde ich sagen, das ist eben so die,\nder, der, der zusammengefasste Teil, der dann wahrscheinlich von einem der der Mitglieder oder einem, der mit Security Clearance versehenen Mitarbeiter dann eben der der Presse gesteckt.\nWäre jetzt meine Vermutung.\nWurde er noch zu der Liste mit den zweitausend Einträgen, das war die, die vor ein paar Jahren da schon mal bemerkt wurde. Ähm.\nDa sieht man jetzt auch wieder, da kann man jetzt auch wieder erkennen, wie sie wie sie sich ihre Rute legen. Er sagte nämlich ähm.\nAuf der Liste mit den zweitausend Einträgen, den Selektoren, die dann da irgendwann mal aufgefallen sind. Sagt Gerhard Schittner,\nstanden keine Unternehmen.\nMerke keine Unternehmen, kommen wir nachher nochmal zu, sondern ausschließlich,\nund jetzt sagt er aber.\nAlso damit bestätigt er ja erstmal den Verdacht, dass der BND.\nDen, den, den, den, der, der NSA geholfen hat, europäische Institutionen und äh deutsche Politiker zu äh bespitzeln.\nEr sagt aber dann, ja, wir sind ja der BND, wir sind ja auch Auslandsgeheimdienst, wissen Sie ja. Und,\nBereiche, wo wir mit unserer Satellitenschüssel äh dranhalten und so.\nDiese ganzen europäischen äh Politikernamen und deutschen Politikernamen,\nDie standen dann halt deswegen auf der Selektorenliste.\nWeil wir gucken wollten, ob im Nahen Osten und Afrika Anschläge auf diese Personen geplant werden.\nDas ist jetzt, so und jetzt kannst du dann halt sehen.\nDas ist die Route, die sie jetzt gehen, ne? Einmal werden sie.\nIst der Hierarchieebene äh ein Bauernopfer bringen,\nauf der höheren Hierarchieebene, Hierarchieebene hat schon einer gesagt, ja nee, ich habe ähm.\nIch habe das alles so bekommen. Bei mir bestand kein Anlass zur Prüfung, ja? Und,\nund außerdem war das ja gar nicht in Deutschland, sondern eben in anderen Ländern. Und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:46",
+      "text": "Ja und vor allem sagen sie ja im Prinzip so äh ja klar haben wir sie überwacht. Aber das ist ja alles nur zu ihrem persönlichen Schutz. Ja, also es könnte ja sein, dass sie jemand überfallen oder entführen möchte."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:58",
+      "text": "Stell dir mal vor im Nahen Osten würden welche sitzen und würden Terroranschläge auf zweitausend individuelle EU Politiker vornehmen, was dann los wär?\nGanz ganz interessant, weil ähm,\nDas jetzt auch mal schon so so frühzeitig,\nerkennen zu können, dass dass sie das ist halt so in der Form noch nicht wirklich verlautbart worden, aber du siehst halt, dass das der Weg ist, den sie jetzt gehen werden. Also\nin dieser Zusammenfassung noch nicht, ne? Und da siehst du halt auch, finde ich, auch sehr schön, dass das sehr abgestimmt ist. So, die passen halt alle wie Arsch auf einmal, diese drei Aussagen. Zueinander, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:40",
+      "text": "Ja und vor allem versuchen sie ähm so ein bisschen diese,\nder Wirtschaft, die es ja nun offensichtlich auch gegeben äh hat oder,\nScheint,\nso ein bisschen aus der Thematik, aus dem, aus der Beleuchtung herauszunehmen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:57",
+      "text": "Ging aber nur so halbwegs gut, da kommen wir auch gleich nochmal zu, aber."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:00",
+      "text": "Ja, was ich insofern auch bemerkenswert finde, als dass es ja eigentlich auch überhaupt gar kein Geheimnis ist und auch ein Selbstverständnis der NSA, dass natürlich ihre Arbeit nicht nur irgendwie dem politischen Prozess, sondern letztlich auch ihrer lokalen Wirtschaft helfen soll\nAlso Wirtschaftsspionage ist ein Ziel,\nvon Geheimdiensten, insbesondere der NSA und alles andere würde uns überraschen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:54:23",
+      "text": "Alles andere ist absoluter Unsinn.\nAuf die eine wirklich schöne Monetarisierungsmöglichkeit dieser gesamten Investition. Da wär's ja verrückt.\nAlso wärst du einfach blöd."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:42",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:54:44",
+      "text": "Ist die NSA aber nicht einmal Kapitelmarke? Denn,\nDie NSA hat nach Information der Bild am Sonntag druckfrisch heute.\nVersucht mit Hilfe des BND den deutschen Technologiekonzern Siemens auszuspähen. Siemens ist vielleicht einigen bekannt. Ähm,\nmachen eigentlich so gut wie alles, ist einer der größten deutschen äh Technologiekonzerne. Ähm.\nAngeblich habe also Siemens, sei in den Verdacht geraten, eine möglicherweise eine,\npartnerschaft mit dem damaligen russischen Geheimdienst SSN einzugehen.\nUnd dann haben die Amerikaner sich noch nicht mal entblödet,\näh diese Daten quasi,\nSiemens relevante Wirtschaftsspionagedaten einfach durch Bad Aibling zu und da könnte man jetzt sagen, dass das blöd ist, man könnte aber auch einfach sagen, warum denn nicht? Warum,\nnicht. So, was haben sie denn zu befürchten? Offenbar ja gar nichts. Ein Sementsprecher kommentierte das mit\nSiemens sind keinerlei Fakten im Verantwortungsbereich des Unternehmens bekannt,\nwürden.\nAlso das ist jetzt, wie gesagt, neue Meldung von heute Morgen. Ähm,\ndas heißt, dieser dieser Behauptung oder diesen diesen,\ndrei offenbar koordinierte,\nZeugen im NSA-Untersuchungsausschuss der Angelegenheit geben wollten, der wurde jetzt auch sehr schön sofort von von äh von der journalistischen äh Seite ähm,\nwiderlegt. Das finde ich das äh finde ich sehr schön. Gleichzeitig gibt's aber jetzt die Meldung, also es gibt im Moment."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:43",
+      "text": "SN ist sicherlich jetzt auch nicht jedem ein äh Begriff, das steht jetzt für äh special communication Service of Rusha und das ist halt ein äh russischer Geheimdienst, der\nÜberraschung auf das Abhören-Film meldetechnischer Anlagen spezialisiert ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:00",
+      "text": "Siemens natürlich auch baut.\nBeziehungsweise interessant, da kommt man ja, könnte man ja nochmal kurz hier an Siemens,\nerinnern. Die bauen ja fernmeldetechnische Anlagen, aber die haben ja ihre Sparte zur Überwachung\nschon vor einigen Jahren ähm ausgegliedert und als äh und umbenannt\nTrophychor heißt die, haben sie ein eigenständiges Unternehmen draus gemacht.\nNaja.\nEinerseits scheint es jetzt oder wird jetzt gerade behauptet, es gäbe eine Debatte, ähm,\ndie Selektoren zu veröffentlichen, die die strittigen Selektoren. Ähm.\nIch hatte in der letzten Sendung schon gesagt, dass ich das für ausgesprochen ähm unwahrscheinlich halte, dass das jemals geschehen wird. Ähm die NSA hat das jetzt auch abgelehnt mit der Begründung, na, welche Begründung nimmt man da wohl."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:01",
+      "text": "Na ja, die Sicherheit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:03",
+      "text": "Genau, laufende Operationen könnten gefährdet werden, wenn man jetzt diese Selektorenliste veröffentlicht.\nUnd in jetzt kommt der Hammer, die NSA droht, damit den Informationsaustausch zwischen den beiden Geheimdiensten für den Fall der Veröffentlichung der Selektoren,\nauf Terrorwarnungen zu reduzieren. Das heißt, ey, wenn ihr,\nzeigt, dass ihr mit den Selektorenlisten, die wir euch schicken, nicht verantwortungsvoll umgeht.\nArbeiten wir nicht mehr nicht mehr mit euch zusammen, dann bekommt ihr von uns,\nkeine hochauflösenden Krisenbilder von Krisenregionen mehr.\nBei Entführung deutscher Staatsbürger können wir dann,\nauch nicht mehr helfen mit unserer Aufklärung, weil ihr ja zeigt, dass ihr nicht verantwortungsbewusst mit dem mit der, mit dieser Zusammenarbeit umgeht.\nDas heißt, die NSA droht uns quasi, droht oder droht dem BND quasi damit, ey, wir ähm.\nProbleme bekommen, so, dann lassen wir euch nicht mehr partizipieren. Und das ist ja der, das ist ja der,\nist ja wieder genau dieser Kernpunkt, diese Geheimdienste kooperieren, deswegen muss man auch immer wieder von diesem von diesem,\nzwischen zwei Nationen äh auch immer wieder weg äh über den wir da sprechen, ne.\nÄhm der zweite, zweite Konfliktpunkt ist, dass die ähm die,\nBundesregierung oder der BND gerne hätte, eine Begründung für die Selektoren, also dass sie sagen, wenn ihr uns schon sowas schickt, ja, dann sagt uns wenigstens mal wieso.\nIhr habt euch ja nicht an die Regeln gehalten, also lasst uns da doch jetzt nochmal irgendwie so ein Layer mit einschnüren, äh dass ihr warum ihr was erfassen wollt,\nDann sagt die NSA natürlich, ja. Das ist äh so schnell erstmal nicht möglich.\nUnd wir werden euch im Zweifelsfall niemals eine Begründung geben. Denn die NSA das wird da in dem Artikel sehr, sehr richtig gesagt. Die NSA lässt sich doch nicht vom BND erpressen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:26",
+      "text": "Wer seid ihr denn? Was wollt ihr eigentlich? Ja. Habt ihr sie noch alle?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:32",
+      "text": "Wer seid ihr denn? So, wollte ihr, wir sollen, wir sollen euch gegenüber,\nirgendetwas begründen, das gibt unsere Rechtslage doch überhaupt nicht her."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:42",
+      "text": "Ja, hallo, McFly, jemand zu Hause?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:48",
+      "text": "So. Dann erklärt, dann erklärt ihr aber mal euren Bundesbürgern, ähm dass ihr, dass ihr die wichtigen Terrorinformationen von uns nicht mehr bekommt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:58",
+      "text": "Hm. Ich frage mich ja wie wie wertvoll der der Datengewinn über die NSA, für BND und damit für die Bundesrepublik Deutschland tatsächlich ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:01:10",
+      "text": "Ich glaube, das weiß man gar nicht. Ähm.\nAlso wenn letztendlich hast du dann einen Riesenhaufen an Daten.\nUnd für den gibt's ja jetzt nicht unbedingt eine ähm.\nDen gibt's ja jetzt nicht unbedingt eine äh,\nautomatische Erkennung,\nTerroranschlag, sondern du hast halt, du du musst, du versuchst immer wieder, andere Houristiken, sucht Techniken oder sonst was darauf anzuwenden und wenn du nichts findest, dann weißt du immer nicht, ob's daran liegt, dass du falsch suchst.\nOder ob es daran liegt, dass du äh dass es tatsächlich keine Aktivität gibt. Ja und,\nInsofern kannst du den den Wert dieser Daten nicht abschätzen. Vielleicht hättest du ähm ich meine, man könnte argumentieren,\nhätte man den den ähm den Germanwings-Piloten ausreichend überwacht und wäre,\nInteresse an Flugzeugcockpitüren ähm.\nUnd das Sammeln von Medizin, Daten\nim Bereich der der Geheimdienste gewesen, dann hätte man vielleicht diesen Massenmord verhindern können. Ja, das kannst du immer behaupten,\naber letztendlich hättest du, kannst du am Einzelfall immer behaupten, wenn du das vorher gewusst hättest, den,\nden den Angriff verhindert haben zu können.\nDas kannst du über alles sagen. Ich meine, die hätten diese Sendung verhindern können, wenn sie es wenn sie,\nweißt du, also wenn sie's geahnt hätten. So, das das kannst du halt immer behaupten oder wenn sie das Budget gehabt hätten. Das kannst du halt posthock für alles immer behaupten. Aber du kannst natürlich nie vorher sagen.\nWas du halt wirklich geschissen bekommst. Und ich glaube, dass sie den den Wert dieser Daten natürlich\nEs gibt aber natürlich einen Bereich, wo du das sehr, sehr genau messen,\nob sich das lohnt. Und das dürfen wir nicht vergessen\nIn der Terrorabwehr kannst du immer sagen, ja, haben wir noch nicht genug Geld drauf geworfen oder was auch immer,\naber in der Wirtschaftsspionage kannst du sehr, sehr schnell sofort\nauf dem Markt positionieren konntest wie du vielleicht ein eher spioniertes Produkt verbessern konntest und dadurch am Ende dich auf dem Markt besser positioniert hast. Da kannst du sehr, sehr gut ähm.\nMessen, ob sich das lohnt oder nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:44",
+      "text": "Ich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:45",
+      "text": "In der Terrorabwehr nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:46",
+      "text": "Ja. Ich freue mich in dem Zusammenhang auch.\nSelektoren nur in eine Richtung? Oder gibt es auch Selektoren, die der NSA zur Verfügung stellt?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:58",
+      "text": "Also dann niemals davon die Rede war, kannst du dir das ungefähr vorstellen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:04",
+      "text": "Ja irgendwie auch ganz interessant oder? Also ich meine, weil,\näh das heißt, während die USA.\nAlso während die NSA, dem BND ganz genau sagt, was sie haben wollen, aber nicht warum.\nDer BND äh der NSA noch nicht mal sagen, was sie wollen.\nSondern die NSA sagt immer nur den BND, was, wenn sie der Meinung sind, das ist eine Information ist, die sie teilen können, ohne da selber einen Schaden von zu haben.\nIn beide Richtungen so laufen.\nSchon mal ähm interessanter Gedanke, oder? Also ich meine, die Frage mich halt grade, ob,\nsozusagen auch in die andere Richtung eine entsprechende Kooperation gibt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:01",
+      "text": "Also angesprochen wurden ja jetzt zum Beispiel eben sowas, was man was man vielleicht unter,\neher unter Amtshilfe fassen kann, ne? Also hochauflösende Satellitenbilder auf Anfrage, wenn irgendeiner entführt wurde oder ihr eure Soldaten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:21",
+      "text": "Ja gut, aber äh diese Selektoren sind ja nun wirklich spezifisch ein Parameter der Massenüberwachung.\nUnd äh genauso könnte ich mir ja vorstellen, dass der BND,\nBedürfnisse entfaltet bestimmte Telefonnummern oder IP-Adressen oder sonstige User-Accounts auch im Ausland\nvon der von\nvon der NSA quasi für den BND mit überwachen zu lassen in Ländern, wo der BND halt nicht so den Zugriff hat oder zumindest in Kommunikationsnetzen, wo der BND nicht so den Zugriff hat. Was sicherlich eine ganze Menge Netze gibt, die diese Anforderungen erfüllen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:58",
+      "text": "Also von meiner, von meiner ähm mein Godfeeling sagt mir, dass sie, dass der BND wahrscheinlich alles von der NSA bekommen kann, wenn er eine Einzel, eine Einzelfallantrag stellt, so, ja, ähm\nder dann halt ordentlich geprüft wird und wo die NSA natürlich sehr genau darauf achten wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:16",
+      "text": "Mit doppeltem Durchschlag."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:06:18",
+      "text": "Mit doppelten Durchschlag und unterschrieben und so weiter. Das ist halt die, das, so scheint hier schon diese Zusammenarbeit zu sein, ne, dass der die NSA sagt, passt mal auf, Freunde. Hier\nPush, so wollen wir die Daten bekommen. Wir haben euch da mal eine wir haben hier mein schönes,\nGlasfaser rüber gelegt, da schiebt ihr das bitte durch. Und wenn ihr mal was braucht, dann könnt ihr auch mal freundlich,\nso. Vorne da ist die Tür, da könnt ihr euch am Anfang anmelden und dann fragt ihr nach einem Termin, dann können wir euch auch mal was davon ab,\nSo ungefähr scheint schon, dass das Kraftverhältnis zu sein. Ist aber auch nicht wirklich verwunderlich. So sind halt auch,\nund,\nAnbietern, ja, also das ist, so läuft es halt, derjenige, der am längeren Hebel sitzt, diktiert die Bedingungen,\nin den Gesellschaften, in denen wir als in denen wir heute leben.\nIst ist es völlig unsinnig, auf seine Interessen zu verzichten, wenn man die Macht hat, sie durchzusetzen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:26",
+      "text": "Ja, aber jetzt äh kommt auch die Superempörte Merkel-Regierung und sagt,\ndu böses äh NSE Land äh äh mit euch, äh euch gehen wir gar nichts mehr."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:07:37",
+      "text": "Und dann letztendlich ich mein am Ende geht's ja dann hier um ja wie gesagt sie drohen ja sofort damit, ja dann kriegt ihr aber keine Informationen mehr\nbei Terror und bei Entführung oder so, ne? Oder Terrorwarnung kriegt ihr schon noch, aber wenn da jetzt jemand entführt wird, dann haben wir halt leider keine Zeit mehr, da äh Fotos von zu machen. Und jetzt kannst du dir natürlich vorstellen, dass diese\nIch meine, der auch vor einigen Folgen hier schon mal die Rolle des Innenministers oder der Innen innere Sicherheitsverantwortlichen gewürdigt, so willst du am Ende,\nich meine, die würden sich diese die würden,\nihr Leben nicht diesem Themenbereich widmen, wenn sie nicht ernsthaft darauf hinarbeiten wollen, würden,\njeden Preis die Sicherheit irgendwie zu erhöhen. Und wenn du denen sagst, ja hier, dann wird halt demnächst jemand entführt und du wirst erklären müssen, warum,\ndu da nicht das nicht aufklären kannst, dann kriegen die natürlich Schiss. Ich würde natürlich sagen.\nLiebe Amis, dann müsst ihr mal erklären,\nDa müsst ihr mal erklären, wie ihr nicht zur Rettung unserer Bürger äh auf fremden Boden äh äh oder sowas,\ntragen wollt, obwohl ihr es könntet, das müsst ihr erstmal öffentlich erklären, da kriegt ihr doch eine Welle rein, äh die sich gewaschen hat,\nwenn ihr eure, eure ganze Scheiß Überwachungstechnologie noch nicht einmal in den wenigen Fällen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:59",
+      "text": "Ja und diese Mann, das ist irgendwie so der Grund, warum ich's nicht so recht glauben möchte, dass es wirklich überhaupt,\nkein halbwegs automatisierten Rückfluss von Erkenntnissen äh geben kann\nlass schreib mir das automatisiert, also dass das sozusagen nicht immer alles nur auf Anfrage ist, sondern dass es schon,\nja, keine Ahnung, so eine Art Selektor auf bestimmten Themenbereichen\nnicht unbedingt jetzt Selektor in Bezug auf Massenüberwachung. Wobei ich das auch nicht für ausgeschlossen halte. Also ich meine, was macht denn bitte, wenn\nähm der Bienen, die jetzt, sagen wir mal so,\nkeine Ahnung, dreißig Leute, von denen sie wissen, dass sie von Deutschland in die USA gereist sind,\ndie aber jetzt hier Dreck am Stecken haben,\nja? Also die jetzt nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:42",
+      "text": "Reisen doch niemals dahin, da kommst du doch niemals durch dieses durch dieses Esther-Verfahren durch, wenn du irgendwo Dreck am Stecken hast. Dafür ist das auch da.\nA ähm Esther ist das das schnell äh schnell ein, also über Äste musst du quasi deine Anreise ankündigen. Wenn du."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:01",
+      "text": "Nee, aber nicht nicht, dass sie jetzt in dem Sinne eine Bedrohung für die USA sind, sondern die sind halt irgendwie,\nBeobachtung, ja und machen jetzt Urlaub in den USA.\nAber auch wieder, wollen aber weiter der BMW BND will aber hat halt eine Überwachungsmaßnahme laufen\nDu hast jetzt hier irgendwie so eine kleine dreißig Leute, sagen wir mal drei\nne? Drei Leute, die irgendwie aufgefallen sind so und die sind jetzt äh organisierte Kriminalität\nWir fahren mal hier durch den und mitm Hammer fahren wir da irgendwie durch Texas,\nund dann sind wir drei Wochen irgendwie unterwegs und jetzt will der BND diese\nLeute beobachten. Schreiben die da einen extra mal ein Fax,\noder fügen sie nicht einfach auch noch diese Telefonnummern,\neiner Liste hinzu, die bei diesem Datenabgleich eben vielleicht auch in die andere Richtung geht\njust sane, ich meine, vielleicht ist es unwahrscheinlich, weiß ich nicht, aber irgendwo."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:11:08",
+      "text": "Also sicherlich wird der BND ja sowieso alle Leute, die ihr irgendwie unter Terrorverdacht hält, die ganze Zeit mit der B mit der NSA teilen. Und das ist ja auch das ist ja die Grund,\nIdee des der Zusammenarbeit zwischen Geheimdiensten, dass sie eben\näh Stretch Intelligence irgendwie tauschen. Insofern glaube ich.\nJa, in dem Fall würde das schon relativ schnell gehen, aber ich glaube, ehrlich gesagt, schon, dass diese Person auch der NSA bekannt wären,\nzu dem Zeitpunkt, wo der BND Sie hier ernsthaft wegen Terrorverdacht unter Kontrolle äh unter unter Beobachtung hat, dann müsste der BND gar nicht mehr irgendwie nochmal Bescheid sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:46",
+      "text": "Na gut, ist ja nicht unbedingt immer Terrorverdacht, ja, also ich meine, nur nur weil die Leute jetzt hier irgendwie in in Hamburg aufm Kiezer irgendwie ein paar Läden abziehen, äh heißt ja noch lange nicht, dass sie dann gleich in Texas anfangen irgendwie wird um sich zu schießen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:00",
+      "text": "Vorsicht ist die Mutter der Porzellankiste. Wir haben bis jetzt wenig äh wenig Zurückhaltung bei äh bei den Geheimdiensten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:07",
+      "text": "Ja, stimmt auch wieder."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:09",
+      "text": "Aber äh ich habe eigentlich, wir wir haben noch gar nicht über den den wirklichen Punkt gesprochen, denn.\nSeit Anfang der Woche stellt Bad Aibling dem US-Geheimdienst keine Informationen zur Internetüberwachung mehr zur Verfügung,\ngibt's einen auf den Deckel und ähm,\nBevor wir euch das begründen, was wir machen, verzichten wir lieber auf die Da.\nUnd jetzt ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:39",
+      "text": "Könnt ihr ja sehen, was ihr davon habt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:41",
+      "text": "Jetzt berichtet man der BND. Ähm leiste leise beim BND leiste man gerade Überstunden um die Liste\ndeutscher und europäischer Interessen zu füllen, damit der BND dann halt automatisch irgendwie die Selektoren filtern kann, die die NSA ihm schickt,\nUnd da gibt's halt jetzt irgendwie Gerüchte davon, dass die, was weiß ich, die gelben Seiten jetzt irgendwie abschreiben oder so. Äh oh um halt da eine Liste zu haben.\nÄhm äh um um um eben die,\nso dass dass sie halt selber darauf achten, dass sie die europäischen Interessen filtern,\nSo, aber das es klingt ja jetzt erstmal nach einer Zuspitzung des Konflikts, wenn da auf einmal keine Daten mehr fließen. Aber wie gesagt, der BND arbeitet schon daran, eben eine Liste zu bekommen äh zu zusammenzustellen, damit sie in irgendwann reumütig wieder zu den Amerikanern gehen können,\nprognostiziere, ich prophezeie, dass in in ein oder zwei Wochen der BND bekannt geben wird, dass man jetzt eine Liste hat\nund die die Selektoren der NSA jetzt automatisch filtert und prüft und so weiter und dass man die Zusammenarbeit wieder aufgenommen hat. Davon dessen bin ich mir relativ sicher."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:51",
+      "text": "Also sie haben sozusagen jetzt alle, alle Mobilfunk, Telefonnummern, aller europäischen Parlamentarier mal zusammengesammelt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:58",
+      "text": "Und vor allem halt auch äh Unternehmen. Ähm\naber ich, wie gesagt, meine Prophezeiung ist, äh, ist, dass das, dass sie, dass sie das eben als Feigenblatt nehmen werden, dass sie die Zusammenarbeit wieder aufnehmen, denn Merkel hat bekräftigt,\ndass der BND an der Zusammenarbeit mit dem US-Geheimdienst NSA festhalten wird, die Bundesregierung wird nämlich alles daran setzen, die Arbeitsfähigkeit der Nachrichtendienste auch zu gewährleisten, diese Arbeitsfähigkeit kann angesichts der internationalen terroristischen Bedrohungen,\nUnd jetzt kommt aber, jetzt gibt's aber noch so ein anderes Ding. Da fand ich sehr, ganz, eine sehr interessante Zahl. Ähm.\nAndere Partnerdienste des BND haben sich besorgt gezeigt,\ngeheime Information über Projekte zwischen dem BND und dem.\nEine äh US-Geheimnis NSA an die Öffentlichkeit geraten sind,\nund zwar aus zwei Gründen. Einerseits, dass sie sagen, hm, was ist denn irgendwie mit den Sachen, die wir mit euch austauschen, landet das auch alles bei bei der NSA? Und zweitens, das ist, glaube ich, das, was die Geheimdienste insgesamt sehr viel mehr beunruhigt.\nSeid ihr noch vertrauenswürdige Partner, die die Schnauze halten oder müssen wir aufpassen, dass wenn wir mit euch irgendwas machen, äh wir morgen irgendwie in eurem blöden Untersuchungsausschuss da äh erwähnt werden.\nMit wie vielen Geheimdiensten der Welt der BND-Partnerschaften hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:41",
+      "text": "Hm. Das habe ich aber schon gespickt, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:44",
+      "text": "Hast du schon gesehen, okay, aber was hättest du denn gedacht, bevor du's gesehen hast."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:47",
+      "text": "Das kann ich dir gar nicht so richtig äh beantworten, aber ich fand die Zahl trotzdem doch ziemlich hoch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:53",
+      "text": "Und zwar arbeitet der BND diesem Bericht zufolge momentan mit vierhunderteinundfünfzig Geheimdiensten aus einhundertsiebenundsechzig Ländern zusammen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:08",
+      "text": "Echt äh eine ganze Menge, weil wie viele Staaten gibt's denn derzeit auf diesem Planeten überhaupt?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:16:17",
+      "text": "Ich glaube, das ist was mit hundertneunzig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:20",
+      "text": "Ja. Also."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:16:23",
+      "text": "Aber ich würde echt mal so sagen, so hoch die internationale Spionage-Aktivität. Das ist doch echt,\nso einen großen Verbund, ja?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:38",
+      "text": "Ja, es ist bemerkenswert, also ich meine äh äh vor allem wüsste ich ganz gerne mal, wie viel wie viele von diesen vierhunderteinundfünfzig alle aus den USA kommen. Ich meine, die USA, die,\nirgendwie gefühlt irgendwie zwanzig oder dreißig verschiedene Geheimdienste, stimmt das? Habe ich das richtig in Erinnerung?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:16:54",
+      "text": "Das weiß ich nicht ausm Kopf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:56",
+      "text": "Aber es ist, also es ist wirklich eine enorm hohe Zahl, ja. Also mal gemeinhin äh würde man ja erwarten, man hat da so ein Land und das Land hat einen Geheimdienst. So, ja und in Deutschland, okay, da müssen wir, da haben wir den Verfassungsschutz und da haben wir irgendwie den,\nBND und dann haben wir noch den MHD und das war's glaube ich,\nsein. Äh habe ich einen vergessen? Also wir haben drei.\nGenau, wir haben, wir haben also drei, ne? Die Zahl korreliert ja jetzt auch ein bisschen, wenn du so hundertsechs, so vierhunderteinundfünfzig, hundertsiebenundsechzig, so ungefähr so drei zu eins.\nDas ist wahrscheinlich so das das typische Ratio, was mit dem zu tun hast,\nschon äh ziemlich bemerkenswert. Ja und das heißt mit anderen Worten, alle Geheimdienste stecken unter einer Decke."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:17:48",
+      "text": "Ja, aber das könnte echt das.\nZusammenschluss sein, ja? Das das ist quasi die intergalaktische,\nVereinigung aller aller Nationen, ja?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:05",
+      "text": "Ja da ist die UN ein Scheiß dagegen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:07",
+      "text": "Dass die UN irgendwie einen Kaffeekranz dagegen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:10",
+      "text": "Ja, allerdings."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:12",
+      "text": "Wenn wir das gewusst hätten, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:19",
+      "text": "Hundertdreiundneunzig Staaten haben wir."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:22",
+      "text": "Hundertdreiundneunzig, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:23",
+      "text": "Hundertsiebenundsechzig davon äh mitm BND,\nJa, na ja gut, wissen wir Bescheid, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:31",
+      "text": "Und Uhl? Uhl warnt natürlich, ja,\nGeheimdienste werden sehr empfindlich darauf reagieren, dass in Deutschland als geheimgestufte Information,\nin die Öffentlichkeit gelangen. Das ist natürlich auch unsere größte Sorge\nDas ist natürlich jetzt auch ich persönlich als Bürger dieses Landes, meine größte Sorge ist, das geheim eingestufte Informationen an die Öffentlichkeit gelang\nder BND gesammelt hat in einer Zusammenarbeit mit vierhunderteinundfünfzig Geheimdiensten der Welt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:01",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:03",
+      "text": "Das wäre wirklich, da wäre meine größte Sorge, dass ich darüber was erfahren könnte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:07",
+      "text": "Oh Mann ey. Äh denkt, das kann man sich echt nicht ausdenken.\nJa, so sieht's aus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:24",
+      "text": "Aber ich finde, ich finde das gerade sehr schön, weil wir wir scheinen jetzt grade auf dieser Welle zu reiten. Ne, das Ganze ist jetzt bald ähm.\nWie war das denn? Haben wir schon nee, das zweite Snowden Jubiläum feiern wir dieses Jahr im September, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:45",
+      "text": "Äh"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:48",
+      "text": "Also Snowden war zweitausenddreizehn, ich weiß noch nicht mehr genau in welchem Monat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:54",
+      "text": "Du meinst jetzt die ersten Dokumente rauskamen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:56",
+      "text": "Ja, wann, also wann quasi diese ganze Hongkong-Geschichte und so, also als das losging. Ich habe sogar gestern nochmal die Folge gehört, Logbuch Netzpolitik, weil ich ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:06",
+      "text": "Juni, Juni, Juni, zwanzig dreizehn war das."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:08",
+      "text": "Okay, das heißt, wir wir feiern bald äh äh das zweite Jahr im,\nanno anno S Anno Snowden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:15",
+      "text": "Zwei nach Snowden, wie man so schön sagt. Genau.\nAS"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:25",
+      "text": "Nee, wie heißt das denn dann? Anno Snowdeny, ne? Ey, ist auch egal, Quatsch. Also äh es scheint wirklich so diese diese ähm diese zwei Jahres ähm.\nJa, wie nennt man das so? Dieser dieser Leck jetzt kommen echt grade viel zusammen, ne, also quasi die Lügen von vor zwei Jahren. Die kommen jetzt ans Licht,\nEin sehr schönes Gerichtsurteil, dass die ACU,\nerstritten hat. Die ACLU wurde bei uns bisher glaub ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:05",
+      "text": "Wenig erwähnt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:06",
+      "text": "Aber fälschlicherweise wenig erwähnt. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:10",
+      "text": "Ist die American Libertys Union. Amerikanische Bürgerrechtsunion."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:17",
+      "text": "Und zwar die sind richtig groß. Die haben,\nAlso die haben richtig viele Mitarbeiter, natürlich hauptsächlich Anwälte, aber auch ähm.\nAlso auch Aktivisten, die die engagieren sich in allen Bereichen für die äh für die für die Bürgerrechte der der Amerikaner. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:39",
+      "text": "So ein bisschen wie humanistische Union, kann man sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:43",
+      "text": "Ja, nur halt mitm mitm mit einer Hochhausetage in der ersten äh an einer ersten Adresse in New York so, ne? Und also die haben halt richtig ähm die haben halt richtig Power."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:56",
+      "text": "Fünfhunderttausend Mitglieder haben sie. Da kann die humanistische Union nicht äh mithalten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:04",
+      "text": "Nee, da kann die humanistische Union nicht mithalten. Ähm,\nneunzehnhundertzwanzig gegründet als Reaktion auf die Folgen des äh der Redscare, also der Kommunisten hat's ähm dem McCarthy McCarthy Isum, der da ja so stattgefunden hat, ähm.\nUnd hatte sich dann eben ähm,\ndie kämpfen an allen möglichen Frauen. Die haben sich damals gegen die Verbannung der Evolutionstheorie im amerikanischen Schulunterricht eingesetzt,\naußer,\nwie heißt, Entschuldigung. Martin Luther King Geschichten und so, da waren die überall drin, ähm Watergate, also das ist ein Laden mit einer richtig langen ähm mit einer richtig langen Tradition.\nÄhm ist eine Stiftung Stiftung, ähm die substantielle jährliche äh Spenden von anderen diversen Stiftungen, Großspendungen, Spendern und so weiter bekommt und ähm,\nja äh relativ groß, relativ groß abgeht. Ja, die haben einen einen tadellosen Namen in den in den USA seit jetzt inzwischen äh,\nfünfundneunzig Jahren ihres Bestehens. Und.\nEngagieren sich natürlich auch sehr in diesem ganzen.\nBekannt ist und in Erscheinung tritt, ist der Christopher, der,\nich glaube,\noder sowas ist seine Rolle da, der so nicht ein ein Journalist ist, äh nicht ein ein Jurist ist, sondern ein ähm,\nInformatiker oder Soziologe ähm der sich eben so in diesem ganzen Internetbereich so auskennt. Und die haben halt eine\neine Horde an äh an Anwälten, die sich mit allen möglichen Kram auseinandersetzen. Ist wirklich irre. Ich habe die auch mal äh ich habe,\nhatte mal Gelegenheit, die zu besuchen. Ähm eines ihrer Büros zu besuchen, das ist echt schon schon wirklich,\nirre wie wie die Professionalisiert sind, aber eben, wie gesagt, nicht nur im Internetbereich, sondern überall, wo es ähm,\nBürgerrechte der USA zu vertreten gilt ist die dabei und.\nWir erinnern uns, zweitausenddreizehn eine der ersten Enthüllungen von Snowden war, dass die Telefondienstleister,\ndie,\nKunden weitergeben. Call Record heißt in dieser an dieser Stelle nicht die Audioaufzeichnung des Gespräches,\nsondern wer wen, wann, wie lange angerufen hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:52",
+      "text": "Meterdaten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:24:54",
+      "text": "Wir hatten das in der Sendung, da das fand ich auch ganz interessant, nochmal zu hören, diese erste Snowden-Sendung dann noch so sehr ähm.\nJa, so ja, dann haben wir gesagt, das ist übrigens Vorratsdatenspeicherung und so, ne? Haben wir da so drüber gesprochen. Und das ist noch sehr ähm entspannt aufgefasst. Ähm aber die ACU hatte schon wenige Tage danach dann dagegen geklagt.\nWeil,\nDass ja die ähm die Metadaten von US-Amerikanern waren. Und sie haben jetzt in diesem Federrekord Recht bekommen,\nden Geheimdiensten erlaubt, alle greifbaren Dinge zu schnappen, die für Untersuchungen relevant sind.\nUnd in der Auslegung haben halt die US-Geheimdienste gesagt, ja okay.\nAlle Telefonate aller Bürger sind für unsere Untersuchung relevant. Und in diesem Urteil wurde jetzt halt gesagt so, ja nee, das äh,\nSo ist das nicht. Es muss schon für eine konkrete Untersuchung sein,\nund es reicht nicht, dass es relevant sein könnte, dass du einfach mal alles alle diese Daten sammelst.\nInsofern wird dieses Urteil folgen haben, auch für die TA äh Massenlocks, die sie für die Telefonüberwachung nutzen. Da haben wir schon vor einiger Zeit darüber gesprochen, denn,\ndie sammelt ja ähm ähnliche Daten, teilt die aber zum Beispiel sehr viel mehr mit anderen Behörden als die NSA ihre eigene Daten überhaupt nutzt.\nÄhm und dann hat die für die CIA noch eine Überwachung von Finanzdaten ab äh durch, also Kontotransaktionen, auch das wird von diesem Urteil jetzt ins Wackeln gebracht werden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:47",
+      "text": "Kurze Anmerkung, äh,\nDE, wer's nicht weiß, äh sieht Truck and Forcement Agency so eine,\nZahlgruppe, die auch so ein bisschen weiß ich, polizeilich, geheimpolizeilich arbeitet, ähm um halt,\nzu führen, quasi."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:05",
+      "text": "Genau, der die Breaking Bad Fans, wie heißt Frank Hank oder Frank oder Hank heißt, nee, Hank, ne?\nDer ist bei der DEA. Ähm genau, auch so eine so eine halbgeheim Polizei auf auf Bundesebene, ja. Ähm.\nWeiterhin wird dort äh höchstrichterlich festgehalten, dass Metadaten,\nsensibel sind und dass der Begriff, der da verwendet wird, ist,\nsetz dich am besten mit mit äh verräterisch, also wo quasi das Urteil erkennt an,\ndass die Metadaten deiner Kommunikation,\nnicht irgendwas sind, sondern dass sie relativ viel über dich aussagen und dass das sensible, persönliche Daten sind. Ja, das muss ja auch irgendwie überhaupt mal in den USA debattiert werden, insofern ist das sehr schön, dass das in diesem Urteil so,\nfestgehalten wird. Dann äh sagt das Urteil über die.\nMaßnahmen, die ergriffen werden, ist eine öffentliche Transparenz,\nDiskussion notwendig. Ähm und.\nDamit wird also gesagt, die Praxis des äh Fiskord ähm\ndas äh Foren Intelligence and the Valence Squats einfach äh unter verschlossenen Tür, ähm paar Mal mit einem Hammer auf den Tisch zu hauen, um zu sagen, das ist jetzt alles höchstrichterlich äh genehmigt, das ist eben nicht okay.\nUnd das ist schon ein sehr schönes, äh ein sehr feines Urteil, was die was die AC Judal erstritten hat und auf Basis dieses Urteils werden sie natürlich jetzt ähm weiterkämpfen und weiterstreiten.\nDas Spannende ist, dass diese dass dieses Urteil.\nIndem es diese Vorgehensweise als,\nillegal dokumentiert? Natürlich auch bestätigt, dass es diese Metadatensammlung gegeben hat.\nUnd interessanterweise,\ngab es die ja offiziell gar nicht, denn James Klapper, wir haben früher ihn vorher schon erwähnt, der Director of National Intelligence,\nIntelligence hering, also in einer Anhörung im Senat äh vor dem,\nIn einer Anhörung vor dem ähm Rede und Antwort gestanden,\nund dort wurde er gefragt, ich weiß nicht, ich habe das Video verlinkt, könntest du das jetzt einspielen oder soll ich's einfach auf Deutsch vorlesen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:29:32",
+      "text": "Ich äh kann das äh kurz einspielen. Wenn wir eine."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:29:38",
+      "text": "Das ist so eine Minute, das ist ganz schön, das mal zu hören. Haben wir mal was was anderes. Ich habe jetzt schon wieder so lange geredet, dass."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:29:45",
+      "text": "Schon wieder. Ähm da haben wir ihn doch hier Sekunde. Kommt sofort."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:31:06",
+      "text": "Wir hören der in seiner,\ninleitung noch erwähnt, dass er seit seit zwölf Jahren im Sinned Intelligence Comity arbeitet und das ihm der Begriff Dossier noch nie untergekommen ist und dass er deshalb einfach die Frage nochmal anders stellen möchte, ähm nämlich sammelt die NSA\nirgendwelche Daten von Millionen an Amerika von von Millionen von Amerikanern.\nUnd James Klapper antwortet nicht wissentlich ich glaube er sagt T,\nes mag Fälle geben, in denen das vielleicht mal versehentlich passiert, aber nicht absichtlich.\nUnd das ist ja jetzt ähm,\neine eine ganz glatte, ganz klare Lüge, die dieser ähm Direktor, der der nationalen äh Geheimdienste äh oder dieser dieser,\nNational Intelligence Director. Ich glaube, das kann man nicht vernünftig übersetzen. Dort vor dem Comedy,\näußert. Und da gab es jetzt eine sehr köstliche Äußerung von,\nRobert Lit, dessen General Council, also dessen,\nChefanwalts. Ähm.\nEs war einfach nur ein Fehler. Wir machen ja alle Fehler. Denn der James Klepper, der hatte das vergessen.\nVergessen, sorry."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:42",
+      "text": "Ja auch aus diesem Video wunderbar hervor, dass er ja auf gar keinen Fall äh nachdenken muss, so ah nee, also jetzt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:32:47",
+      "text": "Kratzt sich so am Kopf so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:50",
+      "text": "Also, weil sie jetzt alle äh also alle,\nJa, so hätte also glatt noch gesagt so, ja, hier alter Mann und so, man hat ja auch nicht mehr so weit bis zur Rente. Oh ja, meint ja einfach gleich so ein äh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:33:08",
+      "text": "Nee, nee, nee, nicht wissentlich, nicht, nicht wissen.\nAlso dass ich ob das eigentlich nur so zur Beruhigung mit reingenommen, um zu zeigen, dass auch in den USA,\ngelogen wird darüber. Ähm.\nIch hoffe mal, dass dass da noch was passieren wird. Also den, das ist auch so jemand, den man im Auge behalten kann, der es in diesem äh Bereich sehr engagiert und der treibt da ähm auch seit seit äh Beginn der der.\nSeit Anno Snow Dero ähm treibt er da eben die entsprechenden Leute äh vor sich her mit der Macht. Oder mit der wenigen mit den wenigen Einflussmöglichkeiten, die ihr dafür als ähm Senator hat.\nIch finde das, also ich meine, äh das einzige, was ich mir da nur so gedacht habe, ist so viel zu eurer Geheimdienst-Transparenz, weißt du?\nAlso das ist jetzt ein Thema, vielleicht müssen wir jetzt nicht nochmal aufmachen das Fass, aber dass wir uns hier irgendwie hinstellen, dass man dass es ja wirklich Menschen gibt, zu denen ich mir vielleicht auch zähle oder auch nicht. Äh ich bin ja selber noch gar nicht so so so.\nSo fest in in meiner eigenen Meinung. Aber so Geheimdienstkontrolle oder Geheimdienst Transparenz ist, glaube ich, ein Modell, wo wir jetzt auch,\nsagen können, dass ähm hat jetzt den Lachttest in der Empirie nicht,\nbestanden. Das haben wir in der\nDas haben wir in in der äh das sehen wir in Deutschland mit der äh mit den entsprechenden Kommissionen und den entsprechenden Kontrollgremien,\neinfach auch nur verarscht und belogen werden. Das sehen wir mit dem Klepper,\nöffentlich wieder besseren Wissens ähm lügen, um irgendwie ein größeres Feuer auszutreten. Also diese geheim diese Geheimdienst-Transparenz oder Kontrolle, ähm das ist, glaube ich, echt was, was wir uns von der Backe schmieren können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:07",
+      "text": "Ja und das ist auch ein wirklich ein bisschen albern, wenn man sich ähm auch so Angela Merkels Äußerungen dazu anhört, so ja, das ist ja alles schon irgendwie total wichtig sei, mit den Geheimdiensten und überhaupt, man müsste sich ja überhaupt gar keine Sorgen machen\näh an der Stelle können wir nochmal hier auf unsere hundert äh verweisen äh äh Gespräch mit Hans-Christian,\nStröbele, ja, der, ja, also zwar nicht viel Details sagen kann, ja, aber ich glaube, wir haben das Thema auch so ein bisschen\nähm um Fahren, wenn ich mich so richtig erinnere,\nPKG, dieses parlamentarische Kontrollgremium\nDas ist halt eine Auswahl von Parlamentariern, die das ohne dass sie noch zusätzliche Mitarbeiter für diese äh Rolle, die sie dort ausfüllen, beschäftigen können, äh sich\nvon ab und zu mal vom Geheimdienst berichten lassen darf, woran die denn so arbeiten\nund dann dürfen sie dieses Wissen mit ins Bett nehmen, weil sie dürfen da halt keinem von erzählen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:36:15",
+      "text": "Genau. Und dann hast du dein Geheim, dann hast du da drei Geheimdienste sitzen, von denen allein einer mit vierhunderteinundfünfzig Geheimdiensten der Welt kooperiert. Wie lange soll das Meeting denn gehen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:36:25",
+      "text": "Genau, wir können ja das nächste beim nächsten Treffen einfach mal alle Selektoren vorlesen.\nEinhundertvierundzwanzig Punkt neununddreißig Punkt siebenundsechzig Punkt achtundvierzig einhundert Punkt siebenundzwanzig Punkt neunundfünfzig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:36:43",
+      "text": "Na, wir lachen da jetzt. Wir lachen da jetzt dadrüber, ne, aber da da siehst du halt, was wir uns da echt, also,\nsiehst du, was wir uns da für eine Hydra äh inzwischen eingetreten haben, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:36:57",
+      "text": "Das ist nichts Neues, also Geheimdienste haben immer schon so gearbeitet. Das kriegt halt jetzt einfach immer alles nur etwas absurdere Zahlen jetzt, wo wir eben mit diesen ganzen digitalen Kommunikationswegen\nverbunden sind. Auch diese Geheimdienst-Kooperation dürfte es früher schon gegeben haben, nur dass eben die Zahl der Dokumente da\nentsprechend niedriger ist. Es wird halt einfach ein bisschen mehr Heu äh von links nach rechts geschaufelt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:37:22",
+      "text": "Ja, auch ein Sendungstil von Lokbuch. Ja.\nWir haben wenigstens noch eine, eine gute Sache. Nee, haben wir auch nicht, ist auch wieder scheiße, aber ähm,\nEs gibt wenigstens ein gutes YouTube Video. Hey.\nIch meine, okay. Wir alle werden von den Politikern belogen, wir werden alle überwacht ähm unser unsere Chefdiplomaten ähm sind irgendwie wirklich erbärmlich und ähm.\nVon von Flugzeugen haben wir auch keine Ahnung und ein Auswahlabkommen bekommen wir nicht, aber es gibt ein schönes neues Video auf YouTube. Ähm von Alexander Lehmann. Yay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:04",
+      "text": "Der ja Wiederholungstäter ist sozusagen, mehrfach und immer wieder für hervorragend,\nrelativ komplexe äh Fragestellungen\nin kurze Videoclips zu gießen, die so Aha-Effekte auslösen und,\ntötet wurde äh soweit ich weiß von Thomas im Rahmen seines Republica Talks da erstmalig äh vorgestellt. Das war sozusagen die.\nRelease. Und ja, das ist ähm\nEin schönes Video zum Thema Netzneutralität, in dem all die ganzen Aspekte, die wir hier auch schon immer wieder von Sendung zu Sendung äh besungen haben. Äh nochmal sehr schön darstellt und vor allem sich auch\nan den Gegenargumenten,\nOrientiert. Deswegen ja auch der Name, so Netzneutralität würde ja töten, wir hatten das ja hier so, Krankenwagen und so weiter, könnte nicht mehr irgendwie zum Krankenhaus kommen und was weiß ich, für einen äh Unsitz, Unsinn und die technischen ähm\nRealitäten, die dahinter stehen und äh die\nDynamiken, die eben bei Unternehmen so existieren, um eben so eine Netzneutralität nicht zu wollen. Die werden in diesem Video wunderbar aufgegriffen und wie ich finde, hervorragend visualisiert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:39:35",
+      "text": "Andere Videos, für die er bekannt ist, äh,\ndu bist Terrorist, äh zweitausendneun, da ging's um die äh Vorratsseitenspeicherung. Ähm,\nrette deine Freiheit und er seine Videos sind, erkennt man auch immer daran, dass er ein, ein wirklich großartigen Sprecher hat. Das sind nämlich nicht er selber, sondern Ernst Walter Simon,\nder die immer vertont auch in so einer ähm.\nUnverkennbaren äh keligen Stimme, was wirklich immer sehr cool ist,\nNetz der Zukunft, weil Mario mal Sprecher und jetzt eben mit,\nähm Netznetralität tötet, wo ich jetzt völlig überrascht feststelle, dass es offensichtlich ein anderer Sprecher ist,\nmich aber total überrascht, weil ich meine die Stimme wiedererkannt zu haben. Komisch. Na ja, aber äh die habe ich doch gestern.\nEgal. Vielleicht äh also okay. Wie dem auch sei, Florian,\nIst auch ein sehr guter Sprecher. Ähm in dem Video Netzneutralität tötet von Alexander Lehmann, der ähm wirklich äh zu jedem einzelnen dieser Themen sehr, sehr sehenswerte Videos gemacht hat. Und in diesem Video eben für.\nÄh für die Seite, save the Internet,\nwirbt sich dort eben mit Faxnachrichten.\nAn die Abgeordneten zu wenden oder mit E-Mails oder mit Anrufen,\nund ähm ich denke, wir können an dieser Stelle nur,\nwiederholen, wie wichtig das ist, diese ganze Netzneutralitätssache steht grade mal wieder ganz besonders ähm,\nschlecht gegen uns und ich glaube, wir haben wie schon so viele Male zuvor jetzt nur die nur eine Chance, wenn wir.\nEinmal wirklich in Ruhe äh zu sezieren und zu äh\nzu klären, ja? Und das ist halt ähm.\nAber äh es ist wichtig, wie dieses Video sehr schön zum Ausdruck bringt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:42:06",
+      "text": "Und das bringt uns dann auch schon an das Ende der Sendung. Hm.\nJa, geringfügig. Mal gucken, was jetzt noch einfällt.\nEs gibt nicht mehr so sehr viel äh zu sagen. Du wolltest, glaube ich, noch einen Dank aussprechen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:42:25",
+      "text": "Ja, danke an eine anonyme Person und dann nochmal die kurze Erinnerung daran,\nsich doch bitte kurz bei mir zu melden, wenn man mal,\nMail Ende zu Ende verschlüsselt äh verschicken möchte, um da irgendwie so,\nArmstrong Moment,\nIst das nicht der erste Mann auf dem Mond."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:42:47",
+      "text": "Nein, das ist nicht der erste Mann auf dem Mond, sondern das ist irgendwie der Dauergewinner, der nein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:42:53",
+      "text": "Wie wie wer war denn der erste Mann auf dem Mond?\nIch weiß nämlich nur noch wegen dir Tim. Wegen dir weiß ich nämlich, den zweiten. Ich habe mir, ich habe mir den zweiten gemerkt, weil ich irgendwann mal in irgendeiner Sendung gesagt habe, keine Sau interessiert sich für den zweiten Mann auf dem Mond. Und dann hast du gesagt\nund ähm seitdem habe ich mir nur den gemerkt. Wie war denn der erste Mann auf dem Mond?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:19",
+      "text": "Neil Armstrong."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:43:25",
+      "text": "Okay und wer ist der, der die ganze Zeit immer durch öffentliche Veranstaltungen geht und den Leuten auf die Fresse haut, die überhaupt nee, wer nicht aufm Boot gewesen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:35",
+      "text": "Keine Ahnung.\nScheint ein ganz guter Name zu sein. Ich kenne verschiedene Leute, die äh Abendschwung heißen und irgendwie bemerkenswertes geleistet haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:43:46",
+      "text": "So, wir verlinken, wir wir verlinken's zur allgemeinen,\nunserer Hörer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:51",
+      "text": "Verschiedene Armstrocks. Eine Auswahl von,\nAbendschaumstier besonders beeindruckend in Erinnerung geblieben sind. Da kommt dann auch Joe Armstrong noch dazu. Dann äh haben wir sie alle beisammen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:44:04",
+      "text": "Was hat auf welchem Planeten ist Joe Armstrong gelandet?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:44:07",
+      "text": "Auf dem Erlangen Planeten hat die Sprache Erlangen gefunden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:44:11",
+      "text": "Ja, okay. Das ist natürlich auch so ein Monlandungsmoment."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:44:15",
+      "text": "Na ja, absolut, also es war nur ein sehr kleiner Schritt für ihn, aber ein großer Schritt für die Telekommunikationsindustrie."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:44:22",
+      "text": "Okay, dann haben wir jetzt die die Armstränge durch und ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:44:27",
+      "text": "Genau. Die Sendung auch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:44:30",
+      "text": "Die Sendung auch. Vielen Dank. Tschau, tschau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:44:32",
+      "text": "Bis bald, tschüss."
+    }
+  ]
+}

@@ -40,6 +40,14 @@ const route = useRoute();
 const { t } = useI18n();
 const settings = useSettingsStore();
 
+const searchTitle = computed(() => {
+  const pid = settings.selectedPodcast || 'freakshow';
+  const key = `search.titleByPodcast.${pid}`;
+  // If the per-podcast key isn't present, fall back to the generic title.
+  const s = t(key as any);
+  return s === key ? t('search.title') : s;
+});
+
 const searchQuery = ref('');
 const q = computed(() => (typeof route.query?.q === 'string' ? route.query.q.trim() : ''));
 
@@ -94,7 +102,10 @@ const fetchSpeakers = async () => {
   speakersLoading.value = true;
   speakersError.value = null;
   try {
-    const url = backendBase.value ? `${backendBase.value}/api/speakers` : '/api/speakers';
+    const podcastId = settings.selectedPodcast || 'freakshow';
+    const url = backendBase.value 
+      ? `${backendBase.value}/api/speakers?podcast_id=${podcastId}` 
+      : `/api/speakers?podcast_id=${podcastId}`;
     const res = await fetch(url, { cache: 'no-cache' });
     if (!res.ok) {
       throw new Error(`HTTP ${res.status}`);
@@ -129,7 +140,8 @@ const doSearch = async (query: string) => {
 
     const run = async (token: string) => {
       const url = backendBase.value ? `${backendBase.value}/api/chat` : '/api/chat';
-      const body: any = { query: qq };
+      const podcastId = settings.selectedPodcast || 'freakshow';
+      const body: any = { query: qq, podcastId };
       if (settings.selectedSpeaker) {
         body.speakerSlug = settings.selectedSpeaker;
       }
@@ -186,6 +198,19 @@ onMounted(() => {
   }
 });
 
+// When switching podcasts, reload speaker dropdown options.
+watch(
+  () => settings.selectedPodcast,
+  async () => {
+    // Reset selection to avoid carrying speakers across podcasts.
+    settings.setSelectedSpeaker(null);
+    settings.setSelectedSpeaker2(null);
+
+    availableSpeakers.value = [];
+    await fetchSpeakers();
+  }
+);
+
 watch(
   () => q.value,
   (next) => {
@@ -222,6 +247,97 @@ const runExample = (query: string, speaker1Slug: string | null = null, speaker2S
   handleSearch();
 };
 
+type SearchExample = {
+  id: string;
+  icon: string;
+  label: string;
+  query: string;
+  speaker1Slug: string | null;
+  speaker2Slug: string | null;
+  sublabel: string | null;
+};
+
+const searchExamples = computed<SearchExample[]>(() => {
+  const pid = settings.selectedPodcast || 'freakshow';
+
+  if (pid === 'lnp') {
+    return [
+      {
+        id: 'lnp-discussion-1',
+        icon: '💬',
+        label: t('search.examplesByPodcast.lnp.discussion1'),
+        query: 'Was haltet Ihr von Apples Reaktion auf den Digital Markets Act?',
+        speaker1Slug: 'linus-neumann',
+        speaker2Slug: 'tim-pritlove',
+        sublabel: t('search.discussionMode.discussion'),
+      },
+      {
+        id: 'lnp-persona-1',
+        icon: '🎙️',
+        label: t('search.examplesByPodcast.lnp.persona1'),
+        query: 'Was hältst du von der digitalen Patientenakte',
+        speaker1Slug: 'linus-neumann',
+        speaker2Slug: null,
+        sublabel: 'Speaker Persona',
+      },
+    ];
+  }
+
+  if (pid === 'ukw') {
+    return [
+      {
+        id: 'ukw-neutral-1',
+        icon: '🌍',
+        label: t('search.examplesByPodcast.ukw.neutral1'),
+        query: 'Wie ist die Lage in der Ukraine?',
+        speaker1Slug: null,
+        speaker2Slug: null,
+        sublabel: t('search.neutral'),
+      },
+    ];
+  }
+
+  // default: freakshow examples
+  return [
+    {
+      id: 'fs-discussion',
+      icon: '💬',
+      label: t('search.examples.discussion'),
+      query: 'Was ist besser, die Quest 3 oder Apple Vision Pro?',
+      speaker1Slug: 'tim-pritlove',
+      speaker2Slug: 'ralf-stockmann',
+      sublabel: t('search.discussionMode.discussion'),
+    },
+    {
+      id: 'fs-persona-1',
+      icon: '🎙️',
+      label: t('search.examples.persona1'),
+      query: 'Wie stehst du zu Bitcoin?',
+      speaker1Slug: 'tim-pritlove',
+      speaker2Slug: null,
+      sublabel: 'Speaker Persona',
+    },
+    {
+      id: 'fs-persona-2',
+      icon: '🏠',
+      label: t('search.examples.persona2'),
+      query: 'Kannst du mir Tipps zur Hausautomatisierung geben?',
+      speaker1Slug: 'roddi',
+      speaker2Slug: null,
+      sublabel: 'Speaker Persona',
+    },
+    {
+      id: 'fs-neutral',
+      icon: '🍎',
+      label: t('search.examples.neutral'),
+      query: 'Apple Quo Vadis?',
+      speaker1Slug: null,
+      speaker2Slug: null,
+      sublabel: t('search.neutral'),
+    },
+  ];
+});
+
 // ---- Inline MP3 player (copied from TopicRiver.vue pattern) ----
 
 const mp3IndexLoaded = ref(false);
@@ -232,6 +348,21 @@ const playerInfo = ref<{ episodeNumber: number; positionSec: number; label: stri
 const playerError = ref<string | null>(null);
 const playerToken = ref(0);
 const currentTranscriptUrl = ref<string | null>(null);
+
+// When switching podcasts, clear cached MP3 index + close the player.
+watch(
+  () => settings.selectedPodcast,
+  () => {
+    mp3IndexLoaded.value = false;
+    mp3IndexError.value = null;
+    mp3UrlByEpisode.value = new Map();
+    currentMp3Url.value = null;
+    playerInfo.value = null;
+    playerError.value = null;
+    currentTranscriptUrl.value = null;
+    playerToken.value++;
+  }
+);
 
 const withBase = (p: string) => {
   const base = (import.meta as any)?.env?.BASE_URL || '/';
@@ -396,7 +527,7 @@ const handleAnswerClick = (event: MouseEvent) => {
       <div class="flex items-start justify-between gap-3">
         <div class="flex-1">
           <div class="flex items-center gap-2 flex-wrap">
-            <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">{{ t('search.title') }}</h2>
+            <h2 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">{{ searchTitle }}</h2>
             <span class="text-xs px-2 py-1 rounded-md bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-bold uppercase tracking-wider">
               beta
             </span>
@@ -501,73 +632,20 @@ const handleAnswerClick = (event: MouseEvent) => {
             {{ t('search.examples.title') }}
           </h3>
           <div class="space-y-3">
-            <!-- Discussion Mode Example -->
             <button
-              @click="runExample('Was ist besser, die Quest 3 oder Apple Vision Pro?', 'tim-pritlove', 'ralf-stockmann')"
+              v-for="ex in searchExamples"
+              :key="ex.id"
+              @click="runExample(ex.query, ex.speaker1Slug, ex.speaker2Slug)"
               class="w-full text-left px-4 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg transition-colors group"
             >
               <div class="flex items-start gap-3">
-                <div class="text-2xl flex-shrink-0">💬</div>
+                <div class="text-2xl flex-shrink-0">{{ ex.icon }}</div>
                 <div class="flex-1 min-w-0">
                   <div class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                    {{ t('search.examples.discussion') }}
+                    {{ ex.label }}
                   </div>
-                  <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                    {{ t('search.discussionMode.discussion') }}
-                  </div>
-                </div>
-              </div>
-            </button>
-            
-            <!-- Persona Example 1 -->
-            <button
-              @click="runExample('Wie stehst du zu Bitcoin?', 'tim-pritlove', null)"
-              class="w-full text-left px-4 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg transition-colors group"
-            >
-              <div class="flex items-start gap-3">
-                <div class="text-2xl flex-shrink-0">🎙️</div>
-                <div class="flex-1 min-w-0">
-                  <div class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                    {{ t('search.examples.persona1') }}
-                  </div>
-                  <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                    Speaker Persona
-                  </div>
-                </div>
-              </div>
-            </button>
-            
-            <!-- Persona Example 2 -->
-            <button
-              @click="runExample('Kannst du mir Tipps zur Hausautomatisierung geben?', 'roddi', null)"
-              class="w-full text-left px-4 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg transition-colors group"
-            >
-              <div class="flex items-start gap-3">
-                <div class="text-2xl flex-shrink-0">🏠</div>
-                <div class="flex-1 min-w-0">
-                  <div class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                    {{ t('search.examples.persona2') }}
-                  </div>
-                  <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                    Speaker Persona
-                  </div>
-                </div>
-              </div>
-            </button>
-            
-            <!-- Neutral Example -->
-            <button
-              @click="runExample('Apple Quo Vadis?', null, null)"
-              class="w-full text-left px-4 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg transition-colors group"
-            >
-              <div class="flex items-start gap-3">
-                <div class="text-2xl flex-shrink-0">🍎</div>
-                <div class="flex-1 min-w-0">
-                  <div class="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                    {{ t('search.examples.neutral') }}
-                  </div>
-                  <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                    {{ t('search.neutral') }}
+                  <div v-if="ex.sublabel" class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    {{ ex.sublabel }}
                   </div>
                 </div>
               </div>

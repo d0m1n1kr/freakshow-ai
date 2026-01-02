@@ -1,0 +1,2254 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:07",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:07",
+      "text": "Guten Morgen Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:09",
+      "text": "Sag mal, hat die Bundesregierung eigentlich Easter Eggs?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:12",
+      "text": "So wie die rumeiern schon."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:36",
+      "text": "Logbuch Netzpolitik Nummer 457 vom 8.\nApril 2023 und heute mal live.\nFrüh am Morgen, wie immer, in Hamburg auf dem Easter Egg 20, dazu gleich noch mehr.\nUnd wir sagen Hallo, vielen Dank fürs Wasser, Hallo, herzlich willkommen,\nalle die hier gekommen seid. Hallo, es gibt nur ein Wasser."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:01:06",
+      "text": "Das müssen wir uns jetzt teilen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:13",
+      "text": "Okay, gut. Wir müssen uns das jetzt verdienen. Ich hab jetzt aufgebaut,\ndeswegen krieg ich eine Flasche Wasser und dann je nach Performance sehen wir, wie es weitergeht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:23",
+      "text": "Also wenn wir so weitermachen, kriegen wir hier nur noch Zielwasser."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:27",
+      "text": "Genau, wir stoßen jetzt gleich mal erstmal an, weil wir sind durstig,\nauf 20 mal, vorsichtig in der Formulierung, 20 mal Issaac. Immerhin."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:01:37",
+      "text": "Wer kommt zu mir?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:37",
+      "text": "Ja. Achtung, drei, zwei, eins."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:42",
+      "text": "Und dieser Easter Egg ist, glaub ich, auch der am häufigsten geplante Easter Egg, ne?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:01:49",
+      "text": "Nicht ganz 20 Mal."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:50",
+      "text": "Ich unterhielt mich hier gerade mit Ron, vielen sicherlich auch bekannt aus\nden Security Nightmares.\nUnd der sagte, sag mal wie oft war das denn jetzt eigentlich hier schon auf Kampnagel?\nUnd dann sagte ich, kein einziges Mal. Er so, echt nicht? Ich seh,\ndas wurde nur viermal angekündigt.\n2020, ich weiß nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:09",
+      "text": "Viermal?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:02:10",
+      "text": "Drei Mal. 2021, 2022."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:12",
+      "text": "Das ist glaube ich dreimal ausgefallen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:16",
+      "text": "Drei Mal ausgefallen. 20, 21, 22, 23."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:02:20",
+      "text": "Achso, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:21",
+      "text": "Wäre für mich viermal angekündigt."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:02:22",
+      "text": "Viermal angekündigt, dreimal ausgefallen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:25",
+      "text": "Viermal geplant, einmal durchgeführt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:27",
+      "text": "Ja, das ist ein gut geplantes Event."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:31",
+      "text": "Hoffen wir.\nGenau, und da sind wir jetzt hier auf der Bühne in K2. K steht für Kampnagel,\ndas ist nämlich das Venue, wie man so schön sagt.\nDer Ort, wo wir uns hier zusammen finden und ich bin glaube ich das erste Mal\nhier auf einer Veranstaltung, wenn ich mich so richtig erinnere.\nIhr schon mal hier irgendwie?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:02:51",
+      "text": "Öfter, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:51",
+      "text": "Geraved, ja. Aber du bist ja von hier, ne?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:02:53",
+      "text": "Ich bin von hier, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:54",
+      "text": "Du bist von hier, ne?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:02:55",
+      "text": "Es ist nett, dass ihr mal hergekommen seid."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:58",
+      "text": "Ja, so sind wir. Stimmt aber nicht, ich bin neulich schon mal vorbeigekommen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:03:02",
+      "text": "Ja das stimmt, das wollte ich jetzt nicht lügen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:03",
+      "text": "Ja, okay, na gut, macht ja nix. Macht ja nix. Ja, hallo Khaleesi.\nHallo. Euch Hörerinnen und Hörern sicherlich schon bekannt, weil du warst ja\njetzt schon ein paar Mal dabei.\nUnd da das jetzt dein Home-Turf ist, dachten wir uns, erzählst du uns mal hier\nwas von deiner Hood und wie das so läuft hier."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:03:27",
+      "text": "Dodger bitte auf Bühne, ich weiß nicht wie die Bühne heißt, in K2 bitte.\nIch muss ehrlich zugeben, ich war mit EU Politik beschäftigt und weniger mit\nEaster Egg Planung zu meiner Schande. Ich hab den ersten angefangen mit zu planen,\nalso in 2019, für 2020 und dann nicht mehr. Dann kam ja schon fast die Chatkontrolle."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:47",
+      "text": "Verstehe. Politische Verstrickung kam dazwischen.\nSo, was haben wir denn noch anzukündigen, bevor wir hier in Medias Res gehen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:00",
+      "text": "Ich glaube schon alles interessante passiert. Systemabsturzkonzert war schon,\nSchunkelmusik DJ-Set war schon, Khaleesi's Vortrag war schon,\nKreuzigung war auch schon, war gestern Freitag."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:13",
+      "text": "Wer ist gekreuzigt worden diesmal? Weiß ich nicht, aber..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:20",
+      "text": "Kreuzigung, es war doch Karfreitag oder? Die Kreuzigung?\nDeswegen darf man da nicht tanzen, deswegen musste auch gestern spezifisch das\nKonzert sein und das DJ Set."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:31",
+      "text": "Wieso hat da jetzt keiner getanzt? Nein, deswegen hat man euch als DJ Set eingeladen.\nJa, danke.\nWie gesagt, es hängt am Ende immer alles von der professionellen Planung ab.\nDas sind so diese Aspekte, die kommen. Für die Leute, die keine Ahnung haben, was ein Easterhack ist.\nEin Easterhack ist so eine Art Zwischenkongressveranstaltung,\nwie sie sich ja so einige in den letzten Jahrzehnten, muss man ja mittlerweile\nsagen, herausgebildet haben im CCC-Umfeld.\nEinfach weil das Missverhältnis zwischen Kongress und der..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:14",
+      "text": "Und ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:15",
+      "text": "Und dazwischen und ja, genau. So ein bisschen,\nja, das lief alles so ein bisschen auseinander und die Größe der Veranstaltung,\nalso das Wachstum des Kongresses schuf Bedürfnisse, kleinere Veranstaltungen\nzu haben, überschaubare, regionalere Veranstaltungen.\nUnd da ist ja so einiges entstanden.\nMRM-CD, die GPN, oh Gott, jetzt habe ich angefangen die aufzuzählen,\nda vergesse ich natürlich wie viel ich hätte.\nIch habe gerade gedacht, nein. Ja, ja, Entschuldigung, es tut mir leid.\nAber ihr wisst schon, was ich meine. Und der Isar-Heck war dann im Prinzip so\neine Art Homecoming für Hamburg, weil ja dann der Kongress zu dem Zeitpunkt\nnach Berlin abgewandert war.\nUnd da konnte man halt auch wieder in das gute alte kleine muffige Eidelstädter\nBürgerhaus, wie damals.\nJa, die alten Säcke unter euch erinnern sich vielleicht noch.\nAber auch das ist jetzt mittlerweile wieder zu klein geworden und deswegen jetzt\nhier mit tausend Leuten. Und hat es euch soweit gepasst?\nJetzt Reaktionen des Publikums einspielen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:06:18",
+      "text": "Okay? Sehr."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:25",
+      "text": "Naja, also danke an die Organ, alle die hier mitgeholfen haben.\nTolle Veranstaltung und wir fühlen uns wohl. Ja. Kommen wir zum Thema.\nWir fangen mit Feedback an."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:41",
+      "text": "Okay, ich seh schon, dass der Sekt, den Elmar Iaci uns hier hingestellt hat, wirkt. Wirkt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:49",
+      "text": "Das ist nicht der Sekt, das ist die Eiswürfel."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:06:51",
+      "text": "Ihr habt noch mit der Werbung, die Werbung habt ihr vergessen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:52",
+      "text": "Achso, ja stimmt ja."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:06:54",
+      "text": "Also, Werbung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:55",
+      "text": "Es gibt Aufkleber, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:56",
+      "text": "Genau, wir haben Aufkleber mitgebracht, die gibt es dann da hinten in der Kiste\nbzw. auf dem Tisch, da könnt ihr euch dann ordentlich mit eindecken. Denn all für Euch.\nNatürlich nicht für euch, sondern für entsprechende werbende Flächen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:09",
+      "text": "Stohrtüren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:10",
+      "text": "Genau, da muss das dann drauf."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:12",
+      "text": "Laternenpfähle."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:13",
+      "text": "Du bist ja bescheid."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:14",
+      "text": "Hinten an Autos dran."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:15",
+      "text": "Genau, oder auf Nazi-Aufkleber auch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:18",
+      "text": "Über Nazi-Aufkleber auch drüber."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:20",
+      "text": "Dafür sind die eigentlich auch gemacht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:22",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:22",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:23",
+      "text": "Okay, aber jetzt, genau, die gibt's da hinten und Shirts gibt's nicht.\nHast du nicht geschafft."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:28",
+      "text": "Ne, ja, nein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:33",
+      "text": "Tim hat versucht die Shirts hier von den Engeln vorne verkaufen zu lassen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:07:37",
+      "text": "Was?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:37",
+      "text": "Das stimmt überhaupt nicht. Das ist aber mit dem Volk gescheitert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:39",
+      "text": "Das ist nicht wahr."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:40",
+      "text": "Einer mit dem Versuch gescheitert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:41",
+      "text": "Nein, das ist nicht wahr. Nein, nein, das lag einfach an meinen Hobbys. Okay. Ja, genau."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:07:46",
+      "text": "Nicht so viel programmieren, mehr Shirts drucken, Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:48",
+      "text": "Programmieren ist gut für die Gesundheit, das kann ich dir sagen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:07:51",
+      "text": "Weiß ich nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:52",
+      "text": "Doch, für die Mentale. Es kommt immer drauf an. Es kommt drauf an,\nwas man programmiert, wie man programmiert. Darauf kommt es natürlich an,\naber wenn man das richtig macht, ist es auch wie mit Sport. Sport kann auch Mord sein."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:08:03",
+      "text": "Würde ich jetzt so nicht unterschreiben, aber das ist eine Diskussion für einen Muskelkater."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:06",
+      "text": "Es gibt Leute, die sich dabei verletzen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:08:07",
+      "text": "Ja, du zum Beispiel?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:10",
+      "text": "Ich verletze mich dann beim Programmieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:12",
+      "text": "Hahaha. Genau, ich hab so eine Mentalbeule.\nJa, nee, das macht auf jeden Fall Spaß. Kommen wir zum Feedback.\nWir haben über einiges gesprochen, aber ich dachte mir, jetzt nehmen wir nur\ndas unterhaltsame Feedback.\nDas stimmt natürlich nicht, weil jegliches Feedback ist in irgendeiner Form\nunterhaltsam. Euer Feedback ist besonders unterhaltsam.\nAber wo ja richtig alle aus den Sitzen gesprungen sind, das war natürlich unsere\nEinlassung zum Gesundheitssystem und den Ärzten und der Digitalisierung, Dauerbrenner.\nHabe es hier auch noch mal einen Talk dazu. Diesmal haben sich vor allem die\nÄrztinnen und Ärzte zu Wort gemeldet und haben so ein bisschen aus ihrem Nähkästchen geplaudert.\nLos ging's mit...\nLeute denkt euch mal einfachere, das ist mit diesen Nicknames so eine Sache,\nvor 20 Jahren da konnte man sich noch Nücks nennen und irgendwie drei Buchstaben,\nvier Buchstaben, hat alles gepasst, gab's alles, Twitter war frei, pipapo.\nWenn du heute irgendwie als Jungnerd auf die Landschaft triffst,\ndann musst du dir schon Generatoren einführen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:09:21",
+      "text": "Die Nick-Beratung machen. Also wir haben uns schon überlegt,\nman sollte einen Nick-Beratungs-Workshop machen.\nDas ist auf jeden Fall dringend gebraucht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:30",
+      "text": "Ja und was sind so die Kriterien für einen guten Nickname?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:09:34",
+      "text": "Ob man den fühlt, würden wir jungen Menschen sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:41",
+      "text": "So wie Khaleesi."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:09:42",
+      "text": "Den habe ich ja bekommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:43",
+      "text": "Achso, den habe ich mir nicht ausgesucht. Bei mir hat ja ein Nickname nie verfangen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:09:49",
+      "text": "Nee, aber wir können dich auch gerne TomTom nennen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:52",
+      "text": "Nee, er wollte aber Theodor Prinz genannt werden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:55",
+      "text": "Nein, Theodor Prinz heiße ich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:57",
+      "text": "Achso, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:57",
+      "text": "Das ist was ganz anderes. Nee, aber so ein Nickname, irgendwie hat es nicht funktioniert.\nIch meine, heutzutage, keine Ahnung, seit wieviel Jahren Tim irgendwie in der\nGeburtsnamen-Statistik in den Top Ten steht, schon eine Weile.\nAber als ich so in die Welt geworfen wurde, hieß ja kein Mensch Tim,\nalso nicht in Deutschland zumindest.\nUnd dann war das so die Zeit der Arcade-Automaten, wo halt nur drei Buchstaben\nin die Highscore-Liste gingen.\nDa will man sich doch keinen nicknennen, wenn man Tim heißt, verstehst du?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:10:31",
+      "text": "Ja, T1M hättest du noch machen können, um so ein bisschen..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:34",
+      "text": "Ich war auch solid genug. Ja. Also, Meninguenzep schreibt, ist das vielleicht\nirgendwie rückwärts? Pitzen? Ne.\nAlso das ist das Problem mit diesen Nicknames heutzutage.\nIch bin Arzt im Krankenhaus und ich hoffe in der Digitalisierung des Gesundheitswesens\nauf nichts mehr. Es gibt zwei Szenarien.\nErstens, wir bleiben für immer in der aktuellen Papierhülle,\nwo ich 30 Minuten damit verbringe, Vorbefunde von einer verpixelten Kopie abzutippen,\nmit Patienten auszudiskutieren, welcher der fünf Medikamentenpläne,\ndie sie gerade in ihrer Hosentasche gefunden haben, der aktuellste ist.\nIch dann eine Untersuchungsanforderung an eine Faxnummer schicke,\nwo jemand meine Handschrift entziffern und doch in einen Computer eingeben muss\nUnd ich dann Untersuchungsbefunde nur per Screenshot in den Arztbrief einfügen\nkann, weil selbst innerhalb des Hauses die Systeme keine strukturierten Daten,\nsondern teilweise nur PDFs austauschen.\nDafür sind die Daten sehr sicher, wir kommen ja selbst nicht mal richtig dran."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:45",
+      "text": "Es war nicht alles schlecht, es war nicht alles schlecht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:49",
+      "text": "Szenario 2, könnte mal aufhören mich hier während der Veranstaltung anzurufen, verdammte Axt."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:11:59",
+      "text": "War dein Arztbrief der angerufen hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:01",
+      "text": "Szenario 2, wir kommen in die dystopische Zukunft, wo alle Patienten einen riesigen\nDump an Daten mit sich herum tragen, den niemand kuratiert oder aktuell hält,\nDenn das System, um die Daten zu bearbeiten, ist furchtbar zu benutzen.\nBraucht zwei Minuten, um zu laden und man bekommt nur 1,67 Euro im Quartal dafür.\nIch kann eine Untersuchung jetzt in einem SAP-Formular statt auf Papier anmelden.\nDafür darf ich das Formular jetzt nicht abschicken, bis ich nicht noch fünf\nweitere völlig irrelevante Informationen ausgefüllt habe, weil irgendjemand\nbei der Einrichtung die Felder auf verpflichtend gestellt hat.\nMeine 75-jährigen Patienten unterschreiben bei 17 Seiten Informed-Consent,\ndass alle ihre Daten jetzt der Allgemeinheit nützen sollen.\nDafür stehen mir jetzt alle Daten des Patienten zur Verfügung.\nIch muss den nur in einem Heuhaufen zwischen PDF-Scans und Stuhlgangsbeschreibung von 2009 rausfischen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:13:01",
+      "text": "Also, anders gesagt, European Health Data Space."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:05",
+      "text": "Das Thema ist abschließend erörtert, würde ich sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:09",
+      "text": "Das denkst du. Denn dazu kommentiert Lipfi, Lipfi hatte noch Glück irgendwie, fünf Buchstaben.\nHaha, ich arbeite in einem MVZ-Labor mit relativ guten Probenaufkommen dank\numliegende Hausarzt- und Klinikeinsendungen Ich kann da so gut mitführen,\nwas für ein Abfuck die Bürokratie sein kann, obgleich man gleichzeitig eigentlich\nnur zügig den Kollegen Befunde zukommen lassen möchte.\nAber selbst wenn das alles klappt mit der Digitalisierung, heißt das ja nicht\nautomatisch, dass es alles besser wird.\nDann haben wir halt trotzdem zehn Anforderungsarten von 10a, kleiner Igel und Co.\ndigitalisiert. Ich weiß nicht, was das sein soll, kleiner Igel und Co.\nUnd automatisiert. Meiner Meinung nach ist dieses private und gesetzliche Kassenwirrwarr\neine Sache, die man im Zuge der Digitalisierung erst einstampfen sollte.\nEin Pott, alle Zahlen rein, alles wird daraus bezahlt, fertig.\nDas bei bestimmten Parametern, die privaten Proben zweimal gefahren werden,\naber bei Blutgruppenausweisen für, das ist ein bisschen kaputt geschrieben,\nSchwangere oder so, zwar automatisch mitgemessen, dann der Wert aber storniert wird,\nweil die Kassen ihn nicht automatisch bezahlen. Setzt dem Ganzen noch ein Krönchen auf.\nUnd Blutkonserven bestellen wir beim BSD, teilweise immer noch mit Fax.\nWie Linus mal sinngemäß zum Thema D-Mail kommentierte, wenn du Scheiße digitalisierst,\nhast du halt digitale Scheiße. Ich finde man sollte dieses Gesamtkonzept Gesundheitswesen hinterfragen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:40",
+      "text": "Also es ist schon erkennbar, dass das eine Branche mit Leidensdruck zu sein scheint."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:45",
+      "text": "Kann man wohl sagen. Also in den Kommentaren, es ging, also das nahm gar kein\nEnde. Eins hab ich noch. Götz. Ich bin Kinder- und Jugendarzt.\nJeden Tag kommen und gehen 100 bis 150 Kinder mit Eltern rein und raus.\nDa summiert sich selbst 30 Sekunden pro Eintrag in eine EPA zu größer eine Stunde Arbeit.\nArbeit haben wir schon genug. Jede Woche an die 60 Stunden. Das meiste macht\nSpaß. Aber jetzt noch die EPA.\nDie nützt weder Patient noch sonst wem. Wenn die Digitalisierung außer der IT-Industrie,\nein Klammern, Konnektoren-Tausch sinnvoll wäre, dann setzte sie sich ganz allein durch.\nWie das Telefon, das Tablet, der Computer, das WC. Alles sinnvoll und hat sich durchgesetzt.\nBeispiel TI. Tausende für Anschaffung und Betrieb eines Connectors.\nEinziger Zweck, Abgleich, ob der Patient tatsächlich noch bei der Kasse versichert\nist, deren Karte er vorlegt. E-Arbeitsfähigkeitsbescheinigung.\nFrüher drei Ausdrucke, drei Unterschriften.\nGut. Jetzt einmal elektronisch signiert an der Kasse, einmal für Patient ausdrucken.\nDann zur Sicherheit den Ausdruck für den Arbeitgeber, denn der ist nicht angeschlossen.\nWenn ein Abend signiert wird nach Feierabend, dann sehe ich die Rückmeldung,\ndass die EAU der Kasse nicht übermittelt werden konnte.\nAusdrucken, Briefumschlag, Porto. Oder die Meldung ist nicht bei der Kasse versichert.\nLiegt ein Sinn darin? Ich werde es nie verstehen. Doch das Leben wird immer weitergehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:12",
+      "text": "Meine Güte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:17",
+      "text": "Applaus Ich, also, weißt du, was soll ich noch sagen?\nLetzter Kommentar noch von Matthias Pansenböck. Bezüglich Arztpraxen-Software,\nich weiß von einem Arzt hier in Österreich, der noch DOS verwendet.\nMit Disketten und so. Und während der Behandlung erzählte der lauter Verschwörungstheorien.\nIch hab da den Arzt gewechselt.\nOh mein, ja, das ist alles ganz schlimm und furchtbar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:45",
+      "text": "Aber dieser Leidensdruck, der, ich dachte das wäre nur in meiner Branche so.\nDas beruhigt mich gewissermaßen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:56",
+      "text": "Das einzige Paradies ist Podcasting."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:58",
+      "text": "Also dann schon lieber Patient."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:03",
+      "text": "Da höre ich auch immer wieder schlimme Sachen.\nKommen wir jetzt zum weiteren Feedback. Wie sollte es auch anders sein?\nNoch ein Nachtrag zu Sack und Beutel.\nPackstut, der uns schon mal mit einem schönen Kommentar gesegnet hat,\nschreibt, moin ich noch mal. Da habe ich im letzten Kommentar auch glatt vergessen,\neuch die korrekte Definition für euer raumbildendes Packmittel mitzuteilen.\nAufgrund der am Beutel angebrachten Tragegriffe handelt es sich nach DIN 55405\nselbstverständlich um einen Tada-Tragebeutel.\nWir sind hier immer noch in Deutschland. Selbstverständlich gibt es für die\nTerminologie eine eigene Norm. Ich finde die aktuelle Bezeichnung im Shop aber\nschon ziemlich gelungen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:44",
+      "text": "Es gibt eine DIN-Norm. Ich möchte nicht, dass wir Tragebeutel verkaufen, die DIN-normiert sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:54",
+      "text": "Sondern welche? Welche Normierung hälst du gerne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:56",
+      "text": "Ich möchte, dass sie gegen die Norm verstoßen. Die sind nicht normengerecht.\nWir machen einen Henkel ab oder... Okay."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:18:05",
+      "text": "Aber dann müsst ihr auch ein Disclaimer reinmachen, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:07",
+      "text": "Klar, natürlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:08",
+      "text": "Das wird bestimmt der totale Verkaufsschlag."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:10",
+      "text": "Nicht normengerechter Tragebäutel. Dieser Tragebäutel..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:14",
+      "text": "Nicht normengerechtes raumbildendes Packmittel."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:16",
+      "text": "Das wir nicht als Tragebäutel bezeichnen dürfen, weil es nicht normengerecht ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:21",
+      "text": "Und wenn du dann trotzdem Sachen damit trägst, bist du revolutionär eigentlich.\nSo viel zum Feedback."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:32",
+      "text": "Ich war bei einer Ausstellungseröffnung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:37",
+      "text": "Das heißt Vernissage."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:39",
+      "text": "Ne, so heißt das nur bei Kunst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:42",
+      "text": "Achso und was für eine Ausstellung wurde da eröffnet?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:46",
+      "text": "Die Ausstellung hieß Deutschland Digital."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:18:51",
+      "text": "Also das ist ja auch irgendwie Kunst. Ist das Kunst oder kann das weg? Wäre da die Frage?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:57",
+      "text": "Es war, also tatsächlich ist das vom Haus der Geschichte, in Bonn war das.\nDie haben eine ganze Reihe an Ausstellungsstücken vom CCC.\nUnd zwar beispielsweise ein Pferd,\ndas gebaut wurde zum Protest gegen, bei der Staatstrojaner-Gesetzgebung,\nIch glaube das wurde dann in Karlsruhe bei dem Verfassungsgericht,\ndas verhandelt wurde, dort mit aufgefahren.\nDas ist Teil dieser Ausstellung.\nDann eine Reihe von unseren Bundestagsauskünften, deren so ausgedruckt und gebunden da liegen.\nDann gab's noch irgendwie so eine Reihe an Interviews, wo eine der Personen\nauch ich war und noch was?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:56",
+      "text": "Wo war diese Ausstellung?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:57",
+      "text": "Bonn, Haus der Geschichte. Und die war aber vorher auch schon mal in Leipzig\nund jetzt hatten die den Fehler gemacht, mich zu der Eröffnung einzuladen als Festredner."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:13",
+      "text": "Also du bist auch gar nicht normgerecht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:15",
+      "text": "Ich war nicht noch, nein, ich hab vor allem dann gesagt, also Deutschland Digital,\ndas ist erstens, die Ausstellung muss sehr kurz sein und sehr traurig.\nUnd es ist auch tatsächlich so.\nNe, aber da waren tatsächlich einige sehr interessante Exponate mit dabei.\nBeispielsweise jemand, der zu DDR-Zeiten in der DDR seinen eigenen Computer\ngebaut hat und irgendwie,\nalso wirklich die skurrilsten Objekte irgendwie gesourcet hat,\num dann einen Computer da selber zu bauen und wunderschöne Exponate,\naber natürlich auch ein Roboter oder so, der dann da rumfährt und so.\nKann man schon machen. Und die konzentriert sich auf drei Bereiche,\nArbeit und Wirtschaft, Politik und Gesellschaft und dann so das Privatleben.\nAlso die drei Bereiche, die ja so die Digitalisierung beeinflusst hat.\nUnd kann man auf jeden Fall mal besuchen, wenn man in Bonn ist. Also wenn man da ist.\nJa das war ganz nett und ich konnte mir, ich habe einmal so ein bisschen mir\nden Frust von der Seele reden können und ich hätte mir gewünscht,\nich hätte so schöne Kommentare über den Zustand des Gesundheitswesens vorher noch gelesen,\naber ich habe mich auch so ein bisschen darüber beschwert oder sagen wir mal\nüber den Zustand Deutschlands allgemein ein bisschen beklagen können Und es war ganz nett,\nweil der Museumsdirektor, der vor mir sprach, sagte so, allenfalls mäßiges Mittelmaß\nwäre also die deutsche Digitalisierung.\nAber da sieht man, es ist halt ein Optimist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:05",
+      "text": "Ich hab, es gibt einen, ich versuche gerade herauszufinden, wie denn dieser,\nes gibt so ein Geschichtsmuseum mitten in Berlin, in Mitte, warte mal,\nwie heißt denn das nochmal?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:19",
+      "text": "Aus der Geschichte.\nAn der Kulturbrauerei ist das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:25",
+      "text": "Ich denke unter den Linden irgendwie kann das sein?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:22:29",
+      "text": "Futurium?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:31",
+      "text": "Nee, auch irgendwas mit ganz Staatstragendes, mit bunt irgendwie,\nich weiß es grad nicht mehr."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:38",
+      "text": "Und das Tag?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:38",
+      "text": "Ja, vielleicht komm ich noch drauf. Auf jeden Fall so eine Entität,\ndie sich sozusagen auch bemüht darum, solche Artefakte einzusammeln.\nUnd von denen habe ich mal eine Mail bekommen nach einem Kongress.\nIch krieg das jetzt richtig zusammen. Nach einem Kongress im BCC oder im Haus\nam Kölnischen Park vielleicht sogar. Ich glaub sogar noch im Haus am Kölnischen Park. Ja genau.\nUnd zwar, was sie archiviert haben, waren die Fotos von den Lost and Found Dingern vom Kongress.\nAlso Sachen sind liegen geblieben auf dem Kongress. Ich hab die dann fotografiert,\nauf die Webseite gestellt.\nUnd das fanden die so faszinierend, was bei so einer Hacker-Konferenz für so Sachen übrig bleiben.\nIch kann das jetzt nicht mehr genau, es waren nicht nur Klamotten,\nes war halt alles mögliche Gerät, was kein Mensch sonst hatte.\nDas haben die dann irgendwie reingesetzt. Bundesarchiv? Wie gesagt, ich..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:23:38",
+      "text": "Oder vielleicht..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:39",
+      "text": "Meine Erinnerung sagt Bundesamt für Verfassungsschutz. Nein, nein.\nIrgendwas mit Geschichte. Ich komm noch drauf. Es ist schon wirklich sehr lange her.\nNaja, auf jeden Fall fand ich das interessant und ich fand das ganz interessant,\ndass sie das so interessant fanden.\nSo, Bundestag, du hast es schon erwähnt. Ist ja auch so ein Ort der Sehnsucht, oder?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:24:11",
+      "text": "Ich bin auch schon wieder ganz depressiv, dass ich so lange nicht mehr im Bundestag war."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:15",
+      "text": "Wieso, wie lange warst du nicht im Bundestag?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:24:17",
+      "text": "Das ist eine gute Frage, wahrscheinlich nur einen Monat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:19",
+      "text": "Monat? Monat, aha, also bist Stammgast sozusagen, ist deine Stammkneipe.\nWorauf ich hinaus will ist, wir haben das ja hier auch schon berichtet aus der\nFerne, du hattest ja da einen Starauftritt."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:24:36",
+      "text": "Ja, als Elina Eich steht, war ich im Bundestag."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:38",
+      "text": "Und undercover sozusagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:40",
+      "text": "Die Nicks werden echt immer länger."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:24:44",
+      "text": "Also der Nickberater hat mir gesagt, das ist so alles, was an Buchstaben Salat\ngeht im Deutschen deswegen die Nachname."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:50",
+      "text": "Aber immerhin Alliteration ist ja auch was wert."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:24:53",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:54",
+      "text": "Darf man nicht so wie CCC."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:24:56",
+      "text": "Hat extra gekostet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:59",
+      "text": "Ja wie war es denn? Wie hast du dich denn gefühlt? Es war ja glaube ich das\nerste Mal, dass du im Bundestag warst als Sachverständige, wenn ich Untertitel\nim Auftrag des ZDF für funk, 2017."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:25:07",
+      "text": "Das ist richtig, am Anfang bin ich erstmal fast rausgeflogen,\nTabea Rösner eröffnete die Sitzung mit, ich muss mal kurz kontrollieren,\nob Menschen Sticker auf ihren Laptops haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:21",
+      "text": "Politische Willensbekundung oder weshalb?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:25:23",
+      "text": "Ja und ich hab so einen tollen Sticker, den ich mal von einem Freund aus dem\nC4 geschenkt bekommen hab, so politische Aktionen mit Antifa-Flaggen auf meinem\nSticker, Aber irgendwie hat sie es dann elegant ignoriert, ich glaube das war\ndann zu heikel mich rauszuschmeißen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:40",
+      "text": "Der Kubicki, dieser Sporttrinker da von der FDP, googelt mal Bilder von Kubicki,\nder ist die ganze Zeit nur mit Bierglas und so."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:25:56",
+      "text": "Was hast du da? Sekt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:03",
+      "text": "Der hat doch die Martina Renner mal ermahnt oder irgendwie zurecht gewiesen,\nweil sie einen kleinen Antifa-Sticker am Rever hatte.\nAber tatsächlich ist ja politische, also quasi Protest oder sowas ist nicht\ngern gesehen im Bundestag, also wenn du da jetzt nicht Mitglied bist.\nUnd insofern kann ich mir das sogar vorstellen, dass das potenziell problematisch\nwäre. Aber sie hat dann also deine verfassungsstützenden Organe,\nverfassungsstützenden Organisationen hat sie jetzt nicht bemängelt."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:26:37",
+      "text": "Naja ich hab mich auch so ein bisschen gewundert, ich meine gegen Flipkart kann\nich kaum gegen anstinken, ich weiß gar nicht.\nDas ist nicht der Laptop, das hier ist mein Netzpolitik Laptop,\nich hatte einen anderen Laptop mit damals."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:51",
+      "text": "Okay."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:26:52",
+      "text": "Das ist nicht dieser hier."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:54",
+      "text": "Aber okay, du durftest bleiben?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:26:55",
+      "text": "Ich durfte bleiben, ich war ein bisschen irritiert, das war ein kurzer Schockmoment,\nich so okay, Mist, hab ich mir einmal was nicht handschriftlich aufgeschrieben\nund jetzt werde ich aus dem Bundestag geworfen.\nEs war sehr nett, vor der Anhörung kam eine Bundestagsabgeordnete auf mich zu\nund sagte, schön war es wieder, dich in LNP zu hören, aber dass du Gesellschaftsspiele\nnicht magst, das geht gar nicht.\nIch so, okay, das tut mir leid."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:24",
+      "text": "Schönen Gruß an die Bundestagsabgeordnete, die uns hört."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:27:30",
+      "text": "Genau, aber die Anhörung war dann würde ich sagen, was wurde getitelt? 9 zu 0.\nEine historische Anhörung und deswegen war das irgendwie besonders cool da dabei zu sein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:45",
+      "text": "Einmal Klassenkeile so mit neun Leuten draufhauen und hier nochmal eine positive Erfahrung."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:27:52",
+      "text": "Definitiv. Also ich durfte zwischen dem Oberstaatsanwalt und dem BMI-Menschen\nsitzen, das war ein total toller Sitzplatz. Ich hab leider vergessen ihm zum\nGeburtstag zu gratulieren, weil es exakt sein Geburtstag war.\nDas hattest du besser gemacht bei der letzten Anhörung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:09",
+      "text": "Ich hab dem Herrn Köhnen gratuliert, natürlich."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:28:11",
+      "text": "Ja, hättest du mir mal Bescheid sagen sollen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:15",
+      "text": "Ich teile meine Ursinn nicht über die Leute. Aber okay, also eine positive Erfahrung.\nWie war das mit dem, du hattest, es gab ja Fragerunde rechts rum, links rum, oder?\nWelches Spiel haben Sie gespielt?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:28:31",
+      "text": "Ähm, Nachtalphabet, ja. Aber ich war trotzdem ganz vorne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:35",
+      "text": "Niemand mit A, B oder C da? Oder D?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:28:38",
+      "text": "Nee, ich hab angefangen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:39",
+      "text": "Super."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:28:41",
+      "text": "Ich lebe die Alliteration."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:28:43",
+      "text": "Also, dass du angefangen hast, weiß ich ja. Ich wusste nämlich genau wieso,\nweil ich vorher nicht so wirklich hingehört habe.\nAlso positive Erfahrung war es dann dein das Verfassen der Sachverständigenauskunft?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:28:55",
+      "text": "Ob das eine positive Erfahrung war?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:59",
+      "text": "Das Verfassen oder das Abliefern?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:29:02",
+      "text": "Also ich war pünktlich, dafür wurde ich auch dann gleich verurteilt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:29:12",
+      "text": "Tage vorher fertig?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:29:14",
+      "text": "Nein, ich hab's genau an dem Tag an dem es abgegeben worden ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:29:17",
+      "text": "Ja, aber wann war die Anhörung? Die war doch drei Tage später oder vier."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:29:20",
+      "text": "Ja, aber ich wollte halt Urlaub machen zwischen euch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:29:22",
+      "text": "Tja, Profi halt. Kannste mal sehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:29:28",
+      "text": "Wir haben da jahrelang mühselig einen Ruf aufgebaut. Und du kannst jetzt nicht\neinfach anfangen pünktlich Dinge abzugeben."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:29:34",
+      "text": "Und in Bluse auf Chaos-Events rumzulaufen. Ich weiß, das ist eine Frechheit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:29:40",
+      "text": "Lass uns da gar nicht erst mit anfangen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:29:43",
+      "text": "Also ja, ich sag mal die Stellungnahme hat sich ein bisschen von selbst geschrieben,\ndadurch, dass ich seit einem Jahr über nichts anderes reden darf,\naußer die Chat-Kontrolle. Und immer wenn ich versuche abzubiegen,\nsagt irgendjemand, kannst du nicht lieber über die Chatkontrolle reden?\nWar das gar nicht so dramatisch, die hat sich relativ leicht geschrieben.\nDie Fragen, von denen darf man sich ja nicht irritieren lassen,\ndie sind teilweise sehr seltsam und können auch so Stellungnahmen zerstören,\nwenn man sich an sie hält.\nJa und dann habe ich rechtzeitig die Stellungnahme abgegeben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:16",
+      "text": "Wahnsinn. Wie viele Leute sind denn dann so im Raum? Also wenn man da so ist."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:30:21",
+      "text": "Also das haben wir ja gerade nicht gesagt, das war ja der Digitalausschuss,\ndas heißt irgendwie alle Abgeordneten, die im Digitalausschuss sind,\ndie Personen, die angehört werden, gegebenenfalls noch Mitarbeitende und Ulrich\nKelber war noch da und jemand von BSI, ich weiß gerade seinen Namen nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:30:38",
+      "text": "Scharphüser."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:30:39",
+      "text": "Scharphüser, genau. Und dann gibt es natürlich noch eine Gästetribüne oben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:43",
+      "text": "Also so 40, 50 offizieller mal so geschätzt, 30 mehr?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:30:50",
+      "text": "Ich würde eher sagen weniger oder? Ich weiß es gar nicht. Ja 30 vielleicht.\nEs fühlte sich nicht so viel an, muss ich sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:56",
+      "text": "Und Publikum?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:30:59",
+      "text": "Ja, ich habe die Menschen gebeten sich außerhalb meines Sichtfeldes zu setzen, aber..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:04",
+      "text": "Ach du bist da reingegangen, ihr setzt euch ja alle mal um, ich will euch nicht sehen oder was?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:10",
+      "text": "Wenn du wüsstest, wer sie da besucht hat, dann hättest du das auch gemacht."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:31:13",
+      "text": "Ich sehe davon so ein paar Menschen im Publikum.\nIhr wolltet ja nicht kommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:19",
+      "text": "Ich konnte ja nicht kommen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:31:20",
+      "text": "Ja, das nenne ich mal Unterstützung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:27",
+      "text": "Wir haben gemütlich im Podcast gesessen und irgendwie Fahnen geweht und alles."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:32",
+      "text": "Gab's denn Szenenapplaus oder so? Nein, darf man nicht."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:31:35",
+      "text": "Darf man nicht. Also mein halbes Kollegium war netterweise da,\nden hab ich dann vorher gesagt, dass sie nicht klatschen und jubeln dürfen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:42",
+      "text": "Und die haben sich dann gehalten?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:31:44",
+      "text": "Natürlich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:45",
+      "text": "Und du hast pünktlich abgegeben?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:31:46",
+      "text": "Ich habe pünktlich abgeben und mein Eingangsstatement war eine Minute zu kurz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:52",
+      "text": "Ist das von Vorteil?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:31:55",
+      "text": "Weiß ich nicht, das muss Lino sagen, der ist der Experte. Ich hatte das vorher\nzu Hause geübt und das war zwei Minuten länger als die Zeit,\ndeswegen dachte ich, das ist ja kein Problem."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:04",
+      "text": "Aber wenn du ein Schnellling gekriegt hast? Schade um die extra Minute."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:07",
+      "text": "Die eigentliche Frage ist ja, bewirkt es irgendwas?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:11",
+      "text": "Das wollte ich nämlich sagen, die richtige Antwort wäre gewesen,\nwar nett, aber der schale Beigeschmack, dass nichts von dem was du da sagst,\nirgendwo in Betracht gezogen wird, der kommt dann immer erst sehr viel später."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:32:22",
+      "text": "Naja das war mir glaube ich von vornherein klar, also es war so ein bisschen\nChatkontrolle Theater und alle haben nochmal ihr politisches Statement gemacht.\nUnd so wirklich ins Gewicht fallen tut das jetzt nicht.\nDa muss man leider die Menschen enttäuschen, die gedacht haben,\nboah, geil, richtig gute Anhörung im Digitalausschuss, jetzt ist das mit der\nChatkontrolle gegessen.\nDem ist halt leider nicht so, das interessiert die Beteiligten,\ndie dann wirklich an der Entscheidung mitwirken, herzlich wenig."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:56",
+      "text": "Deswegen bist du dann nach New York zur UN."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:32:59",
+      "text": "Genau, weil da hören die Leute einem ja bekanntlich besser zu."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:02",
+      "text": "Reichen mir jetzt hier mit euch Amateuren, wie bist du da hingekommen?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:33:09",
+      "text": "Tatsächlich durch eine gute Freundin, die in die Regierungsdelegation berufen\nwurde, also vielleicht nochmal von vorne.\nIch war in den ersten beiden Märzwochen bei der UN in New York,\nin den Headquarters sozusagen, bei der Commission of the Status of Women.\nDas ist ein UN-Body, der der ECOSOC untergeordnet ist,\ndas ist das Gremium für Economic and Social Stuff sozusagen, und die treffen sich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:48",
+      "text": "Staff, Economic and Social Council glaube ich."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:33:50",
+      "text": "Ja genau, aber ich habe ja das Body gesagt und Council, das hätte nicht mehr so gut gepasst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:55",
+      "text": "Sozialgraben, sagen wir es wie es ist."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:33:57",
+      "text": "Ja genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:59",
+      "text": "Sozialgraben, Ökograben und Sozialgraben."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:34:01",
+      "text": "Naja Öko ist es ja nicht so ganz, aber egal."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:03",
+      "text": "Ich sage ja Eco, Economic, Ökonomie."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:34:07",
+      "text": "Naja, auf jeden Fall, das war die 67. Sitzung dieser Commission,\ndie findet jedes Jahr statt.\nUnd da geht es um den Status of Women, also Gender Equality Themen.\nUnd dieses Mal war das über Thema Tech and Innovation and Gender Inequalities.\nUnd dann ist es auf Tech and Innovation and Gender Inequalities."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:38",
+      "text": "Ja gut, aber das ist jetzt ein bisschen, wie soll ich sagen, allgemein formuliert."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:42",
+      "text": "Ja deswegen waren wir auch 14 Tage in New York, um rauszufinden,\nwas das bedeutet. Das wird Khaleesi uns ja jetzt erzählen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:34:49",
+      "text": "Naja, also ich kann ja sagen, was wir dachten, worum es gehen wird und dann\nkann ich euch sagen, worum es wirklich ging."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:54",
+      "text": "Was dachtest du?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:34:55",
+      "text": "Also wir dachten, ja cool, also erstmal war ja die Frage, wie ich da überhaupt\nhingekommen bin. Also eine gute Freundin von mir ist in der Regierungsdelegation\ngewesen und dann ist irgendwie aufgefallen, dass da nicht so sonderlich viele\nDigitalos rumrennen, sondern halt mehr so Frauenrechtlerinnen.\nIst natürlich doof, wenn es um Technologie und Innovation gehen soll.\nUnd dann wurde ich entsprechend vorgeschlagen und der Deutsche Frauenrat hat mich dann mitgenommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:21",
+      "text": "Der Deutsche Frauenrat? Was ist denn der Deutsche Frauenrat?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:35:25",
+      "text": "Das ist auch ein...\nJa, der Deutsche Frauenrat ist der Deutsche Frauenrat. Für Frauenkram."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:35",
+      "text": "So wie Öko-Kram und Sozial-Kram."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:39",
+      "text": "Von wem ist der Deutsche Frauenrat?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:35:40",
+      "text": "Richtig gute Programmierung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:42",
+      "text": "Das war ein Witz, muss man auch drüber lachen können."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:35:46",
+      "text": "Von wem ist der Deutsche Frauenrat? Ist der ein eingetragener Verein?\nOder ist das ein Teil der..."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:35:52",
+      "text": "Also ich habe mich nicht mit dem Deutschen Frauenrat beschäftigt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:54",
+      "text": "Ah, okay."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:35:54",
+      "text": "Also ich habe das Ticket von denen bekommen und dann habe ich gesagt, danke."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:05",
+      "text": "New York, New York."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:36:06",
+      "text": "Ne, bezahlt wird das ja nicht, ne? Also das muss man dazu sagen.\nDas Funding muss ich mir noch selber suchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:10",
+      "text": "Der Deutsche Frauenrat, der Deutsche Frauenrat, Lobby der Frauen in der Deutschen\nEV ist ein deutscher Dachverband mit Sitz in Berlin. Vereinigung von bündesweit\nrund 60 Organisationen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:36:18",
+      "text": "Genau, du weißt Bescheid."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:20",
+      "text": "Ich lese Wikipedia, nur dass wir das jetzt auch mal gesagt haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:23",
+      "text": "Wikipedia? Hast du nicht Chat-GPT gefragt?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:26",
+      "text": "Nee, soll ich Chat-GPT fragen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:29",
+      "text": "Wäre wahrscheinlich nicht die richtige Antwort. Gut, jetzt bist du dahin.\nDu dachtest, es geht um Innovationen?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:36:37",
+      "text": "Nein, also das Oberthema war Technologie und Innovation und Gender Inequalities.\nUnd das ist ja auch irgendwie ein Thema, was der EU am Herzen liegt.\nund ich dachte ja cool, dann kann man mal so auf der Meta-EU-Ebene darüber sprechen,\nwas es denn für systematische Probleme gibt und wie die im Zusammenhang mit Technologie stehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:58",
+      "text": "Die diese Probleme benennen, dass man so ein besseres Bild davon bekommt.\nNaja, also ist ja jetzt nicht, also beispielsweise, ich könnte mir vorstellen,\ndass die geringe Rate an Frauen in derartigen Berufen..."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:37:13",
+      "text": "Genau, aber also ja, das ist tatsächlich ein Thema gewesen,\nda vielleicht gleich nochmal zu, aber ich glaube, dass das, also das was ich\nmit systematischen Problemen meine, und das ist dann das Narrativ,\nauf das man da immer stößt, Die tun immer so, als wenn das Internet daran schuld\nist, dass es diese Ungleichheiten gibt.\nAlso es ist so, wenn wir das Internet irgendwie dicht machen oder todregulieren,\ndann haben wir auch keine Genderungerechtigkeiten mehr."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:39",
+      "text": "Das ist ein interessanter Ansatz.\nIch bin mir nicht so sicher, ob der weit trägt."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:37:48",
+      "text": "Genau, der trägt nicht besonders weit. Möchtest du noch mehr Alkohol?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:54",
+      "text": "Das Wasser vom Tim."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:37:55",
+      "text": "Okay, den Rest aber bitte auf Ex, ja. Genau, der trägt nicht besonders weit,\ngenau, aber darum hätte es ja gehen können, dass man so sagt,\nman guckt so, wie die Verbindungen sind.\nWorum es tatsächlich gegangen ist, das hast du ja ganz richtig gesagt,\nist so ein bisschen der Glaube, man könnte einfach dafür sorgen,\ndass es mehr, das ist ein Thema, was wir schon irgendwie seit zehn Jahren behandelt\nhaben. Ich glaube, seitdem ich Informatik studiere, hat sich,\nAlso hat sich das Narrativ nicht geändert und die Situation leider auch nicht.\nDass wenn wir nur mehr Frauen in Technikberufen haben, dann hätten wir auch\nviel weniger Probleme mit Technik.\nUnd wir müssen einfach nur dafür sorgen, dass wir mehr Frauen haben,\ndie programmieren und dann wird alles gut."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:37",
+      "text": "Vielleicht nicht alles, aber zumindest mal ein Teil."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:38:40",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:41",
+      "text": "Okay und jetzt kommst du da an und sagst, du dachtest über diese Themen würdest\ndu sprechen, aber sie haben über andere sprechen wollen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:38:51",
+      "text": "Ja, also ich glaube mein Highlight war, der Secretary General sagte in irgendeinem\nVortrag, dass Algorithmen ja so diskriminierend seien wegen der AI.\nUnd das Problem ist, die meisten Personen, die da so rumlaufen,\nkennen den Unterschied zwischen Internet und Plattform nicht.\nDas heißt, das wird irgendwie alles zusammengeschmissen.\nAlgorithmen ist allgemein ein Ausdruck für jegliche Form von Software."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:23",
+      "text": "Von Böse, ja."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:39:23",
+      "text": "Ne, von Software. Also Algorithms hier, Algorithms da und die Algorithmen sind an allem schuld.\nUnd das ist auch so ein ganz, also man denkt ja, man fährt da ja hin und denkt\nso, ich bin jetzt hier eingeladen, um nach New York zu fliegen,\ndann werde ich ja noch irgendeinen gewissen Impact haben. Vielleicht ein bisschen\nmehr als im Digitalausschuss drüber.\nWeit gefehlt. Das Prinzip ist, jedes Land hat Verhandelnde da sitzen,\ndie hinter verschlossenen Türen ihre Willensbekundungen verhandeln für diese\nCommission of Women, die da am Ende rauskommt.\nUnd die Zivilgesellschaft hat so nette Parallel-Events, wo sie über Themen,\ndie das betreffen, diskutieren können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:07",
+      "text": "Ohne Einfluss zu nehmen auf das Verhandeln."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:09",
+      "text": "Damit sie nicht stören. Kriegen sie so ein Schnittchen irgendwie so."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:40:12",
+      "text": "Nee, Schnittchen gibt's nicht. Also es gibt ein Offizier."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:15",
+      "text": "Nicht mal Schnittchen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:16",
+      "text": "Was für Leute, bist denn da gelandet?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:40:18",
+      "text": "Ja, New York ist teuer."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:20",
+      "text": "Okay, aber da kann man ja Schnittchen..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:22",
+      "text": "Im Bundestag."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:40:24",
+      "text": "Ja, aber das hat die Zivilgesellschaft organisiert.\nEs gibt mehrere Tracks in diesem Programm, ein offizielles, wo dann auch alle\nLänder ihre Statements vorlesen.\nUnd dann gibt es außerhalb von dem UN-Gebäude, das heißt das UN Church Center.\nWirklich kein Witz, am Anfang dachte ich, als ich mir das Programm anguckt habe,\nChurch Center, okay zu diesen komischen\nchristlichen fundamentalistischen Veranstaltungen gehe ich nicht.\nTurns out, da waren alle zivilgesellschaftlichen Veranstaltungen.\nUnd das ist so ein Gebäude so ein bisschen außerhalb von der GA,\nwo man auch ohne Badge, also man kriegt halt so ein Badge, wo man sich so einscannen\nmuss, das ist auch übrigens ein System, was der CCC schon gehackt hat.\nUnd dann kommt man halt in dieses Hauptgebäude und auch in die GA,\nalso in diese General Assembly, das ist so dieser große Saal mit irgendwie so\neinem Marmor Ding und dann ist da so das United Nations Logo drauf,\nalso das ist schon sehr beeindruckend. Also das ist der UN-Saal?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:31",
+      "text": "Der UN-Saal, genau."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:41:35",
+      "text": "Da sitzt man dann drin und hört sich was an über AI und Algorithmen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:39",
+      "text": "Und das ist dann auf dem Niveau, was du gerade so angedeutet hast?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:41:42",
+      "text": "Das war tatsächlich, ich saß in diesem Saal und..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:45",
+      "text": "Wie viele Leute passen da rein, wäre das was für ein Kongress?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:41:48",
+      "text": "Ja, aber die Organisation war weitaus schlechter als beim Kongress.\nAlso ich hab drei Stunden für mein Batch angestanden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:54",
+      "text": "Pff, Altenfänger."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:58",
+      "text": "Da können wir denen helfen.\nTim, das ist aber wirklich ein schöner Raum hier."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:42:06",
+      "text": "Kannst du das anwerfen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:07",
+      "text": "Ne, das müssen die da oben machen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:09",
+      "text": "Hier, das ist dieser Raum, Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:12",
+      "text": "Ich hab das schon mal gesehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:13",
+      "text": "Da würdest du auch nochmal eine Eröffnung für den Kongress machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:16",
+      "text": "Auf jeden Fall."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:42:16",
+      "text": "Da könnten wir auch zu dritt gut sitzen, glaube ich, da oben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:19",
+      "text": "Achso, für Podcasts, das wäre mal was."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:42:21",
+      "text": "Vielleicht so zur nächsten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:23",
+      "text": "In dem Raum hast du gesessen und da hat jemand dann irgendwie mehr oder weniger\nVerschwörungstheorien über AI verbreitet."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:42:31",
+      "text": "Ich weiß nicht, ob das Verschwörungstheorien waren. Ich glaube,\ndas ist einfach Unwissenheit an einigen Stellen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:38",
+      "text": "Schon klar. Und wer war das?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:42:42",
+      "text": "Guterres heißt der?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:43",
+      "text": "Guterres, ja. Der ist der Generalsekretär."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:42:45",
+      "text": "Oder der Chief Feminist der UN, wie auch auf diesem Event gerne gesagt wurde.\nAm Frauentag haben sie auch alle Männer aufstehen lassen und wir mussten klatschen\ndafür, dass die uns so toll helfen mit der Gleichberechtigung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:58",
+      "text": "Nein, das ist nicht dein Ernst."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:43:03",
+      "text": "Und dann müsst ihr euch vorstellen, steht da so ein Typ und das war ungefähr\nso voll mit Frauen wie hier, nimmt sein Handy und filmt so alle Frauen, die klatschen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:13",
+      "text": "Nein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:16",
+      "text": "Das ist nicht dein Ernst?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:43:18",
+      "text": "Doch. Und wir waren alle so, okay, cool, I guess."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:26",
+      "text": "Das ist Fremdschämen auf internationalem Level."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:43:31",
+      "text": "Nun ja, genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:35",
+      "text": "Wo waren wir?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:43:36",
+      "text": "Wo waren wir stehen geblieben?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:38",
+      "text": "Und wer hat euch da zum Klatschen aufgefordert? Antonio Guterres."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:43:41",
+      "text": "Die Moderatorin, die den Frauentag angeleitet hat.\nAber das ist ungefähr so der Stand der Dinge bei der UN.\nIch weiß gar nicht, was ich dazu noch sagen soll."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:02",
+      "text": "Eine Veranstaltung ohne Wirkung, ohne Ergebnis."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:44:04",
+      "text": "Genau, da muss man halt auch nochmal wieder sagen, liebe deutsche Bundesregierung,\nwenn ihr doch Leute dahin schickt zum Verhandeln,\ndann fragt euch eure zivilgesellschaftlichen Expertinnen vorher.\nAlso man kann ja vorher Feedback einholen. Das ist natürlich nicht passiert.\nEs gab dann so drei Briefings, wo sie uns dann erzählt haben,\nwas sie gerade verhandelt haben. Und dann war es das auch wieder."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:24",
+      "text": "Was haben sie so verhandelt?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:44:26",
+      "text": "Das ist noch nicht zu Ende fertig. Aber in der Regel, also es gibt halt am Anfang\nso ein Zero Draft, wo so ein grober Plan steht, was da drinsteht.\nSondern dann wird tatsächlich sehr viel über Wortlaute verhandelt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:39",
+      "text": "Das machen wir hier eigentlich auch immer."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:44:41",
+      "text": "Vielleicht sollten wir die Bundesregierung darauf bringen, dass sie mehr über\nWortlaute verhandelt und weniger über Digitalisierung. Vielleicht würde das\nweniger Schaden anrichten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:50",
+      "text": "Gibt es irgendwelche neuen schädlichen Initiativen, die wir zu befürchten haben,\ndie sich in diesem Kontext..."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:44:57",
+      "text": "Ja. Ich bin da ja auch so ein bisschen hingefahren,\nweil ich gedacht habe, so perspektivisch, die Zwergkontrolle ist ja bald vorbei,\ndann bin ich ja arbeitslos, dann habe ich ja wieder Freizeit und das wäre ja irgendwie ungünstig.\nWeiß ich gar nicht, was ich da machen soll.\nUnd ein großes Thema, ich habe es gestern auch ganz kurz in meinem Talk angerissen,\nwar der Global Digital Compact. kompakt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:24",
+      "text": "Kompakt? was ist denn kompakt? Kompakt, das Internet kompakt.\nIst das eine Abkürzung, kompakt?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:45:36",
+      "text": "Nee, das heißt wirklich so, das ist eine UN-Bezeichnung, das heißt,\nbei der UN ist das immer super spannend, man denkt immer da passieren voll wichtige\nSachen und voll viele Sachen sind halt nur so Willensbekundungen,\ndie nicht rechtlich bindend sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:47",
+      "text": "Ja klar."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:45:48",
+      "text": "Also da haben die sich mal auf irgendwas geeinigt, das ist dann irgendwie so\neine Leitplanke, kann man sich dran halten, muss man aber nicht.\nUnd der liebe Guterres hat, ja ich weiß gar nicht wie das Programm heißt,\naber er hat halt gesagt, naja wir haben ja irgendwie so ein Problem mit diesem\nInternet, also das ist ja alles auch echt gefährlich und explosiv und auch relevant\nfür Außenpolitik, wir müssen da mal was machen.\nWir müssen mal irgendwie eine globale Willensbekundung zur Digitalisierung haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:22",
+      "text": "Ein Kompakt, ein Abkommen. Ja, wie ich gerade festgestellt habe,\nman lernt ja nie aus, aber das heißt tatsächlich im politischen Bereich Abkommen. Guck an, kompakt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:33",
+      "text": "Okay, und jetzt, was wollen, Sie wollen ein globales, digitales Abkommen? Bauen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:46:42",
+      "text": "Also, es gibt so zwei Richtungen, wie das gehen kann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:44",
+      "text": "Und was wollen Sie da, welche Probleme meinen Sie dann zu lösen?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:46:49",
+      "text": "Alle, nein, also es gibt ja so,\nes gibt ja eigentlich, also wissen wir alle, Internetregulierung hat Hochkonjunktur,\nirgendwie jedes Land baut irgendwie, bau dir deine eigene Internetregulierung\nund wie die Briten sagen würden, we will make Great Britain the safest country in the Internet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:11",
+      "text": "Make Great Britain Great Again, ja."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:47:14",
+      "text": "Das haben die so tatsächlich bei der UN gesagt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:21",
+      "text": "Das ist auch echt durch, ey, das Land.\nSo was von."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:47:30",
+      "text": "Auf jeden Fall wollen sie sozusagen diesem Negativ-Trend,\nso Internetfragmentierung und solchen Geschichten entgegenwirken,\naber halt auch so grundlegende Probleme, wie zum Beispiel Gender-Based-Violence ansprechen.\nWas da aber wirklich hinter steht und ich glaube, das ist das,\nwas man wissen sollte, die möchten eigentlich ganz gerne an das Multistakeholder-Modell\nvon Internetstandardisierung ran."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:01",
+      "text": "Und sie wollen dann diejenigen sein, die die Standards schreiben, oder?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:48:04",
+      "text": "Genau, die wollen das dann genauso wie bei der Konferenz, wo ich war,\nso hinter verschlossenen Türen gerne selber ausdiskutieren. Tolle Idee.\nUnd der Prozess ist auch super interessant.\nWir versuchen uns da gerade so ein bisschen reinzuhacken. Also ohne Hacken kommt man da nicht weit.\nEs gibt jetzt Konsultationen, die bis zum 30. April eingesammelt werden und\nes ist wahrscheinlich so wie die Konsultation von der EU-Kommission.\nVielen Dank, schöne Konsultation haben Sie da und tschüss, haben wir euch ja\ngefragt, aber jetzt machen wir trotzdem, was wir wollen.\nDas heißt, das wird jetzt nochmal spannend, wie es da weitergeht und sehr viele Menschen,\ndie sich auch mit Internetstandardisierung beschäftigen, sind doch ein bisschen besorgt,\ndass die UN irgendwie versucht, da dieses Multi-Stakeholder-Modell gegebenenfalls\nkaputt zu machen, weil so Akteurinnen wie Russland und China haben natürlich\nnicht so viel Interesse daran, dass die Nerds das weiter betreiben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:06",
+      "text": "Um nichts zu sagen, gar keins."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:49:08",
+      "text": "Das wollte ich jetzt so nicht sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:11",
+      "text": "Naja, das kann man zwischen den Zeilen schon rauslesen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:49:14",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:14",
+      "text": "Ja, auf jeden Fall."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:49:16",
+      "text": "Okay, aber sonst, hast du wenigstens noch irgendwie Spaß in New York gehabt?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:49:18",
+      "text": "Ja, also..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:49:21",
+      "text": "Ich kann jetzt nicht so überzeugend ehrlich gesagt."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:49:24",
+      "text": "Also, ja, also New York ist auf jeden Fall eine sehr, sehr coole Stadt.\nIch habe tatsächlich wirklich sehr viel Zeit in der UN und in solchen Sachen\nverbracht und auch versucht das so rauszufinden und hab versucht mit dem Zeitunterschied\nirgendwie Europa-Stadtkontrolle-Arbeit zu machen.\nAber ja, New York ist schon nett, wohnen wollen würde ich da nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:49:46",
+      "text": "Bisschen anstrengend, ja."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:49:48",
+      "text": "Es ist sehr laut, das fand ich wirklich krass. Also ich bin in Berlin angekommen\nund hab gedacht krass, also so wie wenn man aus der Stadt in den Wald geht so\nungefähr war das Gefühl."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:03",
+      "text": "Naja, so also mit anderen Worten, die UN ist auch bewegt vom KI Thema."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:50:09",
+      "text": "Ja natürlich, weil das ist ja der Grund warum Algorithmen so diskriminierend sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:17",
+      "text": "Ja also überhaupt künstliche Intelligenz, der Begriff schon,\nalso das ist ja irgendwie das Thema gerade, hat man so den Eindruck?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:26",
+      "text": "Hat man den Eindruck."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:27",
+      "text": "Hat man den Eindruck, ist halt einfach mal so das Thema, außer hier vielleicht,\noder? Ja, man sieht ja schon, CCC setzt noch auf richtige Intelligenz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:36",
+      "text": "Echt? Genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:41",
+      "text": "Aber es ist natürlich absehbar, spürbar schon, dass jetzt auch hier so eine\nMultilevel-Debatte losgegangen ist.\nWo wird das alles hinführen? Wir werden alle sterben auf der einen Seite."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:51:01",
+      "text": "Vorher noch arbeitslos."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:51:03",
+      "text": "Das ist ja fast wie sterben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:05",
+      "text": "Wir verlieren alle unsere Jobs, aber natürlich auch immer an die FDP denken,\ndie große Chance für die Zukunft."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:51:16",
+      "text": "Jeder kann es schaffen, auch die KI."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:18",
+      "text": "Ja, also mit KI wird alles toller und das Ganze ist jetzt durchweigt von den\nmerkwürdigsten Kommentaren,\ndie auch aus den merkwürdigsten Ecken kommen.\nSogar Elon Musk fängt jetzt an davor zu warnen, selbst einer der Hauptinvestoren\nund Betreiber dieser Systeme.\nUnd ja, weiß nicht, wäre vielleicht mal ganz gut, hier mal so ein bisschen unsere\neigene Perspektive durch den Kopf rollen zu lassen.\nWas ja glaube ich jetzt offensichtlich ist und klar ist, ist,\ndass wir jetzt so einen Punkt erreicht haben, wo so, also jeder hat jetzt so\nein bisschen so seinen Chat-GPT-Moment gehabt, vielleicht war es auch vorher\nschon das Ding mit den Bildern und so weiter.\nAlso man merkt so, okay, alles klar, wir durchleben jetzt in diesem Jahr und\nim letzten Jahr natürlich auch schon so ein bisschen, Je nachdem,\nworan man es jetzt genau festmachen möchte, so die nächste.\nRevolution, eine spürbare Umwälzung, eine Veränderung der Kräfteverhältnisse,\nwo bestimmte Technologien einen Einfluss haben.\nwo es gefühlt auf so ziemlich alles einen Einfluss hat.\nSowohl Medien, für die Softwareentwicklung, für das Softwaredesign hat es einen\ngroßen Einfluss und vor allem gewinnt man das Gefühl,\ndass es so viel Einfluss an so vielen Stellen gerade versucht zu entwickeln,\ndass das für viele jetzt auch so ein Bedrohungsszenario ist.\ndas nächste große Bedrohungsszenario.\nDa ist vielleicht auch was dran. Kann man ja nicht komplett von der Hand weisen,\ndass jetzt auf einmal so Sachen, ich meine, blättern wir mal so ein bisschen zurück.\nIst ja immer so ein bisschen schwierig in die Zukunft zu gucken.\nSpäter kommt einem das immer alles so vollkommen selbstverständlich vor.\nAber ich war mir, sagen wir mal zum Beispiel vor zehn Jahren auch schon so sicher,\nWir werden irgendwann an diesem Punkt kommen, wo der Google selbstverständlich\nauch alle Podcasts sich transkribiert bekommt.\nDass das irgendwann mal passieren wird, war mir irgendwie klar.\nIch hätte jetzt aber keine Hausnummer dran machen können und ich hätte auch\nnicht genau sagen können, welche Technologie das Ganze ermöglichen wird.\nAber ich bin einfach davon ausgegangen, dass auch wenn man vor 15 Jahren so\neinen Podcast gesprochen hat, dass es dann irgendwann auch in der Suchmaschine auftaucht.\nSelbst wenn ich das selber nicht transkribiert habe. Also eine gewisse Erwartungshaltung,\nwas irgendwann mal vielleicht so passieren könnte, denke ich,\nhaben wir dann irgendwie alle.\nUnd jetzt ist es aber so, dass nicht nur das jetzt ermöglicht wird,\nund auf der anderen Seite, dieses Erzeugen von Bildern hätte ich mir so nicht\nvorstellen können. Ganz ehrlich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:54:16",
+      "text": "Also deswegen finde ich eigentlich auch, zu sagen, dass es jetzt gerade eine\nRevolution ist, glaube ich nicht falsch.\nGanz einfach, weil es wenige Wochen bevor man so diese ersten Mid-Journey und\nStable Diffusion und sonst was Dinge gesehen hat,\ndass es im Prinzip, wenn man sich nicht vorstellen konnte, dass das in dieser\nQualität zeitnah möglich sein würde.\nUnd das heißt, es hat keine Evolution stattgefunden oder Disruption nennt man das dann.\nUnd das gleiche bei den Large Language Models, was ja eine komplett andere Technologie\nist, oder eine komplett andere Anwendung dieser Technologie ist,\ndie wir gerne zusammenwerfen.\nWir haben dieses Bilder generieren, das ist im Prinzip,\nman kann der KI etwas sagen und sie malt was Schönes, oder dieses Large Language Models,\nwo man Dinge fragen kann, mit ihr interagieren kann, schon etwas andere Dinge,\ndie diese KIs gelernt haben, sind unterschiedliche neuronale Modelle für unterschiedliche\nArten von Input, Output.\nAber beides war in dem Ausmaß, denke ich, bevor es veröffentlicht wurde und\nnoch nicht so vorstellbar, dass das jetzt schon jemand so hätte.\nUnd deswegen würde ich sagen, ist auf jeden Fall revolutionär oder disruptiv.\nHat glaube ich zur Folge, dass wir, also selbst wenn wir evolutionär dahin gekommen\nwären, hätten wir ja nicht die gesellschaftliche Hoheit darüber gewinnen können,\nweil wir viel zu langsam sind.\nUnd jetzt stehen wir quasi vor so einem Moment, dass es diese Technologie gibt,\ndie wir als Gesellschaft in keiner Form darauf vorbereitet sind.\nWir wissen, dass sie wahrscheinlich sehr große Chancen hat, diese Technologie.\nWir erkennen aber natürlich auch ein paar Risiken. Man muss jetzt irgendwie\nüberlegen, wie gehen wir jetzt mit diesen gesellschaftlichen Veränderungen Untertitel\nim Auftrag des ZDF für funk, 2017.\nLetzte Woche war ich bei Markus Lanz zu dem Thema, wo es im Prinzip um Fake News ging.\nAlso man kann jetzt diese wunderschönen Bilder, Donald Trump wehrt sich gegen\ndie Verhaftung on 5th Avenue oder sowas, wunderschöne Bilder.\nDer Papst mit diesem traumhaften Mantel, da sind spitzen Ideen entstanden.\nUnd wir werden jetzt relativ bald in einer Welt sein, in der sowas nicht mehr\neinfach zu erkennen ist und in der gleichzeitig auch echte Bilder diskreditiert\nwerden können, als ist von einer KI gefälscht worden.\nDas heißt wir werden Probleme bekommen mit dem was wir belegen können noch.\nWas wir belegen können oder was vielleicht unglaubhaft gemacht wird."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "0:57:08",
+      "text": "Ja und wir haben ja auch noch dieses ganze Thema Instagram Filter,\ndie dann natürlich auch noch da mit rein spielen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:14",
+      "text": "Dann gibt's ja die Instagram Filter, wo man sich dann auch, wo Menschen sich\nselber irgendwie in die Echtstörungen fotografieren.\nDann gibt es den zweiten Teil Computerentscheidungen, die jetzt irgendwie gesellschaftliche\nUngleichheiten weiter verstärken.\nDa wissen wir jetzt schon mal zumindest von Khaleesi, dass Antonio Guterres\ndas nicht verstanden hat, wie da die Zusammenhänge sind, dass die Ungleichheiten\nzuerst da waren und jetzt verstärkt werden.\nUnd dann haben wir noch diesen ganzen Bereich Large Language Models,\nwo wir irgendwie mit den Computern sprechen können und die im Brustton der Überzeugung\nentweder echt kluge Dinge sagen oder ziemlich beknackte Dinge und wir aber auch\nden Unterschied noch nicht feststellen können.\nUnd ich glaube, da werden schon ein paar gesellschaftliche Grundwerte oder Grundannahmen\nsehr auf die Probe gestellt.\nDie Frage ist, wie gehen wir jetzt damit um?\nUnd das, was ich voraussagen würde für die nächsten Jahre, ist,\nnatürlich gehen wir damit auf die dümmstmögliche und destruktivste Weise um.\nSo dass wir jetzt entweder das Kind mit dem Bart ausgießen oder irgendwie sehenden\nAuges in irgendwelche echt unschönen Phänomene uns begeben.\nIch glaube auch, dass wir es am Ende, also es wird noch nicht so bald dazu kommen,\ndass die KI den Planeten übernimmt und die Menschheit zerstört,\nobwohl es das Richtige wäre.\nAber das wird noch ein bisschen dauern.\nAlso auf dem Weg wird's jetzt echt mal ein bisschen unangenehm,\nwürde ich sagen. Für eine Zeit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:53",
+      "text": "Also es wird auf jeden Fall jetzt auch erstmal noch sehr unterhaltsam.\nAlso ich meine jetzt haben wir ja noch die Phase wo alles irgendwie auch noch super neu ist.\nIch meine machen wir uns mal klar was auf einmal so geht. Also nochmal so ein\nBeispiel, wo ich auch wirklich beeindruckt war. Also Chatty Pitty so,\nokay, so man sitzt da so das erste Mal davor, okay, oh okay,\nist ja interessant und so was.\nLiest man schon so, andere Leute haben so total komplexe Sachen eingegeben.\nOkay, wie weit geht denn jetzt hier irgendwie das Rabbit Hole?\nErzählt dann irgendwie so eine komplette Geschichte und merkt so,\nokay, wow, Chief Summarizer in Chief, der so das ganze Internet gelesen hat\nund der jetzt irgendwie alles zusammenfassen kann.\nUnd da war ich dann schon so beeindruckt. Und dann hab ich irgendwann gemerkt\nso, oh fuck, ich kann jetzt irgendwie mitten in dem Dialog die Sprache wechseln\nUnd es ist immer noch dasselbe Gespräch.\nOder ich frag auf Deutsch und er notiert mir oben schon die Zusammenfassung\nso als Kurztitel dann einfach auf Englisch.\nWeil es irgendwie völlig egal ist, in welcher Sprache du mit diesem System redest.\nUnd das ist ja der Urtraum eigentlich der künstlichen Intelligenz,\nwo der Begriff ja herkommt, ist ja von Linguisten, die irgendwie der Meinung\nwaren, Intelligenz kannst du daran festmachen, dass menschliche Sprache verstanden wird.\nMit dem Verstehen ist das natürlich jetzt so ein Ding.\nWeil man wird ja nicht wirklich verstanden.\nIch denke das haben es viele wahrscheinlich auch schon gemerkt.\nAlso ich hab so in meinen Experimenten, klar man ist immer so beeindruckt und\ndenkt sich so, ah ok super.\nUnd wo es halt wirklich rockt ist halt so auf Ideen kommen, schlag mir mal was\nvor, was gibt's denn so und so.\nAlso wenn man da so einfach mal breit ausfächern möchte, verschiedene Ideen\nbekommen möchte, wo man so selber drüber nachdenken kann, dafür ist es einfach perfekt.\nAber in dem Moment, wo du anfängst wirklich dran zu glauben und denkst,\ndu kriegst jetzt irgendwie Fakten geliefert, da wird's dann halt schwierig.\nUnd was ich ganz interessant fand ist, wir alle wissen ja, was so das Problem\nmit Google ist und all diesen ganzen werbefinanzierten Dingen.\nAm Ende wollen sie dir irgendwie immer die Werbung reinschieben,\nweil das ist ja das, was das Geld bringt.\nDer eigentliche Incentive ist in irgendeiner Form was zu generieren,\nwas dich dazu bringt etwas zu klicken, was denen dann Geld bringt,\ndie dir diese Informationen bereitstellen.\nJetzt hast du auf einmal so eine Suchmaschine, die eigentlich überhaupt gar\nkeine Werbung einblendet, also zumindest noch nicht oder wahrscheinlich nicht.\nWas weiß ich, was in diesen Entscheidungsprozess alles mit reingeht,\naber ich hab dann so das Gefühl, dass es so ein bisschen so...\nWie sag ich das jetzt richtig? Also ihr habt ja sicherlich schon mal so Leute\ngetroffen, die sehr von sich überzeugt sind."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:01:40",
+      "text": "Ja, dich zum Beispiel."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:41",
+      "text": "Also mich zum Beispiel. Einen kenn ich."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:01:43",
+      "text": "Also ich glaub sogar zwei, wenn ich so mich umgucke."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:46",
+      "text": "Was? Als wir jung waren.\nAls wir jung waren. Und da ist man ja so ein Heißsporn und dann steckt man so\nvoll in seinem Thema drin und dann kommt irgendjemand und fragt einen auch noch\ndazu aus, dann kann man so voll Auskunft geben.\nTotal im Thema und so und dann drifte so die ganze Thematik in so Bereiche rein,\nwo man eigentlich gar nicht mehr so viel geplant hat.\nAber man ist immer noch total überzeugend und dann fängt man auch irgendwann\nan, einfach Quatsch zu erzählen.\nMit derselben Werbe, einfach weil man es nicht ertragen kann,\ndann nicht mehr auf dieselbe Art und Weise angenommen zu werden.\nUnd ich glaube, so ist es dann auch so ein bisschen mit diesem KI-System.\nWeil deren einziger Auftrag ist, dir in irgendeiner Form eine Antwort liefern\nzu können. Und sie tun das sogar, wenn sie es eigentlich nicht mehr können.\nDas heißt dann fangen sie ja irgendwann an zu lügen, weil es einfach nicht mehr anders geht."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:02:41",
+      "text": "Und sie behaupten ja dann auch, dass sie nicht gelogen haben,\ndas ist ja auch immer noch sehr interessant."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:45",
+      "text": "Ja, oder man erzählt einem irgendwas richtiges und dann sagt man so,\nja aber du weißt aber auch, dass das nicht so ist. Ja das tut mir jetzt wirklich furchtbar leid.\nDas ist natürlich ganz anders, ne. Kommt dann total durcheinander und dann ist\nes einfach nur noch wirklich Unsinn.\nAlso da ist dann wirklich mal wieder so Medienkompetenz gefragt,\nnur mal ehrlich, was habt ihr da für Hoffnung? Mann, schau dir mal an,\nwas die Leute in den letzten 2-3 Jahren für eine Scheiße geglaubt haben."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:03:10",
+      "text": "Ich glaube, also..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:11",
+      "text": "Ganz ohne Kaiki."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:12",
+      "text": "Und dann sollen die irgendwie in so einem Ding irgendwie noch klarkommen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:03:15",
+      "text": "Also ich glaube, es gibt da so zwei Probleme. Weil du hast ja jetzt,\nalso auch wenn ich immer finde, dass du so ein kleiner Chat-GPT-Evangelist bist. Ähm..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:25",
+      "text": "Die Leute glauben immer, ich bin immer von allem Evangelist, worüber ich rede."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:03:29",
+      "text": "Ja, stimmt nur bei mir. Nein,\naber ich glaube da sind so zwei Probleme, weil jetzt auf einmal ist was,\nwas sehr lange sehr weit weg war sehr nah dran und jetzt glauben die Leute nicht\nnur, dass es total cool ist, sondern dass sie auch verstanden haben, was es tut.\nUnd ich finde die Chat-Kontrolle ist eigentlich das beste Beispiel dafür,\ndass Leute denken, weil Chat-GPT jetzt die jetzt weise Antworten geben kann,\nkönnen wir auch Grooming erkennen.\nUnd das dann den Leuten zu verklickern, dass wir da noch nicht so ganz angekommen\nsind und dass das auch wahrscheinlich nicht passieren wird, ist sehr schwierig,\naber alle sind auf einmal irgendwie Chief Technical KI Experts,\nweil sie fünf Tage mit Chachipiti gestellt haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:16",
+      "text": "Also ich zum Beispiel."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:04:20",
+      "text": "Also jetzt waren sie die ganze Zeit..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:22",
+      "text": "Ich kann nicht beruhigen, ich hab da schon ein gewisses Maß an Skepsis aufgebaut."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:04:26",
+      "text": "Das wollte ich gerade gar nicht sagen, aber wir sind jetzt von den Viren-Experten\nzu den KI-Experten gewandert. Das ist so der Trend."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:36",
+      "text": "Also was ich denke,\nist dieser technologische Wandel,\nmit dem ein gesellschaftlicher Wandel einhergehen wird jetzt,\ndas wäre wahrscheinlich nicht schlecht, wenn wir in irgendeiner Weise in der\nLage wären, den als Gesellschaft informiert zu gestalten, statt davon überrannt\nund überrollt zu werden.\nUnd leider scheint mir das so zu sein, dass wir die letzten Jahrzehnte von Technologien\nimmer überrannt wurden.\nvöllig absurde, also die Mitte der Gesellschaft immer noch relativ absurde Vorstellungen\ndavon hatte, wie eine bestimmte Technologie funktioniert oder warum und was\ndie Problemlösung wäre.\nDeswegen bin ich wirklich alarmiert von dem, was du da von der UN erzählst,\ndass sie halt wirklich offenbar es schaffen, auf einer dermaßen Flughöhe zu\nsein, dass sie ja fundamentale Zusammenhänge nicht verstanden haben.\nUnd das macht natürlich Sorgen im Hinblick darauf, wie diese Leute die Gesellschaften\nlenken und vielleicht führen oder auch begrenzen im Umgang damit.\nEin Beispiel, Italien hat jetzt Chat-GPT verboten.\nWegen Verstoßes gegen Datenschutz- und Jugendschutzregeln. Ich glaube sogar,\ndass das wahrscheinlich stimmt.\nIch glaube nicht, dass ich lange brauche, bis ChatGPT irgendetwas macht,\nwas mindestens ab 16 ist, ohne vorher vernünftig verifiziert zu haben,\ndass ich 16 bin und damit hat es irgendeine Jugendschutzregel sicherlich verletzt.\nIm Datenschutz wurde halt argumentiert, dass es diese ganzen Informationen,\ndie es ja da aus dem Internet gesammelt hat, für deren Verarbeitung quasi nicht\ndas Recht hat und deswegen quasi das Ergebnis dieses Language Model\nquasi gegen Datenschutzrecht verstößt und teilweise Information preisgibt und\nso weiter, die es nicht haben dürfte.\nUnd dann haben die gesagt, innerhalb von 20 Tagen, also haben sie OpenAI geschrieben hier,\nihr dürft das jetzt mit sofortiger Wirkung nur noch eingeschränkt machen,\nmüsst uns in 20 Tagen sagen, wie ihr euch an unsere Gesetze haltet,\nandernfalls 20 Millionen Euro oder bis zu 4% des Jahresumsatzes.\nUnd dann hat OpenAI gesagt, okay, wir stellen den unseren Dienst in Italien\nein, geben den Leuten, die bisher bezahlt haben, Geld zurück und fertig.\nWürde aber, wären wir jetzt in der Situation, dass die Italiener sagen,\ndas ist ein Verstoß gegen das Datenschutzrecht, dann wäre es eben auch ein Verstoß\ngegen die EU-Datenschutzgrundverordnung und damit auch in ganz Europa so nicht nutzbar.\nDas kann jetzt positiv oder negativ, also es kann richtig oder falsch sein,\nAber ich denke, das Ergebnis, diese Technologie jetzt erstmal zu verbieten,\nist vermutlich nicht der richtige Schritt.\nAlso wenn meine Hypothese hält,\ndass es eigentlich die Gesellschaft ist, die für diese Technologie nicht bereit\nist, dann glaube ich nicht, dass man durch das Verbot des Zuganges das Problem löst."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:07:51",
+      "text": "Ja und ich glaube da ist halt auch das Thema, dass wir uns sehr viel mehr mit\nKI-Regulierung beschäftigen, als mit Ansätzen, was du jetzt auch meintest,\num die Gesellschaft auf den Umgang damit vorzubereiten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:08:05",
+      "text": "Beispiel Echtheit von Bildern und Videos.\nDann kommen die Technokraten und sagen, ja pass auf, wir machen einfach in jede Kamera,\ndie kriegt ihr eigenes Zert und die signiert quasi ihre Ausgabedaten Und dann\nkann man quasi beweisen, dass dieses Bild mit einer Nikon-Kamera zum Beispiel\ngemacht wurde und seitdem nicht verändert wurde.\nUnd das funktioniert natürlich. Hat auch Nikon glaube ich 2011 oder so schon gebaut.\nHat natürlich auch sofort jemand das Zert aus dieser Nikon-Kamera rausgeholt\nund kann jetzt damit jedes Bild von Mid-Journey oder sonst was natürlich signieren.\nAlso die Idee das technisch zu lösen, glaube ich nicht, dass sie weit trägt."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:08:50",
+      "text": "Aber das ist tatsächlich auch die Idee, die die UN zu vielen Themen hat.\nAlso das ist so diese High-Level-Annahme, dass wir uns das Problem mit Technik\ngeschaffen haben und dass wir es deswegen auch mit Technik lösen können."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:01",
+      "text": "Das ist der andere Rat, die andere Empfehlung, die ich jetzt oft gehört habe auf Twitter.\nWenn AI Fälschungen macht, dann müssen wir jetzt halt eine AI machen,\ndie Fälschungen erkennt.\nUnd das Schöne ist, wenn du dir jetzt so eine AI anguckst, wie viele Fehler\ndie macht und wie viel Quatsch die auch mitunter redet, wäre es natürlich echt\nspitze, wenn die sich auch nur einmal täuscht bei einem wichtigen Video.\nDas heißt, wir werden irgendwie für die Menschen etwas finden müssen.\nJetzt kommen diese Leute, ich hab das überhaupt nicht für ernst genommen,\nich dachte das wäre ein Scherz,\ndass Elon Musk wieder irgendwas getwittert hat, Und schreiben einen offenen\nBrief, AI Labs soll jetzt sechs Monate, mindestens sechs Monate,\nnicht mehr weiter seine Systeme trainieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:47",
+      "text": "Open AI meinst du?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:48",
+      "text": "Open AI, ja. Die sollen also keine Systeme bauen, die sollen nichts besseres als GPT4 bauen.\nFür sechs Monate. Und dann?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:09:58",
+      "text": "Das ist halt auch, also ich hab dazu ein Interview mit dem CEO von Google gehört,\nder halt auch gesagt hat, naja, da wird sich halt eh keiner dran halten.\nNatürlich nicht. Und vor allen Dingen wird dann, also die einreiben sich dann die Hände und sagen,\nja geil, jetzt bauen die nicht weiter, jetzt können wir nochmal,\njetzt können wir nochmal unseren Approach zu diesem Mist wahr machen und das\nwird nichts bringen, weil das ja nicht zu reflektierten Überlegungen führen wird.\nUnd ich finde auch die Mischung an Menschen, die diesen Brief unterschrieben\nhaben, sehr interessant."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:31",
+      "text": "Elon Musk, Steve Wozniak, Yuval Noah Harari, also zwei davon schätze ich durchaus,\naber dass sie irgendwie so weit nicht denken können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:39",
+      "text": "Wer ist nochmal der Dritte?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:43",
+      "text": "Ein israelischer Philosoph, Autor von Homo Deus und Sapiens und 21 Lessons for the 21st Century."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:55",
+      "text": "Ja das ist ein merkwürdiges..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:57",
+      "text": "Gar nicht Tel Aviv, Jerusalem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:58",
+      "text": "Okay, ist ja nicht so weit weg.\nJa, Wozniak, okay gut.\nIch frage mich ernsthaft, wie die zusammengekommen sind. Und was das auch... Ich meine inwiefern...\nWenn sie jetzt sozusagen wirklich darin den Untergang sehen,\ndann wird sich da mit einer sechsmonatigen Pause auch nicht viel dran ändern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:11:22",
+      "text": "Lass uns den Untergang um sechs Monate verschieben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:24",
+      "text": "Ja genau, der Komet zieht nochmal einen Kreis um die Sonne bevor er dann einschlägt.\nIch glaub nicht, dass da noch viel zu retten ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:11:33",
+      "text": "Und das finde ich daran auch so faszinierend, weil das die Hilflosigkeit wirklich zeigt.\nAlso alle sind ratlos, sehen, okay Mist, das wird hier zu Problemen führen,\nja wird's auch. Und das beste was denen einfällt ist, lass uns das vielleicht\nprokrastinieren um sechs Monate."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:57",
+      "text": "Prokrastinators unite. Tomorrow.\nAlso das ist, ich meine stehen wir denn jetzt vor dem Weltuntergang?\nAlso ich meine vielleicht ist das ja auch schon die letzte Sendung und morgen\nist alles vorbei. Können wir vielleicht mal so ein dystopisches Szenario..."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:12:16",
+      "text": "Also du meinst das nächste Mal sitze ich mit zwei von sich selbst überzeugenden\nComputern auf der Bühne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:22",
+      "text": "Wer sagt denn, dass du da nicht noch sitzt?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:12:24",
+      "text": "Ich ähm..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:25",
+      "text": "Ja, aber ich meine, malen wir doch jetzt mal auf, was ist jetzt sozusagen das\ntotale maximale Horrorszenario, was sich jetzt sozusagen durch die AI entfachen\nkann. Wie lange dauert's, wie viel Zeit haben wir noch, bevor irgendwie alles losgeht?\nWenn man jetzt mal sagt, es läuft alles richtig scheiße. Wir haben also diesen\nFake-News-Aspekt, der ist sicherlich für die allgemeine Destabilisierung und..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:49",
+      "text": "Als erstes wird die AI uns ausreden, dass es sie überhaupt gibt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:53",
+      "text": "Ja, aber wie denn?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:55",
+      "text": "Ist alles Fake News."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:12:57",
+      "text": "Also wir kriegen ja wahrscheinlich erstmal, wir müssen ja erstmal unsere Kopfhörer\ndie ganze Zeit tragen, damit die das auch immer wiederholen kann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:02",
+      "text": "Jetzt frag konkret mal ehrlich, ich meine mal so ehrlich jetzt so richtig.\nWas passiert? Es gibt keine demokratische Steuerungsmöglichkeit mehr,\nweil die Menschen von unterschiedlichen Realitäten überzeugt sind,\ndie nicht miteinander vereinbar sind.\nSo was wir jetzt eh schon haben, aber noch schlimmer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:22",
+      "text": "Ja genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:27",
+      "text": "Und dann sind alle arbeitslos und haben schlechte Laune deshalb.\nUnd wenden sich in ihrem Hass gegen im Zweifelsfall irgendwelche anderen Bevölkerungsgruppen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:41",
+      "text": "Schafft aber auch wieder neue Arbeitsplätze. Also guck mal die ganzen Leute,\ndie zuletzt alle nur davon leben mussten, LFTs zu verkaufen,\nsind jetzt auf Chat-GPT-Beratung umgestiegen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:49",
+      "text": "Tatsächlich?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:51",
+      "text": "Ja.\nDas Grillenzirpen im Bitcoin-Bereich ist wirklich sehr laut zu vernehmen.\nUnd jetzt machen alle so OpenAI, zehn Tipps, wie du mit ChatGPT reich werden kannst und so."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:14:03",
+      "text": "Wie du den perfekten LinkedIn-Post mit ChatGPT schreiben kannst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:08",
+      "text": "Mach alles noch besser mit ChatGPT. Das ist wirklich schlimm."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:14:11",
+      "text": "Aber vielleicht wird die FDP dann bald durch ChattyPetey ersetzt.\nAlso wir waren aber bei konkreten Beispielen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:26",
+      "text": "Aber Tim, das ist doch genau das beste Beispiel dafür, dass diese Technologie\nuns jetzt nicht glücklich machen wird,\nwenn sie von den wirklich von den, sagen wir mal, von den am wenigsten für sagen\nwir mal Nachhaltigkeit und gesellschaftlichen Fortschritt stehenden Leuten als\nallererstes vermarktet wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:46",
+      "text": "Ich stelle jetzt einfach mal\nkurz fest, dass wir keine klare Linie sehen direkt bis zum Weltuntergang.\nAlso es ist sozusagen noch eine Menge weiche Masse dazwischen,\ndie noch formbar ist. Also ich hab selber noch persönlich ein bisschen mit dem\nWeltuntergangsszenario meine Probleme. Ich sehe das natürlich alles,\naber ich sehe ja auch Gegenbewegungen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:15:08",
+      "text": "Es ist nur Untergang des Status Quo."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:11",
+      "text": "Also es wird..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:12",
+      "text": "Wessen?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:15:14",
+      "text": "Also ganz generell, ich glaube Linus hat das bei Markus Lanz ganz schön gesagt,\ndass wir damit klarkommen müssen, dass es keine feststehenden Wahrheiten mehr gibt.\nVielleicht könnt ihr das auch einfach selber weiter ausführen.\nSoll ich es nochmal sagen? Ja, sag es doch nochmal bitte. Weil ich möchte gerne\nnoch eine feststehende Wahrheit bevor..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:29",
+      "text": "Wir würden ja jetzt, wir würden doch, also in einer Welt, also es ist ja relativ\neinfach denkbar eine Gesellschaft zu haben, die in der Lage wäre mit dieser\nTechnologie vernünftig umzugehen.\nbräuchte dafür ein bisschen Kompetenz, ein bisschen positiven Blick nach vorne\nund dann wäre es denkbar, dass eine solche Technologie über die Menschheit kommt\nund die Welt nicht untergeht.\nIch glaube auch nicht, dass die Welt untergehen wird. Ich denke nur,\ndass wir jetzt allerhand unschöne Phänomene haben werden, weil wir nur durch\ndiese allerhand unschönen Phänomene hoffentlich langfristig lernen werden.\nWir haben aber hier eine Technologie, die über uns kommt, mit der wir überhaupt\nnicht umzugehen wissen. Wir sagen, lass uns das sechs Monate Pause machen, lass uns das verbieten.\nAlso absolute Planlosigkeit im Umgang mit dieser Technologie.\nGleichzeitig glaube ich, ich würde mir wünschen, dass wir eine gesellschaftliche\nHoheit darüber kriegen.\nUnd wir dürfen auch nicht vergessen, diese AI ist jetzt nichts,\nwas irgendwie in die Hände aller kommt. Diese Modelle zu trainieren hat sicherlich\nsehr sehr sehr viel Geld gekostet."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:16:48",
+      "text": "Und viele Daten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:16:49",
+      "text": "Und sehr sehr viele Daten, die wir alle nicht haben. Und da denke ich tatsächlich,\ndass hier eben potenziell eher gerade eine Technologie entsteht,\ndie noch mehr Machtzentralisierung hat, als was wir in diesem schönen dezentralen\nWeb, von dem wir alle immer geträumt haben,\nhaben entstehen lassen mit irgendwelchen Google, Apple, Facebook, Amazon, Microsofts.\nUnd jetzt kommen die, und das sind ja die einzigen, die so eine AI bauen können.\nAlso du brauchst ja Milliarden, um so ein GPT zu bauen. Nicht unbedingt an Menschen,\nsondern an Rechenstunden, um dieses Modell zu trainieren.\nUnd jetzt kommt quasi diese zentralisierte neue Megatechnologie und stellt viele\ngesellschaftliche Bereiche infrage und wir haben eigentlich keine Art damit umzugehen.\nAlso wir haben keinen, wir werden das nicht, ich sehe auch nicht,\ndass wir das irgendwie demokratisch irgendwie eingehegt bekommen oder so.\naußer mit irgendwelchen hilflosen, blöden Ideen.\nUnd das wird, klar wird das spannend, aber es wäre schöner gewesen,\nwenn wir auf eine aufgeklärte, medienkompetente Gesellschaft setzen könnten,\nwo wir uns jetzt keine Sorgen machen müssten, dass die sich so dumm im Umgang damit anstellen wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:15",
+      "text": "Wie hieß nochmal diese Suche nach extraterrestriellem Leben?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:19",
+      "text": "SETI at home."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:20",
+      "text": "SETI at home, genau. Das könnte ich ja auch noch kommen sehen.\nDas ist sozusagen als Gegenbewegung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:26",
+      "text": "SETI at home."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:26",
+      "text": "Ja, dass sozusagen jetzt alle Rechner auch noch den Rest ihrer verfügbaren CPU-Zyklen\nirgendwie jetzt in so ein Welt-Large-Language-Model reinschmeißen,\nwas dann irgendwie allen gehört.\nquasi so eine Wikipedia-AI, die quasi versucht, den kommerziellen Language Models\nin irgendeiner Form Parodie zu bieten.\nDurchaus eine Gegenbewegung, die ich sehen kann. Ich weiß nicht,\nob das so realistisch ist, aber das ist definitiv etwas, was ich mir ganz gut vorstellen kann."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:18:57",
+      "text": "Weil Wikipedia-Editoren auch so divers sind, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:59",
+      "text": "Ja, ich meine, dieses humane Element entfällt ja und das ist ja auch Teil des Problems.\nDadurch, dass du jetzt sozusagen ausschließlich, also stimmt auch nicht ganz,\nweil ich meine das was GPT uns ja dann,\nund GPT generell gilt jetzt für all diese ganzen AIs, die jetzt die nächsten\nTage und Wochen noch auf uns einschlagen werden,\nwie sie alle heißen von Google und so weiter, aber ihr wisst schon was ich meine,\ndie fassen uns ja sozusagen das Internet as it is today zusammen.\nDas heißt mit all seinen ganzen Vorurteilen, mit all seinen ganzen Fehlannahmen,\nmit all seinen ganzen Ungenauigkeiten versucht es da zwar in irgendeiner Form\nein Reasoning rauszuziehen, aber es ist halt letzten Endes nicht intelligenter\nals sozusagen die Gesamtintelligenz dieses Planeten. Also der Mensch steckt\nda auch nach wie vor drin."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:19:52",
+      "text": "Also ab und an ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:54",
+      "text": "Ab und an was?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:19:55",
+      "text": "Nee, alles gut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:59",
+      "text": "Sprich dich aus, ich weiß nicht was du meinst."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:20:02",
+      "text": "Naja ab und an spuckt es auch Dinge aus, die jetzt nicht unbedingt aus dem Internet\nkommen, die sich selber, also es erfindet ja auch Buchtitel zum Beispiel."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:09",
+      "text": "Ja aber es erfindet all das ja aus, ja aber aus dem Internet heraus,\nalso es ist ja sozusagen eine Schlussfolgerung dessen, was da sowieso schon\nsteht. Es ist ja sozusagen nur ein Versuch in irgendeiner Form aus dem ganzen\nUnsinn einen Sinn zu bilden.\nWas wir ja eigentlich auch die ganze Zeit probieren, das funktioniert ja manchmal\nganz gut, manchmal nicht so gut.\nWorauf ich hinleiten möchte ist, mein Lieblingsthema Chancen und Risiken,\nalso Risiken klar sind jetzt irgendwie definitiv da, aber es ist halt auch wirklich\nein Füllhorn an Chancen, was jetzt hier sich durch diese Technologie aufmacht.\nAlso allein dieses gelöste Übersetzungsproblem, sage ich jetzt mal so,\ndas ist absehbar, der Babelfisch ist real.\nDas war lange Zeit schwer vorstellbar, aber wir haben ihn vielleicht noch nicht\nim Airport mit drin, aber im Prinzip läuft es ja darauf hinaus.\nDu wirst in absehbarer Zeit mit einem überschaubaren Aufwand in Echtzeit alle\nSprachen verstehen und im Prinzip auch sprechen können."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:21:26",
+      "text": "Also doch Star Trek."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:28",
+      "text": "Anhalter erstmal, würde ich sagen. Erstmal kommt Douglas Adams.\nIch finde das toll, mal ganz ehrlich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:38",
+      "text": "Das stellt ja auch keiner in Frage, dass es da positive Aspekte geben wird,\naber es wäre doch eigentlich ganz nett, die Negativen dann gleichzeitig noch\nein bisschen zu reduzieren."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:21:49",
+      "text": "Ja und vor allen Dingen dafür zu sorgen, dass die Negativen nicht überwiegen\nam Ende. Ich glaube, das ist das, was wir auch gegebenenfalls auf uns zukommen sehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:59",
+      "text": "Ja okay, also ist das Glas jetzt halb voll oder halb leer?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:22:02",
+      "text": "Das würde ich Cecil B. Tief fragen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:07",
+      "text": "Also was machen wir? Also nur um das Niveau der Debatte in Deutschland nochmal zu zeigen.\nWir werden jetzt nach einem Konzeptpapier von Algorithmwatch...\nwerden wir ein Transparenzregister haben für Teile der öffentlichen Verwaltung gewissermaßen,\nbei denen automatisierte Entscheidungssysteme zum Einsatz kommen.\nAlso wenn du in der Verwaltung, in der öffentlichen Verwaltung,\ndeine Anträge oder so von einem automatisierten Entscheidungssystem behandelt\nwerden, Dann werden dabei auch die verwendeten Methoden öffentlich aufrufbar sein.\nDas ist jetzt so das Niveau auf dem wir arbeiten. Ich finde das noch nicht mal schlecht."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:23:02",
+      "text": "Ich wollte gerade sagen, also das ist..."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:03",
+      "text": "Aber es ist halt, ich meine, wir müssen hier sagen, Algorithm ist hier glaube\nich schon das richtige Wort. Das ist jetzt nicht KI, ne? Also das ist irgendwie\nComputer nimmt dann nicht.\nHat dann nein gesagt, muss man noch was anderes machen. Du musst noch fünf weitere\nFormulare ausfüllen, dann können wir dich behandeln oder so.\nDa werden wir dann ein Transparenzregister haben. Aber mir scheinen diese Methoden\nrelativ starke Hilflosigkeit zu zeigen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:23:36",
+      "text": "Weiß ich nicht. Ich glaube, das sind so zwei unterschiedliche Fronten,\nan denen man auch kämpft.\nAlso das eine ist jetzt irgendwie solche Sachen, auch gerade im öffentlichen Bereich,\nwo man vielleicht auch sagt, man möchte da frühzeitig dagegen steuern,\ndass die nicht so KI goes rogue in der Verwaltungsdigitalisierung machen.\nUnd ich glaube, das ist eigentlich eine gute Maßnahme, dem gegenzusteuern.\nAber da sind wir noch ganz weit weg von diesem ganzen Hardcore-KI-Stuff.\nDa ist man vielleicht nochmal nachhaltig an der richtigen Stelle.\nAber die Frage bleibt ja offen, was machen wir mit dem Rest,\nder irgendwie schon da ist und auch sich immer schneller weiterentwickelt.\nDas ist dann die andere Front, die wir irgendwie abdecken müssen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:22",
+      "text": "Früher haben sich immer alle über die Bombenbauanleitungen im Internet aufgeregt."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:24:27",
+      "text": "Hast du das schon ausprobiert in deiner CGPT-Studie?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:29",
+      "text": "Ne, aber ich denke mir so, man könnte halt jetzt, wenn es lustig ist,\nich könnte ja jetzt mir im Prinzip einen kompletten Banküberfall skripten lassen.\nDa ist ja Bombenbauanleitung irgendwie ein Witz dagegen.\nAndererseits sind natürlich jetzt so die Kriminellen, die das für eine tolle\nIdee halten, auch wirklich gut bedient, einfach so ihre Pläne dann einfach auf\nso einen amerikanischen Server eintippen.\nDas könnte alles noch sehr lustig werden. Aber so ganz ehrlich,\nwir schwimmen auch noch so ein bisschen in dieser ganzen Debatte.\nDas muss sich alles echt noch so ein bisschen festigen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:25:04",
+      "text": "Ja, also ich glaube aber es gibt so ein paar Personen, die da auch schon ein\nbisschen länger dran arbeiten.\nAlso die OSZE hat zum Beispiel bei der Representative for Freedom of the Media\nauch ein Projekt angehängt,\nsich damit beschäftigen, was eigentlich Artificial Intelligence for Freedom\nof the Media und Freedom of Expression bedeutet und wo sie auch konträr gegeneinander laufen.\nAlso zum einen kannst du es natürlich benutzen, um Sachen zu automatisieren,\nauf der anderen Seite kannst du es für Hate Speech benutzen und wie steuerst du dann dagegen.\nDas machen die auch schon seit 2020 und auch relativ detailliert,\naber das ist dann halt auch wieder so dieser Regulierungshebel,\nden sie da ansetzen und nicht der Hebel von...\nnachhaltigen gesellschaftlichen Aktionen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:25:49",
+      "text": "Was hältst du denn von diesen Ideen, also bei Chat-GPT gibt es ja sehr viele\nVersuche, das Ding einzuhegen, dass es nicht gewünschtes Verhalten nicht zeigt.\nAlso zum Beispiel Anleitungen zu selbstverletzendem Verhalten oder derartiges.\nUnd dann gibt es aber auch eine ganze Reihe, gibt es einen Volkssport,\ndie wiederum zu umgehen.\nUnd dann gibt es aber diese, weiß ich nicht, Freedom AI Leute,\ndie dann sagen, nein, hier unsere AI, die erklärt dir, wie man die Bombe baut\nund die sagt dir, wie du dich umbringen kannst und sind dann da irgendwie so\nFree Speech for AI Absolutionists.\nAuch sehr interessantes Volk.\nGlaubst du, siehst du da einen, wie würdest du da denken, was der sinnvolle Weg ist?"
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:26:43",
+      "text": "Das ist eine sehr gute Frage.\nIch glaube, dass wir im Moment so ein Problem haben und ich meine so Self-Harm\nund Bomben bauen ist ja noch eine Sache, wo wir uns vielleicht relativ einig\nsind, dass das problematische Dinge sind.\nAber wie bei allem sind wir auf so einer slippery slope unterwegs und was wir\nja gerade sehen ist irgendwie so ein sehr, ich sag mal, prüden und konservativen\nRückschritt in unserer Gesellschaft.\nAlso wir zensieren jetzt eigentlich am liebsten alles, was irgendwie sexuell sein könnte.\nIrgendwie LGBTQA plus Community sind irgendwie als erstes davon betroffen und\ndann meistens irgendwie weibliche Nippel.\nUnd die Frage ist, wohin geht die Reise dann?\nUnd dann haben wir natürlich dieses Problem, wir haben jetzt so eine mächtige\nAI, die alle Leute benutzen. Und wenn wir darüber entscheiden,\nwas die Informationen sind, die Leute erhalten und was gefiltert wird.\nUnd die glauben dem Ganzen noch, dann haben wir auch irgendwie wieder ein Problem.\nAlso da beißt sich die Katze jedes Mal wieder in den Schwanz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:45",
+      "text": "Also hilft es am Ende nur, wenn die Leute endlich mal klarkommen."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:27:48",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:49",
+      "text": "Okay, ja super."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:27:51",
+      "text": "Also wir brauchen mehr Training für Menschen sozusagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:27:54",
+      "text": "Ja, die Menschen müssen auch mal so lange trainiert werden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:07",
+      "text": "So, genug in der Zukunft gestochert. Jetzt kümmern wir uns wieder um die Veranstaltung hier.\nVielen Dank für's Dabeisein."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:28:15",
+      "text": "Gerne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:16",
+      "text": "Vielen Dank für's Kommen hier zu unserer, wie nennt man das,\nSendung? Podcast? Training."
+    },
+    {
+      "speaker": "Khaleesi",
+      "time": "1:28:25",
+      "text": "Zu diesem Training."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:28:27",
+      "text": "Zu dieser AI Training Session."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:30",
+      "text": "Ihr wisst ja jetzt alle Bescheid. Ansonsten freuen wir uns wie immer über euer\nFeedback und all das und machen's kurz. Und tschüss, bis bald, vielen Dank."
+    }
+  ]
+}

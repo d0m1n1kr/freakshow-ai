@@ -1,0 +1,131 @@
+{
+  "episodeNumber": 41,
+  "title": "LNP041 Datenspuren Spezial: Netzneutralität",
+  "extractedAt": "2026-01-02T10:44:23.157Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "Wo kommt das Internet her?",
+      "subject": {
+        "coarse": "Technology",
+        "fine": "Internet History"
+      },
+      "durationSec": 403,
+      "positionSec": 207,
+      "summary": "In dieser Episode diskutieren Tim Pritlove und Linus Neumann die Herkunft und Struktur des Internets. Neumann erklärt, dass das Internet dezentral ist und aus vielen verschiedenen Anbietern besteht, die Verträge über den Datenverkehr schließen. Es gibt verschiedene Stufen von Providern, von Tier 1 bis Tier 3, wobei die großen Anbieter unterirdische Kabel betreiben und Hochgeschwindigkeitsverbindungen anbieten. Die Diskussion umfasst auch das Peering und Transit von Daten sowie die Herausforderungen der Bandbreitenverteilung und die Nachfrage nach Flatrates im Internet. Begriffe wie Peering, Transit und Tier-Provider werden erwähnt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "41-ts.json",
+        "method": "time-window",
+        "pickedCount": 36,
+        "startSec": 187,
+        "endSec": 630,
+        "generatedAt": "2026-01-02T17:44:36.420Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Wie funktionieren Flatrates (nicht)?",
+      "subject": {
+        "coarse": "Technology",
+        "fine": "Internet Services"
+      },
+      "durationSec": 398,
+      "positionSec": 611,
+      "summary": "In der Diskussion über Flatrates im Internet wird deutlich, dass diese oft keine echten Flatrates sind, sondern Volumentarife mit versteckten Limits. Anbieter wie Telekom bewerben hohe Geschwindigkeiten, doch nach Erreichen eines bestimmten Datenvolumens sinkt die Geschwindigkeit drastisch. Linus Neumann und Tim Pritlove thematisieren die Problematik der Netzneutralität und die wirtschaftlichen Zwänge der Anbieter, die sich aus traditionellen Preismodellen der Telefonie ableiten. Die Frage bleibt, wann das Netz nicht mehr neutral ist und wie sich die Geschäftsmodelle der Anbieter entwickeln.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "41-ts.json",
+        "method": "time-window",
+        "pickedCount": 19,
+        "startSec": 591,
+        "endSec": 1029,
+        "generatedAt": "2026-01-02T17:44:37.753Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Wann ist ein Netz nicht mehr neutral?",
+      "subject": {
+        "coarse": "Policy",
+        "fine": "Net Neutrality"
+      },
+      "durationSec": 1215,
+      "positionSec": 1009,
+      "summary": "In der Diskussion über Netzneutralität wird die Problematik angesprochen, dass Internetprovider wie AT&T und die Telekom bestimmte Dienste wie VoIP (z.B. Skype) einschränken oder monetarisieren, um ihre Geschäftsmodelle zu schützen. Linus Neumann erklärt, dass Provider argumentieren, dass solche Dienste die Bandbreite belasten, was jedoch nicht unbedingt zutrifft. Stattdessen bieten sie gegen Aufpreis spezielle Tarife an, die den Zugang zu diesen Diensten ermöglichen. Zudem wird die Herausforderung der Netzüberlastung durch viele Nutzer in urbanen Gebieten thematisiert, was die Notwendigkeit einer Priorisierung von Datenpaketen, etwa für kritische Anwendungen wie Fernoperationen, unterstreicht.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "41-ts.json",
+        "method": "time-window",
+        "pickedCount": 60,
+        "startSec": 989,
+        "endSec": 2244,
+        "generatedAt": "2026-01-02T17:44:42.184Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Zusatzdienste sind Einschränkungen, Priorisierung ist Diskriminierung",
+      "subject": {
+        "coarse": "Policy",
+        "fine": "Internet Regulation"
+      },
+      "durationSec": 570,
+      "positionSec": 2224,
+      "summary": "In der Diskussion über Netzneutralität wird betont, dass Priorisierung im Internet gleichzeitig Diskriminierung bedeutet. Linus Neumann erklärt, dass Anbieter wie die Deutsche Telekom versuchen, durch Zusatzdienste wie unbegrenzte Spotify-Nutzung, die Netzneutralität zu untergraben. Diese Praktiken führen dazu, dass bestimmte Dienste bevorzugt und andere benachteiligt werden, was den Kern des Internets gefährdet. Neumann fordert gesetzliche Regelungen, um solche Eingriffe zu verbieten und verweist auf internationale Beispiele wie Chile und die USA, die ähnliche Gesetze eingeführt haben.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "41-ts.json",
+        "method": "time-window",
+        "pickedCount": 13,
+        "startSec": 2204,
+        "endSec": 2814,
+        "generatedAt": "2026-01-02T17:44:41.826Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Politische Situation",
+      "subject": {
+        "coarse": "Politics",
+        "fine": "Internet Policy"
+      },
+      "durationSec": 929,
+      "positionSec": 2795,
+      "summary": "Im Gespräch über Netzneutralität wird die politische Situation in verschiedenen Ländern, insbesondere Chile, USA und den Niederlanden, thematisiert. Chile hat ein Netzneutralitätsgesetz, während in den USA ein Gesetz gegen unbegründete Diskriminierung existiert, das jedoch schwammig definiert ist. In den Niederlanden gibt es ein starkes Netzneutralitätsgesetz, das auf Lobbyarbeit von Bits of Freedom zurückgeht. Es wird diskutiert, wie Provider wie die Telekom Einfluss auf den Datenverkehr nehmen und wie dies kleinere Anbieter benachteiligt. Die Gefahr einer Einschränkung der Netzneutralität wird hervorgehoben, insbesondere durch mögliche Zusatzdienste der Provider.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "41-ts.json",
+        "method": "time-window",
+        "pickedCount": 45,
+        "startSec": 2775,
+        "endSec": 3744,
+        "generatedAt": "2026-01-02T17:44:46.641Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T17:44:46.641Z",
+  "transcriptFound": true,
+  "transcriptFile": "41-ts.json"
+}

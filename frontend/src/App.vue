@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
+import { computed, ref, watch, onMounted, onUnmounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { useSettingsStore } from './stores/settings';
 import LanguageSelector from './components/LanguageSelector.vue';
-import PodcastSelector from './components/PodcastSelector.vue';
 
 const route = useRoute();
 const router = useRouter();
 const settingsStore = useSettingsStore();
 const { t } = useI18n();
+
+// Podcast dropdown state
+const showPodcastDropdown = ref(false);
 
 // Get current podcast info
 const currentPodcast = computed(() => {
@@ -24,8 +26,32 @@ const podcastHomeUrl = computed(() => {
   return currentPodcast.value?.homeUrl || 'https://freakshow.fm/';
 });
 
+const podcastName = computed(() => {
+  return currentPodcast.value?.name || 'Freak Show';
+});
+
 const searchTabName = computed(() => {
   return currentPodcast.value?.tabName || t('nav.search');
+});
+
+const selectPodcast = (podcastId: string) => {
+  settingsStore.setSelectedPodcast(podcastId);
+  showPodcastDropdown.value = false;
+};
+
+const handleClickOutside = (event: MouseEvent) => {
+  const target = event.target as HTMLElement;
+  if (!target.closest('.podcast-selector')) {
+    showPodcastDropdown.value = false;
+  }
+};
+
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside);
+});
+
+onUnmounted(() => {
+  document.removeEventListener('click', handleClickOutside);
 });
 
 const activeView = computed(() => {
@@ -93,14 +119,63 @@ const submitSearch = async () => {
                 referrerpolicy="no-referrer"
               />
             </a>
-            <div>
-              <div class="flex items-center gap-2 flex-wrap">
-                <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
-                  {{ t('app.title') }}
-                </h1>
-                <span class="text-sm sm:text-base px-2 py-1 rounded-md bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold uppercase tracking-wider shadow-md">
-                  {{ t('app.titleBadge') }}
-                </span>
+            <div class="flex-1 min-w-0">
+              <div class="podcast-selector relative inline-block">
+                <button
+                  @click="showPodcastDropdown = !showPodcastDropdown"
+                  class="flex items-center gap-2 whitespace-nowrap group"
+                  :title="podcastName"
+                >
+                  <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {{ podcastName }}
+                  </h1>
+                  <span class="text-sm sm:text-base px-2 py-1 rounded-md bg-gradient-to-r from-blue-500 to-teal-400 text-white font-bold uppercase tracking-wider shadow-md flex-shrink-0">
+                    {{ t('app.titleBadge') }}
+                  </span>
+                  <svg 
+                    class="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 dark:text-gray-400 transition-transform flex-shrink-0"
+                    :class="{ 'rotate-180': showPodcastDropdown }"
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                <!-- Dropdown -->
+                <div
+                  v-if="showPodcastDropdown && settingsStore.availablePodcasts.length > 1"
+                  class="absolute left-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden z-50"
+                >
+                  <button
+                    v-for="podcast in settingsStore.availablePodcasts"
+                    :key="podcast.id"
+                    @click="selectPodcast(podcast.id)"
+                    class="w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                    :class="{
+                      'bg-blue-50 dark:bg-blue-900/20': settingsStore.selectedPodcast === podcast.id
+                    }"
+                  >
+                    <img
+                      v-if="podcast.logoUrl"
+                      :src="podcast.logoUrl"
+                      :alt="podcast.name"
+                      class="w-8 h-8 rounded-lg flex-shrink-0"
+                      loading="lazy"
+                      referrerpolicy="no-referrer"
+                    />
+                    <span class="text-sm font-medium text-gray-700 dark:text-gray-300 flex-1 text-left">{{ podcast.name }}</span>
+                    <svg
+                      v-if="settingsStore.selectedPodcast === podcast.id"
+                      class="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
               </div>
               <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1 md:mt-2">
                 {{ t('app.subtitle') }}
@@ -129,9 +204,6 @@ const submitSearch = async () => {
               </button>
             </form>
 
-            <!-- Podcast Selector -->
-            <PodcastSelector />
-            
             <!-- Language Selector -->
             <LanguageSelector />
             

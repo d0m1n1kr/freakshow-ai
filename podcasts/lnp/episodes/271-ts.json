@@ -1,0 +1,509 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen, Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:01",
+      "text": "Guten Morgen, Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:03",
+      "text": "Ich brauche mal kurz dein Handy, gib mal PIN."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:05",
+      "text": "Die errätst du nie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:07",
+      "text": "Ich probiere mal 0000.\nLogbuch-Netzpolitik Nummer 271, frisch vom 12. Oktober 2018, jetzt neue Kinoos."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:38",
+      "text": "Entschuldigung, kann ich hier mal ganz kurz auf den Tisch steigen und eine Keynote halten?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:44",
+      "text": "Make Logbuch-Netzpolitik great again."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:47",
+      "text": "Tim, wir könnten ein wasserstoffbetriebenes Flugzeug kaufen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:52",
+      "text": "Wirklich? Flugtaxi."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:56",
+      "text": "Wasserstoffbetriebenes Flugtaxi."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:59",
+      "text": "Das macht die Nacht zum Tage das wird auch noch kommen ja man kann zu dem Wahnsinn\nder sich in USA abspielt eigentlich fast nichts mehr sagen das ist alles nur\nnoch hochgradig deprimierend ich würde sagen wir konzentrieren uns auf die deprimierenden\nAspekte Europas das trägt ja schon weit genug,\nja ansonsten bist du erholt und alles gut ja alles super ne schön dann machen\nwir jetzt weiter sozusagen Ja,\nfangen wir doch mal kurz an mit Feedback. Da war jetzt gar nicht so viel.\nIn der letzten Sendung hatte ich mit Thomas ein bisschen rumgescherzt,\nwarum es denn so wenig Nobelpreise gibt für Informatiker.\nWurde ich natürlich gleich darauf hingewiesen, gibt es alles schon.\nFür den Mathematiker gibt es halt keinen Nobelpreis, aber die Fields-Medaille.\nUnd für die Informatiker gibt es auch keinen Nobelpreis, aber den Turing Award.\nUnd das sei ja alles äquivalent.\nGut, keine Ahnung, ob ich das schon mal in meinem Leben gehört habe.\nIch habe es auf jeden Fall ausreichend verdrängt gehabt.\nDem sei jetzt hier nochmal Richtung getragen und das erwiesen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:07",
+      "text": "Wer hat den denn so in letzter Zeit bekommen? Diffie. Whitfield Diffie hat den\n2015 bekommen. Tim Berners Lied 2016."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:16",
+      "text": "Das waren dann aber auch schon die bekannteren Personen. Der Rest sind wirklich\neher so Leute, die wahrscheinlich noch nie das Büro verlassen haben.\nÄhm, ja, so für so Dinge."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:27",
+      "text": "Gibt's einen Deutschen? Nee, also größtenteils Amerikaner."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:33",
+      "text": "Israeli, Norweger sehe ich noch.\nJa."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:39",
+      "text": "Ja, also gibt's auch hier natürlich, das wurde, ah, Wind & Surf 2004."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:46",
+      "text": "Niklaus Wirth, Dennis Ritchie, Ken Thompson. Also schon so ein paar Leute dabei,\ndie man auch kennt. Alles gut."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:52",
+      "text": "Ja, sehr schön. So, wann kriegen wir den? Nächstes Jahr."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:57",
+      "text": "Nächstes Jahr. Irgendwann kriegen wir ein Podcast-Award."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:00",
+      "text": "Für die Podcast-Chapter-Marx, Podlove-Chapter-Marx, den Print-Love-Live-Type.\nEs würde glaube ich auch nochmal erwähnt, dass so etwas gibt es eben für,\nDurchbrüche in der Informatik und die sind eben häufiger,\neher in theoretischer Natur, also Grundlagenforschung, als jetzt irgendwie das\nZuckerberg den bekommen würde, weil er ein Facebook geschrieben hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:32",
+      "text": "Ja, das war ja auch nur ein Witz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:35",
+      "text": "Kann man ja trotzdem mal erklären."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:37",
+      "text": "Kann man mal erklären. Auch ein guter Witz ist das, was so die Tories da in\nBritannien gerade abziehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:47",
+      "text": "Kriegen sie auch kein Touring-Award für, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:49",
+      "text": "Ne. Das kam jetzt hier, ich weiß nicht, wer hat uns darauf hingewiesen,\ndas kam per Twitter reingerauscht oder so, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:59",
+      "text": "Ne, per E-Mail, per E-Mail."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:00",
+      "text": "Genau. Genau, ein Hinweis ist vielleicht nochmal der Erwähnung wert.\nAlso man hat ja heutzutage Apps.\nSo auch die Tories, also die konservative Partei Großbritanniens,\nund als guter Tory lädt man sich dann halt die App runter namens Conservative Campaigner,\nCC und ja da\nkann man dann sich dann irgendwie anmelden und dann kann man dann sich alerten\nlassen irgendwelche Campaigns und Action Call to Action folgen und pipapo und\ntolle Sachen machen und Action Points sammeln und kriegt Bonuspunkte und wird\nalso die ganze Zeit so geziesst irgendwie Dinge zu tun Brexit-Gamification.\nGenau, Brexit-Gamification und das nicht nur, weil es jetzt hier um die Tories geht,\nsondern weil diese Software letzten Endes nichts anderes ist als die YouCampaign-App,\ndie am laufenden Meter für bestimmte Kampagnen immer wieder neu verwendet wird.\nAus der Finanzierungsquelle von Robert Mercer, einem Billionär,\nder ja auch schon bei dieser ganzen Cambridge Analytica-Geschichte dahinter stand.\nUnd es ist auch wenig überraschend, wenn man feststellt, wo das alles noch zum Einsatz kam.\nZum Beispiel beim irischen Referendum gegen Abtreibung, was gescheitert ist,\ngab es gleich zwei Apps auf der Basis, die Vote Leave App beim Brexit,\nDie Trump-Pence-App, NRA,\nRepublikanischer Nationalkongress, R&C, Ted Cruz, also alles,\nwas irgendwie einen schlechten Ruf hat auf diesem Planeten, versammelt sich hinter dieser App.\nJetzt eben auch die Tories. Wenn man da irgendwie mit arbeitet,\ngibt es sehr wenige Privatsphären-Deklarationen.\nDa wird dann irgendwie mit Facebook Analytics, Facebook Login,\nFacebook Share und Google Firebase Analytics gleich vier fette Tracker eingesetzt,\ndie also genau messen, was man da eigentlich mit dieser App so macht.\nDavon abgesehen, dass sie halt auch ganz gerne mal auf die eigenen Kontakte zugreift.\nMittlerweile leitet sie wohl nicht gleich das ganze Adressbuch hoch,\naber frühere Version dieser App haben das sehr wohl gemacht und das dann natürlich\nmit entsprechenden Wählerlisten abgeglichen. Also,\nBin ich überraschend.\nLäuft es da nicht so gut. Ich kann nur hoffen, dass da mal Leute,\nFreunde der GDPR, also der Datenschutzregelung jetzt da mal ordentlich beigehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:27",
+      "text": "Da werden die Briten sich aber freuen, wenn sie jetzt noch ein GDPR-Verfahren kriegen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:35",
+      "text": "Ich glaube, das ist wirklich, das interessiert die dann irgendwie auch nicht\nmehr. Die sind nämlich sehr beschäftigt mit Brexit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:44",
+      "text": "Wie heißt die Insel? Das Ferienparadies? Was jetzt bald verhungern muss?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:49",
+      "text": "Angela."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:06:50",
+      "text": "Angela."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:50",
+      "text": "Angela. Angela muss verhungern.\nJa, mit dem Brexit, vielleicht sage ich noch mal ein paar Worte dazu.\nSo previously on Brexit.\nDie letzten beiden Updates kamen ja hier ganz gut an, deswegen dachte ich mir,\nda ich sonst kein Outlet dafür habe und ich mich in letzter Zeit noch mehr mit\ndem ganzen Wahnsinn beschäftigt habe, als ich es ohnehin schon getan habe.\nVielleicht mal so einen kurzen Einblick, was eigentlich gerade abgeht.\nUnd ich finde es irgendwie interessant, dass das Thema immer noch nicht,\nes ist immer noch nicht das Nummer 1 Thema, aber wir sind glaube ich ganz kurz\ndavor, dass es alles verdrängt, denn jetzt tickt die Uhr nicht nur, jetzt läuft sie ab.\nNächste Woche muss eigentlich eine Einigung erzielt werden, wie denn dieses\nAustrittsabkommen nun aussehen soll.\nUnd zur Erinnerung, alle reden ja von dem zukünftigen Verhältnis,\nwas die EU und Großbritannien haben können und sollten.\nDas Ding ist, da sind wir eigentlich noch gar nicht, weil die Briten immer noch\nnicht das erfüllt haben, was die EU gesagt hat, was erstmal erfüllt sein muss.\nEs gibt nämlich immer noch kein Austrittsabkommen.\nAlso das, worüber seit zwei Jahren geredet wird, ist sozusagen eigentlich noch nicht weit gediehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:18",
+      "text": "Ich dachte, das wäre dann auch Teil, das Austrittsabkommen würde regeln,\nwie die sich denn dann nachher vertragen oder nicht?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:25",
+      "text": "Nee, eigentlich nicht. Das Austrittsabkommen sagt einfach erstmal nur,\nwas die Bedingungen des Austritts sind.\nWozu sich quasi Großbritannien verpflichtet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:36",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:36",
+      "text": "Da fließt dann mit ein, wie viel Kohle\ndie EU noch bekommt, weil sich ja Großbritannien lange Zeit, also UK,\nauf mehrere Jahre ja committed hat, an bestimmten Programmen teilzunehmen,\ndie alle aufgesetzt wurden und wo ja mit dem Funding von UK auch das Ganze gerechnet\nwurde und die anderen sehen nicht ein, dass sie das jetzt bezahlen sollen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:55",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:56",
+      "text": "Da ist so die Zahl von 39 Milliarden Euro im Raum, wo dann auch gerne von den\nBrexiteers immer gedroht wird, ja nö, zahlen wir nicht und so, was für...\nFällt euch überhaupt ein und ihr seid ja alle doof und riecht nach Lulu.\nDann ist die Garantie der Rechte der EU-Bürger in Großbritannien als auch die\nRechte der Briten in der EU etwas, worum sich die EU kümmert.\nGroßbritannien eher weniger, lustigerweise. Da weiß ich nicht so ganz genau,\nwie jetzt die Details aussehen, aber im Wesentlichen hat sich da auch die EU\ndurchgesetzt und gesagt, so, die lasst ja mal jetzt mal in Ruhe.\nDie werden also jetzt nicht gleich rausgeschmissen. etc.\nMit irgendwelchen Fristen wird das verbandelt sein und dritter Punkt,\nganz wichtig, die Nordirland-Frage.\nUnd das Ding ist, und das ist glaube ich wenigen klar, diese Nordirland-Frage.\nUngelöst. Immer noch. Und zwar komplett perspektivlos ungelöst.\nWas ist die Nordirland-Frage? Nordirland ist ja Teil der Insel Irland.\nTeilt sich also mit der Republik Irland einen Raum. Und es gibt halt derzeit da keine Grenze.\nMan fährt da halt hin und her und macht Trade und so weiter,\nweil es ist ja irgendwie alles ein Wirtschaftsbereich.\nUnd Irland besteht da drauf und die EU besteht da drauf und eigentlich besteht\nauch Großbritannien darauf, also UK darauf, dass das auch so bleibt.\nDas Ding ist nur, wenn Großbritannien jetzt die EU verlässt und alle Verträge absagt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:10:31",
+      "text": "Dann muss Irland eine Grenze hochziehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:33",
+      "text": "Dann muss man eigentlich eine Grenze aufziehen, weil das die WTO-Regeln so besagen.\nDu musst dann deine Außengrenze entsprechend absichern.\nUnd das will aber niemand. Und selbst wenn es jemand wollen würde und tun würde\nund da irgendwelche Polizisten irgendwo hinstellt.\nWas sowieso komplett illusorisch ist, weil es gibt allein zwischen Nordirland\nund Irland gibt es irgendwie sowas in der Größenordnung von 200 und ein paar\noffizielle Grenzübergänge."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:11:03",
+      "text": "Der Trump könnte da doch eine Mauer hinbauen einfach."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:07",
+      "text": "Ja, viel Spaß. 200 Grenzübergänge.\nZum Vergleich die komplette Ostgrenze der EU gegenüber Weißrussland und so weiter.\nUnd Russland hat so 100, die auch aktiv bestückt sind, aber der Aufwand wäre\ngar nicht zu leisten und selbst wenn man das machen würde, würden wahrscheinlich\ndie Leute, die dann da stehen, die armen Säue,\nerschossen werden von den Leuten, die nur darauf warten,\nin Nordirland wieder Rambazamba zu machen, denn das Ganze wird eigentlich dadurch\nverhindert und diese Hauptbedingung ist ja quasi die Erfüllung des Karfreitagsabkommens,\nalso des Friedensvertrags für Nordirland.\nJetzt haben wir aber leider das Problem, dass die Tories nicht alleine regieren,\nsondern ja in einer Koalition sind, weil sie ja dummerweise die May eine neue\nWahl angestoßen hat, die sie dann verloren hat und nur noch in einer Koalition\nmit der DUP regieren kann.\nDie DUP, das sind so die Unionisten, also die Großbritannien,\nUK, Queen-treuen Briten in Nordirland, die unbedingt Teil von UK bleiben wollen.\nAußerdem sind sie vollkommen schwachmaten gegen Abtreibung und alles mögliche\nund haben dann quasi qua ihres Koalitionsanteils eine andere Regelung durchgesetzt\nin den internen Beschlüssen der Tories, ist,\ndass ja auch zwischen Nordirland und UK keine solche Zollgrenze entstehen darf.\nWeil, wo kommt man denn da hin? Dann werden wir ja abgekoppelt,\ndann werden wir ja Teil von Irland.\nUnd die haben natürlich total Angst, dass irgendwie so eine Reunification da\nwieder angestoßen wird.\nNun, das Problem ist, entweder hast du sie auf der einen Seite oder du hast\nsie auf der anderen. Also es schließt sich alles komplett aus.\nSprich, UK und dieser ganze Brexit ist ein einziger Deadlock und nichts geht voran.\nEs gibt ja theoretisch vier Szenarien, mit denen man jetzt irgendwie arbeiten könnte.\nEs gibt das Szenario Hard Brexit, was so eigentlich die Brexitiers so wollen.\nJa, wir treten mal überall aus, aber irgendwie haben wir noch so ein bisschen Verbindung.\nProblem ist, das will irgendwie auch von den Tories keiner und von den Labour keiner.\nEs gibt viel zu viel Widerstand, insbesondere in dem House of Lords,\nalso in der zweiten Kammer des Parlaments. Ist irgendwie unmöglich.\nSoft-Brexit ist so, naja, wir treten zwar mal aus, aber wir machen trotzdem überall noch mit.\nSo ein Norwegen-Modell und so eine Sachen. Das wollen dann die Hard-Brexit-Tiers\nnicht. Gibt es auch keine Mehrheit für.\nAlso gibt es sozusagen für gar keine richtige Brexit-Lösung irgendwas.\nBleibt dann eben dieses, wir können uns auf gar nichts einigen.\nEs gibt überhaupt gar keinen Deal. Das sogenannte No-Deal-Szenario. Das würde zu einer...\nDas ist eine Vollkatastrophe, das würde, sagen wir mal, sofort zu brennenden\nMülltonnen und sehr viel mehr Schaden führen.\nUnd die vierte Option ist halt, sorry, war alles nur ein Witz,\nwir blasen das jetzt mal ab, können wir nicht doch in der EU bleiben.\nUnd die will auch keiner. Naja, also die Bevölkerung ist da mittlerweile eigentlich\nganz anders aufgestellt.\nAlso die Umfragen, die letzten sagen eigentlich alle Mehrheit für Remain.\nMittlerweile bereuen es einfach so viele Leute, Leaf gewählt zu haben oder nicht\ngewählt zu haben, dass nahezu überall es eine Mehrheit gibt für Remain.\nNur das Durchsetzen eines zweiten Referendums ist halt nicht im Interesse des\nEstablishments und deswegen wehren die sich damit Händen und Füßen.\nLeider gibt es auch keine starke Opposition, weil Labour irgendwie,\nnaja, so People's Vote, das könnte man ja vielleicht mal machen,\naber eigentlich hätten wir lieber Neuwahlen, weil wir wollen ja an die Macht.\nDas wiederum macht die Tories totale Angst, weil halt dieser Corbyn so ein hardcore\nkommunistisch angehauchter Erzlinker ist, wo halt alle irgendwie schon Untergang\ndes Abendlandes bevorsehen.\nObwohl sie eigentlich selber gerade am Untergang ihres Abendlandes arbeiten.\nDas ist so mal knapp gesagt das Szenario, in dem wir uns gerade befinden und\nkeiner weiß einfach vor und keiner weiß zurück.\nIch habe keine Ahnung, was so der geheime Plan ist.\nAuf jeden Fall ist der Weg, den die EU gerade geht, ziemlich krass,\nweil sie eigentlich pokern.\nSie bleiben ja knallhart bei ihrer Meinung und mit ihrer Position haben eigentlich\nUK keine andere Möglichkeit, als zu kapitulieren. Jetzt sind die natürlich recht\nstolz unterwegs und so kapitulieren, weiß ja, Ruhe, Britannia, macht der Brite nicht.\nAlso die EU setzt jetzt eigentlich da drauf mit ihrer harten Position.\nSo viel Panik zu erzeugen, dass im Land irgendwas kippt, damit es noch ein Referendum\ngibt, damit am Ende doch wieder für ein Remain-Programm gestimmt wird,\nwas die EU ja dann wahrscheinlich happily akzeptieren würde.\nAlso ich würde sagen, ja okay, da ist schwierig, kostet euch ein bisschen was,\nhier Rabatte könnt ihr vergessen, aber wir nehmen euch wieder auf.\nSo und dann vergessen wir das auch.\nDas wäre natürlich das Optimale. Großbritannien würde so oder so verlieren, das ist ganz klar.\nAlso zu gewinnen gibt es für die jetzt eigentlich gar nichts mehr.\nDann gibt es aber auch so andere Verschwörungstheorien und Tweets,\ndie sagen, naja, die Brexiteers, die sind mittlerweile so hardcore unterwegs und Russen gesponsert,\ndass sie es geradezu darauf anlegen,\nso ein No-Deal-Szenario zu erzeugen, um dann einfach in dem Chaos einen Umsturz zu machen.\nAlso das ist so die die Breite und wie sehr die Panik da jetzt auch wirklich\nschon um sich greift zeigt sich unter anderem daran,\ndass es jetzt im Vereinigten Königreich gibt es jetzt einen neuen Ministerposten\nnämlich den Minister of Food,\nalso sie haben jetzt ein Ministerium eingesetzt was sich nicht um Verbraucherschutz\noder sowas kümmert sondern dass es überhaupt was zu essen gibt Das hatten sie\nschon mal, nämlich kurz nach dem Zweiten Weltkrieg.\nSo, also das ist so der Level, auf dem sich das gerade befindet.\nParallel dazu wird die Industrie langsam panisch, kündigt am laufenden Meter\nSchließungen, temporäre dauerhafte Schließungen, Verlagerungen von Unternehmen an.\nUnd der Agrarsektor geht auch steil, weil sie jetzt irgendwie nach zwei Jahren\ngemerkt haben, dass sie ja eigentlich nur leben, weil sie durch EU-Recht beschützt\nsind und vor allem durch die starke Agrarförderung am Leben erhalten werden.\nUnd dass in dem Moment, wo halt so ein No-Deal-Szenario eintritt,\nim Prinzip alle Grenzen geöffnet werden müssen für Essen von außen und dann\nwerden sie natürlich in 0,0x überschwemmt mit Nahrungsmitteln aus den USA und anderen Quellen.\nUnd können sich da herzlich wenig dagegen wehren.\nUnd dann wäre es halt auch vorbei mit dem Agrarsektor innerhalb von zwei Wochen,\nwie so allgemein eingeschätzt wird.\nDas Ganze ist ein ganz dickes Teil und ich bin gespannt, wie sehr uns das noch um die Ohren fliegt.\nWer Lust hat, sich da ein bisschen reinzulesen und zu hören,\nich habe nochmal ein Video verlinkt, was gerade so die Position der EU-Staaten\nauch nochmal genauer erklärt. Ein schöner Kanal, Brexit Explained.\nUnd wer Bock hat, mal so full in zu gehen, dem empfehle ich mal das Nachhören\nvon einem Videopodcast, der ist sehr unterhaltsam, Three Blokes in a Pub.\nAlso so drei Typen in der Kneipe, wo ein Weltreisender,\neiner der im Lkw-Transport-Business in ganz Europa unterwegs ist und ein Experte\nbeim Aushandeln von Trade-Deals weltweit,\nder also aktiv sowas getan hat,\nmal so richtig schön ablassen, was eigentlich die Realität ist.\nUnd es ist sehr unterhaltsam, aber auch mega erschreckend, was da sozusagen alles bei rauskommt.\nAlso da sieht man mal, hier wird leider die Öffentlichkeit komplett hinters\nLicht geführt und man kann nur hoffen, dass es in Großbritannien noch eine Art\nUmsturz gibt, weil sonst haben wir echt ein richtiges Problem."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:16",
+      "text": "Ein Bild dazu Sonst haben wir ja keine Probleme,\nalso weltweit das Thema was wir heute gar nicht ansprechen wollen ist US Supreme\nCourt Benennung von Brett Kavanaugh ein neuer Tiefpunkt,\nvon allem nach den ganzen anderen letzten neuen Tiefpunkten sondern Sondern\nwir kümmern uns jetzt um den Alarm, denn, wie die Blödzeitung uns informiert,\nDeutschlands Cybersheriff schlägt Alarm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:56",
+      "text": "Alarm, Alarm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:58",
+      "text": "Alljährlich kommt der BSI-Lagebericht raus.\nBundesamt für Sicherheit in der Informationstechnik informiert dann da über\neben die Cyberlage in Deutschland und es ist natürlich unschwer vorherzusagen,\ndie Situation ist ernst und der Cybersheriff Arne Schönbohm schlägt Alarm.\nJetzt hatte ich mir den Genuss, mir diesen BSI-Lagerbericht mal ein bisschen\nim Detail anzuschauen und jetzt\nmuss man natürlich sagen, 2017 war kein besonders gutes Jahr für das BSI.\nWas ist passiert 2017?\nBundesregierung wurde gehackt. Wir erinnern uns an diese Webseite der Hochschule des Bundes,\ndie dann genutzt wurde, um damit Schadsoftware an Mitarbeiter des Auswärtigen Amtes auszuliefern.\nUnd die wurden dann nur durch Zufall, weil einer dieser Mitarbeiter mit dem\nLaptop in ein anderes Netz gegangen ist, entdeckt, dass dort eben Traffic zu,\nwie man glaube ich damals vermutete,\nder Hackergruppe APT28 ausgeleitet wurde.\nUnd quasi nur, weil dieser Mitarbeiter des Auswärtigen Amtes einen Laptop hatte\nund dann eben beim Verteidigungsministerium irgendwie zu Besuch war und beim\nVerteidigungsministerium andere Detektionsregeln auf der Firewall waren,\nals an anderer Stelle ist dieser Fall aufgefallen.\nWarum ist das schlecht fürs BSI?\nNaja, der Schutz genau dieser Regierungsnetze des IVBB, des Informationsverbundes\nBerlin-Brandenburg, das ist genau die Aufgabe des BSI.\nDas ist deren, das fällt in deren Verantwortung.\nIn der Berichterstattung hieß es immer, ja das Netz ist sicher, das Netz ist sicher.\nHacker hacken halt auch keine Netze, sondern die hacken Endpunkte.\nDas Netz ist in der Regel relativ egal.\nDas Netz ist, könnte man quasi sagen, auch sicher geblieben.\nLiest man jetzt aber den BSI-Lagebericht, dann findet man da sowas wie,\ngegen Ende des Jahres 2017 hat das BSI über das nationale Cyberabwehrzentrum\nHinweise auf einen erfolgreichen Cyberangriff erhalten,\nvon dem einzelne Bundesbehörden betroffen sein sollten. Das ist echt schön.\nDamit hatten die ja überhaupt nichts zu tun. Über das Cyberabwehrzentrum haben\nwir da so einen Hinweis erhalten.\nDem sind wir natürlich nachgegangen. Wir starteten den Prozess der Vorfallsbearbeitung\nin Abständung mit dem nationalen Cyberabwehrzentrum und so weiter.\nHaben die potenziell betroffenen Behörden informiert und haben mit der Analyse\nund der Verifikation der initial vorliegenden Informationen begonnen.\nUnd dann sagen sie, der Angriff erfolgte über einen Webster bei der Bundesakademie\nfür öffentliche Verwaltung.\nEntschuldigung, ich hatte gerade irgendwie Bundeshochschule des Bundes oder\nso, Hochschule des Bundes, nein, Bundesakademie für öffentliche Verwaltung.\nDas BSI konnte den Cyberangriff auf das Auswärtige Abend durch den Einsatz eines\nMobile Incident Response Teams über längere Zeit beobachten und so tiefere Einsichten\nin Absicht und Vorgehensweise der Täter erlangen,\ngrößerer Schaden oder eine weitere\nAusbreitung konnten dank bestehender Schutzmaßnahmen verhindert werden.\nDie berichten darüber so, als hätten sie damit überhaupt nichts zu tun gehabt\noder wären eher später zugerufen worden, obwohl das quasi genau ihr Problem ist.\nEine kleine Box und steht irgendwie so weiter nichts dazu.\nAnderes Problem, was 2017 stattgefunden hat, ist natürlich die Bundestagswahl wurde gehackt.\nLogbuch Netzpolitik berichtet, primär daran beteiligt eben Martin Schiersig,\nThorsten Schröder und ich die sich, wir haben jetzt ja ein paar Wochen mit dieser\nSoftware auseinandergesetzt und eben wenige Wochen vor der Bundestagswahl.\nDarüber berichtet und ich denke ich kann so viel aus den Hintergrundgesprächen\nerzählen, dass da durchaus das Innenministerium und das BSI mit dieser Sachlage befasst waren.\nJetzt wurde bei der Pressekonferenz zur Vorstellung dieser ganzen Angelegenheit von einem,\nReporter, ich glaube der ARD, gefragt, sag mal, ich habe jetzt mal geguckt in\neurem Lagebericht 2017, da steht irgendwie gar nichts drin,\ndass die Bundestagswahl 2017 gravierende Sicherheitslücken hatte,\ndie vom Chaos Computer Club untersucht und aufgedeckt wurden. Wie kann dat?\nSeehofer war damals noch nicht im Minister.\nDann war noch die Frage nach den Gegenmaßnahmen.\nAlso wir hören auch hier, das BSI weist wieder seine,\nVerantwortung von sich. Er sagt, das liegt ja in der Hoheit des Bundeswahlleiters\nund ja, viel gibt es da nicht zu berichten. Ich meine,\nIch finde es wirklich sehr amüsant, wie wir hier, also zwei wirklich schwere\nKatastrophen und das BSI geht noch nicht mal hin und erkennt da seine Verantwortung an.\nAlso man würde ja erwarten, dass sie sagen, ja okay, hier sind Defizite,\ndeswegen brauchen wir mehr Geld oder so.\nAber die gehen über beide Vorfälle so drüber hinweg, als wäre das irgendwie\ngeschehen und sie hätten damit nichts zu tun gehabt. Und das ist eigentlich\ntatsächlich in dem gesamten BSI-Lagebericht so ein bisschen so,\ndu fragst dich, wofür haben wir das eigentlich?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:31",
+      "text": "Ja, die haben doch gesagt, wenn sie jetzt darüber reden, dann wissen ja die\nBösen, was zu tun ist, dann würden sie ja nur Tipps rausgeben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:39",
+      "text": "Ja, BSI, Security by Obscurity, herzlichen Glückwunsch, geile Idee.\nAlso das ist doch wirklich, ich meine, ich finde das wirklich schwierig.\nIch habe das, glaube ich, hier auch schon öfter gesagt, der Vorgänger von Arne\nSchönbohm, Herr Hanke, das war ja\njemand, mit dem hatte ich ja auch meine politischen Differenzen mal, ja.\nAber das war wenigstens jemand, der einen seriösen, verantwortungsbewussten\nUmgang mit Fragen der IT-Sicherheit betrieben hat.\nUnd das sehe ich hier wirklich nicht.\nAlso wenn Vorfälle irgendwie unter den Teppich gekehrt werden,\ngleichzeitig sie aber schaffen, dieses Cybersheriff schlägt Alarm,\nüberall sonst bricht die Welt zusammen, nur beim BSI ist alles in Ordnung.\nDa haben sie eine wunderschöne Sache auch in ihrer Pressekonferenz dann eben\nhervorgetan, wo sie also sagten, hier übrigens Steckenpferd des BSI, die Routerrichtlinie.\nDie Routerrichtlinie. Ich hatte es schon ganz vergessen, dass ich mich damit\nnämlich auch 2017 und 2018 auseinandergesetzt habe.\nUnd zwar bezieht sich das auf 2016 hatten wir den Ausfall der Telekom-Router,\nalso die einige erinnern sich vielleicht, damals sind knapp 900.000 Telekom-Router ausgefallen.\nWeil sie eine Availability Schwachstelle hatten, also sie konnten leicht,\nsind einem DDoS einem DOS zum Opfer gefallen, DDoS kann man da kaum zu sagen\ndas waren irgendwie sieben Pakete, die die brauchten, um abzuschmieren Also Denial of Service.\nGenau, also die Router sind ausgefallen, weil es im Rahmen eines anderen Angriffs,\nfür den sie nicht verwundbar waren, zu einem erhöhten Aufkommen bestimmter Pakete kam.\nUnd diese Sache, diesen Ausfall, der ja jetzt nicht, der war ja keine Kleinigkeit,\nannähernd eine Million Internetanschlüsse in Deutschland fallen aus.\nGut, die meisten haben es gar nicht gemerkt, weil Netz eh scheiße ist in Deutschland,\naber das war natürlich etwas, da ist auch sofort Innenministerium und Wirtschaftsministerium\nsind da sofort darauf aufmerksam geworden und haben, glaube ich,\nsehr zügig die ersten Termine, die wir da hatten, waren,\nwenn ich mich nicht täusche, im Januar 2017 oder so.\nOder vielleicht sogar noch Ende 2016. Da gab es mehrere Anhörungen zu öffentliche\nund nicht öffentliche, wo ich auch als Vertreter des Chaos Computer Clubs damals\nwar und dann eben diese Anhörungen,\ndiese Idee, dass das BSI jetzt eine Richtlinie verfasst, wie es um Router zu\nbestehen hat, damit da irgendwie so etwas nicht mehr passiert.\nWie gesagt, fing damals an im Wirtschaftsministerium, dann ging es weiter im\nInnenministerium, weil es eben am Ende eine BSI-Sache ist.\nDa hatten wir, ich glaube sowas wie irgendwas zwischen drei und fünf Terminen.\nIch bin da ein paar mal hingegangen, Frank Rieger ist da hingegangen und Mirko\nVogt vom Chaos Computer Club und Freifunk ist da hingegangen.\nWir haben diesen Prozess so ein bisschen begleitet.\nDas ist ganz geil. Da sitzt du dann mit irgendwie 30, 40 Leuten.\nDie Leute sind Stakeholder, also Hersteller von solchen Geräten,\nBetreiber von Netzen und dann irgendwie CCC.\nIch glaube, wenn ich mich jetzt nicht täusche, bei ein oder zwei Treffen war auch Klaus Landefeld.\nAlso vom DZX, die betroffenen Organisationen, mal wieder natürlich nur so Gesamtverband\nder Versicherungswirtschaft,\nhabe ich da auch mal jemanden gesehen, also auch so ein paar, wo man sagen würde,\nokay, die haben hier unabhängiges Interesse,\nChaos Computer Club, würde ich mal so sagen, wir sind da hingekommen,\num eben technisch beratend zu stehen.\nWir hatten natürlich unsere Forderungen.\nUnsere Forderungen waren primär, bitte, bitte, bitte Haftung einführen.\nDas ist ja das, was wir immer sagen. Wir wollen für bestimmte Fälle,\nin denen eben Fahrlässigkeit nachzuweisen ist, wollen wir Haftung der Hersteller.\nWeil über Haftung klären sich sehr viele Details sehr schnell."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:03",
+      "text": "Und automatisch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:05",
+      "text": "Da schafft man einfach einen Anreiz und dann klappt das.\nWenn du keine Haftung hast, wie zum Beispiel jetzt bei der Manipulation von\nDieselsteuergeräten oder so, dann merkst du, dass sich der Markt sehr langsam\nerst anpasst an die Anforderungen, die du haben möchtest. Deswegen haben wir\ngesagt, hier mach doch einfach einen Preisschnitt dran.\nWas meinst du, wie schnell solche Sachen passieren?\nWeiterer Punkt natürlich eine unserer Forderungen, eine Verpflichtung Updates\nbereitzustellen für einen genannten Mindestzeitraum,\nden wir eben auch quasi diktiert haben wollen durch diese Anforderungen.\nUnd dann, sehr, sehr wichtig, eine unserer zentralen Forderungen,\nauch wenn du jetzt als Hersteller sagst, für dieses Gerät leiste ich keinen\nSupport mehr, das ist jetzt, sagen wir mal, acht Jahre alt.\nWir haben dafür jetzt Software-Updates bereitgestellt über die letzten acht Jahre.\nNun hören wir damit auf. Was ist dann?\nDas ist ein sehr interessanter Fall, weil dann ja im Prinzip die Nutzerinnen\ndieser Geräte vor der Entscheidung stehen, okay,\ngehe ich das Risiko jetzt ein, dieses Gerät weiterhin zu betreiben,\nwelches unter Umständen unsicher ist oder werfe ich es jetzt weg?\nWeil wer weiß, wie lange das noch sicher bzw. unsicher ist.\nDie dritte Option wäre natürlich zu sagen, okay, wenn der Hersteller schon sagt,\nwir kümmern uns jetzt nicht mehr um die Software,\ndann wäre natürlich eigentlich zu erwarten, dass der Hersteller sagt,\nwenn wir es nicht machen, dann\nkannst du lieber Verbraucher oder liebe Verbraucherin das selber machen.\nUnd oder eine Open Source Community möge sich bitte dieses Gerätes bemächtigen.\nSehr viele ältere WLAN-Router kannst du ja sehr gut betreiben,\nzum Beispiel mit OpenWRT, mit einer quelloffenen, wunderbaren,\nfreien Software, die mit einer aktiven Entwickler-Community diese Geräte weiterführen kann.\nAlso das war unser Verlangen, dass man sagt, wenn du aufwärst,\ndich darum zu kümmern, dann sei verpflichtet, das freizugeben.\nIm Prinzip eine rein ökologische Forderung, zu sagen, okay,\nwenn du dieses Gerät in einen Zustand versetzt oder das Risiko eingestellt,\ndass dieses Gerät nicht mehr sicher betrieben werden kann,\ndann wäre eigentlich die notwendige Konsequenz, die Menschen müssen es wegwerfen\nund das ist ein elektronisches Gerät, was,\nwenn es noch funktioniert, mit einer anderen Software, vielleicht auch funktionieren kann.\nWenn du deiner Verantwortung nicht mehr gerecht werden möchtest,\nder Nachsorge, dann musst du es wenigstens anderen ermöglichen.\nWäre sowas wie, um jetzt mal bei dem Autovergleich zu bleiben,\nstell dir mal vor, VW würde dir ein Auto verkaufen und sagen,\nalso unsere Werkstätten liefern dir dafür für die nächsten zehn Jahre Ersatzteile\nund reparieren das, aber dann endet leider dein Supportvertrag.\nWenn die Karre dann kaputt ist, dann hast du eben Pech gehabt.\nAber in eine freie Werkstatt darfst du nicht gehen. Das möchten wir verhindern.\nWürdest du nicht akzeptieren. Also das waren unsere Forderungen,\ndie wir da an den Tisch gebracht haben.\nImmer vor dem Hintergrund.\nDas ist die zentrale Forderung. Wie schaffen wir es denn, dass zumindest deutschlandweit,\nwas ja schon der geringste Anspruch ist,\neigentlich möchtest du ja ein Sicherheitsniveau mindestens europaweit oder gar weltweit anheben, ja?\nWie können wir das denn da durchsetzen? So, da fanden dann diese Treffen statt.\nWir hatten dann Vertreter, der Netzbetreiber, Vertreter der Gerätehersteller\nund dann wurde da diskutiert, was denn jetzt mal so eine Sicherheitsanforderung wäre.\nDann wurde gesagt, ja, wir könnten ja zum Beispiel reinschreiben,\ndass das Passwort bei der Inbetriebnahme geändert werden muss oder so.\nOder dass es keine Standardpasswörter gibt.\nAh, das ist aber schwierig. Und dann wird da so drüber diskutiert und wenn die\nAnforderung zu hart wurde, Dann haben die Hersteller gequengelt und wenn zum\nBeispiel die Anforderung war, okay, wir wollen eine Open-Source-Software darauf haben,\ndann haben sich hier die Kabelnetzbetreiber gequengelt, weil die ja effektiv\neinen Routerzwang durchsetzen.\nJa, die versuchen dir genau das zu verbieten, eigene Open Source Software und\nso weiter da zu betreiben.\nNaja und so wird ja dann lange darüber diskutiert und jetzt hast du zwei Jahre\nnach dem Vorfall soll also jetzt diese Richtlinie veröffentlicht werden und\njetzt kommt das Schöne, diese Richtlinie ist vollständig freiwillig.\nDie ist erstmal allenfalls das Papierwert, auf dem du das PDF ausdruckst,\ndenn sie hat null Verbindlichkeit. Die steht erstmal nur da.\nAlso das BSI kann Richtlinien schreiben, wie es will, die haben dann eine Nummer\nund dann kannst du halt sagen, okay, hier nach Richtlinie so und so.\nDas ist aber jetzt nicht, dass sie, also alles, was darauf noch aufbauen würde,\nzum Beispiel jetzt eine Zertifizierung nach dieser Richtlinie oder ein Gütesiegel\noder eine Verbindlichkeit dieser Richtlinie für den Eintritt in irgendeinen\nMarkt, das passiert erstmal alles nicht.\nDas ist das Ergebnis nach zwei Jahren. Ja, eine zerwässerte Richtlinie.\nJetzt freut sich der Arne Schönbohm und sagt, ja, also der nächste Schritt wird\ndann nämlich sein, dann haben wir ein Gütesiegel.\nDann haben wir ein Gütesiegel. Meine Güte. Dann stehst du im Mediamarkt und\ndann hast du so ein schönes Deutschland-Siegel, wie der Arne Schönbohm ja auch\nhier immer am Anorak hat, links.\nDer hat immer so eine kleine Deutschland-Fahne, Cyber-Schland oder sowas.\nSo und so,\ndann hast du ein Gütesiegel und das war sehr schön ich weiß leider nicht mehr, wer das damals.\nVon wem damals dieser Satz kam in diesem Treffen im Innenministerium,\nweil dann nämlich gesagt wurde ja, weil Gütesiegel, wenn es nämlich dann ein\nGütesiegel gibt, dann kann der Verbraucher seine Risikoabwägung selber treffen.\nUnd dann meldet sich jemand und sagt, der Verbraucher, der in den Mediamarkt\ngeht, der hat seine Risikoabwägung bereits getroffen.\nUnd was immer, immer das große Ding war, die haben natürlich dann gebashed,\nalso die Hersteller deutscher Geräte haben dann immer gesagt,\nja und der ganze China-Schrott, der ganze China-Schrott.\nVon dem sie sich gerne absetzen wollten und dafür wollten sie gerne dieses Siegel\nhaben, weil die Weil die deutschen Hersteller sich dann eben wünschen,\nja, dann können wir sagen, wir haben hier so ein BSI-Gütesiegel auf unseren\nGeräten und dann können wir nämlich unsere höheren Preise rechtfertigen.\nUm nichts anderes ging es da.\nDa hat kein Mensch noch das Ziel vor Augen gehabt, dass man ernsthaft ein...\nSich in eine Richtung bewegt, wo man wirklich in Deutschland mal nachhaltig\naus diesem Problem lernen würde.\nZwei Jahre ist da gar nichts passiert und jetzt haben wir eine unverbindliche\nRichtlinie. Das wird noch Jahre dauern, bis die umgesetzt ist.\nUnd genau zum Beispiel für sowas wie lange es noch Software-Updates gibt,\nist in dieser Richtlinie nicht definiert.\nEs ist nur definiert, dass du das ansagen musst.\nEs ist wieder so ein richtig schönes Wischi-Waschi. Schreibst du hin,\nWie lange gibt es noch Sicherheitsupdates?\nDrei Tage, dann erfüllst du quasi die Richtlinie.\nAlso es ist wirklich zum Heulen und man würde sich tatsächlich wünschen,\ndass hier dieses BSI mal wirklich auch die Kraft bekommen würde und den Mut\nund auch das Backing vom Innenministerium, von der Bundesregierung mal wirklich\ndurchgreifen zu können.\nJa, und dieser Bereich der Router,\nTR-Router, technische Richtlinie Router ist ja nur einer, wo ich dann eben sehe,\nwie sowas über die Jahre zerredet wird und am Ende so ein Papiertiger dabei\nrauskommt, der vollständig zahnlos ist.\nDas ist wirklich traurig, finde ich wirklich traurig.\nInsofern, ich bin da wirklich nicht sehr zufrieden mit der Arbeit des BSI.\nGleichzeitig muss man sagen, das BSI ist eine wichtige Einrichtung und wir können\neigentlich froh sein, so etwas zu haben und es wäre halt toll,\nwenn wir da auch ein bisschen was von hätten als Bürgerinnen und Bürger des\nLandes und da mal wirklich in Deutschland auch mal jenseits von D-Mail,\nPC-Wahl,\nBEA und all diesen ganzen Wenn."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:57",
+      "text": "Mal irgendwas richtig funktionieren würde."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:58",
+      "text": "Eine Sache."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:00",
+      "text": "Ein einziges Ding, was mal irgendwie okay wäre, wo man sagt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:04",
+      "text": "Und es ist immer so, ja das können wir jetzt nicht machen, wir können jetzt\ndie Hersteller zwingen.\nWeißt du, wenn die das von alleine machen, wenn die sich ihre Richtlinie selber\nschreiben, danach wie sie die erfüllen können,\ndann kannst Lass sie dir das sparen, dann brauchst du das nicht zu machen,\nso während dieses Ding da zerredet wird, ne.\nMacht so ein WhatsApp, während wir die D-Mail philosophieren,\nja, macht so ein WhatsApp einfach mal ein Upgrade und hat Ende-zu-Ende-Verschlüsselung, ja.\nIch will jetzt wirklich nicht WhatsApp loben und wirklich nicht Facebook,\naber irgendwie, es wäre schon gut, so eine IT-Sicherheitspolitik zu betreiben,\nwo am Ende auch mal was passiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:52",
+      "text": "Ja, aber man hat immer noch nicht E-Mail im Griff von Porn."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:56",
+      "text": "Wir haben aber mehrere Anläufe unternommen. Also ich war gestern in Oldenburg\nan dem Institut für Informatik da, haben wir mit so ein paar Leuten drüber gesprochen.\nWeißt du, wie viele, also wir haben irgendwie diese,\nVolksverschlüsselung, wir haben das D-Mail, wir haben den E-Postbrief,\nwir haben das besondere elektronische Anwaltspostfach und mir sind noch zwei\nweitere Sachen eingefallen, wo in Millionen,\nProjekten versucht wurde, irgendwie das E-Mail sicher zu machen.\nIch frage mich, wann das nächste kommt, weil es längere Zeit nichts mehr passiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:35",
+      "text": "Das ist nicht unglaublich. Und das, obwohl es, wie wir auch schon mehrfach betont\nhaben, eigentlich ja schon lange was gibt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:43",
+      "text": "Das Problem ist seit Jahrzehnten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:46",
+      "text": "Es gibt es schon alles. High-S-Mime könnte man einfach einführen.\nDafür habt ihr irgendwie euren elektronischen Personalausweis und all diesen Kram."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:56",
+      "text": "Das wäre alles da gewesen für eine Mark 80."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:01",
+      "text": "Wenn das nix kostet, dann ist das auch nix."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:03",
+      "text": "Das ist wirklich ne Katastrophe das ist wirklich ich find das ganz schlimm du\nmerkst auch, dass die Leute alle in diesen Treffen sitzen da kam ja beim dritten\nMal kein Techie mehr hin, der einzige Techie der da noch hingegangen ist,\nwar Mirko und der kam auch jedes Mal irgendwie so Zähneknirschen zurück und\nsagte so Linus, was hast du ich möchte das nicht,\nweil der irgendwie die ganze Zeit nur so Marketing-Heinis sitzen,\ndie irgendwie ihre drei Notizen haben und sagen, wenn das und das gesagt wird, sagen nein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:35",
+      "text": "Da kommen noch die friedliebsten Nerds und wir anderen wollen nur noch töten."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:43:38",
+      "text": "Ich würde dem Mirko jetzt nicht unterstellen, dass er töten wollte,\naber er war jetzt nicht mal weit weg davon.\nSchlimm. Und da werden wir auch wieder zerrieben.\nNext. Kommen wir zu einem schönen jetzt kommen wir zu einem schönen Thema,\ndas ihr in der letzten Sendung schon angesprochen hattet.\nBloomberg. Bloomberg hat mal wieder einen Scoop gehabt. Wahnsinn-Story."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:12",
+      "text": "Richtig geile Recherche."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:13",
+      "text": "Story geht so, es gibt einen Hersteller von Mainboards, primär im Serverbereich.\nDas ist ein US-amerikanischer Hersteller, trägt den Namen Supermicro."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:25",
+      "text": "Also so US-Taiwanesisch. Ja, okay."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:29",
+      "text": "Und produziert, wie eigentlich alle, seine Hardware in China.\nUnd hat es jetzt so im Serverbereich, glaube ich, sehr, sehr verbreitet.\nUnd jetzt sagt Bloomberg, ja, also es wäre so gewesen, bei Amazon waren eben\nSupermicro, nee, Amazon wollte ein Unternehmen kaufen,\ndieses Unternehmen hatte in seinen Servern Supermicro-Boards im Einsatz und\ndann hat Amazon im Rahmen seiner Akquisitionsüberlegungen gesagt,\nhier, wir schicken da mal ein paar Pentester durch.\nUnd die haben dann Hardware-Trojaner auf diesen Boards gefunden, auf den Mainboards.\nKleine Chips, die quasi nicht in den Bestellungen von Supermicro drin waren.\nDie auf diesen Boards saßen und so wird beschrieben, die irgendwie irgendeine\nForm von Eigenleben entwickelt haben was hier jetzt technisch nicht genauer beschrieben wird.\nUnd irgendwie aber die ganzen Computer trojanisiert haben und dann dachte ich\nso Wahnsinn, so unglaubliche Geschichte,\nfast wie die NSA das bei anderen Leuten macht der Aktienkurs von Supermicro\nging irgendwie ab in den Keller,\ndie haben irgendwie sowas wie 50% Börsenwert verloren an dem gleichen Tag und\nalle Stakeholder in der ganzen Angelegenheit widersprechen heftigst, Supermicro,\nAmazon und Apple, die auch Supermicrobots irgendwo für ihre iCloud oder sowas\nim Einsatz haben, ich glaube, war gar nicht genau spezifiziert wo.\nApple und Amazon widersprechen der Geschichte sogar gegenüber dem Kongress und\nsagen offiziell, also das, was da steht, das gibt's nicht.\nUnd Bloomberg sagt aber, wir haben mit 17 Quellen gesprochen,\ndie wir hier nicht namentlich nennen können.\nDie Story stimmt, das ist ein ganz klarer Fall.\nDann geht Patrick Gray hin vom Risky Business Podcast und spricht mit einer\nder wenigen namentlich benannten Quellen in diesem Artikel und sagt nochmal\nhier was du bist da namentlich genannt, wie siehst du denn diesen Artikel?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:45",
+      "text": "Also Joe Fitzpatrick, der so auf Blackhead und so weiter öfter schon mal Präsentationen\ngemacht hat, so wie könnte man denn das theoretisch machen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:53",
+      "text": "Genau, Hardware-Trojaner sind quasi seine, sein Forschungsbereich relativ einfach,\nder guckt sich Geräte an, in diesem Fall eben auch den,\nSPI-Bus auf Boards und sowas und hat gesagt, wenn man da einen kleinen Chip\ndrauf machen würde, der folgendes könnte, weil es eben ein Bus ist,\nda sind ja dann alle Informationen drauf und jetzt, das wäre ja total,\nda könnte man ja Hardware-Trojaner bauen.\nUnd der hat gesagt, er hätte genau so wären auch seine Gespräche mit Bloomberg\ngewesen, dass die Bloomberg-Leute ihn gefragt haben, wenn man hier einen,\nwenn man so einen kleinen Chip auf so einem Board hätte, was könnte man denn damit alles machen?\nUnd er hat dann denen erklärt, ja, da könntest du, was weiß ich,\neinen Ethernet-Konnektor simulieren und du könntest irgendwie den ganzen Rechner\nübernehmen und zum Beispiel folgendes tun.\nUnd in der Bloomberg-Geschichte steht, so schildert er, alles,\nwas er so gesagt hat, was passieren könnte, steht in dem Bloomberg-Artikel als\ngegebene Tatsache durch diesen kleinen Chip.\nUnd dummerweise findet sich, sagt selbst Bloomberg nicht, hier gibt es mal so\nein Chip und man würde jetzt davon ausgehen, dass vielleicht ein paar Leute,\ndie Supermicrobots in ihrem Keller haben, mal runtergehen und gucken,\nob sich da vielleicht so ein Chip drauf befinden könnte oder so.\nNiemand findet etwas, niemand kann diese Geschichte in irgendeiner Form bestätigen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:12",
+      "text": "Das Lustige ist, das einzige Bild, was hier sozusagen als Beispielchip mit sowas\nkönnte es sein, abbilden, ist ein Bild, was dieser Joe ihm auf Nachfrage geschickt\nhat, so naja, wir haben gehört, das ist so ein Übertrager, wie sieht denn sowas aus?\nUnd dann hat er aus irgendeinem Katalog so ein Bild rausgenommen und genau dieses\nBild, was er ihm geschickt hat, landet dann in diesem Artikel sozusagen und er meinte so,\nsowas baut man nicht auf dem Mainboard, sowas baut man vielleicht auf eine Internetkarte\noder so weiter, wo man so Transziver dran hat, aber wenn sowas auf dem Mainboard\nist, dann sagt jeder, der irgendwie was von Hardware versteht,\nDa steht so, hä, was ist denn das?\nSo, ja, was hat das da überhaupt zu suchen? Also nicht sonderlich gut versteckt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:50",
+      "text": "Also als nächstes findet, wo du gerade sagst, was braucht man auf dem Network-Interface?\nAls nächstes findet Bloomberg dann einen israelischen Unternehmer,\nder gesagt, er hätte bei einem Pentest bei einem Telekom-Anbieter auf Supermicroboards\nauf dem Netzwerkkarte-Hardware-Trojaner gefunden.\nBloomberg sagt, ja hier, wir haben einen weiteren Zeugen. Komplett andere Geschichte,\nnämlich nicht mehr das Board, sondern das Network Interface betroffen.\nUnd dieser Typ hat ein Unternehmen, was genau sagt, es würde Hardware-Trojaner lösen.\nEr hat irgendwie so ein komisches... und verkauft dagegen irgendwelche Schlangenöl.\nUnd du findest wieder nur Dementis dieser ganzen Story.\nKeiner will da jemals was von gehört haben. Fazit bisher, die Geschichte ist\ntrotzdem jetzt so generell möglich und glaubwürdig,\nja, aber die Art, wie sie berichtet wird, ohne jeglichen Beleg,\nalle widersprechen, niemand sagt, okay, hier, gib doch mal so ein Chip, zeig doch mal, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:54",
+      "text": "Ja, auch die Art, wie es dementiert wird. Das ist ja nicht nur so,\ndass man jetzt so shady Dementis hat mit, ja, wir können uns dazu nicht äußern\noder so, sondern sagen alle so, nee, kennen wir nicht, hatten wir nicht,\nwir haben alle gefragt, wir haben hier eine Investigation gestartet, nee,\nnichts von gehört, weiß keiner was zu, es gibt ja auch keine FBI Investigation,\nwir haben mit niemandem zusammengearbeitet.\nAlles Sachen, die ja dann von dritter Stelle auch schnell belegbar wären oder\nwiderlegbar wären und von daher scheint an dieser ganzen Geschichte herzlich\nwenig dran zu sein, sodass man sich fragt, wo kommt es denn eigentlich her,\nwenn es denn da so viele Quellen gibt angeblich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:32",
+      "text": "Tja, darüber wird jetzt spekuliert. Ich bin einfach mal sehr gespannt.\nAlso Bloomberg steht ja natürlich auch mit einem halbwegs guten Namen in der Kreide.\nUnd das ist halt eine Nummer zu groß, um sowas irgendwie bei sowas Unsinn zu behaupten.\nEs ist immer noch möglich, dass Bloomberg morgen irgendwie das Ding aus der\nTasche holt und sagt, hier ist der Hardware-Trojaner, hier sind fünf unabhängige\nGutachter, die das genau beschreiben, dass alles so ist, wie wir es sagen,\naber bis jetzt riecht das nicht danach und ich habe den, es nähert sich langsam die Befürchtung.\nDass diese Journalisten hier irgendwie ein bisschen die."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:15",
+      "text": "Standard ihrer Arbeit verletzen. Einer des Informationskampagnen auch vor allem\nauf den Leim gegangen sind."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:51:21",
+      "text": "Das kann natürlich auch sein. Es passt ja zu der Storyline des Pentagon und\nvor allem der Planung von Donald Trump, dass jetzt diese ganze Produziererei\nin China passt jetzt politisch nicht so ganz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:36",
+      "text": "Ja, das wird schlecht geredet. Es wird ja hier auch auf Future Zone von Erich\nMöchel ein wenig nahegelegt, dass das einfach jetzt die Quellen sind.\nHier wird einfach behauptet, China ist gefährlich für die Produktion,\nlass mal lieber in den USA machen.\nWas im Übrigen, wie jeder weiß, der wenig Einblick hat in diese Industrien,\nderzeit einfach vollkommen illusorisch ist.\nEs ist derzeit einfach niemand in der Lage, auch nur annähernd diese Produktionskapazitäten,\ngeschweige denn die Preise, die China da derzeit realisiert und Taiwan,\nauch nur annähernd im Westen zu reproduzieren, geschweige denn zu unterbieten\nund von daher ist das alles Wunschdenken."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:24",
+      "text": "Gut, kommen wir zu neuen künstlichen Intelligenzgeschichten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:30",
+      "text": "Dadurch wird ja alles besser, haben wir gelernt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:32",
+      "text": "Ja, künstliche Intelligenz ist ja super klug."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:36",
+      "text": "Die alte Intelligenz war nicht so geil. Jetzt nehmen wir die künstliche."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:40",
+      "text": "Und da hat Amazon, oder willst du das erzählen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:43",
+      "text": "Ich kann das kurz erzählen. Also Amazon hat sich gedacht, naja,\nRecruiting ist ja voll anstrengend. Wir brauchen jetzt so viele neue Leute.\nDas müssen wir jetzt mal mit Software optimieren. Und hat dafür ein Team in Edinburgh gestartet.\nDie haben dann 2014 angefangen, so eine Software zu entwickeln.\nUnd die wollte dann sozusagen die Bewerbungen des potenziellen neuen Personals\neinfach sich durchlesen und bewerten auf Basis von, naja, früheren Bewerbungen.\nUnd haben da irgendwelche Modelle sich gebaut für Jobfunktionen,\num das alles zu bewerten und so gut 50.000 Begriffe in den Bewerbungen ausgewertet,\num dann am Ende für jeden Bewerber so ein bis fünf Sterne,\nzu vergeben, um zu sehen wie geil denn das so ist,\nWäre eh so ein Freund von Sternchen für Bewertungen mit Fünf-Sterne-System ist schön doof."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:33",
+      "text": "Fünf-Sterne-Deluxe."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:35",
+      "text": "Ja. Kannst du diesen schönen Witz? My Review of the Solar System? One Star.\nNaja, auf jeden Fall stellte sich 2015 schnell raus. Klappt alles nicht so wie gedacht.\nDie Datenbasis war nämlich die Bewerbung der letzten zehn Jahre und das waren\nim Wesentlichen Männer.\nUnd stellt sich raus, hat alles nicht so gut funktioniert, weil unter anderem\nWorte, die Männer gerne verwenden, höher bewertet wurden und auch so diverse\nAbstufungen vorgenommen wurden, wenn halt irgendwas mit Frauen da drin stand.\nAlso wenn irgendeine Frau gesagt hat, sie war so in ihrem Schachclub irgendwie,\nCaptain, dann führte das in diesem Algorithmus eben zur Abwertung.\nUnd wir wissen ja bei AI und Machine Learning Sachen, man weiß immer,\nalso da wird nicht ein Algorithmus gemacht, sondern der Algorithmus ergibt sich\naus den Daten, mit denen man die Maschine füttert.\nDeswegen kann man das alles erst im Nachhinein feststellen. Da wurde dann auch\nnoch manuell nachbearbeitet und so eine Sachen versucht auszugleichen.\nAuch so, dass irgendwie, wenn Frauen auf einem College waren,\nwo nur Frauen waren, dann führte das auch zur Abwertung.\nEinfach dadurch, dass man die falschen Daten hatte.\nUnd es blieb einfach am Ende auch noch genug Quatsch über. Funktionierte alles nicht.\nEs wurden einfach nur noch Unqualifizierte für irgendwelche Jobs vorgeschlagen\nund 2017 wurde dieses Programm eingestellt und angeblich hätten sie es ja auch\nnie so richtig zum Einsatz gebracht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:55:05",
+      "text": "Was man hier sieht, also,\nEin klassisches Problem bei der Anwendung von künstlicher Intelligenz ist,\ndass das Ding eben aus Daten der Vergangenheit gefüttert werden muss.\nDas kann nur so gut werden, wie die Recruiter vorher waren.\nUnd wenn du eben, wenn du in deinen Lerndaten diesen Bias hast zu männlichen Bewerbern,\ndann ist das ganz selbstverständlich, dass deine AI das auch lernt.\nJa, das fängt auch, selbst wenn man das Wort Female jetzt da rausgenommen hätte,\ndann wird es das eben an anderen Sachen festmachen, was weiß ich irgendwie,\nDauer der Ausbildung oder es gibt viele Unterschiede."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:55",
+      "text": "Es waren auch so Wörter, die Männer gerne benutzen, so executed."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:00",
+      "text": "Oder die spielen eben Football statt Soccer in den USA.\nAlso es ist ganz klar, das wird passieren, wenn du Biases hast,\nwird deine AI die auch reproduzieren.\nEs sei denn, du sorgst dafür, dass du dem Ding ausreichend Futter gibst,\ndass es das Gegenteil lernen kann.\nDas war übrigens auch genau das, was ich damals bei dem Einsatz zu Risikomanagement-Systemen\nin der Besteuerung an den Bundestag gemeldet habe, dass ich gesagt habe,\nwenn ihr so einen Mist einsetzt, müsst ihr mindestens 50% der Entscheidungen\nauch nochmal auf Basis von Zufall treffen,\ndamit das Ding überhaupt Gelegenheit bekommt, seine eigenen Voraussagen wieder zu revidieren.\nWeil wenn das Ding jetzt einmal anfängt, Männer zu bevorteilen,\ndann kann es nicht mehr feststellen.\nDass Frauen unter Umständen besser sind. Es fängt dann nur noch an,\nzwischen Männern zu diskriminieren.\nUnd das ist jetzt nur das eine, was du halt feststellst, dass es irgendwie sagt,\nah, zwischen Männern und Frauen.\nDas kann aber nochmal genauso gut bei den Männern nochmal nach der sozialen\nHerkunft oder sonstigen Unterschieden haben.\nUnd das Üble ist eben teilweise auch, wenn das einfach nicht explizit in den\nDaten ist, sondern nur implizit.\nDeswegen macht man sowas nicht und es wäre auch echt sehr schön,\nwenn dieser AI-Hype da irgendwann mal zum Ende kommen würde und Leute das irgendwie\nvernünftig zur Anwendung bringen würden.\nGerade bei Amazon würde es ja eigentlich hoffen, dass da genug Leute sind,\ndie sich wenigstens bei dem Einsatz dieser Technologien irgendwie der Fallstricke bewusst sind.\nKommen wir zurück in den Bundestag. Wir haben ja jetzt die AfD dort sitzen und\ndie AfD hat Geld und Zeit, denn wirklich arbeiten braucht sie ja nicht.\nWir erinnern uns, wie der Gauleiter im Sommerinterview auch nochmal erzählt\nhat, was alles nicht seine Aufgabe ist.\nWohl aber natürlich das Stellen von Anträgen.\nUnd am heutigen Freitag wird dann sehr schön im Bundestag im Zweifelsfall ohne\nDiskussion entschieden.\nDer Antrag zum Entzug der Finanzierung.\nFür die Netzkonferenz Republika. Antrag der Abgeordneten Jan-Ralf Nolte,\nMarc Bernhard, Joanna Eleonora Cotar, Ach jetzt, Siegbert Dröse, Franziska Gminder,\nElsner von Gronow, Jens Kästner, Jern König, Rüdiger Lukassen,\nChristoph Neumann, Bernhard Ulrich Oehme, Gerold Otten, René Springer und der Fraktion der AfD.\nDen man sieht, die brauchen echt eine ganze Menge Leute, um da irgendwie zwei Seiten zu schreiben.\nWo sie eben sagen, ja, weil die Republika sich hier gegen die Soldaten gewendet hat.\nDas dürfte, sollte sie also jetzt keine Förderung mehr in der Zukunft erhalten.\nStimmt natürlich überhaupt nicht. Die Republika hat überhaupt keine Soldaten ausgeschlossen.\nDie Republika hat einfach nur gesagt, wir möchten bitte, dass sie keine Uniform\ntragen und wir können ihnen, wenn sie da Uniform tragen, eben auch keinen Stand anbieten.\nJa, gegen Geld.\nJa, also das Geld, da wäre ja auch wieder eine staatliche Förderung der Republika quasi.\nNein, das wäre diese Bundeswehr Arbeitgebermarke gewesen, die das bezahlt hätte.\nUnd da sehen wir eben, was für Leute wir da jetzt haben.\nJetzt greifen sie, und das war ja auch die ganze Zeit klar,\nalso im Prinzip sind sie ja hier im Fahrwasser von Peter Tauber,\nvon der CDU, der damit ja angefangen hat, zu sagen, ey, was ist das hier,\ndie kriegen öffentliche Mittel, jetzt müssen wir die angreifen.\nAfD ist da natürlich gerne mit dabei.\nAußerdem gibt es eine sehr schöne kleine Anfrage der AfD-Fraktion,\nwo sie von der Bundesregierung wissen möchten,\nWelche Programme von NGO sie in welcher Höhe finanziell unterstützt hat.\nUnd da interessieren sie sich für Ärzte ohne Grenzen, die Amadeo Antonio Stiftung,\nAmnesty International, die Clinton Foundation,\nKorrektiv, das European Center for Press and Media Freedom,\nEuropean Civil Liberties Union, European Council on Foreign Relations,\nEuropean Stability Initiative, Global Investigative Journalism Network,\nHuman Rights Watch. Ich bin hier.\nInternationale Organisation für Migration, Initiative Transparente Zivilgesellschaft,\nInvestigative Europe, Journalismfund.eu, Journalists Network,\nJugend rettet, Mediendienst Integration,\nMigrant Offshore Aid Station, Mission Lifeline, Netzpolitik.org,\nNetzwerk Recherche, No Border Network, Proactive Open Arms, Republika,\nReconquista, Internet.\nReporter ohne Grenzen, Save the Children, CIC Watch, SOS Mediterranee und Transparency International.\nArne Semsrott hat sehr gesagt, also im Prinzip so eine schöne Liste an Vorschlägen,\nwo man Geld hinspenden kann, hat er lange nicht gesehen und dank dafür der AfD.\nAber wir Wir sehen sehr genau, dass jetzt eben deren Mitarbeiter und deren Abgeordnete\nschon sehr klar anfangen,\nihre im Bundestag vorhandenen Einflussmöglichkeiten dazu zu nutzen,\njetzt gegen die offene Gesellschaft, gegen liberale Kräfte vorzugehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:15",
+      "text": "So, dann gibt es noch eine Meldung vom D-Kix."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:02:23",
+      "text": "Ich sage immer Zix, du sagst Kix."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:25",
+      "text": "Nee, ich sage Zix."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:02:26",
+      "text": "Du sagst auch Zix, dann sagen wir beide Zix. Wir sind ja hier auch die Netzpolitik-Zixen.\nWir erinnern uns, der D-Zix wehrt sich gegen die Anordnung, die er vom BND bekommt,\nnämlich zur Ausleitung innerdeutscher Kommunikation am D-Zix in Frankfurt.\nUnd da hat er ja vor dem Bundesverwaltungsgericht gegen diese Anordnung klagen wollen.\nDas wurde im Mai ohne weitere Verhandlungen abgewiesen, diese Beschwerde.\nUnd da wird eben gesagt, diese Entscheidung der Klageabweisung durch das Bundesverwaltungsgericht\nohne jegliche inhaltliche Prüfung der Klage überhaupt, können wir uns so nicht bieten lassen.\nWir haben in der Klage umfassend vorgebrachte Verstöße dargelegt gegen das Briefpost-\nund Fernmeldegeheimnis und das Bundesverwaltungsgericht behandelt die noch nicht einmal,\ndeswegen gehen wir vor das Bundesverfassungsgericht, um gegen die Entscheidung\ndes Bundesverwaltungsgerichts sich damit nicht zu befassen zu klagen.\nKönnen wir dem TZX natürlich nur viel Erfolg wünschen.\nDas FBI hat dann jetzt auch den ersten Bruch der biometrischen Schutzmaßnahmen\nan Geräten mal durchgezogen.\nUnd zwar ist es ja so, dass in den meisten zivilisierten Ländern Strafverfolgungsbehörden\nnicht erzwingen können, dass man sein Passwort sagt.\nUnd so ein Graubereich juristisch war immer, wie ist das denn mit biometrischen\nMerkmalen, hat das FBI jetzt einfach mal ausprobiert, ist bei einem eingeritten,\nhat gesagt, hallo, Tag FBI,\nHausdurchsuchung und einmal hier bitte Face ID unlockt von dem Telefon.\nHaben den quasi angewiesen, sein Gesicht vor das Gerät gehalten. Der hat es gemacht.\nUnd dann wurde er kurz darauf wegen Empfang und Besitz von dokumentierten Kindesmissbrauchs angeklagt.\nUnd jetzt stellt sich natürlich die Frage, wie stehen wir dazu als Nutzer unter\nUmständen dieser Technologie,\ndass man dazu eben hier in dieser Form sich zwingen kann.\nIch würde hoffen, dass es da demnächst mal Urteile zu gibt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:52",
+      "text": "Ja, wir hatten ja in der letzten Folge auch schon den Fall, dass Neuseeland\nauch jetzt direkt nach Passwort anfragen darf.\nAlso da ist es nicht auf Biometrie beschränkt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:02",
+      "text": "Und dann gibt es eine sehr schöne Meldung aus Frankreich.\nZwar wurde da ein Darknet-Marktplatz hochgenommen vor einiger Zeit durch den französischen Zoll.\nDer hat den Namen Blackhand gehabt. Und die haben sich dann eben diesen Server\nangeschaut und fanden heraus,\ndass es dort jemanden gab, der sensible Daten und Informationen aus den nationalen\nPolizeidatenbanken unter Pseudonym in diesem Darknet-Marktplatz verkauft hat.\nUnd zwar war das jemand, der für die Direktion Générale de la Sécurité interieur,\nder DGSI, also den Inlandsgeheimdienst, gearbeitet hat und der soll sich eigentlich\num Terrorismus und Cybercrime kümmern und der hat jetzt irgendwie so gesagt,\nja für 300 Euro pro Auskunft könnte er bei mir Handynummern tracken oder die\nAnruflisten aus den Vorratsdatenspeicherungen bekommen und er hat auch einen\nService beworben, wo man sich darüber informieren lassen konnte,\nob man von der Polizei gesucht wird oder was potenziell gegen einen vorliegt.\n300 Euro finde ich echt einen guten Service, finde ich völlig in Ordnung.\nUnd da sieht man mal eben, was das bedeutet, wenn man diese Daten schafft.\nWenn du diese Daten schaffst, dann hast du eben darauf Zugriff und dieser Zugriff\nkann eben auch missbräuchlich sein. und das passiert nicht nur in Frankreich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:33",
+      "text": "Sondern potenziell überall."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:06:36",
+      "text": "Wir merken, dass ich ein bisschen kurz angebunden bin.\nUnd leider jetzt los muss. Deswegen machen wir ein kurzes schmerzloses Ende\nmit einem Dankeschön, welches von mir geht an Alexander, Andreas, Arne,\nBenedikt, Björn, Christian, Clemens, Daniel, Dirk, Fabian, Jens, Katharina,\nKai, Martin, Matthias, Michael, Peter, Ralf, Sebastian,\nSimon, Steffen, Thomas, Tore, Tim, Tim und Judith, herzliche Grüße,\nTobias und Toni. Herzlichen Dank."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:24",
+      "text": "Man merkt, du warst eine Weile weg.\nUnd ja, wie man schon merkte, muss jetzt auch los.\nAlso machen wir erstmal Schluss. Wir haben noch ein paar Themen für die nächste Woche aufgespart.\nUns gehen die Themen ohnehin nicht aus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:07:41",
+      "text": "Nee, leider nicht. Das wäre eigentlich schön. Eigentlich müsste man sagen, es wäre schön."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:46",
+      "text": "Erfolg hat dieser Podcast erst, wenn er nicht mehr nötig ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:07:49",
+      "text": "Ja. das Ziel dieses Podcasts ist nicht mehr nötig zu sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:57",
+      "text": "Vielen Dank fürs Zuhören, bis bald Ciao, ciao."
+    }
+  ]
+}

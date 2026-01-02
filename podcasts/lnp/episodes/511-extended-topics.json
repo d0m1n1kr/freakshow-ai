@@ -1,0 +1,227 @@
+{
+  "episodeNumber": 511,
+  "title": "LNP511 Stand der Technik des letzten Jahrhunderts",
+  "extractedAt": "2026-01-02T11:45:14.000Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "38C3: Elektronische Patientenakte",
+      "subject": {
+        "coarse": "Health / Electronic Health Records",
+        "fine": "Data Management / Patient Data"
+      },
+      "durationSec": 2049,
+      "positionSec": 604,
+      "summary": "Beim 38C3-Kongress wurde ein Vortrag zur elektronischen Patientenakte (EPA) gehalten, der sich mit der neuen Opt-out-Lösung befasste, bei der Bürger automatisch eine EPA erhalten, sofern sie nicht widersprechen. Linus Neumann und Tim Pritlove diskutierten die Sicherheitsarchitektur der EPA, die auf Heilberufs- und Praxisausweisen basiert, und die damit verbundenen Risiken, insbesondere in Bezug auf den Zugang zu sensiblen Patientendaten. Kritisiert wurde, dass die Zugriffsberechtigungen nicht ausreichend gesichert sind, was potenziellen Missbrauch begünstigen könnte. Die Diskussion beleuchtet auch die Herausforderungen der IT-Sicherheit im Gesundheitswesen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "511-ts.json",
+        "method": "time-window",
+        "pickedCount": 24,
+        "startSec": 584,
+        "endSec": 2673,
+        "generatedAt": "2026-01-02T20:04:44.887Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "38C3: Volkswagen-Datenleck",
+      "subject": {
+        "coarse": "Security / Data Breaches",
+        "fine": "Incident Analysis / Volkswagen"
+      },
+      "durationSec": 1892,
+      "positionSec": 2654,
+      "summary": "Im Rahmen des 38C3 wurde ein Datenleck beim Volkswagen-Konzern thematisiert, das durch eine anonyme Person aufgedeckt wurde. Über eine API wurde ein Heap-Dump gefunden, der geheime Zugriffstokens und sensible Daten von etwa 800.000 Fahrzeugen, darunter Geokoordinaten, Uhrzeiten und Fahrzeugidentifikationsnummern (VINs), enthielt. Besonders kritisch war, dass die Daten von Elektrofahrzeugen stammten, die regelmäßig ihren Batteriestatus und Standort übermittelten. Die Volkswagen-Tochter Carriot war für die Cloud-Funktionen verantwortlich, und das Leck offenbarte, dass die gesammelten Daten über zwei Jahre zurückreichten. Der CCC wies darauf hin, dass das Hauptproblem nicht nur der unzureichende Schutz der Daten war, sondern auch die Praxis der massenhaften Datensammlung.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "511-ts.json",
+        "method": "time-window",
+        "pickedCount": 24,
+        "startSec": 2634,
+        "endSec": 4566,
+        "generatedAt": "2026-01-02T20:04:45.436Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "38C3: Wahlsoftware",
+      "subject": {
+        "coarse": "Politics / Election Technology",
+        "fine": "Software / Voting Systems"
+      },
+      "durationSec": 1519,
+      "positionSec": 4546,
+      "summary": "Im Transkript wird die Problematik der Wahlsoftware in Deutschland thematisiert, insbesondere die Sicherheitsmängel und die fehlende kryptografische Signatur von Wahlergebnissen. Linus Neumann beschreibt, wie auf einem FTP-Server Wahlergebnisse manipuliert werden können, da alle Wahlkreise dasselbe Passwort verwenden. Er fordert die Einführung von kryptografischen Signaturen für Wahlergebnisse, um zwischen legitimen und manipulierten Daten zu unterscheiden. Zudem kritisiert er die mangelhafte Softwareentwicklung und die unzureichenden technischen Richtlinien des BSI, die nicht die Hersteller der Software, sondern die Nutzer ansprechen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "511-ts.json",
+        "method": "time-window",
+        "pickedCount": 28,
+        "startSec": 4526,
+        "endSec": 6085,
+        "generatedAt": "2026-01-02T20:04:49.598Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Big Trump-Tech",
+      "subject": {
+        "coarse": "Technology / Big Tech",
+        "fine": "Corporate Influence / Trump"
+      },
+      "durationSec": 1594,
+      "positionSec": 6709,
+      "summary": "In dieser Episode wird die Verbindung zwischen Donald Trump und der Tech-Industrie thematisiert. Linus Neumann erwähnt, dass führende Tech-CEOs, darunter Tim Cook, Sam Altman und Elon Musk, hohe Summen für Trumps Inauguration gespendet haben. Zudem wird diskutiert, wie Mark Zuckerberg plant, Facebook nach dem Vorbild von X (ehemals Twitter) umzubauen, um die Inhalte weniger zu moderieren und mehr auf Meinungsfreiheit zu setzen. Die Diskussion beleuchtet die Auswirkungen dieser Entwicklungen auf die Unternehmenspolitik und die gesellschaftliche Verantwortung der Tech-Giganten.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "511-ts.json",
+        "method": "time-window",
+        "pickedCount": 50,
+        "startSec": 6689,
+        "endSec": 8323,
+        "generatedAt": "2026-01-02T20:04:49.903Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Anom",
+      "subject": {
+        "coarse": "Security / Cybersecurity",
+        "fine": "Threats / Anom"
+      },
+      "durationSec": 242,
+      "positionSec": 8304,
+      "summary": "Im Transkript wird das Thema Anom behandelt, ein Kryptokommunikationssystem, das vom FBI betrieben wurde, um Kriminelle zu überwachen. Anom bot Handys mit einer versteckten Krypto-Messenger-App an, die gezielt an Kriminelle verkauft wurden. Die App konnte nur durch einen speziellen Code aktiviert werden. Die Operation führte zur Beschlagnahmung großer Mengen Drogen und zur Festnahme zahlreicher Krimineller. Zudem wird auf rechtliche Fragen eingegangen, insbesondere auf die Zulässigkeit von Beweismitteln, die aus solchen Operationen stammen. Das Buch \"Dark Wire\" von Joseph Cox wird als empfehlenswerte Lektüre erwähnt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "511-ts.json",
+        "method": "time-window",
+        "pickedCount": 3,
+        "startSec": 8284,
+        "endSec": 8566,
+        "generatedAt": "2026-01-02T20:04:54.597Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "NSO",
+      "subject": {
+        "coarse": "Security / Cybersecurity",
+        "fine": "Threats / NSO Group"
+      },
+      "durationSec": 131,
+      "positionSec": 8546,
+      "summary": "",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "511-ts.json",
+        "method": "time-window",
+        "pickedCount": 8,
+        "startSec": 8526,
+        "endSec": 8697,
+        "generatedAt": "2026-01-02T20:04:51.477Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Telegram",
+      "subject": {
+        "coarse": "Communication / Messaging Apps",
+        "fine": "Privacy / Telegram"
+      },
+      "durationSec": 83,
+      "positionSec": 8677,
+      "summary": "In der Diskussion wird erwähnt, dass Telegram seit der Verhaftung von Pavel Durow in Paris mehr Daten an deutsche Behörden weitergibt. Linus Neumann und Tim Pritlove reflektieren über die Bedeutung dieser Entwicklung für die sichere Kommunikation und die Herausforderungen im Zusammenhang mit der Vorratsdatenspeicherung. Zudem wird auf einen Vorfall in Magdeburg eingegangen, bei dem ein Attentäter über Twitter X Ankündigungen machte, was die Debatte über die Effektivität von Sicherheitsbehörden und die Notwendigkeit von Vorratsdatenspeicherung anheizt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "511-ts.json",
+        "method": "time-window",
+        "pickedCount": 16,
+        "startSec": 8657,
+        "endSec": 8780,
+        "generatedAt": "2026-01-02T20:04:55.320Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Vorratsdatenspeicherung",
+      "subject": {
+        "coarse": "Law / Data Retention",
+        "fine": "Policy / Vorratsdatenspeicherung"
+      },
+      "durationSec": 273,
+      "positionSec": 8761,
+      "summary": "Im Transkript wird die Diskussion um die Vorratsdatenspeicherung in Deutschland thematisiert, insbesondere im Kontext eines Attentats in Magdeburg. Linus Neumann kritisiert, dass die Sicherheitsbehörden versagt haben und die Forderung nach Vorratsdatenspeicherung als Ablenkung von diesem Versagen dient. Es wird erwähnt, dass die CDU die Vorratsdatenspeicherung gefordert hat, während die Bundesregierung zunächst nicht dafür war. Die Debatte um die Vorratsdatenspeicherung wird als grundrechtswidrig und als wiederholter Versuch beschrieben, diese in Deutschland einzuführen.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "511-ts.json",
+        "method": "time-window",
+        "pickedCount": 17,
+        "startSec": 8741,
+        "endSec": 9054,
+        "generatedAt": "2026-01-02T20:04:58.813Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Netzneutralität",
+      "subject": {
+        "coarse": "Internet / Net Neutrality",
+        "fine": "Policy / Regulation"
+      },
+      "durationSec": 240,
+      "positionSec": 9035,
+      "summary": "",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "511-ts.json",
+        "method": "time-window",
+        "pickedCount": 3,
+        "startSec": 9015,
+        "endSec": 9295,
+        "generatedAt": "2026-01-02T20:04:56.962Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T20:04:58.813Z",
+  "transcriptFound": true,
+  "transcriptFile": "511-ts.json"
+}

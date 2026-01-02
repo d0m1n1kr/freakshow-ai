@@ -754,6 +754,11 @@ watch(() => settingsStore.clusteringVariant, () => {
   loadData();
 });
 
+// Watch for podcast changes and reload data
+watch(() => settingsStore.selectedPodcast, () => {
+  loadData();
+});
+
 // Watch for data changes and redraw
 watch([heatmapData, filteredMatrix, filteredClusters2, () => settingsStore.isDarkMode], () => {
   if (heatmapData.value) {

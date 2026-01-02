@@ -1,0 +1,1938 @@
+{
+  "createdAt": "2026-01-02T18:15:20.926506+00:00",
+  "method": "hdbscan-v2",
+  "embeddingModel": "text-embedding-3-large",
+  "embeddingsCreatedAt": "2026-01-02T17:55:29.945Z",
+  "totalTopics": 1793,
+  "uniqueTopics": 1554,
+  "settings": {
+    "clusters": 91,
+    "outlierThreshold": 0.9,
+    "linkageMethod": "hdbscan(min_cluster_size=2, min_samples=2)",
+    "useRelevanceWeighting": true
+  },
+  "statistics": {
+    "clusterCount": 91,
+    "outlierCount": 0,
+    "outlierPercentage": "0.0%"
+  },
+  "clusters": [
+    {
+      "id": "deutschland-situation",
+      "name": "Deutschland-Situation",
+      "description": "3 Topics in 33 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 33,
+      "relevanceSec": 23169,
+      "sampleTopics": [
+        "Situation in Deutschland",
+        "Die Situation in Deutschland",
+        "Situation Deutschland"
+      ],
+      "episodes": [
+        28,
+        29,
+        32,
+        33,
+        35,
+        36,
+        41,
+        42,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        54,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        67,
+        68,
+        69,
+        70,
+        76,
+        77,
+        78,
+        79,
+        82,
+        90
+      ]
+    },
+    {
+      "id": "militäranalyse",
+      "name": "Militäranalyse",
+      "description": "4 Topics in 11 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 11,
+      "relevanceSec": 15768,
+      "sampleTopics": [
+        "Militärische Situation",
+        "Aktuelle Gesamtsituation",
+        "Militärische Lage",
+        "Militärischen Situation"
+      ],
+      "episodes": [
+        94,
+        96,
+        98,
+        101,
+        103,
+        109,
+        112,
+        117,
+        121,
+        122,
+        133
+      ]
+    },
+    {
+      "id": "globale-corona-analyse",
+      "name": "Globale Corona-Analyse",
+      "description": "4 Topics in 25 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 25,
+      "relevanceSec": 11823,
+      "sampleTopics": [
+        "Ausblick",
+        "Internationale Corona-Situation",
+        "Situation International",
+        "Internationaler Ausblick"
+      ],
+      "episodes": [
+        28,
+        29,
+        39,
+        41,
+        47,
+        48,
+        52,
+        53,
+        55,
+        57,
+        60,
+        62,
+        63,
+        71,
+        73,
+        74,
+        75,
+        105,
+        106,
+        109,
+        111,
+        120,
+        131,
+        133,
+        140
+      ]
+    },
+    {
+      "id": "maßnahmen-diskurs",
+      "name": "Maßnahmen-Diskurs",
+      "description": "7 Topics in 8 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 8,
+      "relevanceSec": 11676,
+      "sampleTopics": [
+        "Neue Maßnahmen",
+        "Die November-Maßnahmen",
+        "Neue Maßnahmen braucht das Land",
+        "Maßnahmen",
+        "Die neuen Maßnahmen"
+      ],
+      "episodes": [
+        38,
+        47,
+        48,
+        62,
+        63,
+        81,
+        83,
+        88
+      ]
+    },
+    {
+      "id": "europäische-politik",
+      "name": "Europäische Politik",
+      "description": "12 Topics in 12 Episoden",
+      "isOutlier": false,
+      "topicCount": 12,
+      "episodeCount": 12,
+      "relevanceSec": 11555,
+      "sampleTopics": [
+        "Konsequenzen und Zukunft",
+        "Die Brexit-Debatte in Europa",
+        "Die Zukunft von Großbritannien",
+        "Die politische Debatte",
+        "Die Rolle Deutschlands"
+      ],
+      "episodes": [
+        2,
+        3,
+        56,
+        68,
+        103,
+        106,
+        121,
+        127,
+        129,
+        130,
+        131,
+        137
+      ]
+    },
+    {
+      "id": "impfkampagne-deutschland",
+      "name": "Impfkampagne Deutschland",
+      "description": "4 Topics in 15 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 15,
+      "relevanceSec": 11523,
+      "sampleTopics": [
+        "Die Impfkampagne",
+        "Impfkampagne in Deutschland",
+        "Impfkampagne",
+        "Impfkampagne Deutschland"
+      ],
+      "episodes": [
+        54,
+        70,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        86,
+        87,
+        88,
+        89
+      ]
+    },
+    {
+      "id": "zahlen-deutschland",
+      "name": "Zahlen Deutschland",
+      "description": "4 Topics in 15 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 15,
+      "relevanceSec": 10989,
+      "sampleTopics": [
+        "Die aktuelle Zahlen aus Deutschland",
+        "Aktuelle Zahlen aus Deutschland",
+        "Aktuelle Infektionszahlen",
+        "Zahlen in Deutschland"
+      ],
+      "episodes": [
+        18,
+        20,
+        24,
+        37,
+        38,
+        43,
+        46,
+        53,
+        55,
+        57,
+        66,
+        75,
+        81,
+        89,
+        91
+      ]
+    },
+    {
+      "id": "omikron-varianten",
+      "name": "Omikron-Varianten",
+      "description": "8 Topics in 9 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 9,
+      "relevanceSec": 10476,
+      "sampleTopics": [
+        "Der UK-Virus",
+        "Die neuen Virus-Varianten",
+        "Varianten und ihre Folgen",
+        "Varianten",
+        "Die Omikron-Variante"
+      ],
+      "episodes": [
+        53,
+        54,
+        60,
+        66,
+        86,
+        87,
+        88,
+        89,
+        90
+      ]
+    },
+    {
+      "id": "waffentechnik",
+      "name": "Waffentechnik",
+      "description": "11 Topics in 12 Episoden",
+      "isOutlier": false,
+      "topicCount": 11,
+      "episodeCount": 12,
+      "relevanceSec": 9823,
+      "sampleTopics": [
+        "Eingesetze Waffensysteme",
+        "Luftabwehrsysteme",
+        "Neue Waffensysteme",
+        "Aktuelle Waffentechnik im Krieg",
+        "Waffen- und Munitionslieferungen"
+      ],
+      "episodes": [
+        92,
+        99,
+        103,
+        105,
+        109,
+        113,
+        114,
+        122,
+        124,
+        128,
+        133,
+        135
+      ]
+    },
+    {
+      "id": "corona-warn-app",
+      "name": "Corona-Warn-App",
+      "description": "3 Topics in 10 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 10,
+      "relevanceSec": 7448,
+      "sampleTopics": [
+        "Corona-Warn-App",
+        "Corona Warn App",
+        "Corona Warn App in der Praxis"
+      ],
+      "episodes": [
+        25,
+        27,
+        28,
+        29,
+        34,
+        35,
+        37,
+        51,
+        73,
+        88
+      ]
+    },
+    {
+      "id": "ukraine-reisen",
+      "name": "Ukraine-Reisen",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 7208,
+      "sampleTopics": [
+        "Reise nach Kiew",
+        "Reisen in die Ukraine",
+        "Reise in die Ukraine"
+      ],
+      "episodes": [
+        96,
+        118,
+        119
+      ]
+    },
+    {
+      "id": "bundesländer-situation",
+      "name": "Bundesländer-Situation",
+      "description": "3 Topics in 17 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 17,
+      "relevanceSec": 6690,
+      "sampleTopics": [
+        "Situation in den Bundesländern",
+        "Situation in den Bundesländer",
+        "Bundesländer"
+      ],
+      "episodes": [
+        37,
+        43,
+        48,
+        51,
+        52,
+        55,
+        58,
+        59,
+        60,
+        64,
+        70,
+        71,
+        76,
+        77,
+        79,
+        80,
+        89
+      ]
+    },
+    {
+      "id": "infektionszahlen-deutschland",
+      "name": "Infektionszahlen Deutschland",
+      "description": "6 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 7,
+      "relevanceSec": 6305,
+      "sampleTopics": [
+        "Aktuelle Zahlen",
+        "Entwicklung der Infektionszahlen",
+        "Infektionszahlen",
+        "Infektionszahlen Deutschland",
+        "Infektionszahlen in Deutschland"
+      ],
+      "episodes": [
+        27,
+        34,
+        68,
+        72,
+        73,
+        83,
+        85
+      ]
+    },
+    {
+      "id": "mobilisierung-russland",
+      "name": "Mobilisierung Russland",
+      "description": "6 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 7,
+      "relevanceSec": 5843,
+      "sampleTopics": [
+        "Mögliche Eskalation und Mobilimachung",
+        "Mobilisierung der Russen",
+        "Truppenverluste und Mobilisierung",
+        "Die Mobilisierung",
+        "Mobilisierung"
+      ],
+      "episodes": [
+        97,
+        98,
+        99,
+        103,
+        104,
+        107,
+        122
+      ]
+    },
+    {
+      "id": "schnelltests",
+      "name": "Schnelltests",
+      "description": "4 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 6,
+      "relevanceSec": 5644,
+      "sampleTopics": [
+        "Schnelltests",
+        "Schnelltests und Testläufe",
+        "Wirkmächtigkeit von Schnelltests",
+        "Schnellltests"
+      ],
+      "episodes": [
+        34,
+        46,
+        61,
+        64,
+        66,
+        69
+      ]
+    },
+    {
+      "id": "drohnenkrieg-und-technologie",
+      "name": "Drohnenkrieg und -technologie",
+      "description": "10 Topics in 10 Episoden",
+      "isOutlier": false,
+      "topicCount": 10,
+      "episodeCount": 10,
+      "relevanceSec": 5283,
+      "sampleTopics": [
+        "Drohnenkrieg",
+        "Droneneinsatz",
+        "Drohnenangriffe der Ukraine",
+        "Flug- und Seedrohnen",
+        "Roboter- und Drohnenkrieg"
+      ],
+      "episodes": [
+        95,
+        99,
+        113,
+        120,
+        121,
+        124,
+        125,
+        133,
+        135,
+        140
+      ]
+    },
+    {
+      "id": "internationale-beziehungen",
+      "name": "Internationale Beziehungen",
+      "description": "2 Topics in 9 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 9,
+      "relevanceSec": 4909,
+      "sampleTopics": [
+        "Internationale Situation",
+        "Internationale Politik"
+      ],
+      "episodes": [
+        4,
+        13,
+        21,
+        25,
+        36,
+        38,
+        43,
+        58,
+        125
+      ]
+    },
+    {
+      "id": "impfungen-israel",
+      "name": "Impfungen Israel",
+      "description": "4 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 7,
+      "relevanceSec": 4634,
+      "sampleTopics": [
+        "Impfungen in Deutschland und Israel",
+        "Impfungen in Israel",
+        "Impfung in Israel",
+        "Impfkampagne in Israel"
+      ],
+      "episodes": [
+        53,
+        55,
+        57,
+        58,
+        59,
+        60,
+        70
+      ]
+    },
+    {
+      "id": "impfstoffe",
+      "name": "Impfstoffe",
+      "description": "8 Topics in 8 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 8,
+      "relevanceSec": 4122,
+      "sampleTopics": [
+        "Biontech-Impfstoff",
+        "Neues von den Impfstoffen",
+        "Vortrag zu Impfstoffen",
+        "Impfstoff Update",
+        "Impfungen und Impfstoffe"
+      ],
+      "episodes": [
+        46,
+        47,
+        49,
+        50,
+        66,
+        68,
+        90,
+        91
+      ]
+    },
+    {
+      "id": "russische-wirtschaft",
+      "name": "Russische Wirtschaft",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 3901,
+      "sampleTopics": [
+        "Stimmung und Wirtschaft in Russland",
+        "Wirtschaftliche Situation in Rußland",
+        "Wirtschaftliche Situation in Russland",
+        "Die Wirtschaft in Russland",
+        "Russlands wirtschaftliche Situation"
+      ],
+      "episodes": [
+        113,
+        120,
+        122,
+        125,
+        140
+      ]
+    },
+    {
+      "id": "krim-konflikt",
+      "name": "Krim-Konflikt",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 3774,
+      "sampleTopics": [
+        "Angriffe auf der Krim",
+        "Anschlag auf die Kertsch-Brücke",
+        "Angriffe auf die Krim",
+        "Bombenanschlag auf die Krim-Brücke"
+      ],
+      "episodes": [
+        101,
+        105,
+        110,
+        134
+      ]
+    },
+    {
+      "id": "nukleare-sicherheit",
+      "name": "Nukleare Sicherheit",
+      "description": "6 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 4,
+      "relevanceSec": 3706,
+      "sampleTopics": [
+        "Das atomare Tabu",
+        "Nukleares Mindesthaltbarkeitsdatum",
+        "Risiko eines Atomkriegs",
+        "Nukleare Drohungen",
+        "Nuklearthema ist durch"
+      ],
+      "episodes": [
+        97,
+        103,
+        107,
+        129
+      ]
+    },
+    {
+      "id": "hamas-konflikt",
+      "name": "Hamas-Konflikt",
+      "description": "5 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 2,
+      "relevanceSec": 3685,
+      "sampleTopics": [
+        "Autonomie für Palästina",
+        "Die Intifada",
+        "Der Terrorangriff der Hamas",
+        "Strategie von Hamas und Situation in Gaza",
+        "Terror und Zersetzung"
+      ],
+      "episodes": [
+        115,
+        126
+      ]
+    },
+    {
+      "id": "teststatistiken",
+      "name": "Teststatistiken",
+      "description": "3 Topics in 10 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 10,
+      "relevanceSec": 3647,
+      "sampleTopics": [
+        "Tests und Positivenquote",
+        "Tests und Positivquote",
+        "Testzahlen und Positivquote"
+      ],
+      "episodes": [
+        58,
+        59,
+        72,
+        76,
+        77,
+        79,
+        80,
+        83,
+        87,
+        89
+      ]
+    },
+    {
+      "id": "us-innenpolitik",
+      "name": "US-Innenpolitik",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 3638,
+      "sampleTopics": [
+        "Innenpolitische Situation in den USA",
+        "Innenpolitische Folgen in den USA",
+        "Folgen für die USA"
+      ],
+      "episodes": [
+        117,
+        127,
+        129
+      ]
+    },
+    {
+      "id": "ukrainische-unterstützung",
+      "name": "Ukrainische Unterstützung",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 3587,
+      "sampleTopics": [
+        "Weitere Unterstützung für die Ukraine",
+        "Unterstützung der Ukraine",
+        "Militärische Unterstützung der Ukraine"
+      ],
+      "episodes": [
+        107,
+        114,
+        130
+      ]
+    },
+    {
+      "id": "ukrainische-waffenhilfe",
+      "name": "Ukrainische Waffenhilfe",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 3560,
+      "sampleTopics": [
+        "Schwere Waffen für die Ukraine",
+        "Waffenversorgung der Ukraine",
+        "Waffenproduktion der Ukraine"
+      ],
+      "episodes": [
+        97,
+        99,
+        139
+      ]
+    },
+    {
+      "id": "nordirland-konflikt",
+      "name": "Nordirland-Konflikt",
+      "description": "3 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 6,
+      "relevanceSec": 3558,
+      "sampleTopics": [
+        "Situation in Nordirland und Irland",
+        "Nordirland",
+        "Situation in Nordirland"
+      ],
+      "episodes": [
+        8,
+        31,
+        44,
+        56,
+        74,
+        123
+      ]
+    },
+    {
+      "id": "pandemie-rückblick",
+      "name": "Pandemie-Rückblick",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 3533,
+      "sampleTopics": [
+        "Wann ist alles vorbei?",
+        "Ende der Pandemie",
+        "Die Pandemie im Rückblick"
+      ],
+      "episodes": [
+        22,
+        58,
+        70
+      ]
+    },
+    {
+      "id": "westliche-politik",
+      "name": "Westliche Politik",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 3219,
+      "sampleTopics": [
+        "Politische Lage im Westen",
+        "Unterstützung durch den Westen",
+        "Die Politik des Westens"
+      ],
+      "episodes": [
+        95,
+        109,
+        119
+      ]
+    },
+    {
+      "id": "impfstoff-wirkung",
+      "name": "Impfstoff-Wirkung",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 3193,
+      "sampleTopics": [
+        "Effektivität",
+        "Impfstoff-Auswirkungen",
+        "Wirkung von Impfstoffen",
+        "Wirksamkeit von Impfstoffen",
+        "Auswirkungen von Impfungen und Erkrankungen"
+      ],
+      "episodes": [
+        45,
+        48,
+        54,
+        62,
+        63,
+        69
+      ]
+    },
+    {
+      "id": "boosterimpfungen",
+      "name": "Boosterimpfungen",
+      "description": "4 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 5,
+      "relevanceSec": 3156,
+      "sampleTopics": [
+        "Drittimpfungen",
+        "Booster-Impfungen",
+        "Booster-Impfung",
+        "Boosterimpfungen"
+      ],
+      "episodes": [
+        81,
+        82,
+        83,
+        85,
+        87
+      ]
+    },
+    {
+      "id": "verhandlungsstatus",
+      "name": "Verhandlungsstatus",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 3089,
+      "sampleTopics": [
+        "Die kommenden Verhandlungen",
+        "Künftige Verhandlungen",
+        "Aktuelle Verhandlung"
+      ],
+      "episodes": [
+        8,
+        74,
+        130
+      ]
+    },
+    {
+      "id": "us-unterstützung",
+      "name": "US-Unterstützung",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 3051,
+      "sampleTopics": [
+        "Unterstützung der USA",
+        "Politische Unterstützung EU und USA",
+        "Die Unterstützung der USA"
+      ],
+      "episodes": [
+        101,
+        114,
+        121
+      ]
+    },
+    {
+      "id": "f-16-kampfflugzeuge",
+      "name": "F-16 Kampfflugzeuge",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 3035,
+      "sampleTopics": [
+        "Kampfflugzeuge für UA",
+        "F16 Kampfflugzeuge",
+        "F16-Kampfjets",
+        "F-16 im Einsatz",
+        "Kampfflugzeuge"
+      ],
+      "episodes": [
+        108,
+        121,
+        122,
+        125,
+        135,
+        139
+      ]
+    },
+    {
+      "id": "risikotabelle",
+      "name": "Risikotabelle",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 2991,
+      "sampleTopics": [
+        "Daten und die Risikotabelle",
+        "Rohdaten der Risk-Tabelle",
+        "Die Risikotabelle",
+        "Neues zur Risikotabelle"
+      ],
+      "episodes": [
+        27,
+        28,
+        35,
+        64
+      ]
+    },
+    {
+      "id": "prognosen-und-voraussagen",
+      "name": "Prognosen und Voraussagen",
+      "description": "4 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 5,
+      "relevanceSec": 2956,
+      "sampleTopics": [
+        "Die Pandemie vorhersagen",
+        "Voraussagen",
+        "Prognosenkontroverse",
+        "Prognosen und Modellrechnungen"
+      ],
+      "episodes": [
+        64,
+        65,
+        66,
+        70,
+        78
+      ]
+    },
+    {
+      "id": "ostfront-reisen",
+      "name": "Ostfront-Reisen",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 2887,
+      "sampleTopics": [
+        "Reise an die Ostfront",
+        "Ausflug an die Front in Pokrovsk",
+        "Ausflug an die Front in Vovchansk"
+      ],
+      "episodes": [
+        126,
+        139
+      ]
+    },
+    {
+      "id": "lockdown-diskussion",
+      "name": "Lockdown-Diskussion",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2721,
+      "sampleTopics": [
+        "Der neue Lockdown",
+        "Funktioniert der Lockdown Light?",
+        "Der Lockdown"
+      ],
+      "episodes": [
+        42,
+        49,
+        51
+      ]
+    },
+    {
+      "id": "kinderimpfungen",
+      "name": "Kinderimpfungen",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2520,
+      "sampleTopics": [
+        "BioNTech/Pfizer-Impfstoff für Kinder",
+        "Impfungen von Kindern",
+        "Impfstoff für Kinder"
+      ],
+      "episodes": [
+        71,
+        77,
+        85
+      ]
+    },
+    {
+      "id": "luhansk-offensiven",
+      "name": "Luhansk-Offensiven",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2413,
+      "sampleTopics": [
+        "Charkiv-Luhansk-Offensive",
+        "Luhansk-Offensive",
+        "Lohansk-Offensive"
+      ],
+      "episodes": [
+        104,
+        105,
+        107
+      ]
+    },
+    {
+      "id": "energieversorgung-europa",
+      "name": "Energieversorgung Europa",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 2404,
+      "sampleTopics": [
+        "Energiekrise",
+        "Gasversorgung Europas",
+        "Russische Gasinfrastruktur"
+      ],
+      "episodes": [
+        84,
+        101
+      ]
+    },
+    {
+      "id": "trump-friedensverhandlungen",
+      "name": "Trump-Friedensverhandlungen",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2329,
+      "sampleTopics": [
+        "Plan für Friedensverhandlungen",
+        "Trumps „Friedensverhandlungen“",
+        "Die “Friedensverhandlungen”"
+      ],
+      "episodes": [
+        127,
+        133,
+        134
+      ]
+    },
+    {
+      "id": "china-dynamik",
+      "name": "China-Dynamik",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 2230,
+      "sampleTopics": [
+        "China und der Westen",
+        "Mainland China auf dem Vormarsch",
+        "China und die USA",
+        "Was ist eigentlich mit China?"
+      ],
+      "episodes": [
+        5,
+        7,
+        23,
+        94
+      ]
+    },
+    {
+      "id": "russische-infrastrukturangriffe",
+      "name": "Russische Infrastrukturangriffe",
+      "description": "5 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 4,
+      "relevanceSec": 2172,
+      "sampleTopics": [
+        "Angriffe auf die Infrastruktur",
+        "Angriffe auf russische Infrastruktur",
+        "Angriff auf Dnipro-Staudamm",
+        "Angriffe auf die Russische Petro-Infrastruktur",
+        "Angriffe auf russisches Wärmekraftwerk"
+      ],
+      "episodes": [
+        108,
+        119,
+        120,
+        138
+      ]
+    },
+    {
+      "id": "schottische-unabhängigkeit",
+      "name": "Schottische Unabhängigkeit",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 2096,
+      "sampleTopics": [
+        "Referendum in Schottland",
+        "Unabhändigkeit von Schottland",
+        "Wahlen in Schottland",
+        "Unabhängigskeitsreferendum in Schottland"
+      ],
+      "episodes": [
+        4,
+        56,
+        74,
+        100
+      ]
+    },
+    {
+      "id": "cwa-erfolge",
+      "name": "CWA-Erfolge",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 2066,
+      "sampleTopics": [
+        "CWA: Verbreitung",
+        "CWA: Erfolgreiche Tests",
+        "CWA: Erfolgreiche Meldungen"
+      ],
+      "episodes": [
+        33
+      ]
+    },
+    {
+      "id": "britische-politik",
+      "name": "Britische Politik",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 2066,
+      "sampleTopics": [
+        "Die neue Regierung",
+        "Die Wahl von Liz Truss",
+        "Die neue Labour-Regierung"
+      ],
+      "episodes": [
+        4,
+        106,
+        123
+      ]
+    },
+    {
+      "id": "medienanalyse-deutschland",
+      "name": "Medienanalyse Deutschland",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1945,
+      "sampleTopics": [
+        "Die Medienlandschaft",
+        "Berichterstattung in Deutschland",
+        "Einfluss der Nachrichtenlage"
+      ],
+      "episodes": [
+        2,
+        7,
+        52
+      ]
+    },
+    {
+      "id": "wagner-gruppe",
+      "name": "Wagner-Gruppe",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1897,
+      "sampleTopics": [
+        "Wagner-Linie",
+        "Bakhmut, Wagner und die Tschetschenen",
+        "Was bleibt von Wagner?"
+      ],
+      "episodes": [
+        108,
+        111,
+        113
+      ]
+    },
+    {
+      "id": "cherson-offensive",
+      "name": "Cherson-Offensive",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1880,
+      "sampleTopics": [
+        "Die Gegenoffensive in Cherson",
+        "Die Cherson-Offensive"
+      ],
+      "episodes": [
+        101,
+        102
+      ]
+    },
+    {
+      "id": "impfnachweise",
+      "name": "Impfnachweise",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1880,
+      "sampleTopics": [
+        "Immunitätsausweis",
+        "Nachweise der Impfungen",
+        "Impfnachweise"
+      ],
+      "episodes": [
+        37,
+        72,
+        75
+      ]
+    },
+    {
+      "id": "dunkelziffer-forschung",
+      "name": "Dunkelziffer-Forschung",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1792,
+      "sampleTopics": [
+        "Gangelt-Studie und die Dunkelziffern",
+        "Dunkelziffer-Studien",
+        "Die Dunkelziffer von Tirschenreuth",
+        "Dunkelziffer"
+      ],
+      "episodes": [
+        24,
+        43,
+        72,
+        89
+      ]
+    },
+    {
+      "id": "russland-konflikt",
+      "name": "Russland-Konflikt",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1790,
+      "sampleTopics": [
+        "Der Angriff Russlands",
+        "Angriffe auf russische Gebiete"
+      ],
+      "episodes": [
+        92,
+        114
+      ]
+    },
+    {
+      "id": "wahlen-2023",
+      "name": "Wahlen 2023",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1712,
+      "sampleTopics": [
+        "Rückblick auf die Wahlen",
+        "Die Unterhauswahlen",
+        "Bundestagswahl"
+      ],
+      "episodes": [
+        8,
+        123,
+        128
+      ]
+    },
+    {
+      "id": "moldawien-transnistrien",
+      "name": "Moldawien & Transnistrien",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 1710,
+      "sampleTopics": [
+        "Transnistrien",
+        "Moldawien",
+        "Moldau und Transnistrien"
+      ],
+      "episodes": [
+        97,
+        99,
+        110,
+        140
+      ]
+    },
+    {
+      "id": "bildungssituation",
+      "name": "Bildungssituation",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 1696,
+      "sampleTopics": [
+        "Aktuelle Situation in den Schulen",
+        "Situation der Lehrer",
+        "Situation der Schülern"
+      ],
+      "episodes": [
+        17
+      ]
+    },
+    {
+      "id": "straßennetz-lkw",
+      "name": "Straßennetz & LKW",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 1691,
+      "sampleTopics": [
+        "Verkehr: LKW",
+        "Verkehr: Straßennetz"
+      ],
+      "episodes": [
+        136
+      ]
+    },
+    {
+      "id": "exposure-notifications",
+      "name": "Exposure Notifications",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1600,
+      "sampleTopics": [
+        "Exposure Notification API",
+        "Exposure Notification Express",
+        "Exposure Notifications"
+      ],
+      "episodes": [
+        30,
+        35,
+        51
+      ]
+    },
+    {
+      "id": "virussequenzierung",
+      "name": "Virussequenzierung",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1597,
+      "sampleTopics": [
+        "Virusähnliche Partikel",
+        "Nachtrag zu Theorien zu anderen Virusverbreitungen",
+        "Sequenzierung des Virus",
+        "Sequenzierung in Deutschland"
+      ],
+      "episodes": [
+        39,
+        49,
+        52,
+        57
+      ]
+    },
+    {
+      "id": "gesundheitskrise",
+      "name": "Gesundheitskrise",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1531,
+      "sampleTopics": [
+        "Krise des Gesundheitssystems",
+        "Belastung der Intensivmedizin",
+        "Belastung des Gesundheitssystems",
+        "Belastung der Krankenhäuser"
+      ],
+      "episodes": [
+        11,
+        18,
+        20,
+        85
+      ]
+    },
+    {
+      "id": "infektionsübertragung",
+      "name": "Infektionsübertragung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1531,
+      "sampleTopics": [
+        "Infektionswege",
+        "Wo steckt man sich an?"
+      ],
+      "episodes": [
+        18,
+        37
+      ]
+    },
+    {
+      "id": "ukrainische-politik",
+      "name": "Ukrainische Politik",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1504,
+      "sampleTopics": [
+        "Die Ukraine",
+        "Innenpolitik der Ukraine",
+        "Situation im Südwesten der Ukraine"
+      ],
+      "episodes": [
+        92,
+        96,
+        97
+      ]
+    },
+    {
+      "id": "us-wahlen",
+      "name": "US-Wahlen",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1469,
+      "sampleTopics": [
+        "Die Wahlen in den USA",
+        "Die US-Wahl",
+        "Präsidentschaftswahlen"
+      ],
+      "episodes": [
+        122,
+        127,
+        132
+      ]
+    },
+    {
+      "id": "no-deal-strategien",
+      "name": "No-Deal-Strategien",
+      "description": "4 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 3,
+      "relevanceSec": 1429,
+      "sampleTopics": [
+        "Die Motivation für No-Deal",
+        "No-Deal-Verhinderungsstrategien",
+        "No-Deal Vorbereitungen",
+        "No-Deal Szenario"
+      ],
+      "episodes": [
+        4,
+        31,
+        44
+      ]
+    },
+    {
+      "id": "digitaler-impfnachweis",
+      "name": "Digitaler Impfnachweis",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 1417,
+      "sampleTopics": [
+        "Digitaler Impfpass",
+        "Digitaler Impfnachweis",
+        "Impfausweis nur noch digital"
+      ],
+      "episodes": [
+        62,
+        73,
+        78,
+        82
+      ]
+    },
+    {
+      "id": "astrazeneca-zulassung",
+      "name": "AstraZeneca-Zulassung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1325,
+      "sampleTopics": [
+        "Zulassung von Astra Zeneca Impfstoff in EU zieht sich",
+        "AstraZeneca-Impfstoff in EU zugelassen"
+      ],
+      "episodes": [
+        53,
+        58
+      ]
+    },
+    {
+      "id": "nahostkonflikt",
+      "name": "Nahostkonflikt",
+      "description": "4 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 2,
+      "relevanceSec": 1309,
+      "sampleTopics": [
+        "Diskussion um Deserteure",
+        "Der Gefangenenaustausch",
+        "Der 6-Tage-Krieg",
+        "Jom-Kippur-Krieg"
+      ],
+      "episodes": [
+        103,
+        115
+      ]
+    },
+    {
+      "id": "tschechische-politik",
+      "name": "Tschechische Politik",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1308,
+      "sampleTopics": [
+        "Tschechien und Rumänien",
+        "Tschechien engagiert sich",
+        "Wahlen in Tschechien"
+      ],
+      "episodes": [
+        33,
+        120,
+        140
+      ]
+    },
+    {
+      "id": "modellanalysen",
+      "name": "Modellanalysen",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 1305,
+      "sampleTopics": [
+        "Zahlen und Modelle",
+        "Probleme mit Modellen",
+        "Aussagen der Modelle"
+      ],
+      "episodes": [
+        14
+      ]
+    },
+    {
+      "id": "schwarzes-meer-konflikt",
+      "name": "Schwarzes Meer Konflikt",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1159,
+      "sampleTopics": [
+        "Der Seekrieg im Schwarzen Meer",
+        "RU versenkt UA-Aufklärungsschiff"
+      ],
+      "episodes": [
+        119,
+        138
+      ]
+    },
+    {
+      "id": "gesellschaft-sport",
+      "name": "Gesellschaft & Sport",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1128,
+      "sampleTopics": [
+        "Gesellschaft und Lebensstil",
+        "Sport und Kultur"
+      ],
+      "episodes": [
+        136,
+        137
+      ]
+    },
+    {
+      "id": "proteste-2024",
+      "name": "Proteste 2024",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1099,
+      "sampleTopics": [
+        "Die Proteste seit 2024",
+        "April: Schülerproteste"
+      ],
+      "episodes": [
+        132,
+        137
+      ]
+    },
+    {
+      "id": "russland-politik",
+      "name": "Russland-Politik",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 1058,
+      "sampleTopics": [
+        "Russland und Syrien",
+        "Serbien und Russland"
+      ],
+      "episodes": [
+        131,
+        132
+      ]
+    },
+    {
+      "id": "sterblichkeitsstatistik",
+      "name": "Sterblichkeitsstatistik",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1037,
+      "sampleTopics": [
+        "Sterblichkeitsraten",
+        "Sterbefälle",
+        "Sterbezahlen"
+      ],
+      "episodes": [
+        21,
+        68,
+        79
+      ]
+    },
+    {
+      "id": "brexit-finale",
+      "name": "Brexit-Finale",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 949,
+      "sampleTopics": [
+        "Das Ende der Verhandlungen",
+        "Der Anfang vom Ende von Brexit?",
+        "Brexit ist vorbei"
+      ],
+      "episodes": [
+        56,
+        106,
+        123
+      ]
+    },
+    {
+      "id": "wuhan-pandemie",
+      "name": "Wuhan Pandemie",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 913,
+      "sampleTopics": [
+        "Ground Zero Wuhan",
+        "Wuhan",
+        "Wuhan Lockdown"
+      ],
+      "episodes": [
+        23
+      ]
+    },
+    {
+      "id": "krim-konflikt",
+      "name": "Krim-Konflikt",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 899,
+      "sampleTopics": [
+        "Situation der Krim",
+        "Situation auf der Krim und im Schwarzen Meer"
+      ],
+      "episodes": [
+        110,
+        113
+      ]
+    },
+    {
+      "id": "ländersituationen",
+      "name": "Ländersituationen",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 872,
+      "sampleTopics": [
+        "Die Situation in anderen Ländern",
+        "Situation in den Ländern und Kreisen"
+      ],
+      "episodes": [
+        18,
+        53
+      ]
+    },
+    {
+      "id": "ländervergleiche",
+      "name": "Ländervergleiche",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 829,
+      "sampleTopics": [
+        "Vergleich mit den Nachbarländern",
+        "Internationaler Vergleich",
+        "Andere Länder"
+      ],
+      "episodes": [
+        71,
+        72,
+        81
+      ]
+    },
+    {
+      "id": "wirtschaftsanalyse",
+      "name": "Wirtschaftsanalyse",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 827,
+      "sampleTopics": [
+        "Wirtschaft",
+        "Globale Auswirkungen",
+        "Wirtschaftliche Folgen"
+      ],
+      "episodes": [
+        9,
+        15,
+        127
+      ]
+    },
+    {
+      "id": "russland-krise",
+      "name": "Russland-Krise",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 815,
+      "sampleTopics": [
+        "Russlands Probleme",
+        "Reaktionen in Russland"
+      ],
+      "episodes": [
+        128,
+        129
+      ]
+    },
+    {
+      "id": "open-source-entwicklung",
+      "name": "Open Source Entwicklung",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 803,
+      "sampleTopics": [
+        "Open Source",
+        "Dokumentation und offene Entwicklung"
+      ],
+      "episodes": [
+        30
+      ]
+    },
+    {
+      "id": "covid-strategien",
+      "name": "Covid-Strategien",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 752,
+      "sampleTopics": [
+        "ZeroCovid",
+        "NoCovid"
+      ],
+      "episodes": [
+        55,
+        58
+      ]
+    },
+    {
+      "id": "britische-politik",
+      "name": "Britische Politik",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 680,
+      "sampleTopics": [
+        "Keir Starmer",
+        "House of Lords"
+      ],
+      "episodes": [
+        31,
+        44
+      ]
+    },
+    {
+      "id": "altersgruppen-analyse",
+      "name": "Altersgruppen-Analyse",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 648,
+      "sampleTopics": [
+        "Verbreitung nach Altersgruppen",
+        "Altersgruppen"
+      ],
+      "episodes": [
+        41,
+        86
+      ]
+    },
+    {
+      "id": "youtube-kanäle",
+      "name": "YouTube-Kanäle",
+      "description": "4 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 1,
+      "relevanceSec": 502,
+      "sampleTopics": [
+        "YT: The Enforcer",
+        "YT: Perun",
+        "YT: Vlad Vexler",
+        "YT: William Spaniel"
+      ],
+      "episodes": [
+        114
+      ]
+    },
+    {
+      "id": "auslandsreisen",
+      "name": "Auslandsreisen",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 473,
+      "sampleTopics": [
+        "Schulferien und Urlaub",
+        "Reisen ins Ausland"
+      ],
+      "episodes": [
+        33,
+        75
+      ]
+    },
+    {
+      "id": "feedback-management",
+      "name": "Feedback-Management",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 369,
+      "sampleTopics": [
+        "Feedback: Maßnahmen",
+        "Feedback: Begründung der Maßnahmen"
+      ],
+      "episodes": [
+        22
+      ]
+    },
+    {
+      "id": "atemschutzmasken",
+      "name": "Atemschutzmasken",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 357,
+      "sampleTopics": [
+        "N95 Masken",
+        "FFP2-Masken"
+      ],
+      "episodes": [
+        47,
+        58
+      ]
+    },
+    {
+      "id": "raucherkrankheiten",
+      "name": "Raucherkrankheiten",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 281,
+      "sampleTopics": [
+        "Roddis Symptome",
+        "Raucher"
+      ],
+      "episodes": [
+        10,
+        24
+      ]
+    }
+  ]
+}

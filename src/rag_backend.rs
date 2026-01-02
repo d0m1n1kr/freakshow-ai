@@ -9,7 +9,7 @@ use std::{
 
 use anyhow::{anyhow, Context, Result};
 use axum::{
-    extract::State,
+    extract::{Query, State},
     http::{header, HeaderMap, HeaderName, HeaderValue, Method, StatusCode},
     response::IntoResponse,
     routing::post,
@@ -190,7 +190,8 @@ struct AppState {
     cfg: AppConfig,
     http: Client,
     rag: Arc<RagIndex>,
-    transcript_cache: Arc<RwLock<HashMap<u32, Arc<Vec<TranscriptEntry>>>>>,
+    // Cache transcript entries per (podcast_id, episode_number). Needed for multi-podcast support.
+    transcript_cache: Arc<RwLock<HashMap<(String, u32), Arc<Vec<TranscriptEntry>>>>>,
 }
 
 #[tokio::main]
@@ -265,8 +266,15 @@ struct SpeakersListResponse {
     speakers: Vec<SpeakerInfo>,
 }
 
-async fn speakers_list(State(st): State<AppState>) -> impl IntoResponse {
-    match load_speakers_index(&st.cfg.speakers_dir) {
+async fn speakers_list(
+    State(st): State<AppState>,
+    Query(params): Query<HashMap<String, String>>,
+) -> impl IntoResponse {
+    // Get podcast_id from query parameter or use default
+    let podcast_id = params.get("podcast_id").map(|s| s.as_str()).unwrap_or("freakshow");
+    let speakers_dir = PathBuf::from(format!("podcasts/{}/speakers", podcast_id));
+    
+    match load_speakers_index(&speakers_dir) {
         Ok(speakers) => (StatusCode::OK, Json(SpeakersListResponse { speakers })).into_response(),
         Err(e) => {
             error!("Failed to load speakers: {:?}", e);
@@ -374,6 +382,8 @@ struct ChatRequest {
     speaker_slug: Option<String>,
     #[serde(default)]
     speaker_slug2: Option<String>,
+    #[serde(default)]
+    podcast_id: Option<String>,
 }
 
 #[derive(Debug, Serialize)]
@@ -431,56 +441,106 @@ async fn chat_impl(st: &AppState, req: ChatRequest) -> Result<ChatResponse> {
         return Err(anyhow!("query must not be empty"));
     }
 
+    // Determine podcast ID from request or use default
+    let podcast_id = req.podcast_id.as_deref().unwrap_or("freakshow");
+    
+    // Load RAG database for this podcast
+    let rag_db_path = PathBuf::from(format!("db/{}/rag-embeddings.json", podcast_id));
+    if !rag_db_path.exists() {
+        return Err(anyhow!("RAG database not found for podcast '{}': {}", podcast_id, rag_db_path.display()));
+    }
+    let rag = RagIndex::load(&rag_db_path)
+        .with_context(|| format!("Failed to load RAG database: {}", rag_db_path.display()))?;
+    
+    // Use podcast-specific episodes and speakers directories
+    let episodes_dir = PathBuf::from(format!("podcasts/{}/episodes", podcast_id));
+    let speakers_dir = PathBuf::from(format!("podcasts/{}/speakers", podcast_id));
+
     let top_k = req.top_k.unwrap_or(st.cfg.top_k).clamp(1, 20);
 
     // Get speaker name from slug if requested
     let speaker_name = if let Some(slug) = req.speaker_slug.as_ref() {
-        get_speaker_name_from_slug(&st.cfg.speakers_dir, slug).ok()
+        get_speaker_name_from_slug(&speakers_dir, slug).ok()
     } else {
         None
     };
     
     // Get second speaker name from slug if requested (discussion mode)
     let speaker2_name = if let Some(slug) = req.speaker_slug2.as_ref() {
-        get_speaker_name_from_slug(&st.cfg.speakers_dir, slug).ok()
+        get_speaker_name_from_slug(&speakers_dir, slug).ok()
     } else {
         None
     };
 
     // Load speaker profile if requested
     let speaker_profile = if let Some(slug) = req.speaker_slug.as_ref() {
-        load_speaker_profile(&st.cfg.speakers_dir, slug).ok()
+        load_speaker_profile(&speakers_dir, slug).ok()
     } else {
         None
     };
     
     // Load second speaker profile if requested (discussion mode)
     let speaker2_profile = if let Some(slug) = req.speaker_slug2.as_ref() {
-        load_speaker_profile(&st.cfg.speakers_dir, slug).ok()
+        load_speaker_profile(&speakers_dir, slug).ok()
     } else {
         None
     };
 
     // 1) Retrieve - get more results if we need to filter by speaker
-    let search_k = if speaker_name.is_some() { top_k * 3 } else { top_k };
-    let hits = retrieve(st, query, search_k).await?;
+    let search_k = if speaker_name.is_some() || speaker2_name.is_some() {
+        top_k * 3
+    } else {
+        top_k
+    };
+    let hits = retrieve(st, &rag, query, search_k).await?;
 
     // 2) Build context from transcripts
     let mut sources: Vec<ChatSource> = Vec::with_capacity(hits.len());
     let mut context_parts: Vec<String> = Vec::with_capacity(hits.len());
 
     for h in hits {
-        let transcript = load_transcript_entries(st, h.item.episode_number).await?;
-        let excerpt = excerpt_for_window(
-            &transcript,
-            h.item.start_sec,
-            h.item.end_sec,
-            4000,
-            speaker_name.as_deref(),
-        );
+        let transcript =
+            load_transcript_entries(st, podcast_id, &episodes_dir, h.item.episode_number).await?;
 
-        // Skip empty excerpts when filtering by speaker
-        if speaker_name.is_some() && excerpt.contains("[no transcript entries found") {
+        // If discussion mode is active (two speakers), build per-speaker excerpts so each position
+        // is grounded in that speaker's actual transcript lines.
+        let (excerpt, should_skip) = if let (Some(name1), Some(name2)) =
+            (speaker_name.as_deref(), speaker2_name.as_deref())
+        {
+            let ex1 = excerpt_for_window(
+                &transcript,
+                h.item.start_sec,
+                h.item.end_sec,
+                2200,
+                Some(name1),
+            );
+            let ex2 = excerpt_for_window(
+                &transcript,
+                h.item.start_sec,
+                h.item.end_sec,
+                2200,
+                Some(name2),
+            );
+
+            let empty1 = ex1.contains("[no transcript entries found");
+            let empty2 = ex2.contains("[no transcript entries found");
+
+            let combined = format!("{name1}:\n{ex1}\n\n{name2}:\n{ex2}");
+            (combined, empty1 && empty2)
+        } else {
+            let ex = excerpt_for_window(
+                &transcript,
+                h.item.start_sec,
+                h.item.end_sec,
+                4000,
+                speaker_name.as_deref(),
+            );
+            // Skip empty excerpts when filtering by a single speaker
+            let should_skip = speaker_name.is_some() && ex.contains("[no transcript entries found");
+            (ex, should_skip)
+        };
+
+        if should_skip {
             continue;
         }
 
@@ -627,18 +687,18 @@ struct Hit {
     score: f32,
 }
 
-async fn retrieve(st: &AppState, query: &str, top_k: usize) -> Result<Vec<Hit>> {
-    if st.rag.has_embeddings {
+async fn retrieve(st: &AppState, rag: &RagIndex, query: &str, top_k: usize) -> Result<Vec<Hit>> {
+    if rag.has_embeddings {
         let q = embed_query(st, query).await?;
         let qn = l2_norm(&q);
         if qn <= 0.0 {
             return Err(anyhow!("Query embedding norm is 0"));
         }
 
-        let mut scored: Vec<(usize, f32)> = Vec::with_capacity(st.rag.items.len());
-        for (i, it) in st.rag.items.iter().enumerate() {
+        let mut scored: Vec<(usize, f32)> = Vec::with_capacity(rag.items.len());
+        for (i, it) in rag.items.iter().enumerate() {
             let Some(v) = &it.embedding else { continue };
-            let dn = st.rag.norms[i];
+            let dn = rag.norms[i];
             if dn <= 0.0 {
                 continue;
             }
@@ -653,7 +713,7 @@ async fn retrieve(st: &AppState, query: &str, top_k: usize) -> Result<Vec<Hit>> 
         Ok(scored
             .into_iter()
             .map(|(i, score)| Hit {
-                item: st.rag.items[i].clone(),
+                item: rag.items[i].clone(),
                 score,
             })
             .collect())
@@ -662,8 +722,8 @@ async fn retrieve(st: &AppState, query: &str, top_k: usize) -> Result<Vec<Hit>> 
         let q = normalize_for_match(query);
         let q_tokens: Vec<&str> = q.split_whitespace().collect();
 
-        let mut scored: Vec<(usize, f32)> = Vec::with_capacity(st.rag.items.len());
-        for (i, it) in st.rag.items.iter().enumerate() {
+        let mut scored: Vec<(usize, f32)> = Vec::with_capacity(rag.items.len());
+        for (i, it) in rag.items.iter().enumerate() {
             let hay = normalize_for_match(
                 it.text
                     .as_deref()
@@ -693,7 +753,7 @@ async fn retrieve(st: &AppState, query: &str, top_k: usize) -> Result<Vec<Hit>> 
         Ok(scored
             .into_iter()
             .map(|(i, score)| Hit {
-                item: st.rag.items[i].clone(),
+                item: rag.items[i].clone(),
                 score,
             })
             .collect())
@@ -741,25 +801,28 @@ struct TranscriptEntry {
 
 async fn load_transcript_entries(
     st: &AppState,
+    podcast_id: &str,
+    episodes_dir: &PathBuf,
     episode_number: u32,
 ) -> Result<Arc<Vec<TranscriptEntry>>> {
+    let cache_key = (podcast_id.to_string(), episode_number);
     // Fast path from cache
     {
         let cache = st.transcript_cache.read().await;
-        if let Some(v) = cache.get(&episode_number) {
+        if let Some(v) = cache.get(&cache_key) {
             return Ok(v.clone());
         }
     }
 
     let fname = format!("{episode_number}-ts.json");
-    let path = st.cfg.episodes_dir.join(fname);
+    let path = episodes_dir.join(fname);
     let bytes = match std::fs::read(&path) {
         Ok(b) => b,
         Err(e) if e.kind() == io::ErrorKind::NotFound => {
             warn!("Transcript not found: {}", path.display());
             let arc = Arc::new(Vec::new());
             let mut cache = st.transcript_cache.write().await;
-            cache.insert(episode_number, arc.clone());
+            cache.insert(cache_key, arc.clone());
             return Ok(arc);
         }
         Err(e) => {
@@ -771,7 +834,7 @@ async fn load_transcript_entries(
 
     let arc = Arc::new(tf.transcript);
     let mut cache = st.transcript_cache.write().await;
-    cache.insert(episode_number, arc.clone());
+    cache.insert(cache_key, arc.clone());
     Ok(arc)
 }
 

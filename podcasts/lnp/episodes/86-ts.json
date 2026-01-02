@@ -1,0 +1,974 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus. Guten Morgen Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:02",
+      "text": "Land net, das ist doch scheiße. Ich ich schicke jetzt einfach meine Daten nur noch innerhalb von Berlin.\nGanz Berlin eine Wolke.\nLogbuch Netzpolitik Nummer sechsundachtzig. Ja.\nDas äh klingt zwar jetzt nicht besonders äh aufregend, aber weiß der Geier, vielleicht äh wird ja trotzdem eine schöne Sendung draus.\nUns einiges einfallen lassen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:55",
+      "text": "Wir haben uns was einfallen lassen. Wir haben auch einen Gast."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:57",
+      "text": "Genau. Vor allem haben wir uns einen Gast einfallen lassen und äh wir begrüßen hier in unserer Runde ein weiteres Mal Gregor, Gregor Sedlack, hallo, guten Morgen."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:01:05",
+      "text": "Hallo, guten Morgen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:06",
+      "text": "Ja, wir brauchten mal wieder intellektuelle Verstärkung, dass äh hat die letzte Sendung auch wieder deutlich gemacht.\nÄhm da müssen wir auch, glaube ich, jetzt mal mit so einem kleinen äh Ratum Blog beginnen.\nÄhm zur Erinnerung, wir haben uns letztes Mal sehr ausführlich mit äh Clemens auch über diese ganzen Schlandnetzhintergründe äh unterhalten, beziehungsweise überhaupt über die technischen Hintergründe Internet in Deutschland. Da ist die Sendung so ein bisschen ins technische abgedriftet.\nAuch so ein bisschen den Eindruck gehabt und das wurde auch in den Kommentaren beklagt, dass nicht so wirklich ganz klar geworden ist\neigentlich so die Argumentationslinie am Ende war,\nbevor wir vielleicht das nochmal kurz aufgreifen, haben wir auch noch so zwei Dinge ganz konkret falsch gesagt, zum Beispiel die Behauptung des AVM sei eine Route in China baut. Was wir einfach mal so angenommen haben, sie herausgestellt ist, wo ist nicht so?\nTatsächlich werden zwar äh elektronische Bauteile aus Asien äh bezogen, oh Wunder, aber das Ganze wird wohl ähm,\nso am Bodensee irgendwie zusammengelötet, ja? Also nicht nur deutsche Daten für deutsche Bürger, sondern.\nIst halt auch made in Germany."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:23",
+      "text": "Gelötet in Germany. Äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:25",
+      "text": "In Germany. Und dann äh äh viel noch so ganz nebenbei äh die Behauptung, dass ein bestimmtes Windgas äh Netzwerk äh ein Teil von Gazprom sei,\nwas es dann wohl doch nicht ist, auch wenn ich es nicht weiß, wovon es vielleicht ein Teil ist. Aber das ist jetzt hiermit mal gesagt. Linus, was meinst du denn jetzt hier zu dem.\nKlare Argumente."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:48",
+      "text": "Ich will erstmal meine meine Ente Rüstung über äh AVM loswerden, die uns hier gerade um eine Stunde zurückgeworfen hat,\nDie haben, also nee, ehrlich, sowas geht gar nicht. Die haben äh offensichtlich bei ihrem letzten Update der Software, dass Tim eingespielt hat innerhalb der letzten Woche, seit unserer letzten Sendung. Ähm,\nim Gastnetz blocken sie jetzt und das nicht, das gehört sich nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:12",
+      "text": "Also es ist eine Option, die man einschalten kann und."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:15",
+      "text": "Die aber automatisch mitgeliefert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:16",
+      "text": "Die irgendwie sich selbst eingeschaltet hat. Naja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:20",
+      "text": "Die hat sich selbst eingeschaltet bei äh bei dir und bei mir und das finde ich nicht gut, weil ich gerade einfach mal panisch hier alle möglichen Server runterfahren musste, weil ich dachte, ich käme nicht mehr drauf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:29",
+      "text": "Na ja, gut, das haben wir jetzt äh geklärt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:32",
+      "text": "Nein, ich ich übe jetzt, ich ich prangere das an."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:34",
+      "text": "Du prangerst das an. Gut. Dann haben wir das ja auch durch. Wird sich trotzdem nochmal zu dem Schlandennetz Unklarheiten äh Vorwurf äußern oder gehen wir damit dann auch schon irgendwie in unsere eigentliche Agenda über."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:03:48",
+      "text": "Ähm.\nIch glaube, was, was, was da so als Abschluss vor der Folge fehlte, war so so die Executive Summary und das ist ähm, glaube ich, zu sagen, dass das ist ein ein sehr viel größerer technischer Aufwand ist, als man eventuell jetzt gerade äh,\nüberblickt. Ich denke, das ist, glaube ich, klar geworden durch Clemens Ausführung. Und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:10",
+      "text": "Weil sich so ein bisschen die Vorstellung äh manifestiert in der Öffentlichkeit. Ja man muss einfach nur die Tore zumachen, ja?\nSo quasi so ein digitales Frontex einfach Grenzen äh äh dicht, dann kommt hier keiner mehr rein, Hauptsache die Mauern sind hoch äh genug so, ja. Die deutsche Firewall und dann äh können auch die Daten nicht mehr rauspurzeln.\nAber dazu ist das einfach auf so vielen Ebenen, mit so vielen äh Dingen verquickt, dass dass eben nicht ohne Weiteres herzustellen wäre."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:36",
+      "text": "Anders gebaut wurden. Ja, also man hat sich eben nicht da hm es gibt eben nicht diese diese Grenzen, sondern diese Kabel äh und und Glasfasern liegen sowieso über die Grenzen\nhinaus. Ähm und der zweite wichtige Punkt, den wir ähm nur am Rande angesprochen haben, ist das, was innerhalb Deutschlands liegt.\nAn Netz. Das gehört dann auch,\ngrößtenteils oder zu großen Teilen auch der Telekom. Und äh wenn heute ein Provider äh in der Lage ist zu sagen, ey, das was die Telekom von mir verlangt, um\nirgendwie durch deren Netze zu gehen, ist mir irgendwie einfach nicht recht. Deswegen,\nmöchte ich mich auf anderem Wege zum mit dem Ziel verbinden, kaufe also nicht irgendwie mit der Telekom, sondern kaufe mir äh\nirgendwie Internet Global Routing so wie Clemens das auch erzählte ähm diese Option hätten die Provider dann nicht mehr, wenn sie gezwungen sind, wenn sie im Prinzip durchs durch das Gesetz gezwungen sind mit äh mit der deutschen Telekom da.\nÄh verbunden zu werden oder innerhalb Deutschlands verbunden zu werden. Das heißt, es hätte ähm finanziell äh finanziell,\npositive Folgen für die Telekom und negative für andere Anbieter. Und würde die Marktmacht der Telekom stärker äh zement."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:57",
+      "text": "Ja und es wäre wahrscheinlich auf der Ebene auch einfach Europatechnisch auch gar nicht durchzubringen, dass man jetzt an der Stelle den Markt irgendwie begrenzt und äh da den Zwang zur Nutzung eines Monopolisten äh einführt, was es ja\numgekehrt bedeuten würde. Also von daher ist es gar nicht gar nicht durchführbar, nicht nur nicht technisch durchführbar, sondern auch einfach vom,\nSicherheits äh also vom äh freien Wirtschaftsraum Europa her äh,\nGut, wenn man jetzt sagt, nicht schlanknetzt, sondern Schengennetz, ja, geht man einen Schritt weiter, aber da gehört dann Britannien im Prinzip äh genauso dazu zur EU und von daher äh ja, da wissen wir einfach, da ist das Loch dann sehr groß\nes ist einfach eine, eine, eine, eine leere Diskussion, aber du hast da, glaube ich, auch noch ein paar Gedanken zukriege, oder?"
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:06:46",
+      "text": "Ja die die Politik muss einfach unter komplex,\nLösungen anbieten. Und das tut sie und in dem Bereich, wo wir gerade keine Experten sind, äh sind wir gar nicht so äh äh empört oder,\nspotten so herum. Der Atomausstieg von der von der Merkel vor zweieinhalb Jahren nach Fukushima. Äh das ist quasi schlank nett in Strom.\nFür alle anderen, denn die Elektronen, die wandern ja trotzdem durch die Netze und ähm.\nDurch diese äh Abschalten der Atomkraftwerke kommt dann ja auch letztlich sogar mehr Atomstrom aus Frankreich, dann in die deutschen Netze. Äh ich bin mir sicher, dass wenn man so ein Stromnetzwerkmanager äh,\nmal befragen würde, dann käme ähnlich detailreiches Expertenwissen zu Tage wie äh äh Clemens, dass äh,\njetzt berichtet hat und trotzdem hat die Politik einfach gesagt, wir machen das jetzt aus bestimmten,\ngründen, um auch Handlungssouveränität zu simulieren, weil mehr kann Politik meines Erachtens gar nicht machen in so komplexen Welt,\naber das braucht die Politik auch um Legitimation,\nzu behaupten zu können und damit auch eine gewisse Beruhigung der Lage zu bringen. Und ich glaube, jeder führende Politiker wird nie und nimmer auf äh Experten hören. Ich glaube, das ist überhaupt das Grundsatz eines Politikers ist,\nüber Experten wissen einfach drüber zu marschieren.\nUnd deswegen ist diese Aufregung, diese flächendeckende äh eigentlich ein bisschen wohlfeil, weil man muss das anders sehen. Das ist kein technisches Problem, das ist ein politisches Problem.\nDieses deutsche Daten in deutschen Händen, das ist wie Freie, ihr seid wie äh wie der ADAC vor vierzig Jahren der bei den ersten Tempolimits äh empört war, dass dass man jetzt nicht mehr so schnell fahren kann, wie man darf,\nHaben die gesagt, freie Fahrt für freie Bürger. Ja, aber so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:59",
+      "text": "Nicht mehr so schlimm, wie man kann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:09:00",
+      "text": "Und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:03",
+      "text": "Man darf immer so schnell fahren, wie man darf, aber."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:09:04",
+      "text": "Und äh äh für deswegen ist auch die ganze Empörung für Politiker vollkommen normal, weil die haben nur mit diesen äh Partikularinteressen zu tun,\nund solange es kein kein gutes Narrativ gibt dafür, dass man keine irgendwie gearteten, nationalen äh Maßnahmen gegen einen,\nals doch ziemlich äh bestürzenden Skandal, wie die äh Abhör äh Affäre findet. Da braucht's jetzt irgendwie eine eine Maßnahme,\näh wenn wenn verrottetes Fleisch auf den deutschen Markt kommt, dann heißt es auch, müssen wir halt die,\nLebensmittelkontrollgesetze verschärfen. Das ist so die normale,\nHandlung ähm das natürlich Fleisch hin und her gekarrt wird in einem äh äh Binnenmarkt EU mit und ohne Schengen und das ist dann auf der praktischen Basis viel, viel komplexer ist. Das weiß jeder Politiker, aber der muss,\nDrei Tage nach dem Skandal muss ein Maßnahmen ein Eckpunkte,\nPapier auf den Markt kommen und da passt natürlich so etwas wie ähm.\nLandnetz ganz gut rein und ich finde, man sollte das äh auch mal auf einer auf einer politischen Ebene vielleicht versuchen, anders ähm als.\nAls ein Auftrag, aber nicht als eine eine praktische Lösungsstrategie zu diskutieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:31",
+      "text": "Ja, ich meine, es ist, es ist schon nachvollziehbar, warum das so verheißungs äh voll aufgegriffen wird von der Politik, weil das ja im Prinzip da\nda steckt so dieses Made in Germany drin, Standortstärken, bla bla bla äh ja auf eigene Stärken und überhaupt dieses ganze äh Internet, das äh haben sie ja nun, glaube ich, in letzter Zeit auch gemerkt, dass insbesondere dieser Cloud Aspe\nmuss ich mal die äh Dimension des Ausbaus in den USA anschaut, jetzt nicht nur die der Geheimdienste, sondern auch so der äh im eher öffentlicheren\nähm Dienste. Das ist absehbar ist, dass man hier in Deutschland dem überhaupt nicht,\nfolgen kann. Also nicht nur, weil wir einfach diese Wüsten äh äh nicht haben, wo man mal eben so eine Kleinstadt an äh Lagerhallen hinstellt und dazu noch äh eine zweite Kleinstadt in Solarpanelen\nsondern auch einfach die Expertise so nicht da ist schon beziehungsweise die Expertise mag vielleicht sogar noch Aufbau sein aber ich denke dass einfach die Dynamik,\nhier äh immer schon gefehlt hat so und äh dieses Abgehängt werden, das ist ja natürlich klar, dass dann so diese Reaktion ist da, ja, aber es mag ja schnell sein und viel können so, aber es ist ja nicht Schland\nja? Und äh von daher ist das wahrscheinlich auch die ganze Botschaft, die dahintersteckt und man muss sich da gar nicht so groß drüber unterhalten."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:11:46",
+      "text": "Ähnliche ähm Aktionen haben ja auch,\nsich als halbwegs als Erfolgsgeschichte herausgestellt, wie zum Beispiel, dass die Europäer ähm vor vierzig Jahren gesagt haben, wir wollen den Amerikaner damals in der westlichen Emisphäre nicht den Flugzeugmarkt\nalleine überlassen und deswegen gründen wir und.\nDie sehen halt so eine Erfolgsgeschichte, weil jetzt gibt es ein Durpo, praktisch in diesen Passagierflugzeugmarkt und ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:16",
+      "text": "Oder die Isar."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:12:17",
+      "text": "Oder die Esa. Es heißt und das aber in so einem vierzig Jahres äh Zyklus, also,\nDas ist vielleicht auch nochmal die Sache. Du kannst ein Schlandnett nicht innerhalb von drei Monaten implementieren. Das ist wäre ein dreißig Jahre Plan. Ähm,\nda fehlt uns auch glaube ich die Fantasie überhaupt äh das Internet in so einer als bleibende Infrastruktur äh uns vorstellen zu können, weil wir einfach gesehen haben, wie stark die sich verändert. Äh,\naber so aus einem politischen Reflex heraus ähm will ich einfach eher so ein bisschen für Verständnis erstmal werben, äh weil auch,\nTerritorialprinzip halt das,\nPrinzip des Nationalstaats ist, dass er eingeheckt von äh von bestimmten Kontrollposten, ein über ein Territorium eine gewisse Gewalt,\nausübt und darin eine Souveränität hat. Ähm meistens jedenfalls."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:17",
+      "text": "Und."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:13:20",
+      "text": "Dass jetzt immer mehr dieser Infrastruktur in diesem digitalen Layer, der um unsere,\nZivilisation unsere Welt jetzt quasi so drüber gelegt wird, äh die ist nicht mehr. Das haben wir jetzt eigentlich auch.\nEigentlich durch die Schlandnett Debatte jetzt überhaupt erst erfahren, die sind nicht mehr konkruent. Ja, diese Internetsphäre funktioniert auf technischer Basis äh komplett anders, als dieses Territorialprinzip Staat,\nund ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:49",
+      "text": "Was ja auch nichts Neues ist. Ich meine, das hat man äh in der Finanzwelt äh ähnlich. Du hast Stromnetze schon äh angesprochen. Das sind ja alles ähnliche Dynamiken."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:13:57",
+      "text": "Genau, äh gerade auch die die ähm Dynamik in den Finanzmärkten, da ist ja dasselbe, dass nach der äh Finanz\näh Lehman pleite. Dann gesagt, wir müssen jetzt härter an die Kandare nehmen und die sollen auch mal bezahlt. Die sollen auch mal bezahlen die Finanz äh Akrobaten. Ähm dafür, dass sie äh so viele\nja Wettbillionen um die äh Erde schicken äh und ich denke mal, die,\nDie daraus resultierende Forderung, Börsen, Transaktionssteuer und so, dass die ähnlich äh schwer äh,\nzu implementieren ist, wie so eine Schlattnet-Routing oder Schengen-Net-Routing und.\nDer wird auch nicht viel kommen, aber zumindest hat die Politik sich dann mal hingesetzt und auf einen bestehenden Skandal,\nDer jagt gewissermaßen auch aus der eigenen, aus der Mitte der eigenen,\nkommt die Finanzindustrie ist ja hoch verflochten mit äh sowohl dem der Politik als auch mit der realen Wirtschaft. Die,\nGeheimdienste sind ja auch nicht vom Himmel gefallen, sondern die haben eine lange Tradition und haben sich ähnlich vermutlich wie die Banken dem technischen Fortschritt sehr stark angepasst.\nUnd äh auch die Möglichkeiten, die sich aus dem technischen Fortschritt ergeben, dann genutzt und auf einmal durch die ja durch die Quantität an,\nan Abschöpfungsmaßnahmen ist einfach.\nIch glaube, das kann man sagen durch den NSA-Enthüllung, äh einfach auch eine neue Qualität entstanden, die uns alle beunruhigt. Und darauf,\nDas sieht, glaube ich, auch jeder in der Politik so. Äh selbst der IM Friedrich sieht das manchmal so,\nje nach Tagesform und Briefing, das ihm irgendein Abteilungsleiter rein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:44",
+      "text": "Ja und welche Faxe grade aus den USA kamen."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:15:49",
+      "text": "Ich glaube, der wird von der CSU ferngesteuert, nicht von von der NSA."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:15:55",
+      "text": "Jetzt aber das, was du jetzt grundsätzlich für die Politik diagnostizierst. Du warst ja ein, was schon, glaube ich, eine ganz zutreffende Diagnose ist. Was heißt das, aber denn grundsätzlich mein ähm,\nDas heißt, sie müssen irgendwas machen, sie müssen irgendwas sagen. Also also tun sie das,\nkommen damit ja offensichtlich auch durch. Ich glaub die die Einschätzung, dass das in vielen Bereich oder vielleicht sogar in allen Bereichen so ist, von denen wir keine Ahnung haben, dass wir dass wir da den den ganzen Tag nur irgendwelchen,\nMist vorgekocht bekommen, der der unausgegoren ist und der der Komplexität des des der Realität irgendwie nicht gerecht wird. Ähm.\nWarum warum unterhalten wir uns so einen, also warum gönnen wir uns diese diesen Quatsch dann?"
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:16:38",
+      "text": "Dies, ich glaube, die Politik ist einfach ein unglaublich äh komplexes,\nso Immunsystem in einer Gesellschaft, in also in der Demokratie. Ähm dieses ständige Kampf aller gegen alle sorgt dafür, dass ähm.\nNicht die besten Ideen sich durchsetzen, sondern dass, ich glaube, die die besonders auffällig schlechten nicht durchkommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:05",
+      "text": "Das ist die These ist ja wohl widerlich. Sorry."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:17:10",
+      "text": "Na ja, ich meine, weil du du hast natürlich jetzt IM Friedrich vor Augen, aber äh ähm es geht immer noch schlimmer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:19",
+      "text": "Suzensursular war dann doch zu krass Scheiße, als das dann noch durch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:24",
+      "text": "Dass man sie nicht noch ein paar Jahre Familienministerin äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:27",
+      "text": "Nicht ursula selbst, sondern ihr der Auslöser, also ich mein, der ist ja dann immerhin nicht gekommen so, ja, weil da war dann genau dieser Bogen überspannend."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:37",
+      "text": "Halt auch erst wieder, wenn wir schlank nicht haben. Das ist ja so der Punkt, den ich äh also erst, wenn wir Schlandnitt haben, ähm\nkönnen wir überhaupt unsere schönen nationalen Zensur-Infrastrukturen machen? Können wir alles schön vom BKA überwachen lassen oder äh oder vom BND oder wer auch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:53",
+      "text": "Ja, wer hat denn eigentlich Standlette? Eigentlich nur China."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:17:57",
+      "text": "Ich meine, von China lernen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:00",
+      "text": "Du meinst das mit dem Schießpulver war doch eigentlich gar nicht so eine schlechte Idee."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:18:07",
+      "text": "Chinesen,\ndass die sich überhaupt dazu haben nieder äh äh niederregen lassen, überhaupt so einen westlichen Standard für sich zu akzeptieren. Ich glaube, das ist schon eine große Schmach für die. Weil die sich ja generell, das ist ein,\nein Nationalstaat, das ist kein richtiger Nationalstaat. China ist die Welt,\nAlso dieses Reich der Mitte, das ist nicht wie so irgendwie die neue Mitte von Schröder. So, das ist.\nEin richtiger Chinese kann sich gar nicht vorstellen, dass außerhalb von China etwas existiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:40",
+      "text": "Sowie Amerikaner."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:18:42",
+      "text": "Genau, die Amerikaner sind diese andere komplett,\nauch, das ist ja abgedriftete Nation, die ähm die nicht die zwar formalen Nation ist, aber eigentlich dadrüber steht. Ich finde es auch ganz interessant, wir haben ja den,\nWir sagen, es gibt United. States of America und es gibt die United Nations. Wir haben in Deutschland ja die unglaublich feine Unterscheidung zwischen den Vereinigten Staaten und den Vereinten Nationen.\nFür die Amerikaner sind das doch zwei komplett widerstreben. Wie kann man denn United States sein und gleichzeitig Newted Nations angehören?\nDas sind ja das ist doch auf der auf Bedeutungsebene gibt's da gar keinen Unterschied, für die ist doch kein Wunder, dass die äh den,\nsie die Vereinten Nationen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:31",
+      "text": "Aber sie sagen doch auch One Nation. Also sie sie die bezeichnen ja schon ihre Summe als Nation."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:19:38",
+      "text": "Ja. Sie sind die andere Nation, die keine war, war ja die Sowjetunion, die sich auch wirklich ach so, es gibt noch eine dritte, das ist das UK."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:49",
+      "text": "Ja das ist auch vor allem United King Dym, nicht Kings."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:19:55",
+      "text": "Es ist den Inhalt Kingdom und es gibt ja noch quasi was für die für Russland die Guss ist, ist für UK das,\nund wenn du siehst kommen willst und die Five Eyes, das ist nur vier kommen willst, Länder unter der Queen und die USA dürfen mitmachen.\nIch glaube, so sieht die Brite das. Und eigentlich das, ich muss halt sagen, dieses Hauptquartier ist schon so cool von diesem GH. Wie heißt der?\nJa, also dass der noch nicht in einem Bon-Film aufgetreten ist, das wird sich aber jetzt ändern. Und äh ich denke mal, Apple hat da ja auch sich inspirieren lassen.\nMit ihrem mit ihrer Firma."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:37",
+      "text": "Ist die Frage, ja. Ein Ring sie zu knechten."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:20:43",
+      "text": "Das ist toll, dass du das sagst. Die gesamte NSA-Affäre liest sich doch wie äh Herr der Ringe, oder?\nAlle Diskussionen, es gibt dieses alles sehende Auge aus Morde und selbst wenn du dich untern Krypto-Talschirm stellst, je aktiver du da bist, desto eher kommst du ins in das Sichtfeld von äh Sauron.\nDas ist jetzt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:06",
+      "text": "Stimmt."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:21:08",
+      "text": "Das ist genau das Problem von den ganzen Krypto Freaks, dass man sich hier gerade dadurch dann besonders verdächtig und auffällig verhält, wenn man ähm Kryptographisch unterwegs ist. Und äh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:22",
+      "text": "Aber jetzt jetzt muss uns noch welche zu Gregor, jetzt hast du uns ja schon welchen Ring müssen wir in welches Loch schmeißen, um aus der Nummer wieder raus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:30",
+      "text": "Wir müssen Apple opfern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:34",
+      "text": "Also ich glaube an also da das wird sogar tatsächlich der Fall sein."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:21:41",
+      "text": "Also wieder ein bisschen äh äh auf auf heimischen Boden zurückzukommen. Ähm,\nVerrecke äh nehmen, dass dann äh Tante äh AKA ähm Jürgen Golter und MS Pro,\nAKA Michael Seemann, sich so Pingpong-mäßig jetzt so äh durchgespielt haben, plus noch das der äh Tante äh so eine Art Asterix bei den Gurtensuchmaschine jetzt.\nÄh Suchmaske ins Netz gestellt hat, die äh der Weltnetz Suchantrieb hieß. Und äh.\nDas ist eine wunderbare Illustration dessen, was,\ner glaubt und äh befürchtet, wie es aussieht, wenn ähm ein sich also so durchsetzt. Und das dann mit diesem äh antinationalen,\nImpuls der äh der Antideutschen äh äh linken äh Bewegung.\nUnd das finde ich halt äh so verblüffend, weil.\nIn der gesamten Welt ist der Nationalstaat immer noch die einzige,\nquasi äh ähm anerkannte Handlungsebene äh auf globaler Ebene. Also wenn du kein Staat bist, kannst du irgendwo nicht mitspielen im großen Spiel. Selbst,\nKatholische Kirche muss sich so ein, so eine Starts Vehikel, so einen Staatsmantel leisten, damit sie mitspielen kann,\nmit ihrem Vatikanstaat. Und ausgerechnet die Deutschen,\noder ein relativ großer Teil der der Deutschen eher progressiven linken äh Bewegung, die hat,\nAus guten Gründen natürlich, ein antinationalstaatlichen Reflex. Der wird nur auf der ganzen Welt so nicht geteilt.\nÄhm im Gegenteil, je stärker die Deutschen versuchen supernational,\nund äh multilateral zu agieren, desto mehr wächst das Misstrauen, dass alle anderen Staaten sagen, das nutzen die ja nur als Wege, um ihre Macht äh.\nIhre nationalen Macht äh Ambitionen durchzusetzen. Ähm weil in Spanien ja ein Engländer ein Franzose, der glaubt das nicht, dass wir nicht an den Nationalstaat glauben. Der hält das für einen Trick.\nDas ist so in in dem in dem äh die haben ja die haben ja eine eine weitgehend ungebrochene äh nationale Identifikation und Identität,\ndie geht reicht ja teilweise Jahrhunderte zurück wir haben diese Stunde null so 'ne Unterbrechung wir hatten zwei unterschiedliche Staatssysteme die parallel zueinander agiert haben es gibt die,\nquasi äh anti-nationale Identität dadurch, dass äh die Deutschen äh ähm.\nMit dem Holocaust äh sich ein Verbrechen aufgeladen haben und eine Verantwortung für diese Schuld über Generationen äh weiter äh äh geht.\nDas haben andere Nationen nicht, die haben nicht diesen Bruch. Und äh,\nEs fehlt aber auch die die Empathie, sich das bei einem anderen wirklich vorstellen zu können. Die sagen, das machen die aus dem Trick,\nsind natürlich komplett wie alle wie wir alle die Deutschen sind nicht anders als wir aber die haben natürlich diesen dieses Problem und deswegen äh holen sie sich jetzt diesen Mantel des."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:20",
+      "text": "Nur die Deutschen dürfen das nicht machen, weil wenn die erstmal anfangen, das zu machen, was wir machen, dann machen sie es immer gleich im industriellen Maßstab und dann kriegt sie irgendwie keiner mehr gekapselt."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:25:27",
+      "text": "Ja, aber jetzt ist es halt noch schlimmer, weil aus guten Motiven sagen, hier in Deutschland einige den Nationalstaat hat keine Zukunft.\nSind aber die einzigen, die das sagen auf der Welt. Und je lauter man das sagt, desto stärker klingt das natürlich nach am deutschen Wesen soll die Welt genesen.\nSo dass also der Antinationalismus als ein besonders perfide Form deutschen Hegemonalanspruchs gelesen wird,\nund wenn du unter dieser Berücksichtigung mal die ganze Euro,\nEuropakrisendebatte dir anguckst, ähm dann versteht man, warum die Griechen, die Italiener, die Spanier, äh eigentlich alle äh mit Deutschland im Moment nicht so zufrieden sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:13",
+      "text": "Warum Angela Merkel denn in jeder zweiten Karikatur sich dann auch nochmal ein Bärtchen ankleben lassen muss?"
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:26:18",
+      "text": "Und sie kommt ja gar nicht dran vorbei. Ähm in einem gewissen Rahmen muss sie ja auch äh deutsche Interessen vertreten und selbst da, wo die Deutschen,\nAus idealistischen Gründen handeln,\ngibt es immer sehr, sehr gute Gründe zu sagen, das machen die aber nicht nur aus idealistischen Gründen. Und ähm.\nDass nun das ist so wirklich so wirklich die Metaebene, das das,\nalle Welt nach wie vor an den Staat, an den Nationalstaat, als den Player auf dieser Bühne der Welt glaubt,\nund die Deutschen da immer mit so einem bisschen mit so einer gewissen Befangenheit agieren. Zum Beispiel die Bundesrepublik konnte lange Zeit gar nicht nationalstaatlich auftreten, weil sie ja ihre Grundexistenz,\nwar, dass sie ein Partikularstaat ist, der überhaupt erst die Wiedervereinigung anstrebt, um dann als kompletter Nationalstaat wieder auf die Bühnen der Welt zu treten,\nJetzt hat aber die Bundesrepublik Deutschland,\nwar dann trotzdem so stark, dass sie so eigenständig äh agiert hat und als dann die Wiedervereinigung ist, hat sich ja gar nicht so viel verändert in unserem System. Wurde ja sehr, sehr viel übergestülpt auf die DDR. Nur die anderen,\nNationen haben durchaus gesehen,\nwas da für ein Machtzuwachs wieder entsteht und waren deswegen auch in in Sorge und.\nDeswegen dieses dieses verrecke, das glaubt uns keiner und äh,\nletztlich wird es sich auch auf irgendeiner praktisch, politischen Ebene nie durchsetzen lassen, weil das ist,\nLass es fünfzehn, zwanzig Prozent sein, die das unterschreiben in unserer Bevölkerung. In Amerika oder in England sind's vielleicht ein oder zwei Prozent. Das sind auch die Leute, die vielleicht mit denen wir in Kontakt sind,\ndie da vielleicht auch sagen, hey, das ist schon progressiv, was ihr macht und ja, Weltrepublik. Ähm,\nAber wenn's dann ein Amerikaner ist, die sowieso schon aus einer Republik kommen, die sich überhaupt nur nationalstaatliche Hülle um,\ngestülpt hat, weil sie der Nationalstaat sind, der begründet worden ist, um alle Nationalstaaten zu beenden. Um sich von diesem Elend loszulösen.\nNe, sich äh da da ist ein ganz anderes Mindset dahinter und äh dasselbe ist mit China, um jetzt dieses Fenster wieder zuzumachen,\ndie fünftausend Jahre schon nationalstaatlich äh so als ein Reich irgendwie so eine Identität haben und die hatten jetzt mal dreihundert Jahre Form-Krise."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:50",
+      "text": "Aber immerhin schon das China-Netz am Start.\nSo und jetzt Linus. Wie machen wir weiter? Hast du da noch eine äh Anmerkung zu diesen Themenkomplex? Zu machen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:29:07",
+      "text": "Zum Themenkomplex Schlandnetz glaube ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:29:10",
+      "text": "Ist jetzt erstmal alles gesagt, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:29:12",
+      "text": "Du hast du hast noch einen."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:29:14",
+      "text": "Praktischen. Also ich würde jetzt äh weil's technisch ja einfach äh absurd ist, würde ich fragen, kann man denn so etwas wie positive Diskriminierung machen? Können wir denn nicht ähm,\ndie großen Anbieter äh Google, Facebook und sonst was ähm einfach zu einer hm in unserem Sinne,\nkontrollierbareren und beruhigenderen technischen Infrastruktur verleiten, dass man sagt, wenn Google wir alle googeln gerne, wir alle sind gerne bei Facebook,\nIhr bekommt eine Steuererleichterung, wenn ihr eure gesamten europäischen Kunden.\nErstmal über europäische.\nÄhm Rechenzentren routet, dann bekommt ihr eine Mehrwertsteuer erlassen und äh ihr kriegt so eine Art Schlandnet oder Schengen Net Stempel,\nund der sagt einfach nur, äh wie mit so einem Bio äh Zertifikat, dass das entsprechend dem,\näh läuft, wie wir das gut finden und die müssen das halt offenlegen, dass die Daten alle entsprechend äh quasi nach einem, ich habe das mal Datensubsidira trägt\ngenannt, dass die möglichst schnell und effektiv nicht über irgendwelche unkontrollierbaren äh ähm Routen übers Internet,\ngeleitet werden müssen, wenn sie es denn nicht notwendigerweise brauchen. Also quasi so ein Zusatzlayer, der das bisherige Internet nicht verhindert, sondern einfach die Firmen äh wirtschaftlich dazu,\ndrängt,\nähm sich quasi schlank nett oder Schengen nett äh konformer zu verhalten. Und äh wenn man überlegt, was die Firmen für für Verrenkungen machen, um irgendwelche,\nkomischen Steuervorteile auf den Keimen Islands äh einzusacken, dann wär noch so ein bisschen Subvention, um quasi zu sagen, komm,\nDas ist doch, was habt ihr denn für ein Problem, wenn ähm neunzig Prozent der europäischen Kunden wollen ja mit mit europäischen Kunden,\nirgendwie rum Facebooken und purken. Äh und wenn die das nach Amerika rübergehen, äh anderen Account.\nDann könnt ihr das ja über äh andere Server machen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:32",
+      "text": "Der Grund ist, also der Punkt ist also welchen das fällt ja immer noch also da\nden Vorteil machst du auf der Prämisse, dass sich irgendetwas dadurch ändern würde, dass man ein Standnetz macht. Also äh,\nJetzt zu sagen, äh Google mach doch mal bitte Berechnungszentren in Europa und seht zu, dass unsere europäischen Kunden darauf hin.\nWenn jetzt eine Nation anfängt, irgendwie zu oder ein Staat anfängt, den da irgendwie mit Steuererleichterungen zu kommen, dann schau dir doch die ähm,\nDie Firmen an, was sie in Europa machen, äh Apple oder so, dass sie natürlich sich genau ausschauen. Und das haben wir ja sowieso schon in in Sachen Datenschutz gemacht. Deswegen sitzen ja alle in Irland diese ganzen US-Firmen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:15",
+      "text": "Und in Luxemburg."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:32:16",
+      "text": "Und in Luxemburg aufgrund der steuerlichen und der datenschutzrechtlichen Vorteile, die die Unternehmenssitze dort ihnen bieten, noch dazu\nwohl mal hier äh wollen wir nicht aus den Augen verlieren. Es geht da, es sollte mal darum gehen, mit diesem Standnetz irgendwie.\nSpionage.\nZugriff anderer Länder abzuwehren, insbesondere der USA, die ja bekanntermaßen sich davon in keiner Form beeindrucken lassen würden. So, das heißt, die hätten ja, ob du jetzt den Googles sagst, äh bitte baut eure Rechenzentren\nin in in Luxemburg oder was. Und ähm.\nWir wir äh geben euch dafür Steuererleichterungen oder Förderungen. Das würde ja nichts an der Situation ändern, dass sie dass sie natürlich weiterhin unter dem äh unter der Kandare der der US-Geheimdienste wehren oder unter oder in dem Angriffsfokus, ja.\nWir haben ja schon mit dem, Entschuldigung, wir haben ja mit dem, mit diesem Belger kommen, äh schon gesehen, dass die also selbst wenn es europäische äh Infrastrukturanbieter sind, ähm\ndass die USA sich da nicht im Mindesten von beeindrucken lassen,\nWir haben gesehen, dass sie äh sich auch bei, also sie hacken oder sie haben gehackt. Belger kommen und sie haben gehackt Google. Ja? Sie haben mit all diesen ähm Firmen, das war ja der Gans, der ganz der Anfang der der Prison ähm.\nEnthüllungen mit allen großen Firmen irgendwelche Geheimverträge und,\nTeile, die von oder Geheimkooperationen, die irgendwie über den Fisk äh äh Gerichtshof da geregelt wurden, ähm,\nbei denen letztendlich gegenüber keiner Datenanfrage jemals ein ein Protest so ungefähr erhoben wurde. Und selbst die\nSelbst die Firmen, die mitgespielt haben und ich denke, das ist auch der Teil, wo äh wo wo Google jetzt gegenüber der NSA wahrscheinlich einfach sowas von beleidigt sein kann äh oder beleidigt ist.\nWie wir hier vor zwei Wochen in dem Fuck You Post äh dann gesehen haben,\nSelbst wenn du mit denen kooperierst, selbst wenn du hingehst und sagst, jo, wenn ihr uns irgendwas schickt, dann äh geben wir euch die Daten raus.\nÄhm selbst wenn du mit denen kooperierst, gehen sie trotzdem noch hin und haken irgendwie dein und äh und hängen da drin. Also vor dem Hintergrund ist doch diese gesamte äh Idee zu sagen, ey, dann kommt hier rüber,\nbaut euer Rechenzentrum hierhin, wir wir machen euch dafür 'ne steuerliche Erleichterung, da sehe ich überhaupt sich kein bisschen irgendwelche Vorteile drin."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:34:53",
+      "text": "Auf der jetzt enthüllten, praktischen Ebene, wo dann ja auch äh diese BND Zugriff auf dem äh Dezex äh Knoten offensichtlich sehr, sehr intensiv ist. Ähm,\nIst das dann wahrscheinlich nur graduell,\näh wahrscheinlich sogar viel intelligenter, nur zwanzig Prozent abzugreifen als ein Full Take zu machen, weil mit zwanzig Prozent wirst du wahrscheinlich neunundneunzig Prozent deiner äh äh Verdächtigen,\nGeschichten auch äh herausfiltern können. Ähm ja, das ist aber jetzt vielleicht auch nochmal so eine grundsätzliche äh äh Frage. Also es gibt,\neinige äh es gibt einige äh die sagen äh die NSA,\nist mir sowas von egal, weil äh die NSA interessiert sich nicht für mich als Deutschen,\naber der BND äh wenn der mich ausspioniert, ist das viel, viel dramatischer. Ich habe die andere äh mit einer anderen Ansicht\ndass, wenn der BND\nuns ausspioniert, dann ist, fällt er sich illegal und wenn er sich illegal verhält, kann ich über meinen Abgeordneten, der das dann weitergibt an seinen Abgeordneten, der in der P äh parlamentarischen Kontrollkommission sitzt,\naus äh Gremium äh äh Druck ausüben. Ähm dieses diesen direkten\nähm staatsbürgerlichen Zugriff habe ich de de facto nicht gegenüber den Vereinigten Staaten.\nUnd das macht für mich einen Unterschied aus und wer und das ist vielleicht auch wieder so ein hinsichtlich der Frage,\nja, was was der Nationalstaat kann, als wir als deutsche Bürger können auf das Handeln und die das legitime Handeln unseres Staates,\nmeines Erachtens mehr Einfluss nehmen\nals auf das Handeln eines fremden Staates, eines Drittstaates und es muss ja nicht immer die USA sein, sondern wir wissen ja, äh gar nicht, was äh jetzt\nRussland oder China oder Brasilien äh äh sonst noch aus unseren Netzen abfischt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:50",
+      "text": "Das heißt, ähm.\nEigenen Staat überwacht zu werden, findest du dann akzeptabel. Also da würdest du jetzt keinen äh."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:37:02",
+      "text": "Es ist aus meiner Sicht das lösbarere Problem, unseren eigenen Diensten auf die Finger zu klopfen, äh insbesondere, wenn sie sich grob äh rechtswidrig verhalten, als.\nIch es einem fremdstaat ja gar nicht, die verhalten sich ja uns gegenüber gar nicht rechtswidrig aus, auf Basis ihrer eigenen Gesetzgebung.\nDas ist ja das Blöde an so einem Auslandsgeheimdienst, dass er ähm,\nwirklich abseits des nationalen Territoriums äh bewegen die sich ja wie äh Francis Drake als Freibeuter. Die haben einen Kaperbrief.\nUnd äh äh was auf hoher See passiert äh äh interessiert da niemanden. Und ähm.\nVon daher, so wie die Situation jetzt ist, habe ich lieber ähm äh den BND im Haus, dem ich im Zweifelsfalle äh einbremsen kann."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:02",
+      "text": "Hat sehr gut geklappt in den letzten Jahren. Wir äh blicken da auf eine lange äh Erfolgsgeschichte zurück."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:38:09",
+      "text": "Ja, aber wir sind ja jetzt erst am am Anfang dieser Enthüllung und äh jetzt werden sie ja sich neue, neu verkapseln müssen, um noch kleines Thema vorzugehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:20",
+      "text": "Weil ja, sie, sie gehen irgendwie keine Ziel vor, aber sie kooperieren ja auch mit denen, also Dienste kooperieren ja mit untereinander. Kommen wir auch, können wir auch später noch\nmal äh zu ist heute nochmal Thema. Das heißt, also ich sehe ähm solange irgendein Geheimdienst da dranhängt, sich irgendwie keinen, also sehe ich da\nkeine Unterschiede zwischen Lösungen. Ob ich jetzt von den Amerikanern überwacht werde, von von dem BND, der es dann den Amerikanern gibt. Ähm ich würde da eigentlich, finde ich,\nwürde ich diese ganze Kategorie, wer es jetzt am Ende macht, ähm."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:38:54",
+      "text": "Aber wir können eine Regierung wählen, die dem BND explizit untersagen könnte, äh Kooperationen äh mit ausländischen Geheimdiensten einzugehen,\nwäre zwar nicht nicht besonders klug, das würde auch kaum einer machen, ähm aber es wäre vollkommen äh innerhalb des legalen Rahmens formal möglich,\nWenn einer dagegen ist, dann wird er absolviert, wird er in einstweilen in Ruhestand versetzt. Wenn der BND-Chef da äh äh Kontra gibt.\nUnd das können wir nicht mit irgendwelchen äh ausländischen Geheimdienstchefs machen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:28",
+      "text": "Also die die theoretische Möglichkeit der Kontrolle äh des des der deutschen Geheimdienste lässt sie dir angenehmer erscheinen als die,\nnoch nicht einmal theoretisch vorhandene Möglichkeit die US-Geheimdienste zu kontrollieren, wenngleich praktisch äh der Unterschied nicht vorhanden ist."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:39:48",
+      "text": "Sonst wird's doch keinen Sinn machen, sich überhaupt staatsbürgerlich äh bei Wahlen und sonst was äh zu engagieren, wenn wir nicht unsere eigenen Staatsorgane dann auch auf Linie bringen würden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:01",
+      "text": "Das ist natürlich eine schöne Sicht. Es gibt auf jeden Fall auch Stimmen, die sie jetzt sagen würden,\nGeheimdienste sind international viel zu verflochten als das man da jetzt noch zwischen dem einen oder dem anderen Kürzel äh unterscheiden könnte. Auf der einen Seite und auf der anderen Seite diese Kontrolle, die wir ausüben über den BND\nerscheint ja nun äh angesichts der diesjährigen Nachrichtenlage auch höchst zweifelhaft. Also äh\nden USA gab's ja nun mehrfach schon nachgewiesenermaßen Aussagen früher in der Geheimdienstler, die sich jetzt binnen dieses Jahres als vollständige Lüge entpuppt haben. Ich warte,\nbis nur darauf, dass wir eine entsprechende Nachweislage auch bei den Äußerungen hier haben. Dieser äh diese PKG, diese Kontrollkommission, wie sie ja mal hieß PKK, lustigerweise\nwie heißt das jetzt? Parlamentarische."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:52",
+      "text": "KGR-Gremium."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:54",
+      "text": "Gremium. Genau. So, ich meine, was soll das, ja? Ich meine, die kriegen da was erzählt, dürfen das nicht weitererzählen,\nUnd von daher können die den ja auch alles Mögliche erzählen. Ist einfach Kontrolle äh äh findet nicht statt. Naja gut, ich möchte jetzt,\nnochmal auch ähm bitten, dass wir vielleicht jetzt das Thema, zumindest mal entweder mal noch klarer eingrenzen. Wir waren jetzt irgendwie hier noch immerhin beim Schlandnetz, Zusammenfassungsbereich. Hier sind wir schon wieder bei dem Geheimdienst Generalismus\nvielleicht äh springen wir einfach mal äh springen wir mal einfach mal ein äh wenig weiter, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:31",
+      "text": "Ja wir springen noch, also eine Meldung, die gar nicht so groß äh so gar nicht so groß war, ähm,\nDie ich jetzt äh an dieser Stelle bringe, weil äh weil sie mein Argument gegenüber Gregor nochmal ein bisschen äh festigt. Ähm es wird kein förmliches Ermittlungsverfahren der Bundesanwaltschaft in der NSA-Affäre geben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:51",
+      "text": "Überhaupt irgendjemand?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:52",
+      "text": "Überhaupt irgendjemanden. Ähm auf als ziemlich zum Beginn der Affäre wurde ja so ein äh Beobachtungsvorgang angelegt.\nDas bedeutet, dass die die Bundesanwaltschaft prüft, ob ein Anfangsverdacht vorliegt.\nAlso sie schauen, ist hier vielleicht ein wir müssen mal schauen, ob hier nicht eventuell der Verdacht einer äh des des Gesetzbruchs."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:18",
+      "text": "Von irgendjemand."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:19",
+      "text": "Von irgendjemandem ähm erfüllt ist. Und ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:24",
+      "text": "Haben sich alle ihre Sonnenbrillen aufgesetzt und nach einer Woche gesagt, irgendwie sehen wir nix."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:29",
+      "text": "Wir sehen nix, nee und ähm interessant, da hat der Harald Range\nGeneralbundesanwalt äh erstaunlich äh gute Worte für gefunden, indem er sagte, ja mir ist bewusst, dass schon die Einleitung eines Ermittlungsverfahrens im politisch diplomatischen Bereich eine ganz schwerwiegende Nachricht sein könnte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:48",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:50",
+      "text": "Und vor dem Hintergrund, dass sie äh das deutsche Ermittler\nSich bisher in der Terrorfahndung auch äh grade auf die Informationen der US-Geheimdienste gestützt haben und umgekehrt. Ähm bestünde ja die Gefahr, dass die Amerikaner den Deutschen ab dann\nNicht mehr solche Erkenntnisse zuspielen. Das heißt, dass die USA in Reaktion darauf, dass sie,\nstrafrechtlich verfolgt werden für ihre geheimdienstlichen Aktivitäten. Die Ergebnisse dieser Aktivitäten nicht mehr mit den Deutschen teilen würden.\nDenke ich mal eine eine sinnvolle Reaktion. Ähm vor allem vor dem Hintergrund, dass wenn ich wenn ich wenn ich als als USA gerade in Deutschland äh,\nTeil einer oder äh Ziel eine Strafvermittlungsverfahrens wegen Spionage bin, äh dann würde ich natürlich nicht äh quasi dieses diese diesen Vorwurf untermauern, indem ich weiter äh spionierte Daten,\nanderer Stelle an genau die gleiche Identität weitergebe. Und genau aus diesem Grunde wird es also in Deutschland keine keine Ermittlungsverfahren geben, denn.\nParagraph einhundertdreiundfünfzig D der Strafprozessordnung sieht vor, dass der Generalbundesanwalt von der Verfolgung von Straftaten absehen kann,\nWenn dadurch die Gefahr eines schweren Nachteils für die Bundesrepublik Deutschland entstünde.\nDas finde ich ja mal geil. Das heißt, wir haben einen, wir haben eine, wir haben eine Ausnahmeregelung. Wenn du es, wenn du es schaffst, ein ein eine Straftat.\nZu begehen, die so die Bundesrepublik Deutschland an den Eiern hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:30",
+      "text": "Also deren deren Verfolgung dazu führen würde, dass."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:44:33",
+      "text": "Dass deren Verfolgung dazu führen würde, dass der Bundesrepublik Deutschland äh große Nachteile entstehen,\ndann hast du gewonnen. Also das äh finde ich echt mal das finde ich sehr, sehr interessant. Das ist ein die einzige also,\nQuasi wenn du wenn du die Bundesrepublik Deutschland ausreichend bedrohen kannst, genießt du per Gesetz äh Immunität."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:44:55",
+      "text": "Ja, aber wir haben doch jetzt zwei Ebenen, die das Strafrechts und die des Völkerrechts. Und die, das Völkerrechts ist,\nauf einer komplett anderen Ebene angesiedelt und früher die das überhaupt,\nVölkerrechtlich problematische Dinge im Strafrecht verhandelt werden, ist eigentlich eine Anomalie, weil dieses Strafrecht ist, hat noch dieses Konzept des geschlossenen,\nTerritorialstaats und Strafrecht bezieht sich in der Regel auf,\ndie innerhalb dieses Gesetzes äh Rahmens, irgendwelche Vergehen,\nsich schuldig machen oder gemacht haben könnten und alles andere, Ausländer, Diplomaten oder sonst was oder Leute, die in ein anderes Land geflohen sind und, und, und, wurden danach immer durch Zusatzprotokolle überhaupt erst in irgendeiner Form für das Strafrecht handhabbar gemacht.\nUnd dann gibt es natürlich wirklich, wie in diesem Fall, einfach eine Kategorie von Straftaten, die,\näh komplett in die Sphäre des Völkerrechts und der diplomatischen hoheitlichen Souveränität\nDer Bundesrepublik gegenüber den anderen Staaten äh dieser, ich sagte ja, dieser globalen Playerschicht des Völkerrechts, das sind ja nur so zwohundert Rechtssubjekte. Die verhalten sich natürlich wie eine Dorfgemeinschaft. Das das Völkerrecht,\nPrimitiv recht. Weil ein ein das Bürgerliche Gesetz oder Strafgesetz, das.\nMuss Millionen von von verschiedenen Interaktionen hochabstrakt abbilden. Das Völkerrecht mit seinen zweihundert,\nEntitäten, wovon überhaupt nur fünfzig wirklich,\nwahrnehmbare, relevante Player sind. Alles andere sind so Minisstaaten, ähm die überhaupt keine Rolle spielen. Äh die werden nach uralten,\nwie in jedem Stammes äh äh Volk äh behandelt. Ja und äh deswegen.\nSehe ich deine Empörung nicht, sondern wenn, dann zeigt es einfach die Grenzen dessen, wofür äh dieses Strafrecht gemacht ist. Es gibt immer mal, es gibt immer mal Grenzen und und Grenzsituationen und äh die sehen wir an der Stelle."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:10",
+      "text": "Ja, also äh um es mal vielleicht anders darzustellen, also\nja, Deutschland ist halt so, der kleine Junge, der irgendwie mit den anderen Schlägern irgendwie über den Spielplatz zieht und äh jetzt hat sich halt mal jemand beschwert, dass der große BIF äh hier zugeschlagen hat und dann stehen wir da. So, ja, was sollen wir jetzt machen? Wenn wir jetzt äh\nman da jetzt sagen, na ja, ich kann ja mal die Bullen anrufen, so, dann gibt's halt auf die Fresse. Und so ist es dann halt auch. Wir wissen nicht ganz genau, was.\nWas da konkret passiert, aber es ist mittlerweile sehr offensichtlich, dass äh genug passiert, damit alle richtig äh den Arsch voll Angst äh kriegen, so.\nOb das so ein wünschenswerter Zustand ist und ob diese Abhängigkeiten äh wünschenswert sind, das kann man sicherlich in Frage stellen,\naber es ist auch äh einfach mal der Zustand jetzt."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:48:02",
+      "text": "Trotzdem, ich glaube, so aus einer Gewohnheits allgemein vielleicht auch mit diesem, diesem übernationalen Impuls in Deutschland, denken wir, dass Völkerrecht sei gewissermaßen die Krönung des hochabstrakten Rechtsrahmens,\nund das ist Quatsch. Das ist ein Rückschritt in die primitiv Kultur des des der zehn Gebote quasi,\nwenn wenn überhaupt da irgendein eine Moral dahinter steckt, Erpressung ist das Grundprinzip des Umgangs zwischen Staat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:30",
+      "text": "Na gut, aber äh wir brauchen ja gar keine Angst zu haben vor der Zukunft, weil wir haben ja die GroKo, ja\nund die ist jetzt auch dabei, die äh digitale Agenda für Deutschland, für die nächsten vier Jahre äh festzulegen und äh Linus, da wird doch alles gut, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:49",
+      "text": "Ja, wir hatten's war das letzte oder vorletzte Woche, da hatten wir diese Themen schon ähm kurz angesprochen, dass man also die netzpolitischen,\ndie sich die Bundesrepublik die Bundesrepublik ja doch die die Bundeskoalition."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:06",
+      "text": "Regierung, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:49:07",
+      "text": "Krokodil äh kümmern möchte. Und äh,\nDie digitale Agenda für Deutschland wurde jetzt in, wie gesagt, in der Unterarbeitsgruppe äh formuliert. Und da gab's dann doch einige interessante Änderungen in der letzten Minute bevor es dann die finale Version\nfür den ähm für den Koalitionsvertrag gibt. Die hat der äh Patrick Beuth sehr schön ähm rausgearbeitet.\nBeizeit online ähm und da heißt es also hieß es einmal,\ndie Blockade von Internettelefonie durch die Mobilfunkanbieter soll untersagt werden, ja? Schöne Sache\nim Rahmen der äh der Netzneutralität zu sagen, okay, die die gezielte Diskriminierung von von Diensten in diesem Falle äh aus eigenen finanziellen Interessen,\nsoll untersagt werden, denn die,\nTelefonanbieter sperren ja, weil sie einfach gerne möchten, dass ihre Nutzer den teureren Dienst, nämlich.\nIhren eingebauten ins Mobilfunknetz eingebauten Telefondienst nutzen zu Kosten von irgendwie äh einem sehr eindeutig vielfachen. Ähm.\nUnd das vor, dieser Satz wurde geändert in Mobilfunkanbieter müssen Internettelefonie gegebenen.\nMeine Güte, das ist eine Abkürzung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:33",
+      "text": "Gegebenenfalls."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:34",
+      "text": "Falls."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:35",
+      "text": "Gibt's."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:37",
+      "text": "Gegebenenfalls gegen ein separates Entgeld ermöglichen. Und das ist halt genau das Gegenteil von Netzneutralität, ne? Das heißt, ähm wir,\nWir nicht nur ähm verbieten wir dir die ähm,\nVerbieten wir die, verbieten wir dir die Verletzung der Netzneutralität. Nein, wir schreiben dir sogar vor, dass du es nur tun darfst, äh\noder oder wir schreiben dir sogar vor, dass du es gegen Belohnung tun darfst, ja? Nämlich, indem du sagst, da sperre ich, aber du musst es zumindest noch ermöglichen. Ja, das heißt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:10",
+      "text": "Also ich weiß gar nicht, was du willst gegen ein separates Geld hätte ich dir auch in meinem öffentlichen WLAN, meinem Gästenetz äh durchaus den Zugang auch zu allen Pods."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:51:17",
+      "text": "Ich musste ja hier auch jetzt grade bezahlen, das können wir."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:20",
+      "text": "Tja, ja, ja,\ngenau, das äh Netzneutralitätsthema, das hatten wir jetzt hier schon äh mehrfach und ich denke, das ist auch wichtig, dass man an der Stelle das nochmal klarmacht. Also genau diese Unterscheidung, die gerade in der Politik stattfindet, nämlich dieses\nja, Netzneutralität heißt im Prinzip nur man darf alles was man machen was man will wenn man es bezahlen kann.\nJa? Ähm das ist halt genau nicht die eigentliche Bedeutung dieses äh Begriffs, der natürlich auch sehr schwammig ist und nicht genug Leuten klar ist, was er denn nun wirklich äh äh bedeutet. Der wird also\nderzeit noch kräftig umgeformt,\nGegebenenfalls ist es auch mal notwendig, hier einen neuen Begriff zu äh formen, denke ich, der das äh etwas besser klarmacht, was man eigentlich will. Aber diese Aussage, äh mit was haben sie denn in der zweiten\nKlasse, wenn's ihnen da nicht gefällt, können sie doch in die erste Klasse gehen. Da haben wir das doch alles äh ja, das kann's ja nun nicht sein, ne.\nUnd ich meine, die sehen das natürlich so wie äh ja wieso, äh wenn sie das Essen an den Tisch haben wollen, dann müssen sie halt in die erste Klasse gehen, ja. Und wir sehen das halt so wie äh wieso gibt's denn jetzt bitte in der zweiten Klasse keine Klos?\nUnd ich glaube, das ist so ein bisschen die.\nDas Missverständnis auch an der Stelle. Also ich würde manchen Politikern in gewisser Hinsicht sogar noch zugute halten, dass sie es einfach nicht verstehen\nJa, das sind das einfach so sehr von ähm den Lobbyabteilungen zahlreicher Unternehmungen äh so klar gemacht wird, dass das ja ein unglaublicher Aufwand ist und überhaupt, man könnte doch mit sowas nicht äh rechnen und wie man denn überhaupt auch nur auf die Idee kommt."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:53:03",
+      "text": "Ich habe mal eine eine Frage. Ähm Politik ist Organisation. Wo ist denn diese digitale Agenda ähm Arbeitsgruppe äh angesiedelt innerhalb dieser Krokodil äh Gesprächsrunden?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:15",
+      "text": "War das nicht in dem Kultur äh Bereich untergebracht?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:18",
+      "text": "Ich hätte jetzt in ähm innen gedacht. Also ich habe das vor zwei Wochen gesagt und weiß es nicht mehr, warte. Ich ich kann's aber raussuchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:25",
+      "text": "Irgendwie ein Kulturthema."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:53:28",
+      "text": "Also was ich interessant finde ist, dass ähm generell auch wieder als Nebeneffekt dieser ganzen NSA Geschichten ähm.\nNetzpolitik ist in der Mitte der Gesellschaft jetzt angekommen. Auch als politisches es gibt,\nin dem Sinne keine Netzpolitik mehr als so, äh weil das ist so, als wie Finanzpolitik ist. Alles ist jetzt Netzpolitik, weil das Internet ist ein eine Sphäre, die alle Lebens,\näh Bereiche durchdringt. Und ich habe jetzt langsam das Gefühl, dass mehr und mehr die Diskussion.\nDarüber ankommt, dass es sinnvoll ist, alle Internetbezogenen,\nProblemfelder in einem Ressort zu bündeln, nicht mehr so eine absurde Forderung ist, wie sie vielleicht vor zehn Jahren gewesen ist. Ähm wenn jetzt sogar ein Hauptausschuss,\ndiskutiert wird, dann wäre es eine Anomalie, nur diesen Hauptausschuss zu gründen, weil diese Ausschüsse sind ja Spiegelausschüsse. Das heißt, ein,\nVerteidigungsausschuss im Parlament kontrolliert das Verteidigungsministerium, Finanzausschuss, kontrolliert das Finanzministerium. Wenn's jetzt ein,\nquasi losgelösten.\nDigitale Gesellschaftsausschuss oder Internetausschuss im Parlament. Äh der bräuchte ja einen Ansprechpartner.\nDas heißt, eigentlich bedingen sich die beiden. Und ich würde,\nSogar radikaler äh für äh dafür plädieren, dass so die die Netzcommunity sich mal zusammentun sollte und wirklich ein solches Ministerium,\nder digitalen Sphäre, Gesellschaft,\nund zwar ganz wichtig, ein neoklassisches Ministerium.\nEs gibt die klassischen Ministerien, die Künstler an dem Namen, die die heißen zum Beispiel Bundesministerium der Finanzen. Ähm,\nBundesministerium der Verteidigung. Die kommen so aus diesen ganz alten, klassischen Kabinettspolitik.\nUnd alle anderen, nicht klassischen Ministerien, die heißen äh für. Und deswegen, damit man einfach damit sagt man, dieses."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:54",
+      "text": "Bundesministerium der Daten."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:55:56",
+      "text": "Bundesministerium des Digitalen ist zuständig für alles.\nSo wie das Finanzministerium zuständig ist für alles, so wie das äh Justizministerium ist. Jedes Gesetz äh Vorhaben,\nmuss durch das äh Justizministerium geprüft werden. Und so würde quasi jedes Gesetz das verabschiedet wurde, erstmal vom,\nDigitalministerium nach Netzneutralität, nach bestimmten politischen äh Grundsätzen geprüft werden und dann erst durchgewunken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:31",
+      "text": "Herr Digitalminister, diese Maßnahme ist für unseren Zweig wirklich wichtig. Ja, tut mir leid, aber da wird einfach nicht genug durchgeleitet und das. Ja, genau. Das hast du, das ist nicht langweilig. Mhm."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:56:39",
+      "text": "Das ist uns nicht netzneutral genug. Ja, da sagst du, das ist nicht netzneutral, bitte überarbeiten. Und man muss, ja, man muss auch mal zweihundert Prozent fordern, damit man vielleicht hundert Prozent bekommt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:56:53",
+      "text": "Okay."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:57:00",
+      "text": "Minister, der Daten und der Paranoia.\nNein, das ist das Wahrheitsministerium."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:08",
+      "text": "Ich glaube, das ist Kanzleramtsministerium, wo die mehr interessiert."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:57:13",
+      "text": "Ja, aber widersprechen mir. Ähm alles, was wir jetzt sehen, ist, dass wir Politik nicht mehr ohne äh das Digitale überhaupt diskutieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:23",
+      "text": "Da habe ich Schwierigkeiten dir zu widersprechen, da rennst du bei mir äh offene Türen ein. Ich bin mir nicht so hundertprozentig sicher, dass äh unbedingt jetzt so ein äh Internetministerium,\nZwangsläufig die beste Lösung ist, aber in deiner Argumentationskette kann ich das gut nachvollziehen, weil nur wenn man's auf diesen Rang hebt, eben wie die Finanzen, das ist einfach alles durchwirkt und alles\nstimmt und alles auf alles eine Auswirkung hat und es nicht sein kann, dass irgend so eine Querschläger äh äh Argumentation im Wirtschaftsministerium\ndie bestimmten Lobbygruppen irgendwas zuspielt, halt einfach äh ein äh eine Bildungsinitiative zum Beispiel äh zunichte macht, weil in den Schulen alle Pots gesperrt werden müssen. Das ähm\nJa, das sind äh solche äh Argumentationen, die kann ich ganz gut nachvollziehen. Also ich denke, es ist auf jeden Fall auch mal wert, äh\nda mal so ein großes schwarzes Etwas, auf den Marktplatz äh zu stellen und dann müssen sich das alle auch erstmal angucken, bevor sie anfangen, drüber zu reden."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "0:58:18",
+      "text": "Ja und das fehlt mir in dieser digitalen Agenda und es fehlt mir auch in der äh netzpolitischen Debatte, einfach mal so ein\nso eine kühle Forderung als monolithischen Block, äh den so richtig ähm auf die Bühne zu stellen, äh die Argumente, die ich dann höre, ach nee, dann dann ist das ja alles zentral äh äh,\nund dann können die Lobbyisten ja jetzt müssen sie von Pontius zu Pilatus laufen, um was zu erreichen.\nDemnächst rufen die nur noch ihren Abteilungsleiter an und alles äh wird dann quasi äh äh nach Telekom Bedürfnissen hin geregelt,\nTja, ähm ich Lobby wird's immer geben in der in der Politik, aber ähm.\nIch finde, das ist noch kein Argument."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:09",
+      "text": "Ja, finde ich ja schön. Dann können wir ja mal zu den Koalitionsverhandlungen, wo finden die eigentlich statt? Hier in Berlin im Wesentlichen, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:15",
+      "text": "Ne, es gibt es."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:15",
+      "text": "So eine so eine so eine Kaba hinstellenden, wo sie sich dann alle drum scharen können."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:59:20",
+      "text": "Es geht ja noch weiter. Sie haben sich ja denn ähm.\nSie haben dann, also diese Netzneutralität, das ist wirklich äh das ist genau das, wovor ich auch schon vor ein paar Wochen äh warnte, ja, also sagen jetzt also, ja, dass das sogenannte Best-Efford-Internet,\nwird in seiner Qualität weiterentwickelt und darf nicht einer Vielzahl darf nicht von einer Vielzahl von Manageservices verdrängt werden. Nichts von einer Vielzahl.\nAlles, ne, also und dann sagen sie weiter, ja,\nauch auf europäischer Ebene wird sich die Bundesregierung für die gesetzliche Verankerung von Netzneutralität einsetzen,\nDer Satz ging früher weiter, denn da stand die sicherstellt, dass im Internet alle Datenpakete unabhängig von Inhalt, Dienst,\nAnwendung, Herkunft oder Ziel, grundsätzlich gleichbehandelt werden. Diesen zweiten Teil haben sie einfach gestrichen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:21",
+      "text": "In letzter Minute sozusagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:23",
+      "text": "Genau, das wäre nämlich eine Definition von Netznetralität gewesen. Und da sie ja schon sagen, ja ihr dürft sperren, ihr müsst nur mehr Geld dafür verlangen, dass es wieder entsperrt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:32",
+      "text": "Aber bloß nicht zu viel davon, weil das fällt auf."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:34",
+      "text": "Ihr dürft nicht, dürft nicht zu viel machen, das das sogenannte Best-Effert-Internet muss weiterentwickelt werden. Das ist ja übrigens auch offizielle Sprachregelung der Telekom, ne. Wir bauen Managed Services\nund wenn die managed Services gerade nicht gebraucht werden, dann ist das ja auch bestfort Internet. Hat ja dann auch was davon."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:56",
+      "text": "Ja, Best Erfurt ist ja auch, klingt irgendwie nicht so, nicht so gut, wie die Datenpakete fließen können, sondern so gut wie die Telekom es schafft, sie fließen zu lassen. Ja und wenn's dann halt nicht geht, dann geht's halt nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:01:05",
+      "text": "Genau, haben wir jetzt gerade nicht geschafft, aber es ist, man sieht man sieht ja wirklich eine ganz klare ähm,\nEine ganz klare Angleichung an die an die Sprachregelung der ähm der Unternehmen, die die einfach den ganzen Begriff,\nentkräften, ne? Das ist das ist wirklich äh das ist seit langer Zeit zu sehen, dass sie diese Strategie fahren und das funktioniert, ja?"
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "1:01:29",
+      "text": "Ich muss auch hier wieder die Primat des politischen allen fordern. Wir haben ja jetzt ja schon die GroKo fünf vielleicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:01:37",
+      "text": "Noch nicht, noch nicht."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "1:01:37",
+      "text": "Ne, aber vielleicht kriegen wir sie. Dann haben wir ja eine verfassungsgebende Mehrheit, dann könnte man doch eigentlich eine wohl,\nformulierte Netzneutralitätsforderung einfach ins ins Grundgesetz hineinschreiben. Und ähm dann hätte man mal eine wirklich äh vielleicht auch in Verbindung mit diesen abgeleiteten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:59",
+      "text": "Reinschreiben könnten dies schon, ob sie's auch in der Lage sind wohl zu formulieren. Da habe ich so ein bisschen meine Zweifel."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "1:02:06",
+      "text": "Ja, aber wenn man schon den den Kampf aufnimmt, würde ich doch jetzt äh nicht auf so einer komischen Arbeitspapierebene von einer digitalen Agenda, die irgendwo im im,\nKulturausschuss untergeordnet ist. Mir geht's darum, diese Politik.\nNach Input, weil nur Input gibt ihnen Legitimität, dass das, was sie tun, auch richtig ist. Und wir haben sehr, eigentlich sehr aktive äh Menschen in dieser Lobby-Netzpolitik,\nUnd wenn die jetzt sagen würden, Netzneutralität muss ein Grundrecht werden.\nDann das gehört gewissermaßen wie Versammlungsfreiheit wie dies noch nicht. Ich weiß nicht, ich bin kein Verfassungs äh Mensch äh ich habe die noch nie gelesen. Ähm wo ich wahrscheinlich die meisten,\nIch kenne nur so ein paar Ausschnitte daraus, ne. Ähm irgendwo wird man, glaube ich, äh vermutlich ganz äh äh interessant, so etwas wie,\nWir haben ja sowas wie die Öffentlichkeit auf der Straße, ja? Da hieß ja eigentlich auch diskriminierungsfrei, da heißt es ja auch nicht ähm,\nderjenige darf nur durch Managed Services quasi schneller transportiert werden auf der Straße, sondern jeder, der bewegt sich dort frei und so,\nweiß gar nicht, wahrscheinlich ist in unserer Verfassung so was wie die Öffentlichkeit gar nicht definiert, weil das Konzept gar nicht vorstellbar war, ja? Vielleicht ist es auch nicht praktikabel, aber ich würde irgendwo mal so eine Forderung machen,\nNicht, dass das in so einem Arbeitspapier auftaucht, das sowieso dann abgehakt wird. Kein Mensch interessiert sich für für Koalitionsverträge. Ähm sondern dass man einfach sagt, das ist,\nquasi das.\nEin Grundrecht für das einundzwanzigste Jahrhundert, weil unsere Gesellschaft sich verändert hat, brauchen wir Netzneutralität. Das ist sowas wie die Bewegungsfreiheit in der Öffentlichkeit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:55",
+      "text": "Ja gut, ich meine, ob man da so weit kommt, weiß ich nicht, damit handeln sonst wahrscheinlich dann gleich die Vermummungsverbot äh Diskussionen gleich mit ein. Ja, wie auch immer. Also ich verstehe dein äh,\nGedanken an der Stelle. Lass uns doch mal kurz äh hier die äh aufgestellten Thesen dieser Arbeitsgruppe."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:15",
+      "text": "Wir haben sie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:17",
+      "text": "Vollständigen. Das war auch noch was zu Zwangsroutern äh da, beziehungsweise nicht mehr da."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:21",
+      "text": "Ja, sie hatten einen Satz drin stehen, wo sagt die zur Anmeldung der vom Nutzer betriebenen Router am Netz erforderlichen Zugangsdaten sind dem Kunden unaufgefordert mitzuteilen. Diesen Satz äh hatten sie drinstehen.\nDer ist auch entfernt worden. Das wär, wir hatten das damals besprochen, das wäre die Lösung für das Zwangsrouterproblem, dass man sagt, okay, per Gesetz, du musst die, musst die Daten mitliefern, die Zugangsdaten, die jemand äh eingeben muss, um einen anderen Router zu betreiben,\ndas haben sie dieser Satz ist dann doch rausgefallen.\nUnd dann noch einen äh gibt's noch einen allgemeines äh Bekenntnis, dass jetzt auch nichts Neues. Die Identifizierungsfunktion des neuen Personalausweises, die sichere Kommunikation über D Mail\nund die Nutzung von Ende zu Endeverschlüsselung sind anzuwenden, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:18",
+      "text": "Sie sagen Ende zur Endeverschlüsselung und D-Mail in einem Satz, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:22",
+      "text": "Na ja, immerhin sagen sie, äh dieses und äh trennt ja die beiden Dinge, ja?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:26",
+      "text": "Also es ist nicht die Ende zur Endeverschlüsselung von D Mail, die es ja nicht hat, sondern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:30",
+      "text": "Sichere Kommunikation über DML und die Nutzung der gleichwertigen\nalso man hätte den Eindruck, dass es irgendwie so eine Einsatzeinsatz von Gleichwertigkeit, aber das ist das verstehe ich überhaupt nicht, weil\nWie gesagt, die D-Mail-Nummer ist durch, die beiden Gesetze gibt's ja jetzt, also oder die drei, es gibt das D mehr Gesetz, dieses Verwaltungsgesetz und das Juristengesetz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:49",
+      "text": "Das darf unsicher sein, Gesetz."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:05:51",
+      "text": "Genau, ja das das ist ja quasi äh so und das heißt da da also ich glaube im D-Mail-Bereich, da.\nNa ja vielleicht, sie könnten jetzt noch E-Mail verbieten. Ja, das wäre dann so noch die die."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:05",
+      "text": "Es ist jetzt wahrscheinlich auch nochmal so ein Marketingparagraph, dass vielleicht irgendjemand noch mal auf die Idee kommt, dauernd auch tatsächlich teilzunehmen. Ich meine, das Ding ist ein Rockred Pira und wird wahrscheinlich in ein paar Jahren dann eingestellt werden, aber äh so lange müssen wir es wahrscheinlich noch ertragen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:06:17",
+      "text": "Hoffen wir's mal, aber ich, also es kann natürlich sein, dass sie sich noch was einfallen lassen, ja, also wenn sie jetzt sehen, dass der dass selbst diese beiden Gesetze in diesem Jahr nicht,\nzu einer nennenswerten äh Steigerung des,\nD-Mail-Umsatzes bei der Deutschen Telekom äh geführt hat, dann äh kann ich mir vorstellen, dass sie noch weitere verrückte Ideen bekommen, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:38",
+      "text": "So, das bringt uns jetzt auch schon so langsam ans Ende, oder?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:06:48",
+      "text": "Es geht gerade, es ist schlagen wieder heute viele Neuigkeiten auf aus dem NSA-Skandal. Aber ich habe da inzwischen auch keinen Bock mehr drauf. Die noch die\nwollten wir extra heute den den Gregor ein bisschen da haben, um so die allgemeine."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:09",
+      "text": "Ja. Nicht genau,\ndie allgemeine Sache, ich wollte auch nochmal was aufgreifen, was vielleicht auch noch nicht jeder äh gelesen hat, ist jetzt schon eine Weile her, Gregor, du hast auf Netzpolitik Punkt org einen äh Gastbeitrag äh gehabt am dreizehnten August."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "1:07:25",
+      "text": "Zum neunjährigen Jubiläum von des Blogs."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:27",
+      "text": "Äh war das so?"
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "1:07:30",
+      "text": "Mein Geburtstagsgeschenk."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:32",
+      "text": "Und dann passenderweise das Ende der Netzpolitik.\nGenau, wie wir sie kennen, ja? Das äh fällt mir jetzt gerade etwas schwer, da ein Management äh zu äh geben, dir würde es wahrscheinlich etwas einfacher fallen. Ich hab's gelesen, fand das alles sehr äh anregend.\nLange her, als dass ich zuverlässig hier das ausgraben könnte."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "1:07:57",
+      "text": "Ein Satz war trotz der Skandal wäre gewesen, dass eine eine Atommacht kein.\nKeine durchdringende Geheimdiensttätigkeit. Mach, das wäre grobe Fahrlässigkeit, weil gewissermaßen der.\nSowie im privaten Bereich, wenn du eine Waffe hast, dann lässt du die nicht einfach irgendwo rumliegen, sondern da hast du ein Sicherheitssystem, das verschließt du und die Munition wird woanders\ngetan und ähm ähnlich ist es halt äh und du guckst da halt auch öfters nach, wer hat den Schlüssel und wenn du einen Verdacht hast, da könnten irgendwelche Leute äh dran an einen Waffenschrank und sich einen Nachschuss mal bis du eigentlich auch gefordert dem nachzugehen,\näh ich behaupte einfach mal, dass mit der ähm,\nÄh ist das eigentlich auch so eine so eine es liegt in der Logik der Atomwaffen und ich habe auch,\ngesagt, so aus diesem ursprünglichen Skandal heraus, diesem Gefühl, wir werden das alle durchleuchtet. Meine Güte, wir werden seit Jahrzehnten bedroht,\nin einem globalen Erpressungsmanöver äh,\ndass wir alle vernichtet werden. Und wir haben uns daran gewöhnt und ich wollte das mal in Relation auch setzen. Erstmal die beiden Dinge gehören zusammen,\ndie bedingen sich, aber die eigentliche, der eigentliche Skandal ist doch, dass es einige Nationen gibt, die auf Kosten.\nDes Rest der Welt äh äh Konflikte, Not unter Umständen bereit sind, auf Kosten von Milliarden von Menschen äh ihre Konflikte gewaltsam zu lösen.\nUnd ähm das ist ja auch der der Grundsatz bei diesem äh Atomwaffensperr,\nVertrag, dass ja die Atommächte, die jetzt diese Waffen haben, sich verpflichten, äh äh erstmal niemanden neu in diesen Club reinbringen zu lassen und,\non the long Turm quasi diese Waffen nach und nach abzurüsten,\nund da hat sogar der Obama sich so so zumindest sich ein bisschen drum bemüht. Ähm das ist ich wollte einfach nur mal so ein so ein Gefühl."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:08",
+      "text": "Dieser Opa."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "1:10:09",
+      "text": "Ja, der ist ja jetzt nicht bis."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:10",
+      "text": "Ist jetzt nicht mehr cool, ne?"
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "1:10:12",
+      "text": "Nicht mehr der Heilsbringer. Hm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:13",
+      "text": "Nee, leider."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "1:10:15",
+      "text": "Und,\nweil dieses Atomwaffen äh äh Thema durch die äh durch die Wände äh und die Entspannung äh einfach ein bisschen ausm, ausm,\nJa aus der aktuellen Bedrohungslage entschwunden ist, aber diese Waffen sind ja nach wie vor da, sie werden modernisiert und ähm.\nÜbrigens war das ja auch eine der großen äh Themen der Anti-Atombewegung gegen den Plotoniumstaat, weil die gesagt haben, wenn überall Plutonium hin und her gekraut wird, das Zeug ist so giftig, dann wird sich drumherum ein Kontrollsystem,\näh äh etablieren müssen,\ndass ein totalitäres Überwachungsregime sein wird, weil äh die Gefahr einfach zu groß ist, dass irgendjemand ähm unqualifiziert ist, sich dieser äh Plutoiummengen annimmt,\nJa und das ist eigentlich das,\nDasselbe haben wir jetzt quasi im globalen Maßstab. Du hast einfach diesen Kontrollapparat mit aufgebaut, wenn du Atomwaffen hast, weil du brauchst, dass das so ein so ein Frühwarnsystem, weil sonst waren deine Atomwaffen nichts wert, weil wenn sie vernichtet werden,\nim Erstschlag vom Gegner, dann waren sie äh haben sie keinen Sinn.\nAber vielleicht wenn wir gerade bei bei den USA sind, es gibt ja auch noch ein bisschen ein kleines Licht der Hoffnung, finde ich,\ndass die amerikanische Demokratie in sich äh auch solche Herausforderungen äh annimmt und auch diskutiert und,\nVorhin gesagt, äh dass wir als Staatsbürger keinen direkten Einfluss haben, aber über die öffentliche Meinung haben wir ja durchaus auch eine eine Impact auf die äh amerikanische Politik,\nund äh eine besondere äh äh Pointe gibt es, dass der Abgeordnete,\nbist der, Jim Sensenbrenner, der hat einen zwotausendeins ein ähm.\nVorhaben durch den Kongress gebracht, das nannte sich Uniting.\nUnd das Ganze hat in der Abkürzung ist es dann USA und das ist ja gewissermaßen so die Mutter aller Übel.\nVon denen wir jetzt sagen, dass auf Basis dieser Gesetzeslage die NSA und die anderen Geheimdienste der USA so übergriffig geworden sind,\nund äh dieser Mensch hat offensichtlich äh gelernt, weil der hat nämlich jetzt einen neuen Antrag.\nLanciert, warte mal.\nUnd zwar der heißt Uniting America bei Full Villing Whites and Ending Evestoping. Dragnet Collection and online Monitoring Act und der nennt sich USA Freedom Act.\nAlso der hat's mit den Abkürzungen und ähm.\nDas ganze Ding ist quasi ein Amantment äh zum zum ursprünglichen und versucht quasi jetzt ähm.\nÜbergriffigkeiten und äh ähm auch,\nUnklarheiten zurückzuschrauben und äh ich finde das ganz bemerkenswert, dass jemand zumindest,\nbist. Kann jetzt nicht in die Einzelheiten äh des Gesetzes geben. Vorabends bin ich nicht reingegangen. Aber ich finde es schon ganz bemerkenswert, dass auch von dieser republikanischen Seite ähm jetzt.\nDurchaus auch die Nachteile,\ndieses damaligen vielleicht vorschnellen Handelns klar wurden und auch dieser Sensenbrenner sagt, ähm uns war nicht klar, dass die äh Geheimdienste ähm,\ndass in diesem Maße auslegen würden. Und ähm.\nInsofern wollte ich einfach nochmal auch diesen, auf diesen Punkt äh bringen, der ist ob auch in Opposition zu einem Antrag, der von den Demokraten und äh quasi administrationsnah äh lanciert wird, der, glaube ich, deutlich ähm,\nGeheimdienstfreundlicher formuliert ist, von der auch von der Frau Finesteen, die die,\nin diesem geheimen Dienst, Kontrollausschuss, das äh Kongresses sitzt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:53",
+      "text": "Ja, da schöpfst du jetzt viel Hoffnung. Also ich bin da sehr äh skeptisch, meine selbst wenn es jetzt dieselbe Person ist, die diesen Patriot-Act äh vorgelegt hat, ich denke, damals waren sie alle nur sehr äh glücklich, dass es überhaupt irgendeiner gemacht hat so und sie waren ja alle total aufgeheizt\nZum Vergleich. Der äh Patriot-Act wurde am dreiundzwanzigsten Oktober zwanzig elf eingebracht. Also da war, nein, die liffen grad mal.\nRichtig zwanzig äh zweitausendeins natürlich äh eingebracht. Also da war halt äh,\nder Vorfall, auf den sich das natürlich alles bezogen. Gerade mal sechs Wochen alt, sprich da ist noch nicht viel Wasser.\nGeflossen seitdem die Flüsse entlang und,\nJa, ein klassischer Schnellschuss, würde ich mal sagen, ne? Und jetzt, äh, da waren sie dann aber, ja, aber da waren sie ja alle."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:44",
+      "text": "Im Schrank lag, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:45",
+      "text": "Ja eben genau und letztlich äh sind das ja keine neuen Ideen. Das war nur die Zeit äh gekommen, dann endlich mal die Tore äh zu öffnen, aber man kriegt jetzt halt einfach die Schleusentüre äh nicht in demselben Maße wieder geschlossen. Also ich bin da eher\nskeptisch so interessant ich das jetzt auch finde, ob das jetzt auch schon so ein deutliches Zeichen der Rheinwaschung äh ist. Ich meine, die USA haben auch ein sehr merkwürdiges Verhältnis, das klang ja vorhin schon an so diesen Modellstart und was der Staat macht, ja, also gerade so die Republikaner, ja, die immer so, ja, der Staat darf ja irgendwie nicht so viel tun, aber wenn sie dann mal sind, dann dann, dann, dann tun sie mehr, als äh\näh"
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "1:16:19",
+      "text": "Interessant in dem Zusammenhang ist, dass der Jim Senson bei einer ähm diesen Gesetzesvorschlag auch im Europäischen Parlament ähm,\nvorstellt, also in Europareise macht. Und ich find's auch bemerkenswert, dass äh ähm,\njemand aus dem Repräsentantenhaus überhaupt die EU als ja Staatssubjektin oder überhaupt äh zur Kenntnis."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:44",
+      "text": "Ja genau, dass sie das überhaupt sich mal vielleicht eine Sekunde auch darüber Gedanken machen könnten, was so ihre Verbündeten äh in Europa darüber denken mögen, weil das hat man auch mal so den Eindruck, dass das eigentlich ziemlich egal ist. Aber ganz egal scheint's dann wohl doch nicht zu sein.\nJa\nDas Ende der äh Netzpolitik ist auch das Ende vom Lokbuchnetz Politik, es sei denn, Linus hat jetzt noch ein eine Eingabe äh zu machen. Du äh starrst die ganze Zeit schon gebannt in das Internet."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:17:20",
+      "text": "Ja, das Internet ärgert mich heute. Ich bin heute nicht eins mit dem Internet. Das fing an mit diesen fehlenden Ports, die dem Internet auf einmal fehlten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:29",
+      "text": "Ist ein Auslaufmodell. Ja, also der Hype ist vorbei."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:17:30",
+      "text": "Ich bin heute nicht äh gut aufs Internet zu sprechen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:37",
+      "text": "Aber. Wir waren gut zu sprechen auf Gregor."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:17:42",
+      "text": "Ich will, ich bin gut zu sprechen auf äh Christoph, Sven und Michael,\ndie schon vor langer Zeit äh vor vielen Wochen mir mal ein kleine Aufmerksamkeit haben zukommen lassen. Also jeder einzelne von ihnen. Und äh die ich bei auf Teufel komm raus nicht anderweitig,\nausmachen konnte, weil sie offensichtlich gute, gut ihre eigenen Identitäten verstecken. Und deswegen danke ich ihnen an dieser Stelle."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:09",
+      "text": "Mhm. Prominös ominös. Ja, vielen Dank an Gregor."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "1:18:16",
+      "text": "Danke, dass ich mich einladen durfte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:18",
+      "text": "Jederzeit, Gregor. Darf sich jederzeit wieder einladen? Nee, wir äh laden ja auch gerne ein und lassen äh auch gerne Leute sich einladen. Genau. Also nicht jeden, aber."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:30",
+      "text": "Genau. Also wenn die Leute was zu sagen haben, können sie sich mehr bei uns melden. Genau. Und Wasser."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:36",
+      "text": "Genau. Aber wir haben jetzt nichts mehr zu sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:40",
+      "text": "Internet, heute ist einfach nichts mit Internet. Ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:42",
+      "text": "Ohne Internetanschluss läuft bei dir einfach auch nichts, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:45",
+      "text": "Einfach, weißt du? Guck mal, du stehst auf, so, machst Internet an und dann fehlen halt ein paar Power, weißt du? Stell dir das vor so und weißt du, aus so aus so einem Tag wird einfach nix. Aus so einem Tag wird nix mehr."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:51",
+      "text": "Kennt ihr das, Bäume? Das Netz ist dir heute einfach nicht neutral genug, ja? Ja. Ja, du hast einen Rotkohlsaft über die Tastatur gegossen und gemerkt so, ah!"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:03",
+      "text": "Kann man so jetzt hin, ich komme hier hin, ich habe gerade meine, ich habe gerade mein mein äh Server irgendwie in den Modus geworfen, weil ich dachte, dass da bestimmte äh lebenswichtige Sachen äh von diesem Gerät nicht mehr bereitgestellt würden.\nUnd ähm,\nerst, als wir dann auffedern sich vielleicht den nächsten direkt auch noch in Modus äh werfen muss, fiel mir dann auf, dass eventuell ein Tims äh äh Fritzbox siegen könnte. Ist echt, ist Katastrophe."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:28",
+      "text": "Mach dich ganz verrückt, ne?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:30",
+      "text": "Ich finde, ich komme da nicht drüber weg."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:31",
+      "text": "Ja, basisches Netz, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:34",
+      "text": "Komme da nicht drüber weg."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:35",
+      "text": "Der pH-Wert äh ist unausgewogen. So, ich mache dem Ganzen jetzt hier äh ein Ende. Ich sage äh tschüss und bis bald."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:44",
+      "text": "Tschüss und bis bald."
+    },
+    {
+      "speaker": "Gregor Sedlag",
+      "time": "1:19:45",
+      "text": "Ciao."
+    }
+  ]
+}

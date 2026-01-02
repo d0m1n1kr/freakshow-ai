@@ -1,0 +1,227 @@
+{
+  "episodeNumber": 522,
+  "title": "LNP522 Security by Hippocrates",
+  "extractedAt": "2026-01-02T11:46:36.980Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "Bianca Kastl",
+      "subject": {
+        "coarse": "People",
+        "fine": "Bianca Kastl"
+      },
+      "durationSec": 248,
+      "positionSec": 185,
+      "summary": "Bianca Kastl ist Softwareentwicklerin und Softwareprojektleiterin, die sich auf die Digitalisierung im Gesundheitswesen spezialisiert hat. Sie ist aktiv in der zivilgesellschaftlichen Organisation INÖK (Innovationsverbund Öffentliche Gesundheit), die sich mit der Digitalisierung von Gesundheitsämtern beschäftigt. Kastl hat Erfahrungen mit digitalen Projekten wie der Corona-Warn-App und der elektronischen Patientenakte. Sie kritisiert die bestehenden digitalen Lösungen und setzt sich für eine bessere Implementierung von Digitalisierungsmaßnahmen im Gesundheitsbereich ein.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "522-ts.json",
+        "method": "time-window",
+        "pickedCount": 20,
+        "startSec": 165,
+        "endSec": 453,
+        "generatedAt": "2026-01-02T20:08:26.621Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "ePA: Digitalisierung des Gesundheitswesens",
+      "subject": {
+        "coarse": "Health",
+        "fine": "Digitalization"
+      },
+      "durationSec": 247,
+      "positionSec": 434,
+      "summary": "In der Diskussion über die Digitalisierung des Gesundheitswesens wird die elektronische Patientenakte (ePA) thematisiert, die seit 2003 geplant und 2005 unter Ulla Schmidt als Konzept vorgestellt wurde. Die Einführung des E-Rezepts, das seit etwa zwei Jahren verbindlich ist, wird als Grundlage für die ePA betrachtet. Bianca Kastl hebt hervor, dass unter Karl Lauterbach Fortschritte erzielt wurden, jedoch auch Herausforderungen bestehen, insbesondere bei der Umsetzung und den Datenschutzfragen. Die Zugangsberechtigungen für das E-Rezept, die über Gesundheitskarten oder QR-Codes erfolgen, werden als Beispiel für die Probleme bei der ePA angeführt.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "522-ts.json",
+        "method": "time-window",
+        "pickedCount": 11,
+        "startSec": 414,
+        "endSec": 701,
+        "generatedAt": "2026-01-02T20:08:26.308Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "ePA: Das E-Rezept und Gesundheitskarte",
+      "subject": {
+        "coarse": "Health",
+        "fine": "E-Prescription"
+      },
+      "durationSec": 373,
+      "positionSec": 681,
+      "summary": "Das E-Rezept ermöglicht den Zugriff auf Rezepte über die Gesundheitskarte oder QR-Codes, um eine niedrigschwellige Nutzung zu gewährleisten. Bianca Kastl erläutert, dass das Konzept des Zugriffs auf E-Rezepte nicht ohne Probleme ist, insbesondere wenn es auf die elektronische Patientenakte (EPA) übertragen wird. Der Zugriffsschutz für kritische Daten ist unzureichend, da es einfach ist, Tokens zu erhalten, indem man die Kartennummer anfragt. Dies könnte zu Sicherheitsrisiken führen, da die Kartennummern systematisch generiert werden können. Die Telematik-Infrastruktur, die für den Zugriff benötigt wird, umfasst verschiedene technische Komponenten, darunter einen Connector und kryptografische Nachweise für medizinisches Personal.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "522-ts.json",
+        "method": "time-window",
+        "pickedCount": 16,
+        "startSec": 661,
+        "endSec": 1074,
+        "generatedAt": "2026-01-02T20:08:31.450Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "ePA: Die Telematik-Infrastruktur",
+      "subject": {
+        "coarse": "Health",
+        "fine": "Telematics Infrastructure"
+      },
+      "durationSec": 960,
+      "positionSec": 1055,
+      "summary": "Die Telematik-Infrastruktur im Gesundheitswesen besteht aus mehreren Komponenten, darunter der Connector, der als VPN-Router fungiert, sowie kryptografische Elemente wie Heilberufsausweise und Praxisausweise (SMCB). Diese Ausweise sind notwendig, um den Zugang zur Infrastruktur zu ermöglichen und E-Rezepte auszustellen oder einzulösen. Es gibt Sicherheitsbedenken, da die Technologie teilweise veraltet ist und Schwachstellen wie SQL-Injections existieren. Die Diskussion hebt hervor, dass trotz Sicherheitsmaßnahmen immer noch Risiken bestehen, insbesondere durch die Vielzahl an Berechtigten im System.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "522-ts.json",
+        "method": "time-window",
+        "pickedCount": 28,
+        "startSec": 1035,
+        "endSec": 2035,
+        "generatedAt": "2026-01-02T20:08:31.093Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "ePA: Sicherheitslücken  der Elektronischen Patientenakte",
+      "subject": {
+        "coarse": "Health",
+        "fine": "Security Vulnerabilities"
+      },
+      "durationSec": 1646,
+      "positionSec": 2015,
+      "summary": "In der Episode wird über Sicherheitslücken der Elektronischen Patientenakte (ePA) diskutiert, insbesondere in Bezug auf den E-Rezept-Dienstweg. Bianca Kastl und Linus Neumann kritisieren die Gematik, die für die Digitalisierung des Gesundheitswesens zuständig ist, und deren Umgang mit Sicherheitsproblemen, die bereits im August 2022 gemeldet wurden. Es wird darauf hingewiesen, dass trotz der Identifizierung von Sicherheitsrisiken, die Gematik weiterhin behauptet, dass die Zugangswege sicher seien. Die Diskussion umfasst auch die Problematik von Sicherheitsanalysen, die durch Einschränkungen im Scope nicht alle potenziellen Risiken abdecken. Zudem wird auf die Möglichkeit hingewiesen, dass unbefugte Personen durch den Erwerb von Kartenlesegeräten Zugang zu sensiblen Daten erlangen könnten.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "522-ts.json",
+        "method": "time-window",
+        "pickedCount": 63,
+        "startSec": 1995,
+        "endSec": 3681,
+        "generatedAt": "2026-01-02T20:08:35.579Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "ePA: Reaktionen der Gematik und der Politik",
+      "subject": {
+        "coarse": "Health",
+        "fine": "Reactions"
+      },
+      "durationSec": 1067,
+      "positionSec": 3662,
+      "summary": "In der Diskussion über die elektronische Patientenakte (ePA) äußern Tim Pritlove und Linus Neumann Kritik an der Gematik und der politischen Verantwortung für Sicherheitsmängel. Sie bemängeln architektonische Schwächen und die unzureichende Reaktion auf Sicherheitsbedenken, die bereits im August geäußert wurden. Bianca Kastl ergänzt, dass die Verantwortung politisch sei und dass es Versuche zur Schadensbegrenzung gab, wie das Einführen von Rate Limiting, um den Zugriff auf sensible Daten zu beschränken. Die Testphase der ePA wurde verkürzt und auf 300 ausgewählte Institutionen beschränkt, um mögliche Sicherheitsrisiken zu minimieren.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "522-ts.json",
+        "method": "time-window",
+        "pickedCount": 37,
+        "startSec": 3642,
+        "endSec": 4749,
+        "generatedAt": "2026-01-02T20:08:37.338Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "ePA: Die neueste Sicherheitslücke",
+      "subject": {
+        "coarse": "Health",
+        "fine": "Latest Security Vulnerability"
+      },
+      "durationSec": 1275,
+      "positionSec": 4730,
+      "summary": "In der Episode wird die neueste Sicherheitslücke in der elektronischen Patientenakte (ePA) thematisiert. Bianca Kastl erklärt, dass es durch fehlerhafte Implementierungen in der Telematik-Infrastruktur möglich war, sensible Patientendaten über Anfragen abzurufen, ohne dass die entsprechenden Authentifizierungsmechanismen korrekt funktionierten. Dies führte zu einem potenziellen Datenleck, das innerhalb von 24 Stunden nach der Entdeckung behoben wurde. Die Diskussion beleuchtet auch die Herausforderungen der Sicherheitsarchitektur der ePA, die auf Confidential Computing setzt, und die Notwendigkeit, ein System zu entwickeln, das den Nachweis der Patientenzugehörigkeit sicherstellt. Ein neues Verfahren namens 'Proof of Patient Presence' soll 2026 eingeführt werden, um diese Probleme zu adressieren.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "522-ts.json",
+        "method": "time-window",
+        "pickedCount": 32,
+        "startSec": 4710,
+        "endSec": 6025,
+        "generatedAt": "2026-01-02T20:08:40.450Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "ePA: Lässt es sich retten?",
+      "subject": {
+        "coarse": "Health",
+        "fine": "Crisis Management"
+      },
+      "durationSec": 619,
+      "positionSec": 6006,
+      "summary": "Im Gespräch über die elektronische Patientenakte (ePA) wird deutlich, dass grundlegende Architekturprobleme bestehen, die eine effektive Nutzung behindern. Bianca Kastl schlägt vor, von der aktuellen Konstruktion der ePA abzurücken und die Komponenten zu entkoppeln, um eine bessere Anpassung an die unterschiedlichen Anforderungen im Gesundheitswesen zu ermöglichen. Sie betont die Notwendigkeit eines transparenten Prozesses bei der Entwicklung von Spezifikationen, um die Beteiligten einzubeziehen. Der europäische Gesundheitsdatenraum (IHDS) wird als gesetzliche Grundlage für Interoperabilität erwähnt, jedoch wird die Umsetzung als herausfordernd beschrieben, da das deutsche Gesundheitssystem noch im Wandel ist.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "522-ts.json",
+        "method": "time-window",
+        "pickedCount": 22,
+        "startSec": 5986,
+        "endSec": 6645,
+        "generatedAt": "2026-01-02T20:08:42.869Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Neue Ministerien und Minister",
+      "subject": {
+        "coarse": "Politics",
+        "fine": "New Ministries"
+      },
+      "durationSec": 1019,
+      "positionSec": 6625,
+      "summary": "In der Episode wird über die bevorstehenden Veränderungen in der deutschen Ministerialstruktur diskutiert, insbesondere über das neue Bundesministerium für Digitalisierung und Staatsmodernisierung (BDSM). Linus Neumann und Tim Pritlove sprechen über die voraussichtliche Ernennung von Carsten Wildberger als Digitalminister und seine bisherigen politischen Vorschläge. Zudem wird Alexander Dobrindt als neuer Innenminister erwähnt, wobei die Diskussion auch auf seine Erfahrungen im Bereich digitale Infrastruktur und die Herausforderungen eines neuen Ministeriums eingeht. Es wird die Frage aufgeworfen, wie effektiv das neue Ministerium arbeiten kann und welche Zuständigkeiten es übernehmen wird.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "522-ts.json",
+        "method": "time-window",
+        "pickedCount": 52,
+        "startSec": 6605,
+        "endSec": 7664,
+        "generatedAt": "2026-01-02T20:08:44.598Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T20:08:44.598Z",
+  "transcriptFound": true,
+  "transcriptFile": "522-ts.json"
+}

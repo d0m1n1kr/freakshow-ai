@@ -17,7 +17,7 @@ const podcastIndex = args.indexOf('--podcast');
 const PODCAST_ID = podcastIndex !== -1 && args[podcastIndex + 1] ? args[podcastIndex + 1] : 'freakshow';
 
 const PROJECT_ROOT = path.join(__dirname, '..');
-const EMBEDDINGS_FILE = path.join(PROJECT_ROOT, 'db', 'topic-embeddings.json');
+const EMBEDDINGS_FILE = path.join(PROJECT_ROOT, 'db', PODCAST_ID, 'topic-embeddings.json');
 const TAXONOMY_FILE = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topic-taxonomy.json');
 const OUTPUT_DIR = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID);
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'topic-umap-data.json');
@@ -27,9 +27,11 @@ const FRONTEND_OUTPUT = OUTPUT_FILE;
  * Load embeddings database
  */
 function loadEmbeddings() {
-  console.log('📂 Loading db/topic-embeddings.json...');
+  console.log(`📂 Loading embeddings database for podcast: ${PODCAST_ID}...`);
+  console.log(`   Path: ${EMBEDDINGS_FILE}`);
   if (!fs.existsSync(EMBEDDINGS_FILE)) {
     console.error(`❌ ${EMBEDDINGS_FILE} not found!`);
+    console.error(`   Create it with: node scripts/create-embeddings.js --podcast ${PODCAST_ID}`);
     process.exit(1);
   }
   

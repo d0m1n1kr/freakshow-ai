@@ -594,6 +594,23 @@ const playerError = ref<string | null>(null);
 const playerToken = ref(0);
 const currentTranscriptUrl = ref<string | null>(null);
 
+// When switching podcasts, clear the cached MP3 index so we don't reuse URLs
+// from a previously selected podcast (e.g. LNP playing Freakshow).
+watch(
+  () => settingsStore.selectedPodcast,
+  () => {
+    mp3IndexLoaded.value = false;
+    mp3IndexError.value = null;
+    mp3UrlByEpisode.value = new Map();
+    // stop any currently playing audio tied to the previous podcast
+    currentMp3Url.value = null;
+    playerInfo.value = null;
+    playerError.value = null;
+    currentTranscriptUrl.value = null;
+    playerToken.value++;
+  }
+);
+
 const withBase = (p: string) => {
   // Ensure static assets work when deployed under a sub-path (Vite base).
   // Example: BASE_URL = "/freakshow/" -> "/freakshow/episodes/285-ts-live.json"

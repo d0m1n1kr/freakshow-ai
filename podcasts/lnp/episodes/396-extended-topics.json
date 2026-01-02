@@ -1,0 +1,107 @@
+{
+  "episodeNumber": 396,
+  "title": "LNP396 Hochsicherheit kommt vor dem Fall",
+  "extractedAt": "2026-01-02T11:28:42.391Z",
+  "dataSource": "detailed-chapters",
+  "topics": [
+    {
+      "topic": "Feedback: Doktorarbeiten",
+      "subject": {
+        "coarse": "Education",
+        "fine": "Theses"
+      },
+      "durationSec": 585,
+      "positionSec": 125,
+      "summary": "In dieser Episode wird Feedback zu Doktorarbeiten diskutiert, basierend auf Kommentaren von Doktor Würdenträgern. Eckhard, ein Biologe, hebt hervor, dass die Promotion eine bedeutende Forschungsleistung darstellt, die international anerkannt ist, jedoch auch eine große Abhängigkeit von Betreuern mit sich bringt. Doktor Ing Düsentrieb teilt seine Erfahrungen über den Druck während der Promotion und die damit verbundenen psychischen Belastungen. Es wird auch die Problematik angesprochen, dass einige Doktorarbeiten nicht den hohen Anforderungen genügen und die Bedeutung des Titels im Alltag infrage gestellt wird. Die Diskussion umfasst auch die Anforderungen an Dissertationen in verschiedenen Fachbereichen, insbesondere die Publikation in hochrangigen Fachzeitschriften.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "396-ts.json",
+        "method": "time-window",
+        "pickedCount": 13,
+        "startSec": 105,
+        "endSec": 730,
+        "generatedAt": "2026-01-02T19:26:02.236Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Marcus Mengs",
+      "subject": {
+        "coarse": "Individuals",
+        "fine": "Marcus Mengs"
+      },
+      "durationSec": 258,
+      "positionSec": 711,
+      "summary": "Marcus Mengs ist seit etwa siebzehn Jahren im Bereich IT-Sicherheit tätig und beschäftigt sich mit verschiedenen Facetten der Informationssicherheit, einschließlich Datenschutz. Er hat ein großes privates Interesse an Sicherheitsthemen, was ihn dazu brachte, sich intensiver mit der Luca-App auseinanderzusetzen, nachdem er durch Diskussionen auf Twitter und Veröffentlichungen von Experten auf das Thema aufmerksam wurde. Mengs hat sich insbesondere mit den Sicherheitskonzepten der Luca-App beschäftigt und dabei Unstimmigkeiten festgestellt. Er führt Sensibilisierungsmaßnahmen durch, um Klienten über Gefahren und Risiken zu informieren.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "396-ts.json",
+        "method": "time-window",
+        "pickedCount": 18,
+        "startSec": 691,
+        "endSec": 989,
+        "generatedAt": "2026-01-02T19:26:02.433Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Luca: Was bisher geschah",
+      "subject": {
+        "coarse": "Security",
+        "fine": "Vulnerabilities"
+      },
+      "durationSec": 1875,
+      "positionSec": 969,
+      "summary": "In der Episode wird die Luca-App und ihre Sicherheitsrisiken thematisiert. Linus Neumann und Marcus Mengs diskutieren über frühere Veröffentlichungen, darunter ein Paper von Theresa Stadler, das potenzielle Schäden der App beschreibt, sowie einen offenen Brief von Forschern, der vor Risiken warnt. Mengs hat eine YouTube-Playlist erstellt, die sich mit den Schwachstellen der App auseinandersetzt, insbesondere im Hinblick auf zentrale versus dezentrale Ansätze. Es wird auf Sicherheitslücken hingewiesen, die es ermöglichen, Bewegungsprofile von Nutzern abzurufen, und die Problematik der unzureichenden Verschlüsselung der Daten wird hervorgehoben.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "396-ts.json",
+        "method": "time-window",
+        "pickedCount": 32,
+        "startSec": 949,
+        "endSec": 2864,
+        "generatedAt": "2026-01-02T19:26:08.529Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    },
+    {
+      "topic": "Luca: Die neueste Schwachstelle",
+      "subject": {
+        "coarse": "Security",
+        "fine": "Vulnerabilities"
+      },
+      "durationSec": 3426,
+      "positionSec": 2844,
+      "summary": "Im Transkript wird das Thema CSV-Injection im Kontext der Luca-App behandelt. Marcus Mengs und Linus Neumann diskutieren, dass die Luca-App keine Sicherheitslücken aufweist, sondern dass es sich um ein unerwartetes Feature handelt, das durch die Verwendung von Excel-Formeln in CSV-Dateien entstehen kann. Diese Formeln können dazu führen, dass beim Öffnen einer CSV-Datei in Excel unerwünschte Aktionen ausgeführt werden, wie der Zugriff auf externe Daten. Das Problem liegt nicht in Excel selbst, sondern in der Art und Weise, wie die Datenquelle gestaltet ist. Es wird betont, dass eine vertrauenswürdige Quelle oder das Filtern der Daten notwendig ist, um solche Sicherheitsprobleme zu vermeiden.",
+      "summaryMeta": {
+        "transcriptFound": true,
+        "transcriptFile": "396-ts.json",
+        "method": "time-window",
+        "pickedCount": 70,
+        "startSec": 2824,
+        "endSec": 6290,
+        "generatedAt": "2026-01-02T19:26:07.759Z",
+        "llm": {
+          "provider": "openai",
+          "model": "gpt-4o-mini",
+          "temperature": 0.3
+        }
+      }
+    }
+  ],
+  "extendedAt": "2026-01-02T19:26:08.529Z",
+  "transcriptFound": true,
+  "transcriptFile": "396-ts.json"
+}

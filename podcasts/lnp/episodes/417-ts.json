@@ -1,0 +1,914 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten Morgen Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:00",
+      "text": "Guten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:03",
+      "text": "Frohes drittes Jahr, Linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:05",
+      "text": "Frustrittes Jahr, Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:27",
+      "text": "Logbuch, Dance-Politik Nummer 417 und äh wir schreiben das Jahr 20022. Wir kommen hier am 7. Januar zusammen und äh ja, da ist sie, die erste Sendung des neuen,\nJahres und ob's nun wirklich das dritte Pandemiejahr wird, ich bin mir noch nicht so sicher."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:46",
+      "text": "Was soll's denn sonst werden? Äh vierte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:49",
+      "text": "Na ja, ich denke, ich denke, ich denke wir haben sogar eine Chance. Es ist kein drittes Jahr wird."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:57",
+      "text": "Also Tim, es ist bereits das dritte Jahr. Die die Frage ist äh in Deutschland? Also nee, die also okay, die."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:08",
+      "text": "Du weißt, eine Pandemie ist ja auch weltweit und so. Nimmst es ja wieder sehr genau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:12",
+      "text": "Medi, also die die ich weiß nicht mehr das genaue Datum, aber es ist über zwei Jahre her, dass das Coronavirus bekannt wurde\nUnd damit sind wir jetzt nun mal im dritten Jahr. Du die Frage, die du dir stellst, ist, ob die Pandemie das dritte Jahr noch voll macht, glaube ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:29",
+      "text": "Nee, ob's ob's ähm in Deutschland das dritte Jahr noch antritt, sagen wir's mal so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:37",
+      "text": "Okay. Also du glaubst in zwei Monaten ist es durch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:47",
+      "text": "Ähm ja denke schon."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:47",
+      "text": "Okay, okay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:52",
+      "text": "Auch erforderlich, um einfach Raum zu machen für die goldenen Zwanziger. Du weißt schon."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:59",
+      "text": "Jetzt verstehe ich wenigstens, warum die Leute uns immer bellt schreiben, dass sie unseren ungebrochenen Optimismus schätzen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:04",
+      "text": "Ja. Ja. Du mit du bist ja immer hier der Dom, da musst du sie ja irgendwie ausgleichen. Nee, ich bin ganz optimistisch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:16",
+      "text": "Okay, ja, nee."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:17",
+      "text": "Mit dem Angriff von Obicron wird das alles in Ordnung kommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:19",
+      "text": "Ja gut, dem lassen wir dem gehen wir auf jeden Fall gerade genug Raum, ja? Ich bin mal gespannt, also ich meine, die hätte nichts dagegen. Ähm ich hänge nicht an der Pandemie-Time, ne. Also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:29",
+      "text": "Wirklich? Ach du meinst, du könntest jetzt auch mal ohne.\nJetzt ich finde gut ich meine jetzt wo man sich so sehr dran gewöhnt hat,\nWahrscheinlich auch wieder eine Umstellung. Ging dir das nicht auch schon so im Sommer, das dachtest so, ah ja jetzt wollen die mir bei alle Spieler so nahe kommen und so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:49",
+      "text": "Hm nö, das habe ich.\nNee, da man hat eher so seine äh die Erwartungen, die dann irgendwie anders sind und nicht erfüllt werden. Das war jetzt hier gerade der die gekontoüberleitung zu deinem HTTP Statuscode."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:05",
+      "text": "Ja genau, wir wollen ja nach wie vor die Statuscodes euch näher äh bringen und um ehrlich zu sein\nauch uns. So richtig ausführlich studiert, habe ich die auch noch nie und äh insofern ist es mal ganz interessant, dass äh sich mal zu ähm\nzu geben. Wir sind jetzt bei Nummer 417 und die hat den wunderschönen Namen\nExpectation fehlt. Das kennen wir natürlich alle auf eine gewisse Art und Weise, ne? Allerdings ist es halt auch wieder so ein Klassiker\nInsofern, als dass das so eine\ndefinierter Statuscode ist, wo sich die Entwickler irgendwie mal gedacht haben, ja, was brauchen wir bestimmt und so, dass man erstmal einen dafür definieren. Es gibt da irgendwie auch nur irgendwie einen einzigen Usecase und den benutzt wohl kaum einer. Also kein kein Browser unterstützt das äh äh wirklich. Von daher handelt es sich hier eher um totes Material.\nAber äh das bietet natürlich dann die Möglichkeit, diesen wunderschönen Fehlercode vielleicht für.\nAnderer anderer artige Interpretationen freizugeben, zum Beispiel politischer Art.\nHaben ja derzeit so diverse die äh sicherlich auf die ein oder andere Art und Weise mal irgendwann mal fehlen werden und dann kann man da einfach sagen, ja vierhundertsiebzehn, ne, ja, hm ja,\nso so ein bisschen wie dieser dieser Witz mit in dem Witzeclub wo alle den Witz schon äh kennen und gar nicht mehr zu Ende erzählen wollen\ndie Witze einfach nur noch bezahlen äh referenzieren ne und aber wenn wenn dann halt einer nicht lacht, dann war er halt Scheiße erzählt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:36",
+      "text": "Kannst du so nicht machen. Nee, nee."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:37",
+      "text": "Vierhundertsiebzehn, ne? Ja.\nWir haben Shirts. Verkauft haben wir."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:04:47",
+      "text": "Genau und unten Mails dazu bekommen, tatsächlich. Also ähm ich Programmierer machen ja oft bei One Evers,\näh Hörerinnen auch. Einige von euch haben oft bei One Airs gebracht, weil ich in der Sendung gesagt habe zwanzig dreiundzwanzig habt ihr euren LNP-Merch und einige haben halt gedacht, ich hätte damit versprochen, zwanzig,\neinundzwanzig oder mit Beginn 202zwanzig tatsächlich ähm ist es so, also wenn man mit,\nauch nochmal konferiert, weil wir einige unglückliche Leute haben, die ihre Lieferung noch nicht erhalten haben. Äh die Situation ist folgende,\nHm sagen wir mal so, der äh die Menge die bestellte Menge lag etwas über der von mir äh prognostizierten Menge.\nSodass es äh jetzt äh zu einer Nachbestellung kommen musste, also die Rohware musste nachbestellt werden in bestimmten,\nGrößen, also bestimmte Größen mussten neu bestellt werden und ähm das ist ein Problem, was ich auch schon vom Kongress immer kenne. Du musst,\ndauert teilweise halt echt einfach mal vier Wochen oder sowas, bis du halt eine neue Lieferung bekommst. Vor allem äh wenn Pandemie ist und ähm Dezember und deswegen gibt's jetzt noch einen.\nSagen wir mal prozentual,\nkleinen aber absolut immer noch recht also ist trotzdem signifikanter Teil an Leuten die ihre äh Lieferung einfach noch nicht erhalten haben und zu eurem Trostmarkt gehören äh ich auch noch nicht.\nMeine meine Bestellung ist auch noch nicht da. Was ich jetzt, sage ich mal, von Ticket-Toaster auch nur so halbsmart finde\ndas nicht, wenigstens sehe ich meinen Shit bekomme, aber äh das zeigt eben auch einfach nur, dass sie's nach Best-Eford gemacht haben und ich war eben nicht äh der Erste, der bestellt hat, sondern der Letzte.\nÄhm insofern äh ja kriege ich's, kriege ich's halt auch bisher noch nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:45",
+      "text": "Um's mal zu konkretisieren, also ungefähr so 15 Prozent der Bestellungen stehen noch aus. So, also die allermeisten von euch sind schon äh beglückt worden und ähm habt uns das auch wissen lassen, was ich äh sehr schön fand, äh vor allem auf,\nTwitter wurde dann doch das ein oder andere äh Foto gepostet und äh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:06",
+      "text": "Paar in den ich fürchte\nich hoffe, dass ich da keins äh übersehen habe, aber ich weiß, dass ich eins habe, dass äh bestimmt mehrere übersehen habe, aber das Schönste fand ich tatsächlich von Johannes, der äh am,\nVormittag des 25. Dezembers äh sich selbst und ich würde jetzt mal schätzen, sein Vater beide auf Twitter mit dem,\ngleichen Shirt und äh der äh Unterschrift zwei Doofer ein Gedanke."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:33",
+      "text": "Oder oder seinen Sohn. Also wir wissen ja jetzt nicht, wem der Account gehört."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:37",
+      "text": "Genau ja genau also zwei können auch vielleicht sind einfach nur Kumpels ja so wie du und ich, ich will ja auch nicht dein Sohn.\nJetzt bricht für alle eine Welt zusammen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:46",
+      "text": "Linus, ich bin dein Vater."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:49",
+      "text": "Na ja und äh genau, vielleicht sind wir einfach in Kumpels, aber auf jeden Fall haben die sich äh gegenseitig das Shirt geschenkt. Und sich dann äh das ist doch äh eine coole äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:03",
+      "text": "Einem nicht nicht ein Shirt sondern genau auch noch das dasselbe Modell, ne? Das schicke."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:08",
+      "text": "Ist schon sehr."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:09",
+      "text": "Ist wirklich hübsch geworden ist, also das äh finde ich ganz toll."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:13",
+      "text": "Sieht auf jeden Fall gut aus. Äh ich hab's ja noch nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:17",
+      "text": "Auch nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:18",
+      "text": "Aber fand äh das äh war natürlich das konnte man dann nicht mehr toppen und äh habe haben wir uns sehr drüber hm gefreut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:27",
+      "text": "Ja, wir verlinken ein paar von den äh schönen Fotos."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:33",
+      "text": "Genau, die Tweets, die uns so erreicht haben mit Bild und ja. Freuen wir."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:37",
+      "text": "Haben wir für coole Hörerinnen auch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:40",
+      "text": "Ne? So da haben wir zwei kurze gute Nachrichten, Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:49",
+      "text": "Zwei kurze gute Nachrichten oh ho ho ho, jetzt übertreibst du's aber."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:59",
+      "text": "Und zwar hatte der Bundestag ja im Juni, wenn ich mich nicht täusche, beschlossen.\nDass ähm die Bundespolizei und alle 19 Nachrichtendienste des Bundes und der Länder,\nStaatstrojaner Befugnis bekommen, also ähm ne die Benutzung von Staatsrändern das ausrollen.\nWas äh damals wir hier auch sehr ausführlich diskutiert haben ähm und das war ein ein besonders\nkritischer Aspekt war\ndass die Bundespolizei das präventiv darf, also nicht nur im Rahmen der Strafverfolgung, sondern präventiv. Du hast also noch gar keine Straftat begangen und dein Handy darf gehackt\nwerden, dass äh die Geheimdienste das machen, weil die Geheimdienste müssen ja sehr viel weniger ähm.\nÄh äh sich rechtfertigen für das, was sie tun. Da gibt's auch keinen äh Richtervorbehalt. Und ähm dann,\nUm das alles zu ermöglichen, hatten Sie auch geplant, dass quasi Telekommunikationsanbieter verpflichtet werden.\nAufspielen von Überwachungssoftware zu helfen.\nÄhm das war der in also ich meine die sind alle kritisch diese Punkte aber quasi deine deine Telekommunikationsanbieter.\nDazu zu verpflichten, gegen deine Interessen zu agieren und dein Handy mit einer Scherzerfahrt zu versehen. Ist ja wirklich ein sehr\näh großes ein ein ein sehr äh übles Vorgehen oder eine sehr schlechte Idee, weil ja hier direkt in das Vertrauensverhältnis einbrichst,\nund es geht eben nicht jetzt, was weiß ich, um die Leitung, die sie dir bereitstellen, sondern dein persönliches Gerät, welches daneben gehackt werden soll. Ähm\nMan muss gar nicht unbedingt sagen, dass sie außerdem bei der Telekommunikationsanbieter natürlich falsch sind, denn sie müssten eigentlich wahrscheinlich eher bei den,\nAnbietern oder bei Apple Google antreten. Langer Rede kurzer Sinn, dieses Vorhaben hat,\nim September äh im Dezember dann den Bundesrat nicht passiert. Also der Bundesrat im Bundesrat war das Gesetz zustimmungspflichtig ist, hat sich keine\nMehrheit für diese Mitwirkungspflicht gefunden.\nUnd dementsprechend wird die nicht.\nKommen, ja? So wie es aussieht haben das die Grünen und die FDP,\näh gestoppt, so interpretiere ich das jetzt hier ähm\nprimär, weil FDP sich dazu äußert und ich die Info von den äh Grünen bekommen habe. Ähm kurz nachdem das da entschieden wurde und äh das ist ja erstmal eine gute Nachricht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:59",
+      "text": "Das ist definitiv eine gute Nachricht und äh ist überhaupt bisher alles recht entspannt, was so äh aus dem Bundesjustizministerium an frühen Maßnahmen gekommen ist, sind ja auch noch ein paar andere Sachen,\nschon behandelt worden, Vorratsdatenspeicherung hatten wir schon drüber gesprochen,\ndie jetzt äh sozusagen nicht gerade ganz oben auf der Agenda äh sitzt und natürlich dann auch so nicht nützpolitische Aspekte wie diese sinnlose äh Abtreibungs-Werbungsverbot für äh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:12:28",
+      "text": "Oh ja, boah, was ein Wahnsinn."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:29",
+      "text": "Und so was, also einfach einfach so no brainer der letzten Jahrzehnte,\neinfach so mit dem Generations und dann eben auch mit dem Politwechsel, den eben so eine neue Regierung dann zwangsläufig mit sich bringt, dann so schnell unter dieses so ja okay, können wir das jetzt endlich mal lassen, die sinnlosen.\nDas das das ist immer das Schöne an solchen Momenten. Ich meine, wir werden noch.\nGenug haben, wo wir uns aufregen werden und wo's äh mal wieder in eine Richtung läuft, die kritikwürdig äh ist, mit Sicherheit. Aber grad so der Beginn einer Regierung ist natürlich erstmal damit verbunden, dass so diese ganzen Sachen, wo die überhaupt keinen Bock mehr haben zu diskutieren, weil das ist eigentlich schon alles diskutiert ist und nur noch von der\nCDU verhindert wurde. Äh das wird dann halt einfach jetzt mal schnell zu Akten gelegt und dann kann man sich in das äh wichtige Zeug kümmern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:16",
+      "text": "Muss man auch ganz einfach sagen, mit der FDP im Justizministerium sind wir auch von 2009 bis 2013 nicht so schlecht gefahren.\nSabine Schnarrenberger ja also schöne Grüße an Herrn Buschmann, hat ein Vorbild. Der sich gerne orientieren kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:34",
+      "text": "Genau. Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:37",
+      "text": "Mhm das war die eine gute Nachricht und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:41",
+      "text": "Eine gute Nachricht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:42",
+      "text": "Eine gute Nachricht. Und zwar äh gibt es jetzt.\nÄhm zwei Verbraucherschutzgesetzivellierungen im Bürgerlichen Gesetzbuch, die wir auch hier begleitet haben und damit gilt die Sätzen eine EU,\nRichtlinie um, ja ähm und zwar die EU-Waren, Kaufrichtlinie von 2019 und da wird im BGB quasi ergänzt, was für Basisanforderungen, für Verträge,\nüber die Bereitstellung,\ndigitaler Produkte gilt. Ja und das war das ist quasi die Umsetzung der EU-Richtlinie für digitale Inhalte und,\nDienstleistungen.\nUnd äh was das bedeutet ist, digitale Produkte kann man jetzt quasi zurückgeben und zwar auch die äh sogenannten kostenlosen, wo du nicht mit Geld bezahlst, sondern mit deinen Daten.\nJa, da gibt's also quasi ein Rückgaberecht und,\nähm da quasi so Updates im Durchschnitt für fünf Jahre müssen ungefähr äh bereitgestellt werden,\nne ähm bei Mängeln an dem Produkt gibt's dann eine längere Beweislastumkehr.\nUnd das heißt, hier wird jetzt zum ersten Mal so ein gewisser,\nAnspruch ähm auf die Software, die du irgendwie als Kunde dir andrehen lässt. Äh gültig und auch rechtlich durchsetzbar und als Markt,\nÄh Markt erfordernis äh definiert und das ist schon mal ein guter Schritt in die richtige Richtung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:30",
+      "text": "Richtig verstanden habe, gilt diese äh Beweislast-Umkehr jetzt gar nicht mal nur für diese digitalen Produkte, sondern generell ist das sozusagen jetzt eine Abkehr von dem bisher gültigen sechs Monaten auf äh einen Monat, also was so die Gewährleistung\nbetrifft aber das gilt natürlich auch hier. Äh ich würde noch ergänzen, dass\nin dem Gesetz nicht genau festgelegt ist, wie lange diese Update-Pflicht ist, sondern dass sie quasi in so einer Kalkulation davon\nausgegangen sind, dass so fünf Jahre, so das ist, von dem sie annehmen, dass es irgendwie okay ist, aber es ist halt jetzt noch nicht fest geregelt. Was das dann bedeutet, muss man mal schauen, weil das bedeutet ja, dass es jetzt zwangsläufig dann vor Gerichten entschieden werden muss.\nDenn jetzt hier sozusagen noch ein Update hm Verpflichtung besteht für das eine oder andere Produkt äh frage mich halt auch, wie das dann letztlich verankert wird, weil man irgendeine Richtlinie muss es ja geben, sonst würde das ja dann eben erst in den nächsten Jahren mit\nentsprechenden Entscheidungen\nbei Gerichten quasi nachträglich festgestellt werden, sodass man sagt, was weiß ich, DSL Rauter muss mindestens fünf Jahre, aber dein äh Christmas Light ähm reicht auch irgendwie zwei Jahre oder so, ne.\nUnd das äh erscheint mir noch ein bisschen unklar zu sein, aber äh schon mal besser, dass es das jetzt grundsätzlich gibt und jetzt muss man halt gucken, wie das ausgestattet wird."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:51",
+      "text": "Genau, das muss jetzt mal ausgemalt werden. Also das ist ein Schritt in die richtige Richtung, sicherlich noch nicht in der vollen Stränge, aber hier gibt's jetzt mal vernünftigen Verbraucher oder hier gibt's jetzt mal überhaupt eine Basis,\nfür den Verbraucherschutz und ähm das ist auch muss man sagen eine Forderung die wir sehr lange schon äh hatten,\nund ähm das wird sicherlich nicht uninteressant.\nIch würde aber auf jeden Fall auch sagen, da muss wird jetzt noch in wahrscheinlich in tja die die wie nennt man das denn dann? Die das gelebte Recht muss man dann jetzt mal noch sehen.\nUnd dann werden sich sicherlich auch irgendwelche Anpassungen, Ergänzungen oder so was in in den nächsten Jahren ergeben. Ist ja häufig.\nNicht so gute Nachricht, Tim. Äh wir wollen ja, dass das äh Coronavirus endemisch wird. Aber jetzt äh geht es offenbar auch darum, dass die Corona-Apps endemisch werden wollen.\nUnd da haben sich jetzt tatsächlich hm einige ja ich will mal sagen interessante ähm Entwicklungen ergeben.\nUnd zwar fangen wir mal mit der Corona-Warn-App an. Die hat jetzt in der neusten Version,\nEin Feature, das sich Remote Validation nennt.\nSo, was ist äh was soll das lösen? Also welche Probleme will man hier lösen?\nWenn du also ich ich das beste Beispiel,\nWas wäre von diesem Feature profitieren wird und wer das sicherlich auch äh gerne haben wollte, äh ist eine Airline, ja? Ähm wenn du jetzt mal irgendwie in letzter Zeit geflogen bist, äh die Airline-Situation ist so, du buchst dieses Ticket, die sagen dir dann, okay, pass auf\nBeachte bitte die geltenden Einreisebestimmungen. Die informieren dich natürlich auch so gut wie möglich darüber und sagen, was mal hier guckst du beim Auswärtigen Amt oder sonst was.\nAber was äh regelmäßig zu chaotischen Situationen führt, ist wenn zum Beispiel ein Land sich jetzt mal.\nRelativ kurzfristig entschieden hat, was weiß ich, bei Einreise aus Deutschland verlangen wir einen ähm PCR-Test.\nUnd wir verpflichten übrigens auch die Airlines, die dieses das Vorliegen dieses PCR-Test vorher zu prüfen. Ja, dann bist du in der Situation, dass beim Boarding.\nDas Personal, das normalerweise einfach nur kurz guckt, dass äh weißt du, wenn bei uns Senatorin früher einsteigen dürfen, so ungefähr, ja, die müssen jetzt auf einmal,\ndie,\nImpfpässe noch kontrollieren oder potenziell PCR-Nachweise und was nicht alles. Und da hast du natürlich dann Kulleraugen, weil irgendwelche Leute haben das Memo wieder nicht gekriegt und dann dürfen die nicht mitfliegen und so weiter und so fort. Deswegen.\nJa, also Problemstellung, wir würden gerne bei der Buchung eines Tickets beispielsweise online.\nUnd schon mal das Vorliegen eines Impfnachweises bestätigen lassen und diesen prüfen\nwas da heute gemacht wird, weil es keine andere Lösung gibt, ist, mache bitte einen Screenshot, ne oder ein Foto von,\ndem äh QR-Code, den du da hast, lad das irgendwie hoch. Ähm Spanien beispielsweise hat dafür eine eigenes Webportal beziehungsweise eine eigene App, aber letztendlich der einzige Weg, den sie haben, ist ähm,\nschickt bitte also machen Screenshot oder QR-Code oder sowas, so lade den hoch, ne. Ähm,\nTicketverkauf ist das Gleiche, deswegen lass uns einfach mal beim beim Flug bleiben für das Beispiel, damit's nicht äh allzu viel allzu komplizierter wird, weil der Flug ist gleichzeitig auch schon der komplizierteste Fall. So ähm.\nDas ist das Problem, was Sie gerne lösen möchten, ja? Ähm was gefällt Ihnen am Status Quonig? Na ja,\nletztendlich eigentlich nur, dass es halt umständlich ist, Screenshot hochladen und so weiter, ne? Also ist ein Prozess, der jetzt sage ich mal\nviele Menschen potenziell äh überfordert, ja oder eine hohe Anforderung ist. Das heißt, man möchte hier die Usability ähm erhöhen\nund dann ergibt sich natürlich auch das Problem.\nWer ist jetzt eigentlich verantwortlich dafür, dass diese Prüfung auch ordnungsgemäß stattfindet und zwar diese Remote-Prüfung? Ähm,\nLetztendlich in dem QR-Code steht ja nur drin, ne Personenname, Impfstatus, ähm Geburtsdatum, glaube ich, und ähm dann halt eine Signatur dahinter, ja und,\nMan könnte jetzt zum Beispiel die erste Möglichkeit diesen Prozess zu vereinfachen, wäre, dass man nicht einen QR-Code hochladen muss, sondern einfach den textlichen Inhalt des QR-Codes.\nDer den anderen zugänglich macht, ne? Das wäre so die der erste Schritt der Vereinfachung, weil dann sparst du dir auf der Verifikationsseite schon mal den\nQR-Code äh Dekoder, ja? Also kannst du kannst du sehr viel Ressourcen sparen und Ärger sparen, wenn du einfach sagst, okay,\nSchick mal bitte den String."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:22",
+      "text": "Ist schon gescannt sozusagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:24",
+      "text": "Ja, das äh der QR-Code ist ja quasi eine Komplizierung der Angelegenheit. Ja ähm so da was da welches Problem bleibt.\nDu hast jetzt eine Sammlung von Gesundheitsdaten bei diesen Privatanbietern.\nKeiner weiß, wer die sind, was die machen, wie sie die speichern. Die haben im Zweifelsfall auch keine Lust,\njetzt auf einmal andere DSGVO Geschichten zu haben, weil sie mit Gesundheitsdaten agieren, ja? Und zweitens,\nWer bürgt den, also wer gibt denen die Software, die garantiert? Du hast das richtig geprüft, weil was ist denn, wenn die jetzt aus irgendwelchen Gründen irgendeine veraltete Version des Checks machen und irgendein Zertifikat falsch\nanerkennen\nja? Oder fälschlicherweise ablehnen und ne also immer wenn die da eine falsche Entscheidung treffen würden, kann die potenziell sehr blöde Konsequenzen haben. Ich sage nicht, dass das wahrscheinlich ist, dass dieser Fall auch eintritt. Ich sage nur, dass sich natürlich jeder juristisch darum.\nErgard, wenn das der Fall ist. So, ich denke, das ist das, das ist jetzt der äh das ist so das.\nAnwendungsgebiet, ja? Es gibt ähm Anbieter, allen voran die Airlines, aber nicht nur, die gerne dieses Feature hätten. Es gibt ähm,\nPersonen, die an ein in Einlassschlangen stehen, die sich auch freuen, wenn Sachen zügiger gehen.\nUnd ähm jetzt könnte man sagen, ich habe ja gerade mal so naiv gesagt, dann nimmst du einfach den String aus dem QR-Code und schickst den rüber und,\nlässt den dort verifizieren ja? Jetzt,\nhättest du aber äh also jetzt ist noch die Frage, wie schaffst du das jetzt, den darüber zu schicken? Da muss man natürlich irgendwie ein Protokoll definieren, ne? Könnte man sagen, na du, du zeigst einen QR-Code\nder dann für die Corona-Warn-App der Endpunkt ist, wo die dann eben mal kurz ihren Impf-String hinschickt und Problem, die aufmerksame Hörerin erinnert sich direkt an der ID Wallet. Ja, das ist nämlich, wenn man so was dann mit QR-Codes macht, dann kann jeder da irgendwie\nIrgendwohin Staaten schicken lassen und dann hast du potenziell da eine Sicherheitslücke. Also, was haben sich die.\nCWA-Leute und übrigens nicht nur die, sondern auch direkt auf Höhe der Europäischen Union. Überlegt, na ja, wir machen einfach,\nTrusted Validation Services.\nJa also nee du schickst nicht deinen Impfpass direkt an den Anbieter, wo er dann entsprechenden äh Problemen unterliegt, dass der den vielleicht scheiße prüft oder wie er da rechtlich ist oder die Daten zu lange speichert oder oder oder. Sondern.\nWir machen dazwischen einen Service, der quasi diese Validierung vornimmt. Wir machen in der Corona-Warn-App stellen wir sicher, dass sie nur mit autorisierten Services redet und auch nur denen ihren ähm\nImpfstatus verrät, ja, also den Impfpass mitteilt und so weiter und die teilen dann wiederum dem anderen Ende mit, jo, alles klar, hier äh diese Person, wir wir bestätigen hiermit das\nPerson XY gerade einen Impfpass folgender Provenienz äh vorgelegt hat, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:38",
+      "text": "Oder generell einfach die Anforderungen, die in dem Fall äh erfüllt werden müssen, dass die erfüllt werden, ohne weitere Details zu nennen. Einfach nur ein Passshow oder Pass."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:25:46",
+      "text": "Richtig richtig so. Also ne es soll ein Valleyation Service.\nUnd ähm man muss jetzt dazu sagen, äh der der der Test, den der macht ist relativ einfach, der muss halt nur sicher sein, ne und du hast es gerade gesagt, es gibt ja unterschiedliche,\nRulesets. Deswegen habe ich jetzt auch immer direkt mit den Airlines angefangen, weil die könnten potenziell,\nne? Für jedes Land sagen okay pass auf, mit dem Impfpass kannst du nach ähm was weiß ich nach Portugal darfst du aber äh nach Spanien nicht oder ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:22",
+      "text": "Nach China nicht, ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:23",
+      "text": "Nach China nicht oder äh äh und so weiter.\nDann könnte man das natürlich auch noch ausbauen, weil es gibt ja auch äh quasi standardisierte PCR-Tests äh äh Signaturen und so weiter, ne. Soweit äh die Idee. So. Ähm.\nDiese Möglichkeit, das zu unterstützen, ist jetzt mit dem neuen Update in der Corona-Warn-App schon drin.\nAllein es gibt noch keinen zertifizierten Anbieter eines solchen Veliation Service.\nEs gibt allerdings ein Unternehmen, das\nschon einen gebaut hat und von dem das BMG angekündigt hat, dass dieses Unternehmen einen Validation Service bereitstellen wird\nauch wenn das BMG diesen Service noch nicht abgenommen und freigegeben hat und dieses Unternehmen ist.\nDie auch die Corona-Warn-App bauen im Auftrag des BMG."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:26",
+      "text": "Also nicht genau die App, sondern die Backend-Infrastruktur vor allem machen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:31",
+      "text": "Aber die an dem Projekt beteiligt sind, so. Und dieser Validation Service wird.\nÄh B2B angeboten. Also wird dann anderen ähm Unternehmen, die jetzt beispielsweise einer Airline, die Interesse daran hat, diese Funktion zu benutzen, letztendlich halt eine API bereitstellen, das ganze Asso-Service.\nVerkaufen. Das heißt ausgerechnet T-Sistance hat jetzt einen zweiten Business Case außerhalb der Corona-Warn-App in Richtung von.\nJa in in Richtung von B to B angeboten. Noch dazu,\nwird hier jetzt eben, was also was ist dieser Service? Man kann jetzt auch an der,\nArchitektur ja man kann dadran rummeckern, man kann auch sagen es gibt viele andere Möglichkeiten das gleiche Ziel zu erreichen ja ohne einen äh zentralen Veliation Server,\nJa? Ähm die wurden hier aber nicht gebaut und ich glaube auch nicht, dass die das eigentliche Problem.\nLösen würden. Also weil,\nich interpretiere, dass ihr das das große Problem ist quasi die Rechtssicherheit, ja? Also diese Validation Service\nden schreibe ich dir an einem Tag in Python, ne? Das ist wirklich jetzt nicht das Problem. Die ganzen Librarys zur Prüfung von Impfzertifikaten gibt's ja. Äh die ähm\näh Ruolsets musst du dann da reinlehnen, musst laden musst dich vielleicht noch ein bisschen mit Revocation auseinandersetzen, bisschen Management drumherum. Der technische Teil ist nicht das Problem.\nDen aber immer aktuell zu halten.\nUnd auch auf Änderungen dynamisch reagieren zu können und den in einer Weise zu betreiben, dass du ihn als Dienstleistung anderen gegenüber mit potentieller,\nVerfügbarkeits ähm Garantie und ähm Haftung für Fehler,\nNichtverfügbarkeit bereitstellen kannst. Da ist natürlich die Musik drin Geld zu verdienen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:29:35",
+      "text": "Es könnte unter Umständen noch weitere, ich bin mir jetzt nicht ganz so sicher, wie das jetzt in der ersten Phase ist, aber in diesem ganzen Zusammenspiel gehört ja zum Beispiel auch die Überprüfung im Kontext eines Ausweisdokuments noch mit dazu. Das kann also sehr wohl sein, dass sich\ndieser ganze Vorgang an der Stelle noch etwas komplexer darstellt, entweder mit Unterlagen, die vorhin dem, in dem Fall halt dem Flug\nUnternehmen äh kommen oder eben die noch äh von anderer Seite von dem\nUser geliefert werden muss. Ich erinnere an diese ganzen Verification-Dienste, die es ja heute schon gibt, um so Accounts zu öffnen oder postedent und all diese ganzen äh Sachen kann kann kann sehr wohl sein, dass das dann halt auch noch Teil der Überprüfung wird und weit mehr ist als jetzt nur ein QR-Code zu scannen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:30:21",
+      "text": "Da hast du eine schöne Idee. Ich denke allerdings also du wirst eine Sache nicht rauskriegen aus diesem ganzen Prozess, egal was du machst. Du musst an,\nbleiben wir beim Flugzeug. Du musst beim Boarding feststellen, dass das auch wirklich die Person ist. Also selbst wenn du schon vorher,\nden äh Impfpass hast und wenn du jetzt was vielleicht,\nklug klingt, aber eigentlich keinen Mehrwert bietet, sogar noch einen Posten machst, oder ein Video-Edent oder was auch immer, ja? Da muss in dem Moment, wo du den Einlass regelst, wirst du den Ausweis kontrollieren müssen.\nUnd.\nDa sind wir jetzt wieder auch bei dem tatsächlichen Aspekt. Wenn du das trotzdem ohnehin noch tun musst, dann ist dieser gesamte Effizienzgewinn natürlich auch um einiges geringer.\nJa, weil du musst trotzdem, ne, dein dein Check-in-Prozess, wo du jetzt gerade ergänzt, um Ausweis zeigen, ja. Ähm,\nklar, Impfpass könntest du jetzt potenziell äh dann aus dieser,\nGleichung rausnehmen, also ein Drittel deiner Überprüfungsaufgaben entfällt. Normalerweise musst du, was weiß ich, Ticket äh Impfpassausweis, ja? Das könntest du jetzt äh reduzieren auf Ticket und ähm Ausweis."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:41",
+      "text": "Gut, aber es geht ja auch dadrum, sowas im Vorfeld schon zu checken, damit das eben gar nicht erst noch zusätzlich mit dazukommt. Äh und der Prozess bleibt halt so, wie er immer ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:31:50",
+      "text": "Was du sagen möchtest ist, es geht darum, dass sie den Menschen die Situation ersparen, dass sie irgendwo am Flughafen stehen und ähm,\nja verärgert sind. Und es geht darum äh Prozess äh Einlass natürlich schneller äh zu ähm ermöglichen. Aber Ziel schneller zu ermöglichen. Du hast weiterhin das Problem der äh der Ausweiskontrolle.\nDaran anschließend.\nKommt jetzt mein entscheidender Punkt. Dieses Business-Modell wird natürlich nicht nur einer Airline angeboten werden, die.\nIn gewisser Form.\nKeinen größeren Schaden anrichtet, dadurch, dass sie ein solches Feature umsetzt, weil sie ohnehin die Person namentlich ähm erfasst hat und quasi ähm,\nja nicht nicht viel mehr Schaden macht, außer, dass sie das hier, dass sie jetzt nochmal alle Kunden durch einen zentralen oder einen von wenigen zentralen Anbietern durchpeipt,\nder dann von allen, die dort buchen, auch weiß, dass sie's tun. Ja, dass äh der Kritikpunkt an dieser zentralen Architektur. In meinen Augen beginnt das Problem dann, wenn andere Anbieterinnen.\nDiese Funktionalität übernehmen, die zum heutigen Zeitpunkt noch keine namentliches Ticketing haben. Also, Konzert.\nFußball. Tim Fußball kennst du, ne? Interessiert dich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:21",
+      "text": "Haben aber namentliches Ticketing."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:23",
+      "text": "Werder Bremen, was du da immer guckst, ne? Und ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:27",
+      "text": "Die haben aber namentliches Ticketing."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:31",
+      "text": "Ja bei bei deinen Dauerkarten ein normaler Hooligan, ein normaler Hooligan kann sich immer noch ein Ticket am am am U-Bahnhof beim Schwarzhändler kaufen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:39",
+      "text": "In den letzten zwei Jahren nicht. Corona alles komplett immer."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:33:42",
+      "text": "Zwei Jahren nicht, ist ja genau der Punkt. Da da genau darüber rede ich ja jetzt gerade so. Wir haben äh wir führen jetzt\nmit diesem Feature potenziell äh namentliches äh Ticketing ein und es gibt eine ganze Menge Leute, die da durchaus auch daran Interesse haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:59",
+      "text": "Ja gut, aber das namentliche Ticketing haben wir schon. Also es wird jetzt nicht durch dieses Feature äh ermöglicht, sondern das ist ja sozusagen jetzt schon da."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:06",
+      "text": "Wird aber dadurch zementiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:08",
+      "text": "Ja, gut, weiß ich nicht. Vielleicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:10",
+      "text": "Also es gibt eine ganze Reihe äh Veranstaltungen also.\nEs gibt eine ganze Reihe Veranstaltungen, da gibt es kein namentliches Ticketing. Klar, äh beim Fußball, da will ich auch wo wo die ganze Zeit irgendwelche Rechtsradikalen, Gewaltverbrecher irgendwie äh hingehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:28",
+      "text": "Dich. Nenn mir mal ein Beispiel. Also ich kenne jetzt gar keine einzige Veranstaltung in den letzten zwei Jahren, wo nicht namentliches Ticketing war."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:36",
+      "text": "Spreche gerade äh spezifisch davon, du hast gesagt, in zwei Monaten ist die Pandemie vorbei."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:41",
+      "text": "Wenn die Pandemie vorbei ist, brauchen wir auch die Überprüfung dieser Zertifikate nicht mehr."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:45",
+      "text": "Aber du wirst das namentliche Ticketing nicht mehr los, was du jetzt damit ausrollst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:51",
+      "text": "So, weiß nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:34:54",
+      "text": "Inklusive Ausweiskontrolle am Einlass. Also das ist keine gute Idee. Das ist keine also um's kurz zusammenzufassen. Namentliches Ticketing.\nIn den Bereichen, wo es vor der Pandemie und in zwei Monaten, wenn die Themen in Übereinstimmung wenn die wenn die Pandemie in der übereinstehenden.\nWenn die Pandemie in Übereinstimmung mit Tims Prophezeiung dann vorbei ist, dann wird man's hoffentlich auch nicht mehr brauchen. Aber.\nDenke nicht, dass das etwas ist, wo man sich ohne ähm Not reindrängen sollte, nur um irgendwie potenziell hier diesen äh Check-In-Vorgang äh etwas zu vereinfachen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:36",
+      "text": "Ja gut, also ich ich teile deine deine Bewertung nur nur,\nteilweise, weil ähm das Problem mit haben wir eine Verpflichtung zu namentlicher Bestellung und Teilnahme an Veranstaltungen oder können die anonym stattfinden, wie sie's vorher gemacht haben. Ist so das eine. In diesem Fall ist dieser Dienst ja sozusagen\näh nicht der Schalter, der das ein oder ausschaltet, sondern der ja nur die Überprüfung dieser Corona-Zertifikate\nextern macht, die sonst halt von dem Dienst äh selbst gemacht werden müssten. Also ich sehe da jetzt diesen unmittelbaren Zusammenhang\näh nicht so klar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:36:18",
+      "text": "Ja, okay, dann hast du deinen Punkt gebracht. Ich habe ihn jetzt auch gebracht, ja. Ähm ich denke,\ndass äh es dass es hier mehrere Forderungen ergeben.\nErstens und jetzt erstmal unabhängig von der Architektur. Dass Feature darf nicht verpflichtend sein. Du musst auch einfach sagen können, ich möchte,\nwas weiß ich daran nicht teilnehmen und bestehe auf einer äh Impfmaßkontrolle am Einlass,\nUnd zweitens, wer heute keine namentliche Erfassung hat oder vor zwei Jahren keine hatte\nsollte sie jetzt nicht einführen beziehungsweise in den zwei Monaten\näh die du der Pandemie noch gibst, dann auch äh wieder absetzen. Ja, das ist schon ein äh genereller Gewinn,\ndass wir äh die meisten Orte betreten können ohne ähm Ausweis.\nErfassung und es macht einen entscheidenden Unterschied, dass ich heute von mir aus an irgendeinem Restaurant jemandem,\nsolange ich nicht an irgendeinen Kölner Wirt gelange, jemanden kurz nachweise, dass ich geimpft bin.\nDieses Restaurant aber nicht speichert, äh wer ich bin und dass ich da war. Ja, also ich ich reserviere meinen Tisch auf Mickey Mouse,\ngehe hin, zeige mein äh Linus Neumann im Impfausweis und mein äh Personalausweis. Ähm und bin aber jetzt nicht dort erfasst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:50",
+      "text": "Mickey Mouse, du bist das. Habe ich doch schon öfter gesehen in der Liste. Jetzt jetzt weiß ich endlich mal, wer da."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:37:55",
+      "text": "Luca ruft auch andauernd an. Nein und äh das ist ein Unterschied. Ja und das ist ein entscheidender Unterschied, ob diese namentliche Erfassung stattfindet.\nOder,\nob äh du ob die ob eine Prüfung des Impfstatus stattfindet und das ist äh ja das ist ein entscheidender Unterschied. Das ist äh ein ähm ja ein fundamentale Änderung dessen, wie das hier,\npassiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:24",
+      "text": "Ja gut, aber ich meine, dieser Dienst lagert ja im Prinzip nur die Überprüfung aus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:28",
+      "text": "Nein, das ist ja sorry Tim, das ist ja genau das, das ist ja genau mein Argument. Der lagert nur die äh Überprüfung aus und du, der den Dienst nutzt, musst am Ende den Ausweis am Einlass kontrollieren, also musst du namentlich erfassen, wer kommt.\nDas musstest du vorher nicht, wenn du den Dienst nicht nutzt und sagst, ich mache ein äh Musikfestival."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:49",
+      "text": "So, du du befürchtest jetzt sozusagen eine generelle Verpflichtung, dass man den in allen Fällen immer benutzen muss. So habe ich das nicht verstanden, sondern."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:38:58",
+      "text": "Nee, du musst mir schon zuhören. Ich habe gesagt, also erstens ja, natürlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:00",
+      "text": "Ich muss dir jetzt auch noch zuhören. Was was was bringt dieses Jahr denn noch an äh Verschlimmbesserungen?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:05",
+      "text": "So läuft das hier. Also, ich habe spezifisch hergesagt, also ich habe gerade gesagt, bei einer Airline sehe ich kein Problem, weil die Airline ohnehin dein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:17",
+      "text": "Sowieso machen muss. Okay, gut, alles klar. Jetzt habe ich seinen Punkt auch verstanden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:21",
+      "text": "Deswegen habe ich das mit der Airline die ganze Zeit durchgesprochen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:24",
+      "text": "Okay du Fuchs."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:39:25",
+      "text": "Die Airline erfasst ohnehin Länder, PNR und so weiter, ja? Die Airline hat außerdem potentiell wechselnde Routets und so weiter.\nDas heißt, bei der Airline kannst du das verstehen. Für eine Airline ändert sich durch das, was jetzt passiert, dass es,\nDass Sie Geld an einen Till system Service bezahlen kann, wenn Sie das möchte,\nUnd dieser T-System Service ähm potenziell würde ich jetzt mal schätzen, dass IBM Ubid äh hier nichts senio oder irgendjemand wird so was vielleicht auch noch anbieten, aber besonders viele Konkurrenten wird's da nicht geben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:59",
+      "text": "Wollen wir nicht mitmachen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:01",
+      "text": "Nee ähm so äh dieser Service weiß aber dann zum Beispiel ne oder kann wissen, äh was weiß ich, Tim hat sich grade gegenüber der Ryanair oder mit wem du fliegst. Ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:15",
+      "text": "Bestimmt nicht. Das kann ich dir versichern. Also ich äh wenn ich wenn ich die Möglichkeit habe und ich habe sie meistens ja, dann verzichte ich immer auf Ryanair."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:27",
+      "text": "So hat sich gegenüber hier Etihad äh ausgewiesen. Ähm und ne, du hättest du hast also jetzt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:36",
+      "text": "Willst du damit sagen, dass ich immer Luxusklasse fliege oder was?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:40:39",
+      "text": "Etat ist, naja weiß ich nicht, das ist ein Air-Berlin-Verschnitt, oder? Na ja, jedenfalls die ähm du du hast jetzt einen weiteren Service, wo potenziell zentralisiert,\nDaten anfallen, ja? Oder wenn wenn man jetzt sagt, na ja, es gibt ja mehrere Services, da hast du trotzdem keine freie Wahl, weil ja der,\nDer Anbieter, wo du dann dein Ticket buchst\ndiese Wahl trifft und T-Systems hat eben hier jetzt sicherlich einen nennenswerten Marktvorteil, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:10",
+      "text": "Ja, das auf jeden Fall. Ist mir dann aber auch egal."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:41:13",
+      "text": "So und.\nJetzt frag, jetzt kommt denn der nächste Punkt, ja? Also nur mal so das Ausmaß dieser ganzen Sache mal darzustellen.\nEinen neuen Gesundheitsminister und ähm der alte Gesundheitsminister hieß ja Spahn und der Herr Spahn war in der CDU und die CDU ist ja so eine.\nSo eine Bromi-Partei, ja, das heißt, der hat sich natürlich da äh seine Leute, seine treuen CDU-Homies äh reingeholt\nund das für die Digitalisierung im Gesundheitswesen zuständig und damit auch für die Corona-Warn-App war Gottfried Ludewig.\nDer früher mal äh Vorsitzender der Jungen Union war.\nUnd dieser Gottfried Ludewig ist jetzt natürlich im BMG unter äh Lauterbach besetzt seine äh Besetzte, wahrscheinlich jetzt, sage ich mal, die zentralen Stellen, die ja mit kompetenten Leuten und deswegen musste der Ludewick jetzt wahrscheinlich gehen,\nund der arbeitet aber jetzt der hat jetzt einen Job bei in genau diesem Gesundheitsding. Das heißt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:22",
+      "text": "Überraschung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:42:23",
+      "text": "Ludewig wird jetzt mehr oder weniger bei den Leuten arbeiten, die mit Remote-Veditation einen B2B-Service-modell äh auf Basis der,\nbis dahin immer hochgelobten Corona-Warn-App haben. So, ich verstehe nicht, warum man einen solchen,\nRufschaden an diesem Projekt ähm riskieren muss, ja ähm.\nIch glaube, wie gesagt, es gibt Vorschläge, man kann das auch ohne Einigation Service machen. Du kannst ja irgendwie sagen, keine Ahnung ähm.\nSowas wie du prüfst den QR-Code, also dir wird ein QR-Code mit einem Ruleset gegeben. Die Corona-Warn-App checkt, ob du gegen dieses ob du diesen Ruleset entsprichst. Das ist eine Funktion, die hat sie schon. Du kannst heute deinen ähm,\nAlso wenn du heute sagst, ich möchte meine äh Gültigkeit für eine Reise prüfen, dann wird letztendlich einfach nur das aktuelle des Zielortes genommen, ja? Das heißt, der Code ist schon da, gegen Ruleset prüfen. Der ist in der Corona-Warn-App drin.\nUnd du könntest quasi auch einfach ein System bauen, in dem du jetzt quasi, in dem die Airline sagt, hier ist dein Ruleset, scann das mal, QR Code in der Corona-Warn-App. Dann sagt die Corona-Warn-App, alles klar, das ist eine für eine Reise da und da hin. Du entsprichst dem,\nund dann könntest du noch in den QR-Code irgendeinen,\nähm irgendeinen ähm random Quarterback mit reinnehmen, wo die Corona-Warn-App, den die dann aufruft und sagt, jo übrigens, ich habe geprüft, Person, die Person, die jetzt grade gescannt hat,\nentspricht diesem ja? Und dann hättest du diesen Teil gelöst ohne einen zentralen Velitation Service. Problem,\nwenn da irgendetwas schiefgeht und sich die Regeln ändern, weißt du halt nicht, was du machen sollst. Aber man kann.\nEin solches Feature auch bauen ohne dass dabei ein Business Case entsteht für,\nServices. Das ist äh ein Fakt.\nKann man natürlich sagen, okay, wenn du den QR-Code selber äh dekodierst, könntest du diesen Endpunkt auch einfach aufrufen und damit könntest du quasi, ne.\nFälschen, dass du einen Impfpass hast, der wir dabei eh am Eingang nochmal kontrolliert. So, wäre jetzt eine Möglichkeit, das Ganze ähm dezentral zu bauen.\nDie hätte und das glaube ich ist der andere Punkt net was die Leute haben wollen ist Rechtssicherheit die hätte es in diesem Fall nicht.\nWäre also hier theoretisch möglich, dass du äh ja lieber dein äh Impfausweis äh lügst.\nGrundsätzlich würde ich sagen, dass wir das überhaupt brauchen,\nDass man da jetzt einen Velidation Service braucht, liegt eigentlich daran, dass man nicht mit dem Impfzertifikat den Leuten einfach auch ein Secret gegeben hat, ja? Kriegst du jetzt nicht mehr ausgerollt, aber du könntest ja theoretisch einfach auch ähm ein Secret-Key haben, mit dem du Sachen signierst\nJa und dann signierst du eben, dass du einem äh Woolset entsprichst,\nhaben wir hier diese Sache mit dem Service und der stinkt einfach, ne? Also namentliche Registrierung wird ermutigt. Wie gesagt, da wo sie ohnehin schon stattfindet, entsteht kein größerer Schaden, da wo sie noch nicht stattfindet. Lecken sich die Leute jetzt die Finger.\nUnd sagen.\nZu meinem Festival könnte ich immer namentliche Erfassungen machen, weil vielleicht möchte ich ja einfach den Schwarzmarkt versuchen trocken zu legen.\nZweitens ähm ich spare mir Zeit am Einlass, also sammle ich mal eben von allen Leuten äh die.\nNamen nach Personalausweis und macht die Welle macht die äh Impfpass-Verifizierung über so einen Service. Alle\nhappy, weil ähm ja Einlasspotentiell ein bisschen schneller geht. Tickets im äh Zweitmarkt nicht so teuer werden.\nUnd äh alles gut. Das heißt, hier entsteht jetzt ein großer Incentive für namentliches Ticketing und namentliches Ticketing ist, sage ich mal, nicht,\nim Interesse der Besucherinnen und Besucher. Und diese Drehtür mit dem Judeweg, Mann ey. Aber okay, Gottfried Ludewig hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:32",
+      "text": "Das noch groß auf? Also ich meine, das ist ähm.\nIst halt so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:46:38",
+      "text": "Ich find's halt schon ich habe ähm diese die Corona-Warn-App hat verdient.\n'ne ganze Menge Vorschussvertrauen bekommen als sie gelauncht ist ja und.\nSie ist äh ne dezentral anonym und schnell. Sie ist eine elegante Lösung mit dem\nExposian-Notivation Framework. Sie hat sehr viele Vorteile. Sie hat dann sogar noch äh angelehnt an Crowd Notifire, den die schnelle Notification für Orte,\neingebaut, allerdings zu spät, ja es stand es entstand diese Marktlücke, in die dann die Luca App gesprungen ist, aber die Corona-Warn-App hat auch hier,\nüberlegene Lösung und jetzt so am Ende kommt auf einmal so ein Ding rum, ja? Und jetzt musst du äh äh dir halt überlegen wie geht man damit um? Deswegen also ich kann nur sagen\nich also ich verstehe dieses Feature wird kommen.\nDas wirst du jetzt nicht mehr. Also dafür ist der Bedarf allein auf Seiten der Airlines groß genug und auch der Bedarf von T-Systems noch weiter Geld zu verdienen, ja. Ähm\nwann wird's da nicht mehr rauskriegen?\nAus der äh Corona-Warn-App und wenn, dann wird's halt in die Luca App eingebaut und die freuen sich. Ja, also haste nix von. Also es wird Remote Veliation geben. Es wird ein Geschäftsmodell sein. Ähm.\nInsofern denke ich, kann man jetzt nur,\nSchadensbegrenzung machen, indem man wie gesagt fordert OK erstens du kannst die Leute nicht dazu verpflichten, die müssen Anspruch haben auf äh Impfpasskontrolle an Ort und Stelle. Der Ausweis muss sowieso immer noch kontrolliert werden, insofern ist das jetzt auch nicht so tragisch.\nUnd zweitens, diejenigen, die vor zwei Jahren noch keine namentliche Registrierung hatten, äh sollten diese jetzt auch nicht deswegen einführen.\nWeil,\nne? Kommt irgendwann jemand vorbei, holt euch die Daten da raus und das ist einfach uncool, ja? Und das sind auch die Dinge, vor denen ja äh zu Recht,\ngewarnt wurde,\nmit den ganzen Impffesten und so, dass gesagt wurde, ey dann wird man überall muss man seinen Ausweis zeigen, wird kontrolliert und so weiter, ja und dass das damit eine Überwachung,\nentstehen kann. Ja oder also Überwachung im Sinne von große, zentrale Datensammlungen, unklarer Provenienz. Und ähm.\nGenau das passiert jetzt, ja? Noch dazu, also dass sich T-Systems da jetzt ein Business-Model raus spinnt aus der aus der Corona-Warn-App.\nEinfach nicht schön, ja. Also da wird einfach dieses Vorschussvertrauen ähm enttäuscht und jetzt kommt's, jetzt liest du, ich habe ja wie gesagt, wir sprechen ja über diese Sache Contact Racing wird ein ddemisch, jetzt liest du nämlich äh die Verträge,\nfür die Corona-Warnapp wurden jetzt ähm verlängert. Ja Bundesgesundheitsministerium hat den\nlaufenden Vertrag mit Telekom und SAP ähm.\nBis zum 31. Dezember 222 verlängert. Äh kostet nochmal 25 Millionen Euro. Ähm,\nkurz vor der Bundestagswahl haben Sie diese Verlängerungsoption äh gezogen und ähm.\nDann wird hier im im Spiegel zitiert ähm dass man sich quasi ähm,\ndarüber Gedanken macht, wie man äh nach Omikron und nach der Pandemie mit der Corona-Warn-App weitermacht.\nÄh die Corona-Warnapp soll, wenn es nach ihnen geht, überleben, sie sei die erfolgreichste öffentliche App aller Zeiten, mit dutzenden Steuermillionen entwickelt und deshalb viel zu schade,\nfürs Museum der Kommunikation. Äh ich zitiere aus dem Spiegelartikel,\nbereits Ideen für ein zweites Leben, etwa als Bundeswarnapp für den Katastrophenschutz in der bestehende Lösung, wie Katwan und Nina aufgehen könnten, eine andere Idee. Die Warn-App könnte zur Gesundheitsamt werden und dann etwa E-Rezepte bei Apotheken,\neingelöst werden, ja? Eigentlich sollte das schon seit Jahresbeginn flächendeckend möglich sein, aber ja E-Rezept haben sie auch wieder verkackt. Ja, das heißt, jetzt sitzen sie da,\nhaben ne anfangs haben sie hier keine kommerzielle Nutzung dezentral Daten, sondern so weiter, alles schön erfüllt und jetzt,\nkommen natürlich die Begehrlichkeiten, dass man denkt, meine Güte, wir haben hier halt eine Installationsbasis von 40 Millionen. Das wäre doch schade, wenn wir da nicht noch äh weiteres Geld mit verdienen und das ist einfach enttäuschend."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:07",
+      "text": "Na ja, okay, lassen wir die beiden Sachen mal auseinanderhalten. Also das eine ist die Weiterentwicklung als äh App. Das andere ist diese Sache mit Warn und Katastrophen so. Also in dem Katastrophenteil,\ngehe ich sogar mit. Ja, also das macht Sinn, weil derzeit haben wir da einen totalen Wildwuchs und die anderen Apps sind alle furchtbar.\nAlso\nJa, die mögen oder der ein oder anderen Nutzen gezeigt haben, aber im im Wesentlichen kann man det auch alles mal wegwerfen und neu machen und die Installationsbasis mag zwar gegeben sein, aber die ist halt nicht besonders groß. Und dass sie äh an der Stelle jetzt überlegen, okay, selbst wenn\nApple, das Contact Tracing, Framework äh schließen wird und Google, ne, was ja angekündigt haben, wenn Pandemie vorbei ist, also in zwei Monaten, ne, weißt du, ähm,\ndann äh schalten wir das auch ab betriebssystemseitig und dann würde ja quasi diese Funktion entfallen.\nÄhm und dann könnte man ja mit mit der App im Prinzip dann müsste man sie ja nicht komplett einstellen.\nNe, also man könnte ja dann sagen, okay wir nehmen das Feature raus, wird ja dann eh abgeschaltet äh und wir machen aber jetzt was anderes damit. Und wir verwenden das jetzt generell als Warn,\nApp, für Pandemien und sonstige Bedrohungen der Gesellschaft. Habe ich ehrlich gesagt überhaupt gar kein Problem damit. Inwiefern das Ding dann auch als,\nGesundheitswerkzeug funktionieren kann oder sollte. Tja, das\näh hängt natürlich dann sehr davon ab in in in was sie das dann\nmutieren wollen. Wenn sie letzten Endes hier einen Pfad einschlagen wollen, der diese ganzen Designprinzipien und Grundansätze der Corona-Warn-App halt auch für eine öffentliche Infrastru,\nund auch für eine Gesundheitsinfrastruktur weiterentwickelt, würde ich mich dem jetzt gedanklich erstmal auch nicht unbedingt äh verschließen, auch wenn ich mir das doch noch mal genauer anschauen wollen würde, was sie denn dann da tun, ne. Also das Ding kann natürlich dann jetzt nicht\nder persönliche Datenspeicher werden, aber es könnte dann äh natürlich unter Umständen ein Abwicklungswerkzeug werden.\nSo ist eben nicht selber Daten über mich groß speichert.\nIn einem Maße, was jetzt irgendwie über diese persönliche Speicherung, die sie ja heute schon macht, in Form dieser Zertifikate äh hinausgeht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:53:37",
+      "text": "Ja, aber äh das sind ja jetzt äh also da die Dinge, die du jetzt gerade gesagt hast, klar, du hast sie getrennt und man glaube, wir sind uns aber auch darüber einig, dass die Zeichen gerade nicht wirklich in diese Richtung stehen, ja? Dass äh,\ndass die dies die Prinzipien werden ja jetzt bereits mit dieser Nutzung von Services äh verletzt oder äh stark in Frage gestellt und ähm ich würde vielleicht an dieser Stelle,\nÄhm wie gesagt, ich habe ja bereits gesagt, der Punkt ist das ist.\nDas Problem in meinen Augen ist nicht unbedingt diese Remote-Velitation. Ja, die Wahrscheinlichkeit,\ndass ähm zum Beispiel der Bundesdatenschutzbeauftragte Ulrich Kälber noch dafür sorgt, dass es entsprechend äh strenge Auflagen für diese Vediation Services gibt.\nÄhm ist relativ hoch und das jetzt diese Validation Services ausgerechnet,\ndas fette Daten-Leak werden, was der Corona-Warn-App zum Verhängnis wird, wo man dann sieht, wo das Tim doch,\nfliegt. Äh Ryanair, obwohl das ist auch Ryanair ist echt eine Klasse für sich. Aber ähm dann äh äh dass diese Daten verloren gehen, halte ich auch für verhältnismäßig gering, ja.\nÄhm insofern sage ich mal so gewissermaßen ist es ein äh.\nEs ist jetzt nix wo wo ich groß gegen Aufbegehren würde,\naber das, was hier passiert und das ist genau der äh äh dieses Phänomen nennt sich Feature Creep, ja,\nkriechen da jetzt langsam weitere Features rein. Und da haben wir einen Valeation Service und hier, jetzt kannst du irgendwann äh direkt drüber buchen. Diese Dinge\nja? Die und das war auch tatsächlich in den Presseanfragen, die es zu dem Thema bekommen habe. Die Sachen, die man vermeiden wollte,\nIndem man sagt nein, wir machen das hier. Das ist eine App der öffentlichen Hand, die gehorcht nicht kommerziellen Interessen, sondern pandemischer Notwendigkeit.\nUnd äh äh die die die lösten Problem gezielt und elegant und nicht einfach durch irgendeine Plumpe zentrale äh Datensammlung, ja? Und es waren mehrere Journalisten,\nmich im Prinzip angeschrieben haben und gesagt haben, pass mal auf Norman, das war doch eigentlich das, wovor ihr bei der Luca-App die ganze Zeit Angst hatten.\nSie sich da irgendwie andere Business Cases dran zimmern. Und das passiert nun mal hier.\nDann eben damit quasi hier Wallet für alle einfacher ist, kontrollier doch einfach am Einlass nur noch den Personalausweis.\nDas sind einfach keine positiven Entwicklungen. Und die sind wie gesagt es ist jetzt nicht der schlimme Dammbruch, aber irgendwann, wenn man sagt, wo war der Punkt, wo es angefangen hat schief zu gehen? Da wird es genau der gewesen sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:43",
+      "text": "Also,\nokay, also ich äh akzeptiere, dass du das äh äh da warnend so siehst. Sicherlich muss man da genau anschauen. Mir äh fehlt hier noch so ein bisschen das Empörungspotential, einfach aus dem Grund heraus,\nweil ich diesen Validierungsdienst an sich für eine sinnvolle Sache halte, weil\ngrade diese ganze kritische Überprüfung und so weiter eben nicht bei 1tausend Anbietern von irgendwelchen ähm Veranstaltungsdiensten laufen sollte, sondern das eigentlich sehr gut ist, wenn das da nicht ist, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:19",
+      "text": "Da hast du einen guten Punkt. Das muss man nochmal spezifisch anerkennen. Würde man es nicht so machen, sondern stattdessen die Daten irgendwo zentral sammeln.\nJa, dann hättest du im Zweifelsfall, also da wirst du am Ende der Pandemie, also in zwei Monaten, mehr,\nDatenlecks haben als mit diesem einen zentralen Veliation Service, der einmal richtig durchgeputzt wird und unter starken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:44",
+      "text": "Nur stattfindet und so weiter, ne? Und es ist ein Standard und äh ist jetzt sozusagen auch nicht so, dass jetzt nur die Telekom das machen kann, sondern andere können das halt auch machen. Ich glaube auch nicht, dass das jetzt ehrlich gesagt so eine große Goldgrube ist so, sondern das ist für die halt eher\nTeil einer äh Gesamteicht\nwo sie halt überall präsent sein wollen, weil halt Gesundheit für sie ein wichtiger Bereich ist. Ich meine, da gibt's ja auch viel zu digitalisieren. Packen wir's an. Also ich meine, das beklagen wir ja äh auch nachhaltig, dass dass es hier nicht äh vorangeht, sollen die sich da gerne engagieren, solange sie es richtig machen.\nWas ich noch sagen möchte ist, klar Feature-Creep kann ein Problem sein äh,\nDinge können, können jetzt auch falsch laufen bei der Corona-Wahl. Können, können aber auch.\nAnders laufen. Und im Prinzip sehe ich's halt hier so ein bisschen mehr als Chance ähm darauf zu drängen, zu sagen\nerstmal man sollte diese App konkret,\nso weiterentwickeln, dass, sagen wir mal, wenn jetzt Pandemie-Ende ist und nächstes Jahr kommt dann das nächste Virus und man stellt fest, oh, jetzt müssen wir das aber wieder anschalten.\nJa? Dass die App nicht sofort gleich hinten raus purzelt äh aus dem App Store, weil in der Zwischenzeit Sachen reingekommen sind, für die\nandere Updates, entsprechende Apps ja abgelehnt wurden. Also es gab ja das in UK zum Beispiel, wo sie tatsächlich so einen zentralen Speicher äh Ding sie äh rankoppeln wollten. Ich\nsind ja hundert Prozent zusammen was es war, aber dann ist das Update halt von Apple irgendwie und Google glaube ich auch einfach abgelehnt worden so nach dem Motto Leute ihr habt ja euch die Bedingungen nicht,\ngelesen. So äh kommt ihr hier nicht rein, ne. Das heißt, die die App dürfte, wenn sie denn überhaupt wieder in diese Verwendung dieses Exposione-Notification-Framwork reinrutscht, was ja jederzeit passieren könnte.\nÄhm dürfte sie sich eben entsprechend auch gar nicht entwickeln und das ist schon mal ein relativ starkes Argument. Und davon abgesehen.\nVon diesem Detail des Konflikts mit dem äh App Store, die ist uns potenziellen Konflikts mit dem App Store in der Zukunft\ndenke ich auch, dass wir jetzt einen schönen Showcase gehabt haben mit der Corona-Warn-App so nach dem Motto, gucke mal, man kann das halt auch alles mal anders,\nals es bisher gelaufen ist, weil im Vergleich zu dem wie Infrastrukturprojekte gerade im Gesundheitsbereich aber nicht nur dort,\nwir ja oft genug äh zerfleddert. Ähm haben einfach nicht diesen Grad an Transparenz gehabt. Haben nicht diesen Open Source äh teil gehabt, ja. Gut, das äh mag nicht alles von Anfang an funktioniert haben. Trotzdem war die Entwicklung dieser App\nein sehr unterhaltsamer vergleichsweise transparenter Vorgang\nWo man wirklich auch im Zweifelsfall wirklich mal auf GitHub gucken konnte, wie's denn wirklich läuft und ähm das muss eben so als Vorbild auch äh weiterentwickelt werden und ich denke, da steht die Regierung auch unter Druck, das so zu machen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:39",
+      "text": "Hier genau wieder nicht der Fall."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:41",
+      "text": "Wieso? Gibt doch einen Standard."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:43",
+      "text": "Dieses Feature, dieses spezifische Feature wurde dir wurde die Weltöffentlichkeit drüber informiert mit äh mit dem bereit äh Stellen der Dingens. Das ist genau nicht, dass es vorher diskutiert wurde."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:57",
+      "text": "Gut, ich weiß jetzt nicht ehrlich gesagt, wie viele es auf europäischer Ebene diskutiert wurde, ähm kann ich nicht beurteilen. So, aber es ist ja klar definiert, wie es zu funktionieren hat. Also es gibt ja da ein eine Protokollspezifikation."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:01:11",
+      "text": "Ja und die wer hat sich die dahin geschrieben?\nDer hat ja geschrieben. Es ist es ist du willst drehst und wendest. Von von diesen Prinzipien wird da jetzt grade Abstand genommen.\nUnd deswegen markiere ich das ja. Ich sage ja wie gesagt, dieses Feature wird kommen. Ich halte es für unwahrscheinlich, dass da jetzt das große Datenleck entsteht\nIch würde sagen, man wird es nicht verpflichtend machen können oder man sollte es nicht verpflichtend machen und man sollte Anbieterinnen, die keine äh namentliche Erfassung haben, auch nicht unbedingt dazu raten, das jetzt einzuführen.\nEinfach nur, weil es gesellschaftlich das falsche Signal ist und zweitens, weil sie im Zweifelsfall auch mit den Namen\nschon überfordert sind, die sicher äh aufzubewahren und äh die Prinzipien, die du da benennst, die werden gerade verletzt,\nGleichzeitig halte ich es für unwahrscheinlich, dass wir dieses Feature stoppen kann oder stoppen wird.\nUnd auch würde sogar sagen, da gibt's ja dann so diesen Aspekt, ne, Wirtschaftlichkeit und so weiter\nes gibt einfach viele Leute, die das haben wollen und zwar auf Anbieterseite und äh auch auf Kundenseite. Wenn du dir die Leute anguckst am Flughafen\nweißt du Bescheid."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:27",
+      "text": "Okay Leo, du bist jetzt wieder auf diesen Service gegangen. Meine Argumentation, die mit der ich gerade begonnen hatte, bezog sich jetzt mehr auf diesen Aspekt\nwie soll diese App weiterentwickelt werden? In was soll diese App sich künftig unter Umständen weiterentwickel,\nJa, das das war jetzt so eigentlich meine meine Stoßrichtung in dieser Argumentation und ähm das muss man beobachten jetzt. Also ich ähm bin gespannt, aber ich denke halt auch äh jetzt haben wir da schon relativ viel Energie reingesteckt,\nIm Prinzip ist das alles in der Summe ein sehr positives Ergebnis. Das kann man glaube ich nicht von der Hand weisen und ähm das,\nmuss jetzt, daran muss jetzt gearbeitet werden, dass dass das jetzt so ein akzeptierter way of doings wird. Dass dass diese Prinzipien beibehalten werden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:12",
+      "text": "Genau der Satz, den du gerade gesagt hast, der ist äh bei Nexenio auch gefallen, wo wir jetzt halt zum zweiten Thema äh die Corona-Apps werden in dem ich kommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:22",
+      "text": "Auch eine gute Nachricht.\nDu bist jetzt wieder über die Luca-App reden?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:32",
+      "text": "Es gibt ein eine sehr interessante Recherche von Netzpolitik ORG, die wir hier selbstverständlich würdigen müssen. Ähm und zwar,\näh hoffentlich nicht so lang, weil einfach mal weniger Widerworte gibst, dann könnten wir die Themen auch einfach schneller."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:47",
+      "text": "Was fällt mir ein? Ja, eine eigene Meinung zu entwickeln. In meinem Podcast. Frechheit.\nErzähl mal. Ich will eh nicht über Luca App reden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:04:00",
+      "text": "Ich habe ja schon gesagt, äh äh Luca App äh Vertragsverlängerung steht an.\nSteht gar nicht an, die haben eine Abo-Falle in ihren Verträgen. Ähm das heißt, die Kündigungsfrist läuft bald ab und die Länder müssen jetzt äh die Verträge aktiv kündigen, sonst müssen sie nochmal bezahlen.\nÄhm ne pfiffig, ne? Und ähm.\nWas ich ja auch schon mal erwähnt habe, äh nexenio sagt, sie hätten äh auch um die dreißig, vierzig Millionen Installationen der Luca App.\nUnd wenn man sich mal überlegt,\nwelche App ist überhaupt so viele Millionen mal installiert worden? Da kämen nur noch die Corona-Warn-App und dann kommen so Schwergewichte wie WhatsApp und so, ne, wo also,\nMilliarden Unternehmen sehr, sehr lange arbeiten mussten, um äh eine solche Installationsbasis zu bekommen. Wenn man so im Marketingbereich guckt, dann liegt so,\nso zwischen 130 und 150 bei Android, bei iPhones noch deutlich mehr. Also kannst du im Prinzip sagen, so dieser\ndas, was die Luca App geschenkt bekommen hat an Installationsbasis dadurch, dass ihre,\nAnwendung in 13 Ländern staatlich verordnet wurde und damit ja die Gastronomen gezwungen waren, ihre ähm.\nIhren Kundinnen, die,\nInstallationen nahe zu legen. Ähm ist also ungefähr so was im Bereich sechzig Millionen Euro, die sie quasi on top,\nnochmal geschenkt bekommen haben. Wenn man davon ausgeht, ist es Android. Gehst du mal davon aus, dass auch ein paar iPhone Nutzer die App haben. Dann haben wir jetzt so hundert Millionen.\nEuro in Marketing und Installationswert geleistet. Die Gastronominnen für diese App auf Zwang des Staates.\nUnd da überlegen die sich natürlich auch, ähm.\nWas machen Sie in der Anschlussverwendung der App? Und das war übrigens auch, wir haben ja eigentlich als Hitze zehn nur einmal davor gewarnt und haben gesagt, die werden, die suchen nach anderen Geschäftsmodellen und genau das tun Sie jetzt auch grade und interessanterweise steht in diesen LUGA-Verträgen,\nDas Recht von Culture for Life, die Software außerhalb des Einsatzgebietes gegebenenfalls nach eigenem Ermessen zu kommen, mezialisieren,\nunberührt. Das steht da drin, ja? Die können also jetzt damit machen, was sie wollen, ja? Äh wird kritisiert von Professor Klaus Wendt von der Universität\nSiegen. Der sagt, während wichtige Projekte wie die elektronische Gesundheitsakte nicht vorankommen, können Firmen in der Pandemie vorpreschen und der Staat\nsolchen Apps völlig naiv kaum Einschränkungen.\nÄhm das ist natürlich zu kritisieren. Er sagt, der Staat sollte wichtige IT-Infrastrukturen im Gesundheitsbereich selbst in der Hand halten, vertritt er also eine ähnliche Position wie du grade,\nzur Corona-Warnapp. Jetzt hatte ich ja schon gesagt, ne, Smudo wirst wieder auf einen Talkshow-Strich und äh stimmt aber gar nicht, denn.\nDie haben eine Lobby-Agentur beauftragt. Äh was jetzt hier bei Netzpolitik Org rausgekommen ist und zwar ist das.\nDie Lobbyagentur FGH Finsbury Glover haring,\nÄhm die für Management im Managermagazin ähm äh,\näh so beschrieben wird als äh der also der Vorstand äh Alexander Geiss wäre der einflussreichste Vorstandsflüsterer Deutschlands.\nNun hat er nur ein, nun hat er ein neues Ziel, FGH zur größten PR-Maschine der Welt zu machen. Ähm,\ndie machen eher so, also die machen PR, ja, aber ähm wenn man sich mal anschaut, wer da so angestellt ist,\näh würde man eher sagen so Public Affairs, ja, Public Affairs ist ja PR in Richtung der Regierung, ne? Ähm also politische Entscheidungsprozesse Lobbyen.\nUnd,\nIn dieser Agentur ist tätig ein Herr mit dem Namen Lutz Stroppe. Und äh dieser Lutz Stroppe war bis vor Kurzem,\nStaatssekretär im Gesundheitsministerium und der war einmal der Büroleiter von.\nBundeskanzler Doktor Kohl? Ja? Und der macht jetzt PR und Public Affairs,\nfür die Luca App.\nBei einer Spin-Doktor-PR-Agentur, die sich anschickt äh oder die plant äh die einflussreichste der Welt zu werden. Ich würde jetzt mal vorsichtig schätzen,\nwendet ihr so jemanden kaufst, äh dann ist der nicht ganz so günstig. Ja, wenn er."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:04",
+      "text": "Grad fragen, was kostet das."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:05",
+      "text": "Staatssekretär, Büroleiter, Kanzler, ja ähm das ist also ich meine, das ist die Drehtür,\npar excellence. Er ist vor ein paar äh auch erst vor Kurzem ähm ausm äh Gesundheitsministerium unter unklaren Gründen gegangen. Ähm,\nSag mal.\nVor allem, wenn also in diesem Bereich, in dem der jetzt tätig ist, wird der sicherlich mehr verdienen, als er als Staatssekretär verdient hat, vor allem wenn er mal früher Staatssekretär war. Ja und das ist doch wirklich ich meine.\nJe länger du da hinguckst, ne, umso.\nUnschöner wird das. Ja, da da hast du jetzt Millionen einem Unternehmen hinterhergeworfen, die jetzt wirklich so die richtig evil Kommunikations-Spin-Doktor Public Affairs-Leute losschicken.\nUm äh dich wieder in die Medien zu bringen und da ist irgendwie jemand, der früher Büroleiter des Kanzlers war."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:04",
+      "text": "Ist man dann schon automatisch evil eigentlich oder wo Laureus leitest du das jetzt äh ab, dass die Iv."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:10",
+      "text": "Also ich würde ehrlich gesagt sagen ähm,\nDann bist du evil. Das also ich ich kann mir ich also wer solchen, wer ich allein.\nAlso ich ich übrigens nur, damit's nicht wieder heißt, äh ich denke auch, dass T-Systems evil ist und Ludevik Evil ist, dass er jetzt irgendwie äh da jetzt zu denen rübergeht und und an der an der anderen Seite der Corona-Warn-App weiter,\nne? Das ist einfach evil. Das ist macht man nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:37",
+      "text": "Wenn jetzt dein Lieblingspolitiker mal Kanzler wird und du wirst dann Kanzler äh Büro lei."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:42",
+      "text": "Werde ich ja nicht. Werde ich ja nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:44",
+      "text": "Na, das woher weißt du denn das?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:48",
+      "text": "Dass ich nicht Kanzlerberater werde? So einen Hungerlohn gehe ich doch nicht arbeiten, Tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:49",
+      "text": "Ja, dann kannst du auch du kannst doch ganz gut mit Terminen und so. Na ja, also das macht man dann mal ab, wenn's soweit ist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:10:58",
+      "text": "Die eine Sache, äh die die Sache ist.\nWas du danach machst, ja? Wie willst du denn in ein in ein Urteilsvermögen eines äh Staatssekretärs im BMG Vertrauen, wenn der im Nachhinein sein äh Adressbuch,\nauf diese Weise äh\näh äh monetarisiert. Und man kann, wenn du den jetzt fragst, dann wird dir der Herr Struppe bestimmt sagen, wie sehr er brennt für die Gesundheitspolitik,\nwie wichtig es eben ist mit FGH für die gute Sache zu kämpfen, dass er jetzt irgendwie den Datenschutz aufweichen, um mehr Daten in der Luka App erfassen zu können, ne? Das die können die ja alle immer eine schöne Geschichte erzählen.\nUnd ich würde, jetzt pass auf, ich glaube die Geschichte sogar, ich glaube auch, dass die alle irgendwie zu Hause sitzen und denken, sie wären hier irgendwie gerade die Speerspitze des Guten, ja?\nAber allein allein, dass sie das tun.\nMacht einfach so ein schlechtes Bild von von der Politik, von den Leuten, die in solchen äh Bereichen arbeiten. Das ist einfach nicht,\nschön. Ja, das ist einfach das ist einfach ein rücksichtsloser Schaden, der hier an dem an dem Vertrauen in die Demokratie in Kauf genommen wird.\nDer wird ein ganz toller Mensch sein, der Herr Strophe, bin ich mir ganz sicher. Aber,\nWie sieht das denn aus? Wie sieht das denn aus? Und wie sieht das aus, wenn die wenn die dir einerseits erzählen, sie würden mit der Luca-App kein Geld verdienen und dann holen die sich so einen als,\nPR. Ich meine wer will toll? Wer wer soll bitte teurer sein als als Lobbyist und PR-Manager, als jemand, der Staatssekretär und Büroleiter des Kanzlers war? Was willst du denn noch?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:40",
+      "text": "Na ja, vielleicht äh vielleicht liegt ja Smudo holt ja Smudo jetzt seine seine Ersparnisse unterm Kopfkissen vor und haut jetzt einfach äh für ein Lobby drauf. Da geht sie hin die ganze GEMA-Kohle."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:54",
+      "text": "Also das ist einfach, das ist einfach kein schönes Bild, ja und ähm,\ndas ist ja enttäuschend. Naja jedenfalls äh Luca also hier gibt's ja einen Artikel auf Netz für Tick Org, wo eben erstens gesagt wird, die Luka App hat jedes Recht.\nDas Ding auf anderen äh auf andere Weisen zu vermarkten und deswegen habe ich ja gerade auch diesen äh diese diese Überleitung genommen, weil die natürlich auch da sitzen und denken, tja,\nzig Millionen in Stores. Das wäre ja jetzt wirklich schade.\nZu vernichten, ne? Also das Gleiche, was du ja gerade zur Corona-Warn-App sagtest, ne? Und äh die Luka App hat natürlich jetzt, ich meine, die schielen in alle Richtungen,\näh überlegen natürlich auch äh ob sie nicht eine direkt\nKommunikationsschnittstelle zwischen Ämtern und Bürgern werden ähm haben ja jetzt schon irgendwie Speisekarten als äh extra Angebot und Monetarisierungsmöglichkeiten in Richtung der Gastronomie aufgenommen. Natürlich wäre jeder wahnsinnig zu sagen okay äh dieses Projekt wird jetzt erbendet und wir widmen uns\netwas Neuem und versuchen nochmal eine Installationsbasis von ein paar Millionen aufzubauen, ja. Aber aus genau dem Grund,\nnur wiederholen, haben wir eben gesagt ist es sehr wichtig, dass du hier die staatliche äh Hoheit hast mit der Corona-Warn-App.\nUnd wenn man sich jetzt mal überlegt, bevor nun ein Unternehmen die Kommunikation für den Staat baut, was ja,\noffenbar eines der Kommerzialisierungsziele der Luca App ist, wenn man sich diese Artikel durchliest und auch die Zitate, also der Geschäftsführer Patrick Hennig sagt das ja auch ganz klar\nne, dass er äh sich für unterschiedliche Optionen der Monetarisierung interessiert.\nÄhm insbesondere äh Ämterkommunikation. Natürlich willst du da lieber äh selber was bauen.\nAlso natürlich willst du das in eigener in einer eigenen Hand haben und da\ndeswegen mache ich das so. Natürlich willst du dann lieber, dass die Corona-Warn-App aufgebohrt wird, als dass die Leute, denen du quasi äh,\nNutzerbasis im Wert von 100 Millionen Euro erzwungen geschenkt hast? Ich weiß gar nicht, wie nennt man das? Wie nennt man das, wenn man jemandem was schenkt, indem man andere zwingt. Er er schwenkt.\nEr zwängt, er zwängt. Genau, die haben denen das erzwängt. Ähm,\nwenn die dann sagen, guck mal, ihr habt uns hier so und so viel äh Nutzer erzwängt und jetzt äh nutzen wir die, um letztendlich quasi bei allem schon mal 40 Millionen oder 30 Millionen Nutzerinnen.\nÄhm Vorsprung zu haben. Tja. Also die Corona-Apps werden.\nEndemisch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:44",
+      "text": "Kommen wir zu ähm ja, weiß nicht, gute Nachrichten, also.\nBemerkenswerte äh Nachrichten zumindest aus dem Datenschutzbereich ähm und zwar,\nblicken wir einerseits auf Frankreich und andererseits auf den Umgang mit äh was ich mal so Cookie Dark Petterns äh nennen würde. Kennt ihr alle. Ja man kriegt so,\nkomische Dialoge beim Besuch einer Webseite aufgerufen und dann ist da so ein großer, dicker, fetter Button. Mit hier drauf drücken und alles wird gut und dieses hässliche Overlay, was dir den Zugang zu dem geilen Content\nversperrt. Das ist dann auch sofort weg und dann dann melden wir uns auch nie nie wieder.\nOder du bist halt dann aufgeklärter User oder möchtest gerne so ja nee äh möchtest jetzt aber nicht, dass jetzt hier diese ganzen Marketing-Cookies bei mir gesetzt werden und dieses und jenes Unternehmen hier berechtigt ist nochmal Quervergleiche zu meinem Surfverhalten aufzuspannen.\nUnd dann guckst du so, ja wo ist denn der andere Button, der irgendwie sagt, nein, dann musst du's grollen und dann hast du auf,\nTelefon, müsste irgendwie noch das nochmal hoch scrollen und dann scrollst du im falschen Bereich und scrollst in irgend so einer komischen Liste und nicht irgendwie das ganze User in der äh äh Element, so dass es dann den eigentlichen Button aussiehst und dann sind die,\nbenannt und haben eine andere Farbe und sind kleinere Schrift und ihr ihr kennt das alles, ne. Dark Petterns halt. Hauptsache, man sagt ja zu allem\nUnd dafür ist jetzt Google von der französischen Datenschutzbehörde CNIL mit weiteren Bußgeldern belegt worden.\nÄh und Facebook im Übrigen auch. Also es betrifft beide Unternehmen und äh ja, es wurde schlicht und ergreifend festgestellt, dass es halt Nutzerinnen und Nutzern äh auf Webseiten der beiden Unternehmen,\nsehr schwer gemacht wurde ähm die Nutzung von Cookies, also Marketing Cocos, abzu.\nNutzung von Marketing, Cocos abzulehnen,\nDas äh verstößt gegen französisches Recht. Ich vermute mal, es verstößt vor allem gegen die DSGVO, aber ähm so habe ich das jetzt hier gelesen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:17:54",
+      "text": "Konzernt und so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:55",
+      "text": "Ist halt auch französisches Recht, aber ich denke mal, dass sich das schon aus der DSGVO ableiten lässt. So, was müssen Sie jetzt zahlen?\nAlso wir haben jetzt erstmal drei Monate Zeit und können das fixen.\nMüssen sie nichts zahlen, aber wenn sie was äh wenn sie es nicht machen oder ich weiß nicht, ob sie's stand hier zumindest nicht. Also hier steht nur, dass äh für jeden Tag Verspätung ein Zwangsgeld in Höhe von 100.000 Euro fällig wird.\nKönnen wir mal ausrechnen? Das wären so 36,5 Millionen Euro im Jahr. Was verdienen Google und Facebook mit dieser Methode?\nAlso.\nKann schon sein, dass sie sagen, ach ja echt so billig ist das. Dann.\nVerzicht war er auf das Ding vielleicht komplett irgendwie. Schalten sie einfach immer ein, wenn das so billig ist. Bei 36,5 Mio im Jahr, machen wir mal locker in Frankreich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:49",
+      "text": "Ja, ich glaube, das sieht aber natürlich schlecht aus, ne? Also die werden natürlich irgendeine Anpassung machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:54",
+      "text": "Nein nein, Sie sagen auch, Sie machen das und wir kooperieren und alles nicht so schlimm und äh die Datenschutzbehörde hat Google auch schon mal irgendwie fuffzig und einmal 100äh Millionen für ähnliche Verstöße aufs Auge gedrückt, also.\nDas greift schon. Wenn man äh dann mal wirklich auch.\nKonkret rangeht und vor allem, was heute irgendwie 1hunderttausend bei Verzögerungen sind. Es ist vielleicht beim nächsten Mal dann schon 300.000 und das irgendwie aber ab dem Tag des äh Urteilsspruchs. Also.\nUlsi."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:25",
+      "text": "Wenigstens,\ngeht mal jemand dagegen vor, ja, also das haben wir oder also neu hat das ja auch getan. Ähm äh spezifisch gegen diese äh Dinge sich eingesetzt und ja, also das ist auch tatsächlich ein ein\nIrrsinn eigentlich, ne? Wenn du dir wenn du jetzt keinen keinen Browser, Plug-in hast, was was diese Cookie-Concent-Bänder äh weg wegmacht,\nIst ja wirklich skurril. Schon echt äh daneben.\nAber okay, also äh äh wenigstens auch mal von staatlicher Stelle was dagegen. Musste sich ja selber, quasi musste ja dann irgendwie klagen und so was alles, ne.\nIn Polen,\nIst äh wegen Pegasus gerade äh richtig was los. Also Polen ist ja eh tatsächlich von der politischen Entwicklung her nicht besonders erfreulich insgesamt alles, ne?\nJetzt gerade dieses Mediengesetz, wo sie da äh letztendlich das Ziel hatten, ein unabhängiges Medium mit ausländischen Eignerinnen irgendwie,\nja de facto zu verstaatlichen. Also wir wollten dem entgegen, den er hatte glücklicherweise der Präsident das nochmal abgesägt.\nUnd äh das Citizen Lab hatte in seiner,\nPegasus, NSO-Pegasus statt zu einer äh Veröffentlichung schon festgestellt und äh eine Amnesty war das halt die, die das quasi festgestellt haben oder beide. Wir Amnesty und Viertel sind da. Das ist ein Satz von NSO-Pegasus gegen Oppositionelle in,\nPolen gab und zwei speziellen gegen Roman,\neinen prominenten Anwalt, äh der also in der Opposition sich stark macht und eine Staatsanwältin Eva Voschek\näh auch regierungskritisch ist, die gegen die wurde direkt mal mit einem Staatstrijaner vorgegangen und die.\nRegierung hatte dann erst eben gesagt, ja das waren ausländische Mächte und jetzt ist aber eben äh rausgekommen,\ndie haben diesen Staatsttrojaner gekauft und damit ist auch klar, wer den äh eingesetzt hat,\nja und äh gegen die Opposition und das ist Wahnsinn, oder? Ich muss wirklich einfach sagen, das ist halt ein es ist wirklich ein Wahnsinn,\nSowas in einem unserer Nachbarländer passiert, ne? Völlig klar, also diese diese Dinge, vor denen wir immer gewarnen hier, ne, das das passiert dann am Ende äh ja nebenan,\nin genau der Form, in einem Land, das Mitglied der Europäischen Union ist, schon irre oder nicht?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:04",
+      "text": "Der letzte Teil ist der eigentlich äh,\ndramatische Teil. Also das ist irgendwie auf EU-Ebene äh nicht gelingt hier in Polen mal andere Sitten mit durchzusetzen. Das frustriert mich zunehmend von Ungarn fangen wir gar nicht erst an."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:23",
+      "text": "Tja und dann also ein ein Themenbereich, den wir ja hier äh äh immer sehr,\nvorsichtig um schiffen oder es äh betrifft ja die Crypto Currencies, ne? Und äh das, was da jetzt grade so passiert, also im,\nBitcoin, Eva, NFT und den ganzen äh dem ganzen ähm Sumpf, diesem ganzen Ponysumpf und ähm,\nAlso es treibt ja wirklich\nsehr äh unterhaltsame Blüten, ne. Also ich habe jetzt irgendwie letztens ein ein Plakat gesehen für NASA-Doge. Das ist irgendein Eva-Talken, den man kaufen soll,\nes hat wirklich also ich ich glaube, ich kann's zu dieser ganzen Crypto Car C ein eine Sache sagen. Ich weiß nicht, wie es endet, ja? Ich habe ein paar Ideen, wie das ganze Ding endet.\nAber es wird nicht gut enden. So, das das wird nicht gut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:30",
+      "text": "Das ist so.\nAuf keinen Fall."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:35",
+      "text": "Auf gar keinen Fall. So entweder fackeln wir einfach mit der ganzen Scheiße den Planeten ab,\noder wir bauen alle ganz kräftig hier schöne Infrastrukturen für die ganzen kriminellen Geldwäscher, Steuerhinterzieher und so weiter.\nOder die ganze Kacke geht baden und ihr äh und und am Ende haben wir äh Blut in der Straße. Ne, weil alle ihr Erspartes für ein paar Bits äh aufs Spiel gesetzt haben. Also das sind so die drei.\nUnd die drei Optionen, die ich sehe, eine positive fällt mir da irgendwie langfristig nicht zu ein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:10",
+      "text": "Nee, das ist ähm schwierig zumal die Leute, die das vor allem jetzt vorangetrieben haben, ihr ihr Geld schon längst gemacht haben,\njetzt eigentlich nur noch die Leute einsteigen, die dann halt künftig bluten werden. Man merkt aber auch, dass das jetzt alles in so einem,\nÜberhitzungsmodus auch langsam gerät, also jetzt werden sie alle schon panisch und äh die ganze Werbe\nAktivität steigt enorm an und und und lappt auch schon so aus dem Internet äh rüber auf Plakate und äh Fernsehanzeigen. Also so eine gewisse Überhitzung ist schon anzumerken. Wie viel thermischer Raum da noch besteht, bevor es,\nkommt, darüber kann man jetzt noch diskutieren. Das ist unter Umständen alles noch ein bisschen länger hin. Aber es ist die Zeichen verdichten sich schon."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:24:56",
+      "text": "Ja aber äh ich glaube, da ist so ein bisschen Luft. Also da auf jeden Fall, wenn du jetzt sagst, Corona ist in zwei Monaten vorbei, würde ich sagen äh diese ganze Krypto-Nummer wird auf jeden Fall nochmal einmal richtig schön nach oben schießen, ja. Also hoffe ich, hoffe ich, sagen wir's mal so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:07",
+      "text": "Ja, das dauert auf jeden Fall noch länger als zwei Monate. Ja klar, du musst ja noch die Gewinner einfahren hier von den Investitionen. Also so schnell jetzt nicht?"
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:25:16",
+      "text": "Aber ich kann euch nur sagen, ich kann eigentlich nur dazu raten, gebt eure Coins lieber mir. Ähm da sind sie besser aufgehoben. Her damit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:23",
+      "text": "Also ich habe jetzt Bitcoin aus meinen Spendenoptionen rausgestrichen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:25:29",
+      "text": "Ach echt ja? Äh hast du Norden? Norden Antivirus?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:32",
+      "text": "Ähm das läuft jetzt hier eigentlich schon ganz gut seit einiger Zeit, aber ich habe ein bisschen viel CPU-Last. Weiß gar nicht warum."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:25:41",
+      "text": "Also eine der Sachen, die tatsächlich äh.\nEine eine also ein ich finde ehrlich gesagt auch immer die die ehrlichere äh Art des des dessen ist wie man einen erlangten Zugang.\nMonetarisiert ist äh\nmeiner Weare, ja? Also statt einer äh bemächtigt man sich halt eines Computers, eines Sportnetzes oder\neines Superrechners und installiert halt einen meiner, ja, der dann irgendwie Monero meint oder Bitcoin oder weiß der Geier. Und äh ne, für die Zeit, die du diese Maschine im Beschlag hast, ähm,\nprofitierst du dann eben, ne, weil du,\nEnergie in nicht mehr wirklich nutzbare Wärme umsetzt und in äh Kryptotaler. So und um das zu verhindern.\nInstallieren sich viele Leute ein Virenscanner,\nUnd damit Sie aber trotzdem in den Genuss von Crypto Correncys kommen, hat jetzt Norden,\nnun hat die Virus hat jetzt einen Coin Meiner eingebaut in ihren Virenscanner\nder wenn du äh im Prinzip äh keine, ne, wenn du jetzt irgendwie gerade nix zu tun hast, dann meint der IFA.\nUnd ähm dafür, dass er das macht.\nAlso Norden hat quasi einen Mining-Pool, ja, also den Mining-Pool heißt ja du verwaltest im Prinzip rechnen lasst, du kriegst immer die,\nBestätigung, dass deine äh deine Clients da mitgearbeitet haben und am Ende teilst du die Gewinne unter denen auf.\nAlso Norden hat jetzt ein IFA-Mining-Pool.\nUnd der die Software dazu ist in deinem Norden Antivirus drin und sie geben dir sogar deine äh.\nFünfzehn nehmen die nur fünfzehn Prozent von dem was du dort leistest ab als Vieh ja? Also du kriegst immer hin,\n85Prozent von dem was du da an Energie wirklich verballerst äh und in IFA umsetzt, kriegst du auch tatsächlich.\nAlle die sind alle völlig verrückt geworden, oder? Das ist so so ab absurd, also es sind Aprilscherz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:58",
+      "text": "Ja, also Planeten retten und so klingt natürlich super in den äh ganzen Anzeigen so, aber äh lieber Geld, ne, dass dann doch\näh im Zweifelsfall halt schon äh wichtiger, ne. Also ja mal gucken. Also ich meine, wird wahrscheinlich nicht mehr lange dauern und weil du hast die Option auch in der Luca App."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:28:18",
+      "text": "Ja und weißt du, was das Schlimme ist? Mhm, ich habe jetzt nur mal so geguckt, ich habe ja hier auch so einen neuen M eins äh Prozessor, ne? Was der so für Haschraten,\nhinkriegt und ich habe jetzt noch nicht so wirklich ausgerechnet, ich glaube das ist nicht äh also das würde man würde den jetzt nicht zu diesem Zweck kaufen und man kann sicherlich besser ähm.\nMit diesen ganzen Grafikkarten und FPGA äh äh FPGAss und Asics und so, die man dafür inzwischen hat, sicherlich besser meinen. Aber natürlich habe ich auch schon überlegt, äh ob man den nicht zumindest, wenn man den nicht an der eigenen Steckdose stecken hat, über Nacht.\nDen ich noch einmal ein bisschen was was der denn so erwirtschaften könnte, ne? Ist natürlich Quatsch, aber das natürlich Norden sich das denkt und sagt hm wie viel, wie viel CPU haben wir denn eigentlich da, die wir benutzen könnten?\nUnd wie viel ist 15 Prozent davon als Revenue für uns?\nMacht das vielleicht Sinn, wenn wir hier so einen bei uns mit reinmergen? Und äh ja, haben sie gemacht,\nAlso das wird irgendwann weißt du, das ist wie wenn du aus irgendwelchen fernen Ländern wie Spanien,\nvon deren Lotterie hörst und dir denkst, so seid ihr alle bescheuert? Ne, das ganze Land wirft irgendwie Milliarden in diese Lotterie und machen da irgendwie einen riesigen Hype draus oder auch einfach mal die Länder,\nwo's wo halt mal Ponys ging's einfach auch wirklich gelaufen sind, ne und die sich dann am Ende halt das das Land in in finanziellen Ruinen geworfen haben, weil sie alle irgendwelche kleinen Täterchen getauscht haben.\nSo wirst du irgendwann über dieses Krypto reden und sagen OK scheiße Norden Norden hat das da bei sich eingebaut. Das ist doch wirklich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:30:02",
+      "text": "Also wenn's um Geld geht, kennt einfach niemand irgendwie Scham. Also es ist halt einfach,\näh wenn du Kohle verdienen kannst, dann ist einfach jedes Mittel äh recht und dann wird einfach alles ausgenutzt, was irgendwie zu holen ist und nichts zeigt das besser als diese äh\nWelt. Also da wird einfach jede Ressource in Anspruch genommen, egal wie viel Planet dabei drauf geht und es wird auch jede verwegende\nTheorie erzählt, um da irgendwie die Agenda durchzusetzen und wenn du dir halt\ndieser Community zuhörst, die ist halt auch schon so verblendet, ja, also das ist einfach wirklich schon ein Strohblatt, zwei null.\nWas sie sich immer wieder alles aus den Fingern ziehen, was ist denn angeblich für einen gesellschaftlichen Benefit hat, ist halt einfach alles Bullshit. Und ähm,\nDas äh könnte nochmal eine heftigere Auseinandersetzung geben, zumal das eben so ein Bereich ist, der prinzipiell eine Menge Geld hat,\nAlso haben ja schon gesehen, wie wie das in der Politik verfangen hat, ne, mit irgendwie Blockchain in."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:31:06",
+      "text": "Och ja da darf ich ganz dran denken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:31:07",
+      "text": "Ja, das ja aber so ist es halt,\nklar, ne. Gut, ich meine, man kann,\nerhalten, dass das ähm komplexe Materie ist, die schwierig zu verstehen ist und wenn natürlich so viele Leute in so einer Branche davon reden, dann muss man zwangsläufig irgendwann mal als Politiker davon ausgehen, dass es auch schon sind, bestimmte Bedeutungen hat, weil wenn du's nicht verstehst, wer bist du denn dann zu sagen, dass das alles nicht wahr ist?\nAlso das ist äh ja ne so ein,\nso ein eigenes äh Problem äh für sich. Aber äh wir raten auf jeden Fall erst mal von der Installation ab. Äh sowohl von der ernorden Antivirus als auch von Norden Krypto."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:31:46",
+      "text": "Krypto Meilern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:31:47",
+      "text": "Ja, also wenn ihr bereit seid, da irgendwie ähm Geld zu investieren, dann lieber ein T-Shirts von Nokbuch."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:31:55",
+      "text": "Ja. Und dann kann ich noch auf einen kleinen ähm.\nVortrag hinweisen, den ich zusammen mit Karl und Lilit von der Zerforschung gemacht habe, beziehungsweise ist deren Vortrag und ich habe da ein paar Kleinigkeiten, also als Sidekick\nbeigetragen. Der heißt\nDeine Software, die Sicherheitslücken und ich dabei so ein bisschen zusammengefasst, was so beim Melden von Schwachstellen. Die Best Fractice ist einerseits auf der Seite derer DD.\nMeldungen machen, andererseits auf der Seite derer, die denen, die mit dieser Meldung umgehen.\nUnd äh ja, den kann ich an dieser Stelle glaube ich mal empfehlen. Das war anlässlich.\nDer RC drei, also der Remote Experience dem Online-Ersatzprogramm für das zweite Ausfallen eines Cares Communication Congress."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:55",
+      "text": "Ja\nDamit sind wir durch für diese Woche. Euer euer eure erste Sendung des des dritten Jahrs.\nÄhm für uns ist es ja schon, dass habe ich vergessen. Was hatten wir jetzt grade? Zehn, ne? Ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:33:13",
+      "text": "Das elfte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:33:14",
+      "text": "Wir sind jetzt im im elften Jahr und ähm ja das wird aber auf jeden Fall diese Pandemie überdauern. Würde ich mal sagen, ne."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:33:26",
+      "text": "Ich wollte übrigens noch äh noch eine Sache, äh ich wollte noch ein anderes Video empfehlen, sorry. Und zwar äh hat äh Helena den typischen Kongressbeitrag gemacht.\nHaben wir die die die Teile davon, die haben wir schon beim letzten echten Kongress in Leipzig äh geschnitten.\nUnd äh der ist sehr lustig. Hast du den schon gesehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:33:50",
+      "text": "Ähm weiß ich nicht, nee. Glaube nicht, nein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:33:56",
+      "text": "Okay, dann dann äh sei der auch äh sei der auch ähm sehr empfohlen,\nJa, der der jährliche Kongressbericht äh ist einfach so äh typisch typisch wie halt über den Kongress berichtet wird mit den Bildern und es geht einfach um alles."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:34:14",
+      "text": "So in den Medien äh über den Kongress berichtet wird, von."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:34:17",
+      "text": "Einfach so ein typischer Typ, wie so ein wie der typische Kongressbericht aussieht, ne?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:34:21",
+      "text": "Jährliche Jahreskongress des CC und so Hacker. Ja, mhm."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:34:24",
+      "text": "C, ne, blinkende Lichter und dann geht es diesmal einfach um alles. Denn äh alles ist kaputt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:34:32",
+      "text": "Das ist schön. Den kann man dann immer wieder hervorholen und sagen, ja ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:34:35",
+      "text": "Es ist schön schön. Da habe ich auch eine Rolle drin, ne? Ganz viele Leute drin, aber eine äh,\nNatürlich dann den CEO, der dann sagt, alles ist sicher und CC-Sprecher, also warten's natürlich seit Jahren davor, vor allem und es ist sehr schönes äh sehr schönes Video."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:34:52",
+      "text": "Ich würde euch jetzt auch gern noch einen Podcast äh aus der Mieterebene empfehlen, aber der ist noch nicht draußen. Der kommt aber bald und da wird dann dieses ganze Krypto-Problem auch nochmal umfassend äh."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:35:04",
+      "text": "Ach schade, ich hatte gedacht, das könnten wir hier mal machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:08",
+      "text": "Ach, das können wir ja sicherlich auch noch ein paar Mal machen, aber jetzt habe ich schon mal äh was aufgenommen. Das kommt dann äh die Tage. Und äh wir können das ja gerne nachbesprechen und noch eine Länge ziehen, durchkauen, fünfzig Mal im Kreis drehen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:35:22",
+      "text": "Ansonsten meine meine Coin, meine Wallets gibt's alle auf meiner Website."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:26",
+      "text": "Bei mir nicht mehr jetzt. Ich bin jetzt ballet free."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:35:30",
+      "text": "Ich habe tatsächlich hier noch so einen Bitcoin Lightning mal äh angemacht. Da weiß ich aber noch nicht genau, wie das geht. Aber da könnt ihr mir auch gerne das erklären möchte, kann mir da Geld hinschicken. Dann gucke ich mir das mal an. Bisher ist da nur nichts passiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:44",
+      "text": "Wird auch nichts passieren, wie ich dir das schon sage.\nGut Leute, dann äh habt noch eine schöne Zeit und wir hören uns die Tage wieder. Bis bald."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:35:57",
+      "text": "Bis dahin, ciao ciao."
+    }
+  ]
+}

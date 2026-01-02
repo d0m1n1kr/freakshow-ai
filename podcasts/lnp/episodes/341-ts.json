@@ -1,0 +1,769 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:00",
+      "text": "Guten morgen linus."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:02",
+      "text": "Guten morgen tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:04",
+      "text": "Dieser bill gates der sagt ja alles voraus gibt's irgendwas was dir noch nicht vorher gesagt hat."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:10",
+      "text": "Das internet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:34",
+      "text": "Logbuch netzpolitik nummer dreihunderteinundvierzig frisch auf den tisch am achtzehnten,\nachtzehnten april im jahre des chorona virus ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:00:49",
+      "text": "Im ersten jahr des corona wir."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:51",
+      "text": "Ja irgendwie lustigen witz gelesen mit dem zeitreisenden der so kommt so welches jahr ist ja zwanzig zwanzig oh das erste jahr,\nder langen zeit."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:07",
+      "text": "Kommen wir zum feedback oder müssen wir noch irgendwas anderes sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:11",
+      "text": "Auf keinen fall."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:13",
+      "text": "Wir wurden darauf also es wurde mir wurden über windows,\nja auch linux tastatur kürze aufgeklärt und zwar kontroll-ct in diesem modernen grafischen umgebungen\nwird verwendet um sachen zu kopieren und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:35",
+      "text": "Nur bei windows nicht in den modernen grafischen umgebung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:01:38",
+      "text": "Auf meinem linux ist es tatsächlich auch so wobei in der regel schriftsteller c weil im terminal ja steuerung c belegt ist aber das sind details,\nes ist tatsächlich so dass julia räder dann auch zugegeben hat auf twitter dass das\ndas kontroll-ct dann der ausschlaggebende\nfaktor für den namen war und nicht das traditionelle control was ist schon sehr viel länger gibt glaube ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:12",
+      "text": "Deutlich heißt auch auf text in askia."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:02:16",
+      "text": "Du ich nehme das jetzt so zur kenntnis man lernt nie aus,\ndann gab es gibt es immer noch feedback ja aber die messung von bluethoothspeaker ist ja aber ungenau.\nJa deswegen ist es ja auch eine herausforderung eine corona app zu bauen.\nLeider haben wir nichts besseres und leider habt ihr jetzt auch noch nix besseres erfunden,\ninsofern man muss glaube ich wenn man sich darüber gedanken macht auch eben erkennen wie.\nWeit diese diskussion schon ist und was wir dadurch vermieden haben an an anderen\nproblemen die man sich hätte eintreten können wir sind hier nur mal in einer krise und ganz klar geht es bei all diesen korona tracing apps darum wirklich eine noch nie dagewesene\nherausforderungen irgendwie zu stemmen die natürlich viele probleme hat es gibt eben bei problemen die einen die den ganzen tag um das problem tanzen und die anderen die wenigstens versuchen es so gut wie möglich zu\nlösen mein respekt gilt meistens eher letzteren aber,\nauf jeden fall ist es richtig dass es sehr gut sein kann dass ich das als zu problematisch erweist und zwar habe ich in der letzten sendung.\nJa schon es gibt zwei perspektiven über ein volk weil einer solchen app die eine perspektive ist,\nes ist eigentlich kein problem wenn wir zwei millionen leute fälschlicherweise für vierzehn tage in quarantäne schicken weil wir aktuell ungefähr achtzig,\nbis zweiundachtzig millionen leute ohne anlass in quarantäne schicken ja das heißt,\nso gesehen wäre das selbst bei katastrophalen raten immer noch besser als das was wir jetzt machen\ndie andere perspektive ist die einer person die zum,\nzweiten oder dritten mal fälschlicherweise in quarantäne geschickt wird zu zeiten wo andere noch draußen rumtanzen das ist natürlich ein problem\naber auch eines den man sich nähern kann und ich glaube ohnehin dass eine contact tracing app nicht wirklich,\nklarkommen wird also die real welt implementierung glaube ich wird dich pingeln und dich kontakte bestätigen lassen.\nUm dieser ungenauigkeit und diesen problemen rechnung zu tragen davon gehe ich aus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:01",
+      "text": "Zweimal ist es am ende ein telefon und keine person so und ob man dann wirklich in quarantäne geht und gehen muss ist noch mal eine ganz ganz andere."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:05:11",
+      "text": "Leider ist das aber auch ein argument gegen pseudonymen oder anonyme ansätze denn\nje nachdem wie man seinen ansatz gestaltet ja das\nman das so radikal machen könnte dass man gar nicht weiß wer die anonym oder pseudonymen person war die einen eventuell angesteckt hat oder nicht je nachdem die zentrale zentral so jetzt die,\nrückführung darauf wer hat mich infiziert.\nKönnte also natürlich helfen oder wer hat mich mit wem hatte ich kontakt weil es könnte ja zum beispiel sein dass man sagt ach ja der willi komm ey das ist so ein schwieriger typ dann hatte ich eben meine maske auf und eine,\nglasscheibe dazwischen war ich dem nicht über den weg traue oder,\nin dem supermarkt hängt eine glasscheibe oder sowas ne das könnte ja sein und ich denke dass das.\nIn real welt implementierung einer solchen contact racing app in irgendeiner form teil manuell berücksichtigt sein wird.\nOder was denkst du tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:18",
+      "text": "Ja also ohnehin ist es halt erstmal ein ein hinweis dass man infiziert sein\nkönnte und bei allen modellen spielt auf jeden fall die zeit eine rolle also je nachdem welchen ansatz man da folgt wird halt mindestens der tag wenn ich sogar die uhrzeit,\nwas ich ganz hilfreich finde und in dem moment muss man für sich selber dann halt abschätzen okay was für ein vehement war ich da zu diesem zeitpunkt ist das etwas worüber ich mir gedanken machen muss\nwar ich im öpnv war ich im supermarkt dann ist es problematisch,\nbei mir zu hause und hab irgendwie stundenlang netflix geguckt dann kann man das wahrscheinlich sogar ignorieren muss man sich vielleicht ein bisschen darüber gedanken machen was das jetzt sozusagen für ein kontakt gewesen sein soll aber da kommen dann halt die nachbars wand vielleicht ins spiel.\nSo oder so sind das immer alles noch deutliche verbesserungen zu der alternative was wir eingehend schon gesagt hast und,\nich glaube das ist auch das was ich viele leute gerade noch überhaupt nicht klar machen wir haben jetzt so ein mega bremsen lok down den wir auf gar keinen fall in dieser form,\nnochmal so haben wollen.\nUm das zu verhindern müssen wir uns einfach kreative gedanken machen weil ich glaube viele leben auch noch so ein bisschen in dieser illusion,\nnaja wenn dann der look down vorbei ist dann ist krise auch vorbei ja mitnichten das kann sein wenn wir glück haben dass uns das nur ein zwei jahre verfolgt,\npech haben sogar noch sehr viel länger,\nund das ist kein zustand den wir haben wollen deswegen sollten wir alle möglichkeiten finden dass so erträglich und händelbar zu machen wie es nur irgendwie geht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:07:52",
+      "text": "Da kann ich jetzt auch noch ein twitter witz erzählen der heute mich erreichte da war sieht die sinkende titanic abgebildet,\nnicht ganz gesunken und jemand ruft time to open technik ich aussehe.\nEin sehr schöner trump bezug ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:16",
+      "text": "Fand ich den vergleich mit dem fallschirm besser wo jemand zu den falschen gezogen hat ja der falsche macht doch jetzt meinen sturz erheblich ab."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:22",
+      "text": "Wir brauchen die nicht mehr."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:23",
+      "text": "Kann ich dir jetzt abmachen so und das ist so die situation in der wir uns gerade befinden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:08:30",
+      "text": "Okay dann haben wir in der letzten sendung über die corona datenspeicher gesprochen.\nUnd da hatten wir interessanterweise tatsächlich es kommt ja.\nEigentlich selten vor dass wir so gespaltenes feedback bekommen und zwar gab es einmal so feedback in die richtung da hättet ruhig mal fest dadrauf hauen können eure kritik ist so zurückhaltend.\nUnd von anderen kam die das feedback war dir aber voll gemein zu der app so das ist ja trotzdem vielleicht auch ganz schön.\nIm c verfahren wir ja grundsätzlich nach dem prinzip erst dann guck aber da wir jetzt am samstag aufnehmen könnte es sein dass wenn ihr diese sendung hört,\nes vielleicht schon neueres in der angelegenheit gibt dass es könnte zum beispiel sein dass ich irgendjemandem mal genauer angeschaut hat was glaube ich.\nOhnehin inzwischen,\nbekannt ist also zumindest mir lange genug dass ich jetzt davon ausgehe dass es nicht geheim war kennst du das tim wenn du so wenn diese drückerkolonne mit den,\nmit den fotos von tierbabys die stehen beim alexanderplatz stehen die gerne mal ne die haben dann irgendwie fotos von tierbabys und sagen er gibt es fünf euro hier für diesen kleinen hund ne und der trick ist ja so,\ndu gibst fünf euro aber monatlich und die sagen dir nicht wie man,\ndie los wird das heißt die fünf euro summieren sich auf sechzig im jahr und auf jenachdem,\nwie lange du noch hast sehr viel mehr geld als die fünf euro die du da verstanden hast so ungefähr ist das auch bei der datenspeicherung.\nDenn bei den.\nAlso was die außer bei apple health sich bei.\nZum beispiel google fit holen also sie haben ja anbindung für verschiedene geräte ich spreche jetzt über den fall google fit und auch.\nIch glaube bei gaumen ist das ebenfalls so aber wie gesagt zumindest in dem fall die holen sich,\ntalks für eine app das heißt es ist gar nicht die app,\ndie die daten an das gibt sondern die holen sich die selber aus eurer cloud und die primär funktion der app ist es in diesen fällen nur den cloud zugriff einmal einzurichten mit eben,\ndiesen.\nDie app selber macht also gar nichts das hat übrigens auch zur folge wenn du die app installiert ist es nicht so als würde der of token dann ungültig,\nalso du hast dann wie nennt man das so ein dauerauftrag ne,\nauftakt einzugs ermächtigung eine eindruck ermächtigung ist das ja,\nnico corona einzeln so und das hat natürlich auch leider so ein paar folgen für deine pseudonymen täte also das ist alles.\nBoah da weiß ich nicht ob ich das so besonders gut heißen kann aber ich fand's ganz schön,\nda mal geteiltes feedback zu bekommen es.\nWir müssen in all diesen bereichen und ich glaube das muss ich jetzt auch mal so vielleicht grundsätzlich sagen.\nIhr erkennt ja zum beispiel dass wir hier diese contact tracing apps auch sehr interessiert und,\nbisweilen wohlwollend beachten betrachten und genauso.\nKann man sicherlich auch sich über diese datenspuren app.\nWohlwollend unterhalten denn von der gesamtidee her ja hat man wahrscheinlich niemals seine fitness daten,\nan irgendetwas besseres gegeben als hier ein paar forscher die sind was weiß ich in wie vielen clouds die landen mit mit irgendwelchen,\nabnehmen apps und sieben minuten workout apps und was ihr euch alles installiert ja die sind überall verteilt wahrscheinlich haben die daten noch nie so eine gute anwendung bekommen zum beispiel.\nAuch bei euch nicht ja also ihr sammelt ja im zweifelsfall auch nur diese daten ohne euch jetzt sage ich mal in in der tiefe der analyse mit diesen daten wirklich zu beschäftigen insofern ist das.\nWahrscheinlich noch eine der besten eine besten anwendungszeit wecke für diese daten die diesen daten jemals passiert,\nnichtsdestotrotz muss eine solche app wie jede andere app auch mit der gebotenen sorgfalt gebaut werden.\nUnd bleiben da die jetzt mich ja fast vom stuhl gefallen ja das landet alles hier in meinen hälfte an."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:38",
+      "text": "Vom konto abgebucht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:13:40",
+      "text": "Und das ist.\nDie ansprüche an it-sicherheit und privatsphäre oder datenschutz bleiben natürlich auch in diesen fällen bestehen und.\nSie sind ja aber auch ja der der nicht der krise sondern der krisenbewältigung der krisenbewältigung,\ninsofern schauen wir da mal weiter wohlwollend drauf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:17",
+      "text": "Vierhunderttausend leute haben das installiert sagte dass er nach ein paar tagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:21",
+      "text": "Vierhunderttausend jetzt schon."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:22",
+      "text": "Das schon ein paar tage her die zahl was nicht wie sich das entwickelt hat aber es ist auch nicht so dass das jetzt gar keine freunde gefunden hat so viel auch schon mal zum thema werden den tracing apps überhaupt installiert werden von leuten so.\nKann schon sein."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:38",
+      "text": "Naja vierhunderttausend für so eine app noch ein bisschen zu wenig ne."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:41",
+      "text": "Ja aber in den ersten tagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:44",
+      "text": "In heinsberg wäre das eine ganze menge."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:46",
+      "text": "Da reden wir gleich noch drüber."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:14:50",
+      "text": "Da kommen wir gleich zu kaum feedback gab es zu logbuch freiheit\naußer dass mir jemand einen klugen tipp gegeben hat wie man\nseinen youtube account verifiziert insofern gibt es jetzt die folge eins versammlungsfreiheit im look down auf youtube und\nauch die folge zwei die ja morgen am sonntag um sechzehn uhr premiere hat wird für viele von euch,\ndann schon erhältlich sein,\ninsofern könnt ihr euch da zwei folgen logbuch freiheit anschauen und ich freue mich über feedback ich habe natürlich,\nyoutube kommentare deaktiviert ich bin ja kein idiot aber ich freue mich wenn ihr das feedback zum beispiel hier in den sendung kommentaren.\nZurücklasst oder auch unter meinem kontaktformular ich bin da ja oder wir beide sind da ja sehr neu da drin die lea und ich ansonsten klar please like share subscribe mai youtube kanal,\nda gibt's schöne sachen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:57",
+      "text": "Du hast die glocke vergessen klar alter ohne glocke bist du nix auf you."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:00",
+      "text": "Glocke ach ja genau man muss die glocken man muss die glocke machen damit ihr damit ihr eine push-notification kriegt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:07",
+      "text": "Richtig ran bimmeln genau ansonsten muss ich nochmal betonen dass dass das natürlich mit logbuch netzpolitik gar nichts zu tun hat ja weil bin ich ja nicht dabei ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:19",
+      "text": "Richtig deswegen heißt auch logbuch freiheit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:21",
+      "text": "Ist was ganz anderes."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:23",
+      "text": "Ach so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:25",
+      "text": "Nur zufällig weil du da auch bist hat es überhaupt bezug."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:31",
+      "text": "Habe ich da kann ich ja wohl die hälfte die die hälfte von dem namen kann ich ja wohl mitnehmen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:35",
+      "text": "Aber doch nicht den ich bitte dich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:39",
+      "text": "Schön war übrigens auf diesem united stream die haben ja tatsächlich auch sonst ganz gutes programm gestern habe ich mir den stream angeguckt von maroon im mensch meier geht's nochmal."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:52",
+      "text": "Ja na klar."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:55",
+      "text": "Hat mensch meier aufgelegt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:56",
+      "text": "Rainbow."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:16:58",
+      "text": "Hat sie nicht gespielt ich habe da die ganze zeit die ganze zeit mit meinem grün gefärbten augenbrauen im wohnzimmer gewartet dass endlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:06",
+      "text": "Aber nichts gegen marokko ist schon eine coole sau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:14",
+      "text": "So gut gemacht und die hat auch vom vom vinyl aufgelegt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:18",
+      "text": "Die kann das nämlich noch so wie diese ganzen lächerlichen digital jockis."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:23",
+      "text": "Also kommen wir kommen wir zu den profit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:29",
+      "text": "Zurück zu korona."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:31",
+      "text": "Zurück zu korona es gibt eine ganze reihe verschwörungstheorien."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:38",
+      "text": "Oh mann ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:40",
+      "text": "Über über corvette also bill gates weißt du was der jetzt gemacht hat tim."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:47",
+      "text": "Einen schuld."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:17:48",
+      "text": "Sau ja erstmal hat er die pandemien in seinem tattoo vorhergesagt und dann hat er die gemacht nur damit er am ende recht hatte hatte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:58",
+      "text": "So läuft das heutzutage."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:18:00",
+      "text": "Der sau er verfolgt ja irgendwie den plan,\nsieben verschiedene konzepte von impfstoff fabriken jetzt zu fördern in der erwartung dass höchstens ein oder zwei davon funktionieren\naber das ist die einzige möglichkeit der beschleunigung durch parallelwährung und da gibt es sagt er ja sehr schön da werden wir halt ein paar milliarden verschwenden aber das ist halt nichts im vergleich zu dem\nwas wir hier durch den gesamten prozess am ende einsparen werden das ist also sehr interessant dass jetzt also jemand muss echt sagen seppel geht bei microsoft weg ist wird der typ mir echt,\nimmer sympathischer verdammt coole sau gibt's auch übrigens diese.\nDiese netflix serie bei netflix lief das glaube ich wo sie so ihn zuhause,\nbisschen besuchen und du siehst irgendwie was der sich reintut und wofür der sich interessiert und so das ist schon jetzt nicht der,\nnicht der schlechteste mensch ja nicht so ein schlechter mensch wie man meinen würde wenn man versucht die software zu benutzen die.\nDieser mensch in die welt gesetzt hat hatte nicht immer so ein glückliches händchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:15",
+      "text": "Ja ist schon jetzt auch ist schon durch es verjährt würde ich sagen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:19:19",
+      "text": "Ist verjährt ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:20",
+      "text": "Andererseits zeigt aber auch\nund das hat er ja eigentlich mit microsoft auch gezeigt aber kann man jetzt sozusagen im detail kritik äußern das lassen wir jetzt mal sein die witze aber ist ja jetzt auch nicht so dass ihm nicht gelungen wäre aus dem nichts und weltkonzern,\naus dem boden zu stampfen und das\ner fordert ja auch noch ein bisschen mehr als nur ein paar programmieren können das hat auch viel mit visionen und mit reaktionen zu tun und vor allem dass man eben auch groß denken kann und der ansatz den er jetzt hier in dieser pandemien hat.\nWünschte ich mir halt auch auf den politischen ebene den zu sehen weil das ist halt einfach professionelles denken so ja okay wir brauchen da mal ein ein impfstoff,\nhaben wir noch nicht ist aber durchaus denkbar dass der kommt dauert normalerweise lange,\nso aber wir wissen dass ein teil von diesem lange ist halt dann das bauen der fabriken wenn wir wissen was es ist so weil jeder impfstoff braucht einen anderen prozess braucht eine komplett andere fertigungsstraße etcetera p p also bauen wir einfach mal alles,\ndas ist einfach geil."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:28",
+      "text": "Ja ich habe ehrlich gesagt den eindruck dass es bei microsoft immer so gekannt ist oder um noch einen kleinen microsoft witz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:35",
+      "text": "Ich wollte gerade keinen microsoft witz mehr eigentlich gestanden ja."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:37",
+      "text": "Ja aber ich mache nochmal okay keine microsoft witze mehr."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:42",
+      "text": "Eine microsoft witze über begabtes nur über die anderen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:47",
+      "text": "Aber über fünf g können wir noch witze über machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:49",
+      "text": "Na ja diese ganzen verschwörungstheorien ich meine ich ich schaust du dir das an also ich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:20:59",
+      "text": "Ich nehme das zur kenntnis."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:00",
+      "text": "Ja ich nehme das bestenfalls zur kenntnis ich ich kann das nicht ertragen dass einfach dass da will ich\ngar keine zeit darauf verschwinden aber ich weiß natürlich dass leute das tun und du triffst auch manchmal so leute auf der straße die einen ja ja begehrtes also hatte ich gerade gestern stand ich auf der straße mit jemandem unterhalten kam so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:16",
+      "text": "Bei dir genau richtig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:18",
+      "text": "So ein zeitungsverkauf er kam dann irgendwie den ich kannte weil er irgendwie immer durch die bars latscht wo ich dann bin ja weißt du so halt so ein\nja\ndu hast ja alles gelogen und seine große verschwörung hat er nicht gesagt aber dann kann man gleich mit bill gates begeht das ist ja ein faschist,\nweißt du also würde ich gefragt so was wo wie warum war es nein,\nwarum und es war auch klar es sinnlos ist da irgendwie so diskutieren ich habe immer einfach nur gesagt so nee ist nicht so ja,\nund es könnte dann annehmen oder nicht hat er natürlich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:21:57",
+      "text": "Weißt du was ich schön finde tim wie der die geschichte wahrscheinlich jetzt gerade erzählt da habe ich auch wieder eingetroffen hätte konnte annehmen oder nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:08",
+      "text": "Gesagt mir geht es kein faschist."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:22:10",
+      "text": "Schön ist gerade diese wir haben ja in der letzten sendung ja schon bezug darauf genommen irgendwie fünf dass das korona kommt ja eigentlich von fünf g.\nDeswegen werden in den niederlanden und in england ja jetzt die fünf masten abgefackelt wo man auch sagen muss so,\nrespekt die machen sich immerhin so klug dass sie offenbar fünf masken von vier geben masten unterscheiden können oder vielleicht auch nicht ja,\nauf jeden fall wo wird der quatsch verbreitet natürlich auf facebook und youtube und damit haben wir jetzt wieder so eine,\nunwahrheiten debatte fake news debatte und,\ndie wurde ja in den vergangenen jahren insbesondere wenn es ums politische campaign ging noch ein bisschen anders\ngehandelt wo sie nämlich gesagt haben ja das stimmt schon da müssen wir irgendwie was machen und so aber wenn der präsident irgendwie fake news verbreitet oder so dann.\nKönnen wir da jetzt nicht so wirklich vielleicht haben wir einen fette checker oder sonst was aber.\nWir wissen nicht und diese maßnahmen wandern alle immer sehr soft jetzt geht es tatsächlich los dass facebook sich darüber gedanken macht sie unterscheiden hier die beiden begriffe missinformationen,\ndesinformation desinformation sind quasi groß angelagert angelegte desinformationskampagnen mit dem ziel,\nleuten falsche dinge zu sagen und missinformationen ist jetzt der einzelne akt ja beispielsweise das sharing einer solchen informationen und sie wollen jetzt damit beginnen,\ndenjenigen die so etwas verbreiten ein hinweis zu geben ja zu sagen übrigens das was du da verbreitet hast das ist ist nicht so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:01",
+      "text": "Bestimmt so effektiv wie ich mit dem zeitungsverkauf."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:24:04",
+      "text": "Genau deswegen gibt es jetzt auch die forderung.\nZu sagen ey sag das doch den empfänger nur nicht den verbreitern und\ndann sagt facebook ja hin und her und da kommen aber dann auch der einwand naja pass mal auf für euren werbekampagne könnt den leuten bei dem werbeanzeigen auf die millisekunde genau sagen wie lange die leute drauf geschaut haben und wie viele von denen das geklickt haben also könnt ihr das mit den fake\nnews und sachen die da irgendwie verbreitet werden auch also es gibt ja jetzt.\nBemühungen oder eine erneute diskussion und die läuft diesmal anders als in dem falle der politischen desinformationskampagnen so da bin ich mal gespannt wie sich das\nweiter entwickelt es ist natürlich ja also diese gesamte erfahrung und so bringt uns alle so ein bisschen an,\nja grenzen des der vorstellungskraft und irgendwie auch so eine frage nach kanada muss das denn alles sein und so da das haben wir alle.\nAber ich muss so jetzt auch das ist ja was was man gerade uns vielleicht selten sagen hört so.\nInsgesamt bin ich schon ganz zufrieden damit wie.\nDas hier grob gerade läuft ja wir haben wir haben einen ganzen haufen an problemen,\nbeispielsweise hier eindämmung also missbrauch der kontaktverbot e zur zur verhinderung von demonstrationen,\nglücklicherweise haben wir dann aber auch da die urteile die dem wieder entgegentreten wir haben gesundheitsminister dem ich,\nnicht ganz so viel zutraue aber glücklicherweise wird er irgendwie container ja also es läuft alles gerade nicht so unglaublich schlecht was nicht heißen soll dass es keine probleme gibt.\nAber wo probleme sind da sehe ich in der regel auch irgendjemanden.\nDer oder die dafür sorgen dass das dann doch halbwegs sich noch in der bahn hält und seien es die gouverneure in den usa."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:22",
+      "text": "Ich fasse zusammen wir jammern aber wir auf eine hohe niveau."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:29",
+      "text": "Also habe ich schon noch den eindruck es läuft alles noch ganz okay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:34",
+      "text": "Vergleich ist es auf jeden fall alles noch im lot das kann natürlich auch schnell auseinander klappen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:26:39",
+      "text": "Genau deswegen gucken wir ja drauf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:42",
+      "text": "Vielleicht noch ein tipp für verschwörungstheorien\nan der backe hat oder vielleicht mal zurecht biegen will verlinke ich noch ein schönes video wo ihr der youtuber simon sehr schön in wenigen minuten mal alle facts zu fünf g schön zusammengefegt hat und,\nso als argumentationshilfe nicht dass ich,\nvoller hoffnung dass es viel bringt aber vielleicht irgendjemand der noch zweifel hat auch noch diese auszuräumen so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:12",
+      "text": "Ich sag mal so in so einem turbulenten sturm des gesprächs mit einer verschwörungstheoretiker drin oder ein verschwörungstheoretiker\nist es nicht schlecht so ein kleinen handschmeichler der realität in der hand zu halten mit einem youtube-video wo vielleicht noch 'ne zurechnungsfähig person spricht ja also das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:30",
+      "text": "Handschmeichler der realität das ist schön wobei man auch in deutschland ist die argumentation eigentlich relativ einfach so ah ihr denkt dass fünf den korona virus verbreitet wir sind in deutschland gibt es keinen fünf g."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:43",
+      "text": "Ja\nWie soll das denn hierher gekommen seid."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:48",
+      "text": "Wie soll denn das funktionieren."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:27:51",
+      "text": "Hallo okay dann.\nMachen wir ein kleines update zum stand der contact tracing und korona apps und zwar möchte ich jetzt.\nAlso wer sich da jetzt detaillierter mit auseinandersetzt hat vielleicht auch mitbekommen dass es dass da jetzt eine reihe an,\naufregenden news gibt die dann doch irgendwie inhaltlich relativ schwach sind das heißt,\nin der spezifikationen ebene und technisch hat sich da jetzt relativ wenig getan deswegen möchte ich jetzt mal eine metaperspektive auf das geschehen wagen und zwar es gibt ja im prinzip.\nDrei player in diesem bereich contact racing apps das ist einmal der staat selber.\nUnd das ist einmal also google apple die großen monopole dir jetzt auch also von denen halt diese geräte stammen.\nOder die betriebssysteme die darauf laufen und dann gibt es noch,\ndritte die ich jetzt sagen wir mal als ich nenne jetzt mal dritte beziehungsweise je nachdem.\nAuch treuhänder die sagen okay wir,\ntrauen den staaten nicht wir trauen auch den big nicht deswegen sind wir hier als,\ntreuhänder die dafür sorgen dass es irgendwie eine privatsphäre basierte\ncontact tracking contact tracing möglichkeit gibt die wir implementieren die wir bauen wie auch immer ja also unabhängig davon ob das jetzt den trail oder dezentral ist das ist also diese unabhängige dritte.\nSo jetzt ist das so die unabhängigen dritten die trauben start- und big technik,\nstart und big trauen aber auch einander nicht und die haben auch beide sehr gute gründe dafür ja also es ist.\nTraditionell so dass wir versuchen unsere daten irgendwie möglichst nicht diesen big,\nzu geben und vor allem auch irgendwie die staatliche souveränität nicht an,\nabzutreiben und genauso kommen diese big tech-leute und sagen also diese staaten entschuldigung das sind irgendwie diese nervenden clever da unten und je nachdem wo wir unseren briefkasten aufhängen wollen die steuern von uns haben ja.\nIst irgendwie auch nervig ja und das heißt es gibt eigentlich allen diesen playern gegenüber einen argwohn und dieser argwohn ist.\nGesund ja,\nso bürgerinnen trauen nämlich start und big take nicht ja und jetzt ist die einzige frage ja was ist denn eigentlich mit diesem dritten mit treuhänder ja und da findet natürlich so ein bisschen diese diskussion gerade statt über\nzentrale und dezentrale systeme nochmal zur allgemeinen auffrischung.\nFür die unterscheidung zwischen zentral und dezentral ist,\ndie frage entscheidend wo die jetzt kommt das jetzt kommt zu so auf die entscheidung dann vor also für die unterscheidung von zentral und dezentral,\nist die frage relevant wo die entscheidung zu alarmierung getroffen wird im dezentralen ansatz wird sie auf deinem gerät getroffen im zentralen ansatz auf einem zentralen server der,\nauf dem dann eben auch,\nkontakt grafen anfallen also im im zentralen ansatz weiß ein server gerät xy alarmiert jetzt folgende fünf drei oder acht geräte.\nEs geht allerdings keinen mir bekannten zentralen ansatz der jetzt in europa diskutiert wird oder in deutschland diskutiert wird wo,\nunmittelbar klar wäre welche person das ist aber das ist so der der darüber streiten sich eben gerade die gelernten masse das dezentrale masters zentral zu den dezentralen ansätzen\ngehören primär d p t welche,\nursprünglich auch in peppi.\nMit drin waren in p t dem europäischen ansatz sollte es eine zentrale und eine dezentrale möglichkeit geben.\nDazu komme ich gleich nochmal wichtig ist steht für einen dezentralen ansatz ein anderer dezentrale ansatz ist das was apple und google,\nvorgeschlagen haben.\nDie dezentralen ansätze haben den vorteil dass sie so die höchste privacy bieten und damit eben auch das höchste vertrauen.\nDie höchsten grund dem zu vertrauen jetzt muss man da natürlich auch wieder.\nEinschränkungen machen ja unter der annahme dass ich genau weiß was das tut und das von unabhängigen dritten betrieben wird sie ja,\nda unterscheiden sich dann nur drei und apple google so ein bisschen ja die ist open source apple google hat ein konzept dargelegt aber da komme ich gleich nochmal darauf zu,\nder vorteil von diesen dezentralen ansetzen ist es gibt keine kontaktgranaten.\nDer nachteil ist es gibt keine kontaktgranaten für epidemiologische forschung entscheidungsfindung und monitoring,\nbenutzen da den etwas ungünstigen begriff zur welt der natürlich in der in privatsphäre.\nUnd netzpolitik bereichen tatsächlich eine sehr andere konsultation hat warum interessiert die epidemiologische und epidemiologische der kontakt graf nun die sagen.\nEs wäre gut zu wissen wie viele leute an jedem tag alarmiert wurden wie sich diese zahl im laufe der zeit ändert,\ngrundsätzlich ginge das auch in einem dezentralen modus diese zahl zurück zu liefern aber da hat man natürlich wieder das risiko dass man diesen,\ndezentralen modus ein bisschen versaut denn das eigentlich das eins der einzige grund warum man diesem dezentralen modus macht ist damit es keine kontakt grafen gibt und.\nHätten den ihr zeit gerne ein weiterer also je nachdem wie man darauf blickt ist das jetzt ein vorteil oder nachteil aber darüber streiten sie sich gerade ein wie ich denke,\nder entscheidendste nachteil der dezentralen ansätze aber ist dass das tuning schwieriger wird man hat kaum feedback,\nund kann deshalb schlechter lernen ja also wenn ich jetzt nicht,\nwenn ich noch nicht mal weiß wie viele leute alarmiert wurden dann weiß ich auch nicht wie viele positives negatives und so weiter ich habe ich komme immer auch an diese daten,\nja aber zum beispiel ein paar tage später wenn wenn die leute sich dann selber melden oder unter,\ngrößeren schwierigkeiten und das heißt,\nwird schwieriger die entscheidung an die vielen verschiedenen geräte die unendlich vielen situationen und kombination irgendwie anzupassen.\nUnd wir haben's ja hier mit einer entscheidung zu tun die die menschheit noch nicht hand hatte ja also es ist schwer davon auszugehen dass irgendjemand eine.\nCorona app sich jetzt ausdenken und sagt unter folgende bedingungen alarmieren ich und diese parameter sind direkt die richtigen,\nja und bei einem dezentralen ansatz wird es schwierig dass auch im laufe der zeit anzupassen denn für dritte standards,\nkann man einfach nicht so gut updaten und upgraden wie zentralisierte das ist einfach ein fakt der gefällt mir auch nicht aber es ist einer\nund das beste beispiel was da immer gerne angebracht wird ist halt e-mail,\nklar gibt es bessere modelle auch zur ende zu ende verschlüsselten versand von e-mail aber wir wissen alle das was am ende passiert ist dass wir.\nPrimär e-mails versenden die halt standards von vor weiß ich nicht,\nalso die man mit standards von vor ja ich weiß ich weiß nicht genau wann noch dazu kam ja dann ist ungefähr zwanzig jahre oder so aber.\nDas das hat man da wirft man einmal in anker raus und den wird man nicht ganz so einfach wieder los auch da gibt es möglichkeiten aber in einem zentralen modell.\nIst das eben einfacher,\nund dann gibt's noch die als problem in diesem dezentralen ansatz sie hat das schon angemerkt dass es eben datenschutzrechtlich eben da diese frage gibt im dezentralen ansatz,\nmarkieren sich ja leute als infiziert und zwar öffentlich denn diese daten wer infizierte wer kreuz gesendet hat und dann.\nDiagnostiziert wurde nur diese werden ja veröffentlicht das heißt von jedem code der da veröffentlicht wurde weiß man die person die den gesendet hat.\nIst infiziert jetzt stellt sich die frage wie gut kann man daraus wieder auf eine person schließen das sind die dinge die halt in dezentralen ansätzen gelöst werden.\nLeider interessiert das\ndatenschutzrechtlichen argumentation ein bisschen weniger weil die sagen na ja die daten sind nun mal da und die könnten ja diesen rückschluss erlauben das heißt da gibt's nochmal diese ganze datenschutzrechtlichen problematik die gewissermaßen ja widersinnig ist weil ja weniger daten anfallen\naber diese diskussion findet eben statt.\nSo jetzt kommt der zentrale ansatz daher und hat erstmal den nachteil na ja er hat kontakt grafen das ist ein entscheidender nachteil ist der eine grund warum wir überhaupt die zentrale ansätze machen jetzt hat er aber leider auch ein vorteil und der vorteil ist.\nEs gibt diese kontakt grafen ja und auf die,\neinsichten die sich von diesen kontakt grafen und den alarmierung erhoffen,\nist zu sehen was geht denn zum beispiel in zwei wochen läuft es gerade gut oder läuft es gerade schlecht ja und wir.\nBlicken ja zumindest in eine welt wo sich gedanken gemacht wird,\nvielleicht genauer schneller feiner dieser ausbreitung zu begegnen ja während wir.\nNachdem hier in deutschland die kontaktspuren begonnen haben,\neben in einer zeit waren wo wir erstmal vierzehn tage darauf warten mussten um zu erkennen hilft das eigentlich was wir hier gerade machen könnte man,\nunter umständen anhand von kontakt grafen da schneller sehen ob das etwas bringt weil man eben.\nLernen könnte weiterhin da die entscheidungsträger zentral liegen könnte man dort unter umständen mit weniger aufwand schneller entscheidungen einer höheren güte treffen,\ndas jetzt mal so das sind die,\ndiskussion die da jetzt gerade stattfinden gleichzeitig möchte keiner der ansätze die hier gerade diskutiert werden.\nUnd das ist weder google apple noch irgendwie noch,\nd p t und diese alle heißen irgendeine zentrale identifizierung von personen sammeln von gesundheitsdaten das möchte niemand in diese debatte ist dann jetzt apple und google sind reingekommen in einer ja doch auch irgendwie,\neinmaligen aktion aber irgendwie paper veröffentlicht haben wo ihre beiden logos drin sind und sagen okay wir vereinheitlichen das jetzt.\nWir sagen jetzt wo der hase lang läuft und geben vor und die haben sich für einen dezentralen ansatz,\nentschieden und die vorteile davon sind es gibt eine vereinheitlichung wie das überhaupt einfach mal weltweit funktionieren kann ja das ist ja irre leistung ja.\nUnd.\nWahrscheinlich wichtigste vorteil ist naja die können es in ihrer betriebssysteme integrieren und dann kann es auch tatsächlich funktionieren das ist natürlich auch die macht mit der die ja in diesem feld agieren,\nund jetzt kommt der nachteil die machen das zwar dezentral und aber auf der,\nus-air und da kennen sie die identität der person ja ohnehin jetzt gehen geben sie natürlich wieder in ihren kryptografisch beschreibungen so zeigen sie wie sie dieses problem lösen wollen aber am ende,\ngerade in so einem apple bereich ist das dann close source und wir fallen auf vertrauen zurück.\nUnd da kommt natürlich jetzt wieder dieser punkt so vertrauen wir big vertrauen wir starten und da in zwei sich jetzt der zwist der eigentlich gerade stattfindet denn.\nDadurch durch diese vereinheitlichung und durch die macht die google und apple hier haben degradiert ihr ansatz im prinzip.\nStaaten zu kunden die haben die staaten verlieren jede souveränität darin irgendwie sich zu überlegen so und so wollen wir contact racing machen sondern es gibt halt contact racing.\nUnd da gibt's von google und apple wie alles andere auch und.\nGleichzeitig degradiert google und apple damit so app anbieter also die dritten und treuhänder,\ndazu dass sie ein bisschen klicke bounty für die epic machen können und sich um das regulatorische heavy lifting kümmern können,\nja also google und apple hatten natürlich kein interesse mit allen ich weiß nicht wie viel es gibt hundertsechzig staaten dieses planeten darüber zu reden unter welchen bedingungen von wem signiert irgendwie jemand dann als infiziert\ngilt oder nicht ja damit haben wir natürlich keine lust sich auseinanderzusetzen mit anderen worten seine hier pass auf wir geben euch auf der us hier das ding\nja und dann möglichst geben uns dann die staaten.\nSagen dann okay wie läuft wohin die daten kommen und welche apps wir irgendwie zulassen können und welche nicht und unter welchen bedingungen so dann.\nDen sagen wir mal den ärgerliche kram den könnt ihr selber machen ja so ist eigentlich gerade die lage und da ist da beginnt jetzt das große tauziehen und.\nMir scheint es so zu sein dass eben.\nWas hier gerade passiert die staaten trauern big technisch traut den staaten nicht und die ziehen natürlich alle daraus ihre schlüssel nämlich gibt die daten lieber uns und.\nDie regierung haben immerhin das,\nalso die europäischen regierungen haben immerhin das problem bewusstsein dass sie sagen okay wir wissen selber dass wir diese daten nicht kriegen können wir wollen aber auch gar nicht haben wir wollen ja nur sicherstellen dass unsere,\nnational health instituts was weiß ich dass er oder wer auch immer darauf zugreifen kann um uns dann irgendwie bei den maßnahmen zu beraten deswegen zerren die großen europäischen staaten deutschland frankreich.\nSehr eindeutig und lesbar in richtung zentraler modelle.\nUnd haben einen allgemeinen wenn auch technisch wenig nachvollziehbaren je nach betrachtungsweise arg wo gegenüber einer lösung von google und apple.\nDas scheint mir die allgemeine gemengelage zu sein und,\ndas finde ich auch dass viel interessantere tauziehen was da gerade stattfindet neben irgendwelchen zankereien zwischen irgendwelchen forschungsgruppe die dann da ja sich alle nicht angemessen verhalten.\nUnd da bin ich sehr gespannt wie das ausgeht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:47",
+      "text": "Ja ich muss ja also alles richtig was du sagst man muss auch mal festhalten zum aktuellen zeitpunkt gibt es halt,\nzumindest jetzt aus dieser perspektive deutschland heraus international habe ich das jetzt nicht so verfolgt wo noch weitere propose gemacht werden es gab ja schon andere ansätze in singapur etcetera die sicherlich,\nmit der technischen basis die dort gefunden wurde jetzt nicht besonders zukunftsträchtig sind\naber alles was jetzt mit dieser ganzen bluetooth energy diesen beacons idee spielt.\nDa gibt's die beiden großen konzeptidee die du gerade beschrieben hast ne zentral dezentral beides irgendwie versucht anonym zu sein das dezentrale hat,\nprinzip bedingt da eben seine vorteile und die von dir genannten nachteile.\nDe facto haben wir aber heute nur für diese dezentralen sowohl eine spezifikation,\nals eben auch schon die ankündigung einer implementierung mit dem extra plus das ist eben auch noch und google sind die das machen und dadurch dass sie das ins us machen das dadurch überhaupt erst ermöglichen,\nwährend dem diese server varianten die die staaten jetzt offensichtlich ganz gerne lieber hätten weil sie sich davon mehr versprechen.\nMuss auch betonen sie versprechen sich davon mehr ob sie davon auch am am ende auch mehr haben werden steht noch mal auf ein ganz anderen blatt.\nGelten diese argumente die du genannt hast aber kann auch sein.\nDass ein dezentrales modell was jetzt technisch gut durchstartet was vielleicht auch,\nauf einem globalen standard arbeitet sehr schnell auch nachgerüstet wird in in in dieser hinsicht und diese anderen probleme auch löst was weiß ich die apps,\naus den einzelnen staaten werden ja sowieso so ein sonderstatus haben weil nur die dürfen überhaupt auf diese funktion zugreifen das hält nicht so dass jetzt jeder im app store irgendwie so eine app baut sondern es geht hier tatsächlich um eine app oder vielleicht auch ein set von apps\ndie aber alle quasi von dem national health organisation abgesegnet und herausgegeben werden und nur die machen das.\nUnd wenn diese apps dann,\nlaufen und das problem haben dass sie eben nicht schnell genug aktualisiert werden\nwas du ja auch gesagt hat ist man will den algorithmus ändern wie stellt man sicher dass es eben auch schnell auf allen telefon so ist weil er muss ja alle erstmal irgendwie ein update button glücken drücken durchaus vorstellbar dass wir an der stelle so ein punkt sehen werden wo,\napps einfach aktualisiert werden ja wo die betriebssysteme so ein push durchgeben und sagen diese app machen wir jetzt einfach mal aktuell\nda warten wir jetzt nicht auf den user sondern wir stellen einfach sicher die aktualisieren sich bevor die irgendwie weitermarschieren können alles technisch möglich alles.\nIn sichtbaren bereich und auch diese ganzen epidemiologische geschichten werden sicherlich in dieser hinsicht auch noch abgefedert werden können das also jetzt sozusagen die situation staaten hätten gerne server.\nHaben aber zumindest öffentlich.\nNichts vorgelegt ich kenne nichts vielleicht gibt's schon irgendwo was ich habe nichts gesehen ja es gibt keinen so soll das protokoll sein so soll 's genau funktionieren sonst alles so ja und im prinzip die dezentralen sind spezifiziert,\nwerden vermutlich ab mitte mai auch schon funktional sein und sind dann erstmal in der welt kann auch sein dass wir beides sehen werden.\nIch werde jetzt gar nicht so überrascht wenn man sagt okay dezentral hat vielleicht irgendwelche nachteile in puncto auswertbar keit,\nist aber schnell am start zu bringen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:48:36",
+      "text": "Entschuldigung wenn ich da ganz kurz einhaken das war ja und ist auch nach meiner nach meinem verständnis wahrscheinlich immer noch\ndas ziel von zwei modelle zu erlauben deswegen waren ja war ja diese forschungsgruppe in pep.\nDrin aber,\nich habe ja auch gerade schon gesagt deswegen will ich gar nicht in irgendwelche details gehen ich weiß es geht hier eher um eine meter gemenge lager und was sich in dieser meter gemengelage zeigt ist dass.\nSeid google und apple da quasi ein flog in den boden gerammt haben.\nVielen anderen eben der gestaltungsspielraum weggenommen wird das kann etwas gutes oder etwas schlechtes sein deswegen habe ich das jetzt erstmal so neutral geschildert und,\num einfach mal hier die kräfteverhältnisse zu zeigen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:34",
+      "text": "Ich wollte wird das jetzt auch gar nicht neutral darstellen ich sage einfach nur da\ndas ist sozusagen derzeit die situation wir haben diesen technischen vorsprung im im bereich dezentral sehr wahrscheinlich dass da demnächst was ins rollen kommt\nwir haben den wunsch server zu machen wo derzeit noch nicht klar ist wie es ist ich finde es schließlich aber auch nicht aus also es kann auch sozusagen beides stattfinden."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:49:56",
+      "text": "Man muss dann schon also das was du im technischen vorsprung bei dezentral nennst ist jetzt\nlässt sich am ende darauf unterbacher dass apple und google da mitspielen würden ja das ist ja nicht unbedingt ein technischer vorsprung ist ja nicht so als wären\nzentrale ansätze jetzt untätig und würden nicht auch code schreiben und wenn du ein.\nIm zweifel simplere protokoll baust was aber wo es zumindest anlass,\nzu der vermutung gibt dass das unter umständen weniger gut performant ist,\nin verschiedenen zielgruppe dann ist es halt auch schwierig von einem technischen vorsprung zu sprechen so einfach ja also nicht alles was einfacher ist es deshalb direkt ein technischer vorsprung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:51",
+      "text": "Ich wollte in zeitlichen vorsprung."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:50:53",
+      "text": "Ok ja das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:54",
+      "text": "Nicht im sinne von besser sondern der vorsprung ist da das existiert bereits es ist ist es spezifiziert es befindet sich gerade eine umsetzung und wird in wenigen wochen in auf die ein oder andere art und weise in der welt sein es wird schneller da sein.\nDas ist der vorsprung den ich meinte."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:51:11",
+      "text": "Ok jedenfalls ist das gerade die große gemengelage und ich finde das jetzt sehr interessant zu sehen wer sich da am ende durchsetzen wird weil mehr als,\nwas jetzt irgendjemand spezifiziert hat ist tatsächlich jetzt die frage dass da doch eben andere interessen und ein kraftmessdosen reinkommt,\nund das wird dann jetzt doch noch spannender als ich dachte.\nWenn das jetzt dann doch zu einem showdown zwischen big und,\nstarten wird die sich beide vom jeweils anderen offenbar in ihre souveränität reingegraben fühlen und auch beide finde verständlich argumente erfahren,\nalso das beobachte ich mit mit interesse."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:02",
+      "text": "Ich habe übrigens falls sich jemand für die technischen details,\ninteressiert in der letzten folge diese ganzen dezentralen ansatz mal im detail durchgeackert sodass man da mal nachvollziehen kann wie das dann,\nfunktionieren könnte."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:52:22",
+      "text": "Hatten wir glaube ich prinzipiell in locker und netzpolitik vor drei folgen oder so auch gemacht,\ngut kommen wir zum nächsten thema und zwar denke ich das nächste was uns hier als diskussion.\nAnstehen wird ist die,\nungleichmäßig verteilung von corona nachteilen in der gesellschaft ich hatte das ja eingangs schon so ein bisschen gesagt wir haben jetzt irgendwie gerade haben wir alle gleichermaßen\ngleiche nachteile und das ist für gruppen immer quasi einfacher zu ertragen also du du erträgst.\nQuasi schlechte situationen.\nUmso besser je mehr leute auch in dieser situation sind ja dann gibt's nämlich kaum jemanden dem du dem du.\nDen du beneiden kannst gibt es auch sehr schöne forschung zu sagen wir im bereich der.\nSoziologie oder sozialpsychologen.\nDass ein besonderer also ein guter garant oder ein guter preditor für irgendwie unzufriedenheit soziale unruhen oder oder auch allgemeine unglücklichkeit.\nIst nicht unbedingt,\nob es den leuten jetzt schlecht geht oder gut geht sondern wie unterschiedliches den leuten geht also wie ungleichmäßig reichtum privilegien und sonstiges in der gesellschaft verteilt sind und zwar,\neinfach nur die spannbreite und.\nDas kann man sich relativ einfach an so verdeutlichen an.\nSo experimenten wo leute gefragt wurden pass auf du kannst du kriegst eine wohnung mit hundertzwanzig quadratmeter in einer welt wo alle anderen zweihundert haben,\noder du kriegst eine wohnung mit neunzig quadratmetern in einer welt wo alle anderen sechzig haben ja und die leute sagen ey pass auf dann nehme ich lieber die quadratmeter obwohl er ist der de facto die kleinere wohnung ist,\naber der relative wert ist für sie hat,\ninteressanter so worauf will ich hinaus bleiben wir bei dieser corona app sagen wir mal die schick dich in in karate-do.\nIn eben einer welt wo du dann nicht einer von sohn soviel achtzig millionen deutschen bist die zu hause bleiben müssen sondern wo du einer von einer million bis während alle anderen\nachtzig millionen da draußen tralala machen denn ist das um einiges schwieriger zu ertragen.\nDas ist der eine punkt zweitens die immunität gegen diese solche wird zu einem.\nAuf jeden fall zu einem privileg einen massiven privileg in dieser gesellschaft wobei übrigens hier vorsichtig kurze geschäftsidee nicht nachmachen ich erwähne die nur damit es hier zuerst gehört habe geschäftsidee corona hotel.\nFunktioniert folgendermaßen die hotels haben ja grade alle quasi zu weil kaum jemand reist jetzt machst du den corona hotel\nwie funktioniert also wer kommt brauchen gesundheitspark ähnlich wie irgendwie vorm fallschirmspringen tauchen oder fliegen oder sowas ne gesundheitspark dass du so grob\nhalbwegs in ordnung bis ärztin hat einmal geguckt dass du ein und ausatmen kannst und irgendwie kurse kopf oder so ne jo jetzt kommst du mit dem gesundheitsminister hin\nund dann unterschreibst du so ein waver wie wie beim was weiß ich tätowieren piercen oder sonst was ne wo du sagst hier\noder sterbehilfe oder so ne wurde sagst du ich weiß was hier passiert ich bin im vollbesitz meiner geistigen kräfte und ich werde euch nicht verklagen und dann gibt es\ndie in diesem corona hotel gepflegte korona suppe die korona suppe,\nwird bei exakt perfekten temperaturen für so einen korona virus gehalten und besteht aus zweifelsfall spucke und spot rum.\nVon corona erkrankten und jetzt,\ndie steht da vorbereitet und dann kannst du davon was nehmen ja infiziert dich jetzt im corona hotel,\ngezielt mit corona außerdem zum angebot gehört eine flatrate für den spa-bereich und weil die alle da korona haben und haben wollen.\nAll inclusive open-bar ja das ist ein richtig geiles hotel netflix flatrate es ist eine fette party dauert ungefähr dein aufenthalt vierzehn tage drei wochen,\nnotärzte sind in der nähe essen gibt's nur economy weil du schmeckst ja eh nichts wenn diese infektion funktioniert und.\nSo"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:10",
+      "text": "Wo willst du hin hier mit diesem gedanken."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:13",
+      "text": "So und wenn das schiefgeht das geht ja nur bei relativ wenigen schief dann\nfahne dich halt irgendwie hintenrum ins krankenhaus und die kosten die muss das hotel ja nicht tragen das kann man ja wieder schön die gewinne privatisieren,\nkosten sozialisieren wie was gesagt haben und ich sage dir tim das ist kein kein,\nalso das ist ein sehr verwerfliches geschäftsmodell und das ist auch nicht für die gesellschaft tragfähig und genau deshalb wird es jemand machen.\nIch sage es gibt bald korona hotels."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:49",
+      "text": "Ich glaube du hast dich da nicht genug mit leuten unterhalten die das virus tatsächlich schon durchlebt haben."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:57:54",
+      "text": "Du ich unterhalte mich mit vielen davon ich unterhalte mich mit leuten die es jetzt gerade durchleben und mit leuten die schon durchlebt haben ich sage dir corona hotel wird's geben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:05",
+      "text": "Gut aber worauf wolltest du denn eigentlich hinaus weil ich finde das jetzt ein bisschen nebensächlich."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "0:58:10",
+      "text": "Die leute werden da reingehen um um den solchen pass zu bekommen.\nUnd tatsächlich arbeitet irgendwie die bundesdruckerei mit der lufthansa go digital\nurbino birgit oder keine ahnung irgend so ein blockchain dingens\njeans und verschiedenen anderen unternehmen und beratungsunternehmen an\nkonzepten für einen verlässlichen nachgewiesenen korona status zu regulation,\nnicht nur im gesundheitswesen sondern auch in der wirtschaft beispiel einlass zu großveranstaltung internationale flüge einreise\nwer schon mal in bestimmte länder gereist ist irgendwie in südamerika zum beispiel da musst du auch zum beispiel nachweis über eine gelbfieber-impfung mitbringen\nja ist also überhaupt nichts besonderes dass man bei einer einreise von menschen.\nEin immunstatus gegen bestimmte krankheiten verlangt und das wird bei korona natürlich auch eine rolle spielen und jetzt überleg dir,\nwas das bedeutet wenn von wie vielen sachen du einfach ausgeschlossen sein wirst wenn du nicht das,\nkorrekte corona prüfsiegel für dein immunsystem zeigen kannst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:38",
+      "text": "Tja,\ndas wird bestimmt total gut funktionieren dieses prüfsiegel nicht falsch zu machen und nicht durch korruption an leute zu verteilen die hatte ich gar keinen anspruch darauf haben,\nalso da habe ich so ein bisschen meine zweifel ob das sozusagen greift aber dein punkt den verstehe ich natürlich schon es ist etwas was wir befürchten müssen ist\nbisschen zu früh glaube ich noch in der ganzen diskussion weil wir derzeit einfach,\ndoch überhaupt gar keine erkenntnisse über immunität haben also wir wissen nicht ist die immunität gegeben ja also\nhat man die auch auf jeden fall wenn man sich den virus einmal eingefangen und durchlebt hat.\nDie aktuelle wahrscheinlichkeit ist ja vermutlich aber wissen tun wir das erst später weil dieser virus ist halt auch erst seit drei monaten in der welt,\nund der andere frage ist selbst wenn er die mich immun macht wie lange wird diese immunität anhalten wird die.\nLebenszeit sein oder verschwindet die nach zwei jahren wieder wissen wir nicht."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:00:45",
+      "text": "Alles ja kein problem in einem solchen dingen abzudecken ja du müsstest ja im prinzip nur,\nalso im impfpass steht auch einfach nur drin wann du geimpft wurdest ne da steht nicht drin ist immun bist sondern da steht drin hat an dem und dem in dem mit dem tag irgendwie eine impfung gegen haste nicht gesehen bekommen und dann kann natürlich auch jedes land\nselber könnte jedes land selber oder entscheiden und sagen pass mal auf wir akzeptieren nur so zu lange oder nicht also das ist schon.\nIch sage nur die machen sich da gerade darüber gedanken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:19",
+      "text": "Wenn's nur eine technologie gebe mit der man sowas sicher abbilden könnte."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:01:23",
+      "text": "Ja genau denn sie versuchen's natürlich jetzt mit einer blockchain."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:26",
+      "text": "Die blockchain."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:01:32",
+      "text": "Genau eine blockchain und wir werden,\nwerden mal sehen wohin das führt weil man sich natürlich bei diesen sachen jetzt auch fragt okay will man das zentral erfassen will man es dezentral erfassen das heißt da wird man genau die gleiche debatte wieder führen.\nGibt jetzt eben verschiedene ansätze das umzusetzen und naja.\nWegen des hohen anreize des diesen immunstatus zu haben denke ich wird es da auch ein sehr hohen druck geben,\ndass menschen versuchen den zu erlangen ja sei es durch fälschung sei es durch den korona haut helm sei es durch sonst was und das wird noch ein richtiges thema in der gesellschaft werden.\nAuch zum beispiel in einer zeit wenn dann aus hoffentlich fällt ja am ende von aus einer von piketty fabriken im stoff ne da gehen wir jetzt einfach von aus der wird ja auch nicht\nmilliarden fach dort raus plumpst wie in die\nwelt braucht ja das heißt auch da werden wir dann wieder verteilung schwierigkeiten haben und so weiter und bei,\ndingen die so hohe privilegien.\nVersprechen viertes eben fälschung bemühungen geben wird es betrugs bemühungen geben und natürlich auch,\nja unlautere angebote wie man sie jetzt auch schon die ganze zeit hat ne das wird wird echt spannend und da.\nKann ich auch verstehen dass dass man sich dann sagt okay kann man kann man da nicht wirklich die modernen methoden der kryptographie nutzen.\nUm einen solchen nachweis unfeld spart zu machen und natürlich kann man das die frage ist was hat das für gesellschaftliche konsequenzen.\nSpannend deswegen ich sag's dir tipp corona heute."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:31",
+      "text": "Da brüssel berater um die idee so richtig in die welt zu kriegen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:03:38",
+      "text": "Und ich kenne guten ich kenne richtig guten peer beraterteam.\nDas sind startup von von von wie soll man das sagen ja also von namen die für sich sprechen.\nKai diekmann ja wer würde sich wer wünscht sich nicht kai diekmann in ins haus.\nExtern de chefredakteur philipp jessen und dem eventmanager michael bronz unter anderem eine,\ndie haben irgendwie so ein social media pr start-up da irgendwie am laufen.\nUnd jetzt ist folgendes passiert der gute viro loge doktor strick,\ndoktor strick hat die sogenannte heinzberg gemacht die auf twitter ja schon sehr viel aufregung,\nmachte bevor sie überhaupt veröffentlicht wurde und sie wurde auch bis heute nicht veröffentlicht noch auch nicht als vorstudie oder sonst was musste aber ostern präsentiert werden und da gab es ein tweet den fand ich total herrlich ja da habe ich schon,\ngedacht immer was ist denn jetzt los da gab's ein foto von dem herrn strick,\nwie der an seinem schreibtisch sitzt oder an einem schreibtisch sitzt mit dem telefonhörer am ohr und einem stift in der hand ein stift,\nund das foto war eindeutig gemacht mit einer guten kamera.\nSo ein bisschen aus position auch nicht von ihm selber denn er hat ja einen stift in der hand und ein telefonhörer und der tweet lautete.\nIrgendwie so sinngemäß letzte ergebnisse zusammentragen in zwei stunden präsentieren wir die heinsberg studie wurde dir so denkst so warte mal.\nZwei stunden vor der präsentation telefonierst du dir noch ergebnisse zusammen und schreibst ihm stift auf und hast dann auch noch zeit für einen tweet und ein fotografen oder eine fotografin der passt doch irgendwie nicht ja.\nStellt sich raus der hat sich.\nDiese story maschine berater an bord geholt mit dem ziel,\nder wissenschaftlichen arbeit groß größtmögliche öffentlichkeit und sichtbarkeit zu ermöglichen\nweil sich ja überhaupt niemand in diesem land gerade für corona interessiert oder irgendwelche studien das ist ja es ist unglaublich schwierig dafür aufmerksamkeit zu bekommen da brauchst du natürlich\nirgendwelche berater von kai diekmann in der hütte die irgendwelche fotos für dich twittern.\nAlso ich man kann sich wirklich nicht man kann sich echt nicht.\nVorstellen wie unglaublich nämlich das war also der fällt mir nichts mehr\nzu allen und das einzige was ich dazu sagen kann ist ich hoffe dass sich alle wissenschaftlerinnen und wissenschaftler jetzt ein für alle mal hinter die ohren schreiben dass sie in ihrer karriere sich nicht die blamage,\ngeben wollen die sich der strick gegeben hat indem er sich mit irgendwelchen social media beratern eingelassen hat bei seiner zweifelsohne wichtigen studie,\ndie sicherlich irgendwann auch noch veröffentlicht wird aber das ist auch wirklich was war das denn für eine peinliche nummer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:05",
+      "text": "Es gibt da zwei faktoren glaube ich die die theoretisch hier zu zur wahrheit führen können die ich nicht kenne wann ist eine ist,\ner war so blöd,\nund hatte wirklich einfach nur keine lust auf die ganze öffentlichkeitsarbeit weil das ja so viel zeit kostet er möchte sich ja gerne um seine studie kümmern und deswegen war\ndann dieses angebot ganz recht mit ach ja ihr öffentlichkeitsarbeit das könnt ihr ja wir sind ja auch gut\ngute freunde dann ach und ihr macht das auch noch kostenlos wie nett von euch das könnte ja wirklich behilflich sein und dann ist er sozusagen\nin diese realität reingelaufen das halt so eine maschine einfach funktioniert wie eine maschine das aber das,\neigentlich zu dem was er tut in der zeit in der es tut nicht passt,\ndas ist aber mal die freundliche auslegung die weniger freundliche auslegung ist dass das ganze\neine konzertierte aktion war dass es eine sehr bewusste entscheidung war sich dementsprechend begleiten zu lassen weil es von vornherein von dem interesse geleitet war\ndieser studie in ihrem ergebnis ein spin mitzugeben,\nkonkret eben mit diesem argument mit ach guck mal was bei uns hier rauskommt ist ja alles gar nicht so schlimm da können wir ja auch mal wieder die wirtschaft aufmachen in nordrhein-westfalen wo ein ministerpräsident ist der gerade gerne c d u vorsitzender werden möchte."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:08:31",
+      "text": "Und du hast ja mit pavel in uk w darüber gesprochen dass die,\nzahlen die da raus gekommen sind für diese für diese dorf geangelt.\nIrgendwie aus aus jeglichem bisherigen bisher berichteten rahmen fallen was."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:53",
+      "text": "Ja das ist noch ein bisschen umstritten also wir haben da auch feedback bekommen es wird das mal ein bisschen offen halten ob die nur wirklich komplett aus dem rahmen fällt aber es ist eh klar dass einfach\ndieser bereich nicht aussagekräftig sein kann für ganz deutschland ja gerade weil er eben so massiv betroffen war und es ist interessant sicherlich was dabei rauskommt und man wird vor allem erstmal abwarten müssen was die zahlen am ende sind\nwenn auch mal klar ist wieder die die gewichtung ist aber gut fühlt sich das nicht an."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:09:22",
+      "text": "Also in dubio pro rio im also im zweifelsfall ich gehe davon aus dass der.\nEine wissenschaftlich,\nhaltbare studie da vorlegen wird die wie jede andere wissenschaftliche studien ist auch ihre limitationen haben wird.\nDas ist glaube ich völlig normal und in deswegen werden die limitationen in in den veröffentlichungen\noffen und ehrlich diskutiert und deswegen werden studien vollständig veröffentlicht was da passiert ist mit einer vorfall zu ostern und bis heute haben wir die studie nicht gesehen das ist,\naußerst peinlich und betont einfach nur warum wissenschaft seit vielen,\nich wollte heute mal sogar tatsächlich herausfinden seit wann aber auf jeden fall seit vielen hundert jahren so funktioniert ja das\nwer etwas behauptet immer zeigen muss und so dokumentieren muss dass alle anderen das nachvollziehen müssen jede studie die du machst muss so beschrieben werden dass\nsie die leserin in die position versetzt die gleiche studie ebenfalls durchzuführen.\nUnd das ist hier bis heute nicht der fall und ich hoffe dass das also ich hoffe dass der eine besonders herausragende großartige studie vorliegt weil,\nes gibt nur einen grund warum ich das hoffe weil wir es uns nicht erlauben können dass jetzt ernsthafte zweifel an der,\nintegrität der führenden wissenschaftlerinnen und wissenschaftler dieses planeten entsteht nur deshalb hoffe ich dass der typ selber ist mir völlig egal aber ich hoffe dass der am ende eine.\nVernünftige studie vorlegt die dem schloss vorschuss vertrauen dass er da erhalten hat gerecht wird.\nUnd ich hoffe dass alle daraus lernen wie man sich als,\nehrbarer wissenschaftler damit ins ins knie schießen kann wenn man sich mit kai diekmann einlässt denn ganz ehrlich vorsichtige these ich glaube es hat kein mensch auf diesem planeten jemals nicht bereut\nsich mit kai diekmann eingelassen zu haben und wenn sie es bis jetzt noch nicht bereut haben dann ist es eben noch nicht zu ende,\naber ich kann mir nicht vorstellen dass irgendein mensch auf diesem planeten sagt ich habe mich mit auf dem diekmann eingelassen war völlig in ordnung völlig okay,\ndas ist gibt's einfach nicht ja das weiß man auch man lässt sich mit denen nicht ein unter keinen umständen jemals und das hat er arme herr streck jetzt auch gelernt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:11",
+      "text": "Gut damit sind wir glaube ich mit dem corona thema erstmal durch für diese woche."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:12:17",
+      "text": "Ja und auch bald am ende der sendung ne.\nAlso wir haben es gibt ja eine app mit dem namen zoom der eine klare corona gewinner.\nUnd da haben wir über eine reihe an schwachstellen berichtet und über unter anderem auch darüber dass sie datenschutz mängel hat weil sie nämlich,\ntrecker.\nIn ihrem code eingebaut hatte irgendwie facebook kontaktieren und sowas die nirgendwo dokumentiert waren ja was nach unserer allgemeinen.\nDatenschutzrechtlichen auffassung nicht geht wenn du eben irgendwelche für partys da mit daten fütterst muss das in der datenschutzerklärung erwähnt sein.\nSo stellt sich raus ein open source projekt welches."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:19",
+      "text": "Du empfohlen hast."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:13:21",
+      "text": "Wo ich server für betreibe genau dafür gibt es auch eine app die das gleiche problem,\nund interessanterweise gibt es da wohl auch kein problem bewusstsein und zwar wurde uns in den kommentaren wurden wieder auf ein,\ngitarre\naufmerksam gemacht von alba freude glaube ich sogar ausgelöst wo sie dann mit den entwicklern darüber streiten dass man diese tracker entweder rausnehmen oder in der datenschutzerklärung adäquat aufführen muss das betrifft aber,\neben.\nDie app ja und genau deshalb will man eigentlich auch eine selfie web-app haben ja also wer c ist,\nnicht perfekt aber ganz okay,\nund genau deshalb will man eben open source auf eigenen servern sowas haben und genau deshalb ermutige ich ja auch alle sich ihre eigenen server aufzusetzen und die im besten fall eben auch aus dem browser zu nutzen,\nnicht unbedingt über eine app.\nImmerhin ist der code dieser app offenbar aufgeht hat dass man sich darüber beklagen kann bei summe ist das nicht der fall,\nnur um nochmal bei zoom zu bleiben thorsten hat sich zoom angeschaut.\nPrimär weil ihnen das geärgert hat dass dass die leute das das ding benutzen trotz aller warnungen und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:48",
+      "text": "Also thorsten schröder."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:14:50",
+      "text": "Thorsten schröder genau,\nder bei uns ja auch einmal bisher sendungsmast war mit dem ich schon den ein oder anderen vortrag beim kongress gehalten habe und\nja hat einfach nur mal statisch in das bein geguckt finden sich irgendwelche alten open libraries drin mit schwachstellen finden sich,\ndie statements werden einfach konkrete nate also du hast keine prepaid statements sondern die bauen sich irgendwelche strings und werfen die dann in ihre datenbank mit anderen worten wahrscheinlich\nangriffsfläche für jacksons dann hat er noch ein buffet gefunden in der logik funktion\nauch das nicht ganz so geil und ja das ding bleibt halt einfach irgendwie eine wurst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:37",
+      "text": "Auf welcher plattform hat er sich das angeschaut."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:15:39",
+      "text": "Das ist die windows dass die das windows beinahe zweiunddreißig bitte warum auch immer die den code als zweiunddreißig und nicht als vierundsechzig mit wahrscheinlich weil sie sonst die ganzen kaputten alten libraries nicht mehr da reingelegt kriegen.\nJa also das das bleibt ein ein fass ohne boden und jetzt muss man natürlich so sehen wenn.\nDu deine schwachstelle drin hast dann betrifft die nicht unbedingt nur deine die die vertraulichkeit deiner kommunikation wenn wir hier von buffer flows und injection potenzialen reden.\nDann betrifft das eben auch die unter umständen die integrität deines rechners ne also es.\nEs ist tatsächlich so ich mag viele sachen nicht als webservices ja ich mag ehrlich gesagt teilweise lieber ordentlichen code auf meinem computer.\nIm falle von so einer kommunikation ist das vielleicht.\nAuch so eine frage von hast du das hast du die probleme dezentral oder hast du die probleme zentral und da ist natürlich unter umständen so ein sicherheits- wie ich kontrolliere den server und.\nKontrolliere dem oder und ich muss nur auf den browser aufpassen eben ein anderes als ich habe irgendwie komische app die mir als close source irgendwie hin geschoben wird.\nAber ja das bleibt also ein ein spannendes feld und es gibt natürlich auch viele leute die jetzt bei in größeren gruppen mit jessi nicht so zufrieden sind ich höre jetzt neues gutes über von big,\nbutton das habe ich auch mal in einer größeren gruppe genutzt das scheint da,\nbesser zu funktionieren gleichzeitig entwickelt sich in richtung echter ende zu ende verschlüsselung also es bleibt ein spannendes feld und wird sicherlich auch die corona krise weiterhin begleiten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:36",
+      "text": "Wenn ihr sohn benutzen müsst weil es ja mal jetzt von der ganzen security geschichte abgesehen ganz gute features bietet und ich glaube bei diversen universitäten jetzt auch so die\ndas tool der wahl ist ne kauft euch einfach ein ipad und ballert da irgendwie das obendrauf dann kann ich zumindest der rest des rechners nicht um die ohren fliegen.\nNur empfehlen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:17:58",
+      "text": "Ja oder ich meine man kann auch eine nehmen oder der decades rechner dafür also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:07",
+      "text": "Meine ich ja bleib."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:09",
+      "text": "Wer ja das jetzt unbedingt ein ipad sein muss sei dahingestellt es hat natürlich einige ganz gute.\nKompakt metalisiertes funktionen andererseits würde man sich jetzt nicht ein schönes ipad damit versauen dass man da irgendwie solche sowieso.\nSo was so was drauf installiert ist man will ja irgendwie seine eigene umgebung auch schön halten ja du lachst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:37",
+      "text": "Romantiker."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:40",
+      "text": "Also dein deine anspruch an software hat ja in den letzten jahren gelitten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:43",
+      "text": "Klar natürlich logisch total."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:46",
+      "text": "Wenn ich mir die lass uns nicht mit deiner buchhaltung software anfang."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:49",
+      "text": "Meine buchhaltung funktioniert super ist mit deiner."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:18:52",
+      "text": "Diese software tim es gibt ja das ist.\nAlso was du da benutzt das sind windows interfaces wie wie sie wie man sie seit drei elf glücklich hinter sich gelassen hat das ist einfach keine experience die da geboten wird.\nAber lassen wir das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:14",
+      "text": "Die auswahl so groß wäre wie ich sie gerne hätte ja das wäre schön aber die."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:21",
+      "text": "Der unterschied ist einfach der unterschied ist einfach dass du dich früher als du noch visionär von software gesprochen hast nicht damit zufrieden gegeben hast dass es etwas nicht gibt jetzt tust du es aber."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:33",
+      "text": "Das ist ja gar nicht so ich gebe mich ja überhaupt gar nicht damit zufrieden trotzdem funktioniert's und das ist erstmal das wichtigste."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:41",
+      "text": "Und jetzt redest du den leuten dazu sich ihre schönen ipads mit zoom voll zum ballern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:46",
+      "text": "Ich habe gesagt wenn du zum benutzen musst dann kauft er zumindest ein ipad wo du das quarantäne betreiben kannst."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:19:53",
+      "text": "Wenn du zum benutzen musst dann tue etwas dagegen.\nDas ist der spirit mein freund."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:02",
+      "text": "Ach ja tue deinen jugendlicher leichtsinn."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:07",
+      "text": "Was heißt hier leichtsinn ich benutze keinen zoom."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:10",
+      "text": "Ich bin jetzt auch kein so ich habe nur gesagt wenn ihr besuch benutzen müsst dann so."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:16",
+      "text": "Ich sehe wir kommen ja nicht zum ergebnis."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:18",
+      "text": "Der lass es lieber zum ende kommen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:21",
+      "text": "Komme übrigens tatsächlich dann leute und sagen hier ich muss jetzt an der uni zum benutzen was wie kann ich mich dagegen wehrt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:25",
+      "text": "Ja das ist die realität reality let's facette."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:20:32",
+      "text": "Wie gesagt früher hattest du da mehr mehr mut,\nok ich würde gerne am ende dieses corona dramas dieses arktis des corona dramas einigen leuten danken und ich hatte ja schon es gab jetzt in den letzten\nsendung ja weniger dank weil ich eben psd zwei geschädigte bin.\nDeswegen gibt es jetzt eine etwas längere liste und die beginnt mit besonderem dank an christoph besondere dank an harald besonderen dank an jo,\nsonnentag an michael nils rüdiger besonderen dank an simon susanne und volker dann gibt es zwei unbekannte personen denen ich danken möchte.\nSie können sich gerne noch bei mir melden wenn sie ihren namen jetzt in dieser reihe vermissen.\nUnd dann danke ich noch in alphabetischer reihenfolge alexander andreas benjamin christian clemens daniel dirk hanno holger jens lukas\nmanuel marco markus martin matthias michael oliver peter philipp ralf robert,\nsascha simon steffen stefan säuren thomas tore tim tobias und toni herzlichen dank."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:54",
+      "text": "Bitteschön endlich danke dir auch mal mir achso bisschen beruhigt."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:21:57",
+      "text": "Du warst damit nicht gemeint."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:02",
+      "text": "Ja genau und wie immer.\nGilt der dank auch allen ungenannten und zahlreichen daueraufträge und sonst wie supporter mutmacherin kommentierern und überhaupt all den leuten die den kopf nicht in den sand stecken,\ndenn das wäre nun wirklich total unangemessen."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:22:23",
+      "text": "Genau und genau was hast du jetzt ich muss likes und glocke.\nMein youtube-kanal bitte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:38",
+      "text": "Ich mache ich mache es ganz klassisch ohne glocke einfach mal bei reinhören da gibt's jetzt auch einmal die woche komplettes korona update,\nohne virolent\naber mit schliff viel zeilen und interpretationen und sonstigen diskussionen was sonst noch so wichtig ist und damit entlassen wir euch in was auch immer ihr gerade meint was für ein wochentag ist ihr wisst es ja eh nicht mehr.\nStimmt's."
+    },
+    {
+      "speaker": "Linus Neumann",
+      "time": "1:23:07",
+      "text": "Tschau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:08",
+      "text": "Tschüss."
+    }
+  ]
+}
