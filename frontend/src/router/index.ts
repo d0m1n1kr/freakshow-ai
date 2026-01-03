@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { useSettingsStore } from '../stores/settings';
 import TopicsView from '../views/TopicsView.vue';
 import SpeakersView from '../views/SpeakersView.vue';
 import ClusterHeatmapView from '../views/ClusterHeatmapView.vue';
@@ -8,6 +9,7 @@ import DurationHeatmapView from '../views/DurationHeatmapView.vue';
 import UmapView from '../views/UmapView.vue';
 import AboutView from '../views/AboutView.vue';
 import SearchView from '../views/SearchView.vue';
+import EpisodeView from '../views/EpisodeView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +22,11 @@ const router = createRouter({
       path: '/clusters-river',
       name: 'clusters-river',
       component: TopicsView
+    },
+    {
+      path: '/episodes',
+      name: 'episodes',
+      component: EpisodeView
     },
     {
       path: '/speakers-river',
@@ -62,6 +69,32 @@ const router = createRouter({
       component: AboutView
     }
   ]
+});
+
+// Router guard to ensure podcast parameter is always in URL
+router.beforeEach((to, from, next) => {
+  const settingsStore = useSettingsStore();
+  const currentPodcast = to.query.podcast as string | undefined;
+  
+  // If podcast is in URL, update store
+  if (currentPodcast) {
+    if (settingsStore.selectedPodcast !== currentPodcast) {
+      settingsStore.setSelectedPodcast(currentPodcast);
+    }
+  } else {
+    // If no podcast in URL, add it from store (or default)
+    const podcastId = settingsStore.selectedPodcast || 'freakshow';
+    next({
+      ...to,
+      query: {
+        ...to.query,
+        podcast: podcastId,
+      },
+    });
+    return;
+  }
+  
+  next();
 });
 
 export default router;

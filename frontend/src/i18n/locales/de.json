@@ -25,6 +25,7 @@
     "umap": "UMAP",
     "search": "FdFS",
     "searchBeta": "FdFS (beta)",
+    "episodes": "Episoden",
     "about": "Über"
   },
   "search": {
@@ -356,6 +357,22 @@
       "description": "Topic-Embeddings müssen bereits erstellt sein (node scripts/create-embeddings.js)."
     },
     "documentation": "📖 Vollständige Dokumentation"
+  },
+  "episodes": {
+    "searchTitle": "Episoden suchen",
+    "searchPlaceholder": "Suche nach Titel, Beschreibung oder Themen...",
+    "resultsTitle": "Suchergebnisse ({count})",
+    "date": "Datum",
+    "duration": "Dauer",
+    "speakers": "Sprecher",
+    "loadingStats": "Statistiken werden geladen...",
+    "noStats": "Keine Sprecherstatistiken für diese Episode verfügbar.",
+    "comingSoon": "Demnächst",
+    "stats": {
+      "flow": "Sprechanteil-Verlauf",
+      "boxplot": "Segment-Dauer",
+      "monologue": "Monolog-Analyse"
+    }
   }
 }
 

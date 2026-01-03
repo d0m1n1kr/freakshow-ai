@@ -225,6 +225,7 @@ async fn main() -> Result<()> {
 
     let app = Router::new()
         .route("/api/chat", post(chat))
+        .route("/api/episodes/search", post(episodes_search))
         .route("/api/speakers", axum::routing::get(speakers_list))
         .route("/api/health", axum::routing::get(health))
         .layer(cors)
@@ -445,10 +446,18 @@ async fn chat_impl(st: &AppState, req: ChatRequest) -> Result<ChatResponse> {
     let podcast_id = req.podcast_id.as_deref().unwrap_or("freakshow");
     
     // Load RAG database for this podcast
+    // Try podcast-specific path first, then fallback to root db/rag-embeddings.json
     let rag_db_path = PathBuf::from(format!("db/{}/rag-embeddings.json", podcast_id));
-    if !rag_db_path.exists() {
-        return Err(anyhow!("RAG database not found for podcast '{}': {}", podcast_id, rag_db_path.display()));
-    }
+    let rag_db_path = if rag_db_path.exists() {
+        rag_db_path
+    } else {
+        let fallback = PathBuf::from("db/rag-embeddings.json");
+        if fallback.exists() {
+            fallback
+        } else {
+            return Err(anyhow!("RAG database not found for podcast '{}': {} or {}", podcast_id, PathBuf::from(format!("db/{}/rag-embeddings.json", podcast_id)).display(), PathBuf::from("db/rag-embeddings.json").display()));
+        }
+    };
     let rag = RagIndex::load(&rag_db_path)
         .with_context(|| format!("Failed to load RAG database: {}", rag_db_path.display()))?;
     
@@ -608,6 +617,191 @@ async fn chat_impl(st: &AppState, req: ChatRequest) -> Result<ChatResponse> {
     ).await?;
 
     Ok(ChatResponse { answer, sources })
+}
+
+// ------------------------ Episode Search ------------------------
+
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
+struct EpisodesSearchRequest {
+    query: String,
+    #[serde(default)]
+    podcast_id: Option<String>,
+    #[serde(default)]
+    top_k: Option<usize>,
+}
+
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+struct EpisodesSearchResponse {
+    episodes: Vec<EpisodeSearchResult>,
+}
+
+#[derive(Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+struct EpisodeSearchResult {
+    episode_number: u32,
+    title: String,
+    date: Option<String>,
+    duration_sec: Option<u32>,
+    speakers: Vec<String>,
+    description: Option<String>,
+    score: f32,
+    topics: Vec<String>,
+}
+
+#[derive(Debug, Deserialize)]
+struct EpisodeMetadata {
+    title: Option<String>,
+    number: Option<u32>,
+    date: Option<String>,
+    duration: Option<Vec<u32>>,
+    description: Option<String>,
+    speakers: Option<Vec<String>>,
+}
+
+async fn episodes_search(
+    State(st): State<AppState>,
+    Json(req): Json<EpisodesSearchRequest>,
+) -> impl IntoResponse {
+    match episodes_search_impl(&st, req).await {
+        Ok(resp) => (StatusCode::OK, Json(resp)).into_response(),
+        Err(e) => {
+            error!("{:?}", e);
+            let msg = format!("{}", e);
+            (
+                StatusCode::BAD_REQUEST,
+                Json(serde_json::json!({ "error": msg })),
+            )
+                .into_response()
+        }
+    }
+}
+
+async fn episodes_search_impl(st: &AppState, req: EpisodesSearchRequest) -> Result<EpisodesSearchResponse> {
+    let query = req.query.trim();
+    if query.is_empty() {
+        return Err(anyhow!("query must not be empty"));
+    }
+
+    let podcast_id = req.podcast_id.as_deref().unwrap_or("freakshow");
+    let top_k = req.top_k.unwrap_or(10).clamp(1, 20);
+    
+    // Load RAG database for this podcast
+    // Try podcast-specific path first, then fallback to root db/rag-embeddings.json
+    let rag_db_path = PathBuf::from(format!("db/{}/rag-embeddings.json", podcast_id));
+    let rag_db_path = if rag_db_path.exists() {
+        rag_db_path
+    } else {
+        let fallback = PathBuf::from("db/rag-embeddings.json");
+        if fallback.exists() {
+            fallback
+        } else {
+            return Err(anyhow!("RAG database not found for podcast '{}': {} or {}", podcast_id, PathBuf::from(format!("db/{}/rag-embeddings.json", podcast_id)).display(), PathBuf::from("db/rag-embeddings.json").display()));
+        }
+    };
+    let rag = RagIndex::load(&rag_db_path)
+        .with_context(|| format!("Failed to load RAG database: {}", rag_db_path.display()))?;
+    
+    let episodes_dir = PathBuf::from(format!("podcasts/{}/episodes", podcast_id));
+    
+    // Get embedding for query
+    let q = embed_query(st, query).await?;
+    let qn = l2_norm(&q);
+    if qn <= 0.0 {
+        return Err(anyhow!("Query embedding norm is 0"));
+    }
+
+    // Score all items
+    let mut scored: Vec<(usize, f32)> = Vec::with_capacity(rag.items.len());
+    for (i, it) in rag.items.iter().enumerate() {
+        let Some(v) = &it.embedding else { continue };
+        let dn = rag.norms[i];
+        if dn <= 0.0 {
+            continue;
+        }
+        let s = dot(&q, v) / (qn * dn);
+        if s.is_finite() {
+            scored.push((i, s));
+        }
+    }
+
+    // Sort by score descending
+    scored.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap_or(Ordering::Equal));
+    
+    // Group by episode_number and get best score per episode
+    let mut episode_scores: std::collections::HashMap<u32, f32> = std::collections::HashMap::new();
+    let mut episode_topics: std::collections::HashMap<u32, std::collections::HashSet<String>> = std::collections::HashMap::new();
+    
+    for (idx, score) in scored.iter().take(top_k * 5) {
+        let item = &rag.items[*idx];
+        let ep_num = item.episode_number;
+        
+        // Track best score per episode
+        let best_score = episode_scores.entry(ep_num).or_insert(*score);
+        if *score > *best_score {
+            *best_score = *score;
+        }
+        
+        // Collect topics
+        if let Some(topic) = &item.topic {
+            episode_topics.entry(ep_num).or_insert_with(std::collections::HashSet::new).insert(topic.clone());
+        }
+    }
+    
+    // Convert to vector and sort by score
+    let mut episode_results: Vec<(u32, f32)> = episode_scores.into_iter().collect();
+    episode_results.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap_or(Ordering::Equal));
+    episode_results.truncate(top_k);
+    
+    // Load episode metadata
+    let mut results = Vec::new();
+    for (ep_num, score) in episode_results {
+        let ep_file = episodes_dir.join(format!("{}.json", ep_num));
+        let mut title = format!("Episode {}", ep_num);
+        let mut date = None;
+        let mut duration_sec = None;
+        let mut description = None;
+        let mut speakers = Vec::new();
+        
+        if ep_file.exists() {
+            if let Ok(bytes) = std::fs::read(&ep_file) {
+                if let Ok(meta) = serde_json::from_slice::<EpisodeMetadata>(&bytes) {
+                    if let Some(t) = meta.title {
+                        title = t;
+                    }
+                    date = meta.date;
+                    if let Some(dur) = meta.duration {
+                        if dur.len() >= 3 {
+                            duration_sec = Some(dur[0] * 3600 + dur[1] * 60 + dur[2]);
+                        }
+                    }
+                    description = meta.description;
+                    if let Some(s) = meta.speakers {
+                        speakers = s;
+                    }
+                }
+            }
+        }
+        
+        let topics: Vec<String> = episode_topics
+            .get(&ep_num)
+            .map(|s| s.iter().cloned().collect())
+            .unwrap_or_default();
+        
+        results.push(EpisodeSearchResult {
+            episode_number: ep_num,
+            title,
+            date,
+            duration_sec,
+            speakers,
+            description,
+            score,
+            topics,
+        });
+    }
+    
+    Ok(EpisodesSearchResponse { episodes: results })
 }
 
 // ------------------------ Retrieval ------------------------

@@ -195,6 +195,27 @@ export const useSettingsStore = defineStore('settings', () => {
   persist: {
     key: 'freakshow-settings',
     storage: window.localStorage,
+    paths: [
+      'normalizedView',
+      'topicFilter',
+      'speakerFilter',
+      'topNSpeakersHeatmap',
+      'topNCategoriesHeatmap',
+      'topNSpeakersClusterHeatmap',
+      'topNClustersHeatmap',
+      'topNClustersCluster1Heatmap',
+      'topNClustersCluster2Heatmap',
+      'topNSpeakers1Heatmap',
+      'topNSpeakers2Heatmap',
+      'topNSpeakersSpeaker1Heatmap',
+      'topNSpeakersSpeaker2Heatmap',
+      'clusteringVariant',
+      'themeMode',
+      'ragAuthToken',
+      'selectedSpeaker',
+      'selectedSpeaker2',
+      // Note: selectedPodcast is NOT persisted - it comes from URL
+    ],
   }
 });
 

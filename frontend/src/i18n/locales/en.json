@@ -25,6 +25,7 @@
     "umap": "UMAP",
     "search": "AtFS",
     "searchBeta": "AtFS (beta)",
+    "episodes": "Episodes",
     "about": "About"
   },
   "search": {
@@ -356,6 +357,22 @@
       "description": "Topic embeddings must be created first (node scripts/create-embeddings.js)."
     },
     "documentation": "📖 Full Documentation"
+  },
+  "episodes": {
+    "searchTitle": "Search Episodes",
+    "searchPlaceholder": "Search by title, description, or topics...",
+    "resultsTitle": "Search Results ({count})",
+    "date": "Date",
+    "duration": "Duration",
+    "speakers": "Speakers",
+    "loadingStats": "Loading statistics...",
+    "noStats": "No speaker statistics available for this episode.",
+    "comingSoon": "Coming soon",
+    "stats": {
+      "flow": "Speaking Time Flow",
+      "boxplot": "Segment Duration",
+      "monologue": "Monologue Analysis"
+    }
   }
 }
 
