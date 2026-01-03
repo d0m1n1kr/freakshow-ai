@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "auto-v2.1": {
+      "name": "Automatisch (V2.1, HDBSCAN)",
+      "version": "v2",
+      "lastBuilt": "2026-01-02T23:48:14Z",
+      "description": "HDBSCAN mit automatischer Cluster-Erkennung",
+      "settings": {
+        "minClusterSize": 2,
+        "minSamples": 2,
+        "reducedDimensions": 75,
+        "outlierThreshold": 0.90,
+        "ubiquitousTopicMaxEpisodeShare": 0.90,
+        "defaultTopicDurationSec": 300,
+        "useRelevanceWeighting": true,
+        "useLLMNaming": true
+      }
+    }
+  },
+  "defaultVariant": "default-v1",
+  "lastUpdated": "2026-01-02T23:48:14Z"
+}

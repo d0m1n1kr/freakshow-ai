@@ -1,0 +1,510 @@
+{
+  "createdAt": "2026-01-02T23:48:14.825611+00:00",
+  "method": "hdbscan-v2",
+  "embeddingModel": "text-embedding-3-large",
+  "embeddingsCreatedAt": "2026-01-02T23:47:29.560Z",
+  "totalTopics": 238,
+  "uniqueTopics": 236,
+  "settings": {
+    "clusters": 26,
+    "outlierThreshold": 0.9,
+    "linkageMethod": "hdbscan(min_cluster_size=2, min_samples=2)",
+    "useRelevanceWeighting": true
+  },
+  "statistics": {
+    "clusterCount": 26,
+    "outlierCount": 0,
+    "outlierPercentage": "0.0%"
+  },
+  "clusters": [
+    {
+      "id": "digitale-bildung",
+      "name": "Digitale Bildung",
+      "description": "17 Topics in 11 Episoden",
+      "isOutlier": false,
+      "topicCount": 17,
+      "episodeCount": 11,
+      "relevanceSec": 5100,
+      "sampleTopics": [
+        "digitaler Wandel",
+        "Lehren und Lernen in digitalen Zeiten",
+        "Digitalisierung",
+        "Forschungsmethoden",
+        "Digitalisierung in der Hochschullehre"
+      ],
+      "episodes": [
+        6,
+        11,
+        15,
+        16,
+        22,
+        42,
+        43,
+        56,
+        59,
+        75,
+        76
+      ]
+    },
+    {
+      "id": "wissenschaftskommunikation",
+      "name": "Wissenschaftskommunikation",
+      "description": "14 Topics in 12 Episoden",
+      "isOutlier": false,
+      "topicCount": 14,
+      "episodeCount": 12,
+      "relevanceSec": 4800,
+      "sampleTopics": [
+        "Ergänzung des professionellen Wissenschaftsbetriebs",
+        "Wissenschaftskommunikation",
+        "Sprache und Wissenschaft",
+        "Lehre und Forschung im Journalismus",
+        "Innovationen in der Wissenschaft"
+      ],
+      "episodes": [
+        2,
+        5,
+        7,
+        9,
+        10,
+        15,
+        18,
+        20,
+        35,
+        81,
+        86,
+        99
+      ]
+    },
+    {
+      "id": "klimawandel-und-nachhaltigkeit",
+      "name": "Klimawandel und Nachhaltigkeit",
+      "description": "14 Topics in 12 Episoden",
+      "isOutlier": false,
+      "topicCount": 14,
+      "episodeCount": 12,
+      "relevanceSec": 4200,
+      "sampleTopics": [
+        "Nachhaltige Chemie",
+        "Einfluss des Menschen",
+        "Nachhaltige Entwicklung",
+        "Fischerei und Umweltschutz",
+        "Auswirkungen des Klimawandels auf die Natur"
+      ],
+      "episodes": [
+        24,
+        39,
+        48,
+        58,
+        65,
+        66,
+        70,
+        73,
+        86,
+        88,
+        90,
+        94
+      ]
+    },
+    {
+      "id": "bildungsreformen",
+      "name": "Bildungsreformen",
+      "description": "7 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 6,
+      "relevanceSec": 2100,
+      "sampleTopics": [
+        "Hochschulausbildung",
+        "Bildungssystem",
+        "Akademische Selbstgründung",
+        "Alternative Bildungssysteme",
+        "Hochschulbildung als globaler Markt"
+      ],
+      "episodes": [
+        4,
+        6,
+        33,
+        36,
+        43,
+        55
+      ]
+    },
+    {
+      "id": "wüstenforschung",
+      "name": "Wüstenforschung",
+      "description": "6 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 2,
+      "relevanceSec": 1800,
+      "sampleTopics": [
+        "Faszination der Wüste",
+        "Erforschung der Wüste",
+        "Wüstenforschung",
+        "Ökosysteme der Wüsten",
+        "Klima der Wüsten"
+      ],
+      "episodes": [
+        47,
+        79
+      ]
+    },
+    {
+      "id": "mathematik-anwendungen",
+      "name": "Mathematik Anwendungen",
+      "description": "4 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 3,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Mathematik",
+        "Mathematik in der Wissenschaft",
+        "Mathematik in der Gesellschaft",
+        "Visualisierung komplexer Mathematik"
+      ],
+      "episodes": [
+        11,
+        31,
+        89
+      ]
+    },
+    {
+      "id": "wissenschafts-evolution",
+      "name": "Wissenschafts-Evolution",
+      "description": "4 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 3,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Geschichte der Wissenschaften",
+        "Zukunft der Wissenschaft",
+        "Wandel der Wissenschaft",
+        "Transformative Wissenschaft im Angeln"
+      ],
+      "episodes": [
+        1,
+        25,
+        90
+      ]
+    },
+    {
+      "id": "gottfried-wilhelm-leibniz",
+      "name": "Gottfried Wilhelm Leibniz",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Porträt von Gottfried Wilhelm Leibniz",
+        "Mathematische Beiträge von Leibniz",
+        "Leibniz als Diplomat"
+      ],
+      "episodes": [
+        26
+      ]
+    },
+    {
+      "id": "konfliktpsychologie",
+      "name": "Konfliktpsychologie",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Konfliktforschung",
+        "Gewaltforschung",
+        "Sozialpsychologie"
+      ],
+      "episodes": [
+        30
+      ]
+    },
+    {
+      "id": "bibliothekswesen",
+      "name": "Bibliothekswesen",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Aufgaben des Bibliothekswesens",
+        "Wandel des Bibliothekswesens",
+        "Zukunft des Bibliothekswesens"
+      ],
+      "episodes": [
+        44
+      ]
+    },
+    {
+      "id": "wissenschaftsvernetzung",
+      "name": "Wissenschaftsvernetzung",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Vernetzung im wissenschaftlichen Betrieb",
+        "Vernetzung in der Wissenschaft",
+        "Vernetzung in der Forschung"
+      ],
+      "episodes": [
+        10,
+        25,
+        36
+      ]
+    },
+    {
+      "id": "asiatische-wissensforschung",
+      "name": "Asiatische Wissensforschung",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Entwicklung von Wissen in Asien",
+        "Forschung im asiatischen Raum"
+      ],
+      "episodes": [
+        14
+      ]
+    },
+    {
+      "id": "hochschul-community",
+      "name": "Hochschul-Community",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Hochschule und Zivilgesellschaft",
+        "Universitäten als Communities"
+      ],
+      "episodes": [
+        32,
+        48
+      ]
+    },
+    {
+      "id": "bienenforschung",
+      "name": "Bienenforschung",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Methoden der Bienenforschung",
+        "Stand der Erkenntnisse in der Bienenforschung"
+      ],
+      "episodes": [
+        46
+      ]
+    },
+    {
+      "id": "coronavirus-forschung",
+      "name": "Coronavirus-Forschung",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Strukturbiologie des Coronavirus",
+        "Entschlüsselung der Coronavirus-Funktion"
+      ],
+      "episodes": [
+        85
+      ]
+    },
+    {
+      "id": "jugendprogrammierung",
+      "name": "Jugendprogrammierung",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Programmieren für Jugendliche",
+        "Entwicklung von Programmierfähigkeiten"
+      ],
+      "episodes": [
+        97
+      ]
+    },
+    {
+      "id": "open-data-forschung",
+      "name": "Open Data Forschung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Offene Daten in der Forschung",
+        "Open Data"
+      ],
+      "episodes": [
+        18,
+        37
+      ]
+    },
+    {
+      "id": "ästhetik-im-design",
+      "name": "Ästhetik im Design",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Ästhetik der modernen Produktwelt",
+        "Einfluss der islamischen Ästhetik"
+      ],
+      "episodes": [
+        69
+      ]
+    },
+    {
+      "id": "evidenzbasierte-medizin",
+      "name": "Evidenzbasierte Medizin",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Evidenzbasierte Medizin",
+        "Empirie in der Medizin"
+      ],
+      "episodes": [
+        84
+      ]
+    },
+    {
+      "id": "sprunginnovationen",
+      "name": "Sprunginnovationen",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Sprunginnovationen",
+        "Innovation in der Wirtschaft"
+      ],
+      "episodes": [
+        91,
+        92
+      ]
+    },
+    {
+      "id": "städtische-evolution",
+      "name": "Städtische Evolution",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Wandlungsfähigkeit des städtischen Raums",
+        "Evolution des städtischen Raums"
+      ],
+      "episodes": [
+        54
+      ]
+    },
+    {
+      "id": "ozeanische-wissenschaften",
+      "name": "Ozeanische Wissenschaften",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Tiefseeökosysteme",
+        "Ozeanographie"
+      ],
+      "episodes": [
+        29,
+        60
+      ]
+    },
+    {
+      "id": "wirtschaftsforschung",
+      "name": "Wirtschaftsforschung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Ökonomische Forschung",
+        "Kooperation zwischen Industrie und Forschung"
+      ],
+      "episodes": [
+        18,
+        88
+      ]
+    },
+    {
+      "id": "wirtschaftsregulierung",
+      "name": "Wirtschaftsregulierung",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Wirtschaftssystem",
+        "Marktregulierungen"
+      ],
+      "episodes": [
+        71
+      ]
+    },
+    {
+      "id": "energie-lösungen",
+      "name": "Energie-Lösungen",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Energieprobleme",
+        "Lösungen für Energieprobleme"
+      ],
+      "episodes": [
+        12
+      ]
+    },
+    {
+      "id": "zukunftsvisionen",
+      "name": "Zukunftsvisionen",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Zukunft der Welt",
+        "Zukunftsperspektiven"
+      ],
+      "episodes": [
+        23,
+        78
+      ]
+    }
+  ]
+}

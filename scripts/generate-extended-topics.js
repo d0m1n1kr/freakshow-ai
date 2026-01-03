@@ -25,6 +25,7 @@ function parseArgs(argv) {
     maxExcerptChars: 12000,
     timeMarginSec: 20,
     overwrite: false,
+    backfillTimes: false,
     dryRun: false,
   };
 
@@ -42,6 +43,7 @@ function parseArgs(argv) {
     const a = rest.shift();
     if (a === '--all') args.all = true;
     else if (a === '--overwrite') args.overwrite = true;
+    else if (a === '--backfill-times') args.backfillTimes = true;
     else if (a === '--dry-run') args.dryRun = true;
     else if (a === '--episode') args.episode = parseInt(rest.shift(), 10);
     else if (a === '--from') args.from = parseInt(rest.shift(), 10);
@@ -65,6 +67,7 @@ function usage() {
     '  --max-excerpt-chars <n>   Max transcript excerpt size sent to LLM (default: 12000)\n' +
     '  --time-margin-sec <n>     Padding around time-window topics (default: 20)\n' +
     '  --overwrite              Re-generate even if output exists\n' +
+    '  --backfill-times         Only fill missing summaryMeta.startSec/endSec in existing *-extended-topics.json (no LLM calls)\n' +
     '  --dry-run                Don\'t call the LLM; write empty summaries (useful to test IO)\n'
   );
 }
@@ -242,7 +245,7 @@ function excerptByTimeWindow(transcript, startSec, endSec, maxChars) {
 
 function excerptByKeywordWindow(transcript, topic, maxChars) {
   const toks = topicTokens(topic);
-  if (toks.length === 0) return { text: '', method: 'keyword-window', pickedCount: 0 };
+  if (toks.length === 0) return { text: '', method: 'keyword-window', pickedCount: 0, startSec: null, endSec: null };
 
   // Score each line by token hits.
   const scored = [];
@@ -256,7 +259,7 @@ function excerptByKeywordWindow(transcript, topic, maxChars) {
     if (score > 0) scored.push({ i, score });
   }
 
-  if (scored.length === 0) return { text: '', method: 'keyword-window', pickedCount: 0 };
+  if (scored.length === 0) return { text: '', method: 'keyword-window', pickedCount: 0, startSec: null, endSec: null };
 
   scored.sort((a, b) => b.score - a.score);
   const centers = scored.slice(0, Math.min(10, scored.length)).map(s => s.i);
@@ -284,11 +287,29 @@ function excerptByKeywordWindow(transcript, topic, maxChars) {
     for (let i = a; i <= b; i++) picked.push(transcript[i]);
     const txt = formatTranscriptLines(picked);
     if (txt.length >= maxChars) {
-      return { text: txt.slice(0, maxChars), method: 'keyword-window', pickedCount: picked.length };
+      const secs = picked.map(e => e?._sec).filter(v => Number.isFinite(v));
+      const minSec = secs.length ? Math.min(...secs) : null;
+      const maxSec = secs.length ? Math.max(...secs) : null;
+      return {
+        text: txt.slice(0, maxChars),
+        method: 'keyword-window',
+        pickedCount: picked.length,
+        startSec: Number.isFinite(minSec) ? minSec : null,
+        endSec: Number.isFinite(maxSec) ? maxSec : null,
+      };
     }
   }
 
-  return { text: formatTranscriptLines(picked), method: 'keyword-window', pickedCount: picked.length };
+  const secs = picked.map(e => e?._sec).filter(v => Number.isFinite(v));
+  const minSec = secs.length ? Math.min(...secs) : null;
+  const maxSec = secs.length ? Math.max(...secs) : null;
+  return {
+    text: formatTranscriptLines(picked),
+    method: 'keyword-window',
+    pickedCount: picked.length,
+    startSec: Number.isFinite(minSec) ? minSec : null,
+    endSec: Number.isFinite(maxSec) ? maxSec : null,
+  };
 }
 
 function extractFirstJsonObject(text) {
@@ -422,7 +443,8 @@ async function main() {
     process.exit(0);
   }
 
-  const { settings, source: settingsSource } = loadSettings({ allowMissing: args.dryRun });
+  // `--dry-run` and `--backfill-times` don't require LLM config / settings.json access.
+  const { settings, source: settingsSource } = loadSettings({ allowMissing: args.dryRun || args.backfillTimes });
   const llmCfg = settings.llm || {};
   const retryCfg = {
     maxRetries: settings.topicExtraction?.maxRetries ?? 3,
@@ -455,11 +477,6 @@ async function main() {
 
   for (const ep of selected) {
     const outPath = path.join(PROJECT_ROOT, 'podcasts', PODCAST_ID, 'episodes', `${ep.episodeNumber}-extended-topics.json`);
-    if (!args.overwrite && fs.existsSync(outPath)) {
-      console.log(`⏭️  ${ep.episodeNumber}: output exists, skipping (use --overwrite)`);
-      continue;
-    }
-
     const topicsData = JSON.parse(fs.readFileSync(ep.path, 'utf-8'));
     const transcriptPath = path.join(PROJECT_ROOT, 'podcasts', PODCAST_ID, 'episodes', `${ep.episodeNumber}-ts.json`);
     const transcriptFound = fs.existsSync(transcriptPath);
@@ -476,6 +493,89 @@ async function main() {
           _sec: parseHmsToSeconds(e?.time),
         }))
         .filter(e => typeof e.text === 'string' && e.text.trim().length > 0);
+    }
+
+    // Backfill mode: only update timestamps in existing extended topics (no LLM calls, keep summaries)
+    if (args.backfillTimes && fs.existsSync(outPath)) {
+      const existing = JSON.parse(fs.readFileSync(outPath, 'utf-8'));
+      const existingTopics = Array.isArray(existing?.topics) ? existing.topics : [];
+      if (!transcriptFound || !Array.isArray(transcript) || transcript.length === 0) {
+        console.log(`⏭️  ${ep.episodeNumber}: backfill skipped (no transcript)`);
+        continue;
+      }
+
+      let changed = 0;
+      const updatedTopics = existingTopics.map((t) => {
+        const sm = t?.summaryMeta && typeof t.summaryMeta === 'object' ? t.summaryMeta : null;
+        const hasStart = Number.isFinite(sm?.startSec);
+        const hasEnd = Number.isFinite(sm?.endSec);
+        // If already has a usable window, keep as-is.
+        if (hasStart && hasEnd) return t;
+
+        const pos = Number.isFinite(t?.positionSec) ? t.positionSec : null;
+        const dur = Number.isFinite(t?.durationSec) ? t.durationSec : null;
+        if (Number.isFinite(pos) && Number.isFinite(dur) && dur > 0) {
+          const startSec = Math.max(0, pos - args.timeMarginSec);
+          const endSec = pos + dur + args.timeMarginSec;
+          changed++;
+          return {
+            ...t,
+            summaryMeta: {
+              ...(sm || {}),
+              transcriptFound: true,
+              transcriptFile: path.basename(transcriptPath),
+              method: 'time-window',
+              startSec,
+              endSec,
+              backfilledAt: new Date().toISOString(),
+            }
+          };
+        }
+
+        const r = excerptByKeywordWindow(transcript, t?.topic, args.maxExcerptChars);
+        const kwStart = Number.isFinite(r?.startSec) ? r.startSec : null;
+        const kwEnd = Number.isFinite(r?.endSec) ? r.endSec : null;
+        const startSec = Number.isFinite(kwStart) ? Math.max(0, kwStart - args.timeMarginSec) : null;
+        const endSec = Number.isFinite(kwEnd) ? (kwEnd + args.timeMarginSec) : null;
+        if (Number.isFinite(startSec) && Number.isFinite(endSec) && endSec >= startSec) {
+          changed++;
+          return {
+            ...t,
+            summaryMeta: {
+              ...(sm || {}),
+              transcriptFound: true,
+              transcriptFile: path.basename(transcriptPath),
+              method: r.method || (sm?.method || 'keyword-window'),
+              pickedCount: typeof r?.pickedCount === 'number' ? r.pickedCount : (sm?.pickedCount ?? 0),
+              startSec,
+              endSec,
+              backfilledAt: new Date().toISOString(),
+            }
+          };
+        }
+
+        return t;
+      });
+
+      if (changed > 0) {
+        const out = {
+          ...existing,
+          extendedAt: existing?.extendedAt || new Date().toISOString(),
+          transcriptFound,
+          transcriptFile: path.basename(transcriptPath),
+          topics: updatedTopics,
+        };
+        fs.writeFileSync(outPath, JSON.stringify(out, null, 2) + '\n', 'utf-8');
+        console.log(`🩹 ${ep.episodeNumber}: backfilled timestamps for ${changed} topics`);
+      } else {
+        console.log(`⏭️  ${ep.episodeNumber}: nothing to backfill`);
+      }
+      continue;
+    }
+
+    if (!args.overwrite && fs.existsSync(outPath)) {
+      console.log(`⏭️  ${ep.episodeNumber}: output exists, skipping (use --overwrite)`);
+      continue;
     }
 
     console.log(`▶️  ${ep.episodeNumber}: ${topicsData?.title || ''} (${topicsData?.topics?.length || 0} topics)`);
@@ -512,7 +612,11 @@ async function main() {
           } else {
             const r = excerptByKeywordWindow(transcript, base.topic, args.maxExcerptChars);
             excerpt = r.text;
-            excerptMeta = { method: r.method, pickedCount: r.pickedCount, startSec: null, endSec: null };
+            const kwStart = Number.isFinite(r?.startSec) ? r.startSec : null;
+            const kwEnd = Number.isFinite(r?.endSec) ? r.endSec : null;
+            const startSec = Number.isFinite(kwStart) ? Math.max(0, kwStart - args.timeMarginSec) : null;
+            const endSec = Number.isFinite(kwEnd) ? (kwEnd + args.timeMarginSec) : null;
+            excerptMeta = { method: r.method, pickedCount: r.pickedCount, startSec, endSec };
           }
 
           if (!excerpt.trim()) {

@@ -1,0 +1,1119 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:35",
+      "text": "Hallo und herzlich willkommen zu Raumzeit, dem Podcast über Raumfahrt und andere.\nKosmische Angelegenheiten.\nMein Name ist Tim Prittlaff und ich begrüße alle zur 107. Ausgabe von Raumzeit.\nUnd heute, nach tatsächlich zehn Jahren, ich bin erst einmal wieder nach Holland gefahren ins Estec.\nDas Estec ist das Europäische Weltraumforschungs- und Technologiezentrum, ESA.\nEs gibt ja verschiedene Standorte der ESA quer über Europa verteilt und nicht\nnur in Europa, es gibt ja auch den Raumfahrt-Startplatz in Kourou.\nAber hier ist sozusagen der Ort, wo die Satelliten getestet werden,\nwo sehr viel Technik auch entwickelt wird, auch Forschung gemacht wird,\nalles Mögliche wird hier gemacht.\nUnd heute wollen wir über ein Projekt sprechen, was gerade so richtig erst gestartet ist,\nnämlich das Artemis-Projekt, was eigentlich ein NASA-Projekt ist,\naber bei dem auch die ESA eine Beteiligung hat, nämlich in Form des sogenannten Service Modules.\nUm darüber zu sprechen, begrüße ich meinen Gesprächspartner heute nämlich den\nTobias Lagener. Hallo Tobias. Hallo Tim. Herzlich Willkommen bei Raumzeit.\nJa Tuias, wie lange bist du denn schon hier beim ASTEC?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:01:51",
+      "text": "Ja ich bin hier 2010 angefangen. Ich war zuerst als Ingenieur in der Forschung\nund Entwicklung tätig. Antriebsbereich, Aerothermodynamik."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:01",
+      "text": "In der Industrie dann?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:02:02",
+      "text": "Ne ne, die finde ich direkt nach der, also ich habe erst, also ich habe in Stuttgart\nund in Amerika studiert.\nUnd danach in Stuttgart dann promoviert. Mein Thema damals war Brennkammerkühlung\nfür Raumfahrtantriebe."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:15",
+      "text": "Also direkt, du hast Weltraumtechnik?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:02:17",
+      "text": "Ja genau, ich habe Luft- und Raumfahrtechnik in Stuttgart studiert.\nDas ist eine große Universität für Luft- und Raumfahrtechnik.\nUnd dann mein Promotionsprojekt, da hatte ich Verbindungen hier zu ESA.\nIch war vorher auch mal zum Praktikum hier, das ist jetzt auch schon 17 Jahre her.\nUnd gut, dadurch bin ich dann bei der ESA gelandet. Hab dann in Technologie\nim Forschungsbereich gearbeitet und dann auch angefangen,\nProjekte zu unterstützen im Antriebstechnologiebereich, also Studien,\nAuslegungen, Simulationen und nachher halt auch mehr auf Systemebene.\nIch habe dann quasi immer meinen Arbeitsbereich vergrößert, habe dann irgendwann\nangefangen, ExoMars zu supporten vom Antriebsbereich.\nDas ist ja die Mission der ESA, die damals in Zusammenarbeit mit der russischen\nRaumfahrtagentur Roskosmos war, die ja mittlerweile stillgelegt ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:10",
+      "text": "Aus den bekannten Gründen."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:03:12",
+      "text": "Aus den bekannten Gründen, ja. Und da gab es zwei Missionen.\n2016, das ist ein Orbiter am Mars mit einem Landedemonstrator,\nda habe ich ein bisschen dran gearbeitet. Und dann halt vor allen Dingen die\nMission, die damals 2018 nach 2020 hieß, wo man den europäischen Rover mit einer\nrussischen Kapsel auf den Mars landen wollte.\nWar ich da für die Antriebssysteme verantwortlich oder habe ich das Projekt\nunterstützt mit Technologie Know-How."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:40",
+      "text": "Ganz schön frustrierend, wenn so eine Mission, an der man jahrelang arbeitet,\ndann einfach so mir nichts, dir nichts aus politischen Gründen fällt, oder?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:03:46",
+      "text": "Das stimmt natürlich, wenn man da lange lang gearbeitet hat.\nDas ist jetzt, ich habe dann Gott sei Dank vorher, bevor die Mission stattfand,\nschon in dieses europäische Service-Modulprojekt gewechselt gehabt.\nAllerdings, ich weiß, dass die Leute, das Projektteam von ExoMars,\ndie hatten schon ihre Koffer gepackt und wollten gerade los nach Baikonur.\nDie Launchkampagne wäre im März losgegangen und im Februar ist natürlich der\nUkrainekrieg begonnen.\nGut, danach guckt man dann erstmal\nein bisschen blöd und man weiß nicht so richtig, was man machen soll.\nJetzt ist die Mission umdefiniert, seit der Ministerratskonferenz,\ndie Exumas Mission, dass es einen reinen europäischen Land ergibt mit amerikanischer Beteiligung.\nUnd ja, hoffen wir, dass wir dann unseren Rover dann noch auf dem Mars bekommen.\nAber gut, das Thema ist ja jetzt die Europäische Service Modul."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:42",
+      "text": "Aber das Thema ist halt auch wirklich auch diese Kooperation NASA und ESA,\ndie es ja schon immer gab und viele Projekte hatte.\nAber Russland spielte natürlich eine große Rolle, das fällt jetzt komplett weg.\nDas bedeutet ja im Prinzip hier auch eine Neuausrichtung in vielerlei Hinsicht."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:04:59",
+      "text": "Na gut, ich meine, auf der Raumstationsebene geht die Kooperation weiter.\nDas war auch nie auf Arbeitsebene ein Problem, so wie ich das verstanden habe.\nUnd auch politisch wurde da nicht so richtig daran gezweifelt,\nobwohl es da von russischer Seite, sage ich mal, Kommunikation gab,\ndie wirklich unter der Gütelinie waren.\nAber es läuft weiter. Ich habe auch, als ich in Houston war,\nda waren Russen im Kontrollzentrum, die halt für die ISS zuständig waren,\ndie waren nicht weg, die waren dann ganz normal und haben weiter gearbeitet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:28",
+      "text": "Es ist ja auch bitter, muss ich sagen. Ich begleite ja die Szene von außen auch\nschon öfter und ich kenne einfach keinen Bereich, der so...\nEigentlich mehr globale Friedenspolitik macht als die Raumfahrt.\nWeil hier einfach so die internationale Kooperation schon immer,\nwie soll ich sagen, der Politik eigentlich weit entrückt und voraus war in gewisser Hälfte.\nChina ist noch ein schwieriges Thema, aber auch da gibt es ja auch sehr viel\nmehr Kooperation, als man es an anderen Stellen teilweise findet."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:06:01",
+      "text": "Ja genau, ich denke mal, die friedliche Nutzung der Raumfahrt ist natürlich ein Bereich,\nauf dem man kooperieren kann, weil das ist im Endeffekt eine wissenschaftsgetriebene\nIndustrie, auf der man natürlich kooperieren kann ohne große politische oder Sicherheitsprobleme.\nAber es gibt halt größere Projekte, auf denen dann auch eine echte Zusammenarbeit stattfinden kann.\nZum Beispiel im Multimillionen-Euro-Bereich natürlich.\nUnd da kann dann dadurch eine signifikante Kooperation mit Russland oder China oder natürlich den USA,\nunser Hauptpartner möchte ich jetzt mal meinen, in der man in den Raum fährt,\ndurchgeführt werden, die auch auf politischer Ebene etwas Beachtung findet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:56",
+      "text": "Aber wir wollen ja heute eigentlich über Artemis sprechen, über dieses Projekt.\nDas ist ja nun auch so ein Projekt, was so lange Zeit etwas holprig vorangekommen ist.\nDahinter steckt ja die Idee, nach vielen, vielen Jahrzehnten der Inaktivität\nauf dem Mond endlich mal wieder dort Weltraumfahrt zu betreiben.\nDa kommt natürlich auch noch mal so ein neuer Aspekt mit rein für die Raumfahrt,\njenseits der reinen Wissenschaft.\nDas ist natürlich jetzt hier auch so die Idee des Mondes als einerseits als\nStandort, aber eben vielleicht auch als industrielle Nutzung.\nIn gewisser Hinsicht steckt ja dann auch noch so ein bisschen im Hintergrund.\nDas ist, glaube ich, auch so weltraumrechtlich.\nDas soll heute nicht das Thema sein, aber das steht auf jeden Fall alles so\nein bisschen im Raum, dass sich hier einfach komplett neue Fragen stellen.\nAber zunächst einmal geht es ja darum, vor allem aus Perspektive der Amerikaner,\nnach der Apollo-Mission hier endlich mal wieder den Fokus auf den Mond zu richten.\nDas ist auch schon eine Weile her mit dem Constellation-Programm.\nDas war, glaube ich, so der erste Ansatz, der aber nicht so funktioniert."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:08:06",
+      "text": "Ja, also es gab natürlich erstmal das Shuttle,\nwas halt schon in den 60ern im Endeffekt konzipiert wurde parallel zu Apollo\nund was dann halt in den 80ern, glaube ich, in Betrieb genommen wurde.\nUnd als dann die Entscheidung getroffen wurde, dann keine Shuttle-Flüge mehr\ndurchzuführen, muss man natürlich irgendwie ein Ersatzprogramm herstellen,\nmit dem man größere Raumschiffe in den Weltall außerhalb von dem Leos,\nvom Low Earth Orbit, kriegen kann.\nEs gibt ja in Amerika auch Industriepolitik. Es ist ja nicht so,\ndass die Amerikaner davon frei sind.\nEin Shuttle-Programm war ein sehr großes Programm, das große Industrien beschäftigt\nhat, viele Leute in Arbeit gehalten hat und natürlich müsste man da irgendwie\nanknüpfen, um auch die Technologien weiter zu nutzen, das Know-How nicht zu\nverlieren und so weiter.\nDann gab es halt, ich glaube George Bush.\nJunior hat das Programm oder während seiner Präsidentschaft wurde dieses Constellation-Programm\nin Auftrag gegeben bei der NASA,\nwo halt geguckt wurde, wie muss eine Raketenarchitektur aussehen,\ndie vielleicht an die Shuttle-Technologie anklüpfen kann, um Erkundung vom Mond\nwieder oder Erkundung noch darüber hinaus mit Astronauten.\nUnd es ist ganz wichtig gewesen, dass man halt ein großes Programm hat,\num halt die Technologieführerschaft weiterzuführen.\nUnd dann natürlich werden so Programme dann umdefiniert und auch mal wieder gecancelt.\nUnd ja, das Artemis-Programm wurde dann, oder das Artemis-Programm,\nder Namen vom Artemis-Programm, den gibt's ja eigentlich erst seitdem Donald Trump Präsident war.\nVorher gab es das Orion-Programm, was das Raumschiff war, dann SLS,\ndieses Space Launch System.\nDas ist das zweite Programm in dem Artemis-Konglomerat.\nUnd dann gibt es Exploration Ground Systems. Das ist die Startrampe in Florida\nund alle weiteren operational Technologien,\nAspekte, die halt dazu nötig sind, so ein Raumschiff zu prozessieren,\nden Launcher starten zu lassen, die Kapsel wieder zu bekommen und so weiter.\nArtemis hieß vorher Exploration Mission One. Also nicht wirklich ein attraktiver, kein sexy Name.\nUnd man brauchte dann halt irgendwann, als Donald Trump in Office war, auch einen neuen Namen.\nWas aber auch ganz interessant war, war, dass eigentlich der Starttermin wesentlich\nspäter geplant war. Also klar, der Termin war eigentlich immer eher geplant,\naber die Mondlandung war erst für 2028 geplant eigentlich.\nDonald Trump hat gesagt, wir müssen das eher machen, wir müssen erst mal Artemis\n1 in 2020 fliegen und dann Artemis 3 mit der Mondlandung in 2024."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:11",
+      "text": "Damit das noch in seine theoretische zweite Amtszeit fängt."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:11:14",
+      "text": "Das war natürlich nicht offiziell die Position, sondern inoffiziell hatten wir\nda so Vermutung, dass das vielleicht damit zusammenhängen könnte.\nAuf jeden Fall. Man muss aber auch sagen, das hat vielleicht dem Programm auch\nein bisschen gut getan, weil ein bisschen mehr Funding reingekommen ist.\nAlso wenn man ja so eine Mission macht, die hat Gesamtkosten und wenn man die\nüber 10 Jahre oder 15 Jahre ausbereitet, hat man natürlich pro Jahr weniger\nBudget. Wenn man das jetzt vier Jahre schneller machen muss,\nbraucht man pro Jahr mehr Budget.\nUnd das ist halt auch zum gewissen Teil eingetroffen, dass die NASA in dem Bereich\ndann mehr Budget bekommen hat um die halt die Sachen zu beschleunigen und schneller zu machen.\nGut, und das hat dann natürlich zur Folge, dass wir dann 2022.\nMit Artemis 1 gestartet sind.\nAtomos 2 ist jetzt geplant für Ende 2024 und für Ende 2025 dann die Mondlandung im Atomos 3 Programm.\nUnd dazu entwickelt gerade SpaceX das Landesystem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:21",
+      "text": "Wir sollten vielleicht noch mal kurz klar machen, worum es geht.\nAlso es geht um einen Flug zum Mond und das langfristige Ziel ist halt auch\nwieder eine Landung mit Astronauten.\nAlso das wirklich mal wieder Feet on the Ground herrscht nach dem Apollo.\nDeswegen heißt die Mission ja auch Artemis, weil Artemis eben die Zwillingsschwester von Apollo ist.\nDas stimmt, ja. Ich finde es immer interessant, wenn sich die Raumfahrt so in\nder griechischen Mythologie bedient.\nLiegt ja immer nahe, weil ja auch die Sterne danach benannt sind. Orion, ja.\nWobei Artemis und Orion, das habe ich irgendwie ein bisschen nachgelesen.\nDa lief es irgendwie nicht so gut. Also ich hoffe, das wird dann nicht zu Problemen führen."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:13:04",
+      "text": "Da kennst du dich in der griechischen Mythologie besser aus als ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:07",
+      "text": "Ja, das ist noch so eine etwas schwierige Liebe, die am Ende leider immer mit\ndem Tod von Orion endete.\nAber das will ich jetzt mal nicht voranstellen.\nIch bin da ganz zuversichtlich, dass er das schon ganz ordentlich plant.\nAlso, nur um es nochmal klarzumachen.\nAlso, du hast es ja auch schon erwähnt, SLS, das ist diese Rakete.\nDas ist im Prinzip eine Rakete, die erste amerikanische Rakete,\ndie von der NASA gebaut wurde, die im Prinzip in der Leistungsfähigkeit der\nursprünglichen Saturn V-Rakete,\nder Apollo-Mond-Mission mithalten kann, die ja damals und dann eben auch bis\nheute eigentlich so mit die stärkste Rakete war, die es überhaupt gab und die\nerst jüngst von SpaceX eingeholt wurde in der Leistungsfähigkeit."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:13:48",
+      "text": "Genau, also ich sag mal auch eine Falcon 9, das ist ja diese,\nsorry, eine Falcon Heavy, das ist ja diese SpaceX-Rakete mit den drei Boostern,\nhat nicht so eine Schubkraft wie ein SLS, das ist noch eine ganz andere Klasse.\nDie SLS, die jetzt im November gestartet ist, war wirklich die stärkste Rakete\nder Welt vom Startschub her.\nDie Nutzlastfähigkeit ist ein bisschen geringer als die Saturn V.\nAber es gibt jetzt auch weitere Ausbaustufen von der Rakete,\ndie dann wirklich in die Nähe kommen von der Saturn V auch.\nAlso ich meine, das Artemis-Programm, um das jetzt nochmal mit Apollo zu vergleichen,\nApollo war wirklich First Boots on the Moon Programm.\nOkay, wir wollen amerikanische Astronauten.\nAuf dem Mond landen. Wir wollen die ersten sein. Dafür wurde ein riesiger nationaler\nAufwand betrieben von Kennedy damals, um das hinzubekommen. Es gab halt unglaubliche\nMittel, die freigesetzt worden sind für das Programm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:45",
+      "text": "Mehrere Prozent des Gesamthaushalts."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:14:47",
+      "text": "Ja, richtig. Es war halt ein National Effort, wie man sagt. Das ist jetzt Artemis nicht unbedingt.\nWeil so ein National Effort ist halt auch nicht etwas, was man durchhalten kann für eine lange Zeit.\nDieses Artemis-Programm ist jetzt wirklich längerfristig aufgelegt.\nEs gibt schon, sage ich mal, neue Missionen, die geplant sind.\nMan möchte nicht nur auf dem Mond landen, sondern auch diese Raumstation im\nMondorbit, der Lunar Gateway, damit aufbauen mit diesen Missionen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:17",
+      "text": "Also wirklich einen Standort zu schaffen, wo man immer wieder hinkehren kann,\nwo Infrastruktur entsteht."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:15:22",
+      "text": "Wo quasi eine Orbit-Infrastruktur entsteht, wo man hin kann.\nDie ist nicht permanent bemannt, dieser Lunar Gateway.\nKann aber dazu dienen, auf die Mondoberfläche, das ist noch nicht ganz hundertprozentig\nklar, aber kann dazu dienen, auf die Mondoberfläche hinunterzukommen.\nDer Lunar Gateway wird eine Kommunikationsbrücke sein vom Mond-Orbit zur Erde.\nUnd ist ein fester Bestandteil der NASA-Artemis-Explorationsarchitektur.\nUnd dann möchte man natürlich drüber nachdenken, wenn auf der Oberfläche vielleicht\netwas Permanentes entsteht oder sogar eine Lunar Economy,\nalso eine profitable Mondwirtschaft, was natürlich auch ein bisschen Far Future\nist, dass man dann sagt, okay, wir haben jetzt eine gewisse Infrastruktur im\nOrbit, das funktioniert gut,\nbauen jetzt noch einen Raumschiff, mit dem wir zum Mars fliegen können.\nDas ist das wirklich das langfristige Ziel, man sagt zum Beispiel Artemis Moon to Mars Program.\nNa gut, aber wir haben jetzt erstmal, ich denke mal bis Artemis 3,\ndas ist die Mondlandung, das ist geplant Ende 2025 jetzt offiziell.\nUnd da müssen wir jetzt erstmal gucken, dass wir das hinbekommen,\ndass SpaceX auch das Landesystem fertig hat, mit dem wir dann docken werden.\nUnd danach gibt es dann die Mission zum Aufbau des Gateways.\nDa leistet die ESA natürlich auch einen großen Beitrag.\nAlso wir haben zwei Module, die gerade auch schon in Auftrag sind und gebaut\nwerden für diese Raumstation am Mond.\nUnd die werden dann mit Orion sozusagen zum Mond geflogen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:10",
+      "text": "Um vielleicht noch mal die Begrifflichkeiten von vornherein klar zu machen.\nAlso Artemis ist sozusagen der Name für das gesamte Projekt.\nWir haben dann 1, 2, 3 die einzelnen Missionen, an denen dann die Entwicklung\ndieses Projekts sich festmacht.\nAn den wichtigen Komponenten haben wir die Startrakete, die SLS,\nwie ich gerade schon beschrieben.\nStarkes, dickes Teil, kann einfach eine Menge Schub erzeugen,\nder halt auch einfach erforderlich ist, um einfach bis zum Mond zu kommen.\nDas ist jetzt eben nicht so mit, wir fliegen mal zur ISS, 400 Kilometer, haha.\nDas kriegen wir schon mittlerweile auf einer Arschpacke abgesessen,\naber um die großen Geschwindigkeiten zu erzeugen, braucht man eben schon nochmal\nandere Sachen. Zumindest für diese Nutzlast.\nWir haben ja auch solche Missionen gehabt, wie zum Pluto zum Beispiel.\nDas bedurfte ja auch einiger Geschwindigkeit, um dort sehr schnell hinzukommen,\naber trotzdem die Nutzlast war halt nicht im Ansatz so groß,\nwie das jetzt der Fall ist."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:18:04",
+      "text": "Ja, richtig. zeichnet sich durchaus, dass man halt einen relativ hohen Geschwindigkeitsbedarf\nhat, also dieses Delta V, was durch die Rakete bereitgestellt werden muss.\nUnd gleichzeitig hohe Massen von dem Raumschiff, also wir haben halt ein Raumschiff,\nwas im Endeffekt Astronauten beherbergt und komplettes Lebenserhaltungssystem für die Astronauten,\nselber auch noch Manöver durchführen muss, durchführen können muss."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:36",
+      "text": "Genau und das ist Orion. Das wollen wir nochmal sagen. Also wir haben die Rakete\nSLS. Wir haben Orion und Orion besteht im Prinzip eigentlich auch aus zwei Teilen.\nNämlich einerseits aus der Kapsel, wo eben Astronauten dann später drin sitzen\nsollen und die dann auch wieder zurückkehrt, als einzige zurückkehrt.\nAber damit das irgendwie funktioniert, gibt es noch ein Service-Modul,\nsozusagen Technik und Antriebssystem,\nwas diese Menschenkapsel letzten Endes durch den Weltraum drückt und das ist\ndann auch gleich unser Fokus, aber das ist dann sozusagen der dritte wichtige technische Teil.\nDiese drei Komponenten machen im Wesentlichen das H-SMIS für die erste Mission so aus."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:19:14",
+      "text": "Genau, richtig und auch, ich meine, bei NASA gibt's halt noch ein drittes Projekt,\ndas ist dieses Exploration Ground System Programm, die halt wirklich auch den\nneuen Startramper jetzt bauen.\nFür Artemis 3 brauchen wir einen neuen Startramper und so weiter.\nAlso das ist auch nochmal ein signifikantes Projekt,\nwas man nicht so richtig mitkriegt, weil wir haben halt den Launcher SLS,\nwie du schon richtig sagtest, eine Riesenentwicklung gewesen,\nder übrigens halt viel von der Technologie vom Shuttle übernommen hat.\nWir haben die Haupttriebwerke vom Shuttle, also die Wasserstoff-Sauerstofftriebwerke,\ndie da setzten, vier Stück vorne in der Hauptstufe und dann eine vergrößerte\nVersion der Booster, die halt wirklich den Hauptschub beim Start liefern.\nUnd dann in weiteren Ausbaustufen wird dann noch eine neue Oberstufe konzipiert für Artemis IV.\nDie Exploration Upper Stage, mit der dann halt noch mehr Masse zum Mondorbit gebracht werden kann.\nGenau zum Aufbau dieser Raumstation, weil da braucht man Orion plus dieses Modul\nvon der Station. Das ist natürlich eine größere Masse als nur Orion,\ndas Raumschiff selber, was ungefähr 25 Tonnen wiegt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:17",
+      "text": "Also 25 Tonnen Nutzlast soll letzten Endes hin."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:20:20",
+      "text": "Also Orion selber hat 25 Tonnen, das ist ja die Nutzlast vom SLS.\nUnd dann, ich bin nicht 100% sicher, aber so ein Gateway-Modul wird wahrscheinlich\nauch zwischen 8 und 10 Tonnen wiegen.\nUnd das ist dann halt auch auf der Oberstufe oder auf der SLS-Rakete drauf in\nder Ausbau-Stufe mit der neuen Oberstufe."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:41",
+      "text": "Ja, das ist eine Menge Holz."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:20:42",
+      "text": "Das ist eine Menge Holz, gerade für den Mond-Orbit. Deswegen braucht man auch so große Raketen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:48",
+      "text": "Genau.\nAlso, Nutzlasten sollte man sich schon mal klar machen. Also eine Ariane 5 hat,\nglaube ich, so eine Nutzlast von 5 Tonnen?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:20:57",
+      "text": "Ne, mit 10. 10 bis 10. 10? GTO, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:00",
+      "text": "Okay."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:21:02",
+      "text": "Also bis zum Geostationary Transfer Orbit sind es so 10."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:05",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:21:06",
+      "text": "Genau, da können die zwei Satelliten 5 Tonnen oder so unterbringen.\nAriane 6 wird in der gleichen Größenordnung sein, 6-4."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:13",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:21:14",
+      "text": "Ja, das sind aber Raketen, mit denen man nicht unbedingt viel,\nvielleicht in der Ausbaustufe auch, vielleicht so acht Tonnen bis zum Mond kriegen\nkönnte, acht bis zehn Tonnen ungefähr, aber halt nicht die Größenordnung,\num da halt ein komplett bemanntes System hinzuschicken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:34",
+      "text": "Gut, dann schauen wir doch mal genauer auf die Orion-Komponente,\ndie ja eben aus zwei Teilen besteht.\nBlicken wir vielleicht erst mal kurz auf das ja eigentlich\nnoch zukünftige System was aber jetzt eben auch\nschon getestet wurde die Kapsel für\nden human space flight also wo die astronauten letzten ende ist\ndrin reisen im prinzip verfolgt man hier ein ähnliches konzept wie bei apollo\nso ein zweigeteiltes modul das heißt es gibt eben den teil wo die menschen drin\nsind wo dann halt temperatur sauerstoff etc alles also wo sozusagen Sachen gemütlich\nsein muss, sodass man da drin leben kann.\nUnd dann gibt es halt diesen Serviceteil, der eben das alles bereitstellt und\nwo die Antriebstechnik mit drin ist. Und so war das ja bei Apollo auch.\nGenau. Und am Ende war es so, dass das, was halt auf dem Mond gelandet ist,\ndiese Kapsel, wird dann halt abgespalten, kann dann selber wieder starten und\nverbindet sich wieder mit diesem Serviceteil."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:22:31",
+      "text": "Also Apollo hatte ja, das muss man auch noch sagen, Apollo hatte ja noch eine\ndritte Komponente, das ist die Landefähre.\nDie gibt es jetzt bei Orion noch nicht, die wird ja gerade entwickelt und soll\ndann separat bei Artemis 3 schon im Mondorbit vorhanden sein,\nmit der dann Orion, das Raumschiff Orion, was dann mit dem SNS wieder gelounge\nwurde, dockt und dann diese Landefähre, die von bei 6 gebaut wird die soll dann auf dem Mond landen.\nDie Astronauten werden dann einige Zeit auf dem Mond ihre Experimente machen\nund dann wieder in dieser Landefähre einsteigen,\nwieder in den Mondorbit fliegen, wo sie dann auf Orion umsteigen und mit Orion\ndann wieder zurück zur Erde fliegen. Das ist das Artemis-3-Szenario.\nIm Vergleich zu Apollo, natürlich ein bisschen anders, weil die Landefähre,\nalso die Eagle, war ja immer auf der Saturn V Rakete mit dabei.\nAlso da gab es ein Service Modul, da gab es das Command oder das Crew Module\nund diese dieser Landefähre.\nUnd im Vergleich zu Apollo, im Apollo waren ja drei Astronauten,\ndie mitfliegen konnten und ich glaube die Lebensdauer der Capsula beziehungsweise\ndie die Missionsdauer war halt durch durch das Lebenserhaltungssystem beschränkt.\nIch hoffe, da sage ich jetzt nichts Falsches. Das war glaube ich zwei Wochen,\nwo die halt die Mission durchführen können. Das können wir wesentlich länger\nmit Orion, Die Kapsel ist so ausgelegt, dass die Astronauten länger supportet werden können.\nUnd wir können vier Astronauten mitfliegen. Das hat natürlich zur Folge,\ndass die Kapsel auch wesentlich größer ist im Durchmesser.\nOrion ist ja typisch so eine chronische Kapsel für so ein Wiedereintrittskörper.\nSie hat einen Durchmesser von ungefähr fünf Meter und somit auch das größte\nHitzeschutzschild, das jemals geflogen worden ist.\nDas ist auch eine technologische Meisterleistung, dieses Hitzeschutzschild."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:23",
+      "text": "Also das Hitzeschild vom Space Shuttle war aber noch größer."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:24:25",
+      "text": "Ja, gut, aber für so eine kleine, natürlich das war wesentlich größer,\naber für halt so eine runde, konische Kapsel unten auch.\nWir haben ja auch beim Space Shuttle nun wieder Eintritt vom Low Earth Orbit\nund da sind die Geschwindigkeiten ja nochmal kleiner. Wenn wir vom Mond wiederkommen\nhaben, wir haben am Ende glaube ich 40.000 Kilometer pro Stunde gehabt und vom\nLeo hat man ungefähr 25.000 Kilometer pro Stunde.\nJa, und das ist dann nochmal ein großer Unterschied in der Wärme,\nalso in der Peak Heat Load,\naber auch in der integralen Wärmestrom, dass man halt da das Hitzeschutzschild\ndann für auslegen muss, um halt die Astronauten sicher dann zum Mond zu bringen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:06",
+      "text": "Hitzeschutzschild und ich glaube auch, die eigentliche Flugbahn ist auch nochmal angepasst worden."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:25:10",
+      "text": "Die Flugbahn, da kann ich gleich nochmal beim Missionsverlauf zu kommen,\naber die Flugbahn ist ein bisschen angepasst worden im Vergleich zu Apollo.\nDas Programm ist industriell so aufgebaut, dass die NASA als Missionshauptverordnete,\ndie haben Lockheed Martin, im Boot, um das Orion-Raumschiff zu bauen.\nDie ESA hat dann mit NASA ein Memorandum of Understanding,\nalso quasi so eine Art zwischen Regierungs- oder Intergovernmental-Vertrag,\num diese europäischen Service-Module an die zu liefern und die werden dann von\nLockheed Martin ins Gesamtraumschiff integriert.\nAlso wir haben das Crewmodul, was halt in Amerika produziert wird,\ndas europäische Service Modul, was dann in die USA geliefert wird und dann gibt\nes diesen Crewmodule Adapter,\ndas ist sage ich mal so ein Ring, weil der Durchmesser vom Crewmodul ist größer\nals der Durchmesser vom Service Modul und dann gibt es quasi einen Ring,\nder nochmal auf das Service Modul gesetzt wird, was dann das Crewmodul aufnehmen\nkann. Adapter. So eine Art Adapter, genau.\nAber auch mit dem Release Mechanismus, also den Mechanismus,\num die Kapsel nachher vom Service Modul zu trennen. Das wird auch von Lockheed\nMartin konzipiert und gebaut.\nDas ist natürlich von der industriellen Seite eine sehr...\nSpannende Aufgabe und der Airbus ist unser Hauptauftragnehmer.\nAirbus in Bremen. Die Firma hat eine sehr gute Historie im Bereich bemannte Raumfahrt.\nKolumbusmodul wurde dort konzipiert\nund gebaut. Es gibt verschiedene Projekte, die da laufen zur ISS.\nUnd auch ATV wurde mit Bremen, mit Airbus Bremen, auch mit Airbus Limerot bei\nParis konzipiert und gebaut.\nEs wurden ja auch fünf erfolgreichen Missionen von ATV geflogen.\nATV, das heißt Automated Transfer Vehicle, das war eine der europäischen Beiträge\nzu Internationalen Raumstationen.\nDas ist ein Versorgungsschiff, das von der Ariane 5-Rakete in Kourou gestartet\nwurde und was dann autonom an die Raumstation docken konnte.\nAn der Raumstation und dann Versorgung mit Treibstoff, Wasser,\nExperimenten, Lebensmittel und so weiter für die Astronauten durchführen konnten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:36",
+      "text": "Hatte ich im Übrigen auch hier schon bei Raumzeit behandelt, lang ist es her.\nIm Mai 2011, als ich hier zu Gast war, das erste Mal, habe ich mit Nico Dettmann\ngesprochen über das ATV und eben diese fünf Missionen, die dort gerade,\ndas war noch gerade so die Zeit des letzten Space Shuttle-Flugs.\nGenau, da war das ATV dann gemeinsam mit dem Space Shuttle einer ISS dran."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:28:00",
+      "text": "Da gab es schöne Bilder, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:01",
+      "text": "Da gab es schöne Bilder, auf jeden Fall. Genau, so ein Prinzip.\nDie Technologie des ATV war dann ebenso die Grundlage für dieses europäische Service-Modul,\nwas eben jetzt der wesentliche europäische Beitrag ist, kann man sagen.\nAber das QModul wird jetzt wo gebaut?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:28:22",
+      "text": "Also integriert wird es im Kennedy Space Center. Da gibt es dieses Operations\nand Checkout-Gebäude im Kennedy Space Center, wo auch schon Apollo integriert wurde.\nUnd das ist jetzt quasi unter Verantwortung, diese Integration ist unter Verantwortung\nvon Lockheed Martin. Und da wird das Crewmodul zusammengebaut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:40",
+      "text": "Aber das eigentliche Modul wird in Deutschland gebaut?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:28:43",
+      "text": "Das europäische Service-Modul wird in Bremen gebaut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:46",
+      "text": "Aber ich meine, das Crewmodul."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:28:48",
+      "text": "Das Crewmodul wird ja in Amerika gebaut. gebaut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:51",
+      "text": "Ok, das wird in Amerika gebaut. Und integriert wird das natürlich auch alles\nin Amerika. Das heißt, hier kommt das Service Modul dazu, wird über den Teich\ngefahren und wird dann wahrscheinlich hier erstmal nochmal vorher gecheckt."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:29:00",
+      "text": "Also wir machen einen kompletten Abnahmetest bei Airbus in Bremen.\nAlso das ist ein langer Prozess über mehrere Monate. Werden alle Systeme in\ndem Service Modul wirklich funktional durchgecheckt.\nGrößere Tests für die Qualifikation von dem Service Modul,\naber auch von dem QModul, die haben in Amerika stattgefunden,\nweil man das auch in der Konfiguration testen musste, wo das QModul mit dem\nService Modul verbunden war, zum Beispiel ein Thermal-Test oder ein Struktur-Test und so weiter.\nDas wurde dann auch schon vor einigen Jahren in Amerika durchgeführt,\naber jetzt wirklich für die einzelnen Module, die ausgeliefert werden.\nAlso 2018 haben wir zum Beispiel schon das erste europäische Service Modul an die NASA geliefert.\nNach einem langen Abnahmetest, wo wirklich diese funktionalen Ketten,\ndie das Raumschiff hat. Also ich fange vielleicht mal an kurz über die Architektur\nvon dem Service Modul zu sprechen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:29:59",
+      "text": "Ja, dann kommen wir mal auf das Service Modul zu sprechen."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:30:02",
+      "text": "Das ist ja auch das Hauptthema heute.\nDas Service-Modul hat im Wesentlichen die folgenden Funktionen.\nEs ist dazu da, das Crew-Modul zu unterstützen, die Astronauten am Leben zu\nhalten und alle wichtigen Funktionen im Orbit durchzuführen.\nWir haben zum ersten das Antriebssystem, was die Manöver für die Orbitkontrolle,\nOrbitänderungen und für die Lagerregelung durchführen kann.\nDann haben wir das Thermalsystem, was das Service Modul selber thermisch konditioniert,\nalso auf Temperatur hält.\nIm Weltraum hat man ja das Problem, dass man auf der einen Seite die heiße Sonne\nhat, die quasi ungebremst auf das Raumschiff strahlt und auf der Rückseite quasi\nVakuum und schwarze Leere, die halt wirklich sehr kalt ist. Dazu braucht man ein Thermalsystem.\nUm das auszugleichen und zu kontrollieren. Aber das Thermalsystem hat auch eine\nSchnittstelle mit dem Crewmodul und\ndas übernimmt dann sozusagen auch den Thermalhaushalt für das Crewmodul,\ndas ja so noch um sich schön angenehm temperiert da oben bewegen können.\nDann haben wir das Power-System, also das System für die Stromerzeugung.\nDas ist quasi auch mit Historie von ATV.\nUnd auch ganz interessant, wir befinden uns jetzt hier in Nordwijk in den Niederlanden.\nDas ist eine kleine Küstenstadt, die neben Leiden ist. Das ist vielleicht ein\nbisschen größere Stadt.\nUnd da hat Airbus zum Beispiel eine Filiale in Leiden, die die Solarpanele herstellen für das Raumschiff.\nDas heißt, interessanterweise kommen diese großen Solarpanele,\ndie an einem Service-Modul dran sind, die ungefähr 14 Kilowatt an elektrischer Leistung produzieren.\nHier aus Holland und werden dann in Kennedy erst integriert in das Raumschiff."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:03",
+      "text": "Das ist diese ikonische X-Wing-Anordnung, wie man das bei ATV..."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:32:08",
+      "text": "Richtig, die wurde dann einfach übernommen aus Gründen, dass man sagt,\nwir müssen halt die Architektur, wir müssen halt viel von der Architektur und\nden Komponenten vom ATV..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:19",
+      "text": "Wie viel macht das aus? Also einerseits, wie viel Prozent der ATV-Technik ist\nsozusagen wirklich mehr oder weniger 1 zu 1 übernommen worden?\nUnd wie viel ist konzeptionell übernommen worden? Wie anders ist das Service-Modul?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:32:34",
+      "text": "Also das Service-Modul ist natürlich schon komplett anders von der Architektur\nher, wie das ATV. Das ATV war halt ein System, das bis zur Raumstation geflogen\nist und hat da auch einen bedrückten Teil, weil das hat ja gedockt.\nAlso der Docking-Mechanismus zum Beispiel ist am Service-Modul nicht dran,\nder ist ja im Pro-Modul dran bei Artemis.\nUnd hat halt diesen bedrückten Teil, damit auch Astronauten reinlaufen können.\nDas haben wir jetzt zum Beispiel nicht.\nJa, aber zum Beispiel gab es ein Thermalsubsystem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:03",
+      "text": "Also mit gedrücktem Teil, dass man es unter Druck setzen kann, weil es ist ja Cargo."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:33:08",
+      "text": "Genau, also der Cargo muss natürlich, man sagt ja auch bedrückten und unbedruckten\nTeil, im Raumschiff, der bedrückte Teil, im Raum gibt es ja nur Vakuum.\nDas heißt, ein Teil vom Raumschiff ist dann wirklich im Vakuum.\nUnd der bedrückte Teil ist dann da, wo die Astronauten reinlaufen können, wenn es angedockt ist.\nUnd wie bei beim ESM, beim Europäischen Service Modul auch, gibt es halt dieses\nLebenserhaltungssystem und auch bei Beatemis braucht man das, also mit Luft.\nDas heißt, wir haben halt Stickstoff- und Sauerstofftanks an Bord im Service-Modul\nund auch Wassertanks, die halt für den täglichen Bedarf der Astronauten sind.\nDas ist halt dann über die Schnittstellen verbunden mit dem Crew-Modul.\nAber diesen Crew-Moduladapter, der von Lockheed noch angebaut wird,\nalso immer von der Architektur her ist das Service-Modul schon sehr anders wie das ATV.\nWo man konnte halt viele Komponenten übernehmen, zum Beispiel unsere Hilfstriebwerke.\nIm Antriebssystem sind die gleichen, die bei ATV geflogen sind.\nDie Solarpanele sind sehr ähnlich und auch auf Systemebene gibt es Vergleichbarkeiten\nfür das Thermalsystem und für das Lebenshaltungssystem.\nDas consumable storage system heißt das heißt es\nbei uns immer europäischen service modus na\nja wie gesagt also das ist auch ich sag mal ein bisschen vielleicht auf\nder ebene wenn man so ein projekt aufsetzt dass man versucht diese ähnlichkeiten\nzu einem vorhandenen system herauszustellen um dann entsprechend auch das war\nnicht dafür zu bekommen dass man so eine gewisse kontinuität auf technologie\nebene darstellen kann nach dem motto das haben wir doch alle schon erfunden\ndas haben wir alle schon erfunden das brauchen anpassen genau das Das muss man ein bisschen anpassen.\nDas ist ja bei der NASA nichts anderes. Sie sagen, wir bauen einen Launcher\nbasierend auf einem Shuttle.\nIm Endeffekt auch ein komplett neues System und die Hauptkomponenten mussten auch angepasst werden.\nKlar, die Haupttriebwerke sind die gleichen geworden, aber auch Delta qualifiziert.\nAlso nochmal neu getestet, werden auf einen anderen Betriebspunkt gefahren.\nDas ist etwas, um zu sagen, wir haben gewisse Industrien, gewisse Komponenten,\ndie vorhanden sind und die nehmen wir halt ins neue Programm mit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:21",
+      "text": "Das macht ja auch Sinn. Ich meine, das ist ja auf der einen Seite,\nwenn man jetzt wirklich, im Extremfall würde ja Technik eins zu eins übernommen werden.\nWeil man weiß, diese Komponente funktioniert, die reicht jetzt auch in ihrer\nSpezifikation für das neue Projekt aus, dann nehmen wir das genauso.\nWenn die Spezifikation jetzt nicht ausreicht, dann kann man aber zumindest sagen,\naber das Prinzip haben wir schon mal getestet. Wir wissen, dass es grundsätzlich\nfunktioniert. Wir müssen jetzt hier nicht nochmal irgendwie einen Prototypen\nschaffen, wo wir uns im Vorfeld vielleicht unklar sind, ob das überhaupt so funktioniert.\nUnd wir wissen, dass da auch genug Luft nach oben ist, weil wir es damals eigentlich\ngar nicht in das Maximum genutzt haben, aber vielleicht schon mal auf das Maximum getestet haben, etc.\nDas sind solche Sachen. Und diese Erfahrung, die dann halt auch damit drinsteckt,\ndie ist natürlich auch was wert, die muss dann nicht in Ausbildung gesteckt werden etc."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:36:10",
+      "text": "Und forschen. Ja, richtig. Man will natürlich immer auf Komponenten zurückgreifen.\nIch sag mal, es ist halt vielleicht nicht vergleichbar wie jetzt zum Beispiel\nein Bulli aus der Automobilbranche.\nMan kann halt mit dem Bulli immer verschiedene Sachen machen.\nDa kann man Leute reinsetzen, da kann man aber auch Pakete mit transportieren\noder ein Handwerker kann damit seine Arbeit machen.\nBei der Raumfahrt ist es natürlich so, dass diese Missionsanforderungen,\ndie wir haben, es gibt halt eine Mission zum Mars, es gibt eine Mission zum\nMond, es gibt eine Mission zur Raumstation, es gibt eine Mission zum Pluto.\nDiese Missionsanfahrungen haben einen extremen Einfluss auf die Architektur\nvon einem System. In dieser Architektur können dann Komponenten drin sein,\ndie vorher schon mal geflogen sind. Das will man natürlich auch immer machen.\nAlso Entwicklungskosten, auch für Komponenten, sind im Raumfahrtbereich sehr hoch.\nWenn man ein neues Triebwerk entwickeln müsste, ist man einen sehr hohen Betrag los.\nNatürlich ist es auch wichtig, dass man das macht und dann auch ein bisschen\ndie Leistungsfähigkeit dieser Komponenten weiterzubringen.\nAber auf der anderen Seite, man muss auch nicht das Rad neu erfinden,\ngerade auf Komponentenseite.\nMan muss gucken, ob man da jetzt mit dem Vorhandenen schon seine Architektur aufbauen kann.\nUnd das macht man ja generell eigentlich in vielen Industrien, dass man versucht,\ndas zu benutzen, was schon da ist, was ja auch bewährt ist, was eine gewisse\nQualität hat und wo man vielleicht eventuell auch den den Nutzungsbereich erweitern\nkann durch weitere Tests und so weiter, das ist dann jetzt auch kein großer Aufwand."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:48",
+      "text": "Beziehst du dich jetzt eigentlich auch auf das Triebwerk? Weil ich meine,\ndie Anforderungen für den Antrieb sind ja dann jedoch etwas höher als bei der\nMission nur zu ISS, oder?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:37:58",
+      "text": "Ja, also ich sage mal, vielleicht kann ich da jetzt nochmal,\nweil das ist ja mein Fachgebiet, so ein bisschen auf das Antriebssystem eingehen.\nIn dem ESM sind insgesamt 33 Triebwerke eingebaut.\n24 davon sind für die Lagerregelung von dem Orion Raumschiff.\nAcht sind die Hilfstriebwerke und die werden benutzt oder die sollen benutzt\nwerden, wenn zum Beispiel das Haupttriebwerk nicht benutzt werden kann oder ausfällt.\nUnd das Haupttriebwerk, das heißt, diese 27 Kilonewton-Triebwerk relativ groß\nfür ein Raumschiff, das ist das alte Orbitaltriebwerk vom Shuttle.\nUnd dieses Triebwerk, das da eingebaut ist, dieses OMSI, also Orbital Maneuvering\nSystem Engine, das Triebwerk, das kommt wirklich auch aus dem Shuttle.\nAlso ich weiß jetzt nicht, was bei Artemis I geflogen ist, aber bei Artemis\nIII ist ein Triebwerk von Atlantis eingebaut.\nDas sind wirklich wiederaufbereitete Triebwerke, die schon mal im Orbit gewesen sind.\nUnd das ist unser Haupttrieb. Die werden von Ariane Group in Lampolzhausen gebaut.\nIch weiß nicht, ob du da schon mal von gehört hast, von der Firma?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:10",
+      "text": "Da war ich sogar schon mal."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:39:11",
+      "text": "Da warst du schon mal. Ich habe mir schon fast gedacht, du kennst dich wahrscheinlich\nbesser aus in der Raumfahrtsphäre in Europa als ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:20",
+      "text": "Du hast eigentlich alles gesehen. Da habe ich über Raketenantriebe gesprochen,\neine der ersten Sendungen überhaupt."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:39:25",
+      "text": "Ja, guck mal, dann kennst du auch die Spezies da. Das ist eine ziemlich bekannte\nFirma im Raumfahrtsektor auch,\ndie natürlich die Ariane Rakete herstellt und vermarktet, aber auch gerade auf\ndem Triebwerksektor oder Komponentensektor sehr viel Know-how hat und da auch\ngute Produkte liefern kann.\nUnd diese Lageregelungs-Triebwerke, die waren auch schon bei ATV im Einsatz.\nUnd dann diese Hilftriebwerke, die werden von Aerojet in Kalifornien gebaut.\nDas ist eine bekannte amerikanische Firma, die die Raumfahrtantriebe herstellt.\nUnd dieses Triebwerk geht schon zurück im gewissen Maße auf die Apollo-Zeiten.\nDas ist dann von der Triebwerkseite das System.\nDann braucht man natürlich viel Treibstoff, wenn man zum Mond fliegen will und\nam Mond was machen möchte.\nVon diesen 25 Tonnen Gesamtraumschiffmasse von Oranien sind ungefähr 8,5 Tonnen Treibstoff sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:32",
+      "text": "Krass."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:40:34",
+      "text": "Also sehr viel. Das ist lagerfähiger Treibstoff, der für alle Triebwerke benutzt\nwird. Das ist quasi in der Mitte von dem Service Modul haben wir vier große Treibstofftanks.\nDie werden von Ariane Group in Bremen hergestellt.\nDas ist eine Firma, die da auch sehr viel Know-how und Historie hat auf dem\nBereich von Raumschifftanks.\nDann brauchen wir, also wie sowas funktioniert bei diesen Raumschift-Triebwerken heutzutage.\nDas ist eigentlich state of the art. Es gibt Entwicklungen, um das auch anders zu machen.\nMan hat einen Hochdruckteil, in dem ein ernährtes Gas gelagert wird.\nAlso in unserem Fall Helium, also wir haben zwei Hochdruck."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:18",
+      "text": "Was heißt, ernährtes Gas?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:41:20",
+      "text": "Ja, also nicht reaktionsfähig mit anderen Stoffen.\nAlso zum Beispiel, ne ne, also gerade es kann halt einfach nicht reagieren,\nzum Beispiel Stickstoff oder Helium jetzt in dem Fall. In unserem System benutzen wir Helium.\nDa sind dann zwei Tanks in dem Raumschiff bei 400 Bar.\nUnd dann haben wir eine wirklich sehr komplizierte Bedrückungsarchitektur,\nalso ganz viele Ventile, mit denen dann dieses Hochdruckgas in diese Treibstofftanks geleitet wird.\nUnd dann wird quasi der Treibstoff rausgedrückt aus den Tanks zu den Triebwerken hin.\nDas heißt, wenn die Triebwerke Treibstoff gebrauchen, dann fließt dieser Treibstoff\naus den Treibstofftanks raus und somit verringert sich der Druck in diesen Tanks.\nDa muss man von oben wieder Gas nachgeben, dass das System permanent im gewissen\nDruckbereich sich befindet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:18",
+      "text": "Und dafür benutzt man das Helium?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:42:19",
+      "text": "Dafür benutzt man das Helium, genau. Das ist bei vielen Satelliten so,\ndass es dann für diese lagerfähigen Treibstoffe, gibt es eine Bedrückungsarchitektur.\nUm sozusagen den Tankdruck immer auf dem richtigen Level zu haben.\nDiese Triebwerke funktionieren halt nur im gewissen Druckbereich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:39",
+      "text": "Dafür ist Helium natürlich insofern optimal, dass es natürlich wirklich das\nreaktionsunfreudigste Gas überhaupt ist. Also es ist der absolute Langweiler im Weltall.\nAndererseits ist Helium auch sehr schwierig zu speichern eigentlich."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:42:50",
+      "text": "Ja, also ich sag mal, Helium geht noch. Ich glaube, bei Wasserstoff wird es dann spannend.\nAlso Helium ist ein der leichtesten oder zweitleichtesten Gas.\nDementsprechend flüchtig, aber normalerweise. Wir haben natürlich Probleme mit Dichtheit.\nDas ist immer ein Problem in einem System, wo Fluide sind, also Gase und Flüssigkeiten.\nAber das wird von Airbus natürlich alles vorher getestet.\nDas hat man im Griff. Gerade externe Leckage tritt eigentlich so nicht auf.\nDas wäre ja auch schlecht, wenn man im Orbit ist und man plötzlich wieder Gas\noder Treibstoff verliert. Dann hätte man wieder so ein Apollo 13 Szenario und\ndas möchte man natürlich vermeiden.\nAber gut, das wird natürlich alles vorher getestet, auch mehrmals,\ndass so etwas nicht auftreten kann.\nDas ganze System ist dann voller Ventile, sag ich mal. Man muss ja dann auch\nden Treibstoff entsprechend zu den verschiedenen Triebwerken hinleiten.\nDa gibt es dann verschiedene Ventile, die dafür da sind in dem System.\nTypischerweise werden die Rohrleitungen im System auch geheizt,\num vorzubeugen, dass der Treibstoff einfriert.\nWie gesagt, im Weltraum ist ja eine extreme Bedingung. Es kann ja wieder ganz\nheiß sein oder ganz kalt. Und natürlich wäre es für das Antriebssystem sehr\nschlecht, wenn der Treibstoff einfriert, weil dann kommt keiner mehr am Triebwerk selber an.\nDann glättet man da oben rum und wartet bis vielleicht wieder aufgetaut ist,\naber das ist natürlich auch nicht so einfach, gerade wenn es ein permanentes Problem ist.\nUnd wie gesagt, dann um dieses Antriebssystem zu qualifizieren,\nhat die ESA dann im Rahmen des Projektes ein ein Qualifikationsmodul,\nalso ein Antriebssystemqualifikationsmodul in Auftrag ergeben.\nDas wurde damals bei OHB, das ist ja auch ein deutscher Raumfahrtkonzern mit\nverschiedenen Niederlassung auch in verschiedenen europäischen Ländern bei OAB Schweden.\nDieses Antriebssystem Qualifikationsmodul in Auftrag gegeben,\nwas quasi ein Nachbau des wirklichen Flugantriebssystems ist,\num damit halt zu zeigen, dass alle Manöver geflogen werden können.\nDieses Modell wurde dann nach zu NASA, nach White Sands in New Mexico geflogen.\nWhiteSands Test Facility, das ist eine Einrichtung der NASA,\ndie mitten in der New-Mexican-Desert ist.\nDa wurden auch schon das Apollo-Antriebssystem getestet und auch zum Beispiel\ndieses Triebwerk vom Shuttle. Also alle lagerfähigen Antriebssystemtests werden\nda in WhiteSands durchgeführt.\nDann haben wir über Jahre dieses Antriebssystem getestet. Die letzten Tests\nhaben, glaube ich, 2020 noch stattgefunden.\nUnd so macht man das eigentlich vom Prinzip her. Man hat die Komponenten auf\nKomponenten-Eben, die man qualifiziert und so testet, dass sie der Anwendung entsprechen.\nUnd das Gleiche macht man dann für das Subsystem auch, dass man dann Tests durchführt,\nwo man dann zum Beispiel mal eine komplette Mission durchläuft,\nwo man halt alle Triebwerke feuert,\nwo man das Haupttriebwerk mal für 10-15 Minuten anhat und den kompletten Sprit unten rausjagt,\num zu zeigen, mein System mit der Bedrückungsarchitektur kann so einen Burn\nsupporten und gleichzeitig auch noch Lageregelung machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:38",
+      "text": "Wie viel Redundanz ist in diesem System?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:46:41",
+      "text": "Ja gut, wir haben eigentlich eine Federtoleranz auf allen funktionalen Ketten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:47",
+      "text": "Was heißt das?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:46:48",
+      "text": "Man kann halt einen Fehler haben.\nUnd man kann trotzdem noch die Mission zu Ende fliegen. Man wird dann zwar in\neiner Situation sein, wo man sagt, okay, jetzt haben wir da einen Fehler,\nder nächste Fehler könnte eventuell fatal sein, wir fliegen jetzt nach Hause."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:01",
+      "text": "Das wird dann die... Also im selben System. Im selben System.\nNicht insgesamt ein Fehler und dann ist vorbei, sondern pro Subsystem."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:47:08",
+      "text": "Aber das Problem ist ja bei dieser Sache, wenn man jetzt in einem System einen\nFehler hat, kann der nächste Fehler wieder auch in dem gleichen System auftreten.\nDas ist ja nicht gesagt, dass das dann im anderen ist. Das heißt,\nnormalerweise, wenn man einen Fehler hat und man hat nicht irgendwie anders\nnoch eine Redundanz, die irgendwo herkommt.\nEs gibt auch Fälle, da hat man mal doppelte Redundanz drin aus irgendwelchen\nGründen oder man hat eine operationelle Redundanz, dass man sagen könnte,\nokay, das Teil steht jetzt nicht zur Verfügung, aber wir können es auch anders machen.\nNormalerweise ist das dann ein Fall für loss of mission. Das heißt,\nman muss dann nach Hause fliegen, wirklich.\nWeil der nächste Fehler kann ja wieder da in dem System auftreten,\nsodass es dann nicht mehr zur Verfügung stehen würde.\nAber einen Fehler können wir auf allen Systemen tolerieren. Okay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:51",
+      "text": "Das heißt, im Triebwerkssystem gibt es alles zweimal. Genau."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:47:55",
+      "text": "Deswegen gibt es auch zum Beispiel diese Hilfstriebwerke. Das ist jetzt mal\nein Beispiel, wo man das gut illustrieren kann. Wir haben das Haupttriebwerk,\ndieses OMSI-Triebwerk vom Shuttle.\nWenn das aus irgendwelchen Gründen mal ausfällt, ein Ventil geht nicht auf oder\nso was, hat man halt diese Hilfstriebwerke.\nAcht Stück an der Zahl, mit denen dann diese Hauptmanöver geflogen werden können.\nNatürlich ist die Brennzeit dann länger.\nWeil die nicht so viel Schub haben. Genau. Aber die sind so ausgelegt,\ndas System ist so ausgelegt natürlich, um solche Manöver auch zu supporten.\nDas heißt, anders gesprochen, was halt nicht passieren darf,\nist zum Beispiel Haupttriebwerk fällt aus und die Selbsttriebwerke fallen aus.\nDas geht ja nicht. Dann hat man natürlich ein Problem. Aber das sind ja zwei\nFehler, die dann in dem gleichen System auftreten würden. Das gleiche auch bei\nden Lageregelungstriebwerken.\nAlso die sind komplett voneinander getrennt redundant. Wenn da auf einer Seite\nvon dem Langerungstriebwerk eine Lackage entsteht,\nkann man zum Beispiel dann dieses Triebwerk isolieren, die Ventile zu machen,\ndie zu diesem Triebwerk hinführen und dann einfach das redundante Triebwerk dazu benutzen.\nUnd dann muss man dann gucken, ob das wirklich dann schon Fall ist,\num nach Hause zu fliegen oder nicht.\nAlso im Prinzip ja, aber vielleicht kann man das dann operationell irgendwie\numgehen, das ist dann noch nicht nötig. Aber das ist dann so eine Sache,\ndie dann im Detail sich angeguckt werden kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:13",
+      "text": "Ja, höhere Redundanzen gibt es ja meistens nur bei Missionen,\ndie jetzt wirklich viele, viele Jahrzehnte im Einsatz sein könnten,\nim Idealfall oder zumindest so.\nOder eben sehr weit weg sind und nicht die Option haben, mal eben wieder nach Hause zu fliegen."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:49:29",
+      "text": "Redundanzen sind wichtig natürlich, weil wir Astronauten an Bord haben.\nDeswegen macht man das ja auch so und damit beschränkt man dann sein Risiko\nund erhöht seine Reliability.\nDas ist natürlich ganz wichtig bei so einem System. Es können viele Fehler auftreten,\naber man muss halt nachweisen beim Entwurf von so einem Raumschiff,\ndass man mit einer gewissen Reliability die Mission zu Ende fliegen kann.\nDas ist wichtig. Das muss auf allen Ebenen gezeigt werden.\nUnd ich sag mal, es gibt glaube ich,\nwie gesagt, vom Pro-Modul her habe ich so ein beschränktes Wissen,\nweil natürlich das Pro-Modul in Amerika gebaut wird und wir quasi durch diese\nExport-Control-Geschichte da jetzt auch keine gute Visibility haben, was das angeht.\nAber zum Beispiel von dem Flugcomputer her, was ja wirklich ein zentrales Ding\nist, da gibt es eine höhere Renundanz. Also nicht für alle Systeme,\naber zum Beispiel für das Antriebssystem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:32",
+      "text": "Kommen wir mal auf die Artemis-1-Mission, die jetzt gelaufen ist im letzten November.\nDer Start hat sich ja relativ lange verzögert, gegenüber zwei Monate?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:50:48",
+      "text": "Ganz ehrlich, ich bin am Anfang 2018 hier im Projekt angefangen.\nSeitdem ich das eigentlich immer sehe, ist es schon in sechs Monaten.\nDas ist natürlich nicht eingetreten, wie man weiß. Wir sind ja im November jetzt gestartet.\nGut, aber das erste ernste Datum war eigentlich Februar 2022.\nBis man dann auch gesehen hat, okay, es wird schwierig, weil die Hauptstufe der SLS-Rakete,\ndie wurde auch nochmal komplett getestet, also die geflogen ist,\nwurde quasi am Boden einmal komplett durchgetestet, man hat die Komplette,\nja, hat sie komplett betankt und komplett entleert über acht Minuten burnen,\num einfach zu zeigen, okay mit der Stufe können wir die Mission fliegen,\ndas ist unser Qualifikationstest.\nJa und da gab es dann auch wirklich Verzögerungen und dann wurde die Stufe halt von,\ndas ist im Süden der USA, ich weiß gar nicht in welchem Bundesstaat,\ndas ist auf jeden Fall, wo dann erstmal per Bar Kasse dann diese Stufe nach\nKennedy gebracht und musste dann da integriert werden mit den Boostern und so weiter.\nSo ein langwieriger Prozess. Und das hat dann schon mal dieses Februar Datum\nweiter ins Frühjahr geschoben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:00",
+      "text": "Also es ist deshalb verzögert worden, weil man nochmal einen Test machen wollte,\nden man so vorher nicht eingeplant hat?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:52:06",
+      "text": "Der war geplant und bei dem Test gab es einen Abbruch nach einer Minute ungefähr.\nDa wurde halt ein Sensorwert zu hoch und dann haben wir gesagt,\nok, jetzt automatischer Abbruch bei dem Test. Dann haben wir das nachher nochmal\nfeinjustiert, sich angeguckt, die Daten, es gab nicht wirklich ein Problem.\nAber das hat dann schon wieder ein, zwei Monate gedauert, bis man dann sagen\nkonnte, wir können den Test wiederholen. Das ist ja Raketentechnologie,\nda kann man dann nicht sofort am nächsten Tag wieder so eine Stufe dann volltanken.\nUnd außerdem war das ja auch das Flugmodell. Das war ja nicht so,\ndass das ein Testmodell war, sondern das war ja wirklich das,\ndas Flugmodell von der Rakete, was fliegen sollte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:46",
+      "text": "Also Februar hat nicht funktioniert."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:52:47",
+      "text": "Aber wenn es überhaupt nicht funktioniert, dann hieß es irgendwann mal April.\nUnd da sah man auch schon, okay, das klappt nicht, das kriegen die in Amerika\nnicht hin. Also das Service Modul, muss ich ja sagen, war seit Ende 2018 in\nAmerika, ist dann natürlich integriert worden.\nDas hat auch mehrere Jahre gedauert, bis das dann komplett durchgetestet und\nbetankt war. Wir haben betankt Anfang 21, ich glaube im März 21.\nUnd wir sind dann, ja, das Raumschiff wurde wirklich dann im März 21 betankt\nund wir sind Ende 22 geflogen.\nAlso wir sind anderthalb Jahre quasi betankt am Boden gestanden.\nAlso von der Raumschlussseite, von Orion her, waren wir fertig.\nWir hätten auch Mitte 21 schon fliegen können.\nAber der SLS hat halt ein bisschen gedauert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:30",
+      "text": "Was macht man denn dann in der Zwischenzeit? Ich meine, Däumchen drehen oder?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:53:34",
+      "text": "Ja, das machen wir bei uns im Projekt garantiert nicht.\nAlso ich muss sagen, es ist wirklich ein sehr anspruchsvolles Programm,\nweil wir ja auch weitere Flugmodelle ausliefern.\nWir haben ja erst im 1. gut geliefert 2018, Aber die formale Qualifikation lief\ndann auch bis zum Ende 2020.\nAlso das hat das ganze Papier. Noch war das, dass die ESA gesagt hat,\nokay, das Modul ist für den Nutzen, der angedacht ist, qualifiziert.\nDas ist ja wieder Abnahme, soll ich mal. Und dann gab es ja ESM2,\nwas ja auch schon im Bau befand. ESM3 auch schon. Die Komponenten werden schon\nproduziert für ESM4, ESM5, ESM6."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:11",
+      "text": "Genau, weil das wird ja auch nicht wiederverwendet. Das wurde hochgeflogen und\ndas tut seinen Dienst. Aber es kehrt ja nicht zurück. Also braucht man für jede\nMission nochmal ein neues Modul."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:54:21",
+      "text": "Richtig. Das ist so. Der Aufwand dieses Systems zu recovern wäre wesentlich\ngrößer und hätte auch einen riesigen Impact auf die Systemarchitektur,\nals das jetzt immer wieder neu zu bauen und das dann verglühen zu lassen.\nDas ist natürlich ein bisschen für mich kein Problem. Manche Leute sagen auch\nschade, jetzt habe ich da vier Jahre lang daran gearbeitet an dem Teil und jetzt ist es verglüht.\nIch meine, für mich ist das halt der Zweck. Er wird dafür gebaut,\ndass er dann am Ende verglüht. Er hat eine gewisse Lebensdauer,\ndie Lebensdauer ist dann zu Ende und dann kommt ja schon das Neue.\nService Modul, also das ESM2, haben wir.\nEnde 2021 schon nach Florida ausgeliefert.\nUnd gerade in Bremen sind die schon sehr weit fortgeschritten,\ndas Service-Modul für Artemis 3 zu integrieren.\nDa ist jetzt geplant, dass im Herbst die Auslieferung stattfindet.\nDas ist ja dann auch das Service-Modul, das ist ja sehr besonders,\ndas ist ja das Service-Modul für die eigentliche Mondlandung.\nDas steht da jetzt schon sehr weit fortgeschritten rum.\nArtemis 2 wird ja gerade getestet in Kennedy. Wir erwarten, dass das komplett\ndurchgetestet ist im April.\nUnd dann wird es verbunden mit dem Crew Module für Artemis 2,\nwo dann das erste Mal die Astronauten drinfliegen.\nAlso wirklich eine sehr spannende..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:47",
+      "text": "Also Europa ist im Zeitplan, kann man sagen."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:55:50",
+      "text": "Europa ist im Zeitplan. Also wir schlagen uns wirklich sehr gut auch dank Airbus,\ndie auch immer wieder gucken, wie sie die Planung optimieren können und die\nProduktion verbessern können.\nGanz klar. Jetzt bei, das ist je nachdem von der Mission, ob es jetzt Raumschiff\nist oder Launcher, ich denke mal bei Artemis 3, ist es von der Planung her sehr anspruchsvoll.\nSpaceX muss natürlich auch erstmal die Landefähre bauen und fliegen.\nBevor sie damit auf den Mond landen können und bis jetzt haben wir natürlich\nauch keine Hardware gesehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:25",
+      "text": "Genau, das ist noch ein bisschen Zukunftsmusik, auch wenn SpaceX ja bisher gezeigt\nhat, dass sie ganz gut performen können, wenn es mal drauf ankommt.\nBleiben wir mal bei Artemis 1.\nAlso Service Modul ist schon lange fertig. Das Problem war am Ende der Launcher,\ndie SLS, weil man wollte einfach sehr, sehr, sehr vorsichtig sein,\nweil zumindest eins ist ja im Prinzip auch der Test sozusagen.\nDas ist der erste Flug, wo die Rakete das erste Mal fliegt,\ndas ist der erste Flug, wo das Service Modul und die neue Orion-Kapsel fliegt\nund wo man ja auch einen komplett anderen Anflugsweg geplant hat,\nals das jetzt bei den Apollo-Missionen waren, einfach um nochmal Treibstoff auch zu sparen.\nDas ist ja so ein ganz pfiffiger Gravity Assist, der dort geflogen wurde."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:57:16",
+      "text": "Ja, das stimmt. Also vielleicht kann ich ja mal durch die Mission durchgehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:22",
+      "text": "Genau, du wolltest mal jetzt zum Start kommen und dann können wir das ja mal Schritt für Schritt."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:57:26",
+      "text": "Also nachdem wir dann schon im September in Houston waren, wo dann ja zweimal\nder Start abgebrochen wurde, aus technischen Gründen, gab es dann ja noch zweimal\neine eine Verzögerung wegen dem Hurricane.\nStimmt. Das heißt, da gab es erstmal den Hurricane, wo wirklich viel Schaden\nentstanden ist in Florida, was dann den neuen Starttermin auf den 14.11.\nGeschoben hat und dann wirklich Woche vorher kam dann wieder ein Hurricane und\ndie Rakete stand ja schon draußen in dem Wetter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:58",
+      "text": "Und musste wieder reingeholt werden."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:58:00",
+      "text": "Nein, diesmal beim zweiten Mal ist sie nicht wieder rein geholt wollen die draußen\ngeblieben. Ja also ich weiß nicht ob es eine Kategorie Kategorie 1 Hurricane\nwar oder im Endeffekt nur ein tropischer Sturm da gibt es ja dann diese da bin\nich jetzt auch Experte Hurricanes.\nAlso es war schlechtes Wetter aber es hat ordentlich Es war sicher,\ndass es passiert ist. fast wie in Holland heute, nur nicht so warm dabei.\nDeswegen wurde der Starttermin von 14. auf den 16.11.\nVerschoben, weil dieser Feuer, dieser Hurricane durchlief und die mussten nochmal\nden Launcher und das Raumschiff angucken und hätten den 14.11. nicht geschafft.\nNaja, und dann, gut, da waren wir halt mit unserem Team, also unser Team war quasi zweigeteilt.\nHier bei ASTEC haben wir einen Raum, wo die Telemetrie ankommt,\nwo auch die Daten des Raums schlusslich eingeguckt werden können.\nUnd wir haben natürlich auch in Houston die Mission unterstützt.\nDas heißt, ich war dann zum Beispiel mit einem Kollegen von Airbus in Houston,\naber auch bei allen anderen Subsystemen.\nWir waren ungefähr 20 Leute aus Europa im Kontrollzentrum in Houston,\nwo wir dann den Start und den Flug von SLS und Orion verfolgt haben.\nUnd halt auch während des Fluges haben wir dann mitgeholfen, die Daten auszuwerten,\ndie Systeme zu monitoren, um einfach zu gucken, ob alles im grünen Bereich ist,\ndass es keine Probleme gibt, über die sich Houston Sorgen machen muss.\nNaja, und da kann ich gleich noch mal drauf zukommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:37",
+      "text": "War das eigentlich, ich meine, ich kann mir vorstellen, dass das schon für die\namerikanische Seele auch nochmal so ein besonderer Moment war,\nder Start dieser Mission, oder?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "0:59:48",
+      "text": "Ja, selbstverständlich. Also man hat zum Beispiel auch, jetzt hatten wir bei\nArtemis, bei dem Launch am 16. auch einen Nachtlaunch.\nDa war in Kennedy jetzt nicht so ganz viel los, aber beim ersten Ansatz,\nEnde August, da ja hunderttausende Menschen in Florida.\nKamala Harris als Vice-President war vor Ort, da wurde die Nationalhymne gesungen,\nda gab es Flyby's, das war richtig ein Event.\nAlso ich habe auch viele Bekannte in Amerika und das haben die in den Medien\nmitbekommen, die haben sich darauf gefreut, dass das stattfindet.\nDas war schon ein bisschen anders als in Europa, also in Europa war das natürlich\nauch in den Medien, aber das ist natürlich auch ein nationales,\nstolzes, nationales Projekt und Mission, wo wir als Europa...\nUnd das möchte ich noch mal hier auch feststellen, als Juniorpartner mit dabei\nsind, aber wir sind da als Partner mit dabei.\nUnsere Industrie und auch die ESA sind halt in der Lage heutzutage,\nso ein Modul zu liefern und bei einer Mondmission mit dabei zu sein.\nDas muss man sich mal auch auf der Zunge zergehen lassen. Wenn man sagen würde,\nokay, wir hätten in den 60ern oder in den 60ern schon da mitgemacht bei so einer Mission wie Apollo.\nDas wäre natürlich Wahnsinn gewesen. Und jetzt sind wir halt in der Lage dazu, das zu tun.\nUnd das ist auch für uns im Projektteam, aber auch für die Leute,\ndie Raumfahrt interessiert sind in Europa natürlich was ganz Spezielles, denke ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:04",
+      "text": "Ja, kann ich an der Stelle nochmal auf Raumzeit Nummer 98 verweisen.\nDa habe ich nämlich mit Helmut Trischler mal die Geschichte der europäischen\nRaumfahrt aufgemacht, also speziell natürlich dann auch die der ESA.\nUnd das ist schon bemerkenswert, welchen Weg man genommen hat,\nweil zu Apollo-Zeiten war natürlich hier mit europäischer Raumfahrt noch nichts zu sehen."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:01:23",
+      "text": "Ja, soweit ich weiß, war hier eine Kuhwiese, wo wir heute sitzen.\nDas war in den 60ern war hier nicht, da war Sumpf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:30",
+      "text": "Aber jetzt auch so in Houston im Kontrollzentrum, ist das dann alles überlagert\nvon der Wichtigkeit der eigenen Arbeit in dem Moment oder hat man das irgendwie\nauch schon gemerkt, dass da so eine gewisse Emotionalität sich breit gemacht hat?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:01:43",
+      "text": "In Houston ist das so aufgebaut, also wir haben das in einem Kontrollzentrum\nhaben wir den Control Room, da sitzen dann diese Flycontroller,\nwas quasi unser Darmstadt ist, also wir haben bei der ESA ja auch ein Kontrollzentrum in Darmstadt.\nDas sind die Leute, die wirklich auch die Kommandos an das Raumschiff schicken\ndürfen und das dann fliegen dementsprechend.\nUnd wir zusammen mit den amerikanischen Ingenieursteams saßen in der Mission\nEvaluation Room, wo quasi viel Telemetrie reinkommt, wo man sich wirklich die\nDetails von den Systemen anguckt.\nAber wir haben im Endeffekt die gleichen Displays wie die Flugcontroller zur\nVerfügung und wir haben uns das genauso angeguckt wie die auch.\nBildschirme, kann man sich ja dann so vorstellen.\nFür die Amerikaner war das ein sehr wichtiges Programm, weil da jährlich Milliarden\nin das Projekt gesteckt wurden.\nEs gab auch viele Stimmen, die sagten, das ist ein Dinosaurierprojekt,\ndas alte Technologien mit alten Industrien verwendet.\nWarum nehmen wir nicht einfach SpaceX oder Blue Origin und machen da alles mit?\nDass die NASA nur noch Verträge rausgibt für den Service und nicht mehr so wie\njetzt an der Entwicklung tief beteiligt ist.\nAber Gott sei Dank hat ja alles sehr gut funktioniert bei Artemis I und ich\nglaube, diese Stimmen sind jetzt so ein bisschen, merkt man auch,\nauf Twitter und so ein bisschen ruhiger geworden, weil natürlich jetzt ein Erfolg da ist.\nDas Programm ist immer noch teuer und bewegt sich manchmal auch ein bisschen\nschwerfällig, aber man hat eine erfolgreiche Mission zum Mond geflogen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:14",
+      "text": "Und das wäre jetzt auch wirklich schlimm gewesen, wenn das gescheitert wäre."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:03:17",
+      "text": "Ja, das wäre..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:19",
+      "text": "Also, man weiß nicht... Es ist immer schlimm, wenn was scheitert,\naber ich glaube, das wäre dann schon wirklich sehr bedrohlich geworden für die NASA."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:03:26",
+      "text": "Ich denke auch.\nGenerell, wahrscheinlich hätte man dann den Ansatz der Großprojekte der NASA\nvielleicht in Frage gestellt.\nAlso, wenn das dann vor 20 Jahren passiert wäre, gab es ja keine Alternative.\nAber jetzt gibt es halt in der Privatindustrie durchaus Kompetenzen und andere\nHerangehensweise an Raumfahrtprogramme, wo man vielleicht schneller und besser dabei ist.\nAber auf der anderen Seite ist das ja auch ein so komplexes und spezielles System.\nUnd die NASA hat natürlich jahrzehntelange Erfahrungen auf dem Gebiet auch,\nmuss man sagen, die natürlich auch nützlich ist und man auch nicht vernachlässigen\ndarf. Man darf jetzt nicht sagen, warum geben wir das nicht alles an die private Industrie.\nDer Ansatz der ESA ist ja immer ein bisschen, wir sind ja ein bisschen mehr\nals Agentur, als Procurement Agency da im Vergleich zu NASA.\nDie NASA hat ja wirklich eine Abteilung, wo entwickelt wird und das dann quasi\nder D-Industrie vorgegeben wird.\nDas ist noch ein bisschen anders hier bei der ESA. Wir sind noch ein bisschen\nleaner als die NASA. Also ich sag mal im Vergleich, es sind dreimal so viele\nLeute von der NASA an dem ESM-Projekt, beschäftigt als wie bei der ESA."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:37",
+      "text": "Wirklich?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:04:42",
+      "text": "Ja, das ist halt so. die sind da sehr viel.\nDa sind wir halt sehr lean. Wir arbeiten quasi unter einem sehr großen Pensum,\num das alles zu verfolgen und von unserer Seite her zu shapeen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:59",
+      "text": "Nicht schlecht. Kommen wir zurück zum Start. Du warst in Houston,\noder nicht? Genau. Wir sind jetzt alle mal in Houston.\nGewisse Nervosität macht sich breit, aber ich bin mir sicher,\ndass es total überlagert von der üblichen Professionalität, die die Leute in\ndem Moment an den Tag legen. Der Start gelingt am 16.11.\nDas Ding boostet halt irgendwie los und wenn die SLS sozusagen ihre Aufgabe\nerfüllt hat, gibt es eine Trennung.\nDas heißt, ab dem Moment übernimmt auch das Service-Modul den Antrieb.\nOder gab es noch eine zweite Stufe? Nein, gab es nicht."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:05:37",
+      "text": "Es gab eine Oberstufe bei der Rakete. Das heißt, man hat diese Translunar Injection Eyes.\nDas ist quasi das Manöver, was von der Oberstufe durchgeführt wird.\nAlso die Oberstufe mit Orion trennt sich vom SLS und macht dann einen großen\nBoost, um das Raumschiff Richtung Mond zu schicken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:53",
+      "text": "Und wie genau war die Injektion an der Stelle? Ist die gut gelaufen?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:05:57",
+      "text": "Die ist sowohl, also gerade der Booster hat, also Booster SLS hat sehr gut funktioniert.\nDie Oberstufe auch präzise auf die Flugbange kommen zum Mond und dann findet diese Trennung statt.\nDas ist nach ungefähr zwei Stunden, glaube ich, findet die Trennung statt,\nzwei Stunden nach dem Start.\nUnd dann übernimmt quasi das Raumschiff und das Servicemodul."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:24",
+      "text": "Zwei Stunden, das war echt krass viel."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:06:26",
+      "text": "Ja, gut, man startet halt erstmal, macht dann sozusagen eine Umrundung fast\num die Erde, Da sind ja schon mal so ungefähr 90 Minuten, dann wartet man kurz\nund dann findet das Manöver statt, um vom Erdorbit rauszukommen Richtung Umrund."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:40",
+      "text": "Also um erst mal sozusagen den richtigen Punkt zu finden, wo man dann los kann.\nWo man dann los kann, genau. Weil das hängt dann immer davon ab,\nwann man jetzt genau starten... Im Idealfall startet man ja genau so,\ndass man gar nicht erst nochmal umrunden lässt, oder?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:06:55",
+      "text": "Nein, eigentlich ist das so geplant, dass man nicht direkt da jetzt...\nMan hat ja gewisse Orbitmechaniken um die Erden drum herum, die man nicht jetzt\neinfach so übergehen kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:05",
+      "text": "Ja, ich wollte auch nichts übergehen. Ich frage mich nur, warum man nicht einfach\ndirekt den richtigen Punkt finden kann. Was wird durch diese zusätzliche Umrundung noch gewonnen?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:07:12",
+      "text": "Ja, das ist eine gute Frage. Entweder ist das wirklich so ein Sicherheitsaspekt.\nIch bin jetzt kein Orbitmechaniker, aber entweder ist das jetzt ein Sicherheitsaspekt,\num erstmal einen stabilen Erdorbett zu haben. Man ist ja nie richtig einmal\nrum, man fliegt da quasi so dreiviertel rum.\nUnd wenn dann was schief gehen würde, würde man erstmal noch mal im Erdorben bleiben.\nWenn dieses CLA nicht funktionieren würde aus irgendwelchen Gründen.\nDiese Translunar Injection."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:36",
+      "text": "So, also die SLS hat dann quasi ihre Schuldigkeit getan. Die Oberstufe ist dann auch fertig.\nTrennt jetzt Orion ab. Und Orion besteht eben aus dem Service-Modul und aus dem Crew-Modul.\nUnd das zusammen ist jetzt auf einer Trajektorie Richtung Mond."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:07:57",
+      "text": "Richtig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:59",
+      "text": "Und diesmal hat man aber den Mond ziemlich scharf angeschnitten, sozusagen,\nindem man – also man muss sich ja immer klarmachen,\nso, Mond dreht sich halt langsam um die Erde,\nbraucht ja einen Monat, aber man kommt jetzt sozusagen nicht von hinten und bremst dann ab,\nsondern man kommt sozusagen von vorne, macht so eine halbe Umrundung um den\nMond, fliegt sozusagen der Mond dem Mondorbit entgegen und lässt sich dann vom Mond abbremsen.\nDas ist ja sozusagen so ein bisschen das Gegenteil, was man eigentlich normalerweise\nso kennt. Oft werden ja Planeten, also alle Körper mit ausreichend Masse,\nwerden ja in der Regel zur Beschleunigung benutzt, aber genauso kann man das ja auch zum abbremsen."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:08:49",
+      "text": "Ja, sicher, also hier, man muss sich das ja so vorstellen, wenn man in der Mitte,\nwenn man jetzt nicht so diese Konstellation vorstellt, in der Mitte ist die\nErde und da dreht sich der Mond drumherum. Einmal wie du es richtig gesagt hast,\ndas dauert halt einen Monat, bis der Mond einmal rum ist.\nUnd das Raumschiff rein sollte jetzt in diesen Distant Retrograde Orbit.\nWenn man sich eine Skizze anguckt von dieser Mission, sieht das immer aus wie\nein Kreis um den Mond. Aber im Im Endeffekt was es ist, ist,\ndass das Raumschiff auch...\nIn eine Umlaufbahn um die Erde fliegt.\nDiese Outbound Powered Fly, weil das ist das erste große Manöver,\nwas von dem Service-Modul durchgeführt wird, das lenkt das Raumschiff nah am\nMond, und der Mond nimmt dann das Raumschiff mit.\nDadurch wird das Raumschiff durch die Schwerkraft vom Mond in diesen Distant\nRetrograde Orbit geflogen. Das ist natürlich noch ein bisschen komplizierter\nvon der Bahnmechanik her.\nAber ich fliege dann erstmal mit dem Mond mit und verändere dann meinen Abstand\nund dadurch sieht das dann nachher aus, als ob ich da einen Kreis drum fliege.\nUnd dann, also dieser Transfer von der Erde bis zum Mond hat jetzt 6 Tage gedauert ungefähr.\nUnd dann wurde dieses Outbound Powered Flyby, da war man glaube ich auf 160\nKilometer Höhen, also sehr nah wirklich an der Mondoberfläche.\nUnd wurde dann quasi mitgenommen in diesen Distant Retrograde Overt,\nwo man dann auch so um die sechs, sieben Tage geblieben ist und dann hat man\ndieses Return Powered Flyby Manöver geflogen.\nDas heißt im Endeffekt dadurch dann wieder durch die Mondschwerkraft Richtung Erde katapultiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:35",
+      "text": "Also man nutzt sozusagen die Schwerkraft des Mondes zweimal aus,\ndas Ganze wird aber auch nochmal von so einem Burn begleitet.\nJa genau. das mal angeschaut. Das ist wirklich ganz interessant,\nweil du sagst, es hängt immer so ein bisschen davon ab, von welchem Körper aus\nschaut man sich jetzt eben diese Bahn an.\nAus Sicht des Mondes ist es halt so, da kommt eben dieser Körper angeschossen,\nfliegt sehr nah an ihm vorbei, bremst selber noch mal ein bisschen ab,\naber im Wesentlichen ist es halt die Anziehungskraft des Mondes,\ndie das Raumfahrzeug abbremst.\nDaraus ergibt sich so ein elliptischer orbit um den um den mond herum und wenn\nman das zweite mal am mond vorbeikommt.\nBremst man schon wieder beschleunigt und zurückgeflogen. Wenn man das ganze\nvon der Erde aus betrachtet, macht das Raumfahrzeug eigentlich nur eine große Ellipse wieder zurück."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:11:33",
+      "text": "Da gibt es tolle Animationen auch bei uns auf unserer Webseite.\nIn diesen zwei verschiedenen Reference Frames, in diesen Bezugsfenstern.\nAlso wenn man da jetzt drauf guckt und im erdfesten Koordinatensystem,\nwo man dann sagt, der Mond dreht sich immer so mit und man guckt sich dann an,\nwie sich dann relativ dazu das Raumschiff bewegt, dann ist das quasi eine Ellipse\ndahin und dann halt so ein Kreis um den Mond rum und dann wieder eine Ellipse zurück.\nWenn man sich jetzt anguckt, dass die Erde sich quasi im Mittelpunkt ist und\nder Mond dreht sich um die Erde in diesem Koordinatensystem,\ndann fliegt das Raumschiff quasi mit dem Mond mit, mit einem gewissen und variierenden Abstand.\nAber das ist ja dann auch in der Realität so, auch wenn ich im wirklichen Mondorbit\nbin, dann bin ich ja auch um den Mond rum und fliege da mit dem Mond mit.\nRelativ gesehen zur Erde bewege ich mich dann eher so wie der Mond.\nDas ist natürlich auch das Antriebsvermögen vom Orion, das ist geringer als\nbei Apollo, weil Apollo hat ja diesen Einschuss in den lower lunar orbit gemacht.\nDa braucht man halt ein bisschen mehr Antriebsvermögen für.\nHier hat das System halt ein bisschen weniger Antriebsvermögen und dadurch können\ndann solche Manöver durchgeführt werden, also mit diesem Powered Flyby und so\nweiter. wo man halt dann die Schwerkraft des Mondes benutzt,\num eine Geschwindigkeitsänderung an dem Raumschiff durchzuführen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:05",
+      "text": "So, wie sah das jetzt aus der technischen Begleitung aus?\nIhr wart da jetzt sozusagen in Newston und jetzt ging es ja leider drum.\nAlso du warst dann auch die ganzen Zeitraum über in Newston.\nJa, stimmt. Missionsverlauf. Was hat denn jetzt funktioniert und was hat denn nicht funktioniert?\nWeil irgendwas funktioniert ja immer nicht. Ich erzähle dir,\ndass jetzt alles problemlos funktioniert hat."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:13:28",
+      "text": "Also, ich muss sagen, man kennt ja auch seine, ich spreche jetzt vom Antriebssystem,\nman kennt ja auch seine Schwachstellen im System bzw.\nNicht unbedingt Schwachstellen, sondern vielleicht die Komponenten oder die\nSubsysteme, die so ein bisschen einem während der Entwicklung Kopfzerbrechen\nbereitet haben. Da denkt man, oh Gott, hoffentlich klappt das alles.\nIm Antriebssystem hat wirklich alles super funktioniert. Es gab im Interview,\nda gab es alle paar Tage Interview mit den NASA-Projektleitern,\nda fragte ein Reporter auch, welcher Schulnummer würden sie dem Antriebssystem\ngeben, und der Flight Director aus dem Kontrollzimmer hat gesagt,\nstraight A, also halt eine Glatte 1.\nDas war natürlich sehr gut für uns und vor allen Dingen die Kollegen in Bremen,\ndie das System ja im Wesentlichen entworfen und gebaut haben,\ndass das so gut funktioniert alles.\nEs gibt natürlich immer so kleine Abweichungen. Ich will es nicht mal als Anomalie\nbezeichnen, weil gut, man fliegt das zum ersten Mal, das ist ein paar Sachen, paar Daten oder...\nDas Verhalten vom System mal ein bisschen anders ist, wie man es ausgelegt hat.\nDas ist, glaube ich, normal."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:42",
+      "text": "Anomalie heißt ja auch nur, irgendein Grenzwert wird überschritten,\nden man eigentlich nicht überschritten haben wollte."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:14:48",
+      "text": "Ja, oder man hat wirklich auch operationelle Probleme. Klar,\nwir haben viele Anomalien aufgeschrieben, weil du sagst, es wurde ein Grenzwert überschritten.\nFormal war es eine Anomalie, aber es hatte einfach technisch keinen Einfluss aufs System.\nEs gab auch, und das wurde auch in der Presse gesagt,\nbei uns im Power Subsystem, Da gibt es diese Power Conditioning and Distribution\nUnit, also diese Elektronikbox, die den Strom von den Solarpanelen kriegt,\nLoad Current Limiters, also so eine Art Sicherung, die da eingebaut sind.\nDie sind hin und wieder mal rausgeflogen und wir wussten nicht so richtig, warum.\nAber das ist dann wie zu Hause, man kann die dann wieder reinklicken über einen\nBefehl und dann läuft das wieder ein paar Tage und dann ist sie mal wieder rausgeflogen.\nDas heißt, es war jetzt keine permanente Degradation von dem System.\nDas ist eine der Sachen gewesen, die den Leuten im Baubereich ein bisschen Kopfzerbrechen bereitet haben.\nAber nicht wirklich, dass man sagen würde, wir haben jetzt Redundanz verloren.\nWir wissen, dass es ein wiederkehrendes Problem ist, was jetzt für AtomS2 behoben\nwird. Da sind wir jetzt schon dran.\nAber also wirklich, also vom...\nCrew-Modul, vom Service-Modul lief alles wirklich sehr, sehr gut.\nAlso ich selbst überrascht, also persönlich muss ich sagen mit der Vorgeschichte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:09",
+      "text": "Lief denn auch alles automatisch ab oder musste man auch jetzt sozusagen manuell\nnoch irgendwas freischalten? Oder war das im Prinzip alles vorbestimmt?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:16:16",
+      "text": "Im Prinzip ist das alles vorgeplant vor allen Dingen, also sequenziert und dann\nhalt auch teilweise kontrolliert von der Software, also Close Loop.\nDas heißt, manche Sachen, da kann man natürlich vom Boden her einflussnehmen,\nmuss man aber nicht unbedingt.\nDas läuft dann automatisch durch. Ich kann zum Beispiel sagen,\ndiese großen Manöver beim Outbound Power Flyby und beim Return Power Flyby Manöver,\ndas sind wirklich, wo das Haupttriebwerk zwei Minuten brennt,\nbeziehungsweise drei Minuten, also ein großes Manöver, wenn man denkt,\ndass eine Gesamtbrenndauer von dem System vielleicht zwölf Minuten sein kann.\nDas wird hinter dem Mond ausgeführt, ohne Kommunikation mit der Erde.\nAlso komplett autonom. Man fliegt da halt rein, dann schalten die ganzen Anzeigen\nauf Türkis, weil das ist die Anzeige, wenn keine Daten kommen.\nUnd dann holt man sich erstmal Kaffee."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:08",
+      "text": "Weil man kann nichts machen."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:17:10",
+      "text": "Man kann nur warten, weil man kann ja auch keine Kommandos entschicken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:13",
+      "text": "Und zu sehen gibt es auch nichts. Also es ist alles komplett im Funsch,\nman hat überhaupt keine Möglichkeit. Man bräuchte halt irgendein Relay,\nder noch mit rumfliegt, aber der existiert nicht."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:17:22",
+      "text": "Den gibt es nicht. Da gibt es wohl jetzt auch eine Idee hier bei der ESA,\ndas glaube ich Moonlight, zusammen mit Kommunikationsdirektorat und human spaceflight hier,\ndass man da Satelliten in den Mondorbit oder in DRO setzt, mit dem man dann\nRelay machen kann zurück zur Erde. DRO ist?\nWo dann zum Beispiel auch der Gateway die Gateway Station sein wird.\nNAHO glaube ich. NAHO ist es, wo der Gateway sein wird. Aber gibt's,\nnicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:55",
+      "text": "Gibt es derzeit noch nicht."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:17:56",
+      "text": "Gibt es derzeit noch nicht, deswegen auch nicht unbedingt relevant."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:58",
+      "text": "Also muss man warten und das ist klar, da muss halt alles automatisch ausgeführt\nwerden. Das heißt, all diese ganzen, sowohl das Abrämsmanöver als auch das Beschleunigungsmanöver,\nfällt da, glaube ich, darunter?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:18:10",
+      "text": "Genau, im Endeffekt waren es die beiden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:12",
+      "text": "Also das Wichtigste sozusagen findet statt und man darf noch nicht mal live zuschauen."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:18:17",
+      "text": "Deswegen kannst du ja vorstellen, dass ich bei dem ersten Manöver leicht nervös\nwar, Also generell, es gab so ein paar Punkte. Also Band war halt der Aufstieg,\nalso der Start der Rakete, weil da wirklich viele Sachen im System,\ndas ist alles sequenziert und muss auf die Sekunde genau passieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:31",
+      "text": "Haltest du auf die Millisekunde genau, oder?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:18:33",
+      "text": "Ja, also genau, es ist in Millisekunden im Endeffekt spezifiziert, ja.\nRichtig, also man hat dann gewisse Zeitvorgaben, in denen Sachen passieren müssen,\nund dann quetscht man da seine Operationen rein.\nUnd es fing ja an auch mit dem Tanken und so, das ist ja alles von Countdown\ngeht glaube ich bei minus 42 Stunden los.\nJa und ich bin dann halt ins Kontrollzentrum gegangen bei T-6 Stunden.\nUnd dann sieht man halt wie das Bild getankt wird, wie es dann nicht klappt\nund wie es dann wieder klappt und so weiter. Also das ist dann schon alles ziemlich\nhektisch und ich gerne auch mal eine kleine Anekdote vielleicht zum Besten geben.\nIch saß dann an der Propulsion-Konsole in diesem Mission Evaluation-Raum und\nneben mir waren die Leute, die Mechaniker, also Loads und so was machen,\nalso die Mechanical Engineers, sag ich mal.\nUnd da war ja dieser Hurricane durchgeflogen und dann sind da auch an der Kapsel\nso ein bisschen dichtmaterial abgegangen, was die vorher schon gesehen hatten.\nDann hatten die auch wieder ein Problem mit dem Betanken. Da mussten die so\neine Crew rausschicken, die dann live mit einem halbgefüllten Rakete oben drüber\nunten im Groundsystem nochmal wieder ein paar Flansche anziehen mussten und\nein paar Muttern, damit das dicht wurde.\nDas war wirklich interessant. Das hieß Red Team. Interessanterweise kamen die\nalle in blauen Overrolls raus. Da wusste auch keiner, warum die jetzt Red Team heißen.\nAuf jeden Fall war das auch sehr lustig. Da hat man gesehen,\nwir sind eigentlich gut im Zeitplan, aber wir haben ja nur zwei Stunden Startfenster.\nDas heißt, wenn sich da im Betanken oder in der Sequenz vorher was bestätigt,\nman muss anhalten, man muss Sachen überprüfen, man muss Sachen reparieren.\nWie gesagt, der Flansch musste angezogen werden, damit der Wasserstoff nicht\nmehr rausleckte. Das war halt in Kennedy alles und wir sehen das okay.\nDie Jungs vom Red Team kamen und dann guckten die in die Kameras und hängten da oben drin rum.\nDann hatten die noch mehr von diesem Lichtmaterial gesehen, was halt während\ndem Hurricane so ein bisschen losgegangen war, dass das baumelte da so rum.\nDas hatten die wohl bei der Begehung ein paar Tage vorher noch nicht festgestellt.\nDer Kollege neben mir, der musste dann halt quasi aus dem Bildmaterial Größe,\nVolumen, bestimmen und was passieren könnte, wenn das abfällt.\nOb das irgendwie ein Problem ist. Man hat ja beim Challenger..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:02",
+      "text": "Bei der Katastrophe war ja genau das Problem."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:21:05",
+      "text": "Genau, dass halt der Wasserstoss, der Material abgegangen ist und auf die Flügelvorderkanten\nvon dem Shuttle gefallen ist. Ich weiß nicht, ob das jetzt die gleiche Besorgnis war.\nAuf jeden Fall war das noch ein Problem, was sich noch angeguckt werden muss\nund was halt für den Staat wirklich auch bereinigt muss. Da musst du ja sagen,\nwenn ja geht oder ja geht nicht. Und dann kam irgendwann die Durchsage über uns zumindest. Yes.\nSo, Loads, wie sieht es aus? Red Team ist fertig. Wir warten noch auf deine\nFreigabe für den Start. Der Typ, der hat natürlich auch ein Backoffice gehabt,\nwo die das dann organisiert haben und so weiter.\nUnd spitzen. Der saß direkt neben mir.\nJa und dann irgendwann, Gott sei Dank, also dreiviertel Stunde vor dem wirklichen\nStart an, sagte, okay, we're clear. Alle im Zimmer.\nErstmal alle erleichtert, und dann ging es ja wieder in den Countdown.\nDas war wirklich eine spannende Angelegenheit.\nUnd dann Countdown, T-minus eine Minute. Das war schon mal weiter als letztes\nMal, das ist ja schon mal nicht schlecht.\nMal gucken, was noch passiert. Team minus 10 seconds. Also, shit.\nGeht's jetzt wirklich los?\nIch sag's erst einmal, wir sitzen immer mit NASA-Kollegen an den Konsolen.\nGeht jetzt echt los. Scheiße, geht echt los.\nJa, und dann ging es halt los. Und dann ist das ja wirklich wie ein Film.\nWir haben das vorher auch sehr oft trainiert. Ich meine, es ist ja nicht so,\ndass wir da hingehen und machen das das erste Mal. Wir haben ja hier diesen\nTelemetrieraum, wo wir das simulieren können. Wir waren auch öfter in Houston\nvorher, um in den Raum immer Flugsimulationen zu machen.\nAlso wirklich vergleichbar wie ein Pilot, der für einen gewissen Flieger trainieren\nmuss. Haben wir halt für die Mission trainiert und dann auch ganz oft Aufstieg.\nUnd dann lief das halt wirklich wie im Simulator. Da gab es ein paar kleine\nPunkte, wo mir mal das Herz hingewiesen ist, weil das dann doch nicht alles so ist wie im Simulator.\nDa hatte die Software mal was Komisches angezeigt von den Ventilen.\nIch dachte, shit, jetzt müssen wir hier eine Contingency-Procedure und so ablaufen\nlassen. War aber Gott sei Dank nur, sag ich mal, eine Software-Sache.\nAlso physikalisch hatte das keinen Grund, Gott sei Dank. Also da gab es keine Probleme.\nDann war unser System fertig. Wir waren quasi startklar.\nWie du sagtest, man merkt es knistert in der Luft, aber es ist professionelle\nAnspannung. Es ist jetzt nicht\nso, dass da die Leute irgendwie austicken oder dass viel Quatsch wird.\nAber beim Outbound Powered Fly, das war ungefähr nach sechs Tagen nach dem Start,\nda hat man gemerkt, okay, die Systeme funktionieren alle ganz gut.\nMan hat gesehen, unser Power-Subsystem liefert super. Also mehr Strom als gedacht.\nUnser Thermalsystem braucht nicht so viel Strom, weil die Sachen nicht so kalt\nwerden wie gedacht. Das geht ja noch ein paar Grad, aber trotzdem, das ist halt Leistung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:00",
+      "text": "Also die Heizung ist im Prinzip nur ein Radiator letztlich, oder?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:24:03",
+      "text": "Ja gut, das sind halt viele Heizer, so Heizfolien mit Temperaturfühlern immer\ndaneben, um zu gucken, dass das auch richtig auf die richtige Temperatur gesetzt wird.\nDas ist halt das, Das ist das passive Thermalkontrollsystem,\nwas über elektrische Leistung heizt.\nWenn es dann nicht mehr benötigt wird, geht es aus und wenn es wieder benötigt wird, geht es an.\nDann gibt es dieses aktive Thermalkontrollsystem, wo dann diese Radiatoren außen\nsind und eine Kühlflüssigkeit durch das System gepumpt wird.\nDa werden dann verschiedene Baugruppen, die Wärme absondern.\nMit versorgt und gekühlt. Und nachher auch die Kapsel damit auch gekühlt bzw."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:45",
+      "text": "Beheizt. Thermalsystem heißt also sowohl für die ganze Technik,\nfür die Gase etc. aber eben auch für das Chromodul."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:24:52",
+      "text": "Das ist das aktive Thermalkontroll."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:54",
+      "text": "Und das wurde im Prinzip auch schon auf Menschenbedarf hingeheizt."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:24:58",
+      "text": "Richtig, also die Kapsel war auf Temperatur."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:01",
+      "text": "Aber da waren jetzt keine Dummies an Bord."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:25:04",
+      "text": "Doch, da waren drei Dummies an Bord. Die Nase hatte eine Puppe.\nSo eine Ganzkörperpuppe, die hatte irgendwie einen Commander,\nCommander Munikin oder so hieß sie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:13",
+      "text": "Und die hat auch selber Wärme erzeugt?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:25:15",
+      "text": "Nein, ich glaube nicht. Nee? Nein, nein. Ich glaube nicht. Und dann waren noch\nzwei Puppen, also eine vom DLR. Das war so eine Half-Body-Puppe.\nUnd das war eine Kooperation, die das DLR wohl mit den Israelis hatten.\nDa gab es zwei Puppen. Eine Puppe war eine normale mit ganz vielen Sensoren\nausgestattet und die andere hatte dann so eine Strahlungsweste an.\nMit den gleichen Sensoren ausgestattet, dann sollte gezeigt werden,\nwas passiert, wenn wir so eine Mission fliegen, wie viel Strahlung kommt da\neigentlich an, wie schlecht ist das für die Astronauten, hilft so eine Weste.\nDann waren noch zwei Tiere an Bord. Snoopy?\nUnd Sean das Schaf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:54",
+      "text": "Aber kein wirkliches Schaf."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:25:56",
+      "text": "Nein, nein, also dieser Cartoon-Charakter, das war halt unser ESA-Maskottchen,\nwas mitgeflogen ist. Und dann Snoopy, das was ja seit der Apollo-Zeiten das\nMaskottchen der NASA für die Bermannter Raumfahrt ist. Der war dann in einem Raumanzug mit.\nUnd nochmal dann zurückzukommen auf diesen Return- oder Outbound-Powered-Fly-By,\nwo das Manöver hinter dem Mond, im Funkloch sozusagen, durchgeführt wurde.\nDas war interessant, weil das war für mich das erste Mal, dass das passiert.\nIch war total aufgeregt und so weiter. Ich hoffe, das klappt und ich komme wieder raus.\nBis dann irgendwann die Fly-Controller mit dem Kaffee bei uns in diese Mission\nEvaluation Room reinkommen und anfangen zu quatschen.\nUnd alle stehen und quatschen und denken so, okay, anscheinend...\nAnscheinend läuft es gut. Und dann kriegt man dann eine Anzeige,\nnatürlich, AOS Acquisition of Signer.\nDas ist natürlich alles geplant, man weiß ja ungefähr, wann dann wieder Sichtbarkeit da zur Erde,\nalso eine Line of Sight zur Bodenstation besteht und dann weiß man ungefähr,\nok so und so viele Sekunden bis wir unser Telemetrieset wieder haben und ja\ndann läuft die Uhr auf Null runter und dann guckt man auf sein,\nalso bis die Acquisition auf Signal ist und dann kommen halt so langsam die Daten rein.\nAlso dann werden halt diese Türkisen ziffern, die halt auf dem Display sagen,\nok ich hab keine Telemetrie werden, wie normal. Und man sieht,\ndass da wieder was kommt zum Raumschiff.\nUnd dann plötzlich, Brendauer vom Haupttriebwerk war genau die zwei Minuten\nzehn hochgegangen, wussten wir, manöver hat geklappt.\nRaumschiff war nicht explodiert, weil wir kriegten ja Daten.\nAlso alle happy. Man hat sich danach die Bedrückungsarchitektur bei uns im System geguckt.\nSah gut aus, ist so gelaufen. Dann kamen so langsam auch die ganzen Druckdaten\nund so weiter rein, wo man ein bisschen Historie braucht und dann konnte man\nsagen, okay, wow, hat ja geklappt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:50",
+      "text": "Ist man da eigentlich so auf 24-7 abruf?\nWie macht ihr das? Ihr müsst ja auch mal schlafen. Teilt ihr euch dann im Team\nauf, dass immer jemand da ist oder sagt man einfach so, naja,\njetzt darf man mal so gut schlafen und wenn was ist, wird man geweckt?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:28:04",
+      "text": "Schlaf war so eine Sache, kannst du dir vielleicht vorstellen.\nAlso wir hatten halt wie gesagt ein Team in Houston und ein Team aber auch hier\nbei ASTEC, was auch die gleichen Telemetrie hatten.\nWir hatten das so gemacht, pro Konsole hatten wir eigentlich zwei Personen,\ndie Systemleute hatten ein paar mehr.\nDie Systemleute sind halt die, die den Gesamtüberblick über das Gesamtsystem\nhaben und die wollten halt quasi rund um die Uhr Support machen,\nbrauchten ein bisschen mehr Leute.\nIch habe mir da mit einem Kollegen quasi die Früh- und die Spätschicht geteilt,\nwir haben aber selten Nachtschicht gemacht, nur wenn wirklich was los war.\nAlso wir haben am Schichtmodus gearbeitet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:41",
+      "text": "Oder zwölf."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:28:44",
+      "text": "Wie nötig, ne? Also offiziell an der Konsole glaube ich zehn mit Handover vorher und nachher.\nUnd dann natürlich wenn irgendwelche Sachen waren, noch mal vorher und nachher.\nAlso das ist wirklich nicht zu unterschätzen, weil die Mission ist ja wirklich 24 Stunden.\nDas heißt man wird wach, man hat neue Sachen, man vor dem Bett gehen,\ngibt es wieder, ist noch was los ist.\nGott sei Dank hatten wir natürlich hier aus Holland guten Support,\nweil unser Antriebssystem das größte Subsystem war.\nDas gab es auch am meisten zu tun. Wir hatten hier drei Ingenieure,\nzwei von der ESA, ein Kollege von Airbus, die dann hier 24-7 rotiert sind.\nDas heißt, wir hatten eigentlich immer jemanden vom Antriebssystem,\nder live war, meistens zwei.\nMan hat offiziell einen Tag Rest bekommen, also Ruhetag bekommen,\naber so viel Ruhe war dann auch nicht. Das kann man sich ja vorstellen,\ndas ist ja klar, das läuft ja auch dann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:29:43",
+      "text": "Fährt man dann hier eigentlich nach Hause oder gibt es dann für solche Einsätze\nauch hier die Möglichkeit zu schlafen?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:29:49",
+      "text": "Nö, man fährt dann nach Hause oder ins Hotel hier. Genauso wie bei mir in Houston\nnatürlich auch. Ich bin dann ins Hotel gefahren danach, nach der Schicht.\nDas waren ja fast fünf Wochen, wo wir da waren. Das war natürlich eine lange\nZeit. Gott sei Dank ist die nächste Mission zwei Wochen lang nur. Das reicht dann auch.\nUnd hier also wirklich war auch eine sehr gute Zusammenarbeit zwischen den ungefähr\nauch 20 Leuten hier, die hier auch rund um die Uhr gearbeitet haben und in den Houston.\nSuper Kooperation muss ich sagen zwischen NASA und uns. War auch das erste Mal,\ndass wir die Ops dann die Operations dann mit der NASA zusammen durchführen.\nIch meine, die Leute, mit denen wir dann wirklich da zusammengearbeitet haben,\ndie kannten wir natürlich aus dem Projekt selber.\nDie Flight Controller, da hatten wir so ein bisschen weniger Kontakt mit von\nhier, weil das sind ja wirklich die, die das fliegen.\nDie sind halt nicht unbedingt in der Wickelung so tief.\nBeteiligt. Die kriegen quasi das Design und die Capabilities und implementieren dann quasi die Mission.\nAuch wenn man ein Auto kriegt, da hat man dann ein Handbuch dazu und dann fährt\nman das. Aber man ist ja nicht an der Entwicklung beteiligt unbedingt.\nUnd dann lief es auch wirklich so gut auch bei den meisten anderen Systemen,\ndass dann Management irgendwann gesagt hat, hey, ihr habt alle gedacht,\nim Mondorbit ist ruhig, weil da im Endeffekt fliegt man dann nur nebenher und\nda ist wirklich wenig los, lasst uns doch mal ein paar neue Tests definieren on orbit.\nUnd dann haben wir uns hingesetzt und haben uns überlegt, was kann man denn\neigentlich noch so testen.\nEs gab halt vordefinierte Test-Objectives, aber auch Sachen,\ndie jetzt noch mehr gemacht werden konnten.\nEs war ja eine Qualifizierungsmission, eine Testmission und dementsprechend\ngab es auch schon vorher Sachen, die getestet werden sollen,\ndie man in einer Mission, die man das nicht unbedingt macht.\nAber wir haben dann noch darüber hinaus neue Sachen on the fly definiert.\nZum Beispiel einen 100-Sekunden-Test mit den Hilfstriebwerken,\nder überhaupt nicht vorgesehen war. Da muss halt der Orbit ein bisschen angepasst werden.\nDeswegen, um das thermische Verhalten von zwei Triebwerken nebeneinander sich\nanzugucken. Da hat man am Boden keine Daten, die haben wir dann quasi on Orbit\ngekriegt oder wir haben einen Leckagetest gemacht von Ventilen in Orbit.\nMacht man auch nicht für Astronauten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:08",
+      "text": "Was heißt, wie macht man einen Leckagetest?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:32:11",
+      "text": "Man stellt eine gewisse Drucksituation an dem Ventil ein, also vor dem Ventil\neinen gewissen Druck und nach dem Ventil hat man einen gewissen Druck.\nUnd wenn sich diese Drücke ändern, dann leckt es.\nDas ist im Endeffekt der relativ einfache."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:24",
+      "text": "Und ihr habt das jetzt so weit getrieben, dass es lag oder ihr habt nur geguckt, dass es nicht lag?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:32:27",
+      "text": "Wir haben mal geguckt, ob es lag oder nicht. Im Endeffekt war es wichtig,\num zu gucken, ob sich da irgendwas verändert hat in dem System.\nAber auch für mich wichtig zu wissen, wenn wir mal wirklich ein Problem damit\nhaben, können wir das dann am Orbit dann irgendwie quantifizieren.\nJa, und noch verschiedene kleinere Tests. Also da wurde eigentlich wirklich\nviel auf einmal getestet.\nDann haben die die Triebwerke anders gefeuert. Also es war wirklich auf der\neinen Seite ein bisschen spannend, auf der anderen Seite aber auch cool,\ndass wir das machen konnten.\nSo ein bisschen Spielplatz, ne? Ja, genau. Wenn man so einen Raumschiff mit\nder Entwicklung Orion, wahrscheinlich 25 Milliarden oder so was,\ndann im Mondorbit hat und die Chefs sagen, ja denkt euch mal ein paar Tests\naus. Ja, denk mal, ja. Playground für Grown-ups."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:33:09",
+      "text": "Kommen wir nochmal zum Schluss vielleicht dieser Mission, also Rückkehr.\nAlso man ist halt einmal hin, einmal um den Mond herum und wieder zurück.\nUnd ja, dann kommt es ja dann nochmal die Separation, wo dann die eigentliche\nCrew, das Crewmodul abgespalten wird und das Servicemodul dann verglüht.\nWann findet das genau statt? Wie kurz vor Landung?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:33:30",
+      "text": "Das ist glaube ich 40 Minuten.\nVersuchen wir mal. Zap. Entry Interface. Ich glaube."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:33:39",
+      "text": "Crew ist in Ordnung."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:33:40",
+      "text": "Ich sag mal jetzt 40 Minuten, weil ich habe in weder 40 Minuten noch eine Stunde im Kopf.\nAlso in der letzten Stunde. Genau, in der letzten Stunde, da findet diese Separation\nstatt und dann dreht sich dann das Crewmodul einmal um um die eigene Achse.\nDas Crewmodul hat nochmal ein eigenes Lageregelungstriebwerkssystem eingebaut\nund das dreht sich dann quasi um, um mit dem Hitzeschutzschild zuerst einzutreten.\nUnd dann findet halt der Wiedereintritt von dem Crewmodul statt und das Servicemodul,\ndas fliegt dann halt nebenan, macht seinen Wiedereintritt und verglüht dann\nirgendwie in der Atmosphäre und ein paar Teile bleiben dann über und die landen dann im Pazifik.\nDas Kuhmodul hat jetzt so eine Skipping-Trajektorie, da sind die geflogen.\nMan kann ja zum Beispiel auch direkt eintreten, indem man quasi eine direkte\nFlugbahn hat, da hat man sehr hohe Wärmelast.\nDie sind dann quasi reingekommen, haben dann nochmal hochgezogen und sind dann\nnochmal wieder eingetreten.\nAlso quasi haben die vom Höhenprofil, es ging erst steil runter,\ndann ging es wieder ein bisschen hoch und dann ging es wieder steil runter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:34:49",
+      "text": "Kann man das denn steuern?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:34:50",
+      "text": "Über den Anstellwinkel von der Kapsel. Durch dieses Lage-Regelungssystem sind\nwir in der Lage, das Raumschluss zu drehen und anzustellen.\nUnd dann über die Aerodynamik kann man das dann so einstellen,\ndass man verschiedene Trajektorien in der Atmosphäre fliegen kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:07",
+      "text": "Also ist das so ein bisschen, als wenn man einen flachen Stein über Wasser..."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:35:11",
+      "text": "Ungefähr, daher kommt das, glaube ich, Skippring-Trajektorie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:13",
+      "text": "Genau, also man trifft sozusagen auf, aber stellt einfach durch die Schräglage fest,\ndass man so viel Auftrieb wieder erhält, dass man wieder hochkommt und dadurch\nist dann insgesamt die Bremswirkung größer als würde man einfach straight sofort\neintauchen bzw. man nicht dieselben Temperaturen."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:35:30",
+      "text": "Ja und auch vor allen Dingen, so ich das verstanden habe, dass das halt ein\nDesign, was die Verzögerung, also die mechanischen Lasten ein bisschen reduziert,\nwas natürlich gut ist für die Astronauten.\nAber anscheinend ist es halt schon eh ein ziemlich anspruchsvoller Wiedereintritt\nfür die Astronauten von so einer hohen Geschwindigkeit.\nUnd so kann man das ein bisschen verteilen sozusagen die Wärmelast und auch\ndie mechanischen Lasten.\nDass man dann nicht so eine hohe Bremskraft hat oder eine Bremswirkung und das\nnatürlich dann auch mehrere Gs und die Astronauten dann nicht unbedingt in der\nHöhe, dann lieber zweimal weniger als einmal richtig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:36:05",
+      "text": "Wie lange kriegt man noch Daten von dem Service-Modul, bis es komplett verglüht ist?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:36:10",
+      "text": "Sobald es getrennt ist, ist es weg, weil wir keine Datenverbindung mehr haben\nzum Kronmodul. Ach so und das Kronmodul funkt?\nGenau, das Kronmodul funkt, wir funken nicht. Wir haben mal Datenverbindungen\nnatürlich zum Kronmodul, aber sobald diese Nabel- schnur getrennt ist, ist Feierabend.\nSchade. Das ist eigentlich sehr schade, weil ich meine, gut der Wiedereintritt,\nder ist halt was er ist, aber was wir hatten, wir hatten ja auf den,\ndaher kamen auch die ganzen tollen Bilder während der Atemmission,\nwir hatten ja Kameras auf diesen Solarpaneel, an den Enden von den Solarpaneeln.\nMan hat dem Projekter liebevoll Selfie-Sticks so gesagt, weil man die wirklich\nso benutzt worden hat. Man hatte wirklich das Gefühl, die Leute vom Public Affairs\nOffice von der NASA, also von den Kommunikationsleuten.\nDie haben das wirklich rumgefahren, um sich das Raumschiff von allen Seiten\nanzugucken, dann halt damit auch die Fotos zu schießen von Mond, Erde und so weiter.\nUnd das ist eine Wi-Fi-Verbindung und die kann eigentlich theoretisch sogar\nein bisschen länger funken, also bis halt das Grundmodul, der Router sozusagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:37:23",
+      "text": "Wirklich Wi-Fi jetzt? Also normales WLAN tatsächlich? Normales WLAN."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:37:27",
+      "text": "Ernsthaft? Ja, aber da sind ja GoPros."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:37:28",
+      "text": "Ah, wirklich?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:37:30",
+      "text": "Ja, im Core sind das GoPros.\nAlso im Core sind das GoPros, die da auf den Solarpanelen sitzen.\nDa wurde der Chip und die Kamera. Und dann wurde da ein Gehäuse drum gebaut,\nwas dann halt Raumfahrt qualifiziert wurde und so weiter.\nUnd da gibt es ein WLAN-System für die Kameras.\nIch glaube im Prinzip könnte das sogar funktionieren, weil dann die Kameras, die kriegen noch Strom.\nEigentlich oder haben Materie oder sowas und die könnten dann eigentlich noch\nein bisschen die Trennung sich angucken, ging aber diesmal nicht.\nAus irgendwelchen technischen Gründen, die mir nicht bekannt sind.\nJa genau, dann ist halt, die Bilder waren natürlich spektakulär vom Anflug auf\ndie Erde. Also man hat natürlich die größte Beschleunigung von dem Raumschiff,\nwenn es dann in den Gravity Well von der Erde geht.\nUnd man sieht halt wirklich, dann kommt man da an, man läuft ins Kontrollzentrum,\ndie Erde ist noch so klein klein und am Ende wird die immer größer.\nMan kann es wirklich auf dem Bildschirm dann größer werden sehen,\nwenn es dann zu der Trennung kommt. So ein ziemlich beeindruckender Moment. Und dann hatten wir,\nden Stream von der Kamera aus dem True-Modul, wo man quasi mit der Kamera aus\ndem Fenster geguckt hat und man hat dann gesehen, okay, jetzt ist Eintritt,\nweil das Plasma gerade am Fenster vorbeifliegt.\nUnd dann war ja auch Funkstelle, da gibt es ja diese Blackout-Windows,\nwenn das Plasma eine gewisse Stärke hat, wo man nicht mehr durchfunkt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:53",
+      "text": "Da geht einfach nichts mehr durch, ne?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:38:54",
+      "text": "Ja, man kann nicht mehr durchfunkten, es ist halt dann elektrisch geladene Strömung um das Raumschiff rum.\nUnd dann, nach dem ersten Eintrittsteil, wenn dieses Skipping beginnt, dann hat man wieder...\nDann hat man wieder Kontakt und dann hat man auch toll gesehen,\nschon okay, ich fliege halt mit einer riesigen Geschwindigkeit über die Erde,\nman saut die Erde und dann hat man das halt, hat man wieder ein Blackout gehabt\nund dann sah man schon, okay, jetzt sind wir ja wirklich nah dran.\nUnd dann kamen auch schon die Bilder vom Recovery Ship.\nMan hat dann da die Fallschirme gesehen, die rausgeflogen sind und wir waren\nnatürlich mega happy zu dem Zeitpunkt, wo das Service Modul weg war,\nalso als Europäer, unser Job war es done, well done."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:39:34",
+      "text": "Aber man will ja auch, dass die Mission als Pflicht hier funktioniert."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:39:37",
+      "text": "Ja genau, für mich wäre die Mission kein Erfolg gewesen, wenn da was am Q-Modul passiert wäre.\nObwohl wir nur in Anführungsstrichen das Service-Modul liefern,\nist man da integraler Teil des Oraleprogramms und auch Artemis als ESA-Mitarbeiterin,\nauch als Airbus-Mitarbeiterin.\nDas würde ja auch niemand anders sagen. Also würde keiner sagen,\nich bin nur für das Service-Modul zuständig und für das Rest ist mir egal.\nDas wird dir hier auf dem Flur keiner sagen und das wird dir auch bei den Kollegen\nin Bremen keiner sagen. Die sind alle Teil vom Artemis-Programm.\nUnd dementsprechend, als die Fallschirme rausgingen, du weißt halt,\nokay, da kann noch mal was daneben gehen. Das ist ein zweistufiges Fallschirmsystem.\nKann mal was passieren. Und als die draußen waren, alle happy,\ndann kam auch der NASA-Chef rein, hat man noch eine Ansprache gemacht.\nDer Bill Nelson kam rein.\nDas war dann ganz schön. Da hatten wir einen kleinen Umtrunk bei NASA auf dem Gelände.\nDie Mission ging im Endeffekt nochmal zwei Stunden weiter, weil die haben die\nKapsel nochmal zwei Stunden lang wassern lassen.\nAuch aus Testzwecken, normalerweise machst du das nicht, holst du das schnell\nwie möglich rein, aber die mussten halt zeigen, okay wir können zwei Stunden\nwassern, unsere Systeme bleiben halt aktiv und können die Astronauten am Leben\nerhalten, nochmal zwei Stunden danach."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:41:01",
+      "text": "Da sind glaube ich noch so Sicherheitsballons aufgeblasen worden."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:41:04",
+      "text": "Ja genau, die sind halt zum Floating Devices."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:41:09",
+      "text": "Zum Schluss blicken wir vielleicht mal kurz noch auf, was jetzt noch so ansteht.\nArtemis 2 und 3 haben wir jetzt schon ein paar Mal erwähnt.\nDas sind dann sozusagen die entscheidenden Missionen. Was ändert sich jetzt bei Artemis 2?\nUnd klar, bei 3 sind natürlich dann die Astronauten mit dabei. Was ändert sich dann?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:41:27",
+      "text": "Bei Artemis 2 haben wir noch immer den gleichen Launcher. Wir haben bei Artemis\n2 dann eine Crew an Bord, eine amerikanische Crew.\nIm Service-Modul gab es..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:41:37",
+      "text": "Das heißt, Artemis 2 ist im Prinzip nochmal das gleiche wie Artemis 1, was den Flug betrifft?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:41:42",
+      "text": "Nein, nein, der Flug ist komplett anders. Der Flug ist ganz einfach.\nEs gibt einen Free Return, heißt das.\nDas heißt, man, im Endeffekt fliegt man auf einer Bahn, also man macht diese\nTranslunar Injection, also diesen Einschuss auf die Mondumlaufbahn, aber nichts weiter.\nMan fliegt dann nur am Mond vorbei und fliegt dann direkt zurück,\nohne irgendwelche Manöver am Mond selber durchzuführen.\nEs gibt dann quasi nachher nur noch Lageregelung. Warum?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:42:08",
+      "text": "Also ich meine, wenn man das vorher schon so geübt hat, warum macht man es dann anders?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:42:11",
+      "text": "Ja, man will halt natürlich die Mission zum einen nicht zu lang machen,\nweil man erst einmal die Astronauten, also Risiko ist eine Risikoabwägung,\nglaube ich, von der Missionsdesign, dass man sagt, okay, wir fliegen jetzt in\neine bemannte Mission, damit die Crew sich ans Raumschiff gewöhnen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:42:27",
+      "text": "Jetzt wird das Raumschiff an die Crew gewöhnt."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:42:30",
+      "text": "Hall.\n9000.\nAlso die Mission wird dann so wie folgt aussehen, wir werden dann wirklich auch\neinen Tag im Erdorbit erstmal sein und da werden die Lebenserhaltungssysteme getestet.\nMacht ja auch Sinn, dass man nicht sich direkt jetzt wie bei Artemis 1 auf Richtung\nMond begibt und nach drei Stunden fällt einem auf, oh wir haben keine Luft mehr.\nDas wäre natürlich schlecht und deswegen macht man erst einen Tag,\nwo dann das ausgetestet werden kann und man macht eine Runde VU und einen Docking-Test im Erdorbit.\nUnd es geht ja darum, dass man\nbei Artemis 3 mit dieser Mondlandefähre im Mondorbit, sage ich mal, dockt.\nDas muss man am besten noch mal testen vorher. Und das machen wir dann auch\nnoch im Mondorbit. Und dann, sehr interessant auch für mein System,\ndann wird dieser Mondeinschuss, nicht mit der Oberstufe gemacht,\nweil die ist dann ja schon längst weg, die wird dann mit dem Orion gemacht.\nUnd das ist dann vielleicht auch ein Grund, warum man nachher dann keinen,\nkeinen, nicht mehr ausreichenden Treibstoff hat, um irgendwelchen Mondeinschuss\nzu machen, so wie wir es jetzt gemacht haben.\nHaben. Also generell eine Abwägung, was will ich in der Mission machen,\nwas sind meine Capabilities vom Raumschiff und dann findet halt ein relativ\ngroßer Bören von dem Haupttriebwerkstatt um Richtung Mond zu fliegen.\nUnd dann kommt man nach, glaube ich, neun Tagen wieder zurück,\nlandet dann die Astronauten sicher und hat dann das Raumschiff getestet mit den Astronauten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:59",
+      "text": "Das heißt, für das Service-Modul liegt dann der Fokus in der zweiten Mission\nweniger auf den Antrieb.\nEr ist natürlich auch erforderlich, aber es gibt jetzt wie gesagt nicht diese\nBrems- und Wiederbeschleunigungsmanöver, aber mehr auf die Versorgung des Moduls etc."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:44:15",
+      "text": "Und gerade auch im Crew-Modul, was so ein Onboard-Computer-Jugend-Interface ist. Wahrscheinlich.\nToilettensysteme, ich weiß nicht, was man da noch testen muss mit dem Astronauten.\nAlso einfach so die Sachen, die halt mit dem Interface zwischen Astronauten\nund Raumschiff zusammenhängen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:44:32",
+      "text": "Ich sage mal voraus, dass die Nervosität beim zweiten Start noch größer sein wird als beim ersten."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:44:38",
+      "text": "Ja, das denke ich auch, weil es ist ja nochmal eine ganz andere Verantwortung.\nDas Gute ist, dass wir jetzt wissen, wie gut unser System funktionieren kann.\nUnd wir haben ja auf der gleichen Weise das Service-Modul gebaut und getestet, wie beim ersten Mal.\nSogar noch besser, weil Lessons Learned.\nUnd deswegen glaube ich, wenn wir das Modul abgeliefert haben,\nsind wir da genauso gut in Shape wie bei Atmos 1.\nDas gibt ein bisschen Ruhe auf der anderen Seite, wenn die ersten Mal die Astronauten\ndrauf sitzen, dann will man natürlich nicht, dass man noch eine Anomalie hat,\ndie ja immer auftreten kann.\nUnd dann weiß ich auch nicht, ob ich da unbedingt, also das ist natürlich eine Sache da,\nalso das wäre natürlich ziemlich heftig, wenn man so eine Apollo 13 Situation\nhat und man sitzt da im Team,\nwas die Anomalie dann irgendwie aufzulösen hat, das wäre natürlich schon,\ndas ist eine Situation, die keiner haben möchte und die wahrscheinlich auch\nnicht auftreten wird, aber man weiß es nie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:45:42",
+      "text": "Letzter Ausblick dann vielleicht auch noch mal auf Artemis 3."
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:45:45",
+      "text": "Okay."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:45:47",
+      "text": "So ganz zum Schluss. Das wird ja dann so ein bisschen die Krönung,\ndie vorläufige Krönung, soll ja noch weitere Missionen geben,\naber das ist ja jetzt erstmal das mittelfristige Ziel.\nWie wird es dann laufen mit dem Lander?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:46:01",
+      "text": "Wir haben ja jetzt quasi eine Mission geflogen, um in den Mond Orb zu kommen.\nVon der Oralenseite her wird das relativ ähnlich laufen.\nDer Lander, das ist so eine, im Endeffekt diese SpaceX-Oberstufe, die die jetzt beim..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:46:20",
+      "text": "Das Spaceship meintest du jetzt?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:46:21",
+      "text": "Ja, das Spaceship, ja. Was in Bocotico da auf dem Pad grad steht.\nWas ja auch jetzt, also was gerade wichtig ist, ist, dass das ist eigentlich\nmal eine Sache für mich, da ich ja auch nicht unbedingt da in dem Programm so\ninvolviert bin. Das ist nochmal ein viertes Programm, was bei der NASA läuft,\num Landing System. Da kriegen wir relativ wenig damit.\nMuss ich wirklich sagen, was in den Nachrichten steht, das verfolgen wir natürlich.\nDie müssen halt erstmal die Rakete starten, also dieses Spaceship starten und\ndann das Juven Landing System dementsprechend bauen, in den Mondorbit kriegen.\nAlso im Endeffekt geht es darum, die müssen mehrere Speichel bauen.\nWeil die ja Betankungen im Erdorbit machen müssen, dann müssen sie mit dem Spaceship\nzum Mondorbit fahren, dann muss das wieder im Mondorbit betankt werden,\ndamit sie dann auf die Mondoberfläche landen können und wieder hochkommen können.\nDas ist quasi eine Raumfahrtinfrastruktur für nötig, die gibt es ja heutzutage\nnoch nicht. Und das Ganze soll in drei Jahren im Endeffekt stattfinden.\nSpaceX ist schnell, schneller als eine vergleichbare Firma, aber selbst bei\nCrew Dragon, Also quasi dem Versorgungsschiff für die Raumstation gab es ja\n50 Prozent Projektverzug.\nDas ist nicht unbedingt gesagt, dass es nur weil SpaceX ist,\ndass es dann innerhalb des vorgesehenen Planchefes ist. Aber müssen wir mal sehen.\nGut, das ist halt für mich der kritische Punkt, weil da gibt es noch nichts.\nAber wir von Orion wissen, okay, wir können, gerade wenn wir bei Atomos 2 geflogen\nsind, wir können dann mit Astronauten zum Mond orbit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:47:51",
+      "text": "Aber vom Ablauf her ist es dann im Prinzip wieder wie die erste Mission?"
+    },
+    {
+      "speaker": "Tobias Langener",
+      "time": "1:47:55",
+      "text": "Ja, genau, es ist dann eher so wie die erste Mission, dass Orion auch in Mondorbit\nmuss, wo sich dann dieses Human Landing System befindet von SpaceX.\nDas heißt, wir werden dann docken mit diesem HLS Human Landing System.\nDas muss man sich so vorstellen, wir sind der Delfin und das HLS ist der Wal,\nso von der großen Ordnung.\nAlso wir sind halt ein kleines System, was dann dieses große Human Landing System,\nwas die Oberschrift vom Spaceship ist und damit fliegen dann die Astronauten\nrunter auf den Mond und fliegen dann wieder zurück,\ndocken mit Orion, steigen um und fliegen damit dann zurück zur Erde.\nUnd warum müssen wir das machen? Weil SpaceX kann mit Dragon und Crew Dragon\naus dem Leo zurückkommen.\nAlso aus dem Low Earth Orbit zurückkommen.\nSpaceX legt Spaceship aus, um aus dem Low Earth Orbit wieder zurückzukommen.\nMit den Hitzeschutzkacheln, die da angebaut werden und so weiter.\nAber es ist halt noch nicht nachgewiesen, dass sie überhaupt einen Wiedereintritt\nmit den Motgeschwindigkeiten machen können. was halt wesentlich komplexer ist.\nUnd das ist halt momentan, das Orion mit dem erfolgreichen Flug,\ndas einzige qualifizierte Raumschiff, was einen Return, einen Wiedereintritt vom Mond machen kann.\nDeswegen brauchen wir das, um die Astronauten zurückzukriegen vom Mond-Orbit.\nVielleicht ändert sich das in der Zukunft, man weiß es nicht in langfristig.\nAlso wenn da gewisse Capabilities entstehen bei SpaceX, wo das passiert,\naber ich sehe das halt momentan auch nicht kurzfristig eintreten einfach.\nMan sagt immer, SpaceX würde das alles übernehmen, aber es gibt durchaus auch\ntechnische Hürden, die da sind, das könnte man sicher nicht mehr kommen.\nAber die Physik gilt auch für viele, die es machen. Das ist so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:49:50",
+      "text": "Gut Tobias, ich sage vielen Dank für die Ausführung. Gerne. Hier zu eurem spannenden\nProjekt und dem auch wirklich sehr gut laufenden Projekt und gut laufenden Kooperationen.\nIch hoffe, das wird auch weiterhin so laufen.\nInsofern alles Gute dafür. Ja und vielen Dank dafür und ich bedanke mich auch.\nFürs Zuhören hier bei Raumzeit. Bald geht es wieder weiter. Ich sage tschüss, bis bald."
+    }
+  ]
+}

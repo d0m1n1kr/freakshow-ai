@@ -1,0 +1,839 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Hallo und herzlich willkommen zu Forschergeist dem Podcast des Stifterverbands für die deutsche Wissenschaft.\nMein Name ist Tim Pritlove und ich begrüße alle zu Ausgabe 89 unserer Gesprächsreihe\nund heute hat mich der Weg nach München geführt und stellt mich in gewisser Hinsicht auch für eine doppelte Herausforderung.\nDenn einerseits möchte ich über Mathematik reden und das ist, glaube ich, generell schon mal eine gewisse Herausforderung.\nAuch wenn wir das hier schon mal getan haben.\nUnd wir werden auch viel über Visualisierung sprechen.\nUnd auch das ist ja ein bisschen knifflig in einem Podcast.\nNichts desto trotz, ich bin zuversichtlich, dass mir das gelingen wird mit meinem Gesprächspartner,\nnämlich Jürgen Richter-Gebert, schönen guten Tag."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Hallo, ich freue mich hier zu sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, Herr Richter-Gebert, wir sind hier im Lehrstuhl für Geometrie und Visualisierung, richtig, an der TU München."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Ganz genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "In Garching, in diesem Forschungszentrumsbereich, wo auch noch sehr viele andere sehr interessante Organisationen ihr Heim haben.\nUnd das Ganze ist natürlich der Mathematikteil.\nIst das eigentlich mit der Informatik zusammen die Bereich in der TU München?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Wir sind zumindest im selben Gebäude drin, das heißt, die eine Hälfte vom Gebäude ist die Mathematik, die andere Hälfte ist die Informatik.\nUnd in nicht allzu ferner Zukunft sind wir sogar in einer Organisationseinheit zusammen,\nweil die TU im Moment umstellt und Fakultäten zu Schools zusammengefasst werden\nund dann sind wir dann nach außen hin eine Fakultät sogar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Okay."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Oder eine School, besser gesagt, für Computation, Information, Technology."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und ist das eine begrüßenswerte Tendenz?\nIst das etwas, was, sagen wir mal, naturgemäß gut zusammenpasst, weil hier sowieso schon viel zusammen gearbeitet wird?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Also Mathematik und Informatik gehören natürlich irgendwo zusammen.\nLetztlich ein großer Teil der Informatik ist aus der Mathematik raus entstanden\nund die Mathematik bedient sich immer wieder der Informatik, um die verschiedensten Dinge zu machen, meistens die coolsten Dinge zu machen.\nUnd von daher es gehört irgendwo zusammen und man sollte es auch in dem Verständnis zusammen pflegen.\nWird natürlich nicht von jeder Person in gleichem Umfang gemacht, sowohl auf der einen als auch auf der anderen Seite.\nAber Potenzial hat das, jede Menge."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Das Thema greifen wir noch mal auf, aber ich würde gern zu Beginn, wie es hier so meine Art ist,\nvielleicht erst mal so ein bisschen in Ihre Vita einsteigen und mal so rausfinden, wie es denn hier eigentlich dazu kam,\ndass wir jetzt hier zusammen sitzen.\nIch ahne ein Liebe zur Mathematik, die früh angefangen hat, richtig geraten oder kam das erst später?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Richtig geraten, kommt drauf an, wie früh früh ist.\nAlso vielleicht das früheste war die Liebe zu wissenschaftlichen Phänomenen,\nangefangen mit irgendwelchen Magneten, Stecknadeln, Lupen, die man als Brenngläser verwendet,\num irgendwelche Papiere anzubrennen, so Sachen habe ich, glaube ich, schon als Vierjähriger, Fünfjähriger gemacht.\nUnd das ging dann halt immer mehr in das, was ich formales Denken nenne, rein.\nUnd also das allgemeine Problemlösen mit angeschaltetem Kopf.\nUnd ein Teil davon ist die Mathematik, ein anderer Teil davon ist die Informatik,\nein anderer Teil davon ist die E-Technik, die Physik und so weiter.\nUnd in dem Spielplatz habe ich mich im Prinzip als Kind bewegt und bin davon eigentlich bis jetzt noch nicht weggekommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Trotzdem gab es dann irgendwann, schlug das Pendel mehr in Richtung Mathematik aus?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Das Pendel schlug auf vielfältige Weise in Richtung Mathematik aus, aber nicht allein in Richtung Mathematik.\nAls ich, nach dem Abi überlegt man dann irgendwann, was studierst du denn jetzt?\nUnd da stand bei mir die Wahl zwischen Physik, E-Technik, Informatik, Psychologie und Mathematik.\nUnd am Ende fiel die Wahl auf Mathematik, weil ich mir gesagt habe, Mathematik ist letztlich überall drin\nund es ist die Grundlage von allem und wenn du irgendwann mal in den anderen Bereichen was machen willst,\ndann ist die beste Grundausbildung die, dass du sagst, du machst Mathematik.\nUnd mittlerweile ist es so, ich stehe ständig mit einem Fuß in mindestens einem der anderen Gebiete nach wie vor noch drin\nund habe aber auf dem Weg von damals bis jetzt aber auch schon das eine oder andere etwas fettere mathematische Problem geknackt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also wurde es dann ein Mathestudium?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Es wurde ein Mathestudium, Techno-Mathe, mit Nebenfach Informatik und E-Technik.\nAlso wie gesagt, das gehört alles irgendwo zusammen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wo?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Darmstadt, TU Darmstadt, TH damals noch.\n80er Jahre."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, da mussten sie, da gab es so einige Hochschulen, die später zu Universitäten wurden,\ngerade über diese Linie, über die technische Informatik."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Naja, es ist letztlich eine Umbenennung stattgefunden, nachdem die Fachhochschulen sich sich dann irgendwann Hochschulen genannt haben,\ndann wollten die technischen Hochschulen nicht mehr Hochschule heißen und ist alles okay.\nTU Darmstadt, TH Darmstadt, klasse Adresse."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja auf jeden Fall ein sehr bekannter Name, gerade was so auch die Informatik betrifft.\nAlso viele Aktivitäten sicherlich so einer der, ich weiß nicht, ob ich jetzt führend sagen will, aber sagen wir mal zumindest,\nso einer der Orte, die immer wieder fallen, wenn besondere Studien vorangetrieben werden und gute Forschung gemacht wird.\nGerade auch im Sicherheitsbereich ist, glaube ich, Darmstadt sehr bekannt.\nOkay. Aber trotzdem führte der Weg dann irgendwann woanders hin, wohin ging es denn dann erst mal?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Nach der Zeit in Darmstadt war ich tatsächlich erst mal ein bisschen in der Industrie tätig\nund habe für Firmen gearbeitet, oder für eine Firma gearbeitet, die NC-Steuerungsmaschinen programmiert hat.\nDanach war ich eine Weile im Forschungszentrum der Telekom und danach ging es an die Universität zurück nach Berlin.\nDa hatte ich ein Angebot von einem Kollegen, der gesagt hat, du bist blöd, wenn du nicht habilitierst.\nKomm zu mir, ich habe eine Stelle, das war der Günther Ziegler, und ich habe die Zeit dort unglaublich genossen,\ndas war auch eine der Zeiten, in denen viele sehr spannende mathematische Ergebnisse gepurzelt sind.\nUnd da war ich bis, ich glaube, 97.\nDanach dreieinhalb Jahre an der ETH Zürich und danach dann seit 2001 hier in München."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Die Vorlage muss ich nutzen, um noch mal hier auf Forschergeist 31 hinzuweisen,\nda habe ich nämlich mit Günther Ziegler schon mal über das Abenteuer Mathematik gesprochen.\nUnd auch schon mal eine spezielle Perspektive eingenommen.\nHeute werden wir, glaube ich, noch eine etwas andere Perspektive einnehmen,\naber auch da haben wir uns schon sehr viel über das Wesen von Mathematik als solchem unterhalten.\nDieser Weg von der Uni in die Industrie und wieder zurück, der interessiert mich.\nWeil wir hatten das hier auch vor zwei Sendungen, als es um Computertomographie ging,\nsagen wir mal, was eine Forschung ist, die sehr im industriellen Bereich stattfindet, weil sie sehr spezifisch ist,\nweil sie sehr anwendungsorientiert ist.\nManche drängt es ja in diese konkreten Anwendungen, andere drängt es vielleicht eher in die Lehre oder eben auch in die Forschung.\nWenn man jetzt beides mal so mitgemacht hat, was ist der Reiz in dem einen Bereich, was ist der Reiz in dem anderen?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Also für mich ist der Reiz, auch da immer wieder Grenzgänger zu sein.\nAlso in dem Moment, wo man an Anwendungsproblemen arbeitet, sei es drum,\njetzt für die Firma zum Beispiel irgendwelche NC-Steuerungen, also numerisch controllte Fräsroboter damals zu machen,\nwenn man das gut und richtig machen will, kommt man an der Mathematik nicht vorbei.\nUnd hinter dem, was ich vorhin so das formale Denken genannt habe.\nDann muss man ein Problem so weit durchdringen, dass danach auch eine bestmögliche Lösung irgendwo, wenn es geht, rauskommt.\nUnd das ist auch tatsächlich dann am Ende des Tages wirtschaftlich relevant.\nUnd ich habe in meinem Leben eigentlich so die Erfahrung gemacht, dass egal was man anfasst,\nwenn es ein Problem zumindest im technischen, aber auch in vielen anderen Bereichen, ist,\ndass man, wenn man es richtig machen will, um eine tiefe Durchdringung der dahinterliegenden Mathematik überhaupt nicht drum rum kommt.\nUnd umgekehrt, wenn man Mathematik kann und Mathematik macht, ich sage jetzt immer sehr pauschal Mathematik,\nMathematik ist eine extrem vielfältige Wissenschaft, also man kann eigentlich nicht von der einen Mathematik einfach so reden,\naber das lassen wir jetzt erst mal beiseite.\nAber wenn man diesen Werkzeugkasten hat, dann kann man auch unglaublich tolle Sachen damit machen\nund ist dann natürlich aus der Theorie kommend dann wiederum auch sehr schnell bei interessanten Anwendungen,\nwo die Mathematik einfach möglich macht, die ohne das gar nicht gingen.\nUnd dieses Wechselspiel finde ich mein Leben lang schon interessant.\nUnd natürlich noch den Bezug dann, diese Sachen auch tatsächlich in die Öffentlichkeit ein Stück reinzubringen,\ndamit, Sie fragen nach der Biografie, okay…\nJetzt hüpfe ich mal zurück in die Zeit irgendwo siebte, achte Klasse, da bin ich sehr gern in der Schule als Zauberer aufgetreten.\nUnd Mathematik gibt einem ein bisschen ähnliche Kräfte,\nweil man kann damit manchmal Dinge machen, wo die Leute sagen, ach und wie funktioniert das jetzt?\nUnd wie passt das jetzt plötzlich zusammen?\nUnd dann kann man, wenn Mathematik und keine Zauberer hinten dran steckt, kann man dann sehr schön drüber reden und sagen,\nja jetzt fang doch mal an darüber nachzudenken, was siehst du denn hier, was hast du denn vor dir?\nWarum führen denn dieses Effekte so schön zu dem, was du am Ende siehst?\nJetzt machen wir ein bisschen Visualisierung über Podcast, indem ich zumindest das Gefühl beschreibe,\ndas man hat, wenn man irgendwo was gut visualisiert bekommt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja. Da kommen wir auf jeden Fall noch zu.\nDas heißt, ich deute das jetzt mal als, das waren wertvolle Erfahrungen und schön zu sehen,\ndass man sein konkretes mathematisches Wissen auch in einer Anwendung anbringt,\naber am Ende gab es dann doch mehr den Wunsch, das weiter zu vertiefen und da mehr Zugang zu einer Forschung zu haben,\nBereiche auszuloten, die noch nicht ausgelotet sind?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Ich liebe schwierige Probleme und die hat man natürlich in der mathematischen Grundlagenforschung an allen Ecken und Enden\nund ich komme tatsächlich in meiner Forschungsrichtung eher aus einer Grundlagenecke,\nwo es also jetzt nicht sofort darum geht, jetzt die und die konkrete Anwendung mit der Mathematik machen zu wollen.\nSondern, zum Beispiel als ich habilitiert habe, da ging es um theoretische Fragen von Vielflächen im vierdimensionalen Raum,\nmit was man sich normalerweise gar nicht so sehr beschäftigen würde, hat aber durchaus auch wieder seine praktischen Aspekte.\nAber das war nicht der Reiz dabei, sondern der Reiz waren die schwierigen Probleme.\nUnd dann, ich unterrichte sehr gerne, ich erzähle gerne Dinge, die ich verstanden habe\nund manchmal verstehe ich auch Dinge erst dadurch, dass ich darüber unterrichte.\nUnd dieses Zwischenspiel das hat mich eigentlich schon das ganze Leben über gereizt, macht mir großen Spaß.\nLehre ist mir eine ganz heilige und wichtige Aufgabe und von daher bin ich so in diesem Unibereich irgendwo fühle ich mich sehr gut aufgehoben.\nMuss allerdings sagen, dass ich, und das ist vielleicht ein bisschen anders als bei manchen anderen Kollegen,\nimmer einen starken Drang auch nach außen raus habe, also aus den Dingen, die man jetzt macht,\ndann wiederum etwas zu machen, was man eben auch anderen Leuten zeigen kann.\nUnd da bietet halt die Mathematik auch wieder einiges."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und so führte das Ganze dann zu dieser Professur hier in München?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und worauf fokussiert sich jetzt dieser Lehrstuhl?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Der Lehrstuhl ist ein Lehrstuhl für Geometrie und Visualisierung.\nDas heißt, in den beiden Wörtern stecken schon zwei Aspekte drin, die einfach wichtig sind.\nGeometrie ist für uns wirklich auch ein ganzes Stück Grundlagenforschung,\nmathematische Grundlagenforschung, aber eben die dann auch zu benutzen, um damit konkret Visualisierungen zu machen,\nist ein Teil der Forschung hier.\nDas heißt, die Forschung hier am Lehrstuhl die geht von sogenannter geometrischer in Variantentheorie,\nkombinatorische Geometrie, polytope Theorie, ist jetzt immer hinten dran das Wort Theorie\nund das heißt auch schon, das ist eher so im Grundlagenaspekt verankert.\nBis aber eben dazu hin, dass es eine der wichtigen Aufgaben hier ist, mathematische Grundlagen zu schaffen,\ndie dann wiederum die softwaregestützte Umsetzung von Geometrie und Mathematik auf dem Computer überhaupt erst ermöglichen.\nUnd da stellt man dann, ich habe vorhin schon mal gesagt, wenn man eine Sache richtig machen will,\nbraucht man jede Menge Mathematik dazu und auch da stellt sich raus, wenn man Dinge gut und korrekt visualisieren möchte,\nin die Anschauung reinbringen möchte, dann ist auf dem Weg dahin tatsächlich wiederum viel Mathematik zu betreiben.\nDas heißt, was wir hier auch viel machen, sind einfach wirklich mathematische Grundlagen von interaktiven Visualisierungen,\nwobei ein Schwerpunkt hier bei uns am Lehrstuhl wirklich auf dem Interaktionsaspekt liegt,\nalso es geht uns weniger darum, Filmsequenzen zu produzieren, als darum, Werkzeuge zu produzieren,\nmit denen man interaktive Spielszenarien letztlich bauen kann.\nMit denen man mathematische Effekte erklären kann, indem die Leute mit diesen Produkten am Ende in Interaktion treten mit Maus und Finger und am Bildschirm.\nUnd letztlich selbst ein Stück zum Forscher werden als ein Konzept.\nAlso wir haben ja auch viele Zusammenarbeiten mit der TUM School of Education.\nEin Konzept, das wir an der Stelle immer wieder haben, sind sogenannte Mikrolaboratorien.\nDas sind kleine abgezirkelte interaktive Spielfelder, in denen der Benutzer am Ende selbst zum Forscher werden kann.\nDa gibt es zum Beispiel Dinge über Molekülbildung von geladenen Teilchen,\nwo man mit einem Schieberegler einstellen kann, welche Ladung haben die denn jetzt,\nwelchen Nahwirkungsabstoßungsradius haben die und dann plötzlich Effekte sieht und erlebt,\ndie ansonsten auf molekularer Ebene stattfinden und darüber bekommt man ein viel besseres Verständnis dafür,\nwie sind dann letztlich hinten dran die Wirkmechanismen.\nUnd wie gesagt, um das zu machen, braucht es dann wieder einen Haufen mathematische Theorie\nund die machen wir hier am Lehrstuhl.\nSo lange Antwort auf kurze Frage."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Naja gut, aber das wirkt ja dann auch nicht nur in die Informatik rein, wenn Software beteiligt ist,\nsondern jetzt auch in die Chemie und die Physik und im Prinzip ja eigentlich auch in alle Felder.\nUnd das ist eigentlich so das Ding, Mathematik, finde ich, hat so eine Sonderrolle in den Wissenschaften,\nweil es einfach so eine Schlüsselwissenschaft ist, die ja irgendwo in allem drin steckt.\nAlso mir würde jetzt zumindest kaum etwas einfallen, man könnte natürlich jetzt drüber diskutieren,\ninwiefern die Geisteswissenschaft von der Mathematik beseelt oder bevölkert ist,\naber sie kann sich zumindest über Mathematik, glaube ich, auch viel Gedanken darüber machen,\nwas die Mathematik quasi zu erklären in der Lage ist und was vielleicht auch nicht.\nWas ist denn so aus Ihrer Perspektive dieser Stellenwert?\nIst das so, wie ich das beschrieben habe, was kann man da noch zu sagen\nund welchen Stellenwert hat Mathe auch in der Gesellschaft als solche aus Ihrer Sicht?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Oh vielfältige Frage.\nAlso das eine habe ich vorhin schon gesagt bei meiner Studienwahl.\nIch habe Mathe studiert, weil es eben überall drinsteckt.\nUnd in dem Moment, wo man Wissenschaft betreibt im Sinne von, ich schränke jetzt zunächst mal auf Naturwissenschaften ein,\nkommt man um die Mathematik als Grundlage gar nicht drumrum.\nTheoretische Informatik ist letztlich Mathematik und Mathematik ist letztlich die Grundlage von allen Naturwissenschaften.\nDas Buch der Natur ist in den Sprachen der Mathematik geschrieben.\nAber auch in dem Moment, Sie haben eben die Geisteswissenschaften angesprochen,\nda ist es tatsächlich so, dass viele Bereiche der Geisteswissenschaften auch von Mathematik durchdrungen sind.\nNehmen Sie die Linguistik zum Beispiel her, da geht es ganz viel um logischen Aufbau von Sprache.\nViele Linguisten sind auf der Schnittstelle auch zur Mathematik anzuordnen.\nUnd gerade in unserer heutigen Zeit, wo zum Beispiel Computer Sprache erkennen sollen, Sprache reproduzieren sollen,\nwird so ein Teil zum Beispiel auch direkt von Mathematik durchdrungen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ich würde sogar sagen, die Linguistik war die Geburtsstunde der Informatik, weil so in den 50er Jahren…"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "In gewissem Sinne ja klar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "… waren das ja eigentlich so die Kernzellen."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Klar Chomsky und so weiter, ist zumindest ein wichtiger Bereich und nicht umsonst heißt es ja in der Informatik auch Programmiersprache.\nDas ist ja schon das Konzept einer Syntaxgrammatik und so weiter dahinter.\nSie haben eben noch gefragt, der Stellenwert der Mathematik in der Gesellschaft.\nIch würde sagen, sie wird nach wie vor an vielen vielen Punkten massiv unterschätzt\nund viele Teile der Bevölkerung unterschätzen aber auch sich selbst massiv,\nweil sie einfach viel mehr Mathematik können als sie sich zutrauen.\nUnd eigentlich auch in ganz vielen Zusammenhängen ständig irgendwo formal Mathematik betreiben,\nohne zu sagen, das ist jetzt Mathematik.\nAlso nehmen Sie die ganzen Sudoku-Puzzler und ähnliches, die haben riesigen Spaß am Sudoku und sagen,\nnein, aber lass mich bitte mit Mathematik in Ruhe und das ist so ein bisschen auch ein Bewusstseinsprozess,\nden ich auf Seiten der Wissenschaft in der Schuld sehe, den Leuten überhaupt zu zeigen,\nwo benutzt du denn überhaupt alles Mathematik.\nOder wenn wir jetzt hier über das Mischpult reden…"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ist Sudoku nicht mehr Informatik?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Naja, Sudoku ist ein Problem, okay.\nJetzt kommen wir in dieses Unterteilen der einzelnen Bereiche.\nUnd ich habe ganz bewusst vorhin den Begriff formal Reasoning, formales Denken mit reingebracht,\nweil ich glaube, das ist etwas, woran es uns in vielen Bereichen in unserer Gesellschaft immer noch viel zu sehr fehlt,\ndass Leute sich nicht trauen, auch mal formal über Dinge nachzudenken.\nUnd das macht man in der Mathematik, in der Physik, in der Informatik, in der E-Technik.\nUnd diesen Zugang bewusst zu wählen in einem Gemisch aus Synthese und Analyse,\nein Problem erst mal auseinanderzunehmen, um danach wieder zusammenzusetzen, um zu einer Lösung zu kommen,\ndas ist etwas, was letztlich eine bewusste Entscheidung dafür voraussetzt.\nUnd Thema Kreativität und Kunst und Musik und ähnliches, nehmen Sie aktuelle Audioproduktionen von irgendwelchen Popsongs oder ähnliches,\ndahinter steckt, so wie das heute passiert, ohne dass es den Leuten manchmal bewusst ist, jede Menge formal Reasoning\nund damit auch wieder jede Menge mathematisches Denken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ich meine, das lässt sich ja nicht wegdiskutieren, dass es diese Zurückhaltung gibt gegenüber.\nDas fängt bei manchen schon in der Schule an.\nAber generell ist Mathematik schon, da scheiden sich sozusagen die Geister ab dem Moment,\nwo das erste Mal so eine komplexe Formel vor einem steht.\nManche wollen sich daran nicht beteiligen.\nAber auch so dieses einfache, ich sage mal diese Sudoku-Mathematik, die jedem ja irgendwie noch liegt\nund die vielleicht eben auch so ein bisschen was von, ich programmiere jetzt hier mal einen Algorithmus,\num irgendwie die richtige Zahl herauszufinden, damit was zu tun hat,\nauch da gibt es ja eine Zurückhaltung und ich frage mich halt immer, was eigentlich der Grund dafür ist.\nIst es die pure Komplexität, der sich Leute nicht gewachsen sehen\noder ist es auch so ein bisschen die Angst vor so einer formalen klaren digitalen Wahrheit,\ndie man dann irgendwie erreicht oder nicht erreicht, dass man irgendwie so die Dinge nicht offen lassen sein kann?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Auch hier Antwort ist vielfältig und vieles geht, glaube ich, auf die persönliche Entwicklungsgeschichte von verschiedenen Leuten einfach zurück.\nAlso soweit ich weiß gibt es Studien, die sagen, bei vielen Personen ging der Mathematikvorhang zu Zeiten der Grundschule zu.\nUnd das mag daran liegen, dass man sehr schnell in der Grundschule damit konfrontiert wird,\nMathematik ist das, wo es am Ende immer nur eine richtige Lösung gibt\nund auch vielleicht nur einen richtigen Rechenweg und das ist aber Mathematik nicht.\nAlso wir haben hier am Campus unsere Mathematikausstellung, in der wir Kinder beginnend ab Vorschulalter,\nGrundschule bis Mittelstufe und so weiter mit drin haben.\nUnd tatsächlich das forschende Herangehen, wie wir es teilweise bei Kindern bis zur ungefähr zweiten Klasse beobachten,\nist dem eines echten mathematischen Grundlagenforschers viel ähnlicher als das,\nwas wir häufig beobachten, was man dann so zehnte, elfte, zwölfte Klasse bekommt,\nwo man drauf gestreamlined wurde, okay Mathematik ist jetzt das, wo ich rechnen muss\nund das, wo ich jetzt erst mal aus einer Textaufgabe rausfiltern muss, was ist denn da jetzt der mathematische Gehalt\nund das in eine Formel packen und dann muss ich auf diese Formel ein Verfahren anwenden,\ndas ich vorher irgendwo vielleicht auswendig gelernt habe und da macht natürlich Mathematik nicht mehr so schrecklich viel Spaß\nund da ist man natürlich auch sehr schnell an der Stelle, wo Dinge schnell fehlerhaft werden können,\nweil einfach die Pfade so eng gesteckt sind.\nUnd auf der Uni wird das tatsächlich dann wieder, je weiter man im Studium fortschreitet,\nwieder weiter und weiter dieser Blickwinkel, so dass man am Ende, wenn man ein mathematisches Forscherleben führt,\ntatsächlich eine komplette Methodenoffenheit hat.\nUnd genau diese Erfahrung, glaube ich, dass Mathematik häufig etwas, was von außen bewertet wird,\ndass man erst mal nicht so kann und man sehr viel Frustration einstecken muss,\ndas ist was, was vielen Leuten auf dem Weg, ich formuliere es jetzt mal vorsichtig,\nzumindest eine gewisse Berührungsangst zu Mathematik und formalem Denken macht.\nIch habe kein Patentrezept, wie man dagegen wirkt, aber ich glaube, dass man viel viel viel positiver mit Mathematik in der Gesellschaft umgehen könnte.\nIch hatte einmal, ich muss noch eine Geschichte ganz kurz loswerden.\nIch hatte einmal eine Schlüsselerfahrung, da war ich auf einem Lehrerkongress in Berlin,\nstand am Gendarmenmarkt, habe mir ein Musiker, der da mit der Gitarre spielte, angehört\nund da kam eine Frau dazu geradelt, hat sich später als die Freundin von dem Gitarrenspieler rausgestellt\nund wir kamen ins Gespräch und sie fragte, ja und was machst denn du da?\nUnd ich meinte, ich bin jetzt hier auf einem Lehrerkongress und es geht um Mathematik.\nUnd sie kam irgendwo aus Polen oder Ungarn und sagte sofort, ach wie toll,\nMathematik das ist ja so ein unglaublich spannendes Feld, hätte ich gerne viel mehr von gemacht.\nAlso ich glaube, es gibt andere, gerade zum Beispiel in Ungarn, anderen kulturellen Umgang,\nwie man Mathematik als ein spannendes und offenes Feld, indem man einfach seinen Werkzeugkasten beherrschen muss\nund in dem es sich aber auch lohnt, den Werkzeugkasten zu beherrschen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Klingt jetzt so ein bisschen so, als ob dann in der dritten Schulklasse irgendwo ein Fehler gemacht wird, wie das weiter verfolgt wird.\nLässt sich da irgendwo der Finger drauflegen?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Weiß ich nicht.\nIch definiere mich ganz bewusst nicht als Didaktiker.\nIch arbeite zwar viel mit Didaktikern zusammen, das ist deren Aufgabe, diese Frage letztlich zu klären.\nEs ist ein Stück eine empirische Beobachtung und ich kann sagen, es gibt zumindest auch Studien, die in die Richtung zeigen.\nAber wo jetzt genau an der Stelle der Knackpunkt ist, ist schwierig zu sagen.\nWas ich halt wichtig finde, ist, man sollte vielleicht ein bisschen vorsichtiger mit dem Thema richtig oder falsch umgehen.\nNoch eine andere Geschichte, meine Tochter in der zweiten Klasse, sie sollten sich Aufgaben ausdenken\nund sie hatten gerade Subtraktion gemacht und sie fing dann an, hatte so was wie\nIch habe mich natürlich berufen gefühlt, ihr einen wunderbaren Vortrag über die 0 und dann über negative Zahlen in der zweiten Klasse zu halten,\nwas sie auch vollständig verstanden hat und sie schrieb dann also voll Stolz hin, 5-6=-1\nund die Lehrerin setzte ein fettes F dahinter, weil sie das zu dem Zeitpunkt einfach noch nicht wissen durften."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wurde nicht vermittelt ist …"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Wurde nicht vermittelt, muss so falsch sein.\nUnd das ist jetzt natürlich anekdotische Evidenz, wie wir das immer so schön nennen,\naber ich glaube, da lässt sich vieles besser machen und auf der anderen Seite muss dann der Lehrer\noder die Lehrerin auch lernen, mehr und mehr in eine Rolle von einem Moderator reingehen zu können,\nder mit den ganzen offenen Fragen, die einfach sehr schnell entstehen, wenn man über Mathematik diskutiert,\nirgendwo auch umgehen kann und auch zugeben können muss, ja tut mir leid, weiß ich jetzt auch nicht.\nKann sein, dass ich über Nachdenken darauf komme, kann sein, dass wir einen Experten fragen müssen.\nWeil in der Mathematik ist es so, dass jenseits der Pfade, die man so typischerweise in der Schule geht,\nauch sehr schnell Bereiche kommen, in denen offene mathematische Probleme liegen.\nUnd das ist gleichzeitig der Reiz und gleichzeitig auch die große Schwierigkeit in der Mathematik.\nUnd unseren Studenten im ersten Semester predigen wir immer, das wichtigste, was sie brauchen, ist Frustrationstoleranz.\nWeil es gibt nichts frustrierenderes als Mathematik, aber auch nichts schöneres,\nwenn man durch irgendetwas in der Mathematik durchgekommen ist und am Ende so einen Erweckermoment hat\nund sich der Knoten im Kopf aufgelöst hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Was frustriert Sie denn, also was ist denn so ein frustrierendes Problem?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Dauernd.\nAlso ich hüpfe jetzt gerade mal zu Zeiten meiner Habil zurück.\nDa hatte ich mir ein relativ sehr schwieriges Problem vorgenommen und ich habe ein halbes Jahr nur eine Sackgasse nach der anderen abgegrast.\nUnd da nicht irgendwann zu sagen, nein ich lasse das Problem jetzt Problem sein und habe damit nichts zu tun,\ndas erfordert schon so einen gewissen Biss und Frustrationstoleranz.\nGerade wenn man in der Forschungsmathematik ist, ist es so, dass einfach die Wege, die am Ende zum Ziel führen,\nhalt in aller Regel kein bisschen vorgezeichnet sind und von daher ist Mathematik halt auch eine extrem kreative Wissenschaft\nund tatsächlich Thema Kreativität für dieses Problem, um das es da bei der Habil ging,\ndie Idee dazu war irgendwo an dem Tag, also die Idee für die letztliche Lösung war an dem Tag, an dem meine Tochter geboren wurde\nund ich mit komplett anderen Sachen im Kopf eigentlich beschäftigt war,\nda hat sich dann irgendwo in einer Ecke hinten im Kopf geregt, Mensch mach das mit dem Problem doch so,\nkümmere dich jetzt nicht drum, aber mache das so und du kommst am Ende durch.\nUnd dazu waren dann aber auch die ganzen Sackgassen, die vorher abgegrast wurden, die waren essentiell wichtig,\nweil ich wusste, was alles nicht geht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ich kann mir vorstellen, dass viele Leute so ein Problem haben, sich Kreativität im Zusammenhang mit Mathematik vorzustellen."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Es gibt nichts kreativeres."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, das mag sein, aber sich das vorzustellen.\nAlso ein Problem lösen, wo kommt das Problem her, was hat denn dieses Problem, über das Sie gerade gesprochen haben,\ndenn so schwierig gemacht und was war denn der kreative Kniff, der letzten Endes zu einer Lösung geführt hat?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Okay, jetzt werden wir echt mathematisch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, muss ja auch mal sein."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Wir reden über Vielflächen, Mathematiker nennen das ein Polytop.\nUnd Vielflächen sind Objekte, die aus geraden Flächen als Begrenzung existieren, zum Beispiel ein Würfel.\nUnd so ein Würfel, der hat zwei Ebenen, auf denen er lebt.\nAlso wir haben einerseits den Würfel, wie er jetzt zum Beispiel vor uns liegt, mit konkreten Koordinaten,\ndie Ecken haben bestimmte Koordinaten und andererseits hat der aber auch eine kombinatorische Struktur.\nWelche Ecke liegt auf welcher Seitenfläche.\nIch könnte mir zum Beispiel für einen Würfel eine Liste machen, ein Würfel hat sechs Seiten,\nweiß man von einem normalen Würfel und hat acht Ecken\nund dann könnte ich mir eine Liste machen, wo ich mir die Ecken durchnummeriere,\ndiese Ecke liegt auf dieser Seite, diese liegt auf dieser Seite und so weiter.\nJetzt gebe ich Ihnen vielleicht diese Liste, die ich mir angefertigt habe und frage Sie,\nkönnen Sie mir so was bauen?\nUnd dann stellt sich raus, gucken Sie einmal drauf und denken, ach klasse, ist ein Würfel.\nJetzt gebe ich Ihnen eine kompliziertere Liste und frage Sie, können Sie das bauen?\nUnd dann kommen Sie schon ins Knobeln rein.\nUnd tatsächlich für drei Dimensionen war diese Übergangsfrage, wie kommt man von solchen Listen zu konkreten Realisationen,\ndie ist seit 1922 gelöst durch einen klassischen Satz, den Satz von Steinitz.\nAber für vierdimensionale Polytope war das seit praktisch damals, seit 70 Jahren offen.\nWie schwierig wird das, wie kann man überhaupt zu Lösungen kommen,\nwie sehen die Räume der Lösungen aus und und und.\nUnd da haben sich einige dran versucht, das gescheit hinzukriegen.\nUnd das ist halt ein sehr hartnäckiges Problem, weil man erstens in vier Dimensionen jetzt nicht so unbedingt die beste Intuition hat.\nDa muss man sich erst einen Werkzeugkasten zusammenbauen, mit dem man überhaupt erst mal in vier Dimensionen sich Dinge vorstellen kann\nund für solche Probleme ist die Vorstellung was wichtiges.\nUnd tatsächlich dieses Problem hat sich dann dadurch gelöst, ich habe vorhin gesagt, ich habe mich als Kind auch mit E-Technik beschäftigt.\nUnd in E-Technik setzt man ja verschiedene Bauteile zusammen, um am Ende was daraus zu machen.\nZum Beispiel ein Radio der ein iPhone letztlich auch oder Handy, um es hier werbungsneutral zu sagen.\nUnd so was ähnliches passierte bei dem Problem.\nEs ging darum, sich ein Werkzeugkasten an kleinen Bausteinen zusammenzulegen,\naus denen man eine unglaubliche Komplexität zusammenbauen konnte,\num zu zeigen, dass dieses Problem, dass man da im vierdimensionalen sich dann definiert, beweisbar schwierig ist.\nDas fällt dann in die Klasse der mindestens NP-schweren Probleme.\nUnd da ging es dann darum, einerseits Bausteine zu definieren, sich zusammen auszudenken,\ndie bestimmte kleine Aufgaben machen und andererseits einen Mechanismus zu finden,\nwie man diese Bausteine zusammensetzen kann.\nUnd dieser Mechanismus hat sich als schwierig herausgestellt und da war dann irgendwann die Schlüsselidee,\nman muss die Verklebeflächen irgendwo geschickt wählen.\nWill ich jetzt gar nicht genau erklären, wie man sie wählen muss, aber da kommt man dann,\nwenn man die Idee hat und die Bausteine hat, dann kommt man auf einmal damit durch.\nKlingt jetzt alles schrecklich abstrakt, befürchte ich, macht aber wahnsinnig Spaß.\nIst ein wunderschönes Knobelspiel, mit dem man sich problemlos ein halbes Jahr lang beschäftigen kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Aber ich meine, es führt ja in gewisser Hinsicht direkt zu diesem Lehrstuhl.\nWeil ein Problem lösen heißt ja, es sich vorstellen zu können und das bedeutet eben,\nwir wollen es vor unserem geistigen Auge in irgendeiner Form „sehen“."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Ich muss ein bisschen widersprechen.\nFür mich ist das so, ist aber nicht für jeden Mathematiker zwangsläufig so.\nAlso es gibt durchaus Mathematiker, die sehr stark rein auf der formalisierten Ebene über ein Problem nachdenken können.\nWo das Thema, was man sich am Ende vorstellen kann, eher von der Logik noch mit abgelöst wird.\nUnd für die Mathematik auch ein zu weiten Teilen formaler Prozess ist.\nUnd dann gibt es Leute, die sich, wenn sie irgendwas verstehen wollen, sich das immer vorstellen müssen,\nzu denen gehöre ich und alle Schattierungen irgendwo zwischendrin und in beide Richtungen natürlich auch noch Extreme,\ndie noch über mich oder andere Kollegen dann jeweils hinausgehen, das ist ein Spektrum, von dem wir da reden.\nUnd das ist übrigens auch in der Lehre sehr wichtig, dass man versucht,\nin seiner Lehre die verschiedenen Typen von Mathematikern, die man jetzt vor sich hat, auch anzusprechen.\nUnd ich will das jetzt nicht irgendwo plump reduzieren auf visuelle Typen, auditive Typen und solche, die nur mit Sprache können,\nsondern es ist eher so die Frage, ob man ein Problem alleine von der formalen Seite\noder allein von einer diagrammatischen Seite, wo es mehr um vorstellen geht, angeht\noder welche Schattierung man dazwischen wählt.\nUnd die Kunst dann am Ende, wenn man guter Mathematiker ist, besteht darin, die beiden Seiten gut miteinander zu verknüpfen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Gibt es denn auch so Leute, die so, es gibt ja dieses Phänomen der Synästhesie,\ndass man Zahlen oder Buchstaben oder was auch immer über Wärme, Farben oder so etwas wahrnimmt,\nhaben Sie bei sich so was ähnliches festgestellt, dass die Mathematik gleich so auf eine Art und Weise in einen hineinläuft,\ndass es automatisch irgendetwas auslöst?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Also sagen wir es mal so, für mich ist Mathematik auch sehr stark mit Gefühlen, Gespür eher verbunden.\nAlso jetzt nicht im Sinne von Sinneseindrücken, dass ich sage, das Theorem fühlt sich jetzt rot an und das andere blau,\nso was habe ich nicht, das klingt nach Beethoven und das klingt nach Cold Train, wobei ein bisschen vielleicht schon.\nAber was ich tatsächlich für mich habe ist so ein Gespür, wann Sachen eher richtig oder eher falsch sind.\nUnd ich führe das darauf zurück, das ist jetzt auch wieder so eine ganz absurde autobiografische Geschichte,\nich war in der Schule schrecklich in Kopfrechnen, ich konnte das nicht.\nAlso ich war immer langsam und ich war auch selten unbedingt sofort richtig\nund ich habe mir dann irgendwann angewöhnt, jede Aufgabe auf mindestens drei verschiedene Arten im Kopf zu rechnen\nund per Mehrheitsentscheid dann zu sagen, okay, 3+7 muss dann wohl eher 10 sein als 11,\nweil zweimal gerechnet kommt 10 raus und einmal kam 11 raus.\nWas dabei aber entstanden ist, es hat sich im Kopf bei mir ein Netzwerk gebildet aus verschiedenen Wegen an dasselbe Problem ranzugehen\nund dieses Netz, das glaube ich, das gibt es immer noch und das sagt einem dann,\nokay, das hier, das riecht jetzt ein bisschen richtig und das hier, das riecht jetzt ein bisschen falsch.\nSo dass man Sackgassen, von denen ich vorhin gesprochen habe, vielleicht ein Stück früher abschneiden kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Dass man so Bewertungspfade quasi entwickelt und sagt so, ja das fühlt sich näher und damit vielleicht richtiger an."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "An der Wahrheit an.\nWahrheit ist auch meistens ein bisschen schön.\nZumindest ein bisschen.\nAlso wenn ich irgendein mathematisches Problem angehe und jetzt mich all zu sehr in ganz wilden Formeln vergaloppiere,\nund der Überzeugung bin, nein ich brauche diese Formeln nicht, das Problem hat einen anderen Charakter,\ndann höre ich auf zu rechnen und suche nach einem anderen Ansatz, weil ich einfach denke,\ndurch rechnen alleine kommst du an der Stelle nicht weiter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wahrheit ist ein bisschen schön."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Schönheit ist manchmal auch ein bisschen wahr."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja. Ohne mich zu sehr damit beschäftigt zu haben, aber es gibt, glaube ich, in der Astronomie\nund damit auch in der Astrophysik so ein bisschen auch die Frage immer dieser Vorstellung des Universums,\nwas ja auch sehr schwierig ist zu visualisieren, weil es halt auf der einen Seite ja einerseits vor allem mathematisch beschrieben ist,\nüber Einstein und auch durch die Quantenmechanik und die wollen dann irgendwie auch nicht so richtig zusammen\nund das ist schon mal so ein Bruch, aber generell ist ja auch so dieses Nachdenken über das größte, weiteste und wichtigste\nund alles vielleicht auch in irgendeiner Form vereinigende, da braucht man ja dann eben auch so ein Gespür\nund ich habe so wahrgenommen, dass es auch dort auf der einen Seite immer so dieses klassische,\ndie Wahrheit kündigt sich durch Schönheit an, gibt auf der einen Seite,\naber auch durchaus eine andere Fraktion sagt, nein das ist bestimmt eine Sackgasse,\nvielleicht ist das auch alles viel komplizierter, um hier irgendwie zum Ziel zu kommen.\nDas ist ja auch ein ziemlicher Kriegsschauplatz, wie nehmen Sie das wahr?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Also ich bin eher auf der Schönheitsseite an der Stelle."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja okay, die Vermutung hatte ich schon."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Also ich sehe es so, dass unser Universum eine Kaskade von emergenten Prozessen ist,\nalso wo sich praktisch ein Prozess aus dem jeweils darunter liegenden ergibt.\nAlso nehmen wir unsere Wetterphänomene, da gibt es irgendwo unten drunten die Fluiddynamik und Thermodynamik,\ndie beschreibt wie der Wind geht und dann noch eine Ebene drunter landet man dann irgendwo bei der statistischen Kinematik,\nund da muss man sich drüber Gedanken machen, wie sind eigentlich die Atome aufgebaut, die das machen\nund dann kommt man noch weiter runter irgendwann auf die Quarks und je kleiner die Teilchen werden,\numso grundlegender und einfacher werden die Zusammenhänge dabei auch, ich hoffe,\ndass ich jetzt keinen physikalischen totalen Blödsinn erzähle, aber zumindest nehme ich es so wahr,\ndass also unser Elementarteilchenzoo am Ende doch deutlich geordneter zu sein scheint\nals jetzt zum Beispiel das stürmische Wetter, von dem wir heute nicht wissen, ob morgen die Sonne scheint oder nicht.\nAber trotzdem diese Zusammenhänge von dem ganz unten, ich nenne jetzt mal die kleinen Sachen eher unten\nund die großen Sachen eher oben, doch zwischendrin darauf beruhen, dass man praktisch Dinge zusammensetzt\nund komplexere Dinge daraus entstehen.\nUnd von daher habe ich eigentlich immer noch die Hoffnung, dass wenn man ganz ganz ganz weit runter geht,\ndass da dann die Sachen vielleicht auch so richtig überraschend einfach sind.\nEs am Ende vielleicht nur zwei, drei Regeln gibt, aus denen sich alles am Ende ergibt.\nDie aber so kräftig sind und das sind auch wieder Teile der Mathematik,\ndie sich genau damit beschäftigen, was sind denn zum Beispiel einfache Regeln,\ndie komplexes Verhalten erzeugen können?\nDas ist zum Beispiel auch ein Teil, den wir in der Visualisierung ganz häufig machen,\ndass wir gezielt über Themen reden, wie man aus einfachen Regeln komplexes Verhalten, komplexe Formen oder ähnliches erzeugen kann,\nPflanzenwachstum ist ein interessantes Beispiel dafür, Fischschwärme sind ein interessantes Beispiel.\nAlso in unserer Software kann ich in acht Zeilen einen realistisch aussehenden Fischschwarm zusammenprogrammieren,\naus dem dann plötzlich aus den einfachen Regeln durch emergente Prozesse scheinbar komplexes Verhalten rauskommt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Jetzt waren wir quasi beim Thema dieses Lehrstuhls, der Bedeutung auch der Visualisierung.\nIch habe jetzt so ein bisschen so Escher-Bilder gerade im Kopf, ja, von Maurits Escher,\nwo ja eine Form in das andere übergebt, aber er es auf der anderen Seite auch geschafft hat,\ndas Paradoxe in irgendeiner Form zu visualisieren.\nDass, wenn man es sich anschaut, so treppauf, treppab auf einmal die Dinge im Kopf dann auch gar nicht wieder zusammenbekommt.\nWelche Bedeutung hat diese Visualisierung für die Mathematik und was ist hier so der Ansatz, was ist auch der Bedarf?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Okay, Sie sprechen jetzt den Kern hier meines Lehrstuhls letztlich an und ich könnte Ihnen jetzt darüber ungefähr drei Wochen einen Vortrag halten.\nIch versuche, mich jetzt trotzdem ein bisschen kurz zu fassen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Na dann mal los."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Dazu müssen wir überhaupt erst mal sehen, was heißt überhaupt Visualisierung?\nVisualisierung da steckt ja irgendwo visuell, das Optische irgendwo mit drin\nund das heißt, sichtbar machen von irgendwas.\nJetzt die nächste Frage, was will man eigentlich sichtbar machen?\nUnd eine Variante, mit der man viel zu tun hat, wenn man das Wort Visualisierung hört,\nist zum Beispiel Datenvisualisierung und damit haben wir jetzt hier am Lehrstuhl so gut wie gar nichts am Hut,\nweil wir wollen Strukturen visualisieren, Zusammenhänge visualisieren.\nUnd wir haben jetzt schon einiges darüber gehört, dass Mathematik zuweilen eine recht abstrakte Wissenschaft ist.\nUnd dass trotzdem bei den Leuten, die Mathematik betreiben, dazu Bilder im Kopf sind.\nUnd unsere Aufgabe ist dann zum Beispiel, diese Bilder, die meistens nur im Kopf sind,\nund die teilweise auch sehr schwer zu visualisieren sind, aus dem Kopf raus auf den Computerbildschirm zu bringen.\nUnd an der Stelle ein Schwerpunkt, den wir hier am Lehrstuhl haben, ist die interaktive Visualisierung.\nDas heißt, es soll eben nicht nur ein Bild oder ein Film geschaffen werden,\nsondern ein komplexes Interaktionsszenario, mit dem praktisch der Benutzer davon selbst zum Forscher wird\nin diesem kleinen Bereich, also wir nennen das dann häufig ein Mikrolaboratorium.\nUnd wie gesagt, um das zu machen, ist viel Mathematik notwendig und dann sehen wir jetzt eine Spielart der Visualisierung,\nist das Visualisieren von Mathematik selbst.\nAlso Mathematik ist etwas, ich habe vorher gesagt, ich bin abgeschreckt, wenn ich eine Formel sehe\nund das schreckt viele Leute ab, machen wir doch mal klar, was eigentlich hinter der Formel steckt.\nUnd die meisten Formeln lassen sich auch tatsächlich sehr gut in Bilder/Filme/Animationen/interaktive Animationen entsprechend umsetzen.\nDas ist eine Spielart.\nEine andere Spielart ist, Visualisierung von zum Beispiel emergenten Prozessen,\ndas was ich eben mit dem Fischschwarm angesprochen habe.\nDa geht es jetzt nicht per se darum, eine abstrakte Struktur irgendwo darzustellen,\nsondern etwas was man zum Beispiel in der Natur als Wirkmechanismus erkannt hat,\nwie Moleküle zusammenfinden, wie eine Pflanze wächst, wie eben der Fischschwarm,\nder schon fast metaphorisch hier geworden ist, wie der letztlich sich selbst kontrolliert\nund an der Stelle finde ich immer eine Klarheit etwas sehr wichtiges.\nAlso es geht nicht darum, also das wäre dann Hollywood, die dann eben dann versuchen,\neinen möglichst realistischen Filmschwarm für irgendeinen Ocean-Thriller oder sonst was zusammenzubauen.\nUm was es bei uns geht ist nicht, einen möglichst realistischen Fischschwarm zu bauen,\nsondern einen Fischschwarm zusammen mit seinen Wirkmechanismen so dazustellen,\ndass man versteht, was da passiert und eben dann darüber ins Nachdenken kommen kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Lässt sich denn ein Fischschwarm jetzt rein mathematisch beschreiben, ohne Erkenntnisse aus der Biologie,\nder Meeresbiologie oder so zu haben?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Sicherlich nicht im letzten Detail, aber in einigen strukturellen Zusammenhängen durchaus schon.\nAlso so ein Fisch ist ja am Ende ein relativ, ja, Wesen mit einem einigermaßen beschränkten Horizont.\nAlso der weiß ja, wenn er jetzt irgendwo schwimmt, nicht unbedingt, was der Fisch ein paar Meter weit weg\nam anderen Ende des Fischschwarms macht, trotzdem gibt es Regeln, die zum Beispiel die Kohärenz von so einem Schwarm bedingen\nund das sind eigentlich drei einfache Regeln.\nAlso erste Regel, krach nicht in deinen Nachbarn rein, also wenn du irgendwo direkt auf einen Nachbarn zuschwimmst,\nweiche halt doch irgendwie aus.\nZweite Regel, guck dich um und schau, wo sind deine Nachbarfische und versuche auch da hinzuschwimmen.\nDritte Regel, guck dich um und schau, in welche Richtung schwimmen deine Nachbarn und versuche dich ähnlich zu verhalten.\nWenn man nur die drei Regeln nimmt und das in den Computer zum Beispiel reinprogrammiert,\ndann entsteht auf einmal ein sehr realistisch aussehender Fischschwarm.\nUnd damit kann man auch andere, also Thema Soziologie, also in unserer Schwarmsimulation kann man mit Parametern spielen\nund da gibt es zum Beispiel auch die Möglichkeit zu sagen, ich sehe nur zwei Nachbarn.\nUnd dann versuchen sich eigentlich immer zwei Fische zu finden und so ein kleines Pärchen zu bilden.\nUnd dann gibt es aber manchmal den einsamen Fisch, der dem Pärchen hinterher jagt, um selbst Anschluss zu finden.\nUnd das simuliert dann auch das, was manchmal auf einer Party passiert,\nwenn sich die Pärchen gefunden haben und Leute, die noch nicht Anschluss gefunden haben, dann den Pärchen hinterher laufen.\nAlso von daher, Soziologie gibt da natürlich gezielter oder tiefer Auskunft,\nAber grundlegende Prinzipien kann man schon mal ein bisschen mit Mathematik an der Stelle versuchen zu verstehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Bei dem Fischschwarm, ich meine, woher weiß man denn jetzt, was die Wahrheit ist?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Wahrheit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ich meine, klar, man kann jetzt die…"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Was ist schon wahr, meine Güte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Was ist schon wahr, das müssen wir jetzt final klären."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Nein, schaffen wir nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Natürlich schaffen wir das nicht, nur man kann jetzt Regeln aufstellen, man kann die sich ja,\ndie stehen ja nirgendwo fest, sondern das sind ja jetzt auch nur welche, die man sich im Prinzip ausgedacht hat,\nmit denen man das mal ausprobiert und dann sieht man so, aha okay, damit komme ich jetzt irgendwie so und so weit\nund das sieht schon mal aus wie ein Fischschwarm.\nNur stößt es ja dann auch irgendwann an so eine Grenze, wo es dann vielleicht nicht mehr aussieht wie ein Fischschwarm so."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Natürlich, klar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Das ist ja dann quasi auch so der Test für eine solche Visualisierung, inwiefern sie dann jetzt eben der gewünschten Wahrheit\noder dem gewünschten Wahrheitsgehalt, wie sehr sie dem entgegenkommt.\nEs gibt im Bereich der Computeranimation diesen schönen Begriff des uncanny valley.\nDass, wenn man, auch wenn es jetzt erst mal ein ganz anderer Bereich ist, man visualisiert Menschen mit dem Computer,\nschafft es eben auch bis zu einem bestimmten Bereich ranzukommen, aber irgendwo so kurz vorher endet es,\nirgendwo bricht das zusammen.\nSo und auch die künstliche Intelligenz Forschung hat ja genau dieses selbe Problem,\nman ist mit all diesen Ansätzen sehr weit gekommen und dann gibt es so ganz kurz vor dem Ziel so einen Moment, …"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Klar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "… wo alles auseinanderreißt.\nUnd dann ist ja die Frage, wann ist man quasi erfolgreich genug, gibt es da so ein finales Ziel\noder ist jede Visualisierung im Prinzip immer nur so gut wie man sie gerade braucht?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Ist die Frage, was man damit bezwecken will."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Also wenn ich jetzt zum Beispiel über die Fischschwärme rede, dann geht es mir häufig darum,\nüberhaupt erst mal zu vermitteln, dass eben aus vergleichsweise einfachen Regeln sehr komplexes Verhalten entstehen kann.\nWir machen manchmal Fortbildungen für Lehrer zum Beispiel, in denen wir den Prozess,\nwie komme ich denn jetzt von ein paar grundlegenden Ideen zu etwas hin,\ndas am Ende zu so einer Schwarmsimulation führt, indem wir den thematisieren,\ndamit die das zum Beispiel wieder im Unterricht weitergeben können.\nAlso das sind ganz viele verschiedenen Ebenen der ursprünglichen Absicht, dann der Metaabsicht,\ndie Absicht zu vermitteln und so weiter, dann der Metaabsicht zu erklären,\nwie macht man denn so was denn im etwas allgemeineren, das verzahnt sich an der Stelle alles irgendwo.\nUnd ich muss gerade noch mal eine Sache reinbringen, die ein Stück von dem Fischschwarm weggeht,\nund zwar wieder ein Stück zurück auch auf die abstrakten Zusammenhänge.\nEs gab hier gerade an der TU München in den 60-90er Jahren des vorletzten Jahrhunderts,\nalso wir reden jetzt von 1860 bis 1890 eine sehr intensive Tradition des mathematischen Modellbaus.\nWas ja letztlich auch eine Form der Visualisierung ist.\nUnd eine der Personen, die da maßgeblich dran beteiligt war, ein sehr bekannter Mathematiker,\nder Felix Klein, und der schreibt dann irgendwann mal rückblickend über dieses Modelle bauen,\nindem er über die Zeit schreibt, wie damals war auch heute der Zweck des Modells nicht,\ndie Schwäche der Anschauung auszugleichen, sondern eine lebendige Anschauung überhaupt erst zu schaffen.\nEin Ziel, das vor allem durch das selbst anfertigen von Modellen am besten erreicht wurde.\nUnd so ähnlich ist das mit den Visualisierungen.\nAlso wenn ich, also wir haben ja häufig mit unseren Studenten Visualisierungsseminare,\nin denen sich die Studenten relativ frei ein Thema suchen, und es geht drum,\nsie sollen dazu eine gute Visualisierung erstellen.\nUnd in dem Prozess des Erstellens des Modells verstehen sie auf einmal die Thematik auf einem viel viel tieferen Niveau.\nUnd das ist nämlich noch so ein anderer Nebeneffekt der Visualisierung,\nIch würde mal sagen, ich selbst habe an meinen Programmen am meisten gelernt.\nWeil ich einfach Probleme so tief durchdringe musste, um überhaupt zu dieser Visualisierung hinzukommen,\ndass das eben Forschung für sich genommen schon mal wieder ist.\nUnd das ist ein Effekt, den man auch in der Form weitergeben kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Man schafft sich quasi einen neuen Sinn, um einen Bereich neu erfassen zu können darüber.\nMan legt noch mal so eine Lage …"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Sinn im mehrfachen Sinne des Wortes, Sinn im Sinne von Sinngebung, aber Sinn auch im Sinne von Wahrnehmungsorgan."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "So meinte ich es vor allem."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Also Computer sind für Mathematiker häufig Mikroskop und Teleskop,\nmit denen sie Dinge sehen können, die sie so nicht sehen könnten, wenn nicht zwischendrin irgendwo was gerechnet\nund dann auf dem Bildschirm dargestellt würde."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und es ist ja eigentlich auch genau die Sinneswahrnehmung des Menschen, die diese Kernfähigkeit der Abstraktion,\ndie ja letzten Endes bedeutet, ich kann Dinge auseinanderhalten und schaffe mir meine eigenen Trennungen,\nwo beginnt etwas, wo endet etwas, das ist ja diese Abstraktion, das ist ein Baum und da fängt er an und da hört er auf,\ndas bedeutet, auch hier in der Visualisierung schafft man damit auch neue Begriffe der Abstraktion,\num Dinge voneinander auch vielleicht besser trennen zu können."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Neue Begriffe der Abstraktion und auch neue Möglichkeiten der Intuition.\nAlso nicht selten wurden mathematische Ergebnisse, wichtige mathematische Ergebnisse gefunden,\nnachdem die Leute sich mathematische Visualisierungen zu einem bestimmten Thema angeschaut haben\noder erst mal selbst programmiert haben, dann darüber Dinge sehen konnten,\ndie vorher ihrem Sinnesorgan nicht zugänglich waren und darüber eine Intuition für neue Effekte aufbauen können.\nEs gibt tatsächlich in der Mathematik einen Forschungszweig, der nennt sich experimentelle Mathematik,\ndie genau versucht, solche Dinge zu kultivieren und Werkzeuge des Experimentierens mit Mathematik zu schaffen,\nmit dem man einfach auch mal in größerem Maße Dinge ausprobieren kann.\nUnd ähnlich wie ein Physiker oder ein Chemiker, der verschiedene Substanzen versucht auf ganz unterschiedliche Arten und Weisen zusammenzumixen,\nplötzlich Dinge zusammenzubringen, die auf den ersten Blick scheinbar gar nicht zusammen gehören\nund darüber plötzlich Effekte zu sehen, mit denen man vorher nie gerechnet hätte\nund die teilweise sehr sehr tief liegen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Jetzt ist ja hier schon viel über Software gesprochen worden und über Lösungswege, Algorithmen letztlich,\nund wir hatten es ja auch ganz zu Beginn schon, dass die Mathematik und die Informatik sehr aneinander stößt.\nWie nahe sind sich denn diese Disziplinen eigentlich wirklich?\nWo macht es Sinn, diese Felder zu trennen, wo sind sie sich denn vielleicht ähnlicher als sie es sein wollen?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Wie nahe ist die Mathematik der Informatik, wie nahe ist die Informatik der Mathematik.\nDas kommt, glaube ich, sehr auf die jeweilige Person an, die gerade Mathematik oder Informatik betreibt.\nNatürlich kann man Informatik betreiben und dabei relativ wenig Mathematik machen.\nMan kann auch Mathematik betreiben und dabei relativ wenig Informatik machen.\nJe nachdem in welchem Gebiet man sich gerade bewegt.\nAber es gibt eine Schnittstelle, in der der Overlap so groß ist, dass das eine oder das andere nicht richtig existieren kann.\nUnd viele Bereiche der Mathematik haben auch schon Informatik betrieben, bevor es überhaupt Computer gab.\nUnd in dem Sinne ist es eben auch Informatik in einer Richtung zumindest aus der Mathematik raus entstanden,\nallerdings auch aus rein pragmatischen Aspekten, wie zum Beispiel Webstühle zu programmieren,\nsind in den allerersten Anfängen der Informatik…\nIch würde sagen, das ist eine angenehme Symbiose idealerweise und ich bin immer sehr dagegen, Dinge einfach zu trennen\nund schnell zu trennen und zu sagen, bis dahin ist Mathematik und ab da ist es jetzt Informatik.\nAlso mein ganzes Leben der letzten, ich würde mal sagen, 10 fast 20 Jahre ist ständig ein Mix aus beiden Gebieten\nund wenige Ergebnisse, die ich hatte, wären ohne Computerhilfe entstanden\nund wenige Programme, die ich geschrieben habe, wären ohne mathematische Hintergründe entstanden.\nIch glaube, so geht es sehr vielen Kollegen gerade hier im Haus.\nWir sind an der Technischen Universität München, in der sich die Mathematik auch wirklich sehr anwendungsbezogen definiert,\nwas jetzt nicht heißt, dass jeder von uns Anwendungen macht, aber die Schnittstelle Mathematik und Informatik\nin gewissem Sinne als eine Einheit zu empfinden ist, glaube ich, eine Philosophie,\ndie viele hier irgendwo in ihrer TU DNA drin haben.\nUnd das mag anders sein an Instituten, die nicht dieses T im Namen schon drin haben wie die Technische Universität München.\nUnd es ist so, mein Werdegang hatte immer ein T im Namen, ich habe also an der TH Darmstadt studiert,\nan der KTH dann auch noch einmal promoviert, an der ETA in Zürich war ich\nund jetzt bin ich hier an der TU München, also dieses T zieht sich bei mir immer durch\nund das heißt auch immer, das eine Gebiet mit dem anderen in Verbindung zu bringen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Trotzdem ist es ja hier, glaube ich, auch ein Teilfeld der Forschung, computergerechte Strukturierung von Geometrie herzustellen.\nWas muss man sich darunter vorstellen, was wird denn dem Computer gerecht und was muss sozusagen dann …"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Es spielen viele Dinge zusammen.\nAlso eine lange Zeit, ist jetzt im Moment nicht mehr so das aktuellste Forschungsthema bei mir,\neine lange Zeit habe ich mich mit sogenannter dynamischer Geometrie beschäftigt.\nIdee ist, Sie malen eine geometrische Konstellation auf dem Rechner, zum Beispiel den Satz von Pythagoras oder was ähnliches\nund ich habe ja vorhin gesagt, ich möchte immer solche Experimentierfelder schaffen,\ndas heißt, ich möchte nicht nur ein Bild haben, sondern ich möchte nachher an die Punkte drangehen\nund daran auch bewegen können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Es soll parametrisierbar sein."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Es soll parametrisierbar sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Mehrdimensional."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Mehrdimensional ist gar nicht mal, also ist auch wichtig, aber …"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ist eher zwangsläufig in dem Moment, wo man mehrere Parameter eingibt."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Der Parameterraum ist natürlich vieldimensional."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, das meinte ich."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Jetzt kommt aber was ganz gemeines rein.\nDieses Gebiet der dynamischen Geometrie ist als Forschungsrichtung so in den 80er Jahren letzten Jahrhunderts entstanden,\n80er, 90er und da gab es zum Beispiel immer ein ganz fundamentales Problem\nund die Leute haben das bezeichnet als das Problem der springenden Punkte.\nAlso da hat man wirklich einen springenden Punkt im wörtlichen Sinne.\nUnd zwar wenn ich jetzt was geometrisch konstruiere und das parametrisiere,\njetzt bitte ich alle Leute, die uns hier zuhören, sich mal einfach einen Kreis und eine Gerade vorzustellen.\nDer Kreis und die Gerade sollen sich jetzt mal schneiden und Sie stellen sich jetzt mal vor,\nSie zeichnen einen der beiden Schnittpunkte ein.\nJetzt fangen Sie an, an dem Kreis und der Geraden rumzubewegen und dieser Schnittpunkt soll halt immer schön mitbewegt werden.\nMoment mal, dieser Schnittpunkt, es gibt ja zwei dieser Schnittpunkte.\nEin Kreis und eine Gerade die haben zwei Schnittpunkte und in jedem Moment muss der Computer entscheiden,\nwelchen Schnittpunkt meine ich denn jetzt eigentlich von den beiden,\nweil sonst hüpft auf einmal der Punkt von dem einen Schnittpunkt auf den anderen.\nVerrückterweise ist das ein richtiges Problem, so banal es erscheint.\nUnd alle Programme der frühen dynamischen Geometrie haben unter dem Problem gelitten\nund viele CAD Systeme machen das heute noch, dass, wenn eine Konstruktion zu komplex wird,\nich an Parametern spiele, dass dann plötzlich ein Element der Konstruktion komplett unmotiviert von einer Stelle zur anderen hüpft.\nWenn man das einer mathematischen Analyse unterzieht, stellt man auf einmal fest,\nman hat es mit Räumen von analytischen Funktionen zu tun, denen man nur über sogenannte komplexe Zahlen richtig zu Leibe rücken kann\nund indem man das Ganze in einen viel höher dimensionalen Umgebungsraum einbettet,\nwo man dann um sogenannte Singularitäten, die hier auftreten, dann einen großen Umweg macht,\num die einzelnen Objekte immer auseinanderzuhalten.\nUnd tatsächlich ist man da ein ganzes Stück in tiefer Funktionentheorie gelandet,\num dieses Problem, was einem so banal erscheint, in den Griff zu kriegen.\nUnd kann sogar beweisen, das ist die einzige Möglichkeit, das in den Griff zu kriegen.\nUnd das ist jetzt zum Beispiel so eine Schlüsselstelle, wo man wirklich ganz gehörig in die mathematische Trickkiste greifen muss,\num etwas, einem erst mal als eine ganz einfache Aufgabe erscheint, endgültig in den Griff zu kriegen.\nUnd das ist zum Beispiel eine Leistung hier von der Forschungsarbeit, die wir hier im Rahmen von den verschiedenen Visualisierungsprojekten gemacht haben,\ndass wir das einfach ein für allemal richtig in den Griff bekommen haben\nund dann geht die Fragestellung natürlich weiter, wenn man es im Griff hat,\ndann wie schwierig ist denn das dann algorithmisch umzusetzen?\nUnd dann stellt man fest, dass, wenn man es ganz ganz richtig machen will,\ndass das Ganze dann allerdings beweisbar schwierig wird.\nUnd dann ist man wieder in der Klasse der harten Probleme mit drin, die ich vorhin schon mal kurz angesprochen habe,\nund ja, es ist letztlich mathematische Grundlagenforschung, die man betreibt,\num ein scheinbar banales Visualisierungsproblem in den Griff zu kriegen und es führt kein Weg dran vorbei.\nAlso wenn man es richtig macht, geht es nur so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Das heißt, wenn die CAD Software keine springenden Punkte haben will…"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "…braucht sie komplexe Zahlen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ich grübele schon die ganze Zeit über den Ursprung dieses Begriffs springender Punkt, aber …"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Er kommt ursprünglich woanders her der Begriff.\nAber es ist tatsächlich so, okay, wir haben hier immer wieder Geschichten.\nIn den 90er Jahren haben wir mal auf einer Computermesse ausgestellt, der Orbit in Basel\nund sind dann mal von einem CAD Stand zum anderen gegangen und erst mal war eine Frage,\ngibt es überhaupt vernünftig parametrisierte CAD Systeme, ein paar haben wir gefunden\nund die, die wir gefunden hatten, hatten wir innerhalb von Größenordnung fünf Minuten,\nwenn wir das Benutzerinterface verstanden hatten, dann an der Stelle, wo bei denen dann die Objekte gesprungen sind.\nAlso kein einziges dieser Systeme war in der Lage, eine geringfügig mathematisch anspruchsvolle …"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "In welchem Jahr war das noch so?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Das war, Moment ich muss nachrechnen, 96, 97, 98 um den Dreh rum.\nIch befürchte, die Bilanz ist heute nicht schrecklich viel besser."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Das wäre meine nächste Frage gewesen, inwiefern solche Erkenntnisse halt auch wirklich in die Softwareentwicklung Einfluss hat."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Teilweise ja.\nAlso ich habe damals auch auf Konferenzen mit Leuten geredet, die CAD Systeme erstellt haben\naus industrieller professioneller Seite und ein paar haben zumindest ernsthaft in Erwägung gezogen,\nan der Stelle auf einen anderen Rechenkern umzustellen und wir haben zumindest mal diskutiert,\nwas sind denn die Möglichkeiten und Konsequenzen.\nOb sie es am Ende tatsächlich gemacht haben, kann ich jetzt nicht sagen,\naber zumindest das Problembewusstsein, das häufig nicht da war,\ndas war dann zumindest zu dem Zeitpunkt in einigen Köpfen deutlich besser."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Da ist immer die Frage, wie groß ist das Risiko.\nAlso ich meine, wenn jetzt sozusagen die maximale Auswirkung ist, das zittert ein bisschen auf dem Bildschirm, aber am Ende…"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Geht nicht um zittern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also wenn das das einzige wäre, also wenn man sozusagen nur so eine fehlerhafte,\nalso eine sekundäre optische Störung erzeugen würde, das ist ja das eine.\nAber wenn ich sage, ich mache aber jetzt hier irgendwie einen Kraftwerksbau und wenn ich das nicht sicherstellen kann,\ndass das jetzt auch wirklich gelöst ist in allen Fällen, trete ich mir unter Umständen einen Fehler ein,\neinen konstruktionellen Fehler, der halt die Sicherheit des ganzen Projektes riskieren kann."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Diskontinuitäten sind ein Problem, mit dem man immer wieder in der Informatik zu kämpfen hat.\nEs gibt, ich weiß nicht, ob die Geschichte wahr oder nur gut erfunden ist,\naber es gibt angeblich diesen Düsenjet, der sich über dem Äquator plötzlich auf den Rücken gedreht hat,\nweil irgendwo ein Vorzeichenfehler in der Steuerlogik war, die einfach mit dem Übergang über den Äquator nicht umgehen konnte\nund ein Vorzeichen umgeflippt hat und von nicht sehr sehr unterschiedlicher Art sind diese Probleme,\ndie es dann in der konstruktiven Geometrie gibt, dann auch.\nAlso letztlich geht es um richtige Wahl von Vorzeichen dabei."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ist das Testing ein Problem in der Softwareentwicklung.\nMan testet halt nicht alle Fälle, sondern nur eben die, die erst mal offensichtlich erscheinen\noder die einzigen, an die man denkt, aber ein mathematisches Modell vielleicht herbeizuziehen,\nwas in irgendeiner Form sicherstellen kann, dass ich auch alle Fälle teste, die ich testen müsste,\ndas könnte ja an der Stelle auch schon helfen."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Wobei an der Stell noch dazukommt, dass es an der Stelle um kontinuierliche Übergänge geht.\nUnd es zumindest gar nicht mal diese endliche Anzahl von Fällen gibt.\nUnd da kommt dann wieder die Mathematik rein, wie reduziert man so ein Problem letztlich auf eine endliche Anzahl von Fällen?\nAlso auch da allein um ein Testszenario gescheit zu machen, braucht man wieder Mathematik,\num einfach darüber Auskunft zu geben, wenn ich nur das und das und das abgetestet habe,\ndann habe ich das auch in seiner Gesamtheit, wenn der Rest wenigstens stimmt.\nAlso beweisbar korrekte Software ist wiederum ein Forschungsgebiet sowohl der praktischen als auch der theoretischen Informatik."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also dass da einiges im Argen liegt, das merke ich immer wieder, wenn mir Programme mir irgendwelche Karten\nund meine eigene Position anzeigen und ich stelle wieder fest, dass ich 500 Kilometer südlich von Nigeria irgendwo im Wasser treibe."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Schön dort, sehr schön dort."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Schön dort und vor allem halt Koordinate 0;0, da weiß man halt schon wieder,\nda ist irgendwas ganz gründlich schief gelaufen, an welcher Stelle auch immer."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Aber jetzt gerade noch mal ganz kurz zum Thema Software entwerfen.\nIch schreibe ja selbst auch sehr viel Software und ein großes Problem, mit dem man als Softwareentwickler ständig zu kämpfen hat,\nist, dass man selbst sein Programm immer nur in den Grenzen testet, in denen man es sich selbst vorstellt.\nSogar manchmal intuitiv, um die Schwachstellen einen Bogen drumherum macht,\nweil man einfach weiß, ah okay da wird es vielleicht gar nicht so funktionieren\nund irgendwas ganz im Hinterkopf sagt einem, will ich gar nicht erst testen,\nauch da ist es dann wieder ein ganz bewusster Akt des formalen Denkens, genau das nicht zu tun.\nUnd da stecken in der Softwareentwicklung einige Fallen, in die man sehr schnell reinlaufen kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Gibt ja auch so eine eigene Disziplin in der Informatik hin zu beweisbarer Software."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Die halt mathematisch dann auch wirklich nachweisen kann, dass sie in allen Fällen richtig rechnet.\nIch weiß nicht, ob das jetzt hier …"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Unter bestimmten Prämissen gibt es…"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Unter bestimmten Prämissen."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Im Informatikdepartement gibt es einige Leute, die sich damit beschäftigen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und überschneidet sich das so mit Ihrer Forschung in gewisser Hinsicht?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Also ich schreibe keine beweisbar korrekte Software in dem strengen Sinne.\nIch habe mich aber eine ganze Weile mit automatischen Beweisen aus Software heraus beschäftigt.\nDas war tatsächlich übrigens der ganz ursprüngliche Motivationspunkt für diese ganzen dynamischen Geometriesachen.\nZu Zeiten von meiner Dissertation habe ich automatische Beweise geometrischer Sätze Algorithmen dafür entworfen\nund dafür wollte ich ein Eingabeinterface.\nAlso man zeichnet zum Beispiel den Satz von Pythagoras hin, soll auf einen Knopf drücken\nund dann möchte man einen Beweis für das Theorem geliefert bekommen.\nUnd das war der Ursprung für diese ganzen dynamischen Geometriesachen, mit denen ich mich beschäftigt habe\nund die kamen ursprünglich aus dem Thema automatisches Beweisen.\nWas übrigens dann, um den Bogen jetzt ganz groß rund zu schließen,\nursprünglich aus den Sachen mit den Nichtrealisierbarkeitsbeweisen für die Vielflächen in vier Dimensionen,\nwas da wiederum irgendwo seinen Ursprung mit hat.\nAlso hängt alles irgendwo zusammen, ist aber, wenn man es von außen anschaut, vielleicht etwas diskontinuierlicher\nals es dann in der eigenen Biografie letztlich ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ein Anlass, nicht der einzige, aber ein Anlass, hier das Gespräch mal zu suchen, ist ja,\ndass Sie gerade vom DFG und Stifterverband den Kommunikatorpreis vermittelt bekommen haben.\nDa geht es natürlich vor allem um die Kommunikation dieses Wissens in viele Bereiche.\nUnd ja, da wird ja so einiges erwähnt, abgesehen von der Kerntätigkeit hier am Lehrstuhl, die wir schon gemacht haben,\nfinden ja hier auch noch ein paar andere Sachen statt.\nGerade eben war ich in einer kleinen Ausstellung hier unten im Gebäude des IX Quadrat,\nwo man schon allerlei, also wo es handgreiflich wurde, also wo man quasi Visualisierung in konkreten Körpern,\nObjekten, aber halt auch Bildern gesehen hat und auch eben in solchen parametrisierbaren Sachen.\nSie haben das ja schon erwähnt, so Kommunikation und das Weiterreichen dieses Wissens\nund auch das Zugänglichmachen von Mathematik das ist so ein bisschen auch Ihr Steckenpferd.\nWas findet da noch alles statt, um das gut kommunizieren zu können, was hilft?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Das ist jetzt eine Sache, mit der ich mich tatsächlich schon eine ganze Weile beschäftige.\nAlso die Ursprünge gehen bis auf 86 zurück, wo ich für eine Symmetrieausstellung in Darmstadt schon erste Software geschrieben habe,\nhier am Campus habe ich jetzt unsere Mathematikausstellung vor rund 20 Jahren aufgemacht\nund der Ansatz dabei ist eigentlich immer der, dass man Dinge zugänglich machen möchte,\ndass man interessante Dinge zugänglich machen möchte.\nAlso eine wichtige Sache bei uns in der Ausstellung im IX Quadrat, übrigens man spricht es X-Quadrat aus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Oh, Entschuldigung."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Nicht I X-Quadrat.\nEin wichtiger Punkt dabei ist, Phänomene zu suchen, die verstehbar genug sind,\num damit einen interessanten Dialog über die Objekte hervorrufen zu können.\nUnd tatsächlich die Ausstellung, wie wir sie unten haben, die ist so aufgebaut,\ndass es verschiedene Pfade durch die Exponate gibt, die unterschiedlichste Zusammenhänge rausholen können.\nAlso ein großer Teil geht um das Thema Symmetrie.\nSymmetrie ist ein wunderbares Thema, über das man ganz toll mit Leuten reden kann,\ndie ansonsten sagen, ich habe mit Mathematik gar nicht so schrecklich viel am Hut\nund die Ausstellung ist so gemacht, dass man da sowohl mit einem Kindergartenkind\nals auch mit einem Oberstufenschüler als auch mit einem Gastwissenschaftler einen interessanten Dialog darüber führen kann.\nUnd dazu sind die Phänomene halt sehr gezielt rausgesucht.\nUnd die Ausstellung ist, ich sage jetzt mal so rum, ziemlich designed darauf hin.\nUnd ein typischer Effekt, den wir haben, dass die Leute rausgehen aus dem Raum und sagen,\nMensch der Raum ist ja von innen viel größer als von außen.\nWeil eigentlich was wir gemacht haben ist, Räume im Kopf zu öffnen, in die die Leute dann eintauchen können.\nAlso rund 50 Exponate gibt es da unten, dann gibt es aber noch verschiedene andere Projekte.\nEs gibt diverse Wissenschaftskommunikationsapps, in der verschiedene Effekte auch wieder dargestellt werden.\nWobei ich immer versuche, Computer nur dann einzusetzen, wenn man wirklich um das Digitale nicht drum herum kommt.\nAlso Effekte, die man anfassen kann, die soll man eben auch anfassen können,\naber der Anschauungsraum reicht halt nur bis zu einem gewissen Punkt und dann ist der Computereinsatz was ganz wichtiges.\nDann gibt es diverse Wanderausstellungen, Kooperationen mit dem Deutschen Museum,\nKooperation mit dem Mathemuseum MoMa in New York.\nUnd viele Dinge, wo man sich immer wieder Sachen ausdenkt, wie man denn Leute für Mathematik oder im Allgemeinen auch für Wissenschaft begeistern kann.\nUnd da kann ich gerne noch was zu den verschiedenen Ansätzen sagen, was man damit machen kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Gelingt denn das?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Ja, oft."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Oft."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Nicht immer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also wer ist denn so die Zielgruppe der Überlegungen?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Ich. Ich bin ein Spielkind, also ich freue mich selbst an Phänomenen.\nUnd Dinge, an denen man selbst Spaß hat, die lassen sich auch selbst wieder gut weitergeben.\nUnd tatsächlich ist die Zielgruppe letztlich besteht aus Personen, die entweder sagen,\nich habe mit Mathematik gar nicht so schrecklich viel am Hut oder aus Leuten, die sagen,\neigentlich interessiert mich Mathematik, lass mich doch mal ein bisschen mehr erfahren,\naber auch Leute, die sagen, ich kenne mich total gut in Mathematik aus,\nzeig mir doch mal was neues interessantes, was ich noch nicht kenne.\nAlso die Zielgruppe ist erschreckend breit.\nÜber die Apps hat sich zum Beispiel auch noch eine ganz neue Zielgruppe aufgetan,\nich habe eine App, die ist so an der Schnittstelle von Mathematik zu Kunst\nund Kunstschaffende, insbesondere wenn es in den Bereich Grafikdesign reingeht,\nsind ja auch häufig sehr formal denkende Menschen, trotz aller Kreativität, die in Kunst drinsteckt\nund die kommen häufig zu mir und sagen, Mensch ich hätte gar nicht gewusst,\ndass in mir auch eine mathematische Seite drin steckt und deine Apps haben mir das irgendwo aufgeschlossen.\nUnd Augenöffner sein, das ist vielleicht die wichtigste Message, die in den ganzen Dingen mit rüberkommt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Es gibt ja seit einiger Zeit diesen Kunsttrend, würde ich es mal nennen, der generativen Kunst.\nAlso sowohl was Akustik betrifft als auch Visualisierung betrifft., das geht sehr weit,\ndas ist ja dann tatsächlich auch eine Interessante Schnittstelle zu Ihrer Arbeit."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Das ist eine direkte Schnittstelle zur Mathematik, nicht unbedingt zu meiner Arbeit,\nweil ich nur sehr indirekt generative Kunst betreibe.\nIch habe vorhin gesagt, in den Apps, die ich mache, geht es mir häufig darum,\ndass die Spielregeln möglichst klar sind.\nUnd was ich machen möchte, ich verstehe mich häufig als ein Werkzeugmacher,\nder den Benutzern Software oder Objekte an die Hand gibt, die praktisch Dinge ermöglicht,\ndie man ohne das Werkzeug nicht tun könnte.\nUnd es gibt viele andere Apps in Richtung generative Kunst, in denen man mit der App interagiert,\naber letztlich nicht weiß, was die App jetzt eigentlich aus dem gemacht hat, was ich jetzt da reingegeben habe.\nDa spielt dann auch ganz häufig Zufall eine Rolle und ähnliches.\nIch versuche Dinge zu machen, in denen die Regeln extrem klar snid und sich darüber aber dann ein ganzer Horizont von Möglichkeiten ergibt.\nWie zum Beispiel Flächenornamente oder Rosettenornamente oder ähnliches zu zeichnen.\nUnd genau diese Spielart, dass die Regeln sehr klar sind und trotzdem Dinge entstehen,\nmit denen ich gar nicht gerechnet hätte, das ist sehr spannend, dass dann an kreative Leute zu geben.\nDas ist so ein bisschen ähnlich, wie wenn man Flöte in einem Raum mit einem guten Echo spielt.\nAlso man hat eine Flöte und macht etwas und plötzlich kommt von den Wänden das zurück, was man gerade selbst gemacht hat\nund man kommt mit sich selbst in Interaktion dabei nach bestimmten Regeln,\nund dabei kann sehr interessante und gute Musik entstehen.\nUnd ähnlich kann passieren, wenn man in einer App, die symmetrisch widerspiegelt,\nwas man gerade gemacht hat, kann plötzlich ein Dialog mit sich selbst entstehen,\nder einen über das hinausführt, was man nur mit Stift und Papier sonst gemacht hätte.\nWill nicht sagen, tun könnte, weil man könnte es mit sehr viel Mühe,\naber man wäre dann nicht so in diesem kreativen Fluss drin.\nUnd um das zu machen, auch wieder ein Haufen Mathematik hinten dran."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ich akzeptiere diese Trennung zwischen hier, ich mache ja nur das Werkzeug und in dem Moment,\nwo das Werkzeug dann von jemandem benutzt wird, dann ist es auf einmal Kunst so,\nda gehe ich nur begrenzt mit, zumal ich ja ohnehin …\nWeil oft auch, ich meine, hat natürlich ein bisschen was mit dem Begriffsverständnis für Kunst zu tun,\nwas ist das eigentlich, wo fängt es an, wo hört es auf, aber sicherlich ohne Zweifel ist der Kunstprozess immer einer,\nder auch so eine schöpferische Komponente hat, die zwangsläufig am status quo ansetzt,\ndas heißt, in dem Moment, wo man auch Werkzeug schafft, was überhaupt erst eine Visualisierung,\neine parametrisierte Betrachtung von etwas, was ja quasi auch wieder eine neuartige Verarbeitung von Daten ist\nund damit eben was neues schafft, dann kann ja das Werkzeug selbst ja auch schon die Kunst sein.\nAlso gerade in dem Moment, wo der Computer auch Einzug gehalten hat in die Kunstwelt,\nsind ja oft Dinge schon bestaunt worden und das sicherlich auch zurecht.\nWo man vielleicht auch heutiger Perspektive relativ einfache Dinge überhaupt erst mal zusammengemacht hat,\nweil diese Kombinatorik, diese generative Tätigkeit, dieses Visualisieren letzten Endes unterschiedlicher Eingabedinge,\nund wenn es erst mal nur so ganz grundlegende Sachen waren am Anfang wie,\nman hat da ein Mikrofon und dann wird halt die akustische Information in eine visuelle Information übersetzt,\nauch das ist ja schon ein künstlerischer Prozess, von daher erscheint mir hier der Übergang doch sehr fließend zu sein."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Ich muss auf einen Satz, den Sie eben eingeleitet haben, kurz zu sprechen kommen.\nSie haben eben gesagt, ich mache ja nur das Werkzeug, und dieses nur würde ich massiv rausstreichen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Weil…"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Das war ja auch nur überspitzt formuliert. Nur."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Klar. Ein Instrumentenbauer ist ein Künstler und ein Artefakt so zu schaffen,\ndass daraus etwas entsteht, mit dem Kreativität möglich ist, ist ein kreativer Prozess in sich selbst.\nUnd ich verbringe viel Zeit damit, mir darüber Gedanken zu machen, wie ich den möglichst perfekten Strich auf einem Zeichenprogramm machen kann,\nder sich möglichst natürlich oder sogar übernatürlich anfühlt.\nUnd da ist dann im Hintergrund wieder jede Menge Algorithmik, und die gibt aber dann wiederum anderen Leuten die Möglichkeit,\nDinge zu machen, die mehr sind als ich jemals könnte und mehr sind als Sie jemals ohne die Programme könnten.\nUnd es gibt diesen einen Grafikdesigner, Kaligrafen, Seb Lester aus Großbritannien,\nder hat mit meiner Symmetrie-App wahrscheinlich die komplexesten Buchstaben gemalt,\ndie jemals in der Menschheitsgeschichte überhaupt irgendwo gezeichnet wurden,\nweil einfach an der Stelle seine Fähigkeiten plus den Möglichkeiten des Programms zusammengekommen sind,\nzu etwas, was einfach viel mehr ist als was sowohl er als auch ich könnte.\nDas finde ich toll, das macht wahnsinnig Spaß.\nUnd jetzt gerade über diese Apps auf der Schnittstelle von Mathematik zu Kunst,\nMathematik und Musik bin ich mit Leuten in Kontakt gekommen,\ndie wirklich zu den bereicherndsten Begegnungen hatte und ich meine jetzt, intellektuell bereichernd,\ndie ich bisher hatte und gerade diese Grenzbereiche von Wissenschaft zu Gebieten,\ndie erst mal gar nicht wissenschaftlich erscheinen, auszuloten, ist ein unglaublich spannender Prozess."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Da die Lehre ja hier so eine besondere Bedeutung hat, würde mich natürlich jetzt auch noch mal interessieren,\nwie denn jetzt die Pandemie hier vielleicht die Arbeit beeinflusst hat.\nIch bin mir sicher, das wird sie getan haben.\nGerade wenn man so eine Liebe zu Werkzeugen hat und gerne die Dinge automatisiert haben möchte\nund vielleicht auch gut visualisiert haben möchte, wie hat sich denn das hier ausgewirkt auf die Lehre?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Ich rede jetzt einfach mal von mir ganz persönlich.\nDie letzten zwei Jahre waren wahrscheinlich mithin bezüglich Lehre die arbeitsreichsten, die ich je hatte.\nUnd gleichzeitig war die Pandemiesituation eine gewissen Steilvorlage für unsere Zunft der Visualisierung.\nWeil man steht jetzt plötzlich da und das, was man schon immer betrieben hat,\nnämlich Inhalte digital zugänglich zu machen, wird auf einmal absolut notwendig, um einfach unterrichten zu können.\nIch habe für mich selbst dabei das Ziel gehabt, also ich unterrichte sehr gerne\nund Lehre ist mir selbst eine heilige Aufgabe, und ich mache normalerweise auch sehr gute und schöne Livevorlesungen\nund ich habe mir vorgenommen, in den Videocasts, die ich zu meinen Livevorlesungen jetzt gemacht habe,\noder die diese ersetzen sollten, sollte nichts fehlen, was sonst auch in der Vorlesung drin ist.\nWas am Ende dazu geführt hat, dass ich Filme produziert habe, in denen eine Stunde Video im Film ungefähr 17 Stunden Arbeit bedeuten,\nmit zuerst Konzeptbuch erstellen, letztlich eine Art Drehbuch erstellen, Visualisierungen dafür schreiben,\ndas ganze Zeug selbst aufnehmen, selbst zusammenschneiden, wo aber am Ende was rausgekommen ist,\nan dem ich selbst auch wirklich Spaß habe und mir selbst auch gerne anschaue.\nWo eben genau diese Schnittstelle von formalem Zugang, visuellem Zugang,\nerklären auf sehr vielen verschiedenen Ebenen, die ganze Zeit in den Videos durchgezogen wird.\nUnd die Studenten haben ihren Spaß dran.\nAlso wir haben jetzt zweimal in Folge dafür Lehrauszeichnungen hier von der Fakultät bekommen\nund ich habe viele Studenten gehört, die gesagt haben, bitte die Videos auf keinen Fall nach der Pandemie abschaffen,\ndie müssen weiter existieren und die Lehre muss sich ein Stück auch mit an den Medien mit orientieren.\nIch finde das ein sehr spannendes Thema.\nMacht endlos viel Arbeit, aber macht auch endlos viel Spaß."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wie digital ist denn die Lehre hier schon?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Was ist hier?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also hier in dem Lehrstuhl oder an der Fakultät."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Hier am Lehrstuhl, also die letzten zwei Semester oder drei Semester haben wir voll digital durchgezogen.\nIm Moment geht es halt wieder ein Stück zurück in Richtung Hybridformate.\nIch selbst werde sehr wahrscheinlich die Videos, die ich jetzt in der Zeit erstellt habe,\nauch für zukünftige Unterrichtsjahre verwenden und mehr und mehr auf inverted classroom, flipped classroom umstellen,\nin dem es halt dann wirklich darum geht, dass die Studenten sich die Videos mit all ihren Vorteilen,\nund ein riesiger Vorteil von einem Video ist die Pausetaste und die Rewindtaste und die Stopptaste.\nUnd überhaupt, dass ich Tasten habe, an denen ich das Ganze auch, wenn ich es mag,\nmorgens um 6 oder nachts um 12 anschalten kann, wenn ich am aufnahmefähigsten dazu bin.\nUnd die Rolle des Unterrichtenden ist dann letztlich „nur noch“, verbleibende Fragen zu klären.\nUnd das ist ja der eigentlich spannende Teil und das sollte man dann in Präsenz,\nwenn das wieder möglich wird, in Präsenzeinheiten machen.\nAlso ich denke, wir werden an ganz vielen Stellen unsere Lehre überdenken müssen,\nweil wir einfach wirklich viel dazu gelernt haben über die letzten drei Semester.\nUnd ich bin wirklich, auch wenn es sehr viel Arbeit war, froh über die Erfahrung,\nfroh auch darum zu wissen, wieviel Arbeit es ist, bestimmte Sachen in einem bestimmten Qualitätsniveau herzustellen,\nund ja man hat jede Menge Techniken gelernt und auch viele Sachen noch mal anders pädagogisch überdacht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Was denn zum Beispiel?"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Zum Beispiel den Stellenwert von Visualisierungen, jetzt in meinem ganz konkreten Fall.\nWährend ich Visualisierungen in der Präsenzlehre immer mehr oder weniger vollkommen nebenbei praktisch eingesetzt habe.\nIch hatte die Dinger so und so auf dem Computer und habe sie, wenn immer es sich im Unterricht angeboten hat,\neinfach mit rausgenommen und spontan im Unterricht mit verwendet.\nSo wie man an den Modellschrank geht und rausgreift.\nPlötzlich musste man diese Visualisierungen in ganz gezielter Art und Weise konkret in einen vorgeplanten Fluss einbinden.\nUnd dann auch irgendwo die Balance halten zwischen visualisierten und formalen\nund über die Brücken mehr Gedanken sich machen und man musste dabei viele der Rollen,\ndie die Visualisierung während dem normalen Unterricht spielt,\nnämlich gerade zum Beispiel auf Fragen von Studenten reagieren zu können und zu sagen,\njetzt schaue dir das doch mal da und da so und so an, dann siehst du wie sich das verhält,\ndas vorauszuahnen und praktisch die Fragen im eigenen Video irgendwo auch intern vorwegzunehmen\nund dann ohne die Frage explizit zu stellen, die Frage zu beantworten und seine Erklärungen besser zu machen.\nAlso das Erstellen der Videos war ein sehr starker Vorgang des Bewusstmachens von dem,\nwas erzählt man da jetzt eigentlich?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und wieviel wird davon bleiben?\nAlso ich meine, manches war natürlich jetzt in dieser Zeit zwangsläufig."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Voraussagen über die Zukunft sind immer eine ziemlich unsichere Angelegenheit.\nVon daher muss man schauen, wieviel davon bleibt.\nIch würde sagen, bei mir wird eine Menge davon bleiben, weil ich einfach selbst meine Freude daran habe.\nEs ist letztlich auch ein Stück eine Manifestierung von Dingen, die wir ohnehin schon gemacht haben.\nAlso die Lehre war ja auch in Zeiten vor der Pandemie schon zu großen Teilen digital unterstützt.\nAlso es gab immer schon einen blended learning, in dem eben genau diese Mikrolaboratorien\nzum Beispiel auf dem Portal mathevital gesammelt wurden, in dem es dann begleitend zu den Vorlesungen,\ndie ich gemacht habe, und auch begleitend zu Vorlesungen einiger Kollegen Materialsammlungen gab,\nin denen die Studenten zu Hause noch mal an eben genau diesen passend gebauten Mikrolaboratorien experimentieren konnten\nzum aktuellen Vorlesungsstoff.\nAlso meine lineare Algebra die ist schon seit, ja Moment, mathevital gibt es seit 2008,\nseit 2008 massivst digital unterstützt, dazu kommen die Visualisierungen,\ndie ich so und so in der Vorlesung selbst verwendet habe.\nDas ist natürlich auch ein Bereich, der über die Jahre gewachsen ist und in dem immer mehr dazu kommt.\nUnd in gewissem Sinne waren jetzt die letzten drei Semester so eine Art Konsolidierung von dem,\nwas ohnehin da war.\nAlso von daher in gewissem Sinne, so neu ist es nicht, das Ganze aber dann trotzdem in Drehbuch und in Schnitt\nund man steht ja dann selbst auch da und nimmt sich selbst mit auf mit dem Handy\nund muss die ganze Zeit irgendwo präsent sein, wie jetzt hier in dem Podcast und möglichst vivant irgendwo reden\nund die Leute gefühlt irgendwo dabei halten, das muss man erst mal lernen,\nund das war bestimmt ein Prozess des Neulernens an der Stelle.\nIch war dann am Ende überrascht, also normalerweise, wenn ich meine letzte Vorlesungsstunde mache,\ndann überkommt mich so ein kleiner Moment der Rührung, dass man jetzt diesen Studentenpool jetzt irgendwo ins nächste Semester entlässt.\nUnd in der Pandemiezeit ist das soweit gewachsen, dass ich zu meinem Handy,\ndas dann vor mir stand, ein so intimes dahinter sind jetzt die Studenten-Verhältnis aufgebaut hatte,\ndass die letzte Stunde der Vorlesung dann ganz genauso war und ich gedacht habe,\nMensch das ist jetzt aber wirklich komisch, dass du jetzt leicht angerührt bist davon,\ndass du jetzt in dem Format deine letzte Stunde gibst und ich glaube, das ist dann ein ganz gutes Gefühl, wenn einem das passiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ist schon mal ein ganz gutes Zeichen.\nIch hatte mich hier im Forschergeist 22 schon vor sechs Jahren mit Jürgen Hanke unterhalten,\nder ja in seinem Lehrstuhl, wo es um Englisch geht, ja dasselbe Prinzip des flipped classroom schon lange lange Zeit durchzieht.\nDu die interessanteste Erkenntnis, die ich an dem Tag hatte, war, dass sein Büro eigentlich nur noch ein Kamerastudio zu sein schien.\nJetzt wenn hier alle zurückkehren, könnte ich mir vorstellen, könnten diverse Umbaumaßnahmen eingeleitet werden,\num auch ähnliches auch hier zu machen."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Wir haben gerade letzte Woche im Mitarbeiterseminar genau darüber geredet,\nwas wir eigentlich jetzt neuerdings für Räume bräuchten.\nWobei das ist jetzt, glaube ich, ein pandemiespezifischer Effekt, die Kollegen, die das sehr ernsthaft betreiben,\nund es gibt ja einige an der Fakultät, die das sehr ernsthaft betreiben, die haben sich mittlerweile halt zu Hause ihr Videostudio aufgebaut\nund mit den jeweiligen Gegebenheiten das möglichst beste daraus gemacht\nund auch an ihre jeweilige Person angepasst.\nAlso wir haben hier einen Kollegen, der Tim Hoffmann, der hat zu Hause wirklich seine komplette Greenscreen,\nmehrere Kameramischpulte, Einspielmöglichkeiten, in dem er wirklich sehr virtuos mit all diesen Möglichkeiten umgehen kann.\nBei mir ist es zum Beispiel ein ganz bewusst privat gewählter Rahmen,\nich sitze immer in meiner Wohnzimmerecke, mit meiner Lampe im Hintergrund\nund da hat sich auch mittlerweile so ein gewisses Corporate Identity aufgebaut.\nFarbige Beleuchtung ein bisschen im Hintergrund, damit man nicht ganz so blass im Gesicht ausschaut und alles mögliche.\nUnd tatsächlich glaube ich, jetzt das Aufbauen von Studiosituationen hier im Institut,\ndas wird insbesondere für die Kollegen auch interessant sein,\ndie das vielleicht bisher jetzt gerade auch über die letzten Jahre noch nicht so exzessiv gemacht haben.\nUnd dass man da einfach Möglichkeiten schafft und auch einiges an Knowhow weitergibt.\nSpannendes Thema.\nAlso ich bin sehr gespannt, wie das über die nächsten Jahre weitergeht.\nIch glaube, dass die drei Semester die Lehre nachhaltig verändert haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, ich denke, jetzt haben wir alle Themen angesprochen, die sich jetzt erst mal so aufgedrängt haben.\nIch denke, dass gerade die Lehre noch so auch einen hohen Wandlungsbedarf hat,\ndass also einfach diese neuen Wege auch absolut überfällig gewesen sind\nund auch, sagen wir mal, eine sehr viel höhere Beteiligung, sehr viel höhere Inklusion auch letzten Endes sicherstellen kann.\nDieses, wann schaue ich mir etwas an, wo ich es am besten aufnehmen kann, das trägt ja dazu bei."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Also ich befürchte, dass folgendes passiert bzw. passiert ist,\ndie Lehre, die wir jetzt zum Beispiel über die letzten drei Semester gegeben haben,\ndie wird bei einigen Studenten sehr positive Effekte haben und bei anderen Studenten vielleicht sogar auch sehr negative Effekte.\nUnd das mag jetzt genau umgekehrt sein, wie man es sonst im normalen classroom hat.\nUnd ich glaube tatsächlich, dass ein vernünftiges Miteinander der verschiedenen Formate etwas ist,\nwo man die nächsten Jahre drauf zuarbeiten sollte.\nWeil ich glaube, wir haben es immer bei den Studenten mit Individuen zu tun und jeder ist anders.\nDer eine nimmt besser auf, wenn er sich etwas selbst an einem Video erarbeitet,\nder andere bekommt es wirklich gerne vorgetragen und arbeitet das Ganze dann nach.\nUnd ich glaube, die Vielfalt der Formate ist etwas, das für die nächste Zeit sehr wichtig werden wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, Herr Richter-Gebert, jetzt fällt mir nichts mehr ein, was ich noch fragen kann."
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Mir hat es Spaß gemacht, fand es total entspannend."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Das hat mir auch…"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Ich kann ja jetzt fragen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Dann dauert es ja noch länger.\nIch bedanke mich…"
+    },
+    {
+      "speaker": "Jürgen Richter-Gebert",
+      "time": "",
+      "text": "Ich mich auch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "…für das Gespräch und bedanke mich fürs Zuhören hier bei Forschergeist.\nDas war es für heute und wir hören uns dann bald wieder.\nTschüss und bis bald."
+    }
+  ]
+}

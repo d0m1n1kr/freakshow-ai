@@ -1,0 +1,3474 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:31",
+      "text": "Hallo, hier ist Chaos-Radioexpress Ausgabe Nummer 182 und am Apparat sprich Tim Brittler, wie ihr es gewohnt seid und heute,\nMuss ich mich mal dem Druck der Straße muss ich dem Druck der Straße nachgeben?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:01:48",
+      "text": "Massen wollen Bitcoin."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:49",
+      "text": "Die Massen äh äh wollen jetzt endlich mal Klarheit haben nicht, dass ich das Thema nicht schon lange im Hinterkopf habe,\nAber ich will's auch gleich mal ein äh bisschen weiter aufziehen, sorry gehen um elektronisches Geld.\ndenn das ist eigentlich das, was äh derzeit,\ndenken, wenn sie auch Bitcoin sagen, was gerade so äh ja irgendwie so einen kleinen Hype erlebt und ihr hört schon im Hintergrund, es gibt auch Gäste, nämlich genau einen und zwar Andreas. Hallo.\nAndreas, da sitzen wir jetzt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:02:21",
+      "text": "Ja und hoffen, nicht von dem Geld."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:25",
+      "text": "Hoffentlich vorhandenem Geld, genau. Reich an Witz. Ähm ja, also bevor wir vielleicht so auf diesen ähm Bitcoin-Hype ähm,\nzu sprechen kommen und überhaupt äh das Thema auch nochmal äh angehen wollen. Ich wollt's halt gleich ein bisschen ähm weiter aufklammern, weil so ganz neu ist ja die Idee Geld elektronisch abzubilden nicht.\nKann mich noch entsinnen, dass in den Neunzigern,\nschon mal kräftig so durch die Hacker Szenerie äh taumelte und auch schon so ein bisschen bei den Banken angekommen war."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:03:00",
+      "text": "Genau da gab es damals äh die ähm äh och wie hieß das von David Shome ähm eash,\ndas Verfahren. Ähm muss man vielleicht ein bisschen ausholen. So warum war das spannend? Ähm wenn man sich überlegt, man möchte digitales Geld, hat man ja erstmal das Problem, dass äh Bits sehr kopierbar sind. Kennt jeder von äh Pirat Bay, ja, so ein Haufen Witz lässt sich halt einfach kopieren,\nUnd wenn man jetzt versucht, Geld mit Hilfe von Bits zu repräsentieren, ist die entscheidende Frage, wie verhindere ich, dass jemand einfach diese Bits kopiert und zweimal ausgibt. Das sogenannte Double-Spendling-Problem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:32",
+      "text": "Genau, weil das ist ja schon so eine Eigenschaft von von Münzen äh und Geldscheinen, dass sie eben nicht so ohne weiteres zu kopieren sind."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:03:42",
+      "text": "Ähm,\nIm Grunde gibt es zwei Möglichkeiten, äh das zu verhindern, dass Geld mehr von außen gegeben wird. Äh das Einfachste ist in so eines Online-Verfahren, das heißt, es gibt eine zentrale Instanz.\nServer, der sagt halt, ja das Geld wurde schon ausgegeben oder das Geld wurde noch nicht ausgegeben. Natürlich den Nachteil, dass so was mit äh Anonymitätsproblemen verbunden ist. Das heißt, es ist nicht so anonym wie ähm,\nReguläres Bargeld, wo also ein so ein Zwei-Euro-Stück kann keiner erkennen, wo das vorher war. Gut Geldschein haben eine Seriennummer, die aber auch nicht flächendeckend erfasst wird. Im Großen und Ganzen ist Bargeld ja anonym,\nWenn man jetzt eine zentrale Instanz hat, wo man äh bestätigt bekommt, ja, diese Münze wurde noch nicht ausgegeben,\ndann äh kann das denn nur funktionieren, indem die Bank erkennt, dass es diese Münze ist, also dass die Münze eine bestimmte Säennummer hat und dass die noch nicht ausgegeben wurde. Das heißt, bei einer zentralen Stelle laufen alle Transaktionen auf.\nDas ist natürlich aus mehreren Gründen ungünstig. Zum einen, weil man äh diese Spur hinterlässt. Ähm wer hat wann welche Münze ausgegeben,\näh zum anderen, weil man dazu online sein muss. Das heißt, es funktioniert nicht offline. Und David Schaum hat sich äh viel Gedanken gemacht zum Kryptograf.\nwie man äh ein System bauen kann, das verhindert, dass man Münzen mehrfach ausgibt und dass trotzdem offline funktioniert, also wo man trotzdem keine Internetverbindung braucht. Gut heutzutage ist es nicht mehr so relevant. Heutzutage gibt's überall Internet, da ist das nicht mehr so wichtig, aber damals."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:07",
+      "text": "Nicht sagen, dass es überall Internet gibt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:05:10",
+      "text": "Vergleichsweise schon. Also so eine Anforderung wie das jeder Laden, der äh äh an der Ecke, der Geld akzeptiert, auch eine Online-Verbindung hat, ist heutzutage etwas, was man."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:18",
+      "text": "Gut, aber wenn ich dir zehn Euro im Zug äh äh geben will ja, weil ich sehe dir noch Schulder, dann ist das halt nicht so einfach."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:05:27",
+      "text": "Es ist schon bequem, wenn man wenn's auch offline."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:28",
+      "text": "Was ist, wenn der Server down ist?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:05:30",
+      "text": "Genau, genau. Und der David Schaum hat sich was relativ cleveres ausgedacht und zwar ähm RSA-Verfahren, der ein oder andere Hörer hat's vielleicht schon mal verstanden. Ähm,\nist kommutativ. Das heißt, RSA ist ein Publicie-Verschlüsselungsverfahren. Und mit dem kann man sowohl Sachen verschlüsseln,\nals auch Sachen signieren. Und jetzt kommt der Trick, wenn man etwas verschlüsselt und dann signiert\nEs ist dasselbe, als würde man es signieren und dann verschlüsseln. Das heißt, man kann quasi einen Umschlag nehmen, da tut man etwas rein\nmit Kohlepapier, kann dann von außen drauf unterschreiben. Dann kann der Nächste den Umschlag aufmachen und wegwerfen und hat dann das, was in dem Umschlag war, mit der Unterschrift drauf. So muss man sich das digitale Geld von dem David Schaum vorstellen.\nBlinde Signaturen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:12",
+      "text": "Also nochmal langsam. Das also der Wunsch, die elektronisches Geld zu haben,\nSteht ja im Prinzip daraus, dass es so wunderbar flexibel ist und dass es im Prinzip auch eine Vision sein könnte für das Bezahlen im Netz.\nNicht nur im Netz, aber auch im Netz beziehungsweise, dass alle möglichen elektronischen Geräte äh das Geld vorhalten könnten, nicht wahr? So diese elektronische Wolle et cetera. So,\nund äh einfach nur so Geldscheine als Digitalblocks auszugeben ist natürlich so äh Quatsch. Haben wir ja schon besprochen, weil es eben sich wunderbar kopieren lässt und an der Stelle kommt die Cryptografie mit rein.\nund was du ansprichst, ist mit RSA ist jetzt einfach das Public Privat Key Verfahren, so wie das viele von GPG äh PGP, GPG herken oder zumindest,\näh gehört haben. Das heißt, eine Asymmetrie,\nin dem Konzept, dass man mit zwei Schlüsseln äh arbeitet, die sich gegenseitig ergänzen. Das, was sie mit dem einen verschlüsselt, kann ich mit dem anderen entschlüsseln und umgekehrt.\nUnd das hat jetzt der Schaum auf die Idee E-Cash angewendet."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:07:21",
+      "text": "Genau, also wir können ja mal einen Schritt zurückgehen, das äh Online-Verfahren könnte so funktionieren, es gibt eine Zentralbank,\nDie Zentralbank gibt Geld raus. Also ich gehe dahin, überweise den auf klassischem Wege zehn Euro und die stellen mir dann eine äh Signatur aus. Also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:37",
+      "text": "Sozusagen einen digitalen Geldschein."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:07:38",
+      "text": "Einen digitalen Geldschein, da steht drauf, dieser Geldschein ist zehn Euro wert. Er hat die Seriennummer 23 unterschrieben von der Zentralbank. Dann kann ich damit zum Händler gehen, kann sagen, guck mal, hier ist mein Geldschein,\nKann er die Unterschrift überprüfen? Kann zur Zentralbank laufen und fragen, wurde der Geldschein mit der Nummer 23 schon ausgegeben und äh die Zentralbank sagt dann ja oder nein und wenn sie nein sagt, dann kann der Händler dieses Geld akzeptieren, kann sagen, ist jetzt meins.\nsagt der Bank, okay, ist jetzt mein Geldschein und dann ist das Geld da gelandet. Die Idee von Schaum ist so,\nim Prinzip hat man auch einen unterschriebenen Geldschein, nur dass ich als User, der das Geld quasi bei der Zentralbank eingezahlt hat, jetzt digitales Geld bekommt,\nIch erzeuge diesen Geldschein. Das heißt, ich denke mir eine Seelennummer aus, schreibe drauf, das sind zehn Euro von der Zentralbank."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:27",
+      "text": "Ich denke mir eine Seriennummer aus."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:08:29",
+      "text": "Ich wähle ein ausreichend große, zufällige Zahl. Ja, ein random nonst nennt man das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:35",
+      "text": "Mhm. Nons."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:08:36",
+      "text": "Number used only once."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:39",
+      "text": "Okay."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:08:42",
+      "text": "Mhm ähm dann packe ich das in den Umschlag, schicke das der Bank. Die unterschreibt auf dem Umschlag, schickt mir das zurück, hat jetzt also die Seelen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:51",
+      "text": "Warum erzeuge ich denn die Nummer? Warum erzeugt denn die Bank nicht gleich die Nummer."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:08:54",
+      "text": "Die Bank nicht weiß, dass mein Geld diese Seriennummer hat. Weil es soll ja anonym sein, soll ja wie Geld sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:01",
+      "text": "Ach so, das heißt, die Bank weiß gar nicht, welche Nummer es ist. Genau. Aber wodurch weiß sie das nicht?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:09:08",
+      "text": "Dadurch, dass ich das vorher verschlüsselt habe mit so einem asymmetrischen Verfahren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:13",
+      "text": "Aber warum muss ich denn da überhaupt noch so eine Nummer reintun, wenn äh das eh verschüsselt ist?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:09:19",
+      "text": "Damit man die Geldscheine von Land unterscheiden kann, damit wenn jemand das zweite Mal Geld ausgibt,\nalso das Double-Spendding-Problem damit erkannt wird, der selbe Geldschein wird zweimal ausgegeben, weil ich kann ja hinterher den Digitalblock, den die Bank unterschrieben hat, mehreren Händler geben und die Frage ist immer, wie wird verhindert, dass das Geld mehrfach ausgegeben wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:36",
+      "text": "Okay, aber wenn man diesen wenn man die Zahl gar nicht sieht, wie kann man dann äh feststellen, dass irgendwas doppelt ist."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:09:41",
+      "text": "Na, bevor ich sie ausgebe, muss ich den Geldschein wieder einschlüsseln. Das heißt, ich verschlüssele den, schicke den zur Bank, zum Unterschreiben. Die unterschreibe den. Ich kriege den wieder zurück."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:09:49",
+      "text": "Sie unterschreibt Ihnen jetzt sozusagen auf Basis eines Tausches. Das heißt, ich gebe denen quasi Geld, was Sie schon kennt. Ja, Euro oder was auch,\nDafür kriege ich das Äquivalent als digitalen Geldschein.\nreden aber jetzt ja noch nicht unbedingt von einer neuen Währung, sondern wir befinden uns eigentlich noch in derselben Währung äh."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:10:11",
+      "text": "Das ist relativ Abitrea, ob du jetzt sagst, ich habe hier."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:14",
+      "text": "Könnte auch eine andere sein."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:10:15",
+      "text": "Es könnte auch eine komplett eigene."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:16",
+      "text": "Um's einfach zu halten, bleiben wir erstmal dabei, dass es dieselbe Währung ist. Das heißt, es ist nur eine andere eine andere Form von Geldschein, die ich erhalte von der Bank. So und ich habe mir mal so eine Zahl ausgedacht, verschlüsselt die, aber womit verschlüssele ich die? Mit welchem Schlüssel."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:10:31",
+      "text": "Ich erzeuge mir ein public private."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:33",
+      "text": "Also mein eigenes Pärchen sozusagen. Genau. So und dann verschlüssele ich das mit meinem öffentlichen Schlüssel."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:10:40",
+      "text": "Genau. Dann gebe ich das dahin. Genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:42",
+      "text": "Dahin. Und was kann die Bank dann überprüfen? Sie kann erstmal überprüfen, dass das mit meinem öffentlichen Schlüssel verschlüsselt wurde."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:10:51",
+      "text": "Na, sie kann den Inhalt nicht überprüfen. In der Praxis läuft das so, dass man äh sozusagen hundert solcher Umschläge macht.\nund neunundneunzig werden von der Bank geöffnet. Das heißt, wenn äh die Bank sucht sich neunundneunzig von den 1hundert aus, die ich ihnen geschickt habe und sagt, da wollen wir jetzt aber mal den Inhalt sehen. Und da schicke ich dann mal ein Private Key dazu,\nden ich sozusagen pro Geldschein erzeuge."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:10",
+      "text": "Also jeder Geldschein hat einen eigenen Schlüssel. Schlüsselpaar."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:11:13",
+      "text": "Genau, also nur für diesen dieser Umschlag für den Unterschriftsvorgang hat ein eigenes Schlüsselpaar, genau. Und bei 99 sagt die Bank dann, ich will sehen,\nund äh wenn in den neunundneunzig überall zehn Euro drinsteht eine ordentlich generierte Säennummer, dann glaubt mir die Bank, dass die Hundertste auch in Ordnung ist. Das heißt, ähm ich habe sozusagen eine Chance von 1 zu 100 der Bank gegenüber zu schummeln,\nund ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:36",
+      "text": "Das ist jetzt Teil dieses Eintauschprozesses."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:11:38",
+      "text": "Genau, genau, genau. Also sozusagen die die Bank kann ja nicht überprüfen, was in diesem Betthaufen drin ist, den ich ihr schicke, weil da habt ihr echt nur den Schlüssel für und das ist ja auch beabsichtigt so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:46",
+      "text": "Aber was beweisen denn die anderen 99, wenn sie eigentlich nicht übertragbar sind auf den Hundertsten?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:11:52",
+      "text": "Die Bank wählt zufällig aus, ich schicke hundert hin und die Bank wählt sich neunundneunzig zufällig aus, das heißt die weiß nicht welchen von den hundert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:58",
+      "text": "Ach so. Ah okay, verstehe. Einer einer von den 1hundert könnte wird dann sozusagen derjenige sein, den ich dann verwende,\nDas heißt, die ich schicke hundert hin und die Bank sagt, okay für genau diese neunundneunzig von den 1hundert gibt mir jetzt auch noch die Schlüssel dazu,\nin einem zweiten Schritt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:12:19",
+      "text": "Genau. Wenn ich das dann mache ähm und die Bank nachgeguckt hat, dass in den 99 Betthaufen, die sie entschlüsseln konnte, das Richtige drin ist. Dann gibt es ausreichenden Grund mir zu vertrauen, dass der Hundertste auch in Ordnung ist.\nDann unterschreibt die Bank diesen Bedrophen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:34",
+      "text": "Was für eine Bittverschwendung."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:12:38",
+      "text": "Zur Stromverschwendung kommen wir später. Es ist ja alles noch relativ harmlos."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:41",
+      "text": "Na gut, aber Bits lassen sich ja ganz gut recyclen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:12:44",
+      "text": "Genau, genau, genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:45",
+      "text": "Sprich jetzt habe ich ähm mein mein Euro sozusagen oder bei welcher Menge wollen wir bleiben."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:12:54",
+      "text": "Noch nicht noch nicht ganz der nächste Schritt kommt noch ähm wenn ich den unterschriebenen verschlüsselten Betthaufen zurückbekommen habe, dann entschlüssele ich den wieder mit meinem Schlüssel, den ich extra gezockt habe, um diesen Geldschein zu generieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:05",
+      "text": "Also dieser eine dieser eine von hundert der wo ich nicht habe den Schlüssel mitgeben müssen um zu beweisen, dass ich überhaupt in der Lage bin was Ordentliches zu erzeugen,\nmacht die Bank mit dem einen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:13:16",
+      "text": "Der wird unterschrieben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:17",
+      "text": "Unterschrieben in dem Glauben, dass der genau dieselbe Integrität hat wie alle anderen auch. Okay und mehr tut sie aber nicht. Sie unterschreibt dem jetzt keinen Wert zu."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:13:30",
+      "text": "Nee, weil den Wert habe ich da ja reingeschrieben und die Bank glaubt, dass es schon in Ordnung ist, weil ich habe ja vorher den Zirkus mit den 100 anderen Schüssel."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:13:36",
+      "text": "Das heißt, ich habe diese Menge an Geld, die dieser Geldschein repräsentieren soll, da hinein codiert. Da steht drin, ich bin ich bin zehn Euro.\nIch bin zwei Öltanks und die Bank glaubt mir das einfach, dass ich das dass ich das schon richtig getan habe, weil in anderen neunundneunzig steht da halt auch drin. Ich bin zehn Euro.\nokay so und dann kriege ich das unterschrieben zurück und und mehr fügt die Bank dem nicht hinzu, sondern es sagt einfach nur so, meiner Meinung nach ist das irgendwie äh valide oder unserer Meinung nach. Und jetzt habe ich diesen Block,\nder äh verschlüsselt ist mit dem privaten Schlüssel der Bank, wo der entsprechende öffentliche Schlüssel allgemein bekannt ist. Richtig,\nheißt jeder Mann kann sehen, dass das eine gültige Signatur der ausgebenden Bank ist."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:14:21",
+      "text": "Genau, die aber jetzt noch über den Betthaufen ist. So und jetzt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:23",
+      "text": "Über einen Bitthaufen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:14:24",
+      "text": "Kommt der entscheidende Schritt dabei, weil RSA kommutativ ist, also man die Reihenfolge der Operation vertauschen kann, kann ich jetzt den unterschriebenen, verschlüsselten Bitthaufen entschlüsseln,\nhabe dann einen unterschriebenen entschlüsselten Betaufen. Das heißt, ich habe dann einen lesbaren Text, der trotzdem noch von der Bank unterschrieben ist. Und das ist die Magie dabei."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:14:45",
+      "text": "Das ist jetzt eine Eigenschaft von von RSA generell oder von Public Private Key Verfahren generell oder."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:14:52",
+      "text": "Nee, so würde ich das nicht sagen. Von also von RSA im Speziellen. Es mag auch andere geben, die auch kommunativ sind, aber eben RSA hat diese Eigenschaft, dass man Verschlüsselungen, Signieren vertauschen kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:03",
+      "text": "Das heißt, ich kann den entschlüsseln, aber er ist immer noch unterschrieben,\nUnd das heißt wiederum, dass man ohne irgendeine Krypto,\nsehen kann, dass das jetzt zehn Euro sind und das hat die Bank unterschrieben und ich kann jetzt auch diese Seriennummer, die ich mir selber ausgedacht habe, kann man jetzt lesen.\nNur die Bank weiß nicht, welche drin war. Das heißt, dieses ursprüngliche Verschlüsseln ist eigentlich nur dazu da, um äh diese Seriennummer zu verbergen,\nAber danach existiert sie. Nur die Bank weiß nicht, wann,\ndenen irgendwann mal wem unterschrieben hat, sondern das Ding existiert. Äh man sieht, ah, es ist unterschrieben. Das hat also Gültigkeit, aber äh es gibt keinerlei Trail, wer das jetzt war.\nes ist eigentlich perfektes anonymes Geld an der Stelle."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:15:53",
+      "text": "Ja, einer perfekte es ist anonym, aber es ist kein perfektes Geld."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:15:57",
+      "text": "Das okay, lassen wir das mit dem perfekt erstmal weg. Aber ähm gut, aber jetzt habe ich's verstanden. So jetzt habe ich also einen Digitalhaufen, der sagt, ich bin zehn Euro und meine Nummer ist hm hm. So wie äh jeder Geldschein auch eine Nummer hat,\nAlso im Prinzip so ein direktes Äquivalent zu dem, was man auch kennt.\nMan sieht den Wert, man sieht die Nummer und es gibt diese Bestätigung drauf, weil da ist ja die Unterschrift von dem Bundesbankpräsidenten draufgedruckt et cetera."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:16:22",
+      "text": "Dies äh in dieses digitale Geld nach Schaum. Das i cash hat als aber ein paar Eigenschaften, die nicht wie digitales Geld sind. Und zwar wenn ich mit meinem Geldschein zum Händler gehe und im äh Händler den Geldschein gebe, dann kann der zwar\nWenn er den Publici der Bank hat, überprüfen, dass die Unterschrift in Ordnung ist\nAber rausfinden, dass ich den Geldschein nicht schon woanders ausgegeben habe, kann er wiederum nur mit einer Online-Verbindung. Das heißt, er läuft dann zur Zentralbank,\nund sagt, guck mal, ich habe hier einen Geldschein mit der Sälennummer X und die Zentralbank sagt dann irgendwie, okay, die Seellnummer habe ich noch nicht gesehen. Wir schreiben dir diesen Geldbetrag gut,\noder die Bank sagt, nee, diese Seriennummer wurde schon ausgegeben, das Geld ist nicht echt. Du äh kannst das Geld nicht kriegen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:01",
+      "text": "Das heißt, es ist eigentlich weiterreichen dieses Geldscheins ist zwangsläufig mit so einer Onlinebuchung verbunden."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:17:07",
+      "text": "Genau, also die Annahme meines Geldscheins. Man kann nicht äh das sozusagen von Person zu Person übertragen und dann irgendwann mal bei der Bank einzahlen. Dabei riskiert man äh double spanding. Das heißt nur durch eine Online-Überprüfung kann Double Spending verhindert werden.\nEs gibt theoretische Verfahren, die das verbessern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:26",
+      "text": "Ist denn das jetzt schon alles, was man über wissen muss, um es zu verstehen?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:17:30",
+      "text": "Ich glaube, das ist schon alles. Mehr mehr ist in i-Cash nicht dran."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:33",
+      "text": "Das heißt, das war die ursprüngliche Idee. Ist das nicht mal von der Deutschen Bank getestet worden? War das."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:17:38",
+      "text": "Ja ja ja, das war ähm ich erinnere mich. Ich hatte damals, es muss."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:41",
+      "text": "Mitte 90er Jahre irgendwie."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:17:42",
+      "text": "Neunziger fünfundneunzig, sechsundneunzig hatte ich tatsächlich eine Yahoo-Kreditkarte mit angeschlossenem E-Cash.\nAlso die die Deutsche Bank hat damit wirklich einen Feldversuch gemacht. Das Problem ist ähm,\nalso der Schaum hatte die Patente auf dieses Verfahren. Der hat sich dieses irgendwie Unterschrift und äh Verschlüsselung vertauschen äh patentieren lassen,\nUnd nachdem was ich gehört habe, ist er wohl geizig äh äh gierig geworden, hat gesagt irgendwie na ja was was bietet ihr mir? Fünf Millionen? Ich will zehn, was bietet ihr zehn Millionen? Ich will zwanzig, was bietet ihr zwanzig Minuten? Nee, ich will sechzig und irgendwann haben die Banken gesagt, na gut, dann geh doch weg,\nAlso insbesondere weil er ein PayPal kam und PayPal es es gab damals wo sie eine Präsentation wo PayPal gezeigt\nwas es alles so an theoretischen Features gibt für digitales Geld, so worüber wir gesprochen haben, mit mit Blinding und mit anonymen und mit übertragbar und dann kam die Folie, das haben wir alles nicht, aber wir haben zwei Millionen User,\nAlso PayPal hat diesen Markt,\ndamals ganz schön ausgetrocknet, indem sie im Prinzip etwas gebaut haben, was keine digitale Währung ist, sondern äh halt eine Webseite mit Buchhaltung, so eine Art Onlinebank."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:48",
+      "text": "Onlinebank, ja. Also genau genommen ist, glaube ich, Pepe keine Bank. Oder? Sondern nur so ein ein ein money agent dieses nur weiterreichen. Deswegen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:18:57",
+      "text": "Ist so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:58",
+      "text": "Geld auf diese Transaktionen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:18:59",
+      "text": "Das ist so eine halbe Bank, ja. Also im Prinzip funktioniert das technisch wie eine Bank, nur dass sie keine Vollbank sind, weil man da keine Aktien kaufen kann. So drauf läuft es hinaus.\nGeld hin, Geld zurück, also quasi wie funktioniert schon wie ein Girocott, nur ohne den ganzen Kryptokram und alles online und alles mit, es läuft über deren Server und alles ohne Anonymität,\nJa und daran ist damals das Digi Cash gescheitert. Und ähm mittlerweile sind die Patente von Schaum ausgelaufen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:25",
+      "text": "Also Digi Cash war sozusagen der Brandname von E-Cash der Idee."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:19:29",
+      "text": "Genau Digi Cash hieß die Firma e-Cash war der The Brand für für das digitale Geld.\nEs gibt mittlerweile, äh nachdem das Patent ausgelaufen ist, äh einige Open Source implementierungen äh dieser Technologie. Ja, Lykre zum Beispiel ähm,\nLUCRI. Ähm ich habe ja noch eine Übersicht über verschiedene digitale Geldverfahren. Da sind auch einige andere Reimplementierung. Ähm,\nhaben sogar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:19:59",
+      "text": "Hat da irgendwas äh irgendeine Bedeutung? Also."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:20:01",
+      "text": "Nichts davon hat irgendeine Bedeutung, also nichts davon ist groß geworden, als dass es sich wirklich lohnen würde."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:06",
+      "text": "Das heißt auch dieses funktioniert nach exakt demselben Konzept."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:20:09",
+      "text": "Genau, ist im Wesentlichen eine Rehaplementierung dieses äh Schaum-E-Cash."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:14",
+      "text": "Aber wenn man jetzt sagen wir mal äh diese Software nimmt also ich meine taugt das Lükro auch was oder ist das jetzt nur so eins von denen, die das mal äh."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:20:23",
+      "text": "Ehrlich gesagt noch nicht ausprobiert, aber ähm,\nLeute haben's wohl schon mal verwendet. Also es ist nicht jetzt in so massenhafter Benutzung, dass man."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:34",
+      "text": "Hier steht original bei David Wagner."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:20:38",
+      "text": "Ja, David Wagner ähm hat äh sozusagen das Verfahren von Schaum umgebaut, sodass es nicht mit RSA sind, mit Tiffy Helmen Signaturen funktioniert,\nDas ist halt inplementiert. Aber im Wesentlichen geht es auch auf diese Schaumblinding-Idee zurück."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:20:53",
+      "text": "Ist ist der Name für dieses äh ich lasse dich unterschreiben aber du weißt nicht was du unterschreibst, aber ich habe tro,\nmit der du sicherstellen kannst, dass das schon alles richtig ist. Und äh das heißt, wenn ich jetzt mir so eine Software nehmen würde, ich gehe jetzt einfach mal davon aus, dass das äh irgendwie schon äh funktioniert. Könnte ich quasi so meine eigene E-Cash-Bank bauen und Leuten,\nGeld aushändigen und die könnten dann mit einer Software die wäre ja erforderlich äh,\nquasi dieses Geld austauschen, aber man hat ja dann immer noch dieses Problem, dass so ein also wir jetzt eigentlich auch im richtigen Leben, da ist halt ein Betrag,\neingebrannt. Wenn ich aber jetzt nicht exakt genau diesen Betrag bezahlen muss, sondern quasi Wechselgeld rausgeben muss, dann,\nist das wie im richtigen Leben und die anderen brauchen dann auch entsprechend einen Cent und fünf Cent und zehn Cent und äh tralala Geldscheine."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:21:48",
+      "text": "Tatsächliche Kryptographen viel Gedanken drüber gemacht und sind auf aufteilbare Münzen gekommen. Also es gibt äh basierend auf Heschbäumen, das heißt ähm du hast einen Baum und jeder Knoten in dem Baum ist der Hesch aller drunter liegenden Bäume.\näh wenn man das als digitale Münze betrachtet, kann man sozusagen Teilbäume daraus lösen und Wechselgeld erzeugen.\nin der Theorie. Äh ich glaube nicht, dass es eine praktische Implementierung davon gibt, die wirklich benutzt wird,\nalso die die Münzen werden dann auch relativ groß. Irgendwie kann dann schon mal 20 bis 30 Kilobyte groß sein. Okay, nach heutigen Verhältnissen ist es natürlich gar nichts. Das ist völlig egal.\nUnd es gibt auch äh tatsächlich zumindest in der Theorieprotokolle um diese, ich muss online sein, um die Münze anzunehmen äh zu verhindern,\nzwar über ähm das genannte Secret Splitting. Also das ist im Prinzip,\nso was wie eine muss sich das vorstellen wie so ein Rate Volume. Ja, man hat also zwei Festplatten, man hat drei Festplatten, über die die Daten verteilt sind, man kann jeweils von,\nzwei dieser drei Festplatten wieder den gesamten Inhalt rekonstruieren, wenn eine verloren gegangen ist, eine kaputt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:22:56",
+      "text": "Eine kann kaputt gehen. Mhm."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:22:59",
+      "text": "So eine Aufteilung, aber wenn man."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:00",
+      "text": "Redundantendaten."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:23:01",
+      "text": "Wenn man nur eine Platte hat allerdings, hat man bloß einen Bitthaufen. So man braucht zwingend die zweite Platte dazu, um die Daten wieder rekonstruieren zu können und ähm,\nDas ist sogenanntes Secret Splitting. Also man kann kann jetzt zum Beispiel Daten auch so ein kopieren und ähm von den drei Platten äh,\nteilen wir uns da drei Leuten so auf, dass jeder eine Platte hat, dann können nur zwei Leute zusammen wieder den Inhalt rekonstruieren,\nalso die grundlegende Idee, weil es die und was man ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:29",
+      "text": "Mit so verteilten so Doppel-Schlüsselsystemen für und so."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:23:33",
+      "text": "Genau, genau, genau. Oder wie beim Atomraketen zünden, wo dann zwei gleichzeitig ihren Schlüssel reinstecken müssen und und rumdrehen,\nin Filmen, ich glaube in der Praxis haben sie da einfach einen Knopf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:43",
+      "text": "In der Praxis reicht ein Software glitch."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:23:46",
+      "text": "Genau. In der Praxis war auch der rote Knopf des Präsidenten nicht angeschlossen, weil die Generäle dem amerikanischen Präsidenten nicht äh geglaubt haben, dass er Bootfall auf den Knopf drückt. Aber,\nAndere Geschichte. Jedenfalls ähm wir erinnern uns vorhin an die Geschichte mit den hundert Umschlägen, von denen die Bank dann gesagt hat bei neunundneunzig mach mal auf.\nso ein bisschen funktioniert das dann auch mit der,\nmit dem Secret Splitting und zwar schreibe ich als derjenige, der die Münze rausgibt, meinen Namen, jeweils wieder in 100 von diesmal aufgeteilte Umschläge. Also wenn man äh ich schreibe meinen Namen, es gibt einen linken Umschlag, einen rechten Umschlag,\nUnd wenn man beide aufmacht und zusammenfügt, dann kriegt man meinen Namen raus. Und wenn man nur einen von beiden aufmacht, dann hat man einen Bithaufen. Mache ich auch wieder hundert Mal,\njetzt meine Münze ausgebe, sagt derjenige, der die Münze annimmt für von eins bis 100, ob er jeweils den linken oder den rechten Umschlag will,\nGebe ich ihm jeweils den linken oder den rechten Umschlag. Und wenn ich jetzt dieselbe Münze nochmal ausgehe bei einem anderen Händler."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:48",
+      "text": "Also dieselbe Münze würde dann aus zwei Umschlägen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:24:52",
+      "text": "Nö aus aus 2hundert Umschlägen. Weil ich es hundertmal mein Name drin, aufgeteilt auf zwei Umschläge.\nfür jeden Einzelnen sagt derjenige, der es annimmt, also diesmal nicht die Bank, sondern der, der es annimmt, sagt jeweils ich möchte gerne den linken Umschlag haben oder ich möchte den rechten Umschlag haben,\ndamit kann er noch nichts anfangen mit dem Inhalt der einzelnen Umschläge.\nWenn jetzt aber ich zum zweiten Händler gehe und da auch diesen Geldschein ausgebe, sagt der ja auch wieder, ich möchte hier den linken haben oder ich möchte hier den Rechten haben, dann ist die Wahrscheinlichkeit hoch, dass bei einem dieser 100 Pärchen der erste Hände den linken Umschlag nimmt und der zweite Händler den rechten Umschlag,\nwenn der Zweite dann feststellt, er wurde betrogen, weil er einen Tag später zur Bank geht und die meine äh meinen Geldschein einlösen will, dann äh kann er sich mit dem ersten Händler zusammentun und der erste Händler hat gesagt, ich will einen linken Umschlag, der zweite Händler hat gesagt, ich will einen rechten Umschlag,\ndann kommt mein Name dabei raus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:44",
+      "text": "Aber es könnte auch sein, dass er dass beide den linken Umschlag haben wollten und von daher."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:25:49",
+      "text": "Macht man das hundert Mal. Mit hundert Umschlagpärchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:54",
+      "text": "Ach so.\nDie Wahrscheinlichkeit, dass irgendeiner von den beiden irgendeinen Linken hat, zu dem der andere den Rechten hat, ist sehr hoch. Ah, verstehe. Oh, da wird aber viel äh noch mehr Bitmüll erzeugt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:26:11",
+      "text": "Noch mehr Bitmüll. Also jetzt sind wir zusammen mit den aufteilbaren Münzen sind wir schon bei einem echt großen Haufen Blitz. Also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:17",
+      "text": "Das aber das ist zumindest so, das heißt die Wahrscheinlichkeit, dass in dem Moment wo ich einen Geldschein zweimal ausgebe, dass das zum Zeitpunkt der Einlösung bei der Bank,\nWas ja immer noch stattfinden muss, auffällt, ist sehr hoch. Das heißt, die Motivation für mich, das zu tun, ist sehr niedrig, weil ich danach quasi kryptografisch abgesichert schon vorab unterschrieben habe, dass ich betrogen habe."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:26:40",
+      "text": "Genau. So heißt natürlich auch, dass meine in Anführungszeichen echte Identität der Zentralbank bekannt sein muss. Weil nur dann funktioniert das mit hinterher."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:49",
+      "text": "Ja. Ja. Was ja so vorher noch nicht da wäre, aber okay."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:26:56",
+      "text": "Also Bargeld kann ich auch anonym entgegennehmen und in dem Fall muss ich immer zwangsläufig meine Identität bei der Zentralbank hinterlassen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:03",
+      "text": "Mhm und ähm das ist jetzt aber auch nur eine Idee oder ist das auch in irgendwas implementiert worden?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:27:09",
+      "text": "Das ist meines Wissens erstmal nur eine Idee. Also das ist ein Paper."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:12",
+      "text": "Ja"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:27:13",
+      "text": "Noch nicht fertig als Software."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:16",
+      "text": "Hm. Aber man man merkt schon, dass so diese Grundidee ihr Geld,\nbisschen daran krank, dass man dass es ja hier um Geld geht und von daher so das Bedürfnis zu bescheißen natürlich enorm ist.\nJa, also wenn da auch nur die kleinste Lücke in dem System drin ist, wird sie gnadenlos ausgenutzt werden."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:27:40",
+      "text": "Also ein entscheidender Akzeptanz Schwierigkeitspunkt ist auch die Geschichte mit der Zentralbank, weil wir gehen davon aus, es gibt die Zentralbank und die ist vertrauenswürdig.\nNur wer soll das sein? Also wenn die Deutsche Bank äh hinter so einem Projekt steht wie damals wird der 9zehn E-Cash dann geht das vielleicht so kann man sagen naja geht, da war halt sein Markt noch nicht da, als hat sich das ausgebreitet hätte, aber wenn wenn du jetzt kommst und sagst, ich mache jetzt die Tim Brittlaufbank auf.\ngibt's vielleicht Leute die sagen OK den Tim den kenne ich, den vertraue ich aber so die die breite Masse da draußen die Bevölkerung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:12",
+      "text": "Schwieriger Hacker. Er stellt äh Radiosendungen ins Netz, weiß der Geier, was er noch alles macht."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:28:16",
+      "text": "Genau. So das also warum warum sollte man dir trauen als Zentralbank ist die Frage?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:21",
+      "text": "Echt die Frage."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:28:26",
+      "text": "Und also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:27",
+      "text": "Es könnte ja die Nationalbank äh sein oder die internationale E-Cash Cooperation der Uno oder so. Also irgendwas, was so."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:28:36",
+      "text": "Ja, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:37",
+      "text": "Level of Acceptance hat."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:28:39",
+      "text": "Sowas können die machen, aber haben sie halt nicht getan und das ist sicherlich der Grund, warum sich diese Systeme äh nicht durchgesetzt haben, weil da also es gab einfach nicht den großen Player, dem ausreichend viele Leute vertrauen, der das gemacht hätte. Und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:51",
+      "text": "Mhm. Aber es könnte ja zumindest so in,\nGerade mal was in der Anwendung sagen können. Ich meine äh äh was in der Masse nicht funktioniert, funktioniert ja bei closed user äh äh Groups. Vielleicht, ja, wo so,\nLevel auch hergestellt werden kann. Also in meiner Peer Group, ja, wo das Vertrauen mir gegenüber natürlich maximal ist,\nkönnte ich dann schon äh Bank spielen, ne, aber da könnte man wahrscheinlich auch genauso gut mit Schattenbuchungen arbeiten.\nFrage ist, was wäre dann so der eigentliche Vorteil davon? Der Vorteil wäre, dass man ein System hätte, wo die eigentlichen Transaktionen geheim bleiben."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:29:30",
+      "text": "Genau, also wer wem Geld gegeben hat, magst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:29:33",
+      "text": "Aber in dem Moment, naja gut."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:29:34",
+      "text": "Du siehst zum Beispiel wer Geld angenommen hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:29:36",
+      "text": "Ja, ja eben, also ich habe ja schon den schon im ersten Schritt,\nIm ersten Schritt äh bricht ja eigentlich diese Anonymität auf, weil in dem Moment, wo ich angenommenes Geld äh einlösen muss und es ist ja sogar so,\nWenn man jetzt mal davon ausgehen, dass es keine teilbaren Scheine sind und ich wirklich sage, okay, äh ich schulde dir sechs Euro siebenundfünfzig, ja hast du zehn Euro, dann musst du mir ja drei,\nEuro irgendwas geben und dann muss ich das ja auch wieder,\neinlösen, das heißt in dem Moment ist ja äh für jeder halbwegs gut arbeitende Statistik-Software sofort äh absehbar. Ah hier wurde zeitgleich dieser Betrag und dieser Betrag und da und da,\nMan weiß."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:30:21",
+      "text": "Heißt, kann man mit irgendwie mit Cent großen Münzen arbeiten und aber es ist schwierig. Also dieses gesamte Traffic in der Isisgeschichte spielt natürlich auch eine Rolle, dass man guckt, was ist rein, was ist raus. Das funktioniert bei dem Geld auch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:33",
+      "text": "Also ab dem zweiten Schritt ist ja sozusagen klar, wer welches Geld hat. Es ist ja nur, dass eigentlich die initiale Ausgabe erst mal anonym ist, aber ab dem der ersten Transaktion weiß, die Zentralbank, wer welchen Schein hat,\nund wer es dann im nächsten Schritt vielleicht wieder einlöst, das heißt das ist ja eigentlich Quatsch mit dieser Anonymität.\nHätte man ja eigentlich auch gleich diesen äh Unfug mit den äh hundert am Anfang auch gleich sein lassen können, weil das ja nur diesen allerersten Schritt äh."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:31:01",
+      "text": "Ja, das ist im Prinzip der PayPal-Coach. PayPal hat gesagt, guckt mal her, ich bin die Zentralbank und wir vergessen den ganzen Kryptoquatsch. Hier habt ihr eine Webseite, gebt Passwort ein und gut ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:10",
+      "text": "Ja. Also fragt sich jetzt sozusagen, wer ja, in welchen Vorteil hat denn überhaupt noch das E-Cash an der Stelle?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:31:15",
+      "text": "Ich würde sagen, dieses klassische E-Cash keinen besonders großen. Das ähm so die die Zeit ist ein bisschen abgelaufen und der Vorteil ist nicht wirklich da."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:26",
+      "text": "Aber war eine schöne Idee."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:31:27",
+      "text": "War aber eine schöne Idee, ja. Was auch mathematisch so toll elegant mit der Kommuntativität der äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:33",
+      "text": "Ja, ich glaube, das ist auch so ein bisschen ich glaube, so dieses i-Cash Ding ist, glaube ich, bei den Kryptologen dann auch so ein bisschen so der Privatporn. Oder?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:31:40",
+      "text": "Ja, ja, ja, klar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:42",
+      "text": "So das wollen die einfach mal, das wollen die irgendwie gelöst bekommen und kostet was ist voller."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:31:47",
+      "text": "Ja außerdem gibt es da diese tolle Konferenz in der Karibik, die Financial Kulturgrafie und da will man natürlich hinfahren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:52",
+      "text": "Alles klar. Also traut keinem Kryptographen, sage ich nur.\nAuch alles nur so Geheimwissenschaftler,\nUnd dann passierte auch erst mal lange Zeit nichts. Ich meine PayPal und auch äh ein paar weniger bekannte andere Zahlungs,\nMenschen, Firmenorganisationen im Netz verfolgen jetzt eigentlich alle dasselbe Ding. Ne, man macht auch keine neuen Währungen auf,\nsondern man ist eigentlich nur so der Internetproxie für den Zahlungsverkehr und im Prinzip,\nwie man so mit Western Junien das Geld von der einen Postfiliale zur anderen äh Postfiliale äh übertragen lässt, so benutzt man PayPal.\num eben von dem eigenen äh Account zu einem anderen Account das Geld weiterzuleiten und PayPal nimmt sich eben so eine Transaktionsgebühr,\nwird damit reich oder auch nicht und äh man selbst hat nicht mehr das Problem, dass man ja,\nandere Wege nehmen muss, auch wenn's die natürlich gäbe, aber jeder weiß, wie schwierig heutzutage immer noch eine Banküberweisung ist im Vergleich zu so einer PayPal-Transaktion.\nauch irgendwie absurd ist ja also warum die Banken da immer noch nichts dem haben entgegensetzen können und sich davon PayPal einfach die Butter vom Brot nehmen lassen, ist mir ehrlich gesagt ein Rätsel."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:33:11",
+      "text": "Unglaublich. Wahrscheinlich weil noch genügend Leute Überweisungen machen und äh die Banken noch genügend daran verdienen, dass es überwiesene Geld erstmal drei Tage irgendwo rumliegt. Also da muss ja extra Code dafür geschrieben werden, damit die Überweisung nicht sofort da ist, sondern dass das Geld noch ein bisschen braucht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:25",
+      "text": "Auch wirklich absurd ne, dass das so lange dauert."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:33:28",
+      "text": "In Brasilien gibt's da übrigens gesetzliche Vorschriften, da muss das Geld am selben Tag noch da sein. Und plötzlich kriegen die Banken das hin, ist erstaunlich, oder?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:35",
+      "text": "Ein Wunder. Ja ja. Das ist echt das ist wirklich Beschiss."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:33:41",
+      "text": "Na gut, aber ja, PayPal hat natürlich auch Nachteile, also wer mal an WikiLeaks gespendet hat, hat das sicherlich mitbekommen. Ich glaube, auch du hattest mal so ein PayPal-Konto, das dann plötzlich eingefroren wurde, wo Leute irgendwie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:33:54",
+      "text": "Genau, damals so äh CTC-Zeiten, wo dann so äh Gelder fürs Camp eingingen und so und dann war ihnen das irgendwann auf einmal zu viel äh Transaktion und so."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:34:00",
+      "text": "Genau dann dann und dann muss man plötzlich nachweisen, dass irgendwie der Mädchenname der Mutter uns zwar anhand einer Gasrechnung an ihrer alten Wohnung aus den 70ern und denken sich dann ist immer ganz absurde Sachen aus, was man denn jetzt zeigen soll."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:12",
+      "text": "Ja, auf einmal muss man sozusagen die Anonymität dann aber auch wirklich vollständig brachial aufgeben, wo es am Anfang kein Problem war mal eben so ein Account aufzumachen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:34:19",
+      "text": "Genau, genau, genau. Und also ich möchte gar nicht wissen, wie viel Geld äh PayPal mittlerweile verdient hat über Konten, wo der der es aufgemacht hat, sich dann plötzlich entschieden hat, nee, ich glaube, ich existiere doch nicht. So es ist bestimmt einiges zusammengekommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:32",
+      "text": "Ja. Habe ich mir auch gut vorstellen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:34:35",
+      "text": "Na ja, auf jeden Fall ist es unzufriedenstellend und ähm hat viele Leute geärgert und das ist, glaube ich, der Grund, warum äh Bitcoin so eingeschlagen hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:45",
+      "text": "Du meinst jetzt das WikiLeak-Ding oder so generell diese Problematik des Freasings?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:34:49",
+      "text": "Generell die Problematik des Friesins äh des äh PayPal hat alle meine Daten und ich bin da im Prinzip nackig. Also es sind diese zwei Sachen. Erstens Geldströme können da nach gut Dünken des Betreibers geblockt werden\nund zweitens der weiß, bei wem ich meine Brötchen kaufe mit PayPal. Das sind so die Sachen, die Leute äh nicht toll finden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:08",
+      "text": "Bestimmte Art von Leuten."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:35:10",
+      "text": "Bestimmte Art von Leuten, für bestimmte Art von Dienstleistungen, aber das sind ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:15",
+      "text": "Wir alle wissen, es gibt genug Dienstleistungen, wo man jetzt nicht unbedingt immer möchte."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:35:21",
+      "text": "Genau genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:21",
+      "text": "Sind auch nicht nur Illegale auch, aber nicht nur illegale Tätigkeiten, wo einem das ein ein äh äh Dorn im Auge ist.\nAlso mit Interessenbezahlung et cetera. Ich meine, das ist natürlich alles."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:35:35",
+      "text": "Genau und was nicht alles. Ja, Bitcoin. Ich glaube, da muss man jetzt ein bisschen weiter ausholen und erst mal erklären, was das denn technisch anders macht als äh das E-Cash, was wir eben hatten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:49",
+      "text": "Also Bitcoin ist jetzt äh äh sozusagen gerade das, wo äh wo sich mal wieder ein ein ein neue eine neue Hype äh äh Welle aufbaut und äh noch nicht einer bekannten Auswirkungen.\nUnd es ist im Prinzip ein ein eine Alternativer anderer Ansatz zu dem Thema elektronisches Geld,\ngelben Versuch, noch mehr äh unabhängig zu sein als das eben mit diesen anderen Systemen bisher gewesen ist,\nWie lange geht das schon zurück? Seit wann? Gibt's ja jetzt auch schon seit ein paar Jahren, ne?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:36:22",
+      "text": "Hm, das Paper ist zweitausendneun rausgekommen, Ende 2tausend9, seitdem gibt's auch die Software.\nMensch das geschrieben hat, hat äh gemeint na ja er musste erstmal fertig programmieren, um sich zu überzeugen, dass es überhaupt funktioniert und dann konnte er seinen Paper drüber schreiben, was äh andersrum ist als viele andere Wissenschaftler ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:38",
+      "text": "Ja, das finde ich eigentlich auch ein sehr erstrebenswertes Ding. Es äh hat sich immer schon sehr positiv ausgewirkt, wenn die Leute erstmal Code schreiben und dann sagen, was es eigentlich tut."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:36:47",
+      "text": "Mhm. Und das dümpelte so ein bisschen vor sich hin. Es haben sich einige Leute angeguckt. Äh manche hielten es für eine gute Idee, manche hielten es für grandios und total bescheuert. Ähm,\nUnd also das erste Mal gehört habe ich glaube ich äh Mai letzten Jahres davon. Da war jemand auf einer Liste. Er meinte irgendwie, ach ich gucke mir gerade\ndigitale Währung an und ich habe da so ein bisschen was, will jemand fünfzig Bitcoins Geld zu verschenken, Geld zu verschenken will jemand, haben sich nicht besonders viele gemeldet.\näh ein paar haben's getan, die freuen sich jetzt einen Ast. Ja. Weil diese fünfzig Bitcoins sind mittlerweile ähm,\n20 ist der Kurs, das heißt irgendwie äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:26",
+      "text": "US-Dollar."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:37:27",
+      "text": "Zwanzig US-Dollar, ja, sind tausend Dollar wert mittlerweile. Schon ordentlich. Ähm,\nAber da passiert auch eine ganze Weile nichts und so richtig abgehoben hat es,\nEigentlich vor sechs Wochen ungefähr. Also seit September äh gab es einen äh großen Exchanger, wo man also richtiges Geld gegen äh Bitcoins tauschen konnte,\nda fing dann also plötzlich an Bitcoin tatsächlich, was wir jetzt so sein, dann dümpelte der Kurs für ein paar Monate bei 50 Cent bis ein Dollar pro Bitcoin rum und äh dann tat es plötzlich ein Riesenschlag,\nund der Kurs ist gestiegen innerhalb von zwei oder drei Wochen drei, fünf, sieben, neun, zehn. Dann gab's hier eine Menge Pressegeschichten, dann ist der Kurs weiter gestiegen und zwischendurch\nbis zu 30 Dollar hochgegangen und dann natürlich plötzlich alle geguckt und mit entsprechenden Umsätzen, also nicht so, dass irgendwie einer mal für einen Bitcoin 30 äh Dollar gezahlt hätte, sondern dieser Exchanger macht einen Umsatz von mittlerweile fast eine Million Dollar am Tag.\nund da wird also richtig Geld bewegt und das zieht den entsprechenden Hype nach sich. Also es ist,\nfür normale Verhältnisse ungewöhnlich erfolgreiche digitale Währung, also insbesondere weil sie ihn halt nicht von der zentralen Bank ausgegeben ist.\nÄhm aber vielleicht erstmal noch ein bisschen zur Technik von Bitcoin."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:45",
+      "text": "Ja, was also was wo wo kommt das jetzt überhaupt her? Ist das wieder so eine Cypher Punks Idee?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:38:51",
+      "text": "Das ist so eine Cyberpunks Idee, also das ist äh da gibt es ja diese Kryptoanarchistenfraktionen, die der Meinung ist, äh äh zu viel Staat ist scheiße und äh man kann mit Kryografie was gegen zu viel Staat tun. Und ähm es."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:05",
+      "text": "Ja also wirklich eine eine eine großartige Community, die ja auch schon vor Jahren bei uns auch auf den Camps aufgeschlagen ist, äh wirklich ein ein,\nFunny-Bunch Funny-Bunch of People. Ich habe grad letzte Woche erst wieder äh so einen,\nkleine kulturelle Eigenschaft dieser Cypher Pumps genossen, als ich mal wieder an so einem Hotspot äh landete, der mich der wollte, dass ich mich kostenlos registriere, um irgendwie WLAN zu haben,\nDu ahnst es schon?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:39:33",
+      "text": "Cypher Punks, Passwort Cypher Punks?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:35",
+      "text": "Genau, hat einfach perfekt funktioniert. Kann man immer wieder mal empfehlen, wenn irgendwo kostenlose Registrierung äh erforderlich ist. Das ist einfach so der Log-Innahme und das Passwort, was man da verwendet,\nAber davon abgesehen ähm ist das vor allem so eine Community von Hardcore Cryptologists kann man sagen. Also Leuten, die."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:39:53",
+      "text": "Ja, es gibt da,\nEs es gibt da aber also gerade bei Bitcoin gibt es durchaus auch eine Fraktion, die äh wo man schon so ein bisschen mit erhobener Augenbraue hingucken muss. Das sind irgendwie diese ähm äh,\nAnarchokapitalisten, ähm die äh also die nicht nur finden, zu viel Staat ist scheiße, sondern die sagen, Staat ist eigentlich von vornherein scheiße.\nund ähm die sind teilweise dann auch mit der Fraktion sich überschneidet, die also den äh vollständig äh ungebremsten Waffenbesitz für alle fordert und so weiter und so fort. Also ähm,\nEs ist nicht ganz einfach. Also es gibt da gibt da so einen Teil Community, die die man durchaus auch skeptisch äh betrachten kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:33",
+      "text": "Was sie jetzt innerhalb der Cyferpunks oder."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:40:35",
+      "text": "Innerhalb dieser Bitcoin-Community."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:36",
+      "text": "Dieser Bitcoin-Community. Okay."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:40:39",
+      "text": "Ähm genau, aber wie funktioniert das technisch? Das Spannende ist, dass Bitcoin, obwohl es Bitcoin heißt, gar keine digitalen Münzen hat. Also diese ganze Idee, über die wir da gesprochen haben, es gibt eine digitale Münze oder eine digitale Banknote, die ähm,\nIrgendwie kryptografisch abgesichert ist, das existiert da alles einfach gar nicht,\nsondern das System funktioniert so, dass äh quasi auch wie bei einer Bank eine ein Buchhaltungssystem geführt wird. Das heißt, es gibt Konten und es gibt Kontenbewegungen rein und Kontenbewegungen raus.\nDas Besondere, was Bitcoin ausmacht ist jetzt, dass es nicht die Zentralbank gibt, die die Konten führt,\nsondern wenn man sich so einen Bitcoin-Client installiert, wird man quasi Teil einer verteilten Zentralbank, also eine Dezentralbank. Und,\nSo jede Transaktion im Netz wird über dieses Netz an alle gebroadcastet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:34",
+      "text": "Also an alle im Sinne von man man gibt es raus und äh es verteilt sich von alleine weiter, so wie sich damals Usnet-News äh immer weiterverbreiten,\njeden es schicken und mir bestätigen lassen, dass es empfangen wurde, sondern man gibt es raus."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:41:50",
+      "text": "Nö, sondern ja, man hat so ein paar Nachbarn, also die Software connected sehe ich so über äh also die sucht über Ilk-User und connectet sich dann so zu 60 bis 120 verschiedenen Peers.\nJa, es ist schon ein sehr vertrauenswürdiges Protokoll."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:08",
+      "text": "Na ja ich meine wenn das äh in dem Moment keine geheimen Informationen sind, mag ja auch ganz gut funktionieren."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:42:15",
+      "text": "Ja, ist natürlich auch wieder ein zentraler Angriffspunkt fürs System, aber na ja. Ähm jedenfalls,\nWenn ich eine Überweisung mache, dann wird die einfach an alle gebohrt gekostet und ähm,\nJetzt kommt der spannende Teil. Also jetzt kommt die Stelle, wo die Kryptographen wieder äh jetzt hätte ich fast was unterständiges gesagt und hinterher auf die Konferenz nach äh in die Karibik fliegen. Ähm,\nund zwar äh wird eine Art ewiges Lockfall erstellt, also wie beim Vatikan, ja, wo irgendwie alle Sünden aufgeschrieben werden, wird da ein verteiltes ewiges Lockpfileil gehalten,\nJeder schreibt sich alle Transaktionen auf und alle zehn Minuten wird eine äh ryptografische Unterschrift unter die letzten Transaktionen erstellt.\nKommt der abgefahrene Teil. Das ist so konstruiert, dass das Erstellen der Unterschrift schwierig ist und zwar so, dass die gesamte Rechenleistung des Netzes geradeausreicht, um alle zehn Minuten eine Unterschrift zu erstellen.\nDas Konzept nennt sich äh Proof of Work in der Kryptografie. Das heißt äh die Unterschrift zeigt, dass sich eine bestimmte Rechenleistung investiert habe,\num diese Unterschrift zu erstellen,\nWie muss man sich das praktisch vorstellen? Also der ein oder andere Hörer hat sicherlich schon von Hischfunktionen gehört, so was wie Char 256. Charts 256 wird auch genau verwendet bei bei Bitcoins."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:33",
+      "text": "Was ist mit denen, die davon jetzt noch nicht gehört haben? Also ein nimmt sich Daten,\nund fasst sie quasi in einer kleineren Zahl zusammen und wenn man diesen Algorithmus nachvollzieht, dann weiß man, dass dieser kleine Zahl, diese große Zahl."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:43:51",
+      "text": "Genau wie eine Prüfsumme quasi."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:43:52",
+      "text": "Genau entspricht."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:43:54",
+      "text": "Mit äh aber eine Kryptographische Prüfsumme, die die Eigenschaft hat, dass ich erstens keine zwei verschiedenen großen Pfeils generieren kann, die die selbe Prüfsumme, also den selben haben\nUnd zweitens kann ich auch über die Struktur des Sessions nichts sagen. Also ich kann nicht gezielt ein mit einem bestimmten Wert erzeugen, sondern der ist halt zufällig.\nähm jetzt gibt es bei Bitcoin bei dieser Unterschrift eine sogenannte difficulty. Das heißt, ich,\ndie Unterschrift unter den letzten zehn Minuten Transaktionen, ein sogenannter Block die ist eigentlich nur in aber es wird zusätzlich gefordert, dass dieser Hesch eine bestimmte Eigenschaft hat, wie zum Beispiel die ersten,\nZehn Bits müssen null sein und weil ich ja nicht vorhersagen kann, äh wie der Hirsch aussieht und den nicht bestimmen kann, kann ich bloß noch,\nzufällige Daten mit in meinen Blog reintun, gucken, was für eine rauskommt, gucken, ob der der geforderten Eigenschaft entspricht, also ob die ersten zehn Bits null sind. Wer sie das nicht sind, muss ich noch mal rechnen. Muss ich einen anderen Zufallswert rein tun und so weiter und so fort.\nDas heißt, dadurch, dass ich sage, wie viele Bits null sein müssen in der Prüfsumme?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:00",
+      "text": "Das ist nur ein Beispiel oder geht's konkret dadrum? Also es das ist sozusagen die Vorgabe, so und so viele Bits müssen null sein."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:45:05",
+      "text": "Das ist äh ich weiß nicht, ob's genauso implementiert ist, aber so kann man sich das auf jeden Fall vorstellen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:09",
+      "text": "Okay gut, also irgendwelche Bits müssen eine bestimmte Form haben. Genau. Mhm."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:45:12",
+      "text": "Genau, genau, genau. Das heißt, dass sozusagen über die Anzahl der Bits die null sein müssen, eingestellt werden kann, wie oft ich diesen Algorithmus berechnen muss, bis ich einen Treffer, bis ich eine Unterschrift finde,\nDas ist halt so, das wird so gesteuert, dass die Rechenleistung des gesamten Netzes gemessen wird und die Schwierigkeit entsprechend eingestellt wird, dann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:32",
+      "text": "Rechenleistung, welches Netz des Bitcoin-Netzes oder des."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:45:35",
+      "text": "Letztes Jahr. Das Bitcoin letztes, das heißt alle ähm also man muss es nicht machen, wenn man daran teilnimmt, äh sogenannte Meiner tun das. Bitcoin Mining, also wie so Bergarbeiter,\nähm die spendieren da die Rechenleistung auf ihrer Grafikkarte und äh rechnen alle fröhlich mit, packen da Rechenleistung rein,\nähm dass alle zehn Minuten im Schnitt ähm schaffen sie's halt also das gesamte Netz zusammen, eine von diesen Unterschriften zu erzeugen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:05",
+      "text": "Unter eine Transaktion."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:46:07",
+      "text": "Nee, unter die Transaktionen, die in den letzten zehn Minuten aufgelaufen sind im Gesamtnetz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:12",
+      "text": "Transaktionen im Sinne von Geldaustausch."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:46:16",
+      "text": "Genau. Also tatsächlich funktioniert wie so eine Überweisung. Ich habe eine Kontonummer, du hast eine Kontonummer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:20",
+      "text": "Also ich meine gehen wir nochmal zurück zum Urknall, der Arno Bitcoins. Alles ist leer. Wo kommt die erste Bitcoin her?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:46:30",
+      "text": "Das ist ähm,\nsehr clevere Konstruktion und zwar dieses alle zehn Minuten eine Unterschrift auf einen Block machen. Also ich muss ja motiviert werden diese Rechenleistung zu investieren. Ja, es kostet mich ja Geld. Ich muss eine Grafikkarte kaufen, ich muss einen Rechner kaufen, muss hier mit Strom versorgen, muss mit dem Lärm in meiner Wohnung leben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:45",
+      "text": "Also eine Grafikkarte muss man deshalb kaufen, weil dieser kryptografische Vorgang, den man da anstoßen muss, besonders gut mit diesen Grafikkarten funktioniert, die so hohe Parallelisierung von äh diesen Einzelschritten hat."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:46:56",
+      "text": "So und jetzt kommt der Punkt, der Knackpunkt. Ähm wenn ich es schaffe, eine solche Unterschrift zu finden, bekomme ich als Belohnung Bitcoins. 50 Stück."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:06",
+      "text": "Das heißt, ich berechne gar nicht Bitcoins, wie du auch schon sagtest, es gibt eigentlich diese Währung gar nicht, also es gibt diese Geldscheine gar nicht,\nSondern ich investiere Rechenzeit um Vorgänge unterschreiben zu können und davon lebt das System."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:47:22",
+      "text": "Genau und deswegen ist da eine Belohnung eingebaut, wenn ich es schaffe, die Unterschrift zu finden, kriege ich, derzeit sind's fünfzig, fünfzig Bitcoins."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:29",
+      "text": "Aber dazu muss es ja erstmal eine Transaktion geben, die dann auch unterschrieben werden muss."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:47:34",
+      "text": "Ja, das ging natürlich mal mit null los. Also diese diese Schwierigkeit äh also wie viele Nullen äh in dem Hashtag drin sein müssen, die es am Anfang gestiegen. Das heißt, der."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:43",
+      "text": "Musste da eine 03 sein und das dauert."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:47:45",
+      "text": "Am Anfang ging es mit dem Urknall los. Es gab kein Geld. Da gab es sozusagen die initiale Transaktionen, wurden im Blog drin stand. Es ist noch nichts passiert, aber wir schaffen jetzt hier mal fünfzig Bitcoins aus dem Nichts."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:56",
+      "text": "Man man behauptet einfach, es gäbe welche."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:47:58",
+      "text": "Ja das ist sowieso bei Geld so, dass man behauptet, es gibt das, ja?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:01",
+      "text": "Ja. Auf darauf müssen wir auf jeden Fall auch gleich noch mal eingehen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:48:05",
+      "text": "Ähm und ähm,\nDann halt den nächsten Block und dann ähm hat der Typ, der es errechnet hat, Leuten mal Bitcoins gegeben und dann haben die sich die hin und her geschoben und dann wurden weiter Blogs berechnet und,\nIrgendwann haben Leute angefangen zu sagen, na ja okay, wenn du bei mir, ich habe hier Esther, warum zu stehen, wenn du deinen Shell-Account willst, dann gibst du mir halt einen Bitcoin für und dann kriegst du einen Schelle-Account und dann fingen tatsächlich an sich so ein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:31",
+      "text": "Tauschhandel."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:48:32",
+      "text": "Zu Tauschern so einen Dienstleistungsmarkt zu entwickeln. Das heißt, das Geld war eigentlich noch nichts wert in dem Sinne. Aber Leute haben gesagt, na ja, es klingt nach einem lustigen Experiment. Ich will das mal ausprobieren und ich habe hier Eresossen rumzuliegen, die stecke ich da jetzt rein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:44",
+      "text": "Aber wenn es jetzt keine digitalen Münzen oder Geldscheine gibt, wird man also sozusagen gar nichts ont. Äh wo steht denn, dass ich was habe?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:48:53",
+      "text": "Über die Kontonummer. Also es gibt diese Bitcoin-Adressen. Das sind so 32ähBase 64 and Cooled entziffern und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:03",
+      "text": "So ein langer Hexer ja."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:49:05",
+      "text": "Genau, genau und ähm der ist einem wieder Public Private Keep her zugeordnet. Das heißt, du erzeugst dir wieder so einen asymmetrischen Schlüssel."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:13",
+      "text": "Durch das Base 64, also irgendwie so."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:49:17",
+      "text": "Buchstaben, Großbuch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:18",
+      "text": "Buchstaben, okay, mhm. Okay, das ist mein das ist meine ID. Die erzeuge ich mir selbst. Das ist wieder so wie bei dem äh E-Cash. Ich mache mir meine Nummer selber und äh Algorithmen behaupten, dass es nicht möglich ist, dass jemand dieselbe hat."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:49:31",
+      "text": "Genau und zumindest hat er nicht den Schlüssel dazu, also ja und wenn dir jetzt jemand Geld schickt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:38",
+      "text": "Das heißt Schlüssel, also auch hier kommt wieder Public Privated Key, äh Cryptographie mit ins Spiel. Das heißt überhaupt, um erstmal an Bitcoin teilnehmen zu können, brauche ich so eine Zahl und dazu ein Schlüsselpaar."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:49:51",
+      "text": "Genau, in der Praxis passiert das dadurch, dass sie den Kleinen drunter lädst und der generiert ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:55",
+      "text": "Das einfach, okay. So und dann."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:49:58",
+      "text": "Dann hast du den Private Key zu diesem Schlüsselpaar auf deiner Platte und ich hatte ja schon gesagt, es gibt dieses ewige Lockfall, wo alle Transaktionen drinstehen,\nWenn ähm jemand jetzt dir Geld schickt, dann sagst du ihm deine äh ID, deine Kontonummer quasi.\ndann geht er hin und äh erzeugt eine Transaktion, die eher kryptografisch signiert. Das heißt, er unterschreibt, ich überweise an Kontonummer XY Geld."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:26",
+      "text": "Das kann aber auch nur, wenn in diesem Transaktionslog schon drinsteht, dass er was hat."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:50:29",
+      "text": "Genau. Sonst funktioniert's nicht, aber\nwird beim Überprüfen des Blogs gesagt irgendwie nee das stimmt nicht, da ist irgendwie der Kontostand ins Negative gegangen und die Transaktion wird verworfen. Also es ist schon so ein bisschen Prüfung mit dabei, welche Transaktionen in die Blocks reinkommen.\nAuch wenn Blog berechnet wurde, prüft der Rest des Netzes, ob das alles in Ordnung ist und sagt irgendwie, ja oder nein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:50:47",
+      "text": "Okay, das heißt, die Vorstellung, wer welches Geld besitzt, existiert,\nin dieser Dezentralbank und nur dort. Das heißt, diese ewige Liste dieses Transaktions-Locks ist quasi die vollständige Hysterie jeglichen Geldwechsels, jeglichen Onarchip-Wechsels von Geld,\nÄh und man hat dadurch Geld, dass es einem mal geschenkt wurde,\nvon."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:51:18",
+      "text": "Ja, also entweder."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:20",
+      "text": "Wem?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:51:22",
+      "text": "Entweder man hat es erzeugt, also dieses sogenannte Mining, das Berechnen der Unterschriften alle zehn Minuten, ist er mit einer Belohnung verbunden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:27",
+      "text": "Ja aber wer belohnt das? Das heißt die Dezentralbank sagt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:51:31",
+      "text": "Die das die das kommt aus dem Nichts, das Geld wird geschaffen an der Stelle. Das ist der Geldschöpfungsprozess, der an diesen äh verteilte Unterschriftenprozess gekoppelt ist. Also eine sehr abgefahrene und clevere Konstruktion eigentlich.\nDas ist wie Gelddrucken, Zentralbanken drucken auch Geld. Die drücken aufn Knopf und dann kommen da Geldscheine raus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:47",
+      "text": "Äh gut, aber ich ich überlege jetzt grade, welche welche Entität jetzt tatsächlich diese Transaktionen generiert, das Geld, was es vorher noch nicht gab, jetzt mir gehört. Also angenommen, ich stelle meine Rechenleistung bereit. Dann wird ja diese Rechenleistung nicht benutzt, um\nelektronische Geldzertifikate zu erzeugen, sondern ich erzeuge nur bestimmte Hashes, die aber dann verwendet werden,\num Transaktionen zu unterschreiben, richtig?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:52:16",
+      "text": "Genau. Ja. Wenn du."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:18",
+      "text": "Anderen Leuten, die mit mir gar nichts zu tun haben. Irgendjemand hat jemand anders grade irgendwie eine Bitcoin gegeben und damit das allgemein gilt und in dieser Liste drinsteht, wird jetzt grade ein von mir erzeugter Hesch als Basis genommen, um das zu unterschreiben."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:52:32",
+      "text": "Ja, aber wenn du diesen Hess schon mal gefunden hast, also das ist ist nicht nur diese eine Transaktion, die unterschreibt, sondern alle der letzten zehn Minuten im Schnitt. Okay. Und du schreibst dann auch rein, ach übrigens und ich kriege noch fünfzig Bitcoin aus dem Nichts."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:47",
+      "text": "Ah okay. Das heißt, es ist erforderlich, dass die ganze Zeit Leute Mining betreiben,\nAlso eigentlich ist es ja gar kein Mining, sondern es ist also man erzeugt man holt nicht das Gold aus dem,\nBerg, weil's da liegt, sondern man äh gibt eigentlich nur fuole in diese Maschine, damit das System überhaupt leben kann, weil würde das keiner tun, könnte keiner mehr Geld wechseln.\nmuss die ganze Zeit gerechnet werden. Es muss die ganze Zeit Strom verbraucht werden, damit äh Geld überhaupt fließen kann."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:53:22",
+      "text": "Was übrigens auch ein populärer Kritikpunkt ist an dem System und der nicht ganz von der Hand zu weisen ist. Also diese Energieverschwendung, die da betrieben wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:29",
+      "text": "Ja. Okay, aber erst mal erst mal feststellen, wie es überhaupt funktioniert. Ist ja auch keine Bewertung mit verbunden. So und ähm,\ndadurch dass ich jetzt derjenige war, der den entscheidenden Cash beigetragen hat für die, die letzte Zehn-Minuten-Transaktion durchgeführt werden kann, davon ausgehen, dass es überhaupt welche gab, aber das ist glaube ich mittlerweile nicht mehr das Problem.\ndafür wird mir gewährt, dass ich ähm,\nJetzt auch im Besitz von neuen Bitcoins sind die es so vorher nicht gab. Das heißt die Geldmenge steigt mit jeder Transaktion. Es wird immer mehr Geld."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:54:10",
+      "text": "Ja, allerdings ist ein Limit eingebaut und zwar wird die Höhe der Belohnung für das Errechnen der Blöcke ähm reduziert, also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:19",
+      "text": "Das heißt am Anfang habe ich für dieselbe Rechenleistung noch mehr Bitcoin bekommen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:54:23",
+      "text": "Äh na es sind zwei zwei Parameter, die da justiert werden. Das eine ist die Schwierigkeit. Also wie viele Rechenleistungen ich reinstecken muss, damit ein Block erzeugt wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:33",
+      "text": "Also man muss immer mehr rechnen, weil Rechner werden schneller et cetera."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:54:37",
+      "text": "Ja, das hängt von der Gesamtrechenleistung des Netzes ab. Also es wird äh proportional zu, wie viele Rechner sind da gesteuert, damit alle zehn Minuten im Schnitt ein Block rauskommt. Das Zweite ist, die Auszahlung pro Block.\nalso die ähm durch die Schwierigkeit wird halt die äh Rate der Blogs, also Blogs pro Tag konstant gehalten,\nund äh die Auszahlung pro Block die sinkt. Also je je länger wir in die Zukunft gehen, desto weniger Bitcoins bekommt man pro Unterschrift.\nund zwar so, dass ähm nie mehr als 21 Millionen Bitcoins je existieren werden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:12",
+      "text": "Nie mehr als 21 Millionen.\nDas heißt, irgendwann gibt es gar keinen Anreiz mehr, Mining zu betreiben und irgendwann kann man gar keine Transaktionen mehr unterschreiben."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:55:23",
+      "text": "Äh da gibt's äh einen äh auch einen cleveren Ansatz, also irgendwie der Typ, der sich das ausgedacht hat, der sich echt einen Kopf da drum gemacht,\nÄhm und zwar kann man, wenn man jemandem was überweist äh freiwillig Transaktionsgebühren zahlen.\nderjenige, der den Blog unterschreibt, kriegt halt nicht nur das äh frisch erzeugte Geld, also das frisch aus der Luft erzeugt ist, sondern der bekommt auch die ganzen Transaktionsgebühren von allen Leuten, die bereit waren, Transaktionsgebühren zu zahlen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:48",
+      "text": "Das heißt,\nNoch gibt es eigentlich keine zwingenden Transaktionsgebühren, sondern nur Freiwillige. Aber es kann sein, dass die Maschine irgendwann nicht mehr weiterläuft, wenn Leute nicht bereit sind, Transaktionsgebühren zu zahlen und das tun sie genau an die Leute, die die rechten Zeit bereitstellen, um das System am Laufen zu halten."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:56:04",
+      "text": "Genau und man kann natürlich als meiner sagen, ich bearbeite bevorzugt solche Transaktionen, wo auch äh eine Gebühr gezahlt wird,\nJe mehr, desto eher. Das heißt, man kann Geld dafür investieren, dass die Transaktion schneller durchgeht. Und sobald das soweit ist, wird das natürlich passieren. Wenn Leute bereit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:20",
+      "text": "Jetzt kommen wir nämlich glaube ich auf den Punkt, den ich gerade äh fragen wollte, weil wer entscheidet denn,\nwessen Hesch herangezogen wird für eine Transaktion. Also es ist nicht so, dass ich mein Hash spende und irgendjemand wendet den dann an,\nsondern es ist so, dass ich von allen Outstanding-Transaktionen die grade so rumliegen mir, welchen Nehmer und dafür berechne ich den Hash oder wie?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:56:40",
+      "text": "Genau, du nimmst dir die, wo du denkst, dass es schon passen wird und berechnest dann dafür den Hash. Du publizierst den dann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:47",
+      "text": "Und alle zehn Minuten soll sozusagen einer durchkommen, aber wenn jetzt da, was weiß ich, wenn da jetzt in den letzten zehn Minuten sind halt so und so viele Transaktionen aufgelaufen.\ndie sind dadurch, dass sie dezentral publiziert und sich äh publiziert werden und weiter verteilen, vielen bekannt.\nNicht, dass dann mehrere daran rechnen, dieselben Transaktionen zu bestätigen und nur einer kann dann letzten Endes zum Zuge kommen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:57:15",
+      "text": "Es ist so konstruiert, dass du sozusagen erstmal rechnest und wenn du dann einen magischen Hashtag gefunden hast, suchst du dir die Transaktion zusammen, die da reingehören und äh machst da einen Bock draus.\nAlso es ist nicht so, dass jetzt äh dass die Transaktionen rumliegen, bis du für genau diese Transaktionen äh den Hash gefunden hast, sondern du kannst,\n30 Tage rechnen, wirst du den Hash mit der geforderten Eigenschaft gefunden hast und dann die Transaktion einsammeln, die in den letzten zehn Minuten gelaufen sind und die in den Blog tun."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:40",
+      "text": "Aber es kann ja trotzdem sein, als irgendjemand zum selben Zeitpunkt dasselbe tut."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:57:45",
+      "text": "Ja dann ist immer die Frage wer schneller ist. Also zehn Minuten ist schon eine relativ lange Zeit. Äh also statistisch gesehen ist die Wahrscheinlichkeit, dass es passiert relativ gering. Es kann tatsächlich passieren, dass zwei Leute zur selben Zeit,\nden nächsten Block berechnen mit unterschiedlichen Inhalten, dann gibt's so eine Art Voting im Netz, wer halt schneller war, wer besser war, wem mehr geglaubt wird,\nSo und zwar ähm im Zweifelsfall gilt, dass die längste Kette von Blocks die entscheidend ist.\nDas heißt, wenn wenn du einen Block berechnest und ich einen Block berechne, ja und jetzt kommt der nächste und hat auf Basis meines Blogs schon wieder den nächsten Blog mit den nächsten Transaktionen berechnet. Dann schlägt meine Kette deine Kette, weil meine Kette länger ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:29",
+      "text": "Meine Kette ist länger. Äh was heißt die schlägt? Also ich meine, wer entscheidet denn dann, wer wer sozusagen der Winner ist?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:58:38",
+      "text": "Das entscheiden die Kleinen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:40",
+      "text": "Ja, aber ich meine, da das ja alles dezentral ist, gibt's ja gar kein zentrales Schiedsgericht, das jetzt entscheiden könnte."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:58:45",
+      "text": "Aber die Kleins verwenden alle dieselbe Logik und die Logik ist die längste Kette gewinnt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:50",
+      "text": "Die längste Kette von Transaktionen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:58:52",
+      "text": "Von Blogs. Von Blogs."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:56",
+      "text": "Letzten Endes Transaktionen sind. Also umso mehr Transaktionen ich in einem Schritt signiere."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:59:05",
+      "text": "Die Länge der Blocks, deswegen sage ich Blocks und Nicht-Transaktionen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:10",
+      "text": "Ist das also die."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:59:10",
+      "text": "Nein, nein, das ist nicht dasselbe. Du sagst nicht, wenn wenn ich 100 Transaktionen signiere und du nur zehn, aber irgendjemand auf deinem Blog aufbauend noch einen Blog veröffentlichen mit nochmal zehn gewinnen die zwei Blocks mit den 20 Transaktionen gegen den einen Block mit den 100-Transaktionen?\nweil's um die Blogs geht, weil die ja schwierig sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:29",
+      "text": "Ach so, sozusagen, wenn mein äh also wenn das, was dich kryptografisch erzeugt habe länger ist. Dann ist es mehr wert."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "0:59:39",
+      "text": "Wenn der Nächste schon wieder also die Blocks sieht ja miteinander verkettet. Du sagst immer irgendwie der letzte Block war und diese Kette von Blocks, da zählt immer die längste.\nWeil da wurde die meiste Rechenleistung reingesteckt. Das ist sozusagen eine eine Mehrheitsmeinung über äh Beweis, dass man Rechenleistungen ausgegeben hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:59:57",
+      "text": "Ist in so einem dezentralen System äh sehen ja also wie schnell populiert denn diese Information in diesem Netz. Ich meine wenn der Irrserver und so weiter mit äh verbunden sind, die auch mal äh down sein können, kann es ja sein, dass das dann auch wirklich\ndauert. Ne, grad wenn ich nicht so online bin und an Bitcoin äh teilnehme und ich sitze irgendwo, da ist dann halt einfach mal das Internet kaputt für drei Stunden."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:00:18",
+      "text": "Mhm. Das das ist selbstheilend das System. Also du äh die Transaktionen, die in Blogs drin sind, die nicht zur offiziellen Kette gehören, die sind dann sozusagen wieder als unbestätigte Transaktion in der Luft und der nächste, der einen Block berechnet, nimmt die dann wieder. Also wenn du drei Stunden offline bist,\ngehst dann wieder online und deine Transaktionen laufen systemrein, ist überhaupt gar kein Problem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:37",
+      "text": "Gut, aber wenn ich jetzt selber gemeint habe und äh ich wollte auch irgendwas bestätigen, aber das hat wurde dann sozusagen äh im Netz."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:00:44",
+      "text": "Kannst Pech haben, wenn wenn du vom Rest des Netzes abgeklemmt bist und fröhlich für dich in deiner Insel Blogs berechnest und dann gehst du wieder online, sagen die anderen, ha ha aber wir sind schon viel weiter mit rechnen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:53",
+      "text": "Aber dann kann ich diese cryographischen äh muss ich nicht wieder von vorne anfangen, sondern ich kann."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:00:58",
+      "text": "Der ist dann weg der Blog. Du musst dann wieder von vorne anfangen,\nEs kann ja passieren, dass du einen Block berechnest und irgendwie das Netz sagt irgendwie, ja, uns leid, kommst zu spät. Wahrscheinlichkeit ist nicht sehr groß, weil es sind ja zehn Minuten Zeit im Schnitt bis zum nächsten Block,\nWenn du nicht gerade komplett abgekoppelt bist,\nähm reicht es aus, damit jeder neu berechnete Block sich auch wirklich zu allen propagiert hat und auch du beim Brechen mitbekommst, okay hier ist jetzt der Nächste."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:23",
+      "text": "Wie lange muss man denn so rechnen in so einem Blog derzeit?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:01:26",
+      "text": "Da das kommt drauf an. Es gibt also einen tollen Bitcoin Calkulator. Den mache ich mal auf, dann kann ich dir die Zahlen sagen,\nAlso die spannende Einheit sind äh Megaheshes pro Sekunde. Also wie viele Millionen hashes man pro Sekunde erzeugen kann,\nähm wenn man jetzt so eine Grafikkarte hat, sagen wir mal, man hat äh das Topmodell von Artie aus dem letzten Jahr. Dann kommt man auf ungefähr 4hundert Megaheshes pro Sekunde. Also 400 Millionen äh Schadensechszig-Hashes. Und,\nDa rechnet man derzeit äh zweieinhalb Monate an einem Block."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:09",
+      "text": "Zweieinhalb Monate. Und das muss ich dann noch mal komplett von vorne anfangen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:02:15",
+      "text": "Deswegen machen die meisten Leute äh sogenanntes Pooling. Das heißt, es gibt äh Pool-Server, wo das Rechnen verteilt wird. Das heißt, man rechnet nicht mehr alleine den Block aus, sondern man verteilt das über viele Leute.\nund ähm dann findet eine Auszahlung statt, proportional zu einem rechten Leistungsanteil, den man gemacht hat. Und das funktioniert dann so, dass man sogenannte Workloads kriegt und äh die an denen rechnet man dann so ein bis zwei Minuten,\nDann schickt man die an den zentralen Server und der baut daraus den großen Block zusammen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:43",
+      "text": "Und dann wird aber dann sozusagen die die äh zugeteilten Bitcoins werden dann auch gleichmäßig über alle verteilt. Das heißt, das Protokoll sieht auch vor, dass nicht nur einer äh Kontonummer quasi was bekommt, sondern dass dann entsprechende Transaktionen für alle Beteiligten."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:02:55",
+      "text": "Das macht dann derjenige, der den Pool betreibt. Das heißt, der nimmt erst mal die fünfzig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:00",
+      "text": "Der kriegt jetzt sozusagen ermordet und verteilt es dann in der nächsten Transaktion wiederum äh an die anderen weiter."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:03:04",
+      "text": "Abzüglich seine 3 Prozent natürlich, wie das immer so ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:06",
+      "text": "Ja, ja. Äh das müssen wir noch mal zusammenfassen, weil das war jetzt irgendwie alles ein bisschen ähm Fülle. Also Bitcoin ist ein,\ngroßer, lebender äh Organismus, der permanent mit Rechenpower versorgt werden muss, um überhaupt zu funktionieren. Es\nnicht wirklich digitales Geld, sondern es gibt eigentlich nur Transaktionen und im Rahmen von solchen Transaktionen wird Geld einfach aus dem Nichts erschaffen, aber es ist äh Kryptografisch sichergestellt, dass das Geld schon endlich ist.\nhattest du einundzwanzig."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:03:39",
+      "text": "21 Millionen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:40",
+      "text": "21 Millionen Coins, wobei jetzt diese Coins nicht unteilbar sind, sondern im Prinzip."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:03:46",
+      "text": "Haben acht Stellen nach dem Komma."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:47",
+      "text": "Beliebig beliebig flexibel teilbar ähm sind,\nAber das ist schon so, dass derzeit die Geldmenge immer weiter wächst und irgendwann tut sie das dann nicht mehr. Also irgendwann ist."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:04:02",
+      "text": "Es ist nicht plötzlich vorbei, sondern es flacht sich ab. Das ist so eine."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:07",
+      "text": "Na gut, aber es läuft auf ja genau, aber es läuft sozusagen auf auf eine auf eine Endlichkeit. Hinzu. Die Menge an Geld wird dann irgendwann nicht mehr mehr,\nSo und wenn ich jetzt daran wenn ich jetzt davon profitieren,\noder wenn ich sozusagen dazu beitrage dass das System läuft und das System läuft heißt dass in diesen in dieser ganzen dezentralen Wolke die eigentlichen Geldwechselvorgänge unterschrieben werden kryptografisch,\nDazu ist es erforderlich, diese Blogs zu berechnen. Das wird immer schwerer,\nsie muss immer mehr Zeit, immer mehr Geld investieren dafür. Muss man schon mal eine so eine Frage ist für nachher, ob sich das überhaupt lohnt und dann,\nberechne ich jetzt monatelang an so einem Block,\neinfach die Vorgabe hat, der muss so und so viel Nullen haben und das ist alles irgendwie äh knifflig, also eigentlich ist das so ein Suchen im Wald, ja. Also man muss sozusagen einfach so lange äh Zahlenkolonnen durchackern, bis man mal den Richtigen gefunden hat und die Wahrscheinlichkeit bestimmt einfach das Glück.\nalso auch sein, dass es nur zehn Sekunden dauert, weil man gleich beim ersten Mal den richtigen hat. Genau. Aber es ist halt in der Regel nicht so,\nSo. Wenn ich jetzt so einen Block habe, habe ich den erstmal vollständig unabhängig von den Transaktionen erzeugt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:05:26",
+      "text": "Ja man hat sozusagen also,\nBlock ist so der Fachbegriff für das Gesamtpaket aller Transaktionen mit dem magischen Hesh Value, den du gefunden hast. Und dem Link auf dem Blog davor. Also du findest halt diesen magischen Cashwer You, das ist die eigentlich Berechnung, das ist unabhängig davon, was wirklich passiert ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:42",
+      "text": "Aber suchen jetzt nicht immer alle gleichzeitig denselben."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:05:45",
+      "text": "Nee, es suchen alle einen, der diese Eigenschaft erfüllt. Also du kannst ja nicht denselben suchen, sondern erzeugst dir halt Zufallsinputdaten, guckst, ob der Hashtag hinten rauskommt. Die geforderte Eigenschaft hat oder nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:05:55",
+      "text": "Genau, aber sozusagen,\nEigenschaften, nach denen gesucht wird, ist für alle zum gleichen Zeitpunkt immer gleich. Alle suchen nach der selben Art Blog, aber finden dann einen anderen, der denselben Anforderungen entspricht\nSo und in dem Moment, wo ich den gefunden habe, wo ich also jetzt meine Büchse habe so lange rechnen lassen, bis ich so einen habe. In dem Moment schaue ich mir,\nDie Transaktionswelt zu dem Zeitpunkt an,\nUnd dann sehe ich A da das ist jetzt hier sozusagen die Menge an ausstehenden Transaktionen. Die könnte ich jetzt alle quasi ähm signieren und in die Wirklichkeit überführen.\nUnd,\nWas mache ich dann? Dann nehme ich diese Transaktionen und mit zusammen mit meinem Blog führe ich noch mal einen kryptografischen Unterschreibensprozess."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:06:44",
+      "text": "Dann nochmal gehasht und ich glaube es ist einfach bloß ein das heißt äh letzten Endes äh gibt es eine Blog ID. Das ist ein über die gesamten Daten, die man reingetan hat.\nhalt drin steht die Transaktion ähm,\ndie äh den magischen Value ausgerechnet wurde und der Hashtag des letzten Blocks, damit die verkettet werden können. Das ist und ein Zeitstempel, also eine Uhrzeit. Das sind so die äh die wesentlichen Sachen, die da drin sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:08",
+      "text": "Genau und das Ganze ist quasi so eine Unterschrift so ein Stempel halt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:07:11",
+      "text": "Man kann sich das übrigens auch angucken auf Blog Explorer Punkt com."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:14",
+      "text": "Noch mal ganz kurz, weil äh mit dieser mit dieser mit dieser äh Konkurrenzsituation mit dir bin ich offline, weil ich meine, wenn ich diesen Blog berechne, kann ich ja,\nKann ich ja auch noch lange Zeit dann offline sein, also niemand zwingt mich ja, dass ich, wenn ich diesen Blog erstmal berechnet habe mit diesen Anforderungen, dass ich den auch sofort zur Anwendung bringe."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:07:33",
+      "text": "Die Schwierigkeit ändert sich regelmäßig und wenn sich die Schwierigkeit ändert, ändert sich die Eigenschaft des Sessions, den du finden musst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:07:39",
+      "text": "Und wie häufig ändert sich diese,\nOkay, also das ist jetzt eigentlich sozusagen der Zeitpunkt. Also ab dem Moment, wo ich das Ding ausgerechnet habe, muss ich den einlösen, solange äh er noch den aktuellen Anforderungen an diesem Blog entspricht. Das ist der Punkt. Also ich kann schon auch noch einen Tag warten.\nich kann auch in so einen Race kommen mit irgendjemand anderem, der irgendwie fünf Sekunden vorher."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:08:03",
+      "text": "Aber alles eine eine rein theoretische Konstruktion de facto ist man online."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:07",
+      "text": "Na ja gut, ich will ja nur verstehen, weil weil ich meine das sind ja auch Dinge, wo das System dann nicht explodieren darf, nur weil irgendjemand nicht drüber nachgedacht hat, dass man nicht nicht immer online."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:08:17",
+      "text": "Wenn du halt dann meiner offline betreibst, dann ist ist auch der Punkt weg, weil Mining heißt alle zehn Minuten live unterschreiben. Das heißt, irgendwie der."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:23",
+      "text": "Na ja gut, na gut, ich versuche."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:08:24",
+      "text": "Der Fakt ist so als meine offline bist, ist eigentlich praktisch nicht relevant."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:28",
+      "text": "Na ja okay gut, wie auch immer. Aber jetzt verstehe ich auch sozusagen, wo das Problem ist. Das Problem ist, dass äh äh wenn man sozusagen das Richtige gefunden hat, dann äh verpufft es eben äh wenn ich zu lange warte. Das ist eigentlich das Problem.\nso aber aber wenn jetzt wirklich der Fall eintritt, dass zwei, die online sind\nbeide einen Block haben, der den aktuellen Anforderungen entspricht. Beide schnappen sich gerade die ausstehenden Transaktionen und zwar im Zwölf fallen immer da einfach alle, oder?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:08:54",
+      "text": "Ja, die müssen ja nicht gleich sein, weil ist ja Peter Typia, gibt's da Verzögerungen und so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:58",
+      "text": "Kann sein, dass ich sozusagen einen anderen Set sehe gerade als der andere. Okay, aber es ist sehr wahrscheinlich, dass wenn zwei mehr oder weniger gleichzeitig äh sich die ausstehenden extrem große Überschneidungen haben.\nDas darf ja aber eigentlich nicht sein, weil jede Transaktion nur einmal bestätigt werden."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:09:16",
+      "text": "Na ja, es gibt immer sozusagen die offizielle Geschichte und die offizielle Geschichte ist ähm,\nWer hat die meisten Blogs, die als Kette hintereinander hängen? Und in dem Moment, wo zwei wirklich gleichzeitig, also wie gesagt, es ist extrem unwahrscheinlich, dass es passiert, weil es muss sozusagen innerhalb von Millisekunden sein, sodass es noch nicht übers Netzwerk sich verbreitet hat über das B2P-Netz,\nund äh aber das passiert ja nur alle zehn Minuten im Schnitt, dass ein Block berechnet wird. Das heißt, irgendwie die Wahrscheinlichkeit, dass es passiert, ist nicht allzu hoch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:43",
+      "text": "Ja gut, aber wenn jetzt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:09:44",
+      "text": "Passiert, ja, wenn's passiert. Dann äh schickt jeder sozusagen seinen Block ins Netz und die einen Clins haben den einen zuerst gesehen, die anderen Kleinen haben den anderen zuerst gesehen, sagen, hm sind beide gleich lang, weiß ich noch nicht so richtig?\nKommt's drauf an, wer als Erster den nächsten Block berechnet und was er sagt, was der vorhergehende Block ist. Also sozusagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:05",
+      "text": "Der nächste bestimmt die Realität."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:10:08",
+      "text": "Immer die längste Kette der hintereinander gehängten Blocks bestimmt die Realität."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:10",
+      "text": "Ah jetzt verstehe ich das mit der ah okay, verstehe, verstehe.\nVerstehe. Okay. Aber das bedeutet doch auch, dass quasi alle Kleinst halten die ewige Liste vollständig immer komplett vor."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:10:27",
+      "text": "Momentan ja. Es gibt äh also,\nbei Kurt Google kommen, findet man eine Javai-Implementierung, die für, ich glaube Android gemacht wurde, die halten nicht die komplette Liste, sondern die sagen, okay, irgendwie Blocknummer 100.tausend hatte folgenden Hashtag und das davor glauben wir einfach, weil den haben wir eingebaut,\nAlso man kann mit Patientenlisten leben, aber bei dem PC-Kleins ist es tatsächlich so, wenn man den einschaltet, fängt er an sich die komplette ewige Liste von Tag 1 runterzuladen,\nsind äh äh warte mal, ich gucke nach.\nGlaube ich so was wie um die hundertdreißigtausend Blocks gerade und die brauchen auf meiner Platte grade zusammen äh fünfhundert Megabyte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:10",
+      "text": "50 Megabyte. Das heißt,\nwird ja auch immer mehr, weil das äh erstens werden wahrscheinlich diese diese Blocks immer größer, die berechnet werden müssen und es werden auch immer mehr Transaktionen, die da noch mit reinmüssen, das heißt jeder alle zehn Sekunden wird die Menge an Daten mehr."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:11:30",
+      "text": "Ja, also die ähm alle zehn Minuten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:31",
+      "text": "Die dazu kommt, meine ich. Zehn Minuten Entschuldigung, ja."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:11:34",
+      "text": "Es gibt äh gibt zwei Aspekte. Das eine ist, man muss dieses ewige Lockfall auf Platte speichern. Da gibt's wie gesagt eine Lösung für, die darin besteht, einfach nicht alles äh zu speichern, sondern die äh Geschichte wegzuwerfen und äh irgendwann hat man sich mal überzeugt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:48",
+      "text": "Man kann ja auch sagen so dieser Stand der Dinge wird Kryptographisch abgesichert und wenn man sich darauf bezieht, dann ist das genauso gültig als wenn man okay. Mhm. Also man kann es verkürzen. Mhm."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:11:58",
+      "text": "Kann es verkürzen, ähm wofür noch niemand mit einer überzeugenden Lösung rübergekommen ist, ist wie man das mit dem Traffic Problem löst, weil zwangsläufig ja sozusagen alle Transaktionen an alle Teilnehmer gebroadcasted werden.\nähm der Traffic wird immer mehr werden und ich kann mir schon vorstellen, dass zum Beispiel die Kapazität einer Mobilfunkverbindung irgendwann dann nicht mehr ausreichen wird für,\nwie man dann mit seinem Mobiltelefon noch mit Bitcoins bezahlen soll steht in den Sternen. Also es halte ich persönlich für sozusagen die,\ngrößte, ungelöste technische Schwachstelle in dem System und wenn dann nicht jemand mit einer guten Idee kommt, wird das daran zugrunde gehen und gegen die Wand laufen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:37",
+      "text": "Muss man denn alles empfangen, also um jetzt sozusagen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:12:40",
+      "text": "Man muss auf jeden Fall die Transaktion sehen und äh die."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:46",
+      "text": "Ja, aber das ist doch auch jetzt aufm Mobiltelefon. Ich meine, was ist jetzt das das Bedürfnis, dass ich."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:12:50",
+      "text": "Du willst ja auch auf deinem Mobilfuch bezahlen können. Also stell dir vor, du hast dein Telefon in der Tasche, ziehst es raus und gehst irgendwie dir ein Bier an der Ecke kaufen und da gibt's einen QR-Code an der Wand, hältst du deinen Telefon hin, drückst auf einen Knopf\nund dann sieht der Barkeeper auf seinem Display ja Bitcoins sind angekommen und kann hier ein Bier auszapfen.\nDas ist so die Überlegung, dass man auch von seinem Mobiltelefon aus solche Bitcoin-Transaktionen auslösen kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:12",
+      "text": "Ja und um das zu tun, muss ich eine Transaktion erzeugen und die in die Wolke geben."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:13:17",
+      "text": "Genau mindestens das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:18",
+      "text": "Aber muss ich aber wozu bräuchte denn dann noch die ganze ewige Liste? Ist doch davon unabhängig. Ich muss doch eigentlich nur wissen, welche Bitcoins,\nwie viel Bitcoins mir gehören. Also ich muss mir aber auch gar keine Coins, weil es gibt's ja nicht merken, sondern ich muss ja nur wissen, wie viel habe ich denn wohl."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:13:33",
+      "text": "Aber das steht halt in der ewigen Liste. Deswegen muss man schon irgendwie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:37",
+      "text": "Ja gut, aber ich meine, diese Information kann ich ja auch als solches speichern. Also ich meine, das steht zwar in der ewigen Liste drin, aber für mich reicht's ja vollkommen aus. Ich meine, ist nicht da äh wäre es nicht sinnvoller dann über so eine Art Bitcoin PayPal äh nachzudenken.\nwas sozusagen meine Bitcoin."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:13:53",
+      "text": "Gibt's tatsächlich auch Schön."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:54",
+      "text": "Daten so hat und äh ich benutze das dann so wie PayPal, zahle aber mit Bitcoins und habe eigentlich nur so ein Abfrorenend, was einfach weiß, wie viel."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:14:01",
+      "text": "Ja äh das gibt es, das heißt my Bitcoin."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:05",
+      "text": "Na bitte. Also ich meine, das würde doch vollkommen ausreichen. Meine wozu muss."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:14:08",
+      "text": "Schon."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:09",
+      "text": "Äh äh Daten mit mir rumführen. Ich meine, mein Telefon ist an der Stelle nicht wichtig. Das erzeugt keine Bitcoins."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:14:16",
+      "text": "Also wahrscheinlich ist es wird's eher drauf hinauslaufen, dass man irgendwo zu Hause sein Full-Feature Bitcoin hat, ist ja eh immer jeder online die ganze Zeit.\näh dass man dann eine App hat, mit der man das aus der Pfanne steuert. Also dieses Bitcoin äh im Implementierung ist auch relativ bequem zu Skripten, die hat ein Jason Interface. Da kann man also mit Jason einen 3zehner das aus der Ferne veranlassen Geld für dich zu verschieb."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:39",
+      "text": "Aber wozu brauche ich denn überhaupt diesen Bitcoin-Client? Weil eigentlich,\nGut, also ich brauche den, um Transaktionen zu erzeugen, um Geld anzunehmen. Also wenn jetzt mir jemand Geld schicken will. Also angenommen, ich ich würde jetzt Bitcoins per Spenden,\nannehmen. Angenommen, ich mache jetzt meine ich habe jetzt hier mal einen Bitcoin äh klein gestartet, der sagt, jo Bitcoin, Adresse ist irgendwie eins drei P X Y siebenundzwanzig P Strich sechs. So, jetzt nehme ich diesen String, packe den auf meine Webseite, das reicht aus.\nDas ist sozusagen ausreichend, um Geld zu empfangen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:15:09",
+      "text": "Soll ich dir mal Geld schicken? Kann das ja mal ausprobieren, wenn du schon irgendwie eine funktionierende Adresse da hast."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:14",
+      "text": "Ja hier wird gerade einer angezeigt, ich meine die könnte ich ja einfach mal nehmen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:15:18",
+      "text": "Ja. Kannst du mir die irgendwo hinpasten?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:21",
+      "text": "Ja, sicherlich. Da haben wir ja moderne Kommunikationsmittel hier. Gefällt mir hier einfach mal die Aufnahmeinfrastruktur zum Zwecke der Informationsübermittlung."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:15:32",
+      "text": "Wenn das jetzt klimpern hört in der Aufnahme, das sind die Bitcoins, der gerade durch den Aufnahmerechner."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:15:36",
+      "text": "Ey jetzt müssen hier noch die passende Klinge lingen. Äh,\nJetzt schicke ich dir hier mal so ein."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:15:46",
+      "text": "Stringen. Da ist ein String. Eins drei P siebenundzwanzig B Strich sechs. Den kopiere ich jetzt und jetzt habe ich hier so mein Bitcoin. Wo ist er?\nund füge da die Adresse ein und dann schicke ich mal my two sense und klicke auf senden,\nTrans-Action is over the size limit. Der will eine."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:11",
+      "text": "Heißt Limit nach unten oder nach oben?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:16:15",
+      "text": "Er will, dass ich jetzt eine Vieh bezahle. Kann ich da vielleicht irgendwie wenn ich mehr schicke?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:21",
+      "text": "Null Punkt null eins ist recommended. Heißt es hier."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:16:23",
+      "text": "Ja. Na gut, dann dann bezahle ich jetzt halt mal eine Vieh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:28",
+      "text": "Ach so, das heißt, das ist sozusagen nicht nur so für die Zukunft, dass irgendwann mal nichts mehr da ist, sondern dass es jetzt schon so."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:16:33",
+      "text": "Momentan zwingt mich der Klein dazu, das zu tun, die Frage ist halt immer, was passiert, wenn ich an dem Kleinen drumpatch und sage, ich will das gar nicht,\nleider wird nirgendwo erklärt, welches Side-Limit und warum. Also manchmal geht's auch so. Okay, jetzt steht hier bei mir Payment-Sent."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:47",
+      "text": "Software ist auch so ein bisschen opensourcig, ne?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:16:50",
+      "text": "Ist ganz schön opensourcing. Also ähm wenn jemand mal ein gutes Werk tun will, dann bitte eine neue Oberfläche dran stricken,\ngesagt, es gibt ein Jason Interface. Man kann sich das relativ bequem Skripten also ich habe das ausprobiert mit äh mit Python und dem Jason RPC in Python und da kann man wirklich in drei Zeilen mit dieser Software reden und Dinge tun.\nOkay, bei mir steht jetzt hier null Schrägstrich Unkonfirmt und das Geld ist unterwegs. Und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:14",
+      "text": "Das das Geld unterwegs heißt, du hast deinem Client jetzt gesagt, dass äh an meiner Adresse Geld überkommen äh äh überzeugt äh ähm Geld an meine ja, also das ist mir überschrieben werden soll, so ein schicken in dem Sinne ist es ja gar nicht, sondern du du."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:17:27",
+      "text": "Eine Überweisung, ein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:29",
+      "text": "Internet bekannt, dass du das gerne so möchtest und jetzt soll doch mal bitte irgendjemand das bestätigen. So, wie viel Krypto ist denn jetzt sozusagen in diesem Vorgang ähm,\nschon drin, also so richtig."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:17:42",
+      "text": "Ist schon mit einer Unterschrift verbunden. Also ich habe sozusagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:45",
+      "text": "Aber derjenige der unterschreibt muss denn der in dem Moment wo er es unterschreibt nachrechnen ob du dieses Geld hast."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:17:53",
+      "text": "Ja, der muss es nachrichten. Der den Blog erzeugt muss nachrechnen, ob meine Transaktion valide ist oder nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:59",
+      "text": "Und dazu muss er alle Transaktionen seit ever durchgehen und nachrechnen, was so dein Balance ist?\nOh, das heißt, er muss diese aktuell fünfhundert Megabyte kryptografisch durchiterieren und gucken, ob das jetzt wirklich Geld ist, was du auch wirklich hast."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:18:21",
+      "text": "Muss er die Transaktion verwerfen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:22",
+      "text": "Und und und wenn der das falsch macht wenn die Software versagt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:18:26",
+      "text": "Anderen Clans überprüfen, wenn äh sobald der Blog rausgesendet wird an die Wolke in das Internet, überprüfen natürlich alle anderen auch, ob der Blog in Ordnung ist, bevor sie das äh als Bestandteil der offiziellen Geschichte akzeptieren,\nalle anderen rechnen nochmal nach, dass derjenige, der den Block generiert hat, sich nicht verrechnet hat. Wenn er sich verrechnet hat, wird er halt verworfen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:45",
+      "text": "Wenn sie zu unterschiedlichen Ergebnissen kommen würden, also wenn irgendeiner fehlerhafter Weise behauptet, dass das falsch sei."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:18:52",
+      "text": "Ja, im allerschlimmsten Fall hast du dann einen Split der Wolke. Also wenn die eine Hälfte der Wolke das eine glaubt, in die andere Hälfte der Wolke glaubt das andere, dann hast du plötzlich zwei Universen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:00",
+      "text": "Man damit nicht diesen ja und kann man das dann nicht total dedossen, indem man einfach behauptet, dass irgendwie alle Transaktionen falsch sind."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:19:06",
+      "text": "Dazu brauchst du mehr Rechenleistung als der Rest des Netzwerks, weil wenn alle sagen irgendwie ist in Ordnung, dann sind rechnen die auch weiter und erzeugen den nächsten Block, basierend auf einer bösen alles in Ordnungfunktion. Wenn du sagst irgendwie, ich glaube das nicht, ist es erstmal dein Privatding."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:21",
+      "text": "Weil die anderen meine Behauptungen nicht bestätigen können und das dann nicht."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:19:24",
+      "text": "Die interessieren sich gar nicht für deine Behauptung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:27",
+      "text": "Aber wie viele müssen denn dann das das also jeder muss sozusagen jede also jeder Block, jeder äh alle zehn Minuten, wenn behauptet wird, das sind alles Transaktionen, die waren okay.\nJeder, der das übernimmt, rechnet das auch noch mal komplett nach. Und nur, wenn er das komplett nachgerechnet hat, übernimmt er das in seine Welt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:19:48",
+      "text": "Genau. Und dann auch nur die längste Kette von Blocks."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:51",
+      "text": "Das heißt, das ist nicht so dedorsig, dass man sagen kann, das stimmt alles gar nicht und alle anderen glauben mir das, sondern das müsste dann auch wirklich stimmen, was ich behaupte."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:19:59",
+      "text": "So, in meinem Kleinen steht jetzt hier übrigens eins, nee, jetzt zwei Schrägstrich Unkonfirm, das heißt, während wir Sprachen wurden zwei Blocks generiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:07",
+      "text": "Wir haben jetzt grade äh Glück gehabt, dass jetzt gerade wieder so ein Zehn-Minuten-Dings durch war. Genau. Hätte jetzt auch noch länger dauern können."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:20:11",
+      "text": "Genau, genau. Genau und es ist irgendwie also als ich den Satz anfing, hat es gerade von null auf eins gewechselt und jetzt von eins auf zwei, das heißt, wir haben sogar schon zwei Bestätigungen und die müsste tatsächlich irgendwann bei dir ankommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:24",
+      "text": "Müsste ich das jetzt hier sehen bei."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:20:26",
+      "text": "Trans-Actions. Also bei Recive ziehst du natürlich auch, aber das ist auch bei Transactions."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:30",
+      "text": "Irgendwie aktualisieren? Nee. Bei mir ist noch nix zu sehen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:20:37",
+      "text": "Was wir aber mal ähm was."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:39",
+      "text": "Zwei Connections und äh unten sagt er eintausend, was ist das? Hier eine."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:20:44",
+      "text": "Connections nur, solltest du vielleicht mal UPNP einschalten, damit du mehrere Leute siehst. Also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:51",
+      "text": "UPNP.\nHabe ich glaube ich. Beziehungsweise ich habe Nut PMP. Das ist nämlich toller.\nBitcoin-Software unterstützt keinen Nackt-PMP das geht ja nun gar nicht.\nHeißt es, es läuft im Prinzip wie bei, dass man auch von außen kontaktiert wird äh und in der."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:21:16",
+      "text": "Genau, genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:17",
+      "text": "Verschiedenen. Mit wie viel bist du denn verbunden?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:21:20",
+      "text": "Bei mir stehen acht Connections, okay ist auch nicht so viel."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:23",
+      "text": "Aber du bist auch im selben Netz."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:21:26",
+      "text": "Muss es eigentlich gehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:28",
+      "text": "Hm und du hast sie wahrscheinlich jetzt auch schon ein bisschen länger laufen als ich. Okay, das könnte schneller gehen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:21:34",
+      "text": "So, jetzt gehe ich auf jeden Fall mal auf Blog Explorer Punkt com Slash Edres und da Slash die Adresse, die du mir gerade gegeben hast und Drückerreturn."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:45",
+      "text": "Block, also BLOCK Explorer."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:21:48",
+      "text": "Genau. Ich teste das vielleicht einfach auch mal zurück. Kannst du da drauf klicken. Und da sieht man nämlich die Transaktion schon. Da steht irgendwie äh du als Empfänger.\nIch als Sender und äh dass du jetzt 0,02 auf deinem Konto hast. Und wir sehen die Transaction dazu. Wir können auf die Transaction klicken,\nNämlich die der Block eins drei 001vier der enthält jetzt unsere Transaktion von eben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:12",
+      "text": "Ah ja. Also ich bin jetzt sozusagen im Besitz von null Komma null zwei Bitcoins. Und die sind eine Bitcoin ist gerade wie viel äh Dollar wert hast du gesagt? Einundzwanzig?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:22:25",
+      "text": "Lass mich auf den aktuellen Kurs gucken so ungefähr zweiundzwanzig ja? Gibt da so ein da scrollen die ganzen Markttransaktionen durch. Letzte Transaktion war einundzwanzig Dollar fünfzig pro Bitcoin."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:38",
+      "text": "Du hast mir vierundvierzig Cent Dollars Hemd, US Dollars Hemd. Geschenkt. Wow. Hammer."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:22:46",
+      "text": "Ja, es reicht noch nicht für eine wirklich große Fläche äh Schalldämmung für die Wand, aber."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:52",
+      "text": "Nee, das stimmt. Aber es wird äh theoretisch immer mehr. Jetzt muss ich nur noch irgendjemanden finden, der akustikschaum will, auch gegen Bitcoin ausliefert.\nAha, dreizehn null null eins vier und jetzt schaue ich hier gerade auf Block Expo und da sind wir schon wieder einen weiter."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:23:07",
+      "text": "Mhm, genau. Deswegen steht bei mir auch schon zwei."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:10",
+      "text": "Also zehn Minuten ähm ist das nicht gerade, ne? Das ist hier wirklich."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:23:14",
+      "text": "War im Schnitt und es ändert sich halt auch immer so. Also kurz bevor die Schwierigkeit sich ändert, wird's schneller. Dann ändert sich die Schwierigkeit, dann ist es wieder ein bisschen langsamer. Dann kommen wieder Leute dazu, die mehr Mining machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:25",
+      "text": "Hier irgendwo auch äh wie die Schwierigkeit gerade ist."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:23:29",
+      "text": "Bei Blog Explorer Punkt com siehst du sie nicht, wo du aber mal."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:32",
+      "text": "Waren auch mal 14 Minuten zwischen zwei äh."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:23:35",
+      "text": "Ja ja, das passiert auch. Das ist halt alles sehr dynamisch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:37",
+      "text": "Interessant und hier war auch wirklich mal nur eine einzige Transaktion. Ich meine, er hat sich das dann,\nes ist ja eigentlich sehr attraktiv zu warten bis wirklich viele äh Transaktionen zusammen sind, weil umso mehr Transaktionen ich mit einem Block bestätige umso mehr Geld kriege ich ja eigentlich auch dafür."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:23:57",
+      "text": "Ja, aber wenn du die Wahl hast zwischen 50 Bitcoin sofort und fünfzig Komma null vier Bitcoin in der Stunde, dann nehmen die meisten Leute die fünfzig Bitcoins sofort."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:08",
+      "text": "Gut, aber nur eine einzige Transaktion äh."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:24:11",
+      "text": "Ja oder die äh der Anzahl Anteil der Trans-Action viel gegenüber der Geldschöpfung ist halt noch nicht so hoch, als dass es einen Unterschied machen würde."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:18",
+      "text": "Das könnte sich sozusagen noch ändern."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:24:19",
+      "text": "Also auch dieser dieser Block, mit der nur einen Transaktionen drin hat, 50 Bitcoins erzeugt, für den, der es gefunden hat. Was ganz schön viel Geld ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:28",
+      "text": "Ja, was gibt dieses Total BTC äh da in dieser Spalte noch mit aus? Wie viel Bitcoins da sozusagen hin und her transaktioniert wurden und in dem Fall steht da auch nur 50. Das heißt, das sind genau die 50, die er erhalten hat."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:24:41",
+      "text": "Genau, also wahrscheinlich hat er, ist diese eine Transaktion, sind genau die fünfzig, die erhalten hat. Du kannst da mal draufklicken, dann siehst du den Inhalt da so links."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:48",
+      "text": "Er hat einfach einen Block gespendet und die einzige Transaktion, die er überhaupt äh damit äh signiert hat, ist die, die ihm 50 Bitcoins gegeben hat."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:24:54",
+      "text": "Genau, er hat gesagt, es war gerade nichts los. Gab grad."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:57",
+      "text": "Aber immerhin, ich meine fünfzig Bitcoins sind ja tausend Dollar. Wow."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:25:04",
+      "text": "Das ist schon also das Mining, noch lohnt es sich, wenn man die passende Grafikkarte hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:09",
+      "text": "Krass, aber ich meine, das Geld ist es in dem Moment erst nur wert, wenn ich's halt wieder ausgebe und das macht natürlich derzeit noch keiner und das äh vollkommen unklar, wie sich äh äh das Ganze jetzt währungstechnisch so."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:25:18",
+      "text": "Also die ähm diese,\nKursanstieg in den letzten vier Wochen ist ähm sicherlich damit verbunden, dass es plötzlich einen attraktiven Markt gab, wo man diese Bitcoin auch ausgeben kann.\nhast du bestimmt auch schon von gehört. Das ist dieses ominöse Silk Road, so eine Art äh eBay für Drogen,\nAlso wirklich wie im schlechten Film, so muss man sich das vorstellen, ist eine Webseite, steht da irgendwie LSD, Kokain Haschisch und dann klickt man da drauf und da steht dann irgendwie zwei Bitcoin-Diskreterversand aus Kanada."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:50",
+      "text": "Nein. Unglaublich. Und die ist noch nicht äh noch nie noch nicht niedergekämpft worden diese Webseite."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:25:58",
+      "text": "Also das hat natürlich nicht lange gedauert, dass irgendwie äh zwei Senatoren aus den USA die sofortige und vollständige Vernichtung dieser Zeit gefordert haben und das FBA aufgefordert haben\nendlich was zu tun. Allerdings ist äh das auch eine Zeit, die als Tour Hidden-Note betrieben wird, also im sogenannten Darknet liegt und die ist halt auch nicht so einfach zu finden.\nund ja so dass viele Leute gibt, die zwar\nteure Grafikkarten zu Hause haben, damit viel rechnen, aber sich nicht aus dem Haus trauen, um Drogen zu kaufen, aber trotzdem gerne welche konsumieren offensichtlich. Ähm ist ein Markt entstanden und ähm,\nsicherlich einer der Gründe zusammen mit Spekulation natürlich, warum äh warum Bitcoin plötzlich was wert ist, warum dieses Modell äh funktioniert hat, weil man."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:42",
+      "text": "Gut, jetzt kommen wir jetzt äh auf die eigentliche äh philosophische ähm Diskussion. Weil ich glaube technisch haben wir das jetzt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:26:48",
+      "text": "Technisch sind wir glaube ich durch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:49",
+      "text": "Soweit abgehakt. Gut, gleich kommen noch ein paar Fragen, aber grundsätzlich ist es klar. Vielleicht noch mal ganz grob äh zusammengefasst, also äh äh Bitcoin ist sozusagen ein Währungssystem für sich selbst. Das hat erstmal,\nkeinerlei Bezug zu irgendeiner anderen Währung. Es repräsentiert nicht Euro, es repräsentiert nicht US-Dollar,\nwohl aber hat sich mittlerweile, aus welchen Gründen auch immer, eine Community äh äh von Sights oder Firmen oder Organisationen, was auch immer, individuals gebildet, die der Meinung sind,\nDas hat Wert. Und so ist das ja eigentlich auch mit einer normalen Währung, wenn vertraut,\ndem System, dass es etwas wert ist, weil ich in dieser Währung, in diesen Einheiten dieser Währung für mich Dienstleistungen erwerben kann, beziehungsweise wenn ich im Besitz der Währung bin, auch entsprechend."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:27:36",
+      "text": "Glaube, da geht's erst mal um so elementare Dinge wie äh Dach überm Kopf, Wasser aus der Wand und jeden Morgen sein Brötchen kriegen. Ja, aber das äh basiert tatsächlich darauf, dass ich dran glaube\ndass ich mit diesem Geldschein morgen auch noch Brötchen kriege. Deswegen nehme ich den an, wenn ich selber äh eine Dienstleistung erbringe."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:53",
+      "text": "Mhm genau, wenn du mir jetzt hier so einen zehn Euro so einen Labberschein gibst mit irgendwie Linien drauf, könnte ich auch sagen, was dat denn."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:27:59",
+      "text": "Ist denn ist denn Griechenland gedruckt? Ansonsten nehme ich ihn."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:02",
+      "text": "Genau, das ist das Vertrauen. So und jetzt gibt es offensichtlich Leute, die vertrauen auch diesem Netz so weit,\nErstens ist es das auch morgen gibt und dass es morgen auch diese Einheiten noch etwas wert sind, dass sie sogar bereit sind,\netwas Geld aus diesem anderen System, den sie bisher immer so vertraut haben und in die meisten,\nnämlich dem Internationalen Währungssystem äh sich Geld äh also etwas Geld von dem auszugeben, um Bitcoins einzunehmen und umgekehrt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:28:34",
+      "text": "Versuchst bemüht nicht richtiges Geld zu sagen, oder?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:38",
+      "text": "Bin da wie alle was Geld betrifft äh auf dünnen Eis. Ähm,\nGenau, ja weil richtiges Geld in dem Sinne gibt's ja nicht. Genau,\nUnd okay, das heißt, jetzt gibt es Webseiten, die sagen, du gibst mir hundert Dollar und ich gebe dir Bitcoin dafür und zwar würde ich eben für diese 100 Dollar grade mal zwei kriegen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:29:02",
+      "text": "Ja nee äh vier."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:29:04",
+      "text": "Fünf. Ja okay."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:29:05",
+      "text": "Ja. Ähm wobei diese Seiten nicht direkt als Händler auftreten, sondern es sind so Marktplätze. Es ist ähm wie eine Börse muss man sich das vorstellen. Das heißt Leute gehen da hin, sagen ich kaufe Bitcoin zu dem Preis oder ich verkaufe Bitcoin zu dem Preis.\nKann man sich alles sehr schön angucken auf äh Bitcoin Market Punkt com."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:29:22",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:29:24",
+      "text": "Eine Übersicht über die verschiedenen Handelsplätze und der größte ist Mount Gocks.\nmit äh wirklich bemerkenswerten umsetzen und dann gibt's noch ein paar, die alle unter ferner liefen äh zu verbuchen sind,\nund ja, da sieht man dann die Gebote und äh also Verkaufs- und Einkaufsgebote und dann geht man da halt hin, man registriert sich ein Account und diese Webseite tritt eigentlich nur als Vermittler zwischen Käufer und Verkäufer auf.\nne warte falsch, Bitcoin-Charts Punkt com, Bitcoin Market ist einer dieser Märkte, Bitcoins, macht die bunten Bilder zu den Märkten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:29:58",
+      "text": "Da habe ich mich vertippert. Das Internet, unendliche Weiten. Genau, Slash Markets hatte ich auch schon mal. Hier aufm Screen.\nso was sagt denn hier diese Liste jetzt eigentlich gerade aus."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:30:21",
+      "text": "Sortiert nach Volumen. Da siehst du also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:30:23",
+      "text": "Marktes."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:30:24",
+      "text": "Da siehst du die Umsätze, den ähm den besten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:30:28",
+      "text": "Ist der letzte Preis, der da sozusagen gerade für eine Bitcoin."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:30:31",
+      "text": "Genau. Lettes Preis ist der letzte äh Preis, der gezahlt wurde. Danke."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:30:37",
+      "text": "Denn im Wesentlichen die Tätigkeit, die da gerade ist, also kaufen die Leute derzeit im Wesentlichen Bitcoin gegen Geld, weil sie sehen, die Währung steigt. Kann man das so sehen?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:30:46",
+      "text": "Das läuft in das läuft in beiden Richtungen. Also es gibt ja Leute, die haben was und verkaufen. Es gibt Leute, die wollen was und kaufen. Und nur wenn die es."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:30:55",
+      "text": "Ja auch nichts kaufen will."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:30:56",
+      "text": "So Markt, also irgendwie nur wenn auf beiden Seiten Interesse ist, dann funktioniert der Markt auch, aber die Umsatzzahlen sprechen dafür, dass tatsächlich da reges Interesse da ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:31:04",
+      "text": "Volume von diesem Mounts ist was ist das für eine Zahl? Ja die muss ich aber, die ist aber leider kleingedruckt,\nMuss mal hier kurz ein bisschen zoomen. Thirty Day Volume ist 17 Millionen US-Dollar.\ndas ist sowohl Kauf als auch Verkauf."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:31:26",
+      "text": "Ja. Weil äh eine Transaktion ist immer ein Kauf plus ein Verkauf. Weil einer kauft, der andere verkauf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:31:32",
+      "text": "Ja klar. Okay, das heißt für 17 Millionen US-Dollar sind da Bitcoins gehandelt worden in einem Monat,\nBei dem Nächsten sind es immerhin noch 1,7 Millionen. Da ist aber noch einer, der hat noch viel mehr."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:31:47",
+      "text": "Du musst die Einheit beachten. Das ist mit den 1,7 Millionen sind polnische Slotti. Also die die äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:31:53",
+      "text": "Ach ja, okay, alles klar. Das ist eine andere Währung."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:31:55",
+      "text": "Der größte Exchange der Welt ist halt Mount Gocks, die äh\nin US-Dollar handeln, aber über sogenannte Liberty-Reserf, US-Dollar. Liberty-Rieserf ist so was wie PayPal, allerdings in Costa Rica und ohne so strenge Aufsicht. Also das ist sozusagen das in Anführungszeichen traditionelle\nPayPal der Leute, die mit ihrer Identität nicht ganz so sorgfältig sind, nicht die Geistrechnung ihrer Mutter dahin schicken wollen,\nÄhm genau. Dann die Polen sind an zweiter Stelle der drittgrößte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:22",
+      "text": "Ist ja auch USD Liberty Reserve."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:32:24",
+      "text": "Der drittgrößte Exchange, das ist sehr spannend. Das sind Second-Life-Dollars."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:26",
+      "text": "Nein."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:32:29",
+      "text": "Also es wurden 53 Millionen Second-Life-Dollars gehandelt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:34",
+      "text": "Verstehe, das heißt mit Bitcoin vernetzen sich jetzt auch diese ganzen Welten, die auch schon so ihre eigene Währung hatten,\nWobei äh Second Life zu US-Dollar wird's in dem Sinne auch äh schon immer gegeben haben. Nicht zuletzt durch Linden-Labs, die das einem verkaufen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:32:50",
+      "text": "Mhm mhm so ist das, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:51",
+      "text": "Hier auch dann so World of Warcraft und äh."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:32:53",
+      "text": "W habe ich noch nicht gesehen. Was es auch noch gibt sind äh es gibt einen Irr-Channel, äh der sogenannte over the Counter Geschäfte macht. Das heißt, man geht da einfach rein und sagt irgendwie, ich habe hier Amazon Geschenkegutschein, will nicht jemand Bitcoins gegen Amazon Geschenkegutscheine tauschen,\nSagt einer ja und dann einigt man sich auf den Kurs und da werden natürlich auch WOW Dollars und wie gesagt Amazon Geschenkgutscheine und Prepaid-Kreditkarten und der ganze andere Kram gehandelt,\nan den offiziellen in Anführungszeichen offiziellen Börsen äh ist das noch ein bisschen eingeschränkter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:33:25",
+      "text": "Interessant, das heißt die Polen sind hier aber auch ganz gut dabei."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:33:29",
+      "text": "Polen sind weit vorne, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:33:31",
+      "text": "Steht denn das soweit vorne? Ich meine was ist denn jetzt hier überhaupt Basis dieser Liste? Ist es das Volumen?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:33:36",
+      "text": "Dass die Basis der Liste ist das Volumen in Bitcoin. Das ist die große Zahl über der kleinen Zahl."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:33:43",
+      "text": "Ah okay, verstehe, okay ja alles klar, jetzt verstehe ich das gerade. Gut und da drunter steht nur, was das sozusagen in jeweiliger Währung ist.\nAh, das heißt, die Eurosumme ist deutlich kleiner,\nhundertfünfundsechzigtausend Euro oder knapp fünfzehntausend Bitcoin, die da gehandelt werden. Das ist natürlich nüscht im Vergleich zu dem,\nUS-Dollar zumals ja auch noch andere gibt, die hier mit US-Dollar, okay, es gibt auch noch andere mit Euro, oder? Aber das meiste ist wirklich, da unten ist noch ein bisschen Euro."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:34:21",
+      "text": "Also es gibt spannenderweise auch verschiedene US-Dollar. Es gibt irgendwie Money Bookers, diese PayPal-Alternative, es\nUS-Dollar in Banküberweisungen und es gibt US-Dollar in äh Liberty Reserve. Die interessanterweise auch Großunterschiede haben. Also der Aufschlag zu, ich möchte mit PayPal Bitcoin kaufen, sind äh im Schnitt zehn Prozent."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:34:39",
+      "text": "So, jetzt gucken wir uns nochmal den Preis Price an. Also bei Mount Gox einundzwanzig Komma,\nfünfzehn US-Dollar pro Bitcoin. Und wo haben wir jetzt noch einen anderen mit US-Dollar? Da, der PayPal, genau, dreiundzwanzig fünf.\nAha, das heißt, warum sollte man da überhaupt kaufen, wenn's doch teurer ist? Weil man PayPal benutzen will."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:35:03",
+      "text": "Weil man EP-Pal hat und man möchte natürlich jetzt sein Geld und nicht eine Woche warten bis man auf Liberty Reserve sein Konto eingerichtet hat, das Geld dahin transferiert hat und so weiter und so fort."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:12",
+      "text": "Und ist natürlich auch eine Frage der Transaktionskosten, die das Ganze hat für den Händler, weil PayPal ist halt teurer wahrscheinlich als dieses Liberty-Reserve, oder?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:35:20",
+      "text": "Weiß ich nicht genau. Das kann ich nicht sagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:21",
+      "text": "Weiß ich auch nicht. So, aber dann gibt's ja noch hier einen mit USD. Der hat einfach nur USD, das heißt der nimmt am normalen Bankensystem teil oder was?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:35:30",
+      "text": "Da steht da, was steht denn da in Klammern hinter USD?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:33",
+      "text": "Das da steht nur USD."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:35:36",
+      "text": "TH OSD, den kenne ich noch nicht den Exchange, der ist neu."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:39",
+      "text": "Das steht nur nämlich nur USD, deswegen gehe ich mal davon aus, dass der einfach an dem normalen Banking-System."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:35:45",
+      "text": "Dann würde da Weiher stehen, wenn's also normale Überweisungen sind, steht da Weiher."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:49",
+      "text": "Hier steht einfach nüscht."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:35:52",
+      "text": "Keine Ahnung was trägt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:55",
+      "text": "Auf jeden Fall kostet es da zweiundzwanzig. Wollen wir den? Hier haben wir noch USB Wire. Da kostet es vierundzwanzig. Interessant. Slibbert die Reserve scheint ja wirklich äh,\ngünstige Konditionen zu haben, aber es kostet den USD, war ja irgendwie ja hier gibt's das auch für zwanzig mit USD-Wire.\nMerkwürdig, merkwürdig, merkwürdig. Na gut, äh was lernen wir daraus? Ähm es hat sich jetzt aus welchen Gründen auch immer, hier ein aktiver Markt. Etabliert und das heißt es gibt jetzt eine Währung,\nder einige Leute vertrauen, sodass man auch daraus ableiten könnte genug."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:36:33",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:36:35",
+      "text": "Also das, wie man das so dann auch mal äh sieht und würde ich jetzt äh zu viel Euro haben dann würde ich ja, könnte ich jetzt sagen, okay, ich kaufe mir jetzt mal für hundert Euro zwanzig Bitcoins.\nOder nee, was war jetzt der Preis."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:36:53",
+      "text": "Bitcoins kriegst du."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:36:55",
+      "text": "Achtzehn Komma fünf Euro müsste ich jetzt zahlen, wie auch immer. Also ich investiere jetzt einfach mal äh so viel Geld wie nötig ist, um irgendwie fünf fünf Bitcoins zu bekommen und dann,\ndann habe ich die und dann tue ich dann erst mal nix. Dann ist das quasi wie so ein Aktienkauf und dann setze ich mich äh vor das Internet, starre da die ganze Zeit rein."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:37:13",
+      "text": "Man kann da ganz toll irgendwie lauter Chart-Technik Analysis klicken, somit irgendwie Unterstützungslinien, wie man das ausm Fernsehen kennt. Ja. So kann man machen. Ist also ich würde."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:37:24",
+      "text": "Aber es ist durchaus vorstellbar, dass der Preis noch hoch geht, man ist auch durchaus vorstellbar, dass er wieder runter geht so."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:37:28",
+      "text": "Also es ist ähm also wenn man das tut, dann sollte man sich bewusst sein, dass es hochspekulativ ist und mit dem Risiko des Totalverlusts verbunden.\nAlso es ist nicht völlig auszuschließen, dass morgen jemand kommt und einen fundamentalen Fehler im System findet, der dafür sorgen kann, dass äh sorgt, dass er das ganze Geld rausziehen kann.\ndann würde natürlich der Marktwert komplett auf null fallen innerhalb kürzester Zeit. Das kann passieren,\nein Risiko. Es kann passieren, dass äh keine vernünftige Lösung für das Skalierungsproblem gefunden wird, das heißt, dass die Popularität des Systems einfach es auffrisst, weil immer mehr Rechenleistungen, immer mehr Bandbreite gebraucht wird und es keiner mehr macht.\nTransaktionen nicht mehr durchkommen. Ist auch vorstellbar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:07",
+      "text": "Was dadurch dann die Transaktionskosten steigen, dass man immer mehr."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:38:12",
+      "text": "Ja, also bis hin zum kompletten nicht funktionieren des Systems, dass das Geld nicht mehr ankommt. Sage ich, das Geld bei dir angekommen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:18",
+      "text": "Bisher sehe ich noch nix."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:38:19",
+      "text": "Das ist merkwürdig, weil bei mir steht das schon als Konflint. Hast du dann noch ein Pop-up offen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:22",
+      "text": "Tja, hier zählen die jetzt zählt die ganze Zeit irgendwelche Blogs hoch, also."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:38:25",
+      "text": "Hast du denn da für eine Blocknummer, die da steht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:28",
+      "text": "Eins, zwo, sieben, siebenhundertzehn, also."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:38:33",
+      "text": "Fehlen dir noch dreitausend Blogs, bis du aktuell bist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:36",
+      "text": "Ah, das heißt, er ist immer noch dabei runterzuladen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:38:38",
+      "text": "Immer noch dabei runterzuladen und zu überprüfen ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:41",
+      "text": "Aha. Wie viel fehlen noch, sagst du?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:38:43",
+      "text": "Dreitausend ungefähr. Wir sind bei eins drei null null zwei null und in eins vier ist dein Geld drin."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:46",
+      "text": "Okay, vielleicht bis zum okay, bis äh bis zum Ende der Sendung ähm dürfte ich dann wahrscheinlich auch mein Geld haben. Meine 4undvierzig Cent. So.\ngrad noch so ein bisschen, also ich grüble gerade so ein bisschen über die Implikationen, weil,\nso viele Währungen und dann der Unterschied zwischen der Bitcoin-Währung und allen anderen Währungen ist,\nDas ist hier eigentlich keinerlei Politik gibt, die einen Einfluss hat auf diese Währung.\nWährend man bei US-Dollar gibt es dann auch eine passende Regierung dazu, die gewählt ist und die äh vielleicht nicht unbedingt das tut, was die äh Menschen möchten, aber zumindest irgendwelche Dinge tut aus irgendwelchen Interessen heraus. Hier,\nScheint das ja nicht der Fall zu sein."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:39:40",
+      "text": "Also es gibt natürlich auch da eine Art Politik zu machen und zwar darüber, was für Software in den Kleinen reinkommt. Also ob da Algorithmen dazukommen oder rausfallen, ist also nicht komplett politikfrei.\naber es ist zumindest so, dass äh zum Beispiel die Geldmengensteuerung ähm quasi vorprogrammiert ist. Man kann nicht sagen irgendwie je\nwir haben gerade eine eine Wirtschaftskrise, deswegen müssen wir jetzt den Leitzins senken und dadurch die Geldmenge erhöhen, damit äh Investitionen getätigt werden. Also die klassische kinesianische Geldmengen Steuerungspolitik.\nKonjunkturpolitik, die geht mit dem System nicht, sondern die Geldmenge ist halt rein programmiert. Man weiß genau, wie viel Geld da ist. Man weiß, wie sich die Geldmenge entwickeln wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:22",
+      "text": "Aber derzeit ist es ja so, dass am laufenden Meter Bitcoins erzeugt werden und das wird auch noch eine Weile so gehen. Ich meine, dass irgendwie ab."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:40:30",
+      "text": "Schon noch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:31",
+      "text": "Wird das wohl noch dauern, kann man das irgendwie anhand der aktuellen Wachstumskurve halbwegs prognostizieren."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:40:37",
+      "text": "Ja Nadine Wachstumskurve ist ja reinprogrammiert. Das äh wird über die Schwierigkeit der Blockberechnung gesteuert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:43",
+      "text": "Im Schnitt kommen alle zehn Minuten 50 Bitcoins dazu."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:40:46",
+      "text": "Genau und irgendwann sind's alle zehn Minuten bloß noch 25 Bitcoins, irgendwann und dann irgendwie nur noch 12, fünf und so weiter und so fort. Also es wird in regelmäßigen Abständen die äh die Belohnung runtergesetzt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:57",
+      "text": "Okay, also der Zuwachs nimmt kontinuierlich ab und bleibt aber irgendwie ein Zuwachs bis er dann irgendwann mal gegen so das Ende."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:41:06",
+      "text": "Das läuft dann mal so gegen den Grenzwert, wie man das kennt, wird äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:41:09",
+      "text": "Ja. So eine Tangente."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:41:11",
+      "text": "Und der Schildkröte. Ähm und dann sind's einundzwanzig Minuten. Das wird, glaube ich, noch mal zehn Jahre dauern. Ich hab's jetzt nicht genau im Kopf. Mhm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:41:18",
+      "text": "Zehn Jahre. So und dann gibt's nicht mehr Geld."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:41:22",
+      "text": "Genau, dann ist Geldmenge begrenzt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:41:24",
+      "text": "Das irgendwie gut."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:41:26",
+      "text": "Ähm das kommt drauf an, ob du jetzt die Kinesianer oder die Wiener Schule fragst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:41:33",
+      "text": "Ja, was äh sagt die eine, was sagen die anderen?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:41:35",
+      "text": "Äh das sind beides äh Schulen der Volkswirtschaften, die Kenesianer sagen, Geldmengensteuerung ist elementar notwendig und das System am funktionieren zu halten, um also sozusagen Konjunkturschwankungen auszugleichen.\nund die Wiener Schule sagt ne ist alles völliger Blödsinn man muss das den Marktkräften überlassen und irgendwie also wenn man den Kinesianern\näh glaubt, dann ist es kompletter Blödsinn, das System und wird explodieren und vor sich hin schwanken.\ndie Wiener Schule wird sagen endlich irgendwie ein ein ein Geldmengensystem wo nicht mehr sinnlos irgendjemand eingreift sondern wo man von vornherein weiß wie sich das entwickeln wird. Also,\nauch das Spannende an Bi."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:42:12",
+      "text": "Dieses Kenisantische äh Modell ist sozusagen das, was eigentlich alle machen derzeit."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:42:17",
+      "text": "Ja, mehr oder weniger."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:42:19",
+      "text": "Gibt's irgendjemand irgendein Land, was sich dem entzieht, Nordkorea oder so."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:42:23",
+      "text": "Na ja Nordkorea hat ja eh keinen Kapitalismus in dem Sinne? Da fällt die Frage also weg."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:42:30",
+      "text": "Die haben ja auch Geld."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:42:31",
+      "text": "Die haben auch Geld, aber wie die das mit dem Geld machen, ich glaube die machen das noch anders. Die haben da kein kein Leitzins, sondern sie sagen ihren Backen einfach, was sie zu tun und zu lassen haben. Ist halt kein Markt.\nDamit fällt schon mal der der Ansatz von von Hayek und der Wiener Schule komplett weg, weil der basiert auf einem Markt und eigentlich passiert auch der Ansatz von Kienz auf einem Markt, den man äh steuert. Also man muss sich das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:42:53",
+      "text": "Die Wiener Schule ist ein Markt, der nicht gesteuert ist."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:42:56",
+      "text": "Genau, die glauben irgendwie so staatlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:42:58",
+      "text": "Man normalerweise so Marktradikalismus nennt. Alles wird dem Markt überlassen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:43:00",
+      "text": "Ja, genau, genau. Die sagen, das ist völlig gesund, wenn dann mal so eine Wirtschaftskrise ist, weil dann gehen die ganzen Firmenpleite, die man eh nicht braucht und dann wird hinterher alles besser. Ah ja, also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:12",
+      "text": "Jetzt eigentlich bei Bitcoin."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:43:14",
+      "text": "Haben wir jetzt eigentlich bei Bitcoin genau, ist wie gesagt äh die der Anarchokapitalistische Ansatz im Wesentlichen. So Kapitalisten die sagen, dass Abwesenheit von Staat für den Kapitalismus nur gut sein kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:25",
+      "text": "Das ist so noch nicht bewiesen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:43:27",
+      "text": "Das ist so noch nicht bewiesen. Nein, also irgendwie Bitcoin ist in in dem Sinne auch ein glorioses Experiment. Was passiert, wenn man das mal macht?\nda sehe ich eigentlich auch sozusagen den spannenden Aspekt bei Bitcoin drin, zu gucken, was wird damit passieren. Also es gibt viele Leute, die sagen, es geht jetzt ein ein halbes Jahr oder ein Jahr lang gut,\nUnd dann wird irgendwas passieren. Die Software explodiert oder irgendwie die Marines rücken aus und erschießen alle die Geld wechseln in Bitcoins oder so. Also es gibt da die die wüstesten Vorhersagen.\nAber so vom Bauchgefühl her würde ich sagen, das kommt schon hin. Das ist einfach ein Experiment. Das ist ein ganz schön mutiges Experiment. Das hat eine ganz schön große Größe erreicht für ein Experiment.\nwas so richtig rauskommen wird, das weiß eigentlich noch keiner."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:44:09",
+      "text": "Versuche hier das grade mit dieser Wiener Schule nachzu- äh schlagen, finde aber grad nicht den richtigen äh Suchbegriff."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:44:15",
+      "text": "Du kannst zu YouTube gehen und da gibt's den ähm den Keens und Hayek Rip. Der Haick schreibt sich H A Y EK und der KINS KE Y NES.\nUnd da findet man so einen sieben Minuten Rapsong, wo äh sich ein Battle liefern, was irgendwie ein relativ guter Überblick über die Positionen ist,\nSo, aber der Geltenden Aspekt ist nicht nur der einzige Spannende, der andere Spannende ist, dass es nicht möglich ist, Konten zu sperren.\nalso nicht hingehen und wie in dem äh Wiki Leaks Fall sagen, nee, wir frieren da jetzt das Konto ein oder wir nehmen dieses Geld nicht mehr an,\nSo also auch wenn man äh erotische Dienstleistungen im Netz betreibt, ja aber es nach deutschem Recht völlig legal ist, man darf sich schon vor einer Kamera ausziehen, das Leuten zeigen und Geld dafür nehmen, aber PayPal sagt mir, das passt aber nicht zu unseren Geschäftsbedingungen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:45:06",
+      "text": "Ja, okay, das heißt, äh."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:45:09",
+      "text": "Sperrbarkeit von Transaktionen. Das ist eigentlich das Spannende."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:45:12",
+      "text": "Genau. Es kann nicht einfach mal einer so dazwischen gehen und sagen, du darfst nicht mehr mitspielen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:45:18",
+      "text": "Solange du dein Private Key noch hast und im ewigen Lockfall steht, dass du Geld hast, ist das Geld auch noch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:45:22",
+      "text": "Aber wie ähm viele anderen nehmen das denn die Geschichte? Ich meine, unsere Transaktion jetzt.\nDa steht jetzt nicht unsere Namen drin, sondern da stehen so unsere Strings drin. Aber wenn Mainz dringend auf der Webseite steht, dann ist ja über Google schnell mal herausgefunden, wer denn behauptet, das zu."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:45:37",
+      "text": "Ist richtig. Also die ganzen Behauptungen, Bitcoin wäre anonym, muss man als haltlos übertrieben zurückweisen, weil es gibt dieses ewige Lockfall,\nund zwar stehen da jetzt unsere Namen nicht dran, aber dass diese Transaktion passiert ist, das sieht man schon. Und wenn jetzt irgendwie äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:45:53",
+      "text": "Man weiß auch ganz genau, wie viel Geld hier äh Silk, wie heißt der noch gleich, äh Silk Road für irgendwie äh Drogen in allen für alle Lebenslagen eingenommen hat."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:46:04",
+      "text": "Na ja, Sicord ist ja auch bloß ein Marktplatz. Ist wie eBay. Die kriegen ihre Gebühr. Und äh da gibt's dann äh Käufer und Verkäufer drauf,\nAber natürlich ist es im im gewissen Sinne nachvollziehbar, ja? Wenn jetzt irgendwie einem dieser Drogenlieferanten die Tür eingetreten wird und die beschlagnahmten Rechner und die finden seine Bitcoin ID raus\nund gucken dann nach, von wem hat er denn Geld bekommen? Und dann ist es zufällig die Adresse, die ich auf meine Webseite geschrieben habe, als Spendenadresse für Bitcoins, dann finden die mich natürlich, dann wissen die, ich habe da gekauft,\nAlso das ist äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:46:34",
+      "text": "Gar nicht so eine gute Idee."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:46:35",
+      "text": "Ist keine so eine gute Idee, nein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:46:37",
+      "text": "Es sei denn, man hat man macht sozusagen für jede Transaktion so einen neuen Key auf."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:46:44",
+      "text": "Genau, also das ist eine der Möglichkeiten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:46:45",
+      "text": "Auch dann muss man da ja auch wiederum Bitcoins drauf transferieren. Also es entsteht so oder so so ein Netz von Zahlung."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:46:52",
+      "text": "Man hinterlässt eine Datenschleimspur, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:46:54",
+      "text": "Ja, aber eine eine heftige. Also ich meine, eine eine in jeder Hinsicht vollständiger. Und das gibt bestimmt äh hübsche Grafen, äh wenn man das alles auswertet."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:47:03",
+      "text": "Oh ja, oh ja. Das ähm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:47:05",
+      "text": "Aber bei den Bitcoin-Charts noch nicht äh der Fall. Das sind nicht die Art von Charts, sondern das sind mehr so die die Business-Charts."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:47:12",
+      "text": "Ich würde davon ausgehen, dass das, was äh die Strafverfolgungsbehörden äh derzeit an Werkzeugen einsetzen, um äh Datamin auf äh Finanztransaktionen zu machen\ndass wenn man das auf Bitcoins anwendet, das ist ganz wunderbar funktionieren wird. Also es sei denn man ergreift äh explizite Maßnahmen dagegen. Also\nso so ähm die Bitcoin-Geldwäsche Services wird's bestimmt auch bald geben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:47:35",
+      "text": "Ja. Was wiederum bedeuten könnte, dass also erst mal bedeutet, dass es wahrscheinlich die ganze Aufregung um Bitcoin in Hinsicht von oh Gott äh\nunkontrollierbare, finanzielle Flüsse äh beginnen an zu fließen. Wir müssen das alles sofort zum Explodieren bringen. Was so derzeit so die öffentliche Reaktion zu sein scheint, ist eigentlich übertrieben."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:47:57",
+      "text": "Es ähm es ist ein bisschen übertrieben. Es ist was Wahres dran, ja, weil du kannst also selbst wenn du die Finanzflüsse siehst, kannst du sie nicht stoppen,\ndu siehst irgendwie, da ist irgendein Kolumbianer, der überweist irgendjemanden im Miami äh also selbst wenn man das weiß, äh eine eine Million am Tag, dann kann man da nichts tun. Man kann das nicht verhindern,\nman hat überhaupt erstmal die Schwierigkeiten diese Zuordnung zu machen, also wenn man nicht gerade ähm so doof ist auf seiner Webseite, seine Kontonummer anzugeben und damit dann Drogen einkaufen zu gehen, wird es auch schwieriger."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:48:27",
+      "text": "Aber andererseits weiß man auch, dass hier ein vollständiges Lockpfeil aller dieser finanziellen Transaktionen offen im."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:48:33",
+      "text": "Man sollte, sollte sich der Tatsache durchaus bewusst sein, ja. So wenn man mit\nBitcoins irgendwas macht. Also wenn du zum Beispiel deine äh deine Bitcoin-Adresse auf die Webseite schreibst und sagt irgendwie spendet mir für diese tolle Radiosendung, dann kann hinterher jeder auf Blog Explorer Punkt com nachgucken, wie viel Geld du denn schon wieder eingenommen hast über die Adresse."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:48:51",
+      "text": "Bobbel ja, aber dann wird's ja auch wieder interessant in der Währung Bitcoin. Und wie deklariere ich denn das bitte beim Finanzamt?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:49:00",
+      "text": "Ja wie jede andere Devise auch, nämlich zu äh dementsprechenden Wechselkurs. Also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:49:05",
+      "text": "Jeweiligen Zeitpunkt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:49:07",
+      "text": "Wahrscheinlich musst du das zum jeweiligen Zeitpunkt machen. Ja, ich kann mich da nicht so genau aus, ob du nicht vielleicht irgendwie als äh also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:49:14",
+      "text": "Aber es ist äh dann ist ja meine Steuerberater reden, weil das kann ich gar nicht, aber ähm so entscheidend ist ja sozusagen immer, wenn das Geld sozusagen in meiner Verfügbarkeit äh kalt ist und das ist ja die Frage, ob's eine andere Währung äh."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:49:26",
+      "text": "Es einen Unterschied, ob du äh eine Einnahmenüberschussrechnung machst oder bilanzierst. Weil wenn du bilanzierst, dann musst du natürlich den Wert der Bitcoins äh irgendwie bewerten.\nzu und an der Stelle muss man dann wirklich mit einem Steuerberater reden. Ob das jetzt zum zum aktuellen Preis, zum Einkaufspreis oder irgendwie was auch immer. Ähm wenn du eine Einnahmenüberschussrechnung machst, entsteht für dich die Einnahme eigentlich erst, wenn die Bitcoins wieder verkaufst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:49:53",
+      "text": "Sozusagen so eine so eine Investition ist wie in so eine Aktie."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:49:58",
+      "text": "Ja genau, so oder."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:50:00",
+      "text": "Wenn ich jetzt 100 Euro in Bitcoins reinstecke, dann würde ich sagen, ich habe mir für 100 Euro Bits gekauft und irgendwann verkaufe ich die halt wieder und dann habe ich eine entsprechende Einnahme und das ist das, was ich niederschlägt."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:50:12",
+      "text": "Genau, also stell dir vor, du bist Bäcker und kaufst dir ein Sackmehl. Wenn du eine Einnahmenüberschussrechnung machst, dann sagst irgendwie, ich habe ein Sack Mehl gekauft, hier sind meine Kosten. Ein halbes Jahr später wechselt er von Brot."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:50:21",
+      "text": "Wer druckt mir jetzt eine Rechnung? Also ich meine, wenn ich jetzt, okay, wenn ich zu diesen äh ich tausche dir Euro gegen Bitcoin, dann kriege ich von denen wahrscheinlich auch tatsächlich so was."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:50:29",
+      "text": "Kommt drauf an, wo du das machst und mit wem. Aber im Zweifelsfall, wenn das ein äh seriöser Service ist, ja. Oder du kannst ja auch also ich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:50:38",
+      "text": "Seriös aus."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:50:41",
+      "text": "Nun Moment mal, das sind ja alles nur, äh das sind nur Handelsplätze.\ndie äh ob das seriös ist. Okay, nebenbei Mountain Gogs, die machen auch Scroll. Das heißt, du schickst da schon Geld hin, bekommst Geld zurück. Äh aber ist halt ob du von denen eine ordnungsgemäße Rechnung bekommst, die das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:50:56",
+      "text": "Ja aber ich habe jetzt keinen äh USD und schon gar nicht bei Liberty Reserve. Also wenn, dann könnte ich hier schon äh irgendwie hier äh PayPal machen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:51:02",
+      "text": "Genau, genau. Aber da kriegst du dann halt im Zweifelsfall entweder eine PayPal-Transaktion rein oder eine Überweisung auf dein Konto. Das heißt, du hast ein Zahlungsbeleg. Und damit kannst du für eins angeben und sagen irgendwie, ich versteuere das hier."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:51:15",
+      "text": "Mhm. Aber wenn ich jetzt Wire mache, dann habe ich in dem Sinne keinen wirklichen Zahlungs."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:51:20",
+      "text": "Doch, da hast du einen Geldeingang auf deinem Konto."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:51:23",
+      "text": "Ja gut, das ist aber auch alles."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:51:27",
+      "text": "Ja, reicht ja im Zo."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:51:27",
+      "text": "Okay und dann ähm ja gut dann ist halt noch die nächste Frage, ob das in irgendeiner Form. Also Umsatzsteuer dürfte das ja wahrscheinlich nicht aufwerfen, weil das einfach nur so Geldwechsel ist, ne.\nAber wenn's dann wiederum wie Aktien behandeln, ja es also es wirft einfach eine Reihe."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:51:45",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:51:46",
+      "text": "Von Fragen auf. Das wäre jetzt wahrscheinlich dann doch mal eher was für einen ähm Wirtschaftler, Wirtschaftsjuristen,\nSteuerberater und äh ähnliche Menschen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:51:57",
+      "text": "Also spannend wird's natürlich, wenn du mit deinen Bitcoin wieder Dienstleistungen einkaufst. Also wenn es dir halt genau nicht aufs Konto auszahlen lässt,\nwenn du damit dann deinen Server anbietest, über den du deinen Podcast verteilst.\nAlso irgendwie, wenn man sich die Liste der Dienstleistungen anguckt, die man mit Bitcoin kaufen kann, dann sind das hauptsächlich so Internetdienstleistungen, so Schellserver, ähm VPN, ähm Webdesign."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:52:19",
+      "text": "Auch für den Markt. Gibt's da auch schon so ein Marktfilm?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:52:23",
+      "text": "Da gibt's eine Website, einfach muss man einfach bloß auf WWW Punkt Bitcoin Punkt org gehen, was sowieso die zentrale Anlaufstelle ist, um ähm sich auch die Software runterzuladen.\nDa gibt's direkt einen Link. Sides that accept Bitcoin. Und da kann man drauf klicken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:52:40",
+      "text": "Ein Vicky."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:52:41",
+      "text": "Ein Vicky."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:52:44",
+      "text": "Kann man sich auch eintragen sozusagen, ja. Guck an."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:52:51",
+      "text": "So und jetzt ist das Netz langsam."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:52:53",
+      "text": "Internetservices."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:52:55",
+      "text": "Ach du musst natürlich vorher auf Englisch klicken, damit du auch äh ein bisschen mehr siehst als eine deutsche Seite, auf der fast nichts steht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:53:00",
+      "text": "Ja, ich habe äh hier eben Englisch, sehe schon. Okay, alles klar. Da geht's ja richtig zur Sache, ja. Connectivity VPN,\nIst natürlich in so einer Währung, die derzeit so,\nhast du äh einen Überblick irgendwie, wie sich dieser äh Real-USD zu Bitcoin äh wert zu verhalten hat so im letzten Jahr und du dachtest ja eingangs äh sei hochgegangen, aber wie."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:53:31",
+      "text": "Wie doll hoch, also wir hatten äh lange, lange Zeit einen Kurs von ungefähr eins zu eins zum Dollar.\ngab es irgendwie auch mittlerweile ist es schon sechs Wochen her und wie plötzlich diesen Aufschwung auf vier, fünf bis hin zu acht. Dann geht's mal wieder auf fünf runter und dann irgendwie doch sprunghaft hoch. Also ähm dieser sehr äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:53:52",
+      "text": "Sehr volatil derzeit."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:53:53",
+      "text": "Es ist unglaublich volatil. Also für alle also auch ein Grund, warum das mit dem Spekulieren da so ein bisschen äh schwierig ist. Aber ich kann hier mal auf die sechzig Tage Trehr-Historie klicken, dann erzähle ich keinen Unsinn."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:54:05",
+      "text": "Posting DNS-Hosting."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:54:10",
+      "text": "Mhm. Also,\nSo Anfang Mai ging's halt hoch auf fünf und dann Mitte Mai ging's auf zehn, da wieder ein bisschen runter und blieb bei zehn bis Anfang Juni und dann explizit ist auf zwanzig und drei Tage später auf dreißig\nWas relativ deutlich mit dem Wayat-Artikel korrelierte, wo irgendjemand meinte, oh mein Gott, what the fuck, man kann Drogen im Internet kaufen mit Bitcoin."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:54:30",
+      "text": "Was? Drogen? Geil. Das brauche ich."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:54:33",
+      "text": "Genau. Genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:54:35",
+      "text": "Ah ja."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:54:38",
+      "text": "Mhm. Aber wie gesagt, man kann eigentlich sein gesamtes digitales Leben mittlerweile mit Bitcoin bestreiten. Alles, was man so an Dienstleistungen übers Netz kaufen möchte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:54:46",
+      "text": "Ja, bloß die Frage ist, wie äh bewertet man quasi, was wie viel man da so ausgibt, ne, weil wenn das äh so ein schwankendes Gut ist, dann,\nWahrscheinlich die Preise da auch extrem noch in der Fluktuation begriffen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:55:02",
+      "text": "Hm. Das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:55:06",
+      "text": "Also eigentlich müssten die Preise sinken, ne? Man müsste sozusagen weniger Bitcoin."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:55:11",
+      "text": "Tatsächlich so, dass äh einige Webseiten automatische Umrechnungen haben. Das heißt, als Käufer oder Verkäufer gibt man seinen Preis in US-Dollar an. Der wird dann zum äh sekundenaktuellen Kurs jeweils in Bitcoin umgerechnet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:55:24",
+      "text": "Mhm. Auf Basis der Aussage eben dieser Markets."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:55:28",
+      "text": "Genau genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:55:29",
+      "text": "Wobei es da nicht jetzt einen verbindlichen festgelegten Umsatz äh äh äh Umtauschwert gibt, wie man das jetzt von unseren Nationalwährungen gewohnt ist.\nWer liegt denn eigentlich fest, diesen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:55:44",
+      "text": "Den liegt der Markt fest. Da geht jemand hin und sagt, ich würde gerne Bitcoins kaufen, ich bin bereits."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:55:48",
+      "text": "Meine jetzt äh die normale, wenn ich jetzt Euro zu USD."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:55:51",
+      "text": "Entsteht tatsächlich genauso. Der entsteht an den Finanzhandelsplätzen, also an der Börse in Frankfurt oder in New York oder gibt es die Wiesn-Handelsplätze und."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:55:59",
+      "text": "Also es gibt nicht eine Aussage, sondern es gibt immer nur die Aussage von einem Handelsplatz, was da sozusagen der Durchschnitt des Tages war."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:56:05",
+      "text": "Genau. Genau, genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:56:07",
+      "text": "Und hier ist das dann eigentlich auch so. Gut. Das heißt, sie,\nAlso hier gibt's viele äh viele offene Fragen. Ähm grundsätzlich,\nIst es einfach erstmal spannend zu sehen, wie verhält sich überhaupt eine Währung, die nicht unter dem Einfluss auf die Authorities ist?\nZweitens, wie verhält sich eine Währung, wo man nicht eben mal schnell Geld drucken kann und wo auch klar ist, dass irgendwann nicht mehr,\nnur das Beitragen von Rechenleistungen einem äh Währungseinheiten gibt beziehungsweise es schon, aber eben dann auf Basis der Transaktion, das heißt die Transaktionen werden wahrscheinlich,\nteurer werden. Also es es ist klar, dass eben eine Transaktion Geldkurse ist ja eigentlich auch vollkommen normal,\nUnd ähm aber es kann jetzt nicht irgendeiner sagen, wir erhöhen jetzt mal die Geldmenge und reduzieren quasi den Wert von allem."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:57:04",
+      "text": "Genau, das geht nicht. Man kann nicht auf den Gelddrucken-Knopf drücken und damit den nächsten Krieg finanzieren, wie das bei klassischen Währungen äh durchaus öfter mal gemacht wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:57:12",
+      "text": "Aber trotz alledem, letzten Endes, wird auch der Wert von Bitcoin eben auch bestimmt,\nvon dem wie sich Bitcoin zu allen anderen Währungen auf diesem Planeten verhält. Also es ist ja nicht vollständig isoliert, ja.\ngäbe es jetzt niemand, der mir da US-US-Dollar dafür gibt, dann würde dieser Wert eben der der wahrgenommene Wert sinken. Das heißt, es ist jetzt nicht so, dass Bitcoin nur,\nvollständig in der Wolke hängt und von allem entkoppelt ist, sondern es hängt natürlich schon mit dem Rest zusammen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:57:42",
+      "text": "Ja, das das tun aber alle Währungen auch immer und also wahrscheinlich."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:57:49",
+      "text": "Bis auf die Leitwährung."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:57:50",
+      "text": "Ja. Wahrscheinlich kann der Markt\nauch so groß werden, dass irgendwann so ein Bitcoin intrinsischen Wert hat, wenn du halt tatsächlich deine Miete in Bitcoin zahlen kannst und dir am nächsten Morgen äh beim Bäcker dein Brötchen in Bitcoin dann denkst du gar nicht mehr drüber nach, was denn der Dollar wert ist, weil das ist für dich irrelevant,\nDann ist nur noch interessant irgendwie okay meine Schrippe kostet zwei Bitcoin-Cent."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:58:13",
+      "text": "Hm\nAlso ich meine, das äh denkst du, das wird denkst du, dass wir das noch erleben werden? Also das ist jetzt wird's wirklich ein bisschen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:58:25",
+      "text": "Also Vorhersagen über die Zukunft sind bei Bitcoin äh ja gerade in, ich habe mich da ja auch schon ein bisschen gesetzt, als ich mir das vor einem Jahr angeguckt, habe ich gesagt, das wird sich nie durchsetzen, Leute, die ihre Rechenleistung laufen, also Strom in Geld umzusetzen in massivem Maßstab. Das muss\nnochmal ausrechnen, wie viel das ist, was für eine bescheuerte Idee, aber der der offensichtliche äh Erfolg hat mir da Unrecht gegeben, deswegen bin ich auch vorsichtig, was Prognosen angeht.\nAber meine."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:58:50",
+      "text": "Muss man denn jetzt investieren? Hast du das äh hat das auch schon mal einer ausgerechnet? Also du hast gesagt, man muss zwei Monate rechnen. Was war das? Zweieinhalb Monate."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:58:56",
+      "text": "Halb Monate von so einer Grafikkarte. Wir können das kurz durchrechnen. Also die Grafikkarte, die ich meine, ist so eine Art T 5870. Das ist derzeit so das beste Verhältnis zu Grafikkartenkosten, zu Rechenleistung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:59:08",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:59:09",
+      "text": "So ein damit ausgestatteter Rechner, wenn man ihn laufen lässt, zieht 350 Watt. Das heißt, wir hätten 350 Watt mal ähm,\n24 Stunden am Tag. Mal."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:59:25",
+      "text": "Watt 50 Watt pro Stunde."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:59:27",
+      "text": "350 Watt Stunden, genau, mal 42und Stunden, mal zweieinhalb Monate sind ungefähr 75 Tage, kommen wir auf 63 Kilowattstunden.\nKilowattstunde zu 15 Cent sind wir bei äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:59:47",
+      "text": "49und Euro."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:59:48",
+      "text": "90 Euro. Das heißt, man für hat für 100 Euro Strom ausgegeben und hat dann für äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:59:53",
+      "text": "Kriegt er für 50 Bitcoins."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "1:59:54",
+      "text": "Fünfzig Bitcoin mal einen Kurs von derzeit wie viel achtzehn Euro? Fünfzehn Euro und dann rechnen wir mal mit zwanzig, es rechnet sich einfacher, sind tausend Euro. Das heißt ähm neunhundert Euro Überschuss.\nwas man auf gar keinen Fall tun sollte. Also ihr da draußen, ja, wenn ihr euch diesen Bitcoin zerlegt, da gibt es diesen Knopf, wo man draufdrücken kann und sagen, ich würde gerne auch rechnen lassen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:00:15",
+      "text": "Generieren, ja? Mhm."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:00:16",
+      "text": "Äh nicht machen, weil es läuft für die CDU, das ist 2 bisdrei Größenordnungen ineffizienter und ist den Strom nicht wert, den man da reinsteckt und det rechnet auch ewig. Also bei der derzeitigen Schwierigkeit rechnet man Jahre mit seiner Desktop CPU,\nso einen Blog zu finden. Ähm wenn, dann muss man sich so einen speziellen Kleinen drunter laden. Äh ein ist gerade so einer der aktuellen Angesagten.\nfür alle Plattformen. Da muss man zu so einem Pool gehen und da teilnehmen und dann fällt da auch sinnvoll Geld raus. Also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:00:45",
+      "text": "PROCL."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:00:47",
+      "text": "POCL-BM."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:00:48",
+      "text": "Einfach zu merken. Genau. Mhm."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:00:53",
+      "text": "Und ist auch gefrickelt, wie man das so kennt irgendwie, also so Bitcoin meinen es äh ganz schöner Mordssport und die Leute posten dann auch ihre ähm\nEquipment-Pornos im Netz mit äh drei Grafikkarten, mit jeweils zwei Chips drauf und1,2 Kilowattnetzteilen.\nUnd ähm genau, viel für postete neulich so eine Geschichte. Da hat sich auch einer seinen Bitcoin Mining Equipment ins Zimmer gestellt und wachte dann in der Nacht mit Hitzschlag auf und musste ins Krankenhaus geschafft,\nund hat einen Hirnschaden davongetragen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:01:22",
+      "text": "Aber ist natürlich klar, warum es derzeit sehr interessant ist, nicht. Also man kann jetzt äh ein bisschen technisches Know-How hat und,\nja nicht äh erforderlich, steckt man sich jetzt einfach da so eine performante PC-Büchse mit äh vielleicht mehrere parallel geschalteten Grafikkarten einfach so als Number Crunching.\nzusammen und gut ist. Was ist denn hier so mit Cloud-Computing? Ich meine es gibt ja auch schon so GPU in the cloud et cetera ist das."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:01:46",
+      "text": "Ja, das rechnet sich überhaupt nicht. Ich hab's ausprobiert äh bei Amazon kann man ja diese äh High Performance Computing Instanzen kaufen,\ndie NVD Tesla Sachen drinstecken und es ist spannenderweise so, dass ein bisschen eine andere Architektur hat,\ndie dafür sorgt, dass die Grafikleistungen, die da rauskommen, zwar vergleichbar ist, aber trotzdem die Artikaten, die zehnfache Rechenleistung machen. Also diese diese furchtbar teuren Tesla-Dinger,\nmachen 150 Megahersches pro Sekunde.\nfür zwei Dollar die Stunde die instanzt. Das heißt man zahlt da 50 Dollar am Tag und das ist schon mehr als man meint nämlich ungefähr Faktor vier.\nUnd ähm man kann gucken, dass man das zum Spottpreis kriegt, also dass man nicht die zwei Dollar zahlt, sondern irgendwie wenn Instanzen frei sind für 70 Cent, aber dann macht man immer noch einen Dollar-Verlust pro Stunde, wie man das mietet,\nalso lohnt sich genau gar nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:02:35",
+      "text": "Also man muss sozusagen die die Wolke ins eigene Kinderzimmer äh sperren."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:02:39",
+      "text": "Genau, wenn man eh so eine Grafikkarte hat und zwar nach Möglichkeit eine aktuelle Ati-Karte, also alles, was so achtundfünfzig, fünfzig, äh achtundfünfzig, siebzig äh\nachtundsechzig, fünfzig oder also natürlich am besten neunundsechzig neunzig und davon drei Stück, ja. Also wenn man eh so eine Kiste rumzustehen hat und grade nicht am äh Zocken ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:02:58",
+      "text": "Achtundvierzig fünfzig."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:03:00",
+      "text": "Du kannst mal in Google eingeben äh ähm Bitcoin äh Mining Rick comparsen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:03:11",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:03:14",
+      "text": "Und dann auf den ersten Link klicken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:03:16",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:03:18",
+      "text": "Und da steht drin, was sagt das zur achtundvierzig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:03:21",
+      "text": "50. Ist nicht ein top."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:03:21",
+      "text": "Macht fünfundsiebzig Megahersches pro Sekunde und da gibt es jetzt äh."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:03:29",
+      "text": "Megaschiss. Sagst du?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:03:31",
+      "text": "Achtundvierzig fünfzig, ne fünfundsiebzig, also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:03:34",
+      "text": "Es ist, hab's jetzt hier gerade."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:03:35",
+      "text": "75. Also vielleicht auch mehr, wenn man sie so ein bisschen äh die die Overlocker holen dann da auch hundert raus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:03:41",
+      "text": "Okay, gehen wir mal vom Niedrigsten aus. Fünfundsiebzig."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:03:44",
+      "text": "Und dann, wenn du dann bei Google eingibst, äh Bitcoin."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:03:49",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:03:52",
+      "text": "Gleich wieder der erste Link."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:03:54",
+      "text": "Meinen Kalkulator und dann die Wärter eintragen fünfundsiebzig."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:03:57",
+      "text": "Genau, klickst du drauf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:03:59",
+      "text": "12, so der aktuelle und dieser diffeulti Faktor, der da eingetragen ist, ist sozusagen der aktuelle."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:04:05",
+      "text": "Ist auch aktuell. Der wird noch für tausend Blöcke gültig sein. Dann geht's auf ungefähr 800.00 hoch. Und da kannst du tatsächlich pro Tag dreizehn Bitcoins mit erzeugen.\noder drei Dollar am Tag,\nWahrscheinlich gerade so die Stromkosten deckt. Also immerhin musste dann nicht Geld an Liberteriesolf überweisen, sondern kannst direkt irgendwie deine Stromrechnung in Bitcoin umsetzen und deine Stromrechnung von der Steuer absitzen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:04:28",
+      "text": "Ja, das kann ja auch so okay, aber das ist jetzt auch nicht so gut."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:04:35",
+      "text": "Ist nicht so prall. Also."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:04:36",
+      "text": "Bräuchte schon was aktuelleres."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:04:38",
+      "text": "Genau, mit so einer äh äh achtundfünfzig siebzig. Die kostet grade so hundertfünfzig Euro, kommt man auf ungefähr dreihundertfünfzig Megahersches pro Sekunde.\nDa fallen dann schon äh so was wie sechzig Bitcoins-Cent raus oder auch umgerechnet dreizehn Dollar am Tag oder so neun Euro.\ndie äh top of the Line-Karten ähm die Neunundsechziger, neunundsechzig neunzig mit Zweitships kommen auf achthundert Megaherhes."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:05:08",
+      "text": "Und man muss ja natürlich auch ich meine, man muss dann aber auch wirklich dann diese zwei Monate durchrechnen, ne."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:05:13",
+      "text": "Ja und man muss berücksichtigen, dass es immer schwieriger wird. Also dieser pro Monat, was da an pro Monat Geld rauskommt, muss man ein bisschen vorsichtig betrachten, weil's ja schwieriger wird. Also da,\nmit den 800 Megahashes, die 900 Dollar, das klingt erstmal so, als wäre nach einem Monat die Grafikkarte finanziert, die man sich dafür kaufen muss."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:05:30",
+      "text": "Wer liegt in diesen difficulti Faktor fest?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:05:33",
+      "text": "Denen legt das Netz nach einem festgelegten Algorithmus fest. Also da sind sich auch wieder alle Kleins einig wieder difficulti Faktor aussehen muss. Anhand einer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:05:40",
+      "text": "Aber was ist, wenn wenn der nicht realistisch ist? Wenn jetzt diese diffeculti zu sehr steigt und das einfach dann mit den Preisen, die man so für Strom bezahlt, ich meine, solange man Strom nicht in Bitcoin bezahlt, ne?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:05:52",
+      "text": "Denn wenn die Transaktionskosten steigen, dann gehen halt die Transaktionen nicht mehr durch. Es sei denn, man gibt genügend äh äh Transaction-Fee aus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:06:00",
+      "text": "Tja. Stimmt, da drüber kann sich das dann ganz gut regulieren."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:06:07",
+      "text": "Also es wirkt auf mich alles erstaunlich durchdacht beim längeren Nachgucken. Also viele Sachen über die man so stolpert äh kommt man drauf. Haben sie drüber nachgedacht? Haben sie Antworten drauf."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:06:16",
+      "text": "Ja. Die Frage ist, ob sie langfristig da auch die richtigen drauf haben, ne."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:06:23",
+      "text": "Das ist die große Frage. So also was wie wir in die Staaten reagieren, wenn sie plötzlich keine Hoheit mehr über das Finanzsystem haben. Ist eine sehr spannenden Fragen,\ntechnisch skalieren, wird es technisch weiter funktionieren, findet nicht plötzlich jemand einen also es gibt diverse Leute, die schon gesagt haben, ha ha, ich habe hier einen Bug gefunden, aber ich erzähle ihn euch nicht, aber bereitet schon mal euch schon mal drauf vor, dass der Markt komplett zusammenbrechen wird."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:06:43",
+      "text": "Mhm. Vier Unsertin Tea and Daut."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:06:46",
+      "text": "Ja, aber es hat noch keiner irgendwie, also ich habe dann mal auf äh I call your Bett in one to see geklickt, aber ähm bislang ist keiner mit einem Bug rübergekommen, so. Na ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:06:59",
+      "text": "Auf jeden Fall ist es äh,\nWeil wirklich interessant zu sehen, wie sich so vollständige Nerd Technologie hier äh eigentlich an der an der an der heikelsten Stelle der Gesellschaft eigentlich fest macht. Ja?\nAlso so Internet und World Wide Web, das war ja eigentlich nur Spaß, aber jetzt geht's sozusagen ums Eingemachte."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:07:18",
+      "text": "Sobald Wiki Leaks ging's bloß um die Informationshoheit und da haben sie es schon ganz schön in die Hosen gemacht, wenn's jetzt irgendwie um die Kontrolle über die Wirtschaft geht. So,\nAlso ich finde äh also natürlich sind einige der Aussagen übertrieben, aber nicht vollständig. Wenn das wirklich funktioniert, wenn das wirklich weiter so abhebt, ist es schon,\nJa, für manche Leute ganz schön existenzbedrohend und ähm es wird spannend sein zu beobachten, wie die Welt darauf reagiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:07:47",
+      "text": "Hm na ja gut,\nUm was Wichtiges vergessen, Andreas. Ich glaube nicht. Dann kann man jetzt hier glaube ich den Sack auch mal äh zumachen zum Thema elektronisches Geld. Klingt so ein bisschen für mich wie so ein Thema, was dann irgendwann auch nochmal ein Update braucht."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:08:04",
+      "text": "Ja, nach dem Crash dann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:08:05",
+      "text": "Nach dem Crash genau oder."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:08:07",
+      "text": "Vorher nochmal mhm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:08:08",
+      "text": "Kurz vorher nochmal um noch mal so richtig ja abzusahnen oder noch mal so richtig schön unterzugehen,\nGenau, also wir geben mal jetzt hier auch keine Empfehlung ab. Wir sagen jetzt nicht, hier investiert euer Geld in Bitcoins."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:08:24",
+      "text": "Ganz im Gegenteil, ich würde sagen, wenn ihr mit Bitcoin rumspielt und da Investment tätigt, sorgt dafür, dass es nicht euer Häuschen ist. Rechnet mit dem Totalverlust. Ähm,\nDrogen mit Bitcoins zu kaufen, ist grade auch kein guter Plan wegen der kompletten Offenlegung. Also es ist so ein bisschen die Post-Privacy-Währung eigentlich. So, jeder sieht alle Finanztransaktionen auf dem Planeten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:08:44",
+      "text": "Mhm. Was ja auch einen interessanten also was ja auch durchaus ein segensreicher Faktor sein könnte, weil ich meine derzeit\nähm so so ich meine diese die kolumbianische äh Mafia et cetera, also das basiert ja nun auch alles zu einem Gutteil darauf, dass es eben,\nnicht so sichtbar ist wie die finanziellen Transaktionen ist und ähm\nVielleicht ist das ja auch ein guter Ansatz, ja? Ich meine, das sind so, weil wir voll in dieser äh Post-Privacy-Diskussion, ob denn nun so die Geheimhaltung äh uns alle vor dem Untergang schützt oder die totale Offenlegung."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:09:21",
+      "text": "Also wahrscheinlich erfordert es schon die Drogenlegalisierung, damit dieser Schwarzmarkt verschwindet, aber das ist ja immer ein heikles Thema, ja. Die Politiker schaffen's ja noch nicht mal, die Sommerzeit abzuschaffen. Wie soll man sich denn da ernsthaften Problemen widmen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:09:33",
+      "text": "Das stimmt. Und das ist wirklich schon ein Problem mit der Sommerzeit,\nweil ich glaube die die Russen schaffen sie jetzt gerade ab."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:09:44",
+      "text": "Haben sie getan, ja. Sie haben ja auch eine funktionierende Regierung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:09:48",
+      "text": "Ja, die wollen auch irgendwie fand auch das mit dem Urheberrecht irgendwie grad alles nicht so toll. Ja, lass mal sehen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:09:54",
+      "text": "Na gut, aber ich glaube, dann haben wir's gehabt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:09:59",
+      "text": "Okay, alles klar, vielen Dank."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:10:02",
+      "text": "Jederzeit wieder."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:10:03",
+      "text": "Und äh ja vielen Dank fürs Zuhören. Das war's. Das elektronische Geld. Viel Spaß beim äh Rumspielen, macht euch nicht arm, ja?"
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:10:10",
+      "text": "Und keinen Hitzschlag holen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:10:11",
+      "text": "Daran wären wir gelegen, genau. Und äh mal gucken. Also vielleicht,\nist so dieses äh freie Herumspenden und Kleinstbeträge mal äh durch die Gegend schieben. Durchaus so der Sport, mit dem man da äh schon die nennenswerten Erfahrungen sammeln kann, ohne dass man gleich eine äh ja, riesige Summen da in irgendetwas äh investiert."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:10:32",
+      "text": "Apropos ist dein Geld angekommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:10:33",
+      "text": "Ach so, mal gucken. Äh ist mein Geld angekommen."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:10:38",
+      "text": "Bei welchem Blog bist du?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:10:39",
+      "text": "Eins zwo acht sechs eins sieben."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:10:42",
+      "text": "Dann dauert es noch zwei Stunden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:10:43",
+      "text": "Ah na ja."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:10:45",
+      "text": "Wenn du dann erstmal aktuell bist, dann geht's schneller."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "2:10:47",
+      "text": "Dann geht's schneller. Na gut. Wenn ich mal diese Bitcoin-Adresse mal ins Internet schmieren und mal gucken, was passiert. Alles klar, das war's. Bis bald."
+    },
+    {
+      "speaker": "Andreas Bogk",
+      "time": "2:10:56",
+      "text": "Bis bald."
+    }
+  ]
+}

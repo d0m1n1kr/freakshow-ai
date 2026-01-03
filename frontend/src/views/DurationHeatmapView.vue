@@ -84,6 +84,24 @@
                   </div>
                 </div>
 
+                <div v-if="inlinePlayer.currentMp3Url" class="mt-3">
+                  <MiniAudioPlayer
+                    :src="inlinePlayer.currentMp3Url"
+                    :title="`Episode ${inlinePlayer.playerInfo?.episodeNumber ?? ''}`"
+                    :subtitle="inlinePlayer.playerInfo?.label || ''"
+                    :seek-to-sec="inlinePlayer.playerInfo?.positionSec ?? 0"
+                    :autoplay="true"
+                    :play-token="inlinePlayer.playerToken"
+                    :transcript-src="inlinePlayer.currentTranscriptUrl || undefined"
+                    :speakers-meta-url="inlinePlayer.speakersMetaUrl"
+                    @close="inlinePlayer.closePlayer"
+                    @error="inlinePlayer.setPlayerError"
+                  />
+                  <div v-if="inlinePlayer.playerError" class="mt-2 text-xs text-red-700 dark:text-red-300">
+                    {{ inlinePlayer.playerError }}
+                  </div>
+                </div>
+
                 <!-- Episode List -->
                 <div v-if="showEpisodeList" class="mt-4 bg-white dark:bg-gray-900 rounded-lg border border-violet-300 dark:border-violet-700">
                   <div v-if="loadingEpisodes" class="p-4 text-center text-gray-600 dark:text-gray-400">
@@ -108,7 +126,20 @@
                           class="border-t border-violet-100 dark:border-violet-800 hover:bg-violet-50 dark:hover:bg-violet-900/20"
                         >
                           <template v-if="episodeDetails.has(episodeNum) && episodeDetails.get(episodeNum) !== null">
-                            <td class="px-3 py-2 text-violet-700 dark:text-violet-300 font-mono text-xs whitespace-nowrap">{{ episodeNum }}</td>
+                            <td class="px-3 py-2 text-violet-700 dark:text-violet-300 text-xs whitespace-nowrap">
+                              <div class="flex items-center gap-2">
+                                <button
+                                  type="button"
+                                  class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                                  @click="inlinePlayer.playEpisodeAt(episodeNum, 0, 'Start')"
+                                  title="Episode von Anfang abspielen"
+                                  aria-label="Episode von Anfang abspielen"
+                                >
+                                  ▶︎
+                                </button>
+                                <span class="font-mono">{{ episodeNum }}</span>
+                              </div>
+                            </td>
                             <td class="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap text-xs">
                               {{ formatDate(episodeDetails.get(episodeNum)?.date) }}
                             </td>
@@ -135,13 +166,39 @@
                             </td>
                           </template>
                           <template v-else-if="episodeDetails.get(episodeNum) === null">
-                            <td class="px-3 py-2 text-violet-700 dark:text-violet-300 font-mono text-xs">{{ episodeNum }}</td>
+                            <td class="px-3 py-2 text-violet-700 dark:text-violet-300 text-xs whitespace-nowrap">
+                              <div class="flex items-center gap-2">
+                                <button
+                                  type="button"
+                                  class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                                  @click="inlinePlayer.playEpisodeAt(episodeNum, 0, 'Start')"
+                                  title="Episode von Anfang abspielen"
+                                  aria-label="Episode von Anfang abspielen"
+                                >
+                                  ▶︎
+                                </button>
+                                <span class="font-mono">{{ episodeNum }}</span>
+                              </div>
+                            </td>
                             <td colspan="5" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs italic">
                               Details nicht verfügbar
                             </td>
                           </template>
                           <template v-else>
-                            <td class="px-3 py-2 text-violet-700 dark:text-violet-300 font-mono text-xs">{{ episodeNum }}</td>
+                            <td class="px-3 py-2 text-violet-700 dark:text-violet-300 text-xs whitespace-nowrap">
+                              <div class="flex items-center gap-2">
+                                <button
+                                  type="button"
+                                  class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                                  @click="inlinePlayer.playEpisodeAt(episodeNum, 0, 'Start')"
+                                  title="Episode von Anfang abspielen"
+                                  aria-label="Episode von Anfang abspielen"
+                                >
+                                  ▶︎
+                                </button>
+                                <span class="font-mono">{{ episodeNum }}</span>
+                              </div>
+                            </td>
                             <td colspan="5" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs">
                               Lade...
                             </td>
@@ -173,12 +230,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch, computed } from 'vue';
+import { ref, onMounted, watch, computed, reactive } from 'vue';
 import * as d3 from 'd3';
 import { useSettingsStore } from '../stores/settings';
 import { getEpisodeUrl, getPodcastFileUrl } from '@/composables/usePodcast';
+import MiniAudioPlayer from '@/components/MiniAudioPlayer.vue';
+import { useInlineEpisodePlayer } from '@/composables/useInlineEpisodePlayer';
 
 const settingsStore = useSettingsStore();
+const inlinePlayer = reactive(useInlineEpisodePlayer());
 
 interface EpisodeDetail {
   title: string;

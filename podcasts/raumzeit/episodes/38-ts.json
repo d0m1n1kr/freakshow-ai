@@ -1,0 +1,979 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:42",
+      "text": "Herzlich Willkommen zu Raumzeit, dem Podcast von ESA und DLR.\nMein Name ist Tim Prittlaff und ich begrüße alle zur 38.\nAusgabe unserer Gesprächsserie.\nHeute hat mich der Weg nach Aachen geführt und ganz anders als das hier in allen anderen,\noder zumindest in den meisten anderen Sendungen der Fall ist,\nbefinde ich mich diesmal weder an einem Standort der ESA noch des DLR,\nsondern der Weg hat mich geführt zum RWTH,\nder Universität in Aachen und dort ganz konkret zum Lehrstuhl der Physik.\nWar das die richtige Bezeichnung? Ich werde es gleich erfahren,\ndenn mein Gesprächspartner ist Dr.\nStefan Scheel. Schönen guten Tag, hallo, willkommen zu Raumzeit."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:01:28",
+      "text": "Hallo."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:29",
+      "text": "Wie ist denn die korrekte Bezeichnung? Ich habe ganz vergessen nachzuschlagen."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:01:33",
+      "text": "Also korrekte Bezeichnung ist, Sie sind im ersten physikalischen Institut der RWTH Aachen gelandet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:39",
+      "text": "Wie gibt es denn noch?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:01:41",
+      "text": "Lehrstuhl für Experimentalphysik. Es gibt drei Institute für Experimentalphysik an der RWTH Aachen.\nEs ist einer der größten Standorte in Deutschland, an der Physikforschung gemacht\nwird und natürlich auch Ausbildung.\nWir haben etwa 1000 Physikstudenten an der RWTH Aachen, die wir ausbilden.\nUnd neben den experimentellen Instituten gibt es natürlich auch noch Lehrstühle\nfür Theoretische Physik.\nUnd dann rüber hinaus haben wir noch eine enge Zusammenarbeit in der Physik\nmit dem Forschungszentrum Jülich.\nAlso es gibt vielfältige Möglichkeiten hier in der Physik zu studieren und zu forschen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:17",
+      "text": "Das heißt Physik hat auch generell für die Universität eine große Bedeutung."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:02:21",
+      "text": "Das hat die Physik sicherlich. Zum einen ist es natürlich so,\ndass wir in Aachen insbesondere in den Ingenieurwissenschaften eine der führenden\nUniversitäten in Europa sind und weltweit.\nUnd die Physikausbildung ist natürlich ein zentraler Punkt in der Ingenieurausbildung.\nDarüber hinaus hat sich die RWTH Aachen im Rahmen der Exzellenzinitiative der\nBundesregierung vorgenommen, insbesondere auf dem Gebiet der Naturwissenschaften\nan die führenden Universitäten Anschluss zu finden.\nDenn wir haben gesehen, dass wenn man also Universitäten wie ETH Zürich oder\nMIT mit Aachen vergleicht, dass dann im Wesentlichen der Unterschied ist,\ndass wir in den Naturwissenschaften nicht konkurrenzfähig sind.\nUnd zwar nicht, weil wir nicht gut genug sind, sondern weil wir nicht groß genug sind.\nDas heißt, es ist eine Frage, wie man Ressourcen verteilt und wir haben die\nMittel aus der Exzellenzinitiative massiv genutzt, um die Naturwissenschaften\nauszubauen und haben das auch für die nächste Runde der Exzellenzinitiative so vorgeschlagen.\nDas ist allerdings noch nicht entschieden. Die Entscheidung fällt am 15. Juni.\nDann werden wir sehen, ob RWTH Aachen weiter zu den neuen exzellenten Universitäten\nin Deutschland gehört, wie bisher auch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:03:29",
+      "text": "Ja, jetzt ist gerade der Mai 2012.\nVielleicht auch mal ganz wertvoll hier zu sagen, wann wir die Aufnahme denn\nmachen. Auf der Webseite vermerken wir es ohnehin immer wieder.\nJa, warum bin ich jetzt hierher gekommen? Letzten Endes dreht es sich ja bei\nRaumzeit vor allem um ein Format, was sich der Raumfahrt widmet.\nHier an diesem Institut wurde ein ganz konkretes Experiment entwickelt und was\njetzt bereits im Einsatz ist und zum Einsatz gekommen ist auf der ISS,\nallerdings ist die Geschichte ja auch noch ein bisschen länger.\nKonkret möchten wir hier reden über das Alpha-Magnet-Spektrometer und die damit\nverbundene wissenschaftlichen Fragestellungen.\nWas sind denn diese wissenschaftlichen Fragestellungen, die einen in diesen\nBereich hineintreiben?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:04:20",
+      "text": "Also die Physik gegenwärtig, wenn man sich das nicht jetzt von der Anwendungsseite\nanguckt, sondern von der Grundlagenforschung anguckt,\nHat einige Schwierigkeiten, was vielleicht viele zu überraschen wird,\ndenn wir benutzen die Physik ja auch im Alltag.\nAber von der Grundlagenforschung her haben wir eigentlich seit etwa 100 Jahren\ndas Dilemma, dass die Überlegungen, die Heisenberg,\nDirac, Pauli angestellt haben zur Quantenmechanik, sich nicht vertragen mit den Überlegungen,\ndie Albert Einstein zur allgemeinen Relativitätstheorie, zur Wechselwirkung\nder Gravitation angestellt haben.\nDas heißt konkret, es gibt Bereiche im Universum, wo unsere Physik nicht funktioniert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:04",
+      "text": "Also wo unser bisheriges Modell von wie alles zusammenhängt nicht funktioniert."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:05:09",
+      "text": "Richtig, also wir müssen ja unterscheiden zwischen Realität und dem,\nwas wir im Modell beschreiben.\nAlso die Physik erhebt nicht den Anspruch, dass sie die Realität beschreibt,\nsondern nur, dass wir ein Modell liefern, was es uns erlaubt in vielen Fällen Vorhersagen zu machen.\nDenn das ist ja eigentlich die Aufgabe der Physik. Sie wollen Physik benutzen,\num bestimmte Prozesse zu verstehen und dann Vorhersagen zu können.\nAlso bei einem Verbrennungsmotor, ich muss den Brennraum so und so auslegen,\nweil die thermodynamischen Prozesse, die da ablaufen, auf der und der Basis\nfunktionieren, um ein Beispiel zu sagen.\nUnd die Physik hat eigentlich den Anspruch, dass sie sämtliche Phänomene in\nder Natur beschreiben kann.\nUnd wir haben wiederholt gemerkt, dass wir dazu nicht in der Lage sind.\nJetzt werden viele sagen, wenn das in einigen Situationen nicht funktioniert,\nwarum beunruhigt euch das so?\nUnd das kann man am besten verstehen, wenn man sich da eine Analogie anguckt.\nVor etwas mehr als 100 Jahren hat Max Planck sich gefragt, ob er Physik studieren soll.\nUnd ist an die Uni gegangen, hat mit einem Physikprofessor geredet.\nUnd der Physikprofessor hat gesagt, das lohnt sich eigentlich nicht.\nDie Physik ist abgeschlossen. Es gibt noch ein paar kleine Bereiche,\nwo wir das nicht verstehen, aber die sind so peripher, das lohnt sich eigentlich nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:21",
+      "text": "Vor 100 Jahren."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:06:22",
+      "text": "Vor etwas über 100 Jahren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:24",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:06:26",
+      "text": "Max Planck hat dann natürlich doch Physik studiert, wie wir heute wissen.\nUnd er hat sich mit einem Bereich in der Physik beschäftigt,\nder völlig an der Peripherie liegt und wo überhaupt nicht klar ist,\ndass die Beschäftigung damit wirklich den Durchbruch in der Physik bringt.\nEr hat sich mit der Wärmestrahlung eines schwarzen Körpers beschäftigt.\nUnd die Modelle, die man damals hatte, haben das nicht vernünftig beschreiben können.\nUnd Planck hat erkannt, dass die einzige Möglichkeit, das zu beschreiben,\nist, dass er also das, was wir heute Planck'sches Wirkungsquantum einführen,\ndass er also die Energie quantisiert, wie wir sagen, und damit die Grundlagen\nfür die Quantenmechanik gelegt hat.\nUnd wenn Sie sich heute unsere Welt angucken, also auf dieser Erkenntnis beruht\nunser Verständnis, wie Solarzellen funktionieren, wie ein Transistor funktioniert,\nWie ein Computer funktioniert.\nDas heißt, wenn Sie sich angucken, was sind heute die börsennotierten Unternehmen mit dem höchsten Wert?\nApple, Google, Facebook, Amazon."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:07:23",
+      "text": "Ebay."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:07:26",
+      "text": "Das heißt, 100 Jahre später, unser gesamter Wohlstand beruht auf diesen Arbeiten\nin der Grundlagenforschung.\nUnd das heißt, für die Physik war es und ist es ein erfolgreiches Modell,\nversuchen zu verstehen, Beispiele zu finden, wo die physikalischen Theorien,\ndie wir heute haben, nicht funktionieren.\nAlso Popper hat uns gelehrt, wir können nie eine physikalische Theorie beweisen,\nwir können sie immer nur widerlegen.\nDas heißt also, um das einfach zu sagen, die Beobachtung von noch so vielen\nweißen Schwänen berechtigt nicht zu der Aussage, dass alle Schwäne weiß sind.\nDie Physik versucht unendlich viele Phänomene zu beschreiben Also wir sagen\nnicht, das gilt nur für die fünf Atome die wir uns angucken,\nsondern wir sagen, das gilt für alle Atome im Universum Das heißt,\nwir können nie beweisen, dass das richtig ist,\nAber wenn wir ein einziges Atom finden, für das das nicht funktioniert wie wir\ndas vorhersagen, dann wissen wir, dass unsere Theorie nicht in Ordnung ist und\ndann ist das normalerweise ein Hinweis darauf dass es einen Themenkomplex gibt,\nmit dem wir uns besser auseinandersetzen wenn wir Fortschritt haben wollen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:08:30",
+      "text": "Ist das nicht hochgradig frustrierend, wenn man weiß, dass man eigentlich nie\nirgendwas beweisen kann?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:08:35",
+      "text": "Das ist immer die Frage, welchen Anspruch man hat. Also ich bin sehr damit zufrieden,\ndass wir Modelle entwickeln, die, es ist schwierig zu sagen,\nwelchen Bruchteil des Universums, aber wenn Sie sich unsere Zivilisation angucken,\nunseren Wohlstand angucken, dann stellen Sie fest,\ndass wir das recht erfolgreich machen seit einigen hundert Jahren.\nAlso seitdem wir ernsthaft seit Galileo Newton angefangen haben,\nWissenschaft zu machen, dass wir das recht erfolgreich machen.\nAlso die ganzen Sachen, an die sie heute gewöhnt sind, ob das Laser oder Navigationssystem\nist, können nehmen, was sie wollen.\nKönnen sie ohne die moderne Physik, haben sie keine Chance.\nUnd wenn wir uns heute angucken, was sind die globalen Herausforderungen,\nmit denen wir zu tun haben, also ob das Erderwärmung ist, alternde Gesellschaft, was auch immer. Also.\nIst eigentlich die Erkenntnis, wir werden das wahrscheinlich,\ndiese Probleme nicht dadurch lösen, dass wir das bestehende Know-how,\nich sage jetzt mal ein bisschen despektierlich, aber einfach nur ingenieren.\nAlso um wieder ein Beispiel zu sagen, Sie können sich noch so lange damit auseinandersetzen,\nwie Sie eine Kerze optimieren.\nSobald ein Physiker kommt und Ihnen erklärt, wie eine Glühbirne funktioniert,\nhaben Sie keine Chance mehr.\nUnd sie können noch so lange versuchen als Ingenieur die Glühbirne zu optimieren,\nsobald ein Physiker kommt und ihnen sagt, was eine LED ist, also wie sie Licht\nerzeugen können ohne Wärme über quantenmechanische Prozesse,\nhaben sie mit ihrer Glühbirne keine Chance mehr.\nUnd man sieht an diesen Sprüngen in der Qualität, dass das was ganz anderes\nist, als wenn ich also einen bestehenden Prozess nehme und den Prozess immer weiter optimiere.\nIrgendwann in diesem Prozess hoffentlich kommt die Physik wieder.\nDas ist natürlich ein bisschen, also warum mache ich Physik?\nJa, weil mich diese Themen interessieren, kommt die Physik wieder mit einer\ngrundlegenden neuen Idee und das revolutioniert das gesamte Gebiet.\nDas ist mein Verständnis von Grundlagenforschung und warum man Grundlagenforschung machen muss.\nWir werden die Probleme, die wir heute haben, nicht dadurch lösen,\ndass wir also Engineering machen von den bekannten Lösungen,\nsondern wir brauchen grundsätzlich neue Ansätze.\nUnd dann ist die Frage, wo bekomme ich die her?\nIm Nachhinein ist das einfach zu sagen, Planck mit seinem Wirkungsquantum,\ndas war ja die richtige Idee.\nDie ganzen anderen tausend Physiker, die zu der Zeit an verschiedenen Fragen\ngearbeitet haben, über die reden wir heute nicht mehr.\nUnd genau so ist das heute. Wir arbeiten an Grundlagenforschung,\nwir versuchen Themenkomplexe zu verstehen, die uns aufzeigen,\ndass unsere Physik unvollständig ist.\nWelche von diesen Ansätzen am Ende zum Erfolg führen und zu dem Durchbruch führen,\ndas werden wir in 100 Jahren diskutieren.\nAlso wir nicht, also unsere Nachfolger werden dann bei solch einem Interview\nsitzen und dann werden sie sagen, ja, damals AMS, das war das Schlüsselexperiment, vielleicht.\nWie wir heute sagen, Michelson-Morley, Messung der Konstanz der Lichtgeschwindigkeit\nvor 100 Jahren, das war das entscheidende Experiment, um die Relativitätstheorie zu begründen.\nOder die Messung der Wärmestrahlung eines schwarzen Körpers,\ndas war das entscheidende Experiment, um die Quantenmechanik zu begründen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:11:41",
+      "text": "Was für sich genommen erstmal total banal und gegebenenfalls vollständig unwichtig klingt."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:11:46",
+      "text": "Was für den, selbst für den Experten auf dem Gebiet schwer einzuschätzen ist,\nwas die Bedeutung solch einer Messung ist.\nWeil es dann noch zusätzlich halt solcher Köpfe wie Heisenberg oder Einstein\nbedarf, um aus diesen Messungen, diesen Erkenntnissen dann die passende Theorie zu machen.\nWobei man auch sagen muss, die experimentellen Ergebnisse, die haben sich eigentlich nie geändert.\nAlso die werden präziser, die decken andere Bereiche ab. Das,\nwas sich ändert, sind unsere Theorien.\nDas heißt, dass unsere Modelle, wie wir diese experimentellen Daten zusammennehmen\nund damit Vorhersagen machen, die sind variabel.\nUnd vielleicht versteht man dann, warum ich also sage, dass Experimentalphysik\ndas Spannende ist, weil wir liefern die Grundlagen dafür, die sozusagen,\nwenn wir es richtig gemacht haben, in Stein gemeißelt sind und die Theoretiker\ndazu zwingen, ihre Modelle so anzupassen, dass sie diese Daten beschreiben können.\nUnd dann mit diesen Modellen Vorhersagen zu machen in Bereichen,\nin denen wir nicht gemessen haben, die dann für die Anwendung relevant sind oder sein können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:50",
+      "text": "Da stellt sich natürlich jetzt vor allem die Frage, was sind denn jetzt die\npaar Experimente und paar Betrachtungsorte, die noch Fragen aufwerfen,\nbeziehungsweise die vielleicht auch noch gar nicht durchgeführt worden sind.\nWenn man sich heute den Stand der Physik anschaut und wie auch eigentlich wie\nvor 100 Jahren das Gefühl hat, naja, vielleicht sollte ich doch was anderes\nstudieren, ist ja eigentlich nichts mehr zu erfinden.\nWas antwortet denn da der Mensch mit Einblick?\nWas sind denn so gerade die großen Fragestellungen, die Lücken,\ndie gefüllt werden müssen?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:13:25",
+      "text": "Heute würde die Antwort wahrscheinlich anders aussehen. Also zum einen mit der\nErfahrung aus der Vergangenheit, aber man muss auch sehen, dass sich in den\nletzten zehn Jahren eigentlich eine Revolution weitgehend unbemerkt von der\nÖffentlichkeit in der Physik abgespielt hat.\nUnser Verständnis dessen, wie unser Universum entstanden ist,\nhat sich grundlegend geändert in den letzten zehn Jahren.\nUnd zwar im Wesentlichen durch Messungen von Satellitenexperimenten,\nalso Weltraum-Experimenten, nicht durch Beobachtungen hier auf der Erde.\nDie Messungen der kosmischen Hintergrundstrahlung durch das COBE-Experiment,\ndurch das WMAP-Experiment und jetzt durch das Planck-Experiment,\ndas Hubble Space Telescope, die entdeckt haben, dass also nicht nur das Universum\nnicht schrumpft, wie man das eigentlich auf der Basis der Urknalltheorie erwarten\nwürde, sondern dass es anfängt, sich beschleunigt, wieder auszudehnen.\nDie Erkenntnis, dass ein wesentlicher Teil des Universums aus einer Energieform\nbesteht, die wir nicht beschreiben können, mit der gegenwärtigen Physik,\nwas also die dunkle Energie ist.\nDie Erkenntnis, dass der größte Teil der Materie im Universum dunkle Materie\nist, die wir mit der heutigen Physik nicht beschreiben können,\nvon der wir nicht wissen, was es ist.\nEigentlich ist die ernüchternde Erkenntnis der letzten zehn Jahre von vier Prozent\ndessen, was das Universum ist, wissen wir halbwegs, wie es funktioniert.\nUnd das ist die normale Materie, aus der wir aufgebaut sind.\nDas ist das, was die Physik heute kann.\n96 Prozent verstehen wir nicht. Und wir sind eigentlich jetzt in der Lage oder\nhaben das Gefühl, in der Lage zu sein, die richtigen Fragen zu stellen.\nWir haben nicht die Antworten, aber wir sind in der Lage, die richtigen Fragen zu stellen.\nUnd die Aufgabe für die nächsten 10 Jahre, 15 Jahre wird es sein,\nzu versuchen, auf diese Fragen eine Antwort zu finden.\nUnd diese Fragen sind sehr komplex, sehr schwierig, haben wenig mit unserer\nAlltagsanschauung zu tun.\nEs ist mehr und mehr so, dass die Grundlagenforschung in der Physik sich von den...\nJa, von den Alltagserfahrungen mehr und mehr löst. Also wenn wir in den ganz\nkleinen Längenskalen gehen zur Quantenmechanik oder zu ganz großen Längenskalen\nzur Astrophysik und Kosmologie,\ndass das nichts mit dem zu tun hat, was wir über die Evolution eigentlich gelernt\nhaben, um überleben zu können.\nUnd das macht das sehr schwierig für uns Menschen mit unserem begrenzten Verstand,\ndiese Phänomene überhaupt zu durchdringen.\nUnd ich gehe davon aus, dass wir dafür, genauso wie Einstein eine neue Mathematik\nbrauchte, um seine Relativitätstheorie aufzustellen, dass wir auch neue mathematische\nVerfahren brauchen werden, um diese Probleme zu lösen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:03",
+      "text": "Das heißt, es lohnt sich sogar noch, Mathematik zu studieren,\nweil sogar da wäre noch was zu holen."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:16:07",
+      "text": "Genauso wie Riemann zum Glück Mathematik studiert hat und damit die Grundlagen\nfür Einsteins Relativitätstheorie mathematisch gelegt haben,\nbin ich der Meinung, dass, also ja, selbstverständlich, Mathematik sollte man\nstudieren, Physik sollte man studieren.\nIn der Physik ist es so, dass es eigentlich extrem spannend ist zurzeit und\nfür die nächsten Jahre sein wird, auf diese Fragestellungen eine Antwort zu kriegen.\nUnd wenn ich mir mal überlege, ich weiß nur von 4% des Universums,\nwas es ist, von 96% habe ich keine Idee, dann habe ich nicht das Problem,\ndass ich mich mit kleinen Problemen beschäftige.\nDas hört sich nach einem großen Problem an. Und wenn wir das verstanden haben,\nist dann die Frage, mit den Hilfsmitteln, die wir entwickeln müssen,\num das zu verstehen und mit den Erkenntnissen, die wir gewinnen,\nwenn wir das verstanden haben, welche Auswirkungen wird das in anderen Bereichen haben?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:16:54",
+      "text": "Ich würde da ganz gerne mal konkret drauf eingehen, weil ich denke,\ndass es auch nicht unbedingt so vielen Leuten so klar geworden ist,\nwie grundlegend die Veränderungen der letzten zehn Jahre waren.\nEs sind ja schon ein paar Experimente genannt worden,\nalso vor allem natürlich die Weltraumteleskope, die Systeme,\ndie halt weit ins All und damit auch in die Zeit hineinschauen,\nhaben viele Ergebnisse geliefert, die überrascht haben.\nIch meine, die Entdeckung der Hintergrundstrahlung ist ja schon ein bisschen\nlänger her, aber gerade dieses Experiment,\nich weiß jetzt nicht ganz genau von wem das war, der festgestellt hat,\ndass das Weltall sich weiter ausdehnt und die Geschwindigkeit noch weiter zunimmt.\nWas fühlt man denn da so als Physiker, wenn man dann morgens aufwacht,\nZeitung aufschlägt und man sagt, liest die Nachricht, alles ist anders?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:17:53",
+      "text": "Also erstmal ist es so, dass wir…,\nimmer wieder Beobachtungsdaten haben, die wir nicht verstehen.\nAlso eine der Erkenntnisse zum Beispiel, dass es so etwas wie dunkle Materie geben muss,\nwenn man die Ergebnisse nur richtig interpretiert hätte, hätte man da schon\nin den 1930er Jahren drauf kommen können, als Zwicky sich die Bewegung von größeren\nStrukturen im Kosmos angeguckt hat und festgestellt hat,\ndass man das aufgrund des Gravitationsgesetzes nur verstehen kann,\nwenn es eine zusätzliche Materieform gibt.\nWenn Sie solche Beobachtungen isoliert haben, dann ist immer die Frage,\nes stimmt was mit der Beobachtung nicht, stimmt was mit dem Modell nicht.\nDie Frage ist, wie gut ist unser Verständnis der Gravitationswechselwirkung\nbei den Skalen, auf denen wir arbeiten, denn wir testen das ja immer nur auf der Erde.\nDann können wir das im Sonnensystem testen mit einiger Präzision.\nJetzt gehen sie damit hin und beschreiben Galaxienhaufen oder Rotationskurven von Galaxien.\nDas heißt, wie schnell dreht sich ein Stern um das Zentrum dieser Galaxie,\nverstehe ich, dass der nicht aus der Galaxie rausfliegt, aufgrund der Materieverteilung.\nUnd dann stellt sich halt bei einigen dieser Beobachtungen raus,\ndas sind keine Beobachtungsfehler oder Fehler in der Theorie,\nsondern da steckt wirklich was hinter.\nUnd wir haben durch die Beobachtung der kosmischen Hintergrundstrahlung,\nwas wir uns eigentlich angeguckt haben, ist, hat das Universum die gleiche Temperatur,\negal in welche Richtung ich gucke?\nWas ja eigentlich eine interessante Frage ist. Also wenn das Universum ohne\nVorzugsrichtung erzeugt worden ist, würde man ja sagen, ja, das müsste eigentlich\nüberall ungefähr gleich aussehen.\nDann stellt sich natürlich die spannende Frage, wenn das gleich aussieht,\nwie können Bereiche, die also keinen kausalen Zusammenhang haben,\ndas heißt, die so weit voneinander entfernt sind, dass sie über Lichtgeschwindigkeit\nkeine Informationen austauschen können, wie können die eine gleiche Temperatur haben?\nUnd das ist normalerweise eine Frage, da finden Sie keine Antwort drauf.\nDie Idee, die dann vor 20 Jahren aufkam, 30 Jahren aufkam, war,\ndass es also eine Inflationsphase am Anfang gab.\nDas heißt, das Universum hat sich also exponentiell ausgedehnt aus einem sehr\nkleinen Raumzeitgebiet. In\ndem kleinen Raumzeitgebiet können Sie dann homogene Bedingungen schaffen.\nDas ist klein genug, dass Sie über Lichtgeschwindigkeit Informationen austauschen\nkönnen. Dann blähen Sie das exponentiell auf. Wir verstehen heute nicht, warum.\nDas nimmt eine bestimmte Größe an. Dieser exponentielle Wachstum hört auf.\nAuch da wissen wir nicht, warum es aufhört. Dann dehnt es sich langsam weiter\naus, beziehungsweise Gravitationskraft gewinnt die Überhand und dann sollte\nes sich wieder zusammenziehen, je nachdem, wie viel Materie in dem Universum\nist. Die Anfangsbedingungen kennen wir ja nicht genau.\nUnd dieses Modell, was wir heute haben, das sieht recht plausibel aus.\nUnd wenn Sie das in der Relativitätstheorie angucken, dann hat Einstein eigentlich\nalle Zutaten schon geliefert.\nEr hat das kosmologische Konstante genannt, also diese Vakuumenergie,\ndie notwendig ist, um solche Expansionen vorher zu verursachen.\nUnd Einstein hat damals gesagt, diese Einführung dieser kosmologischen Konstante\nin meine Relativitätstheorie, das war der größte Unfug, den ich gemacht habe,\nals Hubble entdeckt hat, dass das Universum sich tatsächlich ausdehnt,\nalso dass unsere Nachbargalaxien von uns wegfliegen.\nUnd Einstein hat dann gedacht, naja, das ist also ein mathematisches Kuriosum,\ndass ich da eine Konstante habe, die hat keine Bedeutung.\nUnd dann kam die Messung von dem Hubble-Weltraumteleskop, das also festgestellt\nhat, dass das Universum sich beschleunigt, ausdehnt.\nDann kam die Messung der kosmischen Hintergrundstrahlung, was auch festgestellt\nhat, dass wir die Messergebnisse nur verstehen können, wenn wir annehmen,\ndass das Universum sich beschleunigt, ausdehnt.\nUnd wenn man das dann zusammennimmt, dann hat man das Gefühl,\ndas Bild wird wieder konsistent.\nAlso die Ergebnisse passen zusammen. Wir haben eigentlich die Bausteine schon in der Theorie.\nUnser Problem ist mehr, dass wir nicht verstehen, wo die herkommen.\nAlso diese kosmologische Konstante, die Einstein eingeführt hat,\ndas ist zunächst einmal eine dimensionslose Zahl. Warum ist die da?\nWarum hat die den Wert? Warum ist die nicht null?\nUnd dann versuchen sie zu verstehen, wie kann ich sowas auf mikroskopischer\nSkala erzeugen und das ist Quantenfeldtheorie, das ist Heisenberg,\nund dann stellen sie fest, das passt alles nicht zusammen und dann haben sie\neigentlich ein Bild, was sich entwickelt in eine Richtung, dass sie das Gefühl\nhaben, das wird alles konsistent,\nwenn ich gewisse Annahmen mache, aber die Grundlagen für die Annahmen fehlen mir.\nAlso müssen wir verstehen, welche Grundlagen brauchen wir, um diese Annahmen zu rechtfertigen.\nDenn man sollte ja auch wieder, wenn man in der Geschichte zurückgeht,\nals Michelson und Morley die Konstante der Lichtgeschwindigkeit gemessen hatten,\nda haben die das gemessen, weil wir davon ausgingen, dass das Licht,\nalso elektromagnetische Wellen, ein Medium brauchen, um sich auszudehnen.\nUnd das haben wir Äther genannt.\nUnd wenn es diesen Äther tatsächlich geben würde und die Lichtwellen sich in\ndiesem Äther ausbreiten, dann müsste es einen Unterschied machen,\nob ich das Licht also in Richtung der Flugbahn der Erde um die Sonne aussende\noder entgegengesetzt dazu.\nUnd Michelson und Morley haben gezeigt, das macht keinen Unterschied, den Äther gibt es nicht.\nDas heißt, wenn wir jetzt ein Modell des Universums machen und sagen,\ndafür brauchen wir aber Inflation, Vakuumenergie, also dunkle Energie, dunkle Materie,\ndann ist ja die Frage, sind das Hilfskonstrukte, die wir einführen,\nweil wir nicht verstanden haben, wie es wirklich funktioniert?\nOder gibt es diese Sachen wirklich? Also ist die Aufgabe der Experimentalphysik,\ndas kann ja sonst keiner machen, also Experimentalphysiker müssen versuchen\nzu verstehen, was ist das?\nWas sind das neue Elementarteilchen bei der dunklen Materie?\nWas ist das? Sind das schwarze Löcher?\nSind das braune Zwerge? Also sowas wie der Jupiter, also was massiv genug ist,\num Masse zu haben, also viel Masse zu haben, aber nicht massiv genug, um zu leuchten.\nSind das weiße Zwerge, also Überbleibsel von, nicht von Supernova-Explosionen,\naber von Nova-Explosionen, Endstadium von Sternenentwicklung,\ndie wir nicht sehen, weil die halt nicht leuchten.\nIst es interstellares Medium, was wir nicht richtig verstehen.\nDas heißt, sie gehen dann durch die Physikprozesse durch, versuchen das zu verstehen\nund dann kommen wir zu dem Ergebnis, nichts von dem, was wir können,\nist in der Lage, das zu beschreiben.\nAlso die Neutrinos als Elementarteilchen sind nicht in der Lage,\ndunkle Materie vernünftig zu beschreiben.\nWir können ausschließen, dass weiße Zwerge, braune Zwerge, schwarze Löcher die dunkle Materie sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:34",
+      "text": "Weil die nicht genug Materie darstellen könnten?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:24:37",
+      "text": "Nein, weil wir verstehen, dass die bekannten Materieformen, also ich nenne da,\nalso der Fachbegriff ist baryonische Materie. Was ist das?\nDas sind also, das ist Materie, die aus Atomkernen aufgebaut sind.\nAlso wir bestehen alle aus Atomen.\nDas Atom besteht aus Atomkernen und Elektronen, was da drum herum fliegt.\nOder Elektronen, je nach Ladung des Kerns.\nDer Kern selber besteht aus Protonen und Neutronen. So einen Protonen und Neutronen\nbezeichnen wir als Baryonen. Alle chemischen Elemente sind aus Baryonen.\nProtonen und Neutronen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:08",
+      "text": "Und bis vor kurzer Zeit war das eigentlich so die Sicht auf die Welt,\ndass alles daraus besteht?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:25:13",
+      "text": "Die Sicht auf die Welt ist immer noch, dass alle Materie daraus besteht.\nWir können aufgrund der Häufigkeit der chemischen Elemente im Universum heute\nausrechnen, dass nicht mehr baryonische Materie produziert worden ist am Anfang.\nDas heißt, selbst wenn die dann in braunen Zwergen, weißen Zwergen oder schwarzen\nLöcher als Endstadium von Sternen jetzt drin ist, dann reicht das nicht aus,\ndass wir damit die dunkle Materie hinkriegen. Das heißt, wir brauchen neue Elementarteilchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:25:39",
+      "text": "Und von der dunklen Materie weiß man eigentlich nur deshalb oder meint zu wissen,\nweil sonst die ganzen Zusammenhänge mit Gravitation etc. keinen Sinn mehr ergeben."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:25:47",
+      "text": "Genau, wir haben das Gravitationsgesetz getestet. Also wir sind in der Lage\nzu beschreiben, wie die Erde um die Sonne kreist, wie Jupiter,\nSaturn, Venus, Merkur, selbst Merkur im Detail, der durch ein sehr starkes Gravitationsfeld\ndurch muss und deshalb einige Eigenheiten hat, die wir beobachten können.\nEs hat einen Nobelpreis gegeben für die Beobachtung von einem Pulsar,\nbei dem man also beobachtet hat, wie die Periode, die Rotationsperiode von diesem\nNeutronenstern sich verändert.\nDas passt hervorragend zur Relativitätstheorie. Das heißt also,\nin den letzten 50 Jahren haben wir die einsteinische Gravitationstheorie im\nDetail mit immer größerer Präzision getestet.\nIhr Navigationssystem, was ich am Anfang gesandt habe, wäre jedes Mal um 20\nKilometer falsch, ohne Einsteins allgemeine Relativitätstheorie.\nAuch Einstein hätte Ihnen das nicht vorhersagen können, dass Sie mal mit seiner\nTheorie ein Navigationssystem machen.\nAber für uns ist das heute Alltag. Wir benutzen das und wir sehen,\ndass das mit guter Präzision funktioniert.\nUnd dann ist die Annahme in den Naturwissenschaften immer, die einfachste Theorie ist die beste.\nUnd das heißt, wir haben eine Theorie der Gravitation, die funktioniert.\nWir haben aber Phänomene, die wir nicht beschreiben können.\nAlso muss es eine Erweiterung dieser Theorie geben. Wie sieht die aus?\nAuf diese Fragen versuchen wir Antworten zu finden und wir wissen,\ndass wir also nicht in der Lage sind, den Anfangszustand des Universums zu beschreiben.\nAlso Urknall kriegen wir nicht hin, schwarze Löcher kriegen wir nicht hin,\nweil in diesen Fällen dieses Modell von Einstein einfach zusammenbricht.\nDie Gleichungen sind divergent, also wie die Mathematiker sagen,\ndas heißt, da kommt unendlich raus und damit kann ich nichts anfangen.\nHabt keine Vorhersagekraft mehr. Also da passiert was, was wir nicht verstehen.\nUnd das ist im Moment der Schlüssel, wie wir versuchen, da weiterzukommen.\nDas heißt, die Frage jetzt für uns ist, welche Experimente können wir machen,\num zu verstehen, was dunkle Materie und dunkle Energie sind.\nUnd das ist der Grund, warum wir also gesagt haben, wir brauchen ein Experiment auf der Raumstation.\nWir können das also nicht mit terrestrischen Experimenten machen,\nweil wir uns Phänomene angucken wollen, Wollen die also was mit den Grundlagen\ndessen zu tun haben, wie dieses Universum aufgebaut ist, entstanden ist und\nwie die physikalischen Zusammenhänge bei der Entwicklung sind?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:57",
+      "text": "Jetzt sind wir schon wieder bei dem Uns, was die RWTH in diesem Lehrstuhl beschreibt.\nZwischendurch gab es viel Uns, was so eigentlich die gesamte Welt der Physik betrifft.\nUnd es ist ja auch nicht so, dass nur hier jetzt an diesem Problem gearbeitet werden würde.\nEtwas, was viel Wind gemacht hat in letzter Zeit und auch immer noch viel abstrahlt,\nist das LHC-Experiment im CERN, dieser riesige Beschleunigungsring,\nbei dem ja im Prinzip eigentlich auch dieselbe Fragestellung dahinter steht, oder?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:28:27",
+      "text": "Ja, also es gibt, erstmal es gibt sehr viele Wissenschaftler,\nwas gut ist, die an diesen Fragestellungen arbeiten.\nAlso um das nochmal so ein bisschen einzuordnen, also das AMS-Experiment ist\nvon 60 Forschungsinstituten entwickelt worden.\nDie RWTH Aachen war eins davon. Da sind 600 Wissenschaftler dann beteiligt,\nnicht 20 in Aachen, die sowas machen können. Also das ist die richtige Skala dann.\nAlso uns ist, manchmal ist das der RWTH-Physiker, uns seine Gruppe,\nmanchmal sind das alle Physiker, manchmal ist das die ganze Menschheit, je nachdem.\nIch fühle mich zu allen zugehörig. Ja, natürlich.\nJetzt, wenn wir das versuchen einzuordnen, wie ist so der Zusammenhang mit den\nanderen grundlegenden Experimenten in der Physik, die zurzeit laufen?\nDann ist der Versuch am CERN, an dem LHC-Beschleuniger, an dessen Forschungsprogramm\nwir hier auch beteiligt sind, also wir ist jetzt RWTH Aachen, ich insbesondere.\nDann ist der\nansatz am zern eigentlich dass wir versuchen die\nneuen elementarteilchen die wir suchen zu erzeugen\nim labor das heißt wir machen kollisionen von von hoch energetischen protonen\nund schauen uns die zerfallsprodukte an die dabei erzeugt werden und versuchen\nzu verstehen wie die wechselwirkung am anfang aussah also bei diesen kollisionen\nman könnte sagen wir Wir versuchen, so einen kleinen Urknall im Labor zu machen.\nWir sind natürlich um größten Ordnungen von den Energien weg,\ndie am Urknall wirklich geherrscht haben.\nAber wir versuchen, uns dem anzunähern und zu verstehen, welche physikalischen\nProzesse sind notwendig, um das zu beschreiben.\nUnd treten dabei neue Phänomene auf, insbesondere neue Elementarteilchen,\ndie in Frage kommen, um zum Beispiel dunkle Materie zu beschreiben.\nUnser Problem bei diesen Experimenten ist,\nWenn wir da ein neues Elementarteilchen finden, dann steht da nicht dran,\nich bin dunkle Materie, sondern steht da im besten Fall dran,\nich bin ein neues Elementarteilchen, verstehe mich.\nUnd verstehe mich heißt dann, in dem Labor können wir die Bedingungen während\nder Kollision kontrollieren, das heißt wir können die Energie verändern,\nwir können bestimmte Eigenschaften der Teilchen versuchen zu verändern und versuchen\nzu verstehen, was das ist.\nUnd das war in den letzten 50\nJahren, seitdem wir also an Beschleunigern arbeiten, extrem erfolgreich.\nWir haben viel über die Wechselwirkung und die Kräfte in der Natur dabei gelernt, das so zu tun.\nWenn wir jetzt aber ein neues Teilchen finden, und das soll dunkle Materie sein\nim Universum, dann brauche ich ein anderes Experiment, was auch in der Lage\nist, die Eigenschaften dieser Teilchen zu messen, was aber im Weltraum ist.\nUnd sagt, ich schaffe die Verbindung.\nUm im Bild zu sein, ich messe sowas wie einen Fingerabdruck von diesem Teilchen an dem Beschleuniger.\nDas heißt, ich messe seine Eigenschaften.\nUnd ich messe die gleichen Eigenschaften im Weltraum. Und wenn die Eigenschaften\nzusammenpassen, dann habe ich verstanden, was ich da habe.\nUnd das ist die Verbindung zwischen der Physik, die wir auf der Raumstation\nmachen, und der Physik, die wir an Beschleunigerexperimenten machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:40",
+      "text": "Womit wir so ein bisschen beim eigentlichen Thema angekommen sind,\ndas Alpha-Magnet-Spektrometer oder kurz AMS gab es bisher in zwei Varianten.\nEin AMS-01, was eher so der Testballon war und jetzt noch in Betrieb seit 2011,\ndas AMS-02 auf der Raumstation.\nWann ist denn die Idee für dieses Projekt geboren worden und was soll das jetzt konkret tun?\nAlso wie soll diese eigentliche Aufgabe, man muss das auch im Weltraum mal messen\nkönnen, wie ist man da rangegangen und wo hat sich diese Idee überhaupt herausgebildet?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:32:22",
+      "text": "Ja, das ist also eine recht komplexe Frage.\nIch fange mal mit dem ersten Teil an. Wie hat sich das entwickelt?\nWer ist auf die Idee gekommen?\nVom 1995 hatten wir also die Situation, dass wir Beschleunigerexperimente am\nCERN in Genf gemacht haben, an einem sehr ähnlichen Beschleuniger.\nDer war in dem gleichen Tunnel eingebaut, hat aber Elektronen und Positronen\nzur Kollision gebracht.\nUnd wir waren in der Situation, dass wir uns gefragt haben, was machen wir danach?\nUnd dann gab es also eine Richtung der Teilchenphysik, die haben gesagt,\nwir ersetzen die Elektronen und Positronen in Beschleuniger durch Protonen.\nDann können wir höhere Energien erreichen, Schwerpunktsenergien und damit neue\nTeilchen produzieren und neue Phänomene verstehen.\nUnd eine andere Gruppe hat gesagt, eigentlich die höchsten energetischen Beschleuniger\nim Universum, das sind Supernova-Explosionen.\nAlso das kann ich auf der Erde nicht nachbauen. Also so viel Energie,\nwie frei wird, wenn ein Stern explodiert, das kann ich auf der Erde nicht nachbauen.\nUnd es gibt noch hochenergetischer, das nennen wir aktive galaktische Kerne,\nwo Teilchen auf noch höhere Energien beschleunigt werden können.\nUnd wenn Sie sich die Entwicklung in der modernen Physik angucken,\ndann sind viele Erkenntnisse, die wir haben, aus der Beobachtung der kosmischen\nHöhenstrahlung entstanden.\nDie ersten Elementarteilchen sind da gefunden worden. Also das Antiteilchen\nzum Elektron, das Positron ist da gefunden worden.\nMyonen sind in der kosmischen Strahlung gefunden worden. Pionen.\nAm Anfang hat es dafür noch Nobelpreise gegeben, weil man dachte,\ndas ist es jetzt. Es gibt vielleicht zwei, drei. Dann hat sich herausgestellt, das ist ein ganzer Zoo.\nUnd dann hat man in den 50er Jahren gesagt, also wisst ihr was,\ndie Rate in der kosmischen Strahlung ist zu klein. Wir bauen Beschleuniger.\nUnd dann studieren wir das."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:34:07",
+      "text": "Was heißt denn, man hat das in der kosmischen Höhenstrahlung gefunden?\nWo musste man sich denn befinden?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:34:12",
+      "text": "Ja, das ist also wirklich teilweise abenteuerlich.\nAlso die Leute haben Fotoemulsionen genommen und die Flugbahnen von den Teilchen\nin diesen Fotoemulsionen gesehen und damit die Eigenschaften verstanden.\nDas ging so weit, dass die, also die moderne Elektronik gab es ja nicht,\nalso Sintillationszähler, das ist also ein Plastikmaterial, da geht ein Teilchen\ndurch und erzeugt Licht.\nUnd wir lesen das heute mit elektronischen Geräten aus und zählen die Lichtblitze\nund verstehen, was da passiert.\nAber die haben sich dann Kisten gebaut, die Sintillationszähler da reingetan\nund haben sich in die Kisten gesetzt. Und die war absolut dunkel.\nUnd dann haben sie lang genug gewartet.\nNach mehreren Stunden ist das Auge so empfindlich, dass sie also diese Lichtblitze\ndann auch so sehen können und zählen können.\nAlso Physik ist manchmal mühsam.\nUnd das Ergebnis war, es gibt also einen ganzen Zoo von Elementarteilchen.\nWie kriege ich den jetzt irgendwie sortiert? und das haben dann die Beschleunigerexperimente gemacht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:07",
+      "text": "Und nochmal zu Verständnis, diese kosmische Strahlung prasselt ohnehin die ganze Zeit auf uns ein.\nAlso dazu muss man sich jetzt gar nicht auf Mount Everest begeben,\nsondern es reicht auch in der Straße stehen zu bleiben und sozusagen nur im\nrichtigen Moment hinzugucken."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:35:21",
+      "text": "Die ist auch nicht so ganz unwesentlich dafür, dass es uns überhaupt gibt.\nAlso entdeckt worden ist sie von Victor Hess, auch wieder vor 100 Jahren,\nAlso in diesem Jahr vor 100 Jahren,\nalso genau vor 100 Jahren mit einem Ballonflug in der Nähe von Wien.\nDer ist mit dem Ballon aufgestiegen und hat gemessen, wie viele elektrische\nTeilchen er sieht, also geladene Teilchen er sieht und sich gewundert, dass das mehr werden.\nAlso eigentlich war er der Meinung, die kommen von der Erde.\nJa, und dann ist er aufgestiegen und hat gemerkt, das werden immer mehr.\nUnd dann war klar, die kommen eigentlich von oben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:51",
+      "text": "Keine Erdstrahlen."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:35:51",
+      "text": "Keine Erdstrahlen. Dann ist die Frage, was ist das?\nDas sind Teilchen, die in kosmischen Beschleunigern wie einer Supernova-Explosion\nauf hohe Energien beschleunigt werden und auf die Erdatmosphäre treffen.\nUnd die Erdatmosphäre schützt uns vor denen. Also wenn Sie Raumfahrt machen\nund Sie nehmen also einen Astronauten und schicken den zum Mars,\ndann wird er das wahrscheinlich nicht überleben. Er wird an Krebs sterben.\nEntweder schon während des Fluges oder kurz nachdem er hier auf der Erde gelandet\nist, weil die Strahlung einfach viel zu hoch ist. Die Erde ist ein sehr geschütztes Reservoir.\nWir haben ein Erdmagnetfeld und eine Erdatmosphäre, die uns vor dieser kosmischen Strahlung schützt.\nAuf der Raumstation sind wir immer noch im Erdmagnetfeld und wir werden zur\nHälfte durch den Erdschatten abgedeckt.\nWenn Sie aber ein freifliegendes Raumschiff haben, dann ist die Strahlung das\ngrößte Problem. Also Leben, Leute dahin zu bringen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:44",
+      "text": "Wie viel Prozent schirmt die Erde ab? Wie viel kommt trotzdem noch durch?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:36:49",
+      "text": "Also es kommt so wenig durch, dass Sie zwar interessante Sachen darin finden\nkönnen, aber wenn Sie verstehen wollen, was kommt also primär,\ndann müssen Sie bei den niedrigen Energien in den Weltraum gehen.\nDann werden zwar die Teilchen durch das Erdmagnetfeld abgelenkt, aber nicht verändert.\nBei sehr hohen Energien gibt es also Experimente, die benutzen die Erdatmosphäre,\ndamit die Teilchen also einen sogenannten Teilchenschauer in der Erdatmosphäre\nerzeugen, wie das Pierre Auger Observatorium in Argentinien.\nUnd gucken sich diese Schauer, also die Sekundärteilchen an,\ndie da angekommen sind, um Informationen über das Primärteilchen zu erlangen.\nBei AMS ist der Ansatz ein anderer. Wir verlassen die Erdatmosphäre,\nweil wir uns angucken wollen, was also sozusagen ungestört von der Erdatmosphäre hier ankommt.\nAber um den Gedanken noch eben zu Ende zu bringen, wenn wir keine kosmische\nStrahlung hätten, dann hätten wir wahrscheinlich keine vernünftige Evolution hingekriegt.\nDenn diese kosmische Strahlung verursacht natürlich in einigen Fällen,\nwenigen Fällen zum Glück, aber genügend Fällen Schäden in dem Erbgut,\ndie eine Evolution in Gang setzen können. Also wenn sie das Erbgut immer nur\nperfekt kopieren, kriegen sie keine Evolution hin.\nWenn sie zu viel kosmische Strahlung haben, dann ist die Schädigung zu groß\nund sie können auch nicht überleben. Sie sterben an Krebs.\nJa, es ist ein sehr fein tariertes Gleichgewicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:12",
+      "text": "Fortschritt durch Mutation."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:38:14",
+      "text": "Fortschritt durch Mutation, ja. Ohne Mutation gibt es keinen Fortschritt.\nAlso das ist nicht angenehm, aber so ist es.\nUnd die Idee von AMS ist, wir schauen uns das im Weltraum an,\nwir gehen zurück zu den Anfängen der Teilchenphysik, wir machen Experimente\nmit den höchsten energetischen Teilchen, die es gibt und wir machen das in einem\nBereich, wo wir die Anfangsbedingungen nicht kontrollieren können.\nAlso bei dem Beschleuniger kontrollieren Sie ja die Anfangsbedingungen.\nDas heißt, Sie können die Wechselwirkungsrate einstellen, die Energie einstellen.\nDa oben sehen wir alles, was es gibt.\nWas nicht heißt, dass wir merken, was es ist und dass wir das alles verstehen\nkönnen. Aber wir haben keine Einschränkungen an den Anfangszustand.\nUnd das ist die spannende Idee bei AMS. Und dann haben sich die Gründungsväter\nvon AMS, zu denen ich nicht gehöre, weil 1995 war ich also gerade mit meiner Promotion fertig.\nDa war ich noch nicht in der Position, um also solche Experimente vorzuschlagen.\nDas ist vorgeschlagen worden von Herrn Professor Ting.\nDer ist Professor am MIT in den USA, hat den Nobelpreis für Physik in den 70er\nJahren bekommen für die Entdeckung eines neuen Elementarteilchens."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:26",
+      "text": "Als es noch Nobelpreise dafür gab?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:39:28",
+      "text": "Dafür noch Nobelpreise gab. Das war der letzte Nobelpreis, den es für die Entdeckung\neines Quarks gegeben hat, das Charmquark.\nDer hat das vorgeschlagen, sich eine Gruppe von Mitstreitern gesucht.\nDazu gehörte mein Vorgänger hier in Aachen, Herr Professor Lübbelsmeier,\nder dieses Experiment auf den Weg gebracht hat. und die Idee war eigentlich ganz einfach.\nWir gehen also aus der Erstatmosphäre raus und wir sind damit in der Lage,\nuns Teilchen anzugucken, die sich bisher keiner angucken konnte."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:39:59",
+      "text": "Aber das Magnetfeld greift ja immer noch."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:40:01",
+      "text": "Das Magnetfeld greift immer noch und das greift auch vorher schon.\nDas heißt, wir verlieren die Richtungsinformation.\nWenn Sie sich angucken, was wissen wir vom Universum, dann wissen wir das im\nWesentlichen aus der Beobachtung der neutralen Teilchen.\nDas heißt also der Photon und der Neutrinos heute. Bei den Teilchen behalten\nSie die Richtungsinformationen.\nDas heißt, Sie können die Quelle identifizieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:24",
+      "text": "Also Licht."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:40:26",
+      "text": "Licht, das sind die Photonen. Neutrinos in jüngerer Zeit mit Detektoren.\nBei den geladenen Teilchen, die werden schon von den galaktischen Magnetfeldern abgelenkt.\nDie werden durch Turbulenzen abgelenkt in dem interstellaren Medium.\nDas heißt, die Richtungsinformationen haben wir nicht mehr.\nAber um mal ein Beispiel zu sagen, wenn wir uns angucken, wie das Universum\nentstanden ist, dann gehen wir davon aus, dass es vor dem Universum eigentlich nichts gab.\nAlso, sonst wäre es ja nicht der Anfang. Ja. Wenn es nichts gab,\ndann kommt man zu der Idee, dass nichts müsste eigentlich elektrisch neutral sein.\nSonst ist es ja nicht nichts. Also wenn es eine elektrische Ladung hat,\ndann ist es ja schon was. Also es hat keine elektrische Ladung.\nAlle Versuche, die wir machen heute, zeigen uns, dass genauso viele positive\nwie negative Teilchen dann produziert werden. Genauso viel Materie wie Antimaterie.\nHeute verstehen wir nicht, wie es dazu kommt, dass diese vier Prozent,\ndie wir beobachten an Materie im Universum, dass das nur Materie ist.\nWas ist mit der Antimaterie passiert?\nEs könnte durchaus sein, dass es Bereiche gibt im Universum,\ndie aus Antimaterie bestehen. Vielleicht ist das Ganze symmetrisch.\nEs gibt Antimaterie-Galaxien."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:41:36",
+      "text": "Was ist Antimaterie nochmal?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:41:38",
+      "text": "Was ist Antimaterie? Also ich hatte versucht zu erklären, wie so ein Atom aufgebaut ist.\nDas hat ein einfaches Atom, Wasserstoffatom, Atomkern, ist ein Proton und ein Elektronkreis darum.\nDie Physik sagt aber, das muss völlig symmetrisch sein.\nEs muss also ein Anti-Wasserstoffatom geben, was aus einem Antiproton,\ndem Antiteilchen zum Proton, und einem Positron besteht, dem Antiteilchen zum Elektron.\nSo, das hat Dirac postuliert, aufgrund von theoretischen Überlegungen.\nUnd in der kosmischen Höhenstrahlung ist dann das Positron gefunden worden,\ndas Antiteilchen zum Elektron.\nDas heißt, das hat dieselben Eigenschaften wie das Elektron,\nnur die entgegengesetzte elektrische Ladung.\nSo, und wenn dieses Universum am Anfang genauso viel Materie wie Antimaterie\nhatte, dann ist die Frage,\nwo ist die Antimaterie geblieben, gibt es Bereiche aus Antimaterie und wenn\nwir jetzt mit dem AMS-Experiment einen einzigen Antikohlenstoffkern sehen, dann wissen wir,\nes gibt Sterne aus Antimaterie, denn Kohlenstoff kann nur in Sternen entstehen,\nalso es gibt Sterne aus Antimaterie im Universum und wir können dann nicht sagen, wo der ist.\nWeil wir die Richtungsinformation nicht haben. Aber die Erkenntnis an sich,\ndass es Bereiche im Universum aus Antimaterie gibt, würde also die Physik komplett revolutionieren.\nUnd das ist nur eine der Facetten, die sich AMS anguckt.\nUnd mit diesen Überlegungen, es ist also, selbst wenn wir die Richtungsinformation\nnicht bekommen können, das liegt ja nicht daran, dass wir das Experiment irgendwie\nschlecht machen, sondern dass die Natur dafür gesorgt hat,\ndass diese Richtungsinformation nicht mehr vorhanden ist, gibt es genug physikalische\nFragen, die interessant genug sind, dass wir uns das mit solch einem Experiment\nangucken können. Und das war die Geburtsstunde von AMS.\nDas ist also eine Veröffentlichung, wo in Größenordnung 50 Personen draufstehen,\nvon Aachen, Herr Lübbelsmeier als Institutsleiter damals.\nUnd dann haben die Raumfahrtagenturen gesagt, also ihr seid Teilchenphysiker.\nWir glauben euch, dass ihr Experimente am CERN bauen könnt.\nAber so ein Experiment in den Weltraum zu bringen, ist schon noch ein bisschen was anderes.\nAnderes. Und ihr müsst uns erstmal zeigen, dass sowas funktioniert.\nUnd das war die Idee von AMS1. Die Idee von AMS1 war, einen Prototypen zu bauen,\nmit dem man zeigen kann, sowas kann man überhaupt machen.\nAlso Teilchendetektoren sind ja sehr empfindliche Messinstrumente.\nGrößenordnung zu geben, wir messen also die Flugbahnen von Teilchen durch solch\nein Instrument mit einer Genauigkeit von tausendstel Millimeter.\nTausendstel Millimeter. Jetzt überlegen Sie sich mal, wie Sie was bauen müssen,\ndass Sie das vom Tisch schmeißen können.\nUnd das kann danach immer noch tausendstel Millimeter messen.\nUnd das vom Tisch schmeißen ist der Start mit dem Space Shuttle.\nDas ist der vorsichtigste Start, den Sie überhaupt haben können in der Raumfahrt.\nDas sind extreme Anforderungen von der Technologie. Das zweite Problem,\nwas es zu lösen galt, war, die Erde hat ja zum Glück ein Magnetfeld.\nWenn Sie jetzt geladene Teilchen messen wollen, brauchen Sie selber einen Magneten.\nWeil nur mit einem Magneten können Sie die geladenen Teilchen ablenken und aus\nder Ablenkung den Impuls und die elektrische Ladung messen.\nWenn Sie diesen Magneten aber nicht sehr sorgfältig auslegen,\ndann starten Sie das Space Shuttle und danach haben Sie sämtliche Lagekontrolle verloren.\nWeil dieser Magnetwechsel wirkt mit dem Erdmagnetfeld und genau wie eine Kompassnadel\ndreht sich dann das Shuttle bei seinen 90 Minuten um die Erde die ganze Zeit\nin dem Erdmagnetfeld und sie können gar nichts mehr tun.\nUnd da gab es in den 80er Jahren eine Entwicklung, dass also Physiker,\nFestkörperphysiker sich aus ganz anderen Gründen mit Magnetfeldern auseinandergesetzt\nhaben und ein Konzept vorgeschlagen haben, wie man solch einen Magneten bauen kann.\nUnd dieses Konzept hat AMS umgesetzt mit einem sogenannten Permanentmagneten.\nEr ist also aus seltenen Erden aufgebaut.\nIst auch an sich schon ein faszinierendes Projekt. Also die seltenen Erden kamen\naus China nach Deutschland gegangen zur Vakuumschmelze.\nVakuumschmelze hat daraus kleine Würfelchen gemacht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:41",
+      "text": "Also die seltenen Erden sind eigentlich Metalle."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:45:44",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:46",
+      "text": "Man sagt es halt so, was selten ist."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:45:49",
+      "text": "Ja, aber es sind halt Metalle mit bestimmten Eigenschaften.\nVakuumschmelze hat also die magnetisiert und kleine Würfelchen draus gemacht,\nmuss man sich vorstellen, so Kubikzentimeter groß.\nUnd die haben dann eine bevorzugte Magnetisierungsrichtung schon und daraus\nwollen sie also einen zylindrischen Magneten zusammenbauen.\nAus Würfeln kann ich keinen Zylinder bauen. Da gibt es immer Lücken.\nAlso sind diese Würfelchen in Deutschland produziert, wieder nach China gegangen\nund jeder einzelne Würfel ist in Form geschnitten worden, dass ich daraus also\npassgenau einen Zylinder bauen kann. Dafür brauchen sie sehr viel Personal.\nDeshalb macht man das lieber in China. Das können sie nicht mit Maschinen machen, vernünftig.\nDiese seltenen Erden, wenn die gepresst sind, sind also extrem brüchig.\nVersuchen sie mal ein Keramikmesser zu schleifen. Also besser versuchen sie\nes nicht. Das bricht in der Regel ab.\nDas war also extrem arbeitsintensiv, aber ist in China dann gemacht worden.\nUnd die NASA war die Raumfahrtagentur, die das begleitet hat.\nUnd die hat ihre Ingenieure nach China geschickt, um den Prozess zu überwachen\nund hat dann gesagt, so und jetzt wollen wir auskriegen, hält dieser Magnet\nauch einen Start mit einem Space Shuttle aus.\nUnd das Einzige, was sie dann machen können, ist, um sich wirklich davon zu\nüberzeugen, dass sie zwei Baugleiche machen und den einen versuchen kaputt zu machen.\nAlso einen Distractive Test Test, wie das so schön heißt, also einen Test bis\nzur Zerstörung, um wirklich rauszukriegen, wo sind die Grenzen in der Festigkeit.\nUnd der Prüfbericht von dem NASA-Ingenieur, der das gemacht hatte,\nist sehr instruktiv, der sagt nämlich, wir geben auf.\nAlso wir haben alles Equipment, was uns eingefallen ist, versucht zu verwenden\nund wir können diesen Ring nicht kaputt kriegen, diesen Zylinder."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:26",
+      "text": "Obwohl das eigentlich so ein brüchiges Material ist."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:47:28",
+      "text": "Ja, aber wenn das also in solch einer Metallmatrix verklebt ist,\ndann ist das ein extrem robustes Objekt und diese Metallmatrix müssen sie sehr\nrobust auslegen, denn die magnetischen Kräfte, die da wirken,\nsind viel größer als die mechanischen Kräfte bei dem Start von dem Space Shuttle."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:47:47",
+      "text": "Das Ding hält sich sozusagen selbst zusammen."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:47:50",
+      "text": "Ja, das ist so ähnlich wie ein Gewölbe, was Sie bauen, wenn Sie den Stein in\ndie richtige Form geben und das zusammensetzen oder eine Brücke,\nkönnen Sie da drüber gehen und das fällt nicht ein zusammen.\nSo, und das heißt, damit ist es gelungen, dann solch einen Magneten zu bauen,\ndas Magnetfeld so auszulegen, dass es also in der Fachsprache heißt,\nkein externes Dipolmoment hat.\nDas geht physikalisch nicht, aber ein so kleines, dass dieses externe Dipolmoment\nnicht mit dem Erdmagnetfeld wechselwirkt.\nUnd dann ist 1998 mit dem Space Shuttle Discovery dieser Prototyp geflogen.\nSchaut man sich mal die Zeitskala an, das ist drei Jahre nach dem Vorschlag.\nAlso wenn wir heute Raumfahrtprojekte machen, dann können wir nur davon träumen,\ndass also von der Idee bis zur Ausführung drei Jahre vergehen.\nDas war sehr erfolgreich, sind viele wissenschaftliche Veröffentlichungen rausgekommen\nund dann haben die Raumfahrtagenturen gesagt, so und jetzt habt ihr gezeigt,\ndas funktioniert, jetzt baut was für die Raumstation."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:48",
+      "text": "Drei Jahre. Das ist wirklich erstaunlich schnell. Was hat dazu geführt."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:48:53",
+      "text": "Dass das möglich war?\nAlso erstmal muss man sehen, dass das vor den Abstürzen der Space Shuttle war.\nDas heißt, die Sicherheitsanforderungen waren noch andere. Die Leute waren nicht\nso sensibilisiert für Sicherheitsfragen.\nHeute können sie das alleine schon deshalb nicht schaffen, selbst wenn sie alles\nrichtig machen, sie können nicht nachweisen, dass alles richtig ist.\nAlso der Aufwand an Dokumentation und an Testverfahren ist so groß geworden\njetzt, dass sie das in der Zeit einfach gar nicht schaffen können.\nDas ist der eine Grund. Und der zweite Grund, die Teilchenphysiker arbeiten\nanders als die Raumfahrtindustrie und als die, wie soll man das sagen,\nauch die Raumfahrtagenturen.\nAlso die, Goldin war zu der Zeit der Chef von der NASA und der hat gesagt,\nalso wenn ich das intern hinkriegen würde, sowas, das wäre unglaublich.\nJa, die Teilchenphysiker, die waren gewohnt, Experimente zu bauen,\ndas heißt, wir haben diese Infrastruktur an den Universitäten,\ndas heißt also, so ein physikalisches Institut in Aachen hat eine große Werkstatt,\nMechanik, Elektronik inklusive Entwicklung.\nÄhm, das heißt, es war relativ leicht möglich, ein großes Team von Wissenschaftlern,\nTechnikern sozusagen aus dem Stand zur Verfügung zu haben mit dem richtigen\nKnow-how, um das zu machen.\nUnd das Zweite war, die Raumfahrtagenturen selber haben das sehr geschickt gemanagt.\nDie haben nämlich gesagt, also die können Instrumente bauen. Das glauben wir denen.\nRaumfahrt kennen sie nicht. Also wir setzen ein Ingenieurbüro ein an der Schnittstelle,\nwas diesen Prozess überwacht, an deren Treffen teilnimmt, an deren Arbeitsbesprechungen\nteilnimmt und denen unmittelbar eine Rückmeldung gibt, ob das,\nwas die sich überlegen, Sinn macht oder keinen Sinn macht.\nUnd zwar nicht, wie das so schön neudeutsch heißt, vor dem Hintergrund Mission\nSuccess, sondern nur Mission Safety.\nAlso der Erfolg der Mission ist Aufgabe der Wissenschaftler.\nAber die Sicherheit der Mission ist unsere Aufgabe und darauf konzentrieren wir uns.\nUnd alles, was damit nichts zu tun hat, das lassen wir die Wissenschaftler machen,\ndas machen die vor Ort, das machen die schnell und das funktioniert.\nSo, und dann hat sich also die ETH Zürich bereit erklärt, sozusagen die gesamte\nIntegration, dass die in Zürich passiert. Also ein Instrument ist recht komplex.\nDas ist da gemacht worden und dann ist das von Zürich mit einer 747 zum Kennedy\nSpace Center geflogen worden und mit dem Space Shuttle Discovery geflogen worden.\nUnd das war ein Erfolg, was für ein so dreijähriges Projekt also schon ein gutes Aushängeschild ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:51:23",
+      "text": "Wer hat denn das finanziert?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:51:54",
+      "text": "Und was wir damals im Wesentlichen gemacht haben, sind Tragestrukturen,\nKohlefasertragestrukturen zu bauen, zu entwickeln.\nUnd etwas, was sich Laser Alignment System nennt, das ist also ein optisches\nSystem, was die mechanische Stabilität dieses Instruments überwacht hat.\nDas war also von deutscher Seite recht bescheiden. Im Wesentlichen finanziert\nworden ist das von Schweizer Seite, ETH Zürich.\nDie Schweizer Gruppen haben viel finanziert und das MIT über Herrn Ting,\nItalien, das waren die wesentlichen Geldgeber. Mhm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:32",
+      "text": "Das war jetzt aber auch noch, sagen wir mal, ein vergleichsweise kleineres Experiment-Setup\nim Vergleich zu dem, was dann später kam.\nWie groß muss man sich das Ding vorstellen?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:52:44",
+      "text": "AMS 1 oder AMS 2?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:46",
+      "text": "Nee, die erste."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:52:46",
+      "text": "AMS 1 würde ich sagen, ein bisschen mehr als ein Kubikmeter instrumentiertes Volumen.\nSo was wie zweieinhalb bis drei Tonnen Gewicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:52:57",
+      "text": "Also schon eine signifikante Last."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:53:00",
+      "text": "Also für Raumfahrt, wenn man sich anguckt, was der Aufwand ist,\num ein Kilogramm Material auf die Raumstation zu bringen, das ist schon ein\nsignifikanter Teil des Materials und das war in dem Flug auch die wesentliche\nNutzlast von dem Space Shuttle.\nDas hatte als sonstige Aufgabe zum ersten Mal an die Mira anzudocken und hat\ndieses Experiment halt mitgeflogen.\nAlso bei AMS 2 sind die Dimensionen jetzt ein bisschen anders.\nDa haben wir so 60 Kubikmeter instrumentiertes Volumen.\nAlso 5 mal 4 mal 3 Meter ist das Ganze groß, wiegt knapp 8 Tonnen,\nbraucht zweieinhalb Kilowatt Strom.\nDas ist also schon eine Nummer größer, eine Nummer aufwendiger.\nAber mit den Erfahrungen von AMS1 war das auch vertretbar.\nIn der wissenschaftlichen Entwicklung, Sie können normalerweise eine Größenordnung\nextrapolieren, das funktioniert, also ein Faktor 10.\nFaktor 100 ist schwierig, also da tauchen normalerweise ganz andere Probleme auf.\nUnd der Vergleich zwischen AMS 1 und AMS 2 ist so grob, also groben Faktor 10.\nJa, an einigen Stellen ist es mehr, an anderen Stellen ist es weniger,\naber grob ist es also eine Größenordnung schwieriger als AMS 1 zu machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:17",
+      "text": "Bleiben wir nochmal kurz bei AMS 1. Also was konnte da jetzt konkret getan werden\nund was konnte bewiesen werden?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:54:25",
+      "text": "Also, zunächst einmal war die Hauptaufgabe zu zeigen, dass man so ein Instrument\nin den Weltraum bringen kann. Also eine technische Frage.\nDas heißt, die Hauptfrage war, seid ihr in der Lage, das zu bauen?\nWir fliegen das und dann kommt das wieder runter und das funktioniert immer noch.\nUnd hat sich nicht so verändert, dass dadurch eure Messergebnisse beeinflusst werden.\nDas mussten wir also nachweisen. Das heißt, nach dem Flug ist das Instrument\nin einen sogenannten Teststrahl gegangen, wieder am CERN und an der GSI in Darmstadt.\nUnd wir haben uns mit bekannten Teilchen angeguckt, dass das immer noch genauso\nfunktioniert wie vor dem Start."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:56",
+      "text": "Das heißt, die Ergebnisse ließen sich auch erst nach Rückkehr der Mission überhaupt auslesen?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:55:00",
+      "text": "Die Ergebnisse kommen immer erst nach Rückkehr. Also die Daten werden da aufgezeichnet.\nWir haben 100 Millionen Teilchen aus der kosmischen Höhenstrahlung aufgezeichnet.\nDas war damals also so die größte Datenmenge, die man hatte, primär gemessen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:14",
+      "text": "In zehn Tagen."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:55:14",
+      "text": "In zehn Tagen Flug.\nWir haben dabei, also ich will zwei wissenschaftliche Ergebnisse sagen.\nAlso wir haben zum einen natürlich nach Antimaterien der kosmischen Strahlung gesucht.\nWir haben keine gefunden. Jetzt kann man sagen, das ist schlecht.\nEigentlich ist das doch nur ein Erfolg, wenn ihr was findet.\nAber jetzt gehe ich wieder zurück zu dem Experiment von Michelson und Morley.\nDie haben nicht gefunden, dass die Lichtgeschwindigkeit sich ändert.\nDie haben gefunden, dass die Lichtgeschwindigkeit sich nicht ändert.\nDas war die Erkenntnis. Wir haben keine Antimaterie gefunden.\nWir haben damit die Erkenntnis darüber, wie viel Antimaterie es im Universum\ngeben kann, deutlich verbessert.\nWas auf der anderen Seite heißt, wenn es keine Bereiche aus Antimaterie im Universum\ngibt, dann müsste es eigentlich...\nNeue physikalische Wechselwirkungen geben, die diese Asymmetrie erklären zwischen\nMaterie und Antimaterie und heißt, dass wir also an einer anderen Stelle suchen\nmüssen. Wir können diesen Bereich also abschließen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:09",
+      "text": "Aber wie findet man denn bitte etwas, was man noch nie gesehen hat?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:56:13",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:56:14",
+      "text": "Wie baut man ein Instrument für etwas? Also nach welchem Plan kann man,\nalso wenn da jetzt so dieses,\nAntimaterie-Kohlenstoff-Atom daherkommt, so nach langer Reise,\nein paar hundert Millionen Jahre unterwegs, trifft dann rein zufällig auf dieses\nams auf was also woran kann man denn erkennen dass es sich dabei auch um das handelt."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:56:34",
+      "text": "Ja jetzt kommt wieder unser magnet ins spiel wir messen\ndie elektrische ladung der teilchen indem wir diese teilchen durch unser magnetfeld\ndurchfliegen lassen jetzt der magnet alleine tut es nicht sondern dieses magnet\nvolumen wird instrumentiert das heißt wir brauchen spur detektoren die wir da\neinbauen diese spur detektoren erlauben uns die flugbahn dieser dieser Teilchen zu messen.\nUnd zwar mit einer Genauigkeit, dass wir also sowas wie sechs bis zehn Punkte\nmit einer Genauigkeit von einem tausendstel Millimeter pro Punkt bekommen.\nUnd damit können wir feststellen, ob die Spur rechtsrum gekrümmt ist oder linksrum\ngekrümmt ist. Einmal ist es Materie, einmal ist es Antimaterie.\nUnd jetzt sehen wir Heliumatome, das zweithäufigste Element,\nAtomkerne in der kosmischen Strahlung, messen die und sehen,\ndie sehen aus, wie wir das erwarten.\nUnd dann Dann fragen wir von diesen Teilchen, die wir gut messen können,\nmit denen wir sozusagen unser Instrument kalibrieren können,\nwie viele von denen gibt es mit der entgegengesetzten elektrischen Ladung?\nUnd dann finden wir kein einziges.\nUnd dann heißt das, in der kosmischen Strahlung kommt kein Antihelium vor.\nKohlenstoff konnte AMS 1 nicht. Kohlenstoff kann erst AMS 2.\nHelium konnte AMS 1 schon und hat festgestellt, es gibt kein Antihelium.\nSo, und die spannende Frage ist immer, wie bauen Sie ein Instrument,\nmit dem sie nach was Neuem suchen wollen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:57:55",
+      "text": "Also es gibt keins oder es kam keins vorbei?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:57:59",
+      "text": "Die Antwort können wir nicht unterscheiden. Wir können nur sagen,\nin der Beobachtungsdauer, die wir hatten, kam keins vorbei.\nKönnte durchaus sein, dass es welche gibt, aber die sind so selten,\ndass wir sie nicht sehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:10",
+      "text": "Aber wenn 96% des Universums aus Antimaterie bestehen und man interagiert üblicherweise\nmit 4%, dann müsste ja eigentlich..."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:58:20",
+      "text": "Moment, jetzt kommt wieder wieder das, was häufiger passiert.\nDunkle Materie, dunkle Energie, Antimaterie, das sind völlig verschiedene Sachen. Also,\ndiese 4% Materie, die wir im Universum haben,\nDas sind Teilchen, die aus Baryonen im Wesentlichen aufgebaut sind,\ndie wir beobachten können.\nDiese 96 Prozent dunkle Materie und dunkle Energie, da können wir ausschließen,\ndass das Antimaterie ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:54",
+      "text": "Ah, noch mal was anderes."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "0:58:56",
+      "text": "Das hat also damit gar nichts zu tun, sondern es ist eigentlich die Frage,\nwenn ich Elementarteilchen miteinander kollidieren lasse, also nach Einsteins\nFormel E gleich mc² Energie in Masse umwandle, Dann habe ich ja am Anfang,\nwenn ich das mache, Energie.\nEnergie hat keine elektrische Ladung.\nUnd am Ende, habe ich dann eine elektrische Ladung oder nicht?\nWenn ich unterschiedlich viel Materie und Antimaterie produziere,\nhabe ich eine elektrische Ladung.\nAlso wenn ich unterschiedlich viel Elektronen und Positronen mache,\nist die Nettoladung nachher von null verschieden.\nNur wenn ich genauso viele Elektronen wie Positronen mache, ist das,\nwas rauskommt, elektrisch neutral.\nAlle Experimente auf der Erde zeigen uns, dass diese Symmetrie zwischen Materie\nund Antimaterie weitgehend erfüllt ist.\nDie kleinen Abweichungen, die wir gefunden haben, reichen bei Weitem nicht aus,\num die Asymmetrie im Universum zu erklären.\nJetzt suchen wir mit AMS nach Antimaterie. Das heißt, es könnte sein,\ndass diese 4%, die die Materie ausmacht, im Universum, dass es also einen Teil\ndavon in Form von Antimaterie in anderen Galaxien gibt.\nUnd das ist die Aufgabe, was AMS versucht, diese Frage versucht AMS zu beantworten.\nUnd wir haben keine gefunden.\nDas heißt nicht, dass es keine gibt, aber das heißt, mit der Sensitivität,\ndie wir hatten, konnten wir nichts sehen.\nIch versuche es wieder mal an einem Beispiel. Stellen Sie sich einen Wassertropfen\nvor. Sie haben also eine Pfütze, einen Tümpel, nehmen einen Wassertropfen raus und gucken sich den an.\nUnd gucken und gucken und sehen nichts da drin. Und sagen, naja,\nes ist Wasser, es ist halt nichts drin.\nDann kommt einer auf die Idee und sagt, ich baue ein Mikroskop.\nUnd guckt in den Wassertropfen. Und sieht ein ganz neues Universum.\nDer sieht die Einzeller da drin, die da rumschwimmen und sie verstehen plötzlich,\nwie Zellen funktionieren. Und, und, und.\nDurch das Hingucken mit dem Auge haben sie nur gelernt, dass das ein Wassertropfen ist.\nDurch das Hingucken mit dem Instrument, nämlich Mikroskop, was eine tausendmal\nhöhere Sensitivität als das Auge hat, lernen sie dann plötzlich,\nwas in dem Wassertropfen drin ist.\nAMS 2, was wir auf die Raumstation gebracht haben, ist tausendmal empfindlicher\nals alle Experimente, die wir vorher gemacht haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:06",
+      "text": "Tausendmal."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:01:06",
+      "text": "Tausendmal. Mindestens tausendmal, in einigen Bereichen auch mehr.\nWas wir dabei finden, das ist die spannende Frage.\nAlso wenn Sie das Mikroskop gebaut haben, dann haben Sie das auch nicht darauf\nausgelegt, den Einzeller in den Wassertropfen zu finden, sondern Sie haben das\ngebaut, um Strukturen aufzulösen. Das war die Anforderung.\nWir haben AMS gebaut, dass wir Elementarteilchen sehen können.\nWelche wir dabei finden, das wissen wir nicht. Wir hoffen natürlich,\ndass wir welche finden, die wir bisher nicht kennen und aus denen wir was Neues lernen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:01:39",
+      "text": "So, nachdem also AMS01 so erfolgreich war, insofern als dass man bewiesen hat,\nman kann es bauen, man kann es hochschieben, es geht aber nicht kaputt und es\ndetektiert auch tatsächlich, auch wenn nicht gerade das vorbeikam,\nwas man gerne gesehen hätte,\nwar dann die Entscheidung für ein Nachfolgeprojekt dann relativ leicht durchzusetzen?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:02:00",
+      "text": "Die Entscheidung für das Nachfolgeprojekt fiel auch noch, bevor ich an die RWTH Aachen kam.\nMein Vorgänger hat mir gesagt, es war schwierig, als ich also 2000 hier anfing.\nDas war also im April 2000 und im Februar glaube ich, kam der Bescheid vom DLR,\ndass wir das machen können.\nAlso eine Universität in Deutschland, wenigstens mit den Ressourcen,\ndie wir haben, kann sowas nie alleine machen.\nDas muss also immer so sein. meiner meinung nach\nauch zu recht dass also diese vorschläge in\neinem wettbewerbsverfahren von einer wissenschaftsagentur sei das dfg sei das\ndlr ausgesucht werden und dann wird gesagt also das ist das projekt was wir\nverfolgen wollen das war ein riesenschritt\nim vergleich zu der beteiligung über bei ms1 hatten das war so,\ngroßenordnung also faktor zehn mehr was wir da gemacht haben.\nIch möchte, bevor ich darauf eingehe, noch einen Punkt anführen.\nAlso wir haben, als wir diese AMS-1-Messungen gemacht haben,\nnatürlich viele Teilchenflüsse gemessen in der kosmischen Strahlung und einige\nEffekte gefunden, von denen man vorher gar nichts wusste.\nAlso zum Beispiel, wie Elementarteilchen in dem Magnetfeld der Erde gespeichert werden.\nDass die für bestimmte Sorten von Teilchen anders gespeichert werden,\nals man das erwartet hat.\nAlso es kamen in Größenordnung zehn Publikationen raus, die sehr häufig zitiert worden sind.\nEine haben wir hier in Aachen auch komplett alleine gemacht,\nrelativ spät, 2003 bis 2007.\nAlso man sieht an der Zeitskala, wie schwierig das teilweise ist.\nDie ist heute die am häufigsten zitierte Publikation von AMS überhaupt.\nUnd die hat Erkenntnisse über Eigenschaften von dunkler Materie geliefert.\nAlso nicht in dem Sinne, dass wir es gefunden haben, sondern gesagt haben,\nwir messen bekannte Elementarteilchen und aus den Messungen sehen wir Hinweise\ndarauf, die man eventuell als Hinweise auf dunkle Materie interpretieren kann.\nAlso das ist ein recht komplexes Gebiet, aber es zeigt, dass die wissenschaftliche\nAusbeute von AMS 1 schon ziemlich positiv war. Also für solch einen Ingenieurflug,\neigentlich gedachten Ingenieurflug.\nDann haben wir AMS 2 genehmigt bekommen. Das war ziemlich zeitgleich mit meinem\nDienstbeginn hier an der RWTH Aachen.\nUnd dann hatten wir eine ganz andere Aufgabe. Wir mussten nämlich einen substanziellen\nAnteil von AMS 2 hier in Aachen komplett selber entwickeln und bauen.\nUnd das haben wir dann in den nächsten Größenordnung fünf Jahren gemacht.\nDas heißt, AMS 2 ist nicht ein einzelnes Instrument, sondern es setzt sich aus\nsechs bis sieben, je nachdem wie genau man guckt, einzelnen Messinstrumenten\nzusammen, die natürlich alle miteinander sprechen müssen,\nDaten untereinander austauschen müssen und nachher heißt die Aufgabe,\nsetzt diese Einzelinformationen zusammen, man könnte sagen zu einem Gesamtbild.\nDas heißt, was wir eigentlich machen, sind Fotografien von der kosmischen Strahlung.\nMan kann das vielleicht mit einem Fotoapparat vergleichen, der also mit seinem\nSensor bei verschiedenen Farben misst.\nUnd erst wenn ich die ganz verschiedenen Farben zusammengesetzt habe,\ndann weiß ich wirklich, was ich auf dem Bild habe.\nUnd das ist auch die Funktionsweise von AMS. Und wir haben halt den Teil von\nAMS gebaut, der also sozusagen von den Teilchen als erstes durchflogen wird,\neinen sogenannten Übergangsstrahlungsdetektor.\nDas ist ein gasgefülltes Messinstrument, was also seine eigenen technischen\nSchwierigkeiten dadurch hat, dass sie es einfach im Weltraum betreiben wollen\nund Weltraum hat Vakuum.\nWenn Sie einen gasgefüllten Detektor haben, dann müssen Sie sich mal fragen,\nwie dicht kann ich den bauen?\nJeder, der mal versucht hat, also nehmen Sie mal eine Wasserflasche,\ndie also nicht für kohlensäurehaltige Getränke ausgelegt ist,\neine Plastikflasche und füllen Sie da mal Sprudel rein und lassen das mal einen Tag stehen.\nDann werden Sie sich wundern, wie viel Kohlensäure da noch drin ist,\nnämlich so gut wie gar nichts.\nUnd das machen sie bei einem Außendruck von einer Atmosphäre.\nJetzt machen sie das mal im Vakuum, dann geht das noch viel schneller.\nUnd unsere Aufgabe war, so etwas Flüchtiges wie CO2, also mit einem Strohhalm\nfestzuhalten, der also eine Wandstärke von weniger als einer Haardicke hat.\nGasgefüllte Röhrchen, gasgefüllte Strohhalme zu bauen und davon 5248 Stück,\nsodass die dicht sind, weitgehend dicht sind, also weit das überhaupt geht.\nUnd die so zu bauen dass das ganze also leicht wird trotzdem groß also zwei\nmeter durchmesser hat dieses messinstrument 60 zentimeter höhe die fahrer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:31",
+      "text": "Material muss man den das gas dann einschließen damit."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:06:34",
+      "text": "Nicht entweicht ja also dass was wir genommen haben ist also im wesentlichen\neine kapton folie da sind ganz dünne zwei mikrometer dünne aluminiumschichten zwischen,\nUnd daraus haben wir aus dieser Folie, haben wir also bei einer Firma in England\nStrohhalme wickeln lassen.\nDie Folie ist ein Zentimeter breit, wenn man die also bekommt.\nUnd dann hat eine Firma in England daraus Strohhalme gewickelt und dann haben\nwir Größenordnung 10.000 Strohhalme, jeder Strohhalm 2,50 Meter lang,\neinzeln hier getestet auf seine Gasdichtigkeit und dann 5.000 Gute ausgesucht\nund damit dieses Messinstrument gebaut.\nGebaut mit der Industrie hier in dem lokalen Bereich zusammen.\nDann diese Messinstrumente, also diese einzelnen Module, die dann aus diesen\nStrohhalmen bestanden, getestet, qualifiziert für die Raumfahrt,\nalso Schütteltests gemacht, Thermovakuumtests gemacht.\nWir haben auch hier das Klinikum, also Luisen Hospital in Aachen eingespannt,\nweil die zu der Zeit also den modernsten CT-Scanner in der Region hatten.\nUnd wir konnten also da die Mediziner, die wir vorher hier ausgebildet haben\nin der Physik, überreden, dass sie uns also nachts an ihrem Messinstrument,\nalso an ihren CT-Scanner herangelassen haben,\ndamit wir also die Geometrie aus den Röntgenbildern rekonstruieren konnten von\nden Kammern, die wir gebaut haben.\nDenn es ist ja nicht trivial, aus etwas, was eine Wandstärke von weniger als\neinem Haardurchmesser hat, etwas zwei Meter langes zu bauen,\nwas also auf einen Haardurchmesser gerade ist.\nUm dieses Verfahren zu entwickeln und das zu testen, haben wir also diesen CT-Scanner\nam Levisen-Hospital benutzt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:13",
+      "text": "Diese Gasmengen sind sehr überschaubar."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:08:15",
+      "text": "Also die Wandstärke ist nur 0,07 Millimeter.\nAber das Volumen, das ist also ein 6 Millimeter durchmessendes Röhrchen,\nwas zwei Meter lang ist und davon haben wir 5000.\nDas gibt etwas über 200 Liter Gasvolumen, die wir da oben betreiben müssen.\nDafür gibt es ein Gasversorgungssystem, das ist am MIT in den USA entwickelt\nworden. Das heißt also, wir haben einen Vorratsbehälter mitgenommen und da haben\nwir also Xenon-Gas drin und CO2-Gas.\nUnd das wird also auf der Raumstation gemischt und damit füllen wir also die\nVerluste, die wir durch die Diffusion durch diese 70 Mikrometer dicken Röhrchen\nhaben, die man nicht vermeiden kann.\nDann, ihre Sprudelflasche ist ja nicht undicht, wenn die Kohlensäure rausgeht.\nDas diffundiert durch die Wände. Das tut es da oben natürlich auch, etwas schneller noch.\nUnd das heißt, wir müssen so einmal im Monat Gas nachfüllen,\ndamit das also stabile Bedingungen gibt für die Messungen, die wir machen wollen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:23",
+      "text": "Was ist denn jetzt, ist das jetzt schon die Basis des Funktionsprinzips?\nAlso, das ist die erste Schicht, auf die die Teilchen auftreffen,\nsind diese Röhrchen mit diesem Xenon-Gasgemisch.\nWarum? Also warum?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:09:42",
+      "text": "Warum machen wir das?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:42",
+      "text": "Warum ist das?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:09:44",
+      "text": "Ich hatte versucht zu erklären, dass also der Magnet und der Spurdetektor ausreichen,\num den Impuls und die Ladung zu messen.\nGenau, weil man die Richtung nachweisen kann. Genau, weil man die Flugbahn rekonstruiert\nund dann weiß man aus der Krümmung, also rechts rum gekrümmt oder links rum\ndie elektrische Ladung.\nUnd je hochenergetischer das Teilchen ist, desto schneller fliegt es durch das\nMagnetfeld durch und desto weniger kann es sich also krümmen.\nJa, also das heißt, die Stärke der Krümmung ist ein Maß für die Energie der Teilchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:11",
+      "text": "So funktioniert das ja auch beim LHC letztlich."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:10:13",
+      "text": "So funktioniert das beim LHC, so funktioniert das bei allen Teilchenphysikexperimenten\nund so hat auch früher ihr Fernseher funktioniert.\nAlso ihr Röhrenfernseher, da war eine Elektronenkanone drin und ein Magnet und\ndie Elektronen wurden abgelenkt und damit wurde zeilenweise ihr Bild aufgebaut.\nSo, jetzt drehen wir das nur um. Also wir erzeugen die Elektronen nicht selber,\nsondern die kommen von außen.\nWir lassen das Magnetfeld konstant und gucken uns an, wo fliegen die lang.\nUnd dann wissen wir, welche Energie die haben und welche elektrische Ladung,\nalso positiv oder negativ."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:42",
+      "text": "Aber da muss man ja auch schon eine gewisse Erwartungshaltung haben,\nwas für eine maximale Energie überhaupt auf einen einschlägt.\nIch meine, bei dieser Dimensionierung des Magneten muss man ja dann auch schon\nso eine gewisse Erwartung haben, nicht, dass die dann alle so schnell kommen,\ndass man nur noch gerade Linien sieht. Richtig."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:10:56",
+      "text": "Das heißt also, solch ein Messinstrument hat eine gewisse Auflösung.\nGenauso wie unser Mikroskop. Je besser die Linse, desto besser ist die Auflösung.\nBei AMS wird das limitiert durch die Genauigkeit, mit der ich die einzelnen\nSpurpunkte messen kann.\nDas geht halt auf Mikrometer genau und nicht auf Nanometer. Also das limitiert\ndie Genauigkeit, mit der ich die Flugbahn kenne. Und dann kann man den Magneten\nnicht beliebig stark bauen.\nAlso je stärker der Magnet, desto stärker werden die Teilchen abgelenkt.\nAber die Technologie hat da natürliche Begrenzungen. Das heißt,\nWir können bis zu Energien, und jetzt ist die Frage, wie versteht man das,\nbis zu 2 TeV, können wir Informationen aus dieser Krümmung und aus dieser Flugbahn\nextrahieren, was das für Teilchen waren, welche Energie die hatten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:40",
+      "text": "Was heißt Teraelektronenvolt?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:11:41",
+      "text": "TEV sind Teraelektronenvolt. Was ist ein Elektronenvolt?\nDas ist die kinetische Energie, die ein Teilchen gewinnt, wenn es ein elektrisches\nPotenzial von einem Volt durchläuft.\nSie machen einen Plattenkondensator, eine Spannung von einem Volt dazwischen.\nWelche Energie gewinnt das Teilchen, wenn es da durchläuft?\nDas gewinnt eine Energie von einem Elektronenvolt. Und wir können bis 2 TEV\nElektronenvolt Aussagen treffen, was das für Teilchen waren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:10",
+      "text": "Das klingt aber schon ganz schön energetisch."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:12:12",
+      "text": "Das ist schon ganz schön energetisch. Da gibt es auch nur noch wenig Teilchen,\ndie mit so hohen Energien kommen. Aber es gibt Teilchen mit viel höheren Energien."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:20",
+      "text": "Die kommen."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:12:21",
+      "text": "Das heißt, und es könnte durchaus sein, dass die Interessanten die sind,\ndie noch viel höher energetischer sind und wir können das nicht rauskriegen.\nDa haben wir aber keine Wahl."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:32",
+      "text": "Irgendwas muss man ja machen."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:12:34",
+      "text": "Wie wenn Sie das Mikroskop bauen. Sie können die Linsen nur nehmen,\ndie Sie haben. Vom Elektronenmikroskop wissen Sie noch nichts."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:40",
+      "text": "Also mehr wäre jetzt auch technisch gar nicht möglich gewesen oder man hat sich\neinfach nur entschlossen, diesen Bereich zu nehmen in der Erwartung,\ndass man da schon genug Erkenntnisse sammeln kann?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:12:48",
+      "text": "Also wir sind mit den Technologien über das hinausgegangen, was man konnte,\nals das vorgeschlagen worden ist.\nWir haben in vielen Fällen Neuland da betreten und man kann immer sagen,\nich hätte gerne noch eine bessere Auflösung.\nAber da muss man Gründe für haben und man muss das auch technisch können.\nWissenschaftlich, als das Experiment geplant war, sind wir davon ausgegangen,\ndass in dem Energiebereich, den wir abdenken können, interessante Sachen passieren.\nOb das wirklich so ist, da halte ich mich gerne mit Ihnen.\nWas wir machen können als Wissenschaftler, ist ein Instrument bauen,\nwas eine tolle Auflösung hat und toll funktioniert. Das können wir beeinflussen.\nWas wir nicht beeinflussen können, ist, was die Natur macht.\nAlso irgendjemand hat mal festgelegt, wie dieses Universum aussieht, wie das funktioniert.\nAuf diese Entscheidungen haben wir keinen Einfluss. Wir kennen sie auch nicht.\nAlso wir können nur aus unseren Beobachtungen darauf schließen, was da passiert ist.\nUnd wenn sie sich den Wassertropfen, also wenn sie destilliertes Wasser genommen\nhätten unter ihrem Mikroskop, hätten sie nichts gesehen und gesagt, Wasser ist langweilig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:13:58",
+      "text": "Ja gut, aber ich schätze mal bei AMS01 hat man ja, hat man da auch schon die\nEnergie selbst messen können?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:14:06",
+      "text": "AMS hat genauso funktioniert, allerdings hat das eine Auflösung,\ndie war um einen Faktor 40 schlechter.\nDas heißt, wir konnten nicht bis 2 TeV das Ganze messen, sondern die Energieverteilung,\ndie wir aufgezeichnet haben, hören so bei 50 GeV etwa auf.\nJa, und es gab viele Komponenten, also abgesehen von der Energie und der Ladung\ndes Teilchens wollen sie ja noch was mehr wissen.\nAlso der eigentliche Angriffspunkt war ja, warum macht ihr diese Röhrchen da oben drauf?\nEin Teilchen hat zusätzlich noch eine Masse. Und das heißt, was wir wissen wollen,\nist die elektrische Ladung, die Energie und die Masse.\nDann wissen wir alles über das Teilchen, was uns interessiert im Moment.\nUnd die Masse messen ist sehr schwierig, denn was wir eigentlich bei dieser\nAblenkung in dem Magnetfeld messen, ist der Impuls und der Impuls ist Masse mal Geschwindigkeit.\nDas heißt, wenn ich jetzt an die Masse will, muss ich irgendwie die Geschwindigkeit messen.\nDer Nachteil von diesen hochenergetischen Teilchen, also bei 100,\nalso bei GEV-Energien, also 10 hoch 12 Elektronenvolt-Energien,\ndie sind alle so schnell, die bewegen sich mit Lichtgeschwindigkeit.\nEs gibt eine Höchstgeschwindigkeit und das ist die Lichtgeschwindigkeit.\nUnd das heißt, diese Abweichung von der Lichtgeschwindigkeit ist so klein,\ndass Sie das nicht messen können.\nSie sind praktisch mit konstanter Geschwindigkeit.\nAlso müssen Sie sich andere Effekte überlegen, wie Sie Geschwindigkeit kriegen.\nUnd dieser Übergangsstrahlungsdetektor, der aus diesen Röhrchen besteht und\noben auf AMS drauf sitzt, dessen Aufgabe ist es, die Masse von Teilchen zu messen\nüber einen quantenmechanischen Effekt.\nUnd dieser Effekt nennt sich Übergangsstrahlung, das ist auch nicht weiter schwierig zu verstehen.\nWenn Sie also ein Teilchen haben, was also Übergänge passiert,\ndas können zum Beispiel dünne Folien sein, die Sie hintereinander stapeln,\ndann muss dieses Teilchen an jedem dieser Übergänge ein Photon abstrahlen.\nDamit die, also physikalisch gesprochen, damit die Wellenfunktion stetig und\ndifferenzierbar einen Übergang hat bei dem Durchgang durch die verschiedenen\nMedien mit einer verschiedenen Dielektrizitätskonstante.\nAlso einfach damit die elektromagnetische Welle funktioniert, die dazu gehört.\nUnd diese Übergangsstrahlung messen wir zusätzlich. Und damit können wir unterscheiden\nzwischen leichten Teilchen und schweren Teilchen.\nDenn die Energie dieser Übergangsstrahlung hängt davon ab, ab welches Verhältnis\nzwischen Energie und Masse dieses Teilchens besteht.\nUnd diesen Effekt benutzen wir, um zwischen leichten Teilchen und schweren Teilchen zu unterscheiden.\nUnd das passiert am Eingang von AMS. Und dann gibt es im unteren Teil noch andere\nKomponenten, die also auch versuchen, teilweise direkt die Geschwindigkeit zu messen.\nDas funktioniert bei kleinen Energien und dann gibt es unten noch ein sogenanntes\nKalorimeter und das absorbiert Teilchen zum ersten Mal.\nAlso bis dahin versuchen wir nicht destruktiv zu messen, um die Teilchen nicht\nzu beeinflussen. Aber ganz unten absorbieren wir die Elementarteilchen und messen ihre Energie.\nUnd dann wissen wir eigentlich ziemlich viel über dieses Teilchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:12",
+      "text": "Wie absorbiert man die denn, wenn die da mit so Tera-Elektronen-Volt-Power da ankommen?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:17:17",
+      "text": "Also viele Teilchen können wir nicht absorbieren, also die Protonen zum Beispiel,\nder Wasserstoffkern am häufigsten im Universum, den können wir nicht absorbieren.\nAber das ist auch schon eine Messung. Also wenn Sie da nur einen kleinen Energieeintrag\nmessen, dann wissen Sie, das war ein Proton, das ist nämlich durchgeflogen.\nIch sehe in allen Lagen von diesem Instrument gleich viel Energie deponiert.\nWenn da allerdings ein Elektron oder ein Positron ankommt oder ein Photon ankommt,\ndann fängt das einen anderen physikalischen Prozess an und deponiert in den\nBleilagen seine Energie.\nZum Glück für uns."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:50",
+      "text": "Das ist einfach nur Blei im Wesentlichen?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:17:52",
+      "text": "Ja, also Blei alleine wird es ja wieder nicht tun, weil wenn Sie da nur einen\nAbsorber hinstellen, dann wissen Sie nicht, was passiert.\nAlso Sie müssen diesen Absorber instrumentieren. Also das heißt,\nSie müssen wieder Messinstrumente einbauen, die Ihnen sagen,\nwie viel Energie ist denn da deponiert worden. Und das messen wir.\nUnd die Elektronen und Positronen und Photonen deponieren ihre Energie in dem\nKalorimeter und die Protonen nicht.\nUnd damit können wir für diese Elementarteilchen die Energie messen und auch\nidentifizieren, dass es dieses Teilchen war.\nDas heißt, wir wissen dann, was die Masse ist, weil nur die das tun. tun.\nEs ist wie so ein Puzzle. Da fliegt ein Teilchen durch und das macht in dem\neinen Detektor das, in dem nächsten Detektor das, in dem nächsten Detektor das.\nUnd dann schauen wir uns das Muster an und sagen, mit einer gewissen Wahrscheinlichkeit\nin dem ersten Detektor ist das das, in dem zweiten Detektor ist das,\nin dem dritten Detektor ist das.\nUnd dann suchen wir die Hypothese, die die Wahrscheinlichkeiten maximiert und\nsagen, höchstwahrscheinlich war das das und,\nUnd die Kunst ist, das so zu machen, dass sie in möglichst vielen Fällen eine\neindeutige Aussage treffen können.\nUnd so haben wir dieses Instrument entwickelt und dann haben wir das natürlich\nnicht nur gebaut, sondern wir haben das in einem Teststrahl am CERN mit bekannten\nTeilchen kalibriert, um zu sehen, dass das genau so funktioniert, wie wir das erwarten.\nUnd die Eigenschaften also überprüft, bevor wir das auf die Raumstation gebracht haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:19:19",
+      "text": "Sammelt, also überträgt den AMS diese ganzen Messdaten in Echtzeit,\nalso empfängt man jetzt bereits den Datenstrom?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:19:25",
+      "text": "Ja, also das ist so, das ist einer der Gründe warum wir auf der Raumstation\nsind also wir brauchen sehr viel Strom,\ndie Raumstation hat sehr viel Strom, also über die großen Solarpaneele und der\nzweite Grund ist, wir brauchen sehr viel Bandbreite um diese Daten auf die Erde zu übertragen,\nund die werden in Echtzeit übertragen, das\nist nicht trivial wir haben also in am\nes selber so was wie 650 computer eingebaut\ndie in echtzeit diese daten komprimieren\nwenn wir das alles richtig gemacht haben so komprimieren dass wir dabei keine\nphysikalischen informationen die für uns wichtig sind verliert und das was übrig\nbleibt wird also übertragen über eine funk strecke über satelliten in die usa\nund Und von da aus an das CERN-Forschungszentrum in Genf.\nUnd da sitzt unser Payload Operation und Control Center.\nUnd von da aus betreiben wir das Experiment. Und da ist auch das Science Operation\nCenter. Und da werden die Daten also analysiert.\nUnd dann werden sie an alle Forschungsinstitute, die dann beteiligt sind, verteilt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:30",
+      "text": "Werden die Rohdaten auch gespeichert? Ja. Also wenn das dann mal zurückkommt,\ndann hat man das auch noch."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:20:36",
+      "text": "Ah, Moment. Also die sozusagen unprozessierten Unkompromisse.\nDas ist immer die spannende Frage, wie seid ihr sicher, dass ihr also nichts verliert.\nEs gibt verschiedene Ebenen, auf denen diese Kompressionsalgorithmen passieren.\nUnd wir übertragen auf die Erde sowohl unkomprimierte als auch komprimierte Daten.\nVon den unkomprimierten Daten aber nur einen ganz kleinen Bruchteil,\num das Datenvolumen klein zu halten. Und wir sind damit in der Lage,\ndie Kompressionsalgorithmen, die wir benutzen, zu optimieren und zu überprüfen.\nAlso ob wir damit physikalische Informationen verlieren.\nAber für die meisten Ereignisse werden die unkomprimierten Daten weggeschmissen.\nAber für einen Bruchteil, für einen kleinen Bruchteil gucken wir uns die an,\num sicher zu sein, dass wir nichts übersehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:27",
+      "text": "Das heißt quasi so ein Verifikationskanal nochmal zusätzlich, um sicher zu sein und,\ndas Ganze ist ja jetzt Mai 2011 gestartet, womit ist es gestartet?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:21:43",
+      "text": "War der letzte Flug von der Endeavour vom Kennedy Space Center gestartet das war also,\nJa, also eine etwas schwierige Operation, weil das Space Shuttle dann an der\nRaumstation angedockt ist, dann muss das mit dem Roboterarm aus der Endeavor,\nalso die Endeavor selber hat einen eigenen Roboterarm, rausgenommen werden,\ndann an den kanadischen Roboterarm an der Raumstation übergeben werden,\ndann an die richtige Stelle bewegt werden und da muss man sich vorstellen,\nda ist eine Klammer, die schnappt dann ein und dann gibt es also ein elektrisches\nKabel, was also den Power zur Verfügung stellt und ein optisches Kabel,\nwas die Daten da rausholt. Und das ist es.\nUnd die sind eingerastet und wir haben dann also…."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:27",
+      "text": "Also die ganze Installation wurde komplett robotisch gemacht, ohne Außeneinsatz der…."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:22:31",
+      "text": "Ohne Außeneinsatz der Astronauten. Die standen also an den Joysticks und haben\nalso die Roboterarme bedient.\nUnd vier Stunden nach der Installation haben wir also mit der Datennahme angefangen.\nDie läuft seitdem durch. Wir haben inzwischen sowas wie 16 Milliarden Teilchen\nin der kosmischen Strahlung aufgezeichnet. aufgezeichnet, auf die Erde gefunkt.\nAlso das Instrument ist rund um die Uhr in Betrieb.\nWir sehen solche Sachen wie zum Beispiel Flares auf der Sonne.\nJetzt im Januar war also extrem hochenergetisch eine Eruption auf der Sonne.\nUnd wir sehen das in den Elementarteilchenflüssen hier, die wir beobachten.\nDas ist eine der interessanten Beobachtungen für die Raumfahrtagenturen.\nZiel von AMS ist solch einen kompletten Sonnenzyklus. Also die Aktivität der\nSonne variiert über elf Jahre.\nWenn Sie einen Astronauten zum Mars bringen wollen, dann müssen Sie über einen\nsolchen Elfjahreszyklus verstehen,\nwelche geladenen Teilchen kommen von der Sonne, welche Wirkungen haben die auf\ndas Erbgut, also müssen Sie wissen, welche Energie die haben und welche Teilchen das sind.\nUnd eine der Aufgaben von AMS, also sozusagen die Brot- und Butterphysik, ist,\ndiese Teilchenflüsse zu messen und damit ein Modell zu liefern,\num eine Abschirmung überhaupt auslegen\nzu können, mit der man also einen Astronaut zum Mars bringen kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:53",
+      "text": "Erst mal wissen, was da drin ist im Regen."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:23:56",
+      "text": "Im Moment weiß man sehr wenig davon. Also wenn Sie das heute auslegen würden,\ndann kommen Sie so auf Massenabschätzungen in der Größenordnung von 1000 Tonnen\nfür die Abschirmung, was nichts ist, was Sie also irgendwie zum Mars bringen könnten.\nAllerdings, was Sie noch mehr beunruhigen muss, ist, dass die Abschirmung einen\nUnsicherheitsfaktor von 5 hat.\nDas heißt, wenn Sie auf die sichere Seite gehen wollten, müssten Sie 5000 Tonnen Abschirmung bauen.\nDas will keiner zum Mars fliegen. Also die Aufgabe ist, diesen Faktor 5 klein zu kriegen.\nUnd dann gibt es auch Ideen dazu, wie man von diesen 1000 Tonnen auf 20 Tonnen\nrunterkommt, indem man diese Abschirmung nicht passiv macht,\nalso aus Aluminium, sondern indem man das mit Magnetfeldern macht,\nwie die Erde das auch macht und damit dann Leute zum Mars bringen kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:42",
+      "text": "Aber das ist ja schon ein interessanter Dual Use an der Stelle,\ndass man ja hier eigentlich das Experiment aufgebaut hat, um Grundlagenforschung,\nalso vor allem Grundlagenforschung zu machen,\ndass man aber im Prinzip jetzt auch schon konkrete Informationen gewinnt,\ndie jetzt auch für zukünftige Missionen einen Wert haben."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:25:01",
+      "text": "Ja, also es gibt bei solchen komplexen Forschungsprojekten immer ganz verschiedene Aspekte.\nDas eine ist, die Raumfahrtagenturen, um es vorsichtig zu sagen,\nalso wie das Universum zustande gekommen ist, ist nicht ihr primäres Forschungsinteresse."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:18",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:25:18",
+      "text": "Aber bemannte Raumfahrt im Sonnensystem zu ermöglichen, gehört zu ihren primären Aufgaben.\nWenn man das hinkriegen will, muss man das alles verstanden haben.\nUnd AMS bietet sozusagen die Möglichkeit, zum ersten Mal über längere Zeit,\nweil es auf der Raumstation ist und nicht an einem Ballon hängt in den oberen\nSchichten der Erdatmosphäre oder ein kurz fliegender Satellit ist,\nsondern Messdauern von 20 Jahren erreichen soll,\ndas systematisch zu untersuchen.\nDieser Dual Use Aspect, bei dem ersten Vorschlag von AMS 2 war der noch mehr\ndabei, da war nämlich ein supraleitender Magnet vorgeschlagen worden,\nalso statt dem Permanentmagneten bei AMS 1 ein supraleitender Magnet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:01",
+      "text": "Der also gekühlt werden müsste dann?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:26:03",
+      "text": "Der müsste mit suprafluidem Helium auf unter zwei Kelvin gekühlt werden,\ndamit er da oben funktioniert.\nSolch ein Magnet wäre in der Lage, eine magnetische Abschirmung für ein Raumfahrzeug\nzu machen und damit würde er nur 20 Tonnen wiegen und damit könnten sie das\ntatsächlich zum Mars fliegen, ohne dass sie sich über Strahlenschäden Gedanken machen müssen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:26:23",
+      "text": "Das war, dass man sozusagen gar nicht da so eine dicke Bleiwand drauf macht,\nsondern einfach so ein fettes Magnetfeld erzeugt quasi."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:26:29",
+      "text": "Zehn Tesla, Magnetfeld mit einem supraleitenden Magneten hätte ausgereicht.\nDafür müssten sie aber, bevor sie sich sowas trauen, nachweisen,\ndass man einen supraleitenden Magneten im Weltraum betreiben kann.\nDas hat noch keiner geschafft. Das will man schon lange.\nUnd am Ende muss man sagen, AMS hat es auch nicht geschafft oder nicht gemacht\nam Ende, weil wir kurz vor dem Flug entschieden haben, dass wir also auf den\nPermanentmagneten zurückgehen.\nDas Problem mit diesen Magneten ist,\nSuper fluides Helium ist also im Weltraum technisch extrem schwierig,\nweil das keine Oberflächenspannung mehr hat.\nDas heißt, Sie können das nicht pumpen. Sie wissen nicht, wo das ist.\nDas ist einfach verteilt an den Oberflächen, sitzt das irgendwo.\nUnd wenn Sie eine Pumpe da hinsetzen, dann pumpt das alles Mögliche,\naber im Wesentlichen kein Helium, weil das Helium irgendwo anders ist.\nAlso Sie fangen mit einem vollen Tank an, da ist natürlich Helium drin,\nda können Sie pumpen, wo Sie wollen.\nAber wenn Sie ein bisschen was davon raus haben, dann sitzt das Helium irgendwo,\naber nicht da, wo Ihre Pumpe."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:30",
+      "text": "Und man nuckelt die ganze Zeit am Nichts."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:27:31",
+      "text": "Man nuckelt am Nix. Also man muss sich dazu einige technische Lösungen einfallen lassen.\nDieses superfluide Helium ist also physikalisch extrem interessant.\nMan kann das über Temperaturunterschiede von einem Ort in den anderen bewegen,\naber diese Temperaturunterschiede, die sie brauchen, sind tausendstel Grad."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:27:49",
+      "text": "Und so rauspumpen, also nicht raussaugen, sondern so rausdrücken?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:27:54",
+      "text": "Ja, also mit so einem Kolben oder sowas. Dieses Helium geht durch jeden Spalt.\nAlso Sie können nichts da irgendwie, das interessiert das gar nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:06",
+      "text": "Das fließt da einfach dran vorbei."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:28:08",
+      "text": "Egal wie gut Sie das machen, das können Sie völlig vergessen.\nDas Problem war mit diesem supraleitenden Magneten, dass wir den also fertig gebaut hatten 2010."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:28:21",
+      "text": "Und Der ist schon gebaut worden."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:28:24",
+      "text": "Der war komplett fertig. Und da muss man jetzt wieder verstehen,\nwie ist AMS eigentlich genehmigt worden?\nAMS ist genehmigt worden für einen Flug auf der Raumstation von drei Jahren.\nNach drei Jahren sollte es mit dem Space Shuttle wieder nach unten gebracht werden, auf die Erde.\nUnd wie wir alle wissen, durch die Abstürze der Space Shuttle hat sich also\ndas Raumfahrtprogramm signifikant verändert.\nAMS ist lange verzögert worden.\nUnd als wir soweit waren, dass wir diesen supraleitenden Magneten also in bei\nder S-TEC in Nordwijk getestet haben in einer Thermowakuumkammer,\ndas war das erste Mal, dass wir ihn testen konnten.\nAlso wir brauchen eine sehr große Testeinrichtung, um überhaupt zu verstehen,\nwie das funktioniert im Vakuum.\nDa kam dabei raus, der sollte also eine Lebensdauer von 36 Monate haben,\ner hatte aber nur eine von 30.\nAlso es war nicht so, dass der nicht funktionierte und diese Unsicherheit auf\nunsere Messungen war Größenordnung vier Monate.\nEr war nicht weit von der Spezifikation weg. Eigentlich war er sehr nah dran\nund mit ein bisschen Optimismus hätten wir auch gesagt, also das versuchen wir.\nAber genau zu dem Zeitpunkt, als wir diese Messungen gemacht haben bei der S-TEC\nin Nordwijk, gab es eine Tagung der Raumfahrtagenturen in Tokio und da haben\nsich die Chefs der Raumfahrtagenturen darauf geeinigt, die Lebensdauer der ISS zu verlängern.\nUnd Shuttle-Flüge, um AMS wieder runterzubringen, gab es auch nicht mehr.\nUnd das heißt, die Frage war, wollen wir AMS da hochbringen und nach 30 Monaten\neventuell ist Feierabend?\nOder bauen wir AMS um auf einen Permanentmagneten und können damit dann 20 Jahre lang messen?\nUnd dann haben wir gesagt, wir bauen um auf den Permanentmagneten.\nDas ist sicherer, das erlaubt uns 20 Jahre Messzeit, wir können viel tollere Physik machen.\nHaben AMS, also von der S-TEC wieder zurück zum CERN gebracht und haben hier\nin Aachen an der RWTH den Permanentmagneten von AMS 1 so umgebaut,\ndass er in AMS 2 reinpasst."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:30:25",
+      "text": "Also es ist tatsächlich derselbe Magnet?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:30:27",
+      "text": "Es ist derselbe, nicht der gleiche, sondern es ist wirklich derselbe Magnet\nwie in dem ersten Space Shuttle Discovery geflogen.\nUnd wir haben hier innerhalb von drei Monaten es hingekriegt,\nden so umzubauen, dass er er von außen genauso aussieht wie der supraleitende Magnet.\nUnd zwar nicht, damit er von außen so aussieht, sondern wenn Sie ein fertiges\nkomplexes Instrument haben, dann können Sie nicht das Herzstück davon rausnehmen\nund durch was anderes ersetzen, was anders aussieht, wenn Sie innerhalb von\nsechs Monaten den Flug hinkriegen wollen.\nUnd sowohl NASA als auch DLR haben diese Entscheidung unterstützt.\nDas ist schon echt hardcore."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:31:04",
+      "text": "Also so ein halbes Jahr bevor das Ding startet, Operation am Herzen sozusagen."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:31:09",
+      "text": "Ja, am offenen Herzen und wir waren aber im August dann soweit,\ndass wir das fertige Instrument am CERN testen konnten und waren im September\nam Kennedy Space Center. Der Start sollte im Oktober stattfinden.\nWie immer bei Raumfahrtprogrammen, der hat sich dann verzögert,\nweil die Discovery vorher nicht vom Boden wegkam.\nDie hatte also Probleme mit dem Wasserstofftank. Deshalb ist unser Start erst\nim Mai dann passiert, aber die Vorgabe von der NASA war, entweder ihr seid im\nSeptember da oder ihr könnt es vergessen. Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:31:39",
+      "text": "Hat geklappt."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:32:08",
+      "text": "Heißt keine Consumables mehr, also kein Verbrauchsmaterial, was unsere Lebensdauer beschränkt.\nDas heißt, wir sehen ganz entspannt den Entscheidungen entgegen,\nwie lange es die ISS gibt.\nEs wird auf jeden Fall noch für die nächsten zwei Jahre sein.\nAlso ich habe nichts davon gehört."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:22",
+      "text": "Dass die ISS zugemacht wird."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:32:25",
+      "text": "Und alles, was länger ist, ist ein Plus für uns. Und wir können tolle Sachen da beobachten.\nDenn bei den Sachen, die wir beobachten, ist ja nicht klar,\ndass nicht ein seltenes Ereignis wie zum Beispiel eine Supernova-Explosion in\nunserer Galaxie uns tolle physikalische Ergebnisse liefert, die wir eigentlich\nnicht vorhersagen können, weil nur eine Supernova in unserer Galaxie alle 30 Jahre passiert.\nWenn wir aber 20 Jahre da oben sind, dann haben wir eine ziemlich gute Chance,\ndass wir bei einer, die in der Nachbarschaft ist, messen können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:55",
+      "text": "Und es müsste aber eine sehr nahe sein."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:32:59",
+      "text": "Also wenn ich die Messergebnisse kennen würde, dann würde ich Ihnen sagen, wie nah die sein muss.\nJa, aber umso näher."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:33:07",
+      "text": "Umso besser."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:33:08",
+      "text": "Das dient als Beispiel dafür, dass, wenn Sie an dem Beschleuniger sind,\ndann machen Sie immer die gleichen Kollisionen. Ja.\nUnd dann geht es nur darum, möglichst viele davon aufzuzeichnen.\nWenn Sie da im Weltraum sind, dann gibt es Ereignisse, singuläre Ereignisse,\ndie dazu führen können, dass Sie Sachen sehen, die Sie ein Jahr vorher nicht\nsehen können und ein Jahr später auch nicht sehen können.\nDas heißt, es ist nicht so einfach zu beantworten, wie lange will man denn da\noben eigentlich messen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:33:33",
+      "text": "Ja, es ist Regen in der Wüste. ist."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:33:35",
+      "text": "Wegen in der Wüste, ich finde ein anderes Beispiel schöner.\nEs gab dieses Super-Kamiokande-Experiment in Japan, dessen eigentliche Aufgabe\nwar, die Lebensdauer von den Protonen zu messen.\nUnd was die gefunden haben zwischendurch, sind Neutrinos von einer Supernova-Explosion,\nweil halt 1987 gerade eine Supernova in unserer Galaxie explodiert ist.\nUnd die haben die Ankunftszeiten von den Neutrinos gemessen und damit rausgekriegt,\ndass die also sich mit Lichtgeschwindigkeit bewegen.\nDas war Das war das tollste Resultat von denen. Das können sie nicht vorhersagen,\ndas können sie nicht planen.\nSie können nur in ihrem Proposal schreiben, wenn sowas passiert,\ndann können wir das auch.\nWas ich eigentlich sagen will, das Spannendste an AMS ist ja nicht das,\nwas wir auf unserer Liste stehen haben.\nWir haben eine lange Liste von Forschungsthemen. Von Strahlungsmessungen für\ndie bemannte Raumfahrt über dunkle Materie, über neue Materieformen,\ndie wir in Neutronensternen erwarten,\nbis zur Propagation von geladenen Teilchen im galaktischen Magnetfeld,\nwas wir alles untersuchen wollen.\nDarauf haben wir das Instrument optimiert. Aber wenn wir das alles finden,\nda haben wir ein tolles wissenschaftliches Programm, aber der Durchbruch,\ndie Neuheit, das, was die Welt verändert, war nicht dabei.\nNur wenn wir was finden, was wir nicht auf unserer Liste haben,\nwas wir nicht erwartet haben, dann schaffen wir ja wirklich neues Wissen.\nDas ist ein Glücksspiel. Also ich bin, wenn Sie mich jetzt fragen,\nja und was ist das? Und werdet ihr das finden?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:11",
+      "text": "Naja, das ist mir schon klar. Das ist ein Mysterium."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:35:14",
+      "text": "Das ist das Spannende an Wissenschaft. Wir machen ein Experiment,\nwo noch nie einer ein Experiment gemacht hat mit dieser Genauigkeit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:21",
+      "text": "Aber was konnte denn schon abgehakt werden? Also seit einem Jahr werden Daten geliefert.\nMan sieht wahrscheinlich den Daten dann relativ schnell schon mal so einen gewissen\nGrundwert an. Aber natürlich ist eine wissenschaftliche Auswertung auch dessen ein Trägerprozess.\nGibt es denn schon irgendetwas, was schon hat abgehakt werden können?\nZeichnet sich ab, dass für einen bestimmten Bereich das sehr gut oder vielleicht\nauch gar nicht funktioniert?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:35:45",
+      "text": "Ja, also jetzt muss man sich das, es hört sich ein bisschen überheblich an,\naber es ist ein bisschen schwieriger als Fernseher einschalten.\nAlso ich versuche das mal wieder mit einer Analogie zu machen.\nStellen Sie sich vor, Sie sind vor 20 Jahren und Sie haben einen Fernseher mit\neiner Zimmerantenne in Ihrem Wohnwagen und Sie wollen ein gutes Bild kriegen.\nDann richten Sie die Zimmerantenne aus, dann haben Sie ein gutes Bild.\nJetzt machen wir es ein bisschen schwieriger, ich lasse Ihren Wohnwagen fahren.\nDann sind Sie die ganze Zeit da dran und drehen an Ihrer Antenne,\num das Bild stabil zu halten.\nWir haben nicht einen Fernseher, wir haben 300.000. Und wir versuchen,\num in dem Bild zu bleiben, 300.000 Antennen auszurichten, aber unser Wohnwagen\nist ein bisschen schneller als ihrer.\nWir fliegen nämlich in 90 Minuten einmal um die Erde rum.\nDas heißt, unsere Randbedingungen, alles, was drumherum ist,\nändert sich kontinuierlich.\nDie Sonneneinstrahlung ändert sich, damit ändern sich die Temperaturen.\nDie Raumstation ist nicht primär dafür da, als Plattform für AMS zu dienen,\nSondern die ist für ein eigenes wissenschaftliches Programm zuständig.\nDas heißt, da kommen Sojus-Kapseln an, da kommen Space Shuttle an,\ndie Raumstation wird gedreht, Solarpaneele sind in unserer Akzeptanz.\nMal haben wir Schatten, mal haben wir Sonne.\nDie NASA unterstützt uns nach allen Möglichkeiten Also um Beispiel zu sagen,\nes gibt da Radiatoren, um die Wärme der Raumstation abzustrahlen,\nWenn es uns zu kalt wird, dann dreht die NASA diese Radiatoren so,\ndass die uns heizen Und zwar gezielt, also punktuell heizen,\nwenn es an einigen Punkten zu kalt wird,\nDieser Betrieb von AMS auf der Raumstation selber ist eine Herausforderung an\nsich Wir haben also in der Größenordnung zwölf Leute, 24 Stunden,\nsieben Tage die Woche, auf Schicht, die dieses Instrument überwachen.\nUnd zwar nur überwachen, dass das funktioniert, also sich noch überhaupt nicht\ndie Daten angeguckt haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:37:44",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:37:44",
+      "text": "Wir haben dann ein wesentlich größeres Team, was also die Daten,\ndie da runterkommen, analysiert und versucht zu verstehen, ob diese ganzen Effekte,\ndie also zu Veränderungen führen können, ob wir die korrigieren können.\nDas nennt man Kalibration in der Physik.\nDas heißt, wir wollen sicherstellen, dass wenn wir was Neues finden,\ndas nichts damit zu tun hat, dass vielleicht ein Solarpanel irgendwie komisch\nstand und wir da Sekundärteilchen herbekommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:07",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:38:10",
+      "text": "Und das, was für uns, Was ist Ihre Bilanz nach einem Jahr?\nIch war bei diesem Start am Kennedy Space Center.\nVon diesen über sieben Tonnen, fast die Hälfte davon war von Strukturen gehalten,\ndie ich zu verantworten habe, also die an der RWTH gebaut oder in Auftrag gegeben worden waren.\nDa waren sieben Leute, die haben dem ihr Leben anvertraut, dass wir hier keinen Fehler gemacht haben.\nAls ich das erste Foto gesehen habe aus der Ladebucht, wo dieses Instrument\nintakt war, keine Metallstreben irgendwie rausstanden, nicht auseinandergefallen.\nDas war für mich die größte Erleichterung. Das ist eine enorme Verantwortung\ngewesen für solch ein Uni-Institut.\nDas nächste, als wir auf der Raumstation ankamen und das angestellt haben,\nUnsere Röhrchen aus dieser 70 Mikrometer dicken Folie, die sind mittlerweile über 20 Jahre alt.\nDie sind zusammengeklebt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:39:10",
+      "text": "20 Jahre alt?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:39:12",
+      "text": "Über 20 Jahre. Das Rohmaterial wurde in den 90er Jahren hergestellt.\nDass das nach solch einem Shuttle-Start auf der Raumstation im Vakuum alle 5248\nKanäle funktionieren. Wir haben nicht einen einzelnen verloren.\nDa sind 30 Mikrometer dicke vergoldete Wolframdrähte in diesen Röhrchen gespannt,\ndie eigentlich die elektrischen Signale dann rausholen. Die sind zwei Meter lang.\nKein einziger von denen ist gerissen. Das funktioniert 100 Prozent.\nUnd diese Geschichte, was ich jetzt an dem Beispiel von diesem Übergangsstrahlungsdetektor\nerzähle, den wir gebaut haben, und man merkt vielleicht, dass ich ein bisschen\nzufrieden oder stolz darauf bin, dass das alles funktioniert hat,\ndas gilt für die anderen Gruppen genauso.\nWir sehen oder wir sind mittlerweile in der Lage zu sagen, dass dieses Instrument\ngenau so funktioniert, wie wir es konzipiert haben.\nUnd das heißt natürlich auch, der Betrieb ist wesentlich schwieriger,\nals wenn das nicht so gut funktionieren würde.\nAlso wenn Sie etwas bauen, was unpräzise ist, dann müssen Sie sich nicht viel\nMühe geben, um damit was zu machen.\nAlso Sie wollen die Länge eines Tisches messen und Sie haben einen Maßstab,\nder recht ungenau ist, dann kommt es nicht darauf an, wie gut Sie den anlegen.\nAber wenn Sie eine Mikrometerschraube haben, dann müssen Sie sich schon Gedanken\ndarüber machen, bei welcher Temperatur habe ich denn gemessen.\nDieses Instrument funktioniert hervorragend. Das ist von allen Daten,\ndie wir sehen. Es funktioniert hervorragend.\nAber das heißt, dass wir jede Kleinigkeit verstehen müssen, um sicher zu sein,\nmit der Genauigkeit, mit der wir nachher gucken, um wieder das Mikroskop zu\nnehmen, die Linse war nicht krumm, sondern da war wirklich was.\nUnd damit sind wir gegenwärtig beschäftigt. Das machen wir jetzt seit einem\nJahr und das wird immer besser.\nAlso wir nähern uns einem Zustand, wo wir die ganzen Computerprogramme,\nalso am Ende passiert das natürlich mit Computerprogrammen, Sie werten 20 Milliarden Ereignisse,\ndie werten sie nicht von Hand aus,\nsondern sie müssen Computeralgorithmen entwickeln und die müssen alle Eventualitäten kennen,\ndie bis dahin aufgetreten sind, um damit fertig zu werden.\nUnd was wir machen, ist diese Software zu entwickeln, zu testen,\nans Laufen zu kriegen, um stabile wissenschaftliche Ergebnisse zu produzieren.\nUnd wir nähern uns einem Zustand, dass wir das können und fangen jetzt an,\nuns mit den physikalischen Fragestellungen, also unserem eigentlichen Forschungsprogramm,\ndenn Instrumentverstehen ist ja nicht das Forschungsprogramm,\ndas ist Mittel zum Zweck.\nWir fangen jetzt an mit unserem eigentlichen Forschungsprogramm uns zu beschäftigen\nund das Ziel ist, dass wir Ende 2012, Anfang 2013 soweit sind,\ndie ersten wissenschaftlichen Ergebnisse zu publizieren.\nAlso nicht technische Ergebnisse, irgendwas funktioniert so gut,\nsondern die ersten wissenschaftlichen Ergebnisse zu produzieren.\nUnd wir sehen an Beispielen schon, dass das hervorragend funktioniert.\nUnd ein Beispiel möchte ich nennen, also wir wissen, dass das Antiteilchen zum\nElektron dass das das Positron ist.\nWir haben in den AMS1-Daten schon gesehen, dass es mehr Positronen in der kosmischen\nHöhenstrahlung gibt, als wir erwarten.\nUnd wir können jetzt mit AMS2 das zu viel höheren Energien messen,\nmit viel mehr Statistik.\nUnd die höchstenergetischen Positronen, also Antiteilchen zum Elektronen,\ndie je in der kosmischen Höhenstrahlung nachgewiesen worden sind,\ndie sind mit AMS2 jetzt aufgezeichnet worden.\nWir haben schon die ersten Ereignisse. Und man kann das wirklich sich wie ein Foto vorstellen.\nMan sieht die Flugbahn von dem Teilchen. Wir sehen, was jeder Teilchendetektor dazu sagt.\nDas sind ganz saubere Ereignisse und das ist bei Energien, die sind also mehr\nals ein Faktor zwei höher als das, was man vorher konnte.\nUnd diese Positronen sind sehr empfindliche Sonden für die Natur der dunklen\nMaterie und deshalb sind wir daran so interessiert.\nDas ist ein Beispiel, woran wir sehen, dass die wissenschaftlichen Ergebnisse sehr gut sein werden.\nOb sie sensationell sein werden, das liegt nicht in unserer Hand."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:14",
+      "text": "Das heißt, es zeichnet sich auch schon ab, dass jetzt so die Entscheidung für\ndas Maximum bei zwei Teraelektronenvolt jetzt auch nicht die schlechteste Idee war."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:43:25",
+      "text": "Ich meine, eigentlich ist es keine Entscheidung. Wenn Sie uns gefragt hätten,\nwas wollt ihr, hätten wir gesagt, 10 Teraelektronenvolt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:31",
+      "text": "Hat aber keiner."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:43:33",
+      "text": "Sondern das, was man technisch kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:35",
+      "text": "Auch mit dieser Limitierung scheint es schon gut zu funktionieren."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:43:39",
+      "text": "Es funktioniert hervorragend mit der Limitierung. Ob die spannenden physikalischen\nEffekte in dem Energiebereich liegen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:46",
+      "text": "Ist offen."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:43:48",
+      "text": "Im Moment müssen wir sagen, dieser\nEnergiebereich ist nicht vernünftig erforscht. Wir werden das machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:43:53",
+      "text": "Ja, nochmal eine Frage zu dem Wir-Kontext. Also eben hörte ich so,\ndass wir alle beteiligten Wissenschaftler heraus,\nnochmal konkret jetzt hier an den, an der Uni beteiligten Menschen,\nsind das dann vor allem auch viele Studenten?\nAlso ist das quasi dann hier auch Teil der, schon mit der Ausbildung wiederum,\nsich aktiv an diesem Gerät mit zu engagieren?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:44:19",
+      "text": "Ja, also wir haben wissenschaftliches Stammpersonal, was die Universität sozusagen hat.\nDa haben wir dazu Wissenschaftler, die also vom DLR finanziert werden,\ndie an dem Projekt mitarbeiten.\nUnd dann haben wir natürlich eine große Anzahl von Doktoranden,\nvon Studenten, die ihre Abschlussarbeiten an diesem Projekt machen.\nUnd das heißt, ja, das macht eigentlich die Attraktivität von solch einem Standort aus.\nAlso wie viele Möglichkeiten weltweit haben Sie, an solchen Projekten mitzuarbeiten?\nDa gibt es relativ wenige.\nDeutschland ist also als Industrienation führend genug, wohlhabend genug,\num sich solche Projekte der Grundlagenforschung zu leisten. Und das heißt,\nwir können hier an der Grenze dessen, was technisch möglich ist, ausbilden.\nUnd das ist eine ganz wichtige Funktion.\nDas, was mich so ein bisschen traurig macht in dem Zusammenhang,\nist, dass wir so gut ausbilden, dass die Leute teilweise noch in die Industrie\ngehen, bevor sie ihre Ausbildung abgeschlossen haben.\nJa, teilweise sind die, also die gehen im Moment weg wie warme Semmel,\nja, die sind weg, bevor sie ihre Abschlussarbeiten fertig haben,\nweil die Angebote so gut sind.\nDas ist gut aus Sicht des Abnehmers, weil es zeigt,\nwir bilden auf dem richtigen Niveau aus, die Leute werden nachgefragt,\naber aus Sicht des Forschers wäre es halt teilweise schön, wenn diese Abschlussarbeiten\nabgeschlossen werden könnten.\nJa, das ist ein bisschen schwierig im Moment gegenwärtig. Also dieses Modell\nfunktioniert hervorragend.\nDas muss auch so funktionieren. Wir können nur für etwa 10 Prozent der Leute\neine Karrieremöglichkeit in der Forschung anbieten.\n90 Prozent gehen in andere Bereiche.\nUnd das heißt, diese Ausbildung ist auch in der Physik so universell.\nDas eigentliche Ziel ist, ich sage den Studenten immer, euch beizubringen, richtig zu denken.\nAlso gründlich zu denken, komplexe Probleme zu lösen. Das ist das, was Physiker können.\nDie können nicht so viel auswendig wie die Mediziner. Also wenn ich am OP-Tisch\nstehe, kann ich mir nicht überlegen, ich muss mal in die Bibliothek gehen und\nirgendwas nachschlagen.\nDas kann ich nicht machen. Aber als Physiker, die intellektuelle Herausforderung\nist die Komplexität. Bin ich in der Lage, intellektuell das überhaupt zu verstehen?\nNicht, kann ich es mir merken. Kann ich es verstehen?\nUnd die Anforderungen auch in der Industrie sind immer komplexere Zusammenhänge,\ndie durchdrungen werden müssen.\nUnd da sind Physiker extrem hilfreich. Also die Arbeitsmöglichkeiten sind breit\ngestreut und nicht irgendwie auf einen Zweig gestreckt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:46:54",
+      "text": "Und so ganz verloren für die Grundlagenforschung sind sie dann in der Industrie\naber auch nicht oder wie ist das Verhältnis zu sehen?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:47:00",
+      "text": "Häufig sind sie in Forschungsbereichen tätig. Jetzt muss man sich immer wieder\nfragen, Grundlagenforschung und Grundlagenforschung.\nDie Industrie versteht unter Grundlagenforschung naturgemäß was anderes als\ndie Universitäten, weil die\nGrundlagenforschung in der Industrie soll ja immer eine Anwendung haben.\nJa, das ist die Grundlage für die nächste Anwendung, also für das nächste Produkt.\nDie müssen ja Geld verdienen. Ich finde das gar nicht schlecht.\nDas heißt, es ist eine staatliche Aufgabe, eigentlich die Grundlagen für die\nnächste Generation von Grundlagenforschung in die Industrie zu legen.\nDas machen wir an der Universität über solche Sachen wie AMS.\nAber das liefert dann das Ausbildungsniveau, dass die mit dem aktuellen Kenntnisstand,\nalso das, was Forschung heute kann, in die Industrie reingehen.\nUnd damit also diesen Wissenstransfer eigentlich leisten von dem,\nwas auf Universitätsniveau vielleicht funktioniert mit staatlicher Unterstützung,\nzu was, was ich also kommerziell dann einsetzen kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:47:59",
+      "text": "Sind denn die Universitäten in Deutschland generell gut genug aufgestellt,\num an diesen Grundlagenforschungen auch teilzunehmen, auch vielleicht jenseits der Physik?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:48:11",
+      "text": "Ja. Also wir, wenn man das im internationalen Vergleich sieht,\nwir können mit allen Universitäten mithalten, wenn wir das wollen.\nUnd für mich ist es mehr eine Frage, wo setzt man Prioritäten,\nin welchen Bereichen will man das?\nAber wenn wir das wollen, also wir müssen uns nicht hinter ETH Zürich oder MIT\noder Ähnlichem verstecken.\nWenn ich mir angucke, was die anderen Gruppen leisten, was wir leisten können,\nwir sind wettbewerbsfähig in jeder Beziehung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:48:45",
+      "text": "Wie ist denn das jetzt, jetzt ist das AMS da und wenn ich das richtig verstehe,\nist diese ganze Astro-Teilchen-Physik eigentlich ein relativ neues Gebiet noch?\nWas muss denn jetzt als nächster Schritt kommen? Worüber wird denn jetzt nachgedacht? Was steht an?\nDas Ding ist ja jetzt oben und liefert seine Daten, da kann man jetzt nicht\nmehr viel dran drehen. Also man kann natürlich noch dran drehen,\nman kann an der Software drehen, etc.\nUnd man muss vielleicht überhaupt erstmal neue wissenschaftliche Modelle auch\naufbringen, um mit dem Datenstrom auch was anfangen zu können."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:49:24",
+      "text": "Ja, eigentlich heißt auch in der Physik, Sobald das eine Experiment fertig ist,\neigentlich schon vorher, muss man sich darüber Gedanken machen,\nwas macht man als nächstes?\nWie geht es weiter? Also Aufgabe der Universitäten ist ja, dieses Forschungsfeld\nweiterzuentwickeln, also nicht einen gewissen Zustand einzufrieren und dann\n100 Jahre das Gleiche zu machen. Also wie entwickeln wir solch ein Gebiet weiter?\nWas ich sehr instruktiv finde, ist sich das Hubble Space Teleskop anzugucken\nals ein hervorragendes wissenschaftliches Instrument.\nDas ist 1989, glaube ich, gestartet worden. geworden.\nEs ist jetzt mehr als 20 Jahre in Betrieb. Wenn Sie sich die ersten Bilder von\nHubble angucken und das, was wir heute von Hubble sehen, dann sehen Sie einen\nenormen Fortschritt, also in der Technologie dieses Instrumentes.\nDas hat was damit zu tun, dass es am Anfang nicht richtig justiert war, das weiß ich alles.\nEs musste repariert werden.\nEs waren in Größenordnung 6 Missionen notwendig, um dieses Instrument über 20\nJahre am Leben zu halten und auf dem neuesten technischen Stand zu halten.\nDas heißt für AMS, wenn wir in der Lage sind, qualitativ ähnlich hochwertige\nwissenschaftliche Ergebnisse zu produzieren wie Hubble, was wir zeigen müssen erst,\ndann stellt sich die Frage, ob wir diese 20 Jahre auf der Raumstation einfach\nsitzen und warten müssen.\nOder ob wir um AMS herum, AMS als Kern, weitere Instrumente drumherum bauen,\ndie daraus also ein wesentlich leistungsfähigeres Gesamtinstrument machen.\nUnd das sind Überlegungen, mit denen wir jetzt angefangen haben.\nDas lohnt sich aber erst, das ernsthaft zu diskutieren, wenn wir also,\nwürde ich jetzt mal sagen, im Laufe von 2013 ernsthafte wissenschaftliche Ergebnisse\nvorlegen. Und man dann beurteilen kann, inwieweit das sinnvoll ist,\nAMS weiter auszubauen oder umzubauen.\nDas wäre also eine Möglichkeit, wie sich das weiterentwickeln kann.\nDie andere Möglichkeit, die im Raum steht, ist, AMS ist ein ziemliches Universalinstrument\nmit seinen ganzen Komponenten, die es da drin hat.\nWenn wir jetzt bestimmte Effekte sehen, kann man sich sehr gut vorstellen,\ndass man also für diese Fragestellung optimiert, ein neues Instrument baut,\nwas man dann nicht unbedingt mit einem Satelliten fliegen muss,\naber in vielen Fällen kann man das also heute mit Stratosphärenballons machen,\ndie die NASA in der Antarktis starten kann, gegenwärtig als einzige Agentur,\nRaumfahrtagentur in der Antarktis.\nUnd das hat nichts mit den Ballons zu tun, wie wir sie kennen.\nDas sind also Ballone mit einem Volumen von einer Million Kubikmeter,\nüber 100 Meter Durchmesser hat die Hülle.\nDie heben Nutzlasten von drei Tonnen hoch und die erreichen Flugdauern in über\n30 Kilometer Höhe von mehr als 40 Tagen.\nDenn es gibt also im antarktischen Sommer zirkumpolare Winde,\ndie das stabil halten. Also einfach gesagt kreist das einfach um den Südpol.\nDa wohnt auch keiner. Das heißt, man muss sich also nicht so über die Landeplätze Gedanken machen.\nDann wird das irgendwann zur Landung gebracht, indem man also das Helium ablässt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:52:41",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:52:43",
+      "text": "Und auch damit kann man über 99% der Erdatmosphäre hinter sich lassen.\nSodass wir also überlegen müssen, für die nächsten 10, 15 Jahre,\nwie sieht das Programm aus? Weltweit muss das überlegt werden.\nWerden das Ballonexperimente sein? Wird das ein Ausbau von Von AMS werden das\nneue Satellitenexperimente sein.\nUnd das wird damit zusammenhängen, was wir an wissenschaftlichen Ergebnissen von AMS bekommen.\nAlso das wird eine Diskussion in den nächsten drei, vier Jahren sein,\ndass wir uns also ein entsprechendes Programm überlegen müssen,\nwie wir das bei vernünftiger Nutzung der vorhandenen Ressourcen realisieren können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:53:22",
+      "text": "Ja, man kann ja jetzt davon ausgehen, dass es noch ziemlich lange in Betrieb ist.\nDas schreit ja jetzt nicht unbedingt sofort nach einem Ersatzgerät,\nwas auch unabhängig von der ISS fliegt.\nDie ISS hat es ja schon gezeigt, ist eigentlich ein ganz guter Gastgeber mit\nder ganzen Stromversorgung etc.\nPp. Aber es ist auf jeden Fall ein interessanter Wettkampf im Gange,\num die letzten Mysterien oder zumindest die nächsten anstehenden Mysterien der\nPhysik da zu entschlüsseln.\nIst denn da, rund um das LHC-Experiment gibt es ja eigentlich so einen generellen\nOptimismus, der wahrnehmbar ist, dass man da auch in absehbarer Zeit zu neuen Erkenntnissen kommt,\nzumindest durch das Ausscheiden können anderer Varianten.\nWie sehr, was ist Ihre Erwartung, wie sich dieses Feld, was jetzt in den letzten\nzehn Jahren schon so durchschüttelt worden ist, durch neue Erkenntnisse in den\nnächsten Jahren entwickeln wird?\nWar es das jetzt erstmal wieder oder geht es jetzt erst richtig los?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:54:32",
+      "text": "Ja, Prognosen sind schwierig, besonders wenn sie die Zukunft betreffen.\nMan muss auch immer zwischen Wunsch und Wirklichkeit unterscheiden.\nNatürlich ist der Wunsch von allen Beteiligten, dass das passiert,\nbevor sie aus dem aktiven Dienst irgendwie ausscheiden.\nEs ist wirklich eine eine extrem schwierige frage ich möchte auf zwei aspekte\nin dem zusammenhang gehen dass die eine frage die mich umtreibt ist,\nWenn wir nur AMS haben in dieser Form auf der Raumstation und das findet irgendwas\nTolles, wie verifizieren wir das?\nIch habe versucht, in dem Gespräch klarzumachen, dass das ein sehr komplexes Instrument ist.\nAlso wie schließen wir aus, dass das, was wir beobachten, ein Artefakt aus der\nKonstruktion dieses Experiments ist?\nWas wir in der Vergangenheit deshalb immer gemacht haben, wenn Sie sich die\nBeschleunigerexperimente angucken, wir haben immer mehrere gemacht.\nAlso an dem LHC gibt es deshalb zwei Instrumente, die das machen,\ndie das völlig unabhängig voneinander machen.\nBei AMS versuchen wir das jetzt so ein bisschen, indem wir sagen,\nwir machen zwei Analysegruppen auf, die völlig unabhängig voneinander arbeiten\nund am Ende erst ihre Ergebnisse vergleichen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:55:43",
+      "text": "Unterschiedliche Instrumente oder nur unterschiedliche Auswertungswege?"
+    },
+    {
+      "speaker": "Stefan Schael",
+      "time": "1:55:46",
+      "text": "Unterschiedliche Auswertungswege. Unterschiedliche Instrumente können wir nicht.\nEs gibt nur ein AMS. Ja, okay.\nVon daher ist es schon eine relevante Frage, bin ich in der Lage mit vielleicht\nweniger aufwendigen Experimenten, aber verschiedene Details dann nachzumessen,\num sicher zu sein, dass das kein Problem von dem Instrument ist.\nAlso mit der Frage werden wir uns beschäftigen müssen.\nDie zweite Frage ist, was wird in den nächsten zehn Jahren passieren?\nWenn man sich die Sensitivität der jetzigen Generationen von Messinstrumenten\nanguckt, dann müssten wir eigentlich in den nächsten zehn Jahren eine Antwort\nauf die Natur der dunklen Materie finden oder es gibt sie nicht.\nUnd wenn es sie nicht gibt, dann gibt es irgendwas anderes, was wir nicht verstanden\nhaben. Da ist irgendwas grundlegend faul dann.\nJetzt kann man sagen, ihr habt den ganzen Aufwand betrieben und dann habt ihr\nnur verstanden, dass es nicht das ist, was ihr dachtet, was es ist.\nWas ist denn der Fortschritt? Der Fortschritt war zu verstehen,\ndass es keinen Äther gibt und dass sich elektromagnetische Wellen im Vakuum\nausbreiten und dass die Lichtgeschwindigkeit konstant ist und das ist die Grundlage\nfür das GPS, was wir heute benutzen,\nDie Wissenschaft ist nicht immer eine gerade Linie Sie können nicht sagen,\nwie geht das also über die nächsten 50 Jahre etwa weiter Wir werden garantiert Umwege machen,\num zu den Ergebnissen zu kommen Das andere ist immer die Frage,\nwelchen Anspruch kann man haben dass das in nächster Zeit passiert.\nWenn Sie sich mal angucken zwischen Newton und Einstein, das waren mehrere hundert Jahre.\nUnd die Leute dazwischen waren auch nicht dumm und haben auch nicht geschlafen.\nAber es kann sein, dass es einfach ein kultureller Schritt ist,\nden Sie erst zurücklegen müssen, bevor Sie in der Lage sind,\ndiese Erkenntnisse zu gewinnen.\nAlso Newton hätte, egal wie genial er ist, ohne die Vorarbeiten,\ndie also zwischen Newton und Einstein passiert sind, Also Newton hätte nicht\ndie Relativitätstheorie finden können.\nDie Mathematik war überhaupt nicht so weit. Die Menschen waren überhaupt nicht in der Lage dazu.\nOb wir heute qualifiziert sind, um den nächsten Schritt auf dieser Erkenntnistreppe\nzurückzulegen oder nicht, ist schwer zu sagen, bevor wir das nicht gemacht haben.\nJa, im Moment versuchen wir es an verschiedenen Stellen und wir finden an verschiedenen\nStellen, es geht nicht so schnell weiter, wie wir das gerne hätten.\nJa, also beim LAC haben wir auch erwartet, dass wir im ersten halben Jahr endlich\ndie neue Physik sehen und wissen, wie es weitergeht. Es scheint wesentlich schwieriger zu sein.\nWas nicht heißt, dass man es aufgeben sollte, sondern nur, dass es nicht klar\nist, wie wir zu diesen Erkenntnissen kommen, von denen ich fest davon überzeugt\nbin, dass sie eigentlich da sind, dass sie uns im Moment noch nicht zugänglich sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:58:31",
+      "text": "Ja, ich fasse zusammen. Es bleibt spannend in der Astroteilchenphysik für das\nAMS-Experiment und vor allem natürlich auch in der Grundlagenforschung der Physik im Allgemeinen.\nIch denke, jetzt können wir das hier an der Stelle auch erst mal vorerst abschließen.\nWir bleiben gespannt, inwiefern sich da hier neue Erkenntnisse bieten.\nUnd ja, mal gucken. Vielleicht können wir ja hier im Rahmen der Raumzeitserie\ndann auch schon noch die nächsten Schritte mitnehmen.\nAber jetzt erst mal vielen Dank, Stefan Scheel, für die Ausführungen hier zum\nAMS und Bedeutung auch der Astro-Teilchenphysik und den damit verbundenen Experimenten.\nUnd auch vielen Dank für das Zuhören hier bei Raumzeit. Das war die 38.\nAusgabe und in zwei Wochen gibt es uns wieder. Ich sage Tschüss und bis bald."
+    }
+  ]
+}

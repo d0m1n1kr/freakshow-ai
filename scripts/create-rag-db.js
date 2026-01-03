@@ -30,6 +30,7 @@ function parseArgs(argv) {
     force: false,
     resume: true,
     noEmbeddings: false,
+    allowMissingTimestamps: true,
     requestDelayMs: null,
   };
 
@@ -54,6 +55,7 @@ function parseArgs(argv) {
     else if (a === '--force') args.force = true;
     else if (a === '--no-resume') args.resume = false;
     else if (a === '--no-embeddings') args.noEmbeddings = true;
+    else if (a === '--no-missing-timestamps') args.allowMissingTimestamps = false;
     else if (a === '--request-delay-ms') args.requestDelayMs = Math.max(0, parseInt(rest.shift(), 10));
     else if (a === '--help' || a === '-h') args.help = true;
     else throw new Error(`Unknown arg: ${a}`);
@@ -77,6 +79,7 @@ function usage() {
     '  --force                  Rebuild from scratch (ignore existing output)\n' +
     '  --no-resume              Don\'t reuse embeddings from existing output\n' +
     '  --no-embeddings           Build DB without calling embedding API (embeddings = null)\n' +
+    '  --no-missing-timestamps  Don\'t include topics without time bounds (default: include with 0..0)\n' +
     '  --request-delay-ms <n>   Wait between embedding batches (default: 0 unless set)\n'
   );
 }
@@ -353,6 +356,7 @@ async function main() {
 
   const items = [];
   const skippedNoTime = [];
+  let filledNoTime = 0;
   let reused = 0;
 
   for (const f of files) {
@@ -363,10 +367,17 @@ async function main() {
 
     for (let i = 0; i < topics.length; i++) {
       const t = topics[i];
-      const { startSec, endSec } = pickTimeBounds(t);
+      let { startSec, endSec } = pickTimeBounds(t);
       if (!Number.isFinite(startSec) || !Number.isFinite(endSec)) {
-        skippedNoTime.push({ episodeNumber, topic: t?.topic ?? null });
-        continue;
+        if (!args.allowMissingTimestamps) {
+          skippedNoTime.push({ episodeNumber, topic: t?.topic ?? null });
+          continue;
+        }
+        // Some transcripts don't have timestamps at all (time=""), so we still index the topic
+        // but degrade navigation/playback to "start of episode".
+        startSec = 0;
+        endSec = 0;
+        filledNoTime++;
       }
 
       const topicName = typeof t?.topic === 'string' ? t.topic.trim() : '';
@@ -418,6 +429,7 @@ async function main() {
 
   console.log(`Items:        ${items.length}`);
   if (skippedNoTime.length) console.log(`Skipped:      ${skippedNoTime.length} (missing timestamps)`);
+  if (filledNoTime) console.log(`NoTime:       ${filledNoTime} (indexed with 0..0)`);
   if (!args.noEmbeddings) {
     console.log(`Reused:       ${reused}`);
     console.log(`To embed:     ${needEmbeddingIdx.length}`);
@@ -472,6 +484,7 @@ async function main() {
     stats: {
       totalItems: items.length,
       skippedNoTime: skippedNoTime.length,
+      filledNoTime,
       reusedEmbeddings: args.noEmbeddings ? 0 : reused,
     },
   };

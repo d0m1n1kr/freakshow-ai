@@ -1,0 +1,909 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:00:34",
+      "text": "Hallo und herzlich Willkommen zu Raumzeit, dem Podcast über Raumfahrt und andere.\nKosmische Angelegenheiten.\nMein Name ist Tim Frithloff und ich begrüße alle hier zu Nummer 114 von Raumzeit.\nUnd ja, wie ihr schon gemerkt haben dürftet, gibt es ja hier eine ganze Serie\nvon Podcasts hier am CERN in Genf, wo wir mal aufschlüsseln wollen,\nwas denn hier eigentlich alles so installiert ist, warum und wie es funktioniert.\nUnd nachdem wir jetzt schon ein wenig über die Geschichte des CERNs gelernt\nhaben und auch so die Grundlagen der ganzen Physik,\ndie hier erforscht wird,\nangerissen haben, uns auch schon den ersten Detektor angeschaut haben mit ALICE,\nwollen wir heute mal so ein bisschen auf den Kern der Kernforschung hier kommen\nund uns in einer Reihe von zwei Sendungen die Hauptdetektoren des LHC,\ndes Large Hadron Collider, anschauen, mit denen so der Großteil der Experimente durchgeführt wird.\nUnd fangen wir an mit dem CMS-Detektor, dem Compact Muon Solenoid, Toller Name, Detektor.\nJa und um darüber Auskunft zu erhalten, begrüße ich meinen Gesprächspartner,\nnämlich Wolfgang Adam. Hallo Wolfgang."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:01:55",
+      "text": "Hallo."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:01:56",
+      "text": "Herzlich willkommen bei Raumzeit. Du bist Senior Research Associate für CMS\nAnalyse und CMS Tracking und stellvertretender Sprecher."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:02:08",
+      "text": "Genau, ich arbeite für das Institut für Hochenergiephysik der Österreichischen\nAkademie der Wissenschaften in Wien und habe eben gleichzeitig auch Funktionen\nin der Kollaboration, die das CMS-Experiment betreibt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:02:22",
+      "text": "Ja und wie bist du dazu gekommen mit der ganzen Wissenschaft?\nWar das irgendwie schon ein Kindheitstraum?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:02:29",
+      "text": "Naja ich hatte mich früher für Mathematik,\nTechnik, Physik interessiert und habe dann ein Studium der Physik an der Technischen\nUniversität in Wien begonnen und als es Richtung Diplom ging,\nhatten wir einen Professor für Theoretische Physik,\nder gleichzeitig zu dieser Zeit Präsident des CERN Councils war,\ndas heißt der Vertretung an der CERN-Mitgliedsstaaten, die die strategische\nAusrichtung des CERN sozusagen definieren.\nUnd er hat uns eben diese Art von Physik näher gebracht und von den Herausforderungen\ngesprochen, die es hier gibt.\nUnd das hat mich natürlich interessiert habe mich dann für meine Diplomarbeit\nbeworben beim Institut für Hochenergiephysik,\ndas eben das Institut in Wien ist, das sich mit dieser experimentellen Hochenergiephysik\nbeschäftigt und bin dort eingestiegen in die Vorbereitung des Delphi-Experiments.\nDas war der Beschleuniger, der hier im Tunnel vor dem LHC gelaufen ist,\nLEP, Large Electron Positive Collider, und wir haben da eine Detektor-Komponente\nin Wien gebaut und ich habe mich dann angefangen damit zu beschäftigen und bin\ndann zum CERN gekommen um die Installation und den Betrieb und die Auslese dieses\nDetektors zu übernehmen.\nDas war ab dem Ende der 80er Jahre,\nalso LEP ist während der 90er Jahre gelaufen, Also die beginnen 1989."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:06",
+      "text": "Das heißt du bist jetzt hier seit 30 Jahren oder länger noch?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:04:10",
+      "text": "Ja. Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:11",
+      "text": "Okay."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:04:13",
+      "text": "Und ich habe dann am CERN ein Fellowship gemacht, im selben Experiment,\naber in einem anderen Detektor, dem Cherenkov Detektor.\nDas ist etwas, was wir hier CMS nicht finden,\naber das ist ein Detektor, mit dem man Geschwindigkeit geladener Teilchen\nmessen kann und sie damit identifizieren kann und habe\ndann verschiedene Physikgruppen in Delphi übernommen und dann gegen Ende der\nLablaufzeit auch eine gemeinsame Arbeitsgruppe der vier Lab-Experimente für\nSuchen nach unter Anführungszeichen exotischer Physik, also neuen Teilchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:04:56",
+      "text": "Exotische Physik. Tcherenkov-Strahlung war ja auch schon mal ein Thema,\nRaumzeit 104, da war ich auf La Palma\nund wir haben dort die Pläne für das Tcherenkov-Teleskop-Array angeschaut.\nDas ist ja related, sagen wir mal, da kosmische Strahlung und so weiter."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:05:14",
+      "text": "Genau, nur entsteht dort die Tcherenkov-Strahlung in der Atmosphäre.\nDa muss man nicht beschleunigen. Genau, während hier in den Hochenergiephysik-Experimenten\ndas innerhalb eines Detektors passiert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:05:24",
+      "text": "Genau, aber das ist ja immer wieder auch schön zu sehen, so diese Analogie.\nAuf der einen Seite gibt es halt die Installationen, die einfach versuchen die\nkosmische Strahlung, die ohnehin schon beschleunigt durchs All schießt,\nin irgendeiner Form auszuwerten.\nDa wäre ja nebenbei auch noch das Alpha Magnetspektrometer zu erwähnen.\nHatte ich ja auch schon bei Raumzeit 38 schon vor 10 Jahren tatsächlich das\nThema schon mal, dessen Kontrollzentrum ja tatsächlich hier auch auf dem Zerngelände ist.\nGenau, aber wie wir ja auch schon in den letzten drei Sendungen ausgeführt haben,\nhier wird halt viel beschleunigt und durch diese Kaskade von Ringen kriegt man\ndann halt einfach die Teilchen mit einer sehr sehr hohen Energie zu den Detektoren\nund das ist dann eben sozusagen der Ort, wo es dann unter anderem mit dem CMS weitergeht."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:06:13",
+      "text": "Genau, und das hat natürlich auch Auswirkungen auf die Auslegung der Experimente,\nweil wir eben hier nicht natürlich vorkommende Phänomene betrachten,\ndie über Zeit konstant beobachtet werden können, sondern wir generieren hier\ndie Kollisionen, die wir beobachten wollen, direkt.\nUnd das hat natürlich Auswirkungen auf, wie wir die Detektoren auslegen, betreiben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:06:41",
+      "text": "Jetzt wollen wir nochmal sagen, also ich hab's ja schon angedeutet,\nalso CMS und Atlas, was, Spoiler Alert, das Thema in der nächsten Sendung sein\nwird, das sind ja im Prinzip so...\nGeschwister, Nachbarn, die kümmern sich im Wesentlichen um freundliche Konkurrenten.\nAlso zwei Detektoren mit unterschiedlicher Technik, die mehr oder weniger denselben Auftrag haben.\nIm Prinzip in all dieser ganzen Beschleunigungen die selbe Art von Phänomenen\nversuchen zu beobachten, aber eben mit unterschiedlicher Technik.\nUnd das finde ich einen ganz interessanten Ansatz, weil man ja dadurch sozusagen\nvon vornherein feststellt, okay, wir haben kein Bias in unserer Technologie bei dem, was wir sehen.\nOder zumindest nicht so weniger, weniger Bias."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:07:30",
+      "text": "Es gibt verschiedene Gründe natürlich, das so zu machen.\nWarum wir überhaupt zwei Experimente haben, das hat mit dem zu tun,\nwas ich vorhin erwähnt habe, dass wir hier eben die Kollisionen selbst erzeugen.\nEin Grundsatz der Wissenschaft ist natürlich, dass Messungen immer kontrolliert,\nunabhängig kontrolliert werden können von unabhängigen Wissenschaftlern.\nBei vielen Experimenten kann das hintereinander geschehen.\nAlso es wird ein Experiment durchgeführt, man findet etwas, danach kommt ein\nanderes Experiment, das das überprüfen wird und verbessern wird.\nAber nachdem wir hier natürlich den Beschleuniger betreiben müssen,\nist es nicht optimal, wenn man die Messzeiten, die ja ohnehin Jahre und Jahrzehnte\ndauern, wenn man die verdoppeln würde.\nUnd daher ist es viel ökonomischer, die zwei Experimente gleichzeitig zu betreiben.\nUnd für die unterschiedliche Auslegung gibt es verschiedene Gründe,\ntechnologische Gründe, aber es gibt Es gibt vor allem unsere,\nwenn wir Messungen durchführen, sind die Werte, die wir messen,\nnatürlich mit Fehlern behaftet.\nDas heißt, es gibt da Unsicherheiten auf die Messwerte. Das ist vollkommen normal.\nDas geschieht in allen Messungen.\nUnd diese Unsicherheiten können verschiedenen Ursprung haben.\nEs gibt einen ganz einfachen statistischen Ursprung.\nDas heißt, wir beobachten eine endliche Zahl von Ereignissen,\nwenn wir einen bestimmten Prozess messen und dadurch können Fluktuationen auftreten.\nWenn man einen Würfel zehnmal würfelt, dann werden die Eins bis Sechs nicht\ngenau mit der gleichen Wahrscheinlichkeit auftreten.\nAlso man wird nicht die gleiche Zahl beobachten.\nÄhnlich ist es hier, wenn wir nur eine bestimmte Zahl von gewissen Ereignissen\nbeobachten, dann kann diese Zahl einfach ganz natürlich rauf und runter fluktuieren.\nAber es gibt dann eine zweite Komponente, die wir hier typischerweise systematische\nFehler nennen. Das ist...\nMögliche Verzerrungen des Messwerts durch Effekte, die zum Beispiel aus dem\nDetektor kommen können oder aus der theoretischen Modellierung dieser Prozesse.\nUnd um diese Fehler möglichst auszuschließen, ist es günstig,\nwenn man zwei Experimente mit unterschiedlichem Aufbau hat, weil Detektorfehler\ndann im anderen Experiment nicht in derselben Form auftreten würden und man\nsich dadurch gegenseitig kontrollieren kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:10:11",
+      "text": "Ja, das ist sozusagen jetzt erstmal die Prämisse gewesen.\nDas heißt die beiden Detektoren sind quasi mit unterschiedlichen Philosophien,\nmit unterschiedlichen technischen Philosophien, aber eben mit dem selben Ziel entwickelt worden.\nWas ich schon mal ganz bemerkenswert finde, weil das sind ja alles sehr komplexe\nMaschinen. Also jede Maschine für sich ist ja schon sehr sehr sehr kompliziert\nund auch so nie dagewesen.\nAlso so ein bisschen wie auch in der Raumfahrt, es ist eine permanente Prototypenentwicklung\nund man baut ja nicht was, was man schon mal hatte, weil das kennt man ja schon,\nist ja auch langweilig so.\nUnd das verstehe ich auch sehr gut, das ist einer der Reize,\nder hier sozusagen immer wieder ist. Man hat es halt einfach immer mit Bleeding\nEdge Technology zu tun, mit anderen Worten, man muss aber diesen Aufwand dann\ngleich zweimal treiben.\nUnd ist natürlich dann vielleicht auch versucht, in gewisser Hinsicht, Oh mein Gott.\nAlso dann steht man ja immer so in diesem Spannungsfeld, machen wir es jetzt\nüberall komplett anders aus Prinzip oder tendieren wir dann dazu zu wenig auf\nabgehangener Technologie zu basieren,\ndie dann auch so viel Risiko mit in das Ding reinbringt, dass es eben vielleicht\nam Ende nicht funktioniert?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:11:34",
+      "text": "Die Auslegung dieser Experimente ist immer eine Balance zwischen einem Kompromiss\nzwischen wirklich die neueste und beste Technologie zu verwenden und gleichzeitig\ndas Risiko klein zu halten.\nDas Kleinhalten des Risikos, ein Teil davon ist natürlich wiederum,\ndass wir zwei Experimente mit unterschiedlichen Technologien haben.\nUnd es gibt natürlich noch eine endliche Zahl von Detektor-Technologien,\naber das heißt gewisse Elemente werden ähnlich sein,\naber in den Details unterscheiden sie sich dann und vor allem in der Gesamtkonzeption\nunterscheiden sich die zwei Experimente."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:12:13",
+      "text": "Gut, dann schauen wir doch mal darauf, was jetzt im Falle von CMS tatsächlich gebaut wurde.\nWie ist sozusagen das Design des Detektors?\nIm Namen steckt ja schon so einiges drin. Also im Prinzip das Bauprinzip,\nwenn ich das richtig sehe, ist hier unter anderem mit enkodiert.\nUnd wie muss man sich das vorstellen? Wie groß ist das Ding? Erzähl doch mal."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:12:39",
+      "text": "Also wie gesagt, wir haben ein Kompakt im Namen. Das könnte vielleicht etwas\ntäuschen, weil der Detektor wiegt über 10.000,\nTonnen, ist über 20 Meter lang und circa 15 Meter Durchmesser,\nalso ungefähr die Größe eines Hauses.\nUnd dieses Volumen ist zum großen Teil mit Präzisionstechnologie gefüllt.\nDas Grundprinzip, das gilt auch für Atlas, ist,\ndass wir idealerweise, wir haben diese Kollisionen,\ndie im Beschleuniger stattfinden, daraus entstehen Sekundärteilchen,\nsehr viele, hunderte, tausende, und idealerweise wollen wir alle diese Teilchen\nmessen und ein Maximum der Eigenschaften jedes dieses Teilchens messen.\nLeider gibt es kein Detektor-Konzept, das alle Eigenschaften gleichzeitig messen kann.\nMit Eigenschaften meine ich da zum Beispiel den Ursprungspunkt,\nweil es gibt natürlich Teilchen, die direkt aus dem Punkt kommen,\nan dem Protonen oder Atomkerne kollidiert sind.\nAber es gibt dann auch Zwischenstufen. Es gibt kurzlebige Teilchen,\ndie dort erzeugt werden, ein Stück weit fliegen, dann in weitere Teilchen zerfallen.\nDas heißt, wir wollen wissen, ob Teilchen vom ursprünglichen Kollisionspunkt\nkommen oder aus dem Zerfall eines kurzlebigen Teilchens kommen.\nWir wollen die Richtung wissen.\nWir wollen idealerweise die Art des Teilchens wissen, seine Masse und natürlich seine Energie.\nUnd um das für alle wichtigen Teilchenarten zu erzielen, gibt es nur die Möglichkeit,\ndass man mehrere Detektorsysteme kombiniert, weil eben ein einzelnes System\nnicht alle diese Eigenschaften messen kann.\nDas heißt, ganz grob gesagt, teilt sich der Detektor in drei Zonen, je nach Teilchentyp.\nIm innersten Teil des Detektors versuchen wir die Flugbahn von geladenen Teilchen festzustellen.\nAlso damit kann man eben auch den Produktionsort feststellen,\ndie Richtung und wir können auch den Impuls feststellen.\nDas heißt im klassischen Fall ist Impuls einfach das Produkt aus Masse und Geschwindigkeit.\nIm relativistischen Fall, unsere Teilchen, die dort erzeugt werden,\nsind alle normalerweise relativ nah an der Lichtgeschwindigkeit.\nEs ist etwas komplizierter, aber es gibt jedenfalls einen Zusammenhang zwischen\nEnergie, diesem Impuls und der Masse eines Teilchens.\nUnd das erzielen wir dadurch, dass wir eben ein starkes Magnetfeld im Großteil des Detektors haben.\nUnd dieses Magnetfeld wird die geladene Teilchen auf Helixbahnen zwingen.\nUnd aus der Krümmung dieser Helixbahnen kann man dann den Impuls berechnen.\nDie Idee ist, dass man in diesem Volumen die Teilchen möglichst wenig und unter\nAnführungszeichen stört.\nDas heißt, wir wollen diesen Teil des Detektors möglichst leicht bauen,\ndamit die Teiche nicht mit Material kollidieren und sich in andere Teiche umwandeln.\nUnd das ist sozusagen die erste Zone. Die zweite Zone wird verwendet,\num die Energie der meisten Teilchen zu messen, indem man sie de facto absorbiert.\nDas heißt, dort kehrt man das Prinzip sozusagen um.\nMan hat eine Zone mit sehr dichtendem Material.\nUnd in dem dichten Material werden die einlaufenden Teilchen eine Wechselwirkung\nmit Atomkernen oder Elektronen machen.\nDas wird neue Teichen erzeugen und diese neuen Teichen können wiederum kollidieren\nund wiederum neue Teichen erzeugen. Das heißt, das ist ein Lawineneffekt.\nDas heißt, man hat eine Multiplikation der Teilchen, die dort in diesem Schauer\nentstehen und das geht so lange, bis die Energie der Teilchen,\ndie durchschnittliche Energie der Teilchen so weit gesunken ist,\ndass sie keine neuen Teilchen mehr erzeugen können.\nWeil das ganze geschieht natürlich über die übliche Äquivalenz zwischen Energie und Masse.\nDas heißt, solange die einlaufenden Teilchen Energien haben,\ndie über der Masse anderer Teilchen liegen, können sie neue Teilchen überzeugen.\nUnd das heißt, irgendwann einmal fällt die Energie und der Schauer wird beendet.\nUnd aus der Größe des Schauers, aus der Zahl der Teilchen mit dem Schauer,\nkönnen wir die Energie des einlaufenden Teilchens rückrechnen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:17:17",
+      "text": "Habe ich das gerade richtig verstanden? Also die eigentliche Kollision,\nklar die löst du jetzt erstmal aus, dann gibt es halt nachfolgende Prozesse,\nwo dann eben weitere Zerfallsprodukte entstehen, weil das einfach die Eigenschaft\ndieser Teilchen ist, dass sie nicht langlebig sind.\nAber das System ist schon so aufgebaut, dass man dann ab einem bestimmten Zeitpunkt\nauch schon bewusst anderes Material bereit hält, einfach um dann noch weitere\nsekundäre Kollisionen geschehen zu lassen."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:17:46",
+      "text": "Die sekundären Kollisionen in dieser zweiten Zone werden sozusagen absichtlich\nherbeigeführt, eben um die Energie dieses einlaufenden Teilchens messen zu können.\nUnd diesen Bereich werden die allermeisten Teilchen nicht verlassen.\nAlso vielleicht sollte man dann hier sprechen, ein bisschen über die Teilchenarten,\ndie wir da messen können. Also wir haben im Wesentlichen...\nDas Standardmodell mit eigentlich vier Wechselwirkungen, aber die Gravitation,\ndie Schwerkraft spielt hier bei den Experimenten de facto keine Rolle.\nDas heißt wir haben die elektromagnetische Wechselwirkung, schwache Wechselwirkung,\nstarke Wechselwirkung und wie sich Teilchen innerhalb eines Detektors verhalten,\nhängt davon ab, welchen dieser Wechselwirkungen sie unterliegen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:18:32",
+      "text": "Um es gleich nochmal klar zu machen für alle, die nicht ganz so in der Materie\ndrinstecken, mit Wechselwirkung meinen wir jetzt im Prinzip die fundamentalen Kräfte der Natur.\nSchwerkraft kennen wir alle, leiden wir täglich drüber, aber wir würden es noch\ndürrer finden, wenn sie nicht da wäre.\nAlso die starke Kernkraft und man sagt halt hier eher Wechselwirkung,\nweil das ist sozusagen das, was man in diesem Teilchensystem sieht oder was dort,\nwas wir meinen oder glauben, wissen, was dort stattfindet, eine Interaktion\nzwischen diesen Teilchen und manche Teilchen sind halt mehr so dieses Ist und\nmanche sind mehr so das Wird und diese Wirtsteilchen, das ist sozusagen diese\nKräfte, von denen wir sprechen.\nStarke Kernkraft ist halt das, was im Kern, im wahrsten Sinne des Wortes,\ndie Kerne auch zusammenhält, also dafür sorgt, dass nicht alles auseinander fliegt.\nDie schwache Kernkraft kennt man halt so ein bisschen auch unter dem Aspekt\nder Radioaktivität, dass man sozusagen auch in der Lage ist,\nObwohl schwach in irgendeiner Form das Ganze auch immer mal wieder sich auflösen\nzu lassen. Finde ich auch einen schönen Regulationsmechanismus.\nEs bleibt halt nicht alles so wie es ist, sondern mit einer bestimmten Wahrscheinlichkeit\nfliegt der ganze Kram dann einfach so aus sich heraus, mehr oder weniger, auseinander.\nUnd dann halt noch der gesamte Elektromagnetismus, den wir alle toll finden,\njeder hat schon mal in die Steckdose gefasst.\nUnd das hält ja auch irgendwie alles zusammen, das heißt gerade die schwache\nund die starke Kernkraft,\nwürde ich sagen, das ist hier so der Hauptfokus, während die elektromagnetische\nKraft eigentlich eher so ein bisschen der nützliche Idiot ist,\num das genauer anzuschauen oder gibt's Tatsachen?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:20:21",
+      "text": "Nicht ganz, weil de facto war ja etwas, was man in den 80er Jahren eigentlich\nbewiesen hat, ist, dass die elektromagnetische Kraft und die schwache Kraft\neigentlich nur zwei Seiten derselben Metalle sind.\nUnd dass wir sie nur so unterschiedlich sehen, weil wir hier normalerweise bei\nsehr niedrigen Energien arbeiten, Aber wenn man sich Kollisionen bei sehr hoher Energie ansieht,\ndann sieht man, dass das eigentlich dasselbe Phänomen ist, nur in zwei Arten.\nJa, und um auf den Detektor zurückzukommen. Es gibt eben Detektorteile,\ndie sind spezialisiert auf Teilchen, die hauptsächlich elektromagnetisch wechselwirken,\nalso geladene Teilchen oder Photonen, Lichtteilchen, die de facto diese elektromagnetische\nWechselwirkung vermitteln, diese elektromagnetischen Kräfte vermitteln.\nUnd dann gibt es Hadronen, das heißt Teilchen, die auch der starken Wechselwirkung unterliegen.\nUnd die manifestieren sich eben anders und die zum Beispiel im Detektor erzeugen,\ndiese Schauer werden länger sein und das heißt man hat einen speziellen Teil\ndes Detektors für diese Art Teilchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:38",
+      "text": "Hadronen muss man nochmal dazu sagen, das ist das, was den Atomkern im Wesentlichen\nausmacht, also was Protonen und Neutronen formt."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:21:45",
+      "text": "Protonen und Neutronen sind Hadronen, aber es gibt einen ganzen Zuf von Teilchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:21:50",
+      "text": "Nur so zur Einordnung. Hadronen ist der allgemeine Begriff für das,\nwas unter anderem Protonen und Neutronen formt."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:21:57",
+      "text": "Genau. Und dann nach dieser zweiten Zone bleibt eigentlich nicht mehr sehr viel übrig.\nDort sind eben die meisten Teilchen sozusagen stecken geblieben und es bleiben\neigentlich nur mehr Teilchen über,\ndie eben in der Lage sind, sehr große Dichten von Stärken von Material zu durchdringen\nund das sind einerseits die Myonen.\nAlso die Myonen, das ist ein Schwester oder Bruder des Elektrons.\nDas heißt im Wesentlichen haben sie alle Eigenschaften,\ndie auch Elektron hat, das sehr bekannte Elektron hat,\naber sie sind wesentlich schwerer und das führt dazu, dass sie eben wesentlich\nleichter durch Material durchdringen können und der beste Beweis dafür Dafür\nist die Höhenstrahlung.\nDas sind also Myonen, die bei Kollisionen, so wie diese Lawinenartigen Schauer,\ndie ich beschrieben habe, die entstehen natürlich nicht nur im Detektor,\nsondern können auch in der Atmosphäre entstehen, wenn hochenergetische Teilchen\naus dem Weltraum eindringen.\nUnd die Myonen, die dabei entstehen, können bis zur Erdoberfläche laufen und\nde facto sogar unter die Erdoberfläche, weil unsere Detektoren hier am LHC,\ndie so etwa 100 Meter unter der Erde liegen, sehen noch immer Myonen aus der Höhenstrahlung.\nUnd diese Myonen können eben die meisten Detektorschichten durchlaufen und die\nwerden dann in der letzten Zone, im äußersten Teil des Detektors gesehen.\nDas ist sehr praktisch, weil dadurch können wir sie sehr leicht identifizieren.\nWie gesagt, wir würden auch gerne wissen, um welches Teilchen es sich in jedem Fall handelt.\nUnd die Teilchen, die wir in dieser äußersten Zone sehen, sind praktisch ausschließlich Myonen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:23:49",
+      "text": "Und da steckt ja auch ein Name mit drin."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:23:51",
+      "text": "Genau. Die Myonen, die erlauben, wir können Myonen sehr präzise messen.\nSie sind also ein sehr wichtiges Instrument, um zu verstehen,\nwas in einer Kollision passiert.\nUnd gleichzeitig werden wir die Kollisionen, die hier im Beschleuniger entstehen,\nlaufen hauptsächlich über die starke Wechselwirkung.\nWas in der Kollision passiert, ist im Wesentlichen eine Auswirkung der starken Wechselwirkung.\nUnd dabei werden sehr wenige Elektronen, Myonen oder ähnliche Teilchen erzeugt.\nDas heißt, es ist auch einfach, diese Myonen zu detektieren,\nweil neben den hunderten Teilchen, die da entstehen können bei jeder Kollision,\ngibt es jeweils nur höchstens einige wenige Myonen geben.\nUnd deswegen ist die Detektion einfacher und deswegen ist das Experiment auch\nsehr stark darauf ausgelegt worden, dass man Myonen messen kann,\ndie zum Beispiel auch wichtig sind, um das berühmte X-Person zu messen und zu finden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:24:53",
+      "text": "Vielleicht mal so als Nebeneinschub, wenn man das jetzt mal mit so der Kernspaltung\nim Atomkraftwerk vergleicht, wenn man jetzt hier Atomkerne aufeinander ballert\nund die in ihre tausend Teilchen zerschießen, dann ist das ja im Prinzip auch eine Kernspaltung."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:25:09",
+      "text": "Nicht ganz. Also was man wirklich verstehen sollte ist, dass bei den Energien\nmit denen wir hier arbeiten, diese Energien liegen viele Größenordnungen über\nden Energien, die typischerweise in einem Atomkern auftreten.\nUnd bei diesen Energien, wenn zum Beispiel zwei Protonen aufeinandertreffen,\nfindet die Kollision nicht zwischen den Protonen als Protonobjekt 1 und Protonobjekt\n2 statt, sondern die Kollision findet statt zwischen Bestandteilen der Protonen.\nAlso in den Protonen und Neutronen haben wir Quarks, was wir Up- und Down-Quarks nennen.\nDas sind also etwas seltsame Teilchen, weil sie nicht frei in der Natur vorkommen.\nDiese Bestandteile sind immer eingeschlossen in die berühmten Hadronen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:26:00",
+      "text": "Also Hadronen enthalten immer… Also sie kommen in der Natur vor, aber nicht einzeln."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:26:05",
+      "text": "Genau, sie kommen nicht frei in der Natur vor.\nUnd die Hypothese dieser Quarks hat erlaubt eben eine Ordnung in diesem Zoo\nzu bringen, man dadurch die Teilchen klassifizieren konnte, je nachdem welche Quarks sie enthalten.\nUnd de facto, wenn zwei Protonen hier im LHC zusammenstoßen,\nist die Kollision, die uns interessiert,\nist die Kollision entweder zwischen einem Quark aus dem einen Proton und einem\nQuark aus dem anderen Proton oder aber,\nwas hier sehr oft passiert, das Proton ist ein komplexes Objekt.\nAlso im Prinzip, man lernt in der Schule.\nDas Proton besteht aus drei Quarks, aber in Wirklichkeit ist mehr Leben in diesem Proton.\nUnd vor allem gibt es da Gluronan.\nDas Gluronan ist das Äquivalent des Photons, des Lichtteilchens für die elektromagnetische\nWechselwirkung, da in diesem Fall für die starke Wechselwirkung.\nDas heißt, das sind die Teilchen, die die starke Wechselwirkung übertragen zwischen\nzwei Quarks zum Beispiel.\nUnd das Proton ist de facto voll von diesen Glurnan, die die Quarks de facto\nim Proton zusammenhalten.\nUnd das heißt, wir können auch Kollisionen zwischen diesen Q-Unern haben,\nwenn die zwei Protonen sich treffen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:27:23",
+      "text": "Das heißt der Unterschied ist, weil ich mich gefragt habe,\nwenn so viel kollidiert und man das vergleichen kann, so Kernkraftwechsel ist\nhalt sehr viel Radioaktivität frei, inwiefern ist dann diese Kollision anders?\nGeschieht das dort auch oder ist das eben weil die Energie so hoch ist,\ndass alles so dermaßen zertrümmert wird, dass sich das komplett anders verhält?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:27:48",
+      "text": "Ja, wie gesagt, die Energien sind so hoch, dass de facto ein zerfallenes Atomkern,\nein zerfallenes und komplexes Objekt, das aus vielen Protonen und Neutronen\nbesteht, und der wird sich de facto in zwei Teile spalten, weil energetisch\nder Ausgangszustand günstiger ist.\nAber das spielt sich typischerweise bei Energien. Die Energien,\ndie in diese Prozesse involviert sind, sind typischerweise in der Million-Elektron-Volt-Gegend.\nUm das zu vergleichen, ist die circa tausendmal höher als typische Röntgenstrahlung,\nwenn man einen Vergleich haben will.\nUnd wir reden hier über Giga-Elektron-Volt, also Milliarde-Elektron-Volt oder\nnoch einen Faktor tausend drüber.\nDas heißt, wie gesagt, bei diesen Prozessen, das ist keine Spaltung,\nweil wir hier wirklich mit Elementarteilchen arbeiten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:28:47",
+      "text": "Das ist eine Zerschmetterung."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:28:49",
+      "text": "Es ist eine Umwandlung. Es ist eine Umwandlung, weil Zerschmetterung würde voraussetzen,\ndass das Teilchen aus Bestandteilen besteht.\nWährend das wir hier mit, was uns interessiert, sind die Elementarteilchen.\nDas heißt Teilchen, von denen wir keine innere Struktur kennen,\nvon denen wir glauben, dass sie wirklich elementar sind.\nDie niedrigsten Elemente, Bestandteile der Materie darstellen.\nDas heißt, man kann es zerschmettern, ist das vielleicht ein schlechter Ausdruck,\nweil sie keine Bestandteile haben. Und was passiert, ist eine Umwandlung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:29:26",
+      "text": "Ja ich meinte nicht die Teilchen werden zerschmettert, da habe ich mich vielleicht falsch ausgerückt,\nsondern die Struktur wird zerschmettert, also in dem Moment wo diese Bindung von den Quarks,\nGlonen und so weiter alles komplett aufgelöst wird in seine wirklichen elementaren\nTeilchen, dann ist sozusagen die komplette Struktur dessen was kollidiert ist\nsozusagen vollständig aufgelöst."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:29:50",
+      "text": "Ja, es stimmt natürlich, das was zerschmettert wird, ist das Proton, d.h.\nZwei Bestandteile, ein Bestandteil aus jedem Proton kollidiert und macht eine\nWechselwirkung, erzeugt neue Teilchen, das ist der Prozess, der uns interessiert.\nAber das Proton, wenn das passiert, wird das Proton de facto zerstört,\nweil das Proton aus drei Quarks besteht und wenn man da Bestandteile herausschlägt,\ngibt es kein Proton mehr, d.h.\nDer Rest des Protons wird sich auch in neue Teilchen umwandeln.\nDas ist aber ein für uns eher ein störender Untergrund als das was uns wirklich interessieren.\nJa der Rest des Protons wird sich auch in neue Teilchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:32",
+      "text": "Aber Radioaktivität in dem Sinne wird da nicht frei?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:30:34",
+      "text": "Nein, Radioaktivität ist ja der spontane Zerfall eines Atomkerns de facto.\nUnd während wir hier eine induzierte Kollision zwischen zwei Teilchen,\ndie also größtenteils unter der Größe eines Atomkerns liegen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:30:51",
+      "text": "Ja man muss ja auch über gefühlte Gefahren reden.\nWir hatten ja schon in der Ausgangsdiskussion die Diskussion um schwarze Löcher,\ndie hier erzeugt werden, da ist ja ein Weltuntergang drohen."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:31:03",
+      "text": "De facto ist natürlich die Teilchen, die aus der Kollision hinauslaufen,\nsind natürlich Strahlung.\nDas heißt das könnte ionisierende Strahlung und deswegen ist auch die Detektorzone\nwährend wir operieren abgeschlossen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:31:21",
+      "text": "Bevor wir vielleicht gleich mal so den eigentlichen Messvorgang selber aus der\nPerspektive eines Teilchens dann oder eines Protons erstmal beobachten,\nwürde ich ganz gerne nochmal von außen nach innen gehen.\nAlso haben wir ja schon gesagt, es ist ein relativ großes System.\nWas war das? 15 Meter ungefähr?\nSuper schwer, sehr viel Material und vor allem ist es halt ein,\nich meine was der Name ja auch sagt, Solenoid, also sozusagen eine riesige Spule,\neine Magnetspule, wie man das halt so aufgebückt kennt.\nEine ganz kerstliche Spule, ja. Quasi wie so ein riesiges dynamisches Mikrofon.\nUnd dieser Apparat sitzt wo genau? Wie tief?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:32:16",
+      "text": "Der Apparat sitzt auf dem Niveau des Beschleunigers natürlicherweise und das\nheißt das ist knappe 100 Meter tief.\nIn einer Kaverne in der von beiden Seiten der Beschleuniger Tunnel einmündet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:28",
+      "text": "Ist es da eigentlich warm?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:32:31",
+      "text": "Normale Temperatur, Umgebungstemperatur."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:32:35",
+      "text": "Wenn man sich so dem Erdkern nähert, wird es ja irgendwann warm.\nBleibt doch etwas Abstand. Also Frost gibt es auf jeden Fall keinen."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:32:43",
+      "text": "Nein, Frost gibt es keiner.\nDie Größe des Apparats hängt de facto mit der Energie der Kollisionen und daraus\nfolgender Energie der Teilchen, die aus der Kollision erzeugt werden, zusammen.\nIch habe von diesen Schauern gesprochen. Diese Schauer wachsen mit der Energie\ndes Teilchens, werden diese Schauer immer größer.\nUnd um eine präzise Messung der Energie zu erhalten, möchten wir,\ndass der gesamte Schauer im Detektor enthalten ist und nicht,\ndass gewisse Teilchen sich hinten aus dem Detektor rauslaufen würden.\nUnd nachdem eben diese Schauer mit der Energie wachsen und wir die Dichte des\nMaterials nicht beliebig erhöhen können,\nweil wir müssen mit Materialien arbeiten, die es gibt, kann man diese Detektoren\nmit höherer Energie einfach nur dicker machen. Das ist der eine Grund.\nDer andere Grund, ich habe von der Impulsmessung und geladenen Teilchen gesprochen.\nAlso der Sinn der großen Spule ist, dass geladene Teilchen eben auf eine Helix\noder in einer Projektion, Kreisbahn abgelenkt werden.\nDadurch können wir die Ladung messen, weil die positive und negative Teilchen\nwerden sich in unterschiedliche Richtungen wegrümmen und aus der Stärke der\nKrümmung können wir eben diesen Impuls abmessen.\nUnd bei den Energien, die wir produzieren, ist diese Krümmung aber sehr gering.\nUnd das heißt, um diese Krümmung messen zu können, gibt es zwei Möglichkeiten.\nMan erhöht die Präzision des Detektors, weil wir messen eben die Bahn an verschiedenen\nOrten und wenn man dann verschiedene Punkte misst, kann man irgendwann einmal\nsehen, dass diese Punkte nicht auf einer geraden Linie liegen,\nsondern eben eine leichte Probe machen.\nAber wie gut man das messen kann, hängt natürlich von der Präzision ab,\nmit der man jeden Punkt messen kann.\nUnd diese Präzision hat natürlich auch ein Limit, ihre Grenzen.\nUnd die zweite Möglichkeit ist, dass man die Krümmung vergrößert bei gleicher\nEnergie und das heißt ein größeres Magnetfeld, das heißt eine sehr starke Spule.\nUnd in CMS de facto haben wir versucht beides zu machen.\nEin sehr sehr starkes Magnetfeld, also 3,8 Tesla, das ist größenordnungsmäßig\n100.000 mal das Erdmagnetfeld und gleichzeitig sehr Präzisedetektoren im Innenraum der Spur."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:35:18",
+      "text": "Wenn man da runter geht, dann muss man sich auch all seine metallischen Dinge empfehlen."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:35:24",
+      "text": "Ja, wenn die Spule eingeschaltet ist. Es ist zwar, was man außen sieht, ist nur ein Rest Feld.\nWenn man so eine Spule einfach frei in den Raum stellen würde,\ndann würde man ein Magnetfeld im großen Umkreis um den Detektor erzeugen.\nDas möchten wir natürlich nicht.\nDas heißt, die Spule ist komplementiert, und das macht den Großteil der Struktur\ndes Detektors aus, durch einen Rückflussjoch.\nAlso, um es einfach zu sagen, die Spule an der Detektor ist eingebettet in ein\nStahlkorsett, de facto, und dieses schließt die magnetischen Feldlinien.\nDas heißt, die magnetischen Feldlinien laufen durch die Spule und dann durch\nden Stahl wieder zurück Und das bewirkt,\ndass außen zwar nicht null, weil das System nicht perfekt ist,\naber ein sehr viel geringeres Magnetfeld herrscht.\nDieses sehr viel geringere Magnetfeld ist allerdings immer noch stark genug,\num einfach sichtbar zu sein und in Führungen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:33",
+      "text": "Aber es reißt einem jetzt nicht die Armbanduhr vom Arm?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:36:35",
+      "text": "Es reißt nicht die Armbandufe am Arm, aber wenn man nahe an den Detektor geht,\nsollte man keine magnetischen Werkzeuge oder ähnliches haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:36:44",
+      "text": "Man kennt ja diese Problematik aus der Medizin mit so einem Magnetresonanzsystem und so weiter.\nDa ist es ja ein echtes Problem, wenn man da mal was mit reinbringt."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:36:53",
+      "text": "Genau, wir bewegen uns in denselben Größenordnungen und das heißt natürlich\nauch, dass alle Komponenten im Detektor nicht magnetisch sein sollten.\nAber wie gesagt außen in Führungen verwenden wir oft eine kleine Kette von Büroklammern\nund man sieht klar auch außerhalb vom Detektor und in einem Abstand vom Detektor,\ndass diese Kette nicht gerade hinunter hängt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:22",
+      "text": "Wäre das, würde man sich jetzt in der Mitte befinden, wenn der Magnet eingeschaltet ist?\nNur so als Mensch nackt, würde einem das schaden? Also ist das ein Problem für\nden menschlichen Körper oder ist es egal?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:37:36",
+      "text": "Im Prinzip sollte das egal sein, weil wir uns in den selben Größenordnungen\nbewegen wie für medizinische Untersuchungen, Magnetesresonanz."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:37:46",
+      "text": "Na gut, also auf jeden Fall eine fette Spule."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:37:49",
+      "text": "Sie würden aber wahrscheinlich Effekte sehen, wenn sie sich bewegen,\nwenn sich jemand bewegt im Detektor.\nIm magnetischen Feld, das löst ja Ströme aus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:38:00",
+      "text": "Also man würde es stören, aber man würde nicht sterben. Ja.\nOkay, also so ein riesen Magnetspuler, die dann aber auch noch gekühlt werden\nmuss, nehme ich an, also ordentlich?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:38:12",
+      "text": "Genau, das ist meines Wissens immer der größte supraleitende Magnet, der existiert.\nDas heißt, um dieses starke Magnetfeld zu erzeugen, verwenden wir einen Niob-Titan-Leiter,\nder supraleitend wird, wenn man ihn auf etwa 4 Grad über dem absoluten Nullpunkt kühlt.\nUnd diese Kühlung passiert mit flüssigem Helium. Und das macht natürlich die\nKomplexität des Systems aus.\nMan muss flüssiges Helium erzeugen, man muss die Spule natürlich thermisch isolieren,\nDas heißt, die ist in einem Vakuumtank eingebettet, sozusagen eine riesige Thermosflasche.\nUnd man muss garantieren können, dass die Spule immer kalt bleibt,\nweil man muss sich vorstellen, der Leiter,\nalso der elektrische Leiter, der dort ausgewickelt ist in der Spule,\nder hat eine Breite von einigen Zentimetern und eine Dicke von einigen Millimetern\nUnd durch diesen Leiter laufen 18.000 Ampere.\nDas wäre für normal leitende...\nDas heißt, man muss sicherstellen, dass die Spule im super leitenden Zustand bleibt.\nUnd falls man glaubt, dass die Kühlung nicht mehr aufrechterhalten werden kann\noder so, muss man die Spule möglichst schnell und kontrolliert abschalten.\nWeil man muss verstehen, dass im Magnetfeld kann man de facto Energie speichern.\nDas heißt, wenn das Magnetfeld aufgebaut wird, wird de facto Energie dort hineingebombt\nund im Magnetfeld gespeichert.\nIn unserem Fall sind das ca. 2 Gigajoule.\nDas ist eine nicht vernachlässigbare Menge, mit der man eine Menge Metall zum\nBeispiel schmelzen könnte.\nUnd sollte man die Kühlung nicht aufrechterhalten können, muss man dafür sorgen,\ndass man diese große Energie aus den Magneten möglichst schnell extrahiert,\ndamit es keine Beschädigungen im Magnet ergibt. Das ist eine der technischen..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:21",
+      "text": "So ein Abschalten-Moment?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:40:25",
+      "text": "Ja, wir versuchen das möglichst selten zu haben, aber es ist schon zweimal vorgekommen,\ndass wir ihn schnell abschalten wollen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:36",
+      "text": "Aber hat dann zumindest auch funktioniert und das glimpfliche auch."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:40:39",
+      "text": "Hat alles funktioniert, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:40:43",
+      "text": "Wenn ich das richtig sehe, ist ja CMS nicht vor Ort gebaut worden,\nsondern erstmal woanders und dann da rein."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:40:55",
+      "text": "Also CMS, diese Detektoren werden von Kollaborationen gebaut,\ndie aus vielen Instituten bestehen. In CMS haben wir inzwischen mehr als 200\nUniversitäts- oder andere wissenschaftliche Institute, die da mitarbeiten.\nUnd normalerweise, wenn man diesen Konten aus so einem Detektor baut,\nträgt jedes Institut einen gewissen Teil bei.\nUnd die Konstruktion basiert von kleinen Elementen zu immer größeren Elementen.\nAlso viele der grundlegenden Bestandteile werden in Industrie gefertigt und\nsie werden dann sukzessive am Anfang in den Instituten zusammengebaut zu immer größeren Elementen.\nUnd der finale Zusammenbau geschieht dann normalerweise hier am CERN.\nUnd für CMS war das eine spezielle Komplikation, weil als wir anfangen mussten,\nden Detektor zusammenzubauen, also die Konstruktion der Elemente hat ungefähr\nim Jahr 2000 begonnen, war die Kaverne im Untergrund noch nicht fertiggestellt.\nUnd wir konnten aus Zeitgründen nicht warten auf die Fertigstellung,\num das normale Prozedere zu machen, das heißt den Detektor in kleinen Stücken\nunten direkt vor Ort in der Kaverne aufzubauen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:42:12",
+      "text": "Also man hätte das eigentlich gerne getan, aber das macht man auch nicht."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:42:15",
+      "text": "Das wäre eine normale Vorgangsweise gewesen. Aber es ging nicht und deswegen,\nwas wir gemacht haben, wir hatten über der Detektorzone eine große Halle und\nwir haben angefangen den Detektor dort aufzubauen.\nUnd er ist de facto vollständig in dieser Halle aufgebaut worden und der Aufbau\nwurde aber so gemacht, dass er in größere Stücke zerlegt werden konnte.\nAlso insgesamt 15 Stücke, davon 11 wirklich sehr große.\nMan muss sich vorstellen, dass das größte Stück, das auch den Magneten enthalten\nhat, ca. 2000 Tonnen wiegt.\nUnd als die Kaverne fertig war, wir haben einen sehr großen Zugangsschacht,\nder so diese 80, 90 Meter hinunter geht, bis er die Kaverne erreicht.\nUnd es wurde dann ein riesiger Kran gemietet, der 2000 Tonnen tragen kann.\nDie kleine Komplexität dabei ist, dass diese Kräne nicht mehr beweglich sind.\nDas heißt, dieser Kran wurde direkt über dem Schacht aufgebaut.\nUnd der Schacht kann durch einen Deckel verschlossen werden,\nder mehr als einen Meter Stahlbeton besteht.\nUnd das System war dann, dass wir jeweils eines von diesen Detektorstücken auf\nden Deckel verschoben haben.\nDer Kran hat ihn dann dort aufgehoben, man hat den Deckel geöffnet und ihn dann\nin einer Operation, die halben Tag typischerweise gebraucht hat,\ndas Teil runtergelassen bis in die Kaverne.\nDann in der Kaverne verschoben, damit wieder Platz wird und das nächste Teil runtergelassen.\nDas war eine Operation, die von circa 2006 bis 2008 gedauert hat insgesamt.\nKrass. Dieses Konzept hat aber den Vorteil gehabt, oder hat noch immer den Vorteil,\ndass wir dieses Verschieben von Teilen auch jetzt für die Wartung des Detektors verwenden können.\nDer Beschleuniger läuft typischerweise den Großteil des Jahres und wir haben\ndann eine Pause von zwei Monaten oder in der Größenordnung in der Winterperiode.\nDas wird für Wartungen benutzt oder Verbesserungen. Und dieses System mit den\nverschiedenen großen Teilen kann benutzt werden, um die Teile unten in der Kaverne\nzu verschieben und dadurch Zugang zu den Zonen zwischen den Teilen zu bekommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:45",
+      "text": "Okay. Aus der Not eine Tugend gemacht sozusagen."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:44:49",
+      "text": "Mhm."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:44:51",
+      "text": "Gut, dann würde ich sagen, schauen wir doch mal, wie das jetzt wirklich in Operation aussieht.\nAlso wir haben ja auch schon über den Beschleunigerring gesprochen. Die Teilchen,\ndie man halt haben will, werden so einer Quelle entnommen und werden dann auf\ndie Reise geschickt und landen dann eben über die einzelnen Kaskaden von Ringen im LHC,\nin dem großen 27 Kilometer Ring und erhalten dort ihre finale Geschwindigkeit\nund entlang dieses LHC sind die vier großen Detektoren aufgebaut.\nÜber LS haben wir schon gesprochen, jetzt halt CMS. Wo befindet sich CMS,\nschon in der Schweiz oder in Frankreich?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:45:36",
+      "text": "CMS befindet sich in Frankreich, also der einzige Detektor der in der Schweiz steht ist Atlas.\nUnd wir befinden uns genau auf der entgegengesetzten Seite des Rings im Vergleich\nzum Hauptgelände des CERN."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:45:53",
+      "text": "Also maximal weiter Weg."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:45:55",
+      "text": "Maximal weiter Weg, was natürlich die Operation des Detektors und den Betrieb\ndes Detektors nicht erleichtert.\nWir haben natürlich einen Kontrollraum beim Detektor, der ständig besetzt ist\nund das heißt, die Leute müssen vom CERN typischerweise dorthin fahren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:46:16",
+      "text": "Ihr seid so ein bisschen die da draußen sozusagen.\nJa, okay, gut.\nSo jetzt kommen also die Teilchen dort an und werden dann ja auf den letzten\nMetern auch nochmal aus dieser Kreisbahn quasi herausgenommen und fliegen dann\ngerade in diesen Detektor rein.\nSo und jetzt bin ich ein Proton, was da sozusagen angeschossen kommt.\nMir kommt ein anderes, entsprechend anders herum geladenes Teilchen entgegen.\nUnd durch ein Wunder treffe ich jetzt genau auf dieses Teilchen.\nAlso nicht jedes Teilchen, was da durchfliegt, trifft auch auf eins,\nnehme ich mal an, viele fliegen aneinander vorbei."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:47:05",
+      "text": "Nachdem die starke Wechselwirkung eben stark ist, passiert praktisch bei jeder\nKreuzung etwas. Man muss natürlich dazu sagen, dass die Protonen nicht einzeln\nim Beschleuniger fliegen, sondern sie kommen in Paketen.\nWir haben im Beschleuniger einige tausend Pakete von Protonen,\ndie knapp beisammen sind und dann größenordnungsmäßig\nacht Meter wieder Pause oder in\nZeit ausgedrückt 25 Milliarden Sekunden und\ndann kommt das nächste Protonpaket und um sich eine Vorstellung zu machen in\njedem dieser Pakete sind circa 100 Milliarden Protonen und das heißt diese beiden\nde facto kreuzen sich diese beiden Pakete und es können sich da bei jeder Kreuzung,\nkönnen ein oder mehrere Protonkollisionen stattfinden und um die Intensität,\nwir wollen natürlich möglichst viele Protonkollisionen sehen,\nweil um unsere Physikzielsetzungen zu erreichen,\nmöchten wir einerseits möglichst hohe Energien erreichen, um möglicherweise\nneue schwere Teilchen zu erzeugen und wir möchten möglichst hohe Intensität,\nmöglichst viele Protonkollisionen haben, weil wir Prozesse sehen wollen, die extrem selten sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:27",
+      "text": "Aber zwei Pakete treffen quasi\naufeinander. Jedes enthält 100 Milliarden Protonen, also Pi mal Daumen.\nUnd wenn diese zwei Pakete von je 100 Milliarden Protonen aufeinander treffen,\ndann gibt es ein oder ein Paar Kollisionen?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:48:43",
+      "text": "Also die ursprüngliche Auslegung des LHC war typischerweise 25 gleichzeitige\nKollisionen zu haben. Jedes Mal, wenn es..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:48:53",
+      "text": "Alle 25 Nanosekunden."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:48:56",
+      "text": "Ja, das ist nur zufällig dieselbe Zahl und inzwischen ist es dem Beschleuniger\ngelungen die Intensität zu erhöhen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:04",
+      "text": "Durch eine höhere Verdichtung dieses Pakets."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:49:07",
+      "text": "Genau und letztes Jahr hatten wir typischerweise über 50 und dieses Jahr werden wir noch mehr haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:49:15",
+      "text": "Aber die finden ja dann alle gleichzeitig statt, das heißt man beobachtet sie\nauch alle gleichzeitig.\nIst das nicht eher ein Problem, wenn man zu viele gleichzeitig hat,\nweil dann muss man sie ja auch auseinander halten."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:49:25",
+      "text": "Das ist potenziell ein Problem natürlich und die Detektoren wurden darauf auch ausgelegt.\nMan muss jetzt natürlich sagen, sie wurden auf die berühmten ca.\n25 ausgelegt und wir sind jetzt von mehr als einem Faktor 2 darüber.\nAber ja, sie finden gleichzeitig statt, aber die Zone, in der diese Kollisionen\nstattfinden, erstreckt sich über plus minus 15 Zentimeter typischerweise.\nDas heißt, diese Kollisionen finden nicht alle genau am selben Platz statt,\nsondern sie sind etwas verteilt. Und wir können diesen Abstand verwenden,\num sie von einander zu unterscheiden.\nDer zweite wichtige Aspekt ist, dass wir, wir suchen eben extrem seltene Prozesse,\nin denen sehr viel Energie freigesetzt wird. Und das passiert bei Weitem nicht bei jeder Kollision.\nDas heißt, aus den meisten Kollisionen werden wahrscheinlich nur wenige relativ\nniederenergetische Teilchen entstehen.\nUnd eine, typisch maximal eine von diesen Kollisionen, wird ein Ereignis auslösen,\ndas uns interessiert und das wir messen wollen.\nDazu sollte man vielleicht auch sagen, dass eine der Herausforderungen ist,\ndass der Detektor braucht, was wir ein Triggersystem nennen.\nDas heißt wir brauchen ein System, das genau diese interessanten Kollisionen aussucht.\nWeil die Gesamtzahl der Kollisionen,\nman muss sich vorstellen, dass circa 30 Millionen mal pro Sekunde kreuzen sich\nPakete und der Detektor ist in der Lage diese 30 Millionen Fotos,\nalso er ist ausgelegt auf bis zu 40 Millionen Fotos pro Sekunde.\nAber das ist eine Datenmenge, die schwer zu handhaben wäre und in vielen dieser\nKollisionen passiert eben nichts, was uns interessieren würde.\nUnd deswegen brauchen wir ein System, das aus diesen 30 Millionen eine sieben wenige rausfiltert.\nUnd das ist eine ziemliche Herausforderung und das CMS hat sich früher entschieden\nund das war technologisch zum Zeitpunkt der Auslegung des Experiments noch ein\nbisschen auch eine Vorhersage oder eine Wette auf die zukünftige Entwicklung\nvon elektronischen Komponenten und Rechenleistung,\ndass wir diese Auswahl in einem zweistufigen System machen.\nWir haben eine erste Stufe, das ist Elektronik, die sich unten nahe beim Detektor befindet.\nUnd diese Elektronik wird für jede Kollision ein paar Grunddaten bekommen über\nEnergie, die man im Detektor gesehen hat, die Anzahl zum Beispiel der Myonen\noder von Elektronen, die gesehen wurden.\nUnd aus diesen Daten kann sie sagen, ob wir dieses Foto behalten wollen oder nicht.\nUnd das muss geschehen in einigen Mikrosekunden.\nAlso die Elektronik hat einige Millionstel Sekunden Zeit, um für jedes Foto\nzu sagen, wollen wir es behalten oder nicht.\nUnd nur wenn wir es behalten wollen, werden überhaupt alle Daten aus dem Detektor heraus transferiert.\nUnd wir können bis zu 100.000 pro Sekunde transferieren.\nDas heißt, aus den ursprünglichen 30 Millionen pro Sekunde behalten wir mal\nin dieser ersten Stufe 100.000 pro Sekunde.\nUnd in einem zweiten Schritt werden dann diese Daten, die aus dem Detektor gelesen\nwerden, werden an ein Computerzentrum transferiert, das wir auch vor Ort am Experiment haben.\nUnd dort können wir schon sozusagen eine beschleunigte Version der Auswerteprogramme\noder der ersten Stufe der Auswerteprogramme laufen lassen, die wir später dann verwenden auch.\nDamit kann man natürlich sehr viel detaillierter nachsehen in allen Detektoren,\nwas passiert ist und eine viel detailliertere Analyse machen und deswegen auch genauer auswählen.\nUnd damit reduzieren wir dann die Rate von 100.000 auf einige Tausend pro Sekunde.\nDas heißt von den 30 Millionen oder in der Größenordnung die Kreuzungen von\nPaketen die im Detektor oder Fotos die im Detektor genommen werden,\nbehalten wir letztlich nur einige Tausend pro Sekunde. Junge Prosekunde.\nDiese einigen tausend pro Sekunde, die werden dann permanent gespeichert und\ndas ist das, was für die Analyse nachher zur Verfügung steht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:53:57",
+      "text": "Das muss man ja auch erstmal in so ein Computersystem gespeichert bekommen.\nDas ist eine enorme Anforderung an die Geschwindigkeit, die da gestellt werden.\nDiese erste Filterung ist hier gar nicht so sehr eine qualitative Filterung,\nsondern mehr so ein Ranking und man nimmt dann sozusagen die hunderttausend,\ndie man übertragen kann, Nimmt man dann alle, um dann in der zweiten Stufe erst\nauszusuchen, was für einen wertvoll ist oder ist es schon eine qualitative Auslesung?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:54:26",
+      "text": "Nein, nein. Das sind quantitative Kriterien und man kann, obwohl es nicht normale\nCPUs sind, sondern Elektronikkomponenten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:36",
+      "text": "Also quantitativ im Sinne von wie viele Spuren?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:54:39",
+      "text": "Wir können zum Beispiel verlangen, dass wir zwei Myonen übersehen,\ndie über einer gewissen Energie liegen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:54:48",
+      "text": "Okay, also auch schon mit einer, ich meine jetzt qualitativ im Sinne von was sehen wir?\nAlso das wird auch schon berücksichtigt in dieser ersten Frage."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:54:58",
+      "text": "Genau, welche Arten von Teilchen haben wir gesehen, in welcher Zahl, bei welcher Energie.\nWir könnten auch auswählen, dass diese zwei Teilchen in gegengesetzte Richtungen geflogen sind.\nUnd da können wir einige hundert Kriterien definieren, die all diese Größen kombinieren.\nUnd wenn mindestens eines dieser Kriterien erfüllt ist, dann würden wir dieses Event auswählen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:29",
+      "text": "Wenn es so schnell laufen soll, dann ist das schon so optimierte Hardware,\nwo die Software dann voll in die Hardware eingebrannt ist und das voll beschleunigt?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:55:38",
+      "text": "Das sind FPGAs, das heißt das ist Elektronik, die programmierbar ist,\naber nicht programmierbar wie in dem."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:55:46",
+      "text": "Also damit das wirklich sehr schnell abläuft, weil das wäre jetzt für eine normale CPU zu schnell.\nAlright, ja okay gut. Das ist also der Vorgang. Jetzt stellt sich natürlich\ndie Frage, wie funktioniert der Detektor eigentlich genau.\nKlar kann man ja sagen, das haben wir ja in Muon gesehen, das muss man ja auch\nerstmal sehen. Und wir hatten das im Prinzip, wir haben das auch schon,\nals wir über Alice gesprochen haben, im Prinzip folgt das ja dem ähnlichen Modell.\nEs geht einfach darum, durch diese magnetische Ablenkung, die durch diesen großen\nSpulenmagneten hergestellt wird,\nalso sozusagen die ganzen Teilchen quasi in ihrer Ausbreitung,\nin ihrer Abstrahlung irgendwie versucht, wieder in den Griff zu kriegen und\neben dieses starke Magnetfeld braucht, weil eben die Energien so hoch sind, die dort stattfinden.\nDie wollen halt einfach irgendwo hinschießen und der Magnet sagt so, so nicht.\nJa, ich krümm dich jetzt mal hier so ein bisschen weg.\nUnd durch diese Krümmung, die man beobachtet,\ndann ist es ja quasi so das Rennen zwischen Energie des Teilchens und deren\nRichtung kämpft gegen das Magnetfeld Und daraus ergibt sich halt so eine Spurenkurve,\nder man dann eben quasi nachsehen kann.\nOkay, alles klar, wenn du so schnell unterwegs bist, weil die Zeit kann ich\nja messen, und dann diese Kurve machst, dann musst du sonst so schwer sein,\nalso bist du wahrscheinlich das und das Teilchen.\nUnd wie misst jetzt CMS diese...\nFunktioniert das genauso wie bei ALICE oder kommt hier eine ganz andere Technologie zu?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:57:27",
+      "text": "Nein, wir verwenden andere Technologien. Wir verwenden eine Technologie,\ndie ALICE auch in den ganz innersten Tonen verwendet.\nDas sind Siliziumdetektoren, das sind Pal-Beta-Detektoren.\nMan muss sich vorstellen, das sind ganz dünne Scheiben von Silizium,\ndas speziell präpariert wird.\nIm Wesentlichen ist die Idee dieselbe wie die Sensoren in einer Kamera.\nDas heißt, das Silizium kann Lichtteilchen im Fall der Kamera oder geladene\nTeilchen wie Myonen oder andere Teilchen in unserem Fall registrieren,\nwenn diese Teilchen durch das Silizium durchlaufen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "0:58:09",
+      "text": "Also quasi so CCDs, Charge Coupled Devices, sind das ja in der Kamera, als Ladung."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "0:58:15",
+      "text": "Aber in unserem Fall sind es keine CCDs, weil die CCDs viel zu langsam werden.\nWeil eines der Grundprinzipien des Detektors ist natürlich, wie gesagt,\nwir haben einen 25 Milliardstel Sekunden Abstand zwischen zwei Kollisionen.\nUnd das heißt, alle Detektoren müssen schnell genug ein Signal liefern,\num zwei Kollisionen unterscheiden zu können. Und das ginge bei CCDs nicht.\nUnd das heißt, de facto, was wir haben, ist Silizium. Und auf dem Silizium sind\nStrukturen, Elektrodenstrukturen aufgebracht.\nUnd das sind entweder Streifen oder kleine Rechtecke.\nUnd jeder dieser Streifen und\njedes dieser Rechtecke hat seine eigene Verstärkung und Datenübertragung.\nDas heißt, wir haben im Moment knappe 100 Millionen de facto aktive Elemente, so Streifen oder...\nUnd jedes dieser Elemente wird gleichzeitig ausgelesen. Das ist eben der Unterschied zur Kamera.\nUnd das ermöglicht einerseits eine sehr hohe Präzision.\nDas heißt, die Präzision der innersten Lagen ist besser als 10 Millionsilometer.\nDas heißt, das ist kleiner, dünner als ein Haar.\nHinaus nimmt es dann etwas zu, aber es ist immer noch in dieser Größenordnung. 10, 20, 30 Mikrometer.\nDas heißt, wir haben eine Serie.\nDiese Detektoren sind in Schichten angeordnet. Das heißt, im Zentraldetektor\nsind das Zylinder. Das heißt, es ist jeweils eine zylindrische Schicht,\nund die ist mit Detektoren, mit diesen dünnen Platten, vollgepflastert.\nUnd eine Schicht kommt nach der anderen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:04",
+      "text": "Wie viele Schichten sind es dann?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:00:06",
+      "text": "Wir haben insgesamt im Moment, also im Zentralteil würde ein Teilchen 14 Schichten\ndurchlaufen und das heißt jede Schicht würde eine sehr sehr präzise Messung des Ortes."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:16",
+      "text": "Und der Abstand zwischen den Schichten ist konstant?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:00:18",
+      "text": "Nein, der Abstand vergrößert sich nach außen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:22",
+      "text": "Was ist der kleinste und was ist der größte Abstand?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:00:25",
+      "text": "Der kleinste Abstand ist also Zentimeterbereich, 2 Zentimeter und nach außen\nwird es größer, 10 Zentimeter Größenordnung.\nAlso der ganze Detektor, um sich das vorzustellen, geht bis zu einem Radius\nvon knapp über einem Meter.\nAlso knapp einen Meter von der Wechselwirkungszone, von der Kollisionszone entfernt.\nUnd mit diesen 14 Punkten, die kann man dann sozusagen verbinden und aus der\nVerbindung dieser 14 Punkte sieht man dann diese berühmte Spur."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:00:56",
+      "text": "Genau, wo man dann Ort und Zeit hat, überall wo das Zeichen steht."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:01:01",
+      "text": "In unserem existierenden Detektor messen wir die Zeit nicht explizit.\nDer Detektor ist so ausgelegt, dass er optimiert ist, jeweils für eine bestimmte\nKollision die Teilchen zu sehen. Aber wir messen die Zeit nicht explizit.\nWir werden das in der nächsten Generation von CMS machen, aber im derzeitigen\nDetektor ist das nicht notwendig.\nWas man da vielleicht auch erwähnen könnte, ist, dass man diese Punkte zu einer\nLinie, also zu einem Kreis, wenn man so will, verbinden muss.\nDie Komplexität ist natürlich, dass wir eben hunderte oder in Kollisionen von\nKernen tausende Teilchen haben,\ndie da fliegen und jedes dieser Teilchen hinterlässt natürlich Punkte in dem\nDetektor und die ja je nachdem welcher Punkt oder Streifen getroffen wurde Und es ist natürlich,\ndiese Punkte haben kein Etikett, das sagen würde, ich bin von diesem Teich hingekommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:02",
+      "text": "Deswegen dachte ich ja, dass die Zeit ein wichtiger Faktor ist."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:02:05",
+      "text": "Nein, weil die Zeiten, die Teilchen laufen ja fast bei derselben Zeit,\nweil sie wurden zur selben Zeit produziert und fliegen dann de facto mit Lichtgeschwindigkeit hinaus.\nUnd das heißt man hat ein Problem jeweils Punkte einem Teilchen zuzuordnen und\ndas ist ein ziemlich großer Rechenaufwand.\nAlso wenn man ein Foto sehen würde, an dem einfach die Punkte aufgetragen sind,\nwürde man mit freiem Auge nichts erkennen.\nDas heißt es gibt Algorithmen, die dann eben die Punkte verbinden und das klassifizieren\nin Teilchen und dann für jedes Teilchen aus der Krömung eben den Impuls,\ndie Energie ausrechnen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:02:44",
+      "text": "Kann man dabei Fehler machen?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:02:45",
+      "text": "Natürlich. Es gibt natürlich Fehler, aber die Algorithmen sind eben so entwickelt\nworden, um diese Fehler sehr gering zu halten, so gering zu halten,\ndass sie de facto die letztlichen Messungen nicht beeinflussen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:03:00",
+      "text": "Also Teilchen trifft auf, Kollision findet statt,\nall das was dort aufeinander trifft wird dann eben in seine elementaren Teilchen\nzerschmettert und die machen sich dann auf die Reise,\nfliegen los und entweder streifen sie halt selber unmittelbar dann eine dieser\nSchichten Oder auf dem Weg zerteilt sich eben dieses Teilchen nochmal in andere,\nalso von wegen Elementarteilchen, wenn es sich dann doch noch in andere Teilchen\nverwandelt, kann es ja so elementar auch wieder nicht sein.\nEgal, auf jeden Fall das findet statt und man hat es also bei jeder Kollision\nmit einer Vielzahl von Durchschlagungspunkten zu tun,\nalso zumindest in diesem inneren 14 Schichten Bereich,\ndie man dann eben per Software wieder zueinander zuordnen und sagt okay,\nwenn das da war, das da war, dann gehört das wahrscheinlich zusammen und dann\nist das die daraus resultierende Bahn und aus dieser Bahn kann ich dann wiederum errechnen,\nokay was war das jetzt mit welcher Energie und damit weiß ich auch die Masse\nund wenn man die Masse weiß, dann weiß man um was für ein Teilchen es sich gehandelt hat."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:04:11",
+      "text": "Und wie gesagt, worüber diese Siliziumdetektoren, das ist dieser erste Teil\ndes Detektors, von dem ich vorhin gesprochen habe, das heißt dieser Teil des\nDetektors, der möglichst leicht gebaut werden soll."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:04:22",
+      "text": "Aber diese Phase reicht auch schon für die Klassifikation der Teilchen aus? Nein, noch nicht."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:04:26",
+      "text": "Nein, weil wir eben...\nDie Information aus mehreren Detektoren kombinieren wollen.\nDas heißt, wir haben so ein Teilchen, ein geladenes Teilchen,\ndas läuft durch den Detektor durch, wir messen die Punkte, wir verfolgen seine\nSpur und dann wird es in den nächsten Detektor übergehen, eben in dieses Kalorimeter,\nwo sehr viel Material ist, in dem das Teilchen de facto seine ganze Energie abgeben kann.\nDas ist dann eine ganz andere Technologie.\nIm Fall von CMS verwenden wir dabei Kristalle.\nDas ist Blei-Wolframat.\nDas sind sehr, sehr transparente Kristalle, die aber de facto die Dichte von Blei haben.\nDas heißt, eine sehr große Dichte. Man stellt sehr viel Material entgegen,\num eben diese Schauer, diese Lawinen möglichst kurz zu halten.\nUnd Teilchen, besonders Elektronen oder Photonen, die dort in diese Kristalle\nhineinlaufen, die werden den Kristall anregen und es wird Licht ausgesendet,\nStintillationslicht ausgesendet.\nDas Licht wird im Kristall, der sehr transparent ist, weiterlaufen und jeder\nvon diesen circa 80.000 Kristallen hat dann hinten am Kristall einen Detektor, der Licht messen kann.\nUnd aus der Menge des Lichts, das dieser Detektor hinten am Kristall misst,\nkann man dann rückschließen, wie viel Energie sozusagen dort deponiert wurde.\nUnd das heißt, man kann diese Messung mit der Messung aus dem Siliziumdetektor kombinieren.\nDieser Kristalldetektor ist auch notwendig, weil der Siliziumdetektor wird nur\nelektrisch geladene Teilchen sehen.\nDas heißt neutrale Teilchen, wie zum Beispiel Photonen, Lichtteilchen,\nwerden im Siliziumdetektor nicht gesehen.\nDie werden erst dann in diesem Kristallteil gesehen werden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:06:28",
+      "text": "Also wenn diese Kalorimeter, die dann auch die Endstation darstellen für die\nauseinanderfliegenden Teilchen.\nWenn die jetzt zuverlässig aber eingefangen werden sollen, dann muss ja im Prinzip\neine riesige, vollständige, den kompletten zentralen Teil umschließende Schicht sein."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:06:45",
+      "text": "Das ist genau die Grundkonzeption. Wir wollen natürlich möglichst alle Teilchen\nmessen, die aus der Kollision entstehen. Das heißt wir möchten den Kollisionspunkt\neigentlich möglichst hermetisch umschließen.\nDas ist nicht vollständig möglich, weil wir… Man muss ja auch mal ran, ne?\nNaja, der Beschleuniger, die Beschleunigerröhre muss natürlich durchlaufen.\nDas heißt, dort per Definition können keine Detektoren stehen,\naber wir versuchen den Rest möglichst abzudecken.\nUnd wie gesagt, nachdem wir mehrere Lagen verschiedene Detektoren brauchen,\nsind die so angeordnet, dass ein Teilchen eben, egal in welche Richtung es läuft,\nimmer dieselbe Sequenz von Detektortypen durchläuft.\nUnd man könnte sich jetzt naiv vorstellen, dass man eine Kugel baut,\nAber das ist aus mechanischen, Wartungs- und ähnlichen Gründen nicht sehr praktisch.\nDas heißt, die meisten dieser Experimente an Beschleunigern,\nan Speicherringen wie dem LAC, haben einen zylindrischen Aufbau.\nDas heißt, man hat einen zentralen Zylinder, in dem man eine zylindrische Lage nach der anderen hat.\nUnd das wird dann abgeschlossen durch Endkappen, also großen kreisförmigen Strukturen,\nwo dieselbe Sequenz, aber linear von der Mitte nach außen, nach links und nach rechts geht.\nVorkommt und dadurch kann man den Detektor relativ leicht öffnen,\nweil man kann diese Endcaps, wie wir es sagen, diese kreisförmigen Strukturen\nvom Zentralteil entfernen und dann ins Innere des Detektors kommen.\nAber durch diesen Aufbau kann man garantieren, dass dieselbe Sequenz von Detektoren\nvon jedem Teich entgegen ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:27",
+      "text": "Das heißt, diese Kalorimeter, dieser Zylinder ist sozusagen komplett mit diesem\nBlei, was war das für eine Verbindung?\nGenau mit diesen Kristallen beschichtet und messen kann man das dann,\nalso das ist dann diese Sintillation, also das ist sozusagen so ein Lichteffekt\nder dabei dann entsteht."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:08:48",
+      "text": "Genau es wird Licht erzeugt im Kristall und dieses Licht wird gemessen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:08:51",
+      "text": "Okay also im Prinzip ist es dann letzten Endes ein optisches Messgerät,\nwas eigentlich das Licht misst."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:08:57",
+      "text": "Misst die Quantität von Licht die aus dem Kristall kommt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:00",
+      "text": "Okay, gut. Und das tut es mit welcher Auflösung dann wiederum?\nAlso man kann ja nicht jeden Punkt beobachten."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:09:06",
+      "text": "Ja, wie gesagt, über die ganze Fläche. Wir haben jetzt hier 80.000 Kristalle.\nMan muss sich vorstellen, die Kristalle sind so längliche Gebilde mit einem\nquadratischen Querschnitt von einigen Zentimetern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:09:19",
+      "text": "Okay, also 80.000 Kalometer."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:09:21",
+      "text": "Also die Größe ist dadurch bestimmt, dass die Schauer eine gewisse Ausdehnung\nin der Tiefe, aber auch in der Breite haben.\nUnd es ist sinnlos, die Detektoren sozusagen sehr viel kleiner zu machen als\ndie Breite des Schauers. Das war die ursprüngliche Idee.\nDas bestimmte die Zahl der Kristalle.\nUnd das ist der erste Teil des Kalorimeters. Und in diesem Teil,\nder genügt, um de facto alle Teilchen zu stoppen, die elektromagnetisch wechselwirken,\nalso wir sind Elektronen und Photonen.\nUnd andere Teilchen, Hadronen, die erzeugen größere Schauer und wir brauchen\neinen zweiten Kalorimeterteil dahinter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:06",
+      "text": "Also die durchschlagen sozusagen auch noch diesen ersten Teil."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:10:09",
+      "text": "Genau, die würden zwar einen Schauer beginnen im ersten Teil,\naber der Schauer wäre so tief, dass er aus diesen Kristallen heraustritt und hinten raustritt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:10:20",
+      "text": "Ohne einen Lichteffekt zu erzeugen?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:10:23",
+      "text": "Nein, es wird Licht erzeugt, aber das Problem ist, dass nicht der gesamte Schauer\nenthalten sein wird in den Kristallen.\nDas geht danach weiter und dann haben wir einen zweiten Teil.\nDas beruhigt wieder auf dem Prinzip, dass wir dem Teilchen möglichst viel Material entgegenstellen.\nAber in dem Fall ist das Messing.\nEs ist sozusagen ein Sandwich von Messing und wieder Zintillatoren.\nZintillatoren, das ist ein Plastikmaterial und dort ist wieder dieselbe Idee.\nIn dem Plastikmaterial entsteht Licht und man misst das Licht am Ende des Elements\nund aus der Quantität des Lichts schließt man."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:09",
+      "text": "Das ist also auch nochmal so eine zylindrische Struktur."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:11:13",
+      "text": "Das generiert wieder eine zylindrische Struktur, die eben außerhalb des,\ndie nächste Lage darstellt nach diesen Kristallen.\nUnd wie viele Detektoren sind das dann?\nDas ist in großen Modulen strukturiert. Also wir haben einige hundert von den\ngroßen Modulen, aber in jedem Modul gibt es Glasfasern, die Teile des Moduls messen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:38",
+      "text": "Ja, also ist das dann so wie bei dem ersten Zylinder, so 80.000 in der Größenordnung?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:11:42",
+      "text": "Es ist in der Größenordnung. In diesem Teil braucht man etwas weniger Genauigkeit.\nDas heißt, man muss nicht so feine Elemente haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:51",
+      "text": "Gut, nur mal so ein Gefühl für die Datenpunkte zu bekommen, wie viel das so ist."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:11:55",
+      "text": "Und dann gibt es einen..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:11:56",
+      "text": "Gibt es noch Teilchen, die diese Schicht dann auch noch überwinden können?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:11:59",
+      "text": "Genau, dann gibt es die berühmten Myonern, die diese Schicht überwinden können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:12:03",
+      "text": "Ah ja, okay, jetzt wird es spannend."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:12:05",
+      "text": "Diese Myonen sind eingelagert, diese Detektoren sind eingelagert in dieses Rückflussjoch.\nAlso ich habe davon gesprochen, dass wir das Magnetfeld sozusagen im Detektor\nzu halten, haben wir diese Stahlkonstruktion, die rundherum geht.\nUnd in diese Stahlkonstruktion sind eingelagert, in Spalten in der Stahlkonstruktion\nsind Myonkammern eingelagert. Und in dem Fall sind das Gasdetektoren.\nDas sind Detektoren, Schichten mit verschiedenen Technologien,\ndie mit einem Gas gefüllt sind.\nWenn Teilchen durch das Gas durchlaufen, dann ionisieren sie Atome in dem Gas\nund man kann diese Ladungen durch elektrische Felder bewegen und dann messen.\nDiese Detektoren werden elektronisch ausgelesen, also de facto die Bewegung\ndieser Ladungen der Elektronen und der positiven Ionen, die dabei entstehen,\ndie erzeugen elektrische Signale auf Elektroden und die werden dann ausgelesen.\nDort ist es eben wichtig, dass wir mit vernünftigen Kosten eine sehr,\nsehr große Fläche abdecken können, In diesem Prinzip, dass eine Lage nach der\nanderen kommt, natürlich je weiter man nach außen kommt, desto größer wird die\nFläche, die man abdecken muss. Gleichzeitig ist die,\nist die Genauigkeit, die man dort erzielen muss, geringer.\nDas heißt, dort genügt uns ein Zehntel Millimeter oder etwas weniger.\nUnd der Grund dafür ist, dass die Myonen, bis sie in diese Lage kommen,\nhaben sie schon viel Material durchlaufen. Das Material wird sie zwar nicht\nstoppen, aber es wird leichte Ablenkung an der Bahn verursachen.\nUnd das heißt, es ist sinnlos genauer zu messen als die typische Größenordnung\ndieser Ablenkung der Bahn.\nZu den Myonen möchte ich vielleicht noch sagen, dass im Prinzip,\nso wie die CMS konzipiert wurde, um die Myoner zu messen, um zu wissen,\ndass es ein Myon ist, brauchen wir dieses Signal in den äußersten Detektorschichten.\nAber die genaue Messung der Energie des Muons wird in CMS gemacht,\ndass wir den inneren Siliziumdetektor mit den Informationen aus diesen Muonsdetektoren verbinden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:14:35",
+      "text": "Das erklärt jetzt auch warum dieser Muon, also warum das auch im Namen drinsteckt.\nWeil es sozusagen ein Element in diesem großen Magnet mit drin ist und von daher\nsozusagen so ein Major Design Prinzip darstellt sozusagen und nicht einfach\nnur so ein bisschen Gerät, was man noch in die Mitte reingeworfen hat.\nAlso dieser Teilchen zu diesem Standardmodell ist ja wirklich...\nDas kann ja sehr verwirrend sein. Was wir ja die ganze Zeit angerissen haben mit diesen Myonen.\nEs gibt ja in diesem Standardmodell Klassifizierungen auf unterschiedlichen Dimensionen.\nWenn man erstmal generell so diese Quarks und Leptoden unterscheidet,\nalso das was sozusagen Protonen im wesentlichen baut sind die Quarks und der\nRest sind eben die Elektronen und Verwandte sozusagen.\nGibt es ja das dann alles noch dreimal.\nAlles ist irgendwie dreimal vorhanden, hat dann andere Namen,\nähnliche Namen und warum es das jetzt alles dreimal gibt, weiß man nicht so\nrichtig und es gibt es dreimal, weil es dann unterschiedliche Massen hat."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:15:55",
+      "text": "Das ist ganz klar eine der großen unbeantworteten Fragen in der Teilchenphysik,\ndass man im Moment keine Erklärung hat, warum es drei Generationen sein sollten.\nDiese Teilchen haben exakt die gleichen Eigenschaften, nur die Masse ist unterschiedlich. Genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:11",
+      "text": "Das heißt dieses Myon, von dem wir jetzt die ganze Zeit reden,\num das mal ein bisschen bekannter zu machen, ist eigentlich in seinem Wesen ein Elektron.\nEs ist nur sehr viel schwerer als ein Elektron.\nIn welchem Faktor ist das schwerer, sehr viel schwerer?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:16:27",
+      "text": "200 Faktor, 1000, 2000, ca.\n2000. Ca. 2000 sind 500 Kiloelektronvolt und 100 Megelektronvolt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:42",
+      "text": "Ja, wie auch immer. Auf jeden Fall ist sehr viel schwerer, aber ist ansonsten wie so.\nWarum gibt's da, also das wissen wir nicht, aber warum ist man da jetzt so drauf abgefahren?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:16:54",
+      "text": "200 Stimmen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:16:57",
+      "text": "Genau, aber es gibt ja auch noch ein drittes, was dann nochmal extrem viel schwerer\nist, das ist dann das Tauon."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:17:06",
+      "text": "Genau, das Tauon oder Taulepton."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:10",
+      "text": "Das sieht man aber nicht."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:17:12",
+      "text": "Oh ja, das produzieren wir ebenfalls."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:17:16",
+      "text": "Kann das auch detektiert werden?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:17:18",
+      "text": "Natürlich, wir detektieren das. Das einzige Problem, es ist schwerer zu detektieren,\ndas Elektronen und Myonen, weil es nämlich relativ instabil ist.\nElektronen sind stabile Teilchen, da gibt es kein Problem.\nMyonen zerfallen, aber die Lebensdauer eines Myons ist so groß,\ndass sie auf jeden Fall den Detektor verlassen werden, bevor sie zerfallen.\nDagegen haben Daunen, eben weil sie schwer sind, eine relativ kurze Lebenszeit.\nUnd das heißt, die würden schon in den ersten Zentimetern des Detektors zerfallen.\nDas heißt wir werden kein Dow-Lapton als solches durch den Detektor fliegen sehen,\nsondern das Dow-Lapton kann in verschiedene Konfigurationen zerfallen und um\ndie Dow-Laptonen zu identifizieren müssen wir eben die Sekundärteilchen,\nin die das Dow-Lapton zerfallen ist, identifizieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:16",
+      "text": "Also man weiß schon, dass es da war, aber man sieht es nicht als sollte so."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:18:21",
+      "text": "Es ist schwieriger zu sehen, ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:18:22",
+      "text": "Ok, verstehe. Und warum ist man dann jetzt so scharf drauf?\nAlso was kann man, was meint man oder was kann man denn sozusagen daraus ableiten,\ndass jetzt sozusagen dieses Myon da ist?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:18:39",
+      "text": "Ja, wie gesagt, eine direkte Erklärung, warum es eben diese drei Generationen gibt, haben wir nicht.\nAber das, wie gesagt, unser derzeitiges Standardmodell,\nmathematisches Modell, mit dem wir die Teilchen und die Kräfte zwischen den\nTeilchen beschreiben, setzt eben voraus, dass sich diese drei Generationen gleich\nverhalten, bis auf die Masse.\nUnd das ist zum Beispiel ein interessanter Teil des Forschungsgebietes,\num zu überprüfen, möglichst gut zu überprüfen, ob das wirklich der Fall ist.\nWeil wenn es nicht der Fall wäre, das würde das Ansatz geben,\num neue Theorien zu entwickeln.\nUnd deswegen, das ist natürlich ein Grund, sie zu messen. Der andere Grund,\nsie zu messen, ist, dass es einfach zusätzliche Möglichkeiten gibt,\num andere Teilchen zu vermessen oder zu entdecken.\nWeil sehr oft, eben dadurch, dass die Elektronen Myon und Olepton dieselben\nEigenschaften haben, kann ein Teilchen, das in Elektronen zerfallen kann oder\nin Myonen zerfallen kann, auch in die jeweils anderen Teilchen zerfallen.\nDas heißt, wir können dieses zerfallende Teilchen genau untersuchen.\nWir haben mehr Möglichkeiten, wenn wir alle drei Zerfallsmodi untersuchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:20:06",
+      "text": "Old Myon spielt auch eine Rolle bei der Detektion des Higgs-Bosons?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:20:11",
+      "text": "Zum Beispiel, ja.\nGenau, das Higgs-Boson kann in sehr viele unterschiedliche Arten zerfallen.\nUnd eine dieser Arten ist, dass es de facto zuerst in zwei Z-Posonen,\ndas sind die Vermittler der schwachen Wechselwirkung übrigens, zerfällt.\nUnd diese Posonen können dann wieder in Leptonen zerfallen, zum Beispiel.\nAuch in Quarks, aber sie können auch in Leptonen zerfallen.\nUnd sie können zum Beispiel in zwei Myonen zerfallen. Es könnte jedes dieser\nzwei Z-Posonen dann in zwei Myonen zerfallen.\nUnd warum uns das besonders interessiert, ist einfach, weil wir die Myonen,\ndas ist wirklich das Objekt, das wir am besten messen können.\nSie können auch in Detektoren zerfallen, andere Teilchen, aber der Zerfall in\ninsgesamt vier Myonen ist das, was wir normalerweise einen goldenen Kanal nennen.\nDas heißt, das ist wirklich die Art und Weise, die wir am besten messen können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:21:09",
+      "text": "Ah ja, okay, verstehe."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:21:12",
+      "text": "Voraussetzung ist natürlich, dass wir alle vier Myonen in einer Zone des Detektors\nsind, die wir sehen können.\nUnd warum ist es wichtig, dass man die so genau messen kann,\nist, weil wir dann aus den, wenn wir die Energien und Richtungen der Virmionen\nbestimmen, können wir zurückrechnen, die Masse des Teilchens, die zerfallen ist.\nDas ist, wie wir überhaupt versuchen, typischerweise neue Teilchen zu finden.\nEs gibt Energiehaltung, d.h. wenn ein schweres Teilchen zerfällt,\nmuss die Masse, also Masse und Energie der Zerfallsprodukte,\naus denen kann man wieder die Masse des ursprünglichen Teilchens zurückrechnen.\nUnd man sollte sagen, am LHC, wir haben immer sehr viel...\nUntergrund. Das heißt, wir suchen ein bestimmtes Ereignis, einen bestimmten\nTyp von Ereignis, aber es gibt immer andere Prozesse, die etwas Ähnliches produzieren.\nAber dadurch, dass wir diese Masse rekonstruieren können, ist dieser Untergrund,\nder ist normalerweise einfach zufällig verteilt.\nUnd wenn es wirklich ein neues Teilchen ist, wie das X-Boson im Jahr 2012,\ndann sehen wir, dann werden die berechneten Massen, werden immer dort an der\nechten Masse des neuen Teilchens sitzen.\nDas heißt, wenn wir das ansehen, dann gibt es eben diesen Untergrund,\nder verteilt ist und über diesem Untergrund werden wir beginnen ein Signal zu\nsehen, dass auf einer bestimmten Stelle immer mehr Ereignisse sind,\ndie genau diesen Wert haben.\nDas ist wie das X-Boson gefunden wurde und das ist auch die Methode,\num nach anderen Teilchen zu suchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:22:54",
+      "text": "Genau, weil am Ende ist es ja alles eine statistische Betrachtung,\njede Kollision ist anders, immer wieder passiert irgendwas,\naber mit einer bestimmten Wahrscheinlichkeit passieren halt bestimmte Dinge\nhäufiger und wenn man das dann eben einfach über Wochen,\nMonate und Milliarden an Beobachtungen zusammensummiert und plottet,\ndann entstehen halt diese Grafiken, wo so eine kleine Spitze ist,\ndie halt so einen ganzen Raum voller Wissenschaftler total zum Schreien bringen,\nweil das dann einfach total irre ist.\nUnd alle anderen fragen sich nur so, was passiert hier eigentlich gerade?\nAber das kennt man ja auch aus anderen Sportarten. Also Leute,\ndie mit Fußball nichts zu tun haben, wundern sich ja dann auch mal wieder,\nwas die anderen alle so begeistert."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:23:37",
+      "text": "Ja, aber etwas zu finden, was man 60 Jahre lang gesucht hat,\ndas kann etwas Begeisterung auslösen. Genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:23:45",
+      "text": "Jetzt kommen wir vielleicht so langsam zum Ende und die große Frage ist ja halt immer,\nwie kann das alles dazu beitragen jetzt auch wirklich was neues zu finden und\nvielleicht neu ist ja dann auch immer so ein dehnbarer Begriff,\nalso das Higgs Boson war ja nicht in dem Sinne neu, als dass es auf einmal so\nda war und man gesagt, oh Holla was ist das denn?\nSondern das war ja quasi eine Suche nach 60 Jahren, weil es eben diese Theorie\ngab, wenn es das gäbe, dann würde auf einmal alles zusammenpassen.\nAlles was wir bisher beobachtet haben, haben wir sozusagen in dieses Standardmodell\neingefügt, da fehlte dann aber irgendwie noch so ein Slot und man hat immer\nso gehofft, dass es das auch gibt, weil dann passt alles zusammen,\nweil wenn es das nicht gibt, dann passt gar nichts mehr zusammen.\nDann müsste man sich was Neues ausdenken und bisher ist noch keinem was anderes eingefallen."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:24:40",
+      "text": "Naja es gibt einige andere Ansätze, aber es war klar der einfachste Ansatz um\ndas zu finden und deswegen war es spannend um zu sehen ob dieser Ansatz auch\nwirklich realistisch ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:24:52",
+      "text": "Ich denke es ist ja auch alles gebaut worden. Deswegen hat man den LAC gebaut,\ndeswegen hat man diese Energien versucht aufzubauen,\nweil man halt einfach so ein gewisses Target hat und sagt okay das ist so der\nEnergiebedarf den wir benötigen und wenn wir das dann lange genug beobachten,\ndann haben wir vielleicht eben diese Auffälligkeit und CMS ist einer von den\nbeiden Detektoren, die das eben mit der hier beschriebenen Technik beobachtet\nhaben, die Statistiken gemacht hat.\nAtlas das andere, was im Prinzip dasselbe in grün gemacht hat und dann werden\nwir halt auch nochmal drüber reden, wie das dort funktioniert und der Vergleich\ndieser beiden Ergebnisse hat dann eben diese Gewissheit gebracht.\nSo jetzt ist das aber sozusagen aus dem Rennen, Higgs ist jetzt alter Käse."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:25:35",
+      "text": "Absolut nicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:25:36",
+      "text": "Es wird natürlich nach wie vor noch weiter geguckt nach Higgs oder?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:25:40",
+      "text": "Wir stehen eigentlich am Anfang der Reise, weil Entdeckung heißt,\ndass wir die ersten überzeugenden Zeichen für die Existenz eines Teilchens gefunden haben.\nAber was jetzt gemacht wird, ist zu überprüfen, was wir wissen.\nWir haben ein Teilchen gefunden. Das Teilchen entspricht in etwa den Erwartungen der Theorie.\nAber was wir jetzt machen ist, um die detaillierten Vorhersagen der Theorie\nzu überprüfen und zu sehen, ob dieses\nHiggs-Teilchen wirklich genau das Higgs-Teilchen dieses Modells ist.\nUnd das ist eben ein langfristiges Programm.\nDas Higgs-Feld gibt eben Masse an die Teilchen und das hängt damit zusammen,\nwie stark sozusagen diese Teilchen mit dem Higgs-Boson reden. und.\nDas bedingt auch, wie oft ein Higgs-Boson aus diesen Teilchen erzeugt werden\nkann oder wie oft ein Higgs-Boson in diese Teilchen zerfallen wird.\nUnd die Vorhersage des Standard-Modells, dieses Modells ist eben,\ndass diese Wechselwirkung immer schwächer wird, je leichter Teilchen werden.\nUnd dementsprechend werden die leichteren Teilchen auch seltener im Zerfall\neines Higgs-Bosons vorkommen.\nUnd die Entdeckung des X-Bosons wurde im Wesentlichen getragen durch den Zerfall\nin zwei Arten, eben in zwei Z-Bosonen oder ein Zerfall in zwei Photonen.\nJetzt kann man sich fragen, Sie haben gesagt, dass das X hängt mit Masse zusammen.\nDas X gibt eigentlich die Masse. Photonen sind bekannterweise masselos.\nAlso wie kann ein Higgs-Boson in Photonen zerfallen? Und das geschieht in der Beschreibung,\ndie wir von der Natur in der Quantenfeldtheorie haben, dass da einfach ein komplizierter\nProzess aufgetreten ist, dass das Higgs ursprünglich in zwei andere Teilchen\nzerfallen ist und diese Teilchen dann zwei Photonen erzeugt haben.\nUnd in Wirklichkeit hängt das sehr stark zusammen mit dem zerfallen SIX-Bosons\nin zwei virtuelle Topquarks, also in schwere Teilchen.\nUnd im Prinzip haben wir jetzt gemessen und wir haben überzeugende Messungen,\ndass der SIX eben in Z-Bosonen zerfallen kann,\nin W-Bosonen zerfallen kann, dass der SIX mit Topquarks redet,\ndass der SIX, also direkt in Topquarks, in zwei Topquarks kann der SIX nicht\nzerfallen, weil der SIX einfach zu leicht ist.\nDie zwei Top Quarks zusammen werden schwerer als das X-Poson und deswegen kann\nes nicht direkt zerfallen.\nAber es kann trotzdem in der Produktion und im Zerfall auf indirekte Arten mit\ndiesen Top Quarks reden.\nWir haben den Zerfall in B, Quarks.\nUnd die berühmten Dow-Leptonen. Das sind alles de facto die schwersten Teilchen, die wir kennen.\nAber um jetzt überzeugt zu sein, dass dieser Mechanismus der Stärke der Wechselwirkung\nmit Masse wirklich funktioniert, sollten wir auch sehen, ob es mit den leichteren Teilchen redet.\nUnd wir haben jetzt in CMS, wir haben mit den Daten aus den letzten Jahren das\nerste Mal einen Hinweis dafür gesehen, dass das X-Boson direkt in zwei Myonen zerfallen kann.\nDas ist schon jetzt ein großer Sprung in der Masse, weil, wie schon gesagt wurde,\ndie Myonen sind sehr viel leichter als die Dauleptonen zum Beispiel,\nauch sehr viel leichter als Z-Bosonen oder W-Bosonen. Das heißt,\nda ist ein großer Sprung.\nWir haben eben Hinweise dafür, noch nicht auf dem Niveau,\ndas wir typischerweise in der gleichen Physik Entdeckungsniveau nennen,\ndiese berühmten 5 Sigma statistische Wahrscheinlichkeit, also Wahrscheinlichkeit\nvon weniger als 1 zu 1 Million, dass das einfach eine Fluktuation war.\nAber das steht auf unserem Programm und auch zur Fälle in andere leichte Teilchen,\num eben das vollkommen zu überprüfen, das Modell.\nUnd dann auf einer etwas längeren Zeitskala ist die Frage, wie das Higgs mit\nsich selbst redet und..."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:30:08",
+      "text": "Teilchen reden auch mit sich selbst."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:30:10",
+      "text": "Ja, es kann ein Higgs-Boson zum Beispiel in zwei Higgs-Bosonen zerfallen und\nzwei Higgs-Bosonen produzieren in seinem Zerfall.\nUnd das Interessante daran ist, dass das Higgs-Boson ursprünglich erfunden wurde,\num zu erklären, warum diese W- und Z-Bosonen, für die es in den 80er Jahren\nden Nobelpreis gegeben hat und die die schwache Wechselwirkung erklären,\nwarum die nicht wie das Photon masselos sind, sondern warum sie eine Masse haben,\neine ziemlich hohe Masse sogar.\nUnd das läuft unter dem Konzept der Symmetriebrechung.\nEs gibt da in Symmetrienstellen einen sehr wichtigen Bestandteil aller modernen\nTheorien der Teilchenphysik vor.\nSymmetrien können so etwas wie die einfache Links-Rechts-Spiegelsymmetrie sein,\ndie wir kennen, aber es kann auch Symmetrien in anderen Formen geben,\ndie zum Beispiel, das wäre sozusagen eine Art Spiegeleffekt,\ndie zum Beispiel ein Teilchen in ein anderes Teilchen verwandeln könnte und\ndadurch ihre Ähnlichkeit erklärt.\nUnd jedenfalls, das Higgs-Poson hat eben diese spezielle Eigenschaft,\nEigenschaft, dass es eine gewisse Symmetrie bricht, also dazu führt,\ndass die Symmetrie nicht mehr vollkommen respektiert wird.\nUnd das gibt diesen W- und Z-Posonen die Masse.\nUnd das hängt sehr stark davon zusammen, eben wie stark dieses X-Poson sozusagen mit sich selbst redet.\nUnd das ist ein Programm, das ist sehr schwierig zu messen. Das ist ein Prozess,\nder noch viel seltener ist, als was wir im Moment schon messen und die,\nUnd das wird wirklich ein Programm sein für die nächsten Jahre,\nfür die zukünftige Phase des LACs und dann sogar, wahrscheinlich um Präzise\nzu messen, auch für die nächste Beschleuniger-Generation, die nachher kommen werden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:32:17",
+      "text": "Okay, also man ist quasi auf der Mission, also nachdem man sich sicher war,\ndass Higgs-Prinzip das existiert, das ist da, das ist messbar,\ndas entspricht so gut den Vorhersagen und wir haben es auch aus den statistischen\nDaten mit der statistischen Sicherheit herauslesen können.\nDa ist was, geht es jetzt im Wesentlichen darum zu sagen, wie verhält es sich\njetzt genau, was hat das für eine Auswirkung.\nDas ist jetzt sehr kompliziert zu verstehen, dieser ganze Bereich.\nAber eine Sache wollte ich mal kurz rausgreifen, weil das irgendwie eben viel,\nalso wenn wir jetzt den Begriff Wechselwirkung hier mit reinnehmen,\nhab ich ja vorhin schon auch angesprochen, da haben wir es ja sozusagen mit\ndiesen Naturkräften zu tun.\nSchwache Kernkraft durch diese WZ-Versionen, die elektromagnetische Kraft durch dieses Photon,\ndie starke Kernkraft durch diese Gluon, die dann halt irgendwie Lepton und Quark\nirgendwie zusammenbacken oder auch nicht. Und...\nDann gibt's halt noch dieses Higgs. Und jetzt hast du aber auch diesen Begriff\nWechselwirkung in den Mund genommen, wenn man sagt, wie Higgs jetzt sozusagen\nmit den anderen interagiert.\nHeißt das, dass man dann sozusagen, also ist das dann sozusagen noch eine weitere\nKraft, die wir so bisher so nicht auf dem Zeiger haben oder reden wir jetzt\nhier von einer anderen Wirkung, die nicht auf dem Level sich abspielt?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:33:51",
+      "text": "Ich würde das nicht als Kraft bezeichnen. Es ist einfach nur,\ndass es Prozesse gibt, in denen Higgs-Boson und andere Teilchen vorkommen und\ndie dann… Also nicht jede Wechselwirkung ist eine Kraft, aber jede Kraft ist eine Wechselwirkung?\nJa, das könnte man vielleicht so sagen.\nAber was man vielleicht zum Programm mit dem Higgs-Boson noch hinzufügen sollte,\nist, dass das Higgs-Boson auch sehr interessant ist, um mögliche neue Effekte zu studieren.\nWir haben noch nicht erwähnt, dass das Standardmodell, dass wir sehr zufrieden\nsind, dass wir dieses letzte Teilchen des Standardmodells gefunden haben.\nAber wir wissen, dass es nicht vollständig sein kann.\nUnd da gibt es einen starken Zusammenhang mit Kosmologie und dem,\nwas wir im Universum beobachten, weil zwei der großen Fragen in der Entwicklung des Universums sind,\nwarum es einen Unterschied zwischen Teilchen und Antiteilchen gibt und was es\nmit dieser berühmten dunklen Materie im Universum an sich hat.\nUnd beide Themenbereiche hängen mit Teilchenphysik zusammen,\nweil der Unterschied zwischen Teilchen und Antiteilchen,\ndas ist etwas, was man messen kann in verschiedenen Arten, auch am LHC,\nUnd die dunkle Materie, es ist sehr plausibel, dass die dunkle Materie de facto\naus Teilchen besteht, die wir noch nicht kennen.\nUnd wo kommt das Higgs da hinein? In vielen theoretischen Modellen,\ndie versuchen, dunkle Materie mit neuen Teilchen zu erklären,\nspielt das Higgs-Boson oder mehrere, möglicherweise mehrere andere Higgs-Bosonen noch eine Rolle,\num sozusagen die Welt, die wir da jetzt schon kennen, und diese dunkle Welt\nmiteinander zu verbinden, also Verbindungen herzustellen zwischen den Teilchen, die wir kennen,\nund der Produktion von Teilchen, die wir noch nicht können und die zum Beispiel\ndunkle Materie hervorrufen könnten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:35:56",
+      "text": "Also zum Beispiel würde man jetzt, und das ist ja unter anderem auch geplant,\nnoch einen größeren Ring bauen und damit noch mehr Energien aufbauen können\nund noch fettere Detektoren bauen,\ndie mit diesen Energien auch umgehen, was dann noch größere Magneten wären und\nüberhaupt kann man sich das fast schon gar nicht mehr vorstellen,\nWie groß das alles wäre, auf jeden Fall wenn man sozusagen höhere Energien noch beobachten könnte,\ndann könnte es vielleicht theoretisch sein, dass auch in der Mangelung einer\npassenden Theorie zu diesem Zeitpunkt mal halt an irgendeiner Stelle mit noch\nmehr Energien nochmal so einen kleinen Hopser in der Kurve hat."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:36:32",
+      "text": "Das muss nicht unbedingt beim nächsten, das könnte natürlich beim nächsten Beschleuniger\nsein, aber selbst bei uns könnten Prozesse sein, die einfach so selten sind."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:36:42",
+      "text": "Die einfach selten sind, das ist der andere Punkt. Oder aber eben auch,\ndass man erstmal woanders noch suchen muss, das meinte ich eigentlich mehr.\nAlso es könnte auch sein, dass man nochmal ganz woanders gucken muss,\nals wir derzeit gucken können und dort sozusagen nochmal so ein Geschwisterhicks haben,\ndie dann vielleicht einfach nur in der Antimaterie irgendwas machen und da diese\nMassen erzeugen, die wir quasi da ja ausmachen.\nWeil das ist ja das, was wir sehen. Wir sehen, dass da irgendwas gravitativ wirkt,\nGalaxien irgendwie zusammenhält und auf andere Geschwindigkeiten bringt,\ndie sich eben mit unserer Vorstellung der normalen Materie nicht verbinden lässt\nund von daher irgendwie das große Fragezeichen, also eins der großen drei Fragezeichen\nist, die wir derzeit so im Weltall haben."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:37:25",
+      "text": "Ja, aber die Verteilung von dunkler Materie und die Geschichte des Universums\nsagt uns, dass es eine gewisse Verbindung, eine sehr, sehr schwache Verbindung,\naber zwischen diesen Teilchen, wenn es Teilchen sind der dunklen Materie,\nund den normalen Teilchen geben sollte.\nUnd das ist eben Teil des Forschungsprogramms. Mit dieser Verbindung könnten\nwir diese Teilchen unter Umständen hier auch schon im LHC produzieren und mit dem Detektor sehen.\nDas ist übrigens ein interessanter Aspekt, dass die Detektoren de facto auch\nDeichen Detektieren können, die gar nicht direkt im Detektorsignal hinterlassen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:38:05",
+      "text": "Man kann etwas detektieren, was man gar nicht detektiert?"
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:38:07",
+      "text": "Genau, das betrifft schon bekannte Teilchen.\nIm Standardmodell mit den Elektronen, das Elektron hat nicht nur schwere Geschwister,\nsondern auch ein Pendant, das ist das Neutrino, das zum Beispiel in großen Mengen\nin der Sonne in den Kernprozessen erzeugt wird.\nUnd das Neutrino ist fast masselos und hat nur eine sehr schwache Wechselwirkung mit Materie.\nDas heißt, die Neutrinos würden aus unseren Detektoren hinauslaufen und wir\nwürden sie nicht sehen. Aber auch wenn wir zum Beispiel Teilchen der dunklen\nMaterie erzeugen könnten, würden diese auch den Detektor verlassen, ohne dass wir sie sehen.\nAber wir können uns ein Prinzip in der Physik zunutze machen,\nund das ist, es gibt die Energieerhaltung, aber es gibt auch ein Prinzip,\ndas nennt sich Impulserhaltung, das ist also, sagen wir so, verwandt mit der\nEnergie, aber das spielt sich in allen drei Raumrichtungen ab.\nDas heißt, man kennt vielleicht dieses Spiel mit dem Bändeln mit den Kugeln,\nwo man die Kugel fallen lässt und dann läuft auf der anderen Seite eine Kugel\nraus. Das ist de facto Impulserhaltung und das könnte man auch in drei Dimensionen machen.\nJedenfalls, wir haben das Prinzip, dass die Protonen, die zusammenlaufen,\ndie bewegen sich entlang des Beschleunigers, auf einer geraden Linie eben,\naber nicht links, rechts, oben und unten.\nUnd daraus schließt man, dass die Summe aller Teilchen, die nach der Kollision\nproduziert wird, kann insgesamt, kollektiv sozusagen, auch keine Bewegung links,\nrechts, oben und unten haben.\nUnd wenn da jetzt aber ein Teilchen dabei wäre mit hoher Energie,\ndas wir nicht sehen, Und wir machen die Summe über alle sichtbaren Teilchen\nund würden sehen, dass die Summe der sichtbaren Teilchen in irgendeine Richtung zeigen würde.\nWährend das unsichtbare Teilchen in die andere Richtung gegangen wäre.\nUnd auf diese Art und Weise können wir feststellen, ob ein unsichtbares Teilchen\nden Detektor verlassen hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:16",
+      "text": "Also man rechnet sozusagen einfach nach wie viel Energie ist denn hier insgesamt\nfehlt, was fehlt, fehlt und daraus kann man schließen."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:40:23",
+      "text": "Und damit könnte man zum Beispiel sehen, falls dunkle Materie produziert würde\nund das ist ein wichtiger Teil unseres Forschungsprogramms."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:40:32",
+      "text": "Ja, spannend. Das bringt uns jetzt so ein bisschen ans Ende.\nKönnen natürlich jetzt noch stundenlang weiter philosophieren,\naber um es vielleicht mal abzurunden.\nMan sieht, dass die Detektoren halt auf der einen Seite dazu beitragen,\nbestehende Theorien zu überprüfen und das eben teilweise mit Erfolg,\naber auch das nicht Nachweisen ist ja in gewisser Hinsicht auch ein Erfolg,\naber auch noch sehr viel Potenzial hat jetzt sozusagen auf dem nächsten Weg\nmit der existierenden Technologie plus der Upgrades, die ja hier regelmäßig\nstattfinden, die halt Dinge genauer machen, verfeinern, Energien erhöhen usw.\nAnders ballen, dass man eben auch auf dem Pfad zu weiteren Erkenntnissen kommen kann.\nAlso jetzt nicht mit dem Higgs ist nicht das ganze Pulver verschossen worden. Nein, absolut."
+    },
+    {
+      "speaker": "Wolfgang Adam",
+      "time": "1:41:31",
+      "text": "Und wie gesagt, wenn man ein neues Teilchen entdeckt, das ist die erste Stufe,\ndie ist Entdeckung und die zweite Stufe ist dann, um dieses neue Teilchen de\nfacto als Werkzeug zu verwenden, um neue Erkenntnisse zu bekommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "1:41:50",
+      "text": "Ja, gut Wolfgang, ich sag vielen Dank für die Ausführung zum CMS,\ndas war alles sehr interessant, sehr spannend.\nJa, und ich bedanke mich fürs Zuhören, das war's zum CMS, weiter geht's dann\nmit dem Atlas, gucken wir mal wie die auf die Welt schauen, ja.\nUnd dann geht's halt hier wieder weiter. Bis dann sagt Tschüss, bis bald!"
+    }
+  ]
+}

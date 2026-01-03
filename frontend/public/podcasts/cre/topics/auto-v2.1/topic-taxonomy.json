@@ -1,0 +1,2300 @@
+{
+  "createdAt": "2026-01-02T23:41:00.068463+00:00",
+  "method": "hdbscan-v2",
+  "embeddingModel": "text-embedding-3-large",
+  "embeddingsCreatedAt": "2026-01-02T23:36:26.213Z",
+  "totalTopics": 1877,
+  "uniqueTopics": 1867,
+  "settings": {
+    "clusters": 127,
+    "outlierThreshold": 0.9,
+    "linkageMethod": "hdbscan(min_cluster_size=2, min_samples=2)",
+    "useRelevanceWeighting": true
+  },
+  "statistics": {
+    "clusterCount": 127,
+    "outlierCount": 0,
+    "outlierPercentage": "0.0%"
+  },
+  "clusters": [
+    {
+      "id": "gsm-technologien",
+      "name": "GSM-Technologien",
+      "description": "9 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 9,
+      "episodeCount": 4,
+      "relevanceSec": 2700,
+      "sampleTopics": [
+        "Entwicklung der Telefonnetze",
+        "Mobile Telefonnetztechniken",
+        "Aufbau und Funktionsweise von GSM-Netzen",
+        "Vernetzungsstruktur des Telefonnetzverbundes",
+        "Anrufvermittlung in Mobilfunknetzen"
+      ],
+      "episodes": [
+        40,
+        56,
+        110,
+        120
+      ]
+    },
+    {
+      "id": "benutzerschnittstellen",
+      "name": "Benutzerschnittstellen",
+      "description": "9 Topics in 8 Episoden",
+      "isOutlier": false,
+      "topicCount": 9,
+      "episodeCount": 8,
+      "relevanceSec": 2700,
+      "sampleTopics": [
+        "Geschichte der Grafikkarten",
+        "Benutzbares User Interface",
+        "Interaktionsdesign",
+        "Graphisches User Interface",
+        "Interaktive Benutzeroberflächen"
+      ],
+      "episodes": [
+        36,
+        42,
+        64,
+        70,
+        72,
+        101,
+        131,
+        193
+      ]
+    },
+    {
+      "id": "datenschutz-privatsphäre",
+      "name": "Datenschutz & Privatsphäre",
+      "description": "8 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 7,
+      "relevanceSec": 2400,
+      "sampleTopics": [
+        "Datenschutz",
+        "Sicherheitsfragen",
+        "Förderung der Privatsphäre",
+        "Privatsphäre und Datenschutz",
+        "Intimsphäre und Sozialsphäre"
+      ],
+      "episodes": [
+        1,
+        72,
+        140,
+        165,
+        172,
+        176,
+        214
+      ]
+    },
+    {
+      "id": "java-entwicklung",
+      "name": "Java-Entwicklung",
+      "description": "8 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 1,
+      "relevanceSec": 2400,
+      "sampleTopics": [
+        "Überblick über die Java-Plattform",
+        "Entstehungsgeschichte von Java",
+        "Aufstieg und Fall von Java im Web",
+        "Funktionsweise und Optimierungen der Java VM",
+        "Features und Schwachstellen der Java-Programmiersprache"
+      ],
+      "episodes": [
+        90
+      ]
+    },
+    {
+      "id": "lüftungstechnik",
+      "name": "Lüftungstechnik",
+      "description": "7 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 1,
+      "relevanceSec": 2100,
+      "sampleTopics": [
+        "Lüftungsbedarf",
+        "Frischluftzufuhr und Wärmetauscher",
+        "Luftfilter",
+        "Heizungen",
+        "Heizungskonzepte"
+      ],
+      "episodes": [
+        180
+      ]
+    },
+    {
+      "id": "eisenbahnverkehr",
+      "name": "Eisenbahnverkehr",
+      "description": "7 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 2,
+      "relevanceSec": 2100,
+      "sampleTopics": [
+        "Verkehr und Nahverkehr",
+        "Loktypen",
+        "Schienensysteme",
+        "Zusammenstellung eines Zuges",
+        "Zuglängen"
+      ],
+      "episodes": [
+        160,
+        171
+      ]
+    },
+    {
+      "id": "fledermausforschung",
+      "name": "Fledermausforschung",
+      "description": "6 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 1,
+      "relevanceSec": 1800,
+      "sampleTopics": [
+        "Fledermäuse und ihre Evolution",
+        "Lebensweise und Jagdverhalten von Fledermäusen",
+        "Bedrohungen für Fledermäuse durch den Menschen",
+        "Ökologische Bedeutung der Fledermäuse",
+        "Einfluss von Pflanzengiften auf Fledermauspopulationen"
+      ],
+      "episodes": [
+        221
+      ]
+    },
+    {
+      "id": "bierbrauerei",
+      "name": "Bierbrauerei",
+      "description": "6 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 1,
+      "relevanceSec": 1800,
+      "sampleTopics": [
+        "Bierkultur",
+        "Hobbybrauerei",
+        "Malzherstellung",
+        "Gärprozess",
+        "Reinheitsgebot"
+      ],
+      "episodes": [
+        194
+      ]
+    },
+    {
+      "id": "freebsd-und-unix",
+      "name": "FreeBSD und UNIX",
+      "description": "6 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 3,
+      "relevanceSec": 1800,
+      "sampleTopics": [
+        "Praktische Verwendbarkeit von FreeBSD",
+        "Verhältnis von Linux und BSD",
+        "Überblick über den Mac OS X Kernel",
+        "Unterschiede zu anderen UNIX-Systemen",
+        "Hauptunterschiede des Mac OS X Kernels"
+      ],
+      "episodes": [
+        48,
+        69,
+        105
+      ]
+    },
+    {
+      "id": "22c3-congress",
+      "name": "22C3 Congress",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 1800,
+      "sampleTopics": [
+        "22C3",
+        "Konferenzprogramm des 22C3",
+        "22. Chaos Communication Congress",
+        "22C3 Congress Activities",
+        "Rückblick auf den 22. Chaos Communication Congress"
+      ],
+      "episodes": [
+        2,
+        5,
+        8,
+        9,
+        14,
+        58
+      ]
+    },
+    {
+      "id": "kaffeekultur",
+      "name": "Kaffeekultur",
+      "description": "6 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 1,
+      "relevanceSec": 1800,
+      "sampleTopics": [
+        "Anbau und Ernte von Kaffee",
+        "Zubereitung von Kaffee",
+        "Röstung von Kaffeebohnen",
+        "Qualitätsstufen des Kaffees",
+        "Espressozubereitung"
+      ],
+      "episodes": [
+        119
+      ]
+    },
+    {
+      "id": "ipv4-und-ipv6-protokolle",
+      "name": "IPv4 und IPv6 Protokolle",
+      "description": "6 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 3,
+      "relevanceSec": 1800,
+      "sampleTopics": [
+        "Netzwerkprotokolle",
+        "Grundlagen des IPv4 Protokolls",
+        "Funktionsweise der Protokollfamilie",
+        "Migration zu IPv6",
+        "IPv6 Einführung"
+      ],
+      "episodes": [
+        97,
+        141,
+        197
+      ]
+    },
+    {
+      "id": "botnetz-sicherheit",
+      "name": "Botnetz-Sicherheit",
+      "description": "6 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 1,
+      "relevanceSec": 1800,
+      "sampleTopics": [
+        "Botnetze als Bedrohung",
+        "Monetarisierung von Botnetzen",
+        "Aufklärung und Forschung zu Botnetzen",
+        "Honeypots zur Botnetzaufspürung",
+        "Technische Probleme beim Herunterfahren von Botnetzen"
+      ],
+      "episodes": [
+        155
+      ]
+    },
+    {
+      "id": "rfid-technologie",
+      "name": "RFID-Technologie",
+      "description": "5 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 3,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "RFID-Technologie in Eintrittskarten",
+        "Technik des elektronischen Reisepasses",
+        "RFID-Technik im Chip des Passes",
+        "Daten auf dem Chip des Passes",
+        "Reengineering von RFID-Systemen"
+      ],
+      "episodes": [
+        34,
+        47,
+        98
+      ]
+    },
+    {
+      "id": "feuerwehrwesen",
+      "name": "Feuerwehrwesen",
+      "description": "5 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 2,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "Struktur und Aufgaben der Feuerwehr",
+        "Freiwillige und Berufsfeuerwehr",
+        "Aufgabengebiete und Einsätze der Feuerwehr",
+        "Naturkatastrophen und Feuerwehr",
+        "Einsatz bei Naturkatastrophen"
+      ],
+      "episodes": [
+        153,
+        187
+      ]
+    },
+    {
+      "id": "barrierefreie-technologie",
+      "name": "Barrierefreie Technologie",
+      "description": "5 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 3,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "Arbeit mit Computern für Blinde",
+        "Software für Blinde",
+        "Programme zur Unterstützung von Sehbehinderten",
+        "Screenreader-Programme",
+        "Technologie im Alltag"
+      ],
+      "episodes": [
+        24,
+        107,
+        168
+      ]
+    },
+    {
+      "id": "kurdistan-insights",
+      "name": "Kurdistan Insights",
+      "description": "5 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 2,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "Erfahrungen in Kurdistan",
+        "Kurdistan und seine geographische Lage",
+        "Tradition und Kultur der Kurden",
+        "Politische Situation der Kurden",
+        "Geschichte der Kurden"
+      ],
+      "episodes": [
+        13,
+        215
+      ]
+    },
+    {
+      "id": "llvm-technologie",
+      "name": "LLVM Technologie",
+      "description": "5 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 2,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "Low Level Virtual Machine (LLVM)",
+        "LLVM Compiler Infrastructure",
+        "Architecture of LLVM",
+        "LLVM Frontends and Backends",
+        "Use Cases of LLVM"
+      ],
+      "episodes": [
+        88,
+        114
+      ]
+    },
+    {
+      "id": "c64-emulation",
+      "name": "C64 Emulation",
+      "description": "4 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 3,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Emulation",
+        "Emulation der Arcade Games",
+        "Programmierung auf dem C64",
+        "Demoszene und C64 Emulatoren"
+      ],
+      "episodes": [
+        92,
+        170,
+        177
+      ]
+    },
+    {
+      "id": "diamantenwissenschaft",
+      "name": "Diamantenwissenschaft",
+      "description": "4 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 1,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Physik von Diamanten",
+        "Herstellung von Diamanten",
+        "Anwendungen von Diamanten",
+        "Zukunft von Diamanten"
+      ],
+      "episodes": [
+        218
+      ]
+    },
+    {
+      "id": "brettspiel-kultur",
+      "name": "Brettspiel-Kultur",
+      "description": "4 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 2,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Typen von Brettspielen",
+        "Bedeutung von Brettspielen in Deutschland",
+        "Gesellschaftliche Bedeutung von Brettspielen",
+        "Regeln"
+      ],
+      "episodes": [
+        162,
+        173
+      ]
+    },
+    {
+      "id": "wahlcomputer-debatte",
+      "name": "Wahlcomputer-Debatte",
+      "description": "4 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 2,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Wahlcomputer-Debakel",
+        "Einsatz von Wahlcomputern",
+        "Kritik an Wahlcomputern",
+        "Zukunft der elektronischen Wahlgeräte"
+      ],
+      "episodes": [
+        50,
+        118
+      ]
+    },
+    {
+      "id": "gtk-und-gnome",
+      "name": "GTK+ und GNOME",
+      "description": "4 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 1,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Hintergründe und Geschichte von GTK+ und GNOME",
+        "Objektorientierung in GTK+",
+        "Portierung von GTK+ auf andere Betriebssysteme",
+        "Grenzen zwischen GTK+ und GNOME"
+      ],
+      "episodes": [
+        79
+      ]
+    },
+    {
+      "id": "fpga-cpld-technologien",
+      "name": "FPGA & CPLD Technologien",
+      "description": "4 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 1,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "FPGA-Technologien",
+        "CPLD-Technologien",
+        "Selbstprogrammierbare Hardware",
+        "Projekte mit FPGA"
+      ],
+      "episodes": [
+        117
+      ]
+    },
+    {
+      "id": "malware-analyse",
+      "name": "Malware-Analyse",
+      "description": "4 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 2,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Malware auf Android",
+        "Entwicklung von Malware",
+        "Methoden zur Malwareabwehr",
+        "Automatisierte Malware Analyse"
+      ],
+      "episodes": [
+        152,
+        155
+      ]
+    },
+    {
+      "id": "chaos-computer-club",
+      "name": "Chaos Computer Club",
+      "description": "3 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 4,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Geschichte des Chaos Computer Clubs",
+        "Gründung des Chaos Computer Clubs",
+        "Chaos Computer Club"
+      ],
+      "episodes": [
+        38,
+        77,
+        161,
+        217
+      ]
+    },
+    {
+      "id": "internetkultur",
+      "name": "Internetkultur",
+      "description": "4 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 3,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Einfluss des Internets",
+        "Digitalkulturelle Errungenschaften",
+        "Einfluss des Internets auf die Gesellschaft",
+        "Bedeutung der Internetkultur"
+      ],
+      "episodes": [
+        60,
+        121,
+        129
+      ]
+    },
+    {
+      "id": "pypy-entwicklung",
+      "name": "PyPy-Entwicklung",
+      "description": "4 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 1,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "PyPy-Projekt",
+        "Einsatzmöglichkeiten von Python",
+        "Ziele des PyPy-Projekts",
+        "Zukünftige Anwendungen von PyPy"
+      ],
+      "episodes": [
+        88
+      ]
+    },
+    {
+      "id": "überwachungskritik",
+      "name": "Überwachungskritik",
+      "description": "4 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 2,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Überwachungsgesellschaft",
+        "Überwachungstechnologien",
+        "Einfluss von Überwachung auf Freiheit und Vertrauen",
+        "Mißbrauchspotential von Überwachungstechnik"
+      ],
+      "episodes": [
+        37,
+        59
+      ]
+    },
+    {
+      "id": "android-insights",
+      "name": "Android Insights",
+      "description": "4 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 1,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Entstehungsgeschichte von Android",
+        "Tips und Tricks für Android-Nutzer",
+        "Ressourcen für Android-Programmierer",
+        "Aktuelle Probleme und Merkwürdigkeiten von Android"
+      ],
+      "episodes": [
+        152
+      ]
+    },
+    {
+      "id": "dateifreigabe-protokolle",
+      "name": "Dateifreigabe-Protokolle",
+      "description": "4 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 1,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "File Sharing",
+        "SMB",
+        "AFP",
+        "NFS"
+      ],
+      "episodes": [
+        97
+      ]
+    },
+    {
+      "id": "dylan-programmierung",
+      "name": "Dylan-Programmierung",
+      "description": "4 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 1,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Merkmale der Programmiersprache Dylan",
+        "Konzepte hinter Dylan",
+        "Unterschiede zwischen Dylan und anderen Programmiersprachen",
+        "Lösungen für Programmierprobleme mit Dylan"
+      ],
+      "episodes": [
+        31
+      ]
+    },
+    {
+      "id": "gsm-sicherheit",
+      "name": "GSM-Sicherheit",
+      "description": "4 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 2,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Sicherheitsmängel von GSM-Netzen",
+        "Angriffsvektoren in GSM-Netzen",
+        "Verschlüsselungsalgorithmen in GSM",
+        "Sicherheit der GSM-Kryptografie"
+      ],
+      "episodes": [
+        56,
+        179
+      ]
+    },
+    {
+      "id": "zukunft-der-open-source-projekte",
+      "name": "Zukunft der Open-Source-Projekte",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Zukünftige Entwicklung von Samba",
+        "Zukunft des KDE-Projekts",
+        "Zukünftige Möglichkeiten von systemd"
+      ],
+      "episodes": [
+        25,
+        33,
+        209
+      ]
+    },
+    {
+      "id": "steuersystem-analyse",
+      "name": "Steuersystem-Analyse",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Gestaltung des Steuersystems",
+        "Bedeutung des Steuersystems",
+        "Reformfähigkeit des Steuersystems"
+      ],
+      "episodes": [
+        142
+      ]
+    },
+    {
+      "id": "programmiersprachen",
+      "name": "Programmiersprachen",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Moderne Programmiersprachen",
+        "Geschichte von Programmiersprachen",
+        "Technische Grundlagen von Programmiersprachen"
+      ],
+      "episodes": [
+        31
+      ]
+    },
+    {
+      "id": "openstreetmap-anwendungen",
+      "name": "OpenStreetMap Anwendungen",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Freie Geodaten",
+        "Navigation mit OSM-Daten",
+        "Anwendungen mit OSM-Daten"
+      ],
+      "episodes": [
+        113
+      ]
+    },
+    {
+      "id": "bluetooth-technologie",
+      "name": "Bluetooth-Technologie",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Struktur und Sicherheit des Bluetooth Protocol Stacks",
+        "Bluetooth 3.0 und die Koexistenz mit WLAN",
+        "ungewöhnliche Bluetooth-Geräte"
+      ],
+      "episodes": [
+        169
+      ]
+    },
+    {
+      "id": "dvcs-kollaboration",
+      "name": "DVCS-Kollaboration",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Interoperabilität von DVCS",
+        "Kollaborationsstrukturen beim Programmieren",
+        "Verwendung von DVCS zur Bucherarbeitung"
+      ],
+      "episodes": [
+        130
+      ]
+    },
+    {
+      "id": "buchdruckgeschichte",
+      "name": "Buchdruckgeschichte",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Entwicklung des Buchdrucks",
+        "Gutenbergs Buchdrucktechnik",
+        "Aufbau der Buchdruckmaschine"
+      ],
+      "episodes": [
+        80
+      ]
+    },
+    {
+      "id": "internetzugangstechnologien",
+      "name": "Internetzugangstechnologien",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Zugang zum Internet",
+        "Festnetz vs. Mobilfunk",
+        "DSL-Technik"
+      ],
+      "episodes": [
+        191
+      ]
+    },
+    {
+      "id": "freiheitsrechte",
+      "name": "Freiheitsrechte",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Persönliche Freiheit",
+        "Bürgerliche Freiheiten",
+        "Sicherheit und Freiheit"
+      ],
+      "episodes": [
+        51,
+        135
+      ]
+    },
+    {
+      "id": "tex-entwicklung",
+      "name": "TeX-Entwicklung",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "TeX-Makrosprache",
+        "TeX und Schriftarten",
+        "TeX-Werkzeuge und Editoren"
+      ],
+      "episodes": [
+        127
+      ]
+    },
+    {
+      "id": "fahrzeugnetzwerksicherheit",
+      "name": "Fahrzeugnetzwerksicherheit",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Sicherheit in Fahrzeugnetzwerken",
+        "Integration von Fahrzeugnetzen",
+        "Privacy in Fahrzeugnetzen"
+      ],
+      "episodes": [
+        116
+      ]
+    },
+    {
+      "id": "geocaching",
+      "name": "Geocaching",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Geocaching und Letterboxing",
+        "Geocaching als Breitensport",
+        "Erfahrungen von Geocachern"
+      ],
+      "episodes": [
+        181,
+        204
+      ]
+    },
+    {
+      "id": "elektronische-musikgeschichte",
+      "name": "Elektronische Musikgeschichte",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Rolle von Pionieren der elektronischen Musik",
+        "Geschichte der Synthesizer",
+        "Frühe elektronische Musikinstrumente"
+      ],
+      "episodes": [
+        136,
+        149
+      ]
+    },
+    {
+      "id": "b-a-t-m-a-n-protokoll",
+      "name": "B.A.T.M.A.N. Protokoll",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "B.A.T.M.A.N. und Mesh Networking",
+        "Entwicklung des B.A.T.M.A.N. Protokolls",
+        "Erfahrungen und Erkenntnisse im Design von B.A.T.M.A.N."
+      ],
+      "episodes": [
+        45
+      ]
+    },
+    {
+      "id": "wikipedia-insights",
+      "name": "Wikipedia Insights",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Historie des Wikipedia-Projektes",
+        "Aktuelle Probleme und Herausforderungen der Wikipedia",
+        "Neue Funktionen der Wikipedia"
+      ],
+      "episodes": [
+        43,
+        93
+      ]
+    },
+    {
+      "id": "internetkommunikation",
+      "name": "Internetkommunikation",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Web- und E-Mail-Kommunikation",
+        "Kommunikationsmuster im Web",
+        "Grundlagen der Internetkommunikation"
+      ],
+      "episodes": [
+        27,
+        94,
+        197
+      ]
+    },
+    {
+      "id": "computerspiele-entwicklung",
+      "name": "Computerspiele-Entwicklung",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Entwicklung der Computerspiele-Szene",
+        "Computerspiele",
+        "Forschung im Spielebereich"
+      ],
+      "episodes": [
+        89,
+        131,
+        162
+      ]
+    },
+    {
+      "id": "digitaler-aktivismus",
+      "name": "Digitaler Aktivismus",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Politischer Aktivismus im digitalen Raum",
+        "Netzpolitischer Aktivismus",
+        "Hackeraktivismus und Freiheit im Internet"
+      ],
+      "episodes": [
+        95,
+        172,
+        188
+      ]
+    },
+    {
+      "id": "agrarinnovation",
+      "name": "Agrarinnovation",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Entwicklung der Landwirtschaft",
+        "Moderne Landwirtschaft",
+        "Ertragssteigerung"
+      ],
+      "episodes": [
+        210,
+        225
+      ]
+    },
+    {
+      "id": "gesellschaftliche-kunstwirkungen",
+      "name": "Gesellschaftliche Kunstwirkungen",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Einfluss von Künstlern auf die Gesellschaft",
+        "Aufgaben der Kunst in Kultur und Gesellschaft",
+        "Einfluss auf die Gesellschaft"
+      ],
+      "episodes": [
+        10,
+        174,
+        224
+      ]
+    },
+    {
+      "id": "schriftarten-technologie",
+      "name": "Schriftarten-Technologie",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Nicht-proportionale Schriftarten",
+        "Fotosatz und gerasterte Schriftarten",
+        "Vektorisierung von Schriftarten"
+      ],
+      "episodes": [
+        80
+      ]
+    },
+    {
+      "id": "wahlsysteme",
+      "name": "Wahlsysteme",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Wahlsystem in Deutschland",
+        "Wahlsysteme in Europa und der Welt",
+        "Alternative Wahlsysteme"
+      ],
+      "episodes": [
+        128,
+        158
+      ]
+    },
+    {
+      "id": "poststrukturalismus",
+      "name": "Poststrukturalismus",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Konsequenzen des Poststrukturalismus",
+        "Poststrukturalismus",
+        "Auswirkungen des Poststrukturalismus"
+      ],
+      "episodes": [
+        91,
+        192
+      ]
+    },
+    {
+      "id": "chili-kultur",
+      "name": "Chili-Kultur",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Geschichte der Chilipflanzen",
+        "Anbau von Chilipflanzen",
+        "Züchtung von Chilis"
+      ],
+      "episodes": [
+        216
+      ]
+    },
+    {
+      "id": "betriebssysteme",
+      "name": "Betriebssysteme",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Betriebssysteme",
+        "Vergleich von Betriebssystemen",
+        "Betriebssystemversionen"
+      ],
+      "episodes": [
+        92,
+        131,
+        152
+      ]
+    },
+    {
+      "id": "web-usability",
+      "name": "Web-Usability",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Usability-Optimierung",
+        "Lokalisierung von Websites",
+        "Mehrsprachigkeit von Websites"
+      ],
+      "episodes": [
+        64,
+        78,
+        103
+      ]
+    },
+    {
+      "id": "free-software-foundation",
+      "name": "Free Software Foundation",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Geschichte der Free Software Foundation",
+        "Struktur der Free Software Foundation",
+        "Arbeit der Free Software Foundation"
+      ],
+      "episodes": [
+        26
+      ]
+    },
+    {
+      "id": "usb-technologie",
+      "name": "USB-Technologie",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Funktionsprinzipien von USB",
+        "Stecker und Verkabelung",
+        "Funktion eines USB-Hubs"
+      ],
+      "episodes": [
+        86
+      ]
+    },
+    {
+      "id": "zfs-dateisystem",
+      "name": "ZFS Dateisystem",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "ZFS Dateisystem",
+        "Eigenschaften von ZFS",
+        "Anwendungen von ZFS"
+      ],
+      "episodes": [
+        49
+      ]
+    },
+    {
+      "id": "zope-plone",
+      "name": "Zope & Plone",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Zope und Plone",
+        "Struktur und Möglichkeiten von Zope-Anwendungen",
+        "Erweiterung von Plone für Anwendungen"
+      ],
+      "episodes": [
+        78
+      ]
+    },
+    {
+      "id": "präsentationstechniken",
+      "name": "Präsentationstechniken",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Techniken des Sprechens",
+        "Vortragstechniken",
+        "Präsentationstechniken"
+      ],
+      "episodes": [
+        190
+      ]
+    },
+    {
+      "id": "darwin-analyse",
+      "name": "Darwin-Analyse",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Eigenschaften von Darwin",
+        "Mythen und Gerüchte über Darwin",
+        "Struktur und Komponenten von Darwin"
+      ],
+      "episodes": [
+        69
+      ]
+    },
+    {
+      "id": "handfeuerwaffen",
+      "name": "Handfeuerwaffen",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Typen von Handfeuerwaffen",
+        "Funktionsweise einer Schusswaffe",
+        "Durchschlagskraft von Feuerwaffen"
+      ],
+      "episodes": [
+        108
+      ]
+    },
+    {
+      "id": "node-js-technologien",
+      "name": "Node.js Technologien",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Server-side JavaScript und asynchrones I/O",
+        "node.js Architektur",
+        "node.js auf Embedded-Systemen"
+      ],
+      "episodes": [
+        146,
+        167
+      ]
+    },
+    {
+      "id": "internet-kommunikation",
+      "name": "Internet-Kommunikation",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Zukunft der Kommunikation im Internet",
+        "Geschichte des Internets",
+        "Revolution der weltweiten Kommunikation durch Netze"
+      ],
+      "episodes": [
+        94,
+        100,
+        161
+      ]
+    },
+    {
+      "id": "medienentwicklung",
+      "name": "Medienentwicklung",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Einfluss auf die Medienlandschaft",
+        "Rolle der etablierten Medien",
+        "Entwicklung der Medien"
+      ],
+      "episodes": [
+        123,
+        129,
+        139
+      ]
+    },
+    {
+      "id": "brotkultur",
+      "name": "Brotkultur",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Geschichte des Brotbackens",
+        "Wesen des Brots",
+        "Vollwertiges Brot"
+      ],
+      "episodes": [
+        213
+      ]
+    },
+    {
+      "id": "netlabels-und-musikmarkt",
+      "name": "Netlabels und Musikmarkt",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Netlabels und ihre Rolle im Musikmarkt",
+        "Wandel der Musikszene durch das Internet",
+        "Zukunft der Musikdistribution und Netlabels"
+      ],
+      "episodes": [
+        53,
+        136
+      ]
+    },
+    {
+      "id": "fernsehkultur",
+      "name": "Fernsehkultur",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Wesen des Fernsehens",
+        "Zustand des Fernsehens im deutschsprachigen Raum",
+        "Problemfeld Fernsehen"
+      ],
+      "episodes": [
+        157,
+        178
+      ]
+    },
+    {
+      "id": "gesellschaftsanalysen",
+      "name": "Gesellschaftsanalysen",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Gesellschaft",
+        "Gesellschaftsanalyse",
+        "Gesellschaftliche Strukturen"
+      ],
+      "episodes": [
+        3,
+        91,
+        160
+      ]
+    },
+    {
+      "id": "frauenrechte",
+      "name": "Frauenrechte",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Gleichstellung der Geschlechter",
+        "Benachteiligung von Frauen im Alltag",
+        "Sexismus"
+      ],
+      "episodes": [
+        196
+      ]
+    },
+    {
+      "id": "sprachentstehung",
+      "name": "Sprachentstehung",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Entstehung von Sprachen",
+        "Theorien zur Sprachentstehung",
+        "Geschichte der Sprache"
+      ],
+      "episodes": [
+        41,
+        220
+      ]
+    },
+    {
+      "id": "open-source",
+      "name": "Open Source",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Freie Software",
+        "Open Source Software",
+        "Open-Source-Software"
+      ],
+      "episodes": [
+        42,
+        54,
+        199
+      ]
+    },
+    {
+      "id": "geheimdienstüberwachung",
+      "name": "Geheimdienstüberwachung",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Geheimdienste",
+        "Geheimdienste in Deutschland",
+        "Überwachung der Geheimdienste"
+      ],
+      "episodes": [
+        60,
+        159
+      ]
+    },
+    {
+      "id": "medienbildung",
+      "name": "Medienbildung",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Medienkompetenz",
+        "Medienkompetenz in Schulen",
+        "Wissensvermittlung"
+      ],
+      "episodes": [
+        129,
+        189,
+        223
+      ]
+    },
+    {
+      "id": "datenformate",
+      "name": "Datenformate",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Multimedia-Datenformate",
+        "Videoformate",
+        "Containerformate"
+      ],
+      "episodes": [
+        61
+      ]
+    },
+    {
+      "id": "wikipedia-forschung",
+      "name": "Wikipedia-Forschung",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Forschungsprojekte zu Wikipedia",
+        "Löschdiskussionen in Wikipedia",
+        "Wikipedia-Debatte"
+      ],
+      "episodes": [
+        43,
+        139
+      ]
+    },
+    {
+      "id": "web-accessibility",
+      "name": "Web Accessibility",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Barrierefreiheit im Web",
+        "Technische Standards für Accessibility",
+        "Web Content Accessibility Guidelines"
+      ],
+      "episodes": [
+        107
+      ]
+    },
+    {
+      "id": "technologiegeschichte",
+      "name": "Technologiegeschichte",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Technologische Entwicklung",
+        "Wandel durch Technologie",
+        "Geschichte der Technologie"
+      ],
+      "episodes": [
+        60,
+        123,
+        131
+      ]
+    },
+    {
+      "id": "hacker-im-film",
+      "name": "Hacker im Film",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Bild des Hackers in der Filmkultur",
+        "Wandel des Hackerbildes",
+        "Einfluss der Filmbranche auf die Wahrnehmung von Hackern"
+      ],
+      "episodes": [
+        202
+      ]
+    },
+    {
+      "id": "hubschrauber-sicherheit",
+      "name": "Hubschrauber-Sicherheit",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Sicherheitsaspekte bei Hubschraubern",
+        "Fehlschläge in der Hubschraubergeschichte",
+        "Sicherheitskultur"
+      ],
+      "episodes": [
+        74,
+        85
+      ]
+    },
+    {
+      "id": "verschlüsselungstechniken",
+      "name": "Verschlüsselungstechniken",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Verschlüsselungsalgorithmus",
+        "Nutzung von Verschlüsselung",
+        "Verschlüsselung"
+      ],
+      "episodes": [
+        98,
+        120,
+        183
+      ]
+    },
+    {
+      "id": "jagd-und-gesellschaft",
+      "name": "Jagd und Gesellschaft",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Beruf des Jägers",
+        "Bedeutung der Jagd",
+        "Verhältnis der modernen Gesellschaft zum Jägertum"
+      ],
+      "episodes": [
+        210
+      ]
+    },
+    {
+      "id": "digitales-urheberrecht-frankreich",
+      "name": "Digitales Urheberrecht Frankreich",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Urheberrecht in Frankreich",
+        "Rechtsprechung im Internet",
+        "Urheberrecht und digitale Rechte"
+      ],
+      "episodes": [
+        7,
+        29,
+        164
+      ]
+    },
+    {
+      "id": "liquid-democracy",
+      "name": "Liquid Democracy",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Liquid Democracy",
+        "Delegated Voting",
+        "Delegation"
+      ],
+      "episodes": [
+        158
+      ]
+    },
+    {
+      "id": "digitale-kunst",
+      "name": "Digitale Kunst",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Netzkunst",
+        "Medienkunst",
+        "Webseiten als Kunstobjekte"
+      ],
+      "episodes": [
+        132,
+        174,
+        181
+      ]
+    },
+    {
+      "id": "feministische-bewegungen",
+      "name": "Feministische Bewegungen",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Geschichte des Feminismus",
+        "Dritte Welle des Feminismus",
+        "Feminismus und Freiheit"
+      ],
+      "episodes": [
+        196
+      ]
+    },
+    {
+      "id": "musik-programmierung",
+      "name": "Musik-Programmierung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Synergien von Musikkomposition und Programmierung",
+        "Integration von Computern und Software"
+      ],
+      "episodes": [
+        145,
+        149
+      ]
+    },
+    {
+      "id": "astrophysik",
+      "name": "Astrophysik",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Dunkle Materie",
+        "Planetenbewegungen"
+      ],
+      "episodes": [
+        147,
+        156
+      ]
+    },
+    {
+      "id": "journalismus-4-0",
+      "name": "Journalismus 4.0",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Journalismus",
+        "Digitalisierung im Journalismus"
+      ],
+      "episodes": [
+        139,
+        203
+      ]
+    },
+    {
+      "id": "virtualisierungssicherheit",
+      "name": "Virtualisierungssicherheit",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Virtualisierung",
+        "Sicherheitsaspekte bei Virtualisierungssoftware"
+      ],
+      "episodes": [
+        92
+      ]
+    },
+    {
+      "id": "openbsd-sicherheit",
+      "name": "OpenBSD Sicherheit",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Sicherheitsfokus von OpenBSD",
+        "Einsatzgebiete von OpenBSD"
+      ],
+      "episodes": [
+        105
+      ]
+    },
+    {
+      "id": "geodatenmanagement",
+      "name": "Geodatenmanagement",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Erfassung von Geodaten",
+        "Metadaten"
+      ],
+      "episodes": [
+        113,
+        205
+      ]
+    },
+    {
+      "id": "pilotenausbildung",
+      "name": "Pilotenausbildung",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Arbeit von Piloten",
+        "Ausbildung und Weiterbildung von Piloten"
+      ],
+      "episodes": [
+        211
+      ]
+    },
+    {
+      "id": "quadrocopter-technologie",
+      "name": "Quadrocopter-Technologie",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Flugprinzip eines Quadrocopters",
+        "Anwendungsszenarien für den Einsatz von Quadrocoptern"
+      ],
+      "episodes": [
+        106
+      ]
+    },
+    {
+      "id": "rhetorik-emotion",
+      "name": "Rhetorik & Emotion",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Humor in der Rede",
+        "Emotion in der Rede"
+      ],
+      "episodes": [
+        190
+      ]
+    },
+    {
+      "id": "perry-rhodan-sci-fi",
+      "name": "Perry Rhodan Sci-Fi",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Perry Rhodan Universum",
+        "Science Fiction Literatur"
+      ],
+      "episodes": [
+        35,
+        60
+      ]
+    },
+    {
+      "id": "hirnforschung",
+      "name": "Hirnforschung",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Stand der Hirnforschung",
+        "Evolution des Gehirns"
+      ],
+      "episodes": [
+        195
+      ]
+    },
+    {
+      "id": "eventplanung",
+      "name": "Eventplanung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Konferenzen und Festivals",
+        "Gestaltung von Partys und Events"
+      ],
+      "episodes": [
+        174,
+        219
+      ]
+    },
+    {
+      "id": "bundeswehr-studien",
+      "name": "Bundeswehr-Studien",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Bundeswehr und Gesellschaft",
+        "Bundeswehr-Geschichte"
+      ],
+      "episodes": [
+        184
+      ]
+    },
+    {
+      "id": "energieeffizienz",
+      "name": "Energieeffizienz",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Energiespartechniken",
+        "Technik von Passivhäusern"
+      ],
+      "episodes": [
+        75,
+        180
+      ]
+    },
+    {
+      "id": "cpu-optimierung",
+      "name": "CPU-Optimierung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Alternative Befehlssätze",
+        "Debugging einer CPU"
+      ],
+      "episodes": [
+        151,
+        193
+      ]
+    },
+    {
+      "id": "drupal-architektur",
+      "name": "Drupal Architektur",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Module und Blocks",
+        "Rollensystem von Drupal"
+      ],
+      "episodes": [
+        103
+      ]
+    },
+    {
+      "id": "objective-c-macos",
+      "name": "Objective-C & macOS",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Programmiersprache Objective-C",
+        "Mac OS X und iPhone OS"
+      ],
+      "episodes": [
+        70,
+        101
+      ]
+    },
+    {
+      "id": "synchronisationstechniken",
+      "name": "Synchronisationstechniken",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Filmsynchronisation",
+        "Aufnahme der Synchronsprecher"
+      ],
+      "episodes": [
+        150
+      ]
+    },
+    {
+      "id": "pornographie-und-gesellschaft",
+      "name": "Pornographie und Gesellschaft",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Geschichte der Pornographie",
+        "Gesellschaftliche Bedeutung von Pornographie"
+      ],
+      "episodes": [
+        198
+      ]
+    },
+    {
+      "id": "kryptowährungs-kriminalität",
+      "name": "Kryptowährungs-Kriminalität",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Kryptographische Grundlagen von eCash und Bitcoin",
+        "Kriminelle Aktivitäten und Kryptowährungen"
+      ],
+      "episodes": [
+        182,
+        224
+      ]
+    },
+    {
+      "id": "chaosradio-feedback",
+      "name": "Chaosradio Feedback",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Feedback zum Chaosradio Express",
+        "Feedback zu letzten Sendungen"
+      ],
+      "episodes": [
+        8,
+        20
+      ]
+    },
+    {
+      "id": "wikileaks-nachrichten",
+      "name": "Wikileaks Nachrichten",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Wikileaks",
+        "Wikileaks als öffentlicher Nachrichtendienst"
+      ],
+      "episodes": [
+        124,
+        159
+      ]
+    },
+    {
+      "id": "javascript-webentwicklung",
+      "name": "JavaScript Webentwicklung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Moderne Webentwicklung",
+        "Webanwendungsentwicklung mit JavaScript"
+      ],
+      "episodes": [
+        72,
+        146
+      ]
+    },
+    {
+      "id": "testgetriebenes-programmieren",
+      "name": "Testgetriebenes Programmieren",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Testen von Software",
+        "Programmieren mit Tests"
+      ],
+      "episodes": [
+        3,
+        163
+      ]
+    },
+    {
+      "id": "x86-virtualisierung",
+      "name": "x86-Virtualisierung",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "x86-Architektur",
+        "Hardware-Unterstützung für Virtualisierung"
+      ],
+      "episodes": [
+        92
+      ]
+    },
+    {
+      "id": "openwrt-tipps",
+      "name": "OpenWRT Tipps",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "OpenWRT Distribution",
+        "OpenWRT Installation"
+      ],
+      "episodes": [
+        76
+      ]
+    },
+    {
+      "id": "sozialpädagogik-extremismus",
+      "name": "Sozialpädagogik & Extremismus",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Sozialpädagogie",
+        "Über den Umgang mit Nazis"
+      ],
+      "episodes": [
+        178,
+        185
+      ]
+    },
+    {
+      "id": "jugendschutz-im-internet",
+      "name": "Jugendschutz im Internet",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Netzsperren, Filter und jugendgefährdende Inhalte",
+        "Angemessener Jugendschutz im Internet"
+      ],
+      "episodes": [
+        178
+      ]
+    },
+    {
+      "id": "astronomie",
+      "name": "Astronomie",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Sterne und Galaxien",
+        "Sonnensysteme und Galaxien"
+      ],
+      "episodes": [
+        147
+      ]
+    },
+    {
+      "id": "fußballrobotik-kommunikation",
+      "name": "Fußballrobotik Kommunikation",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Kommunikation der Fußballroboter",
+        "Interesse für Technik vs. Kommunikation"
+      ],
+      "episodes": [
+        112,
+        178
+      ]
+    },
+    {
+      "id": "theoretische-physik",
+      "name": "Theoretische Physik",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Einsteinsche Relativitätstheorie",
+        "Grundkräfte der Physik"
+      ],
+      "episodes": [
+        147
+      ]
+    },
+    {
+      "id": "cola-geschichte",
+      "name": "Cola-Geschichte",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Coca-Cola und das Kokain",
+        "Niedergang von Afri-Cola und die Interessengruppe Premium"
+      ],
+      "episodes": [
+        175
+      ]
+    },
+    {
+      "id": "naturgestaltung",
+      "name": "Naturgestaltung",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Gestaltung von Lebensraum",
+        "Leben in und mit der Natur"
+      ],
+      "episodes": [
+        210
+      ]
+    },
+    {
+      "id": "kde-4-updates",
+      "name": "KDE 4 Updates",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Neuerungen in KDE 4.0",
+        "Applikationen für KDE4"
+      ],
+      "episodes": [
+        68
+      ]
+    },
+    {
+      "id": "zwergplaneten",
+      "name": "Zwergplaneten",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Zwergplaneten und Pluto",
+        "Planetenabstände"
+      ],
+      "episodes": [
+        156
+      ]
+    },
+    {
+      "id": "fahrzeugsicherheit",
+      "name": "Fahrzeugsicherheit",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Sicherheitssysteme",
+        "Automatische Bremssysteme"
+      ],
+      "episodes": [
+        171
+      ]
+    },
+    {
+      "id": "mikrocomputer-geschichte",
+      "name": "Mikrocomputer-Geschichte",
+      "description": "2 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 1,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Computertechnik der 70er Jahre",
+        "Entwicklung von Mikrocomputern"
+      ],
+      "episodes": [
+        193
+      ]
+    }
+  ]
+}

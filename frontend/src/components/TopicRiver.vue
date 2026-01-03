@@ -588,6 +588,7 @@ const loadingTopics = ref(false);
 const mp3IndexLoaded = ref(false);
 const mp3IndexError = ref<string | null>(null);
 const mp3UrlByEpisode = ref<Map<number, string>>(new Map());
+const mp3MetaByEpisode = ref<Map<number, { url: string | null; durationSec: number | null }>>(new Map());
 const currentMp3Url = ref<string | null>(null);
 const playerInfo = ref<{ episodeNumber: number; positionSec: number; label: string } | null>(null);
 const playerError = ref<string | null>(null);
@@ -602,6 +603,7 @@ watch(
     mp3IndexLoaded.value = false;
     mp3IndexError.value = null;
     mp3UrlByEpisode.value = new Map();
+    mp3MetaByEpisode.value = new Map();
     // stop any currently playing audio tied to the previous podcast
     currentMp3Url.value = null;
     playerInfo.value = null;
@@ -620,6 +622,29 @@ const withBase = (p: string) => {
   return `${b}${rel}`;
 };
 
+const parseHmsToSeconds = (hms: unknown): number | null => {
+  const s = typeof hms === 'string' ? hms.trim() : '';
+  if (!s) return null;
+  const parts = s.split(':').map(p => p.trim()).filter(Boolean);
+  if (parts.length < 2 || parts.length > 3) return null;
+  const nums = parts.map(p => parseInt(p, 10));
+  if (nums.some(n => !Number.isFinite(n))) return null;
+  if (nums.length === 2) {
+    const [m, sec] = nums;
+    return (m ?? 0) * 60 + (sec ?? 0);
+  }
+  const [h, m, sec] = nums;
+  return (h ?? 0) * 3600 + (m ?? 0) * 60 + (sec ?? 0);
+};
+
+const secondsToHmsTuple = (sec: unknown): [number, number, number] => {
+  const s0 = Number.isFinite(sec as number) ? Math.max(0, Math.floor(sec as number)) : 0;
+  const h = Math.floor(s0 / 3600);
+  const m = Math.floor((s0 % 3600) / 60);
+  const s = s0 % 60;
+  return [h, m, s];
+};
+
 // Lade Episode-Details für Topics (für Speaker-Informationen)
 const loadEpisodeDetails = async () => {
   if (!selectedTopicInfo.value || loadingEpisodes.value) return;
@@ -632,6 +657,10 @@ const loadEpisodeDetails = async () => {
     .map(ep => ep.number)
     .filter(num => !episodeDetails.value.has(num));
   
+  // Ensure MP3 index is available so we can fall back to `episodes.json` metadata when
+  // per-episode detail files don't exist (e.g. some podcasts only have episodes.json).
+  await ensureMp3Index();
+
   for (const episodeNum of toLoad) {
     try {
       const response = await fetch(getEpisodeUrl(episodeNum));
@@ -640,13 +669,40 @@ const loadEpisodeDetails = async () => {
         newDetails.set(episodeNum, data);
       } else {
         console.warn(`Episode ${episodeNum} not found (HTTP ${response.status})`);
-        // Mark as attempted but failed, so we don't try again
-        newDetails.set(episodeNum, null);
+        // Fallback: use MP3 feed index metadata if available
+        const meta = mp3MetaByEpisode.value.get(episodeNum) || null;
+        if (meta?.url || Number.isFinite(meta?.durationSec as number)) {
+          newDetails.set(episodeNum, {
+            title: selectedTopicInfo.value?.episodes?.find((e: any) => e?.number === episodeNum)?.title || '',
+            date: selectedTopicInfo.value?.episodes?.find((e: any) => e?.number === episodeNum)?.date || '',
+            url: meta?.url || null,
+            duration: secondsToHmsTuple(meta?.durationSec),
+            speakers: [],
+            chapters: [],
+            _fallback: 'episodes.json',
+          });
+        } else {
+          // Mark as attempted but failed, so we don't try again
+          newDetails.set(episodeNum, null);
+        }
       }
     } catch (e) {
       console.error(`Failed to load episode ${episodeNum}:`, e);
-      // Mark as attempted but failed
-      newDetails.set(episodeNum, null);
+      const meta = mp3MetaByEpisode.value.get(episodeNum) || null;
+      if (meta?.url || Number.isFinite(meta?.durationSec as number)) {
+        newDetails.set(episodeNum, {
+          title: selectedTopicInfo.value?.episodes?.find((e: any) => e?.number === episodeNum)?.title || '',
+          date: selectedTopicInfo.value?.episodes?.find((e: any) => e?.number === episodeNum)?.date || '',
+          url: meta?.url || null,
+          duration: secondsToHmsTuple(meta?.durationSec),
+          speakers: [],
+          chapters: [],
+          _fallback: 'episodes.json',
+        });
+      } else {
+        // Mark as attempted but failed
+        newDetails.set(episodeNum, null);
+      }
     }
   }
   
@@ -851,21 +907,33 @@ const ensureMp3Index = async () => {
     const data = await res.json();
 
     const map = new Map<number, string>();
+    const metaMap = new Map<number, { url: string | null; durationSec: number | null }>();
     if (data?.byNumber && typeof data.byNumber === 'object') {
       for (const [k, v] of Object.entries<any>(data.byNumber)) {
         const n = parseInt(k, 10);
         const url = typeof v?.mp3Url === 'string' ? v.mp3Url : null;
         if (Number.isFinite(n) && url) map.set(n, url);
+        if (Number.isFinite(n)) {
+          const pageUrl = typeof v?.pageUrl === 'string' ? v.pageUrl : null;
+          const durSec = Number.isFinite(v?.durationSec) ? v.durationSec : parseHmsToSeconds(v?.duration);
+          metaMap.set(n, { url: pageUrl, durationSec: Number.isFinite(durSec as number) ? (durSec as number) : null });
+        }
       }
     } else if (Array.isArray(data?.episodes)) {
       for (const ep of data.episodes) {
         const n = Number.isFinite(ep?.number) ? ep.number : null;
         const url = typeof ep?.mp3Url === 'string' ? ep.mp3Url : null;
         if (Number.isFinite(n) && url) map.set(n, url);
+        if (Number.isFinite(n)) {
+          const pageUrl = typeof ep?.pageUrl === 'string' ? ep.pageUrl : null;
+          const durSec = Number.isFinite(ep?.durationSec) ? ep.durationSec : parseHmsToSeconds(ep?.duration);
+          metaMap.set(n as number, { url: pageUrl, durationSec: Number.isFinite(durSec as number) ? (durSec as number) : null });
+        }
       }
     }
 
     mp3UrlByEpisode.value = map;
+    mp3MetaByEpisode.value = metaMap;
     mp3IndexLoaded.value = true;
   } catch (e) {
     mp3IndexError.value = e instanceof Error ? e.message : String(e);
@@ -1020,7 +1088,20 @@ const closePlayer = () => {
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap text-xs">
                           {{ new Date(episode.date).toLocaleDateString('de-DE') }}
                         </td>
-                        <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">{{ episode.title }}</td>
+                        <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">
+                          <div class="flex items-center gap-2 min-w-0">
+                            <button
+                              type="button"
+                              class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                              @click="playEpisodeAt(episode.number, 0, 'Start')"
+                              title="Episode von Anfang abspielen"
+                              aria-label="Episode von Anfang abspielen"
+                            >
+                              ▶︎
+                            </button>
+                            <span class="truncate">{{ episode.title }}</span>
+                          </div>
+                        </td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap font-mono">
                           <template v-if="getTopicOccurrences(episode).length > 0">
                             <template v-for="(occ, idx) in getTopicOccurrences(episode)" :key="`${episode.number}-${occ.positionSec}-${idx}`">
@@ -1063,7 +1144,20 @@ const closePlayer = () => {
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap text-xs">
                           {{ new Date(episode.date).toLocaleDateString('de-DE') }}
                         </td>
-                        <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">{{ episode.title }}</td>
+                        <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">
+                          <div class="flex items-center gap-2 min-w-0">
+                            <button
+                              type="button"
+                              class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                              @click="playEpisodeAt(episode.number, 0, 'Start')"
+                              title="Episode von Anfang abspielen"
+                              aria-label="Episode von Anfang abspielen"
+                            >
+                              ▶︎
+                            </button>
+                            <span class="truncate">{{ episode.title }}</span>
+                          </div>
+                        </td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap font-mono">
                           <template v-if="getTopicOccurrences(episode).length > 0">
                             {{ getTopicOccurrences(episode).map(formatOccurrenceLabel).join(', ') }}
@@ -1077,7 +1171,20 @@ const closePlayer = () => {
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap text-xs">
                           {{ new Date(episode.date).toLocaleDateString('de-DE') }}
                         </td>
-                        <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">{{ episode.title }}</td>
+                        <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">
+                          <div class="flex items-center gap-2 min-w-0">
+                            <button
+                              type="button"
+                              class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                              @click="playEpisodeAt(episode.number, 0, 'Start')"
+                              title="Episode von Anfang abspielen"
+                              aria-label="Episode von Anfang abspielen"
+                            >
+                              ▶︎
+                            </button>
+                            <span class="truncate">{{ episode.title }}</span>
+                          </div>
+                        </td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap font-mono">
                           <template v-if="getTopicOccurrences(episode).length > 0">
                             {{ getTopicOccurrences(episode).map(formatOccurrenceLabel).join(', ') }}

@@ -1,0 +1,779 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Hallo und herzlich willkommen zu Forschergeist dem Podcast des Stifterverbands für die deutsche Wissenschaft.\nMein Name ist Tim Pritlove und ich begrüße alle zur 92. Ausgabe dieser Gesprächsreihe,\nwo wir immer über ganz viel wichtige Sachen sprechen und manchmal geht es extrem ins Detail\nund manchmal bewegt man sich dann doch mehr auf der Metaebene,\ndas wird heute wahrscheinlich so eine Sendung werden,\ndenn wir wollen über Innovation sprechen und auch über Kreativität\nund noch ein paar andere interessante Begriffe und Tätigkeiten.\nUnd dazu begrüße ich erst mal meine Gesprächspartnerin heute,\nnämlich Katharina Hölzle, schönen guten Tag."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Hallo, ich freue mich, da zu sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ich freue mich, hier zu sein, denn ich bin ja eigentlich der Gast.\nIch bin nach Potsdam gefahren, denn dort sind Sie Professorin für IT-Entrepreneurship, wie das so schön heißt.\nWas Teil der Digital Engineering Fakultät ist an der Universität Potsdam.\nSoweit stimmt das, aber jetzt wird es kompliziert,\ndas Ganze hat auch noch eine Verbindung mit dem Hasso Plattner Institut.\nUnd das ist gar nicht so einfach zu erklären oder doch?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ich versuche es mal ganz einfach.\nAlso das ist das Hasso Plattner Institut, welches ja vor über 20 Jahren von Hasso Plattner gegründet wurde.\nWas dann ganz lange ein Aninstitut an der Universität Potsdam war\nund dann vor gut drei Jahren in die Universität Potsdam aufgenommen wurde als Digital Engineering Fakultät."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ah. Also das ist jetzt sozusagen in die Universität hineingewachsen?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja und Hasso Plattner hat ja Kraft seiner Herkunft, sagen wir mal, digitale Themen\nund Bildungsthemen auch früh hier in den Fokus gestellt des Instituts\nund es hat sich dann mittlerweile ziemlich ausgewachsen hier an der Uni Potsdam,\nkann man sagen oder?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Richtig, genau. Also wir sind ja relativ klein gestartet mit knapp zehn Kollegen,\nzehn Professoren und dann bin ich vor jetzt gut zwei Jahren dazugekommen\nals erste weibliche Professorin und auch als erste nicht-Informatikprofessorin,\ndenn vorher war das halt immer Kern die sogenannte angewandte Informatik.\nUnd dann bin eben vor zwei Jahren ich dazugekommen\nund der Kollege Übernickel, der das Themenfeld Innovation und Design Thinking, Forschung macht,\nund das waren die ersten beiden, die sich dann mal so ein bisschen interdisziplinär da drüber gelegt haben,\num die Themen auch mal im Kontext und übergreifend zu sehen.\nUnd aktuell sind wir jetzt nach letzter Zählung 24 Professoren und zwei Professorinnen\nund es sollen jetzt noch zwei, drei dazukommen und dann sind wir aber erst mal ausgewachsen.\nSo da soll es dann erst mal so bleiben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Da merkt man schon wieder das Problem, was die Informatik nicht nur in Deutschland,\naber auch in Deutschland, schon immer hat, dass es dann doch sehr männlichlastig war lange lange Zeit."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Bricht langsam auf?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Nicht wirklich.\nAlso es ist wirklich wirklich sehr langsam, es ist ein sehr dickes Brett.\nIch hätte das vorher auch nicht gedacht, ich komme ja selber aus den Ingenieurswissenschaften,\nda sind wir gefühlt tatsächlich schon 10-15 Jahre weiter.\nDa haben wir schon eine größere Heterogenität und Diversität.\nDie Informatik hat da immer noch wirklich Schwierigkeiten.\nIch bin ja auch Mitglied der SheTransformsIT Initiative,\nwo wir ja auch mit Mitgliedern aus Wirtschaft, Wissenschaft, Politik versuchen,\ndieses Thema echt ganz oben auf die Agenda zu setzen.\nIch glaube, da ist es, aber über diese 15 Prozent Frauenanteil kommen wir irgendwie seit Jahren nicht wirklich raus.\nUnd wir bemühen uns sehr und ich habe auch immer das Gefühl,\nwir haben viele zarte Pflänzchen, wir gehen in die Schulen,\nwir gehen also in die Kindergärten noch nicht, aber versuchen,\nda wirklich schon frühzeitig anzufangen, aber da muss sich wirklich noch sehr sehr viel ändern."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ist das noch so ein bisschen Henne-Ei-Problem, dass es auch ein bisschen was mit dem Angebot von unten zu tun hat\noder ist das eher ein strukturelles Problem von oben?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ja wahrscheinlich beides.\nAlso es kommen halt ganz viele Faktoren zusammen.\nEs fehlen uns die Rollenmodelle, es fehlen uns die Frauen, die da stehen,\nmit denen sich die jungen Frauen, die Mädchen identifizieren können.\nGleichzeitig ist es so, dass wir insgesamt im Kontext MINT einfach,\ndas wissen Sie sicherlich noch besser als ich, ein totales Bildungsproblem haben.\nDas ist eine schwierig anzufassende Wissenschaft.\nUnd bei Informatik kommt es dann noch mal stärker dazu.\nDass es häufig eben immer damit assoziiert wird, es geht um programmieren,\nes geht um die Nerds, die im Keller sitzen und das ist etwas,\ndamit holen Sie Mädchen grundsätzlich nicht so schnell hervor,\nda haben die nicht so viel Lust drauf.\nWas wir sehen sind die Bindestrich-Informatiken.\nWirtschafts-Informatik, Bio-Informatik, Medien-Informatik,\nda ist der Frauenanteil deutlich höher, da sind wir mittlerweile schon bei 30-40 Prozent angekommen.\nAlso das heißt, wenn wir das Ganze verbinden mit einem Sinn,\nmit einer Anwendung, mit dem Thema Impact, da sind wir ja schon so ein bisschen bei dem Innovationsthema,\nda klappt es besser, ja.\nAber so die Kerninformatik und so, das ist schwierig und genau,\nwir haben gerade bei der Schule angefangen und das setzt sich dann aber leider so fort,\ndass wir eben auch an den Universitäten sehen, dass selbst wenn wir die Mädchen,\ndie jungen Frauen haben, die anfangen Informatik zu studieren,\ndass die sehr sehr zu kämpfen haben, weil es doch immer noch sehr programmierlastig ist.\nDie Jungs können alle programmieren, die Mädchen können nicht programmieren\nund da müssen wir einfach noch mehr Angebote schaffen und dann sagen,\nja es gibt tatsächlich Mädchenprogrammierkurse, damit die einfach erst mal ankommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, das gibt mir Anlass und Gelegenheit, mal nach Ihrem eigenen Werdegang zu fragen.\nSie haben ja eigentlich so ein bisschen mit der Wirtschaft angefangen,\nkann man das so formulieren?\nich weiß nicht, ob man jetzt schon beim Studium starten sollte,\nmich interessiert immer so ein bisschen die Motivation eigentlich,\nwarum man ja ein bestimmtes Studium überhaupt erst einschlägt.\nAlso bei Ihnen war das dann die Wirtschaftsingenieurwissenschaften richtig?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Richtig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wie kommt man da drauf?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Man kommt darauf, wenn der eigene Vater Unternehmer ist\nund man selber aber gesehen hat, wie er gestrampelt hat,\nwie schwer das war, wie eng auch häufig das Geld war,\ndass das für mich nie ein Karriereweg war.\nDass ich gesagt habe, nein das möchte ich nicht.\nIch finde die Wirtschaft spannend, ich habe es kennengelernt bei meinem Vater,\nhabe natürlich da auch viel mitgearbeitet, aber wollte auf gar keinen Fall BWL studieren,\nweil ich die BWLer damals schwierig fand.\nIch hatte Mathe, Chemie Leistungskurs.\nIch glaube, wenn ich aus einem klassischen Akademikerhaushalt gekommen wäre,\nwas wir nicht waren, dann hätte ich vielleicht sogar Ingenieurwesen studieren können,\ndas ist so etwas, was ich immer noch ein bisschen bedaure,\ndass ich nicht mehr Mut hatte, tatsächlich in die Ingenieurwissenschaften einzusteigen.\nUnd der Wirtschaftsingenieur das war dann so der praktische Wirtschaftswissenschaftler auf der einen.\nUnd auf der anderen Seite …"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Die Bindestrich-Disziplin."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Genau, also vielleicht ganz vergleichbar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und wie muss man das verstehen, also Wirtschaftsingenieur, wo liegt der Schwerpunkt?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Naja, also im Grundstudium ist er erst mal schön bunt.\nIch habe ja noch ein klassisches Diplom gemacht in Karlsruhe an der Technischen Universität.\nUnd da haben Sie natürlich von Mathe 1 bis 3b über die Physik,\nüber die Chemie, über die Materialwissenschaften alles dabei.\nUnd dann auch so ein bisschen die auch Programmierung, Rechnungswesen\nund dann im Hauptstudium habe ich mich dann auf der einen Seite\nim Bereich der Ingenieurswissenschaften hatte ich den Maschinenbau\nund auch wieder die Materialwissenschaften.\nUnd auf der anderen Seite dann, das war die Karlsruher Prägung,\naber auch immer schon Informatik, Operations Research und Wirtschaftswissenschaften.\nUnd letztendlich …"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Das war Universität Karlsruhe dann?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Genau, so und uns wurde dann immer vorgeworfen, das wird dem Wirtschaftsingenieur immer gerne noch vorgeworfen,\ndas ist die eierlegende Wollmilchsau, kann alles so ein bisschen, aber nichts richtig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Das kann auch ein Vorteil sein."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Dann ging es aber in die Wirtschaft für Sie erst mal?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Genau, also ich hatte das große Glück, dass ich ein Jahr im Ausland studieren durfte.\nIch habe in den USA meinen Master of Business Administration gemacht\nund hatte dort Professoren, die eigentlich alle aus der Wirtschaft kamen.\nDie hatten alle mal in Unternehmen gearbeitet und das war für mich eine ganz neue Welt.\nDas war also nicht mehr so viel Theorie wie in Karlsruhe,\nsondern das war wirklich Hands on, wie man so sagen kann.\nUnd das war für mich der Punkt, dass ich sagte, ich habe während meines Studiums immer schon an einem Lehrstuhl gearbeitet,\nwas mir große Freude gemacht hat, aber ich fand dieses Vorbild aus den USA,\ndass die Professoren eben wirklich wussten worüber sie sprachen, das fand ich toll.\nUnd da war der Punkt, dass ich sagte, ich kann mir vorstellen, in die Academia zu gehen.\nAber ich möchte doch gerne noch erst die andere Seite sehen, ich möchte erst noch mal richtig arbeiten.\nUnd so kam dann die Entscheidung, zunächst einmal in die Wirtschaft zu gehen.\nUnd als ich dann diverse Stationen durchlaufen hatte, vom Großunternehmen Siemens\nüber die Unternehmensberatung, Capgemini, bis hin zu einem amerikanischen Startup-Unternehmen,\nwar dann irgendwann der Punkt gekommen, dass ich gesagt habe, so jetzt hast du alles mal gesehen\nund jetzt bist du eigentlich bereit, das Ganze jetzt noch mal von der wissenschaftlichen Seite zu betrachten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Startup und Siemens und so, das sind ja, also das könnte ja kaum weiter voneinander entfernt sein.\nIch will jetzt Siemens nicht zu nahe treten, aber ist natürlich eine ganz andere Struktur.\nAlso klar, wenn ich jetzt frage, wo nimmt man mehr mit, dann ist die Antwort,\nbeides ist lehrreich, aber was prägt einen letztlich vielleicht mehr?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Also am meisten geprägt hat mich tatsächlich die Zeit in der Unternehmensberatung.\nDas war eine sehr harte Zeit, also das ist tatsächlich eigentlich noch mal eine zusätzliche Ausbildung gewesen.\nIch bin da sehr geschliffen worden, das tat auch teilweise ganz schön weh,\naber ich glaube, ich habe da wirklich sehr sehr viel noch mal gelernt.\nUnd das war ja so das Zwischenstück, zwischen dem Großunternehmen und dann dem Startup.\nUnd die anderen beiden Erfahrungen waren sehr unterschiedlich, aber beide gut.\nAlso ich glaube, wenn ich nicht vorher in einem Großunternehmen gearbeitet hätte,\ndann hätte ich auf Unternehmensberaterseite nicht so gut verstanden, wie ein Unternehmen tickt,\nin welchen Strukturen es häufig gefangen ist.\nUnd wenn ich nicht als Unternehmensberaterin auch gelernt hätte, so selbstständig zu arbeiten,\ndann hätte ich in diesem amerikanischen Startup-Unternehmen,\nwo ich ja dann am Ende dafür verantwortlich war, auch die europäische Tochter aufzubauen,\nhätte ich das nicht so selbständig machen können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Was für ein Startup war das?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Das nannte sich „Need2Buy“, das war eine Plattform für die Halbleiterindustrie.\nUnd das war also im Jahr 2000, die Hochzeit des e-Commerce,\nund der Halbleitermarkt war damals, was er heute auch immer noch ist, sehr volatil,\ner war sehr intransparent und die Zielsetzung, mit der wir rangegangen waren,\nwar es, eine Plattform zu schaffen, um Nachfrage und Angebot besser zusammenzubringen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wenn man geschliffen wird in der Unternehmensberatung, was schleift sich da ab und wer schleift da an einem?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Naja, erst einmal natürlich die verantwortlichen Partner auf dem Projekt, die einem sehr genau sagen,\nwo man sich einzuordnen hat und was von einem erwartet wird.\nSei es die Form, der Inhalt einer Präsentation, die Art und Weise wie man professionell beim Kunden auftritt.\nAlso insofern würde ich eher sagen, schleifen im positiven Sinne, also einen Rohdiamanten in Form bringen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Eine Härtung eher."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Was schleift sich ab.\nAlso dadurch, dass es bei mir nur gut anderthalb Jahre waren, hat sich nicht so viel abgeschliffen,\nsondern es hat sich tatsächlich viel herausgeschliffen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Okay, verstehe.\nUnd dann ging es aber doch eher wieder in die Richtung der Universitäten?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Genau, also, wie sagt man, das Spiel oder die Tätigkeit bei dem Startup-Unternehmen das endete,\nnachdem die amerikanische Mutter festgestellt hatte, dass die europäische Tochter doch nicht so wichtig ist,\nwie sie das vielleicht geglaubt hat.\nIch hatte dann das Angebot, in den USA weiterzuarbeiten und da war für mich aber der Punkt,\ndass ich dachte, so jetzt hast du viel gesehen, das wäre auch spannend gewesen,\naber mein damaliger Professur, für den ich schon in Karlsruhe gearbeitet hatte,\nder war nach Berlin gegangen, ich lebte zu der Zeit theoretisch in Berlin\nund machte mir ein Angebot und sagte, Mensch wie sieht es denn aus?\nSo, ich habe dich nicht vergessen, ich habe da jetzt gerade eine Stelle frei, hast du nicht Lust?\nUnd das war für mich so der Punkt, dass ich dachte, ja, jetzt ist der an der Technischen Universität Berlin,\ner hatte ein konkretes Projekt mit der Robert Bosch GmbH zusammen, das passte dann auch gut zu diesem Thema."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Auch immer noch in derselben Disziplin?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Genau, Innovationsmanagement.\nAlso er hatte den Lehrstuhl für Technologie und Innovationsmanagement,\nes war eine Promotion im Kontext des Projektmanagements, also Laufbahn für Projektleiter zu entwerfen.\nUnd das passte sehr gut zu meinem Anspruch, die Verbinderin, die Vermittlerin zwischen Wirtschaft und Wissenschaft zu sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also das gleiche wie jetzt, aber nicht das gleiche wie vorher, also nichts Wirtschaftsingenieurwissenschaften,\nsondern halt jetzt ging es in die Innovation rein.\nUnd wie kam es dann zu dem Engagement hier?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Na, ich habe dann an der TU Berlin meine Promotion absolviert, also meine Dissertation geschrieben,\nbin dann kurzzeitig bei dem Professor Gemünden als Postdoc beschäftigt gewesen\nund habe dann eine Juniorprofessur an der TU Berlin angenommen.\nAuch das war wieder Mittlerin zwischen Wirtschaft und Wissenschaft,\neine Juniorprofessur die von den Deutschen Telekom Laboratories finanziert war,\ndie T-Labs waren damals, das war 2007, da gab es die schon ein paar Jahre,\ndas war ja eine ausgelagerte Forschungseinheit der Deutschen Telekom,\nangesiedelt an der TU Berlin, mit dem Auftrag, denkt neu.\nDa sind wir schon bei dem Thema kreativ, innovativ, denkt außerhalb der Strukturen der klassischen Deutschen Telekom.\nUnd ich hatte die Juniorprofessur für Organisation und Führung im Innovationsmanagement.\nSo und das habe ich dann gute anderthalb Jahre gemacht und dann war die Professur für Innovationsmanagement und Entrepreneurship\nan der Universität Potsdam ausgeschrieben und ich habe einfach mal meinen Hut in den Ring geworfen,\nfand mich selber noch ein bisschen jung, aber hat funktioniert und so bin ich dann 2011 an die Universität Potsdam gegangen.\nHatte damals schon an der School of Design Thinking des Hasso-Plattner-Instituts als Dozentin, als Coach gearbeitet.\nHabe dann angefangen, am Hasso-Plattner-Institut die Bachelor- und Masterstudenten im Kontext Wirtschaft und Gründung zu unterrichten.\nHabe da immer sehr viel Spaß gehabt an den Studierenden, weil die sehr aufgeweckt,\nsehr wissbegierig und gleichzeitig eben diesen technischen Hintergrund,\nder mir dann bei der klassischen BWL ein bisschen fehlte, hatte.\nUnd als dann 2018 die Professur für IT-Entrepreneurship am HPI ausgeschrieben war,\nhabe ich mich darauf beworben und bin dann am 01. November 2019 eben richtig als Professorin für IT-Entrepreneurship ans Hasso-Plattner-Institut gegangen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Was heißt denn, man fühlt sich zu jung für eine Professur?\nHat das immer noch den Nimbus, man muss steinalt sein, um so was zu übernehmen?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ja, also das menschliche Alter hat sich zum Glück so ein bisschen, glaube ich, verändert.\nWir haben da ja, gut, wir haben in Deutschland immer noch sehr lineare akademische Laufbahnen.\nAlso meine Laufbahn ist da ja doch immer noch sehr unüblich, zumindest in vielen Bereichen.\nVielleicht nicht bei den Ingenieurswissenschaften, aber in anderen Disziplinen schon,\ninsofern als dass ich ja die Academia erst mal verlassen hatte,\ninsofern war ich eigentlich vom zeitlichen Alter gar nicht mehr so jung,\ndenn ich hatte ja schon diesen Interimspart gehabt, aber ich war ja nun erst anderthalb Jahre als Juniorprofessorin tätig.\nUnd insofern das akademische Alter war eben noch nicht so hoch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "So, das heißt, jetzt in der neuen Rolle hier in Potsdam wird natürlich gelernt, aber es wird natürlich auch geforscht,\nso wie sich das gehört und mit so Begriffen wie Innovation und Kreativität und Unternehmen\nist ja auch eine mutige Kombination, erfüllt ja nicht unbedingt jetzt jedes Unternehmen.\nReden immer alle ganz gerne davon, aber die Frage ist natürlich, was ist das denn eigentlich?\nWenn man jetzt daran forscht und wenn man da, sagen wir mal, jetzt auch wirklich versucht,\nstrukturiert heranzugehen, muss es ja auch erst mal einen Definitionsrahmen geben.\nMan muss es ja irgendwie fassen.\nEs ist natürlich immer ein super Wort für Sonntagsreden, aber wenn es konkret wird,\nein Paper dabei rauskommen soll, muss man das natürlich schon so ein bisschen einkreisen.\nVielleicht können wir uns da mal kurz daran versuchen, was durch Innovation jetzt eigentlich wirklich abgedeckt ist.\nWas muss man sich, was stellen Sie sich darunter vor?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Also für mich ist Innovation erst mal die Umsetzung einer Idee in etwas anfassbares.\nAlso es ist mehr als die Idee, es ist mehr als ein Konzert, was vielleicht meine Idee schon mal beschreibt,\nsondern ich habe das schon in irgendeiner Weise anfassbar gemacht\nund ich habe Menschen, sage ich jetzt mal breit noch gesprochen, gefunden,\ndie das annehmen, die das umsetzen, die damit irgendetwas anfangen.\nIch mache jetzt den Rahmen noch mal ein bisschen größer.\nIn der klassischen Definition sind Innovationen immer etwas, die im Markt umgesetzt werden.\nAlso wir sprechen von der Idee, von dem Konzept und dann erst von der Innovation,\nwenn es in den Markt gebracht wurde und der Markt es angenommen hat.\nIch glaube aber, dass wenn wir heute von Innovation sprechen,\ndass wir diesen Markt sehr viel weiter fassen müssen.\nDenn der Markt ist erst mal ein sehr wirtschaftlicher Begriff.\nUnd ich glaube, dass, wenn wir eben darüber nachdenken, deswegen habe ich jetzt gerade Menschen gesagt,\nwir ja auch über Gesellschaften sprechen oder über Politiksysteme.\nAlso wichtig ist einfach nur, die Innovation ist mehr als nur eine fixe Idee,\neine Problemlösung, ein Konzept, sondern es muss umgesetzt sein.\nSo und über diesen Grad der Umsetzung, darüber können sowohl die Experten als auch die nicht-Experten trefflich streiten.\nAber es muss am Ende etwas anfassbares da sein, was mehr als nur ich,\nals der Erfinder, die Erfinderin gut findet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Würde mir jetzt so als erstes die aktuelle Situation rund um Energiegewinnung einfallen.\nIst ja im Prinzip auch ein sehr innovationsträchtiger Bereich.\nAlso es gibt eine gesellschaftliche Notwendigkeit für eine Innovation, für die aber ein Markt in dem Sinne noch nicht existiert\noder teilweise existiert er eben schon oder befinden wir uns mittlerweile natürlich in einer Phase,\nwo der in zunehmendem Maße wächst, aber wenn man noch mal 20 Jahre zurückblickt,\nals das erneuerbare Energien Gesetz kam, war das ja im Prinzip so ein Ansatz.\nIst das das, was Sie meinen?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Mit der Umsetzung, ja, grundsätzlich schon.\nAlso natürlich, wenn wir jetzt eben drüber nachdenken, dann wissen wir ja auch,\nes hat schon viele Erfindungen gegeben, die womöglich auch Menschen gefunden haben,\ndie gesagt haben, das ist eine supercoole Idee, genauso sollten wir das machen.\nAlso zum Beispiel auch jetzt aktuell Cryptocurrencies oder wie bezahlen wir eigentlich.\nHier die Electronic Wallets, da hat es also vor 20 Jahren schon Lösungen gegeben,\ndie fanden Leute auch cool, da gab es also auch eine technische Umsetzung,\naber die große Masse hat es eben noch nicht angenommen.\nUnd genauso können wir jetzt bei den erneuerbaren Energien ja ähnlich darüber nachdenken,\ndass wir sagen, also eigentlich haben wir die Lösungen, aber sie werden ja noch nicht wirklich breit umgesetzt in einem Markt, in einer Gesellschaft.\nSo und dann kommen wir natürlich ganz schnell auf die Ebene der Diskussion,\nwelche Rolle spielt dann beispielsweise der Staat, in dem er dann einen Markt schafft\nbzw. eine solche Innovation zunächst einmal trägt.\nDenn ich sagte ja gerade schon, diese klassische Wirtschaftsdefinition,\neine Innovation hat einen Markt, das ist natürlich genau dieser Marktbegriff\nund darüber können wir ja trefflich streiten, wer schafft Innovationen?\nIst das der Markt, sind das die Unternehmen oder um eben beispielsweise mit Mariana Mazzucato zu sprechen,\nist es der Staat, der ein ganz großer Innovationstreiber ist.\nUnd da sehen wir schon, es ist schwierig, da dann zu definieren, wer schafft diesen Markt,\nwer ist eigentlich der Nachfrager und ab wann können wir sagen, das ist jetzt eine Innovation.\nUnd da versuchen wir uns als Innovationsforscher immer noch ein bisschen zu behelfen,\ndass wir sagen, es kommt auf die Art der Innovation an, es kommt auf den Grad der Innovation an,\nes kommt auf die Nachfragenden an.\nNur weil es für Sie jetzt gerade eine Innovation ist, ist es vielleicht für mich keine und umgekehrt.\nAlso dieser Innovationsbegriff und das ist so spannend daran, das stelle ich sowohl hier an meinen Kollegen, an meinen Studierenden fest,\nals auch in den klassischen Ingenieurwissenschaften, die Naturwissenschaften sind es gewohnt,\n1 oder 0 zu sagen, es ist richtig oder es ist falsch, es gibt klare Antworten.\nDie Innovation ist nie schwarz oder weiß, sie ist nie ja oder nein,\nsondern sie ist sehr häufig so, dass wir sagen, es kommt darauf an.\nNur weil Deutschland jetzt für sich beschlossen hat, dass wir mit dem erneuerbaren Energie Gesetz folgende Technologien fördern wollen\nund daraus entsprechende Innovation machen, ist das in einem Land wie Japan beispielsweise oder China\nnoch lange nicht diese Innovation wie wir sie vielleicht sehen und umgekehrt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wenn man, jetzt gibt es ja noch den zweiten Begriff der Kreativität, der diese Innovation offensichtlich befördern soll,\nist das auch ein definierbarer Begriff?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Der ist noch mal schwieriger."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, ich weiß, deswegen habe ich das ich gefragt."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Hier gehen wir nämlich dann von den Wirtschaftswissenschaften, die ja vielleicht noch so ein bisschen ihre Wurzeln in den Naturwissenschaften haben,\ngehen wir ja jetzt in die Sozial- und Geisteswissenschaften, wir gehen in die Verhaltenswissenschaften,\nwir gehen gerade bei der Kreativität auch schnell in die Hirnforschung beispielsweise.\nWas ist Kreativität, was macht ein kreativen Menschen aus?\nSo und dann kommen wir in den Bereich der Kunst, wir kommen in den Bereich der Human- und Geisteswissenschaften,\nwas schaffe ich sozusagen als künstlerisches Werk, wie verändere ich Dinge?\nAlso die Kreativität ist da noch mal breiter."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ist das mehr so im Sinne von Produktivität gemeint?\nAlso ich meine, Kreativität kann ja heißen, man schafft was und das Schaffen als solches ist sozusagen wichtig\noder so wie wir das, sagen wir mal, gemeinhin so diskutieren und benutzen das Wort,\nim Sinne von, oh da hast du jetzt aber was gemacht, wo ich jetzt nicht drauf gekommen wäre,\nwas ja eigentlich mehr so diesen Innovationstouch hat, so dieses,\noh wenn jemand sehr kreativ ist, dann tut er innovative Dinge oder ist es einfach nur so ein Output generieren können.\nWie klingt das Wort in Ihrem Kopf?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Also für mich klingt es sehr viel mehr schaffend, also die Problematik mit dem Wort der Produktivität ist,\ndass das ja mittlerweile in Teilen negativ konnotiert ist,\nweil die Produktivität immer ein klar definiertes Ergebnis hat."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Messbar ist auch."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Und ich meine, das Thema Produktivität und ob sich unsere Produktivität verändert hat oder nicht,\nda können wir ja noch mal anderweitig drüber sprechen.\nKreativität für mich hat tatsächlich ganz viel mit dem Wort Schaffen, creare etwas schaffen.\nWie dieses, was wir da schaffen, aussieht, ist ja dann auch wieder einerseits in der Betrachtungsweise des Schaffenden\nund der Menschen, die es betrachten.\nAlso ist das etwas neues, was dort geschaffen wurde?\nUnd neu ist ja auch immer in der Perspektive des Betrachters, wie neu ist neu?\nWas für mich neu ist, ist für jemand anderen nicht neu.\nAber Kreativität hat für mich wirklich erst mal sehr viel damit zu tun,\nund das ist sicherlich die positive Konnotation, die ich diesem Wort gebe, ist,\netwas neues zu schaffen, und zwar neu, gerne auf vielen Dimensionen,\naber tatsächlich eben etwas neues zu schaffen.\nUnd wenn ich jetzt noch einen Schritt weitergehen darf, was für mich immer ganz wichtig ist,\nist aber schon, und da bin ich dann doch wieder wahrscheinlich stärker Naturwissenschaftlerin als Geisteswissenschaftlerin,\ndass ich sage, ich erwarte schon, dass es irgendwie einen Impuls setzen kann.\nAlso Kreativität um der Kreativität Willen damit tue ich mich ein bisschen schwer.\nSondern ich finde das immer, für mich hat es viel damit zu tun, löse ich ein Problem oder eine Herausforderung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Hier gibt es am HPI auch diesen, ich weiß nicht, hatten wir es schon erwähnt, diesen Bereich des Design Thinkings,\nklang, glaube ich, kurz an, ist ja auch so ein skurriles Wort erst mal.\nWas ist denn damit gemeint und inwiefern beeinflusst das die Arbeit hier?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Die Arbeit hier beeinflusst es sehr stark.\nDas Design Thinking ist für mich, das ist jetzt wieder meine individuelle Definition,\nein Prozess, eine Einstellung, ein sogenannter Mindset und eine Herangehensweise,\nProbleme, Nutzer menschenzentriert zu lösen.\nDas macht es so schick, wenn man es im Kontext der Naturwissenschaften gerade betrachtet,\naber auch allgemein, dem Thema, wie lösen wir eigentlich die großen Herausforderungen, vor denen wir stehen,\nda gibt es immer technische Lösungen, da sind wir in Deutschland super, wir haben ganz klare Ingenieurstraditionen,\nnaturwissenschaftliche Traditionen, wir sind immer sehr gut, neue Dinge zu erfinden.\nWas wir häufig in der Vergangenheit vergessen haben, ist zu fragen, für wen machen wir es eigentlich?\nBrauchen die Menschen das eigentlich?\nDas ist so das eine und das andere ist, was brauchen die Menschen eigentlich?\nSo und diesen Menschen in den Mittelpunkt zu stellen, zu sagen, wir haben tolle Technologien,\nwir müssen uns natürlich auch irgendwie die Wirtschaftsseite angucken, weil wir da irgendwann irgendwie mit Geld verdienen müssen\nund unsere Arbeitnehmerinnen bezahlen und dann den Menschen mit reinzunehmen.\nWenn wir also diese drei Bälle zusammenpacken, dann entsteht Innovation.\nUnd Innovation entsteht eben wie gesagt nur dann, wenn wir diese drei Teile miteinander verbinden.\nUnd ich jetzt als klassischer Wirtschaftsingenieur würde sagen, Technologie und Wirtschaft habe ich gelernt,\nwährend meines Studiums, habe ich angewandt, kann ich.\nDen Menschen haben wir erstaunlich wenig betrachtet und das ist das, wo das Design Thinking reinkommt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Da würde mir ja als erstes mal einfallen, dass eigentlich so in Deutschland das vielleicht ein bisschen misslungen ist in der letzten Zeit.\nNehmen wir mal so die prägendste Industrie, die Autoindustrie, die ja nun wirklich zum Jagen getragen werden musste,\nbis sie dann endlich mal den Wandel hin zu Elektromobilität angeht.\nJetzt wird das, sagen wir mal, so typisch deutsch-industriell auch angegangen.\nSo nach dem Motto, holla jetzt sind wir aufgewacht, jetzt fangen wir aber auch wirklich an, so.\nNur eben startet man eben sehr weit hinter der Startlinie in gewisser Hinsicht\noder die anderen rennen halt schon und jetzt hat man dann den Schuss auch gehört.\nDa ist ja dann was schief gegangen oder?\nAlso ich meine, da hat das ja dann eigentlich genauso nicht funktioniert, dass der Mensch mitgedacht wurde.\nWeil der Mensch wurde nicht mitgedacht, sondern es wurde eigentlich nur die normale wirtschaftliche Logik verfolgt,\nso nach dem Motto, ach naja Gott, Verbrennungsmotoren können wir super bauen,\nfunktioniert, haben wir schon immer so gemacht, das müssen wir jetzt beibehalten als unseren Vorteil,\nweil so läuft der Hase, damit verdienen wir halt unsere Brötchen und dieser ganze moderne Kram kostet ja alles nur Geld und will ja auch keiner haben.\nNicht wahr, also das ist ja so ein bisschen diese Marktlogik, die eben nicht von der Innovation so sehr getrieben ist,\nsondern eigentlich eher so eine besitzstandswahrende Logik in sich hat."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Auf der einen Seite ja, auf der anderen Seite haben Sie haben ja gesagt, das hat ja nicht wirklich funktioniert,\ndas stimmt nicht ganz, wenn wir uns die Marktzahlen angucken.\nAlso die deutschen Automobilunternehmen sind schon in den vergangenen Jahren und Jahrzehnten sehr erfolgreich gewesen.\nAlso wenn wir einfach nur mal von der Marktseite gucken, würde ich sagen, nicht alles falsch gemacht.\nWenn wir es uns vom Thema, und da kommt jetzt wieder die Ingenieursperspektive rein,\nwer macht die besten Autos der Welt, glaube ich, können wir doch noch sagen,\nauf vielen Dimensionen sind das die deutschen Automobilbauer.\nWarum? Weil sie immer wieder optimiert haben.\nSie haben sehr sehr gut inkremental innoviert.\nWir haben die geringsten Spaltmaße, wir haben die leisesten Verbrennermotoren,\nwir haben die effizientesten Verbrennermotoren, wir haben, naja über Schönheit und Design gibt es sicherlich unterschiedliche Auffassungen,\naber auf vielen klassischen Dimensionen sind die deutschen Automobilbauer Weltspitze.\nSo und damit haben sie durchaus in gewisser Weise nutzerorientiert gearbeitet,\nnämlich sie haben sich angeguckt, was wollen denn eigentlich die Leute?\nDie wollen schnellere Autos, sie wollen vielleicht dann noch ein bisschen sparsamere Autos,\naber sie wollen große Autos, dicke Autos, wie auch immer, also das haben sie gefragt.\nWas sie nie gefragt haben ist, was ist eigentlich Mobilität?\nBrauchen wir dafür eigentlich noch Autos?\nSie sind sozusagen nicht, man verwendet immer so gerne diesen Begriff, „thinking outside the box“.\nSie sind nie aus ihrer kleinen Kiste rausgesprungen und haben geguckt,\nwas gibt es eigentlich noch für Möglichkeiten?\nSo und dann haben wir einen Fehler gemacht und diesen Fehler sehen wir aber leider in sehr sehr vielen Industrien.\nDass nie von außen mal geguckt wird, sag mal was macht ihr da eigentlich?\nWie produziert ihr eigentlich Energie bzw. wie sieht eigentlich die Zukunft des Energiemarktes aus?\nWie sieht die Zukunft der Mobilität aus?\nWie sieht die Zukunft des Gesundheitswesens aus?\nDas können wir in Deutschland nicht, da ist einfach über Jahre,\nwir sind Kinder unseres Erfolgs bzw. Opfer unseres Erfolgs.\nDer deutschen Volkswirtschaft ging es über Jahrzehnte gut.\nUnd wenn es uns gut geht, das wissen wir alle, mein Doktorgroßvater Jürgen Hauschild hat mal gesagt,\nInnovationen sind im Zweifel nicht willkommen.\nNa klar, keiner von uns möchte sich gerne jeden Tag neu verändern, das merken wir jetzt gerade.\nEs ist schlimm genug, was da draußen passiert, gib mir ein bisschen Stabilität."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ich meine, es ist ja, klar, die Momentaufnahme ist, bisher hat es ganz gut funktioniert.\nBloß in dem Moment, wo es dann aufhört zu funktionieren, kann es ja dann auch sehr schnell gehen.\nUnd was wird jetzt eben debattiert mit großen Entlassungszahlen, die VW vielleicht anstehen,\nweil man halt merkt, naja okay, wenn wir jetzt irgendwie Elektroautos bauen,\nholla, dann müssen wir ja auf einmal ganz viele Dinge gar nicht mehr bauen.\nWir brauchen irgendwie keine Einspritzer und die entsprechende Filtertechnik und ganz viele Bauteile fallen auf einmal weg\nund damit natürlich ganz viele Subindustrien und der Schock ist natürlich immer sehr viel größer,\nwenn das eben so von heute auf morgen geschieht, weil es natürlich dann noch mal sehr viel mehr Widerstände gibt etc..\nMan findet sich dann eben an so einem Punkt wieder, wo man dann doch in der Abrechnung zu viel Zeit hat verstreichen lassen,\nweil man sich eben gegen diese Innovation gesperrt hat.\nUnd das ist natürlich jetzt die eigentliche Frage, was können denn Unternehmen an sich dagegen tun,\num in diese Falle nicht zu tappen.\nDas ist ja immer so dieses, gibt jetzt tausend Zitate, die immer so im Raum rumgestoßen werden,\nwo man nie genau weiß, ob die so eigentlich gefallen sind, aber trotzdem beschreiben Sie, glaube ich, das ganz gut.\nAlso als das Automobil kam so, war es halt so die schnelleren Pferde, die alle haben wollten.\nUnd so mit diesen tolleren Autos ist es halt auch so ein bisschen wie mit diesen schnelleren Pferden.\nDie Leute denken halt dann auch irgendwie so, ach ja ich hatte bisher ein Auto, also brauche ich jetzt wieder ein Auto\nund das muss irgendwas besser daran sein, nur dass irgendwie keinem so recht was einfallen kann,\nwas überhaupt noch besser ist, man aber eben sehr viel annimmt für dieses Produkt,\nwo die Gesellschaft eigentlich schon einen Schritt weiter ist, dass sie sagt, wir wollen aber jetzt nicht mehr so viel Platz in den Städten den Autos opfern\nund das macht uns irgendwie auch krank und es nimmt uns irgendwie auch sozialen Raum,\ngerade jetzt in der Pandemie ist so dieses soziale Kontakte irgendwie, merkt man jetzt sozusagen überhaupt erst mal,\nglaube ich, diese Bedeutung dessen noch mal mehr und die Städte müssen sich wandeln und die Städte wollen sich langsam auch wandeln.\nUnd ich denke, dass schon dieser Industriebereich jetzt an so einem Punkt steht, dass wenn jetzt nicht sehr schnell gehandelt wird,\nviel von dem bisher erreichten dann so ein Pyrrhussieg ist, dass man halt einfach sieht,\nda haben wir uns einfach falsch entwickelt."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Naja, das ist natürlich die zentrale Frage, die Sie da gerade stellen.\nAlso wie bringen wir die Wirtschaft, aber auch die Gesellschaft letztendlich, dazu, frühzeitiger innovativ zu sein?\nAlso die Historie der Innovationsforschung zeigt uns, wir haben diese sogenannten Kondratieff-Zyklen\nund immer, wenn es uns richtig schlecht ging, dann kamen die Innovationen.\nDann kam die erste industrielle Revolution und die zweite und die dritte so.\nUnd es scheint historisch gesehen so zu sein, es muss uns erst richtig schlecht gehen,\nes muss uns richtig weh tun, weil erst dann wir bereit sind, Verhaltensänderungen anzustreben.\nSo, eigentlich haben wir jetzt gerade den Punkt, Thema Klimawandel, eigentlich geht es uns richtig schlecht,\nnur so richtig spüren wir es noch nicht.\nUnd dann stellt sich die Frage, wer hat jetzt die Verantwortung, diese Impulse zu setzen?\nUnd da kommen wir dann schon wieder auf diese Diskussionsebene,\nschafft der Markt, schaffen es die Unternehmen von sich aus, sich zu verändern\nund neue Impulse zu setzen oder brauchen wir den Staat, die Politik, um entsprechende Impulse zu setzen?\nWo sich dann sehr schnell die Frage anschließt, kann der Staat tatsächlich innovativer sein als die Unternehmen oder als die Gesellschaft?\nSie sprachen das gerade an, die Bürgerinnen und Bürger spüren, irgendwie so richtig cool fühlt sich das nicht mehr an.\nAber schaffen sie es als Gesellschaft, diese Impulse zu setzen oder einzufordern\noder ist das dann doch wieder zu anstrengend oder wir wissen ja nicht genau, welche Impulse es jetzt sein sollen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ist ja immer so ein bisschen dieses Element der Disruption.\nAlso die großen Gewinner der letzten Jahrzehnte, das gilt natürlich vor allem jetzt im digitalen Internetbereich,\nGoogle, Facebook etc. sind halt reingegangen und haben den Status quo dahingehen infrage gestellt,\nals dass sie gesagt haben, wir brauchen irgendwie was ganz anderes und wir sind jetzt hier die Disruptoren\noder wie das irgendwie Tesla im Automobilbereich gemacht hat und einfach Dinge generell infrage gestellt hat.\nEinfach andere Vertriebsstrukturen, andere technische Möglichkeiten.\nUnd Unternehmen, denen es über einen längeren Zeitraum gelingt, sich nicht durch die nächste Disruptionswelle den Teppich unter den Füßen wegziehen zu lassen,\nkönnte man zum Beispiel mal auf Apple schauen, die sich ja nun wirklich schon bemerkenswert lange halten\nund dabei eigentlich auch immer so vorgegangen sind, dass sie so ihr eigener Feind sind.\nDass sie einfach immer über sich selber so nachdenken, so, oh jetzt sind wir hier Platzhirsch,\nwie können wir uns selber den Platz streitig machen?\nUnd darüber sozusagen so einen Innovationsdruck auf sich selbst erlegen,\nindem man sich eben selbst als Feind sieht.\nDas ist aber so eine Denkweise, die ich jetzt so im europäischen oder vielleicht auch konkret im deutschen Denken, Wirtschaftsdenken so nicht fühle."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Richtig.\nAlso das ist das, wir nennen das in der Innovationsforschung immer den Fluch der etablierten Unternehmen.\nUnd das sehen wir in Deutschland sehr stark.\nAlso dieser Wille, sich selber infrage zu stellen, der Wille, Dinge auszuprobieren,\nvon denen wir noch nicht wissen, ob sie uns tatsächlich Geld bringen werden,\nwir sind in vielen Bereichen sehr, konservativ ist vielleicht das falsche Wort, aber sehr formalistisch organisiert und strukturiert.\nUnd das finden wir in den Unternehmen auch.\nDa wird dann immer gleich nach dem Return on Investment gefragt.\nDa wird gefragt, wird es uns Geld bringen?\nDa werden diejenigen, die etwas ausprobieren und womöglich 100.000 Euro oder womöglich eine Million in den Sand setzen,\ngeteert und gefedert und vom Hof gejagt, da werden diejenigen, die sagen,\nalso hier der Farbfilm ist es nicht mehr, es ist in Zukunft die Digitalfotografie,\nda wird auch gesagt, vielen Dank Ablage F.\nDas hat viel für mich mit dieser deutschen Einstellung zu tun.\nIm Positiven haben wir es geschafft, ich hatte es gerade schon erwähnt, diese inkrementellen Innovationen.\nUnd immer noch mal ein bisschen besser werden.\nUnd schauen wir uns um, wir haben eine unglaublich stabile Gesellschaft bisher,\nim Moment fragen wir uns alle so ein bisschen was passiert, aber grundsätzlich klagen auf sehr hohem Niveau.\nAlso grundsätzlich funktioniert alles.\nDas kommt dadurch, dass wir dieses, ich nenne das immer Kästchendenken, wir können prima in Kästchen denken,\naber für disruptive Innovation, für diese Herausforderungen, vor denen wir jetzt stehen,\nmüssen wir außerhalb dieser Kästchen denken.\nUnd das ist aber eine Denk- und Lebensweise, die müssen wir alle lernen.\nDenn wie gesagt das tut erst mal weh, weil ich meinen eigenen Anspruch, mein eigenes Machtbewusstsein,\nmein eigenes, das habe ich mir aber verdient, das muss ich aufgeben und muss mich mit einer Unsicherheit anfreunden,\nvon der ich heute nicht weiß, was sie mir morgen bringt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Die Automobilunternehmen, um noch mal das Beispiel versuchen fortzuführen,\nhaben ja aber auch teilweise das ja auch probiert.\nAlso sie haben Car Sharing Projekte gehabt und was weiß ich, BMW hat schon sehr früh ein Elektrofahrzeug auf den Weg gebracht,\nwo man so gedacht hat, ah okay, das könnte ja was werden.\nUnd auch teilweise solche Innovationsmodelle mit so ausgelagerten Unternehmen gehabt,\ndie dann so vor sich hinwurschteln können, außerhalb der normalen Konzernstruktur,\nschon so ein bisschen mit diesem Versuch, ja versucht uns mal Konkurrenz zu machen\nund wir gucken mal, was dabei rauskommt.\nAber offensichtlich scheint das ja nicht gereicht zu haben.\nWas machen die denn da falsch?\nAlso werden da die Lehren nicht richtig gewonnen oder werden die Lehren, die dann gezogen wurden, ignoriert?\nWas fehlt denn in diesem Innovationskranz sozusagen an angezündeten Kerzen,\num da diesen Prozess auch wirklich so umzusetzen?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ich bin keine tiefe Kennerin der Automobilindustrie.\nIch habe immer mal wieder Projekte mit denen zusammen macht,\nund insofern würde ich mich jetzt mal versuchen an einer Interpretation.\nIch glaube, das was versucht wurde das hatten Sie sehr schön beschrieben,\nes gibt immer mal so die eine oder andere, so ein kleines Experimentallabor,\nso jetzt dürft ihr mal ausprobieren, aber das, wonach diese Unternehmen ticken\nund so wie sie aufgestellt sind, das ist immer der größere Motor, das größere Auto.\nDas breitere Auto, mehr Technik, mehr Elektronik, das ist sehr technikgetrieben.\nDas heißt, die Gelder gingen immer in die Neuentwicklung, beispielsweise in die S-Klasse oder in jetzt den neuen SUV.\nDas heißt, es waren immer eigentlich diese alten Geschichten.\nUnd die anderen, das war immer so ein bisschen, jetzt probiert euch mal aus,\naber ganz ehrlich, so richtig viel Geld werden wir damit nicht verdienen.\nUnd dementsprechend waren natürlich auch nicht die Ressourcen dahinter\nund es wurde dann nicht in den Markt richtig geschubst und gestoßen\nund es wurde versucht, tatsächlich so ein Umdenken anzustreben.\nDenn auch klar, mit Drive Now, natürlich hat Daimler das probiert,\naber es war immer klar, wir machen uns hier eigentlich unser eigenes Geschäft kaputt,\nalso seid bloß vorsichtig was ihr macht.\nSo das heißt, die internen Leistungskennzahlen, wie machen Sie Karriere in so einem Unternehmen?\nWie bekommen Sie Ruhm und Ehre, das sind immer noch die klassischen.\nUnd dementsprechend orientieren sich die Menschen natürlich auch in so einem Unternehmen.\nUnd das gilt nicht nur für die Automobilindustrie, das sehen wir in allen Unternehmen.\nEs sind sehr traditionelle Entwicklungsperspektiven, Vergütungsstrukturen,\nes sind dann immer wieder die Punkte, wo gesagt wird, ja aber diesen Weg bin ich doch auch gegangen\nund das müssen die anderen auch so machen.\nUnd das ist für Innovation total schädlich.\nUnd jetzt ich sehe das ja, ich unterhalte mich häufig mit Unternehmensvertretern, so dieses,\nja jetzt die junge Generation und die wollen ja alle nicht mehr so viel arbeiten\nund die wollen nur noch 30 Stunden und dann wollen sie aber hier noch was verdienen,\nda stoßen Welten aufeinander und das ist im Moment sehr spannend als Innovationsforscherin zu beobachten,\nwas passiert da eigentlich in den Unternehmen?\nSchaffen wir es mit diesen jungen Leuten, die wirklich anders herangehen,\ndie gehen anders an das Thema Arbeiten heran, die sind digitalisiert,\ndie haben nicht mehr diese Statussymbole, es muss mindestens ein Auto, wenn nicht zwei Autos vor der Tür sein.\nGleichzeitig spüren die eine ganz große Unsicherheit, die wissen nicht, wo sie in 20 Jahren sein werden.\nUnd das ist jetzt die Frage, schaffen die Unternehmen es, sich so zu öffnen, so zu wandeln,\ndass sie diese Impulse aufnehmen und dann könnten sie innovativ sein.\nAber ich sehe unglaubliche Beharrungstendenzen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wenn so dieses, wir verdienen da ja kein Geld mit, wenn das sozusagen die Leistungskennzahl ist,\ndie einzige, und das funktioniert nicht, was wäre denn eine andere Leistungskennzahl,\nan der man diese Aktivitäten bewerten kann, ohne jetzt einfach nur an das Bauchgefühl zu appellieren?\nKann man den Menschen, ich meine, ich kann die ja in gewisser Hinsicht auch verstehen,\nwenn die da in so einer mittleren Organisationsstruktur sind, oben der dicke Konzern,\nja, der immer nur das große Ganze sieht, das muss irgendwie alles funktionieren,\ndann sind die da so in diesem Bereich, haben irgendwie größere Teile unter sich,\nwas sollen sie denn anderes bewerten als, man kann dasselbe günstiger machen oder wir bauen irgendwas,\nwo wir es den Kunden noch ein geredet bekommen.\nAlso diese Eigendisruption muss ja dann auch in irgendeiner Form bewertet werden können,\nwas wäre denn so eine Leistungskennzahl?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ja, also am Ende müssen natürlich die Umsätze stimmen, das ist klar,\nsonst kann ich meine ArbeitnehmerInnen nicht bezahlen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, klar."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Also damit bin ich raus.\nAber das, was ich mir wünschen würde, wäre dass die Betrachtungszeiträume etwas gestreckt werden,\ndass gesagt wird, also es muss nicht, ähnlich wie wir ja auch Startup-Unternehmen betrachten,\ndie sind in den ersten drei bis fünf Jahren nicht positiv im Cashflow.\nSo und genauso solche Zeit muss ich disruptiven Innovationen im Unternehmen auch geben.\nIn diesem Zeit gibt es dann sehr wohl Leistungskennzahlen, wo ich gucken kann,\nhaben sie entsprechend so und so viel neue Kunden akquiriert, ist die Technologie, das Produkt, die Dienstleistung, ist das eingesetzt worden?\nHabe ich entsprechend, also bei den Innovationskennzahlen kann ich ja einerseits mir produktspezifische Kennzahlen angucken,\ndienstleistungsspezifische Kennzahlen, so wie ich sie gerade zitiert habe,\naber ich kann ja auch gucken, habe ich einen Impact in der Gesellschaft gehabt?\nHat sich da etwas verändert, hat sich da eine Denkweise verändert?\nIch kann mir ökologische Kennzahlen angucken.\nHabe ich es geschafft, meine Produktionslinie entsprechend effizienter zu machen,\ndass ich weniger Wasser verbrauche, dass ich weniger Strom verbrauche.\nAlso da sind wir auch, dieses Thema Innovationscontrolling ist kein einfaches,\nmuss auch jedes Unternehmen für sich selber entscheiden, was sind da Kennzahlen, mit denen wir arbeiten können,\nwichtig ist es nur, den Mut zu haben zu sagen, wir werden da erst mal sehr wahrscheinlich sogar relativ viel Geld reinstecken müssen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Das Ganze trägt sich ja jetzt dann zwangsläufig in die Gesellschaft und damit natürlich auch in die Politik, so.\nAlso wenn wir jetzt sagen, die wirtschaftlichen Leistungskennzahlen die sind schwierig zu greifen,\nweil am Ende geht es dann doch immer irgendwie um Geld, wir müssen aber jetzt trotzdem noch andere Größenordnungen mit reinnehmen\nund dann ist ja auch irgendwie die Gesellschaft gefragt und damit ja quasi auch so die Kunden und was wollen die eigentlich und so weiter,\naber auch was will die Politik.\nSprich, jetzt müssen wir eigentlich für die Gesamtwirtschaft oder für die Gesamtgesellschaft,\nwo die Wirtschaft ein Teil davon ist, eben diese gesellschaftlichen Leistungskennzahlen,\nso würde ich es jetzt mal nennen, auch mit definieren und das geschieht ja teilweise dann eben auch durch die politischen Vorgaben.\nWobei man jetzt so ein bisschen den Eindruck gewonnen hat, dass die Politik halt mehr oder weniger eigentlich immer dem gefolgt ist,\nwas die Wirtschaft gesagt hat.\nDie Wirtschaft sagt, da verdienen wir kein Geld damit, dann sagt die Politik,\nnaja, wenn das so ist, dann machen wir da halt mal lieber nichts.\nDas ist so ein bisschen, glaube ich, so ein Missverständnis, was sich so in den letzten Jahren so durchgesetzt hat.\nJetzt sind Sie ja auch Teil so einer Beratungsoffensive, sage ich mal,\nalso da gibt es einerseits diese Expertenkommission Forschung und Innovation,\ndie der Bundesregierung zuarbeitet und es gibt auch noch ein Hightech-Forum,\nauch der Bundesregierung, was sind das so für Kommissionen, wie sind die aufgestellt, was sollen die eigentlich tun?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Die Expertenkommission Forschung und Innovation ist vor gut zehn Jahren,\nvor elf Jahren ins Leben gerufen worden als innovationsökonomische Kommission,\ndie genau solche Fragen, wie wir sie jetzt gerade diskutieren und Sie so schön anmoderiert haben,\ndabei Hilfestellung leisten soll, indem sie, wir machen das einmal jährlich in einem Gutachten,\nund wir machen es auch mittlerweile unterjährig über sogenannte Policy Briefs,\nwo wir dann so auf zwei, drei Seiten zu einem Thema Stellung nehmen.\nWir sind sechs Wissenschaftler, Wissenschaftlerinnen, drei, drei, die aus dem Bereich der Innovationsökonomie kommen,\nalso eher volkswirtschaftlich orientiert bzw. die Kollegin Häusler und ich eben aus dem Bereich Wirtschaftsingenieurwesen,\nund die der Politik sagen, also aus wissenschaftlicher Perspektive, das, was die Wissenschaft heute herausgefunden hat,\nalso wirklich aktuelle Forschungsergebnisse, würden wir euch folgendes empfehlen.\nUnd wir versuchen, das Ganze sowohl empirisch zu begründen, indem wir regelmäßig Befragungen dazu durchführen\nbzw. diese dann auswerten oder das Ganze auch durchaus mal mit einem theoretischen Modell begründen\nund sagen, pass mal auf, die Theorie sagt, der Markt würde sich folgendermaßen verhalten.\nWenn ihr als Politik jetzt das entscheidet, dann gibt es folgende Möglichkeiten.\nUnd da hören wir dann auf.\nWir versuchen, Theorie und empirisch gestützte Empfehlungen abzugeben,\nzu sagen, also wenn ihr uns fragen würdet, was ihr ja tut, sonst wären wir nicht eingesetzt,\ndann sind das unsere Empfehlungen, was ihr damit macht, ist natürlich euch überlassen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wie oft findet das statt?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Es gibt einmal im Jahr das EFI-Gutachten.\nWir schreiben gerade das Gutachten, was im Februar 2022 übergeben werden,\nbisher haben wir es immer direkt an Frau Merkel übergeben.\nWir hoffen sehr, dass wir im Februar 2022 das an Herrn Scholz übergeben dürfen,\ngleichzeitig sind wir eben sehr eng mit dem Bundesbildungs- und Forschungsministerium, dem BMBF, im Austausch,\naber wie gesagt, wir sind kein Gremium des BMBF, sondern tatsächlich eingesetzt durch den deutschen Bundestag.\nAlso das heißt, unsere Adressaten sind die ParlamentarierInnen aber auch die Gesellschaft und die Wirtschaft.\nDas heißt, unser Gutachten ist sehr bewusst so geschrieben, dass wir versuchen,\ndiese wissenschaftlichen Erkenntnisse so aufzubereiten, dass es einer möglichst breiten Öffentlichkeit zugänglich ist.\nUnd das ist nicht einfach, da können wir uns auch wunderbar drüber streiten im Kreise der Experten,\naber das ist der Anspruch und das sind dann solche Themen wie, die Agilität des Staates beispielsweise im letzten Jahr.\nWir haben im letzten Jahr zu CRISPR/Cas Stellung genommen,\nwas bedeutet das, wie sollte sich Deutschland da aufstellen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also die Genschere."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Die Genschere genau.\nWir haben auch zu Blockchain schon mal was geschrieben, wir haben natürlich schon mal was zum Thema Digitalisierung in Gesellschaft,\nin der Bildung geschrieben, wir haben schon mal was zum Thema, also breite Themenvielfalt.\nArbeitsmarkt der Zukunft letztes Jahr."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja. Ich greife mal eins raus, Agilität des Staates, das ist ja, sagen wir mal, klingt so ein bisschen wie ein Widerspruch in sich."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "/lacht/"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Was steht denn da drin?\nAlso was wird denn dann so dem Staat vorgeschlagen?\nUnd anhand welcher Forschungsergebnisse macht man das dann fest?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Genau, das war also Kapitel im letzten Jahr, was eben momentan hochaktuell ist.\nWir haben dann auch tatsächlich noch mal zwei Policy Briefs darauf aufbauend geschrieben.\nWir haben ja auch beispielsweise ein Ministerium neuen Zuschnitts gefordert vor einigen Monaten,\ndas könnte ein Digitalministerium sein, es hätte aber auch jedes andere Ministerium sein können.\nIn dem wir eben genau das gefordert haben, die Politik, der Staat muss agiler werden.\nWas heißt agiler?\nAgiler heißt, dass er schneller reagiert, dass er Dinge ausprobiert, sie dann auch gerne,\nwenn er feststellt, das funktioniert so nicht, wieder sein lässt und iterativ auf den Erfahrungen aufbaut und dann weiterdenkt.\nAlso das ist sozusagen dieser Grundbegriff der Agilität.\nUnd Sie sagten gerade schon so schön, das ist doch ein Widerspruch in sich, ist es tatsächlich.\nAktuell, wenn wir uns den deutschen Staat angucken, kann sich kaum jemand vorstellen, dass dieser Staat agil ist.\nWenn wir uns aber die großen gesellschaftlichen Herausforderungen angucken,\ndann müssen wir das, denn keiner von uns weiß, wie wir die Klimakrise lösen, das weiß keiner.\nDas einzige, was wir machen können, ist, und da kommt jetzt, und das war ein zweiter wichtiger Teil in diesem Kapitel,\nist diese Missionsorientierung.\nDer Staat kann sogenannte Missionen vorgeben und sagen, wir gehen aktiv die Klimakrise an,\nindem wir beispielsweise, Thema Kennzahl, die Erwärmung auf 1,5 Grad begrenzen\nund wir machen das mit folgenden Maßnahmen.\nSo damit gibt der Staat einen Rahmen vor.\nWie wir diesen Rahmen jetzt ausmalen und das Bild ist auch schon skizziert,\naber welche Farben wir dafür nutzen, wie wir das ausmalen, ob wir das jetzt mit Pastellfarben machen,\nAquarellfarben oder Ölfarben oder ob wir dieses Bild noch mal anpassen müssen,\ndas ist dann wiederum vielen Akteuren überlassen und das ist uns eben ganz wichtig,\nder Staat kann nicht alles machen.\nUnd da haben wir schon auch wieder dieses Thema Agilität bzw. warum wir dann als EFI mit dem Thema innovationsökonomischem Sachverstand sagen,\nder Staat hat eine wichtige Rolle zu spielen, aber anders beispielsweise als Mariana Mazzucato,\ndie sagt, der Staat geht dann ins kleinste Detail und gibt dann vor, in Zukunft nur noch Elektromobilität.\nSagen wir eben, es muss in diesem Rahmen muss es Flexibilität geben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Das mit den Pastellfarben steht da bestimmt so nicht drin."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Nein, das habe ich jetzt gerade für Sie."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, ja, ich habe nichts gegen Bilder, aber mich interessiert wirklich auch mal, was steht denn konkret drin?\nIch habe es natürlich nicht gelesen, ich fauler Sack, aber was…\nWeil worauf ich ein bisschen hinaus will, ist, wenn man sich über Innovation und Effektivität von Maßnahmen und so weiter Gedanken macht,\ndann macht man sich ja wahrscheinlich auch Gedanken darüber, was schreibe ich jetzt in so ein Paper rein,\nund was bewirkt es einfach auch mal konkret.\nAlso man muss ja sozusagen auch diese konkrete Schnittstelle zu einer Bundesregierung oder einem Bundesministerium\nauch so denken, so nach dem Motto, okay wir haben jetzt hier einen begrenzten Zeitraum,\nwir machen jetzt hier eine Empfehlung, was schreiben wir da rein und wie schreiben wir das da rein,\ndamit das dann auch in gewisser Hinsicht Erfolg haben kann."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Das ist ein ganz dünner Grat, weil wir nicht die Politik machen wollen und auch können, dafür sind wir nicht ausgebildet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja klar."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Das heißt, wir werden der Politik nie sagen, mach A, mach B, mach C,\nsondern auch da sagen wir nur, wir empfehlen beispielsweise, eine missionsorientierte Politik zu betreiben.\nWas beutetet missionsorientiert?\nIch hatte das gerade eben kurz angesprochen.\nSo das könnte beispielsweise, Sie haben ja das Hightech-Forum schon angesprochen,\ndas könnte im Rahmen der Hightech-Strategie erfolgen.\nDie Hightech-Strategie, die wir in den vergangen vier Jahren hatten, war eine quasi missionsorientierte Politik.\nDa wurden also auch Dekade des Krebses, also wir als Bundesregierung geben vor,\nwir wollen das Thema Krebsforschung ganz stark vorantreiben.\nWie sieht es dann ganz konkret aus?\nDas müssen dann die Akutere übersetzen.\nUnd da kommt dann beispielsweise jetzt das Hightech-Forum rein, das im Vergleich zur EFI-Kommission sehr viel pragmatischer arbeitet.\nDa sind Vertreter aus der Wirtschaft dabei, da sind Unternehmer dabei, Unternehmerinnen,\nStartup-Unternehmerinnen, Mittelständler, Großunternehmer bzw. eben aus dem Management.\nDa ist die Wissenschaft dabei, verschiedene Forschungsinstitute, da ist die Gesellschaft dabei,\nnicht so stark wie wir es uns gewünscht hätten, das gibt es vielleicht jetzt in der nächsten Iteration.\nDenn das und das beantwortet jetzt Ihre Frage, wer bestimmt das jetzt eigentlich und wer macht das eigentlich jetzt,\ndas müssen die gesellschaftlichen Akteure sein.\nDas muss dann die Wissenschaft, die Wirtschaft, die Politik und die Gesellschaft, das sind ja diese vier Stränge,\ndie müssen das gemeinsam in einem Diskurs ausdiskutieren und sagen,\nwas bedeutet diese Mission jetzt, Dekade des Krebses?\nReduktion der globalen Erwärmung um 1,5 Grad, was sind meine Antworten als Wissenschaftler,\nals Gesellschaft, als Wirtschaft, was sind meine Antworten darauf und wo können wir da zusammenarbeiten?\nUnd die Politik ist für mich oder dann eben auch für uns als EFI und im Hightech-Forum ist es ähnlich, ein Moderator, ein Rahmengeber."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Im letzten Gespräch hier bei Forschergeist habe ich mich mal mit Rafael Laguna de la Vera unterhalten,\nder ja dieses neue Institut für Sprunginnovationen vornimmt, das ist ja dann sozusagen auch so eine Manifestation dieser Idee,\nInnovationen auch wirklich als Teil des Staates zu machen, haben Sie da auch Kontakt?\nIst das Teil Ihrer Forschung?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ja, natürlich. Also auf der einen Seite ist die Agentur für Sprunginnovation ja quasi ein EFI-Produkt,\nalso die EFI hat unter der Leitung von Dietmar Harhoff über Jahre gefordert,\ndass es eine solche Agentur braucht oder eine solche Institution, die eben frei von politischen Vorgaben Geld in die Hand nehmen kann,\num einfach mal diese verrückten Ideen, an die nämlich sonst keiner glaubt,\nfür die es noch keine Kennzahlen gibt, für die wir im Zweifel noch gar nicht wissen, wer es eigentlich machen soll,\nso etwas anstoßen kann.\nAlso insofern ist die EFI und die SPRIND die sind sehr eng miteinander vertraut, sage ich mal so.\nDavon abgesehen, dass eben dann wir uns auch immer versuchen abzugleichen, wer macht eigentlich gerade was\noder wir versuchen uns da auch entsprechend auszutauschen.\nJetzt habe ich Ihre Frage vergessen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, das war die Frage, also wie hängt das zusammen?\nAlso haben Sie ja im Prinzip schon gesagt, dass ist ein Ergebnis sozusagen oder war zumindest mal ein Vorschlag."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ja, genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und das kam bei raus, kann man jetzt sagen, okay das ist nur weil wir das gesagt haben, wahrscheinlich nicht."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Und andere Akteure, ja genau, das will ich jetzt gar nicht …"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und das sind sozusagen Ziele und damit auch messbare Ergebnisse.\nIch meine, inwiefern die Ergebnisse dieser Agentur messbar sind, das werden wir dann erst noch sehen,\nAber ist ja zumindest schon mal ein Gedanke gewesen, so nach dem Motto, wir brauchen so was ähnliches eben wie die DARPA in den USA.\nAlso eine Institution, die eben konkret auch was auslösen kann, indem sie auch wirklich mal konkret Geld in die Hand nehmen kann\nund unabhängig von dem eigentlichen politischen Vorgang, der zwangsläufig langsam ist,\nweil er immer versucht, einen politischen Konsens auszuhandeln, einfach mal Dinge ausprobiert und Kohle verbraten kann\nund dann auch mal in Kauf nimmt, dass irgendwas nicht so gut funktioniert,\nweil wenn man genug Sachen nimmt, irgendwas wird eben schon hängenbleiben.\nAber mich interessiert halt jetzt wirklich dieses, vielleicht gibt es noch ein paar Sachen,\ndie man dazu sagen kann, so dieses Interface von der Wissenschaft zur Politik.\nWeil ich stelle mir halt immer so ein bisschen vor, naja Gutachter, Kommission, Gremien, alles schön und gut,\nda macht man dann mal so sein Papierchen, das legt man hin, dann hat man eine Presskonferenz\nund dann wird einem schön gedankt, wie innovativ das doch jetzt wieder alles ist und dann ist nächsten Montag wieder business as usual.\nDas ist jetzt so ein bisschen vielleicht auch, ne…\nWie das dann wahrgenommen wird, manchmal findet es wahrscheinlich auch so statt,\naber haben Sie auch das Gefühl, dass das so ist oder ist es anders?\nWie verfängt das?\nAlso wie Ofen ist der politische Prozess für die wissenschaftliche Beratung konkret?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Also die Frage stellen wir uns ja selber auch immer wieder.\nDas Hightech-Forum ist ja jetzt geendet mit der letzten Legislaturperiode.\nOb es das wieder geben wird, ob es eine Hightech-Strategie, sie ist ja zumindest im Koalitionsvertrag festgehalten,\noder eine Zukunftsstrategie geben wird, wer die begleiten wird, das werden wir sehen.\nIch sehe den Einfluss oder wir nennen das neudeutsch ja immer so schön Impact auf verschiedenen Dimensionen.\nAlso wenn ich jetzt noch mal für die EFI spreche, wir glauben und das, was wir an Feedback bekommen,\ngelingt es uns, mit unseren Gutachten immer wieder aktuelle Themen aufzugreifen,\nsie zu übersetzen für die Parlamentarierinnen und Parlamentarier, ihnen zu zeigen,\nwo da beispielsweise Innovation drinsteckt, also jetzt wieder Beispiel Genschere CRISPR/Cas,\nwie Politik gestaltet werden sollte, Thema agiler Staat oder Arbeitsmarkt der Zukunft,\nwas sind eigentlich die Fähigkeiten, die die Arbeitnehmerinnen in Zukunft brauchen werden.\nDas sind Impulse, die wir setzen, die werden gelesen, die werden reflektiert,\ndie werden in den Ausschüssen diskutiert, das wissen wir.\nWir wissen auch, dass sie in den Ministerien aufgegriffen werden\nund da teilweise nach einigen Jahren, also das mussten wir schon lernen,\ndass dieses Brett doch ein bisschen dicker ist, aber wenn man immer wieder da auch reinbohrt\nund wir greifen auch Themen immer wieder auf, dass wir sagen, im letzten Jahr haben wir\nund es ist immer noch nichts passiert und jetzt macht doch bitte mal was,\n3,5 Prozent Ziel für die Innovationsausgaben ist so eine andere EFI-Forderung,\ndie also auch sehr lange immer wieder wiederholt werden musste, bis sie dann umgesetzt wurde.\nWas ich persönlich lernen musste ist, dass Politik unglaublich vielfältig ist,\ndas, was in den Ministerien passiert und das, was im Bundestag passiert,\ndas ist so das eine, was wir beeinflussen können als Wissenschaftlerinnen und Wissenschaftler.\nDas, was dann nachher in der konkreten Politikarbeit dann tatsächlich Eingang in Gesetzesvorhaben\noder Umsetzungsprojekte findet, das ist dann wiederum und da haben wir schon letztendlich eine Vergleichbarkeit mit den großen Unternehmen,\ndas ist dann wieder von sehr vielen Partikularinteressen getrieben.\nEs ist dann der einzelne Parlamentarier, der jetzt vor Ort seinem Wahlkreis etwas gutes tun will.\nUnd plötzlich sind die schönsten Konzepte werden also wieder infrage gestellt,\nweil gesagt wird, naja das müssen wir jetzt noch mal überdenken.\nAlso mein Gefühl ist, dass wir die richtigen Impulse setzen, dass wir objektive Fakten liefern können.\nWir bemühen uns, objektiv abgeleitete Handlungsempfehlungen zu geben,\nden Wissensraum der Parlamentarierinnen und Parlamentarier zu öffnen,\ndie Ministerien mit einer weiteren Meinung zu versehen, bereitzustellen,\nnatürlich auch entsprechend bei Diskussionen Rückfragen Kommissionssitzungen zur Verfügung zu stellen,\naber auf die endgültige Entscheidung, was dann nachher umgesetzt wird, haben wir tatsächlich relativ wenig Einfluss."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja gut, ich meine, auch das ist ja ein Experiment, was man beobachten kann.\nMan sieht ja, okay diese Aktivität hat folgende Ergebnisse erzielt und hier war es jetzt nicht so erfolgreich,\ndas kann man ja wie so ein kleines Laborexperiment im Prinzip betrachten, daraus so seine Schlussfolgerungen ziehen so.\nUnd was mich noch mal interessieren würde, was glauben Sie oder was ist so Ihr Gefühl,\nwo es denn am meisten verfängt?\nWeil Sie meinten ja, es gibt im Prinzip mehrere Adressaten, auf der einen Seite ist es so der Bundestag, die Parlamentarier,\ngut die wechseln dann alle paar Jahre, jetzt mischt sich der Reigen wieder komplett neu,\nda geht natürlich dann auch viel verloren in gewisser Hinsicht, weil all die Leute, mit denen man gesprochen hat,\nsind ja dann weg, kann aber auch ein Vorteil sein.\nDas gleiche gilt natürlich jetzt auch für die Bundesregierung, wobei die Leute, die dort mitmachen,\nwahrscheinlich schon auch vorher eine Weile dabei waren, das sind ja jetzt nicht die kompletten Novizen mit wenigen Ausnahmen.\nAber dann gibt es ja auch noch so andere Bereiche.\nAlso erst mal die Ministerien, die tauschen ihren Apparat ja jetzt nicht aus,\nsondern da hat man ja auch über längere Zeit Ansprechpartner und dann gibt es ja auch noch so Gruppen wie den wissenschaftlichen Dienst,\nwo ja ohnehin so eine permanente wissenschaftliche Dienstleistung, im wahrsten Sinne des Wortes, geleistet wird.\nWenn man sich also dieses Spektrum jetzt anschaut und jetzt vielleicht mal den Blick zurückwirft\nund jetzt mal als Adressat dieser Aussage die Wissenschaft in Deutschland nimmt und sagt,\nokay, hör mal, das ist der Einfluss, den ihr nehmen könnt, wie müsste sich quasi die Wissenschaft ausrichten?\nWo macht vielleicht auch die Wissenschaft derzeit noch einen Fehler oder hat Optimierungspotenzial,\num es mal etwas vorsichtiger auszudrücken, in die Gesellschaft in Form der Politik Einfluss zu nehmen?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Eine vielfältige Frage.\nIch fange noch mal kurz mit einer Reflexion an, es gibt nämlich noch einen Punkt, den ich gerade vergessen habe,\nder führt uns dann aber zu dem nächsten.\nIch musste die Erfahrung machen, dass ich sehr viel geduldiger werden musste im Kontext der Wissens- oder Politikberatung.\nIch habe mehrere Runden, also gerade jetzt dieses Thema Verwaltungsinnovationen, agiler Staat,\ndas war natürlich im letzten Jahr vor der Bundestagswahl war das ein ganz heißes Thema.\nUnd es gab unglaublich viele Gesprächsrunden und Diskussionsrunden.\nUnd ich erinnere mich an eine Runde, da hatte Herr Scholz eingeladen zehn Wissenschaftskollegen und -kolleginnen\nund da sollte es also wieder um Verwaltungsinnovation und den modernen Staat gehen.\nUnd wir haben dann angefangen und ich hatte begeistert ja gesagt, weil ich mir dachte,\nnaja das ist jetzt endlich mal der richtige Rahmen und ganz viele BMWI und BMBF und BMI,\nalso Innenministerium und Wirtschaft, alle waren sie dabei.\nUnd dann kamen wieder dieselben Fragen und es kamen wieder dieselben Antworten.\nUnd das war also diese Eingangsrunde und ich beendete dann den Reigen dann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Welche Fragen und welche Antworten?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Na die Frage, was müssen wir denn tun, um den Staat zu modernisieren?\nWie können wir den Staat agiler machen?\nWie muss eine Innovationsorientierte Politik aussehen?\nAlso die Fragen, über die wir gerade gesprochen haben.\nUnd das waren Fragen, die hatte ich in den vergangenen Monaten fünf-, zehnmal gehört, adressiert.\nSo und die kamen hier wieder und die Kollegen aus den Verwaltungswissenschaften, aus der Innovationsforschung,\naus der Ökonomie, das waren so eigentlich die drei, haben das gefühlt immer wieder dasselbe gesagt.\nUnd es brach tatsächlich emotional aus mir heraus, dass ich sagte, Herr Scholz Sie hören das jetzt zum zehnten Mal,\nwarum fragen Sie uns immer wieder dieselben Fragen?\nDas kann doch nicht sein, warum müssen wir das immer wiederholen?\nSo und dann wurde ich also belehrt, sowohl auch von meinen Kollegen, als dann eben auch,\nHerr Scholz hat sich da etwas zurückgehalten, aber von den anwesenden Ministerialvertretern,\nja so einfach ist das ja nicht.\nUnd da sind wir wieder bei diesem Thema Veränderungsresistenz.\nUnd dann wurde ich darüber aufgeklärt, dass die moderne Verwaltung sich eben nicht von heute auf morgen verändern kann.\nUnd dass sie nicht von heute auf morgen ein Experimentallabor machen kann.\nUnd dass sie nicht von heute auf morgen mal eben agil sein kann.\nUnd das war für mich aber ein ganz wichtiger Moment, weil ich festgestellt habe,\ngenau die Frage, die Sie gerade gestellt haben, was für einen Einfluss habe ich denn eigentlich,\nwenn ich mir immer wieder den Mund fusselig rede.\nSo und die Frage habe ich auch immer noch nicht für mich beantwortet,\naußer dass ich eben denke, steter Tropfen höhlt den Stein und immer wieder bohren\nund irgendwann haben wir das Brett geschafft.\nIch glaube tatsächlich, und ich habe aber dadurch festgestellt und jetzt komme ich auf Ihre Frage,\nwas müssen wir als Wissenschaft anders machen, was müssen wir besser machen?\nWir müssen immer wieder das, was wir erforschen, das, was wir herausfinden, müssen wir spiegeln,\nwir müssen es genau in diese Diskussionsrunden einbringen, wir müssen unsere Impulse setzen,\naber, das finde ich ganz wichtig, wir dürfen uns nicht verbiegen.\nWir dürfen dann nicht anfangen, den Politikerinnen und den Politikern nach dem Mund zu reden oder den Wirtschaftsvertretern,\nsondern wir müssen da schon sehr selbstbewusst sein.\nAber wir müssen eine Sprache sprechen, die diese Akteure verstehen und wir müssen natürlich auch Forschung machen, die relevant ist.\nEs hilft keinem von diesen Akteuren, wenn wir die nächste tolle Theorie oder das nächste tolle theoretische Framework entwickeln.\nSondern wir müssen tatsächlich dann fallbezogen und das ist ein weiteres Mantra der Innovationsforschung und auch der EFI,\nwir müssen diese Initiativen, die dann gestoßen werden, wir müssen die begleiten.\nWir brauchen Begleitforschung, die dann nämlich sagen kann, Mensch guck mal hier,\nProBio beispielsweise, das ist also ein Rahmenprogramm des BMBF für das Thema Ausgründung in der Bioökonomie.\nHochrelevant und sehr sehr erfolgreich.\nDas wissen wir aber nur, weil wir eine Begleitforschung gemacht haben.\nSie hatten im Vorfeld gesagt, wir wollten vielleicht noch mal auf We Versus Virus zu sprechen kommen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Da würde ich jetzt drauf einschwenken wollen, genau."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Das war genau so ein Thema, da sind wir herangegangen, also ein Masterstudent und ich,\nda sind wir reingegangen und haben das also über Wochen, die das lief, begleitet,\num festzustellen, guck mal, da passiert jetzt etwas."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Vielleicht sollten wir kurz sagen, was es war.\nAlso zum Beginn der Pandemie, als alle so, oh Gott, was können wir denn jetzt tun,\nwar es ja eine dieser Initiativen, so einen offenen Hackathon zu machen,\nalso eine Veranstaltung, wo technikbegeisterte Leute oder gar nicht primär Technik,\naber generell lösungsorientiert über, okay Pandemie, vor welchen Herausforderungen stehen wir denn jetzt,\nwas können wir denn jetzt hier für Lösungen finden?\nDa ist teilweise viel Software erstellt worden, andere Projekte, ich weiß gar nicht, wie breitbandig es war."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Bildungsangebote."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Es war wirklich sehr sehr viel."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ja, Vernetzungsangebote."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und das Ganze wurde auch binnen kürzester Zeit auf die Beine gestellt.\nUnter anderem auch mit der Hilfe des Prototype-Funds, was ja auch schon so ein Projekt war,\nwas, sagen wir mal, genau mit solchen Strukturen dann auch schon experimentiert hat unter staatlicher Unterstützung.\nIst schon so ein kleines Innovationspflänzchen gewesen, was schon da war,\nwas in dem Moment ganz gut gepasst hat, so dass es dann, ich weiß gar nicht,\nwie schnell kam das zustande, innerhalb von wenigen Wochen."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Vier bis sechs Wochen, also das war eine erste Idee und dann sind sehr schnell die relevanten Akteure haben sich zusammengefunden\nund haben gesagt, wir machen das, wir finden das toll, wir setzen das um.\nEs gab die Finanzierung aus dem BMBF, aus dem BMWI und dann ist das einfach losgelaufen.\nAlso das war tatsächlich auch im Nachgang, gerade wenn Sie mit den Organisatoren sprechen,\ndie sind da immer noch, die reflektieren das und denken, wir hätten das nicht gedacht,\ndass wir das so schnell auf die Beine stellen.\nAber letztendlich hatte das eben genau dieses, das war so ganz agil, kam ja auch aus der IT-Szene,\nso Hackathon, Sie sprachen das gerade schon an, so wir machen einfach mal was.\nSo wir gucken einfach mal, was passiert.\nUnd unsere Gesellschaft befand sich zu dem Zeitpunkt in einer Situation, wo wir alle das Gefühl hatten, wir müssen jetzt was tun."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Was ist dann passiert?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Dann haben sich diese, so und jetzt hätte ich natürlich im Vorfeld noch mal schön die Zahlen nachschlagen können,\nalso ich glaube, wir hatten…\nNein, vierstellig hätte ich jetzt gesagt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Dreistellige Zahl von Teilnehmern auf jeden Fall.\nVierstellig, tatsächlich?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ja, ich meine schon.\nAber gut, also das ist jetzt das, wo wir beide genau stehen.\nUnd die haben sich also zusammengetan an einem Wochenende im März und haben gesagt,\nso, wir tun uns jetzt mal zusammen und wir geben uns gegenseitig Ideen,\nwir sind zusammen kreativ, da sind wir wieder bei diesem Thema Kreativität\nund wir überlegen uns, was können wir eigentlich tun, um diese Herausforderungen,\nvor denen wir stehen, also wie verbinden wir Leute besser miteinander.\nDa hatten wir ja noch das Thema Einkaufshilfen.\nWie sorgen wir dafür, dass die Kinder im Virtuellen unterrichtet werden?\nWie schaffen wir es, womöglich bessere Warnhinweise zu entwickeln?\nWie finden wir womöglich ein Corona-Medikament?\nAlso ganz unterschiedliche Disziplinen wurden da angesprochen.\nEs kamen Menschen aus allen, sage ich mal, Schichten und studiert, nicht studiert,\nInformatiker, der Tischler um die Ecke, die sich alle an diesem Wochenende trafen im virtuellen Raum\nund gemeinsam Ideen entwickelt haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "28.000 sagt die Wikipedia."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Fünfstellig, sehen Sie mal."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ist die Teilnahmezahl. Okay, das ist wirklich eine Menge."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Die sich dann in 1500 Projekten damit beschäftigt haben."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Projektteams, genau.\nSo und da haben wir wirklich eine unglaubliche Bandbreite.\nUnd am Ende waren wir alle ganz überrascht, begeistert davon, dass es eben so viele gab.\nUnd dann ging es ja darum, was machen wir jetzt mit diesen 1500 Projekten?\nDas soll ja nicht nur so eine Einmalveranstaltung gewesen sein.\nUnd das haben wir dann eben, das ist ja dann auch über die Initiative, da sind dann eben entsprechende Mentoren angeworben worden,\ndie Projektteams wurden gefragt, habt ihr Lust das weiter zu machen, habt ihr Zeit dafür?\nWenn nicht, seid ihr bereit, eure Idee sozusagen auf den Marktplatz zu stellen,\ndass die von anderen weiter getrieben werden kann?\nSo und da gab es ganz unterschiedliche Motivationen.\nEs gab welche, die gesagt haben, auf alle Fälle machen wir weiter und ich bereit,\nda auch in meinem Job zurückzustecken.\nEs gab natürlich viele, die während des Lockdowns sehr sehr viel Zeit hatten.\nUnd so ist das also von verschiedenen Akteuren vorangetrieben worden.\nEs gab dann entsprechende finanzielle Unterstützung, es gab dann aber eben auch entsprechende fachliche Unterstützung.\nUnd ich glaube, mittlerweile haben wir also jetzt, also von 15 Gründungen weiß ich,\naber es kann gut sein, dass da mittlerweile auch schon wieder noch mehr dazu gekommen sind.\nAlso die dann tatsächlich in die Unternehmensgründung gegangen sind.\nSei es eben jetzt über eine App, die Daten zur Früherkennung von solchen Pandemien zusammenfügt.\nSei es eine App, die eben solche Communitys entsprechend unterstützt,\nalso vor Ort, so Nachbarschaftshilfen.\nAlso da gab es eine große Bandbreite.\nEs gab zwei oder drei, die jetzt auch in die medizinische Forschung,\nich glaube, zwei sind jetzt am Robert-Koch-Institut angesiedelt,\ndie da ihre Idee entsprechend jetzt auch in die Forschung übertragen haben, um da eben weiterzumachen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und Sie haben das auch forschend begleitet?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Genau. Also wir waren, mein Masterstudent war Teil dieser ersten Runde,\nder war an diesem Wochenende mit dabei, hat sich das angeschaut, war völlig begeistert,\nist selber Informatikstudent gewesen und kam anschließend zu mir und sagte,\nboah Katharina das war so cool und das ist doch eigentlich spannend, jetzt mal zu gucken,\nwas passiert damit eigentlich, was kommt da mit raus?\nUnd das haben wir gemacht.\nWir haben also dann, auf einer Seite hat er in seinem Projektteam weitergearbeitet, an seiner konkreten Idee\nund gleichzeitig hat er aber dann eben mit anderen Teams, mit anderen involvierten Menschen\nhat er Interviews geführt und hat gefragt, warum hast du mitgemacht?\nWas hat dich eigentlich daran gereizt?\nIst das gut gelaufen, was ist an diesem Wochenende gut gelaufen?\nWas ist vielleicht nicht so gut gelaufen, was würdest du beim nächsten Mal anders machen?\nSo und das, was halt rauskam, und da kann man wieder sagen, da sind wir als Wissenschaft nicht so wahnsinnig überrascht gewesen,\nder zentrale Faktor war dieses Zusammengehörigkeitsgefühl, dieses Community-Feeling.\nIch bin mehr als nur einer oder eine, sondern wir sind eine Gemeinschaft.\nUnd in dieser Gemeinschaft haben wir Dinge erreicht, von denen ich nicht dachte, dass die möglich wären.\nIn so kurzer Zeit, in einer solche Kreativität, wir hatten das Gefühl, dass wir sehr viel Unterstützung erfahren haben.\nAlso dieses gesamte Begleitprogramm ist sehr gelobt worden, dass man das Gefühl hatte,\nda gibt es tatsächlich Unterstützung und dann, das ist so der dritte Erfolgsfaktor, wenn wir ihn mal so nennen dürfen,\nwar tatsächlich das Thema, wir gegen das Virus.\nUnd da merkt man eben, wie wichtig diese Gemeinsamkeit oder wir nennen es ja dann als Wirtschaftswissenschaftler immer gerne Vision, ist.\nAber sich darauf einzulassen und zu sagen, ja, dafür mache ich das.\nUnd alle, die hier in diesem virtuellen Raum zusammen sind, die haben alle dieselbe Motivation.\nUnd das waren so die drei Faktoren, aus denen wir dann eben, und deswegen macht man ja so eine Begleitforschung,\nentsprechend Handlungsempfehlungen abgeleitet haben, an die Politik,\naber genauso an Hochschulen, an Schule, an Bürgerinitiativen.\nWenn ihr solche Initiativen machen wollt, solche Hackathons, dann achtet darauf,\nfindet eine Gemeinsamkeit, findet eine gemeinsame Vision, ein Leitmotiv,\nunter das sich die Leute finden können.\nSorgt dafür, dass dieses Gemeinsamkeitsgefühl geschaffen und dann auch aufrechterhalten wird.\nUnd seht zu, dass ihr dann entsprechende Unterstützung anbieten könnt, um aus diesen Ideen tatsächlich konkrete Dinge machen zu können.\nDass man das Gefühl hat, es verpufft eben nicht einfach so, sondern es kommt wirklich etwas raus."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Findet denn das noch statt, also ist diese Begleitung noch, wir die noch betrieben oder ist das abgeschlossen?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Nein, das ist abgeschlossen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Hat das gereicht der Zeitraum?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Naja, es war halt der Zeitraum einer Masterarbeit und er hat schon deutlich mehr Zeit reingesteckt,\nalso er hat acht Monate reingesteckt und wie gesagt, ich sagte ja gerade,\ndie Projekte laufen teilweise ja immer noch.\nAber uns ging es ja wirklich mehr darum zu verstehen, was sind eigentlich bedeutsame Faktoren,\num so eine Initiative zunächst einmal zum Erfolg zu führen, kurzfristiger Erfolg.\nUnd insofern würde ich sagen, für diese Fragestellung, mit der er rangegangen ist, hat es erst mal gereicht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja ist so ein bisschen die Dynamik so auch der Hackerszene, da kennt man das ja sehr stark,\ndiese Community-Ausprägung des Selbermachens, Selberrausfindens, so Eigeninitiative machen\nund das Ganze auch über so eine Community zu lenken.\nWürde mich noch mal interessieren, was man da jetzt wirklich für Lehren draus ziehen kann,\naußer dass das Projekt jetzt an sich toll war.\nWeil so, sagen wir mal, dieser Motivationstrieb war natürlich in dem Moment der hereinbrechenden Pandemie,\nist ja auch jetzt nicht so ohne weiteres replizierbar.\nAlso das ist so eine Ausnahmesituation gewesen.\nAlso reflektiert schön diese Feststellung, die wir vorhin hatten, mit, es muss erst mal ganz dicke kommen,\nbevor irgendwie überhaupt erst mal was passiert.\nSo ja klar, so globale Pandemie da lässt sich was machen.\nFrage ist natürlich, wie kann man das dann im Kleinen mit den normalen Innovationsschüben auch als Lehre heranziehen.\nAlso was würden Sie denn jetzt sozusagen empfehlen?\nDass solche Hackathons ein wichtiger Faktor sind, um sich überall anzugliedern an den politischen Prozess?\nIst das überhaupt wünschenswert, ist das leistbar?\nWäre die Politik bereit, mit den Erfahrungen, das überhaupt anzunehmen?\nOder bleibt das eher eine einmalige Geschichte?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ich denke nicht, dass das eine einmalige Geschichte bleibt.\nDas, was wir im Moment sehen, ist, die Innovationen der Zukunft sind nicht technologische Innovationen.\nSondern sie werden immer eine Kombination sein aus technologischen und sozialen Innovationen.\nDa haben wir wieder diesen Menschenfokus mit drin.\nDas weiß die Politik grundsätzlich, die Unternehmen wissen es grundsätzlich auch.\nUnd wenn es jetzt darum geht, diesen Bereich, den ich jetzt mal Sozialinnovationen nenne\noder Gesellschaftsinnovationen nenne, um das mit reinzukriegen,\nwerden wir ganz stark eine Bürgergesellschaftsnutzerbeteiligung brauchen.\nOhne die wird es nicht funktionieren.\nDa werden wir Disruption nicht durchsetzen können und wir werden vielleicht auch gar nicht erst die Ideen dafür kriegen.\nDas heißt, das, was wir aus so einer Initiative lernen können und wir wissen ja,\nBürgerinitiativen gibt es schon ganz lange und es gibt jetzt auch immer diese Labore,\nda werden dann Bürgerinnen und Bürger eingeladen und wir wissen auch, es sind immer wieder dieselben Menschen,\ndie sich engagieren bei so was.\nUnd es gibt einen ganz großen Anteil an Menschen, die erreichen wir nicht, adressieren wir nicht, die engagieren sich nicht.\nDie werden wir aber brauchen.\nUnd die Erfahrungen und die Lernerfahrung aus so einer Initiative wie „we versus virus“ kann uns helfen,\nwenn wir über Politikmaßnahmen, über neue disruptive Technologieinnovationen nachdenken,\nvon Anfang an mitzudenken, wie sorgen wir dafür, dass wir die Menschen mitnehmen, wie sprechen wir die an?\nWie schaffen wir eine solche Vision, wo die sich vielleicht auch wiederfinden können?\nWie gehen wir früh genug auf diese Akteure zu, um sie einzubinden, um ihre Stimme zu hören?\nUm diese Stimme dann aber auch, und das ist ja immer so dieses ganz wichtige, was gerne vergessen wird,\ndie eben nicht nur einmal zu hören, zur Kenntnis zu nehmen, sondern sie dann auch mit umzusetzen.\nUnd da braucht es dann natürlich auf beiden Seiten ein Umdenken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Das sind super Fragen, aber was sind die Antworten darauf?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Wie wir das machen?"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Pf, das kommt dann ganz drauf an, was wir da jetzt konkret vorhaben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Naja, also nehmen wir doch mal irgendeinen Bereich heraus, der jetzt nicht die Pandemie ist,\nwo wäre denn so ein Vorstoß der Einbindung der Gesellschaft für so innovative Projekte,\nvielleicht jetzt nicht in derselben Dimension und nicht mit demselben Druck wie die Pandemiebekämpfung, sondern eben so andere Sachen.\nSagen wir mal Umgestaltung der Städte im Verkehrsbereich."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Richtig, nachhaltige Mobilität."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Betrifft alle enorm, wird viel diskutiert, wenn man so soziale Medien verfolgt, so hier den Beschwerdekanal Twitter zum Beispiel,\nda wird also permanent darauf hingewiesen, wie kaputt doch so unser autoorientiertes Verkehrssystem so ist,\nhabe ich vorhin ja auch schon mal als Beispiel genommen, da sehe ich eine ganze Menge Potenzial.\nSo und wie geht man dann jetzt vor?\nWie bindet man das denn jetzt ein?\nIch meine, Verkehrsministerium wäre sicherlich ganz gut beraten an der Stelle, konkret wäre ja jetzt mal so ein Vorschlag.\nGut, wie machen wir das denn jetzt mit der Umgestaltung der Städte, damit das nicht irgendwie 30 Jahre dauert,\nbis wir da wirklich an den Punkt kommen, weil der Bedarf ist ja offensichtlich da\nund es ist ja auch etwas, was die Wirtschaft dann unmittelbar wiederum betrifft.\nDa haben wir den Kreis jetzt auch mal geschlossen, nicht wahr, mit der Automobilindustrie,\ndie sich vielleicht mehr als Mobilitätsindustrie verstehen muss, weil eben ja hier noch ein konkreter infrastruktureller Wandel auch ansteht."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ja. Also da ganz konkret würde ich eben tatsächlich, Sie haben jetzt die Städte angesprochen,\naber ich würde das wahrscheinlich direkt parallel laufen lassen und würde mir ein städtisches Experimentallabor ausdenken\nund würde mir eins im ländlichen Raum aussuchen, denn die Zukunft der Mobilität da müssen wir in Deutschland beides bespielen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja richtig."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Und würde dann sagen, okay Berlin Neukölln und Ostwestfalen-Lippe, so die nehmen wir uns,\nda holen wir uns die Bezirkspolitik mit ins Boot und sagen, also ihr werdet jetzt für die nächsten 24 Monate seid ihr unser Zukunftsstandort die Zukunft der Mobilität.\nIhr bekommt Betrag X, fünf, zehn Millionen dafür, dass ihr gemeinsam mit der Wirtschaft vor Ort,\ndas ist jetzt in Berlin Neukölln nicht so stark ausgeprägt, aber da darf dann vielleicht BMW mitspielen,\nwenn Volkswagen nach Ostwestfalen-Lippe geht und ihr macht euch gemeinsam mit diesen vier Parteien,\ndie ich jetzt schon ein paarmal genannt habe, Wirtschaft, Wissenschaft, Politik und Gesellschaft,\ndarüber Gedanken, wie ihr das vor Ort umgestalten wollt.\nSo und dann werden wir unterschiedliche Instrumente bespielen.\nDann werden wir einen Hackathon machen, mindestens einen, wir werden das Ganze also über eine Plattform machen,\nwir werden aber genau so mit Bürgerbüros vor Ort arbeiten, wo wir dann vielleicht die nicht so sozialmedienaffinen einladen und sagen,\nhier das ist die Vision, das stellen wir uns vor, was sind eure Ideen dazu oder wo seht ihr eigentlich die Probleme?\nDie Nutzer mit an den Tisch bringen zu sagen, was sind denn eigentlich eure konkreten Probleme?\nUnd dann gemeinsam mit denen Lösungen entwickeln.\nUnd immer unter diesem Kontext, da komme ich jetzt wieder auf diesen einen Erfolgsfaktor,\nihr als Gemeinschaft hier vor Ort in diesen beiden Experimentallaboren könnt die Zukunft so gestalten,\nwie sie für euch passt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Super Idee, wo klopft man da jetzt an, um das durchzusetzen?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Naja, Sie nannten das ja gerade schon, wir haben ja jetzt ein Ministerium für Digitalisierung und Verkehr,\ndas ist unser erster Faktor, dann nehmen wir das BMBF noch mit rein in die Begleitforschung\nund das BMWI für die Startups.\nUnd dann kommen wir nämlich auf das nächste große Problem, was wir noch nicht gelöst haben\nund wo ich mir sehr viel mehr Innovativität gewünscht hätte von der neuen Regierung,\ndas ist nämlich das Thema interministerielle Zusammenarbeit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Was es so nicht gibt?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Nein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Warum?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Das größte, wie sagte mir mal jemand aus einem der Ministerien, also die größte Bestrafung sind die IMAKs,\ndie interministeriellen Arbeitskreise."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "IMAKs?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Mhm /bejahend/, da wird man also abgeordnet, weil ja dann zwischen den Ministerien eine Koordination erfolgen soll\nund da kommt überhaupt nichts raus.\nWeil, da sind wir wieder relativ zu Beginn, kein Haus will Macht abgeben, kein Haus will die zweite Geige spielen,\nkein Haus will im Zweifel zu etwas zustimmen, was das andere Haus bestimmt hat.\nSo und solange wir das nicht haben, solange die Regierung, die Ministerien sich nicht als ein verantwortlicher Körper versteht,\nda werden viele von den Punkten, über die wir gesprochen haben, schwierig umzusetzen sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Aber ist doch im Prinzip genau das gleiche Problem, was wir vorhin bei der Wirtschaft auch schon festgemacht haben."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ja klar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Dass hier die richtigen Leistungskennzahlen, tolles Wort, Belohnungssysteme vorhanden sind.\nWelche Belohnungssysteme könnten denn dann an der Stelle etwas mit reinbringen?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ja ist richtig, klar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wie kann man denn sozusagen belohnt werden, um durch interministerielle Zusammenarbeit trotzdem zu glänzen\nund nicht sofort der Später zu sein, der das Budget senkt?\nSchwierig, ne?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Sehr sehr schwierig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ich habe nicht gesagt, dass es einfach ist."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ja, also auch da wieder, ich meine, das, was wir da schon als Entwürfe oder mal als Vorschläge entwickelt haben, wäre natürlich,\ndann themenspezifische Töpfe, und das wäre jetzt nachhaltige Mobilität, die Zukunft der Mobilität im städtischen und ländlichen Raum,\nwohlwissend, dass das Digital- und Verkehrsministerium als erstes schreien würde,\ndas ist in unserer Verantwortung und gleich sagen, nein, diesen Topf bekommt ihr nur dann, wenn alle dabei sind.\nUnd dementsprechend werden dann die Gelder verteilt.\nJa, wohlwissend … nein, so und das ist aber jetzt sozusagen meine Milchmädchenrechnung\nund ich weiß, dass da noch ganz viele Punkte entsprechend adressiert werden müssen,\naber wir müssen diese Themen aus der ministeriellen Zuordnung und Verantwortung müssen wir rauslösen,\ndeswegen hoffe ich sehr auf diese sogenannte Hightech- oder Zukunftsstrategie,\nda müssten in meinen Augen solche Themen adressiert werden.\nSie müssten mit Zielkennzahlen hinterlegt werden und dann natürlich auch entsprechend mit Budgets.\nUnd dann müssen wir wahrscheinlich im Zusammenspiel dieser Missionen, nenne ich sie jetzt mal,\nvielleicht heißen sie in Zukunft anders, müssen wir dann austarieren, also da darf mal das Ministerium im Lead sein\nund da das Ministerium, aber insgesamt muss klar sein, ihr könnt es nur alle zusammen.\nAber das ist ein sehr dickes Brett, weil wir da nämlich genau auf dieses Thema Belohnungsstrukturen, Leistungskennzahlen,\nMacht abgeben, zusammenarbeiten, wenn ich womöglich die Sprache des anderen nicht verstehe,\nweil das BMWI da ganz anders arbeitet als das BMBF und so weiter.\nAber ich glaube, das wäre ein zentrales Zeichen für uns alle, für die Wirtschaft, für die Gesellschaft,\ndas bereit ist, über den eigenen Schatten zu springen und zu sagen, Innovation funktioniert nur dann, wenn wir alle mitarbeiten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Schönes Schlusswort, würde ich sagen an der Stelle.\nKönnten jetzt sicherlich noch viel weiter philosophieren und uns fragen, was die Politikwissenschaften hier noch für neue Aufgabenfelder entdeckt haben,\naber vielleicht haben die ja zugehört und denken sich ihren Teil.\nGibt es noch irgendeinen letzten Gedanken, den wir noch hinterher werfen sollten oder können wir es damit beschließen?"
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Ich glaube, wir können es damit gut beschließen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Super, dann beschließen wir das damit.\nDamit vielen vielen Dank für Ihre Zeit."
+    },
+    {
+      "speaker": "Katharina Hölzle",
+      "time": "",
+      "text": "Danke Ihnen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und vielen Dank für das Zuhören hier bei Forschergeist, bald geht es wieder weiter.\nUnd ich sage, tschüss und bis bald."
+    }
+  ]
+}

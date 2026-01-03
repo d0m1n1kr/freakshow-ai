@@ -1,0 +1,719 @@
+{
+  "transcript": [
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Hallo und herzlich willkommen zu Forschergeist, dem Podcast des Stifterverbands für die deutsche Wissenschaft.\nMein Name ist Tim Pritlove und ich begrüße alle zur 97. Ausgabe dieser Gesprächsreihe.\nUnd heute, ja, heute reden wir mal wieder ein bisschen über Bildung.\nDa gibt es ja, wie alle wahrscheinlich meiner Meinung sein werden, eine Menge Bedarf\nund auch eine Menge Nachholbedarf.\nUnd insbesondere dann, wenn es um Digitalisierungsfragen geht und das im Besonderen in Deutschland.\nUnd deswegen sprechen wir heute mal genau darüber, wie man da was dran drehen kann\nund dazu begrüßt ich meine Gesprächspartnerin, nämlich Julia, Julia Freudenberg, hallo schönen guten Tag."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ich grüße dich, freue mich hier zu sein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, herzlich willkommen bei Forschergeist.\nDu bist, das nehme ich mal vorweg, die Leiterin der Hackerschule in Hamburg, kann man so sagen oder?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja, das bin ich und das mache ich sozusagen 40 Stunden am Tag und sehr begeistert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Mhm /bejahend/ und das machst du auch schon eine ganze Weile?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja, ich habe vor ungefähr fünf Jahren die Hacker School übernehmen dürfen\nund seitdem konnte ich schon sehr sehr viel bewegen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Bevor wir darauf kommen, würde ich vielleicht mal kurz erst mal bei dir bleiben wollen.\nWas hat dich denn im Leben so getrieben und fasziniert, dass es dann am Ende hier in dieser Position geendet ist?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "/lacht/ Also es war jetzt nicht so, dass ich schon im Kindergarten geplant hatte, mal eine Hacker School zu leiten\nund Kinder für Programmieren zu begeistern, aber ich hatte einfach die Gelegenheit, sehr sehr viel im Leben auszuprobieren.\nUnd ich war zum Beispiel auf der Waldorfschule, ich kann also spinnen und stricken,\nich habe 30 Jahre Geige gespielt und ich habe immer die Erfahrung gemacht, dass etwas zu organisieren unglaublich viel Spaß macht.\nUnd mein Weg war halt einfach über wirklich viele Stationen.\nIch war 20 Jahre vorher in der Wirtschaft, ich habe eine amerikanische Eiscremekultmarke in Deutschland einführen können.\nUnd alleine über diese Ansätze, die wir damals gefahren sind, ist Guerillamarketing etwas, was ich ja auch gut lernen konnte\nund dementsprechend kann ich da ganz ganz viel auch für die Hacker School mit hinnehmen.\nAlso geilen Scheiß ohne Budget machen, das habe ich schon geübt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Das heißt, deine Skills hast du im Wesentlichen in solchen Projektmanagementebenen entwickelt?\nOder gibt es da nicht auch noch eine parallele Digitalbegeisterung?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Eine Gabe, die ich sicherlich mitbringe, ist eine hohe Begeisterungsfähigkeit, und zwar für die Sachen, die ich richtig und wichtig finde.\nUnd das insgesamt zu kombinieren mit einer gewissen Ausdauer und auch Standhaftigkeit,\nalso du spielst auch nicht ungestraft 30 Jahre Geige, an dieser Stelle nochmal danke an meine Eltern,\nsie haben da wirklich heroisch ausgehalten.\nAuch eine Promotion, die extern zu einer Geschäftsführung läuft, machst du halt eben auch,\nnaja man macht es in gewisser Hinsicht schon nebenbei, aber du brauchst halt da eine recht intensive Begeisterung für Themenfelder,\num Sachen auch wirklich abzuschließen.\nUnd das kombiniert mit einfach einer großen Neugierde und einer großen Liebe zu meinen Kindern,\ndenen ich auch wirklich einfach Zukunft zeigen möchte, ich glaube, das hat mich schon in weiten Teilen da hingebracht, wo ich jetzt bin."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Du hast was genau studiert?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ich bin BWLerin von Haus aus.\nAlso ich bin keine ITlerin, aber ich habe einen geheiratet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ins Haus geholt sozusagen."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Insourcing ist das Stichwort."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Jetzt haben wir es ja schon angesprochen, mittlerweile bist du in diese Rolle geschlüpft, diese Hackerschule zu leiten,\nvielleicht kannst du erst mal grob erzählen, worum handelt es sich dabei, seit wann gibt es das und warum gibt es das?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Hacker School wurde 2014 gegründet von drei großartigen Jungs, die das ehrenamtlich neben ihrer Geschäftsführungstätigkeit\nin einer Agentur umgesetzt und ins Leben gerufen haben.\nDas, was wir machen wollen, ist, eigentlich wirklich Begeisterung zu vermitteln\nund Kids die Möglichkeit zu geben, neue Sachen, insbesondere Programmieren, auszuprobieren.\nWeil damals, als die Hacker School gegründet wurde, hatten sie halt die Situation, sie haben Auszubildende gesucht,\nfür den Fachinformatiker der Anwendungsentwicklung und die jungen Menschen, die sich da beworben haben,\nnaja, das waren so die Kategorie, Mensch, meine Freunde haben gesagt, ich spiel doch so viel, also sollte ich vielleicht mal machen.\nUnd auf die Frage, hast du schon mal programmiert?\nJa, ja die ganz harten Excel vielleicht, aber ansonsten eher Google und Powerpoint.\nUnd das ist halt ein Satz mit X.\nUnd das war der Ansatz zu sagen, wer würde sich denn dafür entscheiden, sich damit auseinanderzusetzen,\nwenn er oder sie wüsste, was das ist und auch wieviele Mädchen,\ngut ein paar von denen mit, ich spiele doch so viel, vielleicht nicht, aber wieviele andere?\nUnd das ist so die Begeisterung, die sich da durchgesetzt hat.\nDie ITlerinnen sind die most giving Community ever.\nAlso ich habe das noch nie so erlebt, diese Begeisterung, anderen etwas zu zeigen, es zu teilen, Leute mit reinzuholen.\nDas ist wirklich außergewöhnlich, und das dafür zu nutzen, dass noch mehr Menschen Bock haben,\nin diesem Bereich zu arbeiten, das fand ich mega überzeugend von der Idee\nund da die Vision der Hacker School ist, dass jedes Kind einmal programmiert haben sollte,\nbevor er oder sie sich für einen Beruf entscheidet, habe ich einfach mal gedacht, ja das nehmen wir wörtlich und das setzen wir jetzt um."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Was heißt denn Kids?\nVon welchem Altersbereich sprechen wir denn jetzt?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Offizielle Zielgruppe der Hacker School ist Jungs und Mädchen zwischen 11 und 18.\nAlso im Sinne auch weiterführende Schule.\nAlso da werden jetzt keine 19-Jährigen aussortiert,\naber wirklich, dass man sagt, die Kinder oder Jugendlichen,\ndie in einer Phase sind, wo sie sich für einen Beruf entscheiden.\nAusnahme ist die Girls Hacker School, das sind Frauen und Mädchen 11-99,\nweil wir auch einfach sehen, wenn es gut läuft, welche tolle Rolle auch Mütter bei der Berufswahl ihrer Töchter spielen können.\nUnd ist ja nun nicht so, dass wir zu viele Frauen in der IT hätten.\nAlso das da zu öffnen und auch wirklich das vielleicht als ersten Sprengsatz in der gläsernen Decke\nmit Digitalfähigkeiten anzugehen, das ist halt noch eine Sonderlocke sozusagen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also mit 11 Jahren ist man ja jetzt nicht gerade auf Berufssuche."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Das stimmt, aber 11 Jahre ist ein geiles Alter, um Sachen auszuprobieren.\nMeine Lieblinge sind 12 Jahre, die können schon gut genug lesen und schreiben\nund auch ein bisschen still sitzen und ein bisschen Englisch,\num sich vielleicht auch mit so was auseinanderzusetzen und sie haben noch nicht dieses entsetzliche Fehlermindset,\nwas wir ja sehr sehr früh schon Kindern vermitteln.\nDie rennen los, die probieren aus, die gucken sich Sachen an und wenn wir Kinder in dem Alter begeistert kriegen,\ndann haben wir das mit dem hier noch eine Schulung, da noch eine Schulung überhaupt nicht mehr,\ndann laufen die autodidaktisch."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wie ist das denn jetzt sozusagen aufgestellt diese Hacker School?\nAlso was hat das für eine Trägerschaft, was ist das für eine Unternehmung,\nwas ist das für eine Rechtsform, wie zieht man so was auf?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "/lacht/ Oh man hat eine sehr steile Lernkurve, egal wie man das dreht.\nUrsprünglich gestartet ist die Hacker School als UG.\nZwar not for profit, aber auch nicht gemeinnützig.\nDann ging es um eine Förderung der Stadt Hamburg aus dem Integrationsfond damals.\nDann brauchten wir eine Gemeinnützigkeit, dann wurde der i3 e. V. gegründet,\nweil dem Vereinsregister Hamburg war der Hacker School e. V. zu kriminell.\nDas fanden die irgendwie, klang so ein bisschen putzig."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ausgerechnet in Hamburg."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ausgerechnet in Hamburg.\nJa, weißt du, es gibt da immer sone und solche.\nAber dann gab es halt diesen i3 e. V. die Initiative Informatikinspiration.\nAber mit zunehmendem Wachstum wurde das etwas komplizierter.\nWeil wenn du halt sechsstellig Gelder von Stiftungen einsammelst\nund die sagen, Moment die Hacker School ist ein Projekt des i3 e. V.\nund hä wir wollen aber nicht den, wir wollen nur die Hacker School.\nDa habe ich gesagt, wenn ich das jetzt wirklich wirklich groß machen soll\nund jedes Kind in Deutschland heißt, wir haben 6,5 Millionen Kids zwischen 11 und 18 ungefähr,\nda müssen wir mal ordentlich reinhauen.\nUnd da kann nicht so was wie, ich muss die Rechtsform erklären, einfach nicht mehr brauchen.\nUnd dann fiel die Entscheidung, die Rechte von der uG zu übernehmen\nund durch Rechtsnachfolge den i3 e. V. in eine gGmbH in die Hacker School gGmbH umzuwandeln\nund ja das sind wir jetzt, wir sind eine gemeinnützige gGmbH.\nWir sind vier Gesellschafter, ich halte 51%, die anderen Gesellschafter jeweils 16.\nUnd wir haben es auch so gemacht, dass die Anteile nicht veräußert werden können,\nwenn einer rausgeht, bleiben die Anteile drin und es wechselt.\nAlso es ist alles so aufgebaut, dass wir ein möglichst schnelles stringentes Wachstum hinlegen können\nund die Zukunft der Hacker School dadurch auch einfach rechtsformtechnisch gesichert ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und in dieser Rechtsform ist es jetzt seit wann?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Seit Dezember 2020."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Okay, also noch eine relativ neue Konstruktion, aber hat sich schon bewährt?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja, also es ist richtig, es hat halt den Vorteil, ich bin auch alleine zeichnungsberechtigt.\nUnd wir hatten vorher Strukturen, wo wir immer zu zweit unterschreiben mussten,\nund wenn das wirklich nur einer hauptberuflich macht und die anderen das ehrenamtlich unterstützen,\nist das einfach was, was schon auch tempotechnisch eine Herausforderung darstellt.\nUnd von daher, ja das hat sich soweit alles bewährt und wir laufen gut."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wieviele Leute sind denn jetzt, wie muss man sich das jetzt vorstellen?\nAlso ihr habt jetzt kein großes Schulgebäude irgendwo."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Nein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Sondern? Also was wir nicht erwähnt haben, wir sitzen jetzt auch gerade in Hamburg,\nwährend wir das jetzt hier aufnehmen.\nDas Ganze hat sozusagen Hamburg als Zentrum und das ist jetzt, sagen wir mal,\nauch erstmal der schulische Bereich, in den ihr reinstrahlt.\nAlso wo ihr wahrscheinlich primär auch erst mal die Jugendlichen gewonnen habt.\nUnterstelle ich jetzt mal so, du darfst mich gerne korrigieren."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Unterstellst du jetzt mal so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Aber das klang ja schon an, Förderungen etc., ist ja alles nicht ganz unwichtig."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Als Arbeitshypothese, ja.\nAlso sagen wir, Hamburg ist unser Hometurf, das stimmt.\nUnd auch hier sind wir jetzt gerade bei mir im Homeoffice.\nWir haben aber auch tatsächlich die Zentrale in der Hamburger Innenstadt.\nWir sitzen jetzt im Impact Hub.\nDas ist in Altona.\nWir haben vorher ein kleines Umzugstrauma hinter uns, weil wir drei Jahre in Folge jedes Jahr umgezogen sind.\nAuch das letzte Büro, da wäre ich wahnsinnig gerne länger geblieben.\nWir waren bei einer wunderbaren Firma, bei Fast Forward,\ndie uns auch seit Jahren unterstützen, aber die sind halt so krass gewachsen,\ndie brauchten die Räumlichkeiten.\nDann haben wir gesagt, so ich habe keinen Bock mehr umzuziehen.\nJetzt sind wir im Impact Hub und das ist halt für uns dahingehend toll,\ndass unser Team deutschlandweit verteilt ist.\nAlso wir haben Kollegen in Dresden, in Hannover, wir hatten eine Kollegin, die in Passau gesessen hat,\nwir stellen jetzt hoffentlich in Frankfurt und NRW ein.\nAlso das ist halt was, wo ich Räumlichkeiten brauche, die atmen können.\nAlso das heißt, ein kleines Team, was in Hamburg auch gerne ins Büro geht.\nWir haben andere Kollegen in Hamburg, die eigentlich nie ins Büro gehen, dazu gehöre ich auch.\nAber dass wir da die Möglichkeit wirklich haben, wenn wir uns alle treffen wollen,\nkönnen wir da hingehen und wenn wir eben auch wirklich mit Präsenz wachsen,\nkann ich auch Flächen einfach zumieten und das ist eine sehr praktische Sache."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also Impact Hub ist so ein Coworking Space, ich weiß gar nicht, ob das schon ausreicht heutzutage,\nes hat sich ja auch sehr entwickelt dieser Bereich.\nAlso üblicherweise hat man da viele Räume, wenn man mal einen Konferenzraum braucht,\ndann nimmt man den sich, aber wenn man den nicht braucht, dann benutzen den eben andere."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Schon vier Etagen, also das ist recht groß und das sind halt wirklich Impact Startups,\ndie sich auch gegenseitig befruchten, wo wir coole Menschen kennenlernen können,\nwo es tolle Veranstaltungen gibt, also ist schon ein cooler Laden.\nDeine andere Arbeitshypothese, wir würden nur Hamburg machen, die würde ich so nochmal aufarbeiten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ich habe nicht nur gesagt."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "/lacht/ Nein."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ich habe nur gesagt, das ist so ein bisschen das, wo es entsteht und sein Zentrum hat."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Wir testen hier alles aus.\nWeil es ist mega, wenn du wirklich vor der Haustür pilotieren kannst.\nWir waren vor Corona schon in 40 Städten deutschlandweit aktiv,\nwo wir bei den Unternehmen vor Ort Kurse veranstaltet haben.\nUnd es ist jetzt so, dass wir eben weiterhin mit diesem…\nalso wir sind jetzt seit Anfang letzten Jahres mit diesen beiden großen Säulen unterwegs,\nalso die außerschulischen Kurse, oft in den Unternehmen teilweise online,\naber die innerschulischen Kurse als zweites wirklich großes Standbein,\nwo wir mit ganzen Klassen einen Vormittag programmieren.\nWo die Kids in den Klassen vor Ort sind und wir als ITlerinnen schalten uns zu.\nDas zieht sich ebenfalls schon über die ganze Republik.\nEs ist natürlich so, dass man, ich sage mal, den steilen Lerneffekt wirklich auch regional lokal teilweise macht.\nAlso einfach zu sagen, hey wir brauchen zehn Schulen in Berlin, wer will noch mal, wer hat noch nicht?\nDas haut überhaupt nicht hin.\nAber die Möglichkeit zu haben, hier in Hamburg über eine Kombination mit der Arbeitsagentur,\nder Wirtschaftsbehörde und der Schulbehörde.\nAuch in Schulleiterkonferenzen präsentieren zu können und dadurch eben halt einfach auch Zugänge zu lernen\nund insbesondere mit wenig Geld die Welt retten zu wollen, da musst du optimieren,\nda musst du gucken, wie kommst du von A nach B, wer kann dir Türen öffnen?\nUnd wie können wir vielleicht noch mehr Kinder erreichen?\nDas ist halt etwas, da musst du viele Sachen ausprobieren und da haben wir in Hamburg die meisten Erfahrungen gesammelt,\naber können noch ganz viel davon auf andere Bundesländer übertragen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Okay, jetzt hast du gesagt, es gibt innerschulische, außerschulische Kurse,\nvielleicht kannst du das noch mal so ein bisschen aufdröseln, wie eigentlich das Angebot dieser Hacker School ist.\nAlso wenn ich das jetzt so richtig verstanden habe, es gibt sowohl die Möglichkeit,\neinfach sich frei auf irgendwelche Kurse zu bewerben und dann macht man da mit\nund dann ist vollkommen egal, in welchem schulischen Kontext man unterwegs ist\nund es gibt aber auch explizit eine Zusammenarbeit mit kompletten Klassen im Rahmen des normalen Schulunterrichts oder angebunden daran?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Also die Hacker School kommt halt eben ursprünglich aus der Ecke, dass es darum ging,\nwirklich ehrenamtliche ITler in Unternehmen so zu unterstützen,\ndass die eben halt ein Wochenende mit Kindern geilen Scheiß machen können.\nWirklich begeistern, spielen, Zukunft entdecken und halt nichts beibringen.\nAber die lernen dabei wahnsinnig viel.\nUnd dieser Unternehmenskontext der ist toll, der ist super.\nwir haben halt die ehrenamtlichen ITler, die das machen, teilweise in ihrer Arbeitszeit, teilweise am Wochenende.\nWir sehen aber, dass wir damit die Verantwortung bei den Kindern belassen.\nSie müssen sich dafür interessieren, sie müssen sich dafür entscheiden\noder sie brauchen Eltern, die für sie entscheiden, dass sie sich da jetzt mal hinbewegen.\nUnd wenn wir die Hacker School wirklich auch dafür nutzen wollen,\ndass wir IT, dass wir digitale Bildung integrativ sehen, dass wir jedes Kind erreichen wollen,\nmüssen wir für Mädchen und auch sozioökonomisch benachteiligte Kinder teilweise die Extrameile gehen.\nUnd in den Schulklassen kriegen wir sie nahezu alle.\nUnd da haben wir halt einfach das Setting, wenn wir mit den ganzen Schulklassen programmieren,\nhaben wir die, die schon denken, sie sind die Helden, was nicht unbedingt immer zutrifft\nund wir haben die, die denken, sie brechen sich, sobald sie in die Nähe einer Tastatur kommen, mindestens zwei Fingernägel ab.\nUnd wir brauchen drei Stunden, um genau diesen Prozess von, brich mir keinen Fingernagel ab,\nzu, boah macht das Spaß, das wirklich zu durchleben.\nUnd das ist das Tolle, dass wir in den Schulklassen zwar auch die Kids haben,\ndie erst mal keinen Bock haben, aber wenn wir die geknackt kriegen,\nist das etwas, was unglaublich begeistert.\nUnd das sind eben halt jetzt die ganz großen beiden Säulen, mit denen wir arbeiten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wie läuft denn das konkret ab, vielleicht kannst du das ja mal schildern?\nJetzt so von, also wer fängt da an?\nIhr sprecht Schulen an, Schulen sprechen euch an?\nWie rum geht das, sowohl als auch oder primär in die eine Richtung?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Kommt darauf an.\nAlso es gibt nichts, was es nicht gibt grundsätzlich.\nAber wir merken, dass wir insbesondere durch so was wie, ich präsentiere auf einer Schulleiterkonferenz\noder eine Schule empfiehlt uns der anderen, einfach viel viel schneller sind\nals wenn wir eine Schule anrufen und sagen, hallo wir sind die Hacker School.\nDas ist erst mal was, …"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also Schulleiterkonferenz sozusagen so schulübergreifend, wo sich Schulleiter treffen\nund über ihre Probleme sprechen."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja oder wo es Informationen gibt.\nAlso hier in Fluch und Segen eines Stadtstaats, das ist eindeutig einer von den segensreicheren Seiten,\nes gibt für die Gymnasien und es gibt für die Stadtteilschulen, das sind hier unsere beiden großen Schulformen,\ndie wir hier haben, jeweils, ich weiß gar nicht in welchem Abstand, aber immer wieder Konferenzen,\nwo alle Schulleitungen zusammenkommen.\nUnd da gibt die Schulbehörde Infos raus.\nDa werden, was weiß ich, zum Beispiel wenn der Schwerpunkt berufliche Bildung ist,\nkommen halt auch Leute von der Arbeitsagentur, um da auch Sachen mit vorzustellen\nund da durfte ich halt eben auch in dem Kontext berufliche Bildung bzw. Berufsorientierung eben halt vorstellen,\nwas wir mit der Hacker School machen, was wir brauchen, was wir anbieten können, wie das hier funktioniert.\nUnd danach sind sehr viele Schule auf uns zugekommen.\nUnd genau diese Wege zu finden, das funktioniert in einem Stadtstaat ganz anders als in einem Flächenland.\nAber da zu gucken, mit wem muss man sprechen, mit wem sollte man nicht sprechen,\nwas sind die informellen Wege, wie man eben genauso an Schulen kommt,\nda haben wir einen echt guten Job gemacht und also wir haben mehr Schulen,\ndie uns anfragen, als wir im Moment befriedigen können, in dem Sinne,\nweil die andere Seite, wir müssen ja die ITlerinnen, die mit uns diese Kurse machen.\nDa haben wir zwar jetzt auch richtig gut gearbeitet und setzen auch neue Konzepte auf,\nwo wir insbesondere über Corporate Volunteering auch auf die Auszubildenden zugreifen können und wollen,\naber das ist eben einfach was, wo wir wirklich zusehen müssen,\nwenn ich nächstes Jahr 25.000 Kinder erreichen möchte, weil wir verdoppeln jedes Jahr,\ndann brauche ich dafür 4000-5000 ITlerinnen und die kannst du dir nicht backen.\nUnd da die Wege zu kriegen, das ist im Moment der limitierende Faktor."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Okay, dann bleiben wir noch mal ganz kurz bei dieser Schule, weil ich wollte einfach so diese Anbahnung mal verstehen.\nAlso jetzt Schulleiterkonferenz mal als Beispiel, ja ist relativ effizient.\nMit anderen Worten, man erreicht erst mal Schulleiter oder vielleicht deren unmittelbares Personal,\ndie ja dann vielleicht ja auch noch da daran teilnehmen und dann sagen die so,\nahja okay alles klar, klingt ja ganz interessant, könnte was für uns sein.\nUnd dann geben die das an Lehrer, Fachlehrer weiter, Klassenlehrer weiter?\nAlso wie läuft da dann konkret so eine Zusammenarbeit ab?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ganz häufig sind es wirklich die Fachlehrer.\nEs läuft sehr sehr viel über Berufsorientierung, weil einige der Fachlehrerinnen\noder die meisten Schulen haben auch einen Beauftragten für Berufsorientierung.\nIn Hamburg ist es zumindest verpflichtend, aber ich meine, dass es in anderen Bundesländern auch so ist.\nUnd da wird einfach gesagt, hey im Rahmen dessen, wir brauchen einen Vormittag,\nwir wollen drei Stunden programmieren, wir stellen Berufe vor, wann passt das?\nUnd wir setzen dann den Schwerpunkt achte Klasse aufwärts,\neinfach weil da die Berufsorientierung tatsächlich schon konkreter ist als bei Elfjährigen, da hast du recht.\nUnd da sind die Kids offener, da hören sie zu und da wird dann nach Terminen gesucht.\nWir versuchen meistens, mindestens vier Klassen auf einmal an einer Schule zu kriegen.\nNicht an einem Tag, weil da sind die Computerräume wieder eng,\naber dass eben der Anbahnungsprozess mit einer einzelnen Schule sich auf mehr Kinder verteilt,\nhaben wir eben halt die Entscheidung da getroffen, da wo möglich ist,\nist schon schön, wenn wir mit 100 Kindern an einer Schule programmieren können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und greifen da jetzt alle Schularten, also sowohl Gymnasien als auch Gesamtschulen?\nIch weiß gar nicht, wie das in Hamburg alles heißt."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Hamburg haben wir Stadtteilschulen und Gymnasien.\nAlso alle allgemeinbindenden Schulen, bei denen die Kinder nicht über extragroße Herausforderungen limitiert sind, funktionieren gut.\nAlso was nicht so super hinhaut, dadurch dass wir in Hamburg einen sehr intensiven Ansatz fahren,\nhaben wir auf den Förderschulen, die es gibt, Kinder mit einem so großen Förderbedarf,\ndass das mit, sitz am Rechner und ich erkläre dir was und du verstehst es\nund du kannst dich artikulieren, dass das da nun nicht mehr im Durchschnitt möglich ist.\nUnd das ist was, das trauen wir uns nicht zu, zumindest Stand heute nicht.\nEs ist auch so, dass wir bei einigen Brennpunktschulen sehen, dass wir da mit dem Hacker School at your school plus,\nein Sonderprojekt, das wir da auch noch mal über andere Ansätze nachdenken müssen,\nweil insbesondere bei Schulen mit einem sehr niedrigen Sozialindex, in Hamburg sind die Schulen indiziert.\nAlso 6 ist mega Sozialindex, was ich am Einkommen der Eltern,\naber auch an Muttersprachlichkeit und noch einigen anderen Faktoren festmacht,\n1 ist schwieriges Niveau und dass wir da eben halt sehen, dass wir mit dem Sozialindex 1 und 2 tatsächlich auch über ein Vorortformat nachdenken\nbzw. gerade eine Erprobung in Erwägung ziehen, wie wir auch da über virtuelles Zuschalten arbeiten können,\naber da müssen wir noch mal die Extrameile gehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Okay, kommen wir noch mal zurück auf die Anbahnung so.\nAlso jetzt gibt es diesen Kontakt mit den Fachlehrerinnen\nund die sagen, okay prima, das würden wir jetzt ganz gerne mal hier in dieser Klasse\noder in jener Klasse oder in mehreren Klassen vielleicht auch machen\nund dann einigt man sich quasi auf einen Termin und dann werden mal drei Stunden aus dem normalen Schulprogramm frei gemacht.\nSehe ich das richtig?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja, es wird teilweise auf die Schulstundentaktung angepasst.\nDas heißt, da, wo es möglich ist, wird es so eingestielt, dass es mit den Pausen,\nden normalen Pausen d’accord geht.\nBei anderen ist es wirklich dann 9-13 Uhr.\nDa kommen die Kinder halt ein bisschen später.\nAlso d gibt es unterschiedliche Variante.\nAber wir fragen immer vier Stunden an, weil drei Stunden wird programmiert,\nbisschen Pause, Gruppeneinteilung und so weiter,\naber wir wollen auch immer noch einen anteiligen halbe Stunde,\nmanchmal auch 25 Minuten dafür haben, dass die ITlerInnnen, die mit uns die Kurse geben,\nihre Berufe vorstellen können, ganz wichtiger Teil.\nUnd so gesehen, ja wir fragen immer vier Stunden an und die werden unterschiedlich gelegt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und was wird den Kindern dann quasi gesagt, was dann stattfinden soll?\nWie kündigt ihr das an, was ist sozusagen ein bisschen das, also ist alles Überraschung\noder gibt es da irgendwie konkrete…"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "/lacht/"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Naja, ist ja dann wahrscheinlich auch die Frage, wie man das so von vornherein erst mal framt,\num nicht gleich Desinteresse auszulösen oder Abwehrverhalten,\nkeine Ahnung, wie da die Befindlichkeiten sind.\nUnd meistens ist es ja so mit, hier noch mehr Dinge, die ihr lernen sollt,\nwo ihr schon ohnehin euch ein bisschen überfordert fühlt.\nKann ich mir durchaus vorstellen, dass es auch eine gewisse Abwehrreaktion geben kann.\nMuss man ja sicherlich auch alles richtig ankündigen."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Es ist tatsächlich so, dass wir auch im Moment noch da dran sind zu arbeiten,\nwie wir die Lehrenden mit ins Boot kriegen.\nWeil die Kinder sind tatsächlich gar nicht so die Herausforderung.\nBitcom hat wieder eine Studie herausgebracht, wo, ich glaube, 75 Prozent der Kids mittlerweile sagen,\nja wir wollen digitale Skills lernen, das ist wichtig, wir wollen da mal reingucken.\nBei den Lehrenden liegt das ein kleines bisschen drunter.\nUnd da wirklich…"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also denen auf der Schule?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja.\nDa auch den Lehrenden die Sorgen zu nehmen, dass es überhaupt nicht darum geht,\ndass sie was können müssen oder dass da irgendjemand vorgeführt werden soll,\nsondern dass wir einfach die Kinder beim Entdecken unterstützen wollen\nund das mit eben halt Jungs und Mädels, die das richtig können und die das richtig gerne mögen, das klappt gut.\nAlso meistens wird das wirklich als ein Projekttag angekündigt\noder wirklich als eine Möglichkeit, Berufsorientierung zu erproben.\nWeil es ist genau so ein bisschen wie beim Geige spielen,\nnur weil du Geigenmusik gerne hörst, heißt das nicht, dass du ein Talent zum Spielen hast.\nAber es auszuprobieren und wirklich mal zu sehen, boah das geht ja viel besser als ich das dachte.\nInsbesondere bei Mädels sehen wir, die kriegen wir hinterher gar nicht wieder ab vom Rechner.\nAber auf jeden Fall das, aktuell hängt es noch tatsächlich an der Lehrkraft, wie sie das auch mit weitergibt.\nDa sind wir noch dabei, auch Wege zu erproben, wie wir die Lehrenden noch enger mit einbinden können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja gut, aber wie wird es angekündigt, also was sagt ihr den Kindern?\nEs finden vier Stunden statt und ihr sollt programmieren lernen."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja, hier kommen echte Hacker zu euch und machen einen Vormittag mit euch.\nWenn wir gut sind und die Lehrenden dazu kriegen, das zu sagen, dann sagen die,\ndie machen den Vormittag mit euch geilen Scheiß.\nEin kleiner Teil von mir bezweifelt, dass die wirklich geilen Scheiß sagen, so was tun Lehrer nicht.\nAber es wird eben angekündigt, ihr habt die Möglichkeit, selber mal zu programmieren.\nEs gibt unterschiedliche Themen, mit denen wir arbeiten, bzw. unterschiedliche Programmiersprachen.\nUnd dass dann eben gesagt wird, mit Python oder mit html könnt ihr eine kleine Webseite bauen.\nEs geht einfach drum, es wird nicht bewertet, das wird auch häufig mit dazu gesagt,\nweil das bei den Kindern unglaublich Druck rausnimmt.\nUnd es ist einfach eure Zeit, guckt euch das an, Berufe anschauen war noch nie so einfach."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Genau, aber der Beruf, der angeschaut wird, ist sozusagen der Beruf des Programmierens.\nUnd darum geht es im Wesentlichen und im Kern und vor allem.\nWeil ich meine, wenn man sagt, digitales Lernen, kann es ja alles mögliche sein.\nHier geht es schon konkret auch ums Coding, das steht bei euch im Mittelpunkt?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja, es geht immer drum, dass die Kids das ausprobieren.\nDen Beruf nur Programmierer den gibt es ja auch selbst in zig Ausführungen.\nLustig, weil ich habe neulich den Namen eines schönen Ausbildungsberufes gehört,\nMatse, mathematisch technischer Softwareentwickler, ist ja auch was schönes.\nEs gibt die Fachinformatiker für Systemintegration, Hardware bzw. Anwendungsentwicklung,\nist ja viel mit Programmieren.\nWorum es uns geht ist tatsächlich, dass die Kids selber mal hinter den Bildschirm gucken und selbst sehen,\nwas ist algorithmisches Denken, wie „rede“ ich mit Maschinen\nund dass sie auch selber diese Erfahrung mache der Selbstwirksamkeit.\nDass sie selber da etwas hinkriegen, was sie sich vorher nicht zugetraut haben\nund dass das Connect zu einer grundsätzlichen Fähigkeit gibt,\nwenn auch nicht zu einem einzelnen Berufsbild.\nUnd wir vermitteln dadurch die 21th Century Skills bzw. eine Erfahrung davon,\ndass sie Probleme, die sie nicht kennen, kreativ und kommunikativ lösen müssen\nin Zusammenarbeit mit anderen mit kritischem Denken und dass sie halt eben auch sehen,\ndass es total geil ist, Fehler zu machen, weil man dadurch sehr viele Sachen direkt rausfinden kann und ausschließen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Aber jetzt, um mal den Bogen kurz abzuschließen, dann findet dieser vier Stunden Block statt\nund dann ist das sozusagen auch damit erst mal abgeschlossen.\nAlso das ist sozusagen ein Event, der stattfindet und dann wird einfach geguckt,\nokay was löst das jetzt aus, und was löst es dann aus?\nAlso was ist so euer Erfahrungsspektrum, was das dann so auslöst?\nUnd inwiefern habt ihr dann mit den Kindern später noch zu tun?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Da wir ein großes Interesse daran haben, unsere Wirkung belegen zu können,\nweil Wirkung ist auch das Marketing der Sozialorganisation.\nWir müssen zeigen, wieviel Gramm leuchtende Kinderaugen wir pro eingesetzten Euro rauskriegen.\nFragen wir immer direkt nach den Veranstaltungen.\nAlso wir haben Evaluationsbogen, wo wir wirklich sehen, dass die Kinder auch sagen können,\nhabe ich dadurch ein besseres Verständnis für IT-Berufe?\nJa, die meisten haben das.\nOb es Spaß gemacht hat, auch, weil man sieht ja, dass insbesondere wenn mir etwas Freude macht,\nbin ich auch bereit, mich da für Veränderungen zu öffnen, wenn ich etwas ablehne, bin ich direkt verschlossen.\nUnd da wirklich zu sagen, habe ich eine bessere Idee, was Digitalisierung,\nwas Programmieren eigentlich ist, kann ich mir dadurch ein besseres Bild über die Berufswelt machen?\nKann ich dadurch vielleicht auch eher wahrnehmen, dass es auch für mich als Mädchen etwas spannendes sein kann?\nDas sind Sachen, die wir abfragen.\nUnd wir sehen in dem Kontext eben auch, dass dadurch, dass wir die Kids bei uns haben,\ndie vorher noch nichts damit zu tun hatten, dass es da sehr große Überraschungsmomente gibt.\nUnd teilweise bedauern wir das auch, dass wir das nicht eins zu eins zuordnen können.\nWeil die Kinder in den Schulen sind für uns in der achten Klasse alle 14\nund haben die Postleitzahl der Schule.\nWir haben die Verteilung von Jungs und Mädels, weil danach häufig gefragt wird,\naber darüber hinaus haben wir keine Daten der Kinder.\nDas ist ein Opfer, was ich bereit bin zu bringen, vor dem Hintergrund,\ndass wir dadurch nicht in größere Kollision mit dem Datenschutz kommen.\nUnd bevor wir von jedem Elternteil unterschreiben lassen, dass das Kind sich bei uns anmelden darf,\nda sind wir ja mit jeder Schule drei Monate beschäftigt,\nist das der Preis, den ich bereit bin zu bezahlen und wir sehen einfach,\ndass dieser disruptive Impuls, wie Stiftungen das nennen, den wir da setzen,\ndass der seine Wirkung zeigt, weil wir auch in den außerschulischen Kursen immer mehr Kids haben,\ndie angeben mit, wo habt ihr uns kennengelernt, ah ja ihr wart bei uns in der Schule.\nUnd da sehen wir eben auch schon die ersten Zusammenhänge, wie sich das weiterentwickelt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Vielleicht noch mal zu dem Format, also die Leute, die diese Kurse dann gestalten,\ndu sprichst von Freiwilligen, wo kommen die her, wieviele, was habt ihr da sozusagen für einen…\nAlso wieviele Kinder nehmen denn daran teil, also an so einer Session,\nwieviele Personen stehen quasi auf der anderen Seite?\nWas habt ihr da für einen Schlüssel, mit dem ihr arbeitet?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Wir arbeiten mit dem Verhältnis 1:6.\nAlso außerschulisch auch meistens, aber innerschulisch ist es immer das Verhältnis 1:6 ungefähr.\nKommt drauf an, wieviele Kinder in einer Klasse sind.\nDas heißt, bei 24 Kids haben wir vier Inspirer, die die Kurse geben, plus ein Team-Inspirer bei mir aus dem Team,\nder den Kurs leitet, alles vorstellt, unterstützt, durch die Räume geht, bei Fragen zur Verfügung steht.\nEinfach dass diejenigen, die die Kurse geben, sich da auch rundum wohl und gut betreut fühlen.\nUnd diejenigen, die die Kurse geben, kriegen wir eben halt insbesondere über Corporate Volunteering aus Unternehmen.\nWeil IT-Lehrer backen hat sich noch nicht als besonders gutes Mittel herausgestellt.\nDeswegen fragen wir ganz häufig Azubis an oder wir bitten Unternehmen um Unterstützung durch Corporate Volunteers,\nimmer mit dem Hinweis, dass es uns begeistert, wirklich dass wir sehr begeistert sind,\nwenn wir Azubis kriegen, weil die gerade die Entscheidung getroffen haben, wo sie hin wollen,\nweil die viel näher dran sind an den Kids als keine Ahnung, auch Leute, die 30-40 Jahre in dem Beruf arbeiten.\nDas ist auch großartig, jede helfende Hand ist willkommnen.\nAber tatsächlich zu sagen, dass Azubis, die auch hinsichtlich Opportunitätskosten für einen Betrieb\nauch möglicherweise etwas günstiger sind als ein hochbezahlter ITler.\nDas ist auch noch mal ein Argument zusätzlich zu dem Punkt, dass man sieht,\nwieviel diese jungen Menschen bei uns lernen können, dadurch dass sie die Kurse geben,\ndass sie zielgruppenadäquate Kommunikation praktizieren, dass sie lernen durch lehren,\ndass sie IT für nicht ITler erklären, dass sie einfach lernen, in Situationen,\nwo sie sich erstmal vielleicht so ein bisschen putzig fühlen, gut zu agieren und ihre Punkte zu machen.\nDas ist etwas, da nehmen die so viel draus mit und das den Azubis zu ermöglichen,\ndie haben mindestens so viel davon wie die Kids, das ist also tatsächlich für alle Beteiligten eine win-win-win-Situation."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Setzt ihr da jetzt allein auf Learning by Doing oder gibt es dann auch in gewisser Hinsicht so eine Art begleitendes Coaching?\nWeil ich kann mir durchaus vorstellen, dass es gerade so in Nerdkreisen, machen wir uns nichts vor,\nsind vielleicht die pädagogischen Fähigkeiten dann nicht unbedingt immer so von Natur aus ausgeprägt.\nFür manche mag das ja auch schwierig sein, dann sich überhaupt in so eine Situation zu begeben.\nWie begleitet ihr das?\nHabt ihr da nochmal einen Kurs für die Freiwilligen?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Train the Trainer."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, train the Trainer, findet das statt oder?\nErgibt sich das von alleine?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Unbedingt.\nAlso wir machen die Erfahrung, wenn die Leute sich wohlfühlen, dann sind sie am allerbesten.\nUnd insbesondere auch junge Menschen, wenn wir denen die Unsicherheit nehmen können,\ndann laufen die zu Hochform auf.\nWir haben Kurse vorbereitet, die Konzepte stehen also, insbesondere für den Schulbereich.\nWir verteilen die Kurskonzepte, dass die sich vorher angeguckt werden können,\nwir machen Onboardings, wo sowohl zu den Konzepten als auch zu how to handle kids viele Fragen gestellt werden können.\nUnd wir haben die ganze Zeit ein Team-Inspirer mit dabei, der selber halt keine Kinder hat,\nsondern sich wirklich um alle anderen mit kümmern kann.\nDass ich davon überzeugt bin, dass die Menschen, die mit uns zusammen die Kurse geben,\nrichtig gut vorbereitet da reingehen und auch wenn sie dann eben halt dann beim Tun selber noch Fragen haben,\nist auch immer jemand an ihrer Seite."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und das sind dann Personen, die Angestellte oder Mitarbeiter der Hacker School sind,\ndie da sozusagen noch mal so diese Metateilnahme durchführen\noder sind das auch nur irgendwelche anderen Freiwilligen, die schon länger dabei sind?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Nein, ich habe mittlerweile ein Team von 35 Leuten ungefähr auf der Payroll,\ndavon ist gut ein Dutzend die sind Team-Inspirer, das sind Minijobber, Werkstudenten,\nunterschiedliche Vertragskonstruktionen, die teilweise schon seit mehreren Jahren bei der Hacker School mit unterstützen\nund die tatsächlich die Kurse leiten und dadurch eben halt auch ein sehr sehr großes Erfahrungswissen haben,\nworauf sie eben halt auch noch mal Ruhe mit ausstrahlen können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Jetzt sollten wir vielleicht auch nochmal kurz auf dieses außerschulische Angebot eingehen,\nweil das war ja jetzt sozusagen alles die …\nGut, da wird sich ja wahrscheinlich viel wiederholen, aber im Prinzip ist es ja erst mal was anderes,\nallein schon deshalb, weil die Kids sich ja da quasi selber initiativ bewerben\noder von irgendjemandem da hingeschoben werden, was auch immer da der Trigger jetzt ist so.\nAber du hast ja schon gesagt, nicht selten sind es dann eben auch Kids,\ndie es einfach in der Schule so durch diesen Erstkontakt mitbekommen haben und festgestellt haben so,\noh funktioniert ja eigentlich ganz gut für mich, interessiert mich, würde ich gerne noch mal machen.\nWas habt ihr dann da im Angebot und dann habt ihr ja in dem Sinne keine Schule,\nwo ihr das machen könnt, wo findet das dann und wie findet das dann statt?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja, das ist auch tatsächlich ein kleines bisschen freier gestaltet.\nAlso das ist das, wo die Hacker School herkommt, wo auch wirklich Begeisterung der ITlerInnen transportiert wird,\nauch teilweise die Gedanken, die sie selber haben, mit umzusetzen.\nAlso in dem Sinne, wir gehen davon aus, wenn jemand für ein Thema brennt,\nkann er das am besten vermitteln.\nUnd außerschulische Kurse sind halt thementechnisch nochmal deutlich freier.\nDas heißt, wenn jemand einen Line Follower Robot machen möchte\noder doch mal mit JavaScript zum Beispiel in Minecraft was bauen möchte oder sonst was,\nist das schon möglich, wir haben auch da so Rahmendaten für, wie baue ich eigentlich einen Kurs auf,\nwie sollte das optimalerweise auch von der Schrittigkeit vorangehen,\naber es ist letztendlich viel freier, weil jeder auch seine Gedanken mit einbringen kann.\nUnd das Spannende daran ist, die Kurse sind halt doppelt so lang.\nWenn wir vor Ort in Unternehmen sind, sind es sogar zweimal fünf Stunden,\nweil man sich zuerst die Kurse noch mit aussuchen kann und am Ende eine Präsentation hat,\nwo man selber seine Projekte darstellen kann.\nWenn wir es online machen, sind es zweimal vier Stunden, weil online immer ein bisschen verdichtet ist,\nweil das hat eine andere Intensität, weil vor Ort machen die Kinder auch mal Quatsch zusammen\nund so weiter, das ist online ein bisschen strukturierter.\nAber da haben wir eben den großen Vorteil, dass Kinder auch Unternehmen nochmal viel besser kennenlernen können.\nAlso vor der Pandemie waren wir zum Beispiel viermal im Jahr bei Otto hier in Hamburg auf dem Campus.\nDie haben einen so tollen Coworking Space, das Collaborate, da waren wir mit bis zu 100 Kindern\nund das war tierisch laut und super anstrengend und wir haben auch so viel zusammen gelernt.\nDas erste Mal hatten sie noch Fritz Cola hingestellt und sechs wirklich hohe Berge Schokolade\nund wo wir hinterher eigentlich, ich war schon kurz davor, nach Panzertape zu fragen,\num die Kinder auf den Stühlen festzuhalten, aber das war mega,\neine unglaublich also tolle Erfahrung auch für die Kids, wo die eben halt sehen,\nwow, also viele waren vorher noch nie in einem Unternehmen.\nUnd das macht eben halt auch noch mal einen ganz großen Reiz aus,\ndass dadurch auch noch mal wirklich eine klarere Idee entsteht, was kann ich hier eigentlich auch beruflich machen?\nUnd man sagt ja immer, der Raum ist der vierte Pädagoge sozusagen.\nDas ist natürlich was, das geht halt nur vor Ort.\nIch bin trotzdem super stolz, dass wir auch online richtig gute Kurse machen können.\nDa müssen wir einen anderen Weg finden, dass eben halt auch die Unternehmen gut zeigen können,\nwas eigentlich junge Menschen bei ihnen lernen können.\nAber es ist letztendlich einfach was, der Fokus liegt da drauf,\nwirklich diese Begeisterung zu wecken und den geilen Scheiß zu machen sozusagen\nund da ist halt einfach außerschulisch noch ein bisschen mehr Zeit als an einem Projektvormittag sozusagen,\naber ich glaube, das ist auch dahingehend ein guter Aufbau.\nWeil wenn wir in den Schulen vier Stunden mit Kids arbeiten, die wirklich wirklich echt nicht wollen,\nwas auch mal passieren kann, die lernen trotzdem eine Menge.\nAber das ist halt so von der Größenordnung was, das kann man noch gut aushalten.\nDas kann man wirklich gut machen.\nDaraus zwei Tage in den Schulen zu machen, das wäre mir nicht sinnvoll vorgekommen.\nAber denjenigen Kindern, die dann auch wirklich Lust haben weiterzumachen,\ndas als einen Zwischenschritt anzubieten, dass sie da auch nochmal tiefer in Projekte eintauchen können,\nda haben wir einfach super Erfahrungen mit gemacht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Das heißt, wenn ich das richtig verstehe, diese offline außerschulischen Sachen\nfinden dann aber auch immer bei irgendwelchen Unternehmen in gestellten Räumen statt oder?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja, also entweder sie sind online oder sie sind halt eben bei Unternehmen,\nweil wir haben selber gar keine eigenen Räumlichkeiten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Die das dann kostenlos zur Verfügung stellen?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja. Wir bringen meist die Hardware mit, weil die wenigsten haben, wenn die was weiß ich,\ndrei, vier Kurse anbieten, die wenigsten haben 30 Schulungsrechner tagesaktuell aufgesetzt,\nda helfen wir im Zweifelsfall aus.\nDie Kids arbeiten dann im Pairprogramming, also sie teilen sich einen Rechner,\naber die Räumlichkeiten werden von den Unternehmen gestellt.\nAuch gerne mal, also bitte keine Fritz Cola, aber eben halt ein bisschen Snacks, Getränke, das machen die auch gerne.\nUnd eben halt insbesondere die Inspirer, die die Kurse geben und wir unterstützen halt überall wo sie es brauchen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und die Aufgaben suchen sich die Kids selber aus, denken die sich selber aus\noder habt ihr sozusagen so ein Set von Sachen mit, hier das könntet ihr machen,\nwas interessiert euch, also wie findet sich sozusagen der Inhalt letzten Endes?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Wir haben es, wenn wir vor Ort Kurse in Unternehmen machen, in der Regel zwei oder drei unterschiedliche Kurse, die parallel laufen.\nUnd da ist es so, dass diese Kurse am Anfang der Session vorgestellt werden\nund die Kids sich dann vor Ort aussuchen können, was sie im Detail machen möchten.\nAlso wir sorgen schon für eine Gleichverteilung."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Kannst du mal ein Beispiel nennen, was das so wäre so bei drei, vier Angeboten?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Zum Beispiel, bau eine Webseite, bau ein Spiel mit Python.\nWir hatten neulich das mit, druck dir eine Drohne aus sozusagen.\nDas war natürlich auch ein Highlight.\nOder bau einen Daddeltisch mit einer Mateteebox.\nAlso ganz unterschiedliche Sachen.\nDie großen Jungs und Mädels werden ja auch nicht erwachsen.\nAlso teilweise je bekloppter die Idee, desto größer die Learnings.\nAber da haben wir ganz ganz vielfältige Sachen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Okay, aber es gibt sozusagen, man bietet was an und die Kids entscheiden sich dann für eins davon\nund das wird dann eben fokussiert gemacht, sodass man es eben auch entsprechend vorbereiten kann."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Weil es gibt ja, wirst du ja sicherlich auch kennen, so Projekte wie Jugend hackt,\ndie ein ähnliches Ziel haben, also Kreativität und Hackertum Jugendlichen näher zu bringen,\ndie aber dann eben auch sehr drauf stehen, dass die Kids dann auch noch ihre eigenen Ideen mitbringen\nund die dann irgendwie dynamisch begleitet werden.\nWollte ich nur mal ein bisschen aussortieren, wie euer Ansatz da an der Stelle ist."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja, Code und Design macht das ja ähnlich, die sind sogar noch länger als Jugend hackt,\ndie sind ja sogar vier Tage mit dabei.\nAlso wir sagen immer gerne, wir sind so die kleine Schwesterorganisation von Jugend hackt.\nIn der Hinsicht, wir wollen alle anfixen, bei Jugend hackt hilft es tatsächlich auch schon,\nein bisschen Vorkenntnisse mitzubringen, aber die sind eben auch eine der Organisationen,\ndie wir immer empfehlen, sobald Kids Lust haben, auch nur ein bisschen weiterzumachen,\nwir zeigen immer am Ende auch der Schulkurse mit, deine Wege in die IT.\nWenn du Bock hast, was weiter zu machen, geh hierhin, geh dahin, guck dir das an,\nes ist völlig egal, was du machst, Hauptsache du tust etwas.\nUnd da haben wir eine ganz tolle Verweisberatung, Weiterempfehlungskultur\nund die ganzen Organisationen wie Jugend hackt oder Chaos macht Schule oder ähnliches,\nüberall da, wo wir wirklich sagen können, schaut euch das an, guckt weiter rein, jederzeit."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Jetzt muss ich dann doch mal auf diesen Begriff noch mal kommen.\nDer Hackerbegriff ist ja älter als vielleicht viele Leute denken, das ist so Ende der 60er Jahre entstanden\nund hat, glaube ich, so über die Jahre sehr unterschiedlichen Zuspruch gefunden\nund mediale Verarbeitung vor allem.\nDa gibt es natürlich so diese naja 80er Jahre Wargames induzierte Konnotation mit so,\nja der Jugendliche auf seinem Sofa mit seinem Homecomputer und fährt dann irgendwie die Atomstäbe hoch und runter\nund was weiß ich, Atomraketen werden scharf geschaltet, so die große Bedrohung aus dem Kinderzimmer.\nDas war ja dann sehr populär so Hacker, das findet man ja auch medial immer wieder.\nDann natürlich auf der anderen Seite so diese konkrete Bedrohung, jetzt Cyberwar, solche Geschichten.\nWährend ja so die Hackerszene selber diesen Begriff immer als eine sehr kreative Bezeichnung angesehen hat.\nWas habt ihr da für eine Vorstellung und warum denkst du wurde dieser Name,\nda warst du ja nicht dran beteiligt, hieß doch von Anfang an Hacker School oder?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Genau.\nWarum wurde dieser Name gewählt, was verbindet ihr mit diesem Begriff?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ich denke, das war das coolste, was man überhaupt machen konnte,\nweil er so wunderbar vieldeutig ist.\nAlso ja, ich sollte irgendwann einmal eine Dankesrede, da hatten wir einen Preis gewonnen,\nanfangen mit, Hacker, sind das nicht die Bösen?\nJa okay, haben alle gelacht.\nDie Idee, warum es Hacker School genannt worden ist, ist,\ndass ja in der ganzen IT-Welt ein Hack, eine unkomplizierte schnelle IT-basierte Problemlösung ist.\nUnd das ist das, was wir den Kids zeigen wollen, nutzt den Scheiß,\nkomm in den Driverseat, einfach wenn du verstehst, was du damit machen kannst\nund es vielleicht ein bisschen anders anwendest, als es ursprünglich mal gedacht war,\nkannst du dir das Leben viel einfacher machen.\nAlso mein Lieblingshack, den wir hier zu Haus haben, ist der smarte Hühnerstall.\nAlso wir haben drei Hühner, die trinken ganz schön viel und insbesondere im Winter nervt das wie Bolle,\nwenn du permanent raus musst und das Wasser aufhacken, damit die was trinken können.\nUnd mit einem Microbit, der einen Temperatursensor hat, einer kleinen Heizspiralen\nund drei Zeilen Code kannst du das relativ einfach machen.\nWenn Temperatur unter 0, dann starte Heizspirale, Wasser warm.\nUnd das ist so angenehm.\nEin Microbit ist sicherlich nie geplant worden für die Nutzung im Hühnerstall,\naber wir feiern das so, dass wir im Winter nicht raus müssen.\nUnd das ist das, was wir den Kids zeigen wollen, guck dir das Ding an,\nverstehe wie es funktioniert und dann mach was draus, egal was, aber mach was draus.\nUnd das ist, natürlich haben wir ganz häufig die Nachfrage, uh kannst du mir,\nsetze den Namen eines Spiels ein, das Ding hacken, ich will mehr Coins oder was weiß ich was haben.\nWo wir auch immer den ethischen Jingle mit dazu machen, zu sagen,\nvirtuell zu stehlen ist genauso scheiße wie im wirklich wahren Leben.\nEs ist völlig wurscht, verhalte dich immer so, wie du selber behandelt werden möchtest.\nUnd je mehr du kannst, desto größer ist deine Verantwortung, das kommt jederzeit von uns.\nEinfach weil ich davon überzeugt bin, dass Wissen zu haben auch Verantwortung bedeutet.\nUnd das den Kids mitzugeben ist das, nicht nur weil man was kann, hat man alle Freiheiten der Welt,\nsondern sollte sich immer darauf besinnen, wie man selber behandelt werden möchte.\nDas ist so ein bisschen, ja, also der Name Hacker School ist eine Gesprächsaufforderung sozusagen\noder ein Angebot, genau auch über solche Sachen ins Gespräch zu kommen.\nUnd das ist halt eben wirklich so die Auslegung des Begriffes, den wir lieben und den wir mit der Hacker School praktizieren."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und das findet auch statt?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja, genau das findet statt."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also die Kids reflektieren sozusagen auf diesen Begriff und hinterfragen den auch?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Es gibt immer sone und solche.\nDas erste ist halt immer, insbesondere pubertierende Jungs, hast du häufig diese,\nkannst du mir XY hacken und ich will und so weiter.\nAber wirklich darüber zu sprechen, wie wäre es denn für dich, wenn dir deine, egal,\nDaten irgendwo gemobst werden und damit Sachen gemacht werden, die dir nicht gefallen?\nEs wird natürlich nie so offen zugegeben, insbesondere nicht wenn die Peergroup zuhört.\nAber man sieht, dass sich dadurch Denkprozesse in Gang setzen und dass eben auch einfach neue Sachen entstehen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Jetzt habt ihr ja den Fokus auf Programmieren und ich glaube, was viele Leute so mit IT\noder Digitales oder so primär assoziieren im Bildungsbereich ist halt die Informatik,\ndas Informatikstudium, so Informatik quasi als Wissenschaft.\nIn gewisser Hinsicht auch sehr mathematisch.\nEs gibt natürlich mittlerweile viele Ausprägungen, Studiengänge, die sehr viel gezielter,\ngerade an Fachhochschulen eben auch wirklich jetzt, was du schon gesagt hast,\nso Systemintegration und solche Sachen auch als Ausbildungsberufe.\nAlso es tut sich da eine ganze Menge, es gibt immer mehr Diversifikation.\nTrotzdem habe ich gerade bei der Informatik immer so den Eindruck,\ndass das Programmieren als solches gar nicht so sehr im Mittelpunkt steht.\nOder um es mal anders aufzuziehen, informatische Problemlösungen werden nicht zwangsläufig immer durch gute Programmentwicklung,\ngutes Programmieren begleitet und das scheint noch so ein Konflikt zu sein,\ndass es nicht so eine richtige Programmierkultur gibt oder ich frage mich manchmal,\nwarum es nicht einfach Studium Programmieren gibt."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Na es ist halt, glaube ich, etwas, was insbesondere for whatever reason in Deutschland sehr angstbehaftet ist.\nUnd es wird ja auch oft gedacht, Programmieren ist reine Mathematik.\nJa, Mathematik ist wie Sport, hilft überall.\nUnd es schadet auch ehrlich gesagt nichts, wenn du einkaufen gehst und dann berechnen kannst,\n30 Prozent Discount was denn das jetzt eigentlich heißt?\nAlso von daher, ich glaube, dass wir einfach in Deutschland diese Situation haben,\ndass viele Bereiche aufgrund der großen Auswahlmöglichkeiten einfach gar nicht beachtet werden.\nUnd das ist etwas, was ich änder möchte.\nEs heißt ja nicht, nur weil ein Mädchen überhaupt nicht in Scope hat,\ndass es vielleicht auch einen Beruf in der IT-Branche im weiteren Sinne spannend finden würde,\ndass es das nicht kann.\nUnd ich möchte halt einfach wirklich diesen Scope, den junge Menschen auf potenzielle Berufe haben,\neinfach deutlich erweitern.\nWas sie dann im Detail machen, ist noch mal eine ganz andere Fragestellung.\nAber ich glaube, dass insbesondere, wenn sie einmal erproben zu programmieren,\ndass sich dadurch ganz viele Ängste abbauen und sie einfach die Möglichkeiten anders beurteilen.\nUnd ich glaube auch tatsächlich, wir werden in zehn Jahren nicht mal ansatzweise mehr so programmieren wie heute.\nWenn du dir anguckst, welche Lowcodevariante alle im Kommen sind, ist das noch mal eine ganz andere Fragestellung.\nAber ich glaube, dass wir viel viel mehr Leute brauchen, die in Erwägung ziehen,\nsich in diesem Bereich mündig beruflich zu engagieren.\nWenn wir das nicht hinkriegen wird das ziemlich eng.\nUnd das möchte ich halt eben erreichen dadurch, dass wir die Begeisterung für Programmieren einfach mal durch das praktische Erfahren wecken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "So Projekte wie die Hacker School stehen natürlich auch jetzt deshalb so ein bisschen im Interesse,\nauch des Stifterverbands und es wurde ja dann auch in entsprechenden Projekten auch schon gewürdigt,\nweil wir einfach ja generell so ein Ausbildungsproblem haben in dem, was man so schön als MINT bezeichnet.\nAlso Schwerpunkt Mathematik, Informatik, generell naturwissenschaftliche Fächer bzw. technische Fächer.\nDie Nachfrage nach diesen Berufen steigt, gerade in den letzten Jahren,\nwo jetzt die Cyberbedrohung, wie es so schön heißt, auch in zunehmendem Maße wahrgenommen wird von Unternehmen,\nnur die finden halt überhaupt keine gut ausgebildeten Leute,\nweil es offensichtlich eher ein zurückgehendes Interesse gibt, da auch wirklich reinzugehen.\nDa fragt man sich ja, seit wann sind denn Berufsbilder uninteressant, die sehr gefragt und gut bezahlt sind,\nwarum gehen da die Leute nicht rein.\nHast du da eine Vorstellung, was da gerade schiefläuft oder vielleicht schon seit längerem schiefläuft?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Es sind sicherlich viele Faktoren, die da zusammenkommen.\nAlso was wir hier insbesondere bei der jetzigen Generation sehen, ist,\noder was heißt jetzige Generation…\nAlso ob man jetzt Richtung Gen Z geht oder auch die Alphas,\ndie jetzt ja langsam auch im Bereich Schule und bald fertig unterwegs sind,\nist es insbesondere auch durch eine sehr sehr hohe Vernetzung im Sinne auch der SocialMedia-Nutzung,\ndass wir eine Generation jetzt gerade ranziehen, die große Herausforderung hat, Schein und Sein zu unterscheiden.\nUnd wenn man eben einfach sieht, auch diese instagramability oder sonst was,\nwie früh das einsetzt und was für fatale Folgen das hat.\nUnd auch was für mitunter unrichtige Stereotypen einfach dadurch weiter mit unterstützt werden.\nDas ist etwas, was, glaube ich, die jungen Menschen massiv verunsichert\nund was wir dadurch einfach auch neu angehen müssen.\nEine riesige Wahlfreiheit, ich kann eigentlich alles machen, ist nichts, was dabei hilft,\neine fundierte und klare Entscheidung zu treffen.\nUnd das eben dadurch zu umgehen, dass man einfach zeigt, wieviel Spaß das machen kann\nund dass man nicht der Hardcoreprogrammierer sein muss, um da irgendwo einen Fuß auf den Boden zu kriegen\nund dass insbesondere im Bereich der Informatik im weiteren Sinne ganz viele praktische,\nsoziale verbindende organisatorische Fähigkeiten gefragt sind,\ndadurch können wir, glaube ich, dieser nach meiner Einschätzung falschen Überstilisierung von diesen Berufen entgegenwirken."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja gut, das ist so der Ausblick auf die Zukunft, aber die Frage ist,\nwas hat denn Deutschland bisher so falsch gemacht?\nAlso ich meine, was läuft denn da schief, dass das Interesse gar nicht da ist und sogar noch zurückgeht,\nobwohl im Prinzip der Markt danach schreit und das tut er jetzt auch nicht erst seit zwei Jahren,\nsondern das ist ja, keine Ahnung, schon seit 20-30 Jahren schon fast so eine Binsenweisheit,\ndass, wenn man was mit Computern macht, dass das Zukunft hat so."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "War sogar bei mir in der Schule schon so."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Naja eben, trotz alledem scheint es auch irgendetwas zu geben und ich habe auch immer so ein bisschen diese Vermutung,\ndas ist auch so ein generelles Ding, wenn man jetzt mal einfach schaut, wie Deutschland an sich Digitalisierung fortwährend verschläft\nund sich dabei verhaspelt, keine Projekte richtig auf die Kette kriegt, immer noch eine digitale Mangelinfrastruktur haben,\nobwohl das Thema auch schon seit 20 Jahren da ist.\nAlso es ist ja sozusagen eine generelle Unfähigkeit, die hier um sich zu greifen scheint.\nHast du irgendwie eine Idee, woran es liegen kann, dass wir da so aufgestellt sind oder vielmehr nicht aufgestellt sind?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Wenn du dir den Gründungsbereich zum Beispiel anguckst, ist etwas, was uns unglaublich Herausforderungen macht,\nist diese krasse Überbürokratisierung eines jeden Schrittes in Deutschland.\nUnd das ist im Bereich der Schulen ganz genau so.\nAlso ich weiß nicht, wer den Bildungsföderalismus erfunden hat,\naber es ist etwas, wo man sagt, wenn wir schnell gute Sachen umsetzen,\nglaube ich, dass es fatal ist erst mal zu sagen, ja wir müssen 16 mal jetzt das gleich entwickeln,\ndamit man hinterher sieht, wer es am besten gemacht hat.\nDas Schulsystem, was wir immer noch haben, kommt aus einer Zeit, wo es darum ging,\nin Preußen die Kinder von den Feldern zu holen.\nIch weiß nicht wie es dir geht, in meinem Freundeskreis arbeiten nicht mehr sehr viele Kinder auf Feldern hier in Deutschland.\nUnd das ist etwas, wir bilden aktuell für eine Zukunft aus, die es nach meiner Einschätzung so nicht mehr gibt.\nAlleine wenn du dir die Abschlussprüfung anguckst, ist da irgendwas mit Kollaboration, mit Zusammenarbeit,\nmit gemeinschaftlich Sachen entwickeln?\nWird sofort als Betrug geahndet.\nMan muss reproduzieren, es ist ganz cool, wenn man es auf neue Fragestellungen anwenden kann,\naber das, worauf es ankommt, was wir auch später in der Berufswelt brauchen,\ndas ist eben halt da noch ziemliches Neuland.\nNatürlich kann man noch argumentieren, dass eine Schule nicht optimiert auf die Berufswelt ausbilden sollte.\nJa, okay.\nEs geht auch darum, grundlegende Werte zu vermitteln und auch ein Grundlagenwissen drauf zu schaffen.\nAber in der heutigen Zeit sehen wir verstärkt, dass du auch bei den Kindern viel mehr diesen Reason Why brauchst.\nWarum soll ich das eigentlich lernen?\nWenn ich mit meinem Sohn und ich liebe es, mit ihm Mathe zu machen, wirklich sagen kann,\nwofür brauchst du denn das von der Berechnung her?\nWie kannst denn du rausfinden, was wie zusammenhängt, wenn du eben halt,\nEvergreen ist ein Dreisatz, damit kannst du ja fast alles berechnen, einen großen Teil.\nWenn der weiß warum er das macht, der läuft von selbst.\nEinfach dieses, ist so weil ist so und steht im Lehrplan und du musst das auswendig lernen,\ndamit werden wir die Kinder heute nicht mehr erreichen.\nUnd da wirklich praktischer reinzugehen und Sachen praktisch und pragmatisch zu lösen,\ndas ist halt aufgrund der unglaublich hohen Bürokratie hier in Deutschland wahnsinnig schwierig.\nUnd ja, da ist die Schule eigentlich gar nicht so viel schlechter als die Bundesrepublik im Durchschnitt,\nda haben wir wahnsinnig viel Raum for Improvement."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und realisiert das irgendjemand außer dir?\nAlso hast du das Gefühl, im Kontakt mit den Schulen, dass sich da was tut von unten nach oben\noder vielleicht sogar von oben nach unten, weil langsam wird es ja Zeit."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Wir haben in Deutschland kein Verständnisproblem, sondern das Umsetzungsproblem, das kennst du ja auch.\nAlso sagen wir mal so, Schulbashing liegt mir fern, weil ich sehe,\nwas für unglaublich große Herausforderungen die Schulen meistern.\nSie übernehmen ja auch in einigen Bereichen grundlegende Erziehungsaufgaben.\nWenn wir sehen, mein Vater sagte damals, die Konzentrationsfähigkeit eines Kindes wird auf dem Wickeltisch angelegt\nund im Kinderwagen, durch das Halten des Augenkontaktes zu Mutter oder Vater,\nwer auch immer da gerade beschäftigt ist.\nWo haben junge Eltern ihre Augen, wenn Sie mit dem Kind unterwegs sind?\nAuf dem Handy.\nUnd das wirklich einfach mitzudenken, was Schulen da leisten.\nIch kenne unglaublich wirklich begeisterte Lehrkräfte, Schulleitungen,\ndie versuchen, alles zu ändern und die halt eben auch so ein bisschen in ihrem Rahmen gefangen sind.\nIch sehe aber auch, dass solche Sachen wie die Hacker School und wir gehen online in Schulen\nund mit Zoom, das ist, man kann alles diskutieren, aber ich sehe,\ndass die Bereitschaft steigt, auch wirklich Sachen zu machen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Aber nur wegen Corona oder?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Du kennst ja die Grafik mit, wer hat die Digitalisierung Ihrer Firma vorangetrieben, CEO, CIO oder Covid?\nNatürlich, Menschen sind unglaublich bequem und was sagte, ich glaube,\nder Gerald Hütter sagte das, warum ändert sich das Schulsystem nicht?\nIst der zweite Satz der Thermodynamik, jedes System verharrt auf dem Zustand,\nwo es am wenigstmöglich Energie verbraucht und das ist sicherlich keine Veränderung.\nUnd da wirklich konstant diesen Veränderungswunsch und -druck reinzubringen und hochzuhalten.\nEin System Schule kannst du nicht von außen verändern oder nur begrenzt.\nDu musst es von innen verändern.\nUnd da sehe ich erste Impulse, aber ja, ich glaube, dass wir auf die Hacker School kurzfristig\noder Initiativen wie die Hacker School kurzfristig nicht verzichten können,\nweil wir eben genau solche Brandbeschleuniger sind und sagen,\nkomm wir gehen da rein, wir machen das, wir versuchen, wir bieten euch was an,\nwas euch nicht wehtut und ich glaube, davon braucht es einfach viel mehr,\ndamit einfach noch mehr Menschen mitmachen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Vielleicht noch mal so ein bisschen auf der Metaebene zu bleiben,\nauch wenn wir da schon im Prinzip drüber gesprochen haben.\nAber du hast vorhin auch so von algorithmischem Denken, kritischem Denken gesprochen.\nInwiefern, denkst du, ist das ein Ergebnis dieser, vielleicht jetzt nicht unbedingt eurer Kurse,\nsondern inwiefern …\nAlso wie verstehst du das?\nVielleicht kannst du das mal kurz erklären, was du meinst mit algorithmischem Denken und kritischem Denken.\nUnd wie kann das entstehen?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ich sehe, dass junge Menschen heutzutage den Eindruck haben,\ndass so was wie Alexa oder jedwede Art der Spracherkennung einen intelligenten Computer auf der anderen Seite hat.\nUnd das spannende ist, wenn wir in Schulklassen reingehen und sagen,\nwer von euch denkt, dass ein Computer intelligent ist?\nDann gehen erst mal die ganzen Hände hoch.\nUnd klar zu machen, dass ein Computer, strunzdumm ist jetzt auch wieder nicht das richtige,\naber dass ein Computer nicht macht was man meint, sondern was man ihm sagt.\nUnd dass es eigene Sprachen gibt, wie Anweisungen in auch Maschinen verständlich formuliert werden müssen.\nDas ist ein total spannendes Erlebnis für Kids.\nUnd was wir häufig machen ist programmieren ohne Computer.\nWir lassen sie in Paaren zusammenarbeiten, einer ist der Programmierer,\nder andere ist der Roboter und der Programmierer muss den Roboter dazu bringen,\nein Schokobon auszupacken und ihn zu essen.\nUnd da zu sehen, wie verdammt schwierig das ist, ganz konkrete detaillierte Anweisungen zu geben.\nUnd auch dadurch zu erfahren, was man, auch wenn man weiterdenkt Richtung künstliche Intelligenz\nim Bereich der Gesichtserkennung, was muss man alles beachten\nund was sind die Biases, die sich da verstecken?\nAlso man sieht ja auch, dass zum Beispiel Gesichter von farbigen Menschen viel schlechter erkannt werden als die von weißen.\nDer Bias der KI mit, es sind weiße Männer zwischen 20 und 40,\nvollkommen klar, dass da nicht alles bedacht wird.\nUnd das eben genau an diesen Stellen mit den Kindern zu problematisieren,\nist etwas, wo sie hinterher ganz anders auf die Welt blicken\nund in ersten Schritten beginnen zu verstehen, warum ganz genaue Anweisungen\noder so was wie Maschinensprache extrem spannend ist, wenn sie Sachen auch automatisieren wollen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Bzw. warum auch diese künstliche Intelligenz meistens gar nicht so intelligent ist, wie man das vielleicht glauben mag."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Nein, und dass Terminator 3 auch noch mal eine andere Kategorie ist, genau."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wir hatte es schon so am Rande ein wenig angesprochen, aber ich wollte noch mal drauf eingehen\nund das ist natürlich jetzt konkret auch die Situation von MINT-Berufswünschen\nund diesen ganzen Programmierkursen und den Mädchen und jungen Frauen,\nfür die ihr ja auch spezielle Angebote habt.\nHast du schon gesagt, Girls School wendet sich auch an alle Altersgruppen,\nsozusagen als außerschulische Kurse dann natürlich.\nInwiefern ist das anders aufgestellt, inwiefern seht ihr da den Bedarf dafür?\nWelche Rolle spielt das bei euch?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Man begeistert Mädels halt einfach anders.\nAlso ich hatte ja erwähnt, ich habe ja seit 20 Jahren einen ITler zu Hause.\nUnd das wundervolle ist, abgesehen davon, dass er nicht erwachsen wird, ist,\nich kann aus erster Hand belegen, es reicht, wenn etwas neu ist und blinkt\num sich das begeistert anzugucken.\nHat eine neue Funktion, muss ich ausprobieren, hier guck mal.\nJetzt ist halt der Temperaturfühler bei den Hühnern, der blinkt jetzt sogar.\nHerzlichen Glückwunsch, das ist super und das macht auch ganz viel Spaß.\nAber ganz ehrlich, so als Frau gesprochen interessiert mich das nicht, ob das Ding blinkt,\nich möchte wissen, ob ich damit mehr erreichen kann oder ob das, ich weiß nicht,\ndie Hühner vielleicht auch noch glücklicher macht oder so was und dann legen sie mehr Eier.\nAlso es ist halt etwas, wir sehen insbesondere bei Mädels, die, im Fachwort gesagt,\nKontextualisierung, warum mache ich etwas, ist so viel wichtiger.\nUnd wenn wir Kurse zum Beispiel mit der Sensebox geben, das ist so eine vorbereitete Box,\ndie mit ganz vielen Sensoren, wo du Sachen messen kannst wie Feinstaub oder was weiß ich was,\nwenn du wirklich sagst, okay damit machen wir was und noch irgendwas zu einem Umweltthema\nund dann macht das auch noch eine weibliche Inspirese, dann sind alle Mädchen da.\nUnd genau das zu sehen, wir brauchen Rolemodels, wir brauchen tatsächlich mehr als nur,\nes ist neu und blinkt, wir brauchen einen Grund, das zu tun und häufig auch was,\nwo man sagen kann, kann ich damit irgendwas verbessern im ökologischen, im sozialen Sinne,\nin was weiß ich welchem Sinne auch immer.\nDamit kommen wir ganz anders an Mädels ran.\nUnd auch der Punkt, zu sagen, ich möchte mich auch für einen Beruf entscheiden,\nwo ich Beruf und Familie gut miteinander vereinbaren kann, das ist etwas,\nwenn man das ebenfalls mit fallen lässt, je nachdem wie alt die Mädels sind,\nist das was, was durchaus gehört wird.\nWeil im IT-Bereich, ich kann arbeiten von wo aus ich will, wann ich will in weiten Teilen,\nokay losgelöst von Teamstrukturen."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also nicht in allen IT-Bereichen, aber mehr als in anderen."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Einfacher, als wenn ich irgendwo in einem Supermarkt an der Kasse sitze,\nda habe ich selten die Möglichkeit mit, ach mir passt es gerade morgens zwischen 2 und 4, da wird der Laden nicht aufmachen.\nUnd das ist halt eine Flexibilität, die man auch noch mal so als Funfact oder Nutzenaspekt mit einfließen lassen kann."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Informatikstudium Anteil Frauen knapp 20 Prozent, glaube ich."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja. Aber so ein Studium macht ja auch noch nicht zwangsläufig jemanden,\nder dann langfristig drin arbeitet."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja nein, ist richtig, aber ich meine, bei 20 Prozent würde ich mal sagen, das ist schon unterrepräsentiert."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Klar."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Also selbst wenn man noch andere Faktoren mit ausrechnet und andere Wege noch mit einschließt,\nzeigt es ja schon, dass es irgendwie keinen Reiz hat und ich frage mich, was die Gründe dafür sind."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ein Freund von mir sagte mal, er erzählt immer eine lustige Geschichte vom MIT,\nwo sie einen Kurs mit Einführung in die Programmierung umbenannt haben,\nthe beauty und joy of Computing.\nMit dem Ergebnis, dass plötzlich die Frauenquote locker über 50 Prozent lag,\nich glaube, bei 70 oder 80.\nDas spricht jetzt natürlich nicht für mein eigenes Geschlecht, an der Stelle zu sagen,\noh das klingt anders, das mach ich jetzt mal.\nAber es ist etwas, wo man sagt…"
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Es triggert einfach was anderes so, was man vielleicht erst mal so gar nicht gesehen hat,\ndass das getriggert gehört."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Es ist auch so, wenn du dir anguckst, wieviele Jobbeschreibungen wirklich männlich formuliert sind,\nmit diesen ganzen Attributen, die wir mit durchsetzungsstark, erfolgreich, wie auch immer,\nes gibt ganz viele Sachen, die ganz klar männlich attribuiert sind.\nUnd dass wir da, wenn du das als Frau liest und denkst so, boah möchte ich das wirklich?\nDann kommt noch der Faktor dazu, ich hatte gehört, bei einem Mann reicht das,\nwenn ungefähr, keine Ahnung, knapp die Hälfte passt, bei einer Frau muss gefühlt über 90 Prozent passen,\nbevor sie sich auf eine Stelle bewirbt.\nUnd das ist halt was, wo wir uns langfristig einfach mal auch angucken müssen,\nkriegen wir das hin, an der Stelle Gleichberechtigung nicht nur zu meinen,\nsondern es eben auch wirklich umzusetzen.\nWenn wir bei unseren Mädels, bei den kleinen Mädchen nicht sagen, sie sind bossy,\nsondern they are showing natural leadership tendencies.\nIch glaube, das ist von Sheryl Sandberg ein Zitat,\ndass man wirklich einfach mal gucken muss, wie attribuieren wir wirklich auch Worte,\ndie wir verwenden und ja, wenn es hilft, ich bin für eine Quote auch in Vorständen,\nich bin auch für eine Paraphrasierung von Kursen, wenn es dazu beiträgt,\ndass es eben halt wirklich die Begeisterung dafür triggert, sich damit auseinanderzusetzen,\ndann müssen wir diesen Weg solange gehen wie es wichtig ist."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Was ist denn jetzt sozusagen die Zukunft, die du dir für die Hacker School vorstellst,\naußer schneller, höher, weiter?\nInwiefern wollt ihr das weiter entwickeln?\nAlso vielleicht kannst du noch mal eine Zahl fallen lassen, so wieviele Kinder ihr im Jahr erreicht,\num mal dafür ein Gefühl zu bekommen und wie denkt ihr, was hat das noch für ein Potential für euch?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Also die Wunschzukunft für die Hacker School ist oder wäre, dass es uns nicht mehr braucht.\nDie sehe ich aber nicht relativ bald.\nDas Ziel, was ich vorhin sagte, ist, jedes Kind soll einmal programmiert haben,\nbevor es sich für einen Beruf entscheidet.\nDas kurzfristige Ziel oder mittelfristig, je nachdem wie du das einordnest, ist,\n2025 wollen wir 100.000 Kinder pro Jahr erreichen.\nDas heißt, wir brauchen ungefähr 17.000 ITlerInnen, die mit uns in Schulklassen,\ndas wird der größte Zahlenlieferant sozusagen werden, Dreiviertel der Kurse vermute ich,\noder Dreiviertel der Kinder, dass wir die über die Schulkurse erreichen.\nWir wollen jedes Jahr verdoppeln.\nDieses Jahr ist das Ziel bei 12.500 Kindern rauszulaufen.\nWir sind jetzt Ende August bei 8.000 Kindern, liegt super.\nAlso dicker Daumen, das werden wir von den Zahlen her, wenn da nicht irgendwas signifikant schiefläuft, erreichen können."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Wieviele nehmen an so einem Kurs im Schnitt dann teil?\nAlso Schulklassen wahrscheinlich eher so 30?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "25-30, das ist unterschiedlich und entsprechend mit durch sechs haben wir die Inspirer.\nDie Idee ist halt eben, die Strategie so zu bauen, dass wir zum einen näher mit Universitäten kooperieren\nund das auch als Seminare anbieten, dass eben halt die StudentInnen bei uns als Inspirer auch Creditpoints sammeln können,\nweil sie ja auch wirklich, sie sammeln ja Fähigkeiten, indem sie das vermitteln.\nWir arbeiten an Kooperationen mit Berufsschulen aus dem IT-Umfeld.\nWo man eben einfach sieht zum Beispiel, die e-Tech auf den Elbinseln hier in Hamburg, die haben 66 Klassen.\nÜber drei Jahre verteilt.\nDas ist also jetzt alles auch gerade erst in Gesprächen, aber zu sehen,\nwir haben erste Tests gemacht, dass es für die Azubine, die dort auch in der Schule sind,\nein totaler Mehrwert ist, dass sie sich da mit engagieren können,\ndass wir gemeinschaftlich richtig viel lernen.\nUnd wenn die weitergeben können, was sie selber in der Schule gelernt haben,\nin der Berufsschule, ist das top.\nUnd der dritte Ansatz, wo wir eben wirklich auch uns Richtung der großen Zahlen auf der Inspirer-Seite bewegen,\nist, dass wir einfach auch die Zusammenarbeit mit den Unternehmen verändern.\nAlso von, hast du zwei ITler, ich brauche dringend noch welche, zu,\nwieviele Azubis hast du, 150, super, ich nehme alle und das zweimal.\nDas wir da die Nutzenargumentation den Firmen gegenüber ganz klar aufzeigen können,\ndass wir das nicht nur machen, weil wir als non profit einfach mal sonst nichts anderes zu tun haben,\nsondern dass es wirklich darum geht, grundsätzlich junge Menschen dafür zu begeistern\nund sich für Zukunftsberufe zu entscheiden und den Azubis und den Azubinen,\ndie eben halt da schon unterwegs sind, die Möglichkeit zu geben,\ndurch die Vermittlung des eigenen Wissens selber das zu lernen.\nMan sagt ja immer, wenn du es deiner Großmutter erklären kannst, hast du es selber verstanden.\nWir haben keine Großmütter, aber wir haben Kinder und das im großen Umfang.\nUnd ich glaube, dass so, wenn die Firmen ihre Verantwortung wahrnehmen,\nsich mit auch für digitale Bildung zu engagieren und die Schulen das zulassen und sich öffnen,\nmit uns als non profit als gemeinnützigem Träger dazwischen, dass wir die Zahlen mit den 100.000 Kindern pro Jahr auf jeden Fall erreichen werden."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Bei 12.500 als Ziel, dann ich habe es mal so grob überschlagen, habt ihr so 2-3 Kurse pro Wochentag vor der Nase,\nwenn ich das richtig sehe, so über das Jahr verteilt?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja, du kannst es nicht ganz über den Mittelwert nehmen vor dem Hintergrund,\nes gibt ja auch tatsächlich im Sommer immer mal diese Ferien oder es gibt immer wieder Ferien,\nwo man sieht, über den Sommer ist es eher so ein bisschen ruhiger.\nEs gibt auch Sonderevents, wo wir eben zum Beispiel auf der Ideen-Expo in Hannover,\nda haben wir ganz viele Kurse mit angeboten.\nDa waren ja, ich weiß gar nicht wieviele Kids dieses Jahr da waren,\naber das letzte Mal waren es über 400.000 und da hatten wir auch bei uns viele Kinder,\nmit denen wir da arbeiten konnten, also auch wirklich da Kurse vor Ort zu geben\nin separaten Räumlichkeiten oder ähnliches.\nEs gibt immer Peaks, wo du auch wirklich siehst, da haben Unternehmen Zeit und Lust, was zu machen.\nEs gibt auch Phasen, wo man sieht, wie eben halt den Sommer, da ist das egal,\nentweder bist du im Urlaub oder du machst Urlaubsvertretung für andere mit.\nAber letztendlich jetzt zu sagen, dass man so ganz grob versucht, linear dranzubleiben,\ndas zweite Halbjahr ist immer stärker als das erste, weil wir da auf den bereits gemachten Kontakten aufsetzen können.\nAuf der anderen Seite ist das erst Halbjahr länger als das zweite, weil die Sommerferien halt Anfang des zweiten liegen.\nAber ja, das ist die Größenordnung, also jetzt nach den Sommerferien wird es so sein,\ndass wir täglich höchstwahrscheinlich immer zwei Kurse haben."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und diese Unternehmen spielen ja bei euch eine relativ große Rolle,\ndie bieten die Orte an, das heißt, das ist ja im Prinzip so eine Art,\ndas ist auch so ein sozialer Payback, könnte man jetzt sozusagen sagen,\nso eine Dividende, die quasi die Unternehmen dann wieder in die Bildung stecken.\nWas ja oft auch gefordert wird, tun sie sicherlich auf andere Ebene auch.\nNur hier das eben konkret zu machen, hat ja so eine Art Doppelnutzen.\nAlso sowohl man verbessert was im Idealfall, aber man verbessert ja auch,\nalso man gibt ja auch seinen eigenen Mitarbeitern und insbesondere den Auszubildenden auch eine spezielle Herausforderung,\ndie sich ja dann letzten Endes auch im Unternehmen wiederum positiv auszahlen kann.\nAlso ich glaube, wenn man einmal so einen Lernprozess, also einen Lehrprozess,\neinen Lehrprozess durchgemacht hat und in so einer Situation bestehen kann,\nkann das ja auch so die eigenen Communicationskills ein wenig verbessern\noder vielleicht sogar signifikant verbessern, würde ich fast sagen.\nKriegt ihr da entsprechendes Feedback von den Unternehmen?\nIst das irgendwie etwas, worüber gesprochen wird?\nMüsst ihr da Überzeugungsarbeit leisten oder ist das irgendwie etwas, was schon verstanden wird?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Also wir kriegen von den Unternehmen, mit denen wir schon arbeiten, großartiges Feedback.\nAlso wir sehen halt jetzt auch, wir sind mit einem sehr großen IT-Systemhaus gerade dabei zu gucken,\nwie kriegen wir das hin, dass wir halt wirklich das allen Azubis ermöglichen,\nnatürlich ohne Druck zu machen, weil einige sind sehr jung, wenn sie da reinkommen.\nUnd es soll niemand, wer wirklich nicht möchte, das hilft nichts,\nMenschen dazu zu zwingen, bringt nichts, aber sie zu ermuntern und ganz klar zu sagen,\nhey wir würden das super begrüßen, wenn ihr mitmacht, ihr könnt so viel für euch lernen,\nalleine dabei, als das den neuen Azubis vorgestellt worden ist, das haben zwei oder drei Azubis gemacht,\ndie schon mehrfach Kurse gegeben haben, was für ein besseres Kompliment kannst du kriegen?\nUnd wirklich jetzt mit dieser Überzeugung rauszugehen, wir wissen, es ist richtig,\nwir wissen, es funktioniert und wir können euch, liebe Unternehmen, so viel Gehassel abnehmen,\neinfach das selber zu organisieren, das ist ein riesiger Aufwand.\nAber wir haben die Prozesse stehen, ey come on, wir machen das seit 2014.\nUnd da wirklich zu haben, wir haben so viel gelernt und all das, was nicht das Programmieren ist,\nalso all das, wo wir euch nicht wirklich notwendigerweise brauchen, das nehmen wir euch ab,\nda kümmern wir uns drum, wir haben das hier vorbereitet.\nWir haben ja, wir haben bis jetzt schon, wir müssten jetzt knapp über 20.000 Kinder bei uns in der Hacker School gehabt haben,\nda lernt man schon was.\nUnd diese Erfahrung einfließen zu lassen, auch das Feedback einfließen zu lassen.\nWir haben jetzt zum Beispiel gerade einen neuen Python-Code gebaut, weil wir gesehen haben,\nes hilft, wenn wir beim Programmieren mehr Visualisierung haben, weil die Kinder da besser das greifen können.\nUnd solche Sachen, das können wir über das Stück der großen Zahl sehr gut bei uns einbauen\nund auch weil wir dadurch, dass wir gemeinnützig sind, dafür Fördergelder beschaffen können.\nUnd die Unternehmen da einzusetzen, wo wir sie wirklich brauchen, das kommt bei den Unternehmen gut an,\ndas wird zunehmend mehr verstanden.\nJa, manchmal dauert das seine Prozesse, insbesondere wenn man eben im öffentlichen Bereich mit Unternehmen arbeitet,\ndie haben Vorlauffristen von locker einem Jahr und bis man das dann wirklich einplanen kann.\nAber die Bereitschaft, Sachen zu pilotieren, auszuprobieren und wirklich dann auch oft mit der Unterstützung auch der Geschäftsführungsebene zu sagen,\nkomm wir machen das jetzt, wir haben doch gar keine andere Wahl,\nlasst uns die Power, die wir haben, dafür nutzen, dass wir junge Menschen für Zukunftsberufe begeistern,\nwir haben eh wenig genug davon hier.\nUnd dieses leave no one behind, das ist ja heute wichtiger denn je zuvor,\nweil es immer wieder auch Fälle gibt, ich weiß nicht, ob du die Firma Lemontaps kennst,\nRaji, der erzählte mir mal, der war so schlecht in Deutsch, dass die Deutschlehrerin seinem Vater gesagt hat,\nhier schalt das Internet ab, der muss mehr Deutsch lesen.\nUnd da hatte nur eine Stunde Internetzeit am Tag und die Stunde, das hat ihn so geärgert,\nhat er genutzt, um rauszufinden, wie er diese Sperre umgehen kann und das hat er geschafft.\nAber als er das dann konnte, hat er gemerkt, wie geil das ist, Sachen zu verändern\nund wirklich steuern zu können und hat dann so viele sinnvolle Sachen online gemacht\nund hat jetzt, glaube ich, die dritte Firma gegründet, das ist ein genialer Mann.\nUnd so, der ist auch bei dieser Organisation two hearts, wo du diese beiden Staatsbürgerschaften hast,\nauch da als Rolemodel mit aktiv.\nUnd wenn wir das hinkriegen, junge Menschen so anzusprechen, dass sie Bock darauf haben, was zu verändern\nund an sich selber zu glauben, dann ist leave noone behind auf einmal gar nicht mehr so das ganz große Problem.\nUnd dafür brauchen wir die Unternehmen und dafür brauchen wir alternative Ansprachewege."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Hacken macht glücklich."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "/lacht/ Auf jeden Fall macht es Spaß."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Du hast gerade erwähnt, ihr arbeitet an einem Kursmaterial.\nDas ist vielleicht auch so ein Punkt, den wir gar nicht angesprochen haben bisher.\nWenn diese Kurse gegeben werden, dann stehen sozusagen diese Leute auch nicht mit nichts da\nund müssen sich selber sozusagen Kurse ausdenken, sondern das ist sozusagen schon ein halbwegs gemachtes Nest,\nin das man sich dann begibt.\nDas heißt, die Leute melden sich freiwillig, sie führen diese Kurse durch, helfen den Kids\nund sind sozusagen AnsprechpartnerInnen in dem Moment, aber es gibt schon vorbereitetes Material,\nmit dem gearbeitet werden kann, was ihr entwickelt?"
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ja. Also insbesondere im Schulbereich, da hast du ja drei Stunden Programmierzeit.\nInnerhalb von drei Stunden solltest du schon so eine Idee haben, wo du hinkommen willst.\nAn den Wochenenden ist das etwas einfacher, weil innerhalb von acht Stunden kannst du ja ganz andere Schwerpunktsetzungen\nund noch Workarounds und alles weitere machen.\nWir ermuntern trotzdem die Inspirer, mit denen wir arbeiten, jederzeit off script zu gehen,\nwenn die Kinder sie rufen.\nWeil man muss, und das ist halt das, was die auch lernen, wirklich zu gucken,\nwas sagt mein Gegenüber eigentlich, wo will der hin, wohin führt der mich?\nUnd da zu sehen, wenn die Kinder in eine andere Richtung driften,\nwo man sagt, ja dann geht doch off script, das ist jetzt nichts, wo ihr müsst das Skript unbedingt durchziehen\nund der Kurs war nur erfolgreich, wenn ihr auch den letzten Punkt gesetzt habt.\nSondern seht zu, dass die Kinderaugen leuchten, dass sie selber merken,\nsie können etwas verändern, sie können etwas schaffen, sie kriegen das hin.\nUnd das ist unsere Empfehlung, damit funktioniert das Bombe, aber wenn ihr zwischenzeitlich merkt,\nihr müsst da was anpassen, macht das, völlig in Ordnung.\nAußerschulisch haben wir halt auch diverse Konzepte, wo Inspirer auch draufgucken können und sagen,\nah super, ich möchte lieber was mit C machen oder mit, völlig egal, setze die Programmiersprache deiner Wahl ein,\naber ich gucke mir mal das Pythonkonzept an, dann weiß ich ungefähr, auf welchem Niveau das ist,\nsuper, ich mache das oder ich baue mir was eigenes, aber dann habe ich da Referenzen.\nUnd da bauen wir auch geraden noch mal so einen, ich sage mal, Rahmen mit,\nwie erstelle ich eigene Kurse.\nIm Moment betreuen wir das auch noch mit etwas größerem Aufwand immer durch einen Kollegen,\nder auch da Unternehmen zur Verfügung steht oder Inspirern.\nAber dass auch da noch mal ein bisschen mehr skalierungsfähig zu kriegen,\ndass es einfacher ist einzuschätzen, wie kann ich eigentlich meine Kurse bauen,\nwenn ich das möchte oder welchen nehme ich, da arbeiten wir auch noch dran, das auszuweiten."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ist ja auch ein Trend.\nAlso es gibt ja eine ganze Menge online Lernplattformen fürs Programmieren mittlerweile,\nvor allem natürlich aus den USA heraus, wo das auch eine ganz andere Kultur hat, glaube ich.\nAlso wo Computer und dieses ganze Programmieren, wo das nicht mit so vielen Ängsten,\nsondern eher mit Chancen so primär immer bedacht ist.\nIst auch glaube ich ein bisschen diese amerikanische Art, so fail ist da nicht so schlimm.\nUnd hier sind so Niederlagen, die haben immer so einen negative Bedeutung und davor haben dann alle Angst, zu scheitern.\nDavon unabhängig, schaut ihr euch das an, was sich da jetzt gerade so entwickelt?\nWeil das scheint eine relativ rasante Entwicklung zu nehmen, mit so online Lernplattformen,\nauch speziell für so MINT-Bereiche, /unverständlich/ ähnlich Sachen, die ja genau eigentlich auf diesen Bereich abzielen.\nDie also sagen, ihr wollt Programmieren lernen, ihr wollt Technik lernen,\nihr wollt mathematische Zusammenhänge verstehen, hier haben wir irgendwie eine online Lernplattform."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Ist mega.\nAlso das wirklich zu sehen, was sich da alles entwickelt, das ist toll.\nAlso es gibt auch, auch wenn du dir Udacity oder sonst was anguckst, unglaublich gute Ansätze.\nUnd sagen wir so, die Herausforderung ist, bevor du dich das traust oder das machst,\nmusst du erstens wissen, dass du dich das trauen kannst und du musst wissen, wonach du guckst.\nUnd das ist eben etwas, wo wir auch in unserer Verweisberatung,\nbei diesem Wege in die IT, geh hierhin, geh dahin, egal was du tust, aber geh irgendwo hin,\nwo wir auch auf die, die wir kennen, immer verweisen.\nAber genau dadurch hoffen, durch das was wir tun, diesen Einstieg hinzukriegen\nund die Berufe, die in diesem weiteren Skillset sind, überhaupt in das Relevantset,\nin diese Auswahlmöglichkeiten bei jungen Menschen zu kriegen.\nDas ist etwas, was keine dieser Plattformen leisten kann.\nWeil die Entscheidung, da drauf zu gehen, die muss ja erstmal fallen.\nUnd dafür brauche ich diese Berufsoptionen überhaupt in dem Set,\nso weit top of mind, dass ich da wirklich was drauf aussuchen kann.\nUnd wenn ich überhaupt nicht denke, ich könnte ja was mit vielleicht IT oder Informatik\noder überhaupt Digitalisierung machen, dann werde ich dagegen immun sein.\nUnd das so als Vorstufe mit reinzuschalten, unsere Arbeit macht es leichter,\nweil wir dann schneller abgeben können, im Sinne von Verweisberatung und Empfehlen.\nIch finde es prima."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Ja, haben wir noch irgendwas wichtiges ungesagt gelassen, was dir noch auf dem Herzen liegt über euer Projekt?\nAnsonsten, glaube ich, haben wir alles abgeklappert."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Wir haben über viele Sachen gesprochen.\nWas ich halt sehe, was auch zunimmt, ist eben etwas, auch das worüber wir uns im weiteren Sinne hier kennengelernt haben,\ndass es einfach zunehmend Initiativen auch von Stiftungen oder vom Stifterverband gibt,\nwo eben halt auch teilweise mit Unternehmen, aber auch solche Förderprogramme und Wettbewerbe aufgelegt werden,\ndie insbesondere jetzt in unserem Fall, weil wir auch das unglaubliche Privileg hatten,\nim letzten Jahr dieses digital engagiert gewinnen zu können,\ndie einen unglaublichen Speed reinbringen, weil dadurch kriegen Initiativen wie wir Kontakt zu richtigen Fachleuten,\ndie wir uns niemals leisten könnten, wenn man das mit Sozialgehältern bezahlen möchte,\nist das eher symbolisch.\nAber dadurch wirklich die Wichtigkeit dieser ganzen Thematik hochzuheben\nund ihr auch eine Sichtbarkeit zu geben, das ist etwas, was ich im Trend auch sehe\nund was mich halt wirklich begeistert."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Schön Julia, ich sage vielen Dank für die Ausführungen zur Hacker School."
+    },
+    {
+      "speaker": "Julia Freudenberg",
+      "time": "",
+      "text": "Es war mir ein Vergnügen, hat viel Spaß gemacht."
+    },
+    {
+      "speaker": "Tim Pritlove",
+      "time": "",
+      "text": "Und vielen Dank fürs Zuhören hier bei Forschergeist.\nBald geht es wieder weiter, bis dahin sage ich, tschüss und bis bald."
+    }
+  ]
+}

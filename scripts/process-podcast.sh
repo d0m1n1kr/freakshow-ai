@@ -237,7 +237,7 @@ if should_run_step 5; then
     run_script "scripts/generate-episodes-mp3.js" || echo -e "${YELLOW}⚠${NC}  MP3 index generation skipped\n"
 
     echo -e "${YELLOW}→${NC} Generating speaker profiles..."
-    run_script "scripts/generate-speaker-profiles.js" --all --max-chunks 50 || echo -e "${YELLOW}⚠${NC}  Speaker profiles skipped\n"
+    # run_script "scripts/generate-speaker-profiles.js" --all --max-chunks 50 || echo -e "${YELLOW}⚠${NC}  Speaker profiles skipped\n"
 
     echo -e "${YELLOW}→${NC} Generating TS-live files..."
     node scripts/generate-ts-live.js --podcast "$PODCAST_ID" --all || echo -e "${YELLOW}⚠${NC}  TS-live generation skipped\n"

@@ -1,0 +1,725 @@
+{
+  "createdAt": "2026-01-02T23:57:43.602216+00:00",
+  "method": "hdbscan-v2",
+  "embeddingModel": "text-embedding-3-large",
+  "embeddingsCreatedAt": "2026-01-02T23:56:44.073Z",
+  "totalTopics": 581,
+  "uniqueTopics": 564,
+  "settings": {
+    "clusters": 36,
+    "outlierThreshold": 0.9,
+    "linkageMethod": "hdbscan(min_cluster_size=2, min_samples=2)",
+    "useRelevanceWeighting": true
+  },
+  "statistics": {
+    "clusterCount": 36,
+    "outlierCount": 0,
+    "outlierPercentage": "0.0%"
+  },
+  "clusters": [
+    {
+      "id": "kosmologie",
+      "name": "Kosmologie",
+      "description": "6 Topics in 8 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 8,
+      "relevanceSec": 2400,
+      "sampleTopics": [
+        "Urknall",
+        "Struktur des Universums",
+        "Entstehung des Universums",
+        "Materie und Anti-Materie",
+        "geometrische Vermessung des Universums"
+      ],
+      "episodes": [
+        38,
+        55,
+        63,
+        100,
+        102,
+        116,
+        117,
+        122
+      ]
+    },
+    {
+      "id": "raumfahrt-herausforderungen",
+      "name": "Raumfahrt-Herausforderungen",
+      "description": "7 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 7,
+      "relevanceSec": 2100,
+      "sampleTopics": [
+        "Herausforderungen im Orbit",
+        "Herausforderungen in der Raumfahrtforschung",
+        "Herausforderungen der Raumfahrt zum Merkur",
+        "Herausforderungen der Venusmission",
+        "Herausforderungen der Raumfahrt"
+      ],
+      "episodes": [
+        11,
+        22,
+        43,
+        47,
+        53,
+        72,
+        110
+      ]
+    },
+    {
+      "id": "weltraumteleskope",
+      "name": "Weltraumteleskope",
+      "description": "7 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 6,
+      "relevanceSec": 2100,
+      "sampleTopics": [
+        "Weltraumteleskop",
+        "Teleskop-Technologie",
+        "Hubble-Weltraumteleskop",
+        "James-Webb-Teleskop",
+        "James-Webb-Weltraumteleskop"
+      ],
+      "episodes": [
+        55,
+        68,
+        81,
+        93,
+        99,
+        101
+      ]
+    },
+    {
+      "id": "gravitationswellenastronomie",
+      "name": "Gravitationswellenastronomie",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1800,
+      "sampleTopics": [
+        "Entdeckung der Gravitationswellen",
+        "Zukunft der Gravitationswellenastronomie",
+        "Gravitationswellen",
+        "Detektion von Gravitationswellen"
+      ],
+      "episodes": [
+        61,
+        73,
+        74,
+        88
+      ]
+    },
+    {
+      "id": "schwerelosigkeitsforschung",
+      "name": "Schwerelosigkeitsforschung",
+      "description": "5 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 4,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "Experimentieren in Schwerelosigkeit",
+        "Materialforschung in Schwerelosigkeit",
+        "Durchführung von Experimenten in der Schwerelosigkeit",
+        "Wissenschaftliche Arbeit in der ISS",
+        "Forschung auf der Internationalen Raumstation"
+      ],
+      "episodes": [
+        26,
+        45,
+        56,
+        72
+      ]
+    },
+    {
+      "id": "cern-und-teilchenphysik",
+      "name": "CERN und Teilchenphysik",
+      "description": "5 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 4,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "Geschichte des CERN",
+        "Teilchenbeschleunigung",
+        "Forschung am CERN",
+        "Untersuchung von Teilchen am LHC",
+        "Teilchenkollisionen am LHC"
+      ],
+      "episodes": [
+        111,
+        112,
+        114,
+        115
+      ]
+    },
+    {
+      "id": "raumfahrt-zukunft",
+      "name": "Raumfahrt-Zukunft",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "Zukunft der Raumfahrt",
+        "Bemanntes Marsprojekt",
+        "Missionen zum Mars",
+        "Zukunft der bemannten Raumfahrt",
+        "Zukunft der ISS"
+      ],
+      "episodes": [
+        7,
+        27,
+        49,
+        72,
+        80
+      ]
+    },
+    {
+      "id": "wissenschaftsforschung",
+      "name": "Wissenschaftsforschung",
+      "description": "4 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 5,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "Wissenschaftliche Untersuchungen",
+        "Astronomische Forschung",
+        "Wissenschaftliche Erkenntnisse",
+        "Forschung"
+      ],
+      "episodes": [
+        58,
+        76,
+        78,
+        93,
+        106
+      ]
+    },
+    {
+      "id": "weltraumschrott",
+      "name": "Weltraumschrott",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "Weltraumschrott",
+        "Satellitenverkehr und Weltraumschrott",
+        "Entsorgung von Weltraumschrott",
+        "Weltraumschrott-Bekämpfung",
+        "Weltraumschrottproblematik"
+      ],
+      "episodes": [
+        7,
+        34,
+        72,
+        92,
+        118
+      ]
+    },
+    {
+      "id": "satellitentechnologie",
+      "name": "Satellitentechnologie",
+      "description": "4 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 5,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "Technik des Satelliten",
+        "Sentinel-Satelliten",
+        "Satelliten und deren Auswirkungen",
+        "Moderne Satellitentechnologie"
+      ],
+      "episodes": [
+        29,
+        42,
+        69,
+        87,
+        118
+      ]
+    },
+    {
+      "id": "exoplanetenforschung",
+      "name": "Exoplanetenforschung",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "Erforschung von extrasolaren Planeten",
+        "Exoplaneten-Erforschung",
+        "Suche nach Exoplaneten",
+        "Exoplanetenforschung",
+        "Exoplaneten-Beobachtung"
+      ],
+      "episodes": [
+        60,
+        81,
+        96,
+        99,
+        101
+      ]
+    },
+    {
+      "id": "kosmische-strahlung",
+      "name": "Kosmische Strahlung",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Einfluss der kosmischen Strahlung",
+        "kosmische Strahlung",
+        "Kosmische Hintergrundstrahlung",
+        "Kosmische Teilchenstrahlung"
+      ],
+      "episodes": [
+        21,
+        38,
+        55,
+        104
+      ]
+    },
+    {
+      "id": "nasa-esa-kooperation",
+      "name": "NASA-ESA Kooperation",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Zusammenarbeit mit Raumfahrtagenturen",
+        "Zusammenarbeit von NASA und ESA",
+        "Zusammenarbeit NASA und ESA",
+        "Rolle der NASA in der Raumfahrt"
+      ],
+      "episodes": [
+        45,
+        82,
+        107,
+        108
+      ]
+    },
+    {
+      "id": "röntgenastronomie",
+      "name": "Röntgenastronomie",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Röntgenastronomie",
+        "Röntgenquellen im All",
+        "Forschung im Frequenzbereich der Röntgen-Strahlung"
+      ],
+      "episodes": [
+        23,
+        51
+      ]
+    },
+    {
+      "id": "schwarze-löcher",
+      "name": "Schwarze Löcher",
+      "description": "4 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 2,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Beobachtung von Schwarzen Löchern",
+        "Schwarze Löcher",
+        "Verschmelzung von Schwarzen Löchern",
+        "Theorien zur Entstehung von Schwarzen Löchern"
+      ],
+      "episodes": [
+        61,
+        74
+      ]
+    },
+    {
+      "id": "kometenmissionen",
+      "name": "Kometenmissionen",
+      "description": "4 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 2,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Missionen zu Kometen",
+        "Komet Tschurjumow-Gerasimenko",
+        "Lander auf Kometen",
+        "Landung auf einem Kometen"
+      ],
+      "episodes": [
+        20,
+        58
+      ]
+    },
+    {
+      "id": "cms-detektor",
+      "name": "CMS-Detektor",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Aufbau des CMS-Detektors",
+        "Funktion des CMS-Detektors",
+        "Aufgabe des CMS-Detektors"
+      ],
+      "episodes": [
+        114
+      ]
+    },
+    {
+      "id": "planetare-missionen",
+      "name": "Planetare Missionen",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "BepiColombo",
+        "ESA-Mission zur Venus",
+        "Gaia-Mission"
+      ],
+      "episodes": [
+        44,
+        46,
+        57
+      ]
+    },
+    {
+      "id": "marsforschung",
+      "name": "Marsforschung",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Wasser auf dem Mars",
+        "Geologie des Mars",
+        "Geochemie des Mars"
+      ],
+      "episodes": [
+        49,
+        82
+      ]
+    },
+    {
+      "id": "monde-des-gasriesen",
+      "name": "Monde des Gasriesen",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Monde des Saturns",
+        "Eismonde des Jupiters",
+        "Jupitermonde"
+      ],
+      "episodes": [
+        32,
+        95,
+        123
+      ]
+    },
+    {
+      "id": "ariane-raketen",
+      "name": "Ariane-Raketen",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Ariane-Programm",
+        "Ariane 6",
+        "Ariane 5"
+      ],
+      "episodes": [
+        98,
+        119
+      ]
+    },
+    {
+      "id": "raummissionen",
+      "name": "Raummissionen",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Raummissionen",
+        "Raumfahrtmissionen",
+        "Deep Space Missionen"
+      ],
+      "episodes": [
+        44,
+        81,
+        96
+      ]
+    },
+    {
+      "id": "venus-atmosphäre",
+      "name": "Venus-Atmosphäre",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Extreme Atmosphäre der Venus",
+        "Klimaforschung durch Venus-Studien",
+        "Atmosphäre der Venus"
+      ],
+      "episodes": [
+        46,
+        47
+      ]
+    },
+    {
+      "id": "envisat-erdbeobachtung",
+      "name": "Envisat-Erdbeobachtung",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Einfluss von Envisat auf die Erdbeobachtung",
+        "Umweltforschung durch Envisat",
+        "Vermessung der Erde mit Envisat"
+      ],
+      "episodes": [
+        41
+      ]
+    },
+    {
+      "id": "astrochemie",
+      "name": "Astrochemie",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Kosmische Chemie",
+        "Chemische Prozesse im Kosmos",
+        "Astrochemie"
+      ],
+      "episodes": [
+        79
+      ]
+    },
+    {
+      "id": "softwareentwicklung",
+      "name": "Softwareentwicklung",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Softwareentwicklung",
+        "Forschung in der Softwaretechnik",
+        "Techniken in der Softwareentwicklung"
+      ],
+      "episodes": [
+        15
+      ]
+    },
+    {
+      "id": "raumfahrtinnovation",
+      "name": "Raumfahrtinnovation",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Neue Konzepte in der Raumfahrt",
+        "Forschung neuer Raumfahrtsysteme",
+        "Entwicklung neuer Technologien für die Raumfahrt"
+      ],
+      "episodes": [
+        22,
+        59,
+        109
+      ]
+    },
+    {
+      "id": "erneuerbare-energien",
+      "name": "Erneuerbare Energien",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Photovoltaik und Solarthermie",
+        "Umbau der Energieversorgung",
+        "Kombination erneuerbarer Energiequellen"
+      ],
+      "episodes": [
+        33
+      ]
+    },
+    {
+      "id": "humanoide-robotik",
+      "name": "Humanoide Robotik",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Anwendungsgebiete humanoider Roboter",
+        "Entwicklungsstand der Robotik",
+        "Forschungsfelder der Robotik"
+      ],
+      "episodes": [
+        50
+      ]
+    },
+    {
+      "id": "rosetta-mission",
+      "name": "Rosetta-Mission",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Raumsonde Rosetta",
+        "Rosetta-Raumsonde",
+        "Rosetta-Mission"
+      ],
+      "episodes": [
+        20,
+        36,
+        58
+      ]
+    },
+    {
+      "id": "raketentechnik-geschichte",
+      "name": "Raketentechnik Geschichte",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Geschichte der Raketenantriebe",
+        "Entwicklung der Raketentechnik"
+      ],
+      "episodes": [
+        3,
+        98
+      ]
+    },
+    {
+      "id": "planetarische-entstehung",
+      "name": "Planetarische Entstehung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Entstehung von Planeten",
+        "Entstehung von Sternensystemen"
+      ],
+      "episodes": [
+        5,
+        79
+      ]
+    },
+    {
+      "id": "theoretische-physik",
+      "name": "Theoretische Physik",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Theoretische Physik",
+        "Standardmodell der Physik"
+      ],
+      "episodes": [
+        105,
+        116
+      ]
+    },
+    {
+      "id": "raumfahrtwirtschaft",
+      "name": "Raumfahrtwirtschaft",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Technologietransfer zwischen Raumfahrt und Wirtschaft",
+        "Privatisierung im Raumfahrtbetrieb"
+      ],
+      "episodes": [
+        35,
+        108
+      ]
+    },
+    {
+      "id": "weltraumforschung",
+      "name": "Weltraumforschung",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Beobachtungen des Weltalls",
+        "Weltraumbeobachtungsmissionen"
+      ],
+      "episodes": [
+        16,
+        94
+      ]
+    },
+    {
+      "id": "sonnenphysik",
+      "name": "Sonnenphysik",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 600,
+      "sampleTopics": [
+        "Sonnenaktivität",
+        "Magnetosphäre der Sonne"
+      ],
+      "episodes": [
+        34,
+        85
+      ]
+    }
+  ]
+}
