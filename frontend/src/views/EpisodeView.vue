@@ -491,7 +491,7 @@ const formatTime = (sec: number): string => {
           v-for="episode in searchResults"
           :key="episode.episodeNumber"
           @click="selectEpisode(episode)"
-          class="w-full text-left p-4 md:p-6 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
+          class="w-full text-left p-4 md:p-6 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors cursor-pointer"
         >
           <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
             <img
