@@ -226,6 +226,7 @@ async fn main() -> Result<()> {
     let app = Router::new()
         .route("/api/chat", post(chat))
         .route("/api/episodes/search", post(episodes_search))
+        .route("/api/episodes/latest", post(episodes_latest))
         .route("/api/speakers", axum::routing::get(speakers_list))
         .route("/api/health", axum::routing::get(health))
         .layer(cors)
@@ -629,12 +630,29 @@ struct EpisodesSearchRequest {
     podcast_id: Option<String>,
     #[serde(default)]
     top_k: Option<usize>,
+    #[serde(default)]
+    offset: Option<usize>,
+    #[serde(default)]
+    limit: Option<usize>,
+}
+
+#[derive(Debug, Deserialize)]
+#[serde(rename_all = "camelCase")]
+struct EpisodesLatestRequest {
+    #[serde(default)]
+    podcast_id: Option<String>,
+    #[serde(default)]
+    limit: Option<usize>,
+    #[serde(default)]
+    offset: Option<usize>,
 }
 
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
 struct EpisodesSearchResponse {
     episodes: Vec<EpisodeSearchResult>,
+    has_more: bool,
+    total: Option<usize>,
 }
 
 #[derive(Debug, Serialize)]
@@ -685,7 +703,8 @@ async fn episodes_search_impl(st: &AppState, req: EpisodesSearchRequest) -> Resu
     }
 
     let podcast_id = req.podcast_id.as_deref().unwrap_or("freakshow");
-    let top_k = req.top_k.unwrap_or(10).clamp(1, 20);
+    let page_size = req.limit.unwrap_or(req.top_k.unwrap_or(10)).clamp(1, 50);
+    let offset = req.offset.unwrap_or(0);
     
     // Load RAG database for this podcast
     // Try podcast-specific path first, then fallback to root db/rag-embeddings.json
@@ -733,7 +752,9 @@ async fn episodes_search_impl(st: &AppState, req: EpisodesSearchRequest) -> Resu
     let mut episode_scores: std::collections::HashMap<u32, f32> = std::collections::HashMap::new();
     let mut episode_topics: std::collections::HashMap<u32, std::collections::HashSet<String>> = std::collections::HashMap::new();
     
-    for (idx, score) in scored.iter().take(top_k * 5) {
+    // Take more items than page_size to ensure we have enough episodes after grouping
+    // (since multiple items can belong to the same episode)
+    for (idx, score) in scored.iter().take((offset + page_size) * 5) {
         let item = &rag.items[*idx];
         let ep_num = item.episode_number;
         
@@ -752,11 +773,20 @@ async fn episodes_search_impl(st: &AppState, req: EpisodesSearchRequest) -> Resu
     // Convert to vector and sort by score
     let mut episode_results: Vec<(u32, f32)> = episode_scores.into_iter().collect();
     episode_results.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap_or(Ordering::Equal));
-    episode_results.truncate(top_k);
+    
+    let total = episode_results.len();
+    let has_more = (offset + page_size) < total;
+    
+    // Apply pagination
+    let paginated_results: Vec<(u32, f32)> = episode_results
+        .into_iter()
+        .skip(offset)
+        .take(page_size)
+        .collect();
     
     // Load episode metadata
     let mut results = Vec::new();
-    for (ep_num, score) in episode_results {
+    for (ep_num, score) in paginated_results {
         let ep_file = episodes_dir.join(format!("{}.json", ep_num));
         let mut title = format!("Episode {}", ep_num);
         let mut date = None;
@@ -801,7 +831,147 @@ async fn episodes_search_impl(st: &AppState, req: EpisodesSearchRequest) -> Resu
         });
     }
     
-    Ok(EpisodesSearchResponse { episodes: results })
+    Ok(EpisodesSearchResponse { 
+        episodes: results,
+        has_more,
+        total: Some(total),
+    })
+}
+
+async fn episodes_latest(
+    State(st): State<AppState>,
+    Json(req): Json<EpisodesLatestRequest>,
+) -> impl IntoResponse {
+    match episodes_latest_impl(&st, req).await {
+        Ok(resp) => (StatusCode::OK, Json(resp)).into_response(),
+        Err(e) => {
+            error!("{:?}", e);
+            let msg = format!("{}", e);
+            (
+                StatusCode::BAD_REQUEST,
+                Json(serde_json::json!({ "error": msg })),
+            )
+                .into_response()
+        }
+    }
+}
+
+async fn episodes_latest_impl(st: &AppState, req: EpisodesLatestRequest) -> Result<EpisodesSearchResponse> {
+    let podcast_id = req.podcast_id.as_deref().unwrap_or("freakshow");
+    let page_size = req.limit.unwrap_or(10).clamp(1, 50);
+    let offset = req.offset.unwrap_or(0);
+    
+    let episodes_dir = PathBuf::from(format!("podcasts/{}/episodes", podcast_id));
+    
+    // Scan episodes directory to find all episode JSON files
+    let mut episode_numbers = Vec::new();
+    if let Ok(entries) = std::fs::read_dir(&episodes_dir) {
+        for entry in entries {
+            if let Ok(entry) = entry {
+                let path = entry.path();
+                if path.is_file() {
+                    if let Some(file_name) = path.file_name().and_then(|n| n.to_str()) {
+                        // Match files like "123.json" (episode number only)
+                        if let Some(ep_num_str) = file_name.strip_suffix(".json") {
+                            if ep_num_str.chars().all(|c| c.is_ascii_digit()) {
+                                if let Ok(ep_num) = ep_num_str.parse::<u32>() {
+                                    episode_numbers.push(ep_num);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // Sort by episode number descending (latest first)
+    episode_numbers.sort_by(|a, b| b.cmp(a));
+    
+    let total = episode_numbers.len();
+    let has_more = (offset + page_size) < total;
+    
+    // Apply pagination
+    let paginated_episodes: Vec<u32> = episode_numbers
+        .into_iter()
+        .skip(offset)
+        .take(page_size)
+        .collect();
+    
+    // Load RAG database once to get topics for all episodes
+    let mut episode_topics_map: std::collections::HashMap<u32, std::collections::HashSet<String>> = std::collections::HashMap::new();
+    let rag_db_path = PathBuf::from(format!("db/{}/rag-embeddings.json", podcast_id));
+    let rag_db_path = if rag_db_path.exists() {
+        rag_db_path
+    } else {
+        PathBuf::from("db/rag-embeddings.json")
+    };
+    if rag_db_path.exists() {
+        if let Ok(rag) = RagIndex::load(&rag_db_path) {
+            for item in &rag.items {
+                if let Some(topic) = &item.topic {
+                    episode_topics_map
+                        .entry(item.episode_number)
+                        .or_insert_with(std::collections::HashSet::new)
+                        .insert(topic.clone());
+                }
+            }
+        }
+    }
+    
+    // Load episode metadata
+    let mut results = Vec::new();
+    for ep_num in paginated_episodes {
+        let ep_file = episodes_dir.join(format!("{}.json", ep_num));
+        let mut title = format!("Episode {}", ep_num);
+        let mut date = None;
+        let mut duration_sec = None;
+        let mut description = None;
+        let mut speakers = Vec::new();
+        
+        if ep_file.exists() {
+            if let Ok(bytes) = std::fs::read(&ep_file) {
+                if let Ok(meta) = serde_json::from_slice::<EpisodeMetadata>(&bytes) {
+                    if let Some(t) = meta.title {
+                        title = t;
+                    }
+                    date = meta.date;
+                    if let Some(dur) = meta.duration {
+                        if dur.len() >= 3 {
+                            duration_sec = Some(dur[0] * 3600 + dur[1] * 60 + dur[2]);
+                        }
+                    }
+                    description = meta.description;
+                    if let Some(s) = meta.speakers {
+                        speakers = s;
+                    }
+                }
+            }
+        }
+        
+        // Get topics from pre-loaded map
+        let topics: Vec<String> = episode_topics_map
+            .get(&ep_num)
+            .map(|s| s.iter().cloned().collect())
+            .unwrap_or_default();
+        
+        results.push(EpisodeSearchResult {
+            episode_number: ep_num,
+            title,
+            date,
+            duration_sec,
+            speakers,
+            description,
+            score: 1.0, // No relevance score for latest episodes
+            topics,
+        });
+    }
+    
+    Ok(EpisodesSearchResponse { 
+        episodes: results,
+        has_more,
+        total: Some(total),
+    })
 }
 
 // ------------------------ Retrieval ------------------------

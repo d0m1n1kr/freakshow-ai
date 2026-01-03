@@ -118,7 +118,56 @@ async function scrapeImages() {
 
     const episodesData = [];
 
-    // Layout C (article-based archive): <article class="show">
+    // Helper function to extract best image URL from img element
+    const getBestImageUrl = (imgElement) => {
+      if (!imgElement) return null;
+      
+      const imageUrl = imgElement.src || null;
+      
+      // Try to get the highest resolution from srcset if available
+      let bestImageUrl = imageUrl;
+      if (imgElement.srcset) {
+        // Parse srcset: "url1 1x, url2 2x, url3 3x"
+        const srcset = imgElement.srcset;
+        const matches = srcset.matchAll(/(\S+)\s+(\d+)x/g);
+        let maxRes = 0;
+        for (const match of matches) {
+          const res = parseInt(match[2]);
+          if (res > maxRes) {
+            maxRes = res;
+            bestImageUrl = match[1];
+          }
+        }
+      }
+      
+      return bestImageUrl;
+    };
+
+    // Layout A (table-based archive): <tr class="archive_episode_row">
+    const rowElements = document.querySelectorAll('tr.archive_episode_row');
+    rowElements.forEach(row => {
+      try {
+        const titleLink = row.querySelector('td.episode_description div.episode_title a');
+        const title = titleLink ? normalizeText(titleLink.textContent) : '';
+        const url = titleLink ? titleLink.href : '';
+
+        // Extract cover image from episode_icon td
+        const coverImage = row.querySelector('td.episode_icon img');
+        const bestImageUrl = getBestImageUrl(coverImage);
+
+        if (title && url && bestImageUrl) {
+          episodesData.push({
+            title,
+            url,
+            imageUrl: bestImageUrl
+          });
+        }
+      } catch (error) {
+        console.error('Error processing episode row:', error);
+      }
+    });
+
+    // Layout B (article-based archive): <article class="show">
     const articleElements = document.querySelectorAll('article.show');
     articleElements.forEach(article => {
       try {
@@ -128,23 +177,7 @@ async function scrapeImages() {
 
         // Extract cover image
         const coverImage = article.querySelector('img.show__cover__image');
-        const imageUrl = coverImage ? coverImage.src : null;
-        
-        // Try to get the highest resolution from srcset if available
-        let bestImageUrl = imageUrl;
-        if (coverImage && coverImage.srcset) {
-          // Parse srcset: "url1 1x, url2 2x, url3 3x"
-          const srcset = coverImage.srcset;
-          const matches = srcset.matchAll(/(\S+)\s+(\d+)x/g);
-          let maxRes = 0;
-          for (const match of matches) {
-            const res = parseInt(match[2]);
-            if (res > maxRes) {
-              maxRes = res;
-              bestImageUrl = match[1];
-            }
-          }
-        }
+        const bestImageUrl = getBestImageUrl(coverImage);
 
         if (title && url && bestImageUrl) {
           episodesData.push({

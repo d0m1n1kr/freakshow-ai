@@ -3,8 +3,8 @@ import { ref, onMounted, computed, watch } from 'vue';
 import * as d3 from 'd3';
 import type { TopicRiverData, ProcessedTopicData } from '../types';
 import { useSettingsStore } from '../stores/settings';
-import MiniAudioPlayer from './MiniAudioPlayer.vue';
-import { getPodcastFileUrl, getEpisodeUrl, getSpeakersBaseUrl } from '@/composables/usePodcast';
+import { useAudioPlayerStore } from '../stores/audioPlayer';
+import { getPodcastFileUrl, getEpisodeUrl, getSpeakersBaseUrl, getEpisodeImageUrl } from '@/composables/usePodcast';
 
 const props = defineProps<{
   data: TopicRiverData;
@@ -14,6 +14,7 @@ const props = defineProps<{
 const themeColor = props.color || 'blue';
 
 const settingsStore = useSettingsStore();
+const audioPlayerStore = useAudioPlayerStore();
 
 const svgRef = ref<SVGSVGElement | null>(null);
 const containerRef = ref<HTMLDivElement | null>(null);
@@ -589,11 +590,6 @@ const mp3IndexLoaded = ref(false);
 const mp3IndexError = ref<string | null>(null);
 const mp3UrlByEpisode = ref<Map<number, string>>(new Map());
 const mp3MetaByEpisode = ref<Map<number, { url: string | null; durationSec: number | null }>>(new Map());
-const currentMp3Url = ref<string | null>(null);
-const playerInfo = ref<{ episodeNumber: number; positionSec: number; label: string } | null>(null);
-const playerError = ref<string | null>(null);
-const playerToken = ref(0);
-const currentTranscriptUrl = ref<string | null>(null);
 
 // When switching podcasts, clear the cached MP3 index so we don't reuse URLs
 // from a previously selected podcast (e.g. LNP playing Freakshow).
@@ -604,12 +600,6 @@ watch(
     mp3IndexError.value = null;
     mp3UrlByEpisode.value = new Map();
     mp3MetaByEpisode.value = new Map();
-    // stop any currently playing audio tied to the previous podcast
-    currentMp3Url.value = null;
-    playerInfo.value = null;
-    playerError.value = null;
-    currentTranscriptUrl.value = null;
-    playerToken.value++;
   }
 );
 
@@ -941,31 +931,28 @@ const ensureMp3Index = async () => {
 };
 
 const playEpisodeAt = async (episodeNumber: number, seconds: number, label: string) => {
-  playerError.value = null;
   await ensureMp3Index();
 
   const mp3 = mp3UrlByEpisode.value.get(episodeNumber) || null;
   if (!mp3) {
-    playerError.value = mp3IndexError.value
+    const errorMsg = mp3IndexError.value
       ? `MP3 Index nicht verfügbar (${mp3IndexError.value})`
       : 'Keine MP3-URL für diese Episode gefunden (episodes.json)';
+    audioPlayerStore.setError(errorMsg);
     // Fallback: open episode page (if we have it)
     openEpisodeAt(episodeNumber, seconds);
     return;
   }
 
-  currentMp3Url.value = mp3;
-  playerInfo.value = { episodeNumber, positionSec: Math.max(0, Math.floor(seconds)), label };
-  // Live transcript data (generated via `yarn ts-live`)
-  currentTranscriptUrl.value = withBase(getPodcastFileUrl(`episodes/${episodeNumber}-ts-live.json`));
-  playerToken.value++;
-};
-
-const closePlayer = () => {
-  currentMp3Url.value = null;
-  playerInfo.value = null;
-  playerError.value = null;
-  currentTranscriptUrl.value = null;
+  audioPlayerStore.play({
+    src: mp3,
+    title: `Episode ${episodeNumber}`,
+    subtitle: label,
+    seekToSec: Math.max(0, Math.floor(seconds)),
+    autoplay: true,
+    transcriptSrc: withBase(getPodcastFileUrl(`episodes/${episodeNumber}-ts-live.json`)),
+    speakersMetaUrl: getSpeakersBaseUrl(),
+  });
 };
 </script>
 
@@ -1005,24 +992,6 @@ const closePlayer = () => {
         </label>
       </div>
       
-      <!-- Inline MP3 player (appears after clicking a position) -->
-      <div v-if="currentMp3Url" class="mt-4 sm:mt-6">
-        <MiniAudioPlayer
-          :src="currentMp3Url"
-          :title="`Episode ${playerInfo?.episodeNumber ?? ''}`"
-          :subtitle="playerInfo?.label || ''"
-          :seek-to-sec="playerInfo?.positionSec ?? 0"
-          :autoplay="true"
-          :play-token="playerToken"
-          :transcript-src="currentTranscriptUrl || undefined"
-          :speakers-meta-url="getSpeakersBaseUrl()"
-          @close="closePlayer"
-          @error="(msg) => { playerError = msg }"
-        />
-        <div v-if="playerError" class="mt-2 text-xs text-red-700 dark:text-red-300">
-          {{ playerError }}
-        </div>
-      </div>
       
       <div v-if="selectedTopicInfo" :class="['mt-4 p-4 border rounded-lg', themeColor === 'blue' ? 'bg-blue-50 dark:bg-blue-900/20 border-blue-200 dark:border-blue-700' : 'bg-purple-50 dark:bg-purple-900/20 border-purple-200 dark:border-purple-700']">
         <div class="relative">
@@ -1069,6 +1038,7 @@ const closePlayer = () => {
                   <thead :class="['sticky top-0', themeColor === 'blue' ? 'bg-blue-100 dark:bg-blue-900' : 'bg-purple-100 dark:bg-purple-900']">
                     <tr>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">#</th>
+                      <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Bild</th>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Datum</th>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Titel</th>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Position(en)</th>
@@ -1085,6 +1055,14 @@ const closePlayer = () => {
                     >
                       <template v-if="episodeDetails.has(episode.number) && episodeDetails.get(episode.number)">
                         <td :class="['px-3 py-2 font-mono text-xs whitespace-nowrap', themeColor === 'blue' ? 'text-blue-700 dark:text-blue-300' : 'text-purple-700 dark:text-purple-300']">{{ episode.number }}</td>
+                        <td class="px-3 py-2">
+                          <img
+                            :src="getEpisodeImageUrl(episode.number)"
+                            :alt="episode.title"
+                            @error="($event.target as HTMLImageElement).style.display = 'none'"
+                            class="w-12 h-12 rounded object-cover border border-gray-200 dark:border-gray-700"
+                          />
+                        </td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap text-xs">
                           {{ new Date(episode.date).toLocaleDateString('de-DE') }}
                         </td>
@@ -1141,6 +1119,14 @@ const closePlayer = () => {
                       </template>
                       <template v-else-if="episodeDetails.has(episode.number) && episodeDetails.get(episode.number) === null">
                         <td :class="['px-3 py-2 font-mono text-xs whitespace-nowrap', themeColor === 'blue' ? 'text-blue-700 dark:text-blue-300' : 'text-purple-700 dark:text-purple-300']">{{ episode.number }}</td>
+                        <td class="px-3 py-2">
+                          <img
+                            :src="getEpisodeImageUrl(episode.number)"
+                            :alt="episode.title"
+                            @error="($event.target as HTMLImageElement).style.display = 'none'"
+                            class="w-12 h-12 rounded object-cover border border-gray-200 dark:border-gray-700"
+                          />
+                        </td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap text-xs">
                           {{ new Date(episode.date).toLocaleDateString('de-DE') }}
                         </td>
@@ -1168,6 +1154,14 @@ const closePlayer = () => {
                       </template>
                       <template v-else>
                         <td :class="['px-3 py-2 font-mono text-xs whitespace-nowrap', themeColor === 'blue' ? 'text-blue-700 dark:text-blue-300' : 'text-purple-700 dark:text-purple-300']">{{ episode.number }}</td>
+                        <td class="px-3 py-2">
+                          <img
+                            :src="getEpisodeImageUrl(episode.number)"
+                            :alt="episode.title"
+                            @error="($event.target as HTMLImageElement).style.display = 'none'"
+                            class="w-12 h-12 rounded object-cover border border-gray-200 dark:border-gray-700"
+                          />
+                        </td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap text-xs">
                           {{ new Date(episode.date).toLocaleDateString('de-DE') }}
                         </td>

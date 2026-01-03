@@ -3,15 +3,16 @@ import { ref, computed, watch, reactive } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { useSettingsStore } from '@/stores/settings';
-import { getPodcastFileUrl } from '@/composables/usePodcast';
+import { useAudioPlayerStore } from '@/stores/audioPlayer';
+import { getPodcastFileUrl, getSpeakersBaseUrl, getEpisodeImageUrl } from '@/composables/usePodcast';
 import SpeakingTimeFlowChart from '@/components/SpeakingTimeFlowChart.vue';
-import MiniAudioPlayer from '@/components/MiniAudioPlayer.vue';
 import { useInlineEpisodePlayer } from '@/composables/useInlineEpisodePlayer';
 
 const route = useRoute();
 const router = useRouter();
 const { t } = useI18n();
 const settings = useSettingsStore();
+const audioPlayerStore = useAudioPlayerStore();
 
 type EpisodeSearchResult = {
   episodeNumber: number;
@@ -82,9 +83,13 @@ type SpeakerStats = {
 
 const searchQuery = ref('');
 const loading = ref(false);
+const loadingMore = ref(false);
 const error = ref<string | null>(null);
 const searchResults = ref<EpisodeSearchResult[]>([]);
 const selectedEpisode = ref<EpisodeData | null>(null);
+const hasMore = ref(false);
+const currentOffset = ref(0);
+const currentQuery = ref('');
 const speakerStats = ref<SpeakerStats | null>(null);
 const episodeTopics = ref<EpisodeTopics | null>(null);
 const activeStat = ref<'flow' | 'boxplot' | 'monologue'>('flow');
@@ -109,14 +114,95 @@ const backendBase = computed(() => {
   return (s || 'http://127.0.0.1:7878').replace(/\/+$/, '');
 });
 
-const searchEpisodes = async () => {
+const loadLatestEpisodes = async (append = false) => {
+  if (append) {
+    loadingMore.value = true;
+  } else {
+    loading.value = true;
+    currentOffset.value = 0;
+  }
+  error.value = null;
+
+  try {
+    const response = await fetch(`${backendBase.value}/api/episodes/latest`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        podcastId: settings.selectedPodcast || 'freakshow',
+        limit: 10,
+        offset: append ? currentOffset.value : 0,
+      }),
+    });
+
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`Failed to load latest episodes: ${response.status} ${text}`);
+    }
+
+    const data = await response.json();
+    if (append) {
+      searchResults.value.push(...(data.episodes || []));
+    } else {
+      searchResults.value = data.episodes || [];
+    }
+    hasMore.value = data.hasMore || false;
+    if (append) {
+      currentOffset.value += data.episodes?.length || 0;
+    } else {
+      currentOffset.value = data.episodes?.length || 0;
+    }
+  } catch (e) {
+    error.value = e instanceof Error ? e.message : String(e);
+    if (!append) {
+      searchResults.value = [];
+    }
+  } finally {
+    loading.value = false;
+    loadingMore.value = false;
+  }
+};
+
+const searchEpisodes = async (append = false) => {
+  // Prevent multiple simultaneous searches
+  if (loading.value && !append) {
+    return;
+  }
+  
   const query = searchQuery.value.trim();
-  if (!query) {
+  
+  // Deselect episode when starting a new search
+  if (!append) {
+    // Clear results immediately when starting a new search
     searchResults.value = [];
+    selectedEpisode.value = null;
+    speakerStats.value = null;
+    episodeTopics.value = null;
+    currentQuery.value = query;
+    hasMore.value = false;
+    currentOffset.value = 0;
+  }
+
+  if (!query) {
+    // If search is empty and no episode is selected, show latest episodes
+    if (!selectedEpisode.value) {
+      await loadLatestEpisodes(append);
+    } else {
+      if (!append) {
+        searchResults.value = [];
+      }
+    }
     return;
   }
 
-  loading.value = true;
+  if (append) {
+    loadingMore.value = true;
+  } else {
+    loading.value = true;
+    currentOffset.value = 0;
+    hasMore.value = false;
+  }
   error.value = null;
 
   try {
@@ -128,7 +214,8 @@ const searchEpisodes = async () => {
       body: JSON.stringify({
         query,
         podcastId: settings.selectedPodcast || 'freakshow',
-        topK: 10,
+        limit: 10,
+        offset: append ? currentOffset.value : 0,
       }),
     });
 
@@ -138,12 +225,50 @@ const searchEpisodes = async () => {
     }
 
     const data = await response.json();
-    searchResults.value = data.episodes || [];
+    if (append) {
+      searchResults.value.push(...(data.episodes || []));
+    } else {
+      // Always replace, never append when append is false
+      searchResults.value = data.episodes || [];
+    }
+    hasMore.value = data.hasMore || false;
+    if (append) {
+      currentOffset.value += data.episodes?.length || 0;
+    } else {
+      currentOffset.value = data.episodes?.length || 0;
+    }
   } catch (e) {
     error.value = e instanceof Error ? e.message : String(e);
-    searchResults.value = [];
+    if (!append) {
+      searchResults.value = [];
+    }
   } finally {
     loading.value = false;
+    loadingMore.value = false;
+  }
+};
+
+const loadMore = () => {
+  if (!loadingMore.value && !loading.value && hasMore.value) {
+    if (currentQuery.value) {
+      searchEpisodes(true);
+    } else {
+      loadLatestEpisodes(true);
+    }
+  }
+};
+
+const handleScroll = (event: Event) => {
+  const target = event.target as HTMLElement;
+  if (!target) return;
+  
+  const scrollTop = target.scrollTop;
+  const scrollHeight = target.scrollHeight;
+  const clientHeight = target.clientHeight;
+  
+  // Load more when user scrolls to within 200px of bottom
+  if (scrollHeight - scrollTop - clientHeight < 200) {
+    loadMore();
   }
 };
 
@@ -238,7 +363,10 @@ watch(
   (q) => {
     if (typeof q === 'string' && q.trim()) {
       searchQuery.value = q.trim();
-      searchEpisodes();
+      searchEpisodes(false); // Explicitly pass false to ensure results are cleared
+    } else if (!selectedEpisode.value) {
+      // If no search query and no episode selected, load latest episodes
+      loadLatestEpisodes(false); // Explicitly pass false
     }
   },
   { immediate: true }
@@ -258,7 +386,10 @@ watch(
       selectedEpisode.value = null;
       speakerStats.value = null;
       episodeTopics.value = null;
-      inlinePlayer.closePlayer();
+      // If no search query, load latest episodes
+      if (!searchQuery.value.trim()) {
+        await loadLatestEpisodes();
+      }
     }
   },
   { immediate: true }
@@ -269,7 +400,31 @@ const handlePlayAtTime = async (timeSec: number) => {
   
   const episodeNumber = selectedEpisode.value.number;
   const label = `${formatTime(timeSec)} - ${selectedEpisode.value.title}`;
-  await inlinePlayer.playEpisodeAt(episodeNumber, timeSec, label);
+  
+  // Use global player store instead of inline player
+  await inlinePlayer.ensureMp3Index();
+  const mp3 = inlinePlayer.mp3UrlByEpisode.get(episodeNumber) || null;
+  if (!mp3) {
+    await inlinePlayer.openEpisodeAt(episodeNumber, timeSec);
+    return;
+  }
+
+  const withBase = (p: string) => {
+    const base = (import.meta as any)?.env?.BASE_URL || '/';
+    const b = String(base).endsWith('/') ? String(base) : `${String(base)}/`;
+    const rel = String(p).replace(/^\/+/, '');
+    return `${b}${rel}`;
+  };
+
+  audioPlayerStore.play({
+    src: mp3,
+    title: selectedEpisode.value.title || `Episode ${episodeNumber}`,
+    subtitle: label,
+    seekToSec: Math.max(0, Math.floor(timeSec)),
+    autoplay: true,
+    transcriptSrc: withBase(getPodcastFileUrl(`episodes/${episodeNumber}-ts-live.json`)),
+    speakersMetaUrl: getSpeakersBaseUrl(),
+  });
 };
 
 const formatTime = (sec: number): string => {
@@ -289,7 +444,7 @@ const formatTime = (sec: number): string => {
         {{ t('episodes.searchTitle') }}
       </h2>
       
-      <form @submit.prevent="searchEpisodes" class="flex flex-col sm:flex-row gap-3">
+      <form @submit.prevent="() => searchEpisodes(false)" class="flex flex-col sm:flex-row gap-3">
         <input
           v-model="searchQuery"
           type="search"
@@ -307,32 +462,43 @@ const formatTime = (sec: number): string => {
         </button>
       </form>
 
-      <div v-if="loading" class="mt-4 p-4 text-center">
-        <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-blue-500 border-t-transparent"></div>
-        <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{ t('search.loading') }}</p>
-      </div>
-
       <div v-if="error" class="mt-4 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
         <p class="text-red-800 dark:text-red-200 text-sm">{{ error }}</p>
       </div>
     </div>
 
     <!-- Search Results -->
-    <div v-if="searchResults.length > 0 && !selectedEpisode" class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
-      <div class="p-4 md:p-6 border-b border-gray-200 dark:border-gray-700">
-        <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
-          {{ t('episodes.resultsTitle', { count: searchResults.length }) }}
-        </h3>
+    <div v-if="(searchResults.length > 0 || loading) && !selectedEpisode" class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <!-- Single Loading Indicator -->
+      <div v-if="loading && searchResults.length === 0" class="p-12 text-center">
+        <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-blue-500 border-t-transparent"></div>
+        <p class="mt-4 text-sm font-medium text-gray-900 dark:text-white">{{ t('search.loading') }}</p>
       </div>
       
-      <div class="divide-y divide-gray-200 dark:divide-gray-700">
+      <template v-else>
+        <div class="p-4 md:p-6 border-b border-gray-200 dark:border-gray-700">
+          <h3 class="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+            {{ t('episodes.resultsTitle', { count: searchResults.length }) }}
+          </h3>
+        </div>
+        
+        <div 
+          class="divide-y divide-gray-200 dark:divide-gray-700 max-h-[600px] overflow-y-auto"
+          @scroll="handleScroll"
+        >
         <button
           v-for="episode in searchResults"
           :key="episode.episodeNumber"
           @click="selectEpisode(episode)"
           class="w-full text-left p-4 md:p-6 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
         >
-          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+            <img
+              :src="getEpisodeImageUrl(episode.episodeNumber)"
+              :alt="episode.title"
+              @error="($event.target as HTMLImageElement).style.display = 'none'"
+              class="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover flex-shrink-0 border border-gray-200 dark:border-gray-700"
+            />
             <div class="flex-1 min-w-0">
               <h4 class="text-base md:text-lg font-semibold text-gray-900 dark:text-white mb-1">
                 {{ episode.title }}
@@ -360,15 +526,37 @@ const formatTime = (sec: number): string => {
             </div>
           </div>
         </button>
-      </div>
+        
+        <!-- Loading More Indicator -->
+        <div v-if="loadingMore" class="p-4 text-center">
+          <div class="inline-block animate-spin rounded-full h-6 w-6 border-2 border-blue-500 border-t-transparent"></div>
+          <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Loading more episodes...</p>
+        </div>
+        
+        <!-- End of Results -->
+        <div v-if="!hasMore && searchResults.length > 0" class="p-4 text-center text-sm text-gray-500 dark:text-gray-400">
+          No more episodes to load
+        </div>
+        </div>
+      </template>
     </div>
 
     <!-- Selected Episode Details -->
     <div v-if="selectedEpisode" class="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       <div class="p-4 md:p-6 border-b border-gray-200 dark:border-gray-700">
-        <h3 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">
-          {{ selectedEpisode.title }}
-        </h3>
+        <div class="flex items-start gap-4 mb-4">
+          <img
+            :src="getEpisodeImageUrl(selectedEpisode.number)"
+            :alt="selectedEpisode.title"
+            @error="($event.target as HTMLImageElement).style.display = 'none'"
+            class="w-24 h-24 sm:w-32 sm:h-32 rounded-lg object-cover flex-shrink-0 border border-gray-200 dark:border-gray-700"
+          />
+          <div class="flex-1 min-w-0">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
+              {{ selectedEpisode.title }}
+            </h3>
+          </div>
+        </div>
         
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
           <div>
@@ -444,21 +632,6 @@ const formatTime = (sec: number): string => {
           @play-at-time="handlePlayAtTime"
         />
         
-        <!-- Audio Player -->
-        <div v-if="inlinePlayer.currentMp3Url" class="mt-4">
-          <MiniAudioPlayer
-            :src="inlinePlayer.currentMp3Url"
-            :title="selectedEpisode?.title || `Episode ${inlinePlayer.playerInfo?.episodeNumber ?? ''}`"
-            :subtitle="inlinePlayer.playerInfo?.label || ''"
-            :seek-to-sec="inlinePlayer.playerInfo?.positionSec ?? 0"
-            :autoplay="true"
-            :play-token="inlinePlayer.playerToken"
-            :transcript-src="inlinePlayer.currentTranscriptUrl || undefined"
-            :speakers-meta-url="inlinePlayer.speakersMetaUrl"
-            @close="inlinePlayer.closePlayer"
-            @error="inlinePlayer.setPlayerError"
-          />
-        </div>
       </div>
 
       <div v-else-if="statsLoading" class="p-8 text-center">

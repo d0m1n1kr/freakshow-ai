@@ -87,23 +87,6 @@
                   </div>
                 </div>
 
-                <div v-if="inlinePlayer.currentMp3Url" class="mt-3">
-                  <MiniAudioPlayer
-                    :src="inlinePlayer.currentMp3Url"
-                    :title="`Episode ${inlinePlayer.playerInfo?.episodeNumber ?? ''}`"
-                    :subtitle="inlinePlayer.playerInfo?.label || ''"
-                    :seek-to-sec="inlinePlayer.playerInfo?.positionSec ?? 0"
-                    :autoplay="true"
-                    :play-token="inlinePlayer.playerToken"
-                    :transcript-src="inlinePlayer.currentTranscriptUrl || undefined"
-                    :speakers-meta-url="inlinePlayer.speakersMetaUrl"
-                    @close="inlinePlayer.closePlayer"
-                    @error="inlinePlayer.setPlayerError"
-                  />
-                  <div v-if="inlinePlayer.playerError" class="mt-2 text-xs text-red-700 dark:text-red-300">
-                    {{ inlinePlayer.playerError }}
-                  </div>
-                </div>
 
                 <!-- Episode List -->
                 <div v-if="showEpisodeList" class="mt-4 bg-white dark:bg-gray-900 rounded-lg border border-teal-300 dark:border-teal-700">
@@ -115,6 +98,7 @@
                       <thead class="bg-teal-100 dark:bg-teal-900 sticky top-0">
                         <tr>
                           <th class="px-3 py-2 text-left text-xs font-semibold text-teal-900 dark:text-teal-100 whitespace-nowrap">#</th>
+                          <th class="px-3 py-2 text-left text-xs font-semibold text-teal-900 dark:text-teal-100 whitespace-nowrap">Bild</th>
                           <th class="px-3 py-2 text-left text-xs font-semibold text-teal-900 dark:text-teal-100 whitespace-nowrap">Datum</th>
                           <th class="px-3 py-2 text-left text-xs font-semibold text-teal-900 dark:text-teal-100">Titel</th>
                           <th class="px-3 py-2 text-left text-xs font-semibold text-teal-900 dark:text-teal-100 whitespace-nowrap">Dauer</th>
@@ -134,7 +118,7 @@
                                 <button
                                   type="button"
                                   class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
-                                  @click="inlinePlayer.playEpisodeAt(episodeNum, 0, 'Start')"
+                                  @click="playEpisodeAt(episodeNum, 0, 'Start')"
                                   title="Episode von Anfang abspielen"
                                   aria-label="Episode von Anfang abspielen"
                                 >
@@ -142,6 +126,14 @@
                                 </button>
                                 <span class="font-mono">{{ episodeNum }}</span>
                               </div>
+                            </td>
+                            <td class="px-3 py-2">
+                              <img
+                                :src="getEpisodeImageUrl(episodeNum)"
+                                :alt="episodeDetails.get(episodeNum)?.title || `Episode ${episodeNum}`"
+                                @error="($event.target as HTMLImageElement).style.display = 'none'"
+                                class="w-12 h-12 rounded object-cover border border-gray-200 dark:border-gray-700"
+                              />
                             </td>
                             <td class="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap text-xs">
                               {{ formatDate(episodeDetails.get(episodeNum)?.date) }}
@@ -182,7 +174,7 @@
                                 <button
                                   type="button"
                                   class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
-                                  @click="inlinePlayer.playEpisodeAt(episodeNum, 0, 'Start')"
+                                  @click="playEpisodeAt(episodeNum, 0, 'Start')"
                                   title="Episode von Anfang abspielen"
                                   aria-label="Episode von Anfang abspielen"
                                 >
@@ -191,7 +183,15 @@
                                 <span class="font-mono">{{ episodeNum }}</span>
                               </div>
                             </td>
-                            <td colspan="5" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs italic">
+                            <td class="px-3 py-2">
+                              <img
+                                :src="getEpisodeImageUrl(episodeNum)"
+                                :alt="`Episode ${episodeNum}`"
+                                @error="($event.target as HTMLImageElement).style.display = 'none'"
+                                class="w-12 h-12 rounded object-cover border border-gray-200 dark:border-gray-700"
+                              />
+                            </td>
+                            <td colspan="4" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs italic">
                               Details nicht verfügbar
                             </td>
                           </template>
@@ -201,7 +201,7 @@
                                 <button
                                   type="button"
                                   class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
-                                  @click="inlinePlayer.playEpisodeAt(episodeNum, 0, 'Start')"
+                                  @click="playEpisodeAt(episodeNum, 0, 'Start')"
                                   title="Episode von Anfang abspielen"
                                   aria-label="Episode von Anfang abspielen"
                                 >
@@ -210,7 +210,15 @@
                                 <span class="font-mono">{{ episodeNum }}</span>
                               </div>
                             </td>
-                            <td colspan="5" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs">
+                            <td class="px-3 py-2">
+                              <img
+                                :src="getEpisodeImageUrl(episodeNum)"
+                                :alt="`Episode ${episodeNum}`"
+                                @error="($event.target as HTMLImageElement).style.display = 'none'"
+                                class="w-12 h-12 rounded object-cover border border-gray-200 dark:border-gray-700"
+                              />
+                            </td>
+                            <td colspan="4" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs">
                               Lade...
                             </td>
                           </template>
@@ -245,12 +253,40 @@ import { ref, onMounted, computed, watch, reactive } from 'vue';
 import * as d3 from 'd3';
 import type { HeatmapData } from '../types';
 import { useSettingsStore } from '../stores/settings';
-import { getPodcastFileUrl, getSpeakerMetaUrl, getEpisodeUrl } from '@/composables/usePodcast';
-import MiniAudioPlayer from '@/components/MiniAudioPlayer.vue';
+import { useAudioPlayerStore } from '@/stores/audioPlayer';
+import { getPodcastFileUrl, getSpeakerMetaUrl, getEpisodeUrl, getSpeakersBaseUrl, getEpisodeImageUrl } from '@/composables/usePodcast';
 import { useInlineEpisodePlayer } from '@/composables/useInlineEpisodePlayer';
 
 const settingsStore = useSettingsStore();
+const audioPlayerStore = useAudioPlayerStore();
 const inlinePlayer = reactive(useInlineEpisodePlayer());
+
+// Helper function to play episode using global store
+const playEpisodeAt = async (episodeNumber: number, seconds: number, label: string) => {
+  await inlinePlayer.ensureMp3Index();
+  const mp3 = inlinePlayer.mp3UrlByEpisode.get(episodeNumber) || null;
+  if (!mp3) {
+    await inlinePlayer.openEpisodeAt(episodeNumber, seconds);
+    return;
+  }
+
+  const withBase = (p: string) => {
+    const base = (import.meta as any)?.env?.BASE_URL || '/';
+    const b = String(base).endsWith('/') ? String(base) : `${String(base)}/`;
+    const rel = String(p).replace(/^\/+/, '');
+    return `${b}${rel}`;
+  };
+
+  audioPlayerStore.play({
+    src: mp3,
+    title: `Episode ${episodeNumber}`,
+    subtitle: label,
+    seekToSec: Math.max(0, Math.floor(seconds)),
+    autoplay: true,
+    transcriptSrc: withBase(getPodcastFileUrl(`episodes/${episodeNumber}-ts-live.json`)),
+    speakersMetaUrl: getSpeakersBaseUrl(),
+  });
+};
 
 interface EpisodeDetail {
   title: string;

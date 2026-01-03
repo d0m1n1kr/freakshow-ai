@@ -3,11 +3,14 @@ import { computed, ref, watch, onMounted, onUnmounted } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n';
 import { useSettingsStore } from './stores/settings';
+import { useAudioPlayerStore } from './stores/audioPlayer';
 import LanguageSelector from './components/LanguageSelector.vue';
+import MiniAudioPlayer from './components/MiniAudioPlayer.vue';
 
 const route = useRoute();
 const router = useRouter();
 const settingsStore = useSettingsStore();
+const audioPlayerStore = useAudioPlayerStore();
 const { t } = useI18n();
 
 // Podcast dropdown state
@@ -112,7 +115,19 @@ watch(
   { immediate: true }
 );
 
-const submitSearch = async () => {
+const submitEpisodeSearch = async () => {
+  const q = searchText.value.trim();
+  if (!q) return;
+  await router.push({ 
+    name: 'episodes', 
+    query: { 
+      ...route.query,
+      q 
+    } 
+  });
+};
+
+const submitAIChat = async () => {
   const q = searchText.value.trim();
   if (!q) return;
   await router.push({ 
@@ -215,22 +230,32 @@ const submitSearch = async () => {
           <div class="flex flex-wrap items-center gap-2 sm:gap-3 w-full lg:w-auto lg:justify-end">
             <!-- Search -->
             <form
-              class="flex items-center gap-2 w-full sm:w-auto"
-              @submit.prevent="submitSearch"
+              class="flex items-center gap-0 w-full sm:w-auto"
+              @submit.prevent="submitEpisodeSearch"
             >
               <input
                 v-model="searchText"
                 type="search"
-                :placeholder="t('search.placeholder')"
-                class="flex-1 min-w-0 sm:w-56 md:w-72 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+                :placeholder="t('app.searchPlaceholder')"
+                class="flex-1 min-w-0 sm:w-56 md:w-72 px-3 py-2 rounded-l-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/50 border-r-0"
               />
-              <button
-                type="submit"
-                class="px-3 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition-colors"
-                :title="t('search.button')"
-              >
-                {{ t('search.button') }}
-              </button>
+              <div class="flex">
+                <button
+                  type="submit"
+                  class="px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition-colors border-y border-r border-blue-600"
+                  :title="t('app.searchEpisodes')"
+                >
+                  {{ t('app.searchEpisodes') }}
+                </button>
+                <button
+                  type="button"
+                  @click="submitAIChat"
+                  class="px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold transition-colors rounded-r-lg border border-purple-600"
+                  :title="t('app.askAI')"
+                >
+                  {{ t('app.askAI') }}
+                </button>
+              </div>
             </form>
 
             <!-- Language Selector -->
@@ -371,9 +396,33 @@ const submitSearch = async () => {
       </div>
     </header>
 
-    <main class="container mx-auto px-2 sm:px-4 py-4 sm:py-6 md:py-8">
+    <main 
+      class="container mx-auto px-2 sm:px-4 py-4 sm:py-6 md:py-8" 
+      :class="{ 
+        'pb-24': audioPlayerStore.state.src && audioPlayerStore.size === 'small',
+        'pb-96': audioPlayerStore.state.src && audioPlayerStore.size === 'big'
+      }"
+    >
       <router-view />
     </main>
+
+    <!-- Persistent Audio Player -->
+    <div v-if="audioPlayerStore.state.src" class="fixed z-50" :class="audioPlayerStore.size === 'small' ? 'bottom-0 left-0 right-0' : 'bottom-4 left-1/2 transform -translate-x-1/2 max-w-2xl w-full px-4'">
+      <MiniAudioPlayer
+        :src="audioPlayerStore.state.src"
+        :title="audioPlayerStore.state.title"
+        :subtitle="audioPlayerStore.state.subtitle"
+        :seek-to-sec="audioPlayerStore.state.seekToSec"
+        :autoplay="audioPlayerStore.state.autoplay"
+        :play-token="audioPlayerStore.state.playToken"
+        :transcript-src="audioPlayerStore.state.transcriptSrc"
+        :speakers-meta-url="audioPlayerStore.state.speakersMetaUrl"
+        :size="audioPlayerStore.size"
+        @close="audioPlayerStore.close"
+        @error="audioPlayerStore.setError"
+        @toggle-size="audioPlayerStore.toggleSize"
+      />
+    </div>
   </div>
 </template>
 

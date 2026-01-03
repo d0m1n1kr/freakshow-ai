@@ -75,3 +75,19 @@ export function getSpeakersBaseUrl(podcastId?: string): string {
   return `/podcasts/${pid}/speakers`;
 }
 
+/**
+ * Get URL for episode image file
+ * Returns URL for jpg format (most common). 
+ * Note: Images are saved with various extensions (jpg, png, jpeg, webp) by scrape-images.js.
+ * Components should handle missing images gracefully with @error handlers.
+ * 
+ * To get episode images, run: node scripts/scrape-images.js --podcast <podcastId>
+ */
+export function getEpisodeImageUrl(episodeNumber: number, podcastId?: string): string {
+  const settings = useSettingsStore();
+  const pid = podcastId || settings.selectedPodcast || 'freakshow';
+  // Try jpg first (most common format)
+  // If the image doesn't exist or has a different extension, the @error handler will hide it
+  return `/podcasts/${pid}/episodes/${episodeNumber}.jpg`;
+}
+

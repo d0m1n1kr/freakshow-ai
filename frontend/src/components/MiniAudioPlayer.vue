@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, watch, onMounted, onBeforeUnmount, computed, nextTick } from 'vue';
+import { getEpisodeImageUrl } from '@/composables/usePodcast';
 
 const props = defineProps<{
   src: string;
@@ -10,12 +11,45 @@ const props = defineProps<{
   playToken?: number; // increment to force re-seek/play even if seekToSec is unchanged
   transcriptSrc?: string; // optional: URL to <episode>-ts-live.json for live speaker/text display
   speakersMetaUrl?: string; // optional: Base URL to fetch speaker meta data (e.g., '/speakers')
+  size?: 'small' | 'big'; // player size
 }>();
 
 const emit = defineEmits<{
   (e: 'close'): void;
   (e: 'error', message: string | null): void;
+  (e: 'toggle-size'): void;
 }>();
+
+const playerSize = computed(() => {
+  // Always use the prop if provided, otherwise default to 'small'
+  // This ensures we respect the store's persisted value
+  return props.size ?? 'small';
+});
+
+// Extract episode number from transcriptSrc URL (e.g., "/podcasts/freakshow/episodes/123-ts-live.json" -> 123)
+const episodeNumber = computed(() => {
+  if (props.transcriptSrc) {
+    const match = props.transcriptSrc.match(/\/(\d+)-ts-live\.json/);
+    if (match) {
+      return parseInt(match[1], 10);
+    }
+  }
+  // Fallback: try to extract from title (e.g., "Episode 123" -> 123)
+  if (props.title) {
+    const match = props.title.match(/Episode\s+(\d+)/i);
+    if (match) {
+      return parseInt(match[1], 10);
+    }
+  }
+  return null;
+});
+
+const episodeImageUrl = computed(() => {
+  if (episodeNumber.value) {
+    return getEpisodeImageUrl(episodeNumber.value);
+  }
+  return null;
+});
 
 const audioRef = ref<HTMLAudioElement | null>(null);
 const isPlaying = ref(false);
@@ -398,9 +432,80 @@ watch(() => currentSpoken.value?.speaker, async (speakerName) => {
 </script>
 
 <template>
-  <div class="border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 p-3">
+  <!-- Small state -->
+  <div v-if="playerSize === 'small'" class="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg">
+    <div class="container mx-auto px-4 py-2">
+      <div class="flex items-center gap-3">
+        <img
+          v-if="episodeImageUrl"
+          :src="episodeImageUrl"
+          :alt="title || 'Episode'"
+          @error="($event.target as HTMLImageElement).style.display = 'none'"
+          class="w-10 h-10 rounded object-cover border border-gray-200 dark:border-gray-700 flex-shrink-0"
+        />
+        <button
+          type="button"
+          class="px-2 py-1 rounded text-xs font-semibold border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-700 flex-shrink-0"
+          @click="togglePlay"
+        >
+          {{ isPlaying ? '⏸' : '▶' }}
+        </button>
+        
+        <div class="min-w-0 flex-1">
+          <div class="text-xs font-semibold text-gray-900 dark:text-white truncate">
+            {{ title || 'Audio' }}
+          </div>
+          <div class="text-[10px] text-gray-500 dark:text-gray-400 flex items-center gap-2">
+            <span class="font-mono">{{ timeLabel }}</span>
+          </div>
+        </div>
+
+        <input
+          class="flex-1 max-w-32"
+          type="range"
+          min="0"
+          :max="Math.max(0, Math.floor(duration || 0))"
+          step="1"
+          :value="isSeeking ? Math.floor(scrubValue || 0) : Math.floor(currentTime || 0)"
+          @input="onScrub"
+          @change="onScrubCommit"
+          @pointerup="onScrubCommit"
+        />
+
+        <button
+          type="button"
+          class="px-2 py-1 rounded text-xs font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white flex-shrink-0"
+          @click="emit('toggle-size')"
+          aria-label="Player vergrößern"
+          title="Vergrößern"
+        >
+          ⬆
+        </button>
+
+        <button
+          type="button"
+          class="px-2 py-1 rounded text-xs font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white flex-shrink-0"
+          @click="emit('close')"
+          aria-label="Player schließen"
+          title="Schließen"
+        >
+          ✕
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Big state -->
+  <div v-else class="border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 p-3">
     <div class="flex items-start justify-between gap-3">
-      <div class="min-w-0">
+      <img
+        v-if="episodeImageUrl"
+        :src="episodeImageUrl"
+        :alt="title || 'Episode'"
+        @error="($event.target as HTMLImageElement).style.display = 'none'"
+        class="w-16 h-16 rounded-lg object-cover border border-gray-200 dark:border-gray-700 flex-shrink-0"
+      />
+      <div class="min-w-0 flex-1">
         <div class="text-sm font-semibold text-gray-900 dark:text-white truncate">
           {{ title || 'Audio' }}
           <span v-if="subtitle" class="font-normal text-gray-600 dark:text-gray-300">— {{ subtitle }}</span>
@@ -413,14 +518,25 @@ watch(() => currentSpoken.value?.speaker, async (speakerName) => {
           {{ localError }}
         </div>
       </div>
-      <button
-        type="button"
-        class="text-sm font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-        @click="emit('close')"
-        aria-label="Player schließen"
-      >
-        ✕
-      </button>
+      <div class="flex items-center gap-2">
+        <button
+          type="button"
+          class="px-2 py-1 rounded text-xs font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+          @click="emit('toggle-size')"
+          aria-label="Player verkleinern"
+          title="Verkleinern"
+        >
+          ⬇
+        </button>
+        <button
+          type="button"
+          class="text-sm font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+          @click="emit('close')"
+          aria-label="Player schließen"
+        >
+          ✕
+        </button>
+      </div>
     </div>
 
     <!-- Transcript: full width of player (not constrained by the header row / close button) -->
@@ -478,10 +594,10 @@ watch(() => currentSpoken.value?.speaker, async (speakerName) => {
         @pointerup="onScrubCommit"
       />
     </div>
-
-    <!-- hidden native element -->
-    <audio ref="audioRef" class="hidden" preload="metadata" :src="src"></audio>
   </div>
+
+  <!-- Audio element - always present to maintain playback state when switching sizes -->
+  <audio ref="audioRef" class="hidden" preload="metadata" :src="src"></audio>
 </template>
 
 

@@ -2,10 +2,10 @@
 import { computed, onMounted, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { useI18n } from 'vue-i18n';
-import MiniAudioPlayer from '@/components/MiniAudioPlayer.vue';
 import { useSettingsStore } from '@/stores/settings';
+import { useAudioPlayerStore } from '@/stores/audioPlayer';
 import { marked } from 'marked';
-import { getPodcastFileUrl, getEpisodeUrl } from '@/composables/usePodcast';
+import { getPodcastFileUrl, getEpisodeUrl, getSpeakersBaseUrl, getEpisodeImageUrl } from '@/composables/usePodcast';
 
 type ChatSource = {
   episodeNumber: number;
@@ -39,6 +39,7 @@ type SpeakerInfo = {
 const route = useRoute();
 const { t } = useI18n();
 const settings = useSettingsStore();
+const audioPlayerStore = useAudioPlayerStore();
 
 const searchTitle = computed(() => {
   const pid = settings.selectedPodcast || 'freakshow';
@@ -343,24 +344,14 @@ const searchExamples = computed<SearchExample[]>(() => {
 const mp3IndexLoaded = ref(false);
 const mp3IndexError = ref<string | null>(null);
 const mp3UrlByEpisode = ref<Map<number, string>>(new Map());
-const currentMp3Url = ref<string | null>(null);
-const playerInfo = ref<{ episodeNumber: number; positionSec: number; label: string } | null>(null);
-const playerError = ref<string | null>(null);
-const playerToken = ref(0);
-const currentTranscriptUrl = ref<string | null>(null);
 
-// When switching podcasts, clear cached MP3 index + close the player.
+// When switching podcasts, clear cached MP3 index
 watch(
   () => settings.selectedPodcast,
   () => {
     mp3IndexLoaded.value = false;
     mp3IndexError.value = null;
     mp3UrlByEpisode.value = new Map();
-    currentMp3Url.value = null;
-    playerInfo.value = null;
-    playerError.value = null;
-    currentTranscriptUrl.value = null;
-    playerToken.value++;
   }
 );
 
@@ -426,29 +417,27 @@ const openEpisodeAt = async (episodeNumber: number, seconds: number) => {
 };
 
 const playEpisodeAt = async (episodeNumber: number, seconds: number, label: string) => {
-  playerError.value = null;
   await ensureMp3Index();
 
   const mp3 = mp3UrlByEpisode.value.get(episodeNumber) || null;
   if (!mp3) {
-    playerError.value = mp3IndexError.value
+    const errorMsg = mp3IndexError.value
       ? t('search.errors.mp3IndexUnavailable', { error: mp3IndexError.value })
       : t('search.errors.noMp3Url');
+    audioPlayerStore.setError(errorMsg);
     await openEpisodeAt(episodeNumber, seconds);
     return;
   }
 
-  currentMp3Url.value = mp3;
-  playerInfo.value = { episodeNumber, positionSec: Math.max(0, Math.floor(seconds)), label };
-  currentTranscriptUrl.value = withBase(getPodcastFileUrl(`episodes/${episodeNumber}-ts-live.json`));
-  playerToken.value++;
-};
-
-const closePlayer = () => {
-  currentMp3Url.value = null;
-  playerInfo.value = null;
-  currentTranscriptUrl.value = null;
-  playerError.value = null;
+  audioPlayerStore.play({
+    src: mp3,
+    title: `Episode ${episodeNumber}`,
+    subtitle: label,
+    seekToSec: Math.max(0, Math.floor(seconds)),
+    autoplay: true,
+    transcriptSrc: withBase(getPodcastFileUrl(`episodes/${episodeNumber}-ts-live.json`)),
+    speakersMetaUrl: getSpeakersBaseUrl(),
+  });
 };
 
 const formatHmsFromSeconds = (sec: unknown) => {
@@ -714,24 +703,6 @@ const handleAnswerClick = (event: MouseEvent) => {
           </div>
         </div>
 
-        <div v-if="currentMp3Url" class="mt-2">
-          <MiniAudioPlayer
-            :src="currentMp3Url"
-            :title="`Episode ${playerInfo?.episodeNumber ?? ''}`"
-            :subtitle="playerInfo?.label || ''"
-            :seek-to-sec="playerInfo?.positionSec ?? 0"
-            :autoplay="true"
-            :play-token="playerToken"
-            :transcript-src="currentTranscriptUrl || undefined"
-            :speakers-meta-url="'/speakers'"
-            @close="closePlayer"
-            @error="(msg) => { playerError = msg }"
-          />
-          <div v-if="playerError" class="mt-2 text-xs text-red-700 dark:text-red-300">
-            {{ playerError }}
-          </div>
-        </div>
-
         <div class="space-y-3">
           <div class="text-sm font-semibold text-gray-900 dark:text-white">
             {{ t('search.sourcesTitle', { count: result.sources.length }) }}
@@ -743,7 +714,13 @@ const handleAnswerClick = (event: MouseEvent) => {
             class="rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-4"
           >
             <div class="flex items-start justify-between gap-3">
-              <div class="min-w-0">
+              <img
+                :src="getEpisodeImageUrl(s.episodeNumber)"
+                :alt="s.episodeTitle || `Episode ${s.episodeNumber}`"
+                @error="($event.target as HTMLImageElement).style.display = 'none'"
+                class="w-12 h-12 rounded-lg object-cover flex-shrink-0 border border-gray-200 dark:border-gray-700"
+              />
+              <div class="min-w-0 flex-1">
                 <div class="text-sm font-semibold text-gray-900 dark:text-white">
                   Episode {{ s.episodeNumber }}
                   <span v-if="s.episodeTitle" class="font-normal text-gray-600 dark:text-gray-300">— {{ s.episodeTitle }}</span>
