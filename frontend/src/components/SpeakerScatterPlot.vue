@@ -203,11 +203,18 @@ const drawChart = () => {
   }
 
   // Set up dimensions
-  const margin = { top: 60, right: 120, bottom: 60, left: 80 };
   const container = chartRef.value;
   const containerRect = container.getBoundingClientRect();
-  const width = Math.max(600, Math.min(1200, containerRect.width));
-  const height = Math.max(400, Math.min(600, width * 0.6));
+  const width = Math.max(600, containerRect.width); // Use full container width
+  const height = Math.max(400, Math.min(800, width * 0.65)); // Better aspect ratio for wide plots
+
+  // Responsive margin: optimize space for plot and labels
+  const margin = {
+    top: 60,
+    right: width > 1200 ? 182 : width > 800 ? 208 : 234, // +30% more space for wider legend
+    bottom: 60,
+    left: 80
+  };
 
   const innerWidth = width - margin.left - margin.right;
   const innerHeight = height - margin.top - margin.bottom;
@@ -334,14 +341,14 @@ const drawChart = () => {
     .call(xAxis)
     .selectAll('text')
     .style('fill', labelColor)
-    .style('font-size', '12px');
+    .style('font-size', '14px');
 
   g.append('text')
     .attr('x', innerWidth / 2)
     .attr('y', innerHeight + 45)
     .attr('text-anchor', 'middle')
     .style('fill', labelColor)
-    .style('font-size', '14px')
+    .style('font-size', '16px')
     .style('font-weight', '500')
     .text('Time');
 
@@ -352,7 +359,7 @@ const drawChart = () => {
     .call(yAxis)
     .selectAll('text')
     .style('fill', labelColor)
-    .style('font-size', '12px');
+    .style('font-size', '14px');
 
   g.append('text')
     .attr('transform', 'rotate(-90)')
@@ -360,14 +367,15 @@ const drawChart = () => {
     .attr('x', -innerHeight / 2)
     .attr('text-anchor', 'middle')
     .style('fill', labelColor)
-    .style('font-size', '14px')
+    .style('font-size', '16px')
     .style('font-weight', '500')
     .text('Speech Duration');
 
   // Legend
+  const legendOffset = width > 1200 ? 20 : width > 800 ? 25 : 30; // +30% adjusted for much wider legend space
   const legend = g
     .append('g')
-    .attr('transform', `translate(${innerWidth + 20}, 20)`);
+    .attr('transform', `translate(${innerWidth + legendOffset}, 20)`);
 
   const uniqueSpeakers = Array.from(new Set(segments.map(d => d.speaker)));
 
@@ -389,12 +397,12 @@ const drawChart = () => {
     const legendTextColor = isDarkMode.value ? '#e5e7eb' : '#374151';
 
     legendRow
-      .append('text')
-      .attr('x', 20)
-      .attr('y', 10)
-      .style('fill', legendTextColor)
-      .style('font-size', '12px')
-      .text(speaker.length > 15 ? speaker.substring(0, 12) + '...' : speaker);
+    .append('text')
+    .attr('x', 45)
+    .attr('y', 10)
+    .style('fill', legendTextColor)
+    .style('font-size', '14px')
+    .text(speaker.length > 32 ? speaker.substring(0, 29) + '...' : speaker);
   });
 
   // Title
@@ -403,7 +411,7 @@ const drawChart = () => {
     .attr('y', -20)
     .attr('text-anchor', 'middle')
     .style('fill', labelColor)
-    .style('font-size', '16px')
+    .style('font-size', '18px')
     .style('font-weight', '600')
     .text('Speech Segments Scatter Plot');
 };
