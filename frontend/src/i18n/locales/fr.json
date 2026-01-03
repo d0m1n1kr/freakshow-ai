@@ -2,7 +2,10 @@
   "app": {
     "title": "Freak Show",
     "titleBadge": "AI",
-    "subtitle": "Visualisation de l'évolution des sujets et des intervenants au fil des années"
+    "subtitle": "Visualisation de l'évolution des sujets et des intervenants au fil des années",
+    "searchPlaceholder": "Rechercher des épisodes ou poser une question...",
+    "searchEpisodes": "Rechercher",
+    "askAI": "Demander à l'IA"
   },
   "theme": {
     "auto": "Auto",
@@ -356,6 +359,25 @@
       "description": "Les embeddings de topics doivent être créés d'abord (node scripts/create-embeddings.js)."
     },
     "documentation": "📖 Documentation complète"
+  },
+  "episodes": {
+    "searchTitle": "Rechercher des épisodes",
+    "searchPlaceholder": "Rechercher par titre, description ou sujets...",
+    "resultsTitle": "Résultats de recherche ({count})",
+    "loadingMore": "Chargement d'autres épisodes...",
+    "noMoreEpisodes": "Aucun autre épisode à charger",
+    "date": "Date",
+    "duration": "Durée",
+    "speakers": "Intervenants",
+    "loadingStats": "Chargement des statistiques...",
+    "noStats": "Aucune statistique d'intervenant disponible pour cet épisode.",
+    "comingSoon": "Bientôt disponible",
+    "stats": {
+      "title": "Statistiques des intervenants",
+      "flow": "Flux",
+      "boxplot": "Boîte à moustaches",
+      "monologue": "Monologue le plus long"
+    }
   }
 }
 

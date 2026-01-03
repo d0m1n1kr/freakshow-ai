@@ -531,12 +531,12 @@ const formatTime = (sec: number): string => {
         <!-- Loading More Indicator -->
         <div v-if="loadingMore" class="p-4 text-center">
           <div class="inline-block animate-spin rounded-full h-6 w-6 border-2 border-blue-500 border-t-transparent"></div>
-          <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Loading more episodes...</p>
+          <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">{{ t('episodes.loadingMore') }}</p>
         </div>
         
         <!-- End of Results -->
         <div v-if="!hasMore && searchResults.length > 0" class="p-4 text-center text-sm text-gray-500 dark:text-gray-400">
-          No more episodes to load
+          {{ t('episodes.noMoreEpisodes') }}
         </div>
         </div>
       </template>
