@@ -62,7 +62,6 @@ const emit = defineEmits<{
 const audioPlayerStore = useAudioPlayerStore();
 const chartRef = ref<HTMLElement | null>(null);
 const tooltipRef = ref<HTMLDivElement | null>(null);
-const legendRef = ref<HTMLDivElement | null>(null);
 let svg: d3.Selection<SVGSVGElement, unknown, null, undefined> | null = null;
 let resizeObserver: ResizeObserver | null = null;
 let positionMarker: d3.Selection<SVGLineElement, unknown, null, undefined> | null = null;
