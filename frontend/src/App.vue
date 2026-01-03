@@ -6,6 +6,7 @@ import { useSettingsStore } from './stores/settings';
 import { useAudioPlayerStore } from './stores/audioPlayer';
 import LanguageSelector from './components/LanguageSelector.vue';
 import MiniAudioPlayer from './components/MiniAudioPlayer.vue';
+import SplashScreen from './components/SplashScreen.vue';
 
 const route = useRoute();
 const router = useRouter();
@@ -15,6 +16,11 @@ const { t } = useI18n();
 
 // Podcast dropdown state
 const showPodcastDropdown = ref(false);
+
+// Splash screen state
+const showSplash = ref(true);
+const appVersion = ref('1.0.0');
+const appName = ref('PodInsights');
 
 // Get current podcast info
 const currentPodcast = computed(() => {
@@ -56,8 +62,20 @@ const handleClickOutside = (event: MouseEvent) => {
   }
 };
 
-onMounted(() => {
+onMounted(async () => {
   document.addEventListener('click', handleClickOutside);
+
+  // Load version information
+  try {
+    const response = await fetch('/version.json');
+    if (response.ok) {
+      const versionData = await response.json();
+      appVersion.value = versionData.version;
+      appName.value = versionData.name;
+    }
+  } catch (error) {
+    console.warn('Could not load version information:', error);
+  }
 });
 
 onUnmounted(() => {
@@ -141,6 +159,14 @@ const submitAIChat = async () => {
 </script>
 
 <template>
+  <SplashScreen
+    v-if="showSplash"
+    :logo-url="'/logo.svg'"
+    :project-name="appName"
+    :version="appVersion"
+    @dismissed="showSplash = false"
+  />
+
   <div class="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
     <header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 shadow-sm">
       <div class="container mx-auto px-4 py-4 md:py-6">
@@ -406,7 +432,7 @@ const submitAIChat = async () => {
     </main>
 
     <!-- Persistent Audio Player -->
-    <div v-if="audioPlayerStore.state.src" class="fixed z-50" :class="audioPlayerStore.size === 'small' ? 'bottom-0 left-0 right-0' : 'bottom-4 left-1/2 transform -translate-x-1/2 max-w-2xl w-full px-4'">
+    <div v-if="audioPlayerStore.state.src && !showSplash" class="fixed z-50" :class="audioPlayerStore.size === 'small' ? 'bottom-0 left-0 right-0' : 'bottom-4 left-1/2 transform -translate-x-1/2 max-w-2xl w-full px-4'">
       <MiniAudioPlayer
         :src="audioPlayerStore.state.src"
         :title="audioPlayerStore.state.title"
