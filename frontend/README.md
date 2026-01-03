@@ -2,67 +2,6 @@
 
 This is the Vue.js frontend for the PodInsights podcast analysis tool. See the main [README.md](../README.md) for complete project documentation, installation instructions, and setup.
 
-## Data Files
-
-The frontend expects these files in the `public/` directory:
-
-### Required Files
-```
-public/
-├── topic-river-data.json              # Topic evolution data
-├── category-river-data.json           # Category overview data
-├── speaker-river-data.json            # Speaker participation data
-├── topic-umap-data.json              # UMAP scatter plot data
-├── topic-taxonomy.json               # Topic cluster metadata
-├── topic-taxonomy-detailed.json      # Extended cluster info
-├── speaker-category-heatmap.json     # Speaker-topic matrix
-├── speaker-cluster-heatmap.json      # Speaker-cluster matrix
-├── speaker-speaker-heatmap.json      # Speaker co-occurrence
-├── cluster-cluster-heatmap.json      # Cluster relationships
-├── year-duration-heatmap.json        # Duration by year
-├── dayofweek-duration-heatmap.json   # Duration by weekday
-└── episodes/                          # Episode detail files
-    ├── 1.json
-    ├── 1-ts.json
-    └── ...
-```
-
-### Generating Data Files
-
-From the project root directory:
-
-```bash
-# 1. Generate all visualization data
-npm run topic-river
-npm run category-river
-node scripts/generate-speaker-river.js
-node scripts/generate-topic-umap.js
-node scripts/generate-speaker-category-heatmap.js
-node scripts/generate-speaker-cluster-heatmap.js
-node scripts/generate-speaker-speaker-heatmap.js
-node scripts/generate-cluster-cluster-heatmap.js
-node scripts/generate-year-duration-heatmap.js
-node scripts/generate-dayofweek-duration-heatmap.js
-
-# 2. Copy to frontend public folder
-cp topic-river-data.json frontend/public/
-cp category-river-data.json frontend/public/
-cp speaker-river-data.json frontend/public/
-cp topic-umap-data.json frontend/public/
-cp topic-taxonomy.json frontend/public/
-cp topic-taxonomy-detailed.json frontend/public/
-cp speaker-category-heatmap.json frontend/public/
-cp speaker-cluster-heatmap.json frontend/public/
-cp speaker-speaker-heatmap.json frontend/public/
-cp cluster-cluster-heatmap.json frontend/public/
-cp year-duration-heatmap.json frontend/public/
-cp dayofweek-duration-heatmap.json frontend/public/
-cp -r episodes frontend/public/
-
-# Or use sync script if available
-./scripts/sync.sh
-```
-
 ## Adding a New Visualization
 
 1. **Create data generator** (in project root)
