@@ -16,7 +16,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/clusters-river'
+      redirect: '/episode-search'
     },
     {
       path: '/clusters-river',
