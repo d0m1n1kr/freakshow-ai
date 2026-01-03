@@ -32,6 +32,15 @@ type EpisodeTopics = {
   }>;
 };
 
+type EpisodeChapters = {
+  chapters: Array<{
+    number: number;
+    title: string;
+    durationSec: number;
+    positionSec: number;
+  }>;
+};
+
 type SpeakerMeta = {
   name: string;
   slug: string;
@@ -65,6 +74,8 @@ type TranscriptData = {
 
 const transcriptData = ref<TranscriptData | null>(null);
 const transcriptLoading = ref(false);
+const chaptersData = ref<EpisodeChapters | null>(null);
+const chaptersLoading = ref(false);
 
 const speakersMeta = ref<Map<string, SpeakerMeta>>(new Map());
 
@@ -90,6 +101,25 @@ const loadTranscript = async () => {
     console.error('Failed to load transcript:', e);
   } finally {
     transcriptLoading.value = false;
+  }
+};
+
+// Load chapters data
+const loadChapters = async () => {
+  if (!props.episodeNumber || chaptersData.value || chaptersLoading.value) return;
+  
+  chaptersLoading.value = true;
+  try {
+    const chaptersUrl = getPodcastFileUrl(`episodes/${props.episodeNumber}-chapters.json`);
+    const response = await fetch(chaptersUrl, { cache: 'force-cache' });
+    if (response.ok) {
+      chaptersData.value = await response.json();
+    }
+  } catch (e) {
+    // Silent fail - chapters are optional
+    chaptersData.value = null;
+  } finally {
+    chaptersLoading.value = false;
   }
 };
 
@@ -235,6 +265,14 @@ const drawChart = () => {
   if (tooltipRef.value) {
     tooltipRef.value.style.display = 'none';
   }
+
+  // Store chapter areas for darkening effect (declared early so it's available throughout the function)
+  const chapterAreas: Array<{
+    startX: number;
+    endX: number;
+    positionSec: number;
+    rect: d3.Selection<SVGRectElement, unknown, null, undefined>;
+  }> = [];
   
   // Detect dark mode dynamically
   const isDarkMode = document.documentElement.classList.contains('dark') || 
@@ -555,6 +593,10 @@ const drawChart = () => {
       if (tooltipRef.value) {
         tooltipRef.value.style.display = 'none';
       }
+      // Remove darkening from all chapters when mouse leaves chart
+      chapterAreas.forEach((area) => {
+        area.rect.attr('opacity', 0);
+      });
     });
 
   // X axis
@@ -604,6 +646,206 @@ const drawChart = () => {
     .style('font-weight', '500')
     .text('Speaking Share');
 
+  // Draw chapter transition lines and labels with hover highlighting
+  if (chaptersData.value && chaptersData.value.chapters) {
+    const chapterLineColor = isDarkMode ? '#9ca3af' : '#6b7280'; // Lighter gray for better visibility
+    const chapterTextColor = isDarkMode ? '#e5e7eb' : '#1f2937'; // gray-200 for dark, gray-800 for light (higher contrast)
+    const chapterDarkenColor = isDarkMode ? 'rgba(0, 0, 0, 0.4)' : 'rgba(0, 0, 0, 0.3)'; // Darkening color for other chapters
+    
+    chaptersData.value.chapters.forEach((chapter, index) => {
+      // Skip the first chapter (positionSec = 0) as it's at the start
+      if (chapter.positionSec === 0) return;
+      
+      const x = xScale(chapter.positionSec);
+      
+      // Only draw if within the chart bounds
+      if (x >= 0 && x <= innerWidth) {
+        // Find the previous chapter to determine the start of this chapter area
+        const prevChapter = chaptersData.value!.chapters[index - 1];
+        const chapterStartX = prevChapter ? xScale(prevChapter.positionSec) : 0;
+        const chapterEndX = x;
+        
+        // Draw vertical dotted line with improved visibility
+        g.append('line')
+          .attr('x1', x)
+          .attr('x2', x)
+          .attr('y1', 0)
+          .attr('y2', innerHeight)
+          .attr('stroke', chapterLineColor)
+          .attr('stroke-width', 1.5)
+          .attr('stroke-dasharray', '4,4')
+          .attr('opacity', 0.8);
+        
+        // Add vertical text label at 2% from bottom (no angle, vertical, no background)
+        const textX = x + 7.5; // Reduced gap from the line (half of 15px)
+        const textY = innerHeight * 0.98; // Position at 2% from bottom (98% down)
+        
+        const chapterTitle = chapter.title.length > 35 ? chapter.title.substring(0, 32) + '...' : chapter.title;
+        
+        // Create text element directly (no background box)
+        g.append('text')
+          .attr('x', textX)
+          .attr('y', textY)
+          .attr('transform', `rotate(-90 ${textX} ${textY})`)
+          .attr('text-anchor', 'start')
+          .attr('dy', '0.35em')
+          .style('fill', chapterTextColor)
+          .style('font-size', '12px')
+          .style('font-weight', '600')
+          .style('pointer-events', 'none')
+          .text(chapterTitle);
+        
+        // Create darkening rectangle for this chapter (initially hidden)
+        const darkenRect = g.append('rect')
+          .attr('x', chapterStartX)
+          .attr('y', 0)
+          .attr('width', chapterEndX - chapterStartX)
+          .attr('height', innerHeight)
+          .attr('fill', chapterDarkenColor)
+          .attr('opacity', 0)
+          .style('pointer-events', 'none');
+        
+        chapterAreas.push({
+          startX: chapterStartX,
+          endX: chapterEndX,
+          positionSec: chapter.positionSec,
+          rect: darkenRect
+        });
+      }
+    });
+  }
+
+  // Add chapter hover areas AFTER chapters are drawn (so chapterAreas array is populated)
+  // These areas will darken other chapters on hover
+  chapterAreas.forEach((chapterArea) => {
+    const hoverArea = g.append('rect')
+      .attr('x', chapterArea.startX)
+      .attr('y', 0)
+      .attr('width', chapterArea.endX - chapterArea.startX)
+      .attr('height', innerHeight)
+      .attr('fill', 'transparent')
+      .style('cursor', 'pointer')
+      .style('pointer-events', 'all')
+      .on('mouseover', function(event: MouseEvent) {
+        event.stopPropagation();
+        // Darken all other chapters
+        chapterAreas.forEach((area) => {
+          if (area.positionSec !== chapterArea.positionSec) {
+            // Use attr instead of style for opacity to ensure it works
+            area.rect.attr('opacity', 1);
+          }
+        });
+      })
+      .on('mouseout', function(event: MouseEvent) {
+        event.stopPropagation();
+        // Remove darkening from all chapters
+        chapterAreas.forEach((area) => {
+          // Use attr instead of style for opacity to ensure it works
+          area.rect.attr('opacity', 0);
+        });
+        // Also hide tooltip when mouse leaves chapter area
+        if (tooltipRef.value) {
+          tooltipRef.value.style.display = 'none';
+        }
+      })
+      .on('mousemove', function(event: MouseEvent) {
+        // Forward mousemove to show tooltips - reuse the tooltip logic from main overlay
+        if (!tooltipRef.value || !chartRef.value) return;
+        
+        const [mx, my] = d3.pointer(event, g.node() as any);
+        const timeSec = Math.max(0, Math.min(props.data.episodeDurationSec, xScale.invert(mx)));
+        const shareValue = Math.max(0, Math.min(1, yScale.invert(my)));
+        
+        // Find the interval that contains this time
+        let intervalIdx = -1;
+        for (let i = 0; i < filledIntervals.length; i++) {
+          const interval = filledIntervals[i];
+          if (interval && timeSec >= interval.start && timeSec < interval.end) {
+            intervalIdx = i;
+            break;
+          }
+        }
+        
+        if (intervalIdx >= 0 && intervalIdx < filledIntervals.length) {
+          const interval = filledIntervals[intervalIdx];
+          if (!interval) return;
+          
+          // Find which speaker's area we're hovering over
+          let cumulative = 0;
+          let hoveredSpeaker: string | null = null;
+          let speakerShare = 0;
+          
+          for (const speaker of speakers) {
+            const share = interval.speakers[speaker] || 0;
+            const bottom = cumulative;
+            const top = cumulative + share;
+            
+            if (shareValue >= bottom && shareValue <= top && share > 0) {
+              hoveredSpeaker = speaker;
+              speakerShare = share;
+              break;
+            }
+            
+            cumulative = top;
+          }
+          
+          if (hoveredSpeaker && tooltipRef.value && interval) {
+            const speakerMeta = speakersMeta.value.get(hoveredSpeaker);
+            const topics = getTopicsForInterval(interval.start, interval.end);
+            
+            const imageHtml = speakerMeta?.image
+              ? `<img src="${speakerMeta.image}" alt="${hoveredSpeaker}" style="width: 32px; height: 32px; border-radius: 50%; border: 2px solid white; display: inline-block; margin-right: 8px;" />`
+              : '';
+            
+            const borderColor = isDarkMode ? '#374151' : '#e5e7eb';
+            const labelColor = isDarkMode ? '#9ca3af' : '#4b5563';
+            const topicBgColor = isDarkMode ? 'rgba(30, 58, 138, 0.3)' : '#dbeafe';
+            const topicTextColor = isDarkMode ? '#93c5fd' : '#1e40af';
+            
+            const topicsHtml = topics.length > 0
+              ? `<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid ${borderColor};">
+                   <div style="font-size: 11px; font-weight: 600; color: ${labelColor}; margin-bottom: 4px;">Topics:</div>
+                   <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+                     ${topics.map(topic => `<span style="padding: 2px 8px; font-size: 11px; background-color: ${topicBgColor}; color: ${topicTextColor}; border-radius: 4px;">${topic}</span>`).join('')}
+                   </div>
+                 </div>`
+              : '';
+            
+            const mouseX = event.clientX || (event as any).pageX || 0;
+            const mouseY = event.clientY || (event as any).pageY || 0;
+            
+            tooltipRef.value.style.display = 'block';
+            tooltipRef.value.style.position = 'fixed';
+            tooltipRef.value.style.left = `${mouseX + 15}px`;
+            tooltipRef.value.style.top = `${mouseY - 10}px`;
+            tooltipRef.value.style.zIndex = '1000';
+            tooltipRef.value.style.backgroundColor = isDarkMode ? '#1f2937' : 'white';
+            tooltipRef.value.style.color = isDarkMode ? '#f3f4f6' : '#111827';
+            tooltipRef.value.style.borderColor = isDarkMode ? '#374151' : '#e5e7eb';
+            
+            tooltipRef.value.innerHTML = `
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                ${imageHtml}
+                <div style="font-weight: 600; font-size: 14px; color: ${isDarkMode ? '#f3f4f6' : '#111827'};">${hoveredSpeaker}</div>
+              </div>
+              <div style="font-size: 12px; color: ${isDarkMode ? '#9ca3af' : '#4b5563'};">
+                <div><strong>Time:</strong> ${interval ? `${formatTime(interval.start)} - ${formatTime(interval.end)}` : ''}</div>
+                <div><strong>Share:</strong> ${(speakerShare * 100).toFixed(1)}%</div>
+              </div>
+              ${topicsHtml}
+              ${props.episodeNumber ? `<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid ${borderColor};">
+                <div style="font-size: 11px; color: ${labelColor}; font-style: italic;">Klicken zum Abspielen</div>
+              </div>` : ''}
+            `;
+          } else if (tooltipRef.value) {
+            tooltipRef.value.style.display = 'none';
+          }
+        } else if (tooltipRef.value) {
+          tooltipRef.value.style.display = 'none';
+        }
+      });
+  });
+
   // Legend
   const legend = g
     .append('g')
@@ -635,9 +877,10 @@ const drawChart = () => {
 };
 
 onMounted(() => {
-  // Load transcript data if episode number is available
+  // Load transcript data and chapters if episode number is available
   if (props.episodeNumber) {
     loadTranscript();
+    loadChapters();
   }
   
   // Wait for next tick to ensure tooltipRef is available
@@ -656,12 +899,20 @@ onMounted(() => {
     }
   }, { deep: true });
   
-  // Watch for episode number changes to load transcript
+  // Watch for episode number changes to load transcript and chapters
   watch(() => props.episodeNumber, () => {
     if (props.episodeNumber) {
       loadTranscript();
+      loadChapters();
     }
   }, { immediate: true });
+  
+  // Watch for chapters data changes
+  watch(() => chaptersData.value, () => {
+    if (tooltipRef.value) {
+      drawChart();
+    }
+  }, { deep: true });
   
   // Watch for episode topics changes
   watch(() => props.episodeTopics, () => {
