@@ -18,9 +18,10 @@ const hoveredSpeaker = ref<string | null>(null);
 const speakerFilter = ref<number>(15);
 const normalizedView = ref<boolean>(false);
 const dimensions = ref({ width: 1200, height: 600 });
-const tooltipRef = ref<HTMLDivElement | null>(null);
 const selectedYear = ref<number | null>(null);
 const tooltipData = ref<{ speakerName: string; speakerImage?: string; year: number; x: number; y: number } | null>(null);
+// @ts-expect-error - tooltipRef is used in template but TypeScript doesn't recognize template refs
+const tooltipRef = ref<HTMLDivElement | null>(null);
 
 // Audio player setup
 const settings = useSettingsStore();

@@ -15,12 +15,12 @@
 
       <!-- Project Name -->
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-        {{ projectName }}
+        {{ displayName }}
       </h1>
 
       <!-- Version -->
       <div class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8">
-        {{ t('splash.version') }} {{ version }}
+        {{ t('splash.version') }} {{ displayVersion }}
       </div>
 
       <!-- Loading indicator -->
@@ -75,15 +75,25 @@ const emit = defineEmits<{
 
 // State
 const show = ref(true);
+const displayVersion = ref(props.version);
+const displayName = ref(props.projectName);
 
-// Methods
-const dismiss = () => {
-  show.value = false;
-  emit('dismissed');
-};
+// Load version from version.json if not provided or if we want to override
+onMounted(async () => {
+  // Load version information from version.json
+  try {
+    const response = await fetch('/version.json');
+    if (response.ok) {
+      const versionData = await response.json();
+      displayVersion.value = versionData.version || props.version;
+      displayName.value = versionData.name || props.projectName;
+    }
+  } catch (error) {
+    console.warn('Could not load version information:', error);
+    // Keep default values
+  }
 
-// Auto-hide after delay
-onMounted(() => {
+  // Auto-hide after delay
   if (props.autoHideDelay > 0) {
     setTimeout(() => {
       if (show.value) {
@@ -92,4 +102,10 @@ onMounted(() => {
     }, props.autoHideDelay);
   }
 });
+
+// Methods
+const dismiss = () => {
+  show.value = false;
+  emit('dismissed');
+};
 </script>

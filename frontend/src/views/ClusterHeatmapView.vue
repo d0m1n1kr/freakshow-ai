@@ -238,11 +238,11 @@ import * as d3 from 'd3';
 import type { HeatmapData } from '../types';
 import { useSettingsStore } from '../stores/settings';
 import { loadVariantData } from '@/composables/useVariants';
-import { getSpeakerMetaUrl, getEpisodeUrl } from '@/composables/usePodcast';
+import { getSpeakerMetaUrl } from '@/composables/usePodcast';
 import { useInlineEpisodePlayer } from '@/composables/useInlineEpisodePlayer';
 import { useAudioPlayerStore } from '@/stores/audioPlayer';
 import { getPodcastFileUrl, getSpeakersBaseUrl, getEpisodeImageUrl } from '@/composables/usePodcast';
-import { useLazyEpisodeDetails, type EpisodeDetail, loadEpisodeDetail, getCachedEpisodeDetail } from '@/composables/useEpisodeDetails';
+import { useLazyEpisodeDetails, type EpisodeDetail as EpisodeDetailType, loadEpisodeDetail, getCachedEpisodeDetail } from '@/composables/useEpisodeDetails';
 
 const settingsStore = useSettingsStore();
 const audioPlayerStore = useAudioPlayerStore();
@@ -275,13 +275,7 @@ const playEpisodeAt = async (episodeNumber: number, seconds: number, label: stri
   });
 };
 
-interface EpisodeDetail {
-  title: string;
-  date: string;
-  duration?: string | number;
-  speakers?: string[];
-  url?: string;
-}
+// EpisodeDetail type is imported from useEpisodeDetails composable
 
 // Speaker metadata with images
 type SpeakerMeta = {
@@ -365,7 +359,7 @@ const loadingEpisodes = ref(false);
 const { setupLazyLoad, preloadVisible } = useLazyEpisodeDetails();
 
 // Local map to track which episodes are loaded (synced with global cache)
-const episodeDetails = ref<Map<number, EpisodeDetail | null>>(new Map());
+const episodeDetails = ref<Map<number, EpisodeDetailType | null>>(new Map());
 const rowRefs = ref<Map<number, HTMLElement>>(new Map());
 const observerCleanups = ref<Map<number, () => void>>(new Map());
 
@@ -479,15 +473,24 @@ function formatDate(dateString: string | undefined): string {
   });
 }
 
-function formatDuration(duration: string | number | undefined): string {
+function formatDuration(duration?: string | number | number[]): string {
   if (!duration) return 'N/A';
   
   // If it's already a string (formatted), return it
   if (typeof duration === 'string') return duration;
   
+  // If it's an array [hours, minutes, seconds], convert to seconds first
+  let seconds: number;
+  if (Array.isArray(duration)) {
+    const [h = 0, m = 0, s = 0] = duration;
+    seconds = h * 3600 + m * 60 + s;
+  } else {
+    seconds = duration;
+  }
+  
   // If it's a number (seconds), format it
-  const hours = Math.floor(duration / 3600);
-  const minutes = Math.floor((duration % 3600) / 60);
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
   
   if (hours > 0) {
     return `${hours}h ${minutes}m`;

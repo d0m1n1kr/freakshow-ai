@@ -346,13 +346,22 @@ function formatDate(dateStr?: string) {
   return new Date(dateStr).toLocaleDateString('de-DE');
 }
 
-function formatDuration(duration?: string | number): string {
+function formatDuration(duration?: string | number | number[]): string {
   if (!duration) return '';
   
   if (typeof duration === 'string') return duration;
   
-  const hours = Math.floor(duration / 3600);
-  const minutes = Math.floor((duration % 3600) / 60);
+  // If it's an array [hours, minutes, seconds], convert to seconds first
+  let seconds: number;
+  if (Array.isArray(duration)) {
+    const [h = 0, m = 0, s = 0] = duration;
+    seconds = h * 3600 + m * 60 + s;
+  } else {
+    seconds = duration;
+  }
+  
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
   
   if (hours > 0) {
     return `${hours}h ${minutes}m`;

@@ -587,7 +587,7 @@ const loadingEpisodes = ref(false);
 const loadingTopics = ref(false);
 
 // Use lazy loading composable
-const { setupLazyLoad, preloadVisible } = useLazyEpisodeDetails();
+const { setupLazyLoad } = useLazyEpisodeDetails();
 const observerCleanups = ref<Map<number, () => void>>(new Map());
 
 // MP3 playback (uses /episodes.json generated from MP3 RSS feed)
