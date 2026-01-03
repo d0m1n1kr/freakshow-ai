@@ -19,8 +19,9 @@ A comprehensive tool suite for scraping, analyzing, and visualizing podcast arch
 ### Speaker Statistics & Analysis
 - ✅ **Speaking Time Analysis**: Detailed breakdown of speaking time per speaker per episode
 - ✅ **Flow Charts**: Visual representation of speaking time distribution over episode duration
-- ✅ **Monologue Analysis**: Longest and shortest speaking segments per speaker
+- ✅ **Scatter Plots**: Individual speech segments with duration vs. position visualization
 - ✅ **Box Plot Visualizations**: Statistical distribution of speaking patterns
+- ✅ **Monologue Analysis**: Longest and shortest speaking segments per speaker
 - ✅ **Speaker Profiles**: Rich speaker metadata with images and descriptions
 
 ### Global Audio Player
@@ -63,7 +64,8 @@ A comprehensive tool suite for scraping, analyzing, and visualizing podcast arch
 - ✅ **Category River Chart**: High-level overview (legacy)
 - ✅ **Speaker River Chart**: Speaker participation over time
 - ✅ **UMAP Scatter Plot**: 2D visualization of topic embeddings
-- ✅ **Heatmaps**: 
+- ✅ **Speaker Scatter Plot**: Individual speech segments by duration and position
+- ✅ **Heatmaps**:
   - Speaker × Cluster relationships
   - Cluster × Cluster co-occurrence
   - Speaker × Speaker co-occurrence (legacy)
@@ -445,13 +447,18 @@ npm run build
 
 ## RAG AI Search Backend (Rust)
 
-This repo includes a small Rust HTTP backend (`rag-backend`) that does RAG over `db/rag-embeddings.json` (created by `node scripts/create-rag-db.js`). It retrieves the referenced transcript window from `episodes/<N>-ts.json`, asks the LLM, and returns the answer **plus sources** (episode + time window + excerpt).
+This repo includes a small Rust HTTP backend (`rag-backend`) that does RAG over podcast-specific databases in `db/<podcast-id>/rag-embeddings.json` (created by `node scripts/create-rag-db.js --podcast <id>`). It supports all podcasts simultaneously and selects the appropriate database based on the `podcastId` parameter in API requests.
 
 ### Build the RAG DB
 
 ```bash
-# Creates ./db/rag-embeddings.json (make sure your LLM settings are configured)
-npm run create-rag-db
+# Build RAG database for a specific podcast
+npm run create-rag-db -- --podcast freakshow
+
+# Build RAG databases for all podcasts
+for podcast in cre forschergeist lnp raumzeit ukw freakshow; do
+  npm run create-rag-db -- --podcast "$podcast"
+done
 ```
 
 ### Run the backend
@@ -477,9 +484,15 @@ cargo run --bin rag-backend
 ### Call the API
 
 ```bash
+# Suche in allen verfügbaren Podcasts (fallback: freakshow)
 curl -s http://127.0.0.1:7878/api/chat \
   -H 'Content-Type: application/json' \
   -d '{ "query": "Worum ging es bei Universal Control?" }' | jq
+
+# Explizit einen Podcast angeben
+curl -s http://127.0.0.1:7878/api/chat \
+  -H 'Content-Type: application/json' \
+  -d '{ "query": "Worum ging es bei Universal Control?", "podcastId": "freakshow" }' | jq
 ```
 
 Response shape:
@@ -555,13 +568,9 @@ node scripts/generate-speaker-river.js --podcast freakshow
 
 ### RAG-Backend
 
-Das RAG-Backend unterstützt Podcast-spezifische Pfade über Umgebungsvariablen:
+Das RAG-Backend unterstützt alle Podcasts gleichzeitig. Die Podcast-Auswahl erfolgt pro Anfrage:
 
 ```bash
-export PODCAST_ID="freakshow"
-export EPISODES_DIR="podcasts/freakshow/episodes"
-export SPEAKERS_DIR="podcasts/freakshow/speakers"
-
 cargo run --bin rag-backend
 ```
 
@@ -569,58 +578,68 @@ cargo run --bin rag-backend
 
 ```
 pod-insights/
-├── podcasts/               # Multi-Podcast Datenstruktur
-│   └── <podcast-id>/
-│       ├── episodes/       # Scraped episode data (per podcast)
-│       └── speakers/       # Speaker data (per podcast)
-├── episodes/                 # Legacy: Scraped episode data (959 files)
-│   ├── 1.json               # Episode metadata
-│   ├── 1-ts.json            # Transcript
-│   ├── 1-sn.json            # Shownotes
-│   └── 1-text.html          # Description
+├── Cargo.lock               # Rust dependencies lock file
+├── Cargo.toml               # Rust project configuration
+├── db/                      # Database files and embeddings
+│   ├── rag-embeddings.json  # RAG database for AI search
+│   ├── topic-embeddings.json # Topic semantic embeddings (~500MB)
+│   ├── cre/                 # Podcast-specific embeddings
+│   ├── forschergeist/
+│   ├── lnp/
+│   ├── raumzeit/
+│   └── ukw/
 │
-├── scrape.js                # Episode list scraper
-├── scrape-details.js        # Transcript/shownotes scraper
-├── scrape-osf.js            # Legacy shownotes scraper
-│
-├── extract-topics.js        # LLM topic extraction
-├── normalize-topics.js      # Topic cleanup
-├── create-embeddings.js     # Generate embeddings
-│
-├── cluster-topics.js        # JavaScript clustering (legacy)
-├── src/
-│   ├── cluster_topics.rs    # V1 Rust clustering (HAC)
-│   └── cluster_topics_v2.rs # V2 Rust clustering (HDBSCAN)
-├── Cargo.toml               # Rust dependencies
-│
-├── variants.json            # Variant configurations
-├── build-variant.sh         # Variant build script
-│
-├── generate-*.js            # Visualization data generators
-│
-├── frontend/                # Vue.js visualization app
+├── docs/                    # Documentation files
+├── frontend/                # Vue.js visualization application
 │   ├── src/
 │   │   ├── views/           # Main view components
-│   │   ├── components/      # Reusable components (inkl. PodcastSelector)
-│   │   ├── composables/     # Vue composables (variant & podcast handling)
-│   │   ├── stores/          # Pinia state management (mit Podcast-Auswahl)
-│   │   └── i18n/            # Translations (de, en, fr)
+│   │   ├── components/      # Reusable components (charts, selectors)
+│   │   ├── composables/     # Vue composables (podcast, audio, etc.)
+│   │   ├── stores/          # Pinia state management
+│   │   ├── i18n/            # Internationalization (de, en, fr)
+│   │   └── types.ts         # TypeScript type definitions
 │   └── public/
-│       ├── podcasts.json    # Podcast-Konfiguration
-│       ├── podcasts/        # Podcast-spezifische Daten
-│       │   └── <podcast-id>/
-│       │       ├── episodes.json
-│       │       ├── episodes/     # Symlink zu podcasts/<id>/episodes
-│       │       ├── speakers/
-│       │       └── topics/       # Variant-specific data
-│       │           ├── manifest.json
-│       │           ├── default-v1/
-│       │           └── auto-v2/
-│       └── episodes/        # Legacy: Episode data (Symlink)
+│       ├── podcasts.json    # Podcast configuration
+│       └── podcasts/        # Frontend data per podcast
+│           └── <podcast-id>/
+│               ├── episodes.json     # Episode index
+│               ├── episodes/         # Episode data (symlinks)
+│               ├── speakers/         # Speaker metadata
+│               └── topics/           # Clustering variants
+│                   ├── manifest.json
+│                   └── <variant>/
 │
-├── settings.json            # Configuration (API keys, etc.)
-├── settings.example.json    # Example configuration
-└── README.md               # This file
+├── lib/                     # Shared JavaScript utilities
+├── podcasts/                # Raw podcast data (organized by podcast)
+│   ├── cre/                 # Chaosradio Express
+│   ├── forschergeist/       # Forschergeist
+│   ├── lnp/                 # Logbuch:Netzpolitik
+│   ├── raumzeit/            # Raumzeit
+│   └── ukw/                 # UKW
+│
+├── scripts/                 # Build and utility scripts
+│   ├── process-podcast.sh   # Complete podcast processing pipeline
+│   ├── build-variant.sh     # Clustering variant builder
+│   ├── sync.sh             # Data synchronization
+│   └── generate-*.js       # Individual data generators
+│
+├── src/                    # Rust source code
+│   ├── cache.rs            # Caching utilities
+│   ├── cluster_topics.rs   # V1 HAC clustering
+│   ├── cluster_topics_v2.rs # V2 HDBSCAN clustering
+│   ├── config.rs           # Configuration handling
+│   ├── handlers/           # HTTP request handlers
+│   ├── lib.rs              # Library exports
+│   ├── rag/                # RAG search implementation
+│   ├── rag_backend.rs      # RAG HTTP server
+│   ├── transcript.rs       # Transcript processing
+│   └── utils.rs            # Utility functions
+│
+├── settings.json           # Configuration (API keys, etc.)
+├── settings.example.json   # Example configuration template
+├── variants.json           # Clustering variant definitions
+├── package.json            # Node.js dependencies and scripts
+└── README.md              # This documentation
 ```
 
 ## Configuration
