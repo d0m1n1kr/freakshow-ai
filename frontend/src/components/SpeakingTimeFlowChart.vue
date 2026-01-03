@@ -718,14 +718,14 @@ const drawChart = () => {
   // Add chapter hover areas AFTER chapters are drawn (so chapterAreas array is populated)
   // These areas will darken other chapters on hover
   chapterAreas.forEach((chapterArea) => {
-    const hoverArea = g.append('rect')
+    g.append('rect')
       .attr('x', chapterArea.startX)
       .attr('y', 0)
       .attr('width', chapterArea.endX - chapterArea.startX)
       .attr('height', innerHeight)
       .attr('fill', 'transparent')
       .style('cursor', 'pointer')
-      .style('pointer-events', 'all')
+      .style('pointer-events', 'all') // Need to capture hover events but let clicks through
       .on('mouseover', function(event: MouseEvent) {
         event.stopPropagation();
         // Darken all other chapters
@@ -843,6 +843,59 @@ const drawChart = () => {
         } else if (tooltipRef.value) {
           tooltipRef.value.style.display = 'none';
         }
+      })
+      .on('click', function(event: MouseEvent) {
+        // Forward click to trigger play functionality - reuse the click logic from main overlay
+        if (!props.episodeNumber) return;
+
+        const [mx, my] = d3.pointer(event, g.node() as any);
+        const clickedTimeSec = Math.max(0, Math.min(props.data.episodeDurationSec, xScale.invert(mx)));
+        const shareValue = Math.max(0, Math.min(1, yScale.invert(my)));
+
+        // Find which speaker was clicked
+        let clickedSpeaker: string | null = null;
+
+        // Find the interval that contains this time
+        let intervalIdx = -1;
+        for (let i = 0; i < filledIntervals.length; i++) {
+          const interval = filledIntervals[i];
+          if (interval && clickedTimeSec >= interval.start && clickedTimeSec < interval.end) {
+            intervalIdx = i;
+            break;
+          }
+        }
+
+        if (intervalIdx >= 0 && intervalIdx < filledIntervals.length) {
+          const interval = filledIntervals[intervalIdx];
+          if (!interval) return;
+
+          // Find which speaker's area was clicked
+          let cumulative = 0;
+          for (const speaker of speakers) {
+            const share = interval.speakers[speaker] || 0;
+            const bottom = cumulative;
+            const top = cumulative + share;
+
+            if (shareValue >= bottom && shareValue <= top && share > 0) {
+              clickedSpeaker = speaker;
+              break;
+            }
+
+            cumulative = top;
+          }
+        }
+
+        // If we found a speaker, find their next segment start
+        let playTimeSec = clickedTimeSec;
+        if (clickedSpeaker && transcriptData.value) {
+          const nextSegmentStart = findNextSegmentStart(clickedSpeaker, clickedTimeSec);
+          if (nextSegmentStart !== null) {
+            playTimeSec = nextSegmentStart;
+          }
+        }
+
+        // Emit play event with the calculated time
+        emit('play-at-time', playTimeSec);
       });
   });
 

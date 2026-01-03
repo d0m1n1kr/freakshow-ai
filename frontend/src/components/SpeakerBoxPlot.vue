@@ -407,18 +407,18 @@ const drawChart = () => {
       if (!hasSelectedSpeakers) {
         // No selection: show all elements normally
         element.style('opacity', null);
-        if (node?.tagName === 'rect') {
+        if (node && 'tagName' in node && node.tagName === 'rect') {
           element.attr('fill-opacity', 0.7);
-        } else if (node?.tagName === 'line' || node?.tagName === 'circle') {
+        } else if (node && 'tagName' in node && (node.tagName === 'line' || node.tagName === 'circle')) {
           const originalStrokeWidth = element.attr('data-original-stroke-width') || '2';
           element.attr('stroke-width', originalStrokeWidth);
         }
       } else if (isSelected) {
         // Selected: highlight
         element.style('opacity', 1);
-        if (node?.tagName === 'rect') {
+        if (node && 'tagName' in node && node.tagName === 'rect') {
           element.attr('fill-opacity', 0.9);
-        } else if (node?.tagName === 'line' || node?.tagName === 'circle') {
+        } else if (node && 'tagName' in node && (node.tagName === 'line' || node.tagName === 'circle')) {
           const originalStrokeWidth = element.attr('data-original-stroke-width') || '2';
           const currentWidth = parseFloat(originalStrokeWidth);
           element.attr('stroke-width', (currentWidth * 1.5).toString());
@@ -426,7 +426,7 @@ const drawChart = () => {
       } else {
         // Not selected: dim
         element.style('opacity', 0.2);
-        if (node?.tagName === 'rect') {
+        if (node && 'tagName' in node && node.tagName === 'rect') {
           element.attr('fill-opacity', 0.2);
         }
       }
@@ -727,7 +727,7 @@ const drawChart = () => {
       .attr('data-speaker', speaker)
       .style('cursor', 'pointer');
 
-    const legendRect = legendRow
+    legendRow
       .append('rect')
       .attr('width', 15)
       .attr('height', 15)
@@ -738,7 +738,7 @@ const drawChart = () => {
 
     const legendTextColor = isDarkMode ? '#e5e7eb' : '#374151';
 
-    const legendText = legendRow
+    legendRow
       .append('text')
       .attr('x', 20)
       .attr('y', 12)
