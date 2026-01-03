@@ -1041,6 +1041,7 @@ const playEpisodeAt = async (episodeNumber: number, seconds: number, label: stri
                       <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Bild</th>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Datum</th>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Titel</th>
+                      <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Play</th>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Position(en)</th>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Dauer</th>
                       <th :class="['px-3 py-2 text-left text-xs font-semibold whitespace-nowrap', themeColor === 'blue' ? 'text-blue-900 dark:text-blue-100' : 'text-purple-900 dark:text-purple-100']">Sprecher</th>
@@ -1067,18 +1068,18 @@ const playEpisodeAt = async (episodeNumber: number, seconds: number, label: stri
                           {{ new Date(episode.date).toLocaleDateString('de-DE') }}
                         </td>
                         <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">
-                          <div class="flex items-center gap-2 min-w-0">
-                            <button
-                              type="button"
-                              class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
-                              @click="playEpisodeAt(episode.number, 0, 'Start')"
-                              title="Episode von Anfang abspielen"
-                              aria-label="Episode von Anfang abspielen"
-                            >
-                              ▶︎
-                            </button>
-                            <span class="truncate">{{ episode.title }}</span>
-                          </div>
+                          <span class="truncate">{{ episode.title }}</span>
+                        </td>
+                        <td class="px-3 py-2">
+                          <button
+                            type="button"
+                            class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                            @click="playEpisodeAt(episode.number, 0, 'Start')"
+                            title="Episode von Anfang abspielen"
+                            aria-label="Episode von Anfang abspielen"
+                          >
+                            ▶︎
+                          </button>
                         </td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap font-mono">
                           <template v-if="getTopicOccurrences(episode).length > 0">
@@ -1131,18 +1132,18 @@ const playEpisodeAt = async (episodeNumber: number, seconds: number, label: stri
                           {{ new Date(episode.date).toLocaleDateString('de-DE') }}
                         </td>
                         <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">
-                          <div class="flex items-center gap-2 min-w-0">
-                            <button
-                              type="button"
-                              class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
-                              @click="playEpisodeAt(episode.number, 0, 'Start')"
-                              title="Episode von Anfang abspielen"
-                              aria-label="Episode von Anfang abspielen"
-                            >
-                              ▶︎
-                            </button>
-                            <span class="truncate">{{ episode.title }}</span>
-                          </div>
+                          <span class="truncate">{{ episode.title }}</span>
+                        </td>
+                        <td class="px-3 py-2">
+                          <button
+                            type="button"
+                            class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                            @click="playEpisodeAt(episode.number, 0, 'Start')"
+                            title="Episode von Anfang abspielen"
+                            aria-label="Episode von Anfang abspielen"
+                          >
+                            ▶︎
+                          </button>
                         </td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap font-mono">
                           <template v-if="getTopicOccurrences(episode).length > 0">
@@ -1166,18 +1167,18 @@ const playEpisodeAt = async (episodeNumber: number, seconds: number, label: stri
                           {{ new Date(episode.date).toLocaleDateString('de-DE') }}
                         </td>
                         <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">
-                          <div class="flex items-center gap-2 min-w-0">
-                            <button
-                              type="button"
-                              class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
-                              @click="playEpisodeAt(episode.number, 0, 'Start')"
-                              title="Episode von Anfang abspielen"
-                              aria-label="Episode von Anfang abspielen"
-                            >
-                              ▶︎
-                            </button>
-                            <span class="truncate">{{ episode.title }}</span>
-                          </div>
+                          <span class="truncate">{{ episode.title }}</span>
+                        </td>
+                        <td class="px-3 py-2">
+                          <button
+                            type="button"
+                            class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                            @click="playEpisodeAt(episode.number, 0, 'Start')"
+                            title="Episode von Anfang abspielen"
+                            aria-label="Episode von Anfang abspielen"
+                          >
+                            ▶︎
+                          </button>
                         </td>
                         <td class="px-3 py-2 text-gray-600 dark:text-gray-400 text-xs whitespace-nowrap font-mono">
                           <template v-if="getTopicOccurrences(episode).length > 0">

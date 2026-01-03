@@ -2,6 +2,9 @@
 import { ref, onMounted, computed, watch } from 'vue';
 import * as d3 from 'd3';
 import type { SpeakerRiverData, ProcessedSpeakerData } from '../types';
+import { useSettingsStore } from '../stores/settings';
+import { useAudioPlayerStore } from '../stores/audioPlayer';
+import { getPodcastFileUrl, getEpisodeUrl, getSpeakersBaseUrl } from '@/composables/usePodcast';
 
 const props = defineProps<{
   data: SpeakerRiverData;
@@ -14,6 +17,16 @@ const hoveredSpeaker = ref<string | null>(null);
 const speakerFilter = ref<number>(15);
 const normalizedView = ref<boolean>(false);
 const dimensions = ref({ width: 1200, height: 600 });
+// const tooltipRef = ref<HTMLDivElement | null>(null); // For future tooltip functionality
+
+// Audio player setup
+const settings = useSettingsStore();
+const audioPlayerStore = useAudioPlayerStore();
+
+// MP3 index loading
+const mp3IndexLoaded = ref(false);
+const mp3IndexError = ref<string | null>(null);
+const mp3UrlByEpisode = ref<Map<number, string>>(new Map());
 
 // Prozessiere die Daten
 const processedData = computed(() => {
@@ -373,6 +386,62 @@ const showEpisodeList = ref(false);
 const episodeDetails = ref<Map<number, any>>(new Map());
 const loadingEpisodes = ref(false);
 
+// Helper function for base URL
+const withBase = (p: string) => {
+  const base = (import.meta as any)?.env?.BASE_URL || '/';
+  const b = String(base).endsWith('/') ? String(base) : `${String(base)}/`;
+  const rel = String(p).replace(/^\/+/, '');
+  return `${b}${rel}`;
+};
+
+// MP3 index loading function
+const ensureMp3Index = async () => {
+  if (mp3IndexLoaded.value || mp3IndexError.value) return;
+  try {
+    const res = await fetch(getPodcastFileUrl('episodes.json'), { cache: 'force-cache' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+
+    const map = new Map<number, string>();
+    if (data?.byNumber && typeof data.byNumber === 'object') {
+      for (const [k, v] of Object.entries<any>(data.byNumber)) {
+        const n = parseInt(k, 10);
+        const url = typeof v?.mp3Url === 'string' ? v.mp3Url : null;
+        if (Number.isFinite(n) && url) map.set(n, url);
+      }
+    } else if (Array.isArray(data?.episodes)) {
+      for (const ep of data.episodes) {
+        const n = Number.isFinite(ep?.number) ? ep.number : null;
+        const url = typeof ep?.mp3Url === 'string' ? ep.mp3Url : null;
+        if (Number.isFinite(n) && url) map.set(n, url);
+      }
+    }
+
+    mp3UrlByEpisode.value = map;
+    mp3IndexLoaded.value = true;
+  } catch (e) {
+    mp3IndexError.value = e instanceof Error ? e.message : String(e);
+  }
+};
+
+// Fallback function to open episode externally
+const openEpisodeAt = async (episodeNumber: number, seconds: number) => {
+  try {
+    const res = await fetch(getEpisodeUrl(episodeNumber), { cache: 'force-cache' });
+    if (!res.ok) return;
+    const details = await res.json();
+    const url = typeof details?.url === 'string' ? details.url : null;
+    if (!url) return;
+    const u = new URL(url);
+    u.searchParams.set('t', String(Math.max(0, Math.floor(seconds))));
+    u.searchParams.set('autoplay', '1');
+    u.hash = `t=${Math.max(0, Math.floor(seconds))}`;
+    window.open(u.toString(), '_blank', 'noopener,noreferrer');
+  } catch {
+    // ignore
+  }
+};
+
 // Lade Episode-Details
 const loadEpisodeDetails = async () => {
   if (!selectedSpeakerInfo.value || loadingEpisodes.value) return;
@@ -385,13 +454,19 @@ const loadEpisodeDetails = async () => {
   
   for (const episodeNum of toLoad) {
     try {
-      const response = await fetch(`/episodes/${episodeNum}.json`);
+      const response = await fetch(getEpisodeUrl(episodeNum));
       if (response.ok) {
         const data = await response.json();
         newDetails.set(episodeNum, data);
+      } else {
+        console.warn(`Episode ${episodeNum} not found (HTTP ${response.status})`);
+        // Markiere als nicht verfügbar mit null
+        newDetails.set(episodeNum, null);
       }
     } catch (e) {
       console.error(`Failed to load episode ${episodeNum}:`, e);
+      // Markiere als nicht verfügbar mit null
+      newDetails.set(episodeNum, null);
     }
   }
   
@@ -406,6 +481,44 @@ watch(showEpisodeList, (newValue) => {
     loadEpisodeDetails();
   }
 });
+
+// When switching podcasts, clear cached MP3 index and episode details
+watch(
+  () => settings.selectedPodcast,
+  () => {
+    mp3IndexLoaded.value = false;
+    mp3IndexError.value = null;
+    mp3UrlByEpisode.value = new Map();
+    episodeDetails.value = new Map();
+    showEpisodeList.value = false;
+  }
+);
+
+// Play episode function
+const playEpisodeAt = async (episodeNumber: number, seconds: number, label: string) => {
+  await ensureMp3Index();
+
+  const mp3 = mp3UrlByEpisode.value.get(episodeNumber) || null;
+  if (!mp3) {
+    const errorMsg = mp3IndexError.value
+      ? `MP3 Index nicht verfügbar (${mp3IndexError.value})`
+      : 'Keine MP3-URL für diese Episode gefunden (episodes.json)';
+    audioPlayerStore.setError(errorMsg);
+    // Fallback: open episode page (if we have it)
+    openEpisodeAt(episodeNumber, seconds);
+    return;
+  }
+
+  audioPlayerStore.play({
+    src: mp3,
+    title: `Episode ${episodeNumber}`,
+    subtitle: label,
+    seekToSec: Math.max(0, Math.floor(seconds)),
+    autoplay: true,
+    transcriptSrc: withBase(getPodcastFileUrl(`episodes/${episodeNumber}-ts-live.json`)),
+    speakersMetaUrl: getSpeakersBaseUrl(),
+  });
+};
 </script>
 
 <template>
@@ -467,6 +580,7 @@ watch(showEpisodeList, (newValue) => {
                       <th class="px-3 py-2 text-left text-xs font-semibold text-green-900">#</th>
                       <th class="px-3 py-2 text-left text-xs font-semibold text-green-900">Datum</th>
                       <th class="px-3 py-2 text-left text-xs font-semibold text-green-900">Titel</th>
+                      <th class="px-3 py-2 text-left text-xs font-semibold text-green-900">Play</th>
                       <th class="px-3 py-2 text-left text-xs font-semibold text-green-900">Dauer</th>
                       <th class="px-3 py-2 text-left text-xs font-semibold text-green-900">Speaker</th>
                       <th class="px-3 py-2 text-left text-xs font-semibold text-green-900">Link</th>
@@ -478,17 +592,28 @@ watch(showEpisodeList, (newValue) => {
                       :key="episodeNum"
                       class="border-t border-green-100 hover:bg-green-50"
                     >
-                      <template v-if="episodeDetails.has(episodeNum)">
+                      <template v-if="episodeDetails.has(episodeNum) && episodeDetails.get(episodeNum)">
                         <td class="px-3 py-2 text-green-700 font-mono text-xs">{{ episodeNum }}</td>
                         <td class="px-3 py-2 text-gray-600 whitespace-nowrap">
-                          {{ new Date(episodeDetails.get(episodeNum).date).toLocaleDateString('de-DE') }}
+                          {{ new Date(episodeDetails.get(episodeNum)!.date).toLocaleDateString('de-DE') }}
                         </td>
-                        <td class="px-3 py-2 text-gray-900">{{ episodeDetails.get(episodeNum).title }}</td>
+                        <td class="px-3 py-2 text-gray-900">{{ episodeDetails.get(episodeNum)!.title }}</td>
+                        <td class="px-3 py-2">
+                          <button
+                            type="button"
+                            class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                            @click="playEpisodeAt(episodeNum, 0, 'Start')"
+                            title="Episode von Anfang abspielen"
+                            aria-label="Episode von Anfang abspielen"
+                          >
+                            ▶︎
+                          </button>
+                        </td>
                         <td class="px-3 py-2 text-gray-600 text-xs">
-                          {{ formatDuration(episodeDetails.get(episodeNum).duration) }}
+                          {{ formatDuration(episodeDetails.get(episodeNum)!.duration) }}
                         </td>
                         <td class="px-3 py-2 text-xs">
-                          <template v-for="(speaker, idx) in episodeDetails.get(episodeNum).speakers" :key="`${episodeNum}-${idx}`">
+                          <template v-for="(speaker, idx) in episodeDetails.get(episodeNum)!.speakers" :key="`${episodeNum}-${idx}`">
                             <span
                               :class="[
                                 'inline-block',
@@ -496,12 +621,12 @@ watch(showEpisodeList, (newValue) => {
                                   ? 'font-semibold text-green-700 bg-green-100 px-1 rounded' 
                                   : 'text-gray-600'
                               ]"
-                            >{{ speaker }}</span><span v-if="(idx as number) < (episodeDetails.get(episodeNum).speakers.length - 1)" class="text-gray-600">, </span>
+                            >{{ speaker }}</span><span v-if="(idx as number) < (episodeDetails.get(episodeNum)!.speakers.length - 1)" class="text-gray-600">, </span>
                           </template>
                         </td>
                         <td class="px-3 py-2">
-                          <a 
-                            :href="episodeDetails.get(episodeNum).url"
+                          <a
+                            :href="episodeDetails.get(episodeNum)!.url"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="text-green-600 hover:text-green-800 underline text-xs"
@@ -510,8 +635,11 @@ watch(showEpisodeList, (newValue) => {
                           </a>
                         </td>
                       </template>
+                      <template v-else-if="episodeDetails.has(episodeNum) && episodeDetails.get(episodeNum) === null">
+                        <td colspan="7" class="px-3 py-2 text-gray-400 text-xs">Episode {{ episodeNum }} - Daten nicht verfügbar</td>
+                      </template>
                       <template v-else>
-                        <td colspan="6" class="px-3 py-2 text-gray-400 text-xs">Episode {{ episodeNum }} - Daten nicht verfügbar</td>
+                        <td colspan="7" class="px-3 py-2 text-gray-400 text-xs">Episode {{ episodeNum }} - Lädt...</td>
                       </template>
                     </tr>
                   </tbody>

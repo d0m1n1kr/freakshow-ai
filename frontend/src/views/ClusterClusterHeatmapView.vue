@@ -101,6 +101,7 @@
                           <th class="px-3 py-2 text-left text-xs font-semibold text-cyan-900 dark:text-cyan-100 whitespace-nowrap">Bild</th>
                           <th class="px-3 py-2 text-left text-xs font-semibold text-cyan-900 dark:text-cyan-100 whitespace-nowrap">Datum</th>
                           <th class="px-3 py-2 text-left text-xs font-semibold text-cyan-900 dark:text-cyan-100">Titel</th>
+                          <th class="px-3 py-2 text-left text-xs font-semibold text-cyan-900 dark:text-cyan-100 whitespace-nowrap">Play</th>
                           <th class="px-3 py-2 text-left text-xs font-semibold text-cyan-900 dark:text-cyan-100 whitespace-nowrap">Dauer</th>
                           <th class="px-3 py-2 text-left text-xs font-semibold text-cyan-900 dark:text-cyan-100 whitespace-nowrap">Sprecher</th>
                           <th class="px-3 py-2 text-left text-xs font-semibold text-cyan-900 dark:text-cyan-100 whitespace-nowrap">Link</th>
@@ -113,19 +114,8 @@
                           class="border-t border-cyan-100 dark:border-cyan-800 hover:bg-cyan-50 dark:hover:bg-cyan-900/20"
                         >
                           <template v-if="episodeDetails.has(episodeNum) && episodeDetails.get(episodeNum) !== null">
-                            <td class="px-3 py-2 text-cyan-700 dark:text-cyan-300 text-xs whitespace-nowrap">
-                              <div class="flex items-center gap-2">
-                                <button
-                                  type="button"
-                                  class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
-                                  @click="playEpisodeAt(episodeNum, 0, 'Start')"
-                                  title="Episode von Anfang abspielen"
-                                  aria-label="Episode von Anfang abspielen"
-                                >
-                                  ▶︎
-                                </button>
-                                <span class="font-mono">{{ episodeNum }}</span>
-                              </div>
+                            <td class="px-3 py-2 text-cyan-700 dark:text-cyan-300 text-xs whitespace-nowrap font-mono">
+                              {{ episodeNum }}
                             </td>
                             <td class="px-3 py-2">
                               <img
@@ -140,6 +130,17 @@
                             </td>
                             <td class="px-3 py-2 text-gray-900 dark:text-gray-100 text-xs">
                               {{ episodeDetails.get(episodeNum)?.title }}
+                            </td>
+                            <td class="px-3 py-2">
+                              <button
+                                type="button"
+                                class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                                @click="playEpisodeAt(episodeNum, 0, 'Start')"
+                                title="Episode von Anfang abspielen"
+                                aria-label="Episode von Anfang abspielen"
+                              >
+                                ▶︎
+                              </button>
                             </td>
                             <td class="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap text-xs">
                               {{ formatDuration(episodeDetails.get(episodeNum)?.duration) }}
@@ -161,19 +162,8 @@
                             </td>
                           </template>
                           <template v-else-if="episodeDetails.get(episodeNum) === null">
-                            <td class="px-3 py-2 text-cyan-700 dark:text-cyan-300 text-xs whitespace-nowrap">
-                              <div class="flex items-center gap-2">
-                                <button
-                                  type="button"
-                                  class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
-                                  @click="playEpisodeAt(episodeNum, 0, 'Start')"
-                                  title="Episode von Anfang abspielen"
-                                  aria-label="Episode von Anfang abspielen"
-                                >
-                                  ▶︎
-                                </button>
-                                <span class="font-mono">{{ episodeNum }}</span>
-                              </div>
+                            <td class="px-3 py-2 text-cyan-700 dark:text-cyan-300 text-xs whitespace-nowrap font-mono">
+                              {{ episodeNum }}
                             </td>
                             <td class="px-3 py-2">
                               <img
@@ -183,24 +173,13 @@
                                 class="w-12 h-12 rounded object-cover border border-gray-200 dark:border-gray-700"
                               />
                             </td>
-                            <td colspan="4" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs italic">
+                            <td colspan="5" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs italic">
                               Details nicht verfügbar
                             </td>
                           </template>
                           <template v-else>
-                            <td class="px-3 py-2 text-cyan-700 dark:text-cyan-300 text-xs whitespace-nowrap">
-                              <div class="flex items-center gap-2">
-                                <button
-                                  type="button"
-                                  class="shrink-0 inline-flex items-center justify-center w-6 h-6 rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
-                                  @click="playEpisodeAt(episodeNum, 0, 'Start')"
-                                  title="Episode von Anfang abspielen"
-                                  aria-label="Episode von Anfang abspielen"
-                                >
-                                  ▶︎
-                                </button>
-                                <span class="font-mono">{{ episodeNum }}</span>
-                              </div>
+                            <td class="px-3 py-2 text-cyan-700 dark:text-cyan-300 text-xs whitespace-nowrap font-mono">
+                              {{ episodeNum }}
                             </td>
                             <td class="px-3 py-2">
                               <img
@@ -210,7 +189,7 @@
                                 class="w-12 h-12 rounded object-cover border border-gray-200 dark:border-gray-700"
                               />
                             </td>
-                            <td colspan="4" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs">
+                            <td colspan="5" class="px-3 py-2 text-gray-400 dark:text-gray-500 text-xs">
                               Lade...
                             </td>
                           </template>
