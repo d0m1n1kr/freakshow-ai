@@ -2,6 +2,10 @@
 
 This is the Vue.js frontend for the PodInsights podcast analysis tool. See the main [README.md](../README.md) for complete project documentation, installation instructions, and setup.
 
+## Note on Embeddings / RAG storage
+
+The large embedding databases are stored in **LanceDB** under `db/<podcast-id>/lance/` (outside the frontend). The frontend consumes the pre-generated JSON artifacts in `frontend/public/podcasts/<podcast-id>/` (river data, heatmaps, UMAP, etc.).
+
 ## Adding a New Visualization
 
 1. **Create data generator** (in project root)

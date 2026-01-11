@@ -176,8 +176,8 @@ onMounted(async () => {
           </div>
           
           <div class="p-4 bg-gradient-to-r from-cyan-50 to-teal-50 dark:from-cyan-900/20 dark:to-teal-900/20 rounded-lg border border-cyan-200 dark:border-cyan-700">
-            <h4 class="font-semibold text-cyan-900 dark:text-cyan-100 mb-2">Serde JSON</h4>
-            <p class="text-sm text-gray-700 dark:text-gray-300">{{ t('about.backend.serde') }}</p>
+            <h4 class="font-semibold text-cyan-900 dark:text-cyan-100 mb-2">LanceDB</h4>
+            <p class="text-sm text-gray-700 dark:text-gray-300">{{ t('about.backend.lancedb') }}</p>
           </div>
         </div>
       </section>

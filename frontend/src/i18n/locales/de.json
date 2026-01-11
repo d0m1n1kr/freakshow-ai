@@ -172,9 +172,9 @@
     "backend": {
       "title": "Backend & Datenverarbeitung",
       "rust": "Hochperformante Clustering-Algorithmen für Topic-Analyse",
-      "node": "Daten-Aggregation und JSON-Generierung",
+      "node": "Daten-Aggregation und Dataset-Generierung",
       "rayon": "Parallele Verarbeitung in Rust für schnelleres Clustering",
-      "serde": "Serialisierung und Deserialisierung von Episode-Daten"
+      "lancedb": "Komprimierte Vector-Datenbank für Embeddings und RAG-Suche (Lance-Format)"
     },
     "ai": {
       "title": "KI & Machine Learning",
@@ -245,7 +245,7 @@
       "steps": {
         "extraction": {
           "title": "Episode-Daten Extraktion",
-          "description": "Laden von Episode-Metadaten und Themen aus JSON-Dateien"
+          "description": "Laden von Episode-Daten und abgeleiteten Artefakten pro Podcast"
         },
         "embedding": {
           "title": "Embedding-Generierung",

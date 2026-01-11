@@ -1,4 +1,5 @@
 use anyhow::{anyhow, Context, Result};
+use arrow_array::Array;
 use serde::{Deserialize, Serialize};
 use std::path::PathBuf;
 use std::sync::Arc;
@@ -80,7 +81,10 @@ impl TopicEmbeddingsLance {
     }
     
     pub async fn get_all(&self) -> Result<Vec<TopicRecord>> {
-        use arrow_array::{Int32Array, StringArray, FixedSizeListArray, Float32Array};
+        use arrow_array::{
+            FixedSizeListArray, Float32Array, Float64Array, Int32Array, Int64Array, LargeStringArray,
+            StringArray, UInt32Array, UInt64Array,
+        };
         use futures::TryStreamExt;
         
         let mut stream = self.table.query()
@@ -91,37 +95,73 @@ impl TopicEmbeddingsLance {
         while let Some(batch) = stream.try_next().await? {
             let num_rows = batch.num_rows();
             
-            // Get columns
-            let ids = batch.column_by_name("id")
-                .context("Missing id column")?
-                .as_any()
-                .downcast_ref::<Int32Array>()
-                .context("Failed to cast id column")?;
-            
-            let topics = batch.column_by_name("topic")
-                .context("Missing topic column")?
-                .as_any()
-                .downcast_ref::<StringArray>()
-                .context("Failed to cast topic column")?;
-            
-            let keywords_json = batch.column_by_name("keywords")
-                .context("Missing keywords column")?
-                .as_any()
-                .downcast_ref::<StringArray>()
-                .context("Failed to cast keywords column")?;
-            
-            let counts = batch.column_by_name("count")
-                .context("Missing count column")?
-                .as_any()
-                .downcast_ref::<Int32Array>()
-                .context("Failed to cast count column")?;
-            
-            let episodes_json = batch.column_by_name("episodes")
-                .context("Missing episodes column")?
-                .as_any()
-                .downcast_ref::<StringArray>()
-                .context("Failed to cast episodes column")?;
-            
+            let get_string_vec = |col_name: &str| -> Result<Vec<String>> {
+                let col = batch
+                    .column_by_name(col_name)
+                    .with_context(|| format!("Missing {} column", col_name))?;
+                if let Some(arr) = col.as_any().downcast_ref::<StringArray>() {
+                    let mut out = Vec::with_capacity(num_rows);
+                    for i in 0..num_rows {
+                        out.push(if arr.is_null(i) { "" } else { arr.value(i) }.to_string());
+                    }
+                    Ok(out)
+                } else if let Some(arr) = col.as_any().downcast_ref::<LargeStringArray>() {
+                    let mut out = Vec::with_capacity(num_rows);
+                    for i in 0..num_rows {
+                        out.push(if arr.is_null(i) { "" } else { arr.value(i) }.to_string());
+                    }
+                    Ok(out)
+                } else {
+                    Err(anyhow!(
+                        "Failed to cast {} column (type {:?})",
+                        col_name,
+                        col.data_type()
+                    ))
+                }
+            };
+
+            let get_u32_vec = |col_name: &str| -> Result<Vec<u32>> {
+                let col = batch
+                    .column_by_name(col_name)
+                    .with_context(|| format!("Missing {} column", col_name))?;
+
+                if let Some(arr) = col.as_any().downcast_ref::<UInt32Array>() {
+                    Ok(arr.values().to_vec())
+                } else if let Some(arr) = col.as_any().downcast_ref::<Int32Array>() {
+                    Ok(arr.values().iter().map(|&v| v as u32).collect())
+                } else if let Some(arr) = col.as_any().downcast_ref::<UInt64Array>() {
+                    Ok(arr.values().iter().map(|&v| v as u32).collect())
+                } else if let Some(arr) = col.as_any().downcast_ref::<Int64Array>() {
+                    Ok(arr.values().iter().map(|&v| v as u32).collect())
+                } else if let Some(arr) = col.as_any().downcast_ref::<Float64Array>() {
+                    Ok(arr.values().iter().map(|&v| v.round().max(0.0) as u32).collect())
+                } else if let Some(arr) = col.as_any().downcast_ref::<Float32Array>() {
+                    Ok(arr
+                        .values()
+                        .iter()
+                        .map(|&v| (v as f64).round().max(0.0) as u32)
+                        .collect())
+                } else {
+                    Err(anyhow!(
+                        "Failed to cast {} column (type {:?})",
+                        col_name,
+                        col.data_type()
+                    ))
+                }
+            };
+
+            // Prefer explicit id if present, otherwise fall back to Lance's internal _rowid.
+            let id_values: Vec<u32> = if batch.column_by_name("id").is_some() {
+                get_u32_vec("id")?
+            } else {
+                get_u32_vec("_rowid")?
+            };
+
+            let topic_values = get_string_vec("topic")?;
+            let keywords_json_values = get_string_vec("keywords")?;
+            let count_values = get_u32_vec("count")?;
+            let episodes_json_values = get_string_vec("episodes")?;
+
             let vectors = batch.column_by_name("vector")
                 .context("Missing vector column")?
                 .as_any()
@@ -130,26 +170,35 @@ impl TopicEmbeddingsLance {
             
             for i in 0..num_rows {
                 // Parse keywords JSON
-                let keywords: Vec<String> = serde_json::from_str(keywords_json.value(i))
-                    .unwrap_or_default();
+                let keywords: Vec<String> = {
+                    let s = keywords_json_values[i].as_str();
+                    if s.is_empty() { Vec::new() } else { serde_json::from_str(s).unwrap_or_default() }
+                };
                 
                 // Parse episodes JSON
-                let episodes: Vec<u32> = serde_json::from_str(episodes_json.value(i))
-                    .unwrap_or_default();
+                let episodes: Vec<u32> = {
+                    let s = episodes_json_values[i].as_str();
+                    if s.is_empty() { Vec::new() } else { serde_json::from_str(s).unwrap_or_default() }
+                };
                 
                 // Extract vector
                 let vector_values = vectors.value(i);
-                let vector_floats = vector_values
-                    .as_any()
-                    .downcast_ref::<Float32Array>()
-                    .context("Failed to cast vector values")?;
-                let embedding = vector_floats.values().to_vec();
+                let embedding: Vec<f32> = if let Some(arr) = vector_values.as_any().downcast_ref::<Float32Array>() {
+                    arr.values().to_vec()
+                } else if let Some(arr) = vector_values.as_any().downcast_ref::<Float64Array>() {
+                    arr.values().iter().map(|&v| v as f32).collect()
+                } else {
+                    return Err(anyhow!(
+                        "Failed to cast vector values (type {:?})",
+                        vector_values.data_type()
+                    ));
+                };
                 
                 records.push(TopicRecord {
-                    id: ids.value(i) as usize,
-                    topic: topics.value(i).to_string(),
+                    id: id_values[i] as usize,
+                    topic: topic_values[i].to_string(),
                     keywords,
-                    count: counts.value(i) as usize,
+                    count: count_values[i] as usize,
                     episodes,
                     embedding,
                 });
