@@ -198,7 +198,7 @@ detect_new_episodes() {
         fi
         
         # Check if speaker stats exist for this episode
-        local stats_file="podcasts/$PODCAST_ID/episodes/${episode_num}-stats.json"
+        local stats_file="podcasts/$PODCAST_ID/episodes/${episode_num}-speaker-stats.json"
         if [ ! -f "$stats_file" ]; then
             # Only add if not already in array
             if [[ ! " ${new_episodes[@]} " =~ " ${episode_num} " ]]; then

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-01-05T11:21:26.100Z",
+  "generatedAt": "2026-01-11T23:33:27.812Z",
   "description": "Subject River Daten für ukw Podcast - Coarse Subjects aggregiert nach Jahren",
   "statistics": {
-    "totalSubjects": 14,
+    "totalSubjects": 15,
     "yearRange": {
       "start": 2019,
       "end": 2025
@@ -28,19 +28,14 @@
         "count": 69
       },
       {
+        "id": "sonstige",
+        "name": "Sonstige",
+        "count": 39
+      },
+      {
         "id": "economics",
         "name": "Economics",
         "count": 37
-      },
-      {
-        "id": "sonstige",
-        "name": "Sonstige",
-        "count": 34
-      },
-      {
-        "id": "technology",
-        "name": "Technology",
-        "count": 33
       },
       {
         "id": "military",
@@ -48,9 +43,9 @@
         "count": 32
       },
       {
-        "id": "society",
-        "name": "Society",
-        "count": 22
+        "id": "technology",
+        "name": "Technology",
+        "count": 29
       },
       {
         "id": "media",
@@ -60,6 +55,11 @@
       {
         "id": "miscellaneous",
         "name": "Miscellaneous",
+        "count": 20
+      },
+      {
+        "id": "society",
+        "name": "Society",
         "count": 18
       },
       {
@@ -5070,15 +5070,15 @@
     "society": {
       "id": "society",
       "name": "Society",
-      "totalEpisodes": 22,
-      "totalRelevanceSec": 20080,
-      "totalOccurrences": 38,
+      "totalEpisodes": 18,
+      "totalRelevanceSec": 16359,
+      "totalOccurrences": 30,
       "yearData": [
         {
           "year": 2019,
-          "count": 3,
-          "totalRelevanceSec": 2579,
-          "totalOccurrences": 5,
+          "count": 1,
+          "totalRelevanceSec": 1451,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 1,
@@ -5092,50 +5092,14 @@
                   "durationSec": 1451
                 }
               ]
-            },
-            {
-              "number": 5,
-              "date": "2019-11-01",
-              "title": "UKW005 Hong Kong",
-              "relevanceSec": 363,
-              "occurrences": [
-                {
-                  "topic": "Hong Kong als Hobby",
-                  "positionSec": 118,
-                  "durationSec": 77
-                },
-                {
-                  "topic": "Kontemporäre Kultur",
-                  "positionSec": 352,
-                  "durationSec": 60
-                },
-                {
-                  "topic": "Faszination Hong Kong",
-                  "positionSec": 1111,
-                  "durationSec": 226
-                }
-              ]
-            },
-            {
-              "number": 7,
-              "date": "2019-11-20",
-              "title": "UKW007 Hong Kong: The Showdown",
-              "relevanceSec": 765,
-              "occurrences": [
-                {
-                  "topic": "Hong Kong kennenlernen",
-                  "positionSec": 107,
-                  "durationSec": 765
-                }
-              ]
             }
           ]
         },
         {
           "year": 2020,
-          "count": 8,
-          "totalRelevanceSec": 9630,
-          "totalOccurrences": 17,
+          "count": 9,
+          "totalRelevanceSec": 10043,
+          "totalOccurrences": 19,
           "episodes": [
             {
               "number": 9,
@@ -5154,17 +5118,12 @@
               "number": 10,
               "date": "2020-03-19",
               "title": "UKW010 Corona: Ich bin Dunkelziffer",
-              "relevanceSec": 394,
+              "relevanceSec": 140,
               "occurrences": [
                 {
                   "topic": "Geänderte Lebensverhältnisse",
                   "positionSec": 1125,
                   "durationSec": 140
-                },
-                {
-                  "topic": "Geschmackslosigkeit",
-                  "positionSec": 2535,
-                  "durationSec": 254
                 }
               ]
             },
@@ -5178,6 +5137,29 @@
                   "topic": "Die neue Realität nach dem Lockdown",
                   "positionSec": 5328,
                   "durationSec": 733
+                }
+              ]
+            },
+            {
+              "number": 16,
+              "date": "2020-04-06",
+              "title": "UKW016 Corona: Masken Berlin",
+              "relevanceSec": 667,
+              "occurrences": [
+                {
+                  "topic": "xhain Makerspace",
+                  "positionSec": 108,
+                  "durationSec": 193
+                },
+                {
+                  "topic": "Helfen wollen",
+                  "positionSec": 301,
+                  "durationSec": 247
+                },
+                {
+                  "topic": "Wie kann man helfen?",
+                  "positionSec": 1318,
+                  "durationSec": 227
                 }
               ]
             },
@@ -5342,23 +5324,10 @@
         },
         {
           "year": 2022,
-          "count": 2,
-          "totalRelevanceSec": 789,
-          "totalOccurrences": 2,
+          "count": 1,
+          "totalRelevanceSec": 331,
+          "totalOccurrences": 1,
           "episodes": [
-            {
-              "number": 98,
-              "date": "2022-05-20",
-              "title": "UKW098 Ukraine: Der Kot des Präsidenten ist ein Staatsgeheimnis",
-              "relevanceSec": 458,
-              "occurrences": [
-                {
-                  "topic": "Ukraine gewinnt ESC",
-                  "positionSec": 104,
-                  "durationSec": 458
-                }
-              ]
-            },
             {
               "number": 100,
               "date": "2022-07-15",
@@ -5381,9 +5350,9 @@
         },
         {
           "year": 2024,
-          "count": 2,
-          "totalRelevanceSec": 2382,
-          "totalOccurrences": 3,
+          "count": 1,
+          "totalRelevanceSec": 1528,
+          "totalOccurrences": 2,
           "episodes": [
             {
               "number": 118,
@@ -5402,41 +5371,15 @@
                   "durationSec": 746
                 }
               ]
-            },
-            {
-              "number": 125,
-              "date": "2024-09-25",
-              "title": "UKW125 Ukraine: Raketenbrot",
-              "relevanceSec": 854,
-              "occurrences": [
-                {
-                  "topic": "Palianytsia",
-                  "positionSec": 3224,
-                  "durationSec": 854
-                }
-              ]
             }
           ]
         },
         {
           "year": 2025,
-          "count": 4,
-          "totalRelevanceSec": 3189,
-          "totalOccurrences": 7,
+          "count": 3,
+          "totalRelevanceSec": 1495,
+          "totalOccurrences": 3,
           "episodes": [
-            {
-              "number": 133,
-              "date": "2025-05-08",
-              "title": "UKW133 Ukraine: Wir sind nicht für die Sicherheit der Besucher der russischen Militärparade zuständig",
-              "relevanceSec": 407,
-              "occurrences": [
-                {
-                  "topic": "Siegesfeiern zum 9. Mai",
-                  "positionSec": 1180,
-                  "durationSec": 407
-                }
-              ]
-            },
             {
               "number": 136,
               "date": "2025-09-01",
@@ -5454,18 +5397,8 @@
               "number": 137,
               "date": "2025-09-24",
               "title": "UKW137 Serbien: Der Präsident ist jetzt zuständig",
-              "relevanceSec": 1140,
+              "relevanceSec": 347,
               "occurrences": [
-                {
-                  "topic": "September: Belgrade Pride",
-                  "positionSec": 5599,
-                  "durationSec": 446
-                },
-                {
-                  "topic": "Sport und Kultur",
-                  "positionSec": 6576,
-                  "durationSec": 347
-                },
                 {
                   "topic": "September: Neues Schuljahr",
                   "positionSec": 5252,
@@ -5477,17 +5410,12 @@
               "number": 139,
               "date": "2025-11-21",
               "title": "UKW139 Ukraine: Bombenwetter",
-              "relevanceSec": 861,
+              "relevanceSec": 367,
               "occurrences": [
                 {
                   "topic": "Resilienz der Bevölkerung",
                   "positionSec": 5905,
                   "durationSec": 367
-                },
-                {
-                  "topic": "Austellung zum Krieg in Ennos Bunker",
-                  "positionSec": 7541,
-                  "durationSec": 494
                 }
               ]
             }
@@ -5498,15 +5426,15 @@
     "sonstige": {
       "id": "sonstige",
       "name": "Sonstige",
-      "totalEpisodes": 34,
-      "totalRelevanceSec": 29312,
-      "totalOccurrences": 66,
+      "totalEpisodes": 39,
+      "totalRelevanceSec": 36175,
+      "totalOccurrences": 77,
       "yearData": [
         {
           "year": 2019,
-          "count": 1,
-          "totalRelevanceSec": 1349,
-          "totalOccurrences": 1,
+          "count": 3,
+          "totalRelevanceSec": 3144,
+          "totalOccurrences": 5,
           "episodes": [
             {
               "number": 1,
@@ -5520,14 +5448,50 @@
                   "durationSec": 1349
                 }
               ]
+            },
+            {
+              "number": 2,
+              "date": "2019-02-23",
+              "title": "UKW002 Brexit: The Deadlock",
+              "relevanceSec": 301,
+              "occurrences": [
+                {
+                  "topic": "Das verlorene Empire",
+                  "positionSec": 904,
+                  "durationSec": 301
+                }
+              ]
+            },
+            {
+              "number": 5,
+              "date": "2019-11-01",
+              "title": "UKW005 Hong Kong",
+              "relevanceSec": 1494,
+              "occurrences": [
+                {
+                  "topic": "Geschichte und Struktur",
+                  "positionSec": 412,
+                  "durationSec": 698
+                },
+                {
+                  "topic": "Der britische Einfluss",
+                  "positionSec": 1337,
+                  "durationSec": 458
+                },
+                {
+                  "topic": "Rückgabe an China",
+                  "positionSec": 1795,
+                  "durationSec": 338
+                }
+              ]
             }
           ]
         },
         {
           "year": 2020,
           "count": 12,
-          "totalRelevanceSec": 10694,
-          "totalOccurrences": 28,
+          "totalRelevanceSec": 10063,
+          "totalOccurrences": 26,
           "episodes": [
             {
               "number": 11,
@@ -5571,25 +5535,15 @@
               ]
             },
             {
-              "number": 16,
-              "date": "2020-04-06",
-              "title": "UKW016 Corona: Masken Berlin",
-              "relevanceSec": 667,
+              "number": 19,
+              "date": "2020-04-15",
+              "title": "UKW019 Corona: Welt in Aufruhr",
+              "relevanceSec": 122,
               "occurrences": [
                 {
-                  "topic": "xhain Makerspace",
-                  "positionSec": 108,
-                  "durationSec": 193
-                },
-                {
-                  "topic": "Helfen wollen",
-                  "positionSec": 301,
-                  "durationSec": 247
-                },
-                {
-                  "topic": "Wie kann man helfen?",
-                  "positionSec": 1318,
-                  "durationSec": 227
+                  "topic": "Zahlen und Wissenschaft",
+                  "positionSec": 5152,
+                  "durationSec": 122
                 }
               ]
             },
@@ -5616,24 +5570,6 @@
                   "topic": "Oliver Drotbohm",
                   "positionSec": 79,
                   "durationSec": 144
-                }
-              ]
-            },
-            {
-              "number": 30,
-              "date": "2020-06-15",
-              "title": "UKW030 Die Corona-Warn-App",
-              "relevanceSec": 391,
-              "occurrences": [
-                {
-                  "topic": "Erwartungshaltungen",
-                  "positionSec": 6059,
-                  "durationSec": 360
-                },
-                {
-                  "topic": "Altersbeschränkungen",
-                  "positionSec": 8439,
-                  "durationSec": 31
                 }
               ]
             },
@@ -5735,6 +5671,24 @@
               ]
             },
             {
+              "number": 39,
+              "date": "2020-10-20",
+              "title": "UKW039 Corona: Impfstoffe",
+              "relevanceSec": 305,
+              "occurrences": [
+                {
+                  "topic": "Lars Fischer",
+                  "positionSec": 79,
+                  "durationSec": 110
+                },
+                {
+                  "topic": "Faszination für Viren und Seuchen",
+                  "positionSec": 189,
+                  "durationSec": 195
+                }
+              ]
+            },
+            {
               "number": 40,
               "date": "2020-10-21",
               "title": "UKW040 Corona: Pimp My CWA",
@@ -5769,10 +5723,23 @@
         },
         {
           "year": 2021,
-          "count": 5,
-          "totalRelevanceSec": 5198,
-          "totalOccurrences": 15,
+          "count": 6,
+          "totalRelevanceSec": 5972,
+          "totalOccurrences": 17,
           "episodes": [
+            {
+              "number": 53,
+              "date": "2021-01-02",
+              "title": "UKW053 Corona Weekly: Der Impfstoff ist ’ne App",
+              "relevanceSec": 88,
+              "occurrences": [
+                {
+                  "topic": "Die kommenden Kandidaten für den Nobelpreis",
+                  "positionSec": 8910,
+                  "durationSec": 88
+                }
+              ]
+            },
             {
               "number": 57,
               "date": "2021-01-23",
@@ -5874,8 +5841,13 @@
               "number": 67,
               "date": "2021-04-03",
               "title": "UKW067 Corona Weekly: Nicht ganz illusionsfrei",
-              "relevanceSec": 296,
+              "relevanceSec": 982,
               "occurrences": [
+                {
+                  "topic": "Wissenschaft vs. Politik",
+                  "positionSec": 1123,
+                  "durationSec": 686
+                },
                 {
                   "topic": "Geburtenrate geht zurück",
                   "positionSec": 8304,
@@ -5893,8 +5865,8 @@
         {
           "year": 2022,
           "count": 5,
-          "totalRelevanceSec": 3177,
-          "totalOccurrences": 6,
+          "totalRelevanceSec": 3942,
+          "totalOccurrences": 7,
           "episodes": [
             {
               "number": 92,
@@ -5944,8 +5916,13 @@
               "number": 95,
               "date": "2022-03-22",
               "title": "UKW095 Ukraine: Der Verlust des Zweifels",
-              "relevanceSec": 882,
+              "relevanceSec": 1647,
               "occurrences": [
+                {
+                  "topic": "Otto von Bismarck",
+                  "positionSec": 197,
+                  "durationSec": 765
+                },
                 {
                   "topic": "Was wir tun und was wir lassen sollten",
                   "positionSec": 9425,
@@ -5970,9 +5947,9 @@
         },
         {
           "year": 2023,
-          "count": 4,
-          "totalRelevanceSec": 2182,
-          "totalOccurrences": 5,
+          "count": 5,
+          "totalRelevanceSec": 3286,
+          "totalOccurrences": 6,
           "episodes": [
             {
               "number": 109,
@@ -6028,6 +6005,19 @@
                   "topic": "Nachproduktion von Material",
                   "positionSec": 1415,
                   "durationSec": 383
+                }
+              ]
+            },
+            {
+              "number": 117,
+              "date": "2023-11-23",
+              "title": "UKW117 Ukraine: Die Russen haben kein Hollywood",
+              "relevanceSec": 1104,
+              "occurrences": [
+                {
+                  "topic": "10 Jahre EuroMaidan",
+                  "positionSec": 2709,
+                  "durationSec": 1104
                 }
               ]
             }
@@ -6092,9 +6082,9 @@
         },
         {
           "year": 2025,
-          "count": 4,
-          "totalRelevanceSec": 3473,
-          "totalOccurrences": 6,
+          "count": 5,
+          "totalRelevanceSec": 6529,
+          "totalOccurrences": 11,
           "episodes": [
             {
               "number": 129,
@@ -6115,11 +6105,29 @@
               ]
             },
             {
+              "number": 132,
+              "date": "2025-04-25",
+              "title": "UKW132 Serbien: Der Präsident ist nicht zuständig",
+              "relevanceSec": 481,
+              "occurrences": [
+                {
+                  "topic": "Serbien nach den Balkankriegen",
+                  "positionSec": 697,
+                  "durationSec": 481
+                }
+              ]
+            },
+            {
               "number": 133,
               "date": "2025-05-08",
               "title": "UKW133 Ukraine: Wir sind nicht für die Sicherheit der Besucher der russischen Militärparade zuständig",
-              "relevanceSec": 265,
+              "relevanceSec": 672,
               "occurrences": [
+                {
+                  "topic": "Siegesfeiern zum 9. Mai",
+                  "positionSec": 1180,
+                  "durationSec": 407
+                },
                 {
                   "topic": "Ausblick",
                   "positionSec": 7956,
@@ -6131,7 +6139,7 @@
               "number": 136,
               "date": "2025-09-01",
               "title": "UKW136 USA: Good enough for the moment",
-              "relevanceSec": 1781,
+              "relevanceSec": 3949,
               "occurrences": [
                 {
                   "topic": "Lärm",
@@ -6142,6 +6150,21 @@
                   "topic": "Natur und Geografie",
                   "positionSec": 791,
                   "durationSec": 1501
+                },
+                {
+                  "topic": "Verkehr: LKW",
+                  "positionSec": 2422,
+                  "durationSec": 437
+                },
+                {
+                  "topic": "Verkehr: Kontrollen",
+                  "positionSec": 2860,
+                  "durationSec": 477
+                },
+                {
+                  "topic": "Verkehr: Straßennetz",
+                  "positionSec": 3337,
+                  "durationSec": 1254
                 }
               ]
             },
@@ -6155,312 +6178,6 @@
                   "topic": "Das Wetter im Kampf um Pokrovsk",
                   "positionSec": 6272,
                   "durationSec": 227
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "miscellaneous": {
-      "id": "miscellaneous",
-      "name": "Miscellaneous",
-      "totalEpisodes": 18,
-      "totalRelevanceSec": 6246,
-      "totalOccurrences": 20,
-      "yearData": [
-        {
-          "year": 2019,
-          "count": 2,
-          "totalRelevanceSec": 1795,
-          "totalOccurrences": 4,
-          "episodes": [
-            {
-              "number": 2,
-              "date": "2019-02-23",
-              "title": "UKW002 Brexit: The Deadlock",
-              "relevanceSec": 301,
-              "occurrences": [
-                {
-                  "topic": "Das verlorene Empire",
-                  "positionSec": 904,
-                  "durationSec": 301
-                }
-              ]
-            },
-            {
-              "number": 5,
-              "date": "2019-11-01",
-              "title": "UKW005 Hong Kong",
-              "relevanceSec": 1494,
-              "occurrences": [
-                {
-                  "topic": "Geschichte und Struktur",
-                  "positionSec": 412,
-                  "durationSec": 698
-                },
-                {
-                  "topic": "Der britische Einfluss",
-                  "positionSec": 1337,
-                  "durationSec": 458
-                },
-                {
-                  "topic": "Rückgabe an China",
-                  "positionSec": 1795,
-                  "durationSec": 338
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2020,
-          "count": 2,
-          "totalRelevanceSec": 330,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 51,
-              "date": "2020-12-19",
-              "title": "UKW051 Corona Weekly: Weihnachten ist nur ein Datum",
-              "relevanceSec": 126,
-              "occurrences": [
-                {
-                  "topic": "Bonus Track",
-                  "positionSec": 8752,
-                  "durationSec": 126
-                }
-              ]
-            },
-            {
-              "number": 52,
-              "date": "2020-12-26",
-              "title": "UKW052 Corona Weekly: Privatpersonen, die nichts wichtiges vorhaben",
-              "relevanceSec": 204,
-              "occurrences": [
-                {
-                  "topic": "Bonus Track",
-                  "positionSec": 8524,
-                  "durationSec": 204
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2021,
-          "count": 7,
-          "totalRelevanceSec": 1055,
-          "totalOccurrences": 7,
-          "episodes": [
-            {
-              "number": 67,
-              "date": "2021-04-03",
-              "title": "UKW067 Corona Weekly: Nicht ganz illusionsfrei",
-              "relevanceSec": 152,
-              "occurrences": [
-                {
-                  "topic": "Bonus Track",
-                  "positionSec": 9754,
-                  "durationSec": 152
-                }
-              ]
-            },
-            {
-              "number": 69,
-              "date": "2021-04-17",
-              "title": "UKW069 Corona Weekly: Inzidenzen interessieren keine Sau",
-              "relevanceSec": 107,
-              "occurrences": [
-                {
-                  "topic": "Bonus Track",
-                  "positionSec": 7320,
-                  "durationSec": 107
-                }
-              ]
-            },
-            {
-              "number": 72,
-              "date": "2021-05-08",
-              "title": "UKW072: Corona Weekly: Geisterfahrerfreie Zone",
-              "relevanceSec": 117,
-              "occurrences": [
-                {
-                  "topic": "Bonus Track",
-                  "positionSec": 7840,
-                  "durationSec": 117
-                }
-              ]
-            },
-            {
-              "number": 75,
-              "date": "2021-05-22",
-              "title": "UKW075 Corona Weekly: Impfen in 3D",
-              "relevanceSec": 158,
-              "occurrences": [
-                {
-                  "topic": "Bonus Track",
-                  "positionSec": 5912,
-                  "durationSec": 158
-                }
-              ]
-            },
-            {
-              "number": 80,
-              "date": "2021-08-10",
-              "title": "UKW080 Corona Weekly: Tempo 30 für Corona",
-              "relevanceSec": 183,
-              "occurrences": [
-                {
-                  "topic": "Bonus Track",
-                  "positionSec": 7902,
-                  "durationSec": 183
-                }
-              ]
-            },
-            {
-              "number": 86,
-              "date": "2021-12-04",
-              "title": "UKW086 Corona Weekly: Obertonwelle Omikron",
-              "relevanceSec": 190,
-              "occurrences": [
-                {
-                  "topic": "Bonus Track",
-                  "positionSec": 8900,
-                  "durationSec": 190
-                }
-              ]
-            },
-            {
-              "number": 87,
-              "date": "2021-12-11",
-              "title": "UKW087 Corona Weekly: Goldene Triade",
-              "relevanceSec": 148,
-              "occurrences": [
-                {
-                  "topic": "Bonus Track",
-                  "positionSec": 10964,
-                  "durationSec": 148
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2022,
-          "count": 4,
-          "totalRelevanceSec": 1321,
-          "totalOccurrences": 4,
-          "episodes": [
-            {
-              "number": 95,
-              "date": "2022-03-22",
-              "title": "UKW095 Ukraine: Der Verlust des Zweifels",
-              "relevanceSec": 765,
-              "occurrences": [
-                {
-                  "topic": "Otto von Bismarck",
-                  "positionSec": 197,
-                  "durationSec": 765
-                }
-              ]
-            },
-            {
-              "number": 99,
-              "date": "2022-06-23",
-              "title": "UKW099 Ukraine: Daneben schießen verboten",
-              "relevanceSec": 201,
-              "occurrences": [
-                {
-                  "topic": "Schlusskuriosität",
-                  "positionSec": 8180,
-                  "durationSec": 201
-                }
-              ]
-            },
-            {
-              "number": 104,
-              "date": "2022-10-05",
-              "title": "UKW104 Ukraine: Kampf ums elektromagnetische Spektrum",
-              "relevanceSec": 191,
-              "occurrences": [
-                {
-                  "topic": "Bonus Track",
-                  "positionSec": 13858,
-                  "durationSec": 191
-                }
-              ]
-            },
-            {
-              "number": 105,
-              "date": "2022-10-12",
-              "title": "UKW105 Ukraine: Menü der Grausamkeiten",
-              "relevanceSec": 164,
-              "occurrences": [
-                {
-                  "topic": "Bonus Track",
-                  "positionSec": 9974,
-                  "durationSec": 164
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2023,
-          "count": 2,
-          "totalRelevanceSec": 1264,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 110,
-              "date": "2023-05-17",
-              "title": "UKW110 Ukraine: Balance des Schreckens",
-              "relevanceSec": 160,
-              "occurrences": [
-                {
-                  "topic": "Bonus Track",
-                  "positionSec": 9369,
-                  "durationSec": 160
-                }
-              ]
-            },
-            {
-              "number": 117,
-              "date": "2023-11-23",
-              "title": "UKW117 Ukraine: Die Russen haben kein Hollywood",
-              "relevanceSec": 1104,
-              "occurrences": [
-                {
-                  "topic": "10 Jahre EuroMaidan",
-                  "positionSec": 2709,
-                  "durationSec": 1104
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2024,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2025,
-          "count": 1,
-          "totalRelevanceSec": 481,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 132,
-              "date": "2025-04-25",
-              "title": "UKW132 Serbien: Der Präsident ist nicht zuständig",
-              "relevanceSec": 481,
-              "occurrences": [
-                {
-                  "topic": "Serbien nach den Balkankriegen",
-                  "positionSec": 697,
-                  "durationSec": 481
                 }
               ]
             }
@@ -9098,9 +8815,9 @@
     "social": {
       "id": "social",
       "name": "Social",
-      "totalEpisodes": 9,
-      "totalRelevanceSec": 5729,
-      "totalOccurrences": 13,
+      "totalEpisodes": 10,
+      "totalRelevanceSec": 6120,
+      "totalOccurrences": 15,
       "yearData": [
         {
           "year": 2019,
@@ -9125,9 +8842,9 @@
         },
         {
           "year": 2020,
-          "count": 5,
-          "totalRelevanceSec": 3707,
-          "totalOccurrences": 7,
+          "count": 6,
+          "totalRelevanceSec": 4098,
+          "totalOccurrences": 9,
           "episodes": [
             {
               "number": 19,
@@ -9162,6 +8879,24 @@
                   "topic": "Vertrauensfragen",
                   "positionSec": 6296,
                   "durationSec": 522
+                }
+              ]
+            },
+            {
+              "number": 30,
+              "date": "2020-06-15",
+              "title": "UKW030 Die Corona-Warn-App",
+              "relevanceSec": 391,
+              "occurrences": [
+                {
+                  "topic": "Erwartungshaltungen",
+                  "positionSec": 6059,
+                  "durationSec": 360
+                },
+                {
+                  "topic": "Altersbeschränkungen",
+                  "positionSec": 8439,
+                  "durationSec": 31
                 }
               ]
             },
@@ -9289,8 +9024,8 @@
       "id": "economics",
       "name": "Economics",
       "totalEpisodes": 37,
-      "totalRelevanceSec": 37927,
-      "totalOccurrences": 62,
+      "totalRelevanceSec": 35759,
+      "totalOccurrences": 59,
       "yearData": [
         {
           "year": 2019,
@@ -9818,8 +9553,8 @@
         {
           "year": 2025,
           "count": 7,
-          "totalRelevanceSec": 11295,
-          "totalOccurrences": 15,
+          "totalRelevanceSec": 9127,
+          "totalOccurrences": 12,
           "episodes": [
             {
               "number": 129,
@@ -9874,23 +9609,8 @@
               "number": 136,
               "date": "2025-09-01",
               "title": "UKW136 USA: Good enough for the moment",
-              "relevanceSec": 3772,
+              "relevanceSec": 1604,
               "occurrences": [
-                {
-                  "topic": "Verkehr: LKW",
-                  "positionSec": 2422,
-                  "durationSec": 437
-                },
-                {
-                  "topic": "Verkehr: Kontrollen",
-                  "positionSec": 2860,
-                  "durationSec": 477
-                },
-                {
-                  "topic": "Verkehr: Straßennetz",
-                  "positionSec": 3337,
-                  "durationSec": 1254
-                },
                 {
                   "topic": "Qualität und Häuser",
                   "positionSec": 5160,
@@ -10376,6 +10096,346 @@
         }
       ]
     },
+    "miscellaneous": {
+      "id": "miscellaneous",
+      "name": "Miscellaneous",
+      "totalEpisodes": 20,
+      "totalRelevanceSec": 6082,
+      "totalOccurrences": 23,
+      "yearData": [
+        {
+          "year": 2019,
+          "count": 2,
+          "totalRelevanceSec": 1128,
+          "totalOccurrences": 4,
+          "episodes": [
+            {
+              "number": 5,
+              "date": "2019-11-01",
+              "title": "UKW005 Hong Kong",
+              "relevanceSec": 363,
+              "occurrences": [
+                {
+                  "topic": "Hong Kong als Hobby",
+                  "positionSec": 118,
+                  "durationSec": 77
+                },
+                {
+                  "topic": "Kontemporäre Kultur",
+                  "positionSec": 352,
+                  "durationSec": 60
+                },
+                {
+                  "topic": "Faszination Hong Kong",
+                  "positionSec": 1111,
+                  "durationSec": 226
+                }
+              ]
+            },
+            {
+              "number": 7,
+              "date": "2019-11-20",
+              "title": "UKW007 Hong Kong: The Showdown",
+              "relevanceSec": 765,
+              "occurrences": [
+                {
+                  "topic": "Hong Kong kennenlernen",
+                  "positionSec": 107,
+                  "durationSec": 765
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2020,
+          "count": 3,
+          "totalRelevanceSec": 584,
+          "totalOccurrences": 3,
+          "episodes": [
+            {
+              "number": 10,
+              "date": "2020-03-19",
+              "title": "UKW010 Corona: Ich bin Dunkelziffer",
+              "relevanceSec": 254,
+              "occurrences": [
+                {
+                  "topic": "Geschmackslosigkeit",
+                  "positionSec": 2535,
+                  "durationSec": 254
+                }
+              ]
+            },
+            {
+              "number": 51,
+              "date": "2020-12-19",
+              "title": "UKW051 Corona Weekly: Weihnachten ist nur ein Datum",
+              "relevanceSec": 126,
+              "occurrences": [
+                {
+                  "topic": "Bonus Track",
+                  "positionSec": 8752,
+                  "durationSec": 126
+                }
+              ]
+            },
+            {
+              "number": 52,
+              "date": "2020-12-26",
+              "title": "UKW052 Corona Weekly: Privatpersonen, die nichts wichtiges vorhaben",
+              "relevanceSec": 204,
+              "occurrences": [
+                {
+                  "topic": "Bonus Track",
+                  "positionSec": 8524,
+                  "durationSec": 204
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2021,
+          "count": 7,
+          "totalRelevanceSec": 1055,
+          "totalOccurrences": 7,
+          "episodes": [
+            {
+              "number": 67,
+              "date": "2021-04-03",
+              "title": "UKW067 Corona Weekly: Nicht ganz illusionsfrei",
+              "relevanceSec": 152,
+              "occurrences": [
+                {
+                  "topic": "Bonus Track",
+                  "positionSec": 9754,
+                  "durationSec": 152
+                }
+              ]
+            },
+            {
+              "number": 69,
+              "date": "2021-04-17",
+              "title": "UKW069 Corona Weekly: Inzidenzen interessieren keine Sau",
+              "relevanceSec": 107,
+              "occurrences": [
+                {
+                  "topic": "Bonus Track",
+                  "positionSec": 7320,
+                  "durationSec": 107
+                }
+              ]
+            },
+            {
+              "number": 72,
+              "date": "2021-05-08",
+              "title": "UKW072: Corona Weekly: Geisterfahrerfreie Zone",
+              "relevanceSec": 117,
+              "occurrences": [
+                {
+                  "topic": "Bonus Track",
+                  "positionSec": 7840,
+                  "durationSec": 117
+                }
+              ]
+            },
+            {
+              "number": 75,
+              "date": "2021-05-22",
+              "title": "UKW075 Corona Weekly: Impfen in 3D",
+              "relevanceSec": 158,
+              "occurrences": [
+                {
+                  "topic": "Bonus Track",
+                  "positionSec": 5912,
+                  "durationSec": 158
+                }
+              ]
+            },
+            {
+              "number": 80,
+              "date": "2021-08-10",
+              "title": "UKW080 Corona Weekly: Tempo 30 für Corona",
+              "relevanceSec": 183,
+              "occurrences": [
+                {
+                  "topic": "Bonus Track",
+                  "positionSec": 7902,
+                  "durationSec": 183
+                }
+              ]
+            },
+            {
+              "number": 86,
+              "date": "2021-12-04",
+              "title": "UKW086 Corona Weekly: Obertonwelle Omikron",
+              "relevanceSec": 190,
+              "occurrences": [
+                {
+                  "topic": "Bonus Track",
+                  "positionSec": 8900,
+                  "durationSec": 190
+                }
+              ]
+            },
+            {
+              "number": 87,
+              "date": "2021-12-11",
+              "title": "UKW087 Corona Weekly: Goldene Triade",
+              "relevanceSec": 148,
+              "occurrences": [
+                {
+                  "topic": "Bonus Track",
+                  "positionSec": 10964,
+                  "durationSec": 148
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2022,
+          "count": 4,
+          "totalRelevanceSec": 1014,
+          "totalOccurrences": 4,
+          "episodes": [
+            {
+              "number": 98,
+              "date": "2022-05-20",
+              "title": "UKW098 Ukraine: Der Kot des Präsidenten ist ein Staatsgeheimnis",
+              "relevanceSec": 458,
+              "occurrences": [
+                {
+                  "topic": "Ukraine gewinnt ESC",
+                  "positionSec": 104,
+                  "durationSec": 458
+                }
+              ]
+            },
+            {
+              "number": 99,
+              "date": "2022-06-23",
+              "title": "UKW099 Ukraine: Daneben schießen verboten",
+              "relevanceSec": 201,
+              "occurrences": [
+                {
+                  "topic": "Schlusskuriosität",
+                  "positionSec": 8180,
+                  "durationSec": 201
+                }
+              ]
+            },
+            {
+              "number": 104,
+              "date": "2022-10-05",
+              "title": "UKW104 Ukraine: Kampf ums elektromagnetische Spektrum",
+              "relevanceSec": 191,
+              "occurrences": [
+                {
+                  "topic": "Bonus Track",
+                  "positionSec": 13858,
+                  "durationSec": 191
+                }
+              ]
+            },
+            {
+              "number": 105,
+              "date": "2022-10-12",
+              "title": "UKW105 Ukraine: Menü der Grausamkeiten",
+              "relevanceSec": 164,
+              "occurrences": [
+                {
+                  "topic": "Bonus Track",
+                  "positionSec": 9974,
+                  "durationSec": 164
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2023,
+          "count": 1,
+          "totalRelevanceSec": 160,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 110,
+              "date": "2023-05-17",
+              "title": "UKW110 Ukraine: Balance des Schreckens",
+              "relevanceSec": 160,
+              "occurrences": [
+                {
+                  "topic": "Bonus Track",
+                  "positionSec": 9369,
+                  "durationSec": 160
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2024,
+          "count": 1,
+          "totalRelevanceSec": 854,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 125,
+              "date": "2024-09-25",
+              "title": "UKW125 Ukraine: Raketenbrot",
+              "relevanceSec": 854,
+              "occurrences": [
+                {
+                  "topic": "Palianytsia",
+                  "positionSec": 3224,
+                  "durationSec": 854
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2025,
+          "count": 2,
+          "totalRelevanceSec": 1287,
+          "totalOccurrences": 3,
+          "episodes": [
+            {
+              "number": 137,
+              "date": "2025-09-24",
+              "title": "UKW137 Serbien: Der Präsident ist jetzt zuständig",
+              "relevanceSec": 793,
+              "occurrences": [
+                {
+                  "topic": "September: Belgrade Pride",
+                  "positionSec": 5599,
+                  "durationSec": 446
+                },
+                {
+                  "topic": "Sport und Kultur",
+                  "positionSec": 6576,
+                  "durationSec": 347
+                }
+              ]
+            },
+            {
+              "number": 139,
+              "date": "2025-11-21",
+              "title": "UKW139 Ukraine: Bombenwetter",
+              "relevanceSec": 494,
+              "occurrences": [
+                {
+                  "topic": "Austellung zum Krieg in Ennos Bunker",
+                  "positionSec": 7541,
+                  "durationSec": 494
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     "travel": {
       "id": "travel",
       "name": "Travel",
@@ -10584,9 +10644,9 @@
     "technology": {
       "id": "technology",
       "name": "Technology",
-      "totalEpisodes": 33,
-      "totalRelevanceSec": 56389,
-      "totalOccurrences": 92,
+      "totalEpisodes": 29,
+      "totalRelevanceSec": 55188,
+      "totalOccurrences": 87,
       "yearData": [
         {
           "year": 2019,
@@ -10616,9 +10676,9 @@
         },
         {
           "year": 2020,
-          "count": 23,
-          "totalRelevanceSec": 47973,
-          "totalOccurrences": 78,
+          "count": 21,
+          "totalRelevanceSec": 47546,
+          "totalOccurrences": 75,
           "episodes": [
             {
               "number": 9,
@@ -10692,19 +10752,6 @@
                   "topic": "Internet-Infrastruktur",
                   "positionSec": 6829,
                   "durationSec": 1530
-                }
-              ]
-            },
-            {
-              "number": 19,
-              "date": "2020-04-15",
-              "title": "UKW019 Corona: Welt in Aufruhr",
-              "relevanceSec": 122,
-              "occurrences": [
-                {
-                  "topic": "Zahlen und Wissenschaft",
-                  "positionSec": 5152,
-                  "durationSec": 122
                 }
               ]
             },
@@ -11090,24 +11137,6 @@
               ]
             },
             {
-              "number": 39,
-              "date": "2020-10-20",
-              "title": "UKW039 Corona: Impfstoffe",
-              "relevanceSec": 305,
-              "occurrences": [
-                {
-                  "topic": "Lars Fischer",
-                  "positionSec": 79,
-                  "durationSec": 110
-                },
-                {
-                  "topic": "Faszination für Viren und Seuchen",
-                  "positionSec": 189,
-                  "durationSec": 195
-                }
-              ]
-            },
-            {
               "number": 40,
               "date": "2020-10-21",
               "title": "UKW040 Corona: Pimp My CWA",
@@ -11198,37 +11227,8 @@
         },
         {
           "year": 2021,
-          "count": 2,
-          "totalRelevanceSec": 774,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 53,
-              "date": "2021-01-02",
-              "title": "UKW053 Corona Weekly: Der Impfstoff ist ’ne App",
-              "relevanceSec": 88,
-              "occurrences": [
-                {
-                  "topic": "Die kommenden Kandidaten für den Nobelpreis",
-                  "positionSec": 8910,
-                  "durationSec": 88
-                }
-              ]
-            },
-            {
-              "number": 67,
-              "date": "2021-04-03",
-              "title": "UKW067 Corona Weekly: Nicht ganz illusionsfrei",
-              "relevanceSec": 686,
-              "occurrences": [
-                {
-                  "topic": "Wissenschaft vs. Politik",
-                  "positionSec": 1123,
-                  "durationSec": 686
-                }
-              ]
-            }
-          ]
+          "count": 0,
+          "episodes": []
         },
         {
           "year": 2022,
@@ -12968,6 +12968,54 @@
                   "durationSec": 445
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    "culture": {
+      "id": "culture",
+      "name": "Culture",
+      "totalEpisodes": 1,
+      "yearData": [
+        {
+          "year": 2019,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2020,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2021,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2022,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2023,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2024,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2025,
+          "count": 1,
+          "episodes": [
+            {
+              "number": 133,
+              "date": "2025-05-08",
+              "title": "UKW133 Ukraine: Wir sind nicht für die Sicherheit der Besucher der russischen Militärparade zuständig"
             }
           ]
         }

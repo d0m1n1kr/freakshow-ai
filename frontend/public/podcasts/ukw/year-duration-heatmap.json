@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-01-02T18:15:21.415Z",
+  "generatedAt": "2026-01-11T23:33:31.089Z",
   "description": "Year × Episode Duration Heatmap Data",
   "statistics": {
-    "totalEpisodes": 140,
-    "totalYears": 7,
+    "totalEpisodes": 141,
+    "totalYears": 8,
     "totalDurationBuckets": 10,
-    "totalCombinations": 33,
+    "totalCombinations": 34,
     "mostCommonYear": "2020",
     "mostCommonYearCount": 45,
     "mostCommonDuration": 90,
@@ -40,6 +40,10 @@
     {
       "year": "2025",
       "totalEpisodes": 13
+    },
+    {
+      "year": "2026",
+      "totalEpisodes": 1
     }
   ],
   "durations": [
@@ -76,7 +80,7 @@
     {
       "minutes": 180,
       "label": "3h",
-      "totalEpisodes": 7
+      "totalEpisodes": 8
     },
     {
       "minutes": 210,
@@ -701,6 +705,73 @@
             129,
             130,
             140
+          ]
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    {
+      "year": "2026",
+      "values": [
+        {
+          "duration": 0,
+          "durationLabel": "0min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 30,
+          "durationLabel": "30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 1,
+          "episodes": [
+            141
           ]
         },
         {
