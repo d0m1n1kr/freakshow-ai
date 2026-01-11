@@ -18,10 +18,29 @@ const PODCAST_ID = podcastIndex !== -1 && args[podcastIndex + 1] ? args[podcastI
 
 const PROJECT_ROOT = path.join(__dirname, '..');
 const EMBEDDINGS_FILE = path.join(PROJECT_ROOT, 'db', PODCAST_ID, 'topic-embeddings.json');
-const TAXONOMY_FILE = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topic-taxonomy.json');
 const OUTPUT_DIR = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID);
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'topic-umap-data.json');
 const FRONTEND_OUTPUT = OUTPUT_FILE;
+
+/**
+ * Find taxonomy file (check variant directory first)
+ */
+function findTaxonomyFile() {
+  const variantPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topics', 'auto-v2.1', 'topic-taxonomy.json');
+  const mainPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topic-taxonomy.json');
+  
+  if (fs.existsSync(variantPath)) {
+    return variantPath;
+  } else if (fs.existsSync(mainPath)) {
+    return mainPath;
+  }
+  
+  console.error(`❌ topic-taxonomy.json not found. Tried:`);
+  console.error(`   - ${variantPath}`);
+  console.error(`   - ${mainPath}`);
+  console.error(`\n   Run clustering first: ./scripts/build-variant.sh v2 auto-v2.1 --podcast ${PODCAST_ID}`);
+  process.exit(1);
+}
 
 /**
  * Load embeddings database
@@ -46,12 +65,10 @@ function loadEmbeddings() {
  */
 function loadTaxonomy() {
   console.log('\n📂 Loading topic-taxonomy.json...');
-  if (!fs.existsSync(TAXONOMY_FILE)) {
-    console.error(`❌ ${TAXONOMY_FILE} not found!`);
-    process.exit(1);
-  }
+  const taxonomyFile = findTaxonomyFile();
+  console.log(`   Path: ${taxonomyFile}`);
   
-  const data = JSON.parse(fs.readFileSync(TAXONOMY_FILE, 'utf-8'));
+  const data = JSON.parse(fs.readFileSync(taxonomyFile, 'utf-8'));
   console.log(`   ✓ Loaded ${data.clusters.length} clusters`);
   return data;
 }

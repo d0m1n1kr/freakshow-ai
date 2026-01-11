@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-01-05T11:07:56.870Z",
+  "generatedAt": "2026-01-11T07:28:10.546Z",
   "description": "Subject River Daten für freakshow Podcast - Coarse Subjects aggregiert nach Jahren",
   "statistics": {
-    "totalSubjects": 15,
+    "totalSubjects": 14,
     "yearRange": {
       "start": 2008,
-      "end": 2025
+      "end": 2026
     },
     "years": [
       2008,
@@ -24,18 +24,19 @@
       2021,
       2023,
       2024,
-      2025
+      2025,
+      2026
     ],
     "subjectsByEpisodeCount": [
       {
         "id": "technology",
         "name": "Technology",
-        "count": 218
+        "count": 221
       },
       {
         "id": "sonstige",
         "name": "Sonstige",
-        "count": 206
+        "count": 207
       },
       {
         "id": "software",
@@ -45,7 +46,7 @@
       {
         "id": "media",
         "name": "Media",
-        "count": 142
+        "count": 143
       },
       {
         "id": "hardware",
@@ -55,17 +56,17 @@
       {
         "id": "finance",
         "name": "Finance",
-        "count": 104
+        "count": 102
       },
       {
         "id": "social",
         "name": "Social",
-        "count": 74
+        "count": 75
       },
       {
         "id": "culture",
         "name": "Culture",
-        "count": 70
+        "count": 58
       },
       {
         "id": "security",
@@ -73,9 +74,9 @@
         "count": 56
       },
       {
-        "id": "gaming",
-        "name": "Gaming",
-        "count": 46
+        "id": "business",
+        "name": "Business",
+        "count": 48
       }
     ]
   },
@@ -83,9 +84,9 @@
     "media": {
       "id": "media",
       "name": "Media",
-      "totalEpisodes": 142,
-      "totalRelevanceSec": 197956,
-      "totalOccurrences": 303,
+      "totalEpisodes": 143,
+      "totalRelevanceSec": 198404,
+      "totalOccurrences": 305,
       "yearData": [
         {
           "year": 2008,
@@ -2844,15 +2845,41 @@
               ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 1,
+          "totalRelevanceSec": 448,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 301,
+              "date": "2026-01-04",
+              "title": "FS301 Freak Show Clubhouse",
+              "relevanceSec": 448,
+              "occurrences": [
+                {
+                  "topic": "ChaosBILD",
+                  "positionSec": 418,
+                  "durationSec": 130
+                },
+                {
+                  "topic": "Karaoke",
+                  "positionSec": 3904,
+                  "durationSec": 318
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     "technology": {
       "id": "technology",
       "name": "Technology",
-      "totalEpisodes": 218,
-      "totalRelevanceSec": 700934,
-      "totalOccurrences": 937,
+      "totalEpisodes": 221,
+      "totalRelevanceSec": 712019,
+      "totalOccurrences": 956,
       "yearData": [
         {
           "year": 2008,
@@ -2913,8 +2940,8 @@
         {
           "year": 2009,
           "count": 6,
-          "totalRelevanceSec": 10794,
-          "totalOccurrences": 40,
+          "totalRelevanceSec": 10844,
+          "totalOccurrences": 41,
           "episodes": [
             {
               "number": 20,
@@ -2935,8 +2962,13 @@
               "number": 36,
               "date": "2009-10-26",
               "title": "MM036 Trust Me",
-              "relevanceSec": 219,
+              "relevanceSec": 269,
               "occurrences": [
+                {
+                  "topic": "Dataloss Sidekick",
+                  "positionSec": 1220,
+                  "durationSec": 50
+                },
                 {
                   "topic": "iPhone Tethering reaktivieren",
                   "positionSec": 5685,
@@ -3678,9 +3710,9 @@
         },
         {
           "year": 2012,
-          "count": 13,
-          "totalRelevanceSec": 16721,
-          "totalOccurrences": 20,
+          "count": 14,
+          "totalRelevanceSec": 17771,
+          "totalOccurrences": 21,
           "episodes": [
             {
               "number": 80,
@@ -3809,6 +3841,19 @@
                   "topic": "ZFS",
                   "positionSec": 12600,
                   "durationSec": 780
+                }
+              ]
+            },
+            {
+              "number": 99,
+              "date": "2012-11-15",
+              "title": "MM099 Brainwashanlage",
+              "relevanceSec": 1050,
+              "occurrences": [
+                {
+                  "topic": "Back-Ups",
+                  "positionSec": 7680,
+                  "durationSec": 1050
                 }
               ]
             },
@@ -4225,8 +4270,8 @@
         {
           "year": 2014,
           "count": 21,
-          "totalRelevanceSec": 63879,
-          "totalOccurrences": 54,
+          "totalRelevanceSec": 64501,
+          "totalOccurrences": 55,
           "episodes": [
             {
               "number": 124,
@@ -4366,8 +4411,13 @@
               "number": 133,
               "date": "2014-05-29",
               "title": "FS133 Ich werde noch meinen Kindern davon erzählen",
-              "relevanceSec": 3340,
+              "relevanceSec": 3962,
               "occurrences": [
+                {
+                  "topic": "Statistiken mit Observium",
+                  "positionSec": 10355,
+                  "durationSec": 622
+                },
                 {
                   "topic": "Loadbalancing",
                   "positionSec": 10977,
@@ -5179,9 +5229,9 @@
         },
         {
           "year": 2016,
-          "count": 19,
-          "totalRelevanceSec": 51233,
-          "totalOccurrences": 69,
+          "count": 20,
+          "totalRelevanceSec": 52594,
+          "totalOccurrences": 73,
           "episodes": [
             {
               "number": 168,
@@ -5307,6 +5357,24 @@
               ]
             },
             {
+              "number": 174,
+              "date": "2016-04-07",
+              "title": "FS174 Legacy Keystroke Importer",
+              "relevanceSec": 981,
+              "occurrences": [
+                {
+                  "topic": "Pornoindustrie",
+                  "positionSec": 670,
+                  "durationSec": 568
+                },
+                {
+                  "topic": "WikiTree",
+                  "positionSec": 11551,
+                  "durationSec": 413
+                }
+              ]
+            },
+            {
               "number": 176,
               "date": "2016-05-12",
               "title": "FS176 Sein Deutsch deterioriert zunehmend",
@@ -5348,12 +5416,22 @@
               "number": 177,
               "date": "2016-05-26",
               "title": "FS177 Talk nerdy to me",
-              "relevanceSec": 190,
+              "relevanceSec": 570,
               "occurrences": [
                 {
                   "topic": "Suchmaschinen",
                   "positionSec": 14041,
                   "durationSec": 190
+                },
+                {
+                  "topic": "Blockchain Business",
+                  "positionSec": 1165,
+                  "durationSec": 239
+                },
+                {
+                  "topic": "Blockchain Business 2",
+                  "positionSec": 1804,
+                  "durationSec": 141
                 }
               ]
             },
@@ -5685,8 +5763,8 @@
         {
           "year": 2017,
           "count": 17,
-          "totalRelevanceSec": 49246,
-          "totalOccurrences": 74,
+          "totalRelevanceSec": 51064,
+          "totalOccurrences": 76,
           "episodes": [
             {
               "number": 190,
@@ -5710,7 +5788,7 @@
               "number": 191,
               "date": "2017-01-12",
               "title": "FS191 Sendungslängenangst",
-              "relevanceSec": 2402,
+              "relevanceSec": 2976,
               "occurrences": [
                 {
                   "topic": "Messenger sind schwierig",
@@ -5741,6 +5819,11 @@
                   "topic": "Gerätekram",
                   "positionSec": 14674,
                   "durationSec": 608
+                },
+                {
+                  "topic": "Open Data Feinstaubmessung",
+                  "positionSec": 9371,
+                  "durationSec": 574
                 }
               ]
             },
@@ -5766,7 +5849,7 @@
               "number": 193,
               "date": "2017-02-23",
               "title": "FS193 Erst Peitsche dann Zuckerbrot",
-              "relevanceSec": 3038,
+              "relevanceSec": 4282,
               "occurrences": [
                 {
                   "topic": "WWDC",
@@ -5787,6 +5870,11 @@
                   "topic": "Hey Siri, Hallo Alexa",
                   "positionSec": 5998,
                   "durationSec": 567
+                },
+                {
+                  "topic": "Retrocomputing mit 68K",
+                  "positionSec": 9823,
+                  "durationSec": 1244
                 }
               ]
             },
@@ -6199,8 +6287,8 @@
         {
           "year": 2018,
           "count": 15,
-          "totalRelevanceSec": 44557,
-          "totalOccurrences": 61,
+          "totalRelevanceSec": 44981,
+          "totalOccurrences": 62,
           "episodes": [
             {
               "number": 210,
@@ -6438,7 +6526,7 @@
               "number": 221,
               "date": "2018-08-24",
               "title": "FS221 Touran Touran",
-              "relevanceSec": 1666,
+              "relevanceSec": 2090,
               "occurrences": [
                 {
                   "topic": "Richtfunk",
@@ -6449,6 +6537,11 @@
                   "topic": "Network Attached Storage",
                   "positionSec": 13980,
                   "durationSec": 824
+                },
+                {
+                  "topic": "Datenelche",
+                  "positionSec": 99,
+                  "durationSec": 424
                 }
               ]
             },
@@ -6632,8 +6725,8 @@
         {
           "year": 2019,
           "count": 16,
-          "totalRelevanceSec": 75684,
-          "totalOccurrences": 113,
+          "totalRelevanceSec": 79823,
+          "totalOccurrences": 119,
           "episodes": [
             {
               "number": 229,
@@ -6905,7 +6998,7 @@
               "number": 236,
               "date": "2019-05-25",
               "title": "FS236 Die Queen im Bluescreen",
-              "relevanceSec": 4792,
+              "relevanceSec": 8931,
               "occurrences": [
                 {
                   "topic": "Feedback: Keynote",
@@ -6946,6 +7039,36 @@
                   "topic": "WWDC Glaskugeling",
                   "positionSec": 13304,
                   "durationSec": 1337
+                },
+                {
+                  "topic": "68K Linux Computer",
+                  "positionSec": 4398,
+                  "durationSec": 411
+                },
+                {
+                  "topic": "68010 CPU im virtuellen Käfig",
+                  "positionSec": 4809,
+                  "durationSec": 2479
+                },
+                {
+                  "topic": "TI-89 Taschenrechner",
+                  "positionSec": 7289,
+                  "durationSec": 197
+                },
+                {
+                  "topic": "Neue MacBook Pros",
+                  "positionSec": 7486,
+                  "durationSec": 263
+                },
+                {
+                  "topic": "Pimp My Mac: Mac Pro Firmware Update",
+                  "positionSec": 11568,
+                  "durationSec": 431
+                },
+                {
+                  "topic": "USV am Mac",
+                  "positionSec": 11999,
+                  "durationSec": 358
                 }
               ]
             },
@@ -7645,9 +7768,9 @@
         },
         {
           "year": 2021,
-          "count": 7,
-          "totalRelevanceSec": 31912,
-          "totalOccurrences": 50,
+          "count": 8,
+          "totalRelevanceSec": 32646,
+          "totalOccurrences": 52,
           "episodes": [
             {
               "number": 256,
@@ -7664,6 +7787,19 @@
                   "topic": "Technik der Villa",
                   "positionSec": 6138,
                   "durationSec": 1001
+                }
+              ]
+            },
+            {
+              "number": 257,
+              "date": "2021-01-29",
+              "title": "FS257 Nerd Hotel",
+              "relevanceSec": 132,
+              "occurrences": [
+                {
+                  "topic": "Datenkonsolidierung",
+                  "positionSec": 8089,
+                  "durationSec": 132
                 }
               ]
             },
@@ -7694,7 +7830,7 @@
               "number": 259,
               "date": "2021-04-23",
               "title": "FS259 Nasenfaktor",
-              "relevanceSec": 6129,
+              "relevanceSec": 6731,
               "occurrences": [
                 {
                   "topic": "Apple Event",
@@ -7745,6 +7881,11 @@
                   "topic": "Teltonika RUT X.11",
                   "positionSec": 11699,
                   "durationSec": 219
+                },
+                {
+                  "topic": "Data Query Tools: jq, csvq, yq, xq",
+                  "positionSec": 10840,
+                  "durationSec": 602
                 }
               ]
             },
@@ -7960,8 +8101,8 @@
         {
           "year": 2023,
           "count": 9,
-          "totalRelevanceSec": 46291,
-          "totalOccurrences": 38,
+          "totalRelevanceSec": 47178,
+          "totalOccurrences": 39,
           "episodes": [
             {
               "number": 264,
@@ -8193,7 +8334,7 @@
               "number": 271,
               "date": "2023-11-18",
               "title": "FS271 Ich glaube das wird ein bisschen mehr Aufwand im Schnitt",
-              "relevanceSec": 6475,
+              "relevanceSec": 7362,
               "occurrences": [
                 {
                   "topic": "Neues von OpenAI",
@@ -8209,6 +8350,11 @@
                   "topic": "Progress in AI",
                   "positionSec": 13149,
                   "durationSec": 1553
+                },
+                {
+                  "topic": "Backup im Internet",
+                  "positionSec": 5150,
+                  "durationSec": 887
                 }
               ]
             },
@@ -9346,6 +9492,11 @@
               ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
@@ -9353,8 +9504,8 @@
       "id": "hardware",
       "name": "Hardware",
       "totalEpisodes": 131,
-      "totalRelevanceSec": 340717,
-      "totalOccurrences": 398,
+      "totalRelevanceSec": 341747,
+      "totalOccurrences": 400,
       "yearData": [
         {
           "year": 2008,
@@ -11560,8 +11711,8 @@
         {
           "year": 2018,
           "count": 9,
-          "totalRelevanceSec": 27645,
-          "totalOccurrences": 29,
+          "totalRelevanceSec": 28675,
+          "totalOccurrences": 31,
           "episodes": [
             {
               "number": 213,
@@ -11595,7 +11746,7 @@
               "number": 215,
               "date": "2018-04-12",
               "title": "FS215 C größer",
-              "relevanceSec": 1743,
+              "relevanceSec": 2773,
               "occurrences": [
                 {
                   "topic": "Thunderbolt",
@@ -11611,6 +11762,16 @@
                   "topic": "Mac Pro erst 2019",
                   "positionSec": 18143,
                   "durationSec": 575
+                },
+                {
+                  "topic": "Rote iPhones",
+                  "positionSec": 18719,
+                  "durationSec": 138
+                },
+                {
+                  "topic": "HomePod Video",
+                  "positionSec": 18857,
+                  "durationSec": 892
                 }
               ]
             },
@@ -12481,6 +12642,11 @@
               ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
@@ -16648,15 +16814,20 @@
               ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
     "business": {
       "id": "business",
       "name": "Business",
-      "totalEpisodes": 45,
-      "totalRelevanceSec": 52097,
-      "totalOccurrences": 71,
+      "totalEpisodes": 48,
+      "totalRelevanceSec": 56900,
+      "totalOccurrences": 74,
       "yearData": [
         {
           "year": 2008,
@@ -16730,10 +16901,23 @@
         },
         {
           "year": 2010,
-          "count": 3,
-          "totalRelevanceSec": 1377,
-          "totalOccurrences": 3,
+          "count": 4,
+          "totalRelevanceSec": 3331,
+          "totalOccurrences": 4,
           "episodes": [
+            {
+              "number": 40,
+              "date": "2010-01-17",
+              "title": "MM040 Das Tablett",
+              "relevanceSec": 1954,
+              "occurrences": [
+                {
+                  "topic": "Smartphone Markt",
+                  "positionSec": 5142,
+                  "durationSec": 1954
+                }
+              ]
+            },
             {
               "number": 41,
               "date": "2010-01-31",
@@ -17169,9 +17353,9 @@
         },
         {
           "year": 2016,
-          "count": 3,
-          "totalRelevanceSec": 1413,
-          "totalOccurrences": 3,
+          "count": 4,
+          "totalRelevanceSec": 2597,
+          "totalOccurrences": 4,
           "episodes": [
             {
               "number": 176,
@@ -17209,6 +17393,19 @@
                   "topic": "Berliner Startupkultur",
                   "positionSec": 2038,
                   "durationSec": 613
+                }
+              ]
+            },
+            {
+              "number": 186,
+              "date": "2016-11-03",
+              "title": "FS186 Kastratur",
+              "relevanceSec": 1184,
+              "occurrences": [
+                {
+                  "topic": "Wer kauft was?",
+                  "positionSec": 10398,
+                  "durationSec": 1184
                 }
               ]
             }
@@ -17291,9 +17488,9 @@
         },
         {
           "year": 2018,
-          "count": 5,
-          "totalRelevanceSec": 6856,
-          "totalOccurrences": 8,
+          "count": 6,
+          "totalRelevanceSec": 8521,
+          "totalOccurrences": 9,
           "episodes": [
             {
               "number": 212,
@@ -17323,6 +17520,19 @@
                   "topic": "SEO und SM",
                   "positionSec": 1862,
                   "durationSec": 293
+                }
+              ]
+            },
+            {
+              "number": 217,
+              "date": "2018-05-12",
+              "title": "FS217 Überspezifisches Dementi",
+              "relevanceSec": 1665,
+              "occurrences": [
+                {
+                  "topic": "Marktanteile",
+                  "positionSec": 1189,
+                  "durationSec": 1665
                 }
               ]
             },
@@ -17488,15 +17698,20 @@
           "year": 2025,
           "count": 0,
           "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
     "social": {
       "id": "social",
       "name": "Social",
-      "totalEpisodes": 74,
-      "totalRelevanceSec": 98628,
-      "totalOccurrences": 118,
+      "totalEpisodes": 75,
+      "totalRelevanceSec": 98961,
+      "totalOccurrences": 119,
       "yearData": [
         {
           "year": 2008,
@@ -18798,15 +19013,36 @@
               ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 1,
+          "totalRelevanceSec": 333,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 301,
+              "date": "2026-01-04",
+              "title": "FS301 Freak Show Clubhouse",
+              "relevanceSec": 333,
+              "occurrences": [
+                {
+                  "topic": "Clubhouse Revisited",
+                  "positionSec": 85,
+                  "durationSec": 333
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     "sonstige": {
       "id": "sonstige",
       "name": "Sonstige",
-      "totalEpisodes": 206,
-      "totalRelevanceSec": 646296,
-      "totalOccurrences": 855,
+      "totalEpisodes": 207,
+      "totalRelevanceSec": 657007,
+      "totalOccurrences": 868,
       "yearData": [
         {
           "year": 2008,
@@ -18852,8 +19088,8 @@
         {
           "year": 2009,
           "count": 4,
-          "totalRelevanceSec": 4160,
-          "totalOccurrences": 11,
+          "totalRelevanceSec": 4110,
+          "totalOccurrences": 10,
           "episodes": [
             {
               "number": 21,
@@ -18869,7 +19105,7 @@
               "number": 36,
               "date": "2009-10-26",
               "title": "MM036 Trust Me",
-              "relevanceSec": 4112,
+              "relevanceSec": 4062,
               "occurrences": [
                 {
                   "topic": "Macs an Schulen",
@@ -18880,11 +19116,6 @@
                   "topic": "Das Stockholm Syndrom und Windows 7",
                   "positionSec": 920,
                   "durationSec": 300
-                },
-                {
-                  "topic": "Dataloss Sidekick",
-                  "positionSec": 1220,
-                  "durationSec": 50
                 },
                 {
                   "topic": "ZFS is dead",
@@ -19031,8 +19262,8 @@
         {
           "year": 2011,
           "count": 6,
-          "totalRelevanceSec": 4252,
-          "totalOccurrences": 13,
+          "totalRelevanceSec": 4291,
+          "totalOccurrences": 14,
           "episodes": [
             {
               "number": 66,
@@ -19043,7 +19274,7 @@
               "number": 69,
               "date": "2011-07-23",
               "title": "MM069 Mach den Affen weg",
-              "relevanceSec": 1182,
+              "relevanceSec": 1221,
               "occurrences": [
                 {
                   "topic": "Alle krank, Wetter blöd",
@@ -19079,6 +19310,11 @@
                   "topic": "Präsente",
                   "positionSec": 13793,
                   "durationSec": 88
+                },
+                {
+                  "topic": "Drei-Stream-Gesellschaft",
+                  "positionSec": 440,
+                  "durationSec": 39
                 },
                 {
                   "topic": "Henne-Ei-Problem",
@@ -19143,8 +19379,8 @@
         {
           "year": 2012,
           "count": 11,
-          "totalRelevanceSec": 15561,
-          "totalOccurrences": 19,
+          "totalRelevanceSec": 14511,
+          "totalOccurrences": 18,
           "episodes": [
             {
               "number": 80,
@@ -19276,13 +19512,8 @@
               "number": 99,
               "date": "2012-11-15",
               "title": "MM099 Brainwashanlage",
-              "relevanceSec": 4625,
+              "relevanceSec": 3575,
               "occurrences": [
-                {
-                  "topic": "Back-Ups",
-                  "positionSec": 7680,
-                  "durationSec": 1050
-                },
                 {
                   "topic": "Tim war im Apple Store",
                   "positionSec": 870,
@@ -19614,8 +19845,8 @@
         {
           "year": 2014,
           "count": 15,
-          "totalRelevanceSec": 55958,
-          "totalOccurrences": 43,
+          "totalRelevanceSec": 58619,
+          "totalOccurrences": 45,
           "episodes": [
             {
               "number": 125,
@@ -19667,7 +19898,7 @@
               "number": 127,
               "date": "2014-02-27",
               "title": "FS127 The Number of the Denis",
-              "relevanceSec": 2727,
+              "relevanceSec": 3829,
               "occurrences": [
                 {
                   "topic": "\"Mobile Messenger\"-Wahnsinn",
@@ -19678,6 +19909,11 @@
                   "topic": "Schneller lesen",
                   "positionSec": 1583,
                   "durationSec": 570
+                },
+                {
+                  "topic": "ART COM",
+                  "positionSec": 5537,
+                  "durationSec": 1102
                 },
                 {
                   "topic": "Empfehlungen",
@@ -19759,17 +19995,12 @@
               "number": 133,
               "date": "2014-05-29",
               "title": "FS133 Ich werde noch meinen Kindern davon erzählen",
-              "relevanceSec": 4600,
+              "relevanceSec": 3978,
               "occurrences": [
                 {
                   "topic": "Hukl-Mail",
                   "positionSec": 4770,
                   "durationSec": 1824
-                },
-                {
-                  "topic": "Statistiken mit Observium",
-                  "positionSec": 10355,
-                  "durationSec": 622
                 },
                 {
                   "topic": "Verschiedenes",
@@ -19787,12 +20018,17 @@
               "number": 136,
               "date": "2014-07-08",
               "title": "FS136 Helga!",
-              "relevanceSec": 1219,
+              "relevanceSec": 2866,
               "occurrences": [
                 {
                   "topic": "Audio Chatting",
                   "positionSec": 11426,
                   "durationSec": 331
+                },
+                {
+                  "topic": "Konferenzen und Diversity",
+                  "positionSec": 5275,
+                  "durationSec": 1647
                 },
                 {
                   "topic": "CoderDojo",
@@ -19864,12 +20100,17 @@
               "number": 143,
               "date": "2014-11-06",
               "title": "FS143 Hättst ja mal Air sagen können",
-              "relevanceSec": 1881,
+              "relevanceSec": 2415,
               "occurrences": [
                 {
                   "topic": "Beef Jerky",
                   "positionSec": 5745,
                   "durationSec": 312
+                },
+                {
+                  "topic": "Lichtinstallation entlang der Berliner Mauer",
+                  "positionSec": 12508,
+                  "durationSec": 534
                 },
                 {
                   "topic": "Leistungsschutzgeld",
@@ -20381,8 +20622,8 @@
         {
           "year": 2016,
           "count": 21,
-          "totalRelevanceSec": 64663,
-          "totalOccurrences": 98,
+          "totalRelevanceSec": 64861,
+          "totalOccurrences": 100,
           "episodes": [
             {
               "number": 168,
@@ -20431,7 +20672,7 @@
               "number": 169,
               "date": "2016-01-14",
               "title": "FS169 Hauptschuhle",
-              "relevanceSec": 860,
+              "relevanceSec": 1630,
               "occurrences": [
                 {
                   "topic": "Workflowy und Wunderlist",
@@ -20442,6 +20683,16 @@
                   "topic": "32C3 Lounge Design",
                   "positionSec": 4922,
                   "durationSec": 400
+                },
+                {
+                  "topic": "HGich.T",
+                  "positionSec": 7270,
+                  "durationSec": 465
+                },
+                {
+                  "topic": "Strandbeest",
+                  "positionSec": 8629,
+                  "durationSec": 305
                 },
                 {
                   "topic": "Linus Neumann",
@@ -20500,7 +20751,7 @@
               "number": 173,
               "date": "2016-03-10",
               "title": "FS173 Koreaners Katzi",
-              "relevanceSec": 3502,
+              "relevanceSec": 3911,
               "occurrences": [
                 {
                   "topic": "Brot",
@@ -20528,6 +20779,16 @@
                   "durationSec": 471
                 },
                 {
+                  "topic": "Schöne Plakate",
+                  "positionSec": 9252,
+                  "durationSec": 315
+                },
+                {
+                  "topic": "Noch mehr schöne Plakate",
+                  "positionSec": 11487,
+                  "durationSec": 94
+                },
+                {
                   "topic": "Digitalarchäologie",
                   "positionSec": 148,
                   "durationSec": 91
@@ -20543,18 +20804,8 @@
               "number": 174,
               "date": "2016-04-07",
               "title": "FS174 Legacy Keystroke Importer",
-              "relevanceSec": 2502,
+              "relevanceSec": 1521,
               "occurrences": [
-                {
-                  "topic": "Pornoindustrie",
-                  "positionSec": 670,
-                  "durationSec": 568
-                },
-                {
-                  "topic": "WikiTree",
-                  "positionSec": 11551,
-                  "durationSec": 413
-                },
                 {
                   "topic": "NASA Space App Challenge",
                   "positionSec": 12364,
@@ -21047,14 +21298,14 @@
         {
           "year": 2017,
           "count": 17,
-          "totalRelevanceSec": 70978,
-          "totalOccurrences": 94,
+          "totalRelevanceSec": 72154,
+          "totalOccurrences": 97,
           "episodes": [
             {
               "number": 190,
               "date": "2017-01-03",
               "title": "FS190 Bitte werfen Sie eine Münze ein",
-              "relevanceSec": 2155,
+              "relevanceSec": 2334,
               "occurrences": [
                 {
                   "topic": "Clemens ruft an",
@@ -21077,6 +21328,11 @@
                   "durationSec": 355
                 },
                 {
+                  "topic": "Verhinderte Kunstprojekte",
+                  "positionSec": 3855,
+                  "durationSec": 179
+                },
+                {
                   "topic": "Luftqualität",
                   "positionSec": 1809,
                   "durationSec": 245
@@ -21089,23 +21345,10 @@
               ]
             },
             {
-              "number": 191,
-              "date": "2017-01-12",
-              "title": "FS191 Sendungslängenangst",
-              "relevanceSec": 574,
-              "occurrences": [
-                {
-                  "topic": "Open Data Feinstaubmessung",
-                  "positionSec": 9371,
-                  "durationSec": 574
-                }
-              ]
-            },
-            {
               "number": 192,
               "date": "2017-02-09",
               "title": "FS192 Rechnungswesen im Autohaus",
-              "relevanceSec": 2710,
+              "relevanceSec": 2911,
               "occurrences": [
                 {
                   "topic": "Freak Tasting Review",
@@ -21116,6 +21359,11 @@
                   "topic": "Trumpismen",
                   "positionSec": 13725,
                   "durationSec": 578
+                },
+                {
+                  "topic": "How Many People Will Die in 2017",
+                  "positionSec": 9283,
+                  "durationSec": 201
                 },
                 {
                   "topic": "Motorola 68000 Oral History",
@@ -21148,7 +21396,7 @@
               "number": 193,
               "date": "2017-02-23",
               "title": "FS193 Erst Peitsche dann Zuckerbrot",
-              "relevanceSec": 5126,
+              "relevanceSec": 3882,
               "occurrences": [
                 {
                   "topic": "Beef Jerky",
@@ -21174,11 +21422,6 @@
                   "topic": "Pimp My Mac",
                   "positionSec": 6566,
                   "durationSec": 1389
-                },
-                {
-                  "topic": "Retrocomputing mit 68K",
-                  "positionSec": 9823,
-                  "durationSec": 1244
                 },
                 {
                   "topic": "360 Grad Fischaugenkameras",
@@ -21325,6 +21568,19 @@
               ]
             },
             {
+              "number": 198,
+              "date": "2017-05-19",
+              "title": "FS198 Er kennt den Admin",
+              "relevanceSec": 1129,
+              "occurrences": [
+                {
+                  "topic": "Steuer und Nerds",
+                  "positionSec": 4254,
+                  "durationSec": 1129
+                }
+              ]
+            },
+            {
               "number": 200,
               "date": "2017-06-15",
               "title": "FS200 Alle Fuzzies freuen sich",
@@ -21396,12 +21652,17 @@
               "number": 201,
               "date": "2017-07-07",
               "title": "FS201 Multidimensionale Fisimatentendynamik",
-              "relevanceSec": 5313,
+              "relevanceSec": 5910,
               "occurrences": [
                 {
                   "topic": "To Do Lists",
                   "positionSec": 9376,
                   "durationSec": 1397
+                },
+                {
+                  "topic": "Notfall in Scoville",
+                  "positionSec": 3102,
+                  "durationSec": 597
                 },
                 {
                   "topic": "Profiwerkzeug",
@@ -21576,8 +21837,13 @@
               "number": 206,
               "date": "2017-10-13",
               "title": "FS206 Partial Content",
-              "relevanceSec": 3236,
+              "relevanceSec": 4124,
               "occurrences": [
+                {
+                  "topic": "USA in Echtzeit",
+                  "positionSec": 9235,
+                  "durationSec": 888
+                },
                 {
                   "topic": "Die Bahn und der Sturm",
                   "positionSec": 10123,
@@ -21661,8 +21927,8 @@
         {
           "year": 2018,
           "count": 19,
-          "totalRelevanceSec": 83879,
-          "totalOccurrences": 112,
+          "totalRelevanceSec": 82425,
+          "totalOccurrences": 109,
           "episodes": [
             {
               "number": 210,
@@ -21868,7 +22134,7 @@
               "number": 215,
               "date": "2018-04-12",
               "title": "FS215 C größer",
-              "relevanceSec": 2474,
+              "relevanceSec": 1444,
               "occurrences": [
                 {
                   "topic": "Forschergeist mit Harald Lesch",
@@ -21879,16 +22145,6 @@
                   "topic": "Ladesäulen",
                   "positionSec": 10582,
                   "durationSec": 919
-                },
-                {
-                  "topic": "Rote iPhones",
-                  "positionSec": 18719,
-                  "durationSec": 138
-                },
-                {
-                  "topic": "HomePod Video",
-                  "positionSec": 18857,
-                  "durationSec": 892
                 }
               ]
             },
@@ -22016,13 +22272,8 @@
               "number": 221,
               "date": "2018-08-24",
               "title": "FS221 Touran Touran",
-              "relevanceSec": 5423,
+              "relevanceSec": 4999,
               "occurrences": [
-                {
-                  "topic": "Datenelche",
-                  "positionSec": 99,
-                  "durationSec": 424
-                },
                 {
                   "topic": "Urlaubsberichte: Schweden",
                   "positionSec": 7201,
@@ -22381,8 +22632,8 @@
         {
           "year": 2019,
           "count": 15,
-          "totalRelevanceSec": 71330,
-          "totalOccurrences": 97,
+          "totalRelevanceSec": 69040,
+          "totalOccurrences": 93,
           "episodes": [
             {
               "number": 229,
@@ -22482,7 +22733,7 @@
               "number": 232,
               "date": "2019-02-21",
               "title": "FS232 Wurstkatastrophe im Bällebad",
-              "relevanceSec": 5650,
+              "relevanceSec": 7312,
               "occurrences": [
                 {
                   "topic": "Steuerung und Workshops",
@@ -22493,6 +22744,11 @@
                   "topic": "Niklas' Projekte",
                   "positionSec": 4836,
                   "durationSec": 1920
+                },
+                {
+                  "topic": "Kunst",
+                  "positionSec": 3173,
+                  "durationSec": 1662
                 },
                 {
                   "topic": "Niklas Roy",
@@ -22611,7 +22867,7 @@
               "number": 236,
               "date": "2019-05-25",
               "title": "FS236 Die Queen im Bluescreen",
-              "relevanceSec": 8198,
+              "relevanceSec": 4059,
               "occurrences": [
                 {
                   "topic": "Europawahl",
@@ -22632,36 +22888,6 @@
                   "topic": "Brillen und Sehschwäche",
                   "positionSec": 632,
                   "durationSec": 2339
-                },
-                {
-                  "topic": "68K Linux Computer",
-                  "positionSec": 4398,
-                  "durationSec": 411
-                },
-                {
-                  "topic": "68010 CPU im virtuellen Käfig",
-                  "positionSec": 4809,
-                  "durationSec": 2479
-                },
-                {
-                  "topic": "TI-89 Taschenrechner",
-                  "positionSec": 7289,
-                  "durationSec": 197
-                },
-                {
-                  "topic": "Neue MacBook Pros",
-                  "positionSec": 7486,
-                  "durationSec": 263
-                },
-                {
-                  "topic": "Pimp My Mac: Mac Pro Firmware Update",
-                  "positionSec": 11568,
-                  "durationSec": 431
-                },
-                {
-                  "topic": "USV am Mac",
-                  "positionSec": 11999,
-                  "durationSec": 358
                 }
               ]
             },
@@ -22970,12 +23196,17 @@
               "number": 244,
               "date": "2019-11-28",
               "title": "FS244 Ottilie Normalcamperin",
-              "relevanceSec": 3056,
+              "relevanceSec": 3243,
               "occurrences": [
                 {
                   "topic": "Pimp My Caravan",
                   "positionSec": 451,
                   "durationSec": 781
+                },
+                {
+                  "topic": "Lichtkunst",
+                  "positionSec": 12144,
+                  "durationSec": 187
                 },
                 {
                   "topic": "Tesla fahren",
@@ -22994,8 +23225,8 @@
         {
           "year": 2020,
           "count": 10,
-          "totalRelevanceSec": 33135,
-          "totalOccurrences": 50,
+          "totalRelevanceSec": 39511,
+          "totalOccurrences": 58,
           "episodes": [
             {
               "number": 245,
@@ -23044,8 +23275,13 @@
               "number": 246,
               "date": "2020-01-30",
               "title": "FS246 Raumzeitfenster",
-              "relevanceSec": 5720,
+              "relevanceSec": 7071,
               "occurrences": [
+                {
+                  "topic": "Sozialraum Auto",
+                  "positionSec": 11273,
+                  "durationSec": 1351
+                },
                 {
                   "topic": "Living the Future: Velostation",
                   "positionSec": 5619,
@@ -23125,7 +23361,7 @@
               "number": 248,
               "date": "2020-03-31",
               "title": "FS248 Public Static Final",
-              "relevanceSec": 2011,
+              "relevanceSec": 4396,
               "occurrences": [
                 {
                   "topic": "Waffelproduktion und Hefezucht",
@@ -23136,6 +23372,26 @@
                   "topic": "Unterrichten über das Netz",
                   "positionSec": 6279,
                   "durationSec": 1198
+                },
+                {
+                  "topic": "Corona und Klopapier",
+                  "positionSec": 1527,
+                  "durationSec": 1321
+                },
+                {
+                  "topic": "Bevorratung",
+                  "positionSec": 2849,
+                  "durationSec": 134
+                },
+                {
+                  "topic": "Mangelhafte Digitalaffinität in Deutschland",
+                  "positionSec": 4427,
+                  "durationSec": 795
+                },
+                {
+                  "topic": "Pokemon Go und Corona",
+                  "positionSec": 11707,
+                  "durationSec": 135
                 },
                 {
                   "topic": "Fitness",
@@ -23214,7 +23470,7 @@
               "number": 251,
               "date": "2020-07-18",
               "title": "FS251 Bürgermeisterladesäulen",
-              "relevanceSec": 7001,
+              "relevanceSec": 9331,
               "occurrences": [
                 {
                   "topic": "cleanelectric",
@@ -23260,6 +23516,16 @@
                   "topic": "Ladeinfrastruktur",
                   "positionSec": 5457,
                   "durationSec": 1310
+                },
+                {
+                  "topic": "Elektromainstream",
+                  "positionSec": 7994,
+                  "durationSec": 1730
+                },
+                {
+                  "topic": "Elektro-Gebrauchtmarkt",
+                  "positionSec": 9724,
+                  "durationSec": 600
                 }
               ]
             },
@@ -23318,8 +23584,13 @@
               "number": 255,
               "date": "2020-12-24",
               "title": "FS255 Bitcoin Recycling",
-              "relevanceSec": 1246,
+              "relevanceSec": 1556,
               "occurrences": [
+                {
+                  "topic": "2020: Corona",
+                  "positionSec": 2046,
+                  "durationSec": 310
+                },
                 {
                   "topic": "2020: Space X ud RocketLab",
                   "positionSec": 2757,
@@ -23332,24 +23603,19 @@
         {
           "year": 2021,
           "count": 7,
-          "totalRelevanceSec": 22684,
-          "totalOccurrences": 30,
+          "totalRelevanceSec": 21950,
+          "totalOccurrences": 28,
           "episodes": [
             {
               "number": 257,
               "date": "2021-01-29",
               "title": "FS257 Nerd Hotel",
-              "relevanceSec": 993,
+              "relevanceSec": 861,
               "occurrences": [
                 {
                   "topic": "Podcastsetup im Hotel",
                   "positionSec": 257,
                   "durationSec": 522
-                },
-                {
-                  "topic": "Datenkonsolidierung",
-                  "positionSec": 8089,
-                  "durationSec": 132
                 },
                 {
                   "topic": "Gast: Ralf Rottmann",
@@ -23395,13 +23661,8 @@
               "number": 259,
               "date": "2021-04-23",
               "title": "FS259 Nasenfaktor",
-              "relevanceSec": 1139,
+              "relevanceSec": 537,
               "occurrences": [
-                {
-                  "topic": "Data Query Tools: jq, csvq, yq, xq",
-                  "positionSec": 10840,
-                  "durationSec": 602
-                },
                 {
                   "topic": "Covidus Longus",
                   "positionSec": 184,
@@ -23546,8 +23807,8 @@
         {
           "year": 2023,
           "count": 9,
-          "totalRelevanceSec": 20547,
-          "totalOccurrences": 27,
+          "totalRelevanceSec": 19660,
+          "totalOccurrences": 26,
           "episodes": [
             {
               "number": 264,
@@ -23729,13 +23990,8 @@
               "number": 271,
               "date": "2023-11-18",
               "title": "FS271 Ich glaube das wird ein bisschen mehr Aufwand im Schnitt",
-              "relevanceSec": 1669,
+              "relevanceSec": 782,
               "occurrences": [
-                {
-                  "topic": "Backup im Internet",
-                  "positionSec": 5150,
-                  "durationSec": 887
-                },
                 {
                   "topic": "Themenverschiebung",
                   "positionSec": 14702,
@@ -23761,8 +24017,8 @@
         {
           "year": 2024,
           "count": 14,
-          "totalRelevanceSec": 61622,
-          "totalOccurrences": 73,
+          "totalRelevanceSec": 64022,
+          "totalOccurrences": 77,
           "episodes": [
             {
               "number": 273,
@@ -24052,8 +24308,13 @@
               "number": 282,
               "date": "2024-08-16",
               "title": "FS282 Antik-Tok",
-              "relevanceSec": 9501,
+              "relevanceSec": 10453,
               "occurrences": [
+                {
+                  "topic": "Olympia und die öffentliche Infrastruktur",
+                  "positionSec": 2652,
+                  "durationSec": 952
+                },
                 {
                   "topic": "Feedback: Effective Altruism",
                   "positionSec": 3754,
@@ -24120,8 +24381,13 @@
               "number": 283,
               "date": "2024-09-07",
               "title": "FS283 Kann ich noch was von dem Ozon haben?",
-              "relevanceSec": 2682,
+              "relevanceSec": 4130,
               "occurrences": [
+                {
+                  "topic": "Verschwörungstheorien",
+                  "positionSec": 214,
+                  "durationSec": 925
+                },
                 {
                   "topic": "Die echte eMobility-Experience",
                   "positionSec": 5260,
@@ -24131,6 +24397,16 @@
                   "topic": "Typographie-Exkurs",
                   "positionSec": 7958,
                   "durationSec": 2365
+                },
+                {
+                  "topic": "Gigapixel-Scan der Nachtwache",
+                  "positionSec": 14768,
+                  "durationSec": 402
+                },
+                {
+                  "topic": "Bibelvisualisierung",
+                  "positionSec": 15171,
+                  "durationSec": 121
                 }
               ]
             },
@@ -24819,15 +25095,56 @@
               ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 1,
+          "totalRelevanceSec": 4326,
+          "totalOccurrences": 5,
+          "episodes": [
+            {
+              "number": 301,
+              "date": "2026-01-04",
+              "title": "FS301 Freak Show Clubhouse",
+              "relevanceSec": 4326,
+              "occurrences": [
+                {
+                  "topic": "Gast: Arne",
+                  "positionSec": 1047,
+                  "durationSec": 999
+                },
+                {
+                  "topic": "Gast: Robin",
+                  "positionSec": 2047,
+                  "durationSec": 1195
+                },
+                {
+                  "topic": "Gast: Udo",
+                  "positionSec": 3242,
+                  "durationSec": 661
+                },
+                {
+                  "topic": "Gast: Robert",
+                  "positionSec": 4223,
+                  "durationSec": 761
+                },
+                {
+                  "topic": "Gast: Morten",
+                  "positionSec": 4985,
+                  "durationSec": 710
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     "culture": {
       "id": "culture",
       "name": "Culture",
-      "totalEpisodes": 70,
-      "totalRelevanceSec": 64698,
-      "totalOccurrences": 106,
+      "totalEpisodes": 58,
+      "totalRelevanceSec": 48908,
+      "totalOccurrences": 81,
       "yearData": [
         {
           "year": 2008,
@@ -24901,23 +25218,8 @@
         },
         {
           "year": 2011,
-          "count": 2,
-          "totalRelevanceSec": 39,
-          "totalOccurrences": 1,
+          "count": 1,
           "episodes": [
-            {
-              "number": 69,
-              "date": "2011-07-23",
-              "title": "MM069 Mach den Affen weg",
-              "relevanceSec": 39,
-              "occurrences": [
-                {
-                  "topic": "Drei-Stream-Gesellschaft",
-                  "positionSec": 440,
-                  "durationSec": 39
-                }
-              ]
-            },
             {
               "number": 76,
               "date": "2011-11-17",
@@ -25018,9 +25320,9 @@
         },
         {
           "year": 2014,
-          "count": 9,
-          "totalRelevanceSec": 12589,
-          "totalOccurrences": 11,
+          "count": 7,
+          "totalRelevanceSec": 9306,
+          "totalOccurrences": 8,
           "episodes": [
             {
               "number": 126,
@@ -25036,19 +25338,6 @@
               ]
             },
             {
-              "number": 127,
-              "date": "2014-02-27",
-              "title": "FS127 The Number of the Denis",
-              "relevanceSec": 1102,
-              "occurrences": [
-                {
-                  "topic": "ART COM",
-                  "positionSec": 5537,
-                  "durationSec": 1102
-                }
-              ]
-            },
-            {
               "number": 130,
               "date": "2014-04-10",
               "title": "FS130 Intergalaktischer Autoscooter",
@@ -25058,19 +25347,6 @@
                   "topic": "Roddisibirsk",
                   "positionSec": 3206,
                   "durationSec": 1484
-                }
-              ]
-            },
-            {
-              "number": 136,
-              "date": "2014-07-08",
-              "title": "FS136 Helga!",
-              "relevanceSec": 1647,
-              "occurrences": [
-                {
-                  "topic": "Konferenzen und Diversity",
-                  "positionSec": 5275,
-                  "durationSec": 1647
                 }
               ]
             },
@@ -25117,17 +25393,12 @@
               "number": 143,
               "date": "2014-11-06",
               "title": "FS143 Hättst ja mal Air sagen können",
-              "relevanceSec": 1926,
+              "relevanceSec": 1392,
               "occurrences": [
                 {
                   "topic": "José Mité",
                   "positionSec": 7361,
                   "durationSec": 1392
-                },
-                {
-                  "topic": "Lichtinstallation entlang der Berliner Mauer",
-                  "positionSec": 12508,
-                  "durationSec": 534
                 }
               ]
             },
@@ -25210,9 +25481,9 @@
         },
         {
           "year": 2016,
-          "count": 9,
-          "totalRelevanceSec": 5811,
-          "totalOccurrences": 14,
+          "count": 7,
+          "totalRelevanceSec": 4632,
+          "totalOccurrences": 10,
           "episodes": [
             {
               "number": 168,
@@ -25224,42 +25495,6 @@
                   "topic": "Nerds und Fußball",
                   "positionSec": 3684,
                   "durationSec": 81
-                }
-              ]
-            },
-            {
-              "number": 169,
-              "date": "2016-01-14",
-              "title": "FS169 Hauptschuhle",
-              "relevanceSec": 770,
-              "occurrences": [
-                {
-                  "topic": "HGich.T",
-                  "positionSec": 7270,
-                  "durationSec": 465
-                },
-                {
-                  "topic": "Strandbeest",
-                  "positionSec": 8629,
-                  "durationSec": 305
-                }
-              ]
-            },
-            {
-              "number": 173,
-              "date": "2016-03-10",
-              "title": "FS173 Koreaners Katzi",
-              "relevanceSec": 409,
-              "occurrences": [
-                {
-                  "topic": "Schöne Plakate",
-                  "positionSec": 9252,
-                  "durationSec": 315
-                },
-                {
-                  "topic": "Noch mehr schöne Plakate",
-                  "positionSec": 11487,
-                  "durationSec": 94
                 }
               ]
             },
@@ -25360,15 +25595,15 @@
         },
         {
           "year": 2017,
-          "count": 12,
-          "totalRelevanceSec": 8899,
-          "totalOccurrences": 19,
+          "count": 10,
+          "totalRelevanceSec": 5905,
+          "totalOccurrences": 14,
           "episodes": [
             {
               "number": 190,
               "date": "2017-01-03",
               "title": "FS190 Bitte werfen Sie eine Münze ein",
-              "relevanceSec": 533,
+              "relevanceSec": 354,
               "occurrences": [
                 {
                   "topic": "Carrie Fisher",
@@ -25379,24 +25614,6 @@
                   "topic": "Einhornliebe",
                   "positionSec": 4390,
                   "durationSec": 119
-                },
-                {
-                  "topic": "Verhinderte Kunstprojekte",
-                  "positionSec": 3855,
-                  "durationSec": 179
-                }
-              ]
-            },
-            {
-              "number": 192,
-              "date": "2017-02-09",
-              "title": "FS192 Rechnungswesen im Autohaus",
-              "relevanceSec": 201,
-              "occurrences": [
-                {
-                  "topic": "How Many People Will Die in 2017",
-                  "positionSec": 9283,
-                  "durationSec": 201
                 }
               ]
             },
@@ -25430,7 +25647,7 @@
               "number": 198,
               "date": "2017-05-19",
               "title": "FS198 Er kennt den Admin",
-              "relevanceSec": 2066,
+              "relevanceSec": 937,
               "occurrences": [
                 {
                   "topic": "tomate",
@@ -25446,11 +25663,6 @@
                   "topic": "MP3 ist frei",
                   "positionSec": 12320,
                   "durationSec": 404
-                },
-                {
-                  "topic": "Steuer und Nerds",
-                  "positionSec": 4254,
-                  "durationSec": 1129
                 }
               ]
             },
@@ -25464,19 +25676,6 @@
                   "topic": "Keine Schoki für die Freak Show",
                   "positionSec": 1555,
                   "durationSec": 210
-                }
-              ]
-            },
-            {
-              "number": 201,
-              "date": "2017-07-07",
-              "title": "FS201 Multidimensionale Fisimatentendynamik",
-              "relevanceSec": 597,
-              "occurrences": [
-                {
-                  "topic": "Notfall in Scoville",
-                  "positionSec": 3102,
-                  "durationSec": 597
                 }
               ]
             },
@@ -25497,17 +25696,12 @@
               "number": 206,
               "date": "2017-10-13",
               "title": "FS206 Partial Content",
-              "relevanceSec": 1291,
+              "relevanceSec": 403,
               "occurrences": [
                 {
                   "topic": "Games-Kultur",
                   "positionSec": 8832,
                   "durationSec": 403
-                },
-                {
-                  "topic": "USA in Echtzeit",
-                  "positionSec": 9235,
-                  "durationSec": 888
                 }
               ]
             },
@@ -25673,9 +25867,9 @@
         },
         {
           "year": 2019,
-          "count": 5,
-          "totalRelevanceSec": 3071,
-          "totalOccurrences": 5,
+          "count": 3,
+          "totalRelevanceSec": 1222,
+          "totalOccurrences": 3,
           "episodes": [
             {
               "number": 230,
@@ -25704,19 +25898,6 @@
               ]
             },
             {
-              "number": 232,
-              "date": "2019-02-21",
-              "title": "FS232 Wurstkatastrophe im Bällebad",
-              "relevanceSec": 1662,
-              "occurrences": [
-                {
-                  "topic": "Kunst",
-                  "positionSec": 3173,
-                  "durationSec": 1662
-                }
-              ]
-            },
-            {
               "number": 240,
               "date": "2019-09-12",
               "title": "FS240 Es gibt noch alte Leute",
@@ -25728,27 +25909,14 @@
                   "durationSec": 344
                 }
               ]
-            },
-            {
-              "number": 244,
-              "date": "2019-11-28",
-              "title": "FS244 Ottilie Normalcamperin",
-              "relevanceSec": 187,
-              "occurrences": [
-                {
-                  "topic": "Lichtkunst",
-                  "positionSec": 12144,
-                  "durationSec": 187
-                }
-              ]
             }
           ]
         },
         {
           "year": 2020,
-          "count": 4,
-          "totalRelevanceSec": 6614,
-          "totalOccurrences": 10,
+          "count": 3,
+          "totalRelevanceSec": 2568,
+          "totalOccurrences": 4,
           "episodes": [
             {
               "number": 245,
@@ -25772,17 +25940,12 @@
               "number": 246,
               "date": "2020-01-30",
               "title": "FS246 Raumzeitfenster",
-              "relevanceSec": 3419,
+              "relevanceSec": 2068,
               "occurrences": [
                 {
                   "topic": "Monty Python und Humor",
                   "positionSec": 460,
                   "durationSec": 2068
-                },
-                {
-                  "topic": "Sozialraum Auto",
-                  "positionSec": 11273,
-                  "durationSec": 1351
                 }
               ]
             },
@@ -25790,45 +25953,12 @@
               "number": 248,
               "date": "2020-03-31",
               "title": "FS248 Public Static Final",
-              "relevanceSec": 2584,
+              "relevanceSec": 199,
               "occurrences": [
                 {
                   "topic": "Büchertips",
                   "positionSec": 5421,
                   "durationSec": 199
-                },
-                {
-                  "topic": "Corona und Klopapier",
-                  "positionSec": 1527,
-                  "durationSec": 1321
-                },
-                {
-                  "topic": "Bevorratung",
-                  "positionSec": 2849,
-                  "durationSec": 134
-                },
-                {
-                  "topic": "Mangelhafte Digitalaffinität in Deutschland",
-                  "positionSec": 4427,
-                  "durationSec": 795
-                },
-                {
-                  "topic": "Pokemon Go und Corona",
-                  "positionSec": 11707,
-                  "durationSec": 135
-                }
-              ]
-            },
-            {
-              "number": 255,
-              "date": "2020-12-24",
-              "title": "FS255 Bitcoin Recycling",
-              "relevanceSec": 310,
-              "occurrences": [
-                {
-                  "topic": "2020: Corona",
-                  "positionSec": 2046,
-                  "durationSec": 310
                 }
               ]
             }
@@ -25904,46 +26034,10 @@
         },
         {
           "year": 2024,
-          "count": 3,
-          "totalRelevanceSec": 3540,
-          "totalOccurrences": 6,
+          "count": 1,
+          "totalRelevanceSec": 1140,
+          "totalOccurrences": 2,
           "episodes": [
-            {
-              "number": 282,
-              "date": "2024-08-16",
-              "title": "FS282 Antik-Tok",
-              "relevanceSec": 952,
-              "occurrences": [
-                {
-                  "topic": "Olympia und die öffentliche Infrastruktur",
-                  "positionSec": 2652,
-                  "durationSec": 952
-                }
-              ]
-            },
-            {
-              "number": 283,
-              "date": "2024-09-07",
-              "title": "FS283 Kann ich noch was von dem Ozon haben?",
-              "relevanceSec": 1448,
-              "occurrences": [
-                {
-                  "topic": "Verschwörungstheorien",
-                  "positionSec": 214,
-                  "durationSec": 925
-                },
-                {
-                  "topic": "Gigapixel-Scan der Nachtwache",
-                  "positionSec": 14768,
-                  "durationSec": 402
-                },
-                {
-                  "topic": "Bibelvisualisierung",
-                  "positionSec": 15171,
-                  "durationSec": 121
-                }
-              ]
-            },
             {
               "number": 287,
               "date": "2024-12-15",
@@ -26043,15 +26137,20 @@
               ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
     "finance": {
       "id": "finance",
       "name": "Finance",
-      "totalEpisodes": 104,
-      "totalRelevanceSec": 127951,
-      "totalOccurrences": 140,
+      "totalEpisodes": 102,
+      "totalRelevanceSec": 120438,
+      "totalOccurrences": 133,
       "yearData": [
         {
           "year": 2008,
@@ -26086,23 +26185,10 @@
         },
         {
           "year": 2010,
-          "count": 2,
-          "totalRelevanceSec": 3698,
-          "totalOccurrences": 2,
+          "count": 1,
+          "totalRelevanceSec": 1744,
+          "totalOccurrences": 1,
           "episodes": [
-            {
-              "number": 40,
-              "date": "2010-01-17",
-              "title": "MM040 Das Tablett",
-              "relevanceSec": 1954,
-              "occurrences": [
-                {
-                  "topic": "Smartphone Markt",
-                  "positionSec": 5142,
-                  "durationSec": 1954
-                }
-              ]
-            },
             {
               "number": 44,
               "date": "2010-03-31",
@@ -26702,9 +26788,9 @@
         },
         {
           "year": 2016,
-          "count": 12,
-          "totalRelevanceSec": 13098,
-          "totalOccurrences": 18,
+          "count": 11,
+          "totalRelevanceSec": 11534,
+          "totalOccurrences": 15,
           "episodes": [
             {
               "number": 168,
@@ -26775,7 +26861,7 @@
               "number": 177,
               "date": "2016-05-26",
               "title": "FS177 Talk nerdy to me",
-              "relevanceSec": 956,
+              "relevanceSec": 576,
               "occurrences": [
                 {
                   "topic": "Satoshi Nakamoto",
@@ -26786,16 +26872,6 @@
                   "topic": "291 Bitcoin Transaktionsgebühr",
                   "positionSec": 762,
                   "durationSec": 402
-                },
-                {
-                  "topic": "Blockchain Business",
-                  "positionSec": 1165,
-                  "durationSec": 239
-                },
-                {
-                  "topic": "Blockchain Business 2",
-                  "positionSec": 1804,
-                  "durationSec": 141
                 }
               ]
             },
@@ -26845,19 +26921,6 @@
                   "topic": "ApplePay",
                   "positionSec": 7812,
                   "durationSec": 213
-                }
-              ]
-            },
-            {
-              "number": 186,
-              "date": "2016-11-03",
-              "title": "FS186 Kastratur",
-              "relevanceSec": 1184,
-              "occurrences": [
-                {
-                  "topic": "Wer kauft was?",
-                  "positionSec": 10398,
-                  "durationSec": 1184
                 }
               ]
             },
@@ -27103,8 +27166,8 @@
         {
           "year": 2018,
           "count": 8,
-          "totalRelevanceSec": 10660,
-          "totalOccurrences": 11,
+          "totalRelevanceSec": 8995,
+          "totalOccurrences": 10,
           "episodes": [
             {
               "number": 213,
@@ -27149,17 +27212,12 @@
               "number": 217,
               "date": "2018-05-12",
               "title": "FS217 Überspezifisches Dementi",
-              "relevanceSec": 3134,
+              "relevanceSec": 1469,
               "occurrences": [
                 {
                   "topic": "Bitcoin Lightning Networks",
                   "positionSec": 6939,
                   "durationSec": 1469
-                },
-                {
-                  "topic": "Marktanteile",
-                  "positionSec": 1189,
-                  "durationSec": 1665
                 }
               ]
             },
@@ -27352,8 +27410,8 @@
         {
           "year": 2020,
           "count": 8,
-          "totalRelevanceSec": 8067,
-          "totalOccurrences": 14,
+          "totalRelevanceSec": 5737,
+          "totalOccurrences": 12,
           "episodes": [
             {
               "number": 245,
@@ -27421,7 +27479,7 @@
               "number": 251,
               "date": "2020-07-18",
               "title": "FS251 Bürgermeisterladesäulen",
-              "relevanceSec": 2998,
+              "relevanceSec": 668,
               "occurrences": [
                 {
                   "topic": "Skalierungsfaktoren",
@@ -27432,16 +27490,6 @@
                   "topic": "Kostenparität und Folgekosten",
                   "positionSec": 10856,
                   "durationSec": 515
-                },
-                {
-                  "topic": "Elektromainstream",
-                  "positionSec": 7994,
-                  "durationSec": 1730
-                },
-                {
-                  "topic": "Elektro-Gebrauchtmarkt",
-                  "positionSec": 9724,
-                  "durationSec": 600
                 }
               ]
             },
@@ -27705,6 +27753,11 @@
               ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
@@ -28660,6 +28713,11 @@
           "year": 2025,
           "count": 0,
           "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
@@ -29482,6 +29540,11 @@
               ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
@@ -30415,131 +30478,20 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    "politics": {
-      "id": "politics",
-      "name": "Politics",
-      "totalEpisodes": 4,
-      "yearData": [
+        },
         {
-          "year": 2008,
+          "year": 2026,
           "count": 0,
           "episodes": []
-        },
-        {
-          "year": 2009,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2010,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2011,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2012,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2013,
-          "count": 1,
-          "episodes": [
-            {
-              "number": 103,
-              "date": "2013-01-24",
-              "title": "MM103 Plattform mit Migrationshintergrund"
-            }
-          ]
-        },
-        {
-          "year": 2014,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2015,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2016,
-          "count": 1,
-          "episodes": [
-            {
-              "number": 184,
-              "date": "2016-09-29",
-              "title": "FS184 Dringendes Klickbedürfnis"
-            }
-          ]
-        },
-        {
-          "year": 2017,
-          "count": 1,
-          "episodes": [
-            {
-              "number": 192,
-              "date": "2017-02-09",
-              "title": "FS192 Rechnungswesen im Autohaus"
-            }
-          ]
-        },
-        {
-          "year": 2018,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2019,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2020,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2021,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2023,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2024,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2025,
-          "count": 1,
-          "episodes": [
-            {
-              "number": 297,
-              "date": "2025-09-26",
-              "title": "FS297 Monochromverläufe"
-            }
-          ]
         }
       ]
     },
     "event": {
       "id": "event",
       "name": "Event",
-      "totalEpisodes": 36,
-      "totalRelevanceSec": 82556,
-      "totalOccurrences": 123,
+      "totalEpisodes": 37,
+      "totalRelevanceSec": 83054,
+      "totalOccurrences": 124,
       "yearData": [
         {
           "year": 2008,
@@ -31561,6 +31513,27 @@
               ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 1,
+          "totalRelevanceSec": 498,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 301,
+              "date": "2026-01-04",
+              "title": "FS301 Freak Show Clubhouse",
+              "relevanceSec": 498,
+              "occurrences": [
+                {
+                  "topic": "39C3",
+                  "positionSec": 548,
+                  "durationSec": 498
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -31657,6 +31630,11 @@
         },
         {
           "year": 2025,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2026,
           "count": 0,
           "episodes": []
         }

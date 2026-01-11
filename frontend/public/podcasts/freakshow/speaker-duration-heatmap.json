@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2025-12-27T23:50:02.082Z",
+  "generatedAt": "2026-01-11T07:40:00.423Z",
   "description": "Speaker × Episode Duration Heatmap Data",
   "statistics": {
-    "totalEpisodes": 300,
-    "totalSpeakers": 67,
+    "totalEpisodes": 301,
+    "totalSpeakers": 72,
     "totalDurationBuckets": 10,
-    "totalCombinations": 145,
+    "totalCombinations": 151,
     "mostCommonSpeaker": "Tim Pritlove",
-    "mostCommonSpeakerCount": 300,
+    "mostCommonSpeakerCount": 301,
     "mostCommonDuration": 210,
     "mostCommonDurationLabel": "3h 30min",
     "mostCommonDurationCount": 409
@@ -15,7 +15,7 @@
   "speakers": [
     {
       "name": "Tim Pritlove",
-      "totalEpisodes": 300
+      "totalEpisodes": 301
     },
     {
       "name": "Denis Ahrens",
@@ -23,7 +23,7 @@
     },
     {
       "name": "roddi",
-      "totalEpisodes": 172
+      "totalEpisodes": 173
     },
     {
       "name": "hukl",
@@ -43,7 +43,7 @@
     },
     {
       "name": "Ralf Stockmann",
-      "totalEpisodes": 39
+      "totalEpisodes": 40
     },
     {
       "name": "Dominik Wagner",
@@ -266,6 +266,26 @@
       "totalEpisodes": 1
     },
     {
+      "name": "Arne",
+      "totalEpisodes": 1
+    },
+    {
+      "name": "Robin",
+      "totalEpisodes": 1
+    },
+    {
+      "name": "Udo Sauer",
+      "totalEpisodes": 1
+    },
+    {
+      "name": "Robert Helling",
+      "totalEpisodes": 1
+    },
+    {
+      "name": "Morten",
+      "totalEpisodes": 1
+    },
+    {
       "name": "Dirk Holtwick",
       "totalEpisodes": 1
     },
@@ -291,7 +311,7 @@
     {
       "minutes": 90,
       "label": "1h 30min",
-      "totalEpisodes": 48
+      "totalEpisodes": 56
     },
     {
       "minutes": 120,
@@ -337,7 +357,7 @@
   "matrix": [
     {
       "speaker": "Tim Pritlove",
-      "totalEpisodes": 300,
+      "totalEpisodes": 301,
       "values": [
         {
           "duration": 60,
@@ -352,7 +372,7 @@
         {
           "duration": 90,
           "durationLabel": "1h 30min",
-          "count": 13,
+          "count": 14,
           "episodes": [
             1,
             13,
@@ -363,6 +383,7 @@
             2,
             239,
             3,
+            301,
             4,
             43,
             46,
@@ -1000,7 +1021,7 @@
     },
     {
       "speaker": "roddi",
-      "totalEpisodes": 172,
+      "totalEpisodes": 173,
       "values": [
         {
           "duration": 60,
@@ -1014,11 +1035,12 @@
         {
           "duration": 90,
           "durationLabel": "1h 30min",
-          "count": 3,
+          "count": 4,
           "episodes": [
             159,
             190,
-            239
+            239,
+            301
           ]
         },
         {
@@ -1927,7 +1949,7 @@
     },
     {
       "speaker": "Ralf Stockmann",
-      "totalEpisodes": 39,
+      "totalEpisodes": 40,
       "values": [
         {
           "duration": 60,
@@ -1938,8 +1960,10 @@
         {
           "duration": 90,
           "durationLabel": "1h 30min",
-          "count": 0,
-          "episodes": []
+          "count": 1,
+          "episodes": [
+            301
+          ]
         },
         {
           "duration": 120,
@@ -5823,6 +5847,346 @@
           "episodes": [
             273
           ]
+        },
+        {
+          "duration": 300,
+          "durationLabel": "5h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 330,
+          "durationLabel": "5h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    {
+      "speaker": "Arne",
+      "totalEpisodes": 1,
+      "values": [
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 1,
+          "episodes": [
+            301
+          ]
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 300,
+          "durationLabel": "5h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 330,
+          "durationLabel": "5h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    {
+      "speaker": "Robin",
+      "totalEpisodes": 1,
+      "values": [
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 1,
+          "episodes": [
+            301
+          ]
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 300,
+          "durationLabel": "5h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 330,
+          "durationLabel": "5h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    {
+      "speaker": "Udo Sauer",
+      "totalEpisodes": 1,
+      "values": [
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 1,
+          "episodes": [
+            301
+          ]
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 300,
+          "durationLabel": "5h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 330,
+          "durationLabel": "5h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    {
+      "speaker": "Robert Helling",
+      "totalEpisodes": 1,
+      "values": [
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 1,
+          "episodes": [
+            301
+          ]
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 300,
+          "durationLabel": "5h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 330,
+          "durationLabel": "5h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    {
+      "speaker": "Morten",
+      "totalEpisodes": 1,
+      "values": [
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 1,
+          "episodes": [
+            301
+          ]
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 0,
+          "episodes": []
         },
         {
           "duration": 300,

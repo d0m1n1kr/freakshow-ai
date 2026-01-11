@@ -20,11 +20,34 @@ const podcastIndex = args.indexOf('--podcast');
 const PODCAST_ID = podcastIndex !== -1 && args[podcastIndex + 1] ? args[podcastIndex + 1] : 'freakshow';
 
 const PROJECT_ROOT = path.join(__dirname, '..');
-const TAXONOMY_FILE = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topic-taxonomy.json');
-const DETAILED_TAXONOMY_FILE = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topic-taxonomy-detailed.json');
 const EPISODES_DIR = path.join(PROJECT_ROOT, 'podcasts', PODCAST_ID, 'episodes');
 const OUTPUT_DIR = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID);
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'topic-river-data.json');
+
+// Default paths - will check variant directory first
+function getDefaultTaxonomyPath() {
+  const variantPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topics', 'auto-v2.1', 'topic-taxonomy.json');
+  const mainPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topic-taxonomy.json');
+  
+  if (fileExists(variantPath)) {
+    return variantPath;
+  } else if (fileExists(mainPath)) {
+    return mainPath;
+  }
+  return mainPath; // Return main path as fallback for error messages
+}
+
+function getDefaultDetailedPath() {
+  const variantPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topics', 'auto-v2.1', 'topic-taxonomy-detailed.json');
+  const mainPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topic-taxonomy-detailed.json');
+  
+  if (fileExists(variantPath)) {
+    return variantPath;
+  } else if (fileExists(mainPath)) {
+    return mainPath;
+  }
+  return mainPath;
+}
 
 function parseArg(name) {
   const idx = process.argv.indexOf(name);
@@ -44,8 +67,8 @@ function fileExists(p) {
  * Lädt die Taxonomie-Daten
  */
 function loadTaxonomy() {
-  const taxonomyPath = parseArg('--taxonomy') || TAXONOMY_FILE;
-  const detailedPath = parseArg('--taxonomy-detailed') || DETAILED_TAXONOMY_FILE;
+  const taxonomyPath = parseArg('--taxonomy') || getDefaultTaxonomyPath();
+  const detailedPath = parseArg('--taxonomy-detailed') || getDefaultDetailedPath();
 
   const hasDetailed = fileExists(detailedPath);
   const hasTaxonomy = fileExists(taxonomyPath);

@@ -16,17 +16,34 @@ const podcastIndex = args.indexOf('--podcast');
 const PODCAST_ID = podcastIndex !== -1 && args[podcastIndex + 1] ? args[podcastIndex + 1] : 'freakshow';
 
 const PROJECT_ROOT = path.join(__dirname, '..');
-const TAXONOMY_FILE = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topic-taxonomy.json');
 const EPISODES_DIR = path.join(PROJECT_ROOT, 'podcasts', PODCAST_ID, 'episodes');
 const OUTPUT_DIR = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID);
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'speaker-cluster-heatmap.json');
 
 /**
+ * Finds and loads the topic taxonomy file (checks variant directory first)
+ */
+function findTaxonomyFile() {
+  const variantPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topics', 'auto-v2.1', 'topic-taxonomy.json');
+  const mainPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topic-taxonomy.json');
+  
+  if (fs.existsSync(variantPath)) {
+    console.log('Lade topic-taxonomy.json (variant: auto-v2.1)...');
+    return variantPath;
+  } else if (fs.existsSync(mainPath)) {
+    console.log('Lade topic-taxonomy.json...');
+    return mainPath;
+  }
+  
+  throw new Error(`Topic taxonomy not found. Tried:\n  - ${variantPath}\n  - ${mainPath}\n\nRun clustering first.`);
+}
+
+/**
  * Lädt die Topic-Taxonomy-Daten
  */
 function loadTaxonomy() {
-  console.log('Lade topic-taxonomy.json...');
-  const data = JSON.parse(fs.readFileSync(TAXONOMY_FILE, 'utf-8'));
+  const taxonomyFile = findTaxonomyFile();
+  const data = JSON.parse(fs.readFileSync(taxonomyFile, 'utf-8'));
   return data.clusters;
 }
 

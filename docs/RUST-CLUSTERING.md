@@ -433,4 +433,4 @@ Tested on Apple M1 Pro (10 cores, 16GB RAM):
 - Main README: `../README.md`
 - Category Grouping: `../CATEGORY-RIVER-GUIDE.md`
 - Visual Guide: `../VISUAL-EXPLANATION.md`
-- JavaScript Reference: `../cluster-topics.js`
+- Rust Implementation: `../src/cluster_topics_v2.rs`

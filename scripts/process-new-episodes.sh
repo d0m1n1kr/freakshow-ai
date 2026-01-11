@@ -28,6 +28,8 @@ NC='\033[0m'
 # Parse arguments
 PODCAST_ID=${1:-freakshow}
 SKIP_SCRAPING=false
+SKIP_RAG=false
+FROM_STEP=0
 
 # Parse arguments
 for arg in "$@"; do
@@ -39,8 +41,15 @@ for arg in "$@"; do
         --skip-scraping)
             SKIP_SCRAPING=true
             ;;
+        --skip-rag)
+            SKIP_RAG=true
+            ;;
+        --from-step)
+            # Will be handled in next iteration
+            FROM_STEP_ARG=true
+            ;;
         --help|-h)
-            echo "Usage: $0 [--podcast <podcast-id>] [--skip-scraping]"
+            echo "Usage: $0 [--podcast <podcast-id>] [--skip-scraping] [--skip-rag] [--from-step <n>]"
             echo ""
             echo "This script processes only newly added episodes and updates global data."
             echo "It does NOT update speaker profiles."
@@ -48,6 +57,17 @@ for arg in "$@"; do
             echo "Options:"
             echo "  --podcast <id>     Podcast ID (default: freakshow)"
             echo "  --skip-scraping    Skip scraping phase (assume episodes already scraped)"
+            echo "  --skip-rag         Skip RAG database update"
+            echo "  --from-step <n>    Start from step n (1-7)"
+            echo ""
+            echo "Steps:"
+            echo "  1: Detect and process new episodes (scraping, stats, topics)"
+            echo "  2: Update global data (normalize topics, embeddings, clustering)"
+            echo "  3: Clustering"
+            echo "  4: Regenerate visualizations"
+            echo "  5: Generate TS-live files"
+            echo "  6: Update RAG database"
+            echo "  7: Organize Frontend Files"
             echo ""
             echo "What this script does:"
             echo "  1. Detects new episodes (missing processed files)"
@@ -64,10 +84,25 @@ for arg in "$@"; do
             if [ "${PODCAST_ARG:-false}" = true ]; then
                 PODCAST_ID=$arg
                 PODCAST_ARG=false
+            elif [ "${FROM_STEP_ARG:-false}" = true ]; then
+                FROM_STEP=$arg
+                FROM_STEP_ARG=false
             fi
             ;;
     esac
 done
+
+# Validate FROM_STEP
+if [ "$FROM_STEP" -lt 0 ] || [ "$FROM_STEP" -gt 7 ]; then
+    echo -e "${RED}❌ Invalid --from-step value: $FROM_STEP (must be 0-7)${NC}"
+    exit 1
+fi
+
+# Helper function to check if a step should run
+should_run_step() {
+    local step=$1
+    [ "$FROM_STEP" -le "$step" ]
+}
 
 PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$PROJECT_ROOT"
@@ -180,7 +215,8 @@ detect_new_episodes() {
 }
 
 # Phase 1: Check existing episodes and scrape new ones
-echo -e "${BLUE}📥 Phase 1: Checking Existing Episodes and Scraping New Ones${NC}\n"
+if should_run_step 1; then
+    echo -e "${BLUE}📥 Phase 1: Checking Existing Episodes and Scraping New Ones${NC}\n"
 
 # Get list of existing episodes before scraping
 echo -e "${YELLOW}→${NC} Checking existing episodes..."
@@ -231,45 +267,48 @@ if [ "$SKIP_SCRAPING" = false ]; then
 else
     echo -e "${YELLOW}⏭${NC}  Skipping scraping phase\n"
 fi
-
-# Detect new episodes (episodes without speaker stats)
-echo -e "${YELLOW}→${NC} Detecting episodes that need processing..."
-if ! detect_new_episodes; then
-    echo -e "${YELLOW}ℹ${NC}  No new episodes to process. Exiting.\n"
-    exit 0
-fi
-
-# Calculate episode range for efficient processing
-if [ ${#NEW_EPISODES[@]} -gt 0 ]; then
-    # Sort episodes numerically
-    IFS=$'\n' sorted_episodes=($(printf '%s\n' "${NEW_EPISODES[@]}" | sort -n))
-    MIN_EPISODE=${sorted_episodes[0]}
-    MAX_EPISODE=${sorted_episodes[${#sorted_episodes[@]}-1]}
-    
-    echo -e "${YELLOW}→${NC} Processing episodes: ${NEW_EPISODES[*]} (range: $MIN_EPISODE-$MAX_EPISODE)\n"
 else
-    echo -e "${YELLOW}ℹ${NC}  No episodes to process\n"
-    exit 0
+    echo -e "${YELLOW}⏭${NC}  Skipping Phase 1 (starting from step $FROM_STEP)\n"
 fi
-
-# Generate speaker stats for new episodes
-echo -e "${YELLOW}→${NC} Generating speaker stats for new episodes..."
-for episode_num in "${NEW_EPISODES[@]}"; do
-    echo -e "${YELLOW}  Processing episode $episode_num...${NC}"
-    node scripts/generate-speaker-stats.js --podcast "$PODCAST_ID" --episode "$episode_num" || echo -e "${YELLOW}⚠${NC}  Failed to generate stats for episode $episode_num"
-done
-echo -e "${GREEN}✓${NC} Speaker stats generation completed\n"
-
-# Extract topics for new episodes
-echo -e "${YELLOW}→${NC} Extracting topics for new episodes..."
-for episode_num in "${NEW_EPISODES[@]}"; do
-    echo -e "${YELLOW}  Processing episode $episode_num...${NC}"
-    node scripts/extract-topics.js --podcast "$PODCAST_ID" "$episode_num" || echo -e "${YELLOW}⚠${NC}  Failed to extract topics for episode $episode_num"
-done
-echo -e "${GREEN}✓${NC} Topic extraction completed\n"
 
 # Phase 2: Update global data (all podcasts)
-echo -e "${BLUE}🔬 Phase 2: Updating Global Data${NC}\n"
+if should_run_step 2; then
+    echo -e "${BLUE}🔬 Phase 2: Updating Global Data${NC}\n"
+
+    # Detect new episodes if coming from step 2 or later (need episode list for processing)
+    if [ "$FROM_STEP" -ge 2 ]; then
+        echo -e "${YELLOW}→${NC} Detecting episodes that need processing..."
+        if ! detect_new_episodes; then
+            echo -e "${YELLOW}ℹ${NC}  No new episodes detected. Continuing with global data update.\n"
+            NEW_EPISODES=()
+        else
+            # Calculate episode range for efficient processing
+            if [ ${#NEW_EPISODES[@]} -gt 0 ]; then
+                # Sort episodes numerically
+                IFS=$'\n' sorted_episodes=($(printf '%s\n' "${NEW_EPISODES[@]}" | sort -n))
+                MIN_EPISODE=${sorted_episodes[0]}
+                MAX_EPISODE=${sorted_episodes[${#sorted_episodes[@]}-1]}
+                
+                echo -e "${YELLOW}→${NC} Processing episodes: ${NEW_EPISODES[*]} (range: $MIN_EPISODE-$MAX_EPISODE)\n"
+                
+                # Generate speaker stats for new episodes
+                echo -e "${YELLOW}→${NC} Generating speaker stats for new episodes..."
+                for episode_num in "${NEW_EPISODES[@]}"; do
+                    echo -e "${YELLOW}  Processing episode $episode_num...${NC}"
+                    node scripts/generate-speaker-stats.js --podcast "$PODCAST_ID" --episode "$episode_num" || echo -e "${YELLOW}⚠${NC}  Failed to generate stats for episode $episode_num"
+                done
+                echo -e "${GREEN}✓${NC} Speaker stats generation completed\n"
+
+                # Extract topics for new episodes
+                echo -e "${YELLOW}→${NC} Extracting topics for new episodes..."
+                for episode_num in "${NEW_EPISODES[@]}"; do
+                    echo -e "${YELLOW}  Processing episode $episode_num...${NC}"
+                    node scripts/extract-topics.js --podcast "$PODCAST_ID" "$episode_num" || echo -e "${YELLOW}⚠${NC}  Failed to extract topics for episode $episode_num"
+                done
+                echo -e "${GREEN}✓${NC} Topic extraction completed\n"
+            fi
+        fi
+    fi
 
 echo -e "${YELLOW}→${NC} Normalizing topics (updates all podcasts)..."
 run_script "scripts/normalize-topics.js"
@@ -301,9 +340,13 @@ fi
 
 echo -e "${YELLOW}→${NC} Generating subject river data (updates all podcasts)..."
 run_script "scripts/generate-subject-river.js"
+else
+    echo -e "${YELLOW}⏭${NC}  Skipping Phase 2 (starting from step $FROM_STEP)\n"
+fi
 
 # Phase 3: Clustering (all podcasts)
-echo -e "${BLUE}🎯 Phase 3: Clustering (V2 auto-v2.1)${NC}\n"
+if should_run_step 3; then
+    echo -e "${BLUE}🎯 Phase 3: Clustering (V2 auto-v2.1)${NC}\n"
 
 echo -e "${YELLOW}→${NC} Building clustering variant: auto-v2.1 (updates all podcasts)..."
 if ./scripts/build-variant.sh v2 auto-v2.1 --podcast "$PODCAST_ID"; then
@@ -312,9 +355,13 @@ else
     echo -e "${RED}✗${NC} Clustering failed\n"
     exit 1
 fi
+else
+    echo -e "${YELLOW}⏭${NC}  Skipping Phase 3 (starting from step $FROM_STEP)\n"
+fi
 
 # Phase 4: Regenerate visualizations (all podcasts)
-echo -e "${BLUE}📊 Phase 4: Regenerating Visualizations${NC}\n"
+if should_run_step 4; then
+    echo -e "${BLUE}📊 Phase 4: Regenerating Visualizations${NC}\n"
 
 echo -e "${YELLOW}→${NC} Analyzing cluster speakers (all podcasts)..."
 run_script "scripts/analyze-cluster-speakers.js"
@@ -363,9 +410,13 @@ if [ ! -f "$VARIANT_UMAP" ]; then
 else
     echo -e "${GREEN}✓${NC} UMAP data already exists in variant directory\n"
 fi
+else
+    echo -e "${YELLOW}⏭${NC}  Skipping Phase 4 (starting from step $FROM_STEP)\n"
+fi
 
 # Phase 5: Generate TS-live files for new episodes
-echo -e "${BLUE}⚙️  Phase 5: Generating TS-live Files${NC}\n"
+if should_run_step 5; then
+    echo -e "${BLUE}⚙️  Phase 5: Generating TS-live Files${NC}\n"
 
 echo -e "${YELLOW}→${NC} Generating TS-live files for new episodes..."
 for episode_num in "${NEW_EPISODES[@]}"; do
@@ -373,9 +424,36 @@ for episode_num in "${NEW_EPISODES[@]}"; do
     node scripts/generate-ts-live.js --podcast "$PODCAST_ID" --episode "$episode_num" || echo -e "${YELLOW}⚠${NC}  Failed to generate TS-live for episode $episode_num"
 done
 echo -e "${GREEN}✓${NC} TS-live generation completed\n"
+else
+    echo -e "${YELLOW}⏭${NC}  Skipping Phase 5 (starting from step $FROM_STEP)\n"
+fi
 
-# Phase 6: Copy/Move Files to Frontend
-echo -e "${BLUE}📦 Phase 6: Organize Frontend Files${NC}\n"
+# Phase 6: Update RAG Database
+if should_run_step 6; then
+    echo -e "${BLUE}🧠 Phase 6: Update RAG Database${NC}\n"
+
+    if [ "$SKIP_RAG" = false ]; then
+        if [ ${#NEW_EPISODES[@]} -gt 0 ]; then
+            echo -e "${YELLOW}→${NC} Updating RAG database with new episodes..."
+            IFS=$'\n' sorted_episodes=($(printf '%s\n' "${NEW_EPISODES[@]}" | sort -n))
+            MIN_EPISODE=${sorted_episodes[0]}
+            MAX_EPISODE=${sorted_episodes[${#sorted_episodes[@]}-1]}
+            
+            echo -e "${YELLOW}  Processing episodes $MIN_EPISODE to $MAX_EPISODE...${NC}"
+            run_script_optional "scripts/create-rag-db.js" --from "$MIN_EPISODE" --to "$MAX_EPISODE"
+        else
+            echo -e "${YELLOW}ℹ${NC}  No new episodes for RAG database update\n"
+        fi
+    else
+        echo -e "${YELLOW}⏭${NC}  Skipping RAG database update (--skip-rag)\n"
+    fi
+else
+    echo -e "${YELLOW}⏭${NC}  Skipping Phase 6 (starting from step $FROM_STEP)\n"
+fi
+
+# Phase 7: Copy/Move Files to Frontend
+if should_run_step 7; then
+    echo -e "${BLUE}📦 Phase 7: Organize Frontend Files${NC}\n"
 
 FRONTEND_PODCAST_DIR="frontend/public/podcasts/$PODCAST_ID"
 mkdir -p "$FRONTEND_PODCAST_DIR"
@@ -418,9 +496,16 @@ if [ -d "$PODCAST_EPISODES_DIR" ]; then
         echo -e "${YELLOW}⚠${NC}  Episodes symlink already exists or target exists"
     fi
 fi
+else
+    echo -e "${YELLOW}⏭${NC}  Skipping Phase 7 (starting from step $FROM_STEP)\n"
+fi
 
 # Summary
-echo -e "\n${GREEN}✅ New episodes processing completed!${NC}\n"
+if [ "$FROM_STEP" -gt 0 ]; then
+    echo -e "\n${GREEN}✅ New episodes processing completed (resumed from step $FROM_STEP)!${NC}\n"
+else
+    echo -e "\n${GREEN}✅ New episodes processing completed!${NC}\n"
+fi
 if [ ${#NEW_EPISODES[@]} -gt 0 ]; then
     echo -e "📝 Processed ${#NEW_EPISODES[@]} new episode(s): ${NEW_EPISODES[*]}"
 fi

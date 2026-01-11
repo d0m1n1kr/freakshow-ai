@@ -16,8 +16,25 @@ async function generateClusterClusterHeatmap() {
   console.log(`Processing podcast: ${PODCAST_ID}`);
   console.log('Loading topic taxonomy...');
   
-  // Load topic taxonomy from podcast directory
-  const taxonomyPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topic-taxonomy.json');
+  // Try to find taxonomy file (check variant directory first, then main directory)
+  const variantPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topics', 'auto-v2.1', 'topic-taxonomy.json');
+  const mainPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topic-taxonomy.json');
+  
+  let taxonomyPath;
+  try {
+    await fs.access(variantPath);
+    taxonomyPath = variantPath;
+    console.log('  Using variant taxonomy: topics/auto-v2.1/topic-taxonomy.json');
+  } catch {
+    try {
+      await fs.access(mainPath);
+      taxonomyPath = mainPath;
+      console.log('  Using main taxonomy: topic-taxonomy.json');
+    } catch {
+      throw new Error(`Topic taxonomy not found. Tried:\n  - ${variantPath}\n  - ${mainPath}\n\nRun clustering first.`);
+    }
+  }
+  
   const taxonomyData = JSON.parse(await fs.readFile(taxonomyPath, 'utf-8'));
   
   const clusters = taxonomyData.clusters;

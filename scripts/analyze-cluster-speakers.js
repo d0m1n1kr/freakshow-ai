@@ -93,8 +93,29 @@ function calculateSpeakerRelevance(speakerCounts, totalEpisodes) {
 async function analyzeClusterSpeakers() {
   console.log(`Processing podcast: ${PODCAST_ID}`);
   console.log('Loading topic taxonomy...');
-  const taxonomyPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topic-taxonomy.json');
-  const taxonomy = await loadJSON(taxonomyPath);
+  
+  // Try to find taxonomy file (check variant directory first, then main directory)
+  const variantTaxonomyPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topics', 'auto-v2.1', 'topic-taxonomy.json');
+  const mainTaxonomyPath = path.join(PROJECT_ROOT, 'frontend', 'public', 'podcasts', PODCAST_ID, 'topic-taxonomy.json');
+  
+  let taxonomyPath = null;
+  let taxonomy = null;
+  
+  try {
+    await fs.access(variantTaxonomyPath);
+    taxonomyPath = variantTaxonomyPath;
+    console.log('  Using variant taxonomy: topics/auto-v2.1/topic-taxonomy.json');
+    taxonomy = await loadJSON(taxonomyPath);
+  } catch (err) {
+    try {
+      await fs.access(mainTaxonomyPath);
+      taxonomyPath = mainTaxonomyPath;
+      console.log('  Using main taxonomy: topic-taxonomy.json');
+      taxonomy = await loadJSON(taxonomyPath);
+    } catch (err2) {
+      throw new Error(`Topic taxonomy not found. Tried:\n  - ${variantTaxonomyPath}\n  - ${mainTaxonomyPath}\n\nMake sure clustering has been run first.`);
+    }
+  }
   
   if (!taxonomy.clusters || !Array.isArray(taxonomy.clusters)) {
     throw new Error('Invalid topic-taxonomy.json format: missing clusters array');
