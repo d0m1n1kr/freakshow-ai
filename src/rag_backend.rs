@@ -5,6 +5,7 @@ mod handlers;
 mod rag;
 mod transcript;
 mod utils;
+mod lance;
 
 use anyhow::{Context, Result};
 use axum::{

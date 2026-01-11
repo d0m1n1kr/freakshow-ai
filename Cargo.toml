@@ -48,6 +48,13 @@ maxminddb = "0.24"
 sha2 = "0.10"
 hex = "0.4"
 
+# LanceDB for vector storage (matching Node.js 0.22.3)
+lancedb = "0.22"
+# Keep Arrow versions aligned with Lance/LanceDB to avoid duplicate major versions (breaks downcasting).
+arrow = "56.2.0"
+arrow-array = "56.2.0"
+arrow-schema = "56.2.0"
+
 [profile.release]
 opt-level = 3
 lto = true

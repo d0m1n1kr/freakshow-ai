@@ -10,19 +10,9 @@ function sleep(ms) {
 }
 
 function parseArgs(argv) {
-  // Parse podcast argument
-  const podcastIndex = argv.indexOf('--podcast');
-  const PODCAST_ID = podcastIndex !== -1 && argv[podcastIndex + 1] ? argv[podcastIndex + 1] : 'freakshow';
-  const PROJECT_ROOT = path.join(__dirname, '..');
-  
-  const dbDir = path.join(PROJECT_ROOT, 'db', PODCAST_ID);
-  if (!fs.existsSync(dbDir)) {
-    fs.mkdirSync(dbDir, { recursive: true });
-  }
   const args = {
-    inDir: path.join(PROJECT_ROOT, 'podcasts', PODCAST_ID, 'episodes'),
-    outFile: path.join(dbDir, 'rag-embeddings.json'),
-    podcastId: PODCAST_ID,
+    inDir: path.join(__dirname, 'episodes'),
+    outFile: path.join(__dirname, 'db', 'rag-embeddings.json'),
     episode: null,
     from: null,
     to: null,
@@ -30,20 +20,10 @@ function parseArgs(argv) {
     force: false,
     resume: true,
     noEmbeddings: false,
-    allowMissingTimestamps: true,
     requestDelayMs: null,
   };
 
-  // Remove `--podcast <id>` from argv so order doesn't matter and arg parsing doesn't fail.
-  const rest = [];
-  for (let i = 0; i < argv.length; i++) {
-    const a = argv[i];
-    if (a === '--podcast') {
-      i++; // skip value
-      continue;
-    }
-    rest.push(a);
-  }
+  const rest = [...argv];
   while (rest.length) {
     const a = rest.shift();
     if (a === '--in-dir') args.inDir = rest.shift();
@@ -55,7 +35,6 @@ function parseArgs(argv) {
     else if (a === '--force') args.force = true;
     else if (a === '--no-resume') args.resume = false;
     else if (a === '--no-embeddings') args.noEmbeddings = true;
-    else if (a === '--no-missing-timestamps') args.allowMissingTimestamps = false;
     else if (a === '--request-delay-ms') args.requestDelayMs = Math.max(0, parseInt(rest.shift(), 10));
     else if (a === '--help' || a === '-h') args.help = true;
     else throw new Error(`Unknown arg: ${a}`);
@@ -66,9 +45,9 @@ function parseArgs(argv) {
 function usage() {
   return (
     'Usage:\n' +
-    '  node scripts/create-rag-db.js [--podcast <id>] --episode <n> [--out <file>] [--no-embeddings]\n' +
-    '  node scripts/create-rag-db.js [--podcast <id>] --from <n> --to <n> [--out <file>] [--batch-size <n>]\n' +
-    '  node scripts/create-rag-db.js [--podcast <id>] --in-dir <dir> [--out <file>] [--force] [--no-resume]\n' +
+    '  node scripts/create-rag-db.js --episode <n> [--out <file>] [--no-embeddings]\n' +
+    '  node scripts/create-rag-db.js --from <n> --to <n> [--out <file>] [--batch-size <n>]\n' +
+    '  node scripts/create-rag-db.js --in-dir <dir> [--out <file>] [--force] [--no-resume]\n' +
     '\n' +
     'Options:\n' +
     '  --in-dir <dir>           Directory with *-extended-topics.json (default: ./episodes)\n' +
@@ -79,7 +58,6 @@ function usage() {
     '  --force                  Rebuild from scratch (ignore existing output)\n' +
     '  --no-resume              Don\'t reuse embeddings from existing output\n' +
     '  --no-embeddings           Build DB without calling embedding API (embeddings = null)\n' +
-    '  --no-missing-timestamps  Don\'t include topics without time bounds (default: include with 0..0)\n' +
     '  --request-delay-ms <n>   Wait between embedding batches (default: 0 unless set)\n'
   );
 }
@@ -95,13 +73,13 @@ function tryReadJson(p) {
 
 function loadSettings({ allowMissing } = { allowMissing: false }) {
   // Prefer settings.json, but in some environments it may be blocked (ignored/secret file).
-  const settingsPath = path.join(__dirname, '..', 'settings.json');
+  const settingsPath = path.join(__dirname, 'settings.json');
   const fromSettings = tryReadJson(settingsPath);
 
   if (fromSettings.ok) return { settings: fromSettings.value, source: 'settings.json' };
 
   // If settings.json is missing or unreadable, allow env-based config (and optionally fall back to settings.example.json)
-  const examplePath = path.join(__dirname, '..', 'settings.example.json');
+  const examplePath = path.join(__dirname, 'settings.example.json');
   const fromExample = tryReadJson(examplePath);
 
   const envLLM = {
@@ -356,7 +334,6 @@ async function main() {
 
   const items = [];
   const skippedNoTime = [];
-  let filledNoTime = 0;
   let reused = 0;
 
   for (const f of files) {
@@ -367,17 +344,10 @@ async function main() {
 
     for (let i = 0; i < topics.length; i++) {
       const t = topics[i];
-      let { startSec, endSec } = pickTimeBounds(t);
+      const { startSec, endSec } = pickTimeBounds(t);
       if (!Number.isFinite(startSec) || !Number.isFinite(endSec)) {
-        if (!args.allowMissingTimestamps) {
-          skippedNoTime.push({ episodeNumber, topic: t?.topic ?? null });
-          continue;
-        }
-        // Some transcripts don't have timestamps at all (time=""), so we still index the topic
-        // but degrade navigation/playback to "start of episode".
-        startSec = 0;
-        endSec = 0;
-        filledNoTime++;
+        skippedNoTime.push({ episodeNumber, topic: t?.topic ?? null });
+        continue;
       }
 
       const topicName = typeof t?.topic === 'string' ? t.topic.trim() : '';
@@ -429,7 +399,6 @@ async function main() {
 
   console.log(`Items:        ${items.length}`);
   if (skippedNoTime.length) console.log(`Skipped:      ${skippedNoTime.length} (missing timestamps)`);
-  if (filledNoTime) console.log(`NoTime:       ${filledNoTime} (indexed with 0..0)`);
   if (!args.noEmbeddings) {
     console.log(`Reused:       ${reused}`);
     console.log(`To embed:     ${needEmbeddingIdx.length}`);
@@ -484,7 +453,6 @@ async function main() {
     stats: {
       totalItems: items.length,
       skippedNoTime: skippedNoTime.length,
-      filledNoTime,
       reusedEmbeddings: args.noEmbeddings ? 0 : reused,
     },
   };

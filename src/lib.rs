@@ -1,3 +1,6 @@
+// LanceDB integration
+pub mod lance;
+
 // Simple Rust unit tests for mathematical functions
 #[cfg(test)]
 mod tests {

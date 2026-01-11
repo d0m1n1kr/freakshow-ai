@@ -1579,72 +1579,173 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // Load embeddings
     println!("📂 Lade Embeddings-Datenbank (Podcast: {})...", args.podcast);
-    let db_path = PathBuf::from(format!("db/{}/topic-embeddings.json", args.podcast));
-    if !db_path.exists() {
-        eprintln!("\n❌ Keine Embeddings-Datenbank gefunden!");
-        eprintln!("   Erwarteter Pfad: {}", db_path.display());
-        eprintln!("   Erstelle zuerst die Datenbank mit:");
-        eprintln!("   node scripts/create-embeddings.js --podcast {}\n", args.podcast);
-        std::process::exit(1);
-    }
+    
+    // Try LanceDB first
+    let lance_path = PathBuf::from(format!("db/{}/lance", args.podcast));
+    let use_lance = lance_path.exists() && lance_path.join("topics.lance").exists();
+    
+    let (db, filtered_topics) = if use_lance {
+        println!("   Verwende LanceDB");
+        
+        // Load from LanceDB
+        use freakshow_ai::lance::TopicEmbeddingsLance;
+        let lance = TopicEmbeddingsLance::open(&args.podcast).await?;
+        let meta = lance.metadata();
+        
+        println!("   Modell: {}", meta.embedding_model);
+        println!("   Dimensionen: {}", meta.embedding_dimensions);
+        
+        let records = lance.get_all().await?;
+        println!("   Topics: {}", records.len());
+        
+        // Convert to old format for compatibility
+        let topics: Vec<TopicWithEmbedding> = records.into_iter().map(|r| {
+            let occurrences: Vec<TopicOccurrence> = r.episodes.iter().map(|&ep| {
+                TopicOccurrence {
+                    episode_number: ep,
+                    duration_sec: Some(default_topic_duration_sec),
+                    position_sec: Some(0),
+                }
+            }).collect();
+            
+            TopicWithEmbedding {
+                topic: r.topic,
+                keywords: r.keywords,
+                count: r.count,
+                episodes: r.episodes,
+                occurrences: Some(occurrences),
+                embedding: r.embedding.into_iter().map(|f| f as f64).collect(),
+            }
+        }).collect();
+        
+        // Create a minimal EmbeddingsDatabase for compatibility
+        let db = EmbeddingsDatabase {
+            embedding_model: meta.embedding_model.clone(),
+            created_at: chrono::Utc::now().to_rfc3339(),
+            embedding_dimensions: meta.embedding_dimensions,
+            total_topics_raw: meta.total_topics,
+            topics: topics.clone(),
+        };
+        
+        // Filter ubiquitous / boilerplate topics
+        let ubiquitous_share_threshold = settings
+            .topic_clustering
+            .as_ref()
+            .and_then(|s| s.ubiquitous_topic_max_episode_share)
+            .unwrap_or(0.90);
 
-    let db_content = fs::read_to_string(&db_path)?;
-    let db: EmbeddingsDatabase = serde_json::from_str(&db_content)?;
-
-    println!("   Modell: {}", db.embedding_model);
-    println!("   Topics: {}", db.topics.len());
-    println!("   Dimensionen: {}", db.embedding_dimensions);
-    println!("   Erstellt: {}", db.created_at);
-
-    // ------------------------------------------------------------------------
-    // Filter ubiquitous / boilerplate topics (e.g. intro/outro)
-    // ------------------------------------------------------------------------
-    let ubiquitous_share_threshold = settings
-        .topic_clustering
-        .as_ref()
-        .and_then(|s| s.ubiquitous_topic_max_episode_share)
-        .unwrap_or(0.90);
-
-    let mut all_episode_ids: HashSet<u32> = HashSet::new();
-    for t in db.topics.iter() {
-        for &ep in &t.episodes {
-            all_episode_ids.insert(ep);
+        let mut all_episode_ids: HashSet<u32> = HashSet::new();
+        for t in topics.iter() {
+            for &ep in &t.episodes {
+                all_episode_ids.insert(ep);
+            }
         }
-    }
-    let total_episodes = all_episode_ids.len().max(1);
+        let total_episodes = all_episode_ids.len().max(1);
 
-    let mut filtered_topics: Vec<TopicWithEmbedding> = Vec::with_capacity(db.topics.len());
-    let mut skipped_by_name = 0usize;
-    let mut skipped_by_share = 0usize;
+        let mut filtered_topics: Vec<TopicWithEmbedding> = Vec::with_capacity(topics.len());
+        let mut skipped_by_name = 0usize;
+        let mut skipped_by_share = 0usize;
 
-    for t in db.topics.iter().cloned() {
-        let topic_lc = t.topic.to_lowercase();
-        let is_intro_outro = topic_lc.contains("intro") || topic_lc.contains("outro");
+        for t in topics.into_iter() {
+            let topic_lc = t.topic.to_lowercase();
+            let is_intro_outro = topic_lc.contains("intro") || topic_lc.contains("outro");
 
-        if is_intro_outro {
-            skipped_by_name += 1;
-            continue;
+            if is_intro_outro {
+                skipped_by_name += 1;
+                continue;
+            }
+
+            let share = (t.episodes.len() as f64) / (total_episodes as f64);
+            if share >= ubiquitous_share_threshold {
+                skipped_by_share += 1;
+                continue;
+            }
+
+            filtered_topics.push(t);
         }
 
-        let share = (t.episodes.len() as f64) / (total_episodes as f64);
-        if share >= ubiquitous_share_threshold {
-            skipped_by_share += 1;
-            continue;
+        if skipped_by_name > 0 || skipped_by_share > 0 {
+            println!(
+                "🧹 Filter: entferne {} Intro/Outro-Themen + {} ubiquitäre Themen (≥ {:.0}% von {} Episoden).",
+                skipped_by_name,
+                skipped_by_share,
+                ubiquitous_share_threshold * 100.0,
+                total_episodes
+            );
+            println!("   Topics nach Filter: {}", filtered_topics.len());
+        }
+        
+        (db, filtered_topics)
+    } else {
+        // Fallback to JSON
+        println!("   Verwende JSON");
+        let db_path = PathBuf::from(format!("db/{}/topic-embeddings.json", args.podcast));
+        if !db_path.exists() {
+            eprintln!("\n❌ Keine Embeddings-Datenbank gefunden!");
+            eprintln!("   Erwarteter Pfad: {}", db_path.display());
+            eprintln!("   Erstelle zuerst die Datenbank mit:");
+            eprintln!("   node scripts/create-embeddings.js --podcast {}\n", args.podcast);
+            std::process::exit(1);
         }
 
-        filtered_topics.push(t);
-    }
+        let db_content = fs::read_to_string(&db_path)?;
+        let db: EmbeddingsDatabase = serde_json::from_str(&db_content)?;
 
-    if skipped_by_name > 0 || skipped_by_share > 0 {
-        println!(
-            "🧹 Filter: entferne {} Intro/Outro-Themen + {} ubiquitäre Themen (≥ {:.0}% von {} Episoden).",
-            skipped_by_name,
-            skipped_by_share,
-            ubiquitous_share_threshold * 100.0,
-            total_episodes
-        );
-        println!("   Topics nach Filter: {}", filtered_topics.len());
-    }
+        println!("   Modell: {}", db.embedding_model);
+        println!("   Topics: {}", db.topics.len());
+        println!("   Dimensionen: {}", db.embedding_dimensions);
+        println!("   Erstellt: {}", db.created_at);
+
+        // Filter ubiquitous / boilerplate topics (e.g. intro/outro)
+        let ubiquitous_share_threshold = settings
+            .topic_clustering
+            .as_ref()
+            .and_then(|s| s.ubiquitous_topic_max_episode_share)
+            .unwrap_or(0.90);
+
+        let mut all_episode_ids: HashSet<u32> = HashSet::new();
+        for t in db.topics.iter() {
+            for &ep in &t.episodes {
+                all_episode_ids.insert(ep);
+            }
+        }
+        let total_episodes = all_episode_ids.len().max(1);
+
+        let mut filtered_topics: Vec<TopicWithEmbedding> = Vec::with_capacity(db.topics.len());
+        let mut skipped_by_name = 0usize;
+        let mut skipped_by_share = 0usize;
+
+        for t in db.topics.iter().cloned() {
+            let topic_lc = t.topic.to_lowercase();
+            let is_intro_outro = topic_lc.contains("intro") || topic_lc.contains("outro");
+
+            if is_intro_outro {
+                skipped_by_name += 1;
+                continue;
+            }
+
+            let share = (t.episodes.len() as f64) / (total_episodes as f64);
+            if share >= ubiquitous_share_threshold {
+                skipped_by_share += 1;
+                continue;
+            }
+
+            filtered_topics.push(t);
+        }
+
+        if skipped_by_name > 0 || skipped_by_share > 0 {
+            println!(
+                "🧹 Filter: entferne {} Intro/Outro-Themen + {} ubiquitäre Themen (≥ {:.0}% von {} Episoden).",
+                skipped_by_name,
+                skipped_by_share,
+                ubiquitous_share_threshold * 100.0,
+                total_episodes
+            );
+            println!("   Topics nach Filter: {}", filtered_topics.len());
+        }
+        
+        (db, filtered_topics)
+    };
 
     println!("\n📊 V2 Clustering-Einstellungen:");
     println!("   Algorithmus:         HDBSCAN");

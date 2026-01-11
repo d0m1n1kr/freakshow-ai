@@ -107,8 +107,9 @@ async fn get_all_podcast_ids() -> Result<Vec<String>> {
         let path = entry.path();
         if path.is_dir() {
             if let Some(podcast_id) = path.file_name().and_then(|n| n.to_str()) {
-                let rag_path = path.join("rag-embeddings.json");
-                if tokio::fs::metadata(&rag_path).await.is_ok() {
+                // Check for LanceDB directory with rag_chunks table
+                let lance_path = path.join("lance/rag_chunks.lance");
+                if tokio::fs::metadata(&lance_path).await.is_ok() {
                     podcast_ids.push(podcast_id.to_string());
                 }
             }
@@ -161,72 +162,66 @@ async fn episodes_search_impl(st: &AppStateType, req: EpisodesSearchRequest) -> 
     
     // Get embedding for query
     let q = embed_query(st, query).await?;
-    let qn = l2_norm(&q);
-    if qn <= 0.0 {
-        return Err(anyhow!("Query embedding norm is 0"));
-    }
 
-    // Score all items across all podcasts with parallel computation
+    // Search all podcasts and collect results
     let keep_count = (offset + page_size) * 5;
+    let mut all_hits: Vec<(String, crate::rag::Hit)> = Vec::new();
     
-    // Parallel computation of all scores across all podcasts
-    let mut scored: Vec<(String, usize, f32)> = Vec::new();
     for (podcast_id, rag) in &rag_indices {
-        let podcast_id_clone = podcast_id.clone();
-        let podcast_scores: Vec<(String, usize, f32)> = rag.items
-            .par_iter()
-            .enumerate()
-            .filter_map(|(i, it)| {
-                let v = it.embedding.as_ref()?;
-                let dn = rag.norms[i];
-                if dn <= 0.0 {
-                    return None;
-                }
-                let s = dot(&q, v) / (qn * dn);
-                if s.is_finite() {
-                    Some((podcast_id_clone.clone(), i, s))
-                } else {
-                    None
-                }
-            })
-            .collect();
-        scored.extend(podcast_scores);
+        // Search this podcast's RAG index using LanceDB
+        let hits = rag.lance.search(&q, keep_count).await?;
+        
+        // Convert to our format and tag with podcast_id
+        for hit in hits {
+            all_hits.push((
+                podcast_id.clone(),
+                crate::rag::Hit {
+                    item: crate::rag::RagItem {
+                        id: hit.item.id,
+                        episode_number: hit.item.episode_number,
+                        episode_title: hit.item.episode_title,
+                        topic: hit.item.topic,
+                        subject: hit.item.subject.map(|s| crate::rag::RagSubject {
+                            coarse: s.coarse,
+                            fine: s.fine,
+                        }),
+                        start_sec: hit.item.start_sec,
+                        end_sec: hit.item.end_sec,
+                        start_hms: hit.item.start_hms,
+                        end_hms: hit.item.end_hms,
+                        summary: hit.item.summary,
+                        text: hit.item.text,
+                        embedding: hit.item.embedding,
+                    },
+                    score: hit.score,
+                },
+            ));
+        }
     }
     
-    // Use partial sort to get top-K without sorting everything
-    let mut scored = scored;
-    if scored.len() > keep_count {
-        let (top_part, _, _) = scored.select_nth_unstable_by(keep_count - 1, |a, b| {
-            b.2.partial_cmp(&a.2).unwrap_or(Ordering::Equal)
-        });
-        top_part.sort_by(|a, b| b.2.partial_cmp(&a.2).unwrap_or(Ordering::Equal));
-        scored = top_part.to_vec();
-    } else {
-        scored.sort_by(|a, b| b.2.partial_cmp(&a.2).unwrap_or(Ordering::Equal));
-    }
+    // Sort all hits by score
+    all_hits.sort_by(|a, b| b.1.score.partial_cmp(&a.1.score).unwrap_or(Ordering::Equal));
+    all_hits.truncate(keep_count);
     
     // Group by (podcast_id, episode_number) and get best score per episode
     // Also track multiple positions (start_sec) of matching items (top 3 per episode)
     let mut episode_data: HashMap<(String, u32), (f32, Vec<(f64, f32)>)> = HashMap::new();
     
     // Take more items than page_size to ensure we have enough episodes after grouping
-    for (podcast_id, idx, score) in scored.iter().take((offset + page_size) * 5) {
-        let rag = rag_indices.iter()
-            .find(|(pid, _)| pid == podcast_id)
-            .map(|(_, rag_arc)| rag_arc.as_ref())
-            .ok_or_else(|| anyhow!("RAG index not found for podcast {}", podcast_id))?;
-        let item = &rag.items[*idx];
+    for (podcast_id, hit) in all_hits.iter().take(keep_count) {
+        let item = &hit.item;
         let ep_num = item.episode_number;
-        let key = (podcast_id.clone(), ep_num);
+        let score = hit.score;
+        let key: (String, u32) = (podcast_id.clone(), ep_num);
         
         // Track best score per episode and collect positions with their scores
-        let entry = episode_data.entry(key).or_insert((*score, Vec::new()));
-        if *score > entry.0 {
-            entry.0 = *score;
+        let entry = episode_data.entry(key).or_insert((score, Vec::new()));
+        if score > entry.0 {
+            entry.0 = score;
         }
         
         // Collect positions with their scores
-        entry.1.push((item.start_sec, *score));
+        entry.1.push((item.start_sec, score));
     }
     
     // Sort positions by score and keep top 3 per episode, preserving both positions and scores
@@ -419,18 +414,10 @@ async fn episodes_latest_impl(st: &AppStateType, req: EpisodesLatestRequest) -> 
         .take(page_size)
         .collect();
     
-    // Load RAG database once to get topics for all episodes (with caching)
-    let mut episode_topics_map: HashMap<u32, std::collections::HashSet<String>> = HashMap::new();
-    if let Ok(rag) = load_rag_index_cached(st, podcast_id).await {
-        for item in &rag.items {
-            if let Some(topic) = &item.topic {
-                episode_topics_map
-                    .entry(item.episode_number)
-                    .or_default()
-                    .insert(topic.clone());
-            }
-        }
-    }
+    // Note: Topic map feature removed - topics are now stored in LanceDB
+    // and would require a full scan which is inefficient. Consider adding
+    // a separate index if this feature is needed.
+    let episode_topics_map: HashMap<u32, std::collections::HashSet<String>> = HashMap::new();
     
     // Load episode metadata in parallel (batch loading with caching)
     let metadata_map = load_episode_metadata_batch_cached(st, podcast_id, &paginated_episodes).await?;

@@ -34,6 +34,9 @@
     "test:all": "npm run test:frontend && npm run test:rust"
   },
   "dependencies": {
+    "@apache-arrow/ts": "^14.0.2",
+    "@lancedb/lancedb": "^0.22.3",
+    "apache-arrow": "^18.0.0",
     "fast-xml-parser": "^4.3.2",
     "puppeteer": "^24.0.0",
     "umap-js": "^1.4.0"

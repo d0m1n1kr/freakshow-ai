@@ -6,6 +6,7 @@ use serde::Deserialize;
 
 use crate::config::AppState;
 use crate::rag::RagIndex;
+use crate::lance::RagIndexLance;
 
 // Cache entry structures
 #[derive(Clone)]
@@ -113,47 +114,31 @@ pub async fn load_rag_index_cached(
     st: &AppState,
     podcast_id: &str,
 ) -> Result<Arc<RagIndex>> {
-    // Determine RAG database path
-    let rag_db_path = PathBuf::from(format!("db/{}/rag-embeddings.json", podcast_id));
-    let rag_db_path = if tokio::fs::metadata(&rag_db_path).await.is_ok() {
-        rag_db_path
-    } else {
-        let fallback = PathBuf::from("db/rag-embeddings.json");
-        if tokio::fs::metadata(&fallback).await.is_ok() {
-            fallback
-        } else {
-            return Err(anyhow!("RAG database not found for podcast '{}'", podcast_id));
-        }
-    };
-
-    // Check cache (moka handles TTL and LRU automatically)
-    // Note: Cache validation is disabled - embeddings never expire once loaded
+    // Load from LanceDB
+    let lance_path = PathBuf::from(format!("db/{}/lance", podcast_id));
+    
+    tracing::debug!("Loading RAG index from LanceDB for podcast: {}", podcast_id);
+    
+    // Check cache
     if let Some(cached) = st.rag_cache.get(podcast_id).await {
-        if cached.file_path == rag_db_path {
+        if cached.file_path == lance_path {
             return Ok(cached.rag.clone());
         }
     }
-
-    // Load and cache - use streaming deserialization for large files
-    // Open file directly in blocking task to enable true streaming
-    let rag_db_path_for_cache = rag_db_path.clone();
-    let rag_db_path_for_load = rag_db_path.clone();
-    let display_path = rag_db_path_for_load.display().to_string();
-    let rag = tokio::task::spawn_blocking(move || {
-        RagIndex::load_from_path(&rag_db_path_for_load)
-    }).await
-        .with_context(|| "Failed to spawn blocking task")?
-        .with_context(|| format!("Failed to parse RAG database: {}", display_path))?;
     
-    let rag = Arc::new(rag);
+    // Load from LanceDB
+    let podcast_id_clone = podcast_id.to_string();
+    let rag_lance = RagIndexLance::open(&podcast_id_clone).await
+        .map_err(|e| anyhow!("Failed to open LanceDB for podcast '{}': {}", podcast_id, e))?;
     
-    // Insert into cache
+    let rag = Arc::new(RagIndex::new(rag_lance));
+    
     st.rag_cache.insert(
         podcast_id.to_string(),
         CachedRagIndex {
             rag: rag.clone(),
             loaded_at: SystemTime::now(),
-            file_path: rag_db_path_for_cache,
+            file_path: lance_path,
         }
     ).await;
     
@@ -404,53 +389,13 @@ pub async fn load_speaker_meta_cached(
 }
 
 pub async fn load_episode_topics_map_cached(
-    st: &AppState,
-    podcast_id: &str,
+    _st: &AppState,
+    _podcast_id: &str,
 ) -> Result<HashMap<u32, std::collections::HashSet<String>>> {
-    // Determine RAG database path
-    let rag_db_path = PathBuf::from(format!("db/{}/rag-embeddings.json", podcast_id));
-    let rag_db_path = if tokio::fs::metadata(&rag_db_path).await.is_ok() {
-        rag_db_path
-    } else {
-        PathBuf::from("db/rag-embeddings.json")
-    };
-
-    if tokio::fs::metadata(&rag_db_path).await.is_err() {
-        return Ok(HashMap::new());
-    }
-
-    // Check cache (moka handles TTL and LRU automatically)
-    // Note: Cache validation is disabled - embeddings never expire once loaded
-    if let Some(cached) = st.episode_topics_map_cache.get(podcast_id).await {
-        if cached.rag_db_path == rag_db_path {
-            return Ok(cached.topics_map.clone());
-        }
-    }
-
-    // Load RAG database and build topics map
-    let rag = load_rag_index_cached(st, podcast_id).await?;
-    let mut topics_map: HashMap<u32, std::collections::HashSet<String>> = HashMap::new();
-    
-    for item in &rag.items {
-        if let Some(topic) = &item.topic {
-            topics_map
-                .entry(item.episode_number)
-                .or_insert_with(|| std::collections::HashSet::new())
-                .insert(topic.clone());
-        }
-    }
-
-    // Cache result
-    st.episode_topics_map_cache.insert(
-        podcast_id.to_string(),
-        CachedEpisodeTopicsMap {
-            topics_map: topics_map.clone(),
-            loaded_at: SystemTime::now(),
-            rag_db_path: rag_db_path.clone(),
-        }
-    ).await;
-
-    Ok(topics_map)
+    // Note: This feature has been removed as it required scanning all RAG items.
+    // Topics are now stored in LanceDB and would require inefficient full scans.
+    // Consider adding a separate index if this feature is needed.
+    Ok(HashMap::new())
 }
 
 pub async fn check_episode_files_cached(

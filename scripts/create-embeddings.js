@@ -379,37 +379,81 @@ async function main() {
   }
   console.log(`   ${allEmbeddings.length} Embeddings erstellt`);
 
-  // 5. Speichere Datenbank
+  // 5. Speichere Datenbank (LanceDB)
   console.log('\n💾 Speichere Datenbank...');
   
-  const database = {
-    schemaVersion,
-    createdAt: new Date().toISOString(),
-    embeddingModel: embeddingModel,
-    embeddingDimensions: allEmbeddings[0]?.length || 0,
-    sourceEpisodes: topicsFiles.length,
-    totalTopicsRaw: allTopics.length,
-    topics: uniqueTopics.map((topic, i) => ({
-      id: i,
-      topic: topic.topic,
-      keywords: Array.from(new Set([...(topic.keywords || []), ...buildSubjectKeywordsFromOccurrences(topic.occurrences)])),
-      count: topic.count,
-      episodes: topic.episodes,
-      occurrences: topic.occurrences,
-      embedding: allEmbeddings[i]
-    }))
-  };
-
-  fs.writeFileSync(dbFile, JSON.stringify(database, null, 2), 'utf-8');
+  const embeddingDimensions = allEmbeddings[0]?.length || 0;
+  const createdAt = new Date().toISOString();
   
-  const fileSizeMB = (fs.statSync(dbFile).size / 1024 / 1024).toFixed(2);
-  console.log(`   Gespeichert: ${dbFile}`);
-  console.log(`   Dateigröße: ${fileSizeMB} MB`);
-  console.log(`   Dimensionen: ${database.embeddingDimensions}`);
+  const lancedb = await import('@lancedb/lancedb');
+  const lanceDir = path.join(dbDir, 'lance');
+  if (!fs.existsSync(lanceDir)) {
+    fs.mkdirSync(lanceDir, { recursive: true });
+  }
+  
+  const lanceDb = await lancedb.connect(lanceDir);
+  
+  const records = uniqueTopics.map((topic, idx) => ({
+    id: idx,
+    topic: topic.topic,
+    keywords: JSON.stringify(Array.from(new Set([...(topic.keywords || []), ...buildSubjectKeywordsFromOccurrences(topic.occurrences)]))),
+    count: topic.count,
+    episodes: JSON.stringify(topic.episodes),
+    occurrences: JSON.stringify(topic.occurrences),
+    vector: allEmbeddings[idx],
+  }));
+  
+  const tableNames = await lanceDb.tableNames();
+  if (tableNames.includes('topics')) {
+    await lanceDb.dropTable('topics');
+  }
+  
+  await lanceDb.createTable('topics', records);
+  
+  // Save metadata
+  const metaPath = path.join(lanceDir, 'metadata.json');
+  const existingMeta = fs.existsSync(metaPath) 
+    ? JSON.parse(fs.readFileSync(metaPath, 'utf-8')) 
+    : {};
+  
+  fs.writeFileSync(metaPath, JSON.stringify({
+    ...existingMeta,
+    topics: {
+      type: 'topic-embeddings',
+      schemaVersion,
+      createdAt: createdAt,
+      updatedAt: new Date().toISOString(),
+      embeddingModel: embeddingModel,
+      embeddingDimensions: embeddingDimensions,
+      totalTopics: allTopics.length,
+      uniqueTopics: uniqueTopics.length,
+      recordCount: records.length,
+    },
+  }, null, 2));
+  
+  const lanceSizeMB = ((await getDirSize(lanceDir)) / 1024 / 1024).toFixed(2);
+  console.log(`   Gespeichert: ${lanceDir}`);
+  console.log(`   Dateigröße: ${lanceSizeMB} MB`);
+  console.log(`   Dimensionen: ${embeddingDimensions}`);
 
   console.log('\n✅ Embeddings-Datenbank erstellt!');
   console.log('\nNächste Schritte:');
   console.log('   node scripts/cluster-topics.js    # Clustering durchführen');
+}
+
+async function getDirSize(dirPath) {
+  let size = 0;
+  if (!fs.existsSync(dirPath)) return 0;
+  const files = fs.readdirSync(dirPath, { withFileTypes: true });
+  for (const file of files) {
+    const filePath = path.join(dirPath, file.name);
+    if (file.isDirectory()) {
+      size += await getDirSize(filePath);
+    } else {
+      size += fs.statSync(filePath).size;
+    }
+  }
+  return size;
 }
 
 // Starte das Skript
