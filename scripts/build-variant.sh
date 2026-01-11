@@ -102,6 +102,19 @@ if [ "$NEED_BUILD" = false ]; then
     fi
 fi
 
+# If the release binary is older than relevant Rust sources, rebuild.
+# This prevents confusing runtime errors when the binary lags behind recent fixes.
+if [ "$NEED_BUILD" = false ] && [ -f "target/release/$BINARY" ]; then
+    if [ "$BINARY" = "cluster-topics-v2" ]; then
+        if [ "target/release/$BINARY" -ot "src/lance/topics.rs" ] || \
+           [ "target/release/$BINARY" -ot "Cargo.toml" ] || \
+           [ "target/release/$BINARY" -ot "Cargo.lock" ]; then
+            echo -e "${YELLOW}⚠️  Existing $BINARY is older than source changes. Rebuilding...${NC}"
+            NEED_BUILD=true
+        fi
+    fi
+fi
+
 if [ "$NEED_BUILD" = true ]; then
     echo -e "${BLUE}🔧 Building $BINARY...${NC}"
     cargo build --release --bin "$BINARY"

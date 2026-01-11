@@ -484,6 +484,8 @@ fn find_cluster_name(
 ) -> String {
     let mut keyword_counts: HashMap<String, f64> = HashMap::new();
     let mut topic_words: HashMap<String, f64> = HashMap::new();
+    let mut bigrams: HashMap<String, f64> = HashMap::new();
+
     let generic_words: HashSet<&str> = [
         "und",
         "der",
@@ -528,6 +530,7 @@ fn find_cluster_name(
     .iter()
     .copied()
     .collect();
+
     for &idx in cluster_items {
         let topic = &all_topics[idx];
         let weight = if use_relevance_weighting {
@@ -535,10 +538,16 @@ fn find_cluster_name(
         } else {
             1.0
         };
+
+        // Keywords get highest weight (they're already extracted and relevant)
         for kw in &topic.keywords {
-            let key = kw.to_lowercase();
-            *keyword_counts.entry(key).or_insert(0.0) += weight;
+            let key = kw.to_lowercase().trim().to_string();
+            if !key.is_empty() && key.len() > 2 {
+                *keyword_counts.entry(key).or_insert(0.0) += weight * 3.0;
+            }
         }
+
+        // Extract words and bigrams from topic text
         let words: Vec<String> = topic
             .topic
             .to_lowercase()
@@ -555,25 +564,74 @@ fn find_cluster_name(
             .filter(|w| w.len() > 2 && !generic_words.contains(w))
             .map(|s| s.to_string())
             .collect();
-        for word in words {
-            *topic_words.entry(word).or_insert(0.0) += weight;
+
+        // Count individual words
+        for word in &words {
+            *topic_words.entry(word.clone()).or_insert(0.0) += weight;
+        }
+
+        // Extract and count bigrams (two-word phrases)
+        for i in 0..words.len().saturating_sub(1) {
+            let bigram = format!("{} {}", words[i], words[i + 1]);
+            *bigrams.entry(bigram).or_insert(0.0) += weight * 1.5;
         }
     }
+
+    // Combine all counts, prioritizing keywords, then bigrams, then words
     let mut all_counts: HashMap<String, f64> = topic_words.clone();
+    
+    // Add keywords with high weight
     for (kw, count) in keyword_counts {
-        *all_counts.entry(kw).or_insert(0.0) += count * 2.0;
+        *all_counts.entry(kw).or_insert(0.0) += count;
     }
+    
+    // Add bigrams with medium-high weight (they represent phrases)
+    for (bigram, count) in bigrams {
+        *all_counts.entry(bigram).or_insert(0.0) += count;
+    }
+
     if all_counts.is_empty() {
         return "Sonstiges".to_string();
     }
+
     let mut sorted: Vec<_> = all_counts.into_iter().collect();
     sorted.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap());
-    let top_words: Vec<_> = sorted.iter().take(3).collect();
-    if top_words.is_empty() {
+
+    let top_items: Vec<_> = sorted.iter().take(3).collect();
+    if top_items.is_empty() {
         return "Sonstiges".to_string();
     }
-    let first_word = &top_words[0].0;
-    // Capitalize first character (UTF-8 safe)
+
+    // Prefer multi-word phrases (bigrams) if they're strong enough
+    let best_item = &top_items[0].0;
+    let best_score = top_items[0].1;
+    
+    // If the best item is a bigram and significantly better, use it
+    if best_item.contains(' ') && top_items.len() > 1 {
+        let second_score = top_items[1].1;
+        if best_score >= second_score * 1.2 {
+            // Capitalize first letter of each word in the bigram
+            let capitalized: String = best_item
+                .split_whitespace()
+                .map(|word| {
+                    let mut chars = word.chars();
+                    match chars.next() {
+                        Some(first_char) => {
+                            let mut s = first_char.to_uppercase().to_string();
+                            s.push_str(chars.as_str());
+                            s
+                        }
+                        None => word.to_string(),
+                    }
+                })
+                .collect::<Vec<_>>()
+                .join(" ");
+            return capitalized;
+        }
+    }
+
+    // Otherwise, use single word or combine top two
+    let first_word = &top_items[0].0;
     let mut chars = first_word.chars();
     let name = match chars.next() {
         Some(first_char) => {
@@ -584,25 +642,30 @@ fn find_cluster_name(
         None => first_word.to_string(),
     };
 
-    if top_words.len() > 1 && top_words[0].1 <= top_words[1].1 * 2.0 {
-        let second_word = &top_words[1].0;
-        // Capitalize first character (UTF-8 safe)
-        let mut chars = second_word.chars();
-        let second = match chars.next() {
-            Some(first_char) => {
-                let mut s = first_char.to_uppercase().to_string();
-                s.push_str(chars.as_str());
-                s
-            }
-            None => second_word.to_string(),
-        };
-        return format!("{} & {}", name, second);
+    // Combine with second word if scores are close
+    if top_items.len() > 1 && best_score <= top_items[1].1 * 2.0 {
+        let second_word = &top_items[1].0;
+        // Don't combine if second is a bigram (would be too long)
+        if !second_word.contains(' ') {
+            let mut chars = second_word.chars();
+            let second = match chars.next() {
+                Some(first_char) => {
+                    let mut s = first_char.to_uppercase().to_string();
+                    s.push_str(chars.as_str());
+                    s
+                }
+                None => second_word.to_string(),
+            };
+            return format!("{} & {}", name, second);
+        }
     }
+
     name
 }
 
 fn call_llm_for_naming<'a>(
     topics: Vec<String>,
+    keywords: Option<Vec<String>>,
     settings: &'a Settings,
     model: Option<&'a str>,
     retry_count: u32,
@@ -620,18 +683,42 @@ fn call_llm_for_naming<'a>(
             .as_ref()
             .and_then(|s| s.retry_delay_ms)
             .unwrap_or(5000);
-        let system_prompt = r#"Du bist ein Experte für präzise Kategorisierung. Deine Aufgabe ist es, für eine Gruppe von Podcast-Topics einen kurzen, prägnanten Kategorie-Namen zu finden.
+        let system_prompt = r#"Du bist ein Experte für präzise Kategorisierung von Podcast-Inhalten. Deine Aufgabe ist es, für eine Gruppe von Topics einen kurzen, prägnanten Kategorie-Namen zu finden.
 
-Regeln:
-- Der Name sollte 1-3 Wörter lang sein
-- Sei spezifisch, nicht generisch (z.B. "iPhone" statt "Mobilgeräte", "Podcasting" statt "Medien")
-- Wenn es um ein konkretes Produkt/Thema geht, nenne es beim Namen
-- Die Topics sind nach Relevanz sortiert - die ersten sind wichtiger!
-- Antworte NUR mit dem Kategorie-Namen, nichts anderes"#;
-        let user_prompt = format!(
-        "Finde einen kurzen, prägnanten Namen für diese Gruppe von Topics (sortiert nach Relevanz, wichtigste zuerst):\n\n{}\n\nKategorie-Name:",
-        topics.iter().map(|t| format!("- {}", t)).collect::<Vec<_>>().join("\n")
-    );
+WICHTIGE REGELN:
+1. Länge: 1-3 Wörter (idealerweise 1-2)
+2. Spezifität: Sei konkret, nicht generisch
+   - GUT: "iPhone", "Künstliche Intelligenz", "Klimawandel", "Podcasting"
+   - SCHLECHT: "Mobilgeräte", "Technologie", "Umwelt", "Medien"
+3. Produktnamen: Wenn es um ein konkretes Produkt/Thema geht, nenne es beim Namen
+4. Relevanz: Die Topics sind nach Wichtigkeit sortiert - die ersten sind am wichtigsten
+5. Format: Antworte NUR mit dem Kategorie-Namen, keine Erklärungen, keine Anführungszeichen
+
+BEISPIELE:
+- Topics über iPhone, iPad, Apple Watch → "Apple Produkte"
+- Topics über ChatGPT, GPT-4, LLMs → "Künstliche Intelligenz"
+- Topics über Klimawandel, CO2, Erderwärmung → "Klimawandel"
+- Topics über verschiedene Podcasts → "Podcasting"
+- Topics über Bitcoin, Ethereum, Kryptowährungen → "Kryptowährungen"#;
+        let mut user_prompt = format!(
+            "Finde einen kurzen, prägnanten Namen für diese Gruppe von Topics (sortiert nach Relevanz, wichtigste zuerst):\n\n{}",
+            topics.iter().map(|t| format!("- {}", t)).collect::<Vec<_>>().join("\n")
+        );
+
+        if let Some(ref kw) = keywords {
+            if !kw.is_empty() {
+                let unique_keywords: Vec<String> = kw.iter()
+                    .take(15)
+                    .map(|k| k.clone())
+                    .collect();
+                user_prompt.push_str(&format!(
+                    "\n\nHäufige Keywords in dieser Gruppe: {}",
+                    unique_keywords.join(", ")
+                ));
+            }
+        }
+
+        user_prompt.push_str("\n\nKategorie-Name:");
         let request = LlmRequest {
             model: model_name.to_string(),
             messages: vec![
@@ -669,7 +756,7 @@ Regeln:
                             max_retries
                         );
                         tokio::time::sleep(tokio::time::Duration::from_millis(backoff_ms)).await;
-                        return call_llm_for_naming(topics, settings, model, retry_count + 1).await;
+                        return call_llm_for_naming(topics, keywords, settings, model, retry_count + 1).await;
                     } else {
                         eprintln!("   ❌ Max retries erreicht nach Rate Limit");
                         return None;
@@ -701,7 +788,7 @@ Regeln:
                         max_retries
                     );
                     tokio::time::sleep(tokio::time::Duration::from_millis(backoff_ms)).await;
-                    return call_llm_for_naming(topics, settings, model, retry_count + 1).await;
+                    return call_llm_for_naming(topics, keywords, settings, model, retry_count + 1).await;
                 }
                 eprintln!("   ❌ Request failed: {}", e);
                 None
@@ -934,11 +1021,13 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     );
     println!("   ✓ {} Cluster erstellt\n", cluster_result.len());
     println!("🏷️  Cluster benennen...");
+    // Default delay: 100ms = ~600 RPM (safe for gpt-4o-mini with 3,500 RPM limit)
+    // Can be reduced to 50ms (~1,200 RPM) or 25ms (~2,400 RPM) if you have higher tier limits
     let delay_ms = settings
         .topic_extraction
         .as_ref()
         .and_then(|s| s.request_delay_ms)
-        .unwrap_or(2000);
+        .unwrap_or(100);
     let pb = ProgressBar::new(cluster_result.len() as u64);
     pb.set_style(
         ProgressStyle::default_bar()
@@ -971,13 +1060,22 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 .map(|t| t.topic.clone())
                 .collect();
 
-            // Längere Pause alle 50 Requests um Rate Limits zu vermeiden
-            if i > 0 && i % 50 == 0 {
-                pb.set_message("⏸️  Pause (Rate Limit Prävention)".to_string());
-                tokio::time::sleep(tokio::time::Duration::from_millis(30000)).await;
+            // Extract top keywords from cluster for better LLM context
+            let mut keyword_counts: HashMap<String, u32> = HashMap::new();
+            for topic in &sorted_topics {
+                for kw in &topic.keywords {
+                    *keyword_counts.entry(kw.clone()).or_insert(0) += 1;
+                }
             }
+            let mut sorted_keywords: Vec<_> = keyword_counts.into_iter().collect();
+            sorted_keywords.sort_by(|a, b| b.1.cmp(&a.1));
+            let top_keywords: Vec<String> = sorted_keywords
+                .iter()
+                .take(15)
+                .map(|(kw, _)| kw.clone())
+                .collect();
 
-            match call_llm_for_naming(top_topics, &settings, model, 0).await {
+            match call_llm_for_naming(top_topics, Some(top_keywords), &settings, model, 0).await {
                 Some(llm_name) => {
                     pb.set_message(format!("\"{}\" (LLM)", llm_name));
                     tokio::time::sleep(tokio::time::Duration::from_millis(delay_ms)).await;

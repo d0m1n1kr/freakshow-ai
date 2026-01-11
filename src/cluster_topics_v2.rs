@@ -7,6 +7,7 @@
 //! - Better outlier handling
 
 use clap::Parser;
+use futures::future;
 use indicatif::{ProgressBar, ProgressStyle};
 use ndarray::{Array1, Array2, Axis};
 use ordered_float::OrderedFloat;
@@ -15,7 +16,9 @@ use serde::{Deserialize, Serialize};
 use std::collections::{BinaryHeap, HashMap, HashSet};
 use std::fs;
 use std::path::PathBuf;
+use std::sync::Arc;
 use std::time::Instant;
+use tokio::sync::Semaphore;
 
 // ============================================================================
 // Command-line Arguments
@@ -1148,6 +1151,7 @@ fn find_cluster_name(
 ) -> String {
     let mut keyword_counts: HashMap<String, f64> = HashMap::new();
     let mut topic_words: HashMap<String, f64> = HashMap::new();
+    let mut bigrams: HashMap<String, f64> = HashMap::new();
 
     let generic_words: HashSet<&str> = [
         "und",
@@ -1202,11 +1206,15 @@ fn find_cluster_name(
             1.0
         };
 
+        // Keywords get highest weight (they're already extracted and relevant)
         for kw in &topic.keywords {
-            let key = kw.to_lowercase();
-            *keyword_counts.entry(key).or_insert(0.0) += weight;
+            let key = kw.to_lowercase().trim().to_string();
+            if !key.is_empty() && key.len() > 2 {
+                *keyword_counts.entry(key).or_insert(0.0) += weight * 3.0;
+            }
         }
 
+        // Extract words and bigrams from topic text
         let words: Vec<String> = topic
             .topic
             .to_lowercase()
@@ -1224,14 +1232,29 @@ fn find_cluster_name(
             .map(|s| s.to_string())
             .collect();
 
-        for word in words {
-            *topic_words.entry(word).or_insert(0.0) += weight;
+        // Count individual words
+        for word in &words {
+            *topic_words.entry(word.clone()).or_insert(0.0) += weight;
+        }
+
+        // Extract and count bigrams (two-word phrases)
+        for i in 0..words.len().saturating_sub(1) {
+            let bigram = format!("{} {}", words[i], words[i + 1]);
+            *bigrams.entry(bigram).or_insert(0.0) += weight * 1.5;
         }
     }
 
+    // Combine all counts, prioritizing keywords, then bigrams, then words
     let mut all_counts: HashMap<String, f64> = topic_words.clone();
+    
+    // Add keywords with high weight
     for (kw, count) in keyword_counts {
-        *all_counts.entry(kw).or_insert(0.0) += count * 2.0;
+        *all_counts.entry(kw).or_insert(0.0) += count;
+    }
+    
+    // Add bigrams with medium-high weight (they represent phrases)
+    for (bigram, count) in bigrams {
+        *all_counts.entry(bigram).or_insert(0.0) += count;
     }
 
     if all_counts.is_empty() {
@@ -1241,12 +1264,41 @@ fn find_cluster_name(
     let mut sorted: Vec<_> = all_counts.into_iter().collect();
     sorted.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap());
 
-    let top_words: Vec<_> = sorted.iter().take(3).collect();
-    if top_words.is_empty() {
+    let top_items: Vec<_> = sorted.iter().take(3).collect();
+    if top_items.is_empty() {
         return "Sonstiges".to_string();
     }
 
-    let first_word = &top_words[0].0;
+    // Prefer multi-word phrases (bigrams) if they're strong enough
+    let best_item = &top_items[0].0;
+    let best_score = top_items[0].1;
+    
+    // If the best item is a bigram and significantly better, use it
+    if best_item.contains(' ') && top_items.len() > 1 {
+        let second_score = top_items[1].1;
+        if best_score >= second_score * 1.2 {
+            // Capitalize first letter of each word in the bigram
+            let capitalized: String = best_item
+                .split_whitespace()
+                .map(|word| {
+                    let mut chars = word.chars();
+                    match chars.next() {
+                        Some(first_char) => {
+                            let mut s = first_char.to_uppercase().to_string();
+                            s.push_str(chars.as_str());
+                            s
+                        }
+                        None => word.to_string(),
+                    }
+                })
+                .collect::<Vec<_>>()
+                .join(" ");
+            return capitalized;
+        }
+    }
+
+    // Otherwise, use single word or combine top two
+    let first_word = &top_items[0].0;
     let mut chars = first_word.chars();
     let name = match chars.next() {
         Some(first_char) => {
@@ -1257,18 +1309,22 @@ fn find_cluster_name(
         None => first_word.to_string(),
     };
 
-    if top_words.len() > 1 && top_words[0].1 <= top_words[1].1 * 2.0 {
-        let second_word = &top_words[1].0;
-        let mut chars = second_word.chars();
-        let second = match chars.next() {
-            Some(first_char) => {
-                let mut s = first_char.to_uppercase().to_string();
-                s.push_str(chars.as_str());
-                s
-            }
-            None => second_word.to_string(),
-        };
-        return format!("{} & {}", name, second);
+    // Combine with second word if scores are close
+    if top_items.len() > 1 && best_score <= top_items[1].1 * 2.0 {
+        let second_word = &top_items[1].0;
+        // Don't combine if second is a bigram (would be too long)
+        if !second_word.contains(' ') {
+            let mut chars = second_word.chars();
+            let second = match chars.next() {
+                Some(first_char) => {
+                    let mut s = first_char.to_uppercase().to_string();
+                    s.push_str(chars.as_str());
+                    s
+                }
+                None => second_word.to_string(),
+            };
+            return format!("{} & {}", name, second);
+        }
     }
 
     name
@@ -1313,6 +1369,7 @@ fn topic_relevance_sec(topic: &TopicWithEmbedding, default_topic_duration_sec: u
 
 fn call_llm_for_naming<'a>(
     topics: Vec<String>,
+    keywords: Option<Vec<String>>,
     settings: &'a Settings,
     model: Option<&'a str>,
     retry_count: u32,
@@ -1331,19 +1388,43 @@ fn call_llm_for_naming<'a>(
             .and_then(|s| s.retry_delay_ms)
             .unwrap_or(10000);
 
-        let system_prompt = r#"Du bist ein Experte für präzise Kategorisierung. Deine Aufgabe ist es, für eine Gruppe von Podcast-Topics einen kurzen, prägnanten Kategorie-Namen zu finden.
+        let system_prompt = r#"Du bist ein Experte für präzise Kategorisierung von Podcast-Inhalten. Deine Aufgabe ist es, für eine Gruppe von Topics einen kurzen, prägnanten Kategorie-Namen zu finden.
 
-Regeln:
-- Der Name sollte 1-3 Wörter lang sein
-- Sei spezifisch, nicht generisch (z.B. "iPhone" statt "Mobilgeräte", "Podcasting" statt "Medien")
-- Wenn es um ein konkretes Produkt/Thema geht, nenne es beim Namen
-- Die Topics sind nach Relevanz sortiert - die ersten sind wichtiger!
-- Antworte NUR mit dem Kategorie-Namen, nichts anderes"#;
+WICHTIGE REGELN:
+1. Länge: 1-3 Wörter (idealerweise 1-2)
+2. Spezifität: Sei konkret, nicht generisch
+   - GUT: "iPhone", "Künstliche Intelligenz", "Klimawandel", "Podcasting"
+   - SCHLECHT: "Mobilgeräte", "Technologie", "Umwelt", "Medien"
+3. Produktnamen: Wenn es um ein konkretes Produkt/Thema geht, nenne es beim Namen
+4. Relevanz: Die Topics sind nach Wichtigkeit sortiert - die ersten sind am wichtigsten
+5. Format: Antworte NUR mit dem Kategorie-Namen, keine Erklärungen, keine Anführungszeichen
 
-        let user_prompt = format!(
-            "Finde einen kurzen, prägnanten Namen für diese Gruppe von Topics (sortiert nach Relevanz, wichtigste zuerst):\n\n{}\n\nKategorie-Name:",
+BEISPIELE:
+- Topics über iPhone, iPad, Apple Watch → "Apple Produkte"
+- Topics über ChatGPT, GPT-4, LLMs → "Künstliche Intelligenz"
+- Topics über Klimawandel, CO2, Erderwärmung → "Klimawandel"
+- Topics über verschiedene Podcasts → "Podcasting"
+- Topics über Bitcoin, Ethereum, Kryptowährungen → "Kryptowährungen""#;
+
+        let mut user_prompt = format!(
+            "Finde einen kurzen, prägnanten Namen für diese Gruppe von Topics (sortiert nach Relevanz, wichtigste zuerst):\n\n{}",
             topics.iter().map(|t| format!("- {}", t)).collect::<Vec<_>>().join("\n")
         );
+
+        if let Some(ref kw) = keywords {
+            if !kw.is_empty() {
+                let unique_keywords: Vec<String> = kw.iter()
+                    .take(15)
+                    .map(|k| k.clone())
+                    .collect();
+                user_prompt.push_str(&format!(
+                    "\n\nHäufige Keywords in dieser Gruppe: {}",
+                    unique_keywords.join(", ")
+                ));
+            }
+        }
+
+        user_prompt.push_str("\n\nKategorie-Name:");
 
         let request = LlmRequest {
             model: model_name.to_string(),
@@ -1383,7 +1464,7 @@ Regeln:
                             max_retries
                         );
                         tokio::time::sleep(tokio::time::Duration::from_millis(backoff_ms)).await;
-                        return call_llm_for_naming(topics, settings, model, retry_count + 1).await;
+                        return call_llm_for_naming(topics, keywords.clone(), settings, model, retry_count + 1).await;
                     } else {
                         eprintln!("   ❌ Max retries erreicht nach Rate Limit");
                         return None;
@@ -1415,7 +1496,7 @@ Regeln:
                         max_retries
                     );
                     tokio::time::sleep(tokio::time::Duration::from_millis(backoff_ms)).await;
-                    return call_llm_for_naming(topics, settings, model, retry_count + 1).await;
+                    return call_llm_for_naming(topics, keywords.clone(), settings, model, retry_count + 1).await;
                 }
                 eprintln!("   ❌ Request failed: {}", e);
                 None
@@ -1820,11 +1901,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // Step 4: Build cluster structures
     println!("\n🏷️  Cluster benennen...");
-    let delay_ms = settings
-        .topic_extraction
-        .as_ref()
-        .and_then(|s| s.request_delay_ms)
-        .unwrap_or(2000);
+    // Note: delay_ms removed - parallel processing with semaphore handles rate limiting
 
     // Group topics by cluster
     let mut cluster_topics: HashMap<i32, Vec<usize>> = HashMap::new();
@@ -1843,68 +1920,120 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     );
 
     let mut named_clusters = Vec::new();
-    let model = settings
+    // Extract model as owned String before moving settings into Arc
+    let model: Option<String> = settings
         .topic_clustering
         .as_ref()
-        .and_then(|s| s.model.as_deref());
+        .and_then(|s| s.model.clone());
 
-    for (i, (_cluster_label, topic_indices)) in cluster_topics.iter().enumerate() {
-        let cluster_topics_data: Vec<_> = topic_indices
-            .iter()
-            .map(|&idx| unique_topics[idx].clone())
-            .collect();
+    // Save unique_topics length before moving into Arc
+    let unique_topics_len = unique_topics.len();
 
-        // Determine if outlier based on cluster cohesion
-        let is_outlier = cluster_topics_data.len() < min_cluster_size;
-
-        let name = if is_outlier {
-            pb.set_message("\"Sonstiges\" (Outlier)".to_string());
-            "Sonstiges".to_string()
-        } else if use_llm_naming && cluster_topics_data.len() > 1 {
-            let mut sorted_topics = cluster_topics_data.clone();
-            sorted_topics.sort_by(|a, b| {
-                topic_relevance_sec(b, default_topic_duration_sec)
-                    .cmp(&topic_relevance_sec(a, default_topic_duration_sec))
-            });
-            let top_topics: Vec<String> = sorted_topics
+    // Prepare all cluster data for parallel processing
+    let cluster_data: Vec<_> = cluster_topics
+        .iter()
+        .enumerate()
+        .map(|(i, (_cluster_label, topic_indices))| {
+            let cluster_topics_data: Vec<_> = topic_indices
                 .iter()
-                .take(10)
-                .map(|t| t.topic.clone())
+                .map(|&idx| unique_topics[idx].clone())
                 .collect();
+            (i, topic_indices.clone(), cluster_topics_data)
+        })
+        .collect();
 
-            // Rate limit prevention
-            if i > 0 && i % 50 == 0 {
-                pb.set_message("⏸️  Pause (Rate Limit Prävention)".to_string());
-                tokio::time::sleep(tokio::time::Duration::from_millis(30000)).await;
-            }
+    // Use semaphore to limit concurrent LLM requests (5 concurrent = ~300 RPM, safe for 3,500 RPM limit)
+    // With 5 concurrent requests and ~2s per request, we get ~150 RPM, well below 3,500 RPM limit
+    let semaphore = Arc::new(Semaphore::new(5));
+    let settings_arc = Arc::new(settings);
+    let unique_topics_arc = Arc::new(unique_topics);
 
-            match call_llm_for_naming(top_topics, &settings, model, 0).await {
-                Some(llm_name) => {
-                    pb.set_message(format!("\"{}\" (LLM)", llm_name));
-                    tokio::time::sleep(tokio::time::Duration::from_millis(delay_ms)).await;
-                    llm_name
+    // Process clusters in parallel with concurrency limit
+    let mut tasks = Vec::new();
+    for (i, topic_indices, cluster_topics_data) in cluster_data {
+        let pb = pb.clone();
+        let semaphore = semaphore.clone();
+        let settings = settings_arc.clone();
+        let unique_topics = unique_topics_arc.clone();
+        let model = model.as_deref();
+
+        let task = async move {
+            let is_outlier = cluster_topics_data.len() < min_cluster_size;
+
+            let name = if is_outlier {
+                pb.set_message("\"Sonstiges\" (Outlier)".to_string());
+                "Sonstiges".to_string()
+            } else if use_llm_naming && cluster_topics_data.len() > 1 {
+                let mut sorted_topics = cluster_topics_data.clone();
+                sorted_topics.sort_by(|a, b| {
+                    topic_relevance_sec(b, default_topic_duration_sec)
+                        .cmp(&topic_relevance_sec(a, default_topic_duration_sec))
+                });
+                let top_topics: Vec<String> = sorted_topics
+                    .iter()
+                    .take(10)
+                    .map(|t| t.topic.clone())
+                    .collect();
+
+                // Extract top keywords from cluster for better LLM context
+                let mut keyword_counts: HashMap<String, u32> = HashMap::new();
+                for topic in &sorted_topics {
+                    for kw in &topic.keywords {
+                        *keyword_counts.entry(kw.clone()).or_insert(0) += 1;
+                    }
                 }
-                None => {
-                    let heuristic_name = find_cluster_name(
-                        topic_indices,
-                        &unique_topics,
-                        use_relevance_weighting,
-                        default_topic_duration_sec,
-                    );
-                    pb.set_message(format!("\"{}\" (Heuristik)", heuristic_name));
-                    heuristic_name
+                let mut sorted_keywords: Vec<_> = keyword_counts.into_iter().collect();
+                sorted_keywords.sort_by(|a, b| b.1.cmp(&a.1));
+                let top_keywords: Vec<String> = sorted_keywords
+                    .iter()
+                    .take(15)
+                    .map(|(kw, _)| kw.clone())
+                    .collect();
+
+                // Acquire semaphore permit for concurrent request
+                let _permit = semaphore.acquire().await.unwrap();
+                
+                match call_llm_for_naming(top_topics, Some(top_keywords), settings.as_ref(), model, 0).await {
+                    Some(llm_name) => {
+                        pb.set_message(format!("\"{}\" (LLM)", llm_name));
+                        llm_name
+                    }
+                    None => {
+                        let heuristic_name = find_cluster_name(
+                            &topic_indices,
+                            &unique_topics,
+                            use_relevance_weighting,
+                            default_topic_duration_sec,
+                        );
+                        pb.set_message(format!("\"{}\" (Heuristik)", heuristic_name));
+                        heuristic_name
+                    }
                 }
-            }
-        } else {
-            let heuristic_name = find_cluster_name(
-                topic_indices,
-                &unique_topics,
-                use_relevance_weighting,
-                default_topic_duration_sec,
-            );
-            pb.set_message(format!("\"{}\" (Heuristik)", heuristic_name));
-            heuristic_name
+            } else {
+                let heuristic_name = find_cluster_name(
+                    &topic_indices,
+                    &unique_topics,
+                    use_relevance_weighting,
+                    default_topic_duration_sec,
+                );
+                pb.set_message(format!("\"{}\" (Heuristik)", heuristic_name));
+                heuristic_name
+            };
+
+            pb.inc(1);
+            (i, name, cluster_topics_data, is_outlier)
         };
+        tasks.push(task);
+    }
+
+    // Execute all tasks and collect results
+    let results: Vec<(usize, String, Vec<TopicWithEmbedding>, bool)> = future::join_all(tasks).await;
+    
+    // Sort results by original index to maintain order
+    let mut sorted_results = results;
+    sorted_results.sort_by_key(|(i, _, _, _)| *i);
+
+    for (_i, name, cluster_topics_data, is_outlier) in sorted_results {
 
         // Collect all episodes
         let mut all_episodes = HashSet::new();
@@ -1978,7 +2107,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         embedding_model: db.embedding_model.clone(),
         embeddings_created_at: db.created_at.clone(),
         total_topics: db.total_topics_raw,
-        unique_topics: unique_topics.len(),
+        unique_topics: unique_topics_len,
         settings: ClusterSettings {
             clusters: named_clusters.len(),
             outlier_threshold,

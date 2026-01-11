@@ -93,7 +93,8 @@
     "maxTopics": 10,
     "minTopicLength": 3,
     "language": "de",
-    "requestDelayMs": 3000,
+    "requestDelayMs": 100,
+    "_comment": "Delay between API calls in ms. 100ms = ~600 RPM (safe). Can reduce to 50ms (~1,200 RPM) or 25ms (~2,400 RPM) if you have higher OpenAI tier limits.",
     "maxRetries": 3,
     "retryDelayMs": 5000
   },

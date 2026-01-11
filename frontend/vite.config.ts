@@ -15,6 +15,23 @@ export default defineConfig({
     fs: {
       // Allow serving files from the episodes directory (symlinked)
       allow: ['..']
+    },
+    watch: {
+      // Disable polling - use native file system events (much more efficient)
+      usePolling: false,
+      // Batch file changes to reduce CPU usage during rapid file changes
+      atomic: true,
+      // Aggressively exclude Rust target directories - this is the main CPU hog
+      // Using glob patterns which are faster than functions for chokidar
+      ignored: [
+        '**/target/**',
+        '**/target',
+        '../target/**',
+        '../target',
+        // Standard exclusions
+        '**/node_modules/**',
+        '**/.git/**'
+      ]
     }
   },
   build: {
