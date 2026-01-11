@@ -1,39 +1,40 @@
 {
-  "createdAt": "2026-01-04T19:35:35.234475+00:00",
+  "createdAt": "2026-01-11T19:03:20.652136+00:00",
   "method": "hdbscan-v2",
   "embeddingModel": "text-embedding-3-large",
-  "embeddingsCreatedAt": "2026-01-04T19:31:35.985Z",
+  "embeddingsCreatedAt": "2026-01-11T19:03:05.394633+00:00",
   "totalTopics": 2455,
   "uniqueTopics": 2048,
   "settings": {
-    "clusters": 104,
-    "outlierThreshold": 0.9,
-    "linkageMethod": "hdbscan(min_cluster_size=2, min_samples=2)",
+    "clusters": 99,
+    "outlierThreshold": 0.8,
+    "linkageMethod": "hdbscan(min_cluster_size=3, min_samples=2)",
     "useRelevanceWeighting": true
   },
   "statistics": {
-    "clusterCount": 104,
+    "clusterCount": 99,
     "outlierCount": 0,
     "outlierPercentage": "0.0%"
   },
   "clusters": [
     {
-      "id": "schwurbel-analysen",
-      "name": "Schwurbel-Analysen",
+      "id": "schwurbel-und-verschwörung",
+      "name": "Schwurbel und Verschwörung",
       "description": "6 Topics in 128 Episoden",
       "isOutlier": false,
       "topicCount": 6,
       "episodeCount": 128,
-      "relevanceSec": 86351,
+      "relevanceSec": 85864,
       "sampleTopics": [
         "Verschwörungstheorien",
+        "Corona-Verschwörungen",
         "Schwurbel",
         "Diskussion Schwurbler",
-        "Schwurbel der Woche",
-        "Reini im Schwurbelreich"
+        "Schwurbel der Woche"
       ],
       "episodes": [
         43,
+        163,
         206,
         207,
         208,
@@ -137,7 +138,6 @@
         340,
         341,
         342,
-        344,
         345,
         347,
         348,
@@ -166,20 +166,66 @@
     {
       "id": "snackable-science",
       "name": "Snackable Science",
-      "description": "3 Topics in 31 Episoden",
+      "description": "5 Topics in 76 Episoden",
       "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 31,
-      "relevanceSec": 15847,
+      "topicCount": 5,
+      "episodeCount": 76,
+      "relevanceSec": 43345,
       "sampleTopics": [
+        "Snackable Science",
         "Snackable Science und Experiment",
+        "Experimenteller Snack",
         "Snackable Science: \"Alles Banane\"",
         "Science Snack"
       ],
       "episodes": [
+        246,
+        248,
         254,
+        259,
+        266,
+        269,
+        270,
+        276,
         278,
+        279,
+        285,
+        287,
+        288,
+        291,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        303,
+        304,
+        305,
+        306,
+        307,
+        313,
+        314,
+        315,
+        316,
+        317,
+        319,
+        321,
+        324,
+        325,
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
         335,
+        336,
+        338,
+        339,
         340,
         341,
         342,
@@ -192,6 +238,7 @@
         350,
         351,
         352,
+        353,
         354,
         355,
         356,
@@ -211,22 +258,202 @@
       ]
     },
     {
-      "id": "nobelpreise-wissenschaft",
-      "name": "Nobelpreise Wissenschaft",
-      "description": "10 Topics in 4 Episoden",
+      "id": "woche-der-experimente",
+      "name": "Woche der Experimente",
+      "description": "27 Topics in 66 Episoden",
       "isOutlier": false,
-      "topicCount": 10,
-      "episodeCount": 4,
-      "relevanceSec": 14487,
+      "topicCount": 27,
+      "episodeCount": 66,
+      "relevanceSec": 27520,
       "sampleTopics": [
-        "Preisträger Chemie",
-        "Nobelpreis Physik",
-        "Nobelpreis Chemie",
-        "Nobelpreis Medizin",
-        "Physiknobelpreis"
+        "Experiment der Woche: Der Spaghetti-Brecher",
+        "Experiment der Woche: Ballon in der Flasche",
+        "Experiment der Woche: Das schwebende Ei",
+        "Experiment der Woche: Autoballon",
+        "Experiment der Woche"
+      ],
+      "episodes": [
+        6,
+        38,
+        44,
+        52,
+        55,
+        59,
+        73,
+        74,
+        75,
+        81,
+        85,
+        86,
+        91,
+        95,
+        106,
+        110,
+        113,
+        119,
+        120,
+        121,
+        126,
+        127,
+        128,
+        131,
+        144,
+        150,
+        151,
+        158,
+        164,
+        167,
+        170,
+        171,
+        175,
+        177,
+        181,
+        185,
+        187,
+        193,
+        197,
+        206,
+        207,
+        209,
+        210,
+        212,
+        213,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        224,
+        226,
+        227,
+        233,
+        234,
+        238,
+        244,
+        250,
+        252,
+        258,
+        268,
+        271,
+        292,
+        323,
+        366
+      ]
+    },
+    {
+      "id": "universum-und-kosmologie",
+      "name": "Universum und Kosmologie",
+      "description": "19 Topics in 18 Episoden",
+      "isOutlier": false,
+      "topicCount": 19,
+      "episodeCount": 18,
+      "relevanceSec": 19180,
+      "sampleTopics": [
+        "kosmischer Staubsauger",
+        "Weltenstrom Laniakea",
+        "Dunkle Materie",
+        "Universum",
+        "Astronomen"
+      ],
+      "episodes": [
+        32,
+        34,
+        49,
+        137,
+        174,
+        203,
+        220,
+        227,
+        229,
+        230,
+        251,
+        255,
+        305,
+        325,
+        333,
+        347,
+        366,
+        368
+      ]
+    },
+    {
+      "id": "essen-snacks",
+      "name": "Essen & Snacks",
+      "description": "12 Topics in 12 Episoden",
+      "isOutlier": false,
+      "topicCount": 12,
+      "episodeCount": 12,
+      "relevanceSec": 17380,
+      "sampleTopics": [
+        "Thema 2: \"Knochensalat\"",
+        "Thema 3: “Issa fein?!”",
+        "Thema 2: \"McFlurry für den Frieden\"",
+        "Thema 1: “Bed of Burgers”",
+        "Thema 2: \"Katzenchips\""
+      ],
+      "episodes": [
+        213,
+        227,
+        241,
+        255,
+        268,
+        285,
+        313,
+        324,
+        346,
+        352,
+        356,
+        369
+      ]
+    },
+    {
+      "id": "tierische-fantasie",
+      "name": "Tierische Fantasie",
+      "description": "9 Topics in 9 Episoden",
+      "isOutlier": false,
+      "topicCount": 9,
+      "episodeCount": 9,
+      "relevanceSec": 13820,
+      "sampleTopics": [
+        "Thema 1: “Frankenschwein”",
+        "Thema 1: “Der Terminator bringt Leben”",
+        "Thema 1: “Crocodile baby”",
+        "Thema 1: “Walking Wildschwein”",
+        "Thema 1: “Gourmet Waschbär”"
+      ],
+      "episodes": [
+        221,
+        243,
+        263,
+        266,
+        267,
+        272,
+        274,
+        308,
+        337
+      ]
+    },
+    {
+      "id": "nobelpreis-physik",
+      "name": "Nobelpreis Physik",
+      "description": "7 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 7,
+      "relevanceSec": 9485,
+      "sampleTopics": [
+        "Preisträger Physik",
+        "Nobelpreise 2014 für Physik",
+        "Preis: Physics",
+        "Physik-Nobelpreis 2022",
+        "Nobelpreis Physik"
       ],
       "episodes": [
         13,
+        36,
+        225,
+        228,
         277,
         326,
         373
@@ -235,20 +462,25 @@
     {
       "id": "gesunde-ernährung",
       "name": "Gesunde Ernährung",
-      "description": "5 Topics in 6 Episoden",
+      "description": "11 Topics in 11 Episoden",
       "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 6,
-      "relevanceSec": 6832,
+      "topicCount": 11,
+      "episodeCount": 11,
+      "relevanceSec": 9344,
       "sampleTopics": [
-        "Ernährung",
-        "Thema 2: \"Stressesser\"",
-        "Thema 1: “Hunger Dich gesund!”",
-        "Thema 2: \"Die Fleischampel\"",
-        "Thema 1: \"Iss dich jung\""
+        "tägliche Essenswahl",
+        "Zwiebelmuskeln",
+        "Diät",
+        "Stress",
+        "Ernährung"
       ],
       "episodes": [
+        32,
+        51,
+        101,
+        179,
         212,
+        219,
         255,
         286,
         292,
@@ -257,8 +489,259 @@
       ]
     },
     {
-      "id": "hal-9000-dialoge",
-      "name": "Hal 9000 Dialoge",
+      "id": "chemie-nobelpreis",
+      "name": "Chemie-Nobelpreis",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 7940,
+      "sampleTopics": [
+        "Preisträger Chemie",
+        "Nobelpreise 2014 für Chemie",
+        "Chemie-Nobelpreis 2022",
+        "Nobelpreis Chemie",
+        "Chemienobelpreis"
+      ],
+      "episodes": [
+        13,
+        36,
+        228,
+        277,
+        326,
+        373
+      ]
+    },
+    {
+      "id": "interviews",
+      "name": "Interviews",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 7607,
+      "sampleTopics": [
+        "Interview Thomas Hörren",
+        "Interview mit Jens Foell",
+        "Interview Bremen3"
+      ],
+      "episodes": [
+        206,
+        322,
+        366
+      ]
+    },
+    {
+      "id": "reinis-reisen",
+      "name": "Reinis Reisen",
+      "description": "7 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 7,
+      "relevanceSec": 7556,
+      "sampleTopics": [
+        "Reini auf Tour",
+        "Reini in Wien",
+        "Unterwegs auf Tour",
+        "Reinis Urlaub",
+        "Tourvorbereitungen"
+      ],
+      "episodes": [
+        213,
+        216,
+        297,
+        319,
+        329,
+        353,
+        356
+      ]
+    },
+    {
+      "id": "audiokommentare",
+      "name": "Audiokommentare",
+      "description": "22 Topics in 26 Episoden",
+      "isOutlier": false,
+      "topicCount": 22,
+      "episodeCount": 26,
+      "relevanceSec": 7287,
+      "sampleTopics": [
+        "Kommentare",
+        "Audiokommentar Christoph zu Sand",
+        "Audiokommentar Samuel zu Katzen",
+        "Audiokommentar Miguel",
+        "Audiokommentar Florian"
+      ],
+      "episodes": [
+        206,
+        216,
+        224,
+        235,
+        238,
+        250,
+        252,
+        260,
+        273,
+        279,
+        281,
+        288,
+        293,
+        294,
+        306,
+        309,
+        326,
+        327,
+        331,
+        334,
+        335,
+        349,
+        362,
+        367,
+        369,
+        370
+      ]
+    },
+    {
+      "id": "der-herr-der-ringe",
+      "name": "Der Herr der Ringe",
+      "description": "5 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 3,
+      "relevanceSec": 6746,
+      "sampleTopics": [
+        "Thema 1: \"Woher der Ringe?\"",
+        "Thema 1: \"Ein Ring, sie ins Dunkel zu treiben und ewig zu binden.\"",
+        "Thema 2: \"Galadriels brüchige Phiole\"",
+        "Thema 4: \"War Gollum rare oder well done?\"",
+        "Thema 2: Der eine Ring"
+      ],
+      "episodes": [
+        207,
+        222,
+        237
+      ]
+    },
+    {
+      "id": "medizin-nobelpreis",
+      "name": "Medizin Nobelpreis",
+      "description": "8 Topics in 8 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 8,
+      "relevanceSec": 6563,
+      "sampleTopics": [
+        "Preisträger Medizin",
+        "Nobelpreise 2014 für Medizin",
+        "Preis: Medicine",
+        "Medizin-Nobelpreis 2022",
+        "Nobelpreis Medizin"
+      ],
+      "episodes": [
+        13,
+        36,
+        225,
+        228,
+        277,
+        326,
+        328,
+        373
+      ]
+    },
+    {
+      "id": "solarenergie",
+      "name": "Solarenergie",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 6215,
+      "sampleTopics": [
+        "grüner Strom",
+        "Wasserkraft",
+        "Solaranlagen",
+        "Balkonkraftwerk",
+        "BalkonSolar"
+      ],
+      "episodes": [
+        3,
+        168,
+        190,
+        263,
+        264,
+        265
+      ]
+    },
+    {
+      "id": "geologie",
+      "name": "Geologie",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 6205,
+      "sampleTopics": [
+        "Thema 1: “Das Salz in der subglazialen Suppe”",
+        "Thema 1: “Das Dolomitproblem”",
+        "Thema 1: \"Vulkan im Vorgarten\"",
+        "Thema 1: \"Sonnensteine\""
+      ],
+      "episodes": [
+        239,
+        278,
+        330,
+        331
+      ]
+    },
+    {
+      "id": "rehabilitation",
+      "name": "Rehabilitation",
+      "description": "6 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 7,
+      "relevanceSec": 5807,
+      "sampleTopics": [
+        "Familienorientierte-Reha",
+        "Reha",
+        "Reha Ende",
+        "Reha Reini",
+        "Ostern mit Reha und Corona"
+      ],
+      "episodes": [
+        244,
+        245,
+        247,
+        292,
+        293,
+        294,
+        295
+      ]
+    },
+    {
+      "id": "gesundheitssystem",
+      "name": "Gesundheitssystem",
+      "description": "4 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 5,
+      "relevanceSec": 5545,
+      "sampleTopics": [
+        "Krank",
+        "Reini im Krankenhaus",
+        "Krankenhaus",
+        "Krankheit"
+      ],
+      "episodes": [
+        266,
+        288,
+        290,
+        330,
+        362
+      ]
+    },
+    {
+      "id": "ai-ethik",
+      "name": "AI Ethik",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
@@ -276,22 +759,73 @@
       ]
     },
     {
-      "id": "astrophysik",
-      "name": "Astrophysik",
+      "id": "klimavorlesungen",
+      "name": "Klimavorlesungen",
+      "description": "3 Topics in 11 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 11,
+      "relevanceSec": 5382,
+      "sampleTopics": [
+        "Ringvorlesung Klima",
+        "Klimaringvorlesung",
+        "Klima-Ringvorlesung"
+      ],
+      "episodes": [
+        212,
+        213,
+        215,
+        240,
+        242,
+        291,
+        293,
+        295,
+        296,
+        341,
+        345
+      ]
+    },
+    {
+      "id": "bierkultur",
+      "name": "Bierkultur",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 5151,
+      "sampleTopics": [
+        "Privatbrauerei",
+        "Bier der Woche",
+        "\"Bier auf Wein …\"",
+        "Thema 1: “KI Bier”",
+        "Thema 1: “Bier auf Gel, quietschfidel!”"
+      ],
+      "episodes": [
+        10,
+        41,
+        288,
+        293,
+        299,
+        355
+      ]
+    },
+    {
+      "id": "gedächtnisforschung",
+      "name": "Gedächtnisforschung",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
       "episodeCount": 3,
-      "relevanceSec": 5298,
+      "relevanceSec": 4886,
       "sampleTopics": [
-        "Thema 1: \"Galaktische Goldminen\"",
-        "Thema 1: “Zerbröselnde schwarze Löcher”",
-        "Thema 1 \"Die dunkle Seite des Universums\""
+        "Thema 1: “Kurzzeitvergessnis”",
+        "Thema 2: \"Nomen est Memoria\"",
+        "Thema 1: \"Fettgedächtnis\""
       ],
       "episodes": [
-        229,
-        305,
-        366
+        249,
+        264,
+        323
       ]
     },
     {
@@ -319,114 +853,107 @@
       ]
     },
     {
-      "id": "der-herr-der-ringe",
-      "name": "Der Herr der Ringe",
-      "description": "5 Topics in 3 Episoden",
+      "id": "allgemeine-themen",
+      "name": "Allgemeine Themen",
+      "description": "4 Topics in 3 Episoden",
       "isOutlier": false,
-      "topicCount": 5,
+      "topicCount": 4,
       "episodeCount": 3,
-      "relevanceSec": 4714,
+      "relevanceSec": 4746,
       "sampleTopics": [
-        "Thema 3: \"Durch Mark und Bein\"",
-        "Thema 1: \"Ein Ring, sie ins Dunkel zu treiben und ewig zu binden.\"",
-        "Thema 2: \"Galadriels brüchige Phiole\"",
-        "Thema 3: “Flieht ihr Narren!”",
-        "Thema 2: Der eine Ring"
+        "Verschiedenes",
+        "Themen",
+        "Thema 1",
+        "Thema 2"
       ],
       "episodes": [
-        55,
-        222,
-        237
+        206,
+        228,
+        362
+      ]
+    },
+    {
+      "id": "experimentelle-wissenschaft",
+      "name": "Experimentelle Wissenschaft",
+      "description": "14 Topics in 14 Episoden",
+      "isOutlier": false,
+      "topicCount": 14,
+      "episodeCount": 14,
+      "relevanceSec": 4200,
+      "sampleTopics": [
+        "Experiment der Woche: Das Feuer-Karusell",
+        "Experiment der Woche: Höllenfeuer aus dem Federmäppchen",
+        "Experiment der Woche: Knallharte Erleuchtung",
+        "Experiment der Woche: Fliegendes Graphit",
+        "Experiment der Woche: Pulverhandschuh"
+      ],
+      "episodes": [
+        9,
+        10,
+        11,
+        13,
+        46,
+        76,
+        88,
+        105,
+        116,
+        134,
+        174,
+        176,
+        180,
+        191
+      ]
+    },
+    {
+      "id": "ameisenforschung",
+      "name": "Ameisenforschung",
+      "description": "8 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 7,
+      "relevanceSec": 4119,
+      "sampleTopics": [
+        "Leichen im Ameisenbau",
+        "Ameisenverhalten",
+        "Toiletten in Ameisenhaufen",
+        "Haare auf Ameisen",
+        "Gruppenintelligenz bei Wespen"
+      ],
+      "episodes": [
+        30,
+        39,
+        45,
+        53,
+        221,
+        256,
+        269
       ]
     },
     {
       "id": "quantenphysik",
       "name": "Quantenphysik",
-      "description": "3 Topics in 3 Episoden",
+      "description": "8 Topics in 9 Episoden",
       "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 4424,
-      "sampleTopics": [
-        "Thema 1: “Spiegelwelten”",
-        "Thema 1: “Plasmawellenreiter”",
-        "Thema 1: \"Symmetriebruch mit Folgen\""
-      ],
-      "episodes": [
-        260,
-        264,
-        340
-      ]
-    },
-    {
-      "id": "podcast-drama",
-      "name": "Podcast-Drama",
-      "description": "10 Topics in 9 Episoden",
-      "isOutlier": false,
-      "topicCount": 10,
+      "topicCount": 8,
       "episodeCount": 9,
-      "relevanceSec": 4360,
+      "relevanceSec": 4082,
       "sampleTopics": [
-        "Nachrichten",
-        "Gastauftritte in Podcasts",
-        "TKKG Retro-Folgen",
-        "Journalistenpodcast",
-        "Spezialgelagert Podcast Gastauftritt"
+        "Kampf mit der Quantenmechanik",
+        "Foto aus der Quantenwelt",
+        "Einstein Podolsky Rosen Paradoxon",
+        "Quantenspielchen",
+        "Quantenanomalie"
       ],
       "episodes": [
-        180,
-        206,
-        227,
-        264,
-        274,
-        298,
-        310,
-        311,
-        365
-      ]
-    },
-    {
-      "id": "zeitreisen",
-      "name": "Zeitreisen",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 4107,
-      "sampleTopics": [
-        "Thema 1: \"Zeitspalt\"",
-        "Thema 2: \"Tempus fugit\"",
-        "Thema 2: \"Der illegale Zahn der Zeit\""
-      ],
-      "episodes": [
-        245,
-        286,
-        296
-      ]
-    },
-    {
-      "id": "schulbildung",
-      "name": "Schulbildung",
-      "description": "7 Topics in 7 Episoden",
-      "isOutlier": false,
-      "topicCount": 7,
-      "episodeCount": 7,
-      "relevanceSec": 4029,
-      "sampleTopics": [
-        "Pausen und Lernen",
-        "Pausen",
-        "Schule und Bildung",
-        "Grundschule",
-        "Lehrerfortbildung"
-      ],
-      "episodes": [
-        33,
-        193,
-        198,
-        212,
-        226,
-        249,
-        279
+        8,
+        46,
+        70,
+        72,
+        107,
+        171,
+        328,
+        361,
+        374
       ]
     },
     {
@@ -450,57 +977,67 @@
       ]
     },
     {
-      "id": "reinis-reisen",
-      "name": "Reinis Reisen",
-      "description": "5 Topics in 5 Episoden",
+      "id": "chinagadget",
+      "name": "Chinagadget",
+      "description": "11 Topics in 14 Episoden",
       "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 5,
-      "relevanceSec": 3854,
+      "topicCount": 11,
+      "episodeCount": 14,
+      "relevanceSec": 3900,
       "sampleTopics": [
-        "Reini auf Tour",
-        "Bahnreise",
-        "Unterwegs auf Tour",
-        "Reinis Urlaub",
-        "Reinis Europareise"
+        "Chinagadget der Woche",
+        "Chinagadget: Kettenreiniger",
+        "Chinagadget: Say my name! (Leuchtreklame)",
+        "Chinagadget: Nagelheber",
+        "Chinagadget: Schleifenersatz"
       ],
       "episodes": [
-        213,
-        216,
-        297,
-        319,
-        356
+        55,
+        88,
+        92,
+        95,
+        103,
+        104,
+        105,
+        106,
+        108,
+        110,
+        113,
+        116,
+        118,
+        119
       ]
     },
     {
-      "id": "klima-ringvorlesung",
-      "name": "Klima-Ringvorlesung",
-      "description": "5 Topics in 8 Episoden",
+      "id": "klimawandel",
+      "name": "Klimawandel",
+      "description": "7 Topics in 9 Episoden",
       "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 8,
-      "relevanceSec": 3769,
+      "topicCount": 7,
+      "episodeCount": 9,
+      "relevanceSec": 3881,
       "sampleTopics": [
         "Klima",
+        "Klimaverlierer",
         "Klimaargumente",
-        "Ringvorlesung Klima",
-        "Klimawandel",
-        "Klima-Ringvorlesung"
+        "CO2",
+        "Klimawandel"
       ],
       "episodes": [
         128,
+        146,
         148,
         156,
         170,
-        212,
+        173,
         216,
-        291,
-        296
+        222,
+        240
       ]
     },
     {
-      "id": "placebo-effekte",
-      "name": "Placebo-Effekte",
+      "id": "placebo-effekt",
+      "name": "Placebo-Effekt",
       "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
       "topicCount": 4,
@@ -520,90 +1057,192 @@
       ]
     },
     {
-      "id": "reha-reini",
-      "name": "Reha Reini",
+      "id": "botanik",
+      "name": "Botanik",
+      "description": "9 Topics in 10 Episoden",
+      "isOutlier": false,
+      "topicCount": 9,
+      "episodeCount": 10,
+      "relevanceSec": 3768,
+      "sampleTopics": [
+        "Pflanzen",
+        "Bäume",
+        "grüne Biologie",
+        "Photosynthese",
+        "Wachstum von Bäumen"
+      ],
+      "episodes": [
+        23,
+        73,
+        115,
+        135,
+        140,
+        143,
+        188,
+        197,
+        328,
+        374
+      ]
+    },
+    {
+      "id": "marsforschung",
+      "name": "Marsforschung",
+      "description": "4 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 6,
+      "relevanceSec": 3716,
+      "sampleTopics": [
+        "Methan auf dem Mars",
+        "Wasser auf dem Mars",
+        "Thema 1: “This time of the year: Wasser auf dem Mars”",
+        "Thema 2: \"Civilization on Mars\""
+      ],
+      "episodes": [
+        41,
+        46,
+        60,
+        125,
+        233,
+        263
+      ]
+    },
+    {
+      "id": "wirtschaftspreise",
+      "name": "Wirtschaftspreise",
       "description": "4 Topics in 5 Episoden",
       "isOutlier": false,
       "topicCount": 4,
       "episodeCount": 5,
-      "relevanceSec": 3557,
+      "relevanceSec": 3690,
       "sampleTopics": [
-        "Reha",
-        "Reha Ende",
-        "Reha Reini",
-        "Ende Reini Reha"
+        "Nobelpreise 2014 für Wirtschaft",
+        "Preis: Economics",
+        "Sonderpreis Wirtschaft",
+        "Alfred-Nobel-Gedächtnispreis für Wirtschaftswissenschaften"
       ],
       "episodes": [
-        245,
-        247,
-        292,
-        294,
-        295
+        36,
+        225,
+        228,
+        277,
+        373
       ]
     },
     {
-      "id": "universumstheorie",
-      "name": "Universumstheorie",
+      "id": "supraleitung",
+      "name": "Supraleitung",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 3640,
+      "sampleTopics": [
+        "Supraleiter",
+        "Hochtemperatur Supraleiter?",
+        "Supraleitung Update",
+        "Hochtemperatursupraleitung",
+        "Supraleitung doch kein Durchbruch"
+      ],
+      "episodes": [
+        178,
+        261,
+        262,
+        263,
+        276
+      ]
+    },
+    {
+      "id": "vogelverhalten",
+      "name": "Vogelverhalten",
+      "description": "11 Topics in 11 Episoden",
+      "isOutlier": false,
+      "topicCount": 11,
+      "episodeCount": 11,
+      "relevanceSec": 3600,
+      "sampleTopics": [
+        "Echoortung in der Tierwelt",
+        "Prokrastinierende Vögel",
+        "Unmoralische Vögel",
+        "intelligente Vögel",
+        "Vogelscheiße"
+      ],
+      "episodes": [
+        19,
+        42,
+        52,
+        77,
+        86,
+        102,
+        104,
+        128,
+        162,
+        195,
+        203
+      ]
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
       "episodeCount": 3,
-      "relevanceSec": 3440,
+      "relevanceSec": 3557,
       "sampleTopics": [
-        "Thema 4: “In einem Universum vor unserer Zeit\"",
-        "Thema 2: \"Die Struktur des Universums\"",
-        "Das Universum"
+        "ChatGPT",
+        "Chat GPT Plagiate",
+        "ChatGPT zum Basteln"
       ],
       "episodes": [
-        220,
-        229,
-        333
+        232,
+        251,
+        343
       ]
     },
     {
-      "id": "dpg-tagung",
-      "name": "DPG Tagung",
-      "description": "4 Topics in 7 Episoden",
+      "id": "apokalypse",
+      "name": "Apokalypse",
+      "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
       "topicCount": 4,
-      "episodeCount": 7,
-      "relevanceSec": 3344,
+      "episodeCount": 4,
+      "relevanceSec": 3512,
       "sampleTopics": [
-        "DPG Tagung",
-        "Wisskomm auf der DPG",
-        "DPG Tagung und WissKomm",
-        "DPG Tagung Berlin"
+        "Weltuntergang",
+        "Thema 1: “Katastrophen Blend”",
+        "Thema 1: “Weltuntergang verschoben\"",
+        "Thema 2: \"Die Apokalypse …\""
       ],
       "episodes": [
-        224,
-        273,
-        278,
-        291,
-        292,
-        337,
-        339
+        86,
+        215,
+        217,
+        293
       ]
     },
     {
-      "id": "gartenminerale",
-      "name": "Gartenminerale",
-      "description": "2 Topics in 2 Episoden",
+      "id": "existenzielle-fragen",
+      "name": "Existenzielle Fragen",
+      "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 3337,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 3446,
       "sampleTopics": [
-        "Thema 1: \"Vulkan im Vorgarten\"",
-        "Thema 1: \"Sonnensteine\""
+        "Nichts",
+        "Thema 1: „Mehr summ als sein“",
+        "Thema 2: \"Ist irgendwer da draußen?\""
       ],
       "episodes": [
-        330,
-        331
+        154,
+        216,
+        343
       ]
     },
     {
-      "id": "plastikmüll",
-      "name": "Plastikmüll",
+      "id": "plastikverschmutzung",
+      "name": "Plastikverschmutzung",
       "description": "3 Topics in 4 Episoden",
       "isOutlier": false,
       "topicCount": 3,
@@ -622,73 +1261,96 @@
       ]
     },
     {
-      "id": "audiokommentare",
-      "name": "Audiokommentare",
-      "description": "15 Topics in 13 Episoden",
+      "id": "städte-in-europa",
+      "name": "Städte in Europa",
+      "description": "5 Topics in 5 Episoden",
       "isOutlier": false,
-      "topicCount": 15,
-      "episodeCount": 13,
-      "relevanceSec": 3156,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 3084,
       "sampleTopics": [
-        "Audiokommentar Miguel",
-        "Audiokommentar Florian",
-        "Audiokommentar Jonas",
-        "Audiokommentar von Markus",
-        "Audiokommentar"
+        "Österreich",
+        "Pforzheim",
+        "Hessen",
+        "Hameln",
+        "Göttingen"
       ],
       "episodes": [
-        235,
-        238,
-        252,
-        260,
-        273,
-        293,
-        306,
-        326,
-        349,
-        362,
-        367,
-        369,
-        370
+        211,
+        247,
+        275,
+        348,
+        349
       ]
     },
     {
-      "id": "existenzielle-fragen",
-      "name": "Existenzielle Fragen",
-      "description": "2 Topics in 2 Episoden",
+      "id": "podcasting",
+      "name": "Podcasting",
+      "description": "6 Topics in 6 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 3146,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 3059,
       "sampleTopics": [
-        "Thema 1: „Mehr summ als sein“",
-        "Thema 2: \"Ist irgendwer da draußen?\""
+        "akustisch attraktive Podcaster",
+        "Gastauftritte in Podcasts",
+        "Journalistenpodcast",
+        "Smarter Leben Podcast",
+        "Spezialgelagert Podcast Gastauftritt"
       ],
       "episodes": [
-        216,
-        343
+        97,
+        206,
+        264,
+        272,
+        274,
+        365
       ]
     },
     {
-      "id": "langeweile-bewältigen",
-      "name": "Langeweile bewältigen",
-      "description": "2 Topics in 2 Episoden",
+      "id": "community-kommentare",
+      "name": "Community Kommentare",
+      "description": "9 Topics in 1 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 2942,
+      "topicCount": 9,
+      "episodeCount": 1,
+      "relevanceSec": 3005,
       "sampleTopics": [
-        "Thema 2: \"Effizient nichts tun!\"",
-        "Thema 2: \"Vorspulen auf Langeweile\""
+        "Kommentar Florian",
+        "Kommentar Baecker1909",
+        "Kommentar Mike Jan",
+        "Kommentar Kenjiro2k5",
+        "Kommentar Ophelia"
       ],
       "episodes": [
-        267,
-        311
+        250
       ]
     },
     {
-      "id": "raumgeräusche",
-      "name": "Raumgeräusche",
+      "id": "dpg-tagung",
+      "name": "DPG Tagung",
+      "description": "3 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 6,
+      "relevanceSec": 2962,
+      "sampleTopics": [
+        "DPG Tagung",
+        "DPG Tagung und WissKomm",
+        "DPG Tagung Berlin"
+      ],
+      "episodes": [
+        224,
+        278,
+        291,
+        292,
+        337,
+        339
+      ]
+    },
+    {
+      "id": "raumakustik",
+      "name": "Raumakustik",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
@@ -706,8 +1368,27 @@
       ]
     },
     {
-      "id": "live-auftritte",
-      "name": "Live-Auftritte",
+      "id": "gesundheitsauszeichnungen",
+      "name": "Gesundheitsauszeichnungen",
+      "description": "5 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 1,
+      "relevanceSec": 2860,
+      "sampleTopics": [
+        "PUBLIC HEALTH PRIZE",
+        "COMMUNICATION PRIZE",
+        "MEDICINE PRIZE",
+        "NUTRITION PRIZE",
+        "PSYCHOLOGY PRIZE"
+      ],
+      "episodes": [
+        280
+      ]
+    },
+    {
+      "id": "auftritte",
+      "name": "Auftritte",
       "description": "5 Topics in 7 Episoden",
       "isOutlier": false,
       "topicCount": 5,
@@ -731,36 +1412,19 @@
       ]
     },
     {
-      "id": "ozeanische-phänomene",
-      "name": "Ozeanische Phänomene",
-      "description": "2 Topics in 2 Episoden",
+      "id": "musik",
+      "name": "Musik",
+      "description": "6 Topics in 10 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 2744,
-      "sampleTopics": [
-        "Thema 1: \"Es kam aus der Tiefe\"",
-        "Thema 1: \"Hydrolevitation eines Kontinents\""
-      ],
-      "episodes": [
-        316,
-        344
-      ]
-    },
-    {
-      "id": "musikgeschichten",
-      "name": "Musikgeschichten",
-      "description": "5 Topics in 9 Episoden",
-      "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 9,
-      "relevanceSec": 2723,
+      "topicCount": 6,
+      "episodeCount": 10,
+      "relevanceSec": 2852,
       "sampleTopics": [
         "Ohrwürmer",
         "verführerischer Musik",
         "Hintergrundmusik",
         "Musik",
-        "Alltagsgeschichten"
+        "Musik von Joachim"
       ],
       "episodes": [
         85,
@@ -769,243 +1433,269 @@
         161,
         212,
         216,
+        273,
         281,
         305,
-        316
+        371
       ]
     },
     {
-      "id": "naturkonflikte",
-      "name": "Naturkonflikte",
-      "description": "2 Topics in 2 Episoden",
+      "id": "emotionen",
+      "name": "Emotionen",
+      "description": "5 Topics in 5 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 2698,
-      "sampleTopics": [
-        "Thema 1: “Ameisen vs. Löwen”",
-        "Thema 1: \"Das perfekte Ei\""
-      ],
-      "episodes": [
-        285,
-        334
-      ]
-    },
-    {
-      "id": "themenvielfalt",
-      "name": "Themenvielfalt",
-      "description": "3 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 2,
-      "relevanceSec": 2655,
-      "sampleTopics": [
-        "Themen",
-        "Thema 1",
-        "Thema 2"
-      ],
-      "episodes": [
-        228,
-        362
-      ]
-    },
-    {
-      "id": "minkorrekt-brettspiel",
-      "name": "Minkorrekt Brettspiel",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 2606,
-      "sampleTopics": [
-        "Interview mit Matthias zum \"Minkorrekt Brettspiel\"",
-        "Montu-Games",
-        "Minkorrekt Brettspiel"
-      ],
-      "episodes": [
-        337,
-        348,
-        362
-      ]
-    },
-    {
-      "id": "emotionale-intelligenz",
-      "name": "Emotionale Intelligenz",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 2468,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 2768,
       "sampleTopics": [
         "Emotionale Unterstellungen",
         "Liebe",
+        "Enttäuschung",
         "Gefühle-Schatzbuch",
         "Gefühle"
       ],
       "episodes": [
         64,
         140,
+        147,
         240,
         306
       ]
     },
     {
-      "id": "wissenschaftsexperimente",
-      "name": "Wissenschaftsexperimente",
-      "description": "8 Topics in 8 Episoden",
+      "id": "tiere",
+      "name": "Tiere",
+      "description": "8 Topics in 9 Episoden",
       "isOutlier": false,
       "topicCount": 8,
-      "episodeCount": 8,
-      "relevanceSec": 2400,
+      "episodeCount": 9,
+      "relevanceSec": 2700,
       "sampleTopics": [
-        "Experiment der Woche: Lochlupe",
-        "Experiment der Woche: Die schwerelose Flamme",
-        "Experiment der Woche: Lasermikroskop",
-        "Experiment der Woche: Leuchteumschlag",
-        "Experiment der Woche: Kastanienlampe"
+        "Fische",
+        "Echsen",
+        "seltsame Tiere",
+        "Katzen",
+        "kleine Tiere"
       ],
       "episodes": [
-        50,
         76,
-        96,
-        116,
-        128,
+        125,
+        129,
+        141,
         144,
-        181,
-        197
+        170,
+        172,
+        189,
+        204
       ]
     },
     {
-      "id": "apokalypse-diskurs",
-      "name": "Apokalypse-Diskurs",
-      "description": "3 Topics in 3 Episoden",
+      "id": "wissenschaftskomik",
+      "name": "Wissenschaftskomik",
+      "description": "6 Topics in 6 Episoden",
       "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 2387,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 2696,
       "sampleTopics": [
-        "Weltuntergang",
-        "Thema 1: “Weltuntergang verschoben\"",
-        "Thema 2: \"Die Apokalypse …\""
+        "witzige Forschung",
+        "Wissenschaft",
+        "Forschung und Wissenschaftsförderung",
+        "Humor in der Wissenschaft",
+        "behind science"
       ],
       "episodes": [
-        86,
-        217,
-        293
+        151,
+        167,
+        198,
+        226,
+        284,
+        349
       ]
     },
     {
-      "id": "kopenhagen-museen",
-      "name": "Kopenhagen Museen",
-      "description": "3 Topics in 2 Episoden",
+      "id": "blutspende",
+      "name": "Blutspende",
+      "description": "6 Topics in 5 Episoden",
       "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 2,
-      "relevanceSec": 2369,
+      "topicCount": 6,
+      "episodeCount": 5,
+      "relevanceSec": 2619,
       "sampleTopics": [
+        "Blutplasmaspende",
+        "Wie läuft es bei uns?",
+        "DRK Essen Ankunft",
+        "Blutabnahme",
+        "Blutspenden"
+      ],
+      "episodes": [
+        224,
+        235,
+        258,
+        343,
+        370
+      ]
+    },
+    {
+      "id": "kopenhagener-museen",
+      "name": "Kopenhagener Museen",
+      "description": "4 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 3,
+      "relevanceSec": 2545,
+      "sampleTopics": [
+        "Computermuseum Oldenburg",
         "Kopenhagen1",
         "Kopenhagen2",
         "Museen in Kopenhagen"
       ],
       "episodes": [
+        228,
         255,
         256
       ]
     },
     {
-      "id": "bierkultur",
-      "name": "Bierkultur",
-      "description": "4 Topics in 4 Episoden",
+      "id": "literaturnobelpreis",
+      "name": "Literaturnobelpreis",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 2457,
+      "sampleTopics": [
+        "Nobelpreise 2014 für Literatur",
+        "Preis: Literature",
+        "Literaturnobelpreis 2022",
+        "Nobelpreis Literatur",
+        "Literaturnobelpreis"
+      ],
+      "episodes": [
+        36,
+        225,
+        228,
+        277,
+        326,
+        373
+      ]
+    },
+    {
+      "id": "weihnachtskultur",
+      "name": "Weihnachtskultur",
+      "description": "4 Topics in 5 Episoden",
       "isOutlier": false,
       "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 2346,
+      "episodeCount": 5,
+      "relevanceSec": 2415,
       "sampleTopics": [
-        "Privatbrauerei",
-        "Bier der Woche",
-        "\"Bier auf Wein …\"",
-        "Thema 1: “Bier auf Gel, quietschfidel!”"
+        "Weihnachtsmann",
+        "Weihnachten",
+        "Thema 3: \"grüner Weihnachtsstern\"",
+        "Weihnachtsmarkt"
       ],
       "episodes": [
-        10,
-        41,
-        288,
-        299
+        16,
+        181,
+        204,
+        206,
+        325
       ]
     },
     {
-      "id": "gesundheitsversorgung",
-      "name": "Gesundheitsversorgung",
-      "description": "3 Topics in 4 Episoden",
+      "id": "ig-nobelpreise",
+      "name": "Ig-Nobelpreise",
+      "description": "8 Topics in 7 Episoden",
       "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 4,
-      "relevanceSec": 2280,
+      "topicCount": 8,
+      "episodeCount": 7,
+      "relevanceSec": 2399,
       "sampleTopics": [
-        "Krank",
-        "Krankenhaus",
-        "Krankheit"
+        "IG-Nobelpreis",
+        "Ig Nobelpreis 2016",
+        "IG Nobelpreise 2018",
+        "IG Nobelpreise",
+        "IG-Nobelpreise 2021"
       ],
       "episodes": [
-        266,
-        288,
-        330,
-        362
+        59,
+        82,
+        134,
+        151,
+        199,
+        225,
+        280
       ]
     },
     {
-      "id": "hoden-ki-forschung",
-      "name": "Hoden-KI-Forschung",
-      "description": "2 Topics in 2 Episoden",
+      "id": "nobelpreise",
+      "name": "Nobelpreise",
+      "description": "7 Topics in 9 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 2251,
+      "topicCount": 7,
+      "episodeCount": 9,
+      "relevanceSec": 2362,
       "sampleTopics": [
-        "Hodenforschung",
-        "KI in der Forschung"
+        "Nobelpreis 2013",
+        "Nobelpreise 2015",
+        "Nobelpreise 2016",
+        "Nobelpreise",
+        "Nobelpreise 2021"
       ],
       "episodes": [
-        253,
-        349
+        13,
+        61,
+        84,
+        131,
+        153,
+        177,
+        202,
+        228,
+        279
       ]
     },
     {
-      "id": "hochtemperatursupraleitung",
-      "name": "Hochtemperatursupraleitung",
+      "id": "lauftraining",
+      "name": "Lauftraining",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
       "episodeCount": 3,
-      "relevanceSec": 2156,
+      "relevanceSec": 2306,
       "sampleTopics": [
-        "Supraleiter",
-        "Hochtemperatur Supraleiter?",
-        "Hochtemperatursupraleitung"
+        "Sport und Ziele",
+        "Lauftraining Reini",
+        "Joggen"
       ],
       "episodes": [
-        178,
-        261,
-        263
+        251,
+        257,
+        342
       ]
     },
     {
-      "id": "marswasser",
-      "name": "Marswasser",
-      "description": "2 Topics in 4 Episoden",
+      "id": "mikrobiologie",
+      "name": "Mikrobiologie",
+      "description": "6 Topics in 7 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 4,
-      "relevanceSec": 2114,
+      "topicCount": 6,
+      "episodeCount": 7,
+      "relevanceSec": 2100,
       "sampleTopics": [
-        "Wasser auf dem Mars",
-        "Thema 1: “This time of the year: Wasser auf dem Mars”"
+        "Riesenviren",
+        "Designer-Viren",
+        "Zombiebakterien",
+        "Bakterien",
+        "Viren"
       ],
       "episodes": [
-        46,
-        60,
-        125,
-        233
+        22,
+        97,
+        110,
+        141,
+        159,
+        175,
+        192
       ]
     },
     {
@@ -1030,212 +1720,198 @@
       ]
     },
     {
-      "id": "chatgpt-anwendungen",
-      "name": "ChatGPT Anwendungen",
-      "description": "2 Topics in 2 Episoden",
+      "id": "stadtmobilität",
+      "name": "Stadtmobilität",
+      "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1863,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1939,
       "sampleTopics": [
-        "Chat GPT Plagiate",
-        "ChatGPT zum Basteln"
+        "Stadtentwicklung",
+        "Wegen durch die Stadt",
+        "Fahrradstraßen",
+        "Mobilität in der Stadt"
       ],
       "episodes": [
-        251,
-        343
+        120,
+        192,
+        212,
+        276
       ]
     },
     {
-      "id": "nanotechnologie",
-      "name": "Nanotechnologie",
-      "description": "6 Topics in 6 Episoden",
-      "isOutlier": false,
-      "topicCount": 6,
-      "episodeCount": 6,
-      "relevanceSec": 1863,
-      "sampleTopics": [
-        "Graphen-Spinnen",
-        "Nanofachwerk",
-        "pupsende Nanopartikel",
-        "Elektrospinnen",
-        "Nanowände"
-      ],
-      "episodes": [
-        50,
-        68,
-        92,
-        124,
-        155,
-        212
-      ]
-    },
-    {
-      "id": "dfg-forschung",
-      "name": "DFG-Forschung",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1840,
-      "sampleTopics": [
-        "Forschung und Wissenschaftsförderung",
-        "DFG-Antrag"
-      ],
-      "episodes": [
-        198,
-        233
-      ]
-    },
-    {
-      "id": "corona-updates",
-      "name": "Corona-Updates",
+      "id": "plattentektonik",
+      "name": "Plattentektonik",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
       "episodeCount": 3,
-      "relevanceSec": 1824,
+      "relevanceSec": 1932,
       "sampleTopics": [
-        "Corona-Maßnahmen",
-        "Pandemiesituation",
-        "Corona Update"
+        "Kontinentaldrift",
+        "Kontinentalplattendrift",
+        "Thema 2: \"Tektonische Fernwirkung\""
       ],
       "episodes": [
-        167,
-        208,
-        212
+        4,
+        48,
+        360
       ]
     },
     {
-      "id": "nobelpreise",
-      "name": "Nobelpreise",
-      "description": "4 Topics in 6 Episoden",
+      "id": "bürogestaltung",
+      "name": "Bürogestaltung",
+      "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
       "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1856,
+      "sampleTopics": [
+        "Großraumbüros",
+        "Büro Reini",
+        "Büro",
+        "Bürokratie für Unternehmen"
+      ],
+      "episodes": [
+        124,
+        282,
+        285,
+        306
+      ]
+    },
+    {
+      "id": "kühl-experimente",
+      "name": "Kühl-Experimente",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
       "episodeCount": 6,
       "relevanceSec": 1800,
       "sampleTopics": [
-        "Nobelpreis 2013",
-        "Nobelpreise 2015",
-        "Nobelpreise 2016",
-        "Nobelpreise"
+        "Experiment der Woche: Kalter Kaffee",
+        "Experiment der Woche: Der knackende Eiswürfel",
+        "Experiment der Woche: Der Salzkühlschrank",
+        "Experiment der Woche: Kochen mit Eis",
+        "Experiment der Woche: Bierkühler"
       ],
       "episodes": [
-        13,
-        61,
-        84,
-        131,
-        153,
-        177
+        8,
+        53,
+        57,
+        67,
+        136,
+        152
       ]
     },
     {
-      "id": "vogelverhalten",
-      "name": "Vogelverhalten",
+      "id": "diamanten",
+      "name": "Diamanten",
       "description": "5 Topics in 6 Episoden",
       "isOutlier": false,
       "topicCount": 5,
       "episodeCount": 6,
       "relevanceSec": 1800,
       "sampleTopics": [
-        "Unmoralische Vögel",
-        "intelligente Vögel",
-        "navigierende Vögel",
-        "Killervögel",
-        "Navigation von Vögeln"
+        "Diamanten aus der Unterwelt",
+        "Diamanten",
+        "Diamant aus Öl",
+        "Maser-Diamanten",
+        "verbogenem Diamant"
       ],
       "episodes": [
-        52,
-        77,
-        104,
-        128,
-        162,
-        195
+        23,
+        64,
+        80,
+        117,
+        119,
+        178
       ]
     },
     {
-      "id": "wissenschaftsjahre",
-      "name": "Wissenschaftsjahre",
-      "description": "6 Topics in 5 Episoden",
+      "id": "kognitive-verzerrungen",
+      "name": "Kognitive Verzerrungen",
+      "description": "5 Topics in 6 Episoden",
       "isOutlier": false,
-      "topicCount": 6,
-      "episodeCount": 5,
+      "topicCount": 5,
+      "episodeCount": 6,
       "relevanceSec": 1800,
       "sampleTopics": [
-        "Rückblick auf wissenschaftliche Entdeckungen 2013",
-        "Spannende Forschung im Jahr 2013",
-        "Wissenschaftsjahr 2014",
-        "wissenschaftlicher Jahresrückblick 2018",
-        "wissenschaftlicher Jahresrückblick 2019"
+        "Lügen",
+        "Orientierung",
+        "Wahrnehmung",
+        "Täuschungen",
+        "falsche Erinnerungen"
       ],
       "episodes": [
-        17,
-        40,
-        136,
-        158,
-        182
+        87,
+        142,
+        150,
+        173,
+        186,
+        188
       ]
     },
     {
-      "id": "homöopathie",
-      "name": "Homöopathie",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 1741,
-      "sampleTopics": [
-        "Homöopathie",
-        "Alternativmedizin",
-        "HomöopaTea",
-        "Kommentar zur Phytotherapie"
-      ],
-      "episodes": [
-        221,
-        223,
-        224,
-        275
-      ]
-    },
-    {
-      "id": "schwarze-löcher",
-      "name": "Schwarze Löcher",
+      "id": "rentenwesen",
+      "name": "Rentenwesen",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
       "episodeCount": 3,
-      "relevanceSec": 1734,
+      "relevanceSec": 1737,
       "sampleTopics": [
-        "Snackable Science: Schwarze Löcher",
-        "Snackable Science: Lebensdauer Schwarze Löcher",
-        "Snackable Science: Lichtjahr trinken"
+        "Renten",
+        "Adel und Rentenkasse",
+        "Rente"
       ],
       "episodes": [
-        251,
-        255,
-        261
+        73,
+        269,
+        301
       ]
     },
     {
-      "id": "gesundheitsauszeichnungen",
-      "name": "Gesundheitsauszeichnungen",
-      "description": "3 Topics in 1 Episoden",
+      "id": "bahnreisen",
+      "name": "Bahnreisen",
+      "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
-      "episodeCount": 1,
-      "relevanceSec": 1664,
+      "episodeCount": 3,
+      "relevanceSec": 1731,
       "sampleTopics": [
-        "PUBLIC HEALTH PRIZE",
-        "MEDICINE PRIZE",
-        "NUTRITION PRIZE"
+        "Bahnreise",
+        "Bahnlob",
+        "Bahnabenteuer"
       ],
       "episodes": [
-        280
+        216,
+        226,
+        302
       ]
     },
     {
-      "id": "wandern-im-allgäu",
-      "name": "Wandern im Allgäu",
+      "id": "kanzlerwahlen",
+      "name": "Kanzlerwahlen",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1725,
+      "sampleTopics": [
+        "Kanzler an der Uni",
+        "Wahl",
+        "Kanzlerwahl"
+      ],
+      "episodes": [
+        239,
+        335,
+        345
+      ]
+    },
+    {
+      "id": "wandern-allgäu",
+      "name": "Wandern Allgäu",
       "description": "3 Topics in 2 Episoden",
       "isOutlier": false,
       "topicCount": 3,
@@ -1252,48 +1928,29 @@
       ]
     },
     {
-      "id": "blutspende-dkms",
-      "name": "Blutspende & DKMS",
+      "id": "soziale-medien",
+      "name": "Soziale Medien",
       "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
       "topicCount": 4,
       "episodeCount": 4,
-      "relevanceSec": 1645,
+      "relevanceSec": 1646,
       "sampleTopics": [
-        "Wie läuft es bei uns?",
-        "DRK Essen Ankunft",
-        "Blutspenden",
-        "DKMS"
+        "krankhaftes Facebook",
+        "Facebook für Zellen",
+        "Echokammern",
+        "Esoterik in den Sozialen Medien"
       ],
       "episodes": [
-        235,
-        258,
-        343,
-        370
+        19,
+        67,
+        143,
+        332
       ]
     },
     {
-      "id": "städtische-mobilität",
-      "name": "Städtische Mobilität",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 1639,
-      "sampleTopics": [
-        "Wegen durch die Stadt",
-        "Fahrradstraßen",
-        "Mobilität in der Stadt"
-      ],
-      "episodes": [
-        192,
-        212,
-        276
-      ]
-    },
-    {
-      "id": "woche-im-fokus",
-      "name": "Woche im Fokus",
+      "id": "wöchentliche-themen",
+      "name": "Wöchentliche Themen",
       "description": "3 Topics in 23 Episoden",
       "isOutlier": false,
       "topicCount": 3,
@@ -1331,191 +1988,36 @@
       ]
     },
     {
-      "id": "katrin-johanna-kommentare",
-      "name": "Katrin & Johanna Kommentare",
-      "description": "3 Topics in 5 Episoden",
+      "id": "fidorbank",
+      "name": "Fidorbank",
+      "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 5,
-      "relevanceSec": 1597,
-      "sampleTopics": [
-        "Kommentar",
-        "Kommentar Johanna",
-        "Kommentar Katrin"
-      ],
-      "episodes": [
-        228,
-        287,
-        289,
-        299,
-        334
-      ]
-    },
-    {
-      "id": "kommentarreihe",
-      "name": "Kommentarreihe",
-      "description": "5 Topics in 1 Episoden",
-      "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 1,
-      "relevanceSec": 1577,
-      "sampleTopics": [
-        "Kommentar Florian",
-        "Kommentar Stephan",
-        "Kommentar Stefan",
-        "Kommentar Mistafunk",
-        "Kommentar Felix"
-      ],
-      "episodes": [
-        250
-      ]
-    },
-    {
-      "id": "chinagadget",
-      "name": "Chinagadget",
-      "description": "3 Topics in 6 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 6,
-      "relevanceSec": 1500,
-      "sampleTopics": [
-        "Chinagadget der Woche",
-        "Chinagadget",
-        "Chinagadget: Sound Machine"
-      ],
-      "episodes": [
-        55,
-        104,
-        108,
-        110,
-        113,
-        119
-      ]
-    },
-    {
-      "id": "evolutionsbiologie",
-      "name": "Evolutionsbiologie",
-      "description": "2 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
+      "topicCount": 4,
       "episodeCount": 4,
-      "relevanceSec": 1488,
-      "sampleTopics": [
-        "Evolution",
-        "Biologie"
-      ],
-      "episodes": [
-        4,
-        205,
-        328,
-        374
-      ]
-    },
-    {
-      "id": "rentenplanung",
-      "name": "Rentenplanung",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1461,
-      "sampleTopics": [
-        "Renten",
-        "Rente"
-      ],
-      "episodes": [
-        73,
-        301
-      ]
-    },
-    {
-      "id": "reini-und-banken",
-      "name": "Reini und Banken",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 1454,
+      "relevanceSec": 1607,
       "sampleTopics": [
         "Bank Reini",
+        "Fidorbank",
         "Reini und die Fidorbank",
         "Reini und Banken"
       ],
       "episodes": [
         208,
+        210,
         243,
         373
       ]
     },
     {
-      "id": "psychotherapie-insights",
-      "name": "Psychotherapie Insights",
-      "description": "3 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 2,
-      "relevanceSec": 1400,
-      "sampleTopics": [
-        "Audiokommentar Tobias über Psychotherapie",
-        "Audiokommentar Ilka über Depression",
-        "Thema 1: \"Volume Up! durch Psychotherapie\""
-      ],
-      "episodes": [
-        219,
-        359
-      ]
-    },
-    {
-      "id": "ig-nobelpreise",
-      "name": "IG-Nobelpreise",
-      "description": "5 Topics in 5 Episoden",
-      "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 5,
-      "relevanceSec": 1389,
-      "sampleTopics": [
-        "IG-Nobelpreis",
-        "Ig Nobelpreis 2016",
-        "IG Nobelpreise 2018",
-        "IG Nobelpreise",
-        "Ig-Nobelpreise"
-      ],
-      "episodes": [
-        59,
-        82,
-        134,
-        151,
-        225
-      ]
-    },
-    {
-      "id": "fussballpsychologie",
-      "name": "Fussballpsychologie",
+      "id": "digitale-transformation",
+      "name": "Digitale Transformation",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
       "episodeCount": 3,
-      "relevanceSec": 1342,
+      "relevanceSec": 1561,
       "sampleTopics": [
-        "Heimvorteil",
-        "Schuld",
-        "Fussballpsychologie"
-      ],
-      "episodes": [
-        28,
-        183,
-        216
-      ]
-    },
-    {
-      "id": "digitale-transformation",
-      "name": "Digitale Transformation",
-      "description": "2 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 3,
-      "relevanceSec": 1261,
-      "sampleTopics": [
+        "IT-Zukunftstechnologien",
         "Digitalisierung",
         "Digitale Ordnung"
       ],
@@ -1526,62 +2028,279 @@
       ]
     },
     {
+      "id": "blutzucker-technologie",
+      "name": "Blutzucker-Technologie",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1555,
+      "sampleTopics": [
+        "Diabetes-Messgeräte",
+        "Blutzuckersensor",
+        "Snackable Science: Blutzuckermessung"
+      ],
+      "episodes": [
+        9,
+        285,
+        286
+      ]
+    },
+    {
       "id": "bildmanipulation",
       "name": "Bildmanipulation",
-      "description": "2 Topics in 2 Episoden",
+      "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1246,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1546,
       "sampleTopics": [
+        "manipulierte Fotos",
         "Fotos die keine sind",
         "Reale Fotos oder Fake?"
       ],
       "episodes": [
+        102,
         142,
         246
       ]
     },
     {
-      "id": "lauftraining",
-      "name": "Lauftraining",
-      "description": "2 Topics in 2 Episoden",
+      "id": "wissenschaftsveranstaltungen",
+      "name": "Wissenschaftsveranstaltungen",
+      "description": "5 Topics in 6 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1237,
+      "topicCount": 5,
+      "episodeCount": 6,
+      "relevanceSec": 1541,
       "sampleTopics": [
-        "Lauftraining Reini",
-        "Joggen"
+        "Science Slam Buch",
+        "Pint of Science Duisburg",
+        "Pint of Science 2024",
+        "Science Slam",
+        "Science Slam Duisburg"
       ],
       "episodes": [
-        257,
-        342
+        244,
+        249,
+        295,
+        356,
+        364,
+        368
       ]
     },
     {
-      "id": "kaffee-kultur",
-      "name": "Kaffee-Kultur",
-      "description": "3 Topics in 4 Episoden",
+      "id": "klemmbausteine",
+      "name": "Klemmbausteine",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1514,
+      "sampleTopics": [
+        "reibungsfreie Legosteine",
+        "Lego",
+        "Klemmbausteine",
+        "Lego vs. Bluebrixx"
+      ],
+      "episodes": [
+        51,
+        275,
+        368,
+        369
+      ]
+    },
+    {
+      "id": "neuroscience",
+      "name": "Neuroscience",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "Erbsenhirne",
+        "Hirnforscher",
+        "kleine Hirne",
+        "Magneten im Gehirn",
+        "Hirn"
+      ],
+      "episodes": [
+        9,
+        76,
+        107,
+        140,
+        150
+      ]
+    },
+    {
+      "id": "spinnenverhalten",
+      "name": "Spinnenverhalten",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 1500,
+      "sampleTopics": [
+        "Fieser Trick von Spinnen",
+        "Monsterspinnen in der Stadt",
+        "segelnde Spinnen",
+        "hungrigen Spinnen",
+        "Spinnenbeinen"
+      ],
+      "episodes": [
+        5,
+        32,
+        54,
+        105,
+        161
+      ]
+    },
+    {
+      "id": "homöopathie",
+      "name": "Homöopathie",
+      "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1486,
+      "sampleTopics": [
+        "Homöopathie",
+        "Alternativmedizin",
+        "HomöopaTea"
+      ],
+      "episodes": [
+        221,
+        223,
+        224
+      ]
+    },
+    {
+      "id": "arztbesuche",
+      "name": "Arztbesuche",
+      "description": "3 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 3,
+      "relevanceSec": 1439,
+      "sampleTopics": [
+        "Zum Arzt",
+        "Arzttermine",
+        "Arztgespräche"
+      ],
+      "episodes": [
+        235,
+        266,
+        267
+      ]
+    },
+    {
+      "id": "fortpflanzung",
+      "name": "Fortpflanzung",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 1408,
+      "sampleTopics": [
+        "topfschlagende Spermien",
+        "Sperma",
+        "Sperma aus dem Weltraum",
+        "Befruchtungsstrategie",
+        "Snackable Science: Fortpflanzung der Feige"
+      ],
+      "episodes": [
+        57,
+        63,
+        75,
+        80,
+        284
+      ]
+    },
+    {
+      "id": "impfstoffe",
+      "name": "Impfstoffe",
+      "description": "3 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 2,
+      "relevanceSec": 1366,
+      "sampleTopics": [
+        "Russischer Impfstoff",
+        "Meinungen zu Impfstoffen",
+        "Boosterimpfung"
+      ],
+      "episodes": [
+        184,
+        207
+      ]
+    },
+    {
+      "id": "nanotechnologie",
+      "name": "Nanotechnologie",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
       "episodeCount": 4,
       "relevanceSec": 1200,
       "sampleTopics": [
-        "Studien über Kaffee",
-        "löblicher Kaffee",
-        "Kaffee"
+        "gefährliche Nanopartikel",
+        "Nanofachwerk",
+        "pupsende Nanopartikel",
+        "Nanowände"
       ],
       "episodes": [
-        8,
-        94,
-        122,
-        159
+        22,
+        68,
+        92,
+        155
       ]
     },
     {
-      "id": "affensprache-und-verhalten",
-      "name": "Affensprache und Verhalten",
+      "id": "mini-u-boote",
+      "name": "Mini-U-Boote",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Mini-U-Boote",
+        "Mini-U-Boote in Zellen",
+        "kleinstes U-Boot der Welt",
+        "kleine U-Boote"
+      ],
+      "episodes": [
+        16,
+        21,
+        109,
+        132
+      ]
+    },
+    {
+      "id": "künstliche-materialien",
+      "name": "Künstliche Materialien",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Künstliche Haut",
+        "künstliches Fleisch",
+        "künstliche Muskeln",
+        "künstliche Tintenfischhaut"
+      ],
+      "episodes": [
+        6,
+        7,
+        30,
+        32
+      ]
+    },
+    {
+      "id": "affenverhalten",
+      "name": "Affenverhalten",
       "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
       "topicCount": 4,
@@ -1601,108 +2320,49 @@
       ]
     },
     {
-      "id": "virenforschung",
-      "name": "Virenforschung",
+      "id": "kaffee",
+      "name": "Kaffee",
       "description": "3 Topics in 4 Episoden",
       "isOutlier": false,
       "topicCount": 3,
       "episodeCount": 4,
       "relevanceSec": 1200,
       "sampleTopics": [
-        "Riesenviren",
-        "Designer-Viren",
-        "Viren"
+        "Studien über Kaffee",
+        "löblicher Kaffee",
+        "Kaffee"
       ],
       "episodes": [
-        22,
-        97,
-        159,
-        175
+        8,
+        94,
+        122,
+        159
       ]
     },
     {
-      "id": "augenblick",
-      "name": "Augenblick",
+      "id": "batterietechnologie",
+      "name": "Batterietechnologie",
       "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
       "topicCount": 4,
       "episodeCount": 4,
       "relevanceSec": 1200,
       "sampleTopics": [
-        "Blick in die Augen",
-        "Superaugen",
-        "Blitzlicht-Augen",
-        "Blickdruck"
+        "druckbare Batterien",
+        "Aluminiumbatterie",
+        "Diamantbatterie",
+        "Akku"
       ],
       "episodes": [
-        78,
-        79,
-        115,
-        135
+        4,
+        48,
+        87,
+        156
       ]
     },
     {
-      "id": "diamanten",
-      "name": "Diamanten",
-      "description": "3 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 4,
-      "relevanceSec": 1200,
-      "sampleTopics": [
-        "Diamanten",
-        "Diamant aus Öl",
-        "Maser-Diamanten"
-      ],
-      "episodes": [
-        64,
-        80,
-        117,
-        178
-      ]
-    },
-    {
-      "id": "spermienforschung",
-      "name": "Spermienforschung",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 1200,
-      "sampleTopics": [
-        "topfschlagende Spermien",
-        "Sperma",
-        "Sperma aus dem Weltraum",
-        "Befruchtungsstrategie"
-      ],
-      "episodes": [
-        57,
-        63,
-        75,
-        80
-      ]
-    },
-    {
-      "id": "weihnachtszeit",
-      "name": "Weihnachtszeit",
-      "description": "2 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 3,
-      "relevanceSec": 1124,
-      "sampleTopics": [
-        "Weihnachten",
-        "Weihnachtsmarkt"
-      ],
-      "episodes": [
-        181,
-        204,
-        325
-      ]
-    },
-    {
-      "id": "pilze-und-mistkäfer",
-      "name": "Pilze und Mistkäfer",
+      "id": "mykologie",
+      "name": "Mykologie",
       "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
       "topicCount": 4,
@@ -1722,195 +2382,65 @@
       ]
     },
     {
-      "id": "botanik",
-      "name": "Botanik",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 1080,
-      "sampleTopics": [
-        "Pflanzen",
-        "Bäume",
-        "Botanik"
-      ],
-      "episodes": [
-        23,
-        73,
-        328
-      ]
-    },
-    {
-      "id": "büro-reini",
-      "name": "Büro Reini",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 958,
-      "sampleTopics": [
-        "Büro Reini",
-        "Büro"
-      ],
-      "episodes": [
-        282,
-        285
-      ]
-    },
-    {
-      "id": "literaturnobelpreis",
-      "name": "Literaturnobelpreis",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 945,
-      "sampleTopics": [
-        "Nobelpreis Literatur",
-        "Literaturnobelpreis",
-        "Literatur Nobelpreis"
-      ],
-      "episodes": [
-        277,
-        326,
-        373
-      ]
-    },
-    {
-      "id": "spinnenforschung",
-      "name": "Spinnenforschung",
+      "id": "innovative-materialien",
+      "name": "Innovative Materialien",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
       "episodeCount": 3,
       "relevanceSec": 900,
       "sampleTopics": [
-        "Fieser Trick von Spinnen",
-        "Spinnenkleber",
-        "Spinnenbeinen"
+        "Geige mit Spinnenseiden-Saiten",
+        "Graphen-Spinnen",
+        "Elektrospinnen"
       ],
       "episodes": [
-        5,
-        121,
-        161
+        7,
+        50,
+        124
       ]
     },
     {
-      "id": "mini-u-boote",
-      "name": "Mini-U-Boote",
+      "id": "wissenschaftsrückblick",
+      "name": "Wissenschaftsrückblick",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
       "episodeCount": 3,
       "relevanceSec": 900,
       "sampleTopics": [
-        "Mini-U-Boote",
-        "kleinstes U-Boot der Welt",
-        "kleine U-Boote"
+        "wissenschaftlicher Jahresrückblick 2018",
+        "wissenschaftlicher Jahresrückblick 2019",
+        "Wissenschaft im Jahr 2020"
       ],
       "episodes": [
-        16,
-        109,
-        132
+        136,
+        158,
+        182
       ]
     },
     {
-      "id": "eis-experimente",
-      "name": "Eis-Experimente",
+      "id": "suchtmittel",
+      "name": "Suchtmittel",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
       "episodeCount": 3,
       "relevanceSec": 900,
       "sampleTopics": [
-        "Experiment der Woche: Der knackende Eiswürfel",
-        "Experiment der Woche: Kochen mit Eis",
-        "Experiment der Woche: Eiswasser"
+        "Koks",
+        "Alkohol",
+        "Drogen"
       ],
       "episodes": [
-        53,
         67,
-        152
+        118,
+        183
       ]
     },
     {
-      "id": "fischarten",
-      "name": "Fischarten",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 900,
-      "sampleTopics": [
-        "Fische",
-        "Tiere",
-        "Tieren"
-      ],
-      "episodes": [
-        76,
-        170,
-        172
-      ]
-    },
-    {
-      "id": "experimentelle-physik",
-      "name": "Experimentelle Physik",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 900,
-      "sampleTopics": [
-        "Experiment der Woche: Der zersägte Besenstil",
-        "Experiment der Woche: Rührholz",
-        "Experiment der Woche: magische Zahnstocher"
-      ],
-      "episodes": [
-        34,
-        75,
-        126
-      ]
-    },
-    {
-      "id": "quantenphysik",
-      "name": "Quantenphysik",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 900,
-      "sampleTopics": [
-        "Foto aus der Quantenwelt",
-        "Quantenspielchen",
-        "Quanten"
-      ],
-      "episodes": [
-        46,
-        72,
-        171
-      ]
-    },
-    {
-      "id": "wahrnehmungspsychologie",
-      "name": "Wahrnehmungspsychologie",
-      "description": "2 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 3,
-      "relevanceSec": 900,
-      "sampleTopics": [
-        "Wahrnehmung",
-        "Täuschungen"
-      ],
-      "episodes": [
-        150,
-        173,
-        186
-      ]
-    },
-    {
-      "id": "roboterinnovationen",
-      "name": "Roboterinnovationen",
+      "id": "robotik",
+      "name": "Robotik",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
@@ -1928,282 +2458,57 @@
       ]
     },
     {
-      "id": "eier-experimente",
-      "name": "Eier-Experimente",
+      "id": "mondforschung",
+      "name": "Mondforschung",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
       "episodeCount": 3,
       "relevanceSec": 900,
       "sampleTopics": [
-        "Experiment der Woche: Das schwebende Ei",
-        "Experiment der Woche: Flaschenei",
-        "Experiment der Woche: Essig-Ei"
+        "Entstehung des Mondes",
+        "Höhlen auf dem Mond",
+        "Wasserlauf dem Mond"
       ],
       "episodes": [
-        44,
-        120,
-        175
-      ]
-    },
-    {
-      "id": "künstliche-biotechnologie",
-      "name": "Künstliche Biotechnologie",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 900,
-      "sampleTopics": [
-        "Künstliche Haut",
-        "künstliches Fleisch",
-        "künstliche Muskeln"
-      ],
-      "episodes": [
-        6,
-        7,
-        30
-      ]
-    },
-    {
-      "id": "paper-entwicklung",
-      "name": "Paper-Entwicklung",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 896,
-      "sampleTopics": [
-        "Abgelehntes Paper",
-        "Paper mit Easteregg veröffentlicht"
-      ],
-      "episodes": [
-        319,
-        340
-      ]
-    },
-    {
-      "id": "solarenergie",
-      "name": "Solarenergie",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 817,
-      "sampleTopics": [
-        "Solaranlagen",
-        "BalkonSolar"
-      ],
-      "episodes": [
-        190,
-        264
-      ]
-    },
-    {
-      "id": "3d-drucktechnik",
-      "name": "3D Drucktechnik",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 739,
-      "sampleTopics": [
-        "3d Drucker",
-        "3d Maus",
-        "3d Drucker und Skadis"
-      ],
-      "episodes": [
-        221,
-        233,
-        305
-      ]
-    },
-    {
-      "id": "mobilitätsdienste",
-      "name": "Mobilitätsdienste",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 625,
-      "sampleTopics": [
-        "Mietwagen und Leasing Autos",
-        "Lieferdienste"
-      ],
-      "episodes": [
-        237,
-        339
-      ]
-    },
-    {
-      "id": "science-slam",
-      "name": "Science Slam",
-      "description": "2 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 3,
-      "relevanceSec": 601,
-      "sampleTopics": [
-        "Science Slam Buch",
-        "Science Slam"
-      ],
-      "episodes": [
-        244,
-        356,
-        368
-      ]
-    },
-    {
-      "id": "magnetisches-wasser",
-      "name": "Magnetisches Wasser",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 600,
-      "sampleTopics": [
-        "magisches Wasser",
-        "Experiment der Woche: Magnetisches Wasser"
-      ],
-      "episodes": [
-        123,
-        205
-      ]
-    },
-    {
-      "id": "suchtmittel",
-      "name": "Suchtmittel",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 600,
-      "sampleTopics": [
-        "Alkohol",
-        "Drogen"
-      ],
-      "episodes": [
-        118,
-        183
-      ]
-    },
-    {
-      "id": "hirnforschung",
-      "name": "Hirnforschung",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 600,
-      "sampleTopics": [
-        "kleine Hirne",
-        "Hirn"
-      ],
-      "episodes": [
-        107,
-        150
-      ]
-    },
-    {
-      "id": "wetterphänomene",
-      "name": "Wetterphänomene",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 600,
-      "sampleTopics": [
-        "Eiszapfen",
-        "Gewitter"
-      ],
-      "episodes": [
-        20,
-        140
-      ]
-    },
-    {
-      "id": "kriminalfälle",
-      "name": "Kriminalfälle",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 600,
-      "sampleTopics": [
-        "Verbrechen",
-        "Morden"
-      ],
-      "episodes": [
+        48,
         112,
-        157
+        148
       ]
     },
     {
-      "id": "pflanzenpflege",
-      "name": "Pflanzenpflege",
-      "description": "2 Topics in 2 Episoden",
+      "id": "wissenschaftsrückblick",
+      "name": "Wissenschaftsrückblick",
+      "description": "3 Topics in 2 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
+      "topicCount": 3,
       "episodeCount": 2,
-      "relevanceSec": 600,
+      "relevanceSec": 900,
       "sampleTopics": [
-        "Rettung der Büropflanzen",
-        "grüne Biologie"
+        "Rückblick auf wissenschaftliche Entdeckungen 2013",
+        "Spannende Forschung im Jahr 2013",
+        "Wissenschaftsjahr 2014"
       ],
       "episodes": [
-        1,
-        115
+        17,
+        40
       ]
     },
     {
-      "id": "soziale-medien-toxicity",
-      "name": "Soziale Medien Toxicity",
-      "description": "2 Topics in 2 Episoden",
+      "id": "psychotherapie",
+      "name": "Psychotherapie",
+      "description": "3 Topics in 1 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 600,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 538,
       "sampleTopics": [
-        "krankhaftes Facebook",
-        "Hasskommentare"
+        "Audiokommentar Tobias über Psychotherapie",
+        "Audiokommentar Olli über Psychotherapie",
+        "Audiokommentar Ilka über Depression"
       ],
       "episodes": [
-        19,
-        205
-      ]
-    },
-    {
-      "id": "familienleben",
-      "name": "Familienleben",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 600,
-      "sampleTopics": [
-        "Eltern",
-        "Kinder"
-      ],
-      "episodes": [
-        154,
-        197
-      ]
-    },
-    {
-      "id": "chinagadget-zubehör",
-      "name": "Chinagadget Zubehör",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 600,
-      "sampleTopics": [
-        "Chinagadget: Kettenreiniger",
-        "Chinagadget: Schleifenersatz"
-      ],
-      "episodes": [
-        88,
-        103
+        219
       ]
     },
     {
@@ -2224,25 +2529,6 @@
         282,
         325,
         374
-      ]
-    },
-    {
-      "id": "hörerinteraktion",
-      "name": "Hörerinteraktion",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 54,
-      "sampleTopics": [
-        "Hörerfrage",
-        "Hörerinnenkommentare",
-        "Hörer*innen Feedback"
-      ],
-      "episodes": [
-        55,
-        250,
-        273
       ]
     }
   ]

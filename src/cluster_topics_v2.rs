@@ -1509,14 +1509,25 @@ BEISPIELE:
 // Main
 // ============================================================================
 
-/// Load variant settings from variants.json
+/// Load variant settings from variants.json (podcast-specific or global fallback)
 fn load_variant_settings(
     variant_name: &str,
+    podcast_id: &str,
 ) -> Result<(String, VariantSettingsJson), Box<dyn std::error::Error>> {
-    let variants_path = PathBuf::from("variants.json");
-    if !variants_path.exists() {
-        return Err("variants.json not found".into());
-    }
+    // Try podcast-specific variants.json first
+    let podcast_variants_path = PathBuf::from(format!("podcasts/{}/variants.json", podcast_id));
+    let variants_path = if podcast_variants_path.exists() {
+        println!("📋 Using podcast-specific variants: {}", podcast_variants_path.display());
+        podcast_variants_path
+    } else {
+        // Fallback to global variants.json
+        let global_path = PathBuf::from("variants.json");
+        if !global_path.exists() {
+            return Err("variants.json not found (neither podcast-specific nor global)".into());
+        }
+        println!("📋 Using global variants: {}", global_path.display());
+        global_path
+    };
 
     let variants_content = fs::read_to_string(&variants_path)?;
     let variants_config: VariantsConfig = serde_json::from_str(&variants_content)?;
@@ -1524,7 +1535,7 @@ fn load_variant_settings(
     let variant = variants_config
         .variants
         .get(variant_name)
-        .ok_or_else(|| format!("Variant '{}' not found in variants.json", variant_name))?;
+        .ok_or_else(|| format!("Variant '{}' not found in {}", variant_name, variants_path.display()))?;
 
     Ok((variant.name.clone(), variant.settings.clone()))
 }
@@ -1562,7 +1573,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         outlier_threshold,
         default_topic_duration_sec,
     ) = if let Some(ref variant_name) = args.variant {
-        match load_variant_settings(variant_name) {
+        match load_variant_settings(variant_name, &args.podcast) {
             Ok((variant_display_name, variant_settings)) => {
                 println!(
                     "📋 Lade Variante: {} ({})\n",
@@ -1681,13 +1692,26 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         
         // Convert to old format for compatibility
         let topics: Vec<TopicWithEmbedding> = records.into_iter().map(|r| {
-            let occurrences: Vec<TopicOccurrence> = r.episodes.iter().map(|&ep| {
-                TopicOccurrence {
-                    episode_number: ep,
-                    duration_sec: Some(default_topic_duration_sec),
-                    position_sec: Some(0),
-                }
-            }).collect();
+            // Prefer real per-episode timing metadata from LanceDB (written by scripts/create-embeddings.js).
+            // Fall back to synthetic occurrences if the column is missing or unparsable.
+            let parsed_occurrences: Option<Vec<TopicOccurrence>> = r
+                .occurrences_json
+                .as_deref()
+                .and_then(|s| serde_json::from_str::<Vec<TopicOccurrence>>(s).ok())
+                .filter(|v| !v.is_empty());
+
+            let occurrences: Vec<TopicOccurrence> = match parsed_occurrences {
+                Some(v) => v,
+                None => r
+                    .episodes
+                    .iter()
+                    .map(|&ep| TopicOccurrence {
+                        episode_number: ep,
+                        duration_sec: Some(default_topic_duration_sec),
+                        position_sec: Some(0),
+                    })
+                    .collect(),
+            };
             
             TopicWithEmbedding {
                 topic: r.topic,

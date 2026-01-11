@@ -797,14 +797,25 @@ BEISPIELE:
     })
 }
 
-/// Load variant settings from variants.json
+/// Load variant settings from variants.json (podcast-specific or global fallback)
 fn load_variant_settings(
     variant_name: &str,
+    podcast_id: &str,
 ) -> Result<(String, VariantSettingsJson), Box<dyn std::error::Error>> {
-    let variants_path = PathBuf::from("variants.json");
-    if !variants_path.exists() {
-        return Err("variants.json not found".into());
-    }
+    // Try podcast-specific variants.json first
+    let podcast_variants_path = PathBuf::from(format!("podcasts/{}/variants.json", podcast_id));
+    let variants_path = if podcast_variants_path.exists() {
+        println!("📋 Using podcast-specific variants: {}", podcast_variants_path.display());
+        podcast_variants_path
+    } else {
+        // Fallback to global variants.json
+        let global_path = PathBuf::from("variants.json");
+        if !global_path.exists() {
+            return Err("variants.json not found (neither podcast-specific nor global)".into());
+        }
+        println!("📋 Using global variants: {}", global_path.display());
+        global_path
+    };
 
     let variants_content = fs::read_to_string(&variants_path)?;
     let variants_config: VariantsConfig = serde_json::from_str(&variants_content)?;
@@ -812,7 +823,7 @@ fn load_variant_settings(
     let variant = variants_config
         .variants
         .get(variant_name)
-        .ok_or_else(|| format!("Variant '{}' not found in variants.json", variant_name))?;
+        .ok_or_else(|| format!("Variant '{}' not found in {}", variant_name, variants_path.display()))?;
 
     Ok((variant.name.clone(), variant.settings.clone()))
 }
@@ -846,7 +857,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         use_relevance_weighting,
         use_llm_naming,
     ) = if let Some(ref variant_name) = args.variant {
-        match load_variant_settings(variant_name) {
+        match load_variant_settings(variant_name, &args.podcast) {
             Ok((variant_display_name, variant_settings)) => {
                 println!(
                     "📋 Lade Variante: {} ({})\n",

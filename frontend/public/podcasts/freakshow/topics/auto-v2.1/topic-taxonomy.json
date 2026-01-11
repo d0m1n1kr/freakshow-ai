@@ -1,13 +1,13 @@
 {
-  "createdAt": "2026-01-11T07:34:02.688816+00:00",
+  "createdAt": "2026-01-11T18:51:53.897656+00:00",
   "method": "hdbscan-v2",
   "embeddingModel": "text-embedding-3-large",
-  "embeddingsCreatedAt": "2026-01-11T07:27:26.710Z",
+  "embeddingsCreatedAt": "2026-01-11T18:51:34.834874+00:00",
   "totalTopics": 4031,
   "uniqueTopics": 3669,
   "settings": {
     "clusters": 153,
-    "outlierThreshold": 0.9,
+    "outlierThreshold": 0.75,
     "linkageMethod": "hdbscan(min_cluster_size=2, min_samples=2)",
     "useRelevanceWeighting": true
   },
@@ -18,19 +18,259 @@
   },
   "clusters": [
     {
+      "id": "mac-hardware",
+      "name": "Mac Hardware",
+      "description": "50 Topics in 51 Episoden",
+      "isOutlier": false,
+      "topicCount": 50,
+      "episodeCount": 51,
+      "relevanceSec": 64632,
+      "sampleTopics": [
+        "Macbook Air",
+        "mobileMacs",
+        "iMac i7",
+        "MacBook Pros",
+        "Mac Mini/ MacBook Air"
+      ],
+      "episodes": [
+        2,
+        39,
+        40,
+        45,
+        82,
+        95,
+        97,
+        103,
+        114,
+        116,
+        139,
+        141,
+        142,
+        143,
+        145,
+        149,
+        152,
+        163,
+        178,
+        181,
+        183,
+        189,
+        193,
+        194,
+        196,
+        197,
+        198,
+        201,
+        202,
+        205,
+        206,
+        217,
+        219,
+        222,
+        223,
+        224,
+        226,
+        228,
+        233,
+        240,
+        247,
+        250,
+        252,
+        253,
+        255,
+        257,
+        263,
+        267,
+        272,
+        288,
+        297
+      ]
+    },
+    {
+      "id": "e-mobilität",
+      "name": "E-Mobilität",
+      "description": "48 Topics in 41 Episoden",
+      "isOutlier": false,
+      "topicCount": 48,
+      "episodeCount": 41,
+      "relevanceSec": 48756,
+      "sampleTopics": [
+        "Fahrstühle",
+        "Elektrische Autos",
+        "Tesla Store Berlin",
+        "Volkswagen",
+        "E-Autos"
+      ],
+      "episodes": [
+        150,
+        154,
+        160,
+        162,
+        163,
+        164,
+        169,
+        178,
+        182,
+        184,
+        185,
+        188,
+        191,
+        194,
+        195,
+        196,
+        200,
+        201,
+        202,
+        203,
+        208,
+        214,
+        215,
+        216,
+        227,
+        230,
+        233,
+        243,
+        244,
+        246,
+        251,
+        252,
+        255,
+        267,
+        276,
+        278,
+        280,
+        281,
+        283,
+        295,
+        300
+      ]
+    },
+    {
+      "id": "apple-software",
+      "name": "Apple Software",
+      "description": "31 Topics in 31 Episoden",
+      "isOutlier": false,
+      "topicCount": 31,
+      "episodeCount": 31,
+      "relevanceSec": 40719,
+      "sampleTopics": [
+        "AppStore",
+        "iTunes U",
+        "Game Center",
+        "iOS 6",
+        "iOS6"
+      ],
+      "episodes": [
+        43,
+        80,
+        82,
+        96,
+        97,
+        98,
+        110,
+        112,
+        113,
+        114,
+        118,
+        119,
+        134,
+        141,
+        175,
+        189,
+        206,
+        219,
+        220,
+        222,
+        223,
+        237,
+        242,
+        249,
+        250,
+        263,
+        273,
+        284,
+        285,
+        293,
+        294
+      ]
+    },
+    {
+      "id": "apple-geräte",
+      "name": "Apple Geräte",
+      "description": "57 Topics in 45 Episoden",
+      "isOutlier": false,
+      "topicCount": 57,
+      "episodeCount": 45,
+      "relevanceSec": 40015,
+      "sampleTopics": [
+        "iPhone 2G und Stores (aus Amerika)",
+        "Erfahrungen mit dem iPhone",
+        "Funktionen und Features des iPhones",
+        "Neue Apple Produkte",
+        "Bild.de nur noch als Pay-Content für das iPhone"
+      ],
+      "episodes": [
+        2,
+        12,
+        36,
+        37,
+        39,
+        43,
+        44,
+        49,
+        67,
+        69,
+        71,
+        80,
+        95,
+        96,
+        104,
+        118,
+        133,
+        138,
+        140,
+        146,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        182,
+        183,
+        188,
+        204,
+        206,
+        211,
+        219,
+        223,
+        226,
+        241,
+        252,
+        262,
+        263,
+        266,
+        269,
+        278,
+        281,
+        284,
+        297
+      ]
+    },
+    {
       "id": "bitcoin",
       "name": "Bitcoin",
-      "description": "5 Topics in 29 Episoden",
+      "description": "13 Topics in 36 Episoden",
       "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 29,
-      "relevanceSec": 30170,
+      "topicCount": 13,
+      "episodeCount": 36,
+      "relevanceSec": 38441,
       "sampleTopics": [
         "Bitcoins",
         "BitCoin",
+        "Bitcoinkram",
         "Bitcoin News",
-        "Bitcoin Update",
-        "2020: Bitcoin"
+        "Bitcoin Trouble"
       ],
       "episodes": [
         94,
@@ -51,41 +291,1683 @@
         149,
         152,
         156,
+        157,
         158,
         165,
         167,
+        170,
         172,
+        181,
         187,
         189,
         197,
+        202,
+        203,
         208,
+        215,
+        217,
         255,
         260,
         263
       ]
     },
     {
-      "id": "chaos-communication-congress",
-      "name": "Chaos Communication Congress",
-      "description": "4 Topics in 7 Episoden",
+      "id": "iphone-geräte",
+      "name": "iPhone Geräte",
+      "description": "34 Topics in 33 Episoden",
       "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 7,
-      "relevanceSec": 17845,
+      "topicCount": 34,
+      "episodeCount": 33,
+      "relevanceSec": 37792,
       "sampleTopics": [
-        "33C3",
-        "33C3 Eindrücke",
-        "34C3",
-        "35C3"
+        "iPhone",
+        "iPhone App Settings",
+        "Auto Brightness",
+        "iPhone 5",
+        "Größe des iPhones"
       ],
       "episodes": [
+        9,
+        39,
+        73,
+        96,
+        97,
+        98,
+        101,
+        139,
+        155,
+        161,
+        162,
+        170,
+        179,
+        183,
+        184,
+        200,
+        204,
+        208,
+        213,
+        222,
+        223,
+        228,
+        231,
+        237,
+        240,
+        241,
+        252,
+        255,
+        260,
+        262,
+        263,
+        271,
+        280
+      ]
+    },
+    {
+      "id": "macintosh",
+      "name": "Macintosh",
+      "description": "37 Topics in 38 Episoden",
+      "isOutlier": false,
+      "topicCount": 37,
+      "episodeCount": 38,
+      "relevanceSec": 34775,
+      "sampleTopics": [
+        "Meinung und Kommentar zu Apple-Produkten",
+        "Mac-News",
+        "Neue iMacs",
+        "Bullet Time bei mobileMacs",
+        "Neues aus dem Studio"
+      ],
+      "episodes": [
+        1,
+        9,
+        36,
+        37,
+        38,
+        61,
+        69,
+        82,
+        84,
+        94,
+        99,
+        102,
+        112,
+        125,
+        149,
+        160,
+        163,
+        175,
+        179,
+        183,
+        186,
+        188,
+        193,
+        200,
+        205,
+        219,
+        230,
+        231,
+        233,
+        236,
+        245,
+        252,
+        262,
+        263,
+        271,
+        272,
+        286,
+        290
+      ]
+    },
+    {
+      "id": "podcasting",
+      "name": "Podcasting",
+      "description": "52 Topics in 45 Episoden",
+      "isOutlier": false,
+      "topicCount": 52,
+      "episodeCount": 45,
+      "relevanceSec": 33762,
+      "sampleTopics": [
+        "Formatfindung des Podcasts",
+        "Längere Episoden",
+        "Live Podcast Aufnahme",
+        "Feedback während der Sendung",
+        "Podcastsordnung"
+      ],
+      "episodes": [
+        1,
+        5,
+        10,
+        39,
+        53,
+        60,
+        63,
+        66,
+        83,
+        84,
+        105,
+        114,
+        132,
+        150,
+        153,
+        160,
+        163,
+        164,
+        165,
+        172,
+        177,
+        178,
+        184,
+        188,
+        192,
+        194,
+        195,
+        196,
+        199,
+        200,
+        202,
+        205,
+        215,
+        216,
+        217,
+        220,
+        224,
+        241,
+        246,
+        253,
+        270,
+        280,
+        285,
+        286,
+        287
+      ]
+    },
+    {
+      "id": "apple-themen",
+      "name": "Apple Themen",
+      "description": "31 Topics in 31 Episoden",
+      "isOutlier": false,
+      "topicCount": 31,
+      "episodeCount": 31,
+      "relevanceSec": 33572,
+      "sampleTopics": [
+        "Aktuelle Themen im Apple-Universum",
+        "iPhone-Nachrichtenlage",
+        "Nachrichtenlage zu Apple",
+        "Keynote von Phil Schiller",
+        "Nachlese zur WWDC Keynote"
+      ],
+      "episodes": [
+        1,
+        4,
+        15,
+        20,
+        29,
+        47,
+        81,
+        93,
+        99,
+        117,
+        123,
+        143,
+        147,
+        151,
+        173,
+        197,
+        204,
+        230,
+        241,
+        259,
+        272,
+        274,
+        277,
+        279,
+        280,
+        283,
+        284,
+        290,
+        292,
+        298,
+        300
+      ]
+    },
+    {
+      "id": "chaos-communication-congress",
+      "name": "Chaos Communication Congress",
+      "description": "24 Topics in 13 Episoden",
+      "isOutlier": false,
+      "topicCount": 24,
+      "episodeCount": 13,
+      "relevanceSec": 33572,
+      "sampleTopics": [
+        "30C3",
+        "Der 30C3",
+        "32C3: Methodisch Inkorrekt",
+        "32C3 Design",
+        "32C3 Opening"
+      ],
+      "episodes": [
+        122,
+        123,
+        124,
+        169,
         187,
         189,
+        190,
         191,
         198,
         203,
+        210,
         228,
         229
+      ]
+    },
+    {
+      "id": "netzwerktechnik",
+      "name": "Netzwerktechnik",
+      "description": "38 Topics in 33 Episoden",
+      "isOutlier": false,
+      "topicCount": 38,
+      "episodeCount": 33,
+      "relevanceSec": 30750,
+      "sampleTopics": [
+        "Hintergründe",
+        "Ethernet - damals in Klondike",
+        "Mehr Netz",
+        "Onlinezugang und Provider",
+        "Aktien und Internetdienste"
+      ],
+      "episodes": [
+        11,
+        69,
+        96,
+        102,
+        103,
+        104,
+        106,
+        123,
+        131,
+        132,
+        133,
+        144,
+        165,
+        167,
+        171,
+        176,
+        177,
+        185,
+        212,
+        217,
+        221,
+        228,
+        230,
+        232,
+        244,
+        247,
+        248,
+        254,
+        275,
+        283,
+        293,
+        295,
+        299
+      ]
+    },
+    {
+      "id": "apple-hardware",
+      "name": "Apple Hardware",
+      "description": "33 Topics in 31 Episoden",
+      "isOutlier": false,
+      "topicCount": 33,
+      "episodeCount": 31,
+      "relevanceSec": 29791,
+      "sampleTopics": [
+        "Motivationen für Apple",
+        "Vorstellung der neuen MacBook-Geräte",
+        "Zukunftsausblick",
+        "Macs an Schulen",
+        "Apple und Google"
+      ],
+      "episodes": [
+        3,
+        15,
+        28,
+        36,
+        42,
+        47,
+        56,
+        69,
+        74,
+        77,
+        78,
+        79,
+        85,
+        105,
+        114,
+        121,
+        124,
+        175,
+        177,
+        178,
+        186,
+        193,
+        204,
+        206,
+        215,
+        220,
+        237,
+        243,
+        248,
+        255,
+        259
+      ]
+    },
+    {
+      "id": "audio-technik",
+      "name": "Audio-Technik",
+      "description": "32 Topics in 29 Episoden",
+      "isOutlier": false,
+      "topicCount": 32,
+      "episodeCount": 29,
+      "relevanceSec": 29732,
+      "sampleTopics": [
+        "interaktive Klangkontrolle",
+        "Soundboard",
+        "Audiophile Inhalte",
+        "Tim rantet: Audioprogramme",
+        "Audio-Upgrades"
+      ],
+      "episodes": [
+        51,
+        66,
+        69,
+        77,
+        84,
+        101,
+        104,
+        108,
+        110,
+        122,
+        127,
+        133,
+        150,
+        152,
+        166,
+        170,
+        186,
+        191,
+        207,
+        210,
+        214,
+        237,
+        238,
+        242,
+        284,
+        286,
+        294,
+        295,
+        299
+      ]
+    },
+    {
+      "id": "app-entwicklung",
+      "name": "App-Entwicklung",
+      "description": "26 Topics in 24 Episoden",
+      "isOutlier": false,
+      "topicCount": 26,
+      "episodeCount": 24,
+      "relevanceSec": 28831,
+      "sampleTopics": [
+        "iPhone Apps und sonstiger Kram",
+        "Tim kaufte Software (Flinc, Vector Designer)",
+        "Game Center & Spiele-Empfehlungen",
+        "iPad-App-Empfehlungen (siehe Show Notes)",
+        "iBooks Author und iBooks"
+      ],
+      "episodes": [
+        47,
+        69,
+        78,
+        79,
+        80,
+        81,
+        82,
+        84,
+        88,
+        95,
+        99,
+        100,
+        102,
+        103,
+        104,
+        119,
+        127,
+        134,
+        143,
+        237,
+        264,
+        267,
+        269,
+        274
+      ]
+    },
+    {
+      "id": "ipad-geräte",
+      "name": "iPad Geräte",
+      "description": "14 Topics in 23 Episoden",
+      "isOutlier": false,
+      "topicCount": 14,
+      "episodeCount": 23,
+      "relevanceSec": 28812,
+      "sampleTopics": [
+        "iPad",
+        "iPad 3G",
+        "iPad in Spanien benutzen",
+        "iPhone 4",
+        "iPad 2"
+      ],
+      "episodes": [
+        41,
+        45,
+        46,
+        47,
+        61,
+        77,
+        79,
+        84,
+        99,
+        120,
+        153,
+        161,
+        165,
+        166,
+        174,
+        200,
+        203,
+        206,
+        226,
+        228,
+        241,
+        259,
+        273
+      ]
+    },
+    {
+      "id": "gaming-kultur",
+      "name": "Gaming Kultur",
+      "description": "28 Topics in 27 Episoden",
+      "isOutlier": false,
+      "topicCount": 28,
+      "episodeCount": 27,
+      "relevanceSec": 28333,
+      "sampleTopics": [
+        "Rätselauflösung",
+        "Microsoft und seine Produkte Bashing",
+        "Nochmal Switch",
+        "2048 Spiel",
+        "Hacksport Stricken"
+      ],
+      "episodes": [
+        79,
+        103,
+        109,
+        128,
+        131,
+        137,
+        143,
+        146,
+        153,
+        154,
+        166,
+        189,
+        195,
+        206,
+        218,
+        226,
+        243,
+        248,
+        259,
+        263,
+        269,
+        276,
+        279,
+        291,
+        293,
+        297,
+        299
+      ]
+    },
+    {
+      "id": "softwareentwicklung",
+      "name": "Softwareentwicklung",
+      "description": "28 Topics in 25 Episoden",
+      "isOutlier": false,
+      "topicCount": 28,
+      "episodeCount": 25,
+      "relevanceSec": 27944,
+      "sampleTopics": [
+        "Computer-Standort Europa",
+        "Mikroeinstellung",
+        "hukls Spur geht kaputt",
+        "Nokia, Microsoft und Samsung",
+        "Funktionstasten II"
+      ],
+      "episodes": [
+        60,
+        69,
+        81,
+        82,
+        104,
+        106,
+        127,
+        129,
+        137,
+        138,
+        153,
+        155,
+        164,
+        167,
+        194,
+        212,
+        213,
+        220,
+        239,
+        248,
+        250,
+        258,
+        269,
+        290,
+        292
+      ]
+    },
+    {
+      "id": "medien-und-technologie",
+      "name": "Medien und Technologie",
+      "description": "32 Topics in 30 Episoden",
+      "isOutlier": false,
+      "topicCount": 32,
+      "episodeCount": 30,
+      "relevanceSec": 25233,
+      "sampleTopics": [
+        "Nachrichtenanalyse",
+        "Rundfunk Durchbruch",
+        "Drei-Stream-Gesellschaft",
+        "Zukünftige Fernsehmodelle",
+        "Netatalk"
+      ],
+      "episodes": [
+        5,
+        56,
+        69,
+        75,
+        77,
+        81,
+        107,
+        138,
+        148,
+        154,
+        165,
+        170,
+        173,
+        186,
+        197,
+        202,
+        206,
+        210,
+        212,
+        215,
+        218,
+        229,
+        230,
+        236,
+        253,
+        254,
+        257,
+        259,
+        270,
+        294
+      ]
+    },
+    {
+      "id": "apple-watch",
+      "name": "Apple Watch",
+      "description": "11 Topics in 18 Episoden",
+      "isOutlier": false,
+      "topicCount": 11,
+      "episodeCount": 18,
+      "relevanceSec": 23534,
+      "sampleTopics": [
+        "Apple Watch",
+        "Keynote: Apple Watch",
+        "Apple Watch Experience",
+        "WatchOS 2",
+        "watchOS 3"
+      ],
+      "episodes": [
+        139,
+        152,
+        154,
+        157,
+        161,
+        171,
+        179,
+        183,
+        205,
+        206,
+        219,
+        222,
+        226,
+        250,
+        252,
+        260,
+        284,
+        293
+      ]
+    },
+    {
+      "id": "wwdc-und-apple",
+      "name": "WWDC und Apple",
+      "description": "28 Topics in 25 Episoden",
+      "isOutlier": false,
+      "topicCount": 28,
+      "episodeCount": 25,
+      "relevanceSec": 23321,
+      "sampleTopics": [
+        "WWDC Ankündigungen",
+        "Ankündigungen der WWDC",
+        "MacWorld in San Francisco",
+        "WWDC Vorschau",
+        "Nachrichtenlage rund um die letzte Keynote"
+      ],
+      "episodes": [
+        5,
+        6,
+        20,
+        28,
+        53,
+        67,
+        69,
+        88,
+        89,
+        90,
+        130,
+        135,
+        136,
+        155,
+        181,
+        184,
+        199,
+        207,
+        219,
+        220,
+        259,
+        260,
+        279,
+        280,
+        284
+      ]
+    },
+    {
+      "id": "reise-lifestyle",
+      "name": "Reise & Lifestyle",
+      "description": "23 Topics in 21 Episoden",
+      "isOutlier": false,
+      "topicCount": 23,
+      "episodeCount": 21,
+      "relevanceSec": 23018,
+      "sampleTopics": [
+        "Essen und Getränke",
+        "Musikgeschäfte in Berlin",
+        "Reisezubehör",
+        "Internet im Ausland",
+        "Reise-Hardware"
+      ],
+      "episodes": [
+        19,
+        107,
+        113,
+        138,
+        145,
+        161,
+        174,
+        185,
+        193,
+        205,
+        212,
+        222,
+        239,
+        241,
+        242,
+        261,
+        285,
+        289,
+        290,
+        291,
+        295
+      ]
+    },
+    {
+      "id": "mobilfunktechnik",
+      "name": "Mobilfunktechnik",
+      "description": "23 Topics in 25 Episoden",
+      "isOutlier": false,
+      "topicCount": 23,
+      "episodeCount": 25,
+      "relevanceSec": 22870,
+      "sampleTopics": [
+        "Max macht iPhone-Jailbreak",
+        "Smartphone Markt",
+        "Mobilfunk",
+        "Android & Telekommunikation",
+        "Clemens vs. Telekom"
+      ],
+      "episodes": [
+        37,
+        40,
+        94,
+        117,
+        120,
+        124,
+        141,
+        142,
+        153,
+        158,
+        162,
+        168,
+        169,
+        175,
+        176,
+        181,
+        185,
+        187,
+        198,
+        220,
+        239,
+        244,
+        248,
+        255,
+        300
+      ]
+    },
+    {
+      "id": "soziale-kultur",
+      "name": "Soziale Kultur",
+      "description": "35 Topics in 30 Episoden",
+      "isOutlier": false,
+      "topicCount": 35,
+      "episodeCount": 30,
+      "relevanceSec": 22752,
+      "sampleTopics": [
+        "Nachrichten und aktuelle Ereignisse",
+        "Mischpultprobleme",
+        "Namensgebung",
+        "Gast: Dominik",
+        "Streamdiskussion"
+      ],
+      "episodes": [
+        19,
+        38,
+        82,
+        97,
+        104,
+        131,
+        144,
+        167,
+        168,
+        174,
+        176,
+        180,
+        189,
+        190,
+        224,
+        225,
+        233,
+        235,
+        239,
+        246,
+        249,
+        255,
+        256,
+        258,
+        264,
+        276,
+        281,
+        287,
+        299,
+        301
+      ]
+    },
+    {
+      "id": "verschiedenes",
+      "name": "Verschiedenes",
+      "description": "19 Topics in 22 Episoden",
+      "isOutlier": false,
+      "topicCount": 19,
+      "episodeCount": 22,
+      "relevanceSec": 21445,
+      "sampleTopics": [
+        "Ereignisse der letzten drei Wochen",
+        "Schokolade",
+        "Das Schoki-Problem",
+        "Leben mit Windows 7",
+        "Vermischtes"
+      ],
+      "episodes": [
+        13,
+        30,
+        37,
+        43,
+        94,
+        96,
+        97,
+        113,
+        115,
+        120,
+        127,
+        133,
+        168,
+        177,
+        184,
+        190,
+        207,
+        217,
+        232,
+        248,
+        281,
+        284
+      ]
+    },
+    {
+      "id": "smart-home",
+      "name": "Smart Home",
+      "description": "14 Topics in 15 Episoden",
+      "isOutlier": false,
+      "topicCount": 14,
+      "episodeCount": 15,
+      "relevanceSec": 20880,
+      "sampleTopics": [
+        "Häuserbeleuchtung",
+        "Kommunikation mit Geräten",
+        "Heimautomatisierung #1",
+        "Heimautomatisierung #2",
+        "Heimautomatisierung"
+      ],
+      "episodes": [
+        13,
+        73,
+        77,
+        78,
+        84,
+        111,
+        126,
+        179,
+        187,
+        189,
+        200,
+        247,
+        272,
+        274,
+        298
+      ]
+    },
+    {
+      "id": "bildung-selbständigkeit",
+      "name": "Bildung & Selbständigkeit",
+      "description": "25 Topics in 24 Episoden",
+      "isOutlier": false,
+      "topicCount": 25,
+      "episodeCount": 24,
+      "relevanceSec": 20281,
+      "sampleTopics": [
+        "Leistungsupdate",
+        "Lizenzkram",
+        "Geschäftsmodell vom netatalk-Mensch",
+        "Schwarmtaler",
+        "Zucker und Sand"
+      ],
+      "episodes": [
+        36,
+        69,
+        160,
+        164,
+        180,
+        196,
+        207,
+        209,
+        216,
+        221,
+        231,
+        234,
+        239,
+        241,
+        247,
+        249,
+        256,
+        259,
+        261,
+        279,
+        280,
+        286,
+        300,
+        301
+      ]
+    },
+    {
+      "id": "chaos-communication-congress",
+      "name": "Chaos Communication Congress",
+      "description": "42 Topics in 14 Episoden",
+      "isOutlier": false,
+      "topicCount": 42,
+      "episodeCount": 14,
+      "relevanceSec": 20209,
+      "sampleTopics": [
+        "Der Kongress 29C3",
+        "Chaos Communication Congress (31C3)",
+        "32C3",
+        "32C3: Freak Show Live",
+        "32C3: rad1o++"
+      ],
+      "episodes": [
+        102,
+        146,
+        160,
+        169,
+        210,
+        228,
+        242,
+        245,
+        273,
+        284,
+        287,
+        288,
+        299,
+        301
+      ]
+    },
+    {
+      "id": "geschenke-lifestyle",
+      "name": "Geschenke & Lifestyle",
+      "description": "19 Topics in 20 Episoden",
+      "isOutlier": false,
+      "topicCount": 19,
+      "episodeCount": 20,
+      "relevanceSec": 19619,
+      "sampleTopics": [
+        "Nachrichtenlage",
+        "Weihnachten und Feiertage",
+        "Weihnachtsgeschenkempfehlungen",
+        "Präsente",
+        "Fußball-Europameisterschaft"
+      ],
+      "episodes": [
+        10,
+        19,
+        32,
+        56,
+        69,
+        91,
+        110,
+        111,
+        123,
+        126,
+        141,
+        146,
+        154,
+        162,
+        184,
+        185,
+        224,
+        228,
+        287,
+        299
+      ]
+    },
+    {
+      "id": "mac-hardware",
+      "name": "Mac Hardware",
+      "description": "10 Topics in 19 Episoden",
+      "isOutlier": false,
+      "topicCount": 10,
+      "episodeCount": 19,
+      "relevanceSec": 19497,
+      "sampleTopics": [
+        "Mac Pro",
+        "iMac oder Mac Pro?",
+        "Tims Mac Pro",
+        "iMac Pro",
+        "Mac (Book) Pro"
+      ],
+      "episodes": [
+        69,
+        78,
+        79,
+        104,
+        113,
+        132,
+        178,
+        196,
+        200,
+        205,
+        206,
+        217,
+        226,
+        236,
+        237,
+        257,
+        262,
+        263,
+        267
+      ]
+    },
+    {
+      "id": "apple-tv",
+      "name": "Apple TV",
+      "description": "19 Topics in 22 Episoden",
+      "isOutlier": false,
+      "topicCount": 19,
+      "episodeCount": 22,
+      "relevanceSec": 18826,
+      "sampleTopics": [
+        "AppleTV Videoformate",
+        "AppleTV Filme",
+        "AppleTV Alternativen",
+        "Vorstellung des neuen Apple TV",
+        "iPad 2: Technische Spezifikationen"
+      ],
+      "episodes": [
+        37,
+        49,
+        63,
+        81,
+        83,
+        89,
+        101,
+        126,
+        131,
+        140,
+        152,
+        160,
+        161,
+        162,
+        163,
+        164,
+        191,
+        204,
+        244,
+        249,
+        259,
+        260
+      ]
+    },
+    {
+      "id": "wwdc-events",
+      "name": "WWDC Events",
+      "description": "11 Topics in 23 Episoden",
+      "isOutlier": false,
+      "topicCount": 11,
+      "episodeCount": 23,
+      "relevanceSec": 18378,
+      "sampleTopics": [
+        "WWDC 2013",
+        "WWDC Keynote",
+        "Apple Keynote",
+        "WWDC",
+        "hukl reacts to WWDC"
+      ],
+      "episodes": [
+        111,
+        112,
+        117,
+        133,
+        134,
+        139,
+        142,
+        161,
+        179,
+        180,
+        183,
+        193,
+        200,
+        219,
+        222,
+        237,
+        240,
+        248,
+        250,
+        260,
+        267,
+        279,
+        293
+      ]
+    },
+    {
+      "id": "telekommunikation",
+      "name": "Telekommunikation",
+      "description": "23 Topics in 21 Episoden",
+      "isOutlier": false,
+      "topicCount": 23,
+      "episodeCount": 21,
+      "relevanceSec": 18298,
+      "sampleTopics": [
+        "Skype-Nutzung",
+        "Jabber auf Mac und iPhone",
+        "Launch von Windows Phone 7",
+        "Liger: VNC mit Abstrakt",
+        "Remote einloggen in Lion"
+      ],
+      "episodes": [
+        13,
+        38,
+        54,
+        69,
+        80,
+        100,
+        104,
+        107,
+        118,
+        128,
+        146,
+        176,
+        177,
+        185,
+        188,
+        203,
+        208,
+        209,
+        245,
+        267,
+        294
+      ]
+    },
+    {
+      "id": "apple-entwicklung",
+      "name": "Apple Entwicklung",
+      "description": "19 Topics in 17 Episoden",
+      "isOutlier": false,
+      "topicCount": 19,
+      "episodeCount": 17,
+      "relevanceSec": 17447,
+      "sampleTopics": [
+        "MacRuby",
+        "MacRuby Nachtrag",
+        "Mac OS X/iOS Programmierung",
+        "Mac-Programmierung",
+        "Software-Entwicklung für Mac und iOS"
+      ],
+      "episodes": [
+        36,
+        37,
+        68,
+        77,
+        111,
+        118,
+        133,
+        134,
+        165,
+        187,
+        195,
+        207,
+        228,
+        237,
+        253,
+        255,
+        288
+      ]
+    },
+    {
+      "id": "zahlungsverkehr",
+      "name": "Zahlungsverkehr",
+      "description": "15 Topics in 17 Episoden",
+      "isOutlier": false,
+      "topicCount": 15,
+      "episodeCount": 17,
+      "relevanceSec": 17225,
+      "sampleTopics": [
+        "Finanzsoftware",
+        "Paypal und Webseiten",
+        "Bezahl-Infrastruktur heute und morgen",
+        "Flattr",
+        "MoneyMoney"
+      ],
+      "episodes": [
+        44,
+        69,
+        95,
+        133,
+        169,
+        192,
+        198,
+        212,
+        213,
+        216,
+        221,
+        242,
+        247,
+        248,
+        277,
+        279,
+        290
+      ]
+    },
+    {
+      "id": "macos-systeme",
+      "name": "macOS Systeme",
+      "description": "27 Topics in 19 Episoden",
+      "isOutlier": false,
+      "topicCount": 27,
+      "episodeCount": 19,
+      "relevanceSec": 17203,
+      "sampleTopics": [
+        "nächste Version von Mac OS X",
+        "Drobo",
+        "Snow Leopard",
+        "Snow Leopard Server",
+        "iPhone OS 4"
+      ],
+      "episodes": [
+        6,
+        21,
+        34,
+        36,
+        40,
+        45,
+        61,
+        67,
+        69,
+        79,
+        82,
+        93,
+        112,
+        120,
+        157,
+        237,
+        260,
+        294,
+        297
+      ]
+    },
+    {
+      "id": "kryptowährungen",
+      "name": "Kryptowährungen",
+      "description": "19 Topics in 18 Episoden",
+      "isOutlier": false,
+      "topicCount": 19,
+      "episodeCount": 18,
+      "relevanceSec": 16001,
+      "sampleTopics": [
+        "Bitcoin-Imperium",
+        "BitCoin, JOYN und Mobilfunk",
+        "Geld und Authentifizierung",
+        "Bitcoin und IPv6",
+        "Währungen: von analog bis Bitcoin"
+      ],
+      "episodes": [
+        68,
+        106,
+        111,
+        123,
+        146,
+        160,
+        165,
+        177,
+        179,
+        190,
+        196,
+        197,
+        202,
+        241,
+        250,
+        258,
+        260,
+        273
+      ]
+    },
+    {
+      "id": "podlove-tools",
+      "name": "Podlove Tools",
+      "description": "14 Topics in 14 Episoden",
+      "isOutlier": false,
+      "topicCount": 14,
+      "episodeCount": 14,
+      "relevanceSec": 15313,
+      "sampleTopics": [
+        "Podcast AutoPlay",
+        "Podlove Publishing Plugin für Wordpress",
+        "Podcasting",
+        "Podlove Podcast Publisher und Web Player",
+        "Podcast Publishing"
+      ],
+      "episodes": [
+        39,
+        95,
+        100,
+        101,
+        107,
+        128,
+        138,
+        141,
+        142,
+        155,
+        195,
+        215,
+        219,
+        247
+      ]
+    },
+    {
+      "id": "e-mobilität",
+      "name": "E-Mobilität",
+      "description": "13 Topics in 13 Episoden",
+      "isOutlier": false,
+      "topicCount": 13,
+      "episodeCount": 13,
+      "relevanceSec": 15126,
+      "sampleTopics": [
+        "E-Roller vs. Auto vs. Fahrrad",
+        "E-Bikes",
+        "Elektroscooter",
+        "E-Scooter",
+        "Elektrokleinstfahrzeuge"
+      ],
+      "episodes": [
+        195,
+        205,
+        226,
+        227,
+        228,
+        230,
+        232,
+        233,
+        234,
+        246,
+        251,
+        264,
+        290
+      ]
+    },
+    {
+      "id": "kultur-und-musik",
+      "name": "Kultur und Musik",
+      "description": "21 Topics in 19 Episoden",
+      "isOutlier": false,
+      "topicCount": 21,
+      "episodeCount": 19,
+      "relevanceSec": 14268,
+      "sampleTopics": [
+        "Aus dem Party-Weltall",
+        "Soziale Interaktionen bei Veranstaltungen",
+        "Musik",
+        "Bier",
+        "NOKIA, finnische Sprache, Tanzen"
+      ],
+      "episodes": [
+        37,
+        90,
+        98,
+        117,
+        121,
+        123,
+        176,
+        184,
+        187,
+        207,
+        208,
+        227,
+        235,
+        256,
+        260,
+        261,
+        269,
+        270,
+        294
+      ]
+    },
+    {
+      "id": "sicherheit-und-verschlüsselung",
+      "name": "Sicherheit und Verschlüsselung",
+      "description": "11 Topics in 11 Episoden",
+      "isOutlier": false,
+      "topicCount": 11,
+      "episodeCount": 11,
+      "relevanceSec": 14167,
+      "sampleTopics": [
+        "Crypto",
+        "Verschlüsselung",
+        "Zertifikate",
+        "Apple-Zertifikate",
+        "GPG Key Erzeugung und Benutzung"
+      ],
+      "episodes": [
+        114,
+        115,
+        131,
+        142,
+        158,
+        161,
+        162,
+        211,
+        223,
+        227,
+        239
+      ]
+    },
+    {
+      "id": "vintage-computing",
+      "name": "Vintage Computing",
+      "description": "14 Topics in 14 Episoden",
+      "isOutlier": false,
+      "topicCount": 14,
+      "episodeCount": 14,
+      "relevanceSec": 13997,
+      "sampleTopics": [
+        "Alte Rechner und Läden",
+        "Analoge Hobbys",
+        "Vintage Computing ist auch nichts neues",
+        "Der Eier-Entscheidungs-Computer",
+        "Retrocomputing mit 68K"
+      ],
+      "episodes": [
+        104,
+        123,
+        141,
+        172,
+        193,
+        200,
+        218,
+        223,
+        224,
+        225,
+        232,
+        236,
+        254,
+        282
+      ]
+    },
+    {
+      "id": "freak-show",
+      "name": "Freak Show",
+      "description": "18 Topics in 17 Episoden",
+      "isOutlier": false,
+      "topicCount": 18,
+      "episodeCount": 17,
+      "relevanceSec": 13856,
+      "sampleTopics": [
+        "Mailkompetenz",
+        "Mail",
+        "Freakmails",
+        "Freak Show Meta",
+        "Freak Show Termine"
+      ],
+      "episodes": [
+        101,
+        103,
+        117,
+        118,
+        153,
+        177,
+        200,
+        203,
+        205,
+        214,
+        215,
+        238,
+        240,
+        252,
+        264,
+        287,
+        300
+      ]
+    },
+    {
+      "id": "dateisysteme",
+      "name": "Dateisysteme",
+      "description": "13 Topics in 15 Episoden",
+      "isOutlier": false,
+      "topicCount": 13,
+      "episodeCount": 15,
+      "relevanceSec": 13720,
+      "sampleTopics": [
+        "Liger: Filesystem",
+        "Thema Kapitelmarken",
+        "LV(M) und Filesystem",
+        "Festplatten und Dateisysteme",
+        "Dateisysteme"
+      ],
+      "episodes": [
+        69,
+        82,
+        99,
+        105,
+        149,
+        166,
+        173,
+        175,
+        179,
+        181,
+        198,
+        200,
+        214,
+        283,
+        294
+      ]
+    },
+    {
+      "id": "chatgpt-und-ai",
+      "name": "ChatGPT und AI",
+      "description": "8 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 7,
+      "relevanceSec": 13698,
+      "sampleTopics": [
+        "Nerdtalk für angehende Programmierer",
+        "Voice Coder und Skynet",
+        "ChatGPT und die Anwendung von AI",
+        "ChatGPT Integrationen und Plugins",
+        "Programmieren mit ChatGPT"
+      ],
+      "episodes": [
+        75,
+        225,
+        265,
+        266,
+        268,
+        279,
+        289
+      ]
+    },
+    {
+      "id": "telekommunikation",
+      "name": "Telekommunikation",
+      "description": "16 Topics in 15 Episoden",
+      "isOutlier": false,
+      "topicCount": 16,
+      "episodeCount": 15,
+      "relevanceSec": 13666,
+      "sampleTopics": [
+        "Telekom(unikation) Beschwerdeecke",
+        "Drosselkom",
+        "Telekom",
+        "O2 Tarife",
+        "Neue Angebote in magenta"
+      ],
+      "episodes": [
+        103,
+        110,
+        112,
+        136,
+        146,
+        150,
+        165,
+        170,
+        200,
+        202,
+        214,
+        223,
+        244,
+        290,
+        298
+      ]
+    },
+    {
+      "id": "design-und-software",
+      "name": "Design und Software",
+      "description": "14 Topics in 13 Episoden",
+      "isOutlier": false,
+      "topicCount": 14,
+      "episodeCount": 13,
+      "relevanceSec": 13267,
+      "sampleTopics": [
+        "Bildschrimschoner",
+        "Schriftarten",
+        "Schoki-Request",
+        "Sound und Design für Games",
+        "Schöne Plakate"
+      ],
+      "episodes": [
+        82,
+        102,
+        165,
+        171,
+        173,
+        187,
+        207,
+        221,
+        232,
+        251,
+        277,
+        283,
+        290
+      ]
+    },
+    {
+      "id": "mobiles-internet",
+      "name": "Mobiles Internet",
+      "description": "14 Topics in 13 Episoden",
+      "isOutlier": false,
+      "topicCount": 14,
+      "episodeCount": 13,
+      "relevanceSec": 13209,
+      "sampleTopics": [
+        "iPhone Tethering reaktivieren",
+        "iPhone Tethering",
+        "Tethered",
+        "Tethering kaputt",
+        "AirDrop"
+      ],
+      "episodes": [
+        36,
+        39,
+        44,
+        69,
+        96,
+        108,
+        135,
+        155,
+        166,
+        191,
+        198,
+        203,
+        281
       ]
     },
     {
@@ -113,82 +1995,315 @@
       ]
     },
     {
-      "id": "heimautomatisierung",
-      "name": "Heimautomatisierung",
-      "description": "7 Topics in 8 Episoden",
+      "id": "arm-macs",
+      "name": "ARM Macs",
+      "description": "10 Topics in 10 Episoden",
+      "isOutlier": false,
+      "topicCount": 10,
+      "episodeCount": 10,
+      "relevanceSec": 12949,
+      "sampleTopics": [
+        "Apple Custom Silicon",
+        "Mac mit ARM",
+        "ARM-Zukunft in Macs",
+        "Macs auf ARM",
+        "macOS und 64 Bit und ARM und die Cloud"
+      ],
+      "episodes": [
+        204,
+        206,
+        208,
+        215,
+        216,
+        233,
+        239,
+        249,
+        250,
+        253
+      ]
+    },
+    {
+      "id": "webhosting",
+      "name": "Webhosting",
+      "description": "12 Topics in 12 Episoden",
+      "isOutlier": false,
+      "topicCount": 12,
+      "episodeCount": 12,
+      "relevanceSec": 12946,
+      "sampleTopics": [
+        "inunico.de",
+        "World Wide Web Diverses",
+        "Fritz!Box-Hack",
+        "Webforen",
+        "Hukl-Mail"
+      ],
+      "episodes": [
+        77,
+        95,
+        126,
+        127,
+        133,
+        148,
+        149,
+        151,
+        166,
+        211,
+        213,
+        295
+      ]
+    },
+    {
+      "id": "star-wars-und-filme",
+      "name": "Star Wars und Filme",
+      "description": "12 Topics in 15 Episoden",
+      "isOutlier": false,
+      "topicCount": 12,
+      "episodeCount": 15,
+      "relevanceSec": 12666,
+      "sampleTopics": [
+        "Prinzessin Leia",
+        "Blade Runner",
+        "Star Wars",
+        "Star Wars Despecialized Version",
+        "Star Wars 7"
+      ],
+      "episodes": [
+        37,
+        77,
+        168,
+        169,
+        170,
+        172,
+        174,
+        177,
+        189,
+        198,
+        207,
+        224,
+        238,
+        262,
+        291
+      ]
+    },
+    {
+      "id": "zfs-auf-mac",
+      "name": "ZFS auf Mac",
+      "description": "21 Topics in 17 Episoden",
+      "isOutlier": false,
+      "topicCount": 21,
+      "episodeCount": 17,
+      "relevanceSec": 12599,
+      "sampleTopics": [
+        "TimeMachine über Netatalk 2.0.5 auf FreeBSD mit ZFS",
+        "ZFS-Laberei",
+        "Geheule, da es kein ZFS im Mac geben wird",
+        "Lion: Filesystem, FileVault",
+        "Lion: FileVault mit mehreren Usern"
+      ],
+      "episodes": [
+        37,
+        69,
+        79,
+        80,
+        94,
+        123,
+        140,
+        162,
+        179,
+        184,
+        192,
+        202,
+        208,
+        218,
+        220,
+        236,
+        237
+      ]
+    },
+    {
+      "id": "3d-medien",
+      "name": "3D Medien",
+      "description": "7 Topics in 7 Episoden",
       "isOutlier": false,
       "topicCount": 7,
-      "episodeCount": 8,
-      "relevanceSec": 12942,
+      "episodeCount": 7,
+      "relevanceSec": 12402,
       "sampleTopics": [
-        "Heimautomatisierung #1",
-        "Heimautomatisierung #2",
-        "Heimautomatisierung",
-        "Heim-/ Hausautomation",
-        "Hausüberwachung und -steuerung"
+        "Die Contentindustrie",
+        "VFX, 3D und Kino",
+        "Software für 3D und Apples neue Rechner",
+        "3D Kinos",
+        "3D-Drucker"
       ],
       "episodes": [
-        77,
-        78,
-        84,
-        111,
-        179,
-        189,
-        200,
-        274
+        79,
+        121,
+        168,
+        275,
+        278,
+        286,
+        292
       ]
     },
     {
-      "id": "apple-desktop-rechner",
-      "name": "Apple Desktop Rechner",
-      "description": "2 Topics in 10 Episoden",
+      "id": "swift-entwicklung",
+      "name": "Swift Entwicklung",
+      "description": "9 Topics in 10 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
+      "topicCount": 9,
       "episodeCount": 10,
-      "relevanceSec": 11594,
+      "relevanceSec": 12043,
       "sampleTopics": [
-        "Mac Pro",
-        "iMac Pro"
+        "Swift",
+        "Swift 1.2",
+        "Swift Compiler Crashes",
+        "Swift 2",
+        "Swift 2.2"
       ],
       "episodes": [
-        69,
-        104,
-        113,
-        132,
-        178,
-        196,
-        200,
-        206,
-        217,
-        267
+        134,
+        135,
+        151,
+        152,
+        157,
+        167,
+        172,
+        179,
+        215,
+        252
       ]
     },
     {
-      "id": "ipad-modelle",
-      "name": "iPad Modelle",
-      "description": "4 Topics in 6 Episoden",
+      "id": "finanzen",
+      "name": "Finanzen",
+      "description": "16 Topics in 17 Episoden",
       "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 6,
-      "relevanceSec": 11269,
+      "topicCount": 16,
+      "episodeCount": 17,
+      "relevanceSec": 11468,
       "sampleTopics": [
-        "iPad",
-        "iPad 3G",
-        "iPad 2",
-        "iPad 3"
+        "Quartalsendeberichtserstattungsfinanzkasper",
+        "Roddi und der Fahrstuhl",
+        "Kasse",
+        "Wer kauft was?",
+        "Spass mit Rechnungswesen"
       ],
       "episodes": [
-        41,
-        45,
-        46,
-        61,
-        77,
-        84
+        103,
+        157,
+        168,
+        186,
+        192,
+        193,
+        205,
+        221,
+        233,
+        239,
+        242,
+        252,
+        254,
+        262,
+        273,
+        291,
+        300
       ]
     },
     {
-      "id": "mastodon-vs-twitter",
-      "name": "Mastodon vs. Twitter",
+      "id": "zfs",
+      "name": "ZFS",
+      "description": "9 Topics in 13 Episoden",
+      "isOutlier": false,
+      "topicCount": 9,
+      "episodeCount": 13,
+      "relevanceSec": 11211,
+      "sampleTopics": [
+        "ZFS",
+        "Feedback zu ZFS",
+        "ZFS is dead",
+        "OpenZFS",
+        "FreeBSD/ZFS"
+      ],
+      "episodes": [
+        2,
+        21,
+        36,
+        81,
+        96,
+        118,
+        119,
+        126,
+        148,
+        175,
+        177,
+        187,
+        255
+      ]
+    },
+    {
+      "id": "apple-retail",
+      "name": "Apple Retail",
+      "description": "17 Topics in 17 Episoden",
+      "isOutlier": false,
+      "topicCount": 17,
+      "episodeCount": 17,
+      "relevanceSec": 11136,
+      "sampleTopics": [
+        "Apple-Store in Hamburg",
+        "Apple Store FFM",
+        "Neuer AppleStore in Hamburg",
+        "Der Apple Store Berlin-Scoop",
+        "Apple-Store Berlin"
+      ],
+      "episodes": [
+        37,
+        39,
+        78,
+        80,
+        82,
+        96,
+        98,
+        99,
+        100,
+        102,
+        105,
+        107,
+        108,
+        109,
+        110,
+        172,
+        204
+      ]
+    },
+    {
+      "id": "lichtkunst",
+      "name": "Lichtkunst",
+      "description": "10 Topics in 9 Episoden",
+      "isOutlier": false,
+      "topicCount": 10,
+      "episodeCount": 9,
+      "relevanceSec": 10987,
+      "sampleTopics": [
+        "Wandel der Stadt",
+        "Kunst",
+        "Bilderrahmen",
+        "Tolles Licht",
+        "Lichtkunst"
+      ],
+      "episodes": [
+        228,
+        232,
+        233,
+        239,
+        244,
+        254,
+        256,
+        265,
+        283
+      ]
+    },
+    {
+      "id": "mastodon-und-twitter",
+      "name": "Mastodon und Twitter",
       "description": "5 Topics in 6 Episoden",
       "isOutlier": false,
       "topicCount": 5,
@@ -211,180 +2326,444 @@
       ]
     },
     {
-      "id": "star-wars-und-sci-fi",
-      "name": "Star Wars und Sci-Fi",
-      "description": "10 Topics in 13 Episoden",
+      "id": "re-publica",
+      "name": "re:publica",
+      "description": "8 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 7,
+      "relevanceSec": 10756,
+      "sampleTopics": [
+        "re:publica 2013",
+        "Netz auf der re:publica",
+        "re:publica-Netzwerk",
+        "re:publica-Vorträge",
+        "re:publica 15"
+      ],
+      "episodes": [
+        110,
+        111,
+        132,
+        154,
+        155,
+        176,
+        198
+      ]
+    },
+    {
+      "id": "elixir-programmierung",
+      "name": "Elixir Programmierung",
+      "description": "11 Topics in 10 Episoden",
+      "isOutlier": false,
+      "topicCount": 11,
+      "episodeCount": 10,
+      "relevanceSec": 10343,
+      "sampleTopics": [
+        "Erlang Diskussion",
+        "Erlang",
+        "Remote arbeiten",
+        "Betreutes Programmieren und Elixir",
+        "Online-Immersion"
+      ],
+      "episodes": [
+        86,
+        157,
+        225,
+        247,
+        248,
+        264,
+        265,
+        268,
+        285,
+        292
+      ]
+    },
+    {
+      "id": "apple-finanzen",
+      "name": "Apple Finanzen",
+      "description": "7 Topics in 13 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 13,
+      "relevanceSec": 10189,
+      "sampleTopics": [
+        "iPhoto für iOS",
+        "Apple Bank",
+        "Apple Pay",
+        "ApplePay",
+        "Feedback: Apple Pay"
+      ],
+      "episodes": [
+        84,
+        99,
+        164,
+        179,
+        181,
+        183,
+        200,
+        222,
+        223,
+        226,
+        228,
+        234,
+        244
+      ]
+    },
+    {
+      "id": "softwareentwicklung",
+      "name": "Softwareentwicklung",
+      "description": "10 Topics in 12 Episoden",
       "isOutlier": false,
       "topicCount": 10,
-      "episodeCount": 13,
-      "relevanceSec": 10741,
+      "episodeCount": 12,
+      "relevanceSec": 9872,
       "sampleTopics": [
-        "Blade Runner",
-        "Star Wars",
-        "Star Wars 7",
-        "Blade Runner 2049",
-        "Rogue One"
+        "Technische Herausforderungen",
+        "Themensuche",
+        "Development",
+        "Software-Entwicklung und Projektmanagement",
+        "Verhinderte Kunstprojekte"
       ],
       "episodes": [
-        77,
-        168,
-        170,
-        172,
-        174,
-        177,
-        189,
-        198,
-        207,
-        224,
-        238,
-        262,
-        291
-      ]
-    },
-    {
-      "id": "chatgpt-programmierung",
-      "name": "ChatGPT Programmierung",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 9416,
-      "sampleTopics": [
-        "ChatGPT und die Anwendung von AI",
-        "Programmieren mit ChatGPT",
-        "Programmieren mit ChatGPT4"
-      ],
-      "episodes": [
-        265,
-        266,
-        268
-      ]
-    },
-    {
-      "id": "wwdc-keynote",
-      "name": "WWDC Keynote",
-      "description": "3 Topics in 13 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 13,
-      "relevanceSec": 9053,
-      "sampleTopics": [
-        "WWDC Keynote",
-        "WWDC",
-        "WWDC: Keynote"
-      ],
-      "episodes": [
-        112,
-        133,
-        134,
-        179,
-        193,
-        200,
+        14,
+        37,
+        114,
+        130,
+        190,
+        195,
+        212,
         219,
-        237,
-        250,
-        260,
-        267,
+        225,
+        277,
         279,
         293
       ]
     },
     {
-      "id": "apple-car-ecosystem",
-      "name": "Apple Car Ecosystem",
+      "id": "freebsd",
+      "name": "FreeBSD",
+      "description": "6 Topics in 9 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 9,
+      "relevanceSec": 9799,
+      "sampleTopics": [
+        "Einsatz von FreeBSD als Apple File Server",
+        "FreeBSD",
+        "FreeBSD auf dem MacPro",
+        "Pimp My Mac: FreeBSD",
+        "FreeBSD 10.3"
+      ],
+      "episodes": [
+        54,
+        93,
+        125,
+        139,
+        143,
+        164,
+        174,
+        194,
+        200
+      ]
+    },
+    {
+      "id": "konferenzen",
+      "name": "Konferenzen",
+      "description": "7 Topics in 8 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 8,
+      "relevanceSec": 9765,
+      "sampleTopics": [
+        "Konferenzen",
+        "Konferenzen und Diversity",
+        "Konferenzen und Apps",
+        "Location fürs internationale Meetings",
+        "Konferenzsysteme"
+      ],
+      "episodes": [
+        118,
+        136,
+        142,
+        153,
+        176,
+        214,
+        232,
+        250
+      ]
+    },
+    {
+      "id": "360-grad-medien",
+      "name": "360-Grad Medien",
+      "description": "8 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 7,
+      "relevanceSec": 9653,
+      "sampleTopics": [
+        "Sound und Kamera",
+        "YouTube macht 360-Grad-Videos",
+        "360 Grad Fischaugenkameras",
+        "360 Grad Kameras",
+        "VLC 3 und 360 Fotografie"
+      ],
+      "episodes": [
+        96,
+        153,
+        193,
+        199,
+        212,
+        234,
+        294
+      ]
+    },
+    {
+      "id": "hardware-diy",
+      "name": "Hardware DIY",
+      "description": "14 Topics in 15 Episoden",
+      "isOutlier": false,
+      "topicCount": 14,
+      "episodeCount": 15,
+      "relevanceSec": 9648,
+      "sampleTopics": [
+        "Hardware-Neuvorstellungen",
+        "Hardware-Basteleien",
+        "SSD und Backupsysteme",
+        "Hardware-RAIDs",
+        "Hardwarebastel"
+      ],
+      "episodes": [
+        24,
+        54,
+        68,
+        79,
+        129,
+        151,
+        186,
+        192,
+        194,
+        195,
+        213,
+        239,
+        253,
+        281,
+        298
+      ]
+    },
+    {
+      "id": "raketentechnologie",
+      "name": "Raketentechnologie",
+      "description": "9 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 9,
+      "episodeCount": 6,
+      "relevanceSec": 9519,
+      "sampleTopics": [
+        "Raketenstart und Schwerelosigkeit",
+        "Raketentechnik",
+        "Rocket Launches",
+        "Rakete 1",
+        "Rakete 2"
+      ],
+      "episodes": [
+        133,
+        185,
+        192,
+        211,
+        212,
+        255
+      ]
+    },
+    {
+      "id": "digitale-gesundheit",
+      "name": "Digitale Gesundheit",
+      "description": "10 Topics in 9 Episoden",
+      "isOutlier": false,
+      "topicCount": 10,
+      "episodeCount": 9,
+      "relevanceSec": 9343,
+      "sampleTopics": [
+        "Health Tracking",
+        "Ethische Aspekte der Kryptowährungen",
+        "Medizinische Informatik",
+        "Feedback: Infotainmentsysteme in Autos",
+        "Zukünftige medizinische Anwendungen"
+      ],
+      "episodes": [
+        182,
+        202,
+        218,
+        222,
+        224,
+        237,
+        249,
+        250,
+        261
+      ]
+    },
+    {
+      "id": "transport-und-infrastruktur",
+      "name": "Transport und Infrastruktur",
+      "description": "14 Topics in 11 Episoden",
+      "isOutlier": false,
+      "topicCount": 14,
+      "episodeCount": 11,
+      "relevanceSec": 9253,
+      "sampleTopics": [
+        "Bahn und Netz",
+        "Pfeifen",
+        "Dieselgate und Verkehr",
+        "Mut zur Infrastruktur",
+        "Die Bahn und der Sturm"
+      ],
+      "episodes": [
+        156,
+        197,
+        202,
+        205,
+        206,
+        230,
+        239,
+        251,
+        258,
+        278,
+        291
+      ]
+    },
+    {
+      "id": "vision-pro",
+      "name": "Vision Pro",
+      "description": "7 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 4,
+      "relevanceSec": 9130,
+      "sampleTopics": [
+        "Technologie",
+        "Vision Pro: die Technik und das Konzept",
+        "Vision Pro: Mögilche Anwendungen",
+        "Vision Pro: Kaufjuckreiz",
+        "Vision Pro: Worüber sie nicht gesprochen haben"
+      ],
+      "episodes": [
+        9,
+        267,
+        275,
+        279
+      ]
+    },
+    {
+      "id": "fritz-box",
+      "name": "Fritz!Box",
+      "description": "12 Topics in 11 Episoden",
+      "isOutlier": false,
+      "topicCount": 12,
+      "episodeCount": 11,
+      "relevanceSec": 9072,
+      "sampleTopics": [
+        "UMTS Stick",
+        "FritzBox",
+        "Labor-Firmware für die FritzBox 7390",
+        "AVM Fritz!Box",
+        "WLAN Kram"
+      ],
+      "episodes": [
+        36,
+        77,
+        80,
+        98,
+        99,
+        106,
+        117,
+        120,
+        152,
+        188,
+        227
+      ]
+    },
+    {
+      "id": "clubhouse-und-kommunikation",
+      "name": "Clubhouse und Kommunikation",
+      "description": "18 Topics in 12 Episoden",
+      "isOutlier": false,
+      "topicCount": 18,
+      "episodeCount": 12,
+      "relevanceSec": 8995,
+      "sampleTopics": [
+        "Interaktive Sendung",
+        "Fragen der Zuhörer",
+        "Rückkehr von Bumm Zack",
+        "Live-Chat Interaktion",
+        "Feedback zur letzten Sendung von Denis"
+      ],
+      "episodes": [
+        10,
+        11,
+        63,
+        66,
+        126,
+        169,
+        178,
+        257,
+        278,
+        282,
+        283,
+        296
+      ]
+    },
+    {
+      "id": "reiseberichte",
+      "name": "Reiseberichte",
+      "description": "15 Topics in 11 Episoden",
+      "isOutlier": false,
+      "topicCount": 15,
+      "episodeCount": 11,
+      "relevanceSec": 8781,
+      "sampleTopics": [
+        "Urlaub in Norwegen",
+        "Urlaub in Schweden und der Schweiz",
+        "Noch mehr Urlaub in Schweden",
+        "Clemens auf Reisen",
+        "Wissenswertes über Schweden"
+      ],
+      "episodes": [
+        182,
+        185,
+        204,
+        212,
+        214,
+        221,
+        238,
+        245,
+        278,
+        282,
+        295
+      ]
+    },
+    {
+      "id": "apple-car",
+      "name": "Apple Car",
       "description": "8 Topics in 8 Episoden",
       "isOutlier": false,
       "topicCount": 8,
       "episodeCount": 8,
-      "relevanceSec": 9001,
+      "relevanceSec": 8712,
       "sampleTopics": [
-        "Maps und iCloud",
+        "Apples iTunes-Support",
         "Apple Car",
         "Apple Car Project",
         "CarPlay und Maps",
         "CarPlay"
       ],
       "episodes": [
-        102,
+        127,
         152,
         175,
         201,
         206,
         221,
         237,
-        281
-      ]
-    },
-    {
-      "id": "apple-betriebssysteme",
-      "name": "Apple Betriebssysteme",
-      "description": "5 Topics in 8 Episoden",
-      "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 8,
-      "relevanceSec": 8978,
-      "sampleTopics": [
-        "iOSX",
-        "iOS",
-        "macOS",
-        "macOS: App Store",
-        "iOS 12"
-      ],
-      "episodes": [
-        98,
-        110,
-        113,
-        175,
-        219,
-        220,
-        222,
-        293
-      ]
-    },
-    {
-      "id": "netzwerktechnik",
-      "name": "Netzwerktechnik",
-      "description": "5 Topics in 5 Episoden",
-      "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 5,
-      "relevanceSec": 8601,
-      "sampleTopics": [
-        "Netzwerktechnik",
-        "Netzwerke",
-        "Netzwerkkram",
-        "Netzwerken",
-        "Netzwerk"
-      ],
-      "episodes": [
-        103,
-        106,
-        131,
-        133,
-        144
-      ]
-    },
-    {
-      "id": "re-publica-events",
-      "name": "re:publica Events",
-      "description": "5 Topics in 5 Episoden",
-      "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 5,
-      "relevanceSec": 8550,
-      "sampleTopics": [
-        "re:publica 2013",
-        "Netz auf der re:publica",
-        "re:publica-Netzwerk",
-        "re:publica 2017",
-        "Netz auf der re:publica 2017"
-      ],
-      "episodes": [
-        110,
-        111,
-        132,
-        176,
-        198
+        250
       ]
     },
     {
@@ -408,320 +2787,697 @@
       ]
     },
     {
-      "id": "iphone-modelle",
-      "name": "iPhone Modelle",
-      "description": "4 Topics in 7 Episoden",
+      "id": "tims-leben",
+      "name": "Tims Leben",
+      "description": "18 Topics in 13 Episoden",
       "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 7,
-      "relevanceSec": 8173,
+      "topicCount": 18,
+      "episodeCount": 13,
+      "relevanceSec": 8419,
       "sampleTopics": [
-        "iPhone",
-        "iPhone X",
-        "iPhone Xs/Xr",
-        "iPhone Xs"
+        "Dialog zwischen Tim und Max",
+        "Erfahrungen mit iLife und Aperture",
+        "Tim's Reise nach München",
+        "Jaja, Backup…",
+        "Tim will sich was wünschen"
       ],
       "episodes": [
-        9,
-        73,
-        204,
-        208,
-        213,
-        222,
-        231
-      ]
-    },
-    {
-      "id": "mac-hardware",
-      "name": "Mac-Hardware",
-      "description": "5 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 4,
-      "relevanceSec": 8059,
-      "sampleTopics": [
-        "Mac-Hardware",
-        "Mac-Hardware Teil 2",
-        "Mac",
-        "Macs",
-        "Mac Pro Teil 2"
-      ],
-      "episodes": [
-        142,
-        145,
-        163,
-        178
-      ]
-    },
-    {
-      "id": "tesla-elektromobilität",
-      "name": "Tesla Elektromobilität",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 7798,
-      "sampleTopics": [
-        "Tesla-Testfahrt",
-        "Elektromobilität und Tesla",
-        "Tesla und Elektromobilität",
-        "Tesla fahren"
-      ],
-      "episodes": [
-        163,
+        21,
+        54,
+        63,
+        69,
+        77,
+        150,
+        156,
         169,
-        191,
-        244
+        190,
+        210,
+        239,
+        282,
+        288
       ]
     },
     {
-      "id": "apple-store-berlin",
-      "name": "Apple Store Berlin",
-      "description": "10 Topics in 11 Episoden",
+      "id": "hardware-zubehör",
+      "name": "Hardware Zubehör",
+      "description": "12 Topics in 12 Episoden",
+      "isOutlier": false,
+      "topicCount": 12,
+      "episodeCount": 12,
+      "relevanceSec": 8089,
+      "sampleTopics": [
+        "Produktivität mit dem iPad",
+        "Das Keyboard",
+        "Mobilgeräte",
+        "Robustheit von Notebooks",
+        "Tastaturen und Trackpads"
+      ],
+      "episodes": [
+        77,
+        79,
+        100,
+        142,
+        153,
+        186,
+        187,
+        188,
+        200,
+        252,
+        257,
+        272
+      ]
+    },
+    {
+      "id": "flash-technologien",
+      "name": "Flash-Technologien",
+      "description": "9 Topics in 10 Episoden",
+      "isOutlier": false,
+      "topicCount": 9,
+      "episodeCount": 10,
+      "relevanceSec": 8036,
+      "sampleTopics": [
+        "Flash und HTML5",
+        "Flash und Touch",
+        "Apple-Adobe-Flash-Saga",
+        "Occupy Flash",
+        "Flash"
+      ],
+      "episodes": [
+        42,
+        43,
+        46,
+        77,
+        146,
+        174,
+        186,
+        197,
+        202,
+        232
+      ]
+    },
+    {
+      "id": "gespräche-gäste",
+      "name": "Gespräche & Gäste",
+      "description": "9 Topics in 9 Episoden",
+      "isOutlier": false,
+      "topicCount": 9,
+      "episodeCount": 9,
+      "relevanceSec": 8014,
+      "sampleTopics": [
+        "Gast: Martin Pittenauer (@map)",
+        "Affenschwanz am Lattenzaun",
+        "Max ist zu Gast",
+        "Tobias Engel",
+        "Ralf und Heiko"
+      ],
+      "episodes": [
+        94,
+        137,
+        139,
+        181,
+        195,
+        230,
+        257,
+        264,
+        273
+      ]
+    },
+    {
+      "id": "apple-vision-pro",
+      "name": "Apple Vision Pro",
+      "description": "10 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 10,
-      "episodeCount": 11,
-      "relevanceSec": 7766,
+      "episodeCount": 3,
+      "relevanceSec": 7979,
       "sampleTopics": [
-        "Apple-Store in Hamburg",
-        "Neuer AppleStore in Hamburg",
-        "Der Apple Store Berlin-Scoop",
-        "Apple-Store Berlin",
-        "Apple-Store-Eröffnungen"
+        "Anwendungen für VR",
+        "Vision Pro: Unboxing und Komponenten",
+        "Vision Pro: Kameras und Schärfe",
+        "Vision Pro: Bedienung von Menü und Fenstern",
+        "Vision Pro: Filme und Videos"
       ],
       "episodes": [
-        37,
-        78,
-        80,
-        82,
-        96,
-        100,
-        105,
-        107,
-        108,
-        109,
-        110
+        199,
+        275,
+        289
       ]
     },
     {
-      "id": "freebsd-server",
-      "name": "FreeBSD Server",
-      "description": "2 Topics in 5 Episoden",
+      "id": "messer-sicherheit",
+      "name": "Messer & Sicherheit",
+      "description": "8 Topics in 6 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 5,
-      "relevanceSec": 7600,
-      "sampleTopics": [
-        "FreeBSD",
-        "FreeBSD auf Servern"
-      ],
-      "episodes": [
-        93,
-        125,
-        143,
-        194,
-        200
-      ]
-    },
-    {
-      "id": "neue-macs",
-      "name": "Neue Macs",
-      "description": "4 Topics in 7 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 7,
-      "relevanceSec": 6856,
-      "sampleTopics": [
-        "Neue Macs",
-        "Macs kaufen",
-        "Die neuen Macs",
-        "Macintosh Kaufberatung"
-      ],
-      "episodes": [
-        99,
-        183,
-        231,
-        252,
-        262,
-        271,
-        290
-      ]
-    },
-    {
-      "id": "geschenke-sport",
-      "name": "Geschenke & Sport",
-      "description": "5 Topics in 6 Episoden",
-      "isOutlier": false,
-      "topicCount": 5,
+      "topicCount": 8,
       "episodeCount": 6,
-      "relevanceSec": 6817,
+      "relevanceSec": 7807,
       "sampleTopics": [
-        "Präsente",
-        "Geschenke",
-        "Geschenke/Sport",
-        "Sport",
-        "Weihnachtsgeschenke"
+        "iChat Passwörter",
+        "GSM-Hack",
+        "Messer schärfen",
+        "YouTube Channel Tipps: Math",
+        "Messerschärfen"
       ],
       "episodes": [
         69,
-        123,
-        141,
-        146,
-        184,
-        299
+        115,
+        252,
+        263,
+        296,
+        298
       ]
     },
     {
-      "id": "hukl-mail-server",
-      "name": "Hukl Mail & Server",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 6690,
-      "sampleTopics": [
-        "Hukl-Mail",
-        "Hukls Mailserversetup",
-        "Webhosting",
-        "Serveradministration"
-      ],
-      "episodes": [
-        133,
-        148,
-        149,
-        213
-      ]
-    },
-    {
-      "id": "elektroautos",
-      "name": "Elektroautos",
-      "description": "5 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 4,
-      "relevanceSec": 6574,
-      "sampleTopics": [
-        "Elektrische Autos",
-        "E-Autos",
-        "Elektroautos",
-        "Elektroauto verkaufen",
-        "Elektroauto kaufen"
-      ],
-      "episodes": [
-        154,
-        162,
-        201,
-        276
-      ]
-    },
-    {
-      "id": "audiotechnik",
-      "name": "Audiotechnik",
-      "description": "7 Topics in 8 Episoden",
+      "id": "dokumentenmanagement",
+      "name": "Dokumentenmanagement",
+      "description": "7 Topics in 7 Episoden",
       "isOutlier": false,
       "topicCount": 7,
-      "episodeCount": 8,
-      "relevanceSec": 6486,
+      "episodeCount": 7,
+      "relevanceSec": 7800,
       "sampleTopics": [
-        "Audiotechnik",
-        "Audio",
-        "Audio-Equipment",
-        "Neue Lautsprecher",
-        "Digitale Verstärker"
+        "Scanner und Dokumentenmanagement",
+        "Dokumentenscanning",
+        "Digitaler Dokumentenscan",
+        "Document Scanner",
+        "Shredder und Scanner"
       ],
       "episodes": [
-        101,
-        122,
-        127,
-        150,
-        186,
-        207,
-        210,
+        102,
+        103,
+        104,
+        105,
+        117,
+        216,
+        278
+      ]
+    },
+    {
+      "id": "podcast-transkription",
+      "name": "Podcast-Transkription",
+      "description": "11 Topics in 12 Episoden",
+      "isOutlier": false,
+      "topicCount": 11,
+      "episodeCount": 12,
+      "relevanceSec": 7376,
+      "sampleTopics": [
+        "Nerds und Fußball",
+        "Protokolle für non-verbale Kommunikation",
+        "Maximal unbeeindruckt",
+        "Transkriptionen",
+        "Plattenspieler"
+      ],
+      "episodes": [
+        168,
+        176,
+        189,
+        192,
+        196,
+        198,
+        215,
+        233,
+        267,
+        274,
+        284,
         294
       ]
     },
     {
-      "id": "freak-show-jubiläum",
-      "name": "Freak Show Jubiläum",
-      "description": "7 Topics in 6 Episoden",
+      "id": "blinkenlights",
+      "name": "Blinkenlights",
+      "description": "8 Topics in 8 Episoden",
       "isOutlier": false,
-      "topicCount": 7,
-      "episodeCount": 6,
-      "relevanceSec": 6413,
+      "topicCount": 8,
+      "episodeCount": 8,
+      "relevanceSec": 7336,
       "sampleTopics": [
-        "Freak Show Termine",
-        "Freak Show ist wieder da",
-        "10 Jahre Freak Show",
-        "Rückblick auf 10 Jahre Freak Show",
-        "The Freak Show returns"
+        "Lichtinstallation Blinkenlights Stereoscope",
+        "AtomUhr (Gorgy Timing)",
+        "Denis' Selbstbau-Uhr und die Schaltsekunde",
+        "Roddis USB Leuchte",
+        "Flip-Dot-Display im Friedel-Richter"
       ],
       "episodes": [
-        177,
-        203,
-        214,
-        215,
-        264,
-        300
+        14,
+        79,
+        84,
+        141,
+        154,
+        222,
+        240,
+        268
       ]
     },
     {
-      "id": "zfs-technologie",
-      "name": "ZFS-Technologie",
-      "description": "2 Topics in 6 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 6,
-      "relevanceSec": 6356,
-      "sampleTopics": [
-        "ZFS",
-        "OpenZFS"
-      ],
-      "episodes": [
-        2,
-        81,
-        96,
-        118,
-        119,
-        148
-      ]
-    },
-    {
-      "id": "e-mobilität",
-      "name": "E-Mobilität",
-      "description": "4 Topics in 6 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 6,
-      "relevanceSec": 6279,
-      "sampleTopics": [
-        "Elektroscooter",
-        "Elektroroller",
-        "E-Roller",
-        "E-Motorräder"
-      ],
-      "episodes": [
-        226,
-        230,
-        233,
-        234,
-        251,
-        290
-      ]
-    },
-    {
-      "id": "congress-insights",
-      "name": "Congress Insights",
+      "id": "elektrofahrzeuge",
+      "name": "Elektrofahrzeuge",
       "description": "8 Topics in 7 Episoden",
       "isOutlier": false,
       "topicCount": 8,
       "episodeCount": 7,
-      "relevanceSec": 5921,
+      "relevanceSec": 7248,
+      "sampleTopics": [
+        "Tesla Model 3",
+        "Tesla Model X",
+        "Hyundai Ioniq",
+        "Pimp My Caravan",
+        "Tesla Cybertruck"
+      ],
+      "episodes": [
+        175,
+        186,
+        208,
+        244,
+        252,
+        277,
+        299
+      ]
+    },
+    {
+      "id": "mac-os-x",
+      "name": "Mac OS X",
+      "description": "6 Topics in 8 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 8,
+      "relevanceSec": 7248,
+      "sampleTopics": [
+        "Mac OS X 10.7.3",
+        "Mavericks",
+        "Mac OS X Yosemite",
+        "Yosemite",
+        "OS X Yosemite"
+      ],
+      "episodes": [
+        80,
+        113,
+        121,
+        134,
+        142,
+        146,
+        153,
+        157
+      ]
+    },
+    {
+      "id": "küchengeräte",
+      "name": "Küchengeräte",
+      "description": "15 Topics in 10 Episoden",
+      "isOutlier": false,
+      "topicCount": 15,
+      "episodeCount": 10,
+      "relevanceSec": 7229,
+      "sampleTopics": [
+        "Apple Remote & Nostalgie",
+        "Analyse der aktuellen Situation",
+        "Produktneuerungen im Herbst",
+        "Sparschäler",
+        "Aktenvernichter"
+      ],
+      "episodes": [
+        36,
+        60,
+        71,
+        196,
+        206,
+        234,
+        235,
+        239,
+        252,
+        294
+      ]
+    },
+    {
+      "id": "küchengeräte",
+      "name": "Küchengeräte",
+      "description": "9 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 9,
+      "episodeCount": 6,
+      "relevanceSec": 7216,
+      "sampleTopics": [
+        "Nachträge aus der letzten Ausgabe",
+        "Non-Küchen-Gear",
+        "Küchen-Gear",
+        "Küchenbau und IKEA",
+        "Wasserkocher"
+      ],
+      "episodes": [
+        134,
+        149,
+        154,
+        247,
+        252,
+        287
+      ]
+    },
+    {
+      "id": "apple-finanzen",
+      "name": "Apple Finanzen",
+      "description": "11 Topics in 12 Episoden",
+      "isOutlier": false,
+      "topicCount": 11,
+      "episodeCount": 12,
+      "relevanceSec": 7205,
+      "sampleTopics": [
+        "Quartalszahlen",
+        "Apples Quartalszahlen",
+        "Apple Quarterly Results",
+        "Quartalsergebnisse von Nokia",
+        "Quartalsergebnisse von Apple"
+      ],
+      "episodes": [
+        32,
+        36,
+        41,
+        63,
+        69,
+        80,
+        101,
+        103,
+        109,
+        132,
+        154,
+        164
+      ]
+    },
+    {
+      "id": "chaos-communication-camp",
+      "name": "Chaos Communication Camp",
+      "description": "16 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 16,
+      "episodeCount": 6,
+      "relevanceSec": 7132,
+      "sampleTopics": [
+        "Chaos Communication Camp 2015",
+        "Chaos Communication Camp",
+        "Camp: Netzversorgung",
+        "Camp: Infrastruktur",
+        "Camp: Ralph Caspers"
+      ],
+      "episodes": [
+        144,
+        147,
+        157,
+        159,
+        160,
+        169
+      ]
+    },
+    {
+      "id": "vision-pro",
+      "name": "Vision Pro",
+      "description": "8 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 5,
+      "relevanceSec": 7129,
+      "sampleTopics": [
+        "Virtual Reality",
+        "Vision Pro: Spatial Computing",
+        "Vision Pro: First Thoughts",
+        "Vision Pro: Setup",
+        "Vision Pro: Mac Screen Sharing"
+      ],
+      "episodes": [
+        195,
+        267,
+        275,
+        276,
+        286
+      ]
+    },
+    {
+      "id": "wärmepumpen",
+      "name": "Wärmepumpen",
+      "description": "5 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 5,
+      "relevanceSec": 7105,
+      "sampleTopics": [
+        "Heizungen",
+        "Heizungssteuerungen und HomeKit",
+        "Webverzeichnis",
+        "Wärmepumpen",
+        "Warten auf die Wärmepumpe"
+      ],
+      "episodes": [
+        188,
+        190,
+        278,
+        282,
+        285
+      ]
+    },
+    {
+      "id": "live-unterhaltung",
+      "name": "Live Unterhaltung",
+      "description": "12 Topics in 12 Episoden",
+      "isOutlier": false,
+      "topicCount": 12,
+      "episodeCount": 12,
+      "relevanceSec": 7086,
+      "sampleTopics": [
+        "Rant und Streit",
+        "Hukl und Tim rappen",
+        "Die Sendung rockt",
+        "Tim besteht auf Sendungsfortführung",
+        "Wieder Drossel"
+      ],
+      "episodes": [
+        56,
+        69,
+        109,
+        113,
+        123,
+        136,
+        208,
+        245,
+        264,
+        267,
+        272,
+        275
+      ]
+    },
+    {
+      "id": "podcast-apps",
+      "name": "Podcast-Apps",
+      "description": "7 Topics in 8 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 8,
+      "relevanceSec": 7067,
+      "sampleTopics": [
+        "Podcast-Apps",
+        "Podcast-Applikation von Apple",
+        "Podcast-App",
+        "Podcasting-Apps",
+        "Podcast Apps"
+      ],
+      "episodes": [
+        80,
+        91,
+        96,
+        137,
+        160,
+        182,
+        200,
+        255
+      ]
+    },
+    {
+      "id": "icloud-services",
+      "name": "iCloud Services",
+      "description": "7 Topics in 9 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 9,
+      "relevanceSec": 7055,
+      "sampleTopics": [
+        "iCloud",
+        "Ankündigung von iCloud",
+        "iCloud-Probleme",
+        "Maps und iCloud",
+        "iCloud Core Data Desaster und Syncing"
+      ],
+      "episodes": [
+        66,
+        67,
+        80,
+        81,
+        93,
+        102,
+        105,
+        111,
+        134
+      ]
+    },
+    {
+      "id": "apple-health",
+      "name": "Apple Health",
+      "description": "7 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 7,
+      "relevanceSec": 6918,
+      "sampleTopics": [
+        "Apple Watch Erfahrungen",
+        "Apple Watch und Medizin",
+        "Feedback: Apple Watch als Medizinprodukt",
+        "Apple Watch und das EKG",
+        "Apple Health"
+      ],
+      "episodes": [
+        155,
+        204,
+        223,
+        224,
+        228,
+        260,
+        269
+      ]
+    },
+    {
+      "id": "audio-technologie",
+      "name": "Audio-Technologie",
+      "description": "8 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 7,
+      "relevanceSec": 6664,
+      "sampleTopics": [
+        "Bluetooth-Kopfhörer",
+        "Audio Chatting",
+        "Audio über Internet",
+        "Headsets und Audio",
+        "Headset und Mischpult"
+      ],
+      "episodes": [
+        39,
+        136,
+        248,
+        249,
+        253,
+        254,
+        256
+      ]
+    },
+    {
+      "id": "bluetooth-audio",
+      "name": "Bluetooth Audio",
+      "description": "5 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 5,
+      "episodeCount": 6,
+      "relevanceSec": 6537,
+      "sampleTopics": [
+        "Zik Parrot Bluetooth Headphones",
+        "Mobiles Headset-Setup",
+        "Bluetooth Gear",
+        "Bluetooth Headsets",
+        "Bluetooth Headphones"
+      ],
+      "episodes": [
+        79,
+        172,
+        178,
+        188,
+        192,
+        223
+      ]
+    },
+    {
+      "id": "fahrrad-mobilität",
+      "name": "Fahrrad & Mobilität",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 6396,
+      "sampleTopics": [
+        "Faltrad Birdy",
+        "BahnCard",
+        "Distribution und Merchandising",
+        "Lastenräder und Mobilität",
+        "Feedback: Lastenräder"
+      ],
+      "episodes": [
+        163,
+        164,
+        207,
+        225,
+        226,
+        278
+      ]
+    },
+    {
+      "id": "serien-und-filme",
+      "name": "Serien und Filme",
+      "description": "8 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 5,
+      "relevanceSec": 6358,
+      "sampleTopics": [
+        "Filmklassiker",
+        "Serien: Fallout",
+        "Serien: The Expanse",
+        "Serien: See",
+        "Letzte Folgen und Serienangst"
+      ],
+      "episodes": [
+        212,
+        278,
+        281,
+        292,
+        300
+      ]
+    },
+    {
+      "id": "twitter",
+      "name": "Twitter",
+      "description": "10 Topics in 11 Episoden",
+      "isOutlier": false,
+      "topicCount": 10,
+      "episodeCount": 11,
+      "relevanceSec": 6331,
+      "sampleTopics": [
+        "Denis Twitter",
+        "Twitter",
+        "Twitter Retweets",
+        "Twitter Listen",
+        "Tweetie"
+      ],
+      "episodes": [
+        4,
+        11,
+        38,
+        39,
+        78,
+        81,
+        106,
+        128,
+        144,
+        215,
+        300
+      ]
+    },
+    {
+      "id": "kongressmanagement",
+      "name": "Kongressmanagement",
+      "description": "9 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 9,
+      "episodeCount": 7,
+      "relevanceSec": 6175,
       "sampleTopics": [
         "Der Congress",
+        "Sicherheitsprobleme bei Kongressen und  Kongresscentern",
         "Kongress 2",
         "Kongress-Tipps",
-        "Weihnachten und Congress",
-        "Congress Teil 2"
+        "Weihnachten und Congress"
       ],
       "episodes": [
         101,
@@ -734,214 +3490,294 @@
       ]
     },
     {
-      "id": "elixir-programmierung",
-      "name": "Elixir Programmierung",
-      "description": "3 Topics in 3 Episoden",
+      "id": "biometrische-sicherheit",
+      "name": "Biometrische Sicherheit",
+      "description": "4 Topics in 6 Episoden",
       "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 5778,
+      "topicCount": 4,
+      "episodeCount": 6,
+      "relevanceSec": 6011,
       "sampleTopics": [
-        "Betreutes Programmieren und Elixir",
-        "Schöner Programmieren mit Elixir",
-        "Elixir in der Praxis"
+        "Touch ID",
+        "Face ID und AR",
+        "iPhone X: Face ID",
+        "Face ID"
       ],
       "episodes": [
-        247,
-        264,
-        265
+        118,
+        119,
+        186,
+        204,
+        207,
+        252
       ]
     },
     {
-      "id": "app-empfehlungen",
-      "name": "App-Empfehlungen",
-      "description": "5 Topics in 5 Episoden",
+      "id": "web-technologien",
+      "name": "Web-Technologien",
+      "description": "7 Topics in 7 Episoden",
       "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 5,
-      "relevanceSec": 5704,
+      "topicCount": 7,
+      "episodeCount": 7,
+      "relevanceSec": 6000,
       "sampleTopics": [
-        "iPhone Apps und sonstiger Kram",
-        "App-Empfehlungen",
-        "Softwareempfehlungen",
-        "App-Tipps und -Rants",
-        "App Empfehlungen"
-      ],
-      "episodes": [
-        47,
-        95,
-        103,
-        104,
-        119
-      ]
-    },
-    {
-      "id": "zukunft-von-apple",
-      "name": "Zukunft von Apple",
-      "description": "6 Topics in 5 Episoden",
-      "isOutlier": false,
-      "topicCount": 6,
-      "episodeCount": 5,
-      "relevanceSec": 5639,
-      "sampleTopics": [
-        "Zukunft des Macs",
-        "Zukunft der MacBooks",
-        "Zukünftige MacBook Pros",
-        "Zukunft der Mac-Plattform",
-        "Die Zukunft von Apple"
+        "WebKit",
+        "WebOS",
+        "Adblocker",
+        "Mozilla",
+        "Web Browser"
       ],
       "episodes": [
         77,
-        175,
-        186,
-        204,
-        259
-      ]
-    },
-    {
-      "id": "mobilfunknetze",
-      "name": "Mobilfunknetze",
-      "description": "4 Topics in 5 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 5,
-      "relevanceSec": 5556,
-      "sampleTopics": [
-        "Mobilfunk",
-        "Mobilfunknetzstrukturen",
-        "Telefonnetze",
-        "HD Telefonie im Mobilfunk"
-      ],
-      "episodes": [
-        94,
+        78,
+        110,
+        129,
         153,
-        169,
-        181,
-        198
+        161,
+        194
       ]
     },
     {
-      "id": "podcast-apps",
-      "name": "Podcast-Apps",
-      "description": "4 Topics in 5 Episoden",
+      "id": "medienkultur",
+      "name": "Medienkultur",
+      "description": "9 Topics in 9 Episoden",
       "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 5,
-      "relevanceSec": 5463,
+      "topicCount": 9,
+      "episodeCount": 9,
+      "relevanceSec": 5896,
       "sampleTopics": [
-        "Podcast-Apps",
-        "Podcast-App",
-        "Podcasting-Apps",
-        "Podcast Apps"
+        "Überwachung",
+        "10 Jahre Metaebene",
+        "Awards",
+        "Mathematische Tools",
+        "Veranstaltungslänge"
       ],
       "episodes": [
-        80,
-        96,
-        137,
-        160,
-        182
+        115,
+        166,
+        176,
+        218,
+        239,
+        253,
+        275,
+        280,
+        300
       ]
     },
     {
-      "id": "typografie-und-design",
-      "name": "Typografie und Design",
-      "description": "3 Topics in 3 Episoden",
+      "id": "siri-und-sprachassistenten",
+      "name": "Siri und Sprachassistenten",
+      "description": "9 Topics in 11 Episoden",
       "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 5351,
+      "topicCount": 9,
+      "episodeCount": 11,
+      "relevanceSec": 5584,
       "sampleTopics": [
-        "Schriftarten",
-        "Grafikdesign",
-        "Typographie-Exkurs"
+        "Siri auf iPhone 4S",
+        "Siri und KI",
+        "Siri",
+        "Wünsche an das Internet",
+        "Siri und die Sprachen"
       ],
       "episodes": [
-        102,
-        207,
-        283
-      ]
-    },
-    {
-      "id": "zfs-für-mac",
-      "name": "ZFS für Mac",
-      "description": "7 Topics in 6 Episoden",
-      "isOutlier": false,
-      "topicCount": 7,
-      "episodeCount": 6,
-      "relevanceSec": 5288,
-      "sampleTopics": [
-        "ZFS-Laberei",
-        "Geheule, da es kein ZFS im Mac geben wird",
-        "Zevo: ZFS für den Mac",
-        "ZFS: Apple, Oracle und Sun",
-        "Rechnerbau und ZFS"
-      ],
-      "episodes": [
-        37,
-        80,
-        94,
-        123,
+        75,
+        100,
         162,
-        220
+        168,
+        173,
+        179,
+        193,
+        206,
+        211,
+        237,
+        285
       ]
     },
     {
-      "id": "dateisysteme-und-integrität",
-      "name": "Dateisysteme und Integrität",
+      "id": "küchengeräte",
+      "name": "Küchengeräte",
+      "description": "17 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 17,
+      "episodeCount": 1,
+      "relevanceSec": 5522,
+      "sampleTopics": [
+        "Tier List: Reiskocher",
+        "Tier List: Popcorn-Schale",
+        "Tier List: Eierkocher",
+        "Tier List: Spaghettimaß",
+        "Tier List: Küchenwaage"
+      ],
+      "episodes": [
+        294
+      ]
+    },
+    {
+      "id": "nas-systeme",
+      "name": "NAS-Systeme",
+      "description": "13 Topics in 11 Episoden",
+      "isOutlier": false,
+      "topicCount": 13,
+      "episodeCount": 11,
+      "relevanceSec": 5493,
+      "sampleTopics": [
+        "FreeNAS",
+        "Das \"NAS-Storage-Problem\"",
+        "De-Duplication bei Online-Backup",
+        "Ärger mit netatalk",
+        "SD-Karten waschbar"
+      ],
+      "episodes": [
+        39,
+        69,
+        84,
+        221,
+        222,
+        228,
+        233,
+        255,
+        257,
+        267,
+        268
+      ]
+    },
+    {
+      "id": "telekommunikation",
+      "name": "Telekommunikation",
+      "description": "8 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 7,
+      "relevanceSec": 5481,
+      "sampleTopics": [
+        "Windows Phone",
+        "Skype",
+        "Skype, Opus, Mumble",
+        "VoIP",
+        "Voice over LTE"
+      ],
+      "episodes": [
+        42,
+        84,
+        105,
+        107,
+        163,
+        181,
+        244
+      ]
+    },
+    {
+      "id": "zahlungsverkehr",
+      "name": "Zahlungsverkehr",
       "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
       "topicCount": 4,
       "episodeCount": 4,
-      "relevanceSec": 5072,
+      "relevanceSec": 5293,
       "sampleTopics": [
-        "LV(M) und Filesystem",
-        "Dateisysteme",
-        "Datenintegrität und Dateisysteme",
-        "Zukünftiges File System"
+        "Payment",
+        "Micropayment",
+        "Electronic Payment",
+        "Receipts"
       ],
       "episodes": [
-        99,
-        149,
-        173,
-        175
+        140,
+        144,
+        163,
+        192
       ]
     },
     {
-      "id": "bluetooth-audiogeräte",
-      "name": "Bluetooth Audiogeräte",
-      "description": "2 Topics in 3 Episoden",
+      "id": "prozessoren",
+      "name": "Prozessoren",
+      "description": "7 Topics in 7 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 3,
-      "relevanceSec": 5070,
+      "topicCount": 7,
+      "episodeCount": 7,
+      "relevanceSec": 5287,
       "sampleTopics": [
-        "Bluetooth Headsets",
-        "Bluetooth Headphones"
+        "Erste Schlüsse zu den neuen Geräten",
+        "Tims Couch-Keyboard-Traum",
+        "Hintergrundprogramme",
+        "Prozessorgefreake",
+        "Prozessoren"
       ],
       "episodes": [
-        188,
-        192,
-        223
-      ]
-    },
-    {
-      "id": "konferenzen",
-      "name": "Konferenzen",
-      "description": "3 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 4,
-      "relevanceSec": 5034,
-      "sampleTopics": [
-        "Konferenzen",
-        "Konferenzen und Apps",
-        "Konferenzsysteme"
-      ],
-      "episodes": [
+        15,
+        37,
+        80,
         118,
-        142,
-        153,
-        214
+        209,
+        224,
+        230
+      ]
+    },
+    {
+      "id": "airtag-und-ios",
+      "name": "AirTag und iOS",
+      "description": "7 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 7,
+      "relevanceSec": 5191,
+      "sampleTopics": [
+        "iOS und Datenschutz",
+        "iOS Video Player und Volume Control",
+        "Geräte verleihen",
+        "AirTag",
+        "AirTags und das FindMy Network"
+      ],
+      "episodes": [
+        63,
+        200,
+        213,
+        259,
+        261,
+        262,
+        272
+      ]
+    },
+    {
+      "id": "schnittstellen-technologien",
+      "name": "Schnittstellen Technologien",
+      "description": "25 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 25,
+      "episodeCount": 1,
+      "relevanceSec": 5154,
+      "sampleTopics": [
+        "Physical Interfaces Tier List",
+        "Tier List: V.24",
+        "Tier List: Centronics",
+        "Tier List: SCSI",
+        "Tier List: LocalTalk"
+      ],
+      "episodes": [
+        293
+      ]
+    },
+    {
+      "id": "pandemie-themen",
+      "name": "Pandemie Themen",
+      "description": "7 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 6,
+      "relevanceSec": 5061,
+      "sampleTopics": [
+        "Coronavirus",
+        "Corona und Klopapier",
+        "Corona Situation",
+        "2020: Corona",
+        "Covidus Longus"
+      ],
+      "episodes": [
+        246,
+        248,
+        249,
+        255,
+        259,
+        260
       ]
     },
     {
@@ -964,178 +3800,110 @@
       ]
     },
     {
-      "id": "lte-tethering",
-      "name": "LTE Tethering",
-      "description": "5 Topics in 5 Episoden",
+      "id": "kopfhörer",
+      "name": "Kopfhörer",
+      "description": "8 Topics in 8 Episoden",
       "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 5,
-      "relevanceSec": 4941,
+      "topicCount": 8,
+      "episodeCount": 8,
+      "relevanceSec": 4869,
       "sampleTopics": [
-        "iPhone Tethering",
-        "Tethered",
-        "Tethering kaputt",
-        "LTE",
-        "LTE to go"
+        "Audio-Hardware-Shopping",
+        "Kopfhörer-Ersatzteile",
+        "Headphone Jack",
+        "Billige Headsets & DIY Audio",
+        "Kopfhörer"
       ],
       "episodes": [
-        39,
-        44,
-        96,
-        135,
-        198
+        151,
+        171,
+        173,
+        176,
+        177,
+        183,
+        190,
+        213
       ]
     },
     {
-      "id": "arm-macs",
-      "name": "ARM-Macs",
-      "description": "4 Topics in 4 Episoden",
+      "id": "rc3-event",
+      "name": "rC3 Event",
+      "description": "9 Topics in 1 Episoden",
       "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 4739,
+      "topicCount": 9,
+      "episodeCount": 1,
+      "relevanceSec": 4849,
       "sampleTopics": [
-        "Mac mit ARM",
-        "Macs auf ARM",
-        "macOS auf ARM",
-        "ARM-Macs"
+        "rC3 Erwartungen",
+        "rC3 Struktur und Design",
+        "rC3 First Contact",
+        "rC3 Highlights",
+        "rC3 Jam Sessions"
       ],
       "episodes": [
-        206,
-        215,
-        249,
-        250
-      ]
-    },
-    {
-      "id": "apple-watch-gesundheit",
-      "name": "Apple Watch Gesundheit",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 4655,
-      "sampleTopics": [
-        "Apple Watch und Medizin",
-        "Apple Watch und das EKG",
-        "Apple Watch und Gesundheit"
-      ],
-      "episodes": [
-        204,
-        224,
-        269
-      ]
-    },
-    {
-      "id": "messerschärfen",
-      "name": "Messerschärfen",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 4509,
-      "sampleTopics": [
-        "Messer schärfen",
-        "Messerschärfen"
-      ],
-      "episodes": [
-        252,
-        296
-      ]
-    },
-    {
-      "id": "3d-vfx",
-      "name": "3D VFX",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 4408,
-      "sampleTopics": [
-        "VFX, 3D und Kino",
-        "3D Kinos",
-        "Dreidimensionale Medien"
-      ],
-      "episodes": [
-        121,
-        168,
-        292
-      ]
-    },
-    {
-      "id": "audio-technologie",
-      "name": "Audio-Technologie",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 4317,
-      "sampleTopics": [
-        "Audio über Internet",
-        "Headsets und Audio",
-        "Mikrofone und Headsets",
-        "Audio und Internet"
-      ],
-      "episodes": [
-        248,
-        249,
-        254,
         256
       ]
     },
     {
-      "id": "küchengeräte",
-      "name": "Küchengeräte",
-      "description": "4 Topics in 4 Episoden",
+      "id": "thunderbolt-hardware",
+      "name": "Thunderbolt Hardware",
+      "description": "7 Topics in 9 Episoden",
       "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 4142,
+      "topicCount": 7,
+      "episodeCount": 9,
+      "relevanceSec": 4844,
       "sampleTopics": [
-        "Küchen-Gear",
-        "Wasserkocher",
-        "Reiskocher",
-        "Waffeleisen"
-      ],
-      "episodes": [
-        149,
-        247,
-        252,
-        287
-      ]
-    },
-    {
-      "id": "web-technologien",
-      "name": "Web-Technologien",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 4068,
-      "sampleTopics": [
-        "WebKit",
-        "Adblocker",
-        "Web Browser",
-        "Content Blocker"
+        "Thunderbolt",
+        "Thunderbolt Hardware",
+        "SSD und Thunderbolt",
+        "Audio-Performance via Thunderbolt",
+        "Thunderbolt 3"
       ],
       "episodes": [
         77,
-        110,
-        153,
-        161
+        79,
+        105,
+        178,
+        186,
+        187,
+        197,
+        215,
+        226
       ]
     },
     {
-      "id": "cursor-entwicklung",
-      "name": "Cursor-Entwicklung",
-      "description": "3 Topics in 3 Episoden",
+      "id": "digitale-musiktechnologie",
+      "name": "Digitale Musiktechnologie",
+      "description": "10 Topics in 3 Episoden",
       "isOutlier": false,
-      "topicCount": 3,
+      "topicCount": 10,
       "episodeCount": 3,
-      "relevanceSec": 4042,
+      "relevanceSec": 4760,
+      "sampleTopics": [
+        "Roboterbands",
+        "Digitale Zahlungssysteme auf Festivals",
+        "Die digitale Band",
+        "Die digitale Band: Bühnensituation",
+        "Die digitale Band: Abstrahlwinkel"
+      ],
+      "episodes": [
+        235,
+        238,
+        283
+      ]
+    },
+    {
+      "id": "cursor-software",
+      "name": "Cursor Software",
+      "description": "4 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 3,
+      "relevanceSec": 4510,
       "sampleTopics": [
         "Cursor Revisited",
         "Cursor Updates",
+        "Cursor Support Fail",
         "Cursor 2.0"
       ],
       "episodes": [
@@ -1145,353 +3913,17 @@
       ]
     },
     {
-      "id": "kleinkram",
-      "name": "Kleinkram",
-      "description": "3 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 4,
-      "relevanceSec": 4019,
-      "sampleTopics": [
-        "Kleinteiligkeiten",
-        "Kleinkram",
-        "Sonstiger Kleinkram"
-      ],
-      "episodes": [
-        113,
-        115,
-        184,
-        284
-      ]
-    },
-    {
-      "id": "raketentechnologie",
-      "name": "Raketentechnologie",
-      "description": "4 Topics in 1 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 1,
-      "relevanceSec": 3998,
-      "sampleTopics": [
-        "Rakete 1",
-        "Rakete 2",
-        "Rakete 3",
-        "Rakete 4"
-      ],
-      "episodes": [
-        211
-      ]
-    },
-    {
-      "id": "telekomtarife",
-      "name": "Telekomtarife",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 3989,
-      "sampleTopics": [
-        "Telekomtarif Hybrid",
-        "Festnetzkapriolen",
-        "Mobilfunk-Flatrates",
-        "Mobilfunktarife"
-      ],
-      "episodes": [
-        150,
-        165,
-        214,
-        244
-      ]
-    },
-    {
-      "id": "prozessoren",
-      "name": "Prozessoren",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 3968,
-      "sampleTopics": [
-        "Prozessorgefreake",
-        "Prozessoren",
-        "Prozessorposter"
-      ],
-      "episodes": [
-        118,
-        209,
-        224
-      ]
-    },
-    {
-      "id": "dokumentenscanning",
-      "name": "Dokumentenscanning",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 3951,
-      "sampleTopics": [
-        "Scanner und Dokumentenmanagement",
-        "Dokumentenscanning",
-        "Digitaler Dokumentenscan"
-      ],
-      "episodes": [
-        102,
-        103,
-        104
-      ]
-    },
-    {
-      "id": "wärmepumpen-heizungen",
-      "name": "Wärmepumpen & Heizungen",
-      "description": "2 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 3,
-      "relevanceSec": 3695,
-      "sampleTopics": [
-        "Heizungen",
-        "Wärmepumpen"
-      ],
-      "episodes": [
-        188,
-        278,
-        285
-      ]
-    },
-    {
-      "id": "elektronische-zahlungen",
-      "name": "Elektronische Zahlungen",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 3566,
-      "sampleTopics": [
-        "Payment",
-        "Electronic Payment"
-      ],
-      "episodes": [
-        140,
-        163
-      ]
-    },
-    {
-      "id": "reise-essentials",
-      "name": "Reise Essentials",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 3497,
-      "sampleTopics": [
-        "Reisezubehör",
-        "Taschen und Accessories",
-        "Reiseberichte",
-        "Reise und Gesundheit"
-      ],
-      "episodes": [
-        113,
-        174,
-        290,
-        295
-      ]
-    },
-    {
-      "id": "retrocomputing",
-      "name": "Retrocomputing",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 3490,
-      "sampleTopics": [
-        "Alte Rechner und Läden",
-        "Vintage Computing ist auch nichts neues",
-        "Retrocomputing mit 68K",
-        "MS-DOS und Vintage Computing"
-      ],
-      "episodes": [
-        104,
-        141,
-        193,
-        224
-      ]
-    },
-    {
-      "id": "yosemite-os-x",
-      "name": "Yosemite OS X",
-      "description": "3 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 4,
-      "relevanceSec": 3444,
-      "sampleTopics": [
-        "Mac OS X Yosemite",
-        "Yosemite",
-        "OS X Yosemite"
-      ],
-      "episodes": [
-        134,
-        142,
-        146,
-        153
-      ]
-    },
-    {
-      "id": "selbständigkeit-finanzen",
-      "name": "Selbständigkeit & Finanzen",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 3442,
-      "sampleTopics": [
-        "Selbständigkeit",
-        "Selbständige Letty",
-        "Finanzierungsfragen"
-      ],
-      "episodes": [
-        207,
-        221,
-        259
-      ]
-    },
-    {
-      "id": "podcast-entwicklung",
-      "name": "Podcast-Entwicklung",
-      "description": "8 Topics in 8 Episoden",
-      "isOutlier": false,
-      "topicCount": 8,
-      "episodeCount": 8,
-      "relevanceSec": 3399,
-      "sampleTopics": [
-        "Formatfindung des Podcasts",
-        "Live Podcast Aufnahme",
-        "Podcastsordnung",
-        "Neugestaltung der Sendung",
-        "Podcast Gestaltung"
-      ],
-      "episodes": [
-        1,
-        10,
-        39,
-        60,
-        66,
-        114,
-        196,
-        246
-      ]
-    },
-    {
-      "id": "usb-c-zubehör",
-      "name": "USB-C Zubehör",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 3335,
-      "sampleTopics": [
-        "Tastaturen und Trackpads",
-        "Laden mit Magsafe und USB-C",
-        "USB-C Adapter und Keyboards",
-        "USB-C Ladegeräte-Wahnsinn"
-      ],
-      "episodes": [
-        153,
-        186,
-        200,
-        272
-      ]
-    },
-    {
-      "id": "online-zahlungen",
-      "name": "Online-Zahlungen",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 3298,
-      "sampleTopics": [
-        "Zahlungsplattformen",
-        "Geld im Internet",
-        "Bezahlen im Web"
-      ],
-      "episodes": [
-        198,
-        213,
-        247
-      ]
-    },
-    {
-      "id": "küchengeräte",
-      "name": "Küchengeräte",
+      "id": "japan",
+      "name": "Japan",
       "description": "4 Topics in 2 Episoden",
       "isOutlier": false,
       "topicCount": 4,
       "episodeCount": 2,
-      "relevanceSec": 3279,
-      "sampleTopics": [
-        "Küchengeräte",
-        "Küchenmaschine",
-        "Eismaschinen",
-        "Milchschäumer"
-      ],
-      "episodes": [
-        234,
-        235
-      ]
-    },
-    {
-      "id": "schweden-urlaub",
-      "name": "Schweden Urlaub",
-      "description": "4 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 3,
-      "relevanceSec": 3265,
-      "sampleTopics": [
-        "Urlaub in Schweden und der Schweiz",
-        "Noch mehr Urlaub in Schweden",
-        "Urlaubsberichte: Schweden",
-        "Ausflug nach Schweden"
-      ],
-      "episodes": [
-        182,
-        221,
-        295
-      ]
-    },
-    {
-      "id": "airtags-und-fahrräder",
-      "name": "AirTags und Fahrräder",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 3262,
-      "sampleTopics": [
-        "AirTags und das FindMy Network",
-        "AirTags und Device Tracking",
-        "Fahrräder und AirTags"
-      ],
-      "episodes": [
-        261,
-        262,
-        272
-      ]
-    },
-    {
-      "id": "leben-in-japan",
-      "name": "Leben in Japan",
-      "description": "3 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 2,
-      "relevanceSec": 3244,
+      "relevanceSec": 4494,
       "sampleTopics": [
         "Tala in Japan",
         "Leben in Japan",
+        "Forschen in Japan",
         "Japan"
       ],
       "episodes": [
@@ -1500,358 +3932,351 @@
       ]
     },
     {
-      "id": "twitter-strategien",
-      "name": "Twitter-Strategien",
-      "description": "5 Topics in 6 Episoden",
+      "id": "dns-technologien",
+      "name": "DNS Technologien",
+      "description": "8 Topics in 8 Episoden",
       "isOutlier": false,
-      "topicCount": 5,
-      "episodeCount": 6,
-      "relevanceSec": 3225,
-      "sampleTopics": [
-        "Twitter",
-        "Twitter Retweets",
-        "Twitter Listen",
-        "Tweetie",
-        "Twitter 4"
-      ],
-      "episodes": [
-        11,
-        38,
-        39,
-        78,
-        128,
-        300
-      ]
-    },
-    {
-      "id": "programmierung",
-      "name": "Programmierung",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 3184,
-      "sampleTopics": [
-        "Programmieren",
-        "Programmierkram",
-        "Programmiersprachen"
-      ],
-      "episodes": [
-        137,
-        153,
-        167
-      ]
-    },
-    {
-      "id": "fritz-box-netzwerk",
-      "name": "Fritz!Box Netzwerk",
-      "description": "3 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 4,
-      "relevanceSec": 3170,
-      "sampleTopics": [
-        "FritzBox",
-        "AVM Fritz!Box",
-        "Fritz!Box, SIP & Netzwerk"
-      ],
-      "episodes": [
-        77,
-        98,
-        99,
-        120
-      ]
-    },
-    {
-      "id": "podcast-transkription",
-      "name": "Podcast-Transkription",
-      "description": "3 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 4,
-      "relevanceSec": 3106,
-      "sampleTopics": [
-        "Transkriptionen",
-        "Podcast-Transkripte",
-        "Podcast-Transkription"
-      ],
-      "episodes": [
-        192,
-        215,
-        233,
-        274
-      ]
-    },
-    {
-      "id": "kalender-apps",
-      "name": "Kalender-Apps",
-      "description": "4 Topics in 8 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
+      "topicCount": 8,
       "episodeCount": 8,
-      "relevanceSec": 3076,
+      "relevanceSec": 4403,
+      "sampleTopics": [
+        "Google DNS",
+        "DynDNS",
+        "DNS",
+        "Captive Portals",
+        "Quad9 DNS"
+      ],
+      "episodes": [
+        39,
+        117,
+        165,
+        176,
+        208,
+        227,
+        250,
+        261
+      ]
+    },
+    {
+      "id": "roboter-und-musik",
+      "name": "Roboter und Musik",
+      "description": "10 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 10,
+      "episodeCount": 4,
+      "relevanceSec": 4390,
+      "sampleTopics": [
+        "Ausstieg aus der Computertechnologie",
+        "Moritz Simon Geist",
+        "Techno in Hardware",
+        "Trautonium",
+        "Vibraphon-Roboter"
+      ],
+      "episodes": [
+        182,
+        235,
+        236,
+        242
+      ]
+    },
+    {
+      "id": "apple-arbeitskultur",
+      "name": "Apple Arbeitskultur",
+      "description": "8 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 6,
+      "relevanceSec": 4265,
+      "sampleTopics": [
+        "Apple-Angestellte bei Denis auf Arbeit (Steves Verwandte)",
+        "Psyche der Apple Store Mitarbeiter",
+        "This American Life: Mr. Daisey and the Apple Factory",
+        "Mike Daisey And The Apple Factory",
+        "Geheimhaltung bei Apple"
+      ],
+      "episodes": [
+        37,
+        73,
+        79,
+        84,
+        96,
+        220
+      ]
+    },
+    {
+      "id": "navigationstechnologie",
+      "name": "Navigationstechnologie",
+      "description": "8 Topics in 9 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 9,
+      "relevanceSec": 3876,
+      "sampleTopics": [
+        "Google Maps mit Turn-by-Turn",
+        "Nokia",
+        "Nokia Maps",
+        "Maps",
+        "iOS 9: Maps und Transit"
+      ],
+      "episodes": [
+        37,
+        39,
+        100,
+        132,
+        155,
+        188,
+        237,
+        250,
+        290
+      ]
+    },
+    {
+      "id": "kalender-software",
+      "name": "Kalender-Software",
+      "description": "8 Topics in 12 Episoden",
+      "isOutlier": false,
+      "topicCount": 8,
+      "episodeCount": 12,
+      "relevanceSec": 3875,
       "sampleTopics": [
         "Kalenderprogramme",
+        "iCal-Gerante (siehe vorherige Folge)",
         "Kalender",
-        "Kalender und AppStore",
-        "Kalenders- und Kontakte-Software"
+        "Google Calender-Integration",
+        "iCloud und Kalender"
       ],
       "episodes": [
         68,
+        69,
         78,
+        80,
         82,
+        96,
         100,
         101,
         153,
         207,
+        240,
         300
       ]
     },
     {
-      "id": "icloud",
-      "name": "iCloud",
-      "description": "3 Topics in 5 Episoden",
+      "id": "apple-eingabegeräte",
+      "name": "Apple Eingabegeräte",
+      "description": "7 Topics in 8 Episoden",
       "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 5,
-      "relevanceSec": 3057,
+      "topicCount": 7,
+      "episodeCount": 8,
+      "relevanceSec": 3795,
       "sampleTopics": [
-        "iCloud",
-        "iCloud-Probleme",
-        "iCloud und andere Online-Services"
+        "Apple Magic Mouse",
+        "Magic TrackPad 2",
+        "Magic Keyboard",
+        "Apple Magic Keyboard",
+        "Apple Keyboards"
+      ],
+      "episodes": [
+        37,
+        42,
+        164,
+        165,
+        234,
+        237,
+        249,
+        271
+      ]
+    },
+    {
+      "id": "video-software",
+      "name": "Video Software",
+      "description": "6 Topics in 5 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 5,
+      "relevanceSec": 3659,
+      "sampleTopics": [
+        "Mac OS 10.6.2",
+        "QuickTime X",
+        "Quicktime",
+        "iStat Menus und SMC",
+        "Videoschnitt und iMovie"
+      ],
+      "episodes": [
+        38,
+        69,
+        105,
+        119,
+        200
+      ]
+    },
+    {
+      "id": "safari",
+      "name": "Safari",
+      "description": "6 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 7,
+      "relevanceSec": 3649,
+      "sampleTopics": [
+        "Safari",
+        "macOS: Safari",
+        "WWDC: Safari",
+        "Safari Updates",
+        "Safari Summary & Highlights"
+      ],
+      "episodes": [
+        82,
+        100,
+        134,
+        219,
+        260,
+        267,
+        279
+      ]
+    },
+    {
+      "id": "iphone-vpn",
+      "name": "iPhone VPN",
+      "description": "6 Topics in 6 Episoden",
+      "isOutlier": false,
+      "topicCount": 6,
+      "episodeCount": 6,
+      "relevanceSec": 3628,
+      "sampleTopics": [
+        "VPN auf dem iPhone",
+        "VPN unter iOS 6.1",
+        "iPhone VPN",
+        "VPN mit iOS 9 und El Capitan",
+        "Networking in iOS 10 und Mac OS Sierra"
+      ],
+      "episodes": [
+        37,
+        105,
+        142,
+        161,
+        183,
+        185
+      ]
+    },
+    {
+      "id": "feedback-themen",
+      "name": "Feedback Themen",
+      "description": "10 Topics in 8 Episoden",
+      "isOutlier": false,
+      "topicCount": 10,
+      "episodeCount": 8,
+      "relevanceSec": 3492,
+      "sampleTopics": [
+        "Kreatives Feedback",
+        "Feedback: Bahn",
+        "Feedback",
+        "Feedback: Feedback",
+        "Feedback: Selbständigkeit"
       ],
       "episodes": [
         66,
-        80,
-        81,
-        93,
-        134
-      ]
-    },
-    {
-      "id": "coronavirus-pandemie",
-      "name": "Coronavirus Pandemie",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 3050,
-      "sampleTopics": [
-        "Coronavirus",
-        "Corona Situation",
-        "2020: Corona",
-        "Pandemie Recovery"
-      ],
-      "episodes": [
-        246,
-        249,
-        255,
-        260
-      ]
-    },
-    {
-      "id": "sichere-e-mail-verschlüsselung",
-      "name": "Sichere E-Mail-Verschlüsselung",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 3030,
-      "sampleTopics": [
-        "GPG und S/MIME",
-        "S/MIME und Zertifikate",
-        "TLS-Zertifikate selber aufsetzen"
-      ],
-      "episodes": [
-        161,
-        162,
-        223
-      ]
-    },
-    {
-      "id": "chaos-communication-congress",
-      "name": "Chaos Communication Congress",
-      "description": "9 Topics in 8 Episoden",
-      "isOutlier": false,
-      "topicCount": 9,
-      "episodeCount": 8,
-      "relevanceSec": 2928,
-      "sampleTopics": [
-        "32C3",
-        "36C3",
-        "36C3: Allgemein",
-        "36C3: Diverses",
-        "38C3"
-      ],
-      "episodes": [
-        160,
-        242,
-        245,
-        284,
-        287,
-        288,
-        299,
-        301
-      ]
-    },
-    {
-      "id": "swift-versionen",
-      "name": "Swift-Versionen",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 2925,
-      "sampleTopics": [
-        "Swift 1.2",
-        "Swift 2",
-        "Swift 2.2"
-      ],
-      "episodes": [
-        151,
-        157,
-        172
-      ]
-    },
-    {
-      "id": "blinkenlights-installationen",
-      "name": "Blinkenlights Installationen",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 2895,
-      "sampleTopics": [
-        "Lichtinstallation Blinkenlights Stereoscope",
-        "Blinkenlights",
-        "Blinkenlights Polychrome"
-      ],
-      "episodes": [
-        14,
+        173,
+        211,
         222,
-        268
+        223,
+        227,
+        288,
+        292
       ]
     },
     {
-      "id": "falt-und-lastenräder",
-      "name": "Falt- und Lastenräder",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 2889,
-      "sampleTopics": [
-        "Faltrad Birdy",
-        "Lastenräder und Mobilität",
-        "Feedback: Lastenräder"
-      ],
-      "episodes": [
-        163,
-        225,
-        226
-      ]
-    },
-    {
-      "id": "flash-technologie",
-      "name": "Flash-Technologie",
-      "description": "3 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 4,
-      "relevanceSec": 2825,
-      "sampleTopics": [
-        "Flash und HTML5",
-        "Flash und Touch",
-        "Flash"
-      ],
-      "episodes": [
-        42,
-        43,
-        146,
-        197
-      ]
-    },
-    {
-      "id": "synology-nas",
-      "name": "Synology NAS",
-      "description": "5 Topics in 4 Episoden",
+      "id": "metaebene",
+      "name": "Metaebene",
+      "description": "5 Topics in 5 Episoden",
       "isOutlier": false,
       "topicCount": 5,
-      "episodeCount": 4,
-      "relevanceSec": 2777,
+      "episodeCount": 5,
+      "relevanceSec": 3460,
       "sampleTopics": [
-        "Das \"NAS-Storage-Problem\"",
-        "Ärger mit netatalk",
-        "Network Attached Storage",
-        "Synology NAS",
-        "Synology Erfahrungen"
+        "Software-Umstellungen in der Metaebene",
+        "Standards und Verplattformung",
+        "Metaebene Community",
+        "Metaebene Studio Setup",
+        "Metaebene"
       ],
       "episodes": [
-        69,
-        221,
-        257,
-        268
+        131,
+        166,
+        175,
+        261,
+        282
       ]
     },
     {
-      "id": "bitcoin-kultur",
-      "name": "Bitcoin-Kultur",
+      "id": "patentrecht",
+      "name": "Patentrecht",
+      "description": "7 Topics in 7 Episoden",
+      "isOutlier": false,
+      "topicCount": 7,
+      "episodeCount": 7,
+      "relevanceSec": 3338,
+      "sampleTopics": [
+        "Nokia Patentklage",
+        "Der Patentkrieg",
+        "Patenttrolle",
+        "Patentauseinandersetzungen",
+        "Chain of Fools"
+      ],
+      "episodes": [
+        40,
+        43,
+        69,
+        80,
+        84,
+        213,
+        270
+      ]
+    },
+    {
+      "id": "machine-learning",
+      "name": "Machine Learning",
       "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
       "topicCount": 4,
       "episodeCount": 4,
-      "relevanceSec": 2741,
+      "relevanceSec": 3051,
       "sampleTopics": [
-        "Bitcoin-Imperium",
-        "Währungen: von analog bis Bitcoin",
-        "Bitcoin Umstellung",
-        "15 Jahre Bitcoin"
+        "Deep Learning",
+        "Machine Learning",
+        "Machine Learning für Share Sheets",
+        "Die Dekade des Machine Learnings"
       ],
       "episodes": [
-        68,
-        146,
-        202,
-        273
+        165,
+        200,
+        237,
+        266
       ]
     },
     {
-      "id": "vision-pro",
-      "name": "Vision Pro",
-      "description": "2 Topics in 1 Episoden",
+      "id": "drohnen-technologie",
+      "name": "Drohnen-Technologie",
+      "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 1,
-      "relevanceSec": 2736,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 2844,
       "sampleTopics": [
-        "Vision Pro: die Technik und das Konzept",
-        "Vision Pro: Mögilche Anwendungen"
+        "Schiffsdrohnen",
+        "Zoe Anomalie",
+        "Talas Spaßdrohne",
+        "Kamikaze-Drohnen"
       ],
       "episodes": [
-        267
+        130,
+        211,
+        245,
+        276
       ]
     },
     {
-      "id": "patentkonflikte",
-      "name": "Patentkonflikte",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 2731,
-      "sampleTopics": [
-        "Der Patentkrieg",
-        "Patenttrolle",
-        "Patentauseinandersetzungen"
-      ],
-      "episodes": [
-        43,
-        69,
-        80
-      ]
-    },
-    {
-      "id": "rodecaster",
-      "name": "Rodecaster",
+      "id": "rodecaster-geräte",
+      "name": "Rodecaster Geräte",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
@@ -1869,239 +4294,31 @@
       ]
     },
     {
-      "id": "serienanalyse",
-      "name": "Serienanalyse",
-      "description": "3 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 2,
-      "relevanceSec": 2519,
-      "sampleTopics": [
-        "Serien: See",
-        "Letzte Folgen und Serienangst",
-        "Serienqualität"
-      ],
-      "episodes": [
-        278,
-        292
-      ]
-    },
-    {
-      "id": "chaos-communication-camp",
-      "name": "Chaos Communication Camp",
-      "description": "7 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 7,
-      "episodeCount": 2,
-      "relevanceSec": 2503,
-      "sampleTopics": [
-        "Chaos Communication Camp",
-        "Camp: Teslaspulenmusik",
-        "Camp: Licht und Züge",
-        "Camp: Freak Show Live",
-        "Camp: Eröffnung"
-      ],
-      "episodes": [
-        147,
-        160
-      ]
-    },
-    {
-      "id": "apple-magic-peripherie",
-      "name": "Apple Magic Peripherie",
-      "description": "4 Topics in 5 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 5,
-      "relevanceSec": 2496,
-      "sampleTopics": [
-        "Apple Magic Mouse",
-        "Magic TrackPad 2",
-        "Magic Keyboard",
-        "Apple Magic Keyboard"
-      ],
-      "episodes": [
-        37,
-        42,
-        164,
-        165,
-        234
-      ]
-    },
-    {
-      "id": "machine-learning",
-      "name": "Machine Learning",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 2450,
-      "sampleTopics": [
-        "Machine Learning",
-        "Die Dekade des Machine Learnings"
-      ],
-      "episodes": [
-        200,
-        266
-      ]
-    },
-    {
-      "id": "360-grad-medien",
-      "name": "360 Grad Medien",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 2443,
-      "sampleTopics": [
-        "360 Grad Fischaugenkameras",
-        "360 Grad Fotos und Videos"
-      ],
-      "episodes": [
-        193,
-        234
-      ]
-    },
-    {
-      "id": "hardware-modding",
-      "name": "Hardware-Modding",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 2310,
-      "sampleTopics": [
-        "Hardware-Basteleien",
-        "Hardwarebastel",
-        "PC schrauben"
-      ],
-      "episodes": [
-        54,
-        129,
-        186
-      ]
-    },
-    {
-      "id": "podlove-plugins",
-      "name": "Podlove Plugins",
-      "description": "2 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 3,
-      "relevanceSec": 2301,
-      "sampleTopics": [
-        "Podlove Publishing Plugin für Wordpress",
-        "Podlove"
-      ],
-      "episodes": [
-        95,
-        107,
-        141
-      ]
-    },
-    {
-      "id": "siri-insights",
-      "name": "Siri Insights",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 2297,
-      "sampleTopics": [
-        "Siri und KI",
-        "Siri und die Sprachen",
-        "Siri Anomalie"
-      ],
-      "episodes": [
-        100,
-        173,
-        211
-      ]
-    },
-    {
-      "id": "apple-quartalszahlen",
-      "name": "Apple Quartalszahlen",
-      "description": "5 Topics in 6 Episoden",
+      "id": "marketing-und-technologie",
+      "name": "Marketing und Technologie",
+      "description": "5 Topics in 5 Episoden",
       "isOutlier": false,
       "topicCount": 5,
-      "episodeCount": 6,
-      "relevanceSec": 2264,
-      "sampleTopics": [
-        "Apples Quartalszahlen",
-        "Apple Quarterly Results",
-        "Quartalsergebnisse von Apple",
-        "Apples Quartalsergebnisse",
-        "Apple Quartalszahlen"
-      ],
-      "episodes": [
-        36,
-        63,
-        69,
-        80,
-        103,
-        164
-      ]
-    },
-    {
-      "id": "digitale-gesundheit",
-      "name": "Digitale Gesundheit",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 2264,
-      "sampleTopics": [
-        "Digitale Gesundheitsapps",
-        "Digitales Gesundheitssystem"
-      ],
-      "episodes": [
-        250,
-        261
-      ]
-    },
-    {
-      "id": "spiele-tipps",
-      "name": "Spiele Tipps",
-      "description": "3 Topics in 5 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
       "episodeCount": 5,
-      "relevanceSec": 2236,
+      "relevanceSec": 2438,
       "sampleTopics": [
-        "Spiele",
-        "Spieltips",
-        "Spiele spielen"
+        "Kompression",
+        "Datenkompression mit zStandard",
+        "SEO und SM",
+        "SEO",
+        "Komposition und Musikerzeugung"
       ],
       "episodes": [
-        146,
-        153,
-        189,
-        226,
-        259
+        129,
+        184,
+        216,
+        218,
+        235
       ]
     },
     {
-      "id": "tesla-fahrzeuge",
-      "name": "Tesla Fahrzeuge",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 2232,
-      "sampleTopics": [
-        "Tesla Model 3",
-        "Tesla Model X",
-        "Tesla Battery Day"
-      ],
-      "episodes": [
-        175,
-        186,
-        252
-      ]
-    },
-    {
-      "id": "tracking-lösungen",
-      "name": "Tracking-Lösungen",
+      "id": "tracking-technologie",
+      "name": "Tracking Technologie",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
@@ -2119,58 +4336,26 @@
       ]
     },
     {
-      "id": "apple-finanzdienstleistungen",
-      "name": "Apple Finanzdienstleistungen",
-      "description": "2 Topics in 2 Episoden",
+      "id": "wahlen-und-politik",
+      "name": "Wahlen und Politik",
+      "description": "6 Topics in 5 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 2195,
+      "topicCount": 6,
+      "episodeCount": 5,
+      "relevanceSec": 2211,
       "sampleTopics": [
-        "ApplePay",
-        "Apple Card"
+        "Wahl",
+        "Politik in Kanada",
+        "Wahlcomputer",
+        "Wahlkram",
+        "Sommerpartybeteiligungsstrategien"
       ],
       "episodes": [
-        183,
-        234
-      ]
-    },
-    {
-      "id": "apple-tv-neuheiten",
-      "name": "Apple TV Neuheiten",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 2157,
-      "sampleTopics": [
-        "Vorstellung des neuen Apple TV",
-        "Neues Apple TV",
-        "Apple TV und Fernseher"
-      ],
-      "episodes": [
-        49,
-        163,
-        204
-      ]
-    },
-    {
-      "id": "mac-ios-entwicklung",
-      "name": "Mac/iOS Entwicklung",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 2147,
-      "sampleTopics": [
-        "Mac OS X/iOS Programmierung",
-        "Mac-Programmierung",
-        "Software-Entwicklung für Mac und iOS"
-      ],
-      "episodes": [
-        68,
-        77,
-        111
+        115,
+        165,
+        184,
+        202,
+        236
       ]
     },
     {
@@ -2193,27 +4378,8 @@
       ]
     },
     {
-      "id": "öffentlicher-verkehr",
-      "name": "Öffentlicher Verkehr",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 2089,
-      "sampleTopics": [
-        "Bahn und Netz",
-        "Bahn und Bus",
-        "The Sound of Transport"
-      ],
-      "episodes": [
-        156,
-        239,
-        251
-      ]
-    },
-    {
       "id": "to-do-listen",
-      "name": "To-Do-Listen",
+      "name": "To Do Listen",
       "description": "3 Topics in 2 Episoden",
       "isOutlier": false,
       "topicCount": 3,
@@ -2230,410 +4396,112 @@
       ]
     },
     {
-      "id": "thunderbolt-technologie",
-      "name": "Thunderbolt Technologie",
-      "description": "3 Topics in 4 Episoden",
+      "id": "macbook-hardware",
+      "name": "MacBook Hardware",
+      "description": "5 Topics in 4 Episoden",
       "isOutlier": false,
-      "topicCount": 3,
+      "topicCount": 5,
       "episodeCount": 4,
-      "relevanceSec": 1981,
+      "relevanceSec": 1698,
       "sampleTopics": [
-        "Thunderbolt",
-        "Thunderbolt Hardware",
-        "SSD und Thunderbolt"
+        "Force Touch Trackpad",
+        "Force Touch",
+        "Trackpad",
+        "MacBook Pro: Tastatur",
+        "MacBook Pro: Touchpad"
       ],
       "episodes": [
-        77,
-        79,
-        105,
-        215
+        153,
+        172,
+        186,
+        193
       ]
     },
     {
-      "id": "vision-pro",
-      "name": "Vision Pro",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 1975,
-      "sampleTopics": [
-        "Vision Pro: Setup",
-        "Vision Pro Recap",
-        "Vision Pro"
-      ],
-      "episodes": [
-        275,
-        276,
-        286
-      ]
-    },
-    {
-      "id": "podcast-gäste",
-      "name": "Podcast-Gäste",
+      "id": "time-capsule",
+      "name": "Time Capsule",
       "description": "5 Topics in 5 Episoden",
       "isOutlier": false,
       "topicCount": 5,
       "episodeCount": 5,
-      "relevanceSec": 1963,
+      "relevanceSec": 1651,
       "sampleTopics": [
-        "Gast: Dominik",
-        "Gast: Hans Hübner",
-        "Gast",
-        "Gast: Lars",
-        "Gast: Ron"
+        "Time Capsule",
+        "TimeCapsule Backup",
+        "TimeMachine-Target",
+        "Lion Recovery Mode",
+        "TimeCapsule Backups"
       ],
       "episodes": [
-        97,
-        167,
-        174,
-        256,
-        258
+        36,
+        40,
+        54,
+        81,
+        177
       ]
     },
     {
-      "id": "vision-pro-medien",
-      "name": "Vision Pro Medien",
-      "description": "2 Topics in 1 Episoden",
+      "id": "iphone-os-3",
+      "name": "iPhone OS 3",
+      "description": "5 Topics in 5 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 1,
-      "relevanceSec": 1923,
-      "sampleTopics": [
-        "Vision Pro: Filme und Videos",
-        "Vision Pro: Fotos und Panoramas"
-      ],
-      "episodes": [
-        275
-      ]
-    },
-    {
-      "id": "voip-kommunikation",
-      "name": "VoIP-Kommunikation",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1918,
-      "sampleTopics": [
-        "Skype",
-        "VoIP"
-      ],
-      "episodes": [
-        84,
-        107
-      ]
-    },
-    {
-      "id": "meta-transformation",
-      "name": "Meta-Transformation",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1843,
-      "sampleTopics": [
-        "Software-Umstellungen in der Metaebene",
-        "Metaebene"
-      ],
-      "episodes": [
-        131,
-        282
-      ]
-    },
-    {
-      "id": "kopfhörer",
-      "name": "Kopfhörer",
-      "description": "4 Topics in 5 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
+      "topicCount": 5,
       "episodeCount": 5,
-      "relevanceSec": 1820,
+      "relevanceSec": 1643,
       "sampleTopics": [
-        "Kopfhörer-Ersatzteile",
-        "Kopfhörer",
-        "Beyerdynamic Kopfhörer",
-        "Kopfhörer und Co."
+        "3G-iPhone",
+        "Ankündigungen zu iPhone OS 3.0",
+        "iPhone OS 3.0",
+        "iPhone OS 3",
+        "iPhone SDK Regeländerungen"
       ],
       "episodes": [
-        171,
-        177,
-        183,
-        190,
-        213
-      ]
-    },
-    {
-      "id": "clubhouse-dynamik",
-      "name": "Clubhouse-Dynamik",
-      "description": "4 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 3,
-      "relevanceSec": 1819,
-      "sampleTopics": [
-        "Interaktive Sendung",
-        "Fragen der Zuhörer",
-        "Clubhouse: Funktionsweise und Dynamik",
-        "Clubhouse und Konferenzen"
-      ],
-      "episodes": [
-        10,
-        11,
-        257
-      ]
-    },
-    {
-      "id": "wwdc-news",
-      "name": "WWDC News",
-      "description": "6 Topics in 6 Episoden",
-      "isOutlier": false,
-      "topicCount": 6,
-      "episodeCount": 6,
-      "relevanceSec": 1800,
-      "sampleTopics": [
-        "WWDC Ankündigungen",
-        "Ankündigungen der WWDC",
-        "WWDC Vorschau",
-        "Nachrichten rund um die WWDC",
-        "WWDC und Produktankündigungen"
-      ],
-      "episodes": [
-        5,
         6,
-        28,
-        67,
-        88,
-        90
+        24,
+        30,
+        42,
+        47
       ]
     },
     {
-      "id": "rc3-konferenzberichte",
-      "name": "rC3 Konferenzberichte",
-      "description": "4 Topics in 1 Episoden",
+      "id": "eurovision",
+      "name": "Eurovision",
+      "description": "3 Topics in 2 Episoden",
       "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 1,
-      "relevanceSec": 1798,
-      "sampleTopics": [
-        "rC3 Erwartungen",
-        "rC3 Struktur und Design",
-        "rC3 Fazit",
-        "rC3 Konferenz"
-      ],
-      "episodes": [
-        256
-      ]
-    },
-    {
-      "id": "retro-technik",
-      "name": "Retro-Technik",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
+      "topicCount": 3,
       "episodeCount": 2,
-      "relevanceSec": 1796,
+      "relevanceSec": 1602,
       "sampleTopics": [
-        "Technik von Früher",
-        "Videotext-Archäologie"
+        "Eurovision Song Contest",
+        "ESC Voting",
+        "Karaoke"
       ],
       "episodes": [
-        150,
-        170
+        292,
+        301
       ]
     },
     {
-      "id": "watchos-3",
-      "name": "watchOS 3",
-      "description": "4 Topics in 5 Episoden",
+      "id": "datenschutz",
+      "name": "Datenschutz",
+      "description": "5 Topics in 5 Episoden",
       "isOutlier": false,
-      "topicCount": 4,
+      "topicCount": 5,
       "episodeCount": 5,
-      "relevanceSec": 1749,
+      "relevanceSec": 1521,
       "sampleTopics": [
-        "watchOS 3",
-        "Watch OS 3",
-        "watchOS",
-        "WWDC: watchOS"
+        "Leistungsschutzgeld",
+        "DSGVO",
+        "Datenelche",
+        "Feedback: Datenelche in Australien",
+        "Datenkonsolidierung"
       ],
       "episodes": [
-        179,
-        183,
-        250,
-        260,
-        293
-      ]
-    },
-    {
-      "id": "apple-news",
-      "name": "Apple News",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 1747,
-      "sampleTopics": [
-        "Aktuelle Themen im Apple-Universum",
-        "Nachlese zur WWDC Keynote",
-        "Irgendwas mit Apple",
-        "Was ist denn nun mit Apple Intelligence?"
-      ],
-      "episodes": [
-        1,
-        29,
-        147,
-        290
-      ]
-    },
-    {
-      "id": "wikiversum-discourse",
-      "name": "Wikiversum & Discourse",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1725,
-      "sampleTopics": [
-        "Das Sendegate Forum und die Software Discourse",
-        "Das Wikiversum"
-      ],
-      "episodes": [
-        274,
-        299
-      ]
-    },
-    {
-      "id": "quicktime-mac-os",
-      "name": "QuickTime & Mac OS",
-      "description": "4 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 3,
-      "relevanceSec": 1719,
-      "sampleTopics": [
-        "Mac OS 10.6.2",
-        "QuickTime X",
-        "Quicktime",
-        "iStat Menus und SMC"
-      ],
-      "episodes": [
-        38,
-        69,
-        105
-      ]
-    },
-    {
-      "id": "iphone-vpn",
-      "name": "iPhone VPN",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 1673,
-      "sampleTopics": [
-        "VPN auf dem iPhone",
-        "VPN unter iOS 6.1",
-        "VPN mit iOS 9 und El Capitan"
-      ],
-      "episodes": [
-        37,
-        105,
-        161
-      ]
-    },
-    {
-      "id": "küchenhelfer-tierlisten",
-      "name": "Küchenhelfer Tierlisten",
-      "description": "4 Topics in 1 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 1,
-      "relevanceSec": 1668,
-      "sampleTopics": [
-        "Tier List: Reiskocher",
-        "Tier List: Eierkocher",
-        "Tier List: Eierschneider",
-        "Tier List: Maiskolbenspieße"
-      ],
-      "episodes": [
-        294
-      ]
-    },
-    {
-      "id": "auslandsbanking",
-      "name": "Auslandsbanking",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 1632,
-      "sampleTopics": [
-        "Banking im Ausland",
-        "Kontowechsel",
-        "Konten und Banken"
-      ],
-      "episodes": [
-        233,
-        252,
-        254
-      ]
-    },
-    {
-      "id": "iphone-neuheiten",
-      "name": "iPhone Neuheiten",
-      "description": "4 Topics in 4 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 4,
-      "relevanceSec": 1627,
-      "sampleTopics": [
-        "iPhone kaufen",
-        "Neue iDevices",
-        "Neues iPhone",
-        "Neue iPhones"
-      ],
-      "episodes": [
-        43,
-        262,
-        263,
-        297
-      ]
-    },
-    {
-      "id": "digitale-band",
-      "name": "Digitale Band",
-      "description": "4 Topics in 1 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 1,
-      "relevanceSec": 1568,
-      "sampleTopics": [
-        "Die digitale Band",
-        "Die digitale Band: Was man nicht haben will",
-        "Die digitale Band: Was alles wegkommt",
-        "Die digitale Band: Digital-Rack v2"
-      ],
-      "episodes": [
-        283
-      ]
-    },
-    {
-      "id": "voip-kommunikation",
-      "name": "VoIP-Kommunikation",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 1567,
-      "sampleTopics": [
-        "Skype-Nutzung",
-        "IP-Telefonie",
-        "ISDN-Datencalls via VoIP"
-      ],
-      "episodes": [
-        13,
-        128,
-        185
+        143,
+        218,
+        221,
+        223,
+        257
       ]
     },
     {
@@ -2654,262 +4522,73 @@
       ]
     },
     {
-      "id": "eurovision-2023",
-      "name": "Eurovision 2023",
-      "description": "2 Topics in 1 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 1,
-      "relevanceSec": 1284,
-      "sampleTopics": [
-        "Eurovision Song Contest",
-        "ESC Voting"
-      ],
-      "episodes": [
-        292
-      ]
-    },
-    {
-      "id": "digital-marketing",
-      "name": "Digital Marketing",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1188,
-      "sampleTopics": [
-        "Kompression",
-        "SEO und SM"
-      ],
-      "episodes": [
-        129,
-        216
-      ]
-    },
-    {
-      "id": "musik-und-identität",
-      "name": "Musik und Identität",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 1151,
-      "sampleTopics": [
-        "Musik",
-        "Künstleridentität",
-        "Klagelieder"
-      ],
-      "episodes": [
-        98,
-        235,
-        261
-      ]
-    },
-    {
-      "id": "apple-arbeitskultur",
-      "name": "Apple Arbeitskultur",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1126,
-      "sampleTopics": [
-        "Mike Daisey And The Apple Factory",
-        "Arbeitskultur bei Apple"
-      ],
-      "episodes": [
-        84,
-        220
-      ]
-    },
-    {
       "id": "iphone-docks",
       "name": "iPhone Docks",
-      "description": "3 Topics in 3 Episoden",
+      "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 1118,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1454,
       "sampleTopics": [
+        "Rogue Amoeba",
         "iPhone Docks mit LineIn",
         "iPhone Docks",
         "iPhone Dock"
       ],
       "episodes": [
+        38,
         39,
         81,
         177
       ]
     },
     {
-      "id": "ralf-und-heiko",
-      "name": "Ralf und Heiko",
-      "description": "2 Topics in 2 Episoden",
+      "id": "flattr-integration",
+      "name": "Flattr Integration",
+      "description": "5 Topics in 5 Episoden",
       "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1115,
-      "sampleTopics": [
-        "Ralf und Heiko",
-        "Gast: Ralf Rottmann"
-      ],
-      "episodes": [
-        195,
-        257
-      ]
-    },
-    {
-      "id": "face-id",
-      "name": "Face ID",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1076,
-      "sampleTopics": [
-        "iPhone X: Face ID",
-        "Face ID"
-      ],
-      "episodes": [
-        207,
-        252
-      ]
-    },
-    {
-      "id": "force-touch-trackpad",
-      "name": "Force Touch Trackpad",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1066,
-      "sampleTopics": [
-        "Force Touch Trackpad",
-        "MacBook Pro: Touchpad"
-      ],
-      "episodes": [
-        153,
-        193
-      ]
-    },
-    {
-      "id": "lichtgestaltung",
-      "name": "Lichtgestaltung",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1046,
-      "sampleTopics": [
-        "Lichtkunst",
-        "Licht"
-      ],
-      "episodes": [
-        244,
-        254
-      ]
-    },
-    {
-      "id": "iphone-os-3",
-      "name": "iPhone OS 3",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 1043,
-      "sampleTopics": [
-        "Ankündigungen zu iPhone OS 3.0",
-        "iPhone OS 3.0",
-        "iPhone OS 3"
-      ],
-      "episodes": [
-        24,
-        30,
-        42
-      ]
-    },
-    {
-      "id": "mac-os-x-katzen",
-      "name": "Mac OS X Katzen",
-      "description": "4 Topics in 5 Episoden",
-      "isOutlier": false,
-      "topicCount": 4,
+      "topicCount": 5,
       "episodeCount": 5,
-      "relevanceSec": 1034,
+      "relevanceSec": 1430,
       "sampleTopics": [
-        "Snow Leopard",
-        "Mac OS X Lion",
-        "Überleitung zu Lion",
-        "Mountain Lion"
+        "Flattr ist toll und wir werden alle reich",
+        "Instacast bekommt Flattr-Integration",
+        "Instacast und Flattr-Integration",
+        "Instacast und Flattr",
+        "RIP Flattr"
       ],
       "episodes": [
-        34,
-        61,
-        69,
-        82,
-        93
-      ]
-    },
-    {
-      "id": "dns-sicherheit",
-      "name": "DNS-Sicherheit",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 971,
-      "sampleTopics": [
-        "Google DNS",
-        "DNS",
-        "DNS over TLS"
-      ],
-      "episodes": [
-        39,
-        165,
-        261
-      ]
-    },
-    {
-      "id": "fernsehtechnologie",
-      "name": "Fernsehtechnologie",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 922,
-      "sampleTopics": [
-        "Zukünftige Fernsehmodelle",
-        "Fernsehen",
-        "Zahlensender"
-      ],
-      "episodes": [
-        75,
-        154,
-        259
+        47,
+        80,
+        88,
+        134,
+        274
       ]
     },
     {
       "id": "online-konferenzen",
       "name": "Online-Konferenzen",
-      "description": "3 Topics in 3 Episoden",
+      "description": "4 Topics in 4 Episoden",
       "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 918,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 1267,
       "sampleTopics": [
         "Webkonferenzen",
         "Konferenz online",
-        "Online-Konferenzen"
+        "Online-Konferenzen",
+        "ElixirConf und Konferenzdesign"
       ],
       "episodes": [
         225,
         248,
-        258
+        258,
+        292
       ]
     },
     {
-      "id": "zsh-und-shells",
-      "name": "Zsh und Shells",
+      "id": "shells",
+      "name": "Shells",
       "description": "2 Topics in 2 Episoden",
       "isOutlier": false,
       "topicCount": 2,
@@ -2925,59 +4604,8 @@
       ]
     },
     {
-      "id": "datenschutz",
-      "name": "Datenschutz",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 889,
-      "sampleTopics": [
-        "DSGVO",
-        "Datenelche"
-      ],
-      "episodes": [
-        218,
-        221
-      ]
-    },
-    {
-      "id": "tims-abenteuer",
-      "name": "Tims Abenteuer",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 867,
-      "sampleTopics": [
-        "Tim berichtet weiter und meckert",
-        "Tims Reisepläne"
-      ],
-      "episodes": [
-        69,
-        288
-      ]
-    },
-    {
-      "id": "safari-updates",
-      "name": "Safari Updates",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 840,
-      "sampleTopics": [
-        "macOS: Safari",
-        "Safari Updates"
-      ],
-      "episodes": [
-        219,
-        267
-      ]
-    },
-    {
-      "id": "farbenblindheit-und-zugänglichkeit",
-      "name": "Farbenblindheit und Zugänglichkeit",
+      "id": "barrierefreiheit",
+      "name": "Barrierefreiheit",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
@@ -2992,149 +4620,6 @@
         178,
         256,
         279
-      ]
-    },
-    {
-      "id": "vibraphon-techno",
-      "name": "Vibraphon-Techno",
-      "description": "2 Topics in 1 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 1,
-      "relevanceSec": 811,
-      "sampleTopics": [
-        "Vibraphon-Roboter",
-        "Techno auf klassischen Musikinstrumenten"
-      ],
-      "episodes": [
-        235
-      ]
-    },
-    {
-      "id": "instacast-flattr",
-      "name": "Instacast Flattr",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 774,
-      "sampleTopics": [
-        "Instacast bekommt Flattr-Integration",
-        "Instacast und Flattr-Integration",
-        "Instacast und Flattr"
-      ],
-      "episodes": [
-        80,
-        88,
-        134
-      ]
-    },
-    {
-      "id": "jubiläum-metaebene",
-      "name": "Jubiläum Metaebene",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 756,
-      "sampleTopics": [
-        "10 Jahre Metaebene",
-        "15 Jahre Metaebene",
-        "20 Jahre Metaebene"
-      ],
-      "episodes": [
-        166,
-        253,
-        300
-      ]
-    },
-    {
-      "id": "wahltechnologie",
-      "name": "Wahltechnologie",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 725,
-      "sampleTopics": [
-        "Wahl",
-        "Wahlcomputer",
-        "Wahlkram"
-      ],
-      "episodes": [
-        115,
-        165,
-        184
-      ]
-    },
-    {
-      "id": "time-capsule",
-      "name": "Time Capsule",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 682,
-      "sampleTopics": [
-        "Time Capsule",
-        "TimeCapsule Backup",
-        "TimeCapsule Backups"
-      ],
-      "episodes": [
-        36,
-        40,
-        177
-      ]
-    },
-    {
-      "id": "feedback-strategien",
-      "name": "Feedback-Strategien",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 615,
-      "sampleTopics": [
-        "Feedback: Feedback",
-        "Feedback im Allgemeinen"
-      ],
-      "episodes": [
-        222,
-        227
-      ]
-    },
-    {
-      "id": "tierlisten-anschlüsse",
-      "name": "Tierlisten: Anschlüsse",
-      "description": "3 Topics in 1 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 1,
-      "relevanceSec": 604,
-      "sampleTopics": [
-        "Tier List: Nubus",
-        "Tier List: FireWire",
-        "Tier List: USB"
-      ],
-      "episodes": [
-        293
-      ]
-    },
-    {
-      "id": "rappen-und-ranten",
-      "name": "Rappen und Ranten",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 328,
-      "sampleTopics": [
-        "Rant und Streit",
-        "Hukl und Tim rappen"
-      ],
-      "episodes": [
-        56,
-        69
       ]
     }
   ]

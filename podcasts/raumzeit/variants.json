@@ -58,9 +58,9 @@
       "description": "HDBSCAN mit automatischer Cluster-Erkennung",
       "settings": {
         "minClusterSize": 2,
-        "minSamples": 3,
-        "reducedDimensions": 80, 
-        "outlierThreshold": 0.75,        
+        "minSamples": 2,
+        "reducedDimensions": 128, 
+        "outlierThreshold": 0.90,        
         "ubiquitousTopicMaxEpisodeShare": 0.90,
         "defaultTopicDurationSec": 300,
         "useRelevanceWeighting": true,

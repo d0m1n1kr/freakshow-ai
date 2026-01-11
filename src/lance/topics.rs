@@ -28,6 +28,9 @@ pub struct TopicRecord {
     pub keywords: Vec<String>,
     pub count: usize,
     pub episodes: Vec<u32>,
+    /// JSON string (array) of per-episode occurrences as written by `scripts/create-embeddings.js`.
+    /// We keep it as JSON here to stay compatible with the existing binary-side structs.
+    pub occurrences_json: Option<String>,
     pub embedding: Vec<f32>,
 }
 
@@ -161,6 +164,11 @@ impl TopicEmbeddingsLance {
             let keywords_json_values = get_string_vec("keywords")?;
             let count_values = get_u32_vec("count")?;
             let episodes_json_values = get_string_vec("episodes")?;
+            let occurrences_json_values: Option<Vec<String>> = if batch.column_by_name("occurrences").is_some() {
+                Some(get_string_vec("occurrences")?)
+            } else {
+                None
+            };
 
             let vectors = batch.column_by_name("vector")
                 .context("Missing vector column")?
@@ -200,6 +208,10 @@ impl TopicEmbeddingsLance {
                     keywords,
                     count: count_values[i] as usize,
                     episodes,
+                    occurrences_json: occurrences_json_values
+                        .as_ref()
+                        .map(|v| v[i].to_string())
+                        .and_then(|s| if s.trim().is_empty() { None } else { Some(s) }),
                     embedding,
                 });
             }

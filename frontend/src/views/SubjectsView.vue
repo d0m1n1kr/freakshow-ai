@@ -729,7 +729,9 @@ const playEpisodeAt = async (episodeNumber: number, positionSec: number, label: 
       v-if="activeChart === 'river'" 
       ref="riverComponentRef"
       :data="subjectData" 
-      color="purple" 
+      color="purple"
+      :normalized-view="normalizedView"
+      :subject-filter="subjectFilter"
     />
     <SubjectRadar 
       v-if="activeChart === 'radar'" 
