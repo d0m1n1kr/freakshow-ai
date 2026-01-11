@@ -137,6 +137,9 @@ if should_run_step 1 && [ "$SKIP_SCRAPING" = false ]; then
     echo -e "${YELLOW}→${NC} Scraping episode details (transcripts, shownotes)..."
     run_script "scripts/scrape-details.js" --all
     
+    echo -e "${YELLOW}→${NC} Scraping episode cover images..."
+    run_script "scripts/scrape-images.js"
+    
     echo -e "${YELLOW}→${NC} Scraping speakers..."
     run_script "scripts/scrape-speakers.js"
 
@@ -208,11 +211,23 @@ fi
 if should_run_step 5; then
     echo -e "${BLUE}📊 Phase 4: Generate Visualizations${NC}\n"
 
+    echo -e "${YELLOW}→${NC} Analyzing cluster speakers..."
+    run_script "scripts/analyze-cluster-speakers.js"
+
     echo -e "${YELLOW}→${NC} Generating speaker river data..."
     run_script "scripts/generate-speaker-river.js"
 
+    echo -e "${YELLOW}→${NC} Generating topic river data..."
+    run_script "scripts/generate-topic-river.js"
+
     echo -e "${YELLOW}→${NC} Generating speaker-speaker heatmap..."
     run_script "scripts/generate-speaker-speaker-heatmap.js"
+
+    echo -e "${YELLOW}→${NC} Generating speaker-cluster heatmap..."
+    run_script "scripts/generate-speaker-cluster-heatmap.js"
+
+    echo -e "${YELLOW}→${NC} Generating cluster-cluster heatmap..."
+    run_script "scripts/generate-cluster-cluster-heatmap.js"
 
     echo -e "${YELLOW}→${NC} Generating year-duration heatmap..."
     run_script "scripts/generate-year-duration-heatmap.js"
@@ -284,7 +299,11 @@ if should_run_step 7; then
 
     # Copy main visualization files
     [ -f "speaker-river-data.json" ] && cp "speaker-river-data.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ speaker-river-data.json"
+    [ -f "topic-river-data.json" ] && cp "topic-river-data.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ topic-river-data.json"
+    [ -f "cluster-speakers.json" ] && cp "cluster-speakers.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ cluster-speakers.json"
     [ -f "speaker-speaker-heatmap.json" ] && cp "speaker-speaker-heatmap.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ speaker-speaker-heatmap.json"
+    [ -f "speaker-cluster-heatmap.json" ] && cp "speaker-cluster-heatmap.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ speaker-cluster-heatmap.json"
+    [ -f "cluster-cluster-heatmap.json" ] && cp "cluster-cluster-heatmap.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ cluster-cluster-heatmap.json"
     [ -f "year-duration-heatmap.json" ] && cp "year-duration-heatmap.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ year-duration-heatmap.json"
     [ -f "dayofweek-duration-heatmap.json" ] && cp "dayofweek-duration-heatmap.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ dayofweek-duration-heatmap.json"
     [ -f "speaker-duration-heatmap.json" ] && cp "speaker-duration-heatmap.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ speaker-duration-heatmap.json"

@@ -222,8 +222,11 @@ if [ "$SKIP_SCRAPING" = false ]; then
         
         echo -e "${YELLOW}→${NC} Scraping chapters for new episodes..."
         node scripts/scrape-chapters.js --podcast "$PODCAST_ID" --start "$MIN_NEW" --end "$MAX_NEW" || echo -e "${YELLOW}⚠${NC}  Chapter scraping skipped\n"
+        
+        echo -e "${YELLOW}→${NC} Downloading episode cover images (will skip existing)..."
+        node scripts/scrape-images.js --podcast "$PODCAST_ID" || echo -e "${YELLOW}⚠${NC}  Image download skipped\n"
     else
-        echo -e "${YELLOW}→${NC} No newly scraped episodes, skipping details/chapters scraping\n"
+        echo -e "${YELLOW}→${NC} No newly scraped episodes, skipping details/chapters/images scraping\n"
     fi
 else
     echo -e "${YELLOW}⏭${NC}  Skipping scraping phase\n"
@@ -283,6 +286,22 @@ fi
 echo -e "${YELLOW}→${NC} Creating embeddings (updates all podcasts)..."
 run_script "scripts/create-embeddings.js"
 
+# Subject Analysis
+echo -e "${YELLOW}→${NC} Generating coarse subjects (updates all podcasts)..."
+run_script "scripts/generate-coarse-subjects.js"
+
+echo -e "${YELLOW}→${NC} Generating episode subjects data for new episodes..."
+if [ ${#NEW_EPISODES[@]} -gt 0 ]; then
+    # Use range for efficiency
+    node scripts/generate-episode-subjects.js --podcast "$PODCAST_ID" --from "$MIN_EPISODE" --to "$MAX_EPISODE" || echo -e "${YELLOW}⚠${NC}  Episode subjects generation skipped\n"
+    echo -e "${GREEN}✓${NC} Episode subjects generation completed\n"
+else
+    echo -e "${YELLOW}⚠${NC}  No new episodes for episode subjects\n"
+fi
+
+echo -e "${YELLOW}→${NC} Generating subject river data (updates all podcasts)..."
+run_script "scripts/generate-subject-river.js"
+
 # Phase 3: Clustering (all podcasts)
 echo -e "${BLUE}🎯 Phase 3: Clustering (V2 auto-v2.1)${NC}\n"
 
@@ -297,11 +316,23 @@ fi
 # Phase 4: Regenerate visualizations (all podcasts)
 echo -e "${BLUE}📊 Phase 4: Regenerating Visualizations${NC}\n"
 
+echo -e "${YELLOW}→${NC} Analyzing cluster speakers (all podcasts)..."
+run_script "scripts/analyze-cluster-speakers.js"
+
 echo -e "${YELLOW}→${NC} Generating speaker river data (all podcasts)..."
 run_script "scripts/generate-speaker-river.js"
 
+echo -e "${YELLOW}→${NC} Generating topic river data (all podcasts)..."
+run_script "scripts/generate-topic-river.js"
+
 echo -e "${YELLOW}→${NC} Generating speaker-speaker heatmap (all podcasts)..."
 run_script "scripts/generate-speaker-speaker-heatmap.js"
+
+echo -e "${YELLOW}→${NC} Generating speaker-cluster heatmap (all podcasts)..."
+run_script "scripts/generate-speaker-cluster-heatmap.js"
+
+echo -e "${YELLOW}→${NC} Generating cluster-cluster heatmap (all podcasts)..."
+run_script "scripts/generate-cluster-cluster-heatmap.js"
 
 echo -e "${YELLOW}→${NC} Generating year-duration heatmap (all podcasts)..."
 run_script "scripts/generate-year-duration-heatmap.js"
@@ -355,10 +386,15 @@ echo -e "${YELLOW}→${NC} Copying visualization data files..."
 
 # Copy main visualization files
 [ -f "speaker-river-data.json" ] && cp "speaker-river-data.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ speaker-river-data.json"
+[ -f "topic-river-data.json" ] && cp "topic-river-data.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ topic-river-data.json"
+[ -f "cluster-speakers.json" ] && cp "cluster-speakers.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ cluster-speakers.json"
 [ -f "speaker-speaker-heatmap.json" ] && cp "speaker-speaker-heatmap.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ speaker-speaker-heatmap.json"
+[ -f "speaker-cluster-heatmap.json" ] && cp "speaker-cluster-heatmap.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ speaker-cluster-heatmap.json"
+[ -f "cluster-cluster-heatmap.json" ] && cp "cluster-cluster-heatmap.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ cluster-cluster-heatmap.json"
 [ -f "year-duration-heatmap.json" ] && cp "year-duration-heatmap.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ year-duration-heatmap.json"
 [ -f "dayofweek-duration-heatmap.json" ] && cp "dayofweek-duration-heatmap.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ dayofweek-duration-heatmap.json"
 [ -f "speaker-duration-heatmap.json" ] && cp "speaker-duration-heatmap.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ speaker-duration-heatmap.json"
+[ -f "subject-river-data.json" ] && cp "subject-river-data.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ subject-river-data.json"
 [ -f "episodes.json" ] && cp "episodes.json" "$FRONTEND_PODCAST_DIR/" && echo "  ✓ episodes.json"
 
 # Copy topic files from variant directory
