@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-01-05T11:21:32.574Z",
+  "generatedAt": "2026-01-11T23:26:00.567Z",
   "description": "Subject River Daten für forschergeist Podcast - Coarse Subjects aggregiert nach Jahren",
   "statistics": {
-    "totalSubjects": 14,
+    "totalSubjects": 15,
     "yearRange": {
       "start": 2014,
-      "end": 2023
+      "end": 2026
     },
     "years": [
       2014,
@@ -17,33 +17,34 @@
       2020,
       2021,
       2022,
-      2023
+      2023,
+      2026
     ],
     "subjectsByEpisodeCount": [
       {
+        "id": "sonstige",
+        "name": "Sonstige",
+        "count": 35
+      },
+      {
         "id": "wissenschaft",
         "name": "Wissenschaft",
-        "count": 32
+        "count": 29
       },
       {
         "id": "gesellschaft",
         "name": "Gesellschaft",
-        "count": 30
+        "count": 23
       },
       {
         "id": "umwelt",
         "name": "Umwelt",
-        "count": 22
-      },
-      {
-        "id": "sonstige",
-        "name": "Sonstige",
-        "count": 18
+        "count": 19
       },
       {
         "id": "technologie",
         "name": "Technologie",
-        "count": 17
+        "count": 18
       },
       {
         "id": "bildung",
@@ -56,19 +57,19 @@
         "count": 9
       },
       {
-        "id": "wirtschaft",
-        "name": "Wirtschaft",
-        "count": 7
-      },
-      {
         "id": "ethik",
         "name": "Ethik",
         "count": 6
       },
       {
+        "id": "psychologie",
+        "name": "Psychologie",
+        "count": 5
+      },
+      {
         "id": "biologie",
         "name": "Biologie",
-        "count": 6
+        "count": 5
       }
     ]
   },
@@ -76,7 +77,7 @@
     "wissenschaft": {
       "id": "wissenschaft",
       "name": "Wissenschaft",
-      "totalEpisodes": 32,
+      "totalEpisodes": 29,
       "yearData": [
         {
           "year": 2014,
@@ -147,7 +148,7 @@
         },
         {
           "year": 2016,
-          "count": 9,
+          "count": 7,
           "episodes": [
             {
               "number": 23,
@@ -155,19 +156,9 @@
               "title": "FG023 Welt in Balance"
             },
             {
-              "number": 24,
-              "date": "2016-01-28",
-              "title": "FG024 Nachhaltige Chemie und das Wasser"
-            },
-            {
               "number": 25,
               "date": "2016-02-22",
               "title": "FG025 Transformative Wissenschaft"
-            },
-            {
-              "number": 26,
-              "date": "2016-03-14",
-              "title": "FG026 Gottfried Wilhelm Leibniz"
             },
             {
               "number": 27,
@@ -257,17 +248,12 @@
         },
         {
           "year": 2021,
-          "count": 2,
+          "count": 1,
           "episodes": [
             {
               "number": 85,
               "date": "2021-04-06",
               "title": "FG085 Coronavirus Structural Task Force"
-            },
-            {
-              "number": 89,
-              "date": "2021-12-06",
-              "title": "FG089 Geometrie und Visualisierung"
             }
           ]
         },
@@ -297,6 +283,11 @@
               "title": "FG099 Biodiversität von Mikroorganismen"
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
@@ -390,13 +381,18 @@
           "year": 2023,
           "count": 0,
           "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
     "gesellschaft": {
       "id": "gesellschaft",
       "name": "Gesellschaft",
-      "totalEpisodes": 30,
+      "totalEpisodes": 23,
       "yearData": [
         {
           "year": 2014,
@@ -462,13 +458,8 @@
         },
         {
           "year": 2017,
-          "count": 3,
+          "count": 2,
           "episodes": [
-            {
-              "number": 40,
-              "date": "2017-01-20",
-              "title": "FG040 Stadt und Gesundheit"
-            },
             {
               "number": 44,
               "date": "2017-05-19",
@@ -483,18 +474,8 @@
         },
         {
           "year": 2018,
-          "count": 5,
+          "count": 2,
           "episodes": [
-            {
-              "number": 54,
-              "date": "2018-03-12",
-              "title": "FG054 Urbane Resilienz"
-            },
-            {
-              "number": 56,
-              "date": "2018-04-20",
-              "title": "FG056 Die digitale Medizin"
-            },
             {
               "number": 61,
               "date": "2018-07-27",
@@ -504,17 +485,12 @@
               "number": 62,
               "date": "2018-08-17",
               "title": "FG062 Leichte Sprache"
-            },
-            {
-              "number": 64,
-              "date": "2018-10-29",
-              "title": "FG064 Ethik und Genetik"
             }
           ]
         },
         {
           "year": 2019,
-          "count": 5,
+          "count": 4,
           "episodes": [
             {
               "number": 65,
@@ -535,17 +511,12 @@
               "number": 72,
               "date": "2019-10-01",
               "title": "FG072 Verantwortung in der Informatik"
-            },
-            {
-              "number": 74,
-              "date": "2019-12-17",
-              "title": "FG074 Stoffwechselforschung"
             }
           ]
         },
         {
           "year": 2020,
-          "count": 4,
+          "count": 3,
           "episodes": [
             {
               "number": 78,
@@ -561,24 +532,13 @@
               "number": 81,
               "date": "2020-06-05",
               "title": "FG081 Wissenschaftskommunikation in Krisen"
-            },
-            {
-              "number": 84,
-              "date": "2020-12-11",
-              "title": "FG084 Evidenzbasierte Medizin"
             }
           ]
         },
         {
           "year": 2021,
-          "count": 1,
-          "episodes": [
-            {
-              "number": 87,
-              "date": "2021-10-31",
-              "title": "FG087 Computertomographie"
-            }
-          ]
+          "count": 0,
+          "episodes": []
         },
         {
           "year": 2022,
@@ -606,6 +566,11 @@
               "title": "FG099 Biodiversität von Mikroorganismen"
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
@@ -712,6 +677,11 @@
           "year": 2023,
           "count": 0,
           "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
@@ -785,6 +755,11 @@
         },
         {
           "year": 2023,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2026,
           "count": 0,
           "episodes": []
         }
@@ -861,13 +836,18 @@
           "year": 2023,
           "count": 0,
           "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
     "sonstige": {
       "id": "sonstige",
       "name": "Sonstige",
-      "totalEpisodes": 18,
+      "totalEpisodes": 35,
       "yearData": [
         {
           "year": 2014,
@@ -876,7 +856,7 @@
         },
         {
           "year": 2015,
-          "count": 2,
+          "count": 4,
           "episodes": [
             {
               "number": 7,
@@ -884,20 +864,40 @@
               "title": "FG007 Die deutsche Sprache und die Wissenschaften"
             },
             {
+              "number": 8,
+              "date": "2015-03-02",
+              "title": "FG008 Wirtschaftskriminalität"
+            },
+            {
               "number": 9,
               "date": "2015-03-24",
               "title": "FG009 Wirtschaftspolitischer Journalismus"
+            },
+            {
+              "number": 19,
+              "date": "2015-10-12",
+              "title": "FG019 Cradle To Cradle"
             }
           ]
         },
         {
           "year": 2016,
-          "count": 3,
+          "count": 5,
           "episodes": [
+            {
+              "number": 24,
+              "date": "2016-01-28",
+              "title": "FG024 Nachhaltige Chemie und das Wasser"
+            },
             {
               "number": 26,
               "date": "2016-03-14",
               "title": "FG026 Gottfried Wilhelm Leibniz"
+            },
+            {
+              "number": 28,
+              "date": "2016-05-02",
+              "title": "FG028 Moore, Paludikultur und das Klima"
             },
             {
               "number": 35,
@@ -913,8 +913,13 @@
         },
         {
           "year": 2017,
-          "count": 3,
+          "count": 4,
           "episodes": [
+            {
+              "number": 40,
+              "date": "2017-01-20",
+              "title": "FG040 Stadt und Gesundheit"
+            },
             {
               "number": 41,
               "date": "2017-02-17",
@@ -934,18 +939,38 @@
         },
         {
           "year": 2018,
-          "count": 1,
+          "count": 5,
           "episodes": [
+            {
+              "number": 54,
+              "date": "2018-03-12",
+              "title": "FG054 Urbane Resilienz"
+            },
+            {
+              "number": 56,
+              "date": "2018-04-20",
+              "title": "FG056 Die digitale Medizin"
+            },
+            {
+              "number": 58,
+              "date": "2018-06-05",
+              "title": "FG058 Fischerei"
+            },
             {
               "number": 62,
               "date": "2018-08-17",
               "title": "FG062 Leichte Sprache"
+            },
+            {
+              "number": 64,
+              "date": "2018-10-29",
+              "title": "FG064 Ethik und Genetik"
             }
           ]
         },
         {
           "year": 2019,
-          "count": 2,
+          "count": 3,
           "episodes": [
             {
               "number": 68,
@@ -956,12 +981,17 @@
               "number": 69,
               "date": "2019-06-30",
               "title": "FG069 Islamische Ästhetik"
+            },
+            {
+              "number": 74,
+              "date": "2019-12-17",
+              "title": "FG074 Stoffwechselforschung"
             }
           ]
         },
         {
           "year": 2020,
-          "count": 4,
+          "count": 7,
           "episodes": [
             {
               "number": 75,
@@ -979,27 +1009,62 @@
               "title": "FG077 Organisationsforschung"
             },
             {
+              "number": 78,
+              "date": "2020-04-01",
+              "title": "FG078 Angst und Zukunft"
+            },
+            {
               "number": 80,
               "date": "2020-05-25",
               "title": "FG080 Medien und Meinungsbildung"
+            },
+            {
+              "number": 82,
+              "date": "2020-10-13",
+              "title": "FG082 Kriminalbiologie"
+            },
+            {
+              "number": 84,
+              "date": "2020-12-11",
+              "title": "FG084 Evidenzbasierte Medizin"
             }
           ]
         },
         {
           "year": 2021,
-          "count": 1,
+          "count": 4,
           "episodes": [
             {
               "number": 86,
               "date": "2021-10-13",
               "title": "FG086 Klugscheißen im Fernsehen"
+            },
+            {
+              "number": 87,
+              "date": "2021-10-31",
+              "title": "FG087 Computertomographie"
+            },
+            {
+              "number": 88,
+              "date": "2021-11-14",
+              "title": "FG088 Reifen aus Löwenzahn"
+            },
+            {
+              "number": 89,
+              "date": "2021-12-06",
+              "title": "FG089 Geometrie und Visualisierung"
             }
           ]
         },
         {
           "year": 2022,
-          "count": 2,
+          "count": 3,
           "episodes": [
+            {
+              "number": 92,
+              "date": "2022-03-09",
+              "title": "FG092 Innovationen kreativ ermöglichen"
+            },
             {
               "number": 93,
               "date": "2022-04-12",
@@ -1016,13 +1081,20 @@
           "year": 2023,
           "count": 0,
           "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
     "technologie": {
       "id": "technologie",
       "name": "Technologie",
-      "totalEpisodes": 17,
+      "totalEpisodes": 18,
+      "totalRelevanceSec": 2925,
+      "totalOccurrences": 1,
       "yearData": [
         {
           "year": 2014,
@@ -1164,103 +1236,27 @@
           "year": 2023,
           "count": 0,
           "episodes": []
-        }
-      ]
-    },
-    "wirtschaft": {
-      "id": "wirtschaft",
-      "name": "Wirtschaft",
-      "totalEpisodes": 7,
-      "yearData": [
-        {
-          "year": 2014,
-          "count": 0,
-          "episodes": []
         },
         {
-          "year": 2015,
-          "count": 3,
-          "episodes": [
-            {
-              "number": 8,
-              "date": "2015-03-02",
-              "title": "FG008 Wirtschaftskriminalität"
-            },
-            {
-              "number": 18,
-              "date": "2015-09-21",
-              "title": "FG018 Die Vermessung der Welt"
-            },
-            {
-              "number": 19,
-              "date": "2015-10-12",
-              "title": "FG019 Cradle To Cradle"
-            }
-          ]
-        },
-        {
-          "year": 2016,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2017,
+          "year": 2026,
           "count": 1,
+          "totalRelevanceSec": 2925,
+          "totalOccurrences": 1,
           "episodes": [
             {
-              "number": 51,
-              "date": "2017-12-05",
-              "title": "FG051 Gründungsmanagement"
+              "number": 100,
+              "date": "2026-01-11",
+              "title": "FG100 Stellerator",
+              "relevanceSec": 2925,
+              "occurrences": [
+                {
+                  "topic": "Forschungsprototyp Wendelstein-7X",
+                  "positionSec": 3975,
+                  "durationSec": 2925
+                }
+              ]
             }
           ]
-        },
-        {
-          "year": 2018,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2019,
-          "count": 1,
-          "episodes": [
-            {
-              "number": 71,
-              "date": "2019-09-05",
-              "title": "FG071 Wirtschaft und Wettbewerb"
-            }
-          ]
-        },
-        {
-          "year": 2020,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2021,
-          "count": 1,
-          "episodes": [
-            {
-              "number": 88,
-              "date": "2021-11-14",
-              "title": "FG088 Reifen aus Löwenzahn"
-            }
-          ]
-        },
-        {
-          "year": 2022,
-          "count": 1,
-          "episodes": [
-            {
-              "number": 92,
-              "date": "2022-03-09",
-              "title": "FG092 Innovationen kreativ ermöglichen"
-            }
-          ]
-        },
-        {
-          "year": 2023,
-          "count": 0,
-          "episodes": []
         }
       ]
     },
@@ -1399,13 +1395,98 @@
           "year": 2023,
           "count": 0,
           "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    "wirtschaft": {
+      "id": "wirtschaft",
+      "name": "Wirtschaft",
+      "totalEpisodes": 3,
+      "yearData": [
+        {
+          "year": 2014,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2015,
+          "count": 1,
+          "episodes": [
+            {
+              "number": 18,
+              "date": "2015-09-21",
+              "title": "FG018 Die Vermessung der Welt"
+            }
+          ]
+        },
+        {
+          "year": 2016,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2017,
+          "count": 1,
+          "episodes": [
+            {
+              "number": 51,
+              "date": "2017-12-05",
+              "title": "FG051 Gründungsmanagement"
+            }
+          ]
+        },
+        {
+          "year": 2018,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2019,
+          "count": 1,
+          "episodes": [
+            {
+              "number": 71,
+              "date": "2019-09-05",
+              "title": "FG071 Wirtschaft und Wettbewerb"
+            }
+          ]
+        },
+        {
+          "year": 2020,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2021,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2022,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2023,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
     "umwelt": {
       "id": "umwelt",
       "name": "Umwelt",
-      "totalEpisodes": 22,
+      "totalEpisodes": 19,
       "yearData": [
         {
           "year": 2014,
@@ -1467,13 +1548,8 @@
         },
         {
           "year": 2018,
-          "count": 5,
+          "count": 3,
           "episodes": [
-            {
-              "number": 53,
-              "date": "2018-01-08",
-              "title": "FG053 Energiewende"
-            },
             {
               "number": 57,
               "date": "2018-05-16",
@@ -1488,11 +1564,6 @@
               "number": 60,
               "date": "2018-07-06",
               "title": "FG060 Klimawandel"
-            },
-            {
-              "number": 63,
-              "date": "2018-10-12",
-              "title": "FG063 Geothermie"
             }
           ]
         },
@@ -1545,17 +1616,12 @@
         },
         {
           "year": 2022,
-          "count": 4,
+          "count": 3,
           "episodes": [
             {
               "number": 90,
               "date": "2022-01-03",
               "title": "FG090 Angeln und Naturschutz"
-            },
-            {
-              "number": 93,
-              "date": "2022-04-12",
-              "title": "FG093 Solarstrom für Mieter"
             },
             {
               "number": 94,
@@ -1571,6 +1637,11 @@
         },
         {
           "year": 2023,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2026,
           "count": 0,
           "episodes": []
         }
@@ -1660,13 +1731,18 @@
           "year": 2023,
           "count": 0,
           "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
     "biologie": {
       "id": "biologie",
       "name": "Biologie",
-      "totalEpisodes": 6,
+      "totalEpisodes": 5,
       "yearData": [
         {
           "year": 2014,
@@ -1712,17 +1788,12 @@
         },
         {
           "year": 2020,
-          "count": 3,
+          "count": 2,
           "episodes": [
             {
               "number": 79,
               "date": "2020-04-29",
               "title": "FG079 Wüstenforschung (Teil 2)"
-            },
-            {
-              "number": 82,
-              "date": "2020-10-13",
-              "title": "FG082 Kriminalbiologie"
             },
             {
               "number": 83,
@@ -1749,6 +1820,108 @@
               "number": 99,
               "date": "2023-02-27",
               "title": "FG099 Biodiversität von Mikroorganismen"
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    "energie": {
+      "id": "energie",
+      "name": "Energie",
+      "totalEpisodes": 4,
+      "totalRelevanceSec": 4015,
+      "totalOccurrences": 1,
+      "yearData": [
+        {
+          "year": 2014,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2015,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2016,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2017,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2018,
+          "count": 2,
+          "episodes": [
+            {
+              "number": 53,
+              "date": "2018-01-08",
+              "title": "FG053 Energiewende"
+            },
+            {
+              "number": 63,
+              "date": "2018-10-12",
+              "title": "FG063 Geothermie"
+            }
+          ]
+        },
+        {
+          "year": 2019,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2020,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2021,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2022,
+          "count": 1,
+          "episodes": [
+            {
+              "number": 93,
+              "date": "2022-04-12",
+              "title": "FG093 Solarstrom für Mieter"
+            }
+          ]
+        },
+        {
+          "year": 2023,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 1,
+          "totalRelevanceSec": 4015,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 100,
+              "date": "2026-01-11",
+              "title": "FG100 Stellerator",
+              "relevanceSec": 4015,
+              "occurrences": [
+                {
+                  "topic": "Energiegewinnung durch Kernfusion",
+                  "positionSec": 0,
+                  "durationSec": 4015
+                }
+              ]
             }
           ]
         }
@@ -1812,6 +1985,11 @@
         },
         {
           "year": 2023,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2026,
           "count": 0,
           "episodes": []
         }

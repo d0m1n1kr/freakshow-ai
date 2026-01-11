@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-01-02T23:48:15.204Z",
+  "generatedAt": "2026-01-11T23:26:07.776Z",
   "description": "Day of Week × Episode Duration Heatmap Data",
   "statistics": {
-    "totalEpisodes": 99,
+    "totalEpisodes": 100,
     "totalDays": 7,
     "totalDurationBuckets": 5,
-    "totalCombinations": 21,
+    "totalCombinations": 22,
     "mostCommonDay": "Montag",
     "mostCommonDayCount": 37,
     "mostCommonDuration": 90,
     "mostCommonDurationLabel": "1h 30min",
-    "mostCommonDurationCount": 52
+    "mostCommonDurationCount": 53
   },
   "days": [
     {
@@ -39,7 +39,7 @@
     },
     {
       "name": "Sonntag",
-      "totalEpisodes": 3
+      "totalEpisodes": 4
     }
   ],
   "durations": [
@@ -56,7 +56,7 @@
     {
       "minutes": 90,
       "label": "1h 30min",
-      "totalEpisodes": 52
+      "totalEpisodes": 53
     },
     {
       "minutes": 120,
@@ -418,8 +418,10 @@
         {
           "duration": 90,
           "durationLabel": "1h 30min",
-          "count": 0,
-          "episodes": []
+          "count": 1,
+          "episodes": [
+            100
+          ]
         },
         {
           "duration": 120,

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-01-11T19:00:17.788Z",
+  "generatedAt": "2026-01-11T23:26:07.437Z",
   "description": "Topic River Daten für Freak Show Podcast - Main Topics aggregiert nach Jahren",
   "statistics": {
-    "totalTopics": 51,
+    "totalTopics": 53,
     "yearRange": {
       "start": 2014,
-      "end": 2023
+      "end": 2026
     },
     "years": [
       2014,
@@ -17,18 +17,24 @@
       2020,
       2021,
       2022,
-      2023
+      2023,
+      2026
     ],
     "topicsByEpisodeCount": [
-      {
-        "id": "klimawandel",
-        "name": "Klimawandel",
-        "count": 8
-      },
       {
         "id": "wissenschaftskommunikation",
         "name": "Wissenschaftskommunikation",
         "count": 8
+      },
+      {
+        "id": "klimawandel-und-umwelt",
+        "name": "Klimawandel und Umwelt",
+        "count": 7
+      },
+      {
+        "id": "nachhaltigkeit",
+        "name": "Nachhaltigkeit",
+        "count": 7
       },
       {
         "id": "wissenschaft-und-forschung",
@@ -41,46 +47,120 @@
         "count": 6
       },
       {
-        "id": "nachhaltigkeit",
-        "name": "Nachhaltigkeit",
-        "count": 6
-      },
-      {
         "id": "digitalisierung",
         "name": "Digitalisierung",
         "count": 6
       },
       {
-        "id": "gesellschaftliche-disruption",
-        "name": "Gesellschaftliche Disruption",
+        "id": "digitale-bildung",
+        "name": "Digitale Bildung",
         "count": 4
       },
       {
-        "id": "innovationen-in-der-industrie",
-        "name": "Innovationen in der Industrie",
+        "id": "industrieinnovation",
+        "name": "Industrieinnovation",
         "count": 4
       },
       {
-        "id": "innovationsförderung",
-        "name": "Innovationsförderung",
+        "id": "energiezukunft",
+        "name": "Energiezukunft",
         "count": 3
       },
       {
-        "id": "bildungsreform",
-        "name": "Bildungsreform",
+        "id": "meeresforschung",
+        "name": "Meeresforschung",
         "count": 3
       }
     ]
   },
   "topics": {
-    "klimawandel": {
-      "id": "klimawandel",
-      "name": "Klimawandel",
-      "description": "10 Topics in 8 Episoden",
-      "totalEpisodes": 8,
-      "totalTopics": 10,
-      "totalRelevanceSec": 3000,
-      "totalOccurrences": 10,
+    "energiezukunft": {
+      "id": "energiezukunft",
+      "name": "Energiezukunft",
+      "description": "4 Topics in 3 Episoden",
+      "totalEpisodes": 3,
+      "totalTopics": 4,
+      "totalRelevanceSec": 4915,
+      "totalOccurrences": 4,
+      "yearData": [
+        {
+          "year": 2015,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 12,
+              "date": "2015-06-08",
+              "title": "FG012 Energieforschung",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Energieprobleme",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Lösungen für Energieprobleme",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2018,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 53,
+              "date": "2018-01-08",
+              "title": "FG053 Energiewende",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Energiewende",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "count": 1,
+          "totalRelevanceSec": 4015,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 100,
+              "date": "2026-01-11",
+              "title": "FG100 Stellerator",
+              "relevanceSec": 4015,
+              "occurrences": [
+                {
+                  "topic": "Energiegewinnung durch Kernfusion",
+                  "positionSec": 0,
+                  "durationSec": 4015
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "klimawandel-und-umwelt": {
+      "id": "klimawandel-und-umwelt",
+      "name": "Klimawandel und Umwelt",
+      "description": "9 Topics in 7 Episoden",
+      "totalEpisodes": 7,
+      "totalTopics": 9,
+      "totalRelevanceSec": 2700,
+      "totalOccurrences": 9,
       "yearData": [
         {
           "year": 2016,
@@ -123,9 +203,9 @@
         },
         {
           "year": 2018,
-          "count": 2,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 57,
@@ -135,19 +215,6 @@
               "occurrences": [
                 {
                   "topic": "Ausrottung der Arten",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            },
-            {
-              "number": 60,
-              "date": "2018-07-06",
-              "title": "FG060 Klimawandel",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Zukunft unseres Planeten",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -229,6 +296,300 @@
               "occurrences": [
                 {
                   "topic": "Auswirkungen von Vulkanausbrüchen auf das Klima",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "wissenschaftstransformation": {
+      "id": "wissenschaftstransformation",
+      "name": "Wissenschaftstransformation",
+      "description": "8 Topics in 6 Episoden",
+      "totalEpisodes": 6,
+      "totalTopics": 8,
+      "totalRelevanceSec": 2400,
+      "totalOccurrences": 8,
+      "yearData": [
+        {
+          "year": 2014,
+          "count": 2,
+          "totalRelevanceSec": 900,
+          "totalOccurrences": 3,
+          "episodes": [
+            {
+              "number": 1,
+              "date": "2014-11-03",
+              "title": "FG001 Geschichte der Wissenschaften",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Geschichte der Wissenschaften",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Zukunft der Wissenschaft",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "date": "2014-11-17",
+              "title": "FG002 Citizen Science",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Bürgerwissenschaften",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2015,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 10,
+              "date": "2015-05-11",
+              "title": "FG010 Wissenschaft im Dialog",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Innovationen in der Wissenschaft",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2016,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 25,
+              "date": "2016-02-22",
+              "title": "FG025 Transformative Wissenschaft",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Nachhaltigkeit in der Wissenschaft",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Wandel der Wissenschaft",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2018,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 55,
+              "date": "2018-03-28",
+              "title": "FG055 Die Kunst des Wissens",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Wirkung von Wissenschaft auf die Gesellschaft",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2023,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 99,
+              "date": "2023-02-27",
+              "title": "FG099 Biodiversität von Mikroorganismen",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Wissenschaftspolitik",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "nachhaltigkeit": {
+      "id": "nachhaltigkeit",
+      "name": "Nachhaltigkeit",
+      "description": "8 Topics in 7 Episoden",
+      "totalEpisodes": 7,
+      "totalTopics": 8,
+      "totalRelevanceSec": 2400,
+      "totalOccurrences": 8,
+      "yearData": [
+        {
+          "year": 2015,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 19,
+              "date": "2015-10-12",
+              "title": "FG019 Cradle To Cradle",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Ansätze für eine Welt ohne Müll",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2016,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 24,
+              "date": "2016-01-28",
+              "title": "FG024 Nachhaltige Chemie und das Wasser",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Nachhaltige Chemie",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2017,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 48,
+              "date": "2017-08-10",
+              "title": "FG048 Die Zukunftsmacher",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Nachhaltige Entwicklung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2018,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 60,
+              "date": "2018-07-06",
+              "title": "FG060 Klimawandel",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Zukunft unseres Planeten",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2019,
+          "count": 2,
+          "totalRelevanceSec": 900,
+          "totalOccurrences": 3,
+          "episodes": [
+            {
+              "number": 66,
+              "date": "2019-02-20",
+              "title": "FG066 Klimaneutralität",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Klimakompensation",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Klimaneutralität",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            },
+            {
+              "number": 70,
+              "date": "2019-07-29",
+              "title": "FG070 Nachhaltigkeit und die Stadt",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Nachhaltigkeit in der Stadt",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2021,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 88,
+              "date": "2021-11-14",
+              "title": "FG088 Reifen aus Löwenzahn",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Umweltbelastung reduzieren",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -532,279 +893,6 @@
         }
       ]
     },
-    "wissenschaftstransformation": {
-      "id": "wissenschaftstransformation",
-      "name": "Wissenschaftstransformation",
-      "description": "8 Topics in 6 Episoden",
-      "totalEpisodes": 6,
-      "totalTopics": 8,
-      "totalRelevanceSec": 2400,
-      "totalOccurrences": 8,
-      "yearData": [
-        {
-          "year": 2014,
-          "count": 2,
-          "totalRelevanceSec": 900,
-          "totalOccurrences": 3,
-          "episodes": [
-            {
-              "number": 1,
-              "date": "2014-11-03",
-              "title": "FG001 Geschichte der Wissenschaften",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Geschichte der Wissenschaften",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Zukunft der Wissenschaft",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            },
-            {
-              "number": 2,
-              "date": "2014-11-17",
-              "title": "FG002 Citizen Science",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Bürgerwissenschaften",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2015,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 10,
-              "date": "2015-05-11",
-              "title": "FG010 Wissenschaft im Dialog",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Innovationen in der Wissenschaft",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2016,
-          "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 25,
-              "date": "2016-02-22",
-              "title": "FG025 Transformative Wissenschaft",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Nachhaltigkeit in der Wissenschaft",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Wandel der Wissenschaft",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2018,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 55,
-              "date": "2018-03-28",
-              "title": "FG055 Die Kunst des Wissens",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Wirkung von Wissenschaft auf die Gesellschaft",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2023,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 99,
-              "date": "2023-02-27",
-              "title": "FG099 Biodiversität von Mikroorganismen",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Wissenschaftspolitik",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "nachhaltigkeit": {
-      "id": "nachhaltigkeit",
-      "name": "Nachhaltigkeit",
-      "description": "7 Topics in 6 Episoden",
-      "totalEpisodes": 6,
-      "totalTopics": 7,
-      "totalRelevanceSec": 2100,
-      "totalOccurrences": 7,
-      "yearData": [
-        {
-          "year": 2015,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 19,
-              "date": "2015-10-12",
-              "title": "FG019 Cradle To Cradle",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Ansätze für eine Welt ohne Müll",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2016,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 24,
-              "date": "2016-01-28",
-              "title": "FG024 Nachhaltige Chemie und das Wasser",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Nachhaltige Chemie",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2017,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 48,
-              "date": "2017-08-10",
-              "title": "FG048 Die Zukunftsmacher",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Nachhaltige Entwicklung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2019,
-          "count": 2,
-          "totalRelevanceSec": 900,
-          "totalOccurrences": 3,
-          "episodes": [
-            {
-              "number": 66,
-              "date": "2019-02-20",
-              "title": "FG066 Klimaneutralität",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Klimakompensation",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Klimaneutralität",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            },
-            {
-              "number": 70,
-              "date": "2019-07-29",
-              "title": "FG070 Nachhaltigkeit und die Stadt",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Nachhaltigkeit in der Stadt",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2021,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 88,
-              "date": "2021-11-14",
-              "title": "FG088 Reifen aus Löwenzahn",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Umweltbelastung reduzieren",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "digitalisierung": {
       "id": "digitalisierung",
       "name": "Digitalisierung",
@@ -1002,26 +1090,44 @@
     "digitale-bildung": {
       "id": "digitale-bildung",
       "name": "Digitale Bildung",
-      "description": "2 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
+      "description": "6 Topics in 4 Episoden",
+      "totalEpisodes": 4,
+      "totalTopics": 6,
+      "totalRelevanceSec": 1800,
+      "totalOccurrences": 6,
       "yearData": [
         {
           "year": 2015,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
+          "count": 2,
+          "totalRelevanceSec": 900,
+          "totalOccurrences": 3,
           "episodes": [
+            {
+              "number": 11,
+              "date": "2015-05-25",
+              "title": "FG011 Lehren und Lernen in digitalen Zeiten",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Lehren und Lernen in digitalen Zeiten",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            },
             {
               "number": 22,
               "date": "2015-12-14",
               "title": "FG022 Hochschullehre Digital",
-              "relevanceSec": 300,
+              "relevanceSec": 600,
               "occurrences": [
                 {
-                  "topic": "Chancen der Digitalisierung",
+                  "topic": "Digitalisierung in der Hochschullehre",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Mehrwerte durch digitale Lehre",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -1036,13 +1142,39 @@
           "totalOccurrences": 1,
           "episodes": [
             {
-              "number": 43,
-              "date": "2017-04-15",
-              "title": "FG043 Schule und Lernen in der digitalen Welt",
+              "number": 42,
+              "date": "2017-03-28",
+              "title": "FG042 Neues Lehren und Lernen an der Fachhochschule",
               "relevanceSec": 300,
               "occurrences": [
                 {
-                  "topic": "Herausforderungen der digitalen Welt",
+                  "topic": "Neues Lehren und Lernen",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2018,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 59,
+              "date": "2018-06-22",
+              "title": "FG059 Digitale Didaktik",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Digitale Medien im Schulunterricht",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Kulturelle Aspekte der digitalen Didaktik",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -1120,101 +1252,14 @@
         }
       ]
     },
-    "gesellschaftliche-disruption": {
-      "id": "gesellschaftliche-disruption",
-      "name": "Gesellschaftliche Disruption",
-      "description": "4 Topics in 4 Episoden",
-      "totalEpisodes": 4,
-      "totalTopics": 4,
-      "totalRelevanceSec": 1200,
-      "totalOccurrences": 4,
-      "yearData": [
-        {
-          "year": 2016,
-          "count": 2,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 32,
-              "date": "2016-07-18",
-              "title": "FG032 Hochschule und Zivilgesellschaft",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Mission Gesellschaft",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            },
-            {
-              "number": 38,
-              "date": "2016-11-24",
-              "title": "FG038 Politische Zäsuren und das Recht",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Bedeutung für die Stabilität einer Gesellschaft",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2020,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 81,
-              "date": "2020-06-05",
-              "title": "FG081 Wissenschaftskommunikation in Krisen",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Öffentlichkeit",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2022,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 92,
-              "date": "2022-03-09",
-              "title": "FG092 Innovationen kreativ ermöglichen",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Disruption in der Gesellschaft",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "meeresforschung": {
       "id": "meeresforschung",
       "name": "Meeresforschung",
-      "description": "4 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 4,
-      "totalRelevanceSec": 1200,
-      "totalOccurrences": 4,
+      "description": "5 Topics in 3 Episoden",
+      "totalEpisodes": 3,
+      "totalTopics": 5,
+      "totalRelevanceSec": 1500,
+      "totalOccurrences": 5,
       "yearData": [
         {
           "year": 2016,
@@ -1261,6 +1306,287 @@
               "occurrences": [
                 {
                   "topic": "Ozeanographie",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2019,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 73,
+              "date": "2019-11-19",
+              "title": "FG073 Klimawandel in Seen",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Forschung an Binnenseen",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "konfliktforschung": {
+      "id": "konfliktforschung",
+      "name": "Konfliktforschung",
+      "description": "4 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 4,
+      "totalRelevanceSec": 1200,
+      "totalOccurrences": 4,
+      "yearData": [
+        {
+          "year": 2016,
+          "count": 1,
+          "totalRelevanceSec": 900,
+          "totalOccurrences": 3,
+          "episodes": [
+            {
+              "number": 30,
+              "date": "2016-06-13",
+              "title": "FG030 Konflikt- und Gewaltforschung",
+              "relevanceSec": 900,
+              "occurrences": [
+                {
+                  "topic": "Konfliktforschung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Gewaltforschung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Sozialpsychologie",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2019,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 67,
+              "date": "2019-04-26",
+              "title": "FG067 Datenbasierte Konfliktforschung",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Datenbasierte Konfliktforschung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "wissenschaftsfinanzierung": {
+      "id": "wissenschaftsfinanzierung",
+      "name": "Wissenschaftsfinanzierung",
+      "description": "4 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 4,
+      "totalRelevanceSec": 1200,
+      "totalOccurrences": 4,
+      "yearData": [
+        {
+          "year": 2015,
+          "count": 1,
+          "totalRelevanceSec": 1200,
+          "totalOccurrences": 4,
+          "episodes": [
+            {
+              "number": 20,
+              "date": "2015-11-02",
+              "title": "FG020 Wissenschaftsfinanzierung",
+              "relevanceSec": 1200,
+              "occurrences": [
+                {
+                  "topic": "Wissenschaftsfinanzierung in Deutschland",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Rolle der öffentlichen Hand in der Forschung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Private Geldgeber in der Wissenschaft",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Einfluss von Förderprogrammen auf Forschungsprojekte",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "industrieinnovation": {
+      "id": "industrieinnovation",
+      "name": "Industrieinnovation",
+      "description": "4 Topics in 4 Episoden",
+      "totalEpisodes": 4,
+      "totalTopics": 4,
+      "totalRelevanceSec": 1200,
+      "totalOccurrences": 4,
+      "yearData": [
+        {
+          "year": 2015,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 19,
+              "date": "2015-10-12",
+              "title": "FG019 Cradle To Cradle",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Neue Produktionsmethoden",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2020,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 76,
+              "date": "2020-02-26",
+              "title": "FG076 Mobilität und Gesellschaft",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Bedarf an Mobilität",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2022,
+          "count": 2,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 91,
+              "date": "2022-01-25",
+              "title": "FG091 Sprunginnovationen",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Sprunginnovationen",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            },
+            {
+              "number": 92,
+              "date": "2022-03-09",
+              "title": "FG092 Innovationen kreativ ermöglichen",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Innovation in der Wirtschaft",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "genetik-und-ethik": {
+      "id": "genetik-und-ethik",
+      "name": "Genetik und Ethik",
+      "description": "4 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 4,
+      "totalRelevanceSec": 1200,
+      "totalOccurrences": 4,
+      "yearData": [
+        {
+          "year": 2018,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 64,
+              "date": "2018-10-29",
+              "title": "FG064 Ethik und Genetik",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Ethische Fragen in der Genetik",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Moderne genetische Verfahren",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2020,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 83,
+              "date": "2020-11-17",
+              "title": "FG083 Bioengineering",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Bekämpfung von Krankheiten",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Technologische Entwicklungen",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -1370,395 +1696,9 @@
         }
       ]
     },
-    "innovationen-in-der-industrie": {
-      "id": "innovationen-in-der-industrie",
-      "name": "Innovationen in der Industrie",
-      "description": "4 Topics in 4 Episoden",
-      "totalEpisodes": 4,
-      "totalTopics": 4,
-      "totalRelevanceSec": 1200,
-      "totalOccurrences": 4,
-      "yearData": [
-        {
-          "year": 2015,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 19,
-              "date": "2015-10-12",
-              "title": "FG019 Cradle To Cradle",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Neue Produktionsmethoden",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2020,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 76,
-              "date": "2020-02-26",
-              "title": "FG076 Mobilität und Gesellschaft",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Bedarf an Mobilität",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2022,
-          "count": 2,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 91,
-              "date": "2022-01-25",
-              "title": "FG091 Sprunginnovationen",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Sprunginnovationen",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            },
-            {
-              "number": 92,
-              "date": "2022-03-09",
-              "title": "FG092 Innovationen kreativ ermöglichen",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Innovation in der Wirtschaft",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "wissenschaftsfinanzierung": {
-      "id": "wissenschaftsfinanzierung",
-      "name": "Wissenschaftsfinanzierung",
-      "description": "4 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 4,
-      "totalRelevanceSec": 1200,
-      "totalOccurrences": 4,
-      "yearData": [
-        {
-          "year": 2015,
-          "count": 1,
-          "totalRelevanceSec": 1200,
-          "totalOccurrences": 4,
-          "episodes": [
-            {
-              "number": 20,
-              "date": "2015-11-02",
-              "title": "FG020 Wissenschaftsfinanzierung",
-              "relevanceSec": 1200,
-              "occurrences": [
-                {
-                  "topic": "Wissenschaftsfinanzierung in Deutschland",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Rolle der öffentlichen Hand in der Forschung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Private Geldgeber in der Wissenschaft",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Einfluss von Förderprogrammen auf Forschungsprojekte",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "konfliktforschung": {
-      "id": "konfliktforschung",
-      "name": "Konfliktforschung",
-      "description": "4 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 4,
-      "totalRelevanceSec": 1200,
-      "totalOccurrences": 4,
-      "yearData": [
-        {
-          "year": 2016,
-          "count": 1,
-          "totalRelevanceSec": 900,
-          "totalOccurrences": 3,
-          "episodes": [
-            {
-              "number": 30,
-              "date": "2016-06-13",
-              "title": "FG030 Konflikt- und Gewaltforschung",
-              "relevanceSec": 900,
-              "occurrences": [
-                {
-                  "topic": "Konfliktforschung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Gewaltforschung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Sozialpsychologie",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2019,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 67,
-              "date": "2019-04-26",
-              "title": "FG067 Datenbasierte Konfliktforschung",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Datenbasierte Konfliktforschung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "genetik-und-ethik": {
-      "id": "genetik-und-ethik",
-      "name": "Genetik und Ethik",
-      "description": "4 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 4,
-      "totalRelevanceSec": 1200,
-      "totalOccurrences": 4,
-      "yearData": [
-        {
-          "year": 2018,
-          "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 64,
-              "date": "2018-10-29",
-              "title": "FG064 Ethik und Genetik",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Ethische Fragen in der Genetik",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Moderne genetische Verfahren",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2020,
-          "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 83,
-              "date": "2020-11-17",
-              "title": "FG083 Bioengineering",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Bekämpfung von Krankheiten",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Technologische Entwicklungen",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "digitale-medizin": {
-      "id": "digitale-medizin",
-      "name": "Digitale Medizin",
-      "description": "3 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 3,
-      "totalRelevanceSec": 900,
-      "totalOccurrences": 3,
-      "yearData": [
-        {
-          "year": 2018,
-          "count": 1,
-          "totalRelevanceSec": 900,
-          "totalOccurrences": 3,
-          "episodes": [
-            {
-              "number": 56,
-              "date": "2018-04-20",
-              "title": "FG056 Die digitale Medizin",
-              "relevanceSec": 900,
-              "occurrences": [
-                {
-                  "topic": "Digitale Medizin",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Apps in der Medizin",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Big Data in der Medizin",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "bienenforschung": {
-      "id": "bienenforschung",
-      "name": "Bienenforschung",
-      "description": "3 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 3,
-      "totalRelevanceSec": 900,
-      "totalOccurrences": 3,
-      "yearData": [
-        {
-          "year": 2017,
-          "count": 1,
-          "totalRelevanceSec": 900,
-          "totalOccurrences": 3,
-          "episodes": [
-            {
-              "number": 46,
-              "date": "2017-06-30",
-              "title": "FG046 Bienenforschung",
-              "relevanceSec": 900,
-              "occurrences": [
-                {
-                  "topic": "Wesen der Honigbienen",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Methoden der Bienenforschung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Stand der Erkenntnisse in der Bienenforschung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "gründerbildung": {
-      "id": "gründerbildung",
-      "name": "Gründerbildung",
-      "description": "3 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 3,
-      "totalRelevanceSec": 900,
-      "totalOccurrences": 3,
-      "yearData": [
-        {
-          "year": 2017,
-          "count": 1,
-          "totalRelevanceSec": 900,
-          "totalOccurrences": 3,
-          "episodes": [
-            {
-              "number": 51,
-              "date": "2017-12-05",
-              "title": "FG051 Gründungsmanagement",
-              "relevanceSec": 900,
-              "occurrences": [
-                {
-                  "topic": "Gründerkultur an der Universität",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Maßnahmen zur Förderung von Gründern",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Lehre im Gründungsmanagement",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "energiepolitik": {
-      "id": "energiepolitik",
-      "name": "Energiepolitik",
+    "mathematik": {
+      "id": "mathematik",
+      "name": "Mathematik",
       "description": "3 Topics in 2 Episoden",
       "totalEpisodes": 2,
       "totalTopics": 3,
@@ -1768,22 +1708,17 @@
         {
           "year": 2015,
           "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
           "episodes": [
             {
-              "number": 12,
-              "date": "2015-06-08",
-              "title": "FG012 Energieforschung",
-              "relevanceSec": 600,
+              "number": 11,
+              "date": "2015-05-25",
+              "title": "FG011 Lehren und Lernen in digitalen Zeiten",
+              "relevanceSec": 300,
               "occurrences": [
                 {
-                  "topic": "Energieprobleme",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Lösungen für Energieprobleme",
+                  "topic": "Mathematik",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -1792,19 +1727,24 @@
           ]
         },
         {
-          "year": 2018,
+          "year": 2016,
           "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
           "episodes": [
             {
-              "number": 53,
-              "date": "2018-01-08",
-              "title": "FG053 Energiewende",
-              "relevanceSec": 300,
+              "number": 31,
+              "date": "2016-06-30",
+              "title": "FG031 Abenteuer Mathematik",
+              "relevanceSec": 600,
               "occurrences": [
                 {
-                  "topic": "Energiewende",
+                  "topic": "Mathematik in der Wissenschaft",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Mathematik in der Gesellschaft",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -1888,77 +1828,11 @@
         }
       ]
     },
-    "bildungsreform": {
-      "id": "bildungsreform",
-      "name": "Bildungsreform",
+    "wissenschaftsvernetzung": {
+      "id": "wissenschaftsvernetzung",
+      "name": "Wissenschaftsvernetzung",
       "description": "3 Topics in 3 Episoden",
       "totalEpisodes": 3,
-      "totalTopics": 3,
-      "totalRelevanceSec": 900,
-      "totalOccurrences": 3,
-      "yearData": [
-        {
-          "year": 2017,
-          "count": 2,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 43,
-              "date": "2017-04-15",
-              "title": "FG043 Schule und Lernen in der digitalen Welt",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Schulsystem im Wandel",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            },
-            {
-              "number": 49,
-              "date": "2017-09-12",
-              "title": "FG049 Open Educational Resources",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Chancen des Lehrens",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2018,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 55,
-              "date": "2018-03-28",
-              "title": "FG055 Die Kunst des Wissens",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Änderungen in der Bildung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "mathematik": {
-      "id": "mathematik",
-      "name": "Mathematik",
-      "description": "3 Topics in 2 Episoden",
-      "totalEpisodes": 2,
       "totalTopics": 3,
       "totalRelevanceSec": 900,
       "totalOccurrences": 3,
@@ -1970,13 +1844,13 @@
           "totalOccurrences": 1,
           "episodes": [
             {
-              "number": 11,
-              "date": "2015-05-25",
-              "title": "FG011 Lehren und Lernen in digitalen Zeiten",
+              "number": 10,
+              "date": "2015-05-11",
+              "title": "FG010 Wissenschaft im Dialog",
               "relevanceSec": 300,
               "occurrences": [
                 {
-                  "topic": "Mathematik",
+                  "topic": "Vernetzung im wissenschaftlichen Betrieb",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -1986,239 +1860,31 @@
         },
         {
           "year": 2016,
-          "count": 1,
+          "count": 2,
           "totalRelevanceSec": 600,
           "totalOccurrences": 2,
           "episodes": [
             {
-              "number": 31,
-              "date": "2016-06-30",
-              "title": "FG031 Abenteuer Mathematik",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Mathematik in der Wissenschaft",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Mathematik in der Gesellschaft",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "museumsbildung": {
-      "id": "museumsbildung",
-      "name": "Museumsbildung",
-      "description": "3 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 3,
-      "totalRelevanceSec": 900,
-      "totalOccurrences": 3,
-      "yearData": [
-        {
-          "year": 2017,
-          "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 52,
-              "date": "2017-12-23",
-              "title": "FG052 Deutsches Museum Bonn",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Moderne Wissensvermittlung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Museum und Science Center",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2022,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 96,
-              "date": "2022-07-26",
-              "title": "FG096 Tierstimmenarchiv",
+              "number": 25,
+              "date": "2016-02-22",
+              "title": "FG025 Transformative Wissenschaft",
               "relevanceSec": 300,
               "occurrences": [
                 {
-                  "topic": "Museum für Naturkunde",
+                  "topic": "Vernetzung in der Wissenschaft",
                   "positionSec": 0,
                   "durationSec": 300
                 }
               ]
-            }
-          ]
-        }
-      ]
-    },
-    "wirtschaftsjournalismus": {
-      "id": "wirtschaftsjournalismus",
-      "name": "Wirtschaftsjournalismus",
-      "description": "3 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 3,
-      "totalRelevanceSec": 900,
-      "totalOccurrences": 3,
-      "yearData": [
-        {
-          "year": 2015,
-          "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
+            },
             {
-              "number": 9,
-              "date": "2015-03-24",
-              "title": "FG009 Wirtschaftspolitischer Journalismus",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Wirtschaftspolitischer Journalismus",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Qualität im Wirtschaftsjournalismus",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2020,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 80,
-              "date": "2020-05-25",
-              "title": "FG080 Medien und Meinungsbildung",
+              "number": 36,
+              "date": "2016-10-19",
+              "title": "FG036 Internationalisierung der Forschung",
               "relevanceSec": 300,
               "occurrences": [
                 {
-                  "topic": "Koexistenz mit klassischen Massenmedien",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "bibliothekswesen": {
-      "id": "bibliothekswesen",
-      "name": "Bibliothekswesen",
-      "description": "3 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 3,
-      "totalRelevanceSec": 900,
-      "totalOccurrences": 3,
-      "yearData": [
-        {
-          "year": 2017,
-          "count": 1,
-          "totalRelevanceSec": 900,
-          "totalOccurrences": 3,
-          "episodes": [
-            {
-              "number": 44,
-              "date": "2017-05-19",
-              "title": "FG044 Digitalisierung der Bibliotheken",
-              "relevanceSec": 900,
-              "occurrences": [
-                {
-                  "topic": "Aufgaben des Bibliothekswesens",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Wandel des Bibliothekswesens",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Zukunft des Bibliothekswesens",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "nachhaltige-fischerei": {
-      "id": "nachhaltige-fischerei",
-      "name": "Nachhaltige Fischerei",
-      "description": "3 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 3,
-      "totalRelevanceSec": 900,
-      "totalOccurrences": 3,
-      "yearData": [
-        {
-          "year": 2018,
-          "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 58,
-              "date": "2018-06-05",
-              "title": "FG058 Fischerei",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Bedeutung der Fischerei für die Ernährung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Fischerei und Umweltschutz",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2022,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 90,
-              "date": "2022-01-03",
-              "title": "FG090 Angeln und Naturschutz",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Einfluss der Angelfischerei auf Ökosysteme",
+                  "topic": "Vernetzung in der Forschung",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -2344,9 +2010,9 @@
         }
       ]
     },
-    "wissenschaftsvernetzung": {
-      "id": "wissenschaftsvernetzung",
-      "name": "Wissenschaftsvernetzung",
+    "bildungsreform": {
+      "id": "bildungsreform",
+      "name": "Bildungsreform",
       "description": "3 Topics in 3 Episoden",
       "totalEpisodes": 3,
       "totalTopics": 3,
@@ -2354,85 +2020,32 @@
       "totalOccurrences": 3,
       "yearData": [
         {
-          "year": 2015,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 10,
-              "date": "2015-05-11",
-              "title": "FG010 Wissenschaft im Dialog",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Vernetzung im wissenschaftlichen Betrieb",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2016,
+          "year": 2017,
           "count": 2,
           "totalRelevanceSec": 600,
           "totalOccurrences": 2,
           "episodes": [
             {
-              "number": 25,
-              "date": "2016-02-22",
-              "title": "FG025 Transformative Wissenschaft",
+              "number": 43,
+              "date": "2017-04-15",
+              "title": "FG043 Schule und Lernen in der digitalen Welt",
               "relevanceSec": 300,
               "occurrences": [
                 {
-                  "topic": "Vernetzung in der Wissenschaft",
+                  "topic": "Schulsystem im Wandel",
                   "positionSec": 0,
                   "durationSec": 300
                 }
               ]
             },
             {
-              "number": 36,
-              "date": "2016-10-19",
-              "title": "FG036 Internationalisierung der Forschung",
+              "number": 49,
+              "date": "2017-09-12",
+              "title": "FG049 Open Educational Resources",
               "relevanceSec": 300,
               "occurrences": [
                 {
-                  "topic": "Vernetzung in der Forschung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "bildungssysteme": {
-      "id": "bildungssysteme",
-      "name": "Bildungssysteme",
-      "description": "2 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
-        {
-          "year": 2015,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 6,
-              "date": "2015-01-19",
-              "title": "FG006 Die Bildung und das Web",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Bildungssystem",
+                  "topic": "Chancen des Lehrens",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -2441,93 +2054,435 @@
           ]
         },
         {
+          "year": 2018,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 55,
+              "date": "2018-03-28",
+              "title": "FG055 Die Kunst des Wissens",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Änderungen in der Bildung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "bibliothekswesen": {
+      "id": "bibliothekswesen",
+      "name": "Bibliothekswesen",
+      "description": "3 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 3,
+      "totalRelevanceSec": 900,
+      "totalOccurrences": 3,
+      "yearData": [
+        {
+          "year": 2017,
+          "count": 1,
+          "totalRelevanceSec": 900,
+          "totalOccurrences": 3,
+          "episodes": [
+            {
+              "number": 44,
+              "date": "2017-05-19",
+              "title": "FG044 Digitalisierung der Bibliotheken",
+              "relevanceSec": 900,
+              "occurrences": [
+                {
+                  "topic": "Aufgaben des Bibliothekswesens",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Wandel des Bibliothekswesens",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Zukunft des Bibliothekswesens",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "digitale-medizin": {
+      "id": "digitale-medizin",
+      "name": "Digitale Medizin",
+      "description": "3 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 3,
+      "totalRelevanceSec": 900,
+      "totalOccurrences": 3,
+      "yearData": [
+        {
+          "year": 2018,
+          "count": 1,
+          "totalRelevanceSec": 900,
+          "totalOccurrences": 3,
+          "episodes": [
+            {
+              "number": 56,
+              "date": "2018-04-20",
+              "title": "FG056 Die digitale Medizin",
+              "relevanceSec": 900,
+              "occurrences": [
+                {
+                  "topic": "Digitale Medizin",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Apps in der Medizin",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Big Data in der Medizin",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "bienenforschung": {
+      "id": "bienenforschung",
+      "name": "Bienenforschung",
+      "description": "3 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 3,
+      "totalRelevanceSec": 900,
+      "totalOccurrences": 3,
+      "yearData": [
+        {
+          "year": 2017,
+          "count": 1,
+          "totalRelevanceSec": 900,
+          "totalOccurrences": 3,
+          "episodes": [
+            {
+              "number": 46,
+              "date": "2017-06-30",
+              "title": "FG046 Bienenforschung",
+              "relevanceSec": 900,
+              "occurrences": [
+                {
+                  "topic": "Wesen der Honigbienen",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Methoden der Bienenforschung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Stand der Erkenntnisse in der Bienenforschung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "nachhaltige-fischerei": {
+      "id": "nachhaltige-fischerei",
+      "name": "Nachhaltige Fischerei",
+      "description": "3 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 3,
+      "totalRelevanceSec": 900,
+      "totalOccurrences": 3,
+      "yearData": [
+        {
+          "year": 2018,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 58,
+              "date": "2018-06-05",
+              "title": "FG058 Fischerei",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Bedeutung der Fischerei für die Ernährung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Fischerei und Umweltschutz",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2022,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 90,
+              "date": "2022-01-03",
+              "title": "FG090 Angeln und Naturschutz",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Einfluss der Angelfischerei auf Ökosysteme",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "wirtschaftsjournalismus": {
+      "id": "wirtschaftsjournalismus",
+      "name": "Wirtschaftsjournalismus",
+      "description": "3 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 3,
+      "totalRelevanceSec": 900,
+      "totalOccurrences": 3,
+      "yearData": [
+        {
+          "year": 2015,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 9,
+              "date": "2015-03-24",
+              "title": "FG009 Wirtschaftspolitischer Journalismus",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Wirtschaftspolitischer Journalismus",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Qualität im Wirtschaftsjournalismus",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2020,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 80,
+              "date": "2020-05-25",
+              "title": "FG080 Medien und Meinungsbildung",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Koexistenz mit klassischen Massenmedien",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "museumsbildung": {
+      "id": "museumsbildung",
+      "name": "Museumsbildung",
+      "description": "3 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 3,
+      "totalRelevanceSec": 900,
+      "totalOccurrences": 3,
+      "yearData": [
+        {
+          "year": 2017,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 52,
+              "date": "2017-12-23",
+              "title": "FG052 Deutsches Museum Bonn",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Moderne Wissensvermittlung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Museum und Science Center",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2022,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 96,
+              "date": "2022-07-26",
+              "title": "FG096 Tierstimmenarchiv",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Museum für Naturkunde",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "gründerbildung": {
+      "id": "gründerbildung",
+      "name": "Gründerbildung",
+      "description": "3 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 3,
+      "totalRelevanceSec": 900,
+      "totalOccurrences": 3,
+      "yearData": [
+        {
+          "year": 2017,
+          "count": 1,
+          "totalRelevanceSec": 900,
+          "totalOccurrences": 3,
+          "episodes": [
+            {
+              "number": 51,
+              "date": "2017-12-05",
+              "title": "FG051 Gründungsmanagement",
+              "relevanceSec": 900,
+              "occurrences": [
+                {
+                  "topic": "Gründerkultur an der Universität",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Maßnahmen zur Förderung von Gründern",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Lehre im Gründungsmanagement",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "gesellschaftliche-stabilität": {
+      "id": "gesellschaftliche-stabilität",
+      "name": "Gesellschaftliche Stabilität",
+      "description": "3 Topics in 3 Episoden",
+      "totalEpisodes": 3,
+      "totalTopics": 3,
+      "totalRelevanceSec": 900,
+      "totalOccurrences": 3,
+      "yearData": [
+        {
           "year": 2016,
           "count": 1,
           "totalRelevanceSec": 300,
           "totalOccurrences": 1,
           "episodes": [
             {
-              "number": 33,
-              "date": "2016-08-10",
-              "title": "FG033 Cusanus-Hochschule",
+              "number": 38,
+              "date": "2016-11-24",
+              "title": "FG038 Politische Zäsuren und das Recht",
               "relevanceSec": 300,
               "occurrences": [
                 {
-                  "topic": "Alternative Bildungssysteme",
+                  "topic": "Bedeutung für die Stabilität einer Gesellschaft",
                   "positionSec": 0,
                   "durationSec": 300
                 }
               ]
             }
           ]
-        }
-      ]
-    },
-    "medizinische-diagnostik": {
-      "id": "medizinische-diagnostik",
-      "name": "Medizinische Diagnostik",
-      "description": "2 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
+        },
         {
-          "year": 2021,
+          "year": 2020,
           "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
           "episodes": [
             {
-              "number": 87,
-              "date": "2021-10-31",
-              "title": "FG087 Computertomographie",
-              "relevanceSec": 600,
+              "number": 81,
+              "date": "2020-06-05",
+              "title": "FG081 Wissenschaftskommunikation in Krisen",
+              "relevanceSec": 300,
               "occurrences": [
                 {
-                  "topic": "Nächste Generation von Computertomographen",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Neue Ära der medizinischen Diagnose",
+                  "topic": "Öffentlichkeit",
                   "positionSec": 0,
                   "durationSec": 300
                 }
               ]
             }
           ]
-        }
-      ]
-    },
-    "jugendprogrammierung": {
-      "id": "jugendprogrammierung",
-      "name": "Jugendprogrammierung",
-      "description": "2 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
+        },
         {
           "year": 2022,
           "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
           "episodes": [
             {
-              "number": 97,
-              "date": "2022-09-06",
-              "title": "FG097 Hacker School",
-              "relevanceSec": 600,
+              "number": 92,
+              "date": "2022-03-09",
+              "title": "FG092 Innovationen kreativ ermöglichen",
+              "relevanceSec": 300,
               "occurrences": [
                 {
-                  "topic": "Programmieren für Jugendliche",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Entwicklung von Programmierfähigkeiten",
+                  "topic": "Disruption in der Gesellschaft",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -2537,9 +2492,9 @@
         }
       ]
     },
-    "asiatische-wissenschaft": {
-      "id": "asiatische-wissenschaft",
-      "name": "Asiatische Wissenschaft",
+    "asiatische-forschung": {
+      "id": "asiatische-forschung",
+      "name": "Asiatische Forschung",
       "description": "2 Topics in 1 Episoden",
       "totalEpisodes": 1,
       "totalTopics": 2,
@@ -2565,51 +2520,6 @@
                 },
                 {
                   "topic": "Forschung im asiatischen Raum",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "meinungsbildung": {
-      "id": "meinungsbildung",
-      "name": "Meinungsbildung",
-      "description": "2 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
-        {
-          "year": 2020,
-          "count": 2,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 80,
-              "date": "2020-05-25",
-              "title": "FG080 Medien und Meinungsbildung",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Meinungsbildung im Online-Zeitalter",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            },
-            {
-              "number": 81,
-              "date": "2020-06-05",
-              "title": "FG081 Wissenschaftskommunikation in Krisen",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Deutungshoheit",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -2656,459 +2566,9 @@
         }
       ]
     },
-    "autonomer-verkehr": {
-      "id": "autonomer-verkehr",
-      "name": "Autonomer Verkehr",
-      "description": "2 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
-        {
-          "year": 2014,
-          "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 3,
-              "date": "2014-12-01",
-              "title": "FG003 Autonomer Verkehr",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Gesellschaftliche Implikationen des autonomen Verkehrs",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Moralisch-ethische Fragestellungen im autonomen Verkehr",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "open-data": {
-      "id": "open-data",
-      "name": "Open Data",
-      "description": "2 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
-        {
-          "year": 2015,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 18,
-              "date": "2015-09-21",
-              "title": "FG018 Die Vermessung der Welt",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Offene Daten in der Forschung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2016,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 37,
-              "date": "2016-11-08",
-              "title": "FG037 Freies Wissen und Open Data",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Open Data",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "wissenschaftsethik": {
-      "id": "wissenschaftsethik",
-      "name": "Wissenschaftsethik",
-      "description": "2 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
-        {
-          "year": 2016,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 23,
-              "date": "2016-01-04",
-              "title": "FG023 Welt in Balance",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Verantwortung der Wissenschaft",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2019,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 72,
-              "date": "2019-10-01",
-              "title": "FG072 Verantwortung in der Informatik",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Verantwortung in der Informatik",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "theoretische-physik": {
-      "id": "theoretische-physik",
-      "name": "Theoretische Physik",
-      "description": "2 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
-        {
-          "year": 2016,
-          "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 34,
-              "date": "2016-08-29",
-              "title": "FG034 Werner Heisenberg",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Die Revolution der Physik",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Werner Heisenberg und seine Beiträge",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "ästhetik-und-kultur": {
-      "id": "ästhetik-und-kultur",
-      "name": "Ästhetik und Kultur",
-      "description": "2 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
-        {
-          "year": 2019,
-          "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 69,
-              "date": "2019-06-30",
-              "title": "FG069 Islamische Ästhetik",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Ästhetik der modernen Produktwelt",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Einfluss der islamischen Ästhetik",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "wissenschaftsjournalismus": {
-      "id": "wissenschaftsjournalismus",
-      "name": "Wissenschaftsjournalismus",
-      "description": "2 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
-        {
-          "year": 2020,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 81,
-              "date": "2020-06-05",
-              "title": "FG081 Wissenschaftskommunikation in Krisen",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Wissenschaftsjournalismus",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2021,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 86,
-              "date": "2021-10-13",
-              "title": "FG086 Klugscheißen im Fernsehen",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Wissenschaftsjournalismus im Fernsehen",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "zukunftsvisionen": {
-      "id": "zukunftsvisionen",
-      "name": "Zukunftsvisionen",
-      "description": "2 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
-        {
-          "year": 2016,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 23,
-              "date": "2016-01-04",
-              "title": "FG023 Welt in Balance",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Zukunft der Welt",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2020,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 78,
-              "date": "2020-04-01",
-              "title": "FG078 Angst und Zukunft",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Zukunftsperspektiven",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "serious-games": {
-      "id": "serious-games",
-      "name": "Serious Games",
-      "description": "2 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
-        {
-          "year": 2015,
-          "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 21,
-              "date": "2015-11-23",
-              "title": "FG021 Spielen und Lernen",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Serious Games",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Lernen durch Spielen",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "mittelaltergeschichte": {
-      "id": "mittelaltergeschichte",
-      "name": "Mittelaltergeschichte",
-      "description": "2 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
-        {
-          "year": 2017,
-          "count": 1,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 45,
-              "date": "2017-06-09",
-              "title": "FG045 Martin Luther",
-              "relevanceSec": 600,
-              "occurrences": [
-                {
-                  "topic": "Martin Luther",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Mittelalter",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "internationale-kooperation": {
-      "id": "internationale-kooperation",
-      "name": "Internationale Kooperation",
-      "description": "2 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 2,
-      "totalRelevanceSec": 600,
-      "totalOccurrences": 2,
-      "yearData": [
-        {
-          "year": 2015,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 15,
-              "date": "2015-07-22",
-              "title": "FG015 Wissenschaftsmanagement",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Internationalisierung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2016,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 36,
-              "date": "2016-10-19",
-              "title": "FG036 Internationalisierung der Forschung",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Internationale Kooperation",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "gesundheitsrollen": {
-      "id": "gesundheitsrollen",
-      "name": "Gesundheitsrollen",
+    "psychische-gesundheit": {
+      "id": "psychische-gesundheit",
+      "name": "Psychische Gesundheit",
       "description": "2 Topics in 2 Episoden",
       "totalEpisodes": 2,
       "totalTopics": 2,
@@ -3159,9 +2619,9 @@
         }
       ]
     },
-    "datenvisualisierung": {
-      "id": "datenvisualisierung",
-      "name": "Datenvisualisierung",
+    "meinungsbildung": {
+      "id": "meinungsbildung",
+      "name": "Meinungsbildung",
       "description": "2 Topics in 2 Episoden",
       "totalEpisodes": 2,
       "totalTopics": 2,
@@ -3169,40 +2629,32 @@
       "totalOccurrences": 2,
       "yearData": [
         {
-          "year": 2015,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
+          "year": 2020,
+          "count": 2,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
           "episodes": [
             {
-              "number": 18,
-              "date": "2015-09-21",
-              "title": "FG018 Die Vermessung der Welt",
+              "number": 80,
+              "date": "2020-05-25",
+              "title": "FG080 Medien und Meinungsbildung",
               "relevanceSec": 300,
               "occurrences": [
                 {
-                  "topic": "Visualisierung von Daten",
+                  "topic": "Meinungsbildung im Online-Zeitalter",
                   "positionSec": 0,
                   "durationSec": 300
                 }
               ]
-            }
-          ]
-        },
-        {
-          "year": 2021,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
+            },
             {
-              "number": 89,
-              "date": "2021-12-06",
-              "title": "FG089 Geometrie und Visualisierung",
+              "number": 81,
+              "date": "2020-06-05",
+              "title": "FG081 Wissenschaftskommunikation in Krisen",
               "relevanceSec": 300,
               "occurrences": [
                 {
-                  "topic": "Visualisierung komplexer Mathematik",
+                  "topic": "Deutungshoheit",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -3277,6 +2729,742 @@
                 },
                 {
                   "topic": "Entschlüsselung der Coronavirus-Funktion",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "autonomer-verkehr": {
+      "id": "autonomer-verkehr",
+      "name": "Autonomer Verkehr",
+      "description": "2 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2014,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 3,
+              "date": "2014-12-01",
+              "title": "FG003 Autonomer Verkehr",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Gesellschaftliche Implikationen des autonomen Verkehrs",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Moralisch-ethische Fragestellungen im autonomen Verkehr",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "zukunftsvisionen": {
+      "id": "zukunftsvisionen",
+      "name": "Zukunftsvisionen",
+      "description": "2 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2016,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 23,
+              "date": "2016-01-04",
+              "title": "FG023 Welt in Balance",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Zukunft der Welt",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2020,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 78,
+              "date": "2020-04-01",
+              "title": "FG078 Angst und Zukunft",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Zukunftsperspektiven",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "wissenschaftsethik": {
+      "id": "wissenschaftsethik",
+      "name": "Wissenschaftsethik",
+      "description": "2 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2016,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 23,
+              "date": "2016-01-04",
+              "title": "FG023 Welt in Balance",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Verantwortung der Wissenschaft",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2019,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 72,
+              "date": "2019-10-01",
+              "title": "FG072 Verantwortung in der Informatik",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Verantwortung in der Informatik",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "mittelalterliche-geschichte": {
+      "id": "mittelalterliche-geschichte",
+      "name": "Mittelalterliche Geschichte",
+      "description": "2 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2017,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 45,
+              "date": "2017-06-09",
+              "title": "FG045 Martin Luther",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Martin Luther",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Mittelalter",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "internationale-zusammenarbeit": {
+      "id": "internationale-zusammenarbeit",
+      "name": "Internationale Zusammenarbeit",
+      "description": "2 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2015,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 15,
+              "date": "2015-07-22",
+              "title": "FG015 Wissenschaftsmanagement",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Internationalisierung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2016,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 36,
+              "date": "2016-10-19",
+              "title": "FG036 Internationalisierung der Forschung",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Internationale Kooperation",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "wissenschaftsjournalismus": {
+      "id": "wissenschaftsjournalismus",
+      "name": "Wissenschaftsjournalismus",
+      "description": "2 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2020,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 81,
+              "date": "2020-06-05",
+              "title": "FG081 Wissenschaftskommunikation in Krisen",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Wissenschaftsjournalismus",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2021,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 86,
+              "date": "2021-10-13",
+              "title": "FG086 Klugscheißen im Fernsehen",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Wissenschaftsjournalismus im Fernsehen",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "jugendprogrammierung": {
+      "id": "jugendprogrammierung",
+      "name": "Jugendprogrammierung",
+      "description": "2 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2022,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 97,
+              "date": "2022-09-06",
+              "title": "FG097 Hacker School",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Programmieren für Jugendliche",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Entwicklung von Programmierfähigkeiten",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "open-data": {
+      "id": "open-data",
+      "name": "Open Data",
+      "description": "2 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2015,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 18,
+              "date": "2015-09-21",
+              "title": "FG018 Die Vermessung der Welt",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Offene Daten in der Forschung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2016,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 37,
+              "date": "2016-11-08",
+              "title": "FG037 Freies Wissen und Open Data",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Open Data",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "digitale-transformation": {
+      "id": "digitale-transformation",
+      "name": "Digitale Transformation",
+      "description": "2 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2015,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 22,
+              "date": "2015-12-14",
+              "title": "FG022 Hochschullehre Digital",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Chancen der Digitalisierung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2017,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 43,
+              "date": "2017-04-15",
+              "title": "FG043 Schule und Lernen in der digitalen Welt",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Herausforderungen der digitalen Welt",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "serious-games": {
+      "id": "serious-games",
+      "name": "Serious Games",
+      "description": "2 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2015,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 21,
+              "date": "2015-11-23",
+              "title": "FG021 Spielen und Lernen",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Serious Games",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Lernen durch Spielen",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "theoretische-physik": {
+      "id": "theoretische-physik",
+      "name": "Theoretische Physik",
+      "description": "2 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2016,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 34,
+              "date": "2016-08-29",
+              "title": "FG034 Werner Heisenberg",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Die Revolution der Physik",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Werner Heisenberg und seine Beiträge",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "islamische-ästhetik": {
+      "id": "islamische-ästhetik",
+      "name": "Islamische Ästhetik",
+      "description": "2 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2019,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 69,
+              "date": "2019-06-30",
+              "title": "FG069 Islamische Ästhetik",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Ästhetik der modernen Produktwelt",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Einfluss der islamischen Ästhetik",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "medizinische-diagnosetechnologien": {
+      "id": "medizinische-diagnosetechnologien",
+      "name": "Medizinische Diagnosetechnologien",
+      "description": "2 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2021,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 87,
+              "date": "2021-10-31",
+              "title": "FG087 Computertomographie",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Nächste Generation von Computertomographen",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Neue Ära der medizinischen Diagnose",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "informatik-theorie": {
+      "id": "informatik-theorie",
+      "name": "Informatik-Theorie",
+      "description": "2 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2019,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 72,
+              "date": "2019-10-01",
+              "title": "FG072 Verantwortung in der Informatik",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Denkweisen in der Informatik",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2021,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 89,
+              "date": "2021-12-06",
+              "title": "FG089 Geometrie und Visualisierung",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Formales Denken",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "bildungssysteme": {
+      "id": "bildungssysteme",
+      "name": "Bildungssysteme",
+      "description": "2 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2015,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 6,
+              "date": "2015-01-19",
+              "title": "FG006 Die Bildung und das Web",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Bildungssystem",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2016,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 33,
+              "date": "2016-08-10",
+              "title": "FG033 Cusanus-Hochschule",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Alternative Bildungssysteme",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "datenvisualisierung": {
+      "id": "datenvisualisierung",
+      "name": "Datenvisualisierung",
+      "description": "2 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 2,
+      "totalRelevanceSec": 600,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2015,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 18,
+              "date": "2015-09-21",
+              "title": "FG018 Die Vermessung der Welt",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Visualisierung von Daten",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2021,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 89,
+              "date": "2021-12-06",
+              "title": "FG089 Geometrie und Visualisierung",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Visualisierung komplexer Mathematik",
                   "positionSec": 0,
                   "durationSec": 300
                 }

@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-01-02T23:48:15.347Z",
+  "generatedAt": "2026-01-11T23:26:07.811Z",
   "description": "Speaker × Episode Duration Heatmap Data",
   "statistics": {
-    "totalEpisodes": 99,
-    "totalSpeakers": 97,
+    "totalEpisodes": 100,
+    "totalSpeakers": 98,
     "totalDurationBuckets": 5,
-    "totalCombinations": 99,
+    "totalCombinations": 100,
     "mostCommonSpeaker": "Franz Josef Radermacher",
     "mostCommonSpeakerCount": 2,
     "mostCommonDuration": 90,
     "mostCommonDurationLabel": "1h 30min",
-    "mostCommonDurationCount": 52
+    "mostCommonDurationCount": 53
   },
   "speakers": [
     {
@@ -27,6 +27,10 @@
     },
     {
       "name": "Antje Boetius",
+      "totalEpisodes": 1
+    },
+    {
+      "name": "Thomas Klingner",
       "totalEpisodes": 1
     },
     {
@@ -416,7 +420,7 @@
     {
       "minutes": 90,
       "label": "1h 30min",
-      "totalEpisodes": 52
+      "totalEpisodes": 53
     },
     {
       "minutes": 120,
@@ -570,6 +574,44 @@
           "count": 1,
           "episodes": [
             10
+          ]
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    {
+      "speaker": "Thomas Klingner",
+      "totalEpisodes": 1,
+      "values": [
+        {
+          "duration": 30,
+          "durationLabel": "30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 1,
+          "episodes": [
+            100
           ]
         },
         {

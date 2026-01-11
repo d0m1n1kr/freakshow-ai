@@ -1,10 +1,15 @@
 {
-  "generatedAt": "2026-01-02T23:48:15.094Z",
+  "generatedAt": "2026-01-11T23:26:07.702Z",
   "description": "Speaker-Speaker Co-occurrence Heatmap Data",
   "statistics": {
-    "totalSpeakers": 97,
-    "totalCombinations": 97,
+    "totalSpeakers": 105,
+    "totalCombinations": 323,
     "topSpeakersByEpisodes": [
+      {
+        "id": "tim-pritlove",
+        "name": "Tim Pritlove",
+        "totalEpisodes": 99
+      },
       {
         "id": "franz-josef-radermacher",
         "name": "Franz Josef Radermacher",
@@ -99,15 +104,15 @@
         "id": "ulinka-rublack",
         "name": "Ulinka Rublack",
         "totalEpisodes": 1
-      },
-      {
-        "id": "max-roser",
-        "name": "Max Roser",
-        "totalEpisodes": 1
       }
     ]
   },
   "speakers": [
+    {
+      "id": "tim-pritlove",
+      "name": "Tim Pritlove",
+      "totalEpisodes": 99
+    },
     {
       "id": "franz-josef-radermacher",
       "name": "Franz Josef Radermacher",
@@ -350,6 +355,11 @@
     },
     {
       "id": "jöran-muuß-merholz",
+      "name": "Jöran Muuß Merholz",
+      "totalEpisodes": 1
+    },
+    {
+      "id": "jöran-muuß-merholz",
       "name": "Jöran Muuß-Merholz",
       "totalEpisodes": 1
     },
@@ -495,7 +505,17 @@
     },
     {
       "id": "jan-hinrik-schmidt",
+      "name": "Jan Hinrik Schmidt",
+      "totalEpisodes": 1
+    },
+    {
+      "id": "jan-hinrik-schmidt",
       "name": "Jan-Hinrik Schmidt",
+      "totalEpisodes": 1
+    },
+    {
+      "id": "stefanie-molthagen-schnöring",
+      "name": "Stefanie Molthagen Schnöring",
       "totalEpisodes": 1
     },
     {
@@ -540,6 +560,11 @@
     },
     {
       "id": "jürgen-richter-gebert",
+      "name": "Jürgen Richter Gebert",
+      "totalEpisodes": 1
+    },
+    {
+      "id": "jürgen-richter-gebert",
       "name": "Jürgen Richter-Gebert",
       "totalEpisodes": 1
     },
@@ -565,12 +590,22 @@
     },
     {
       "id": "hans-ulrich-schmincke",
+      "name": "Hans Ulrich Schmincke",
+      "totalEpisodes": 1
+    },
+    {
+      "id": "hans-ulrich-schmincke",
       "name": "Hans-Ulrich Schmincke",
       "totalEpisodes": 1
     },
     {
       "id": "hendrik-ballhausen",
       "name": "Hendrik Ballhausen",
+      "totalEpisodes": 1
+    },
+    {
+      "id": "karl-heinz-frommolt",
+      "name": "Karl Heinz Frommolt",
       "totalEpisodes": 1
     },
     {
@@ -592,13 +627,965 @@
       "id": "jörg-overmann",
       "name": "Jörg Overmann",
       "totalEpisodes": 1
+    },
+    {
+      "id": "thomas-klingner",
+      "name": "Thomas Klingner",
+      "totalEpisodes": 1
     }
   ],
   "matrix": [
     {
+      "speakerId": "tim-pritlove",
+      "speaker1Name": "Tim Pritlove",
+      "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 99,
+          "episodes": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100
+          ]
+        },
+        {
+          "speakerId": "franz-josef-radermacher",
+          "speaker2Name": "Franz Josef Radermacher",
+          "count": 2,
+          "episodes": [
+            23,
+            66
+          ]
+        },
+        {
+          "speakerId": "stefan-kröpelin",
+          "speaker2Name": "Stefan Kröpelin",
+          "count": 2,
+          "episodes": [
+            47,
+            79
+          ]
+        },
+        {
+          "speakerId": "annette-vogt",
+          "speaker2Name": "Annette Vogt",
+          "count": 1,
+          "episodes": [
+            1
+          ]
+        },
+        {
+          "speakerId": "peter-finke",
+          "speaker2Name": "Peter Finke",
+          "count": 1,
+          "episodes": [
+            2
+          ]
+        },
+        {
+          "speakerId": "barbara-lenz",
+          "speaker2Name": "Barbara Lenz",
+          "count": 1,
+          "episodes": [
+            3
+          ]
+        },
+        {
+          "speakerId": "suat-yilmaz",
+          "speaker2Name": "Suat Yilmaz",
+          "count": 1,
+          "episodes": [
+            4
+          ]
+        },
+        {
+          "speakerId": "onur-güntürkün",
+          "speaker2Name": "Onur Güntürkün",
+          "count": 1,
+          "episodes": [
+            5
+          ]
+        },
+        {
+          "speakerId": "martin-lindner",
+          "speaker2Name": "Martin Lindner",
+          "count": 1,
+          "episodes": [
+            6
+          ]
+        },
+        {
+          "speakerId": "peter-eisenberg",
+          "speaker2Name": "Peter Eisenberg",
+          "count": 1,
+          "episodes": [
+            7
+          ]
+        },
+        {
+          "speakerId": "michael-schermann",
+          "speaker2Name": "Michael Schermann",
+          "count": 1,
+          "episodes": [
+            8
+          ]
+        },
+        {
+          "speakerId": "henrik-müller",
+          "speaker2Name": "Henrik Müller",
+          "count": 1,
+          "episodes": [
+            9
+          ]
+        },
+        {
+          "speakerId": "antje-boetius",
+          "speaker2Name": "Antje Boetius",
+          "count": 1,
+          "episodes": [
+            10
+          ]
+        },
+        {
+          "speakerId": "gunter-dueck",
+          "speaker2Name": "Gunter Dueck",
+          "count": 1,
+          "episodes": [
+            11
+          ]
+        },
+        {
+          "speakerId": "ferdi-schueth",
+          "speaker2Name": "Ferdi Schueth",
+          "count": 1,
+          "episodes": [
+            12
+          ]
+        },
+        {
+          "speakerId": "claudia-eggert",
+          "speaker2Name": "Claudia Eggert",
+          "count": 1,
+          "episodes": [
+            13
+          ]
+        },
+        {
+          "speakerId": "dagmar-schäfer",
+          "speaker2Name": "Dagmar Schäfer",
+          "count": 1,
+          "episodes": [
+            14
+          ]
+        },
+        {
+          "speakerId": "muriel-kim-helbig",
+          "speaker2Name": "Muriel Kim Helbig",
+          "count": 1,
+          "episodes": [
+            15
+          ]
+        },
+        {
+          "speakerId": "nikolaus-kriegeskorte",
+          "speaker2Name": "Nikolaus Kriegeskorte",
+          "count": 1,
+          "episodes": [
+            16
+          ]
+        },
+        {
+          "speakerId": "ulinka-rublack",
+          "speaker2Name": "Ulinka Rublack",
+          "count": 1,
+          "episodes": [
+            17
+          ]
+        },
+        {
+          "speakerId": "max-roser",
+          "speaker2Name": "Max Roser",
+          "count": 1,
+          "episodes": [
+            18
+          ]
+        },
+        {
+          "speakerId": "michael-braungart",
+          "speaker2Name": "Michael Braungart",
+          "count": 1,
+          "episodes": [
+            19
+          ]
+        },
+        {
+          "speakerId": "pascal-hetze",
+          "speaker2Name": "Pascal Hetze",
+          "count": 1,
+          "episodes": [
+            20
+          ]
+        },
+        {
+          "speakerId": "linda-breitlauch",
+          "speaker2Name": "Linda Breitlauch",
+          "count": 1,
+          "episodes": [
+            21
+          ]
+        },
+        {
+          "speakerId": "jürgen-handke",
+          "speaker2Name": "Jürgen Handke",
+          "count": 1,
+          "episodes": [
+            22
+          ]
+        },
+        {
+          "speakerId": "klaus-kümmerer",
+          "speaker2Name": "Klaus Kümmerer",
+          "count": 1,
+          "episodes": [
+            24
+          ]
+        },
+        {
+          "speakerId": "uwe-schneidewind",
+          "speaker2Name": "Uwe Schneidewind",
+          "count": 1,
+          "episodes": [
+            25
+          ]
+        },
+        {
+          "speakerId": "eberhard-knobloch",
+          "speaker2Name": "Eberhard Knobloch",
+          "count": 1,
+          "episodes": [
+            26
+          ]
+        },
+        {
+          "speakerId": "ulrich-dirnagl",
+          "speaker2Name": "Ulrich Dirnagl",
+          "count": 1,
+          "episodes": [
+            27
+          ]
+        },
+        {
+          "speakerId": "hans-joosten",
+          "speaker2Name": "Hans Joosten",
+          "count": 1,
+          "episodes": [
+            28
+          ]
+        },
+        {
+          "speakerId": "angelika-brandt",
+          "speaker2Name": "Angelika Brandt",
+          "count": 1,
+          "episodes": [
+            29
+          ]
+        },
+        {
+          "speakerId": "andreas-zick",
+          "speaker2Name": "Andreas Zick",
+          "count": 1,
+          "episodes": [
+            30
+          ]
+        },
+        {
+          "speakerId": "günter-m.-ziegler",
+          "speaker2Name": "Günter M. Ziegler",
+          "count": 1,
+          "episodes": [
+            31
+          ]
+        },
+        {
+          "speakerId": "michael-vogel",
+          "speaker2Name": "Michael Vogel",
+          "count": 1,
+          "episodes": [
+            32
+          ]
+        },
+        {
+          "speakerId": "silja-graupe",
+          "speaker2Name": "Silja Graupe",
+          "count": 1,
+          "episodes": [
+            33
+          ]
+        },
+        {
+          "speakerId": "ernst-peter-fischer",
+          "speaker2Name": "Ernst Peter Fischer",
+          "count": 1,
+          "episodes": [
+            34
+          ]
+        },
+        {
+          "speakerId": "julia-offe",
+          "speaker2Name": "Julia Offe",
+          "count": 1,
+          "episodes": [
+            35
+          ]
+        },
+        {
+          "speakerId": "ulrich-schreiterer",
+          "speaker2Name": "Ulrich Schreiterer",
+          "count": 1,
+          "episodes": [
+            36
+          ]
+        },
+        {
+          "speakerId": "pavel-richter",
+          "speaker2Name": "Pavel Richter",
+          "count": 1,
+          "episodes": [
+            37
+          ]
+        },
+        {
+          "speakerId": "benjamin-lahusen",
+          "speaker2Name": "Benjamin Lahusen",
+          "count": 1,
+          "episodes": [
+            38
+          ]
+        },
+        {
+          "speakerId": "reinhold-leinfelder",
+          "speaker2Name": "Reinhold Leinfelder",
+          "count": 1,
+          "episodes": [
+            39
+          ]
+        },
+        {
+          "speakerId": "claudia-hornberg",
+          "speaker2Name": "Claudia Hornberg",
+          "count": 1,
+          "episodes": [
+            40
+          ]
+        },
+        {
+          "speakerId": "monika-trümper",
+          "speaker2Name": "Monika Trümper",
+          "count": 1,
+          "episodes": [
+            41
+          ]
+        },
+        {
+          "speakerId": "jörn-loviscach",
+          "speaker2Name": "Jörn Loviscach",
+          "count": 1,
+          "episodes": [
+            42
+          ]
+        },
+        {
+          "speakerId": "lisa-rosa",
+          "speaker2Name": "Lisa Rosa",
+          "count": 1,
+          "episodes": [
+            43
+          ]
+        },
+        {
+          "speakerId": "ralf-stockmann",
+          "speaker2Name": "Ralf Stockmann",
+          "count": 1,
+          "episodes": [
+            44
+          ]
+        },
+        {
+          "speakerId": "lyndal-roper",
+          "speaker2Name": "Lyndal Roper",
+          "count": 1,
+          "episodes": [
+            45
+          ]
+        },
+        {
+          "speakerId": "jürgen-tautz",
+          "speaker2Name": "Jürgen Tautz",
+          "count": 1,
+          "episodes": [
+            46
+          ]
+        },
+        {
+          "speakerId": "christoph-corves",
+          "speaker2Name": "Christoph Corves",
+          "count": 1,
+          "episodes": [
+            48
+          ]
+        },
+        {
+          "speakerId": "jöran-muuß-merholz",
+          "speaker2Name": "Jöran Muuß Merholz",
+          "count": 1,
+          "episodes": [
+            49
+          ]
+        },
+        {
+          "speakerId": "jöran-muuß-merholz",
+          "speaker2Name": "Jöran Muuß-Merholz",
+          "count": 1,
+          "episodes": [
+            49
+          ]
+        },
+        {
+          "speakerId": "hanns-hatt",
+          "speaker2Name": "Hanns Hatt",
+          "count": 1,
+          "episodes": [
+            50
+          ]
+        },
+        {
+          "speakerId": "carolin-bock",
+          "speaker2Name": "Carolin Bock",
+          "count": 1,
+          "episodes": [
+            51
+          ]
+        },
+        {
+          "speakerId": "andrea-niehaus",
+          "speaker2Name": "Andrea Niehaus",
+          "count": 1,
+          "episodes": [
+            52
+          ]
+        },
+        {
+          "speakerId": "volker-quaschning",
+          "speaker2Name": "Volker Quaschning",
+          "count": 1,
+          "episodes": [
+            53
+          ]
+        },
+        {
+          "speakerId": "jochen-rabe",
+          "speaker2Name": "Jochen Rabe",
+          "count": 1,
+          "episodes": [
+            54
+          ]
+        },
+        {
+          "speakerId": "harald-lesch",
+          "speaker2Name": "Harald Lesch",
+          "count": 1,
+          "episodes": [
+            55
+          ]
+        },
+        {
+          "speakerId": "manfred-niekisch",
+          "speaker2Name": "Manfred Niekisch",
+          "count": 1,
+          "episodes": [
+            57
+          ]
+        },
+        {
+          "speakerId": "christopher-zimmermann",
+          "speaker2Name": "Christopher Zimmermann",
+          "count": 1,
+          "episodes": [
+            58
+          ]
+        },
+        {
+          "speakerId": "philippe-wampfler",
+          "speaker2Name": "Philippe Wampfler",
+          "count": 1,
+          "episodes": [
+            59
+          ]
+        },
+        {
+          "speakerId": "stefan-rahmstorf",
+          "speaker2Name": "Stefan Rahmstorf",
+          "count": 1,
+          "episodes": [
+            60
+          ]
+        },
+        {
+          "speakerId": "jule-specht",
+          "speaker2Name": "Jule Specht",
+          "count": 1,
+          "episodes": [
+            61
+          ]
+        },
+        {
+          "speakerId": "isabel-rink",
+          "speaker2Name": "Isabel Rink",
+          "count": 1,
+          "episodes": [
+            62
+          ]
+        },
+        {
+          "speakerId": "ingo-sass",
+          "speaker2Name": "Ingo Sass",
+          "count": 1,
+          "episodes": [
+            63
+          ]
+        },
+        {
+          "speakerId": "robert-ranisch",
+          "speaker2Name": "Robert Ranisch",
+          "count": 1,
+          "episodes": [
+            64
+          ]
+        },
+        {
+          "speakerId": "johann-goldammer",
+          "speaker2Name": "Johann Goldammer",
+          "count": 1,
+          "episodes": [
+            65
+          ]
+        },
+        {
+          "speakerId": "anita-gohdes",
+          "speaker2Name": "Anita Gohdes",
+          "count": 1,
+          "episodes": [
+            67
+          ]
+        },
+        {
+          "speakerId": "gerd-gigerenzer",
+          "speaker2Name": "Gerd Gigerenzer",
+          "count": 1,
+          "episodes": [
+            68
+          ]
+        },
+        {
+          "speakerId": "alina-kokoschka",
+          "speaker2Name": "Alina Kokoschka",
+          "count": 1,
+          "episodes": [
+            69
+          ]
+        },
+        {
+          "speakerId": "oliver-parodi",
+          "speaker2Name": "Oliver Parodi",
+          "count": 1,
+          "episodes": [
+            70
+          ]
+        },
+        {
+          "speakerId": "justus-haucap",
+          "speaker2Name": "Justus Haucap",
+          "count": 1,
+          "episodes": [
+            71
+          ]
+        },
+        {
+          "speakerId": "peter-purgathofer",
+          "speaker2Name": "Peter Purgathofer",
+          "count": 1,
+          "episodes": [
+            72
+          ]
+        },
+        {
+          "speakerId": "rita-adrian",
+          "speaker2Name": "Rita Adrian",
+          "count": 1,
+          "episodes": [
+            73
+          ]
+        },
+        {
+          "speakerId": "jens-claus-brüning",
+          "speaker2Name": "Jens Claus Brüning",
+          "count": 1,
+          "episodes": [
+            74
+          ]
+        },
+        {
+          "speakerId": "sandra-richter",
+          "speaker2Name": "Sandra Richter",
+          "count": 1,
+          "episodes": [
+            75
+          ]
+        },
+        {
+          "speakerId": "stephan-rammler",
+          "speaker2Name": "Stephan Rammler",
+          "count": 1,
+          "episodes": [
+            76
+          ]
+        },
+        {
+          "speakerId": "leonhard-dobusch",
+          "speaker2Name": "Leonhard Dobusch",
+          "count": 1,
+          "episodes": [
+            77
+          ]
+        },
+        {
+          "speakerId": "jan-kalbitzer",
+          "speaker2Name": "Jan Kalbitzer",
+          "count": 1,
+          "episodes": [
+            78
+          ]
+        },
+        {
+          "speakerId": "jan-hinrik-schmidt",
+          "speaker2Name": "Jan Hinrik Schmidt",
+          "count": 1,
+          "episodes": [
+            80
+          ]
+        },
+        {
+          "speakerId": "jan-hinrik-schmidt",
+          "speaker2Name": "Jan-Hinrik Schmidt",
+          "count": 1,
+          "episodes": [
+            80
+          ]
+        },
+        {
+          "speakerId": "stefanie-molthagen-schnöring",
+          "speaker2Name": "Stefanie Molthagen Schnöring",
+          "count": 1,
+          "episodes": [
+            81
+          ]
+        },
+        {
+          "speakerId": "stefanie-molthagen-schnöring",
+          "speaker2Name": "Stefanie Molthagen-Schnöring",
+          "count": 1,
+          "episodes": [
+            81
+          ]
+        },
+        {
+          "speakerId": "mark-benecke",
+          "speaker2Name": "Mark Benecke",
+          "count": 1,
+          "episodes": [
+            82
+          ]
+        },
+        {
+          "speakerId": "joachim-fensterle",
+          "speaker2Name": "Joachim Fensterle",
+          "count": 1,
+          "episodes": [
+            83
+          ]
+        },
+        {
+          "speakerId": "gerd-antes",
+          "speaker2Name": "Gerd Antes",
+          "count": 1,
+          "episodes": [
+            84
+          ]
+        },
+        {
+          "speakerId": "andrea-thorn",
+          "speaker2Name": "Andrea Thorn",
+          "count": 1,
+          "episodes": [
+            85
+          ]
+        },
+        {
+          "speakerId": "ralph-caspers",
+          "speaker2Name": "Ralph Caspers",
+          "count": 1,
+          "episodes": [
+            86
+          ]
+        },
+        {
+          "speakerId": "thomas-flohr",
+          "speaker2Name": "Thomas Flohr",
+          "count": 1,
+          "episodes": [
+            87
+          ]
+        },
+        {
+          "speakerId": "dirk-prüfer",
+          "speaker2Name": "Dirk Prüfer",
+          "count": 1,
+          "episodes": [
+            88
+          ]
+        },
+        {
+          "speakerId": "jürgen-richter-gebert",
+          "speaker2Name": "Jürgen Richter Gebert",
+          "count": 1,
+          "episodes": [
+            89
+          ]
+        },
+        {
+          "speakerId": "jürgen-richter-gebert",
+          "speaker2Name": "Jürgen Richter-Gebert",
+          "count": 1,
+          "episodes": [
+            89
+          ]
+        },
+        {
+          "speakerId": "robert-arlinghaus",
+          "speaker2Name": "Robert Arlinghaus",
+          "count": 1,
+          "episodes": [
+            90
+          ]
+        },
+        {
+          "speakerId": "rafael-laguna-de-la-vera",
+          "speaker2Name": "Rafael Laguna de la Vera",
+          "count": 1,
+          "episodes": [
+            91
+          ]
+        },
+        {
+          "speakerId": "katharina-hölzle",
+          "speaker2Name": "Katharina Hölzle",
+          "count": 1,
+          "episodes": [
+            92
+          ]
+        },
+        {
+          "speakerId": "andrea-rumler",
+          "speaker2Name": "Andrea Rumler",
+          "count": 1,
+          "episodes": [
+            93
+          ]
+        },
+        {
+          "speakerId": "hans-ulrich-schmincke",
+          "speaker2Name": "Hans Ulrich Schmincke",
+          "count": 1,
+          "episodes": [
+            94
+          ]
+        },
+        {
+          "speakerId": "hans-ulrich-schmincke",
+          "speaker2Name": "Hans-Ulrich Schmincke",
+          "count": 1,
+          "episodes": [
+            94
+          ]
+        },
+        {
+          "speakerId": "hendrik-ballhausen",
+          "speaker2Name": "Hendrik Ballhausen",
+          "count": 1,
+          "episodes": [
+            95
+          ]
+        },
+        {
+          "speakerId": "karl-heinz-frommolt",
+          "speaker2Name": "Karl Heinz Frommolt",
+          "count": 1,
+          "episodes": [
+            96
+          ]
+        },
+        {
+          "speakerId": "karl-heinz-frommolt",
+          "speaker2Name": "Karl-Heinz Frommolt",
+          "count": 1,
+          "episodes": [
+            96
+          ]
+        },
+        {
+          "speakerId": "julia-freudenberg",
+          "speaker2Name": "Julia Freudenberg",
+          "count": 1,
+          "episodes": [
+            97
+          ]
+        },
+        {
+          "speakerId": "markus-schrenk",
+          "speaker2Name": "Markus Schrenk",
+          "count": 1,
+          "episodes": [
+            98
+          ]
+        },
+        {
+          "speakerId": "jörg-overmann",
+          "speaker2Name": "Jörg Overmann",
+          "count": 1,
+          "episodes": [
+            99
+          ]
+        },
+        {
+          "speakerId": "thomas-klingner",
+          "speaker2Name": "Thomas Klingner",
+          "count": 1,
+          "episodes": [
+            100
+          ]
+        }
+      ]
+    },
+    {
       "speakerId": "franz-josef-radermacher",
       "speaker1Name": "Franz Josef Radermacher",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 2,
+          "episodes": [
+            23,
+            66
+          ]
+        },
         {
           "speakerId": "franz-josef-radermacher",
           "speaker2Name": "Franz Josef Radermacher",
@@ -615,6 +1602,15 @@
       "speaker1Name": "Stefan Kröpelin",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 2,
+          "episodes": [
+            47,
+            79
+          ]
+        },
+        {
           "speakerId": "stefan-kröpelin",
           "speaker2Name": "Stefan Kröpelin",
           "count": 2,
@@ -630,6 +1626,14 @@
       "speaker1Name": "Annette Vogt",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            1
+          ]
+        },
+        {
           "speakerId": "annette-vogt",
           "speaker2Name": "Annette Vogt",
           "count": 1,
@@ -643,6 +1647,14 @@
       "speakerId": "peter-finke",
       "speaker1Name": "Peter Finke",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            2
+          ]
+        },
         {
           "speakerId": "peter-finke",
           "speaker2Name": "Peter Finke",
@@ -658,6 +1670,14 @@
       "speaker1Name": "Barbara Lenz",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            3
+          ]
+        },
+        {
           "speakerId": "barbara-lenz",
           "speaker2Name": "Barbara Lenz",
           "count": 1,
@@ -671,6 +1691,14 @@
       "speakerId": "suat-yilmaz",
       "speaker1Name": "Suat Yilmaz",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            4
+          ]
+        },
         {
           "speakerId": "suat-yilmaz",
           "speaker2Name": "Suat Yilmaz",
@@ -686,6 +1714,14 @@
       "speaker1Name": "Onur Güntürkün",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            5
+          ]
+        },
+        {
           "speakerId": "onur-güntürkün",
           "speaker2Name": "Onur Güntürkün",
           "count": 1,
@@ -699,6 +1735,14 @@
       "speakerId": "martin-lindner",
       "speaker1Name": "Martin Lindner",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            6
+          ]
+        },
         {
           "speakerId": "martin-lindner",
           "speaker2Name": "Martin Lindner",
@@ -714,6 +1758,14 @@
       "speaker1Name": "Peter Eisenberg",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            7
+          ]
+        },
+        {
           "speakerId": "peter-eisenberg",
           "speaker2Name": "Peter Eisenberg",
           "count": 1,
@@ -727,6 +1779,14 @@
       "speakerId": "michael-schermann",
       "speaker1Name": "Michael Schermann",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            8
+          ]
+        },
         {
           "speakerId": "michael-schermann",
           "speaker2Name": "Michael Schermann",
@@ -742,6 +1802,14 @@
       "speaker1Name": "Henrik Müller",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            9
+          ]
+        },
+        {
           "speakerId": "henrik-müller",
           "speaker2Name": "Henrik Müller",
           "count": 1,
@@ -755,6 +1823,14 @@
       "speakerId": "antje-boetius",
       "speaker1Name": "Antje Boetius",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            10
+          ]
+        },
         {
           "speakerId": "antje-boetius",
           "speaker2Name": "Antje Boetius",
@@ -770,6 +1846,14 @@
       "speaker1Name": "Gunter Dueck",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            11
+          ]
+        },
+        {
           "speakerId": "gunter-dueck",
           "speaker2Name": "Gunter Dueck",
           "count": 1,
@@ -783,6 +1867,14 @@
       "speakerId": "ferdi-schueth",
       "speaker1Name": "Ferdi Schueth",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            12
+          ]
+        },
         {
           "speakerId": "ferdi-schueth",
           "speaker2Name": "Ferdi Schueth",
@@ -798,6 +1890,14 @@
       "speaker1Name": "Claudia Eggert",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            13
+          ]
+        },
+        {
           "speakerId": "claudia-eggert",
           "speaker2Name": "Claudia Eggert",
           "count": 1,
@@ -811,6 +1911,14 @@
       "speakerId": "dagmar-schäfer",
       "speaker1Name": "Dagmar Schäfer",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            14
+          ]
+        },
         {
           "speakerId": "dagmar-schäfer",
           "speaker2Name": "Dagmar Schäfer",
@@ -826,6 +1934,14 @@
       "speaker1Name": "Muriel Kim Helbig",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            15
+          ]
+        },
+        {
           "speakerId": "muriel-kim-helbig",
           "speaker2Name": "Muriel Kim Helbig",
           "count": 1,
@@ -839,6 +1955,14 @@
       "speakerId": "nikolaus-kriegeskorte",
       "speaker1Name": "Nikolaus Kriegeskorte",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            16
+          ]
+        },
         {
           "speakerId": "nikolaus-kriegeskorte",
           "speaker2Name": "Nikolaus Kriegeskorte",
@@ -854,6 +1978,14 @@
       "speaker1Name": "Ulinka Rublack",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            17
+          ]
+        },
+        {
           "speakerId": "ulinka-rublack",
           "speaker2Name": "Ulinka Rublack",
           "count": 1,
@@ -867,6 +1999,14 @@
       "speakerId": "max-roser",
       "speaker1Name": "Max Roser",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            18
+          ]
+        },
         {
           "speakerId": "max-roser",
           "speaker2Name": "Max Roser",
@@ -882,6 +2022,14 @@
       "speaker1Name": "Michael Braungart",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            19
+          ]
+        },
+        {
           "speakerId": "michael-braungart",
           "speaker2Name": "Michael Braungart",
           "count": 1,
@@ -895,6 +2043,14 @@
       "speakerId": "pascal-hetze",
       "speaker1Name": "Pascal Hetze",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            20
+          ]
+        },
         {
           "speakerId": "pascal-hetze",
           "speaker2Name": "Pascal Hetze",
@@ -910,6 +2066,14 @@
       "speaker1Name": "Linda Breitlauch",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            21
+          ]
+        },
+        {
           "speakerId": "linda-breitlauch",
           "speaker2Name": "Linda Breitlauch",
           "count": 1,
@@ -923,6 +2087,14 @@
       "speakerId": "jürgen-handke",
       "speaker1Name": "Jürgen Handke",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            22
+          ]
+        },
         {
           "speakerId": "jürgen-handke",
           "speaker2Name": "Jürgen Handke",
@@ -938,6 +2110,14 @@
       "speaker1Name": "Klaus Kümmerer",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            24
+          ]
+        },
+        {
           "speakerId": "klaus-kümmerer",
           "speaker2Name": "Klaus Kümmerer",
           "count": 1,
@@ -951,6 +2131,14 @@
       "speakerId": "uwe-schneidewind",
       "speaker1Name": "Uwe Schneidewind",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            25
+          ]
+        },
         {
           "speakerId": "uwe-schneidewind",
           "speaker2Name": "Uwe Schneidewind",
@@ -966,6 +2154,14 @@
       "speaker1Name": "Eberhard Knobloch",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            26
+          ]
+        },
+        {
           "speakerId": "eberhard-knobloch",
           "speaker2Name": "Eberhard Knobloch",
           "count": 1,
@@ -979,6 +2175,14 @@
       "speakerId": "ulrich-dirnagl",
       "speaker1Name": "Ulrich Dirnagl",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            27
+          ]
+        },
         {
           "speakerId": "ulrich-dirnagl",
           "speaker2Name": "Ulrich Dirnagl",
@@ -994,6 +2198,14 @@
       "speaker1Name": "Hans Joosten",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            28
+          ]
+        },
+        {
           "speakerId": "hans-joosten",
           "speaker2Name": "Hans Joosten",
           "count": 1,
@@ -1007,6 +2219,14 @@
       "speakerId": "angelika-brandt",
       "speaker1Name": "Angelika Brandt",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            29
+          ]
+        },
         {
           "speakerId": "angelika-brandt",
           "speaker2Name": "Angelika Brandt",
@@ -1022,6 +2242,14 @@
       "speaker1Name": "Andreas Zick",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            30
+          ]
+        },
+        {
           "speakerId": "andreas-zick",
           "speaker2Name": "Andreas Zick",
           "count": 1,
@@ -1035,6 +2263,14 @@
       "speakerId": "günter-m.-ziegler",
       "speaker1Name": "Günter M. Ziegler",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            31
+          ]
+        },
         {
           "speakerId": "günter-m.-ziegler",
           "speaker2Name": "Günter M. Ziegler",
@@ -1050,6 +2286,14 @@
       "speaker1Name": "Michael Vogel",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            32
+          ]
+        },
+        {
           "speakerId": "michael-vogel",
           "speaker2Name": "Michael Vogel",
           "count": 1,
@@ -1063,6 +2307,14 @@
       "speakerId": "silja-graupe",
       "speaker1Name": "Silja Graupe",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            33
+          ]
+        },
         {
           "speakerId": "silja-graupe",
           "speaker2Name": "Silja Graupe",
@@ -1078,6 +2330,14 @@
       "speaker1Name": "Ernst Peter Fischer",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            34
+          ]
+        },
+        {
           "speakerId": "ernst-peter-fischer",
           "speaker2Name": "Ernst Peter Fischer",
           "count": 1,
@@ -1091,6 +2351,14 @@
       "speakerId": "julia-offe",
       "speaker1Name": "Julia Offe",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            35
+          ]
+        },
         {
           "speakerId": "julia-offe",
           "speaker2Name": "Julia Offe",
@@ -1106,6 +2374,14 @@
       "speaker1Name": "Ulrich Schreiterer",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            36
+          ]
+        },
+        {
           "speakerId": "ulrich-schreiterer",
           "speaker2Name": "Ulrich Schreiterer",
           "count": 1,
@@ -1119,6 +2395,14 @@
       "speakerId": "pavel-richter",
       "speaker1Name": "Pavel Richter",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            37
+          ]
+        },
         {
           "speakerId": "pavel-richter",
           "speaker2Name": "Pavel Richter",
@@ -1134,6 +2418,14 @@
       "speaker1Name": "Benjamin Lahusen",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            38
+          ]
+        },
+        {
           "speakerId": "benjamin-lahusen",
           "speaker2Name": "Benjamin Lahusen",
           "count": 1,
@@ -1147,6 +2439,14 @@
       "speakerId": "reinhold-leinfelder",
       "speaker1Name": "Reinhold Leinfelder",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            39
+          ]
+        },
         {
           "speakerId": "reinhold-leinfelder",
           "speaker2Name": "Reinhold Leinfelder",
@@ -1162,6 +2462,14 @@
       "speaker1Name": "Claudia Hornberg",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            40
+          ]
+        },
+        {
           "speakerId": "claudia-hornberg",
           "speaker2Name": "Claudia Hornberg",
           "count": 1,
@@ -1175,6 +2483,14 @@
       "speakerId": "monika-trümper",
       "speaker1Name": "Monika Trümper",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            41
+          ]
+        },
         {
           "speakerId": "monika-trümper",
           "speaker2Name": "Monika Trümper",
@@ -1190,6 +2506,14 @@
       "speaker1Name": "Jörn Loviscach",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            42
+          ]
+        },
+        {
           "speakerId": "jörn-loviscach",
           "speaker2Name": "Jörn Loviscach",
           "count": 1,
@@ -1203,6 +2527,14 @@
       "speakerId": "lisa-rosa",
       "speaker1Name": "Lisa Rosa",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            43
+          ]
+        },
         {
           "speakerId": "lisa-rosa",
           "speaker2Name": "Lisa Rosa",
@@ -1218,6 +2550,14 @@
       "speaker1Name": "Ralf Stockmann",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            44
+          ]
+        },
+        {
           "speakerId": "ralf-stockmann",
           "speaker2Name": "Ralf Stockmann",
           "count": 1,
@@ -1231,6 +2571,14 @@
       "speakerId": "lyndal-roper",
       "speaker1Name": "Lyndal Roper",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            45
+          ]
+        },
         {
           "speakerId": "lyndal-roper",
           "speaker2Name": "Lyndal Roper",
@@ -1246,6 +2594,14 @@
       "speaker1Name": "Jürgen Tautz",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            46
+          ]
+        },
+        {
           "speakerId": "jürgen-tautz",
           "speaker2Name": "Jürgen Tautz",
           "count": 1,
@@ -1260,6 +2616,14 @@
       "speaker1Name": "Christoph Corves",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            48
+          ]
+        },
+        {
           "speakerId": "christoph-corves",
           "speaker2Name": "Christoph Corves",
           "count": 1,
@@ -1271,8 +2635,54 @@
     },
     {
       "speakerId": "jöran-muuß-merholz",
+      "speaker1Name": "Jöran Muuß Merholz",
+      "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            49
+          ]
+        },
+        {
+          "speakerId": "jöran-muuß-merholz",
+          "speaker2Name": "Jöran Muuß Merholz",
+          "count": 1,
+          "episodes": [
+            49
+          ]
+        },
+        {
+          "speakerId": "jöran-muuß-merholz",
+          "speaker2Name": "Jöran Muuß-Merholz",
+          "count": 1,
+          "episodes": [
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "speakerId": "jöran-muuß-merholz",
       "speaker1Name": "Jöran Muuß-Merholz",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            49
+          ]
+        },
+        {
+          "speakerId": "jöran-muuß-merholz",
+          "speaker2Name": "Jöran Muuß Merholz",
+          "count": 1,
+          "episodes": [
+            49
+          ]
+        },
         {
           "speakerId": "jöran-muuß-merholz",
           "speaker2Name": "Jöran Muuß-Merholz",
@@ -1288,6 +2698,14 @@
       "speaker1Name": "Hanns Hatt",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            50
+          ]
+        },
+        {
           "speakerId": "hanns-hatt",
           "speaker2Name": "Hanns Hatt",
           "count": 1,
@@ -1301,6 +2719,14 @@
       "speakerId": "carolin-bock",
       "speaker1Name": "Carolin Bock",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            51
+          ]
+        },
         {
           "speakerId": "carolin-bock",
           "speaker2Name": "Carolin Bock",
@@ -1316,6 +2742,14 @@
       "speaker1Name": "Andrea Niehaus",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            52
+          ]
+        },
+        {
           "speakerId": "andrea-niehaus",
           "speaker2Name": "Andrea Niehaus",
           "count": 1,
@@ -1329,6 +2763,14 @@
       "speakerId": "volker-quaschning",
       "speaker1Name": "Volker Quaschning",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            53
+          ]
+        },
         {
           "speakerId": "volker-quaschning",
           "speaker2Name": "Volker Quaschning",
@@ -1344,6 +2786,14 @@
       "speaker1Name": "Jochen Rabe",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            54
+          ]
+        },
+        {
           "speakerId": "jochen-rabe",
           "speaker2Name": "Jochen Rabe",
           "count": 1,
@@ -1357,6 +2807,14 @@
       "speakerId": "harald-lesch",
       "speaker1Name": "Harald Lesch",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            55
+          ]
+        },
         {
           "speakerId": "harald-lesch",
           "speaker2Name": "Harald Lesch",
@@ -1386,6 +2844,14 @@
       "speaker1Name": "Manfred Niekisch",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            57
+          ]
+        },
+        {
           "speakerId": "manfred-niekisch",
           "speaker2Name": "Manfred Niekisch",
           "count": 1,
@@ -1399,6 +2865,14 @@
       "speakerId": "christopher-zimmermann",
       "speaker1Name": "Christopher Zimmermann",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            58
+          ]
+        },
         {
           "speakerId": "christopher-zimmermann",
           "speaker2Name": "Christopher Zimmermann",
@@ -1414,6 +2888,14 @@
       "speaker1Name": "Philippe Wampfler",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            59
+          ]
+        },
+        {
           "speakerId": "philippe-wampfler",
           "speaker2Name": "Philippe Wampfler",
           "count": 1,
@@ -1427,6 +2909,14 @@
       "speakerId": "stefan-rahmstorf",
       "speaker1Name": "Stefan Rahmstorf",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            60
+          ]
+        },
         {
           "speakerId": "stefan-rahmstorf",
           "speaker2Name": "Stefan Rahmstorf",
@@ -1442,6 +2932,14 @@
       "speaker1Name": "Jule Specht",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            61
+          ]
+        },
+        {
           "speakerId": "jule-specht",
           "speaker2Name": "Jule Specht",
           "count": 1,
@@ -1455,6 +2953,14 @@
       "speakerId": "isabel-rink",
       "speaker1Name": "Isabel Rink",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            62
+          ]
+        },
         {
           "speakerId": "isabel-rink",
           "speaker2Name": "Isabel Rink",
@@ -1470,6 +2976,14 @@
       "speaker1Name": "Ingo Sass",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            63
+          ]
+        },
+        {
           "speakerId": "ingo-sass",
           "speaker2Name": "Ingo Sass",
           "count": 1,
@@ -1483,6 +2997,14 @@
       "speakerId": "robert-ranisch",
       "speaker1Name": "Robert Ranisch",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            64
+          ]
+        },
         {
           "speakerId": "robert-ranisch",
           "speaker2Name": "Robert Ranisch",
@@ -1498,6 +3020,14 @@
       "speaker1Name": "Johann Goldammer",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            65
+          ]
+        },
+        {
           "speakerId": "johann-goldammer",
           "speaker2Name": "Johann Goldammer",
           "count": 1,
@@ -1511,6 +3041,14 @@
       "speakerId": "anita-gohdes",
       "speaker1Name": "Anita Gohdes",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            67
+          ]
+        },
         {
           "speakerId": "anita-gohdes",
           "speaker2Name": "Anita Gohdes",
@@ -1526,6 +3064,14 @@
       "speaker1Name": "Gerd Gigerenzer",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            68
+          ]
+        },
+        {
           "speakerId": "gerd-gigerenzer",
           "speaker2Name": "Gerd Gigerenzer",
           "count": 1,
@@ -1539,6 +3085,14 @@
       "speakerId": "alina-kokoschka",
       "speaker1Name": "Alina Kokoschka",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            69
+          ]
+        },
         {
           "speakerId": "alina-kokoschka",
           "speaker2Name": "Alina Kokoschka",
@@ -1554,6 +3108,14 @@
       "speaker1Name": "Oliver Parodi",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            70
+          ]
+        },
+        {
           "speakerId": "oliver-parodi",
           "speaker2Name": "Oliver Parodi",
           "count": 1,
@@ -1567,6 +3129,14 @@
       "speakerId": "justus-haucap",
       "speaker1Name": "Justus Haucap",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            71
+          ]
+        },
         {
           "speakerId": "justus-haucap",
           "speaker2Name": "Justus Haucap",
@@ -1582,6 +3152,14 @@
       "speaker1Name": "Peter Purgathofer",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            72
+          ]
+        },
+        {
           "speakerId": "peter-purgathofer",
           "speaker2Name": "Peter Purgathofer",
           "count": 1,
@@ -1595,6 +3173,14 @@
       "speakerId": "rita-adrian",
       "speaker1Name": "Rita Adrian",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            73
+          ]
+        },
         {
           "speakerId": "rita-adrian",
           "speaker2Name": "Rita Adrian",
@@ -1610,6 +3196,14 @@
       "speaker1Name": "Jens Claus Brüning",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            74
+          ]
+        },
+        {
           "speakerId": "jens-claus-brüning",
           "speaker2Name": "Jens Claus Brüning",
           "count": 1,
@@ -1623,6 +3217,14 @@
       "speakerId": "sandra-richter",
       "speaker1Name": "Sandra Richter",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            75
+          ]
+        },
         {
           "speakerId": "sandra-richter",
           "speaker2Name": "Sandra Richter",
@@ -1638,6 +3240,14 @@
       "speaker1Name": "Stephan Rammler",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            76
+          ]
+        },
+        {
           "speakerId": "stephan-rammler",
           "speaker2Name": "Stephan Rammler",
           "count": 1,
@@ -1651,6 +3261,14 @@
       "speakerId": "leonhard-dobusch",
       "speaker1Name": "Leonhard Dobusch",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            77
+          ]
+        },
         {
           "speakerId": "leonhard-dobusch",
           "speaker2Name": "Leonhard Dobusch",
@@ -1666,6 +3284,14 @@
       "speaker1Name": "Jan Kalbitzer",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            78
+          ]
+        },
+        {
           "speakerId": "jan-kalbitzer",
           "speaker2Name": "Jan Kalbitzer",
           "count": 1,
@@ -1677,8 +3303,54 @@
     },
     {
       "speakerId": "jan-hinrik-schmidt",
+      "speaker1Name": "Jan Hinrik Schmidt",
+      "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            80
+          ]
+        },
+        {
+          "speakerId": "jan-hinrik-schmidt",
+          "speaker2Name": "Jan Hinrik Schmidt",
+          "count": 1,
+          "episodes": [
+            80
+          ]
+        },
+        {
+          "speakerId": "jan-hinrik-schmidt",
+          "speaker2Name": "Jan-Hinrik Schmidt",
+          "count": 1,
+          "episodes": [
+            80
+          ]
+        }
+      ]
+    },
+    {
+      "speakerId": "jan-hinrik-schmidt",
       "speaker1Name": "Jan-Hinrik Schmidt",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            80
+          ]
+        },
+        {
+          "speakerId": "jan-hinrik-schmidt",
+          "speaker2Name": "Jan Hinrik Schmidt",
+          "count": 1,
+          "episodes": [
+            80
+          ]
+        },
         {
           "speakerId": "jan-hinrik-schmidt",
           "speaker2Name": "Jan-Hinrik Schmidt",
@@ -1691,8 +3363,54 @@
     },
     {
       "speakerId": "stefanie-molthagen-schnöring",
+      "speaker1Name": "Stefanie Molthagen Schnöring",
+      "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            81
+          ]
+        },
+        {
+          "speakerId": "stefanie-molthagen-schnöring",
+          "speaker2Name": "Stefanie Molthagen Schnöring",
+          "count": 1,
+          "episodes": [
+            81
+          ]
+        },
+        {
+          "speakerId": "stefanie-molthagen-schnöring",
+          "speaker2Name": "Stefanie Molthagen-Schnöring",
+          "count": 1,
+          "episodes": [
+            81
+          ]
+        }
+      ]
+    },
+    {
+      "speakerId": "stefanie-molthagen-schnöring",
       "speaker1Name": "Stefanie Molthagen-Schnöring",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            81
+          ]
+        },
+        {
+          "speakerId": "stefanie-molthagen-schnöring",
+          "speaker2Name": "Stefanie Molthagen Schnöring",
+          "count": 1,
+          "episodes": [
+            81
+          ]
+        },
         {
           "speakerId": "stefanie-molthagen-schnöring",
           "speaker2Name": "Stefanie Molthagen-Schnöring",
@@ -1708,6 +3426,14 @@
       "speaker1Name": "Mark Benecke",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            82
+          ]
+        },
+        {
           "speakerId": "mark-benecke",
           "speaker2Name": "Mark Benecke",
           "count": 1,
@@ -1721,6 +3447,14 @@
       "speakerId": "joachim-fensterle",
       "speaker1Name": "Joachim Fensterle",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            83
+          ]
+        },
         {
           "speakerId": "joachim-fensterle",
           "speaker2Name": "Joachim Fensterle",
@@ -1736,6 +3470,14 @@
       "speaker1Name": "Gerd Antes",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            84
+          ]
+        },
+        {
           "speakerId": "gerd-antes",
           "speaker2Name": "Gerd Antes",
           "count": 1,
@@ -1749,6 +3491,14 @@
       "speakerId": "andrea-thorn",
       "speaker1Name": "Andrea Thorn",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            85
+          ]
+        },
         {
           "speakerId": "andrea-thorn",
           "speaker2Name": "Andrea Thorn",
@@ -1764,6 +3514,14 @@
       "speaker1Name": "Ralph Caspers",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            86
+          ]
+        },
+        {
           "speakerId": "ralph-caspers",
           "speaker2Name": "Ralph Caspers",
           "count": 1,
@@ -1777,6 +3535,14 @@
       "speakerId": "thomas-flohr",
       "speaker1Name": "Thomas Flohr",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            87
+          ]
+        },
         {
           "speakerId": "thomas-flohr",
           "speaker2Name": "Thomas Flohr",
@@ -1792,6 +3558,14 @@
       "speaker1Name": "Dirk Prüfer",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            88
+          ]
+        },
+        {
           "speakerId": "dirk-prüfer",
           "speaker2Name": "Dirk Prüfer",
           "count": 1,
@@ -1803,8 +3577,54 @@
     },
     {
       "speakerId": "jürgen-richter-gebert",
+      "speaker1Name": "Jürgen Richter Gebert",
+      "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            89
+          ]
+        },
+        {
+          "speakerId": "jürgen-richter-gebert",
+          "speaker2Name": "Jürgen Richter Gebert",
+          "count": 1,
+          "episodes": [
+            89
+          ]
+        },
+        {
+          "speakerId": "jürgen-richter-gebert",
+          "speaker2Name": "Jürgen Richter-Gebert",
+          "count": 1,
+          "episodes": [
+            89
+          ]
+        }
+      ]
+    },
+    {
+      "speakerId": "jürgen-richter-gebert",
       "speaker1Name": "Jürgen Richter-Gebert",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            89
+          ]
+        },
+        {
+          "speakerId": "jürgen-richter-gebert",
+          "speaker2Name": "Jürgen Richter Gebert",
+          "count": 1,
+          "episodes": [
+            89
+          ]
+        },
         {
           "speakerId": "jürgen-richter-gebert",
           "speaker2Name": "Jürgen Richter-Gebert",
@@ -1820,6 +3640,14 @@
       "speaker1Name": "Robert Arlinghaus",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            90
+          ]
+        },
+        {
           "speakerId": "robert-arlinghaus",
           "speaker2Name": "Robert Arlinghaus",
           "count": 1,
@@ -1833,6 +3661,14 @@
       "speakerId": "rafael-laguna-de-la-vera",
       "speaker1Name": "Rafael Laguna de la Vera",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            91
+          ]
+        },
         {
           "speakerId": "rafael-laguna-de-la-vera",
           "speaker2Name": "Rafael Laguna de la Vera",
@@ -1848,6 +3684,14 @@
       "speaker1Name": "Katharina Hölzle",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            92
+          ]
+        },
+        {
           "speakerId": "katharina-hölzle",
           "speaker2Name": "Katharina Hölzle",
           "count": 1,
@@ -1862,6 +3706,14 @@
       "speaker1Name": "Andrea Rumler",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            93
+          ]
+        },
+        {
           "speakerId": "andrea-rumler",
           "speaker2Name": "Andrea Rumler",
           "count": 1,
@@ -1873,8 +3725,54 @@
     },
     {
       "speakerId": "hans-ulrich-schmincke",
+      "speaker1Name": "Hans Ulrich Schmincke",
+      "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            94
+          ]
+        },
+        {
+          "speakerId": "hans-ulrich-schmincke",
+          "speaker2Name": "Hans Ulrich Schmincke",
+          "count": 1,
+          "episodes": [
+            94
+          ]
+        },
+        {
+          "speakerId": "hans-ulrich-schmincke",
+          "speaker2Name": "Hans-Ulrich Schmincke",
+          "count": 1,
+          "episodes": [
+            94
+          ]
+        }
+      ]
+    },
+    {
+      "speakerId": "hans-ulrich-schmincke",
       "speaker1Name": "Hans-Ulrich Schmincke",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            94
+          ]
+        },
+        {
+          "speakerId": "hans-ulrich-schmincke",
+          "speaker2Name": "Hans Ulrich Schmincke",
+          "count": 1,
+          "episodes": [
+            94
+          ]
+        },
         {
           "speakerId": "hans-ulrich-schmincke",
           "speaker2Name": "Hans-Ulrich Schmincke",
@@ -1890,6 +3788,14 @@
       "speaker1Name": "Hendrik Ballhausen",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            95
+          ]
+        },
+        {
           "speakerId": "hendrik-ballhausen",
           "speaker2Name": "Hendrik Ballhausen",
           "count": 1,
@@ -1901,8 +3807,54 @@
     },
     {
       "speakerId": "karl-heinz-frommolt",
+      "speaker1Name": "Karl Heinz Frommolt",
+      "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            96
+          ]
+        },
+        {
+          "speakerId": "karl-heinz-frommolt",
+          "speaker2Name": "Karl Heinz Frommolt",
+          "count": 1,
+          "episodes": [
+            96
+          ]
+        },
+        {
+          "speakerId": "karl-heinz-frommolt",
+          "speaker2Name": "Karl-Heinz Frommolt",
+          "count": 1,
+          "episodes": [
+            96
+          ]
+        }
+      ]
+    },
+    {
+      "speakerId": "karl-heinz-frommolt",
       "speaker1Name": "Karl-Heinz Frommolt",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            96
+          ]
+        },
+        {
+          "speakerId": "karl-heinz-frommolt",
+          "speaker2Name": "Karl Heinz Frommolt",
+          "count": 1,
+          "episodes": [
+            96
+          ]
+        },
         {
           "speakerId": "karl-heinz-frommolt",
           "speaker2Name": "Karl-Heinz Frommolt",
@@ -1918,6 +3870,14 @@
       "speaker1Name": "Julia Freudenberg",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            97
+          ]
+        },
+        {
           "speakerId": "julia-freudenberg",
           "speaker2Name": "Julia Freudenberg",
           "count": 1,
@@ -1931,6 +3891,14 @@
       "speakerId": "markus-schrenk",
       "speaker1Name": "Markus Schrenk",
       "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            98
+          ]
+        },
         {
           "speakerId": "markus-schrenk",
           "speaker2Name": "Markus Schrenk",
@@ -1946,11 +3914,41 @@
       "speaker1Name": "Jörg Overmann",
       "values": [
         {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            99
+          ]
+        },
+        {
           "speakerId": "jörg-overmann",
           "speaker2Name": "Jörg Overmann",
           "count": 1,
           "episodes": [
             99
+          ]
+        }
+      ]
+    },
+    {
+      "speakerId": "thomas-klingner",
+      "speaker1Name": "Thomas Klingner",
+      "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            100
+          ]
+        },
+        {
+          "speakerId": "thomas-klingner",
+          "speaker2Name": "Thomas Klingner",
+          "count": 1,
+          "episodes": [
+            100
           ]
         }
       ]

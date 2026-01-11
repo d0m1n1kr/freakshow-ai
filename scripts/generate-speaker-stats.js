@@ -265,7 +265,7 @@ async function generateOne(inputPath, outputPath, { pretty }) {
   }
 
   if (items.length === 0) {
-    throw new Error(`No valid segments found in transcript: ${inputPath}`);
+    return null; // Skip episodes without valid segments (e.g., missing speaker names)
   }
 
   // Sort by time
@@ -436,6 +436,7 @@ Example:
 
   let ok = 0;
   let failed = 0;
+  let skipped = 0;
 
   for (const name of selected) {
     const inputPath = path.join(inDir, name);
@@ -443,10 +444,15 @@ Example:
     const outputPath = path.join(outDir, outName);
     try {
       const stats = await generateOne(inputPath, outputPath, { pretty: args.pretty });
-      ok++;
-      const durationMin = Math.floor(stats.durationSec / 60);
-      const durationSecRem = Math.floor(stats.durationSec % 60);
-      console.log(`✅ ${name} -> ${outName} (${stats.segments} segments, ${stats.speakers} speakers, ${durationMin}:${String(durationSecRem).padStart(2, '0')})`);
+      if (stats === null) {
+        skipped++;
+        console.log(`⊘ ${name} -> skipped (no valid segments with speaker names)`);
+      } else {
+        ok++;
+        const durationMin = Math.floor(stats.durationSec / 60);
+        const durationSecRem = Math.floor(stats.durationSec % 60);
+        console.log(`✅ ${name} -> ${outName} (${stats.segments} segments, ${stats.speakers} speakers, ${durationMin}:${String(durationSecRem).padStart(2, '0')})`);
+      }
     } catch (e) {
       failed++;
       console.error(`❌ ${name}: ${e instanceof Error ? e.message : String(e)}`);

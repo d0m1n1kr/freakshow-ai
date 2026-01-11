@@ -7,9 +7,11 @@
 # Steps:
 #   1: Detect and process new episodes (scraping, stats, topics)
 #   2: Update global data (normalize topics, embeddings, clustering)
-#   3: Regenerate visualizations (all podcasts)
-#   4: Generate TS-live files for new episodes
-#   5: Organize Frontend Files
+#   3: Clustering
+#   4: Regenerate visualizations
+#   5: Generate TS-live files
+#   6: Update RAG database and generate episodes index
+#   7: Organize Frontend Files
 
 # Safety: if this script is invoked via zsh/sh (or sourced), re-exec under bash.
 if [ -z "${BASH_VERSION:-}" ]; then
@@ -66,7 +68,7 @@ for arg in "$@"; do
             echo "  3: Clustering"
             echo "  4: Regenerate visualizations"
             echo "  5: Generate TS-live files"
-            echo "  6: Update RAG database"
+            echo "  6: Update RAG database and generate episodes index"
             echo "  7: Organize Frontend Files"
             echo ""
             echo "What this script does:"
@@ -77,7 +79,8 @@ for arg in "$@"; do
             echo "  5. Updates global data (normalize topics, embeddings, clustering)"
             echo "  6. Regenerates visualizations (all podcasts)"
             echo "  7. Generates TS-live files for new episodes"
-            echo "  8. Organizes frontend files"
+            echo "  8. Updates RAG database and generates episodes MP3 index"
+            echo "  9. Organizes frontend files"
             exit 0
             ;;
         *)
@@ -413,18 +416,51 @@ if should_run_step 5; then
     echo -e "${BLUE}⚙️  Phase 5: Generating TS-live Files${NC}\n"
 
 echo -e "${YELLOW}→${NC} Generating TS-live files for new episodes..."
-for episode_num in "${NEW_EPISODES[@]}"; do
-    echo -e "${YELLOW}  Processing episode $episode_num...${NC}"
-    node scripts/generate-ts-live.js --podcast "$PODCAST_ID" --episode "$episode_num" || echo -e "${YELLOW}⚠${NC}  Failed to generate TS-live for episode $episode_num"
-done
-echo -e "${GREEN}✓${NC} TS-live generation completed\n"
+if [ ${#NEW_EPISODES[@]} -gt 0 ]; then
+    for episode_num in "${NEW_EPISODES[@]}"; do
+        echo -e "${YELLOW}  Processing episode $episode_num...${NC}"
+        node scripts/generate-ts-live.js --podcast "$PODCAST_ID" --episode "$episode_num" || echo -e "${YELLOW}⚠${NC}  Failed to generate TS-live for episode $episode_num"
+    done
+    echo -e "${GREEN}✓${NC} TS-live generation completed for ${#NEW_EPISODES[@]} episode(s)\n"
+else
+    echo -e "${YELLOW}ℹ${NC}  No new episodes detected. Checking for missing TS-live files...\n"
+    
+    # Check for episodes with -ts.json but without -ts-live.json
+    MISSING_TS_LIVE=()
+    for ts_file in podcasts/$PODCAST_ID/episodes/*-ts.json; do
+        [ -f "$ts_file" ] || continue
+        
+        # Extract episode number
+        basename=$(basename "$ts_file")
+        episode_num=$(echo "$basename" | sed -E 's/^([0-9]+)-ts\.json$/\1/')
+        
+        if [ -n "$episode_num" ] && [ "$episode_num" != "$basename" ]; then
+            # Check if -ts-live.json exists
+            ts_live_file="podcasts/$PODCAST_ID/episodes/${episode_num}-ts-live.json"
+            if [ ! -f "$ts_live_file" ]; then
+                MISSING_TS_LIVE+=("$episode_num")
+            fi
+        fi
+    done
+    
+    if [ ${#MISSING_TS_LIVE[@]} -gt 0 ]; then
+        echo -e "${YELLOW}→${NC} Found ${#MISSING_TS_LIVE[@]} episode(s) without TS-live files. Generating..."
+        for episode_num in "${MISSING_TS_LIVE[@]}"; do
+            echo -e "${YELLOW}  Processing episode $episode_num...${NC}"
+            node scripts/generate-ts-live.js --podcast "$PODCAST_ID" --episode "$episode_num" || echo -e "${YELLOW}⚠${NC}  Failed to generate TS-live for episode $episode_num"
+        done
+        echo -e "${GREEN}✓${NC} TS-live generation completed for ${#MISSING_TS_LIVE[@]} episode(s)\n"
+    else
+        echo -e "${GREEN}✓${NC} All episodes already have TS-live files\n"
+    fi
+fi
 else
     echo -e "${YELLOW}⏭${NC}  Skipping Phase 5 (starting from step $FROM_STEP)\n"
 fi
 
-# Phase 6: Update RAG Database
+# Phase 6: Update RAG Database and Generate Episodes Index
 if should_run_step 6; then
-    echo -e "${BLUE}🧠 Phase 6: Update RAG Database${NC}\n"
+    echo -e "${BLUE}🧠 Phase 6: Update RAG Database and Generate Episodes Index${NC}\n"
 
     if [ "$SKIP_RAG" = false ]; then
         if [ ${#NEW_EPISODES[@]} -gt 0 ]; then
@@ -441,6 +477,9 @@ if should_run_step 6; then
     else
         echo -e "${YELLOW}⏭${NC}  Skipping RAG database update (--skip-rag)\n"
     fi
+
+    echo -e "${YELLOW}→${NC} Generating episodes MP3 index..."
+    run_script_optional "scripts/generate-episodes-mp3.js"
 else
     echo -e "${YELLOW}⏭${NC}  Skipping Phase 6 (starting from step $FROM_STEP)\n"
 fi
