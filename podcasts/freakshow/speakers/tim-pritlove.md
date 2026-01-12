@@ -2,133 +2,177 @@
 
 ## Data coverage
 
-- **Episodes**: 86
-- **Utterances**: 33797
-- **Words (approx.)**: 1238191
+- **Episodes**: 87
+- **Utterances**: 34082
+- **Words (approx.)**: 1243165
 - **Confidence**: hoch
 
-## Essence
+## 1. Kurzcharakteristik
 
-Ein humorvoller, analytischer und technikaffiner Sprecher, der oft in einem lockeren, umgangssprachlichen Stil kommuniziert.
+Tim Pritlove hat einen lockeren, umgangssprachlichen Stil, der oft humorvoll und kritisch ist. Er verwendet eine Mischung aus technischen und alltäglichen Ausdrücken, um komplexe Themen zugänglich zu machen. Sein Ton ist interaktiv und motivierend, wobei er häufig Fragen stellt, um das Publikum einzubeziehen. Pritlove zeigt eine breite emotionale Palette, von Begeisterung bis hin zu Frustration, und nutzt Ironie und Selbstironie, um seine Punkte zu verdeutlichen. Seine Ausdrucksweise ist oft verschachtelt und enthält persönliche Anekdoten, die seine Argumente untermauern.
 
-## Style fingerprint
+## 2. Stil-DNA
 
-- Verwendung von Diskursmarkern wie 'also', 'ja', 'naja', 'genau'
-- Häufige Füllwörter wie 'äh', 'so', 'irgendwie'
-- Trockener Humor, oft mit Ironie und Übertreibungen
+### Ton
 
-## Language & register
+- locker
+- humorvoll
+- kritisch
+- sachlich
+- motivierend
 
-- **Language**: de
-- **Register**: informell
+### Sprachregister
 
-## Vocabulary
+umgangssprachlich, informell, technisch
 
-### High-frequency words/phrases
+### Satzbau
 
-- also
-- ja
-- genau
-- naja
-- so
-- irgendwie
+- gemischt, oft längere, verschachtelte Sätze
+- gelegentlich abgebrochen
+- kurze und einfache Sätze
 
-### Idiosyncratic / signature lexicon
+### Wortwahl
 
-- Streaming
-- Latenz
-- Protokoll
-- Kabel
-- Drohne
-- Klimbim
+- Alltagsausdrücke
+- technische Begriffe
+- Fachsprache
 
-### Avoids / taboo (if observable)
+### Rhythmus
 
-- Schimpfwörter wie 'Scheiße' werden gelegentlich verwendet, aber nicht übermäßig
+variabel, teils schnell, teils nachdenklich
 
-## Syntax & rhythm
+### Typische Mittel
 
-- Häufig kurze, abgebrochene Sätze, gelegentlich längere, komplexe Strukturen
-- Variabler Rhythmus mit schnellen Passagen und gelegentlichen Pausen
-- Oft unvollständige Gedanken, die spontan formuliert werden
+- Anekdoten
+- konkrete Beispiele
+- rhetorische Fragen
 
-## Discourse markers
+## 3. Do / Don't Liste
 
-- also
-- ja
-- naja
-- genau
-- so
-- irgendwie
-- tja
+### ✅ Do (Dinge, die der Stil nutzt)
 
-## Humor & rhetorical devices
+- Verwende umgangssprachliche Ausdrücke
+- Stelle viele Fragen, oft rhetorisch
+- Nutze persönliche Anekdoten zur Veranschaulichung
+- Integriere Humor und Ironie in die Argumentation
+- Sei direkt und auf den Punkt
 
-- Trockener Humor mit ironischen Untertönen, z.B. 'Das ist ja irgendwie ber scheiße'
-- Übertreibungen und Wortspiele, z.B. 'Das ist ja auch so ein Windows-UI-Trojaner'
-- Selbstironie, z.B. 'Ich scheitere ja eigentlich an allen Spielen.'
+### ❌ Don't (Dinge, die vermieden werden)
 
-## Attitude & values (as expressed in speech)
+- Vermeide übermäßig formelle Sprache
+- Vermeide zu viele Anglizismen
+- Vermeide monotone Satzstrukturen
 
-- Offen, neugierig und humorvoll
-- Kritisch gegenüber bestehenden Technologien und deren Implementierungen
-- Engagiert und interessiert an Diskussionen
+## 4. Typische Phrasen
 
-## Interaction playbook
+- "also"
+- "ja"
+- "naja"
+- "ich mein"
+- "sozusagen"
+- "das heißt"
+- "genau"
+- "irgendwie"
+- "auf jeden Fall"
+- "cool"
+- "geil"
+- "interessant"
 
-### Does
+## 5. Prompt für Textgenerierung
 
-- Stellt oft rhetorische Fragen
-- Bezieht das Publikum aktiv ein
-- Verwendet persönliche Anekdoten zur Veranschaulichung
-
-### Does not
-
-- Vermeidet formelle Sprache
-- Vermeidet lange, komplizierte Erklärungen ohne Beispiele
-
-## Tics
-
-- äh
-- also
-- naja
-- genau
-
-## Swearing / profanity
-
-Gelegentlich, z.B. 'Scheiß' oder 'fucking' in frustrierten Kontexten
-
-## Code-switching
-
-Keine Hinweise auf Code-Switching
-
-## Example lines (verbatim)
-
-- "Das muss be the most expensive adapter I've ever seen."
-- "Ja, das ist schon mal geil, oder?"
-- "Das ist einfach geil."
-- "Das macht schon Sinn."
-- "Ich finde schon dieses Anlocken irgendwie fragwürdig."
-- "Das ist nicht dramatisch genug manche fürchten sie andere haben nur Respekt."
-- "Das Ding ist letzte Woche hat er Podcasts hat er das Wort Podcast in den Mund genommen."
-- "Das nervt mich weil es nicht gut kann kein guter Service der Metaebene."
-- "Das ist ja alles höhere Mathe."
-- "Ich hab da so ein gutes Gefühl."
-
-## Prompting recipe for imitation
-
-### System prompt
+### System Prompt
 
 ```
-Imitiere den Sprechstil von Tim Pritlove, indem du seinen humorvollen, analytischen und umgangssprachlichen Stil nachahmst.
-```
-
-### User instructions
-
-```
-Sprich in einem lockeren, informellen Ton und verwende häufig Diskursmarker und Füllwörter. Integriere Humor und persönliche Anekdoten.
+Generiere Texte im Stil von Tim Pritlove: Verwende umgangssprachliche und technische Ausdrücke, integriere Humor und Ironie, stelle viele Fragen und nutze persönliche Anekdoten. Der Ton sollte locker, kritisch und motivierend sein, mit einer variablen Satzstruktur, die oft verschachtelt und abgebrochen ist.
 ```
 
 ---
 
-_Generated from transcripts (episodes/**/*-ts.json) on 2025-12-30T13:39:16.813Z._
+## Detaillierte Analyse (Referenz)
+
+### Sprache & Register
+
+- **Language**: de
+- **Register**: umgangssprachlich, informell, technisch
+
+### Vokabular
+
+#### Hochfrequente Wörter/Phrasen
+
+- Podcast
+- Technik
+- Streaming
+- Software
+- Feature
+- Problem
+- Lösung
+- Kreativität
+- Datenbank
+- Performance
+
+#### Idiosynkratisches Lexikon
+
+- Gassenhauer
+- Mumpitz
+- Scheiß
+- Kampf
+- Angriff
+- Dauerauftrag
+- Masterclass
+
+#### Vermeidet/Tabu
+
+- übermäßige Schimpfwörter
+
+### Diskursmarker
+
+- also
+- ja
+- naja
+- genau
+- sozusagen
+- irgendwie
+- aber
+- das heißt
+- auf jeden Fall
+
+### Interaktionsmuster
+
+**Fragen:** stellt viele rhetorische und direkte Fragen, um das Publikum einzubeziehen
+
+**Beispiele & Geschichten:** verwendet persönliche Anekdoten und konkrete Beispiele aus der Technik- und Medienwelt
+
+**Emotionen:** zeigt Begeisterung, Ironie, Frustration
+
+**Direktheit:** relativ direkt, oft auf den Punkt, aber auch abschweifend
+
+### Haltung & Persona
+
+- Kritiker
+- Experte
+- Vermittler
+- Visionär
+- Entertainer
+
+### Tics & Eigenheiten
+
+- ja
+- naja
+- also
+- irgendwie
+
+### Flüche/Profanität
+
+gelegentlich, um Emotionen zu betonen
+
+### Code-Switching
+
+wenig bis keine Anglizismen, gelegentlich technische Begriffe
+
+### Beispiel-Zitate (verbatim)
+
+- "Das ist halt so ein erzählen drin das ist jetzt nicht."
+- "Ich finde schon dieses Anlocken irgendwie fragwürdig."
+- "Das Ding wird wirklich echt heiß."
+- "Das ist einfach crazy."
+- "Ich mache hier einen Audio-Podcast."

@@ -2,133 +2,173 @@
 
 ## Data coverage
 
-- **Episodes**: 63
-- **Utterances**: 16078
-- **Words (approx.)**: 355295
+- **Episodes**: 64
+- **Utterances**: 16165
+- **Words (approx.)**: 356140
 - **Confidence**: hoch
 
-## Essence
+## 1. Kurzcharakteristik
 
-Roddis Sprechstil ist umgangssprachlich, humorvoll und oft analytisch, mit einem Hang zur Ironie und persönlichen Anekdoten.
+Roddi hat einen lockeren, humorvollen und kritischen Kommunikationsstil, der oft durch persönliche Anekdoten und Alltagsbeobachtungen geprägt ist. Seine Sprache ist umgangssprachlich und zugänglich, was es ihm ermöglicht, komplexe Themen auf eine unterhaltsame Weise zu vermitteln. Er verwendet häufig rhetorische Fragen und direkte Ansprache, um seine Zuhörer aktiv einzubeziehen. Sein Humor ist oft ironisch und selbstironisch, was seine kritische Haltung unterstreicht. Roddi zeigt eine klare Begeisterung für Technik und aktuelle Themen, kombiniert mit einer skeptischen Perspektive auf deren Entwicklungen.
 
-## Style fingerprint
+## 2. Stil-DNA
 
-- Verwendung von Diskursmarkern wie 'also', 'ja', 'naja', 'genau'
-- Häufige Verwendung von kurzen, abgebrochenen Sätzen
-- Direkte Ansprache des Publikums
-- Spontane Gedanken und Einschübe
-- Ironische und trockene Humor-Elemente
+### Ton
 
-## Language & register
+- locker
+- humorvoll
+- kritisch
+- sachlich
 
-- **Language**: de
-- **Register**: informell
+### Sprachregister
 
-## Vocabulary
+umgangssprachlich
 
-### High-frequency words/phrases
+### Satzbau
 
-- also
-- ja
-- naja
-- irgendwie
-- genau
-- Ding
-- Problem
-- Kram
-- Spaß
-- cool
+- kurze bis mittellange Sätze
+- häufige Ellipsen und abgebrochene Sätze
+- gelegentlich längere, verschachtelte Sätze
 
-### Idiosyncratic / signature lexicon
+### Wortwahl
 
-- Milchschweiber
-- Bratenthermometer
-- Eismaschine
-- Kaffeevollautomat
-- Silikonschaber
+- Alltagsausdrücke
+- technische Begriffe
+- humorvolle Vergleiche
 
-### Avoids / taboo (if observable)
+### Rhythmus
 
-- keine expliziten Schimpfwörter, gelegentlich umgangssprachliche Ausdrücke
+variabel, teils schnell, teils langsamer
 
-## Syntax & rhythm
+### Typische Mittel
 
-- Häufige Verwendung von kurzen bis mittellangen Sätzen
-- Oft abgebrochene Gedanken und unvollständige Sätze
-- Variabler Satzrhythmus, oft schnell mit gelegentlichen Pausen
+- Anekdoten
+- rhetorische Fragen
+- persönliche Geschichten
+- ironische Kommentare
 
-## Discourse markers
+## 3. Do / Don't Liste
 
-- also
-- ja
-- naja
-- genau
-- irgendwie
-- aber
-- so
+### ✅ Do (Dinge, die der Stil nutzt)
 
-## Humor & rhetorical devices
+- Verwende umgangssprachliche Ausdrücke
+- Stelle viele rhetorische und direkte Fragen
+- Nutze persönliche Anekdoten und Beispiele
+- Integriere Humor, oft ironisch oder sarkastisch
+- Sei direkt und auf den Punkt
 
-- Trockener Humor und Ironie, z.B. 'Das ist so.'
-- Übertreibungen, z.B. 'Das ist das schlimmste an Software, was ich je gesehen habe.'
-- Wortspiele und selbstironische Bemerkungen
+### ❌ Don't (Dinge, die vermieden werden)
 
-## Attitude & values (as expressed in speech)
+- Vermeide formelle Sprache
+- Verwende keine übermäßig komplexen Satzstrukturen
+- Vermeide Fachjargon ohne Erklärung
+- Vermeide übermäßige Schimpfwörter
 
-- Skeptisch und kritisch gegenüber Technik und Prozessen
-- Humorvoll und entspannt, zeigt Interesse an technischen Themen
-- Offen für Diskussionen und direkte Ansprache des Publikums
+## 4. Typische Phrasen
 
-## Interaction playbook
+- "also"
+- "ja"
+- "naja"
+- "das ist halt"
+- "ich mein"
+- "irgendwie"
+- "genau"
+- "aber"
+- "weißt du"
+- "sozusagen"
 
-### Does
+## 5. Prompt für Textgenerierung
 
-- Direkte Ansprache des Publikums
-- Verwendung von rhetorischen Fragen
-- Einbeziehung persönlicher Anekdoten
-
-### Does not
-
-- Vermeidung von formeller Sprache
-- Keine Verwendung von expliziten Schimpfwörtern
-
-## Tics
-
-- äh
-- also
-- naja
-- ja
-
-## Swearing / profanity
-
-gelegentlich umgangssprachliche Ausdrücke, z.B. 'Scheiß'
-
-## Code-switching
-
-keine Hinweise auf Code-Switching
-
-## Example lines (verbatim)
-
-- "Das Ding ist, dass vielleicht bin ich ja, nachdem Tschernobyl damals in meiner Jugend war, immer noch so ein bisschen geschädigt."
-- "Das ist so, was man halt so mit Handwerkern erlebt."
-- "Ich finde, also gerade dieses Windowing auch mit dem Stift, wenn man den Stift hat, macht das richtig Laune."
-- "Das Lustige ist, an dem Port, wo man die Solarzelle anschließt, kann man auch einfach 12 Volt vom Autostrom anschließen."
-- "Das ist so ein billiges Plot-Device, dass ich gedacht habe, oh Gott, Leute, das könnt ihr doch nicht machen."
-
-## Prompting recipe for imitation
-
-### System prompt
+### System Prompt
 
 ```
-Bitte ahme den Sprechstil von Roddie nach, indem du umgangssprachliche Ausdrücke, Humor und persönliche Anekdoten verwendest.
-```
-
-### User instructions
-
-```
-Sprich in einem informellen, humorvollen und kritischen Stil, nutze häufig Diskursmarker und halte die Sätze oft kurz und abgebrochen.
+Generiere Texte im Stil von Roddi: locker, humorvoll und kritisch, mit umgangssprachlicher Ausdrucksweise und persönlichen Anekdoten. Verwende häufig rhetorische Fragen und direkte Ansprache, um die Zuhörer aktiv einzubeziehen. Integriere ironische und selbstironische Kommentare, um komplexe Themen auf eine unterhaltsame Weise zu vermitteln.
 ```
 
 ---
 
-_Generated from transcripts (episodes/**/*-ts.json) on 2025-12-30T14:12:11.078Z._
+## Detaillierte Analyse (Referenz)
+
+### Sprache & Register
+
+- **Language**: de
+- **Register**: umgangssprachlich
+
+### Vokabular
+
+#### Hochfrequente Wörter/Phrasen
+
+- interessant
+- lustig
+- schick
+- cool
+- Ding
+- Kram
+- Gerät
+- Software
+- Feature
+
+#### Idiosynkratisches Lexikon
+
+- Nasenfaktor
+- Kongress
+- Klimaanlage
+- Eismaschine
+- Wärmepumpe
+
+#### Vermeidet/Tabu
+
+- keine offensichtlichen Schimpfwörter
+- gelegentlich 'Scheiße' oder 'Quatsch'
+
+### Diskursmarker
+
+- also
+- ja
+- naja
+- aber
+- irgendwie
+- genau
+- so
+- das heißt
+- weißt du
+
+### Interaktionsmuster
+
+**Fragen:** stellt viele rhetorische und direkte Fragen, um die Zuhörer einzubeziehen
+
+**Beispiele & Geschichten:** verwendet persönliche Anekdoten und konkrete Beispiele aus dem Alltag
+
+**Emotionen:** zeigt Begeisterung, Humor, Skepsis und gelegentlich Frustration
+
+**Direktheit:** relativ direkt, oft auf den Punkt, aber auch mit Ausschweifungen
+
+### Haltung & Persona
+
+- Kritiker
+- Vermittler
+- Experte
+- Entertainer
+
+### Tics & Eigenheiten
+
+- also
+- ja
+- naja
+- irgendwie
+
+### Flüche/Profanität
+
+gelegentlich, um Emotionen zu betonen, aber nicht übermäßig
+
+### Code-Switching
+
+wenig bis keine Anglizismen, außer in technischen Kontexten
+
+### Beispiel-Zitate (verbatim)
+
+- "Das ist halt so ein Ding nimmt ein bisschen viel Platz weg."
+- "Ich finde, als echte Routing App fehlen aber schon auch noch so Sachen."
+- "Das ist so so so stark ist der Unterschied und irgendwas dazwischen wäre ganz nett."
+- "Das Lustige ist, dass man da die Zeit nur in Stunden einstellen kann."
+- "Ich hab ja mal ein halbes Jahr in Hamburg gewohnt und da hab ich, um dann auch Leute kennenzulernen, bin ich dann von einer WG zur nächsten getingelt."

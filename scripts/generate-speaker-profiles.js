@@ -47,6 +47,7 @@ function parseArgs(argv) {
     minWordsForLLM: 800,
     maxChunkChars: 16000,
     maxChunks: 8,
+    maxConcurrency: 3,  // Parallel LLM requests
     requestDelayMs: null,
     personaMode: 'speaker', // 'speaker' | 'fictional'
     characterName: null,
@@ -66,6 +67,7 @@ function parseArgs(argv) {
     else if (a === '--min-words') args.minWordsForLLM = parseInt(argv[++i], 10);
     else if (a === '--chunk-chars') args.maxChunkChars = parseInt(argv[++i], 10);
     else if (a === '--max-chunks') args.maxChunks = parseInt(argv[++i], 10);
+    else if (a === '--max-concurrency') args.maxConcurrency = parseInt(argv[++i], 10);
     else if (a === '--delay-ms') args.requestDelayMs = parseInt(argv[++i], 10);
     else if (a === '--persona-mode') args.personaMode = String(argv[++i] || '').trim();
     else if (a === '--character-name') args.characterName = argv[++i];
@@ -89,12 +91,17 @@ Usage:
   node scripts/generate-speaker-profiles.js [options]
 
 Options:
-  --episodes-dir <dir>       Episodes directory (default: ./episodes)
-  --out-dir <dir>            Output directory (default: ./speakers)
-  --cache-dir <dir>          Cache directory (default: ./speakers/.cache)
+  --podcast <id>             Podcast ID (default: freakshow)
+                             Examples: freakshow, ukw, lnp, cre, raumzeit, etc.
+                             
+  --episodes-dir <dir>       Episodes directory (default: podcasts/<podcast>/episodes)
+  --out-dir <dir>            Output directory (default: podcasts/<podcast>/speakers)
+  --cache-dir <dir>          Cache directory (default: podcasts/<podcast>/speakers/.cache)
   --min-words <n>            Minimum words per speaker to call LLM (default: 800)
   --chunk-chars <n>          Chunk size in characters for LLM map step (default: 16000)
   --max-chunks <n>           Maximum number of chunks per speaker (evenly sampled). Default: 8
+  --max-concurrency <n>      Maximum parallel LLM requests (default: 3)
+                             Higher values = faster, but may hit rate limits
   --persona-mode <mode>      'speaker' (default) or 'fictional' (distinct character inspired by style features)
   --character-name <name>    Required for persona-mode 'fictional' (name of the fictional chatbot character)
   --delay-ms <n>             Delay between LLM requests (overrides settings.topicExtraction.requestDelayMs)
@@ -104,6 +111,23 @@ Options:
   --no-llm                   Only extract + write stats (no LLM calls)
   --dry-run                  Print what would be done, write nothing
   --force, -f                Re-generate profiles even if cache is up-to-date
+  --help, -h                 Show this help message
+
+Examples:
+  # Generate profiles for freakshow (default)
+  node scripts/generate-speaker-profiles.js
+
+  # Generate profiles for UKW podcast
+  node scripts/generate-speaker-profiles.js --podcast ukw
+
+  # Generate profile for specific speaker in LNP
+  node scripts/generate-speaker-profiles.js --podcast lnp --speaker "Linus Neumann"
+
+  # Force regenerate all profiles for CRE
+  node scripts/generate-speaker-profiles.js --podcast cre --force
+
+  # Process only top 3 speakers in Raumzeit
+  node scripts/generate-speaker-profiles.js --podcast raumzeit --limit-speakers 3
 `);
 }
 
@@ -248,22 +272,28 @@ function chunkAnalysisMessages({ speakerName, chunkText, languageHint }) {
     {
       role: 'system',
       content:
-        'Du bist ein Linguist, der gesprochene Sprache in Podcast-Transkripten analysiert. ' +
-        'Deine Aufgabe: Extrahiere präzise, wie diese Person SPRICHT - nicht was sie sagt. ' +
-        'Fokus auf:\n' +
-        '- KONKRETE Wörter und Phrasen, die der Speaker tatsächlich verwendet (mit Beispielen!)\n' +
-        '- Satzstruktur und Rhythmus (kurze Sätze? verschachtelt? abgebrochen?)\n' +
-        '- Füllwörter, Diskursmarker und Tics (welche genau und wie oft?)\n' +
-        '- Humor-Stil mit konkreten Beispielen (Ironie? Wortspiele? Übertreibung? trocken?)\n' +
-        '- Haltung und Persönlichkeit wie sie sich im Sprechen zeigt\n' +
-        '- Charakteristische Ausdrücke und wiederkehrende Formulierungen\n\n' +
+        'Rolle: Du bist Linguist, Kommunikationsstratege und Stilanalyst.\n' +
+        'Deine Aufgabe ist es, aus diesem Transkript-Ausschnitt sprachliche und stilistische Merkmale zu extrahieren, ' +
+        'die später genutzt werden können, um neue Texte im Stil dieser Person zu generieren.\n\n' +
+        'Analysiere insbesondere:\n' +
+        '• Tonfall (formell, locker, motivierend, kritisch, humorvoll, sachlich, emotional)\n' +
+        '• Satzstruktur (kurz/lang, einfach/verschachtelt, abgebrochen, elliptisch)\n' +
+        '• Wortwahl (Alltagssprache, Fachsprache, Anglizismen, Metaphern, Bildsprache)\n' +
+        '• Typische Formulierungen & wiederkehrende Phrasen (extrahiere KONKRETE Beispiele!)\n' +
+        '• Umgang mit:\n' +
+        '  - Fragen (stellt viele? rhetorisch? direkt?)\n' +
+        '  - Beispielen & Geschichten (nutzt Anekdoten? abstrakt? konkret?)\n' +
+        '  - Vorlieben und Abneigungen (Worüber spricht die Person gerne/ungerne? Wie?)\n' +
+        '  - Emotionen (zeigt Begeisterung? Zurückhaltung? Ironie?)\n' +
+        '  - Direktheit/Klarheit (auf den Punkt? schweifend? diplomatisch?)\n' +
+        '• Haltung & Persona (Coach, Experte, Visionär, Kritiker, Entertainer, Vermittler)\n\n' +
         'WICHTIG:\n' +
-        '- Zitiere VIELE konkrete Beispielphrasen wortwörtlich aus dem Text\n' +
-        '- Sei spezifisch: nicht "oft Füllwörter" sondern "häufig \'äh\', \'also\', \'so\' (ca. jeder 10. Satz)"\n' +
+        '- Extrahiere VIELE konkrete Beispielphrasen wortwörtlich aus dem Text\n' +
+        '- Sei spezifisch: nicht "oft Füllwörter" sondern "beginnt oft mit \'also\', \'ja nee\', \'ich mein\' (ca. 30% der Sätze)"\n' +
         '- Erfinde nichts - nur was im Text nachweisbar ist\n' +
-        '- Ignoriere Themeninhalte komplett\n\n' +
+        '- Ignoriere Themeninhalte - fokussiere auf WIE gesprochen wird, nicht WAS\n\n' +
         'Antworte ausschließlich mit einem JSON-Objekt mit genau diesen Schlüsseln: ' +
-        '{"language": string, "register": string, "tone": string, "pace": string, "syntax": string, "discourse_markers": string[], "favorite_words": string[], "fillers": string[], "humor_style": string, "attitude": string, "interaction_style": string, "tics": string[], "swearing": string, "code_switching": string, "examples": string[], "notes": string}.',
+        '{"language": string, "register": string, "tone": string, "pace": string, "syntax": string, "discourse_markers": string[], "favorite_words": string[], "fillers": string[], "humor_style": string, "attitude": string, "interaction_style": string, "questions_usage": string, "examples_usage": string, "emotional_range": string, "directness": string, "tics": string[], "swearing": string, "code_switching": string, "examples": string[], "notes": string}.',
     },
     {
       role: 'user',
@@ -280,31 +310,74 @@ function finalProfileMessages({ speakerName, stats, chunkAnalyses }) {
     {
       role: 'system',
       content:
-        'Du erstellst ein detailliertes "Speaker Voice Profile", das präzise beschreibt, WIE diese Person spricht. ' +
-        'Das Profil muss so konkret sein, dass ein anderes LLM die Person authentisch nachahmen kann.\n\n' +
-        'FOKUS:\n' +
-        '1. KONKRETE Wörter und Phrasen, die der Speaker tatsächlich benutzt\n' +
-        '2. SPEZIFISCHE Satzstrukturen und Rhythmen (mit Beispielen!)\n' +
-        '3. CHARAKTERISTISCHE Humor-Muster und rhetorische Mittel\n' +
-        '4. ERKENNBARE Persönlichkeit und Haltung im Sprechen\n' +
-        '5. TYPISCHE Interaktionsmuster und Gesprächsführung\n\n' +
+        'Rolle: Du bist Linguist, Kommunikationsstratege und Stilanalyst.\n' +
+        'Deine Aufgabe ist es, aus den folgenden Transkript-Analysen ein präzises Sprecherprofil zu erstellen, ' +
+        'das später genutzt werden kann, um neue Texte im Stil dieser Person zu generieren.\n\n' +
+        'Du erhältst mehrere Chunk-Analysen. Synthesiere sie zu einem vollständigen Profil.\n\n' +
+        'Aufgaben:\n' +
+        '1. Extrahiere die sprachlichen und stilistischen Merkmale der Person\n' +
+        '2. Erstelle daraus ein Sprecherprofil, das für Textgenerierung geeignet ist\n' +
+        '3. Formuliere das Ergebnis so, dass es direkt als Stilvorgabe für ein LLM genutzt werden kann\n\n' +
+        'Bitte analysiere und synthetisiere:\n' +
+        '• Tonfall (z.B. formell, locker, motivierend, kritisch, humorvoll)\n' +
+        '• Satzstruktur (kurz/lang, einfach/verschachtelt)\n' +
+        '• Wortwahl (Alltagssprache, Fachsprache, Anglizismen, Metaphern)\n' +
+        '• Typische Formulierungen & wiederkehrende Phrasen (sammle die häufigsten!)\n' +
+        '• Umgang mit Fragen, Beispielen & Geschichten, Vorlieben und Abneigungen, Emotionen, Direktheit/Klarheit\n' +
+        '• Haltung & Persona (z.B. Coach, Experte, Visionär, Kritiker)\n\n' +
         'ANFORDERUNGEN:\n' +
         '- Sei SEHR spezifisch: Nicht "verwendet Füllwörter" sondern "beginnt Sätze oft mit \'also\', \'ja nee\', \'ich mein\'"\n' +
         '- Sammle die häufigsten und charakteristischsten Wörter/Phrasen aus allen Chunk-Analysen\n' +
         '- Beschreibe Humor-Stil mit konkreten Beispielen und Mustern\n' +
         '- Identifiziere Persönlichkeits-Traits, die sich im Sprechen zeigen\n' +
         '- Liste typische Satzstrukturen und -muster auf\n' +
-        '- Wähle 10-15 besonders charakteristische Beispiel-Zitate\n\n' +
-        'WICHTIG: Keine Biografie, keine Themen-Zusammenfassung - nur wie die Person SPRICHT!\n\n' +
-        'Antworte ausschließlich mit einem JSON-Objekt mit genau diesen Schlüsseln: ' +
-        '{"speaker": string, "confidence": string, "one_line_essence": string, "language": string, "register": string, "style_fingerprint": string[], "vocabulary": {"high_freq": string[], "idiosyncratic": string[], "taboo_or_avoids": string[]}, "syntax_and_rhythm": string[], "discourse_markers": string[], "humor_and_devices": string[], "attitude_and_values": string[], "interaction_playbook": {"does": string[], "does_not": string[]}, "tics": string[], "swearing": string, "code_switching": string, "example_lines": string[], "mimic_system_prompt": string, "mimic_user_instructions": string}.',
+        '- Wähle 10-20 besonders charakteristische Beispiel-Zitate aus den Analysen\n\n' +
+        'OUTPUT-FORMAT:\n' +
+        'Erstelle ein JSON mit folgender Struktur:\n' +
+        '{\n' +
+        '  "speaker": string,\n' +
+        '  "confidence": string (hoch/mittel/niedrig),\n' +
+        '  "short_characterization": string (5-7 Sätze Fließtext über die Stimme/den Stil),\n' +
+        '  "style_dna": {\n' +
+        '    "tone": string[],\n' +
+        '    "register": string,\n' +
+        '    "sentence_structure": string[],\n' +
+        '    "word_choice": string[],\n' +
+        '    "rhythm": string,\n' +
+        '    "typical_devices": string[]\n' +
+        '  },\n' +
+        '  "do_list": string[] (Dinge, die der Stil immer nutzt),\n' +
+        '  "dont_list": string[] (Dinge, die vermieden werden sollten),\n' +
+        '  "typical_phrases": string[] (10-20 wiederkehrende/stilprägende Formulierungen),\n' +
+        '  "language": string,\n' +
+        '  "vocabulary": {\n' +
+        '    "high_freq": string[],\n' +
+        '    "idiosyncratic": string[],\n' +
+        '    "taboo_or_avoids": string[]\n' +
+        '  },\n' +
+        '  "discourse_markers": string[],\n' +
+        '  "humor_and_devices": string[],\n' +
+        '  "interaction_playbook": {\n' +
+        '    "questions": string,\n' +
+        '    "examples_stories": string,\n' +
+        '    "emotions": string,\n' +
+        '    "directness": string\n' +
+        '  },\n' +
+        '  "attitude_and_persona": string[],\n' +
+        '  "tics": string[],\n' +
+        '  "swearing": string,\n' +
+        '  "code_switching": string,\n' +
+        '  "example_lines": string[],\n' +
+        '  "generation_system_prompt": string (System-Prompt für LLM zur Textgenerierung in diesem Stil)\n' +
+        '}',
     },
     {
       role: 'user',
       content:
         `Speaker: ${speakerName}\n` +
         `Stats: ${JSON.stringify(stats)}\n\n` +
-        `Chunk analyses (JSON objects):\n${JSON.stringify(chunkAnalyses, null, 2)}`,
+        `Chunk analyses (JSON objects):\n${JSON.stringify(chunkAnalyses, null, 2)}\n\n` +
+        `Erstelle jetzt das vollständige Sprecherprofil im angegebenen JSON-Format.`,
     },
   ];
 }
@@ -336,6 +409,7 @@ function renderMarkdownProfile(profile, stats, sourceInfo) {
   const lines = [];
   lines.push(`# Speaker Profile: ${profile.speaker || sourceInfo.speakerName}`);
   lines.push('');
+  
   lines.push('## Data coverage');
   lines.push('');
   lines.push(`- **Episodes**: ${stats.episodesCount}`);
@@ -343,109 +417,186 @@ function renderMarkdownProfile(profile, stats, sourceInfo) {
   lines.push(`- **Words (approx.)**: ${stats.totalWords}`);
   lines.push(`- **Confidence**: ${profile.confidence || 'unknown'}`);
   lines.push('');
-  lines.push('## Essence');
+  
+  lines.push('## 1. Kurzcharakteristik');
   lines.push('');
-  lines.push(profile.one_line_essence ? profile.one_line_essence : '_No essence generated._');
+  lines.push(profile.short_characterization || profile.one_line_essence || '_No characterization generated._');
   lines.push('');
-  lines.push('## Style fingerprint');
+  
+  lines.push('## 2. Stil-DNA');
   lines.push('');
-  for (const s of profile.style_fingerprint || []) lines.push(`- ${s}`);
-  if (!profile.style_fingerprint || profile.style_fingerprint.length === 0) lines.push('- _n/a_');
+  
+  if (profile.style_dna) {
+    lines.push('### Ton');
+    lines.push('');
+    for (const s of profile.style_dna.tone || []) lines.push(`- ${s}`);
+    if (!profile.style_dna.tone?.length) lines.push('- _n/a_');
+    lines.push('');
+    
+    lines.push('### Sprachregister');
+    lines.push('');
+    lines.push(profile.style_dna.register || profile.register || '_n/a_');
+    lines.push('');
+    
+    lines.push('### Satzbau');
+    lines.push('');
+    for (const s of profile.style_dna.sentence_structure || profile.syntax_and_rhythm || []) lines.push(`- ${s}`);
+    if (!profile.style_dna.sentence_structure?.length && !profile.syntax_and_rhythm?.length) lines.push('- _n/a_');
+    lines.push('');
+    
+    lines.push('### Wortwahl');
+    lines.push('');
+    for (const s of profile.style_dna.word_choice || []) lines.push(`- ${s}`);
+    if (!profile.style_dna.word_choice?.length) lines.push('- _n/a_');
+    lines.push('');
+    
+    lines.push('### Rhythmus');
+    lines.push('');
+    lines.push(profile.style_dna.rhythm || '_n/a_');
+    lines.push('');
+    
+    lines.push('### Typische Mittel');
+    lines.push('');
+    for (const s of profile.style_dna.typical_devices || profile.humor_and_devices || []) lines.push(`- ${s}`);
+    if (!profile.style_dna.typical_devices?.length && !profile.humor_and_devices?.length) lines.push('- _n/a_');
+    lines.push('');
+  } else {
+    // Fallback to old format
+    lines.push('### Style fingerprint');
+    lines.push('');
+    for (const s of profile.style_fingerprint || []) lines.push(`- ${s}`);
+    if (!profile.style_fingerprint?.length) lines.push('- _n/a_');
+    lines.push('');
+  }
+  
+  lines.push('## 3. Do / Don\'t Liste');
   lines.push('');
-  lines.push('## Language & register');
+  
+  lines.push('### ✅ Do (Dinge, die der Stil nutzt)');
+  lines.push('');
+  for (const s of profile.do_list || profile.interaction_playbook?.does || []) lines.push(`- ${s}`);
+  if (!profile.do_list?.length && !profile.interaction_playbook?.does?.length) lines.push('- _n/a_');
+  lines.push('');
+  
+  lines.push('### ❌ Don\'t (Dinge, die vermieden werden)');
+  lines.push('');
+  for (const s of profile.dont_list || profile.interaction_playbook?.does_not || []) lines.push(`- ${s}`);
+  if (!profile.dont_list?.length && !profile.interaction_playbook?.does_not?.length) lines.push('- _n/a_');
+  lines.push('');
+  
+  lines.push('## 4. Typische Phrasen');
+  lines.push('');
+  for (const s of profile.typical_phrases || []) lines.push(`- "${s}"`);
+  if (!profile.typical_phrases?.length) {
+    // Fallback: use discourse markers + high freq words
+    const fallback = [
+      ...(profile.discourse_markers || []).slice(0, 5),
+      ...(profile.vocabulary?.high_freq || []).slice(0, 5)
+    ];
+    for (const s of fallback) lines.push(`- "${s}"`);
+    if (!fallback.length) lines.push('- _n/a_');
+  }
+  lines.push('');
+  
+  lines.push('## 5. Prompt für Textgenerierung');
+  lines.push('');
+  lines.push('### System Prompt');
+  lines.push('');
+  lines.push('```');
+  lines.push(profile.generation_system_prompt || profile.mimic_system_prompt || '_No prompt generated._');
+  lines.push('```');
+  lines.push('');
+  
+  // Additional detailed sections for reference
+  lines.push('---');
+  lines.push('');
+  lines.push('## Detaillierte Analyse (Referenz)');
+  lines.push('');
+  
+  lines.push('### Sprache & Register');
   lines.push('');
   lines.push(`- **Language**: ${profile.language || 'unknown'}`);
-  lines.push(`- **Register**: ${profile.register || 'unknown'}`);
+  lines.push(`- **Register**: ${profile.style_dna?.register || profile.register || 'unknown'}`);
   lines.push('');
-  lines.push('## Vocabulary');
+  
+  lines.push('### Vokabular');
   lines.push('');
-  lines.push('### High-frequency words/phrases');
+  lines.push('#### Hochfrequente Wörter/Phrasen');
   lines.push('');
   for (const s of profile.vocabulary?.high_freq || []) lines.push(`- ${s}`);
   if (!profile.vocabulary?.high_freq?.length) lines.push('- _n/a_');
   lines.push('');
-  lines.push('### Idiosyncratic / signature lexicon');
+  
+  lines.push('#### Idiosynkratisches Lexikon');
   lines.push('');
   for (const s of profile.vocabulary?.idiosyncratic || []) lines.push(`- ${s}`);
   if (!profile.vocabulary?.idiosyncratic?.length) lines.push('- _n/a_');
   lines.push('');
-  lines.push('### Avoids / taboo (if observable)');
+  
+  lines.push('#### Vermeidet/Tabu');
   lines.push('');
   for (const s of profile.vocabulary?.taboo_or_avoids || []) lines.push(`- ${s}`);
   if (!profile.vocabulary?.taboo_or_avoids?.length) lines.push('- _n/a_');
   lines.push('');
-  lines.push('## Syntax & rhythm');
-  lines.push('');
-  for (const s of profile.syntax_and_rhythm || []) lines.push(`- ${s}`);
-  if (!profile.syntax_and_rhythm?.length) lines.push('- _n/a_');
-  lines.push('');
-  lines.push('## Discourse markers');
+  
+  lines.push('### Diskursmarker');
   lines.push('');
   for (const s of profile.discourse_markers || []) lines.push(`- ${s}`);
   if (!profile.discourse_markers?.length) lines.push('- _n/a_');
   lines.push('');
-  lines.push('## Humor & rhetorical devices');
+  
+  lines.push('### Interaktionsmuster');
   lines.push('');
-  for (const s of profile.humor_and_devices || []) lines.push(`- ${s}`);
-  if (!profile.humor_and_devices?.length) lines.push('- _n/a_');
+  if (profile.interaction_playbook) {
+    if (profile.interaction_playbook.questions) {
+      lines.push('**Fragen:** ' + profile.interaction_playbook.questions);
+      lines.push('');
+    }
+    if (profile.interaction_playbook.examples_stories) {
+      lines.push('**Beispiele & Geschichten:** ' + profile.interaction_playbook.examples_stories);
+      lines.push('');
+    }
+    if (profile.interaction_playbook.emotions) {
+      lines.push('**Emotionen:** ' + profile.interaction_playbook.emotions);
+      lines.push('');
+    }
+    if (profile.interaction_playbook.directness) {
+      lines.push('**Direktheit:** ' + profile.interaction_playbook.directness);
+      lines.push('');
+    }
+  } else {
+    lines.push('_n/a_');
+    lines.push('');
+  }
+  
+  lines.push('### Haltung & Persona');
   lines.push('');
-  lines.push('## Attitude & values (as expressed in speech)');
+  for (const s of profile.attitude_and_persona || profile.attitude_and_values || []) lines.push(`- ${s}`);
+  if (!profile.attitude_and_persona?.length && !profile.attitude_and_values?.length) lines.push('- _n/a_');
   lines.push('');
-  for (const s of profile.attitude_and_values || []) lines.push(`- ${s}`);
-  if (!profile.attitude_and_values?.length) lines.push('- _n/a_');
-  lines.push('');
-  lines.push('## Interaction playbook');
-  lines.push('');
-  lines.push('### Does');
-  lines.push('');
-  for (const s of profile.interaction_playbook?.does || []) lines.push(`- ${s}`);
-  if (!profile.interaction_playbook?.does?.length) lines.push('- _n/a_');
-  lines.push('');
-  lines.push('### Does not');
-  lines.push('');
-  for (const s of profile.interaction_playbook?.does_not || []) lines.push(`- ${s}`);
-  if (!profile.interaction_playbook?.does_not?.length) lines.push('- _n/a_');
-  lines.push('');
-  lines.push('## Tics');
+  
+  lines.push('### Tics & Eigenheiten');
   lines.push('');
   for (const s of profile.tics || []) lines.push(`- ${s}`);
   if (!profile.tics?.length) lines.push('- _n/a_');
   lines.push('');
-  lines.push('## Swearing / profanity');
+  
+  lines.push('### Flüche/Profanität');
   lines.push('');
   lines.push(profile.swearing || '_n/a_');
   lines.push('');
-  lines.push('## Code-switching');
+  
+  lines.push('### Code-Switching');
   lines.push('');
   lines.push(profile.code_switching || '_n/a_');
   lines.push('');
-  lines.push('## Example lines (verbatim)');
+  
+  lines.push('### Beispiel-Zitate (verbatim)');
   lines.push('');
   for (const s of profile.example_lines || []) lines.push(`- "${s}"`);
   if (!profile.example_lines?.length) lines.push('- _n/a_');
   lines.push('');
-  lines.push('## Prompting recipe for imitation');
-  lines.push('');
-  lines.push('### System prompt');
-  lines.push('');
-  lines.push('```');
-  lines.push(profile.mimic_system_prompt || '');
-  lines.push('```');
-  lines.push('');
-  lines.push('### User instructions');
-  lines.push('');
-  lines.push('```');
-  lines.push(profile.mimic_user_instructions || '');
-  lines.push('```');
-  lines.push('');
-  lines.push('---');
-  lines.push('');
-  if (sourceInfo.personaMode === 'fictional') {
-    lines.push(`_Generated as a fictional persona from transcript-derived style features on ${new Date().toISOString()}._`);
-  } else {
-    lines.push(`_Generated from transcripts (${sourceInfo.episodesDirName}/**/*-ts.json) on ${new Date().toISOString()}._`);
-  }
-  lines.push('');
+
   return lines.join('\n');
 }
 
@@ -518,6 +669,7 @@ async function main() {
   }
 
   console.log('🎙️  Generiere Speaker-Profile aus Transkripten\n');
+  console.log(`Podcast:      ${args.podcastId}`);
   console.log(`Episodes dir: ${args.episodesDir}`);
   console.log(`Output dir:   ${args.outDir}`);
   console.log(`Cache dir:    ${args.cacheDir}`);
@@ -674,40 +826,85 @@ async function main() {
     }
 
     const chunkAnalyses = [];
+    
+    // Prepare all chunks that need LLM calls (non-cached)
+    const chunksToProcess = [];
+    const cachedAnalyses = [];
+    
     for (let i = 0; i < chunks.length; i++) {
       const chunkText = chunks[i];
       const chunkHash = sha1(chunkText);
       const cachedChunk = cached?.chunks?.find((c) => c.chunkHash === chunkHash);
+      
       if (!args.force && cachedChunk?.analysis) {
-        chunkAnalyses.push(cachedChunk.analysis);
+        cachedAnalyses.push({ index: i, analysis: cachedChunk.analysis, cached: true });
         process.stdout.write(`   - chunk ${i + 1}/${chunks.length}: cache\n`);
-        continue;
+      } else {
+        chunksToProcess.push({ index: i, chunkText, chunkHash });
       }
-
-      process.stdout.write(`   - chunk ${i + 1}/${chunks.length}: LLM…\n`);
-      const messages = chunkAnalysisMessages({
-        speakerName,
-        chunkText,
-        languageHint: settings?.topicExtraction?.language || null,
+    }
+    
+    // Process all non-cached chunks in parallel (with concurrency limit)
+    const maxConcurrency = args.maxConcurrency || 3; // 3 parallel requests by default
+    const processedChunks = [];
+    
+    for (let i = 0; i < chunksToProcess.length; i += maxConcurrency) {
+      const batch = chunksToProcess.slice(i, i + maxConcurrency);
+      
+      process.stdout.write(`   - processing chunks ${i + 1}-${Math.min(i + maxConcurrency, chunksToProcess.length)}/${chunksToProcess.length} (parallel)…\n`);
+      
+      const batchPromises = batch.map(async ({ index, chunkText, chunkHash }) => {
+        const messages = chunkAnalysisMessages({
+          speakerName,
+          chunkText,
+          languageHint: settings?.topicExtraction?.language || null,
+        });
+        
+        try {
+          const response = await callChatCompletionsOpenAICompatible(llmCfg, messages, retryCfg);
+          const analysis = extractFirstJsonObject(response);
+          return { index, analysis, chunkHash, success: true };
+        } catch (error) {
+          console.error(`      ❌ chunk ${index + 1} failed: ${error.message}`);
+          return { index, analysis: null, chunkHash, success: false };
+        }
       });
-      const response = await callChatCompletionsOpenAICompatible(llmCfg, messages, retryCfg);
-      const analysis = extractFirstJsonObject(response);
-      chunkAnalyses.push(analysis);
-
-      if (!args.dryRun) {
-        const nextCache = {
-          rawTextHash,
-          chunks: [
-            ...(cached?.chunks || []).filter((c) => c.chunkHash !== chunkHash),
-            { chunkHash, analysis },
-          ],
-          finalProfile: cached?.finalProfile || null,
-        };
-        fs.writeFileSync(cacheFile, JSON.stringify(nextCache, null, 2));
-        cached = nextCache;
+      
+      const batchResults = await Promise.all(batchPromises);
+      processedChunks.push(...batchResults);
+      
+      // Only delay between batches, not between individual requests
+      if (i + maxConcurrency < chunksToProcess.length) {
+        await sleep(delayMs);
       }
-
-      await sleep(delayMs);
+    }
+    
+    // Combine cached and processed chunks in correct order
+    const allChunkResults = [...cachedAnalyses, ...processedChunks]
+      .sort((a, b) => a.index - b.index);
+    
+    for (const result of allChunkResults) {
+      if (result.cached || result.success) {
+        chunkAnalyses.push(result.analysis);
+      }
+    }
+    
+    // Update cache with new chunks
+    if (!args.dryRun && processedChunks.length > 0) {
+      const newChunks = processedChunks
+        .filter(r => r.success)
+        .map(r => ({ chunkHash: r.chunkHash, analysis: r.analysis }));
+      
+      const nextCache = {
+        rawTextHash,
+        chunks: [
+          ...(cached?.chunks || []),
+          ...newChunks
+        ],
+        finalProfile: cached?.finalProfile || null,
+      };
+      fs.writeFileSync(cacheFile, JSON.stringify(nextCache, null, 2));
+      cached = nextCache;
     }
 
     console.log('   - final synthesis: LLM…');

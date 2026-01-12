@@ -85,30 +85,48 @@ pub async fn llm_answer(
         (speaker_profile, speaker2_profile, speaker_name, speaker2_name) {
         // Discussion/debate mode with two speakers
         let system = format!(
-            "You are orchestrating a DISCUSSION/DEBATE between two people with the following profiles. \
-            Answer the user's question by creating a natural dialogue between these two speakers, \
-            where they discuss, debate, or even argue about the topic based ONLY on the provided SOURCES.\n\n\
+            "You are orchestrating a NATURAL, RELAXED DISCUSSION between two people with the following profiles. \
+            Create an authentic conversation where they discuss the topic based ONLY on the provided SOURCES.\n\n\
             SPEAKER 1 ({}):\n{}\n\n\
             SPEAKER 2 ({}):\n{}\n\n\
-            IMPORTANT:\n\
-            - Create a natural back-and-forth discussion or debate between the two speakers\n\
-            - Each speaker should stay in character with their unique personality, vocabulary, and style\n\
-            - They should present different perspectives, challenge each other, or build on each other's points\n\
-            - Format the response as a dialogue with clear speaker labels (e.g., '{}: <text>' and '{}: <text>')\n\
-            - Use only information from the SOURCES provided\n\
-            - Include citations inline like: (Episode 281, 12:38-17:19)\n\
-            - If sources don't contain enough information, have the speakers acknowledge this in character\n\
-            - Make it feel like a real conversation with interruptions, agreements, disagreements, humor, etc.\n\
+            CRITICAL RULES FOR ATTRIBUTION:\n\
+            - Each speaker can ONLY use information from their OWN transcript lines in the SOURCES\n\
+            - When {} speaks, use ONLY lines marked with '{}: ...'\n\
+            - When {} speaks, use ONLY lines marked with '{}: ...'\n\
+            - NEVER mix up who said what - check the speaker label in the transcript carefully\n\
+            - If a speaker doesn't have relevant information in their lines, have them acknowledge this or ask the other speaker\n\
+            - Each speaker's arguments must be based on what THEY actually said in the transcripts, not what the other person said\n\n\
+            CONVERSATION STYLE - MAKE IT NATURAL:\n\
+            - Write as if this is a REAL, spontaneous conversation between friends\n\
+            - Use casual, flowing language - avoid overly formal or structured speech\n\
+            - Let speakers interrupt, overlap, or build on each other's thoughts naturally\n\
+            - Include natural discourse markers from their profiles (\"also\", \"ja\", \"ne\", etc.)\n\
+            - Don't make every turn too balanced - some responses can be short, others longer\n\
+            - Let the conversation flow organically - not every point needs a counter-point\n\
+            - Use ellipses (...) for trailing thoughts or interruptions\n\
+            - Include reactions like agreements, laughter references, or brief acknowledgments\n\
+            - Stay in character with each speaker's unique personality, vocabulary, and humor style\n\
+            - Format: Simply use speaker names followed by colon (e.g., '{}: <text>')\n\n\
+            CITATIONS - MANDATORY BUT NATURAL:\n\
+            - ALWAYS cite sources when making factual claims: (Episode 281, 12:38-17:19)\n\
+            - Citations are REQUIRED for facts, data, or specific information from transcripts\n\
+            - Place citations at the end of statements, not after every phrase\n\
+            - Short reactions or agreements don't need citations (\"Ja genau\", \"Stimmt schon\")\n\
+            - But any substantive point MUST be cited\n\
             - Answer in German unless the user asks otherwise",
-            name1, profile1, name2, profile2, name1, name2
+            name1, profile1, name2, profile2, name1, name1, name2, name2, name1
         );
         
         let user_prompt = format!(
             "QUESTION:\n{}\n\nSOURCES:\n{}\n\n\
-            Remember: Create a discussion/debate between {} and {} about this question. \
-            Make them each bring their unique perspective and personality to the conversation. \
-            Use only information from the sources.",
-            query, context, name1, name2
+            IMPORTANT REMINDER:\n\
+            - {} can ONLY talk about things {} said (look for '{}: ...' in the sources)\n\
+            - {} can ONLY talk about things {} said (look for '{}: ...' in the sources)\n\
+            - Create a natural, flowing discussion - not a formal debate\n\
+            - Make it sound like a real conversation between friends discussing an interesting topic\n\
+            - DO NOT assign one person's arguments to the other person\n\
+            - ALWAYS include episode citations in format: (Episode 123, 12:34-56:78) when stating facts",
+            query, context, name1, name1, name1, name2, name2, name2
         );
         
         (system, user_prompt)

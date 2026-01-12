@@ -148,4 +148,5 @@ Neue Translation-Keys in `de.json`, `en.json`, `fr.json`:
 - [SPEAKER-PERSONAS.md](./SPEAKER-PERSONAS.md) - Allgemeine Informationen zu Speaker-Personas
 - [SPEAKER-PROFILES.md](./SPEAKER-PROFILES.md) - Wie man Speaker-Profile generiert
 - [SPEAKER-METADATA-SCRAPER.md](./SPEAKER-METADATA-SCRAPER.md) - Metadata-Verwaltung
+- [DISCUSSION-ATTRIBUTION-FIX.md](./DISCUSSION-ATTRIBUTION-FIX.md) - Fix für Attribution-Probleme (2026-01-12)
 

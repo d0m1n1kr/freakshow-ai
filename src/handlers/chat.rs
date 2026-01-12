@@ -200,7 +200,11 @@ async fn chat_impl(st: &crate::config::AppState, req: ChatRequest) -> Result<Cha
             let empty1 = ex1.contains("[no transcript entries found");
             let empty2 = ex2.contains("[no transcript entries found");
 
-            let combined = format!("{name1}:\n{ex1}\n\n{name2}:\n{ex2}");
+            // Format with clear separators and emphasis on who said what
+            let combined = format!(
+                "=== WHAT {} SAID ===\n{}\n\n=== WHAT {} SAID ===\n{}",
+                name1.to_uppercase(), ex1, name2.to_uppercase(), ex2
+            );
             (combined, empty1 && empty2)
         } else {
             let ex = excerpt_for_window(

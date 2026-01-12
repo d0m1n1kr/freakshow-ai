@@ -802,9 +802,14 @@ const renderMarkdownWithLinks = (text: string): string => {
   }) as string;
   
   // Then, linkify episode references in the rendered HTML
-  const episodePattern = /\(Episode\s+(\d+),\s+([\d:]+)(?:-[\d:]+)?\)/gi;
+  // Support multiple citation formats:
+  // - (Episode 123, 12:34-56:78)
+  // - (Episode 123, 12:34)
+  // - (Ep. 123, 12:34-56:78)
+  // - (Ep 123, 12:34)
+  const episodePattern = /\((Episode|Ep\.?)\s+(\d+),\s+([\d:]+)(?:-[\d:]+)?\)/gi;
   
-  html = html.replace(episodePattern, (match, episodeNum, startTime) => {
+  html = html.replace(episodePattern, (match, _prefix, episodeNum, startTime) => {
     const episodeNumber = parseInt(episodeNum, 10);
     const seconds = hmsToSeconds(startTime);
     if (!Number.isFinite(episodeNumber) || seconds === null) return match;
