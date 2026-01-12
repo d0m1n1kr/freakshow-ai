@@ -280,6 +280,14 @@ async fn chat_impl(st: &crate::config::AppState, req: ChatRequest) -> Result<Cha
         context.push_str("\n\n[context truncated]\n");
     }
 
+    // Load podcast profile if it exists (for discussion mode context)
+    let podcast_profile_path = PathBuf::from(format!("podcasts/{}/podcast-profile.md", podcast_id));
+    let podcast_profile = if podcast_profile_path.exists() {
+        std::fs::read_to_string(&podcast_profile_path).ok()
+    } else {
+        None
+    };
+
     // 3) Ask LLM
     let answer = llm_answer(
         st, 
@@ -289,6 +297,7 @@ async fn chat_impl(st: &crate::config::AppState, req: ChatRequest) -> Result<Cha
         speaker2_profile.as_deref(),
         speaker_name.as_deref(),
         speaker2_name.as_deref(),
+        podcast_profile.as_deref(),
     ).await?;
 
     Ok(ChatResponse { answer, sources })

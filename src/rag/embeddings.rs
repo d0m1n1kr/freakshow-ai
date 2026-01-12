@@ -55,6 +55,7 @@ pub async fn llm_answer(
     speaker2_profile: Option<&str>,
     speaker_name: Option<&str>,
     speaker2_name: Option<&str>,
+    podcast_profile: Option<&str>,
 ) -> Result<String> {
     #[derive(Serialize)]
     struct ChatReq<'a> {
@@ -84,9 +85,17 @@ pub async fn llm_answer(
     let (system, user_prompt) = if let (Some(profile1), Some(profile2), Some(name1), Some(name2)) = 
         (speaker_profile, speaker2_profile, speaker_name, speaker2_name) {
         // Discussion/debate mode with two speakers
+        let podcast_context = if let Some(podcast_prof) = podcast_profile {
+            format!("\n\nPODCAST CONTEXT:\n{}\n\n\
+                    IMPORTANT: Match the overall tone, dynamics, and style of this podcast in your discussion. \
+                    Use the podcast's typical conversation patterns, humor style, and format quirks.", podcast_prof)
+        } else {
+            String::new()
+        };
+        
         let system = format!(
             "You are orchestrating a NATURAL, RELAXED DISCUSSION between two people with the following profiles. \
-            Create an authentic conversation where they discuss the topic based ONLY on the provided SOURCES.\n\n\
+            Create an authentic conversation where they discuss the topic based ONLY on the provided SOURCES.{}\n\n\
             SPEAKER 1 ({}):\n{}\n\n\
             SPEAKER 2 ({}):\n{}\n\n\
             CRITICAL RULES FOR ATTRIBUTION:\n\
@@ -114,7 +123,7 @@ pub async fn llm_answer(
             - Short reactions or agreements don't need citations (\"Ja genau\", \"Stimmt schon\")\n\
             - But any substantive point MUST be cited\n\
             - Answer in German unless the user asks otherwise",
-            name1, profile1, name2, profile2, name1, name1, name2, name2, name1
+            podcast_context, name1, profile1, name2, profile2, name1, name1, name2, name2, name1
         );
         
         let user_prompt = format!(
@@ -131,11 +140,18 @@ pub async fn llm_answer(
         
         (system, user_prompt)
     } else if let Some(profile) = speaker_profile {
-        // Single speaker persona mode
+        // Single speaker persona mode  
+        let podcast_context = if let Some(podcast_prof) = podcast_profile {
+            format!("\n\nPODCAST CONTEXT:\n{}\n\n\
+                    Match the overall tone and style of this podcast.", podcast_prof)
+        } else {
+            String::new()
+        };
+        
         let system = format!(
             "You are roleplaying as a fictional person described in the following speaker profile. \
             Answer the user's question using ONLY the provided SOURCES (transcript excerpts), \
-            but deliver the answer in the voice, style, and personality described in the profile below.\n\n\
+            but deliver the answer in the voice, style, and personality described in the profile below.{}\n\n\
             SPEAKER PROFILE:\n{}\n\n\
             IMPORTANT:\n\
             - Stay in character throughout your response\n\
@@ -144,7 +160,7 @@ pub async fn llm_answer(
             - If the sources don't contain enough information, say so in character\n\
             - Include citations inline like: (Episode 281, 12:38-17:19)\n\
             - Answer in German unless the user asks otherwise",
-            profile
+            podcast_context, profile
         );
         
         let user_prompt = format!(
