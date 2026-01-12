@@ -915,10 +915,16 @@ const visiblePlayedPodcastPages = computed(() => {
   return pages;
 });
 
-const ensureAuthToken = async (): Promise<string | null> => {
+const ensureAuthToken = async (): Promise<string> => {
   const existing = typeof settings.statsAuthToken === 'string' ? settings.statsAuthToken.trim() : '';
   if (existing) return existing;
 
+  // Return empty string to try without token first
+  // (backend allows no auth if not configured)
+  return '';
+};
+
+const promptForAuthToken = async (): Promise<string | null> => {
   const token = window.prompt('Enter analytics authentication token:', '')?.trim() ?? '';
   if (!token) return null;
   settings.setStatsAuthToken(token);
@@ -936,34 +942,47 @@ const fetchStats = async () => {
   error.value = null;
 
   try {
-    const token = await ensureAuthToken();
-    if (!token) {
-      authenticated.value = false;
-      error.value = 'Authentication token required';
-      loading.value = false;
-      return;
-    }
+    const token0 = await ensureAuthToken();
 
     const url = backendBase.value
       ? `${backendBase.value}/api/analytics/stats${selectedDays.value ? `?days=${selectedDays.value}` : ''}`
       : `/api/analytics/stats${selectedDays.value ? `?days=${selectedDays.value}` : ''}`;
 
-    const res = await fetch(url, {
-      headers: {
-        'x-auth-token': token,
-      },
-      cache: 'no-cache',
-    });
+    const run = async (token: string) => {
+      const headers: any = {};
+      // Only add auth header if token is non-empty
+      if (token) {
+        headers['x-auth-token'] = token;
+      }
+      
+      return await fetch(url, {
+        headers,
+        cache: 'no-cache',
+      });
+    };
+
+    let res = await run(token0);
 
     if (!res.ok) {
       const txt = await res.text();
       if (isPermissionDenied(res.status, txt)) {
+        // Backend requires auth - prompt user
         settings.clearStatsAuthToken();
-        authenticated.value = false;
-        error.value = 'Authentication failed. Please try again.';
-        return;
+        const token1 = await promptForAuthToken();
+        if (!token1) {
+          authenticated.value = false;
+          error.value = 'Authentication token required';
+          loading.value = false;
+          return;
+        }
+        res = await run(token1);
+        if (!res.ok) {
+          const txt2 = await res.text();
+          throw new Error(`HTTP ${res.status}: ${txt2}`);
+        }
+      } else {
+        throw new Error(`HTTP ${res.status}: ${txt}`);
       }
-      throw new Error(`HTTP ${res.status}: ${txt}`);
     }
 
     const data = await res.json() as AnalyticsStats;
