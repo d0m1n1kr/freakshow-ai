@@ -188,16 +188,22 @@ const ensureAuthToken = async () => {
   const existing = typeof settings.ragAuthToken === 'string' ? settings.ragAuthToken.trim() : '';
   if (existing) return existing;
 
-  const token = window.prompt(t('search.authToken.prompt'), '')?.trim() ?? '';
-  if (!token) return null;
-  settings.setRagAuthToken(token);
-  return token;
+  // Return empty string to try without token first
+  // (backend allows no auth if not configured)
+  return '';
 };
 
 const isPermissionDenied = (status: number, bodyText: string) => {
   if (status === 401 || status === 403) return true;
   const txt = (bodyText || '').toLowerCase();
   return txt.includes('permission denied') || txt.includes('forbidden') || txt.includes('unauthorized');
+};
+
+const promptForAuthToken = async () => {
+  const token = window.prompt(t('search.authToken.prompt'), '')?.trim() ?? '';
+  if (!token) return null;
+  settings.setRagAuthToken(token);
+  return token;
 };
 
 const fetchSpeakers = async () => {
@@ -235,10 +241,6 @@ const doSearch = async (query: string) => {
   loading.value = true;
   try {
     const token0 = await ensureAuthToken();
-    if (!token0) {
-      error.value = t('search.authToken.required');
-      return;
-    }
 
     const run = async (token: string) => {
       const url = backendBase.value ? `${backendBase.value}/api/chat` : '/api/chat';
@@ -250,9 +252,14 @@ const doSearch = async (query: string) => {
       if (settings.selectedSpeaker2) {
         body.speakerSlug2 = settings.selectedSpeaker2;
       }
+      const headers: any = { 'Content-Type': 'application/json' };
+      // Only add auth header if token is non-empty
+      if (token) {
+        headers['x-auth-token'] = token;
+      }
       const res = await fetch(url, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'x-auth-token': token },
+        headers,
         body: JSON.stringify(body),
         signal: abortController?.signal,
       });
@@ -263,8 +270,9 @@ const doSearch = async (query: string) => {
     if (!res.ok) {
       const txt = await res.text();
       if (isPermissionDenied(res.status, txt)) {
+        // Backend requires auth - prompt user
         settings.clearRagAuthToken();
-        const token1 = await ensureAuthToken();
+        const token1 = await promptForAuthToken();
         if (!token1) {
           error.value = t('search.authToken.required');
           return;
