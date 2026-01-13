@@ -12,6 +12,12 @@ export default defineConfig({
     }
   },
   server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:7878',
+        changeOrigin: true,
+      }
+    },
     fs: {
       // Allow serving files from the episodes directory (symlinked)
       allow: ['..']

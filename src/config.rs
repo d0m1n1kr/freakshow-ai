@@ -7,8 +7,10 @@ use serde::Deserialize;
 
 use crate::cache::{CachedEpisodeFiles, CachedEpisodeList, CachedEpisodeMetadata, CachedEpisodeTopicsMap, CachedRagIndex, CachedSpeakerMeta, CachedSpeakerProfile, CachedSpeakersIndex};
 
-// Forward declaration to avoid circular dependency
+// Forward declarations to avoid circular dependency
 pub type AnalyticsDb = crate::handlers::analytics::AnalyticsDb;
+pub type TokenDatabase = crate::auth::TokenDatabase;
+pub type EmailService = crate::email::EmailService;
 
 #[derive(Debug, Deserialize, Clone)]
 pub struct SettingsFile {
@@ -16,6 +18,9 @@ pub struct SettingsFile {
     #[serde(rename = "topicClustering")]
     topic_clustering: Option<TopicClusteringSettings>,
     rag: Option<RagSettings>,
+    email: Option<EmailSettings>,
+    #[serde(rename = "tokenSystem")]
+    token_system: Option<TokenSystemSettings>,
 }
 
 #[derive(Debug, Deserialize, Clone)]
@@ -41,6 +46,34 @@ pub struct RagSettings {
     stats_auth_token: Option<String>,
     #[serde(rename = "bindAddr")]
     bind_addr: Option<String>,
+}
+
+#[derive(Debug, Deserialize, Clone)]
+pub struct EmailSettings {
+    #[serde(rename = "smtpHost")]
+    smtp_host: Option<String>,
+    #[serde(rename = "smtpPort")]
+    smtp_port: Option<u16>,
+    #[serde(rename = "smtpUsername")]
+    smtp_username: Option<String>,
+    #[serde(rename = "smtpPassword")]
+    smtp_password: Option<String>,
+    #[serde(rename = "fromEmail")]
+    from_email: Option<String>,
+    #[serde(rename = "fromName")]
+    from_name: Option<String>,
+    #[serde(rename = "baseUrl")]
+    base_url: Option<String>,
+}
+
+#[derive(Debug, Deserialize, Clone)]
+pub struct TokenSystemSettings {
+    #[serde(rename = "defaultLimit")]
+    default_limit: Option<i64>,
+    #[serde(rename = "tokenExpireDays")]
+    token_expire_days: Option<i64>,
+    #[serde(rename = "enabled")]
+    enabled: Option<bool>,
 }
 
 fn try_read_json<T: for<'de> Deserialize<'de>>(path: &PathBuf) -> Result<Option<T>> {
@@ -81,6 +114,18 @@ pub struct AppConfig {
     pub max_context_chars: usize,
     pub auth_token: Option<String>,
     pub stats_auth_token: Option<String>,
+    // Email settings
+    pub email_smtp_host: Option<String>,
+    pub email_smtp_port: Option<u16>,
+    pub email_smtp_username: Option<String>,
+    pub email_smtp_password: Option<String>,
+    pub email_from_email: Option<String>,
+    pub email_from_name: Option<String>,
+    pub email_base_url: Option<String>,
+    // Token system settings
+    pub token_system_enabled: bool,
+    pub token_default_limit: Option<i64>,
+    pub token_expire_days: Option<i64>,
 }
 
 impl AppConfig {
@@ -160,6 +205,24 @@ impl AppConfig {
             .map(|s| s.trim().to_string())
             .filter(|s| !s.is_empty());
 
+        // Email settings
+        let settings_email = settings.as_ref().and_then(|s| s.email.as_ref());
+        let email_smtp_host = settings_email.and_then(|e| e.smtp_host.clone());
+        let email_smtp_port = settings_email.and_then(|e| e.smtp_port);
+        let email_smtp_username = settings_email.and_then(|e| e.smtp_username.clone());
+        let email_smtp_password = settings_email.and_then(|e| e.smtp_password.clone());
+        let email_from_email = settings_email.and_then(|e| e.from_email.clone());
+        let email_from_name = settings_email.and_then(|e| e.from_name.clone());
+        let email_base_url = settings_email.and_then(|e| e.base_url.clone());
+
+        // Token system settings
+        let settings_token = settings.as_ref().and_then(|s| s.token_system.as_ref());
+        let token_system_enabled = settings_token
+            .and_then(|t| t.enabled)
+            .unwrap_or(false);
+        let token_default_limit = settings_token.and_then(|t| t.default_limit);
+        let token_expire_days = settings_token.and_then(|t| t.token_expire_days);
+
         Ok((
             Self {
                 bind_addr,
@@ -173,6 +236,16 @@ impl AppConfig {
                 max_context_chars,
                 auth_token,
                 stats_auth_token,
+                email_smtp_host,
+                email_smtp_port,
+                email_smtp_username,
+                email_smtp_password,
+                email_from_email,
+                email_from_name,
+                email_base_url,
+                token_system_enabled,
+                token_default_limit,
+                token_expire_days,
             },
             settings_source,
         ))
@@ -194,5 +267,8 @@ pub struct AppState {
     pub episode_topics_map_cache: Cache<String, CachedEpisodeTopicsMap>,
     pub episode_files_cache: Cache<(String, u32), CachedEpisodeFiles>,
     pub analytics_db: Arc<AnalyticsDb>,
+    // Token system
+    pub token_db: Option<Arc<TokenDatabase>>,
+    pub email_service: Option<Arc<EmailService>>,
 }
 

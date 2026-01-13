@@ -2015,7 +2015,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                     .collect();
 
                 // Acquire semaphore permit for concurrent request
-                let _permit = semaphore.acquire().await.unwrap();
+                let _permit = semaphore.acquire().await
+                    .expect("Semaphore should never be closed during cluster naming");
                 
                 match call_llm_for_naming(top_topics, Some(top_keywords), settings.as_ref(), model, 0).await {
                     Some(llm_name) => {

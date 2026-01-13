@@ -127,6 +127,22 @@
     "statsAuthToken": "CHANGE_ME",
     "_comment": "Optional: Token required by the RAG backend for /api/chat. Frontend will ask for this token on first search and store it locally. statsAuthToken is required for /api/analytics/stats endpoint."
   },
+  "email": {
+    "smtpHost": "smtp.sendgrid.net",
+    "smtpPort": 587,
+    "smtpUsername": "apikey",
+    "smtpPassword": "SG.your-sendgrid-api-key-here",
+    "fromEmail": "noreply@your-domain.com",
+    "fromName": "PodInsights",
+    "baseUrl": "https://your-domain.com",
+    "_comment": "Email settings for token system. Alternative SMTP providers: smtp.gmail.com (465/587), smtp.mailgun.org (587), email-smtp.eu-west-1.amazonaws.com (587 for AWS SES)"
+  },
+  "tokenSystem": {
+    "enabled": false,
+    "defaultLimit": 100,
+    "tokenExpireDays": 365,
+    "_comment": "Token system for API access control. When enabled=true, users can request tokens via email. Config authToken remains unlimited."
+  },
   "categoryGrouping": {
     "categories": 12,
     "_comment": "Anzahl der übergeordneten Kategorien für Topic-Gruppierung"

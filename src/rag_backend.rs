@@ -1,11 +1,13 @@
 // Main entry point for RAG backend
-mod config;
+mod auth;
 mod cache;
+mod config;
+mod email;
 mod handlers;
+mod lance;
 mod rag;
 mod transcript;
 mod utils;
-mod lance;
 
 use anyhow::{Context, Result};
 use axum::{
@@ -22,7 +24,10 @@ use tracing::info;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
 use config::{AppConfig, AppState};
-use handlers::{chat, episodes_latest, episodes_search, speakers_list};
+use handlers::{
+    activate_token, chat, delete_token, episodes_latest, episodes_search, increase_token_limit,
+    list_tokens, request_token, speakers_list, token_info,
+};
 use handlers::analytics::{self, insert_test_data_endpoint, stats, track, track_episode_play};
 use cache::load_rag_index_cached;
 use std::path::PathBuf;
@@ -130,11 +135,71 @@ async fn main() -> Result<()> {
             .context("Failed to initialize analytics database")?
     );
     
-    if geoip_db_path.is_none() || !geoip_db_path.as_ref().unwrap().exists() {
-        info!("GeoIP database not found. Location tracking will be disabled. Set GEOIP_DB_PATH env var or place GeoLite2-City.mmdb in the project root.");
-    } else {
-        info!("GeoIP database loaded successfully");
+    match &geoip_db_path {
+        Some(path) if path.exists() => {
+            info!("GeoIP database loaded successfully");
+        }
+        Some(path) => {
+            info!("GeoIP database path configured but file not found: {}. Location tracking will be disabled.", path.display());
+        }
+        None => {
+            info!("GeoIP database not configured. Location tracking will be disabled. Set GEOIP_DB_PATH env var or place GeoLite2-City.mmdb in the project root.");
+        }
     }
+
+    // Initialize token system if enabled
+    let (token_db, email_service) = if cfg.token_system_enabled {
+        info!("Token system enabled - initializing...");
+        
+        // Initialize token database
+        let token_db = match auth::TokenDatabase::new("auth_tokens.db").await {
+            Ok(db) => {
+                info!("Token database initialized");
+                Some(Arc::new(db))
+            }
+            Err(e) => {
+                tracing::warn!("Failed to initialize token database: {}. Token system disabled.", e);
+                None
+            }
+        };
+
+        // Initialize email service
+        let email_service = if let (Some(host), Some(port), Some(user), Some(pass), Some(from), Some(base_url)) = (
+            cfg.email_smtp_host.as_ref(),
+            cfg.email_smtp_port,
+            cfg.email_smtp_username.as_ref(),
+            cfg.email_smtp_password.as_ref(),
+            cfg.email_from_email.as_ref(),
+            cfg.email_base_url.as_ref(),
+        ) {
+            match email::EmailService::new(
+                host.clone(),
+                port,
+                user.clone(),
+                pass.clone(),
+                from.clone(),
+                cfg.email_from_name.clone(),
+                base_url.clone(),
+            ) {
+                Ok(service) => {
+                    info!("Email service initialized (SMTP: {}:{})", host, port);
+                    Some(Arc::new(service))
+                }
+                Err(e) => {
+                    tracing::warn!("Failed to initialize email service: {}. Token requests will fail.", e);
+                    None
+                }
+            }
+        } else {
+            tracing::warn!("Email settings incomplete. Token system will not be able to send activation emails.");
+            None
+        };
+
+        (token_db, email_service)
+    } else {
+        info!("Token system disabled");
+        (None, None)
+    };
 
     let app_state = AppState {
         cfg: cfg.clone(),
@@ -149,6 +214,8 @@ async fn main() -> Result<()> {
         episode_topics_map_cache,
         episode_files_cache,
         analytics_db,
+        token_db,
+        email_service,
     };
 
     // Pre-cache all embedding databases
@@ -167,6 +234,14 @@ async fn main() -> Result<()> {
         .route("/api/analytics/stats", axum::routing::get(stats))
         .route("/api/analytics/test-data", axum::routing::get(insert_test_data_endpoint))
         .route("/api/health", axum::routing::get(health))
+        // Token system endpoints
+        .route("/api/auth/request-token", post(request_token))
+        .route("/api/auth/activate/:activation_code", axum::routing::get(activate_token))
+        .route("/api/auth/token-info", axum::routing::get(token_info))
+        // Admin token endpoints
+        .route("/api/admin/tokens", axum::routing::get(list_tokens))
+        .route("/api/admin/tokens/:token/increase-limit", post(increase_token_limit))
+        .route("/api/admin/tokens/:token", axum::routing::delete(delete_token))
         .layer(cors)
         .layer(TraceLayer::new_for_http())
         .with_state(app_state);

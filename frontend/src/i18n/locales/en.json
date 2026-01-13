@@ -71,6 +71,13 @@
     "profileLimited": "Limited profile - answers may be less personalized. Run:",
     "profileGenerate": "node scripts/generate-speaker-profiles.js --speaker \"{speaker}\"",
     "speakerLoadError": "Failed to load speaker profiles: {error}",
+    "rateLimitError": {
+      "title": "Too Many Requests",
+      "message": "You've sent too many requests in a short time. Please wait a moment.",
+      "explanation": "This limit protects the service and ensures fair usage for everyone. LLM requests are resource-intensive.",
+      "retryIn": "Please try again in {seconds} seconds.",
+      "limit": "Limit: {limit} requests per minute"
+    },
     "examples": {
       "title": "Example queries:",
       "discussion": "Tim Pritlove VS Ralf Stockmann: What's better, the Quest 3 or Apple Vision Pro?",
@@ -126,6 +133,25 @@
     "authToken": {
       "prompt": "Enter auth token for search (will be stored locally):",
       "required": "Search requires an auth token."
+    },
+    "tokenRequest": {
+      "title": "Access Token Required",
+      "description": "To use the AI search feature, you need a free token. Enter your email address and we'll send you an activation link.",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "your{'@'}email.com",
+      "emailRequired": "Please enter an email address",
+      "requestButton": "Request Token",
+      "requesting": "Requesting...",
+      "cancel": "Cancel",
+      "close": "Close",
+      "successTitle": "Token Requested!",
+      "successMessage": "We've sent you an email with an activation link. Please check your inbox.",
+      "requestTab": "Request Token",
+      "haveTokenTab": "Enter Token",
+      "enterTokenDescription": "If you already have a token, you can enter it here.",
+      "tokenLabel": "Access Token",
+      "tokenPlaceholder": "Paste your token here...",
+      "submitToken": "Use Token"
     },
     "errors": {
       "invalidResponse": "Invalid response from backend",
@@ -440,6 +466,22 @@
       "subjectsLabel": "Topics",
       "clickToPlay": "Click to play"
     }
+  },
+  "activate": {
+    "activating": "Activating token...",
+    "successTitle": "Token Activated!",
+    "successMessage": "Your access token has been successfully activated.",
+    "errorTitle": "Activation Failed",
+    "errorMessage": "The token could not be activated.",
+    "missingCode": "No activation code provided",
+    "email": "Email",
+    "requestLimit": "Request Limit",
+    "requests": "requests",
+    "token": "Your Token",
+    "tokenSaved": "The token has been automatically saved",
+    "autoRedirect": "Redirecting to search in 2 seconds...",
+    "startSearching": "Start Searching",
+    "requestNew": "Request New Token"
   }
 }
 

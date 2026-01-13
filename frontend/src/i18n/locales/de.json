@@ -71,6 +71,13 @@
     "profileLimited": "Eingeschränktes Profil - Antworten sind möglicherweise weniger personalisiert. Führe aus:",
     "profileGenerate": "node scripts/generate-speaker-profiles.js --speaker \"{speaker}\"",
     "speakerLoadError": "Fehler beim Laden der Sprecher-Profile: {error}",
+    "rateLimitError": {
+      "title": "Zu viele Anfragen",
+      "message": "Du hast zu viele Anfragen in kurzer Zeit gesendet. Bitte warte einen Moment.",
+      "explanation": "Diese Limitierung schützt den Service und stellt faire Nutzung für alle sicher. LLM-Anfragen sind ressourcenintensiv.",
+      "retryIn": "Bitte versuche es in {seconds} Sekunden erneut.",
+      "limit": "Limit: {limit} Anfragen pro Minute"
+    },
     "examples": {
       "title": "Beispielabfragen:",
       "discussion": "Tim Pritlove VS Ralf Stockmann: Was ist besser, die Quest 3 oder Apple Vision Pro?",
@@ -126,6 +133,25 @@
     "authToken": {
       "prompt": "Auth-Token für die Suche eingeben (wird lokal gespeichert):",
       "required": "Für die Suche wird ein Auth-Token benötigt."
+    },
+    "tokenRequest": {
+      "title": "Zugriffs-Token benötigt",
+      "description": "Um die KI-Suchfunktion zu nutzen, benötigst du einen kostenlosen Token. Gib deine E-Mail-Adresse ein und wir senden dir einen Aktivierungslink.",
+      "emailLabel": "E-Mail-Adresse",
+      "emailPlaceholder": "deine{'@'}email.com",
+      "emailRequired": "Bitte gib eine E-Mail-Adresse ein",
+      "requestButton": "Token anfordern",
+      "requesting": "Wird angefordert...",
+      "cancel": "Abbrechen",
+      "close": "Schließen",
+      "successTitle": "Token angefordert!",
+      "successMessage": "Wir haben dir eine E-Mail mit einem Aktivierungslink geschickt. Bitte prüfe dein Postfach.",
+      "requestTab": "Token anfordern",
+      "haveTokenTab": "Token eingeben",
+      "enterTokenDescription": "Falls du bereits einen Token hast, kannst du ihn hier eingeben.",
+      "tokenLabel": "Zugriffs-Token",
+      "tokenPlaceholder": "Füge deinen Token hier ein...",
+      "submitToken": "Token verwenden"
     },
     "errors": {
       "invalidResponse": "Ungültige Antwort vom Backend",
@@ -440,6 +466,22 @@
       "subjectsLabel": "Themen",
       "clickToPlay": "Klicken zum Abspielen"
     }
+  },
+  "activate": {
+    "activating": "Token wird aktiviert...",
+    "successTitle": "Token aktiviert!",
+    "successMessage": "Dein Zugriffs-Token wurde erfolgreich aktiviert.",
+    "errorTitle": "Aktivierung fehlgeschlagen",
+    "errorMessage": "Der Token konnte nicht aktiviert werden.",
+    "missingCode": "Kein Aktivierungscode angegeben",
+    "email": "E-Mail",
+    "requestLimit": "Anfrage-Limit",
+    "requests": "Anfragen",
+    "token": "Dein Token",
+    "tokenSaved": "Der Token wurde automatisch gespeichert",
+    "autoRedirect": "Du wirst in 2 Sekunden zur KI-Suche weitergeleitet...",
+    "startSearching": "Zur KI-Suche",
+    "requestNew": "Neuen Token anfordern"
   }
 }
 

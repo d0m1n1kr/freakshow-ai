@@ -93,6 +93,8 @@ const searchQuery = ref('');
 const loading = ref(false);
 const loadingMore = ref(false);
 const error = ref<string | null>(null);
+const isRateLimitError = ref(false);
+const rateLimitRetryAfter = ref(60);
 const searchResults = ref<EpisodeSearchResult[]>([]);
 const selectedEpisode = ref<EpisodeData | null>(null);
 const hasMore = ref(false);
@@ -285,6 +287,7 @@ const loadLatestEpisodes = async (append = false) => {
     currentQuery.value = ''; // Clear query to indicate we're showing latest episodes
   }
   error.value = null;
+  isRateLimitError.value = false;
 
   try {
     const response = await fetch(`${backendBase.value}/api/episodes/latest`, {
@@ -300,6 +303,19 @@ const loadLatestEpisodes = async (append = false) => {
     });
 
     if (!response.ok) {
+      // Handle 429 Rate Limit Error FIRST
+      if (response.status === 429) {
+        isRateLimitError.value = true;
+        const retryAfter = response.headers.get('Retry-After');
+        if (retryAfter) {
+          rateLimitRetryAfter.value = parseInt(retryAfter, 10) || 60;
+        } else {
+          rateLimitRetryAfter.value = 60;
+        }
+        error.value = t('search.rateLimitError.title');
+        return;
+      }
+      
       const text = await response.text();
       throw new Error(`Failed to load latest episodes: ${response.status} ${text}`);
     }
@@ -395,6 +411,7 @@ const searchEpisodes = async (append = false) => {
     hasMore.value = false;
   }
   error.value = null;
+  isRateLimitError.value = false;
 
   try {
     const response = await fetch(`${backendBase.value}/api/episodes/search`, {
@@ -412,6 +429,19 @@ const searchEpisodes = async (append = false) => {
     });
 
     if (!response.ok) {
+      // Handle 429 Rate Limit Error FIRST
+      if (response.status === 429) {
+        isRateLimitError.value = true;
+        const retryAfter = response.headers.get('Retry-After');
+        if (retryAfter) {
+          rateLimitRetryAfter.value = parseInt(retryAfter, 10) || 60;
+        } else {
+          rateLimitRetryAfter.value = 60;
+        }
+        error.value = t('search.rateLimitError.title');
+        return;
+      }
+      
       const text = await response.text();
       throw new Error(`Search failed: ${response.status} ${text}`);
     }
@@ -640,6 +670,30 @@ watch(() => audioPlayerStore.state.transcriptSrc, () => {
   updateCurrentSpeaker();
 });
 
+// Countdown timer for rate limit
+let countdownInterval: ReturnType<typeof setInterval> | null = null;
+
+watch(isRateLimitError, (isRateLimit) => {
+  if (isRateLimit) {
+    // Start countdown
+    if (countdownInterval) clearInterval(countdownInterval);
+    countdownInterval = setInterval(() => {
+      if (rateLimitRetryAfter.value > 0) {
+        rateLimitRetryAfter.value--;
+      } else {
+        if (countdownInterval) clearInterval(countdownInterval);
+        countdownInterval = null;
+      }
+    }, 1000);
+  } else {
+    // Stop countdown
+    if (countdownInterval) {
+      clearInterval(countdownInterval);
+      countdownInterval = null;
+    }
+  }
+});
+
 // Set up interval to update current speaker
 onMounted(() => {
   speakerUpdateInterval = window.setInterval(() => {
@@ -840,7 +894,39 @@ const getPodcastInfo = (podcastId: string) => {
         </label>
       </form>
 
-      <div v-if="error" class="mt-4 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+      <!-- Rate Limit Error (special styling) -->
+      <div v-if="error && isRateLimitError" class="mt-4 bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 border-2 border-yellow-400 dark:border-yellow-600 rounded-xl p-6 shadow-lg">
+        <div class="flex items-start gap-4">
+          <div class="text-5xl flex-shrink-0 animate-pulse">🚦</div>
+          <div class="flex-1">
+            <div class="text-yellow-900 dark:text-yellow-200 font-bold text-xl mb-2">
+              {{ t('search.rateLimitError.title') }}
+            </div>
+            <div class="text-yellow-800 dark:text-yellow-300 mb-3">
+              {{ t('search.rateLimitError.message') }}
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-yellow-300 dark:border-yellow-700 mb-3">
+              <div class="text-sm text-gray-700 dark:text-gray-300 mb-2">
+                {{ t('search.rateLimitError.explanation') }}
+              </div>
+              <div class="text-xs text-gray-600 dark:text-gray-400 font-mono">
+                {{ t('search.rateLimitError.limit', { limit: '10' }) }}
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-3xl font-bold text-yellow-600 dark:text-yellow-400">
+                {{ rateLimitRetryAfter }}s
+              </div>
+              <div class="text-sm text-yellow-700 dark:text-yellow-300">
+                {{ t('search.rateLimitError.retryIn', { seconds: rateLimitRetryAfter }) }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Regular Error -->
+      <div v-else-if="error" class="mt-4 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
         <p class="text-red-800 dark:text-red-200 text-sm">{{ error }}</p>
       </div>
     </div>

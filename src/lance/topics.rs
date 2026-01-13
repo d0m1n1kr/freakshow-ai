@@ -49,7 +49,9 @@ impl TopicEmbeddingsLance {
         // Convert path to absolute path for LanceDB connection
         let abs_path = lance_dir.canonicalize()
             .with_context(|| format!("Failed to resolve path: {:?}", lance_dir))?;
-        let db = lancedb::connect(abs_path.to_str().unwrap()).execute().await?;
+        let path_str = abs_path.to_str()
+            .ok_or_else(|| anyhow::anyhow!("Path contains invalid UTF-8 characters: {:?}", abs_path))?;
+        let db = lancedb::connect(path_str).execute().await?;
         let table = db.open_table("topics").execute().await?;
         
         // Load metadata

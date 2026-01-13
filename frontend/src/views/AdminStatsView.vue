@@ -1,51 +1,13 @@
 <template>
-  <div class="stats-view p-6 max-w-7xl mx-auto">
-    <div class="flex justify-between items-center mb-6">
-      <h1 class="text-3xl font-bold">Analytics Dashboard</h1>
-      <button
-        v-if="authenticated"
-        @click="logout"
-        class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700"
-      >
-        Logout
-      </button>
-    </div>
-
-    <!-- Token Input Modal -->
-    <div
-      v-if="showTokenInput"
-      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-    >
-      <div class="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4">
-        <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">
-          Analytics-Authentifizierung
-        </h2>
-        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-          Bitte gib deinen Analytics-Token ein, um fortzufahren.
-        </p>
-        <input
-          v-model="statsToken"
-          type="password"
-          placeholder="Analytics Token"
-          class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg mb-4 dark:bg-gray-700 dark:text-white"
-          @keyup.enter="saveStatsToken"
-        />
-        <div class="flex gap-3">
-          <button
-            @click="saveStatsToken"
-            class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
-          >
-            Anmelden
-          </button>
-          <button
-            @click="showTokenInput = false"
-            class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg hover:bg-gray-300"
-          >
-            Abbrechen
-          </button>
-        </div>
-        <p v-if="error" class="mt-3 text-sm text-red-600">{{ error }}</p>
-      </div>
+  <div>
+    <!-- Header Section -->
+    <div class="mb-6">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
+        Analytics & Statistiken
+      </h2>
+      <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+        Übersicht über Nutzungsstatistiken und Analytics-Daten
+      </p>
     </div>
 
     <!-- Loading State -->
@@ -60,7 +22,7 @@
     </div>
 
     <!-- Stats Content -->
-    <div v-if="authenticated && stats && !loading">
+    <div v-if="stats && !loading">
       <!-- Time Range Selector -->
       <div class="mb-6 flex gap-2">
         <button
@@ -771,10 +733,8 @@ interface AnalyticsStats {
 const stats = ref<AnalyticsStats | null>(null);
 const loading = ref(false);
 const error = ref<string | null>(null);
-const authenticated = ref(false);
+const authenticated = ref(true); // Always authenticated in admin context
 const selectedDays = ref<number | null>(null);
-const showTokenInput = ref(false);
-const statsToken = ref('');
 
 const timePeriods = [
   { label: 'All Time', days: null },
@@ -959,8 +919,8 @@ const visiblePlayedPodcastPages = computed(() => {
 });
 
 const ensureAuthToken = async (): Promise<string> => {
-  // Load from localStorage (like Admin panel)
-  const savedToken = localStorage.getItem('statsToken');
+  // Use admin token from localStorage (same as AdminTokensView)
+  const savedToken = localStorage.getItem('adminToken');
   if (savedToken) {
     return savedToken;
   }
@@ -968,25 +928,6 @@ const ensureAuthToken = async (): Promise<string> => {
   // Return empty string to try without token first
   // (backend allows no auth if not configured)
   return '';
-};
-
-const saveStatsToken = () => {
-  if (statsToken.value.trim()) {
-    localStorage.setItem('statsToken', statsToken.value.trim());
-    showTokenInput.value = false;
-    authenticated.value = true;
-    fetchStats();
-  } else {
-    error.value = 'Bitte gib einen Analytics-Token ein';
-  }
-};
-
-const logout = () => {
-  localStorage.removeItem('statsToken');
-  statsToken.value = '';
-  authenticated.value = false;
-  showTokenInput.value = true;
-  stats.value = null;
 };
 
 const isPermissionDenied = (status: number, bodyText: string) => {
@@ -1025,11 +966,9 @@ const fetchStats = async () => {
     if (!res.ok) {
       const txt = await res.text();
       if (isPermissionDenied(res.status, txt)) {
-        // Backend requires auth - show modal
-        localStorage.removeItem('statsToken');
-        showTokenInput.value = true;
+        // Backend requires auth
+        error.value = 'Authentifizierung fehlgeschlagen. Bitte logge dich erneut ein.';
         authenticated.value = false;
-        error.value = 'Analytics-Token erforderlich';
         loading.value = false;
         return;
       } else {
@@ -1769,7 +1708,7 @@ watch(() => settings.statsPodcastsPerPage, () => {
 });
 
 watch(() => settings.isDarkMode, () => {
-  if (stats.value) {
+  if (stats.value && authenticated.value) {
     renderCharts();
     renderWorldMap();
   }
@@ -1800,19 +1739,13 @@ watch(showPodcastsChart, (show) => {
 let resizeObserver: ResizeObserver | null = null;
 
 onMounted(() => {
-  // Check if token exists in localStorage
-  const savedToken = localStorage.getItem('statsToken');
-  if (savedToken) {
-    statsToken.value = savedToken;
-    authenticated.value = true;
-  }
-  // Try to fetch stats (with or without token)
+  // Fetch stats immediately (admin token is handled by AdminLayout)
   fetchStats();
   
   // Set up resize observer to re-render charts when container size changes
   if (typeof ResizeObserver !== 'undefined') {
     resizeObserver = new ResizeObserver(() => {
-      if (stats.value && authenticated.value) {
+      if (stats.value) {
         renderCharts();
         renderWorldMap();
       }

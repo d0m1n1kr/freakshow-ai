@@ -71,6 +71,13 @@
     "profileLimited": "Profil limité - les réponses peuvent être moins personnalisées. Exécuter :",
     "profileGenerate": "node scripts/generate-speaker-profiles.js --speaker \"{speaker}\"",
     "speakerLoadError": "Échec du chargement des profils d'intervenants : {error}",
+    "rateLimitError": {
+      "title": "Trop de requêtes",
+      "message": "Vous avez envoyé trop de requêtes en peu de temps. Veuillez patienter un instant.",
+      "explanation": "Cette limite protège le service et garantit une utilisation équitable pour tous. Les requêtes LLM sont gourmandes en ressources.",
+      "retryIn": "Veuillez réessayer dans {seconds} secondes.",
+      "limit": "Limite : {limit} requêtes par minute"
+    },
     "examples": {
       "title": "Exemples de requêtes :",
       "discussion": "Tim Pritlove VS Ralf Stockmann : Qu'est-ce qui est mieux, le Quest 3 ou l'Apple Vision Pro ?",
@@ -126,6 +133,25 @@
     "authToken": {
       "prompt": "Saisissez le jeton d'authentification pour la recherche (stocké localement) :",
       "required": "La recherche nécessite un jeton d'authentification."
+    },
+    "tokenRequest": {
+      "title": "Jeton d'accès requis",
+      "description": "Pour utiliser la fonction de recherche IA, vous avez besoin d'un jeton gratuit. Entrez votre adresse e-mail et nous vous enverrons un lien d'activation.",
+      "emailLabel": "Adresse e-mail",
+      "emailPlaceholder": "votre{'@'}email.com",
+      "emailRequired": "Veuillez entrer une adresse e-mail",
+      "requestButton": "Demander un jeton",
+      "requesting": "Demande en cours...",
+      "cancel": "Annuler",
+      "close": "Fermer",
+      "successTitle": "Jeton demandé !",
+      "successMessage": "Nous vous avons envoyé un e-mail avec un lien d'activation. Veuillez vérifier votre boîte de réception.",
+      "requestTab": "Demander un jeton",
+      "haveTokenTab": "Entrer un jeton",
+      "enterTokenDescription": "Si vous avez déjà un jeton, vous pouvez l'entrer ici.",
+      "tokenLabel": "Jeton d'accès",
+      "tokenPlaceholder": "Collez votre jeton ici...",
+      "submitToken": "Utiliser le jeton"
     },
     "errors": {
       "invalidResponse": "Réponse invalide du backend",
@@ -440,6 +466,22 @@
       "subjectsLabel": "Sujets",
       "clickToPlay": "Cliquer pour lire"
     }
+  },
+  "activate": {
+    "activating": "Activation du jeton...",
+    "successTitle": "Jeton activé !",
+    "successMessage": "Votre jeton d'accès a été activé avec succès.",
+    "errorTitle": "Échec de l'activation",
+    "errorMessage": "Le jeton n'a pas pu être activé.",
+    "missingCode": "Aucun code d'activation fourni",
+    "email": "E-mail",
+    "requestLimit": "Limite de requêtes",
+    "requests": "requêtes",
+    "token": "Votre jeton",
+    "tokenSaved": "Le jeton a été enregistré automatiquement",
+    "autoRedirect": "Redirection vers la recherche dans 2 secondes...",
+    "startSearching": "Commencer la recherche",
+    "requestNew": "Demander un nouveau jeton"
   }
 }
 

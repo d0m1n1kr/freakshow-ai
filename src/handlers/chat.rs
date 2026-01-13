@@ -77,15 +77,98 @@ fn extract_auth_token(headers: &HeaderMap) -> Option<String> {
     None
 }
 
-fn is_auth_ok(cfg: &AppConfig, headers: &HeaderMap) -> bool {
-    let Some(expected) = cfg.auth_token.as_ref() else {
-        // No auth configured => allow.
-        return true;
-    };
-    let Some(got) = extract_auth_token(headers) else {
-        return false;
-    };
-    got == *expected
+/// Check authentication and increment request count if using token system
+async fn check_auth_and_count(
+    st: &crate::config::AppState,
+    headers: &HeaderMap,
+) -> Result<(), (StatusCode, String)> {
+    // Extract token from headers
+    let token_str = extract_auth_token(headers);
+    
+    // If token system is enabled, validate and count
+    if let Some(ref token_db) = st.token_db {
+        let Some(token) = token_str else {
+            // Token system enabled but no token provided
+            // Check if old config token allows access (backward compatibility)
+            if st.cfg.auth_token.is_none() {
+                // No auth required at all
+                return Ok(());
+            }
+            return Err((StatusCode::UNAUTHORIZED, "Authentication token required".to_string()));
+        };
+        
+        // Check if it's the admin token (unlimited access)
+        if let Some(ref admin_token) = st.cfg.auth_token {
+            if &token == admin_token {
+                tracing::debug!("Admin token used - unlimited access");
+                return Ok(());
+            }
+        }
+        
+        // Validate user token
+        match token_db.get_token(&token).await {
+            Ok(Some(auth_token)) => {
+                if !auth_token.is_activated {
+                    return Err((StatusCode::FORBIDDEN, "Token not activated. Please check your email.".to_string()));
+                }
+                
+                // Check if token has expired
+                if let Some(expires_at) = auth_token.expires_at {
+                    if expires_at < chrono::Utc::now() {
+                        return Err((StatusCode::FORBIDDEN, "Token has expired".to_string()));
+                    }
+                }
+                
+                // Check request limit
+                if auth_token.request_count >= auth_token.request_limit {
+                    return Err((StatusCode::TOO_MANY_REQUESTS, format!(
+                        "Request limit ({}) reached. Please contact support to increase your limit.",
+                        auth_token.request_limit
+                    )));
+                }
+                
+                // Increment request count asynchronously (fire-and-forget)
+                // This prevents blocking the request on DB writes, improving performance
+                let token_db_clone = token_db.clone();
+                let token_clone = token.clone();
+                tokio::spawn(async move {
+                    if let Err(e) = token_db_clone.increment_request_count(&token_clone).await {
+                        tracing::error!("Failed to increment request count for token: {}", e);
+                    }
+                });
+                
+                tracing::info!("Token {} used: {}/{} requests", 
+                    &token[..10], 
+                    auth_token.request_count + 1, 
+                    auth_token.request_limit
+                );
+                
+                Ok(())
+            }
+            Ok(None) => {
+                Err((StatusCode::UNAUTHORIZED, "Invalid token".to_string()))
+            }
+            Err(e) => {
+                tracing::error!("Token validation error: {}", e);
+                Err((StatusCode::INTERNAL_SERVER_ERROR, "Authentication error".to_string()))
+            }
+        }
+    } else {
+        // Token system not enabled - fall back to old auth
+        if let Some(ref expected) = st.cfg.auth_token {
+            let Some(got) = token_str else {
+                return Err((StatusCode::FORBIDDEN, "permission denied".to_string()));
+            };
+            if &got == expected {
+                Ok(())
+            } else {
+                Err((StatusCode::FORBIDDEN, "permission denied".to_string()))
+            }
+        } else {
+            // No auth required
+            Ok(())
+        }
+    }
 }
 
 pub async fn chat(
@@ -93,13 +176,15 @@ pub async fn chat(
     headers: HeaderMap,
     Json(req): Json<ChatRequest>,
 ) -> impl IntoResponse {
-    if !is_auth_ok(&st.cfg, &headers) {
+    // Check authentication and count request
+    if let Err((status, msg)) = check_auth_and_count(&st, &headers).await {
         return (
-            StatusCode::FORBIDDEN,
-            Json(serde_json::json!({ "error": "permission denied" })),
+            status,
+            Json(serde_json::json!({ "error": msg })),
         )
             .into_response();
     }
+    
     match chat_impl(&st, req).await {
         Ok(resp) => (StatusCode::OK, Json(resp)).into_response(),
         Err(e) => {

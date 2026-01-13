@@ -132,6 +132,8 @@ const readFromUrl = () => {
 
 const loading = ref(false);
 const error = ref<string | null>(null);
+const isRateLimitError = ref(false);
+const rateLimitRetryAfter = ref(60); // Default 60 seconds
 const result = ref<ChatResponse | null>(null);
 const expandedSources = ref<Record<number, boolean>>({});
 const episodeSubjectsData = ref<Map<number, any>>(new Map());
@@ -199,11 +201,75 @@ const isPermissionDenied = (status: number, bodyText: string) => {
   return txt.includes('permission denied') || txt.includes('forbidden') || txt.includes('unauthorized');
 };
 
+// Token request modal state
+const showTokenModal = ref(false);
+const tokenModalTab = ref<'request' | 'enter'>('request');
+const tokenRequestEmail = ref('');
+const tokenRequestLoading = ref(false);
+const tokenRequestSuccess = ref(false);
+const tokenRequestError = ref('');
+const tokenInputValue = ref('');
+
 const promptForAuthToken = async () => {
-  const token = window.prompt(t('search.authToken.prompt'), '')?.trim() ?? '';
-  if (!token) return null;
+  return new Promise<string | null>((resolve) => {
+    showTokenModal.value = true;
+    tokenModalTab.value = 'request';
+    tokenRequestSuccess.value = false;
+    tokenRequestError.value = '';
+    tokenInputValue.value = '';
+    
+    // Store resolve function to call later
+    (window as any).__tokenModalResolve = (token: string | null) => {
+      showTokenModal.value = false;
+      resolve(token);
+    };
+  });
+};
+
+const submitTokenInput = () => {
+  const token = tokenInputValue.value.trim();
+  if (!token) return;
   settings.setRagAuthToken(token);
-  return token;
+  (window as any).__tokenModalResolve?.(token);
+};
+
+const cancelTokenModal = () => {
+  (window as any).__tokenModalResolve?.(null);
+};
+
+const requestToken = async () => {
+  const email = tokenRequestEmail.value.trim();
+  if (!email) {
+    tokenRequestError.value = t('search.tokenRequest.emailRequired');
+    return;
+  }
+  
+  tokenRequestLoading.value = true;
+  tokenRequestError.value = '';
+  
+  try {
+    const url = backendBase.value 
+      ? `${backendBase.value}/api/auth/request-token` 
+      : '/api/auth/request-token';
+    
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    });
+    
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      throw new Error(data.error || `HTTP ${res.status}`);
+    }
+    
+    tokenRequestSuccess.value = true;
+    tokenRequestEmail.value = '';
+  } catch (e) {
+    tokenRequestError.value = e instanceof Error ? e.message : String(e);
+  } finally {
+    tokenRequestLoading.value = false;
+  }
 };
 
 const fetchSpeakers = async () => {
@@ -232,6 +298,7 @@ const doSearch = async (query: string) => {
   const qq = query.trim();
   result.value = null;
   error.value = null;
+  isRateLimitError.value = false;
   expandedSources.value = {};
   if (!qq) return;
 
@@ -268,7 +335,22 @@ const doSearch = async (query: string) => {
 
     let res = await run(token0);
     if (!res.ok) {
+      // Handle 429 Rate Limit Error FIRST (before reading body)
+      if (res.status === 429) {
+        isRateLimitError.value = true;
+        // Try to extract Retry-After header
+        const retryAfter = res.headers.get('Retry-After');
+        if (retryAfter) {
+          rateLimitRetryAfter.value = parseInt(retryAfter, 10) || 60;
+        } else {
+          rateLimitRetryAfter.value = 60; // Default to 60 seconds
+        }
+        error.value = t('search.rateLimitError.title');
+        return;
+      }
+      
       const txt = await res.text();
+      
       if (isPermissionDenied(res.status, txt)) {
         // Backend requires auth - prompt user
         settings.clearRagAuthToken();
@@ -299,6 +381,30 @@ const doSearch = async (query: string) => {
     loading.value = false;
   }
 };
+
+// Countdown timer for rate limit
+let countdownInterval: ReturnType<typeof setInterval> | null = null;
+
+watch(isRateLimitError, (isRateLimit) => {
+  if (isRateLimit) {
+    // Start countdown
+    if (countdownInterval) clearInterval(countdownInterval);
+    countdownInterval = setInterval(() => {
+      if (rateLimitRetryAfter.value > 0) {
+        rateLimitRetryAfter.value--;
+      } else {
+        if (countdownInterval) clearInterval(countdownInterval);
+        countdownInterval = null;
+      }
+    }, 1000);
+  } else {
+    // Stop countdown
+    if (countdownInterval) {
+      clearInterval(countdownInterval);
+      countdownInterval = null;
+    }
+  }
+});
 
 onMounted(() => {
   fetchSpeakers();
@@ -987,6 +1093,38 @@ const handleAnswerClick = (event: MouseEvent) => {
         <div class="text-gray-700 dark:text-gray-300">{{ t('search.loading') }}</div>
       </div>
 
+      <!-- Rate Limit Error (special styling) -->
+      <div v-else-if="error && isRateLimitError" class="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 border-2 border-yellow-400 dark:border-yellow-600 rounded-xl p-6 shadow-lg">
+        <div class="flex items-start gap-4">
+          <div class="text-5xl flex-shrink-0 animate-pulse">🚦</div>
+          <div class="flex-1">
+            <div class="text-yellow-900 dark:text-yellow-200 font-bold text-xl mb-2">
+              {{ t('search.rateLimitError.title') }}
+            </div>
+            <div class="text-yellow-800 dark:text-yellow-300 mb-3">
+              {{ t('search.rateLimitError.message') }}
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-yellow-300 dark:border-yellow-700 mb-3">
+              <div class="text-sm text-gray-700 dark:text-gray-300 mb-2">
+                {{ t('search.rateLimitError.explanation') }}
+              </div>
+              <div class="text-xs text-gray-600 dark:text-gray-400 font-mono">
+                {{ t('search.rateLimitError.limit', { limit: '2-5' }) }}
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="text-3xl font-bold text-yellow-600 dark:text-yellow-400">
+                {{ rateLimitRetryAfter }}s
+              </div>
+              <div class="text-sm text-yellow-700 dark:text-yellow-300">
+                {{ t('search.rateLimitError.retryIn', { seconds: rateLimitRetryAfter }) }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regular Error -->
       <div v-else-if="error" class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
         <div class="text-red-800 dark:text-red-200 font-semibold">{{ t('search.errorTitle') }}</div>
         <div class="mt-1 text-sm text-red-700 dark:text-red-300">{{ error }}</div>
@@ -1112,6 +1250,152 @@ const handleAnswerClick = (event: MouseEvent) => {
                   {{ expandedSources[idx] ? t('search.collapseSource') : t('search.expandSource') }}
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Token Request Modal -->
+  <div
+    v-if="showTokenModal"
+    class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+    @click.self="cancelTokenModal"
+  >
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-md w-full p-6">
+      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">
+        {{ t('search.tokenRequest.title') }}
+      </h3>
+      
+      <!-- Success Message -->
+      <div v-if="tokenRequestSuccess" class="space-y-4">
+        <div class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-4">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl">✅</span>
+            <div class="flex-1">
+              <div class="font-semibold text-green-800 dark:text-green-200">
+                {{ t('search.tokenRequest.successTitle') }}
+              </div>
+              <p class="text-sm text-green-700 dark:text-green-300 mt-1">
+                {{ t('search.tokenRequest.successMessage') }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          @click="cancelTokenModal"
+          class="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded transition-colors"
+        >
+          {{ t('search.tokenRequest.close') }}
+        </button>
+      </div>
+
+      <!-- Request Form -->
+      <div v-else class="space-y-4">
+        <!-- Tab Selection -->
+        <div class="flex gap-2 border-b border-gray-200 dark:border-gray-700">
+          <button
+            @click="tokenModalTab = 'request'"
+            :class="[
+              'px-4 py-2 font-semibold transition-colors border-b-2',
+              tokenModalTab === 'request'
+                ? 'border-blue-500 text-blue-600 dark:text-blue-400'
+                : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+            ]"
+          >
+            {{ t('search.tokenRequest.requestTab') }}
+          </button>
+          <button
+            @click="tokenModalTab = 'enter'"
+            :class="[
+              'px-4 py-2 font-semibold transition-colors border-b-2',
+              tokenModalTab === 'enter'
+                ? 'border-blue-500 text-blue-600 dark:text-blue-400'
+                : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+            ]"
+          >
+            {{ t('search.tokenRequest.haveTokenTab') }}
+          </button>
+        </div>
+
+        <!-- Request Token Section -->
+        <div v-if="tokenModalTab === 'request'">
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            {{ t('search.tokenRequest.description') }}
+          </p>
+          
+          <div class="space-y-3">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
+                {{ t('search.tokenRequest.emailLabel') }}
+              </label>
+              <input
+                v-model="tokenRequestEmail"
+                type="email"
+                :placeholder="t('search.tokenRequest.emailPlaceholder')"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                @keyup.enter="requestToken"
+              />
+            </div>
+
+            <div v-if="tokenRequestError" class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-3">
+              <p class="text-sm text-red-700 dark:text-red-300">{{ tokenRequestError }}</p>
+            </div>
+
+            <div class="flex gap-2">
+              <button
+                @click="requestToken"
+                :disabled="tokenRequestLoading || !tokenRequestEmail.trim()"
+                class="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-semibold py-2 px-4 rounded transition-colors disabled:cursor-not-allowed"
+              >
+                <span v-if="tokenRequestLoading">{{ t('search.tokenRequest.requesting') }}</span>
+                <span v-else>{{ t('search.tokenRequest.requestButton') }}</span>
+              </button>
+              <button
+                @click="cancelTokenModal"
+                class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold transition-colors"
+              >
+                {{ t('search.tokenRequest.cancel') }}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enter Token Section -->
+        <div v-else>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+            {{ t('search.tokenRequest.enterTokenDescription') }}
+          </p>
+          
+          <div class="space-y-3">
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
+                {{ t('search.tokenRequest.tokenLabel') }}
+              </label>
+              <input
+                v-model="tokenInputValue"
+                type="text"
+                :placeholder="t('search.tokenRequest.tokenPlaceholder')"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent font-mono text-sm"
+                @keyup.enter="submitTokenInput"
+              />
+            </div>
+
+            <div class="flex gap-2">
+              <button
+                @click="submitTokenInput"
+                :disabled="!tokenInputValue.trim()"
+                class="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white font-semibold py-2 px-4 rounded transition-colors disabled:cursor-not-allowed"
+              >
+                {{ t('search.tokenRequest.submitToken') }}
+              </button>
+              <button
+                @click="cancelTokenModal"
+                class="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold transition-colors"
+              >
+                {{ t('search.tokenRequest.cancel') }}
+              </button>
             </div>
           </div>
         </div>

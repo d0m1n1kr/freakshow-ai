@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Limit Exceeded - PodInsights</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 48px 40px;
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 80px;
+            margin-bottom: 24px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #1a202c;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .status-code {
+            font-size: 18px;
+            color: #718096;
+            margin-bottom: 24px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 16px;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .info-box {
+            background: #f7fafc;
+            border-left: 4px solid #667eea;
+            padding: 16px;
+            margin: 24px 0;
+            text-align: left;
+        }
+
+        .info-box strong {
+            color: #2d3748;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .countdown {
+            font-size: 48px;
+            color: #667eea;
+            font-weight: 700;
+            margin: 24px 0;
+        }
+
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            margin-top: 24px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .footer {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #e2e8f0;
+            color: #718096;
+            font-size: 14px;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 32px 24px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .icon {
+                font-size: 60px;
+            }
+
+            .countdown {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🚦</div>
+        <h1>Zu viele Anfragen</h1>
+        <div class="status-code">HTTP 429 - Rate Limit Exceeded</div>
+        
+        <p>
+            Du hast zu viele Anfragen in kurzer Zeit gesendet. 
+            Bitte warte einen Moment, bevor du es erneut versuchst.
+        </p>
+
+        <div class="info-box">
+            <strong>ℹ️ Rate-Limit-Details:</strong>
+            <p style="margin: 0; font-size: 14px;">
+                • Maximal <strong>2-5 Anfragen pro Minute</strong><br>
+                • Jede LLM-Anfrage kostet Ressourcen<br>
+                • Das schützt den Service für alle Nutzer
+            </p>
+        </div>
+
+        <p><strong>Automatischer Retry in:</strong></p>
+        <div class="countdown" id="countdown">60</div>
+
+        <a href="/" class="button" id="retry-button">Zurück zur Startseite</a>
+
+        <div class="footer">
+            <p>
+                <strong>Hinweis:</strong> Wenn du den Service intensiv nutzen möchtest, 
+                warte bitte zwischen Anfragen oder kontaktiere den Administrator.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Countdown-Timer
+        let seconds = 60;
+        const countdownElement = document.getElementById('countdown');
+        const retryButton = document.getElementById('retry-button');
+
+        const countdown = setInterval(() => {
+            seconds--;
+            countdownElement.textContent = seconds;
+
+            if (seconds <= 0) {
+                clearInterval(countdown);
+                countdownElement.textContent = '✅';
+                retryButton.textContent = 'Jetzt erneut versuchen';
+                retryButton.style.animation = 'pulse 1s infinite';
+            }
+        }, 1000);
+
+        // Auto-Refresh nach Ablauf (optional)
+        // setTimeout(() => {
+        //     window.location.href = '/';
+        // }, 60000);
+    </script>
+</body>
+</html>

@@ -15,6 +15,10 @@ const AboutView = () => import('../views/AboutView.vue');
 const SearchView = () => import('../views/SearchView.vue');
 const EpisodeView = () => import('../views/EpisodeView.vue');
 const StatsView = () => import('../views/StatsView.vue');
+const ActivateTokenView = () => import('../views/ActivateTokenView.vue');
+const AdminLayout = () => import('../views/AdminLayout.vue');
+const AdminTokensView = () => import('../views/AdminTokensView.vue');
+const AdminStatsView = () => import('../views/AdminStatsView.vue');
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -82,12 +86,48 @@ const router = createRouter({
       path: '/stats',
       name: 'stats',
       component: StatsView
+    },
+    {
+      path: '/activate/:code',
+      name: 'activate',
+      component: ActivateTokenView
+    },
+    {
+      path: '/activate',
+      name: 'activate-query',
+      component: ActivateTokenView
+    },
+    {
+      path: '/admin',
+      component: AdminLayout,
+      children: [
+        {
+          path: '',
+          redirect: '/admin/tokens'
+        },
+        {
+          path: 'tokens',
+          name: 'admin-tokens',
+          component: AdminTokensView
+        },
+        {
+          path: 'stats',
+          name: 'admin-stats',
+          component: AdminStatsView
+        }
+      ]
     }
   ]
 });
 
 // Router guard to ensure podcast parameter is always in URL
 router.beforeEach((to, _from, next) => {
+  // Skip podcast check for admin routes
+  if (to.path.startsWith('/admin')) {
+    next();
+    return;
+  }
+  
   const settingsStore = useSettingsStore();
   const currentPodcast = to.query.podcast as string | undefined;
   
@@ -141,6 +181,11 @@ router.beforeEach((to, _from, next) => {
 
 // Track page views after navigation
 router.afterEach((to) => {
+  // Skip tracking for admin routes
+  if (to.path.startsWith('/admin')) {
+    return;
+  }
+  
   const settingsStore = useSettingsStore();
   const podcast = (to.query.podcast as string) || settingsStore.selectedPodcast;
   const episode = to.query.episode as string | undefined;
