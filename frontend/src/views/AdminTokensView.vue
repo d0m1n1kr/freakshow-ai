@@ -62,8 +62,13 @@ const loadTokens = async () => {
     console.log('[AdminTokens] Response status:', response.status)
     
     if (response.status === 401 || response.status === 403) {
-      error.value = 'Ungültiger Admin-Token'
-      logout()
+      error.value = 'Ungültiger Admin-Token. Bitte logge dich erneut ein.'
+      // Remove invalid token - AdminLayout will show login modal on next request
+      localStorage.removeItem('adminToken')
+      // Reload page to trigger AdminLayout login modal
+      setTimeout(() => {
+        window.location.reload()
+      }, 1500)
       return
     }
     
