@@ -28,12 +28,13 @@ const deletingToken = ref<string | null>(null)
 const confirmDelete = ref('')
 
 const backendBase = computed(() => {
-  // In development with Vite dev server
-  if (import.meta.env.DEV) {
-    return '' // Use Vite proxy
-  }
-  // In production or when accessing backend directly
-  return import.meta.env.VITE_BACKEND_BASE_URL || 'http://127.0.0.1:7878'
+  // In production we assume a reverse proxy and always use relative URLs.
+  if ((import.meta as any)?.env?.PROD) return '';
+
+  // In dev, allow overriding the backend URL (or fall back to local dev server).
+  const v = (import.meta as any)?.env?.VITE_RAG_BACKEND_URL;
+  const s = typeof v === 'string' ? v.trim() : '';
+  return (s || 'http://127.0.0.1:7878').replace(/\/+$/, '');
 })
 
 // Load admin token from localStorage
@@ -50,10 +51,14 @@ const loadTokens = async () => {
   error.value = ''
   
   try {
-    console.log('[AdminTokens] Loading tokens from:', `${backendBase.value}/api/admin/tokens`)
+    const url = backendBase.value 
+      ? `${backendBase.value}/api/admin/tokens` 
+      : '/api/admin/tokens';
+    
+    console.log('[AdminTokens] Loading tokens from:', url)
     console.log('[AdminTokens] Using admin token:', adminToken.value.substring(0, 10) + '...')
     
-    const response = await fetch(`${backendBase.value}/api/admin/tokens`, {
+    const response = await fetch(url, {
       headers: {
         'Authorization': `Bearer ${adminToken.value}`
       }
@@ -112,9 +117,11 @@ const confirmIncreaseLimit = async (token: string) => {
   }
   
   try {
-    const response = await fetch(
-      `${backendBase.value}/api/admin/tokens/${encodeURIComponent(token)}/increase-limit`,
-      {
+    const url = backendBase.value 
+      ? `${backendBase.value}/api/admin/tokens/${encodeURIComponent(token)}/increase-limit`
+      : `/api/admin/tokens/${encodeURIComponent(token)}/increase-limit`;
+    
+    const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${adminToken.value}`,
@@ -157,9 +164,11 @@ const confirmDeleteToken = async (token: string) => {
   }
   
   try {
-    const response = await fetch(
-      `${backendBase.value}/api/admin/tokens/${encodeURIComponent(token)}`,
-      {
+    const url = backendBase.value 
+      ? `${backendBase.value}/api/admin/tokens/${encodeURIComponent(token)}`
+      : `/api/admin/tokens/${encodeURIComponent(token)}`;
+    
+    const response = await fetch(url, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${adminToken.value}`

@@ -290,7 +290,11 @@ const loadLatestEpisodes = async (append = false) => {
   isRateLimitError.value = false;
 
   try {
-    const response = await fetch(`${backendBase.value}/api/episodes/latest`, {
+    const url = backendBase.value 
+      ? `${backendBase.value}/api/episodes/latest` 
+      : '/api/episodes/latest';
+    
+    const response = await fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -414,7 +418,11 @@ const searchEpisodes = async (append = false) => {
   isRateLimitError.value = false;
 
   try {
-    const response = await fetch(`${backendBase.value}/api/episodes/search`, {
+    const url = backendBase.value 
+      ? `${backendBase.value}/api/episodes/search` 
+      : '/api/episodes/search';
+    
+    const response = await fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
