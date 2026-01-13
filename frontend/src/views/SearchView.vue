@@ -1325,6 +1325,12 @@ const handleAnswerClick = (event: MouseEvent) => {
             {{ t('search.tokenRequest.description') }}
           </p>
           
+          <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-3 mb-4">
+            <p class="text-xs text-blue-700 dark:text-blue-300">
+              {{ t('search.tokenRequest.privacyNotice') }}
+            </p>
+          </div>
+          
           <div class="space-y-3">
             <div>
               <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
