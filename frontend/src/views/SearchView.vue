@@ -133,6 +133,8 @@ const readFromUrl = () => {
 const loading = ref(false);
 const error = ref<string | null>(null);
 const isRateLimitError = ref(false);
+const isQuotaExceededError = ref(false);
+const quotaExceededMessage = ref<string | null>(null);
 const rateLimitRetryAfter = ref(60); // Default 60 seconds
 const result = ref<ChatResponse | null>(null);
 const expandedSources = ref<Record<number, boolean>>({});
@@ -299,6 +301,8 @@ const doSearch = async (query: string) => {
   result.value = null;
   error.value = null;
   isRateLimitError.value = false;
+  isQuotaExceededError.value = false;
+  quotaExceededMessage.value = null;
   expandedSources.value = {};
   if (!qq) return;
 
@@ -337,7 +341,21 @@ const doSearch = async (query: string) => {
     if (!res.ok) {
       // Handle 429 Rate Limit Error FIRST (before reading body)
       if (res.status === 429) {
+        // Read the error message to distinguish between rate limit and quota exceeded
+        const errorText = await res.text().catch(() => '');
+        
+        // Check if it's a quota exceeded error (from token system)
+        if (errorText.includes('Request limit') || errorText.includes('reached')) {
+          isQuotaExceededError.value = true;
+          isRateLimitError.value = false;
+          quotaExceededMessage.value = errorText || t('search.quotaExceededError.message');
+          error.value = t('search.quotaExceededError.title');
+          return;
+        }
+        
+        // Otherwise it's a rate limit error (from Nginx)
         isRateLimitError.value = true;
+        isQuotaExceededError.value = false;
         // Try to extract Retry-After header
         const retryAfter = res.headers.get('Retry-After');
         if (retryAfter) {
@@ -385,9 +403,9 @@ const doSearch = async (query: string) => {
 // Countdown timer for rate limit
 let countdownInterval: ReturnType<typeof setInterval> | null = null;
 
-watch(isRateLimitError, (isRateLimit) => {
+watch([isRateLimitError, isQuotaExceededError], ([isRateLimit, isQuota]) => {
   if (isRateLimit) {
-    // Start countdown
+    // Start countdown for rate limit
     if (countdownInterval) clearInterval(countdownInterval);
     countdownInterval = setInterval(() => {
       if (rateLimitRetryAfter.value > 0) {
@@ -403,6 +421,11 @@ watch(isRateLimitError, (isRateLimit) => {
       clearInterval(countdownInterval);
       countdownInterval = null;
     }
+  }
+  
+  // Reset quota error when starting new search
+  if (!isQuota) {
+    quotaExceededMessage.value = null;
   }
 });
 
@@ -1093,7 +1116,30 @@ const handleAnswerClick = (event: MouseEvent) => {
         <div class="text-gray-700 dark:text-gray-300">{{ t('search.loading') }}</div>
       </div>
 
-      <!-- Rate Limit Error (special styling) -->
+      <!-- Quota Exceeded Error (token limit reached) -->
+      <div v-else-if="error && isQuotaExceededError" class="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 border-2 border-red-400 dark:border-red-600 rounded-xl p-6 shadow-lg">
+        <div class="flex items-start gap-4">
+          <div class="text-5xl flex-shrink-0">⚠️</div>
+          <div class="flex-1">
+            <div class="text-red-900 dark:text-red-200 font-bold text-xl mb-2">
+              {{ t('search.quotaExceededError.title') }}
+            </div>
+            <div class="text-red-800 dark:text-red-300 mb-3">
+              {{ quotaExceededMessage || t('search.quotaExceededError.message') }}
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-lg p-4 border border-red-300 dark:border-red-700 mb-3">
+              <div class="text-sm text-gray-700 dark:text-gray-300 mb-2">
+                {{ t('search.quotaExceededError.explanation') }}
+              </div>
+            </div>
+            <div class="text-sm text-red-700 dark:text-red-300">
+              {{ t('search.quotaExceededError.contact') }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rate Limit Error (Nginx rate limit) -->
       <div v-else-if="error && isRateLimitError" class="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 border-2 border-yellow-400 dark:border-yellow-600 rounded-xl p-6 shadow-lg">
         <div class="flex items-start gap-4">
           <div class="text-5xl flex-shrink-0 animate-pulse">🚦</div>
