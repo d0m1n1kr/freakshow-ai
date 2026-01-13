@@ -48,9 +48,16 @@ impl TokenDatabase {
         let conn = Connection::open(db_path)?;
         
         // SQLite performance optimizations
-        conn.execute("PRAGMA journal_mode = WAL", [])?; // Write-Ahead Logging for better concurrency
-        conn.execute("PRAGMA synchronous = NORMAL", [])?; // Faster writes (still safe)
-        conn.execute("PRAGMA busy_timeout = 5000", [])?; // Retry on lock for 5 seconds
+        // Try to enable WAL mode (may fail if DB is locked, that's ok)
+        if let Err(e) = conn.execute("PRAGMA journal_mode = WAL", []) {
+            tracing::warn!("Failed to enable WAL mode (may be locked): {}", e);
+        }
+        if let Err(e) = conn.execute("PRAGMA synchronous = NORMAL", []) {
+            tracing::warn!("Failed to set synchronous mode: {}", e);
+        }
+        if let Err(e) = conn.execute("PRAGMA busy_timeout = 5000", []) {
+            tracing::warn!("Failed to set busy timeout: {}", e);
+        }
         conn.execute("PRAGMA foreign_keys = ON", [])?;
         
         // Initialize schema
