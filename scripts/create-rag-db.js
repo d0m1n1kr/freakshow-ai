@@ -10,9 +10,11 @@ function sleep(ms) {
 }
 
 function parseArgs(argv) {
+  const PROJECT_ROOT = path.join(__dirname, '..');
   const args = {
-    inDir: path.join(__dirname, 'episodes'),
-    outFile: path.join(__dirname, 'db', 'rag-embeddings.json'),
+    podcast: null,
+    inDir: null,
+    outFile: null,
     episode: null,
     from: null,
     to: null,
@@ -26,7 +28,8 @@ function parseArgs(argv) {
   const rest = [...argv];
   while (rest.length) {
     const a = rest.shift();
-    if (a === '--in-dir') args.inDir = rest.shift();
+    if (a === '--podcast') args.podcast = rest.shift();
+    else if (a === '--in-dir') args.inDir = rest.shift();
     else if (a === '--out') args.outFile = rest.shift();
     else if (a === '--episode') args.episode = parseInt(rest.shift(), 10);
     else if (a === '--from') args.from = parseInt(rest.shift(), 10);
@@ -39,19 +42,40 @@ function parseArgs(argv) {
     else if (a === '--help' || a === '-h') args.help = true;
     else throw new Error(`Unknown arg: ${a}`);
   }
+
+  // If --podcast is set, auto-configure paths
+  if (args.podcast) {
+    if (!args.inDir) {
+      args.inDir = path.join(PROJECT_ROOT, 'podcasts', args.podcast, 'episodes');
+    }
+    if (!args.outFile) {
+      args.outFile = path.join(PROJECT_ROOT, 'db', args.podcast, 'rag-embeddings.json');
+    }
+  } else {
+    // Default paths if neither --podcast nor explicit paths are set
+    if (!args.inDir) {
+      args.inDir = path.join(__dirname, 'episodes');
+    }
+    if (!args.outFile) {
+      args.outFile = path.join(__dirname, 'db', 'rag-embeddings.json');
+    }
+  }
+
   return args;
 }
 
 function usage() {
   return (
     'Usage:\n' +
+    '  node scripts/create-rag-db.js --podcast <id> [options]\n' +
     '  node scripts/create-rag-db.js --episode <n> [--out <file>] [--no-embeddings]\n' +
     '  node scripts/create-rag-db.js --from <n> --to <n> [--out <file>] [--batch-size <n>]\n' +
     '  node scripts/create-rag-db.js --in-dir <dir> [--out <file>] [--force] [--no-resume]\n' +
     '\n' +
     'Options:\n' +
-    '  --in-dir <dir>           Directory with *-extended-topics.json (default: ./episodes)\n' +
-    '  --out <file>             Output JSON file (default: ./db/rag-embeddings.json)\n' +
+    '  --podcast <id>           Podcast ID (auto-sets --in-dir and --out paths)\n' +
+    '  --in-dir <dir>           Directory with *-extended-topics.json\n' +
+    '  --out <file>             Output JSON file\n' +
     '  --episode <n>            Only index one episode\n' +
     '  --from <n> --to <n>      Index a range of episodes\n' +
     '  --batch-size <n>         Embedding API batch size (default: 100)\n' +
@@ -73,13 +97,11 @@ function tryReadJson(p) {
 
 function loadSettings({ allowMissing } = { allowMissing: false }) {
   // Prefer settings.json, but in some environments it may be blocked (ignored/secret file).
-  const settingsPath = path.join(__dirname, 'settings.json');
+  const settingsPath = path.join(__dirname, '..', 'settings.json');
   const fromSettings = tryReadJson(settingsPath);
 
-  if (fromSettings.ok) return { settings: fromSettings.value, source: 'settings.json' };
-
   // If settings.json is missing or unreadable, allow env-based config (and optionally fall back to settings.example.json)
-  const examplePath = path.join(__dirname, 'settings.example.json');
+  const examplePath = path.join(__dirname, '..', 'settings.example.json');
   const fromExample = tryReadJson(examplePath);
 
   const envLLM = {
@@ -102,8 +124,12 @@ function loadSettings({ allowMissing } = { allowMissing: false }) {
     embeddingBatchSize: process.env.EMBEDDING_BATCH_SIZE != null ? parseInt(process.env.EMBEDDING_BATCH_SIZE, 10) : undefined,
   };
 
-  const base = fromExample.ok ? fromExample.value : { llm: {}, topicExtraction: {}, topicClustering: {} };
+  // Use settings.json as base if available, otherwise use example.json, otherwise empty object
+  const base = fromSettings.ok 
+    ? fromSettings.value 
+    : (fromExample.ok ? fromExample.value : { llm: {}, topicExtraction: {}, topicClustering: {} });
 
+  // Always merge environment variables (they override settings.json)
   const merged = {
     ...base,
     llm: {
@@ -138,7 +164,17 @@ function loadSettings({ allowMissing } = { allowMissing: false }) {
     );
   }
 
-  return { settings: merged, source: fromExample.ok ? 'settings.example.json+env' : 'env' };
+  // Determine source for logging
+  let source = 'env';
+  if (fromSettings.ok) {
+    source = Object.keys(envLLM).some(k => envLLM[k] !== undefined) 
+      ? 'settings.json+env' 
+      : 'settings.json';
+  } else if (fromExample.ok) {
+    source = 'settings.example.json+env';
+  }
+
+  return { settings: merged, source };
 }
 
 async function createEmbeddingsOpenAICompatible({ baseURL, apiKey, embeddingModel, texts, retryCfg }) {
@@ -312,6 +348,7 @@ async function main() {
   let existingByKey = new Map();
 
   if (!args.force && args.resume) {
+    // Try to load from JSON file if it exists (for backward compatibility)
     existing = loadExistingDb(outFile);
     if (existing?.embeddingModel === embeddingModel && Array.isArray(existing?.items)) {
       for (const it of existing.items) {
@@ -320,16 +357,19 @@ async function main() {
     } else {
       existing = null;
     }
+    
+    // TODO: Also try to load from LanceDB for resume functionality
+    // This would require reading from LanceDB table, which is more complex
   }
 
   console.log('📚 Build RAG embeddings DB from extended topics');
   console.log(`In:           ${inDir}`);
-  console.log(`Out:          ${outFile}`);
   console.log(`Episodes:     ${files.length}`);
   console.log(`Embeddings:   ${args.noEmbeddings ? 'disabled (--no-embeddings)' : `${embeddingModel}`}`);
   console.log(`Settings:     ${settingsSource}`);
   if (!args.noEmbeddings) console.log(`Base URL:     ${llmCfg.baseURL}`);
-  console.log(`Resume:       ${args.force ? 'no (--force)' : args.resume ? 'yes' : 'no (--no-resume)'}`);
+  console.log(`Resume:       ${args.force ? 'no (--force)' : args.resume ? 'yes (from JSON if exists)' : 'no (--no-resume)'}`);
+  console.log(`Output:       LanceDB only (JSON disabled by default, use GENERATE_JSON=true to enable)`);
   console.log('');
 
   const items = [];
@@ -457,9 +497,185 @@ async function main() {
     },
   };
 
-  fs.writeFileSync(outFile, JSON.stringify(db, null, 2) + '\n', 'utf-8');
-  const fileSizeMB = (fs.statSync(outFile).size / 1024 / 1024).toFixed(2);
-  console.log(`\n✅ Wrote ${outFile} (${fileSizeMB} MB)`);
+  // Write LanceDB (default, unless explicitly disabled)
+  const skipLanceDB = process.env.SKIP_LANCEDB === 'true' || process.env.USE_LANCEDB === 'false';
+  if (!skipLanceDB && !args.noEmbeddings) {
+    await writeLanceDB(db, outFile, embeddingDimensions, embeddingModel, schemaVersion);
+  } else if (args.noEmbeddings) {
+    console.log('\n⚠️  LanceDB-Schreibung übersprungen (--no-embeddings)');
+  } else {
+    console.log('\n⚠️  LanceDB-Schreibung übersprungen (SKIP_LANCEDB=true)');
+  }
+  
+  // JSON file is no longer generated by default
+  // Only generate JSON if explicitly requested via environment variable
+  if (process.env.GENERATE_JSON === 'true') {
+    fs.writeFileSync(outFile, JSON.stringify(db, null, 2) + '\n', 'utf-8');
+    const fileSizeMB = (fs.statSync(outFile).size / 1024 / 1024).toFixed(2);
+    console.log(`\n✅ Wrote JSON ${outFile} (${fileSizeMB} MB)`);
+  }
+}
+
+async function getDirSize(dirPath) {
+  let size = 0;
+  if (!fs.existsSync(dirPath)) return 0;
+  const files = fs.readdirSync(dirPath, { withFileTypes: true });
+  for (const file of files) {
+    const filePath = path.join(dirPath, file.name);
+    if (file.isDirectory()) {
+      size += await getDirSize(filePath);
+    } else {
+      size += fs.statSync(filePath).size;
+    }
+  }
+  return size;
+}
+
+async function writeLanceDB(db, jsonOutFile, embeddingDimensions, embeddingModel, schemaVersion) {
+  try {
+    console.log('\n💾 Speichere LanceDB...');
+    
+    const lancedb = await import('@lancedb/lancedb');
+    
+    // Determine LanceDB directory from JSON output path
+    // e.g., db/freakshow/rag-embeddings.json -> db/freakshow/lance
+    const jsonDir = path.dirname(jsonOutFile);
+    const lanceDir = path.join(jsonDir, 'lance');
+    
+    if (!fs.existsSync(lanceDir)) {
+      fs.mkdirSync(lanceDir, { recursive: true });
+    }
+    
+    const lanceDb = await lancedb.connect(lanceDir);
+    
+    // Helper function to normalize strings (empty strings become null for optional fields)
+    const normalizeString = (val) => {
+      if (val === null || val === undefined) return null;
+      const str = String(val).trim();
+      return str === '' ? null : str;
+    };
+    
+    // Prepare records for LanceDB
+    const records = db.items.map((item, idx) => ({
+      id: item.id ?? idx,
+      key: String(item.key || ''),
+      episodeNumber: Number(item.episodeNumber) || 0,
+      episodeTitle: normalizeString(item.episodeTitle),
+      topic: normalizeString(item.topic),
+      subjectCoarse: normalizeString(item.subject?.coarse),
+      subjectFine: normalizeString(item.subject?.fine),
+      startSec: Number(item.startSec) || 0,
+      endSec: Number(item.endSec) || 0,
+      startHms: normalizeString(item.startHms),
+      endHms: normalizeString(item.endHms),
+      durationSec: Number(item.durationSec) || 0,
+      summary: normalizeString(item.summary),
+      text: String(item.text || '').trim() || '', // text should never be null
+      source: item.source ? JSON.stringify(item.source) : null, // Store source as JSON string
+      vector: Array.isArray(item.embedding) && item.embedding.length > 0 ? item.embedding : null,
+    }));
+    
+    // Filter out records with invalid data (must have text and vector)
+    const validRecords = records.filter(r => r.text && r.vector && r.vector.length > 0);
+    
+    if (validRecords.length === 0) {
+      throw new Error('No valid records to write to LanceDB (all records missing text or vector)');
+    }
+    
+    // Sort records so that records with non-null summary come first (helps with schema inference)
+    const sortedRecords = [...validRecords].sort((a, b) => {
+      const aHasSummary = a.summary !== null && a.summary !== undefined && a.summary !== '';
+      const bHasSummary = b.summary !== null && b.summary !== undefined && b.summary !== '';
+      if (aHasSummary && !bHasSummary) return -1;
+      if (!aHasSummary && bHasSummary) return 1;
+      return 0;
+    });
+    
+    // Ensure all records have consistent structure with explicit nulls (not undefined)
+    const normalizedRecords = sortedRecords.map(r => ({
+      id: r.id ?? 0,
+      key: r.key ?? '',
+      episodeNumber: r.episodeNumber ?? 0,
+      episodeTitle: r.episodeTitle ?? null,
+      topic: r.topic ?? null,
+      subjectCoarse: r.subjectCoarse ?? null,
+      subjectFine: r.subjectFine ?? null,
+      startSec: r.startSec ?? 0,
+      endSec: r.endSec ?? 0,
+      startHms: r.startHms ?? null,
+      endHms: r.endHms ?? null,
+      durationSec: r.durationSec ?? 0,
+      summary: r.summary ?? null, // Explicit null for schema inference
+      text: r.text ?? '',
+      source: r.source ?? null, // JSON string or null
+      vector: r.vector ?? [],
+    }));
+    
+    // Ensure first record has non-null summary to help with schema inference
+    // If all records have null summary, use empty string for first record
+    let recordsForTable = normalizedRecords;
+    if (normalizedRecords.length > 0 && normalizedRecords[0].summary === null) {
+      // Check if any record has a non-null summary
+      const hasAnySummary = normalizedRecords.some(r => r.summary !== null && r.summary !== '');
+      if (!hasAnySummary) {
+        // All summaries are null - use empty string for first record to help inference
+        recordsForTable = [
+          { ...normalizedRecords[0], summary: '' },
+          ...normalizedRecords.slice(1)
+        ];
+      } else {
+        // Find first record with summary and put it first
+        const firstWithSummary = normalizedRecords.findIndex(r => r.summary !== null && r.summary !== '');
+        if (firstWithSummary > 0) {
+          recordsForTable = [
+            normalizedRecords[firstWithSummary],
+            ...normalizedRecords.slice(0, firstWithSummary),
+            ...normalizedRecords.slice(firstWithSummary + 1)
+          ];
+        }
+      }
+    }
+    
+    // Drop existing table if it exists
+    const tableNames = await lanceDb.tableNames();
+    if (tableNames.includes('rag_chunks')) {
+      await lanceDb.dropTable('rag_chunks');
+    }
+    
+    // Create table - LanceDB will infer schema from records
+    // The first record now has non-null summary (or empty string) to help inference
+    await lanceDb.createTable('rag_chunks', recordsForTable);
+    
+    // Save/update metadata
+    const metaPath = path.join(lanceDir, 'metadata.json');
+    const existingMeta = fs.existsSync(metaPath) 
+      ? JSON.parse(fs.readFileSync(metaPath, 'utf-8')) 
+      : {};
+    
+    fs.writeFileSync(metaPath, JSON.stringify({
+      ...existingMeta,
+      rag: {
+        type: 'rag-embeddings',
+        schemaVersion,
+        createdAt: db.createdAt,
+        updatedAt: db.updatedAt,
+        embeddingModel: embeddingModel,
+        embeddingDimensions: embeddingDimensions,
+        recordCount: validRecords.length,
+        source: db.source,
+        stats: db.stats,
+      },
+    }, null, 2));
+    
+    const lanceSizeMB = ((await getDirSize(lanceDir)) / 1024 / 1024).toFixed(2);
+    console.log(`   Gespeichert: ${lanceDir}`);
+    console.log(`   Dateigröße: ${lanceSizeMB} MB`);
+    console.log(`   Dimensionen: ${embeddingDimensions}`);
+    console.log(`   Records: ${validRecords.length}${validRecords.length !== records.length ? ` (${records.length - validRecords.length} ungültige Records gefiltert)` : ''}`);
+  } catch (error) {
+    console.error(`\n⚠️  Fehler beim Schreiben von LanceDB: ${error.message}`);
+    console.error(`   JSON-Datenbank wurde erfolgreich erstellt.`);
+  }
 }
 
 main().catch(err => {

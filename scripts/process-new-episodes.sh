@@ -264,6 +264,13 @@ if [ "$SKIP_SCRAPING" = false ]; then
         
         echo -e "${YELLOW}→${NC} Downloading episode cover images (will skip existing)..."
         node scripts/scrape-images.js --podcast "$PODCAST_ID" || echo -e "${YELLOW}⚠${NC}  Image download skipped\n"
+        
+        # Set NEW_EPISODES from newly scraped episodes (they need processing)
+        NEW_EPISODES=("${NEWLY_SCRAPED[@]}")
+        # Also set MIN_EPISODE and MAX_EPISODE for later use
+        IFS=$'\n' sorted_newly_scraped=($(printf '%s\n' "${NEWLY_SCRAPED[@]}" | sort -n))
+        MIN_EPISODE=${sorted_newly_scraped[0]}
+        MAX_EPISODE=${sorted_newly_scraped[${#sorted_newly_scraped[@]}-1]}
     else
         echo -e "${YELLOW}→${NC} No newly scraped episodes, skipping details/chapters/images scraping\n"
     fi
@@ -278,39 +285,39 @@ fi
 if should_run_step 2; then
     echo -e "${BLUE}🔬 Phase 2: Updating Global Data${NC}\n"
 
-    # Detect new episodes if coming from step 2 or later (need episode list for processing)
-    if [ "$FROM_STEP" -ge 2 ]; then
+    # Detect new episodes if NEW_EPISODES is not already set (from Phase 1) or if coming from step 2 or later
+    if [ ${#NEW_EPISODES[@]} -eq 0 ]; then
         echo -e "${YELLOW}→${NC} Detecting episodes that need processing..."
         if ! detect_new_episodes; then
             echo -e "${YELLOW}ℹ${NC}  No new episodes detected. Continuing with global data update.\n"
             NEW_EPISODES=()
-        else
-            # Calculate episode range for efficient processing
-            if [ ${#NEW_EPISODES[@]} -gt 0 ]; then
-                # Sort episodes numerically
-                IFS=$'\n' sorted_episodes=($(printf '%s\n' "${NEW_EPISODES[@]}" | sort -n))
-                MIN_EPISODE=${sorted_episodes[0]}
-                MAX_EPISODE=${sorted_episodes[${#sorted_episodes[@]}-1]}
-                
-                echo -e "${YELLOW}→${NC} Processing episodes: ${NEW_EPISODES[*]} (range: $MIN_EPISODE-$MAX_EPISODE)\n"
-                
-                # Generate speaker stats for new episodes
-                echo -e "${YELLOW}→${NC} Generating speaker stats for new episodes..."
-                for episode_num in "${NEW_EPISODES[@]}"; do
-                    echo -e "${YELLOW}  Processing episode $episode_num...${NC}"
-                    node scripts/generate-speaker-stats.js --podcast "$PODCAST_ID" --episode "$episode_num" || echo -e "${YELLOW}⚠${NC}  Failed to generate stats for episode $episode_num"
-                done
-                echo -e "${GREEN}✓${NC} Speaker stats generation completed\n"
-
-                # Extract topics for new episodes
-                echo -e "${YELLOW}→${NC} Extracting topics for new episodes..."
-                for episode_num in "${NEW_EPISODES[@]}"; do
-                    echo -e "${YELLOW}  Processing episode $episode_num...${NC}"
-                    node scripts/extract-topics.js --podcast "$PODCAST_ID" "$episode_num" || echo -e "${YELLOW}⚠${NC}  Failed to extract topics for episode $episode_num"
-                done
-                echo -e "${GREEN}✓${NC} Topic extraction completed\n"
-            fi
         fi
+    fi
+    
+    # Process new episodes if any were found
+    if [ ${#NEW_EPISODES[@]} -gt 0 ]; then
+        # Sort episodes numerically
+        IFS=$'\n' sorted_episodes=($(printf '%s\n' "${NEW_EPISODES[@]}" | sort -n))
+        MIN_EPISODE=${sorted_episodes[0]}
+        MAX_EPISODE=${sorted_episodes[${#sorted_episodes[@]}-1]}
+        
+        echo -e "${YELLOW}→${NC} Processing episodes: ${NEW_EPISODES[*]} (range: $MIN_EPISODE-$MAX_EPISODE)\n"
+        
+        # Generate speaker stats for new episodes
+        echo -e "${YELLOW}→${NC} Generating speaker stats for new episodes..."
+        for episode_num in "${NEW_EPISODES[@]}"; do
+            echo -e "${YELLOW}  Processing episode $episode_num...${NC}"
+            node scripts/generate-speaker-stats.js --podcast "$PODCAST_ID" --episode "$episode_num" || echo -e "${YELLOW}⚠${NC}  Failed to generate stats for episode $episode_num"
+        done
+        echo -e "${GREEN}✓${NC} Speaker stats generation completed\n"
+
+        # Extract topics for new episodes
+        echo -e "${YELLOW}→${NC} Extracting topics for new episodes..."
+        for episode_num in "${NEW_EPISODES[@]}"; do
+            echo -e "${YELLOW}  Processing episode $episode_num...${NC}"
+            node scripts/extract-topics.js --podcast "$PODCAST_ID" "$episode_num" || echo -e "${YELLOW}⚠${NC}  Failed to extract topics for episode $episode_num"
+        done
+        echo -e "${GREEN}✓${NC} Topic extraction completed\n"
     fi
 
 echo -e "${YELLOW}→${NC} Normalizing topics (updates all podcasts)..."

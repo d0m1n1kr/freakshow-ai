@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-01-11T07:40:00.423Z",
+  "generatedAt": "2026-01-15T06:11:18.038Z",
   "description": "Speaker × Episode Duration Heatmap Data",
   "statistics": {
-    "totalEpisodes": 301,
+    "totalEpisodes": 302,
     "totalSpeakers": 72,
     "totalDurationBuckets": 10,
-    "totalCombinations": 151,
+    "totalCombinations": 152,
     "mostCommonSpeaker": "Tim Pritlove",
-    "mostCommonSpeakerCount": 301,
+    "mostCommonSpeakerCount": 302,
     "mostCommonDuration": 210,
     "mostCommonDurationLabel": "3h 30min",
     "mostCommonDurationCount": 409
@@ -15,7 +15,7 @@
   "speakers": [
     {
       "name": "Tim Pritlove",
-      "totalEpisodes": 301
+      "totalEpisodes": 302
     },
     {
       "name": "Denis Ahrens",
@@ -23,7 +23,7 @@
     },
     {
       "name": "roddi",
-      "totalEpisodes": 173
+      "totalEpisodes": 174
     },
     {
       "name": "hukl",
@@ -43,7 +43,7 @@
     },
     {
       "name": "Ralf Stockmann",
-      "totalEpisodes": 40
+      "totalEpisodes": 41
     },
     {
       "name": "Dominik Wagner",
@@ -60,6 +60,10 @@
     {
       "name": "Michaela Lehr",
       "totalEpisodes": 4
+    },
+    {
+      "name": "Pavel Mayer",
+      "totalEpisodes": 3
     },
     {
       "name": "Gregor Sedlag",
@@ -83,10 +87,6 @@
     },
     {
       "name": "Dennis Morhardt",
-      "totalEpisodes": 2
-    },
-    {
-      "name": "Pavel Mayer",
       "totalEpisodes": 2
     },
     {
@@ -336,7 +336,7 @@
     {
       "minutes": 240,
       "label": "4h",
-      "totalEpisodes": 386
+      "totalEpisodes": 390
     },
     {
       "minutes": 270,
@@ -357,7 +357,7 @@
   "matrix": [
     {
       "speaker": "Tim Pritlove",
-      "totalEpisodes": 301,
+      "totalEpisodes": 302,
       "values": [
         {
           "duration": 60,
@@ -593,7 +593,7 @@
         {
           "duration": 240,
           "durationLabel": "4h",
-          "count": 87,
+          "count": 88,
           "episodes": [
             100,
             107,
@@ -670,6 +670,7 @@
             284,
             298,
             299,
+            302,
             53,
             55,
             57,
@@ -1021,7 +1022,7 @@
     },
     {
       "speaker": "roddi",
-      "totalEpisodes": 173,
+      "totalEpisodes": 174,
       "values": [
         {
           "duration": 60,
@@ -1155,7 +1156,7 @@
         {
           "duration": 240,
           "durationLabel": "4h",
-          "count": 61,
+          "count": 62,
           "episodes": [
             100,
             107,
@@ -1211,6 +1212,7 @@
             284,
             298,
             299,
+            302,
             78,
             82,
             90,
@@ -1949,7 +1951,7 @@
     },
     {
       "speaker": "Ralf Stockmann",
-      "totalEpisodes": 40,
+      "totalEpisodes": 41,
       "values": [
         {
           "duration": 60,
@@ -2011,7 +2013,7 @@
         {
           "duration": 240,
           "durationLabel": "4h",
-          "count": 15,
+          "count": 16,
           "episodes": [
             127,
             173,
@@ -2027,7 +2029,8 @@
             283,
             284,
             298,
-            299
+            299,
+            302
           ]
         },
         {
@@ -2350,6 +2353,77 @@
           "episodes": [
             225,
             234
+          ]
+        },
+        {
+          "duration": 270,
+          "durationLabel": "4h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 300,
+          "durationLabel": "5h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 330,
+          "durationLabel": "5h 30min",
+          "count": 0,
+          "episodes": []
+        }
+      ]
+    },
+    {
+      "speaker": "Pavel Mayer",
+      "totalEpisodes": 3,
+      "values": [
+        {
+          "duration": 60,
+          "durationLabel": "1h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 90,
+          "durationLabel": "1h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 120,
+          "durationLabel": "2h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 150,
+          "durationLabel": "2h 30min",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 180,
+          "durationLabel": "3h",
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "duration": 210,
+          "durationLabel": "3h 30min",
+          "count": 2,
+          "episodes": [
+            151,
+            186
+          ]
+        },
+        {
+          "duration": 240,
+          "durationLabel": "4h",
+          "count": 1,
+          "episodes": [
+            302
           ]
         },
         {
@@ -2772,75 +2846,6 @@
           "episodes": [
             247
           ]
-        },
-        {
-          "duration": 270,
-          "durationLabel": "4h 30min",
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "duration": 300,
-          "durationLabel": "5h",
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "duration": 330,
-          "durationLabel": "5h 30min",
-          "count": 0,
-          "episodes": []
-        }
-      ]
-    },
-    {
-      "speaker": "Pavel Mayer",
-      "totalEpisodes": 2,
-      "values": [
-        {
-          "duration": 60,
-          "durationLabel": "1h",
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "duration": 90,
-          "durationLabel": "1h 30min",
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "duration": 120,
-          "durationLabel": "2h",
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "duration": 150,
-          "durationLabel": "2h 30min",
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "duration": 180,
-          "durationLabel": "3h",
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "duration": 210,
-          "durationLabel": "3h 30min",
-          "count": 2,
-          "episodes": [
-            151,
-            186
-          ]
-        },
-        {
-          "duration": 240,
-          "durationLabel": "4h",
-          "count": 0,
-          "episodes": []
         },
         {
           "duration": 270,
