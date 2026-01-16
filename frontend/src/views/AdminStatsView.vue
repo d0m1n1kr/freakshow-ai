@@ -750,6 +750,7 @@ const worldMap = ref<HTMLElement | null>(null);
 const mapTooltip = ref<HTMLElement | null>(null);
 const tooltipTitle = ref<HTMLElement | null>(null);
 const tooltipContent = ref<HTMLElement | null>(null);
+let tooltipHideTimeout: number | null = null;
 
 // View mode toggles
 const showPagesChart = ref(true);
@@ -1587,8 +1588,14 @@ const renderWorldMap = async () => {
 
     // HTML Tooltip on hover
     clusterGroup
-      .on('mouseover', function(event: MouseEvent) {
+      .on('mouseenter', function(event: MouseEvent) {
         if (!mapTooltip.value || !tooltipTitle.value || !tooltipContent.value || !worldMap.value) return;
+        
+        // Clear any pending hide timeout
+        if (tooltipHideTimeout) {
+          clearTimeout(tooltipHideTimeout);
+          tooltipHideTimeout = null;
+        }
         
         const tooltip = mapTooltip.value;
         const titleEl = tooltipTitle.value;
@@ -1613,8 +1620,10 @@ const renderWorldMap = async () => {
         }
         
         // Position tooltip
-        tooltip.style.display = 'block';
-        tooltip.style.opacity = '0';
+        if (tooltip.style.display === 'none') {
+          tooltip.style.display = 'block';
+          tooltip.style.opacity = '0';
+        }
         
         // Force a reflow to get accurate dimensions
         void tooltip.offsetWidth;
@@ -1622,8 +1631,8 @@ const renderWorldMap = async () => {
         // Calculate position (offset to avoid cursor)
         const tooltipWidth = tooltip.offsetWidth || 200;
         const tooltipHeight = tooltip.offsetHeight || 60;
-        const offsetX = 15;
-        const offsetY = 15;
+        const offsetX = 25; // Increased offset to prevent tooltip from being under cursor
+        const offsetY = 25;
         
         let left = x + offsetX;
         let top = y + offsetY;
@@ -1658,8 +1667,8 @@ const renderWorldMap = async () => {
         // Update position as mouse moves
         const tooltipWidth = tooltip.offsetWidth || 200;
         const tooltipHeight = tooltip.offsetHeight || 60;
-        const offsetX = 15;
-        const offsetY = 15;
+        const offsetX = 25; // Increased offset to prevent tooltip from being under cursor
+        const offsetY = 25;
         
         let left = x + offsetX;
         let top = y + offsetY;
@@ -1674,13 +1683,20 @@ const renderWorldMap = async () => {
         tooltip.style.left = `${left}px`;
         tooltip.style.top = `${top}px`;
       })
-      .on('mouseout', function() {
+      .on('mouseleave', function() {
         if (!mapTooltip.value) return;
+        
+        // Clear any pending hide timeout
+        if (tooltipHideTimeout) {
+          clearTimeout(tooltipHideTimeout);
+        }
+        
         const tooltip = mapTooltip.value;
         tooltip.style.opacity = '0';
-        setTimeout(() => {
+        tooltipHideTimeout = setTimeout(() => {
           tooltip.style.display = 'none';
-        }, 200);
+          tooltipHideTimeout = null;
+        }, 200) as unknown as number;
       });
   });
 };
