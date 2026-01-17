@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-01-11T08:03:11.492Z",
+  "generatedAt": "2026-01-17T16:05:10.446Z",
   "description": "Year × Episode Duration Heatmap Data",
   "statistics": {
-    "totalEpisodes": 541,
+    "totalEpisodes": 542,
     "totalYears": 16,
     "totalDurationBuckets": 7,
-    "totalCombinations": 66,
+    "totalCombinations": 67,
     "mostCommonYear": "2020",
     "mostCommonYearCount": 50,
     "mostCommonDuration": 60,
     "mostCommonDurationLabel": "1h",
-    "mostCommonDurationCount": 196
+    "mostCommonDurationCount": 197
   },
   "years": [
     {
@@ -75,7 +75,7 @@
     },
     {
       "year": "2026",
-      "totalEpisodes": 1
+      "totalEpisodes": 2
     }
   ],
   "durations": [
@@ -92,7 +92,7 @@
     {
       "minutes": 60,
       "label": "1h",
-      "totalEpisodes": 196
+      "totalEpisodes": 197
     },
     {
       "minutes": 90,
@@ -1444,8 +1444,10 @@
         {
           "duration": 60,
           "durationLabel": "1h",
-          "count": 0,
-          "episodes": []
+          "count": 1,
+          "episodes": [
+            542
+          ]
         },
         {
           "duration": 90,
