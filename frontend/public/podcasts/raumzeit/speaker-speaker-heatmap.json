@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-01-02T23:57:43.865Z",
+  "generatedAt": "2026-01-22T20:47:18.186Z",
   "description": "Speaker-Speaker Co-occurrence Heatmap Data",
   "statistics": {
-    "totalSpeakers": 123,
-    "totalCombinations": 241,
+    "totalSpeakers": 124,
+    "totalCombinations": 244,
     "topSpeakersByEpisodes": [
       {
         "id": "tim-pritlove",
         "name": "Tim Pritlove",
-        "totalEpisodes": 56
+        "totalEpisodes": 57
       },
       {
         "id": "markus-landgraf",
@@ -111,7 +111,7 @@
     {
       "id": "tim-pritlove",
       "name": "Tim Pritlove",
-      "totalEpisodes": 56
+      "totalEpisodes": 57
     },
     {
       "id": "markus-landgraf",
@@ -722,6 +722,11 @@
       "id": "paul-hartogh",
       "name": "Paul Hartogh",
       "totalEpisodes": 1
+    },
+    {
+      "id": "markus-hundertmark",
+      "name": "Markus Hundertmark",
+      "totalEpisodes": 1
     }
   ],
   "matrix": [
@@ -732,7 +737,7 @@
         {
           "speakerId": "tim-pritlove",
           "speaker2Name": "Tim Pritlove",
-          "count": 56,
+          "count": 57,
           "episodes": [
             38,
             68,
@@ -789,7 +794,8 @@
             120,
             121,
             122,
-            123
+            123,
+            124
           ]
         },
         {
@@ -1239,6 +1245,14 @@
           "count": 1,
           "episodes": [
             123
+          ]
+        },
+        {
+          "speakerId": "markus-hundertmark",
+          "speaker2Name": "Markus Hundertmark",
+          "count": 1,
+          "episodes": [
+            124
           ]
         }
       ]
@@ -3448,6 +3462,28 @@
           "count": 1,
           "episodes": [
             123
+          ]
+        }
+      ]
+    },
+    {
+      "speakerId": "markus-hundertmark",
+      "speaker1Name": "Markus Hundertmark",
+      "values": [
+        {
+          "speakerId": "tim-pritlove",
+          "speaker2Name": "Tim Pritlove",
+          "count": 1,
+          "episodes": [
+            124
+          ]
+        },
+        {
+          "speakerId": "markus-hundertmark",
+          "speaker2Name": "Markus Hundertmark",
+          "count": 1,
+          "episodes": [
+            124
           ]
         }
       ]

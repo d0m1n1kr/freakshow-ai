@@ -1,18 +1,18 @@
 {
-  "createdAt": "2026-01-11T18:56:48.407164+00:00",
+  "createdAt": "2026-01-22T20:47:17.814594+00:00",
   "method": "hdbscan-v2",
   "embeddingModel": "text-embedding-3-large",
-  "embeddingsCreatedAt": "2026-01-11T18:56:43.223165+00:00",
-  "totalTopics": 581,
-  "uniqueTopics": 564,
+  "embeddingsCreatedAt": "2026-01-22T20:47:12.902619+00:00",
+  "totalTopics": 586,
+  "uniqueTopics": 569,
   "settings": {
-    "clusters": 38,
+    "clusters": 39,
     "outlierThreshold": 0.9,
     "linkageMethod": "hdbscan(min_cluster_size=2, min_samples=2)",
     "useRelevanceWeighting": true
   },
   "statistics": {
-    "clusterCount": 38,
+    "clusterCount": 39,
     "outlierCount": 0,
     "outlierPercentage": "0.0%"
   },
@@ -99,25 +99,27 @@
       ]
     },
     {
-      "id": "universumsforschung",
-      "name": "Universumsforschung",
-      "description": "4 Topics in 5 Episoden",
+      "id": "universum",
+      "name": "Universum",
+      "description": "5 Topics in 6 Episoden",
       "isOutlier": false,
-      "topicCount": 4,
-      "episodeCount": 5,
-      "relevanceSec": 7402,
+      "topicCount": 5,
+      "episodeCount": 6,
+      "relevanceSec": 7460,
       "sampleTopics": [
         "Struktur des Universums",
         "Entstehung des Universums",
         "geometrische Vermessung des Universums",
-        "Lichtwerdung des Universums"
+        "Lichtwerdung des Universums",
+        "Universumserforschung"
       ],
       "episodes": [
         63,
         100,
         102,
         117,
-        122
+        122,
+        124
       ]
     },
     {
@@ -295,8 +297,8 @@
       ]
     },
     {
-      "id": "raumfahrtzukunft",
-      "name": "Raumfahrtzukunft",
+      "id": "raumfahrt-zukunft",
+      "name": "Raumfahrt-Zukunft",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
@@ -328,6 +330,44 @@
       ],
       "episodes": [
         79
+      ]
+    },
+    {
+      "id": "asteroiden",
+      "name": "Asteroiden",
+      "description": "2 Topics in 2 Episoden",
+      "isOutlier": false,
+      "topicCount": 2,
+      "episodeCount": 2,
+      "relevanceSec": 3368,
+      "sampleTopics": [
+        "Asteroiden und Kometen",
+        "Bedrohung durch Asteroiden"
+      ],
+      "episodes": [
+        9,
+        71
+      ]
+    },
+    {
+      "id": "astronomie",
+      "name": "Astronomie",
+      "description": "4 Topics in 4 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 4,
+      "relevanceSec": 3352,
+      "sampleTopics": [
+        "Beobachtungen des Weltalls",
+        "Bodengestützte Astronomie",
+        "Himmelsdurchmusterung",
+        "Himmelsbeobachtung"
+      ],
+      "episodes": [
+        16,
+        68,
+        117,
+        124
       ]
     },
     {
@@ -367,8 +407,8 @@
       ]
     },
     {
-      "id": "erde-und-kosmos",
-      "name": "Erde und Kosmos",
+      "id": "geologische-zeitalter",
+      "name": "Geologische Zeitalter",
       "description": "2 Topics in 1 Episoden",
       "isOutlier": false,
       "topicCount": 2,
@@ -400,8 +440,8 @@
       ]
     },
     {
-      "id": "sternentwicklung",
-      "name": "Sternentwicklung",
+      "id": "sternexplosionen",
+      "name": "Sternexplosionen",
       "description": "2 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 2,
@@ -498,8 +538,8 @@
       ]
     },
     {
-      "id": "meteoritenwissen",
-      "name": "Meteoritenwissen",
+      "id": "meteoritenwissenschaft",
+      "name": "Meteoritenwissenschaft",
       "description": "2 Topics in 1 Episoden",
       "isOutlier": false,
       "topicCount": 2,
@@ -534,8 +574,8 @@
       ]
     },
     {
-      "id": "eismonde",
-      "name": "Eismonde",
+      "id": "monde-des-planeten",
+      "name": "Monde des Planeten",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
@@ -550,23 +590,6 @@
         32,
         95,
         123
-      ]
-    },
-    {
-      "id": "sonnenforschung",
-      "name": "Sonnenforschung",
-      "description": "2 Topics in 2 Episoden",
-      "isOutlier": false,
-      "topicCount": 2,
-      "episodeCount": 2,
-      "relevanceSec": 1561,
-      "sampleTopics": [
-        "Sonnenaktivität",
-        "Magnetosphäre der Sonne"
-      ],
-      "episodes": [
-        34,
-        85
       ]
     },
     {
@@ -587,8 +610,8 @@
       ]
     },
     {
-      "id": "raumfahrtinnovationen",
-      "name": "Raumfahrtinnovationen",
+      "id": "raumfahrttechnologie",
+      "name": "Raumfahrttechnologie",
       "description": "3 Topics in 3 Episoden",
       "isOutlier": false,
       "topicCount": 3,
@@ -622,6 +645,60 @@
       "episodes": [
         20,
         58
+      ]
+    },
+    {
+      "id": "raummissionen",
+      "name": "Raummissionen",
+      "description": "4 Topics in 3 Episoden",
+      "isOutlier": false,
+      "topicCount": 4,
+      "episodeCount": 3,
+      "relevanceSec": 1200,
+      "sampleTopics": [
+        "Raummissionen",
+        "BepiColombo",
+        "Gaia-Mission",
+        "Raumfahrtmissionen"
+      ],
+      "episodes": [
+        44,
+        57,
+        81
+      ]
+    },
+    {
+      "id": "softwareentwicklung",
+      "name": "Softwareentwicklung",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Softwareentwicklung",
+        "Forschung in der Softwaretechnik",
+        "Techniken in der Softwareentwicklung"
+      ],
+      "episodes": [
+        15
+      ]
+    },
+    {
+      "id": "erneuerbare-energien",
+      "name": "Erneuerbare Energien",
+      "description": "3 Topics in 1 Episoden",
+      "isOutlier": false,
+      "topicCount": 3,
+      "episodeCount": 1,
+      "relevanceSec": 900,
+      "sampleTopics": [
+        "Photovoltaik und Solarthermie",
+        "Umbau der Energieversorgung",
+        "Kombination erneuerbarer Energiequellen"
+      ],
+      "episodes": [
+        33
       ]
     },
     {
@@ -660,59 +737,6 @@
         20,
         36,
         58
-      ]
-    },
-    {
-      "id": "erneuerbare-energien",
-      "name": "Erneuerbare Energien",
-      "description": "3 Topics in 1 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 1,
-      "relevanceSec": 900,
-      "sampleTopics": [
-        "Photovoltaik und Solarthermie",
-        "Umbau der Energieversorgung",
-        "Kombination erneuerbarer Energiequellen"
-      ],
-      "episodes": [
-        33
-      ]
-    },
-    {
-      "id": "softwareentwicklung",
-      "name": "Softwareentwicklung",
-      "description": "3 Topics in 1 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 1,
-      "relevanceSec": 900,
-      "sampleTopics": [
-        "Softwareentwicklung",
-        "Forschung in der Softwaretechnik",
-        "Techniken in der Softwareentwicklung"
-      ],
-      "episodes": [
-        15
-      ]
-    },
-    {
-      "id": "raumfahrtmissionen",
-      "name": "Raumfahrtmissionen",
-      "description": "3 Topics in 3 Episoden",
-      "isOutlier": false,
-      "topicCount": 3,
-      "episodeCount": 3,
-      "relevanceSec": 900,
-      "sampleTopics": [
-        "Raummissionen",
-        "Missionen zum Mars",
-        "Raumfahrtmissionen"
-      ],
-      "episodes": [
-        44,
-        49,
-        81
       ]
     },
     {

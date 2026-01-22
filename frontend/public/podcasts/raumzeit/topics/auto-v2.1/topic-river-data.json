@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-01-11T18:56:48.484Z",
+  "generatedAt": "2026-01-22T20:47:17.893Z",
   "description": "Topic River Daten für Freak Show Podcast - Main Topics aggregiert nach Jahren",
   "statistics": {
-    "totalTopics": 38,
+    "totalTopics": 39,
     "yearRange": {
       "start": 2010,
-      "end": 2024
+      "end": 2026
     },
     "years": [
       2010,
@@ -21,13 +21,14 @@
       2021,
       2022,
       2023,
-      2024
+      2024,
+      2026
     ],
     "topicsByEpisodeCount": [
       {
-        "id": "universumsforschung",
-        "name": "Universumsforschung",
-        "count": 5
+        "id": "universum",
+        "name": "Universum",
+        "count": 6
       },
       {
         "id": "wissenschaftliche-forschung",
@@ -65,14 +66,14 @@
         "count": 4
       },
       {
-        "id": "satellitentechnologie",
-        "name": "Satellitentechnologie",
+        "id": "astronomie",
+        "name": "Astronomie",
         "count": 4
       },
       {
-        "id": "copernicus-erdbeobachtung",
-        "name": "Copernicus Erdbeobachtung",
-        "count": 3
+        "id": "satellitentechnologie",
+        "name": "Satellitentechnologie",
+        "count": 4
       }
     ]
   },
@@ -366,14 +367,14 @@
         }
       ]
     },
-    "universumsforschung": {
-      "id": "universumsforschung",
-      "name": "Universumsforschung",
-      "description": "4 Topics in 5 Episoden",
-      "totalEpisodes": 5,
-      "totalTopics": 4,
-      "totalRelevanceSec": 7402,
-      "totalOccurrences": 5,
+    "universum": {
+      "id": "universum",
+      "name": "Universum",
+      "description": "5 Topics in 6 Episoden",
+      "totalEpisodes": 6,
+      "totalTopics": 5,
+      "totalRelevanceSec": 7460,
+      "totalOccurrences": 6,
       "yearData": [
         {
           "year": 2016,
@@ -467,6 +468,27 @@
                   "topic": "Lichtwerdung des Universums",
                   "positionSec": 15,
                   "durationSec": 3027
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "count": 1,
+          "totalRelevanceSec": 58,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 124,
+              "date": "2026-01-07",
+              "title": "RZ124 Vera C. Rubin Observatory",
+              "relevanceSec": 58,
+              "occurrences": [
+                {
+                  "topic": "Universumserforschung",
+                  "positionSec": 12,
+                  "durationSec": 58
                 }
               ]
             }
@@ -1143,9 +1165,9 @@
         }
       ]
     },
-    "raumfahrtzukunft": {
-      "id": "raumfahrtzukunft",
-      "name": "Raumfahrtzukunft",
+    "raumfahrt-zukunft": {
+      "id": "raumfahrt-zukunft",
+      "name": "Raumfahrt-Zukunft",
       "description": "3 Topics in 3 Episoden",
       "totalEpisodes": 3,
       "totalTopics": 3,
@@ -1252,6 +1274,154 @@
                   "topic": "Chemische Prozesse im Kosmos",
                   "positionSec": 14,
                   "durationSec": 1463
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "asteroiden": {
+      "id": "asteroiden",
+      "name": "Asteroiden",
+      "description": "2 Topics in 2 Episoden",
+      "totalEpisodes": 2,
+      "totalTopics": 2,
+      "totalRelevanceSec": 3368,
+      "totalOccurrences": 2,
+      "yearData": [
+        {
+          "year": 2011,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 9,
+              "date": "2011-02-21",
+              "title": "RZ009 Asteroiden und Kometen",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Asteroiden und Kometen",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2018,
+          "count": 1,
+          "totalRelevanceSec": 3068,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 71,
+              "date": "2018-03-14",
+              "title": "RZ071 Asteroidenabwehr",
+              "relevanceSec": 3068,
+              "occurrences": [
+                {
+                  "topic": "Bedrohung durch Asteroiden",
+                  "positionSec": 1023,
+                  "durationSec": 3068
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "astronomie": {
+      "id": "astronomie",
+      "name": "Astronomie",
+      "description": "4 Topics in 4 Episoden",
+      "totalEpisodes": 4,
+      "totalTopics": 4,
+      "totalRelevanceSec": 3352,
+      "totalOccurrences": 4,
+      "yearData": [
+        {
+          "year": 2011,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 16,
+              "date": "2011-06-03",
+              "title": "RZ016 SOFIA Infrarotteleskop",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Beobachtungen des Weltalls",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2017,
+          "count": 1,
+          "totalRelevanceSec": 858,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 68,
+              "date": "2017-11-18",
+              "title": "RZ068 Bodengestützte Astronomie",
+              "relevanceSec": 858,
+              "occurrences": [
+                {
+                  "topic": "Bodengestützte Astronomie",
+                  "positionSec": 18,
+                  "durationSec": 858
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2023,
+          "count": 1,
+          "totalRelevanceSec": 1088,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 117,
+              "date": "2023-10-30",
+              "title": "RZ117 Euclid",
+              "relevanceSec": 1088,
+              "occurrences": [
+                {
+                  "topic": "Himmelsdurchmusterung",
+                  "positionSec": 289,
+                  "durationSec": 1088
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "count": 1,
+          "totalRelevanceSec": 1106,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 124,
+              "date": "2026-01-07",
+              "title": "RZ124 Vera C. Rubin Observatory",
+              "relevanceSec": 1106,
+              "occurrences": [
+                {
+                  "topic": "Himmelsbeobachtung",
+                  "positionSec": 0,
+                  "durationSec": 1106
                 }
               ]
             }
@@ -1378,9 +1548,9 @@
         }
       ]
     },
-    "erde-und-kosmos": {
-      "id": "erde-und-kosmos",
-      "name": "Erde und Kosmos",
+    "geologische-zeitalter": {
+      "id": "geologische-zeitalter",
+      "name": "Geologische Zeitalter",
       "description": "2 Topics in 1 Episoden",
       "totalEpisodes": 1,
       "totalTopics": 2,
@@ -1468,9 +1638,9 @@
         }
       ]
     },
-    "sternentwicklung": {
-      "id": "sternentwicklung",
-      "name": "Sternentwicklung",
+    "sternexplosionen": {
+      "id": "sternexplosionen",
+      "name": "Sternexplosionen",
       "description": "2 Topics in 3 Episoden",
       "totalEpisodes": 3,
       "totalTopics": 2,
@@ -1890,9 +2060,9 @@
         }
       ]
     },
-    "meteoritenwissen": {
-      "id": "meteoritenwissen",
-      "name": "Meteoritenwissen",
+    "meteoritenwissenschaft": {
+      "id": "meteoritenwissenschaft",
+      "name": "Meteoritenwissenschaft",
       "description": "2 Topics in 1 Episoden",
       "totalEpisodes": 1,
       "totalTopics": 2,
@@ -1998,9 +2168,9 @@
         }
       ]
     },
-    "eismonde": {
-      "id": "eismonde",
-      "name": "Eismonde",
+    "monde-des-planeten": {
+      "id": "monde-des-planeten",
+      "name": "Monde des Planeten",
       "description": "3 Topics in 3 Episoden",
       "totalEpisodes": 3,
       "totalTopics": 3,
@@ -2072,59 +2242,6 @@
         }
       ]
     },
-    "sonnenforschung": {
-      "id": "sonnenforschung",
-      "name": "Sonnenforschung",
-      "description": "2 Topics in 2 Episoden",
-      "totalEpisodes": 2,
-      "totalTopics": 2,
-      "totalRelevanceSec": 1561,
-      "totalOccurrences": 2,
-      "yearData": [
-        {
-          "year": 2012,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 34,
-              "date": "2012-03-30",
-              "title": "RZ034 Space Situational Awareness",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Sonnenaktivität",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2020,
-          "count": 1,
-          "totalRelevanceSec": 1261,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 85,
-              "date": "2020-03-08",
-              "title": "RZ085 Erforschung der Sonne",
-              "relevanceSec": 1261,
-              "occurrences": [
-                {
-                  "topic": "Magnetosphäre der Sonne",
-                  "positionSec": 13,
-                  "durationSec": 1261
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
     "solar-orbiter": {
       "id": "solar-orbiter",
       "name": "Solar Orbiter",
@@ -2178,9 +2295,9 @@
         }
       ]
     },
-    "raumfahrtinnovationen": {
-      "id": "raumfahrtinnovationen",
-      "name": "Raumfahrtinnovationen",
+    "raumfahrttechnologie": {
+      "id": "raumfahrttechnologie",
+      "name": "Raumfahrttechnologie",
       "description": "3 Topics in 3 Episoden",
       "totalEpisodes": 3,
       "totalTopics": 3,
@@ -2306,6 +2423,169 @@
               "occurrences": [
                 {
                   "topic": "Landung auf einem Kometen",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "raummissionen": {
+      "id": "raummissionen",
+      "name": "Raummissionen",
+      "description": "4 Topics in 3 Episoden",
+      "totalEpisodes": 3,
+      "totalTopics": 4,
+      "totalRelevanceSec": 1200,
+      "totalOccurrences": 4,
+      "yearData": [
+        {
+          "year": 2012,
+          "count": 1,
+          "totalRelevanceSec": 600,
+          "totalOccurrences": 2,
+          "episodes": [
+            {
+              "number": 44,
+              "date": "2012-08-17",
+              "title": "RZ044 Der Merkur",
+              "relevanceSec": 600,
+              "occurrences": [
+                {
+                  "topic": "Raummissionen",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "BepiColombo",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2013,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 57,
+              "date": "2013-12-18",
+              "title": "RZ057 Gaia",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Gaia-Mission",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2019,
+          "count": 1,
+          "totalRelevanceSec": 300,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 81,
+              "date": "2019-11-29",
+              "title": "RZ081 Hubble-Weltraumteleskop",
+              "relevanceSec": 300,
+              "occurrences": [
+                {
+                  "topic": "Raumfahrtmissionen",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "softwareentwicklung": {
+      "id": "softwareentwicklung",
+      "name": "Softwareentwicklung",
+      "description": "3 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 3,
+      "totalRelevanceSec": 900,
+      "totalOccurrences": 3,
+      "yearData": [
+        {
+          "year": 2011,
+          "count": 1,
+          "totalRelevanceSec": 900,
+          "totalOccurrences": 3,
+          "episodes": [
+            {
+              "number": 15,
+              "date": "2011-05-20",
+              "title": "RZ015 Softwaretechnik",
+              "relevanceSec": 900,
+              "occurrences": [
+                {
+                  "topic": "Softwareentwicklung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Forschung in der Softwaretechnik",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Techniken in der Softwareentwicklung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "erneuerbare-energien": {
+      "id": "erneuerbare-energien",
+      "name": "Erneuerbare Energien",
+      "description": "3 Topics in 1 Episoden",
+      "totalEpisodes": 1,
+      "totalTopics": 3,
+      "totalRelevanceSec": 900,
+      "totalOccurrences": 3,
+      "yearData": [
+        {
+          "year": 2012,
+          "count": 1,
+          "totalRelevanceSec": 900,
+          "totalOccurrences": 3,
+          "episodes": [
+            {
+              "number": 33,
+              "date": "2012-03-09",
+              "title": "RZ033 Energie der Zukunft",
+              "relevanceSec": 900,
+              "occurrences": [
+                {
+                  "topic": "Photovoltaik und Solarthermie",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Umbau der Energieversorgung",
+                  "positionSec": 0,
+                  "durationSec": 300
+                },
+                {
+                  "topic": "Kombination erneuerbarer Energiequellen",
                   "positionSec": 0,
                   "durationSec": 300
                 }
@@ -2454,156 +2734,6 @@
               "occurrences": [
                 {
                   "topic": "Rosetta-Mission",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "erneuerbare-energien": {
-      "id": "erneuerbare-energien",
-      "name": "Erneuerbare Energien",
-      "description": "3 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 3,
-      "totalRelevanceSec": 900,
-      "totalOccurrences": 3,
-      "yearData": [
-        {
-          "year": 2012,
-          "count": 1,
-          "totalRelevanceSec": 900,
-          "totalOccurrences": 3,
-          "episodes": [
-            {
-              "number": 33,
-              "date": "2012-03-09",
-              "title": "RZ033 Energie der Zukunft",
-              "relevanceSec": 900,
-              "occurrences": [
-                {
-                  "topic": "Photovoltaik und Solarthermie",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Umbau der Energieversorgung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Kombination erneuerbarer Energiequellen",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "softwareentwicklung": {
-      "id": "softwareentwicklung",
-      "name": "Softwareentwicklung",
-      "description": "3 Topics in 1 Episoden",
-      "totalEpisodes": 1,
-      "totalTopics": 3,
-      "totalRelevanceSec": 900,
-      "totalOccurrences": 3,
-      "yearData": [
-        {
-          "year": 2011,
-          "count": 1,
-          "totalRelevanceSec": 900,
-          "totalOccurrences": 3,
-          "episodes": [
-            {
-              "number": 15,
-              "date": "2011-05-20",
-              "title": "RZ015 Softwaretechnik",
-              "relevanceSec": 900,
-              "occurrences": [
-                {
-                  "topic": "Softwareentwicklung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Forschung in der Softwaretechnik",
-                  "positionSec": 0,
-                  "durationSec": 300
-                },
-                {
-                  "topic": "Techniken in der Softwareentwicklung",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "raumfahrtmissionen": {
-      "id": "raumfahrtmissionen",
-      "name": "Raumfahrtmissionen",
-      "description": "3 Topics in 3 Episoden",
-      "totalEpisodes": 3,
-      "totalTopics": 3,
-      "totalRelevanceSec": 900,
-      "totalOccurrences": 3,
-      "yearData": [
-        {
-          "year": 2012,
-          "count": 2,
-          "totalRelevanceSec": 600,
-          "totalOccurrences": 2,
-          "episodes": [
-            {
-              "number": 44,
-              "date": "2012-08-17",
-              "title": "RZ044 Der Merkur",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Raummissionen",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            },
-            {
-              "number": 49,
-              "date": "2012-11-09",
-              "title": "RZ049 Der Mars",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Missionen zum Mars",
-                  "positionSec": 0,
-                  "durationSec": 300
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "year": 2019,
-          "count": 1,
-          "totalRelevanceSec": 300,
-          "totalOccurrences": 1,
-          "episodes": [
-            {
-              "number": 81,
-              "date": "2019-11-29",
-              "title": "RZ081 Hubble-Weltraumteleskop",
-              "relevanceSec": 300,
-              "occurrences": [
-                {
-                  "topic": "Raumfahrtmissionen",
                   "positionSec": 0,
                   "durationSec": 300
                 }

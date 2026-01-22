@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-01-05T11:21:36.913Z",
+  "generatedAt": "2026-01-22T20:47:12.756Z",
   "description": "Subject River Daten für raumzeit Podcast - Coarse Subjects aggregiert nach Jahren",
   "statistics": {
     "totalSubjects": 14,
     "yearRange": {
       "start": 2010,
-      "end": 2024
+      "end": 2026
     },
     "years": [
       2010,
@@ -21,13 +21,14 @@
       2021,
       2022,
       2023,
-      2024
+      2024,
+      2026
     ],
     "subjectsByEpisodeCount": [
       {
-        "id": "wissenschaft",
-        "name": "Wissenschaft",
-        "count": 49
+        "id": "sonstige",
+        "name": "Sonstige",
+        "count": 48
       },
       {
         "id": "raumfahrt",
@@ -35,24 +36,24 @@
         "count": 45
       },
       {
-        "id": "astronomie",
-        "name": "Astronomie",
-        "count": 43
-      },
-      {
         "id": "technologie",
         "name": "Technologie",
         "count": 40
       },
       {
-        "id": "sonstige",
-        "name": "Sonstige",
-        "count": 35
+        "id": "astronomie",
+        "name": "Astronomie",
+        "count": 39
+      },
+      {
+        "id": "wissenschaft",
+        "name": "Wissenschaft",
+        "count": 38
       },
       {
         "id": "space",
         "name": "Space",
-        "count": 17
+        "count": 18
       },
       {
         "id": "science",
@@ -67,7 +68,7 @@
       {
         "id": "technology",
         "name": "Technology",
-        "count": 10
+        "count": 11
       },
       {
         "id": "forschung",
@@ -81,6 +82,8 @@
       "id": "raumfahrt",
       "name": "Raumfahrt",
       "totalEpisodes": 45,
+      "totalRelevanceSec": 64653,
+      "totalOccurrences": 35,
       "yearData": [
         {
           "year": 2010,
@@ -266,37 +269,116 @@
         {
           "year": 2018,
           "count": 1,
+          "totalRelevanceSec": 6807,
+          "totalOccurrences": 6,
           "episodes": [
             {
               "number": 72,
               "date": "2018-04-26",
-              "title": "RZ072 Die Zukunft der Raumfahrt"
+              "title": "RZ072 Die Zukunft der Raumfahrt",
+              "relevanceSec": 6807,
+              "occurrences": [
+                {
+                  "topic": "Zukunft der bemannten Raumfahrt",
+                  "positionSec": 20,
+                  "durationSec": 881
+                },
+                {
+                  "topic": "Forschung auf der Internationalen Raumstation",
+                  "positionSec": 200,
+                  "durationSec": 1467
+                },
+                {
+                  "topic": "Rolle des Mondes in der Raumfahrt",
+                  "positionSec": 20,
+                  "durationSec": 2018
+                },
+                {
+                  "topic": "Technologien für Marsmissionen",
+                  "positionSec": 3169,
+                  "durationSec": 843
+                },
+                {
+                  "topic": "Entsorgung von Weltraumschrott",
+                  "positionSec": 3090,
+                  "durationSec": 717
+                },
+                {
+                  "topic": "Militärische Aspekte der Raumfahrt",
+                  "positionSec": 20,
+                  "durationSec": 881
+                }
+              ]
             }
           ]
         },
         {
           "year": 2019,
           "count": 5,
+          "totalRelevanceSec": 11489,
+          "totalOccurrences": 6,
           "episodes": [
             {
               "number": 76,
               "date": "2019-07-08",
-              "title": "RZ076 Der Gaia-Sternkatalog"
+              "title": "RZ076 Der Gaia-Sternkatalog",
+              "relevanceSec": 1754,
+              "occurrences": [
+                {
+                  "topic": "Raumsonde Gaia",
+                  "positionSec": 17,
+                  "durationSec": 1754
+                }
+              ]
             },
             {
               "number": 77,
               "date": "2019-08-05",
-              "title": "RZ077 Pflanzen im Weltraum"
+              "title": "RZ077 Pflanzen im Weltraum",
+              "relevanceSec": 869,
+              "occurrences": [
+                {
+                  "topic": "Klimasteuerung in der Raumfahrt",
+                  "positionSec": 15,
+                  "durationSec": 869
+                }
+              ]
             },
             {
               "number": 78,
               "date": "2019-09-03",
-              "title": "RZ078 Pluto und New Horizons"
+              "title": "RZ078 Pluto und New Horizons",
+              "relevanceSec": 1628,
+              "occurrences": [
+                {
+                  "topic": "Mission New Horizons",
+                  "positionSec": 145,
+                  "durationSec": 1628
+                }
+              ]
             },
             {
               "number": 80,
               "date": "2019-11-07",
-              "title": "RZ080 Europäische Raumfahrtpolitik"
+              "title": "RZ080 Europäische Raumfahrtpolitik",
+              "relevanceSec": 7238,
+              "occurrences": [
+                {
+                  "topic": "Zukunft der ISS",
+                  "positionSec": 14,
+                  "durationSec": 2469
+                },
+                {
+                  "topic": "Herausforderungen der europäischen Raumfahrt",
+                  "positionSec": 14,
+                  "durationSec": 867
+                },
+                {
+                  "topic": "Entwicklung von Launchern",
+                  "positionSec": 85,
+                  "durationSec": 3902
+                }
+              ]
             },
             {
               "number": 81,
@@ -308,21 +390,97 @@
         {
           "year": 2020,
           "count": 4,
+          "totalRelevanceSec": 24530,
+          "totalOccurrences": 13,
           "episodes": [
             {
               "number": 83,
               "date": "2020-01-17",
-              "title": "RZ083 SpaceX"
+              "title": "RZ083 SpaceX",
+              "relevanceSec": 16596,
+              "occurrences": [
+                {
+                  "topic": "Geschichte von SpaceX",
+                  "positionSec": 15,
+                  "durationSec": 2592
+                },
+                {
+                  "topic": "Methodik der Raumfahrt",
+                  "positionSec": 15,
+                  "durationSec": 1758
+                },
+                {
+                  "topic": "Philosophie von SpaceX",
+                  "positionSec": 15,
+                  "durationSec": 2428
+                },
+                {
+                  "topic": "Falcon 9 Rakete",
+                  "positionSec": 87,
+                  "durationSec": 1193
+                },
+                {
+                  "topic": "Kostenreduktion in der Raumfahrt",
+                  "positionSec": 15,
+                  "durationSec": 1758
+                },
+                {
+                  "topic": "Landung der ersten Stufe der Rakete",
+                  "positionSec": 774,
+                  "durationSec": 1833
+                },
+                {
+                  "topic": "Falcon Heavy",
+                  "positionSec": 2637,
+                  "durationSec": 1515
+                },
+                {
+                  "topic": "Starship-Projekt",
+                  "positionSec": 87,
+                  "durationSec": 2399
+                },
+                {
+                  "topic": "Transportweg zum Mars",
+                  "positionSec": 378,
+                  "durationSec": 1120
+                }
+              ]
             },
             {
               "number": 86,
               "date": "2020-04-08",
-              "title": "RZ086 Meteoriten"
+              "title": "RZ086 Meteoriten",
+              "relevanceSec": 1434,
+              "occurrences": [
+                {
+                  "topic": "Meteoriten und Raumfahrt",
+                  "positionSec": 14,
+                  "durationSec": 1434
+                }
+              ]
             },
             {
               "number": 89,
               "date": "2020-09-22",
-              "title": "RZ089 Kerbal Space Program"
+              "title": "RZ089 Kerbal Space Program",
+              "relevanceSec": 6500,
+              "occurrences": [
+                {
+                  "topic": "Raketenprogramme im Spiel",
+                  "positionSec": 16,
+                  "durationSec": 2365
+                },
+                {
+                  "topic": "Satellitenstart und -orbit",
+                  "positionSec": 421,
+                  "durationSec": 1631
+                },
+                {
+                  "topic": "Landemissionen auf anderen Planeten",
+                  "positionSec": 16,
+                  "durationSec": 2504
+                }
+              ]
             },
             {
               "number": 90,
@@ -334,58 +492,140 @@
         {
           "year": 2021,
           "count": 2,
+          "totalRelevanceSec": 8787,
+          "totalOccurrences": 3,
           "episodes": [
             {
               "number": 96,
               "date": "2021-11-07",
-              "title": "RZ096 Erdähnliche Exoplaneten"
+              "title": "RZ096 Erdähnliche Exoplaneten",
+              "relevanceSec": 1716,
+              "occurrences": [
+                {
+                  "topic": "Deep Space Missionen",
+                  "positionSec": 378,
+                  "durationSec": 1716
+                }
+              ]
             },
             {
               "number": 98,
               "date": "2021-12-12",
-              "title": "RZ098 Geschichte der Europäischen Raumfahrt"
+              "title": "RZ098 Geschichte der Europäischen Raumfahrt",
+              "relevanceSec": 7071,
+              "occurrences": [
+                {
+                  "topic": "Bedeutung der Europäischen Raumfahrt",
+                  "positionSec": 65,
+                  "durationSec": 4666
+                },
+                {
+                  "topic": "ESA und europäische Raumfahrtindustrie",
+                  "positionSec": 65,
+                  "durationSec": 2405
+                }
+              ]
             }
           ]
         },
         {
           "year": 2022,
           "count": 1,
+          "totalRelevanceSec": 878,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 99,
               "date": "2022-01-11",
-              "title": "RZ099 CHEOPS"
+              "title": "RZ099 CHEOPS",
+              "relevanceSec": 878,
+              "occurrences": [
+                {
+                  "topic": "CHEOPS-Mission",
+                  "positionSec": 15,
+                  "durationSec": 878
+                }
+              ]
             }
           ]
         },
         {
           "year": 2023,
           "count": 4,
+          "totalRelevanceSec": 12162,
+          "totalOccurrences": 6,
           "episodes": [
             {
               "number": 108,
               "date": "2023-03-27",
-              "title": "RZ108 NASA"
+              "title": "RZ108 NASA",
+              "relevanceSec": 2873,
+              "occurrences": [
+                {
+                  "topic": "Rolle der NASA in der Raumfahrt",
+                  "positionSec": 15,
+                  "durationSec": 2873
+                }
+              ]
             },
             {
               "number": 109,
               "date": "2023-05-03",
-              "title": "RZ109 Quantentechnologie für die Raumfahrt"
+              "title": "RZ109 Quantentechnologie für die Raumfahrt",
+              "relevanceSec": 2708,
+              "occurrences": [
+                {
+                  "topic": "Entwicklung neuer Technologien für die Raumfahrt",
+                  "positionSec": 14,
+                  "durationSec": 725
+                },
+                {
+                  "topic": "Genauere Mess- und Steuerinstrumente",
+                  "positionSec": 771,
+                  "durationSec": 1983
+                }
+              ]
             },
             {
               "number": 110,
               "date": "2023-06-14",
-              "title": "RZ110 Grenzen des menschlichen Körpers"
+              "title": "RZ110 Grenzen des menschlichen Körpers",
+              "relevanceSec": 5062,
+              "occurrences": [
+                {
+                  "topic": "Belastungen im Weltraum",
+                  "positionSec": 15,
+                  "durationSec": 1189
+                },
+                {
+                  "topic": "Mondmissionen und ihre Herausforderungen",
+                  "positionSec": 650,
+                  "durationSec": 3873
+                }
+              ]
             },
             {
               "number": 118,
               "date": "2023-11-20",
-              "title": "RZ118 Raumfahrt-Industrie"
+              "title": "RZ118 Raumfahrt-Industrie",
+              "relevanceSec": 1519,
+              "occurrences": [
+                {
+                  "topic": "Planung des Missionsendes",
+                  "positionSec": 108,
+                  "durationSec": 1519
+                }
+              ]
             }
           ]
         },
         {
           "year": 2024,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2026,
           "count": 0,
           "episodes": []
         }
@@ -395,6 +635,8 @@
       "id": "physik",
       "name": "Physik",
       "totalEpisodes": 12,
+      "totalRelevanceSec": 31177,
+      "totalOccurrences": 17,
       "yearData": [
         {
           "year": 2010,
@@ -463,11 +705,21 @@
         {
           "year": 2019,
           "count": 1,
+          "totalRelevanceSec": 1436,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 77,
               "date": "2019-08-05",
-              "title": "RZ077 Pflanzen im Weltraum"
+              "title": "RZ077 Pflanzen im Weltraum",
+              "relevanceSec": 1436,
+              "occurrences": [
+                {
+                  "topic": "Abhängigkeit von Atmosphäre, Licht und Gravitation",
+                  "positionSec": 97,
+                  "durationSec": 1436
+                }
+              ]
             }
           ]
         },
@@ -484,52 +736,162 @@
         {
           "year": 2022,
           "count": 2,
+          "totalRelevanceSec": 10601,
+          "totalOccurrences": 5,
           "episodes": [
             {
               "number": 100,
               "date": "2022-05-12",
-              "title": "RZ100 Raumzeit und Gravitation"
+              "title": "RZ100 Raumzeit und Gravitation",
+              "relevanceSec": 9070,
+              "occurrences": [
+                {
+                  "topic": "Wesen der Raumzeit",
+                  "positionSec": 16,
+                  "durationSec": 1071
+                },
+                {
+                  "topic": "Gravitation",
+                  "positionSec": 771,
+                  "durationSec": 938
+                },
+                {
+                  "topic": "Formeln von Newton und Einstein",
+                  "positionSec": 268,
+                  "durationSec": 1441
+                },
+                {
+                  "topic": "Theoretische Physik und Kosmologie",
+                  "positionSec": 16,
+                  "durationSec": 5620
+                }
+              ]
             },
             {
               "number": 104,
               "date": "2022-09-12",
-              "title": "RZ104 Cherenkov Telescope Array"
+              "title": "RZ104 Cherenkov Telescope Array",
+              "relevanceSec": 1531,
+              "occurrences": [
+                {
+                  "topic": "Kosmische Teilchenstrahlung",
+                  "positionSec": 14,
+                  "durationSec": 1531
+                }
+              ]
             }
           ]
         },
         {
           "year": 2023,
           "count": 5,
+          "totalRelevanceSec": 19140,
+          "totalOccurrences": 11,
           "episodes": [
             {
               "number": 112,
               "date": "2023-07-19",
-              "title": "RZ112 CERN: Die Beschleuniger-Kette"
+              "title": "RZ112 CERN: Die Beschleuniger-Kette",
+              "relevanceSec": 1681,
+              "occurrences": [
+                {
+                  "topic": "Teilchenbeschleunigung",
+                  "positionSec": 5300,
+                  "durationSec": 577
+                },
+                {
+                  "topic": "Energieaufbau in Kollisionen",
+                  "positionSec": 83,
+                  "durationSec": 1104
+                }
+              ]
             },
             {
               "number": 113,
               "date": "2023-08-02",
-              "title": "RZ113 CERN: Der ALICE-Detektor"
+              "title": "RZ113 CERN: Der ALICE-Detektor",
+              "relevanceSec": 1032,
+              "occurrences": [
+                {
+                  "topic": "Quark-Gluon-Plasma",
+                  "positionSec": 762,
+                  "durationSec": 1032
+                }
+              ]
             },
             {
               "number": 115,
               "date": "2023-09-24",
-              "title": "RZ115 CERN: ATLAS"
+              "title": "RZ115 CERN: ATLAS",
+              "relevanceSec": 6568,
+              "occurrences": [
+                {
+                  "topic": "Funktion des ATLAS-Detektors",
+                  "positionSec": 14,
+                  "durationSec": 2392
+                },
+                {
+                  "topic": "Nachweis des Higgs-Bosons",
+                  "positionSec": 14,
+                  "durationSec": 2012
+                },
+                {
+                  "topic": "Teilchenkollisionen am LHC",
+                  "positionSec": 121,
+                  "durationSec": 2164
+                }
+              ]
             },
             {
               "number": 116,
               "date": "2023-10-13",
-              "title": "RZ116 CERN: LHCb"
+              "title": "RZ116 CERN: LHCb",
+              "relevanceSec": 4826,
+              "occurrences": [
+                {
+                  "topic": "Materie und Anti-Materie",
+                  "positionSec": 84,
+                  "durationSec": 1771
+                },
+                {
+                  "topic": "Standardmodell der Physik",
+                  "positionSec": 14,
+                  "durationSec": 1841
+                },
+                {
+                  "topic": "Grenzen der Physik",
+                  "positionSec": 14,
+                  "durationSec": 1214
+                }
+              ]
             },
             {
               "number": 117,
               "date": "2023-10-30",
-              "title": "RZ117 Euclid"
+              "title": "RZ117 Euclid",
+              "relevanceSec": 5033,
+              "occurrences": [
+                {
+                  "topic": "dunkle Energie",
+                  "positionSec": 289,
+                  "durationSec": 1725
+                },
+                {
+                  "topic": "dunkle Materie",
+                  "positionSec": 66,
+                  "durationSec": 3308
+                }
+              ]
             }
           ]
         },
         {
           "year": 2024,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2026,
           "count": 0,
           "episodes": []
         }
@@ -538,7 +900,9 @@
     "sonstige": {
       "id": "sonstige",
       "name": "Sonstige",
-      "totalEpisodes": 35,
+      "totalEpisodes": 48,
+      "totalRelevanceSec": 55524,
+      "totalOccurrences": 36,
       "yearData": [
         {
           "year": 2010,
@@ -553,12 +917,22 @@
         },
         {
           "year": 2011,
-          "count": 7,
+          "count": 10,
           "episodes": [
             {
               "number": 6,
               "date": "2011-01-07",
               "title": "RZ006 Erdbeobachtung"
+            },
+            {
+              "number": 8,
+              "date": "2011-02-04",
+              "title": "RZ008 Satellitennavigation"
+            },
+            {
+              "number": 9,
+              "date": "2011-02-21",
+              "title": "RZ009 Asteroiden und Kometen"
             },
             {
               "number": 13,
@@ -581,6 +955,11 @@
               "title": "RZ025 Zentrum für Kriseninformation"
             },
             {
+              "number": 26,
+              "date": "2011-10-28",
+              "title": "RZ026 Forschen in Schwerelosigkeit"
+            },
+            {
               "number": 27,
               "date": "2011-11-04",
               "title": "RZ027 Mars500"
@@ -594,12 +973,17 @@
         },
         {
           "year": 2012,
-          "count": 5,
+          "count": 12,
           "episodes": [
             {
               "number": 31,
               "date": "2012-02-10",
               "title": "RZ031 DLR_School_Labs"
+            },
+            {
+              "number": 33,
+              "date": "2012-03-09",
+              "title": "RZ033 Energie der Zukunft"
             },
             {
               "number": 34,
@@ -612,14 +996,44 @@
               "title": "RZ035 Technology Transfer Program"
             },
             {
+              "number": 37,
+              "date": "2012-05-11",
+              "title": "RZ037 TanDEM-X"
+            },
+            {
               "number": 39,
               "date": "2012-06-08",
               "title": "RZ039 Der Mond"
             },
             {
+              "number": 40,
+              "date": "2012-06-22",
+              "title": "RZ040 GOCE"
+            },
+            {
+              "number": 41,
+              "date": "2012-07-09",
+              "title": "RZ041 Envisat"
+            },
+            {
+              "number": 42,
+              "date": "2012-07-20",
+              "title": "RZ042 Copernicus/GMES"
+            },
+            {
               "number": 45,
               "date": "2012-08-31",
               "title": "RZ045 Rexus/Bexus"
+            },
+            {
+              "number": 47,
+              "date": "2012-10-05",
+              "title": "RZ047 Die Venus"
+            },
+            {
+              "number": 49,
+              "date": "2012-11-09",
+              "title": "RZ049 Der Mars"
             }
           ]
         },
@@ -669,11 +1083,31 @@
         {
           "year": 2018,
           "count": 3,
+          "totalRelevanceSec": 5101,
+          "totalOccurrences": 4,
           "episodes": [
             {
               "number": 69,
               "date": "2018-01-20",
-              "title": "RZ069 Copernicus Open Data Strategy"
+              "title": "RZ069 Copernicus Open Data Strategy",
+              "relevanceSec": 3375,
+              "occurrences": [
+                {
+                  "topic": "Zugänglichkeit von Erdbeobachtungsdaten",
+                  "positionSec": 177,
+                  "durationSec": 755
+                },
+                {
+                  "topic": "Datenanalyse und -auswertung",
+                  "positionSec": 271,
+                  "durationSec": 248
+                },
+                {
+                  "topic": "Copernicus Erdbeobachtungsprogramm",
+                  "positionSec": 299,
+                  "durationSec": 2372
+                }
+              ]
             },
             {
               "number": 70,
@@ -683,55 +1117,208 @@
             {
               "number": 71,
               "date": "2018-03-14",
-              "title": "RZ071 Asteroidenabwehr"
+              "title": "RZ071 Asteroidenabwehr",
+              "relevanceSec": 1726,
+              "occurrences": [
+                {
+                  "topic": "Einschläge und ihre Auswirkungen",
+                  "positionSec": 321,
+                  "durationSec": 1726
+                }
+              ]
             }
           ]
         },
         {
           "year": 2019,
-          "count": 2,
+          "count": 4,
+          "totalRelevanceSec": 20401,
+          "totalOccurrences": 13,
           "episodes": [
+            {
+              "number": 75,
+              "date": "2019-06-10",
+              "title": "RZ075 Geologische Zeit",
+              "relevanceSec": 8329,
+              "occurrences": [
+                {
+                  "topic": "Bestimmung des Alters der Erde",
+                  "positionSec": 17,
+                  "durationSec": 2177
+                },
+                {
+                  "topic": "Einteilung der Lebenszeit der Erde",
+                  "positionSec": 17,
+                  "durationSec": 1411
+                },
+                {
+                  "topic": "Korrelation zwischen Erde und Kosmos",
+                  "positionSec": 17,
+                  "durationSec": 1483
+                },
+                {
+                  "topic": "Offene Fragen in der Geologie",
+                  "positionSec": 17,
+                  "durationSec": 1629
+                },
+                {
+                  "topic": "Informationslage zur Geologie",
+                  "positionSec": 17,
+                  "durationSec": 1629
+                }
+              ]
+            },
             {
               "number": 77,
               "date": "2019-08-05",
-              "title": "RZ077 Pflanzen im Weltraum"
+              "title": "RZ077 Pflanzen im Weltraum",
+              "relevanceSec": 3306,
+              "occurrences": [
+                {
+                  "topic": "Nutzung von Pflanzen zur Luftreinigun",
+                  "positionSec": 15,
+                  "durationSec": 1021
+                },
+                {
+                  "topic": "Pflanzenzucht in der Raumfahrt",
+                  "positionSec": 15,
+                  "durationSec": 869
+                },
+                {
+                  "topic": "Biokreisläufe in der Antarktis",
+                  "positionSec": 1132,
+                  "durationSec": 1416
+                }
+              ]
+            },
+            {
+              "number": 79,
+              "date": "2019-10-01",
+              "title": "RZ079 Kosmische Chemie",
+              "relevanceSec": 5045,
+              "occurrences": [
+                {
+                  "topic": "Kosmische Chemie",
+                  "positionSec": 14,
+                  "durationSec": 1791
+                },
+                {
+                  "topic": "Chemische Prozesse im Kosmos",
+                  "positionSec": 14,
+                  "durationSec": 1463
+                },
+                {
+                  "topic": "Wasser und Bausteine des Lebens",
+                  "positionSec": 14,
+                  "durationSec": 1791
+                }
+              ]
             },
             {
               "number": 80,
               "date": "2019-11-07",
-              "title": "RZ080 Europäische Raumfahrtpolitik"
+              "title": "RZ080 Europäische Raumfahrtpolitik",
+              "relevanceSec": 3721,
+              "occurrences": [
+                {
+                  "topic": "Rolle privater Unternehmen",
+                  "positionSec": 178,
+                  "durationSec": 879
+                },
+                {
+                  "topic": "Kooperationen mit anderen Staaten",
+                  "positionSec": 14,
+                  "durationSec": 2842
+                }
+              ]
             }
           ]
         },
         {
           "year": 2020,
           "count": 4,
+          "totalRelevanceSec": 11337,
+          "totalOccurrences": 8,
           "episodes": [
             {
               "number": 86,
               "date": "2020-04-08",
-              "title": "RZ086 Meteoriten"
+              "title": "RZ086 Meteoriten",
+              "relevanceSec": 1282,
+              "occurrences": [
+                {
+                  "topic": "Sammlungen von Meteoriten",
+                  "positionSec": 14,
+                  "durationSec": 1282
+                }
+              ]
             },
             {
               "number": 87,
               "date": "2020-05-06",
-              "title": "RZ087 Amateurastronomie"
+              "title": "RZ087 Amateurastronomie",
+              "relevanceSec": 1360,
+              "occurrences": [
+                {
+                  "topic": "Einfluss auf lokale Politik",
+                  "positionSec": 4905,
+                  "durationSec": 473
+                },
+                {
+                  "topic": "Lichtverschmutzung",
+                  "positionSec": 4795,
+                  "durationSec": 887
+                }
+              ]
             },
             {
               "number": 89,
               "date": "2020-09-22",
-              "title": "RZ089 Kerbal Space Program"
+              "title": "RZ089 Kerbal Space Program",
+              "relevanceSec": 3446,
+              "occurrences": [
+                {
+                  "topic": "Missionsanalyse durch Spiele",
+                  "positionSec": 16,
+                  "durationSec": 2094
+                },
+                {
+                  "topic": "Physikalische Gesetzmäßigkeiten in Spielen",
+                  "positionSec": 1421,
+                  "durationSec": 1352
+                }
+              ]
             },
             {
               "number": 91,
               "date": "2020-10-27",
-              "title": "RZ091 Philosophie und das Universum"
+              "title": "RZ091 Philosophie und das Universum",
+              "relevanceSec": 5249,
+              "occurrences": [
+                {
+                  "topic": "Philosophie und Naturwissenschaften",
+                  "positionSec": 13,
+                  "durationSec": 1601
+                },
+                {
+                  "topic": "Philosophische Erklärungsmuster",
+                  "positionSec": 176,
+                  "durationSec": 2899
+                },
+                {
+                  "topic": "Neuformulierung von Fragestellungen",
+                  "positionSec": 1233,
+                  "durationSec": 749
+                }
+              ]
             }
           ]
         },
         {
           "year": 2021,
           "count": 3,
+          "totalRelevanceSec": 1761,
+          "totalOccurrences": 2,
           "episodes": [
             {
               "number": 93,
@@ -741,7 +1328,20 @@
             {
               "number": 97,
               "date": "2021-11-21",
-              "title": "RZ097 Wettersatelliten"
+              "title": "RZ097 Wettersatelliten",
+              "relevanceSec": 1761,
+              "occurrences": [
+                {
+                  "topic": "EUMETSAT und seine Rolle",
+                  "positionSec": 13,
+                  "durationSec": 768
+                },
+                {
+                  "topic": "EU-Programm Copernicus",
+                  "positionSec": 394,
+                  "durationSec": 993
+                }
+              ]
             },
             {
               "number": 98,
@@ -753,57 +1353,141 @@
         {
           "year": 2022,
           "count": 4,
+          "totalRelevanceSec": 7444,
+          "totalOccurrences": 5,
           "episodes": [
             {
               "number": 100,
               "date": "2022-05-12",
-              "title": "RZ100 Raumzeit und Gravitation"
+              "title": "RZ100 Raumzeit und Gravitation",
+              "relevanceSec": 2412,
+              "occurrences": [
+                {
+                  "topic": "Grenzen der mathematischen Beschreibungen",
+                  "positionSec": 301,
+                  "durationSec": 842
+                },
+                {
+                  "topic": "Verständnis der Welt",
+                  "positionSec": 16,
+                  "durationSec": 1570
+                }
+              ]
             },
             {
               "number": 103,
               "date": "2022-08-23",
-              "title": "RZ103 Gran Telescopio Canarias"
+              "title": "RZ103 Gran Telescopio Canarias",
+              "relevanceSec": 1524,
+              "occurrences": [
+                {
+                  "topic": "Standortvorteile der Kanarischen Inseln für Teleskope",
+                  "positionSec": 14,
+                  "durationSec": 1524
+                }
+              ]
             },
             {
               "number": 104,
               "date": "2022-09-12",
-              "title": "RZ104 Cherenkov Telescope Array"
+              "title": "RZ104 Cherenkov Telescope Array",
+              "relevanceSec": 859,
+              "occurrences": [
+                {
+                  "topic": "Atacama-Wüste",
+                  "positionSec": 1262,
+                  "durationSec": 859
+                }
+              ]
             },
             {
               "number": 106,
               "date": "2022-12-12",
-              "title": "RZ106 Der Gaia-Sternkatalog 2"
+              "title": "RZ106 Der Gaia-Sternkatalog 2",
+              "relevanceSec": 2649,
+              "occurrences": [
+                {
+                  "topic": "Data Release 3",
+                  "positionSec": 2002,
+                  "durationSec": 2649
+                }
+              ]
             }
           ]
         },
         {
           "year": 2023,
-          "count": 1,
+          "count": 2,
+          "totalRelevanceSec": 7889,
+          "totalOccurrences": 3,
           "episodes": [
             {
               "number": 108,
               "date": "2023-03-27",
-              "title": "RZ108 NASA"
+              "title": "RZ108 NASA",
+              "relevanceSec": 5339,
+              "occurrences": [
+                {
+                  "topic": "Privatisierung im Raumfahrtbetrieb",
+                  "positionSec": 1035,
+                  "durationSec": 1087
+                },
+                {
+                  "topic": "Herausforderungen durch geopolitische Veränderungen",
+                  "positionSec": 925,
+                  "durationSec": 4252
+                }
+              ]
+            },
+            {
+              "number": 118,
+              "date": "2023-11-20",
+              "title": "RZ118 Raumfahrt-Industrie",
+              "relevanceSec": 2550,
+              "occurrences": [
+                {
+                  "topic": "Rolle der Raumfahrt-Industrie",
+                  "positionSec": 14,
+                  "durationSec": 2550
+                }
+              ]
             }
           ]
         },
         {
           "year": 2024,
           "count": 1,
+          "totalRelevanceSec": 1591,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 119,
               "date": "2024-01-29",
-              "title": "RZ119 Das Ariane-Raketenprogramm"
+              "title": "RZ119 Das Ariane-Raketenprogramm",
+              "relevanceSec": 1591,
+              "occurrences": [
+                {
+                  "topic": "Zusammenarbeit europäischer Techniknationen",
+                  "positionSec": 15,
+                  "durationSec": 1591
+                }
+              ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
     "space": {
       "id": "space",
       "name": "Space",
-      "totalEpisodes": 17,
+      "totalEpisodes": 18,
+      "totalRelevanceSec": 39380,
+      "totalOccurrences": 23,
       "yearData": [
         {
           "year": 2010,
@@ -903,38 +1587,116 @@
         {
           "year": 2019,
           "count": 1,
+          "totalRelevanceSec": 8602,
+          "totalOccurrences": 3,
           "episodes": [
             {
               "number": 82,
               "date": "2019-12-20",
-              "title": "RZ082 Bodenerkundung auf dem Mars"
+              "title": "RZ082 Bodenerkundung auf dem Mars",
+              "relevanceSec": 8602,
+              "occurrences": [
+                {
+                  "topic": "Erkenntnisse aus Marsmissionen",
+                  "positionSec": 15,
+                  "durationSec": 3981
+                },
+                {
+                  "topic": "Zusammenarbeit von NASA und ESA",
+                  "positionSec": 15,
+                  "durationSec": 1109
+                },
+                {
+                  "topic": "Zukünftige Marsmissionen",
+                  "positionSec": 4039,
+                  "durationSec": 3512
+                }
+              ]
             }
           ]
         },
         {
           "year": 2020,
           "count": 2,
+          "totalRelevanceSec": 16028,
+          "totalOccurrences": 8,
           "episodes": [
             {
               "number": 84,
               "date": "2020-02-07",
-              "title": "RZ084 Besuch beim Asteroiden"
+              "title": "RZ084 Besuch beim Asteroiden",
+              "relevanceSec": 10922,
+              "occurrences": [
+                {
+                  "topic": "Mission Hayabusa 2",
+                  "positionSec": 14,
+                  "durationSec": 1456
+                },
+                {
+                  "topic": "Asteroid Ryugu",
+                  "positionSec": 14,
+                  "durationSec": 1033
+                },
+                {
+                  "topic": "Lander MASCOT",
+                  "positionSec": 14,
+                  "durationSec": 7327
+                },
+                {
+                  "topic": "Rückflug zur Erde",
+                  "positionSec": 342,
+                  "durationSec": 1106
+                }
+              ]
             },
             {
               "number": 92,
               "date": "2020-11-17",
-              "title": "RZ092 Weltraumschrott-Bekämpfung"
+              "title": "RZ092 Weltraumschrott-Bekämpfung",
+              "relevanceSec": 5106,
+              "occurrences": [
+                {
+                  "topic": "Weltraumschrott-Bekämpfung",
+                  "positionSec": 659,
+                  "durationSec": 717
+                },
+                {
+                  "topic": "Raumfahrtprobleme durch erhöhten Verkehr",
+                  "positionSec": 16,
+                  "durationSec": 1357
+                },
+                {
+                  "topic": "Space Safety Programm der ESA",
+                  "positionSec": 16,
+                  "durationSec": 1672
+                },
+                {
+                  "topic": "Missionen zur Entfernung gefährlicher Strukturen",
+                  "positionSec": 16,
+                  "durationSec": 1360
+                }
+              ]
             }
           ]
         },
         {
           "year": 2021,
           "count": 1,
+          "totalRelevanceSec": 842,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 95,
               "date": "2021-10-24",
-              "title": "RZ095 JUICE"
+              "title": "RZ095 JUICE",
+              "relevanceSec": 842,
+              "occurrences": [
+                {
+                  "topic": "ESA-Mission JUICE",
+                  "positionSec": 14,
+                  "durationSec": 842
+                }
+              ]
             }
           ]
         },
@@ -946,27 +1708,111 @@
         {
           "year": 2023,
           "count": 1,
+          "totalRelevanceSec": 6344,
+          "totalOccurrences": 4,
           "episodes": [
             {
               "number": 107,
               "date": "2023-02-14",
-              "title": "RZ107 Artemis und Orion"
+              "title": "RZ107 Artemis und Orion",
+              "relevanceSec": 6344,
+              "occurrences": [
+                {
+                  "topic": "Artemis-Mission",
+                  "positionSec": 170,
+                  "durationSec": 1552
+                },
+                {
+                  "topic": "Zusammenarbeit NASA und ESA",
+                  "positionSec": 15,
+                  "durationSec": 1247
+                },
+                {
+                  "topic": "European Service Modul",
+                  "positionSec": 15,
+                  "durationSec": 1993
+                },
+                {
+                  "topic": "Artemis 1 Mission",
+                  "positionSec": 170,
+                  "durationSec": 1552
+                }
+              ]
             }
           ]
         },
         {
           "year": 2024,
           "count": 2,
+          "totalRelevanceSec": 6836,
+          "totalOccurrences": 6,
           "episodes": [
             {
               "number": 120,
               "date": "2024-02-23",
-              "title": "RZ120 Ulf Merbold"
+              "title": "RZ120 Ulf Merbold",
+              "relevanceSec": 5356,
+              "occurrences": [
+                {
+                  "topic": "Ulf Merbolds Raumfahrtkarriere",
+                  "positionSec": 16,
+                  "durationSec": 194
+                },
+                {
+                  "topic": "Space Shuttle Missionen",
+                  "positionSec": 660,
+                  "durationSec": 1448
+                },
+                {
+                  "topic": "Raumstation Mir",
+                  "positionSec": 16,
+                  "durationSec": 1540
+                },
+                {
+                  "topic": "Europäisches Astronautenzentrum",
+                  "positionSec": 5384,
+                  "durationSec": 1060
+                },
+                {
+                  "topic": "Forschungsmodul Columbus",
+                  "positionSec": 660,
+                  "durationSec": 1114
+                }
+              ]
             },
             {
               "number": 121,
               "date": "2024-03-25",
-              "title": "RZ121 EarthCARE"
+              "title": "RZ121 EarthCARE",
+              "relevanceSec": 1480,
+              "occurrences": [
+                {
+                  "topic": "EarthCARE Mission",
+                  "positionSec": 15,
+                  "durationSec": 1480
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2026,
+          "count": 1,
+          "totalRelevanceSec": 728,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 124,
+              "date": "2026-01-07",
+              "title": "RZ124 Vera C. Rubin Observatory",
+              "relevanceSec": 728,
+              "occurrences": [
+                {
+                  "topic": "NASA-Projekt",
+                  "positionSec": 30,
+                  "durationSec": 728
+                }
+              ]
             }
           ]
         }
@@ -976,6 +1822,8 @@
       "id": "technologie",
       "name": "Technologie",
       "totalEpisodes": 40,
+      "totalRelevanceSec": 44752,
+      "totalOccurrences": 26,
       "yearData": [
         {
           "year": 2010,
@@ -1115,6 +1963,8 @@
         {
           "year": 2017,
           "count": 2,
+          "totalRelevanceSec": 830,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 66,
@@ -1124,82 +1974,187 @@
             {
               "number": 68,
               "date": "2017-11-18",
-              "title": "RZ068 Bodengestützte Astronomie"
+              "title": "RZ068 Bodengestützte Astronomie",
+              "relevanceSec": 830,
+              "occurrences": [
+                {
+                  "topic": "Teleskop-Technologie",
+                  "positionSec": 104,
+                  "durationSec": 830
+                }
+              ]
             }
           ]
         },
         {
           "year": 2018,
           "count": 1,
+          "totalRelevanceSec": 917,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 71,
               "date": "2018-03-14",
-              "title": "RZ071 Asteroidenabwehr"
+              "title": "RZ071 Asteroidenabwehr",
+              "relevanceSec": 917,
+              "occurrences": [
+                {
+                  "topic": "Techniken zur Asteroidenabwehr",
+                  "positionSec": 16,
+                  "durationSec": 917
+                }
+              ]
             }
           ]
         },
         {
           "year": 2019,
           "count": 2,
+          "totalRelevanceSec": 6228,
+          "totalOccurrences": 3,
           "episodes": [
             {
               "number": 74,
               "date": "2019-05-11",
-              "title": "RZ074 Schwarze Löcher"
+              "title": "RZ074 Schwarze Löcher",
+              "relevanceSec": 4566,
+              "occurrences": [
+                {
+                  "topic": "Event Horizon Telescope",
+                  "positionSec": 14,
+                  "durationSec": 1063
+                },
+                {
+                  "topic": "Visualisierung von Schwarzen Löchern",
+                  "positionSec": 729,
+                  "durationSec": 3503
+                }
+              ]
             },
             {
               "number": 79,
               "date": "2019-10-01",
-              "title": "RZ079 Kosmische Chemie"
+              "title": "RZ079 Kosmische Chemie",
+              "relevanceSec": 1662,
+              "occurrences": [
+                {
+                  "topic": "Massenspektrometer im Sonnensystem",
+                  "positionSec": 541,
+                  "durationSec": 1662
+                }
+              ]
             }
           ]
         },
         {
           "year": 2020,
           "count": 2,
+          "totalRelevanceSec": 3746,
+          "totalOccurrences": 3,
           "episodes": [
             {
               "number": 85,
               "date": "2020-03-08",
-              "title": "RZ085 Erforschung der Sonne"
+              "title": "RZ085 Erforschung der Sonne",
+              "relevanceSec": 2806,
+              "occurrences": [
+                {
+                  "topic": "Parker Solar Probe",
+                  "positionSec": 66,
+                  "durationSec": 1679
+                },
+                {
+                  "topic": "Solar Orbiter",
+                  "positionSec": 74,
+                  "durationSec": 1127
+                }
+              ]
             },
             {
               "number": 88,
               "date": "2020-08-04",
-              "title": "RZ088 GEO600"
+              "title": "RZ088 GEO600",
+              "relevanceSec": 940,
+              "occurrences": [
+                {
+                  "topic": "Technologie von GEO600",
+                  "positionSec": 1870,
+                  "durationSec": 940
+                }
+              ]
             }
           ]
         },
         {
           "year": 2021,
           "count": 2,
+          "totalRelevanceSec": 7597,
+          "totalOccurrences": 3,
           "episodes": [
             {
               "number": 93,
               "date": "2021-09-26",
-              "title": "RZ093 Das James-Webb-Weltraumteleskop"
+              "title": "RZ093 Das James-Webb-Weltraumteleskop",
+              "relevanceSec": 1134,
+              "occurrences": [
+                {
+                  "topic": "Komplexität der Instrumente",
+                  "positionSec": 1136,
+                  "durationSec": 1134
+                }
+              ]
             },
             {
               "number": 98,
               "date": "2021-12-12",
-              "title": "RZ098 Geschichte der Europäischen Raumfahrt"
+              "title": "RZ098 Geschichte der Europäischen Raumfahrt",
+              "relevanceSec": 6463,
+              "occurrences": [
+                {
+                  "topic": "Entwicklung der Raketentechnik",
+                  "positionSec": 65,
+                  "durationSec": 2457
+                },
+                {
+                  "topic": "Ariane-Programm",
+                  "positionSec": 725,
+                  "durationSec": 4006
+                }
+              ]
             }
           ]
         },
         {
           "year": 2022,
           "count": 3,
+          "totalRelevanceSec": 2636,
+          "totalOccurrences": 2,
           "episodes": [
             {
               "number": 99,
               "date": "2022-01-11",
-              "title": "RZ099 CHEOPS"
+              "title": "RZ099 CHEOPS",
+              "relevanceSec": 426,
+              "occurrences": [
+                {
+                  "topic": "Weltraumteleskope",
+                  "positionSec": 2922,
+                  "durationSec": 426
+                }
+              ]
             },
             {
               "number": 101,
               "date": "2022-06-04",
-              "title": "RZ101 Exoplaneten-Beobachtung"
+              "title": "RZ101 Exoplaneten-Beobachtung",
+              "relevanceSec": 2210,
+              "occurrences": [
+                {
+                  "topic": "Entwicklung von Weltraumteleskopen",
+                  "positionSec": 755,
+                  "durationSec": 2210
+                }
+              ]
             },
             {
               "number": 104,
@@ -1211,61 +2166,161 @@
         {
           "year": 2023,
           "count": 7,
+          "totalRelevanceSec": 15938,
+          "totalOccurrences": 10,
           "episodes": [
             {
               "number": 109,
               "date": "2023-05-03",
-              "title": "RZ109 Quantentechnologie für die Raumfahrt"
+              "title": "RZ109 Quantentechnologie für die Raumfahrt",
+              "relevanceSec": 3569,
+              "occurrences": [
+                {
+                  "topic": "Quantenmechanische Eigenschaften in Technologien",
+                  "positionSec": 80,
+                  "durationSec": 2195
+                },
+                {
+                  "topic": "Einfluss von Quantenmechanik auf irdische Technologien",
+                  "positionSec": 76,
+                  "durationSec": 1374
+                }
+              ]
             },
             {
               "number": 110,
               "date": "2023-06-14",
-              "title": "RZ110 Grenzen des menschlichen Körpers"
+              "title": "RZ110 Grenzen des menschlichen Körpers",
+              "relevanceSec": 1228,
+              "occurrences": [
+                {
+                  "topic": "Technologische Überwindung von biologischen Grenzen",
+                  "positionSec": 15,
+                  "durationSec": 1228
+                }
+              ]
             },
             {
               "number": 111,
               "date": "2023-07-05",
-              "title": "RZ111 CERN: Geschichte und Erfolge"
+              "title": "RZ111 CERN: Geschichte und Erfolge",
+              "relevanceSec": 1819,
+              "occurrences": [
+                {
+                  "topic": "Erfindung des World Wide Webs",
+                  "positionSec": 117,
+                  "durationSec": 1819
+                }
+              ]
             },
             {
               "number": 112,
               "date": "2023-07-19",
-              "title": "RZ112 CERN: Die Beschleuniger-Kette"
+              "title": "RZ112 CERN: Die Beschleuniger-Kette",
+              "relevanceSec": 860,
+              "occurrences": [
+                {
+                  "topic": "Aufbau und Betrieb von Beschleunigern",
+                  "positionSec": 14,
+                  "durationSec": 860
+                }
+              ]
             },
             {
               "number": 115,
               "date": "2023-09-24",
-              "title": "RZ115 CERN: ATLAS"
+              "title": "RZ115 CERN: ATLAS",
+              "relevanceSec": 2392,
+              "occurrences": [
+                {
+                  "topic": "Aufbau des ATLAS-Detektors",
+                  "positionSec": 14,
+                  "durationSec": 2392
+                }
+              ]
             },
             {
               "number": 116,
               "date": "2023-10-13",
-              "title": "RZ116 CERN: LHCb"
+              "title": "RZ116 CERN: LHCb",
+              "relevanceSec": 2058,
+              "occurrences": [
+                {
+                  "topic": "LHCb-Detektor",
+                  "positionSec": 14,
+                  "durationSec": 2058
+                }
+              ]
             },
             {
               "number": 118,
               "date": "2023-11-20",
-              "title": "RZ118 Raumfahrt-Industrie"
+              "title": "RZ118 Raumfahrt-Industrie",
+              "relevanceSec": 4012,
+              "occurrences": [
+                {
+                  "topic": "Bau und Betrieb von Raumfahrzeugen",
+                  "positionSec": 14,
+                  "durationSec": 1613
+                },
+                {
+                  "topic": "Moderne Satellitentechnologie",
+                  "positionSec": 228,
+                  "durationSec": 678
+                },
+                {
+                  "topic": "Lösungen für Planung und Rettung von Missionen",
+                  "positionSec": 131,
+                  "durationSec": 1721
+                }
+              ]
             }
           ]
         },
         {
           "year": 2024,
           "count": 1,
+          "totalRelevanceSec": 6860,
+          "totalOccurrences": 3,
           "episodes": [
             {
               "number": 119,
               "date": "2024-01-29",
-              "title": "RZ119 Das Ariane-Raketenprogramm"
+              "title": "RZ119 Das Ariane-Raketenprogramm",
+              "relevanceSec": 6860,
+              "occurrences": [
+                {
+                  "topic": "Geschichte der Ariane-Raketen",
+                  "positionSec": 15,
+                  "durationSec": 2914
+                },
+                {
+                  "topic": "Ariane 6",
+                  "positionSec": 15,
+                  "durationSec": 1973
+                },
+                {
+                  "topic": "Ariane 5",
+                  "positionSec": 15,
+                  "durationSec": 1973
+                }
+              ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
     "technology": {
       "id": "technology",
       "name": "Technology",
-      "totalEpisodes": 10,
+      "totalEpisodes": 11,
+      "totalRelevanceSec": 7835,
+      "totalOccurrences": 8,
       "yearData": [
         {
           "year": 2010,
@@ -1338,11 +2393,21 @@
         {
           "year": 2018,
           "count": 1,
+          "totalRelevanceSec": 1333,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 69,
               "date": "2018-01-20",
-              "title": "RZ069 Copernicus Open Data Strategy"
+              "title": "RZ069 Copernicus Open Data Strategy",
+              "relevanceSec": 1333,
+              "occurrences": [
+                {
+                  "topic": "Sentinel-Satelliten",
+                  "positionSec": 299,
+                  "durationSec": 1333
+                }
+              ]
             }
           ]
         },
@@ -1354,27 +2419,70 @@
         {
           "year": 2020,
           "count": 2,
+          "totalRelevanceSec": 4674,
+          "totalOccurrences": 4,
           "episodes": [
             {
               "number": 87,
               "date": "2020-05-06",
-              "title": "RZ087 Amateurastronomie"
+              "title": "RZ087 Amateurastronomie",
+              "relevanceSec": 1645,
+              "occurrences": [
+                {
+                  "topic": "Teleskope und Kameras",
+                  "positionSec": 1164,
+                  "durationSec": 649
+                },
+                {
+                  "topic": "Satelliten und deren Auswirkungen",
+                  "positionSec": 418,
+                  "durationSec": 996
+                }
+              ]
             },
             {
               "number": 92,
               "date": "2020-11-17",
-              "title": "RZ092 Weltraumschrott-Bekämpfung"
+              "title": "RZ092 Weltraumschrott-Bekämpfung",
+              "relevanceSec": 3029,
+              "occurrences": [
+                {
+                  "topic": "Radarsysteme zur Objekterfassung",
+                  "positionSec": 16,
+                  "durationSec": 1669
+                },
+                {
+                  "topic": "Lasertechnologie zur Bahnänderung",
+                  "positionSec": 16,
+                  "durationSec": 1360
+                }
+              ]
             }
           ]
         },
         {
           "year": 2021,
           "count": 1,
+          "totalRelevanceSec": 1828,
+          "totalOccurrences": 2,
           "episodes": [
             {
               "number": 97,
               "date": "2021-11-21",
-              "title": "RZ097 Wettersatelliten"
+              "title": "RZ097 Wettersatelliten",
+              "relevanceSec": 1828,
+              "occurrences": [
+                {
+                  "topic": "Entwicklung der europäischen Wettersatelliten",
+                  "positionSec": 13,
+                  "durationSec": 914
+                },
+                {
+                  "topic": "Meteosat- und MetOp-Satelliten",
+                  "positionSec": 13,
+                  "durationSec": 914
+                }
+              ]
             }
           ]
         },
@@ -1392,13 +2500,34 @@
           "year": 2024,
           "count": 0,
           "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 1,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 124,
+              "date": "2026-01-07",
+              "title": "RZ124 Vera C. Rubin Observatory",
+              "occurrences": [
+                {
+                  "topic": "Teleskoptechnologie",
+                  "positionSec": 1066,
+                  "durationSec": null
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     "astronomie": {
       "id": "astronomie",
       "name": "Astronomie",
-      "totalEpisodes": 43,
+      "totalEpisodes": 39,
+      "totalRelevanceSec": 87080,
+      "totalOccurrences": 47,
       "yearData": [
         {
           "year": 2010,
@@ -1413,7 +2542,7 @@
         },
         {
           "year": 2011,
-          "count": 6,
+          "count": 5,
           "episodes": [
             {
               "number": 9,
@@ -1439,11 +2568,6 @@
               "number": 29,
               "date": "2011-12-02",
               "title": "RZ029 Herschel-Weltraumteleskop"
-            },
-            {
-              "number": 30,
-              "date": "2011-12-16",
-              "title": "RZ030 Cassini-Huygens"
             }
           ]
         },
@@ -1485,13 +2609,8 @@
         },
         {
           "year": 2013,
-          "count": 2,
+          "count": 1,
           "episodes": [
-            {
-              "number": 52,
-              "date": "2013-03-01",
-              "title": "RZ052 Solar Orbiter"
-            },
             {
               "number": 57,
               "date": "2013-12-18",
@@ -1523,6 +2642,8 @@
         {
           "year": 2017,
           "count": 2,
+          "totalRelevanceSec": 7036,
+          "totalOccurrences": 6,
           "episodes": [
             {
               "number": 67,
@@ -1532,171 +2653,484 @@
             {
               "number": 68,
               "date": "2017-11-18",
-              "title": "RZ068 Bodengestützte Astronomie"
+              "title": "RZ068 Bodengestützte Astronomie",
+              "relevanceSec": 7036,
+              "occurrences": [
+                {
+                  "topic": "Bodengestützte Astronomie",
+                  "positionSec": 18,
+                  "durationSec": 858
+                },
+                {
+                  "topic": "Großteleskope",
+                  "positionSec": 2633,
+                  "durationSec": 2859
+                },
+                {
+                  "topic": "Entwicklung der Astronomie",
+                  "positionSec": 18,
+                  "durationSec": 983
+                },
+                {
+                  "topic": "Europäische Südsternwarte",
+                  "positionSec": 281,
+                  "durationSec": 653
+                },
+                {
+                  "topic": "Extremely Large Telescope",
+                  "positionSec": 281,
+                  "durationSec": 825
+                },
+                {
+                  "topic": "Multi-Messenger-Astronomie",
+                  "positionSec": 18,
+                  "durationSec": 858
+                }
+              ]
             }
           ]
         },
         {
           "year": 2018,
           "count": 2,
+          "totalRelevanceSec": 5503,
+          "totalOccurrences": 3,
           "episodes": [
             {
               "number": 71,
               "date": "2018-03-14",
-              "title": "RZ071 Asteroidenabwehr"
+              "title": "RZ071 Asteroidenabwehr",
+              "relevanceSec": 3068,
+              "occurrences": [
+                {
+                  "topic": "Bedrohung durch Asteroiden",
+                  "positionSec": 1023,
+                  "durationSec": 3068
+                }
+              ]
             },
             {
               "number": 73,
               "date": "2018-06-06",
-              "title": "RZ073 IceCube Neutrino Observatory"
+              "title": "RZ073 IceCube Neutrino Observatory",
+              "relevanceSec": 2435,
+              "occurrences": [
+                {
+                  "topic": "Messung kosmischer Neutrinostrahlung",
+                  "positionSec": 2121,
+                  "durationSec": 1203
+                },
+                {
+                  "topic": "Gravitationswellen",
+                  "positionSec": 4091,
+                  "durationSec": 1232
+                }
+              ]
             }
           ]
         },
         {
           "year": 2019,
-          "count": 6,
+          "count": 5,
+          "totalRelevanceSec": 30285,
+          "totalOccurrences": 12,
           "episodes": [
             {
               "number": 74,
               "date": "2019-05-11",
-              "title": "RZ074 Schwarze Löcher"
+              "title": "RZ074 Schwarze Löcher",
+              "relevanceSec": 11911,
+              "occurrences": [
+                {
+                  "topic": "Schwarze Löcher",
+                  "positionSec": 14,
+                  "durationSec": 3762
+                },
+                {
+                  "topic": "Gravitationswellen",
+                  "positionSec": 474,
+                  "durationSec": 640
+                },
+                {
+                  "topic": "Verschmelzung von Schwarzen Löchern",
+                  "positionSec": 729,
+                  "durationSec": 3503
+                },
+                {
+                  "topic": "Neutronensterne",
+                  "positionSec": 14,
+                  "durationSec": 957
+                },
+                {
+                  "topic": "Theorien zur Entstehung von Schwarzen Löchern",
+                  "positionSec": 729,
+                  "durationSec": 3049
+                }
+              ]
             },
             {
               "number": 75,
               "date": "2019-06-10",
-              "title": "RZ075 Geologische Zeit"
+              "title": "RZ075 Geologische Zeit",
+              "relevanceSec": 4652,
+              "occurrences": [
+                {
+                  "topic": "Raumfahrtmissionen und ihre Ergebnisse",
+                  "positionSec": 97,
+                  "durationSec": 2558
+                },
+                {
+                  "topic": "Entstehung des Monds und anderer Planeten",
+                  "positionSec": 1736,
+                  "durationSec": 2094
+                }
+              ]
             },
             {
               "number": 76,
               "date": "2019-07-08",
-              "title": "RZ076 Der Gaia-Sternkatalog"
-            },
-            {
-              "number": 78,
-              "date": "2019-09-03",
-              "title": "RZ078 Pluto und New Horizons"
+              "title": "RZ076 Der Gaia-Sternkatalog",
+              "relevanceSec": 3822,
+              "occurrences": [
+                {
+                  "topic": "Gaia-Sternkatalog",
+                  "positionSec": 17,
+                  "durationSec": 1754
+                },
+                {
+                  "topic": "Daten über Sterne",
+                  "positionSec": 1291,
+                  "durationSec": 2068
+                }
+              ]
             },
             {
               "number": 79,
               "date": "2019-10-01",
-              "title": "RZ079 Kosmische Chemie"
+              "title": "RZ079 Kosmische Chemie",
+              "relevanceSec": 3048,
+              "occurrences": [
+                {
+                  "topic": "Entstehung von Sternensystemen",
+                  "positionSec": 1176,
+                  "durationSec": 3048
+                }
+              ]
             },
             {
               "number": 81,
               "date": "2019-11-29",
-              "title": "RZ081 Hubble-Weltraumteleskop"
+              "title": "RZ081 Hubble-Weltraumteleskop",
+              "relevanceSec": 6852,
+              "occurrences": [
+                {
+                  "topic": "Hubble-Konstante",
+                  "positionSec": 1272,
+                  "durationSec": 881
+                },
+                {
+                  "topic": "James-Webb-Teleskop",
+                  "positionSec": 14,
+                  "durationSec": 5971
+                }
+              ]
             }
           ]
         },
         {
           "year": 2020,
           "count": 2,
+          "totalRelevanceSec": 8705,
+          "totalOccurrences": 3,
           "episodes": [
             {
               "number": 86,
               "date": "2020-04-08",
-              "title": "RZ086 Meteoriten"
+              "title": "RZ086 Meteoriten",
+              "relevanceSec": 943,
+              "occurrences": [
+                {
+                  "topic": "Meteoriten und ihre Bedeutung",
+                  "positionSec": 14,
+                  "durationSec": 943
+                }
+              ]
             },
             {
               "number": 90,
               "date": "2020-10-13",
-              "title": "RZ090 Weltraumstaub"
+              "title": "RZ090 Weltraumstaub",
+              "relevanceSec": 7762,
+              "occurrences": [
+                {
+                  "topic": "Weltraumstaub",
+                  "positionSec": 14,
+                  "durationSec": 6488
+                },
+                {
+                  "topic": "Neue Astronomie",
+                  "positionSec": 14,
+                  "durationSec": 1274
+                }
+              ]
             }
           ]
         },
         {
           "year": 2021,
-          "count": 3,
+          "count": 2,
+          "totalRelevanceSec": 4390,
+          "totalOccurrences": 2,
           "episodes": [
             {
               "number": 93,
               "date": "2021-09-26",
-              "title": "RZ093 Das James-Webb-Weltraumteleskop"
-            },
-            {
-              "number": 95,
-              "date": "2021-10-24",
-              "title": "RZ095 JUICE"
+              "title": "RZ093 Das James-Webb-Weltraumteleskop",
+              "relevanceSec": 1832,
+              "occurrences": [
+                {
+                  "topic": "James-Webb-Weltraumteleskop",
+                  "positionSec": 14,
+                  "durationSec": 1832
+                }
+              ]
             },
             {
               "number": 96,
               "date": "2021-11-07",
-              "title": "RZ096 Erdähnliche Exoplaneten"
+              "title": "RZ096 Erdähnliche Exoplaneten",
+              "relevanceSec": 2558,
+              "occurrences": [
+                {
+                  "topic": "Suche nach Exoplaneten",
+                  "positionSec": 127,
+                  "durationSec": 2558
+                }
+              ]
             }
           ]
         },
         {
           "year": 2022,
           "count": 8,
+          "totalRelevanceSec": 19544,
+          "totalOccurrences": 14,
           "episodes": [
             {
               "number": 99,
               "date": "2022-01-11",
-              "title": "RZ099 CHEOPS"
+              "title": "RZ099 CHEOPS",
+              "relevanceSec": 2836,
+              "occurrences": [
+                {
+                  "topic": "Helligkeitsmessung von Sternen",
+                  "positionSec": 72,
+                  "durationSec": 2836
+                }
+              ]
             },
             {
               "number": 100,
               "date": "2022-05-12",
-              "title": "RZ100 Raumzeit und Gravitation"
+              "title": "RZ100 Raumzeit und Gravitation",
+              "relevanceSec": 1656,
+              "occurrences": [
+                {
+                  "topic": "Entstehung des Universums",
+                  "positionSec": 16,
+                  "durationSec": 1656
+                }
+              ]
             },
             {
               "number": 101,
               "date": "2022-06-04",
-              "title": "RZ101 Exoplaneten-Beobachtung"
+              "title": "RZ101 Exoplaneten-Beobachtung",
+              "relevanceSec": 3114,
+              "occurrences": [
+                {
+                  "topic": "Exoplaneten-Beobachtung",
+                  "positionSec": 14,
+                  "durationSec": 931
+                },
+                {
+                  "topic": "Erforschung des Sonnensystems",
+                  "positionSec": 14,
+                  "durationSec": 2183
+                }
+              ]
             },
             {
               "number": 102,
               "date": "2022-06-26",
-              "title": "RZ102 Galaxien-Beobachtung"
+              "title": "RZ102 Galaxien-Beobachtung",
+              "relevanceSec": 2919,
+              "occurrences": [
+                {
+                  "topic": "Beobachtung von Galaxien",
+                  "positionSec": 16,
+                  "durationSec": 961
+                },
+                {
+                  "topic": "Eigenschaften von Galaxien",
+                  "positionSec": 16,
+                  "durationSec": 964
+                },
+                {
+                  "topic": "Entstehung des Universums",
+                  "positionSec": 77,
+                  "durationSec": 994
+                }
+              ]
             },
             {
               "number": 103,
               "date": "2022-08-23",
-              "title": "RZ103 Gran Telescopio Canarias"
+              "title": "RZ103 Gran Telescopio Canarias",
+              "relevanceSec": 2388,
+              "occurrences": [
+                {
+                  "topic": "Aufbau des Gran Telescopio Canarias",
+                  "positionSec": 14,
+                  "durationSec": 1058
+                },
+                {
+                  "topic": "Betrieb des Gran Telescopio Canarias",
+                  "positionSec": 14,
+                  "durationSec": 1330
+                }
+              ]
             },
             {
               "number": 104,
               "date": "2022-09-12",
-              "title": "RZ104 Cherenkov Telescope Array"
+              "title": "RZ104 Cherenkov Telescope Array",
+              "relevanceSec": 2374,
+              "occurrences": [
+                {
+                  "topic": "Gammastrahlen-Teleskope",
+                  "positionSec": 14,
+                  "durationSec": 891
+                },
+                {
+                  "topic": "Multimessenger-Astronomie",
+                  "positionSec": 681,
+                  "durationSec": 1093
+                },
+                {
+                  "topic": "Cherenkov Telescope Array",
+                  "positionSec": 14,
+                  "durationSec": 390
+                }
+              ]
             },
             {
               "number": 105,
               "date": "2022-10-21",
-              "title": "RZ105 Neutronensterne 2"
+              "title": "RZ105 Neutronensterne 2",
+              "relevanceSec": 1181,
+              "occurrences": [
+                {
+                  "topic": "Neutronensterne",
+                  "positionSec": 1610,
+                  "durationSec": 1181
+                }
+              ]
             },
             {
               "number": 106,
               "date": "2022-12-12",
-              "title": "RZ106 Der Gaia-Sternkatalog 2"
+              "title": "RZ106 Der Gaia-Sternkatalog 2",
+              "relevanceSec": 3076,
+              "occurrences": [
+                {
+                  "topic": "Gaia-Sternkatalog",
+                  "positionSec": 17,
+                  "durationSec": 3076
+                }
+              ]
             }
           ]
         },
         {
           "year": 2023,
           "count": 1,
+          "totalRelevanceSec": 4512,
+          "totalOccurrences": 3,
           "episodes": [
             {
               "number": 117,
               "date": "2023-10-30",
-              "title": "RZ117 Euclid"
+              "title": "RZ117 Euclid",
+              "relevanceSec": 4512,
+              "occurrences": [
+                {
+                  "topic": "Weltraumteleskop Euclid",
+                  "positionSec": 15,
+                  "durationSec": 1999
+                },
+                {
+                  "topic": "geometrische Vermessung des Universums",
+                  "positionSec": 66,
+                  "durationSec": 1425
+                },
+                {
+                  "topic": "Himmelsdurchmusterung",
+                  "positionSec": 289,
+                  "durationSec": 1088
+                }
+              ]
             }
           ]
         },
         {
           "year": 2024,
           "count": 2,
+          "totalRelevanceSec": 7105,
+          "totalOccurrences": 4,
           "episodes": [
             {
               "number": 122,
               "date": "2024-07-04",
-              "title": "RZ122 Cosmic Dawn"
+              "title": "RZ122 Cosmic Dawn",
+              "relevanceSec": 5730,
+              "occurrences": [
+                {
+                  "topic": "Frühzeit nach dem Urknall",
+                  "positionSec": 15,
+                  "durationSec": 1208
+                },
+                {
+                  "topic": "Lichtwerdung des Universums",
+                  "positionSec": 15,
+                  "durationSec": 3027
+                },
+                {
+                  "topic": "Entstehung der ersten Galaxien",
+                  "positionSec": 1552,
+                  "durationSec": 1495
+                }
+              ]
             },
             {
               "number": 123,
               "date": "2024-11-19",
-              "title": "RZ123 Die Erforschung des Jupitersystems"
+              "title": "RZ123 Die Erforschung des Jupitersystems",
+              "relevanceSec": 1375,
+              "occurrences": [
+                {
+                  "topic": "Erforschung des Jupitersystems",
+                  "positionSec": 16,
+                  "durationSec": 1375
+                }
+              ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
@@ -1704,6 +3138,8 @@
       "id": "biologie",
       "name": "Biologie",
       "totalEpisodes": 6,
+      "totalRelevanceSec": 5354,
+      "totalOccurrences": 4,
       "yearData": [
         {
           "year": 2010,
@@ -1766,16 +3202,34 @@
         {
           "year": 2019,
           "count": 2,
+          "totalRelevanceSec": 2136,
+          "totalOccurrences": 2,
           "episodes": [
             {
               "number": 77,
               "date": "2019-08-05",
-              "title": "RZ077 Pflanzen im Weltraum"
+              "title": "RZ077 Pflanzen im Weltraum",
+              "relevanceSec": 887,
+              "occurrences": [
+                {
+                  "topic": "Biologische Systeme zur Ernährung",
+                  "positionSec": 97,
+                  "durationSec": 887
+                }
+              ]
             },
             {
               "number": 79,
               "date": "2019-10-01",
-              "title": "RZ079 Kosmische Chemie"
+              "title": "RZ079 Kosmische Chemie",
+              "relevanceSec": 1249,
+              "occurrences": [
+                {
+                  "topic": "Ursprung des Lebens",
+                  "positionSec": 14,
+                  "durationSec": 1249
+                }
+              ]
             }
           ]
         },
@@ -1797,16 +3251,36 @@
         {
           "year": 2023,
           "count": 1,
+          "totalRelevanceSec": 3218,
+          "totalOccurrences": 2,
           "episodes": [
             {
               "number": 110,
               "date": "2023-06-14",
-              "title": "RZ110 Grenzen des menschlichen Körpers"
+              "title": "RZ110 Grenzen des menschlichen Körpers",
+              "relevanceSec": 3218,
+              "occurrences": [
+                {
+                  "topic": "Grenzen des menschlichen Körpers",
+                  "positionSec": 15,
+                  "durationSec": 2270
+                },
+                {
+                  "topic": "Anpassung an Extrembedingungen",
+                  "positionSec": 1441,
+                  "durationSec": 948
+                }
+              ]
             }
           ]
         },
         {
           "year": 2024,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2026,
           "count": 0,
           "episodes": []
         }
@@ -1815,7 +3289,9 @@
     "wissenschaft": {
       "id": "wissenschaft",
       "name": "Wissenschaft",
-      "totalEpisodes": 49,
+      "totalEpisodes": 38,
+      "totalRelevanceSec": 45259,
+      "totalOccurrences": 27,
       "yearData": [
         {
           "year": 2010,
@@ -1824,17 +3300,12 @@
         },
         {
           "year": 2011,
-          "count": 6,
+          "count": 5,
           "episodes": [
             {
               "number": 6,
               "date": "2011-01-07",
               "title": "RZ006 Erdbeobachtung"
-            },
-            {
-              "number": 9,
-              "date": "2011-02-21",
-              "title": "RZ009 Asteroiden und Kometen"
             },
             {
               "number": 13,
@@ -1860,18 +3331,8 @@
         },
         {
           "year": 2012,
-          "count": 8,
+          "count": 4,
           "episodes": [
-            {
-              "number": 33,
-              "date": "2012-03-09",
-              "title": "RZ033 Energie der Zukunft"
-            },
-            {
-              "number": 37,
-              "date": "2012-05-11",
-              "title": "RZ037 TanDEM-X"
-            },
             {
               "number": 39,
               "date": "2012-06-08",
@@ -1891,16 +3352,6 @@
               "number": 42,
               "date": "2012-07-20",
               "title": "RZ042 Copernicus/GMES"
-            },
-            {
-              "number": 47,
-              "date": "2012-10-05",
-              "title": "RZ047 Die Venus"
-            },
-            {
-              "number": 49,
-              "date": "2012-11-09",
-              "title": "RZ049 Der Mars"
             }
           ]
         },
@@ -1985,17 +3436,22 @@
         },
         {
           "year": 2018,
-          "count": 3,
+          "count": 2,
+          "totalRelevanceSec": 949,
+          "totalOccurrences": 1,
           "episodes": [
-            {
-              "number": 69,
-              "date": "2018-01-20",
-              "title": "RZ069 Copernicus Open Data Strategy"
-            },
             {
               "number": 71,
               "date": "2018-03-14",
-              "title": "RZ071 Asteroidenabwehr"
+              "title": "RZ071 Asteroidenabwehr",
+              "relevanceSec": 949,
+              "occurrences": [
+                {
+                  "topic": "Schutzmechanismen der Erde",
+                  "positionSec": 126,
+                  "durationSec": 949
+                }
+              ]
             },
             {
               "number": 73,
@@ -2006,22 +3462,22 @@
         },
         {
           "year": 2019,
-          "count": 4,
+          "count": 2,
+          "totalRelevanceSec": 910,
+          "totalOccurrences": 1,
           "episodes": [
-            {
-              "number": 75,
-              "date": "2019-06-10",
-              "title": "RZ075 Geologische Zeit"
-            },
             {
               "number": 76,
               "date": "2019-07-08",
-              "title": "RZ076 Der Gaia-Sternkatalog"
-            },
-            {
-              "number": 77,
-              "date": "2019-08-05",
-              "title": "RZ077 Pflanzen im Weltraum"
+              "title": "RZ076 Der Gaia-Sternkatalog",
+              "relevanceSec": 910,
+              "occurrences": [
+                {
+                  "topic": "Astronomische Forschung",
+                  "positionSec": 17,
+                  "durationSec": 910
+                }
+              ]
             },
             {
               "number": 79,
@@ -2032,48 +3488,130 @@
         },
         {
           "year": 2020,
-          "count": 4,
+          "count": 3,
+          "totalRelevanceSec": 8038,
+          "totalOccurrences": 7,
           "episodes": [
             {
               "number": 85,
               "date": "2020-03-08",
-              "title": "RZ085 Erforschung der Sonne"
+              "title": "RZ085 Erforschung der Sonne",
+              "relevanceSec": 4120,
+              "occurrences": [
+                {
+                  "topic": "Erforschung des Sonnenwinds",
+                  "positionSec": 13,
+                  "durationSec": 1732
+                },
+                {
+                  "topic": "Magnetosphäre der Sonne",
+                  "positionSec": 13,
+                  "durationSec": 1261
+                },
+                {
+                  "topic": "Rätsel der Sonnenaktivität",
+                  "positionSec": 74,
+                  "durationSec": 1127
+                }
+              ]
             },
             {
               "number": 86,
               "date": "2020-04-08",
-              "title": "RZ086 Meteoriten"
-            },
-            {
-              "number": 87,
-              "date": "2020-05-06",
-              "title": "RZ087 Amateurastronomie"
+              "title": "RZ086 Meteoriten",
+              "relevanceSec": 1308,
+              "occurrences": [
+                {
+                  "topic": "Herkunft und Analyse von Meteoriten",
+                  "positionSec": 14,
+                  "durationSec": 1308
+                }
+              ]
             },
             {
               "number": 88,
               "date": "2020-08-04",
-              "title": "RZ088 GEO600"
+              "title": "RZ088 GEO600",
+              "relevanceSec": 2610,
+              "occurrences": [
+                {
+                  "topic": "Detektion von Gravitationswellen",
+                  "positionSec": 15,
+                  "durationSec": 804
+                },
+                {
+                  "topic": "Einfluss von GEO600 auf LIGO",
+                  "positionSec": 7742,
+                  "durationSec": 879
+                },
+                {
+                  "topic": "Zukunft der Gravitationswellenastronomie",
+                  "positionSec": 512,
+                  "durationSec": 927
+                }
+              ]
             }
           ]
         },
         {
           "year": 2021,
           "count": 4,
+          "totalRelevanceSec": 14883,
+          "totalOccurrences": 6,
           "episodes": [
             {
               "number": 93,
               "date": "2021-09-26",
-              "title": "RZ093 Das James-Webb-Weltraumteleskop"
+              "title": "RZ093 Das James-Webb-Weltraumteleskop",
+              "relevanceSec": 1934,
+              "occurrences": [
+                {
+                  "topic": "Wissenschaftliche Erkenntnisse",
+                  "positionSec": 336,
+                  "durationSec": 1934
+                }
+              ]
             },
             {
               "number": 94,
               "date": "2021-10-10",
-              "title": "RZ094 Weltraumbeobachtung und die Wissenschaft"
+              "title": "RZ094 Weltraumbeobachtung und die Wissenschaft",
+              "relevanceSec": 11248,
+              "occurrences": [
+                {
+                  "topic": "Mission Gaia",
+                  "positionSec": 13,
+                  "durationSec": 1463
+                },
+                {
+                  "topic": "Zusammenarbeit mit der wissenschaftlichen Community",
+                  "positionSec": 224,
+                  "durationSec": 3281
+                },
+                {
+                  "topic": "Zukunft der bodengestützten Astronomie",
+                  "positionSec": 13,
+                  "durationSec": 2084
+                },
+                {
+                  "topic": "Extremely Large Telescope in Chile",
+                  "positionSec": 13,
+                  "durationSec": 4420
+                }
+              ]
             },
             {
               "number": 96,
               "date": "2021-11-07",
-              "title": "RZ096 Erdähnliche Exoplaneten"
+              "title": "RZ096 Erdähnliche Exoplaneten",
+              "relevanceSec": 1701,
+              "occurrences": [
+                {
+                  "topic": "Forschung zu erdähnlichen Planeten",
+                  "positionSec": 15,
+                  "durationSec": 1701
+                }
+              ]
             },
             {
               "number": 98,
@@ -2085,6 +3623,8 @@
         {
           "year": 2022,
           "count": 3,
+          "totalRelevanceSec": 2094,
+          "totalOccurrences": 2,
           "episodes": [
             {
               "number": 102,
@@ -2094,56 +3634,130 @@
             {
               "number": 105,
               "date": "2022-10-21",
-              "title": "RZ105 Neutronensterne 2"
+              "title": "RZ105 Neutronensterne 2",
+              "relevanceSec": 834,
+              "occurrences": [
+                {
+                  "topic": "Theoretische Physik",
+                  "positionSec": 14,
+                  "durationSec": 834
+                }
+              ]
             },
             {
               "number": 106,
               "date": "2022-12-12",
-              "title": "RZ106 Der Gaia-Sternkatalog 2"
+              "title": "RZ106 Der Gaia-Sternkatalog 2",
+              "relevanceSec": 1260,
+              "occurrences": [
+                {
+                  "topic": "Forschung",
+                  "positionSec": 3162,
+                  "durationSec": 1260
+                }
+              ]
             }
           ]
         },
         {
           "year": 2023,
-          "count": 5,
+          "count": 4,
+          "totalRelevanceSec": 18385,
+          "totalOccurrences": 10,
           "episodes": [
             {
               "number": 108,
               "date": "2023-03-27",
-              "title": "RZ108 NASA"
+              "title": "RZ108 NASA",
+              "relevanceSec": 1281,
+              "occurrences": [
+                {
+                  "topic": "Wissenschaftsdirektion der NASA",
+                  "positionSec": 15,
+                  "durationSec": 1281
+                }
+              ]
             },
             {
               "number": 111,
               "date": "2023-07-05",
-              "title": "RZ111 CERN: Geschichte und Erfolge"
+              "title": "RZ111 CERN: Geschichte und Erfolge",
+              "relevanceSec": 8519,
+              "occurrences": [
+                {
+                  "topic": "Geschichte des CERN",
+                  "positionSec": 117,
+                  "durationSec": 2697
+                },
+                {
+                  "topic": "Forschung und Durchbrüche",
+                  "positionSec": 14,
+                  "durationSec": 2155
+                },
+                {
+                  "topic": "Higgsfeld und Standardmodell",
+                  "positionSec": 582,
+                  "durationSec": 3667
+                }
+              ]
             },
             {
               "number": 112,
               "date": "2023-07-19",
-              "title": "RZ112 CERN: Die Beschleuniger-Kette"
+              "title": "RZ112 CERN: Die Beschleuniger-Kette",
+              "relevanceSec": 1396,
+              "occurrences": [
+                {
+                  "topic": "Forschung am CERN",
+                  "positionSec": 14,
+                  "durationSec": 1396
+                }
+              ]
             },
             {
               "number": 114,
               "date": "2023-08-16",
-              "title": "RZ114 CERN: CMS"
-            },
-            {
-              "number": 118,
-              "date": "2023-11-20",
-              "title": "RZ118 Raumfahrt-Industrie"
+              "title": "RZ114 CERN: CMS",
+              "relevanceSec": 7189,
+              "occurrences": [
+                {
+                  "topic": "Aufbau des CMS-Detektors",
+                  "positionSec": 14,
+                  "durationSec": 1316
+                },
+                {
+                  "topic": "Funktion des CMS-Detektors",
+                  "positionSec": 14,
+                  "durationSec": 1316
+                },
+                {
+                  "topic": "Aufgabe des CMS-Detektors",
+                  "positionSec": 14,
+                  "durationSec": 1674
+                },
+                {
+                  "topic": "Nachweis des Higgs-Bosons",
+                  "positionSec": 14,
+                  "durationSec": 1043
+                },
+                {
+                  "topic": "Untersuchung von Teilchen am LHC",
+                  "positionSec": 14,
+                  "durationSec": 1840
+                }
+              ]
             }
           ]
         },
         {
           "year": 2024,
-          "count": 1,
-          "episodes": [
-            {
-              "number": 121,
-              "date": "2024-03-25",
-              "title": "RZ121 EarthCARE"
-            }
-          ]
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
@@ -2151,6 +3765,8 @@
       "id": "science",
       "name": "Science",
       "totalEpisodes": 17,
+      "totalRelevanceSec": 22819,
+      "totalOccurrences": 13,
       "yearData": [
         {
           "year": 2010,
@@ -2176,6 +3792,8 @@
         {
           "year": 2012,
           "count": 6,
+          "totalRelevanceSec": 11354,
+          "totalOccurrences": 5,
           "episodes": [
             {
               "number": 31,
@@ -2190,7 +3808,35 @@
             {
               "number": 38,
               "date": "2012-06-01",
-              "title": "RZ038 Alpha-Magnet-Spektrometer"
+              "title": "RZ038 Alpha-Magnet-Spektrometer",
+              "relevanceSec": 11354,
+              "occurrences": [
+                {
+                  "topic": "Alpha-Magnet-Spektrometer",
+                  "positionSec": 22,
+                  "durationSec": 3112
+                },
+                {
+                  "topic": "Dunkle Materie",
+                  "positionSec": 366,
+                  "durationSec": 1805
+                },
+                {
+                  "topic": "Dunkle Energie",
+                  "positionSec": 121,
+                  "durationSec": 2108
+                },
+                {
+                  "topic": "kosmische Strahlung",
+                  "positionSec": 366,
+                  "durationSec": 2524
+                },
+                {
+                  "topic": "Urknall",
+                  "positionSec": 366,
+                  "durationSec": 1805
+                }
+              ]
             },
             {
               "number": 45,
@@ -2248,33 +3894,73 @@
         {
           "year": 2019,
           "count": 1,
+          "totalRelevanceSec": 5784,
+          "totalOccurrences": 3,
           "episodes": [
             {
               "number": 82,
               "date": "2019-12-20",
-              "title": "RZ082 Bodenerkundung auf dem Mars"
+              "title": "RZ082 Bodenerkundung auf dem Mars",
+              "relevanceSec": 5784,
+              "occurrences": [
+                {
+                  "topic": "Geologie des Mars",
+                  "positionSec": 82,
+                  "durationSec": 1042
+                },
+                {
+                  "topic": "Geochemie des Mars",
+                  "positionSec": 494,
+                  "durationSec": 2731
+                },
+                {
+                  "topic": "Entwicklung des Sonnensystems",
+                  "positionSec": 15,
+                  "durationSec": 2011
+                }
+              ]
             }
           ]
         },
         {
           "year": 2020,
           "count": 2,
+          "totalRelevanceSec": 2502,
+          "totalOccurrences": 2,
           "episodes": [
             {
               "number": 87,
               "date": "2020-05-06",
-              "title": "RZ087 Amateurastronomie"
+              "title": "RZ087 Amateurastronomie",
+              "relevanceSec": 1571,
+              "occurrences": [
+                {
+                  "topic": "Beobachtungen zur Unterstützung der Wissenschaft",
+                  "positionSec": 13,
+                  "durationSec": 1571
+                }
+              ]
             },
             {
               "number": 91,
               "date": "2020-10-27",
-              "title": "RZ091 Philosophie und das Universum"
+              "title": "RZ091 Philosophie und das Universum",
+              "relevanceSec": 931,
+              "occurrences": [
+                {
+                  "topic": "Astrophysik und Astronomie",
+                  "positionSec": 13,
+                  "durationSec": 931
+                }
+              ]
             }
           ]
         },
         {
           "year": 2021,
           "count": 2,
+          "totalRelevanceSec": 989,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 95,
@@ -2284,7 +3970,15 @@
             {
               "number": 97,
               "date": "2021-11-21",
-              "title": "RZ097 Wettersatelliten"
+              "title": "RZ097 Wettersatelliten",
+              "relevanceSec": 989,
+              "occurrences": [
+                {
+                  "topic": "Zukünftige Herausforderungen der Wetterbeobachtung",
+                  "positionSec": 59,
+                  "durationSec": 989
+                }
+              ]
             }
           ]
         },
@@ -2296,24 +3990,49 @@
         {
           "year": 2023,
           "count": 1,
+          "totalRelevanceSec": 788,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 113,
               "date": "2023-08-02",
-              "title": "RZ113 CERN: Der ALICE-Detektor"
+              "title": "RZ113 CERN: Der ALICE-Detektor",
+              "relevanceSec": 788,
+              "occurrences": [
+                {
+                  "topic": "ALICE-Experiment",
+                  "positionSec": 14,
+                  "durationSec": 788
+                }
+              ]
             }
           ]
         },
         {
           "year": 2024,
           "count": 1,
+          "totalRelevanceSec": 1402,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 121,
               "date": "2024-03-25",
-              "title": "RZ121 EarthCARE"
+              "title": "RZ121 EarthCARE",
+              "relevanceSec": 1402,
+              "occurrences": [
+                {
+                  "topic": "Globale Beobachtungen",
+                  "positionSec": 535,
+                  "durationSec": 1402
+                }
+              ]
             }
           ]
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
@@ -2321,6 +4040,8 @@
       "id": "forschung",
       "name": "Forschung",
       "totalEpisodes": 7,
+      "totalRelevanceSec": 5369,
+      "totalOccurrences": 3,
       "yearData": [
         {
           "year": 2010,
@@ -2381,11 +4102,21 @@
         {
           "year": 2018,
           "count": 1,
+          "totalRelevanceSec": 1541,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 73,
               "date": "2018-06-06",
-              "title": "RZ073 IceCube Neutrino Observatory"
+              "title": "RZ073 IceCube Neutrino Observatory",
+              "relevanceSec": 1541,
+              "occurrences": [
+                {
+                  "topic": "IceCube-Experiment",
+                  "positionSec": 420,
+                  "durationSec": 1541
+                }
+              ]
             }
           ]
         },
@@ -2412,21 +4143,44 @@
         {
           "year": 2023,
           "count": 2,
+          "totalRelevanceSec": 3828,
+          "totalOccurrences": 2,
           "episodes": [
             {
               "number": 109,
               "date": "2023-05-03",
-              "title": "RZ109 Quantentechnologie für die Raumfahrt"
+              "title": "RZ109 Quantentechnologie für die Raumfahrt",
+              "relevanceSec": 1436,
+              "occurrences": [
+                {
+                  "topic": "Forschungseinrichtungen des DLR im Bereich Quantenmechanik",
+                  "positionSec": 14,
+                  "durationSec": 1436
+                }
+              ]
             },
             {
               "number": 115,
               "date": "2023-09-24",
-              "title": "RZ115 CERN: ATLAS"
+              "title": "RZ115 CERN: ATLAS",
+              "relevanceSec": 2392,
+              "occurrences": [
+                {
+                  "topic": "Aufgabe des ATLAS-Detektors",
+                  "positionSec": 14,
+                  "durationSec": 2392
+                }
+              ]
             }
           ]
         },
         {
           "year": 2024,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2026,
           "count": 0,
           "episodes": []
         }
@@ -2436,6 +4190,8 @@
       "id": "research",
       "name": "Research",
       "totalEpisodes": 5,
+      "totalRelevanceSec": 3007,
+      "totalOccurrences": 2,
       "yearData": [
         {
           "year": 2010,
@@ -2497,11 +4253,21 @@
         {
           "year": 2019,
           "count": 1,
+          "totalRelevanceSec": 1995,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 78,
               "date": "2019-09-03",
-              "title": "RZ078 Pluto und New Horizons"
+              "title": "RZ078 Pluto und New Horizons",
+              "relevanceSec": 1995,
+              "occurrences": [
+                {
+                  "topic": "Wissenschaftliche Erkenntnisse",
+                  "positionSec": 14,
+                  "durationSec": 1995
+                }
+              ]
             }
           ]
         },
@@ -2523,11 +4289,21 @@
         {
           "year": 2023,
           "count": 1,
+          "totalRelevanceSec": 1012,
+          "totalOccurrences": 1,
           "episodes": [
             {
               "number": 113,
               "date": "2023-08-02",
-              "title": "RZ113 CERN: Der ALICE-Detektor"
+              "title": "RZ113 CERN: Der ALICE-Detektor",
+              "relevanceSec": 1012,
+              "occurrences": [
+                {
+                  "topic": "CERN",
+                  "positionSec": 14,
+                  "durationSec": 1012
+                }
+              ]
             }
           ]
         },
@@ -2535,13 +4311,20 @@
           "year": 2024,
           "count": 0,
           "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 0,
+          "episodes": []
         }
       ]
     },
-    "wirtschaft": {
-      "id": "wirtschaft",
-      "name": "Wirtschaft",
-      "totalEpisodes": 7,
+    "astronomy": {
+      "id": "astronomy",
+      "name": "Astronomy",
+      "totalEpisodes": 5,
+      "totalRelevanceSec": 3826,
+      "totalOccurrences": 5,
       "yearData": [
         {
           "year": 2010,
@@ -2550,141 +4333,30 @@
         },
         {
           "year": 2011,
-          "count": 0,
-          "episodes": []
+          "count": 1,
+          "episodes": [
+            {
+              "number": 30,
+              "date": "2011-12-16",
+              "title": "RZ030 Cassini-Huygens"
+            }
+          ]
         },
         {
           "year": 2012,
-          "count": 2,
-          "episodes": [
-            {
-              "number": 35,
-              "date": "2012-04-13",
-              "title": "RZ035 Technology Transfer Program"
-            },
-            {
-              "number": 42,
-              "date": "2012-07-20",
-              "title": "RZ042 Copernicus/GMES"
-            }
-          ]
+          "count": 0,
+          "episodes": []
         },
         {
           "year": 2013,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2015,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2016,
           "count": 1,
           "episodes": [
             {
-              "number": 65,
-              "date": "2016-12-17",
-              "title": "RZ065 Part Time Scientists"
+              "number": 52,
+              "date": "2013-03-01",
+              "title": "RZ052 Solar Orbiter"
             }
           ]
-        },
-        {
-          "year": 2017,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2018,
-          "count": 1,
-          "episodes": [
-            {
-              "number": 70,
-              "date": "2018-02-14",
-              "title": "RZ070 Weltraumrecht"
-            }
-          ]
-        },
-        {
-          "year": 2019,
-          "count": 1,
-          "episodes": [
-            {
-              "number": 80,
-              "date": "2019-11-07",
-              "title": "RZ080 Europäische Raumfahrtpolitik"
-            }
-          ]
-        },
-        {
-          "year": 2020,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2021,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2022,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2023,
-          "count": 2,
-          "episodes": [
-            {
-              "number": 108,
-              "date": "2023-03-27",
-              "title": "RZ108 NASA"
-            },
-            {
-              "number": 118,
-              "date": "2023-11-20",
-              "title": "RZ118 Raumfahrt-Industrie"
-            }
-          ]
-        },
-        {
-          "year": 2024,
-          "count": 0,
-          "episodes": []
-        }
-      ]
-    },
-    "geowissenschaften": {
-      "id": "geowissenschaften",
-      "name": "Geowissenschaften",
-      "totalEpisodes": 1,
-      "yearData": [
-        {
-          "year": 2010,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2011,
-          "count": 0,
-          "episodes": []
-        },
-        {
-          "year": 2012,
-          "count": 1,
-          "episodes": [
-            {
-              "number": 49,
-              "date": "2012-11-09",
-              "title": "RZ049 Der Mars"
-            }
-          ]
-        },
-        {
-          "year": 2013,
-          "count": 0,
-          "episodes": []
         },
         {
           "year": 2015,
@@ -2708,13 +4380,177 @@
         },
         {
           "year": 2019,
-          "count": 0,
-          "episodes": []
+          "count": 1,
+          "totalRelevanceSec": 1516,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 78,
+              "date": "2019-09-03",
+              "title": "RZ078 Pluto und New Horizons",
+              "relevanceSec": 1516,
+              "occurrences": [
+                {
+                  "topic": "Pluto",
+                  "positionSec": 14,
+                  "durationSec": 1516
+                }
+              ]
+            }
+          ]
         },
         {
           "year": 2020,
           "count": 0,
           "episodes": []
+        },
+        {
+          "year": 2021,
+          "count": 1,
+          "totalRelevanceSec": 1110,
+          "totalOccurrences": 1,
+          "episodes": [
+            {
+              "number": 95,
+              "date": "2021-10-24",
+              "title": "RZ095 JUICE",
+              "relevanceSec": 1110,
+              "occurrences": [
+                {
+                  "topic": "Eismonde des Jupiters",
+                  "positionSec": 197,
+                  "durationSec": 1110
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "year": 2022,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2023,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2024,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2026,
+          "count": 1,
+          "totalRelevanceSec": 1200,
+          "totalOccurrences": 3,
+          "episodes": [
+            {
+              "number": 124,
+              "date": "2026-01-07",
+              "title": "RZ124 Vera C. Rubin Observatory",
+              "relevanceSec": 1200,
+              "occurrences": [
+                {
+                  "topic": "Vera C. Rubin Observatory",
+                  "positionSec": 0,
+                  "durationSec": 36
+                },
+                {
+                  "topic": "Himmelsbeobachtung",
+                  "positionSec": 0,
+                  "durationSec": 1106
+                },
+                {
+                  "topic": "Universumserforschung",
+                  "positionSec": 12,
+                  "durationSec": 58
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "umwelt": {
+      "id": "umwelt",
+      "name": "Umwelt",
+      "totalEpisodes": 5,
+      "yearData": [
+        {
+          "year": 2010,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2011,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2012,
+          "count": 1,
+          "episodes": [
+            {
+              "number": 47,
+              "date": "2012-10-05",
+              "title": "RZ047 Die Venus"
+            }
+          ]
+        },
+        {
+          "year": 2013,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2015,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2016,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2017,
+          "count": 0,
+          "episodes": []
+        },
+        {
+          "year": 2018,
+          "count": 1,
+          "episodes": [
+            {
+              "number": 69,
+              "date": "2018-01-20",
+              "title": "RZ069 Copernicus Open Data Strategy"
+            }
+          ]
+        },
+        {
+          "year": 2019,
+          "count": 1,
+          "episodes": [
+            {
+              "number": 77,
+              "date": "2019-08-05",
+              "title": "RZ077 Pflanzen im Weltraum"
+            }
+          ]
+        },
+        {
+          "year": 2020,
+          "count": 1,
+          "episodes": [
+            {
+              "number": 87,
+              "date": "2020-05-06",
+              "title": "RZ087 Amateurastronomie"
+            }
+          ]
         },
         {
           "year": 2021,
@@ -2733,6 +4569,17 @@
         },
         {
           "year": 2024,
+          "count": 1,
+          "episodes": [
+            {
+              "number": 121,
+              "date": "2024-03-25",
+              "title": "RZ121 EarthCARE"
+            }
+          ]
+        },
+        {
+          "year": 2026,
           "count": 0,
           "episodes": []
         }
